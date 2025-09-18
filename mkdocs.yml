@@ -10,16 +10,12 @@ nav:
       - GT Cellular Communicator (ENG): manual/index.md
 extra_css:
   - stylesheets/base.user.css
+extra_javascript:
+  - javascripts/callouts.js
 markdown_extensions:
   - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.blocks.admonition:
-      types:
-        - note
-        - tip
-        - important
-        - warning
-        - caution
+  - pymdownx.blocks.admonition
   - pymdownx.blocks.details
