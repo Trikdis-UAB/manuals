@@ -10,6 +10,8 @@ nav:
       - GT Cellular Communicator (ENG): manual/index.md
 extra_css:
   - stylesheets/base.user.css
+extra_javascript:
+  - javascripts/redirect-trailing-slash.js
 markdown_extensions:
   - attr_list
   - admonition
