@@ -122,9 +122,9 @@ Works with Protegus2 app:
 
 This manual is for 4G communicators.
 
-> > > > > [!NOTE] This is a note.
-> > > > >
-> > > > > 
+> [!NOTE] This is a note.
+> 
+> 
 
 ### Specifications  {#specifications}
 

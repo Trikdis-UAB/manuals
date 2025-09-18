@@ -1,5 +1,6 @@
-/* GitHub-style alerts for both Typora (.md-alert) and MkDocs Material (.admonition) */
+/* GitHub-style alerts for Typora and MkDocs */
 .md-alert,
+.md-typeset .md-alert,
 .md-typeset .admonition {
   border-left: 6px solid;
   padding: .8rem 1rem;
@@ -7,12 +8,24 @@
   margin: 1rem 0;
   background: rgba(47,115,218,.08);
   color: #1e5bbf;
+  display: block;
 }
 
 .md-alert-text,
 .md-typeset .admonition-title {
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.md-alert-body > :first-child,
+.md-typeset .admonition > :nth-child(2) {
+  margin-top: 0;
+}
+
+.md-alert-body > :last-child,
+.md-typeset .admonition > :last-child {
+  margin-bottom: 0;
 }
 
 /* NOTE → blue */
@@ -80,6 +93,13 @@
 .md-typeset .admonition.caution > .admonition-title,
 .md-typeset .admonition.danger > .admonition-title {
   color: #b71c1c;
+}
+
+/* Reset blockquote defaults when converted to alerts */
+.md-typeset blockquote.md-alert {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Tables - fixed width for better wrapping */
