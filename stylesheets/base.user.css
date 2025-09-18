@@ -1,80 +1,97 @@
-/* GitHub-style alerts in Typora - TRIKDIS color scheme */
-.md-alert { 
-  border-left: 6px solid; 
-  padding: .8rem 1rem; 
-  border-radius: .5rem; 
+/* GitHub-style alerts for both Typora (.md-alert) and MkDocs Material (.admonition) */
+.md-alert,
+.md-typeset .admonition {
+  border-left: 6px solid;
+  padding: .8rem 1rem;
+  border-radius: .5rem;
   margin: 1rem 0;
+  background: rgba(47,115,218,.08);
+  color: #1e5bbf;
 }
 
-.md-alert-text { 
-  font-weight: 700; 
+.md-alert-text,
+.md-typeset .admonition-title {
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 /* NOTE → blue */
-.md-alert-note { 
-  border-left-color: #2f73da; 
-  background: rgba(47,115,218,.08); 
+.md-alert-note,
+.md-typeset .admonition.note {
+  border-left-color: #2f73da;
+  background: rgba(47,115,218,.08);
   color: #1e5bbf;
 }
 
-.md-alert-note .md-alert-text {
+.md-alert-note .md-alert-text,
+.md-typeset .admonition.note > .admonition-title {
   color: #1e5bbf;
 }
 
 /* IMPORTANT → orange */
-.md-alert-important { 
-  border-left-color: #ff9800; 
-  background: rgba(255,152,0,.12); 
+.md-alert-important,
+.md-typeset .admonition.important {
+  border-left-color: #ff9800;
+  background: rgba(255,152,0,.12);
   color: #b8860b;
 }
 
-.md-alert-important .md-alert-text {
+.md-alert-important .md-alert-text,
+.md-typeset .admonition.important > .admonition-title {
   color: #d17e00;
 }
 
 /* WARNING → orange (same as important) */
-.md-alert-warning { 
-  border-left-color: #ff9800; 
-  background: rgba(255,152,0,.12); 
+.md-alert-warning,
+.md-typeset .admonition.warning {
+  border-left-color: #ff9800;
+  background: rgba(255,152,0,.12);
   color: #b8860b;
 }
 
-.md-alert-warning .md-alert-text {
+.md-alert-warning .md-alert-text,
+.md-typeset .admonition.warning > .admonition-title {
   color: #d17e00;
 }
 
 /* TIP → green */
-.md-alert-tip { 
-  border-left-color: #00c853; 
-  background: rgba(0,200,83,.08); 
+.md-alert-tip,
+.md-typeset .admonition.tip {
+  border-left-color: #00c853;
+  background: rgba(0,200,83,.08);
   color: #00701a;
 }
 
-.md-alert-tip .md-alert-text {
+.md-alert-tip .md-alert-text,
+.md-typeset .admonition.tip > .admonition-title {
   color: #00701a;
 }
 
 /* CAUTION → red */
-.md-alert-caution { 
-  border-left-color: #d32f2f; 
-  background: rgba(211,47,47,.08); 
+.md-alert-caution,
+.md-typeset .admonition.caution,
+.md-typeset .admonition.danger {
+  border-left-color: #d32f2f;
+  background: rgba(211,47,47,.08);
   color: #b71c1c;
 }
 
-.md-alert-caution .md-alert-text {
+.md-alert-caution .md-alert-text,
+.md-typeset .admonition.caution > .admonition-title,
+.md-typeset .admonition.danger > .admonition-title {
   color: #b71c1c;
 }
 
 /* Tables - fixed width for better wrapping */
-table { 
-  table-layout: fixed; 
-  width: 100%; 
+table {
+  table-layout: fixed;
+  width: 100%;
 }
 
-table td, table th {
-  white-space: normal; 
-  overflow-wrap: anywhere; 
-  word-break: break-word; 
+table td,
+table th {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   vertical-align: top;
 }
