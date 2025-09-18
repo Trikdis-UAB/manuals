@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"TRIKDIS Manuals","text":"<p>Welcome. This site is built with MkDocs Material.</p>"},{"location":"manual/","title":"First Manual","text":"<p>Getting started content goes here.</p>"}]}
