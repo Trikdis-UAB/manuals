@@ -10,3 +10,5 @@ nav:
       - GT Cellular Communicator (ENG): manual/index.md
 extra_css:
   - stylesheets/base.user.css
+markdown_extensions:
+  - attr_list
