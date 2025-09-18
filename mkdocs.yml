@@ -6,4 +6,7 @@ theme:
     - navigation.instant
 nav:
   - Home: index.md
-  - First Manual: manual/index.md
+  - Manuals:
+      - GT Cellular Communicator (ENG): manual/index.md
+extra_css:
+  - stylesheets/base.user.css

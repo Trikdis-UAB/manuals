@@ -1,0 +1,80 @@
+/* GitHub-style alerts in Typora - TRIKDIS color scheme */
+.md-alert { 
+  border-left: 6px solid; 
+  padding: .8rem 1rem; 
+  border-radius: .5rem; 
+  margin: 1rem 0;
+}
+
+.md-alert-text { 
+  font-weight: 700; 
+  text-transform: uppercase;
+}
+
+/* NOTE → blue */
+.md-alert-note { 
+  border-left-color: #2f73da; 
+  background: rgba(47,115,218,.08); 
+  color: #1e5bbf;
+}
+
+.md-alert-note .md-alert-text {
+  color: #1e5bbf;
+}
+
+/* IMPORTANT → orange */
+.md-alert-important { 
+  border-left-color: #ff9800; 
+  background: rgba(255,152,0,.12); 
+  color: #b8860b;
+}
+
+.md-alert-important .md-alert-text {
+  color: #d17e00;
+}
+
+/* WARNING → orange (same as important) */
+.md-alert-warning { 
+  border-left-color: #ff9800; 
+  background: rgba(255,152,0,.12); 
+  color: #b8860b;
+}
+
+.md-alert-warning .md-alert-text {
+  color: #d17e00;
+}
+
+/* TIP → green */
+.md-alert-tip { 
+  border-left-color: #00c853; 
+  background: rgba(0,200,83,.08); 
+  color: #00701a;
+}
+
+.md-alert-tip .md-alert-text {
+  color: #00701a;
+}
+
+/* CAUTION → red */
+.md-alert-caution { 
+  border-left-color: #d32f2f; 
+  background: rgba(211,47,47,.08); 
+  color: #b71c1c;
+}
+
+.md-alert-caution .md-alert-text {
+  color: #b71c1c;
+}
+
+/* Tables - fixed width for better wrapping */
+table { 
+  table-layout: fixed; 
+  width: 100%; 
+}
+
+table td, table th {
+  white-space: normal; 
+  overflow-wrap: anywhere; 
+  word-break: break-word; 
+  vertical-align: top;
+}
