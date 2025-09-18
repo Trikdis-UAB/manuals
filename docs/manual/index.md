@@ -122,10 +122,6 @@ Works with Protegus2 app:
 
 This manual is for 4G communicators.
 
-> [!NOTE] This is a note.
-> 
-> 
-
 ### Specifications  {#specifications}
 
 <table class="two-col">
@@ -458,26 +454,25 @@ This manual is for 4G communicators.
 
 ![](image5.png){width="7.0875in" height="3.0104166666666665in"}
 
-> [!NOTE]
-> Before you begin, make sure that you have the necessary:
->
-> 1.  USB-C cable for configuration.
->
-> 2.  At least 4-wire cable for connecting communicator to control panel.
->
-> 3.  CRP2 cable for connecting to Paradox panel\`s serial port.
->
-> 4.  Flat-head 2,5 mm screwdriver.
->
-> 5.  Sufficient gain cellular antenna if network coverage in the area is
->     poor.
->
-> 6.  Activated SIM card (PIN code request can be turned off).
->
-> 7.  Particular security control panel\`s installation manual.
->
-> Order the necessary components separately from your local distributor.
->
+!!! note
+    Before you begin, make sure that you have the necessary:
+    
+    1.  USB-C cable for configuration.
+    
+    2.  At least 4-wire cable for connecting communicator to control panel.
+    
+    3.  CRP2 cable for connecting to Paradox panel\`s serial port.
+    
+    4.  Flat-head 2,5 mm screwdriver.
+    
+    5.  Sufficient gain cellular antenna if network coverage in the area is
+    poor.
+    
+    6.  Activated SIM card (PIN code request can be turned off).
+    
+    7.  Particular security control panel\`s installation manual.
+    
+    Order the necessary components separately from your local distributor.
 
 ## Quick configuration with *TrikdisConfig* software  {#quick-configuration-with-trikdisconfig-software}
 
@@ -513,12 +508,11 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 4.  For the direct control of Paradox and Texecom panels enter "**Security panel PC download password**". It must match the password that is entered in the control panel.
 
-> [!NOTE]
-> For the direct panel control to work, you will need to change the panel
-> settings. How to do this is described in chapter 4 "Programming the
-> control panel". In this section you will find information on how to
-> change the PC download/UDL password.
->
+!!! note
+    For the direct panel control to work, you will need to change the panel
+    settings. How to do this is described in chapter 4 "Programming the
+    control panel". In this section you will find information on how to
+    change the PC download/UDL password.
 
 **In "User reporting" window, "PROTEGUS Cloud" tab:**
 
@@ -544,11 +538,10 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 After finishing configuration, click the button **Write \[F5\]** and disconnect the USB cable.
 
-> [!NOTE]
-> For more information about other ***GT*** settings in
-> ***TrikdisConfig***, see chapter **6 "TrikdisConfig window
-> description"**.
->
+!!! note
+    For more information about other ***GT*** settings in
+    ***TrikdisConfig***, see chapter **6 "TrikdisConfig window
+    description"**.
 
 ### Settings for connection with Central Monitoring Station  {#settings-for-connection-with-central-monitoring-station}
 
@@ -600,11 +593,10 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 After finishing configuration, click **Write \[F5\]** and disconnect the USB cable.
 
-> [!NOTE]
-> For more information about other ***GT*** settings in
-> ***TrikdisConfig***, see chapter **6 "TrikdisConfig window
-> description"**.
->
+!!! note
+    For more information about other ***GT*** settings in
+    ***TrikdisConfig***, see chapter **6 "TrikdisConfig window
+    description"**.
 
 ## Installation and wiring  {#installation-and-wiring}
 
@@ -628,15 +620,14 @@ After finishing configuration, click **Write \[F5\]** and disconnect the USB cab
 
 ![](image17.png){width="2.2913385826771653in" height="0.984251968503937in"}
 
-> [!NOTE]
-> Ensure that the SIM card is activated.
->
-> Ensure that mobile internet service (mobile data) is enabled if
-> connected via IP channel.
->
-> To avoid entering the PIN code in ***TrikdisConfig***, insert the SIM
-> card into your mobile phone and turn off the PIN request function.
->
+!!! note
+    Ensure that the SIM card is activated.
+    
+    Ensure that mobile internet service (mobile data) is enabled if
+    connected via IP channel.
+    
+    To avoid entering the PIN code in ***TrikdisConfig***, insert the SIM
+    card into your mobile phone and turn off the PIN request function.
 
 ### Schematics for wiring the communicator to a security control panel  {#schematics-for-wiring-the-communicator-to-a-security-control-panel}
 
@@ -678,16 +669,15 @@ The Paradox control panel must be programmed to transmit events to the CMS and f
 
 Follow this schematic if the control panel will be armed/disarmed with a ***GT*** PGM output turning on/off the panel's keyswitch zone.
 
-> [!NOTE]
-> ***GT*** communicator has 2 universal input / output terminals that can
-> be set to the OUT (PGM) operating mode. The outputs (OUT) can control
-> two areas of the security system. If you want to control the system in
-> this way, in ***TrikdisConfig***, in the \"**System settings**\" window,
-> uncheck **Remote Arm/Disarm**. The ***Protegus2*** apps must be
-> configured with the settings described in chapter 5.2 "Additional
-> settings to arm/disarm the system using the control panel's keyswitch
-> zone".
->
+!!! note
+    ***GT*** communicator has 2 universal input / output terminals that can
+    be set to the OUT (PGM) operating mode. The outputs (OUT) can control
+    two areas of the security system. If you want to control the system in
+    this way, in ***TrikdisConfig***, in the \"**System settings**\" window,
+    uncheck **Remote Arm/Disarm**. The ***Protegus2*** apps must be
+    configured with the settings described in chapter 5.2 "Additional
+    settings to arm/disarm the system using the control panel's keyswitch
+    zone".
 
 <table class="two-col">
 <colgroup>
@@ -719,12 +709,11 @@ Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, 
 
 ![](image26.png){width="5.169291338582677in" height="4.003937007874016in"}
 
-> [!NOTE]
-> If more inputs or outputs need to be connected to the communicator,
-> connect the TRIKDIS ***iO-8*** expander. Connection method is described
-> in the ***iO-8*** manual and chapter 3.7 "Schematics for connecting iO-8
-> expansion modules".
->
+!!! note
+    If more inputs or outputs need to be connected to the communicator,
+    connect the TRIKDIS ***iO-8*** expander. Connection method is described
+    in the ***iO-8*** manual and chapter 3.7 "Schematics for connecting iO-8
+    expansion modules".
 
 ### Schematic for wiring a relay  {#schematic-for-wiring-a-relay}
 
@@ -746,21 +735,20 @@ To start the communicator, turn on the security control panel's power supply. Th
 
 - "NETWORK" LED illuminates green and blinks yellow when the communicator is registered to the network.
 
-> [!NOTE]
-> Sufficient strength of 4G signal is level three (three "NETWORK"
-> indicator flashes in yellow color).
->
-> If you count less yellow "NETWORK" LED flashes, the network signal
-> strength is insufficient. We recommend to select a different place to
-> install the communicator, or to use a more sensitive cellular antenna.
->
-> If you see a different LED indication, it indicates a certain
-> malfunction. Diagnose it by following the LED indication table in
-> chapter 1.6 "LED indication of operation".
->
-> If the ***GT*** indication does not illuminate at all, check the power
-> supply and connections.
->
+!!! note
+    Sufficient strength of 4G signal is level three (three "NETWORK"
+    indicator flashes in yellow color).
+    
+    If you count less yellow "NETWORK" LED flashes, the network signal
+    strength is insufficient. We recommend to select a different place to
+    install the communicator, or to use a more sensitive cellular antenna.
+    
+    If you see a different LED indication, it indicates a certain
+    malfunction. Diagnose it by following the LED indication table in
+    chapter 1.6 "LED indication of operation".
+    
+    If the ***GT*** indication does not illuminate at all, check the power
+    supply and connections.
 
 ## Programming the control panel  {#programming-the-control-panel}
 
@@ -928,13 +916,12 @@ For the control panel to send events via the landline dialer, it must be turned 
 
 The control panel zone to which the ***GT*** output OUT is connected should be set to keyswitch zone for arming/disarming the control panel remotely.
 
-> [!NOTE]
-> Keyswitch zone can be momentary (pulse) or level. By default, the
-> ***GT*** controllable output OUT is set to 3 second pulse mode. You can
-> change the impulse duration or change to level mode in ***Protegus2***
-> settings. See chapter **see the referenced section** "**Error!
-> Reference source not found.**".
->
+!!! note
+    Keyswitch zone can be momentary (pulse) or level. By default, the
+    ***GT*** controllable output OUT is set to 3 second pulse mode. You can
+    change the impulse duration or change to level mode in ***Protegus2***
+    settings. See chapter **see the referenced section** "**Error!
+    Reference source not found.**".
 
 ***  ***
 
@@ -1088,20 +1075,19 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 2.  Log in with your user name and password or register and create new account.
 
-> [!IMPORTANT]
-> When adding the ***GT*** to ***Protegus2*** check if:
->
-> 1.  The inserted SIM card is activated and the PIN code is either
->     entered or disabled;
->
-> 2.  "**Protegus** **cloud**" is enabled. See chapter **6.5 "User
->     reporting" window**;
->
-> 3.  Power supply is connected ("POWER" LED illuminates green);
->
-> 4.  Registered to the network ("NETWORK" LED illuminates green and
->     blinks yellow).
->
+!!! important
+    When adding the ***GT*** to ***Protegus2*** check if:
+    
+    1.  The inserted SIM card is activated and the PIN code is either
+    entered or disabled;
+    
+    2.  "**Protegus** **cloud**" is enabled. See chapter **6.5 "User
+    reporting" window**;
+    
+    3.  Power supply is connected ("POWER" LED illuminates green);
+    
+    4.  Registered to the network ("NETWORK" LED illuminates green and
+    blinks yellow).
 
 <table class="two-col">
 <colgroup>
@@ -1128,10 +1114,9 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 ### Additional settings to arm/disarm the system using the control panel's keyswitch zone  {#additional-settings-to-armdisarm-the-system-using-the-control-panels-keyswitch-zone}
 
-> [!IMPORTANT]
-> The control panel zone to which the ***GT*** output OUT is connected to
-> has to be set to keyswitch mode.
->
+!!! important
+    The control panel zone to which the ***GT*** output OUT is connected to
+    has to be set to keyswitch mode.
 
 <table class="two-col">
 <colgroup>
@@ -1409,13 +1394,12 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 ### "Network settings" window  {#network-settings-window}
 
-> [!IMPORTANT]
-> 1\. Ensure that the SIM card is activated and working before using it.
->
-> 2\. If mobile internet connection will be used for sending events via IP
-> channel or to ***Protegus2***, ensure that mobile data service is
-> enabled.
->
+!!! important
+    1\. Ensure that the SIM card is activated and working before using it.
+    
+    2\. If mobile internet connection will be used for sending events via IP
+    channel or to ***Protegus2***, ensure that mobile data service is
+    enabled.
 
 ![](image49.png){width="7.086614173228346in" height="3.031496062992126in"}
 
@@ -1537,10 +1521,9 @@ In this window, you can turn on, turn off or change the internal event messages 
 
 - **TEST** -- periodic test message.
 
-> [!NOTE]
-> To enable periodic TEST messages and set their period, go to **CMS
-> reporting -\> Settings -\> Test period**.
->
+!!! note
+    To enable periodic TEST messages and set their period, go to **CMS
+    reporting -\> Settings -\> Test period**.
 
 - **Enable** -- when selected, the sending of messages is enabled.
 
@@ -1558,20 +1541,19 @@ Power supply is connected to the communicator. Press and hold the "RESET" button
 
 ## Remote configuration  {#remote-configuration}
 
-> [!IMPORTANT]
-> Remote configuration will work only if:
->
-> 1.  The inserted SIM card is activated and the PIN code is either
->     entered or disabled;
->
-> 2.  "**Protegus** **cloud**" is enabled. How to enable cloud is
->     described in section 6.5 "User reporting" window;
->
-> 3.  Power supply is connected ("POWER" LED illuminates green);
->
-> 4.  Registered to the network ("NETWORK" LED illuminates green and
->     blinks yellow).
->
+!!! important
+    Remote configuration will work only if:
+    
+    1.  The inserted SIM card is activated and the PIN code is either
+    entered or disabled;
+    
+    2.  "**Protegus** **cloud**" is enabled. How to enable cloud is
+    described in section 6.5 "User reporting" window;
+    
+    3.  Power supply is connected ("POWER" LED illuminates green);
+    
+    4.  Registered to the network ("NETWORK" LED illuminates green and
+    blinks yellow).
 
 1.  Start the configuration program ***TrikdisConfig***.
 
@@ -1607,14 +1589,13 @@ When the configuration and installation is complete, perform a system check:
 
 ## Firmware update  {#firmware-update}
 
-> [!NOTE]
-> When the communicator is connected to ***TrikdisConfig***, the program
-> will automatically offer to update the device's firmware if updates are
-> present. Updates require an internet connection. Antivirus software,
-> firewall or strict access to internet settings can block the automatic
-> firmware updates. In this case, you will need to reconfigure your
-> antivirus program.
->
+!!! note
+    When the communicator is connected to ***TrikdisConfig***, the program
+    will automatically offer to update the device's firmware if updates are
+    present. Updates require an internet connection. Antivirus software,
+    firewall or strict access to internet settings can block the automatic
+    firmware updates. In this case, you will need to reconfigure your
+    antivirus program.
 
 The communicator's firmware can also be updated or changed manually. After an update, all previously set settings will remain unchanged. When writing firmware manually, it can be changed to a newer or older version. To update:
 
