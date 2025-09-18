@@ -12,3 +12,14 @@ extra_css:
   - stylesheets/base.user.css
 markdown_extensions:
   - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - tip
+        - important
+        - warning
+        - caution
+  - pymdownx.blocks.details
