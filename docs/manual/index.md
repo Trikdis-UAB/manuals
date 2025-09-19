@@ -1,6 +1,8 @@
-## Description  {#description}
-
+<div style="text-align: center;">
 <img alt="" src="./image3.png" style="width:2.3622047244094486in;height:3.4448818897637796in" />
+</div>
+
+## Description  {#description}
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the ***Protegus2*** application.
 
