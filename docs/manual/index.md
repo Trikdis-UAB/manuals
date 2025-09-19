@@ -1,5 +1,7 @@
 ## Description  {#description}
 
+<img alt="" src="./image3.png" style="width:2.3622047244094486in;height:3.4448818897637796in" />
+
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the ***Protegus2*** application.
 
 The ***GT*** cellular communicator can be directly connected to control panels (DSC, Paradox, UTC Interlogix (CADDX), Texecom, Innerrange, Honeywell) or to a telephone communicator (which supports the Contact ID communication protocol transmitted by DTMF tones) of the control panel.
@@ -33,8 +35,6 @@ Works with Protegus2 app:
 - "*Push*" and special sound notifications informing about events.
 
 - Remote system Arm/Disarm.
-
-<img alt="" src="./image3.png" style="width:2.3622047244094486in;height:3.4448818897637796in" />
 
 - Remote control of connected devices (lights, gates, ventilation systems, heating, sprinklers, etc.).
 
