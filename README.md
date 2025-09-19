@@ -63,3 +63,4 @@ The deploy workflow also publishes a `CNAME` so the custom domain stays pinned t
 - **Local build errors**: run `pipx run --spec mkdocs-material mkdocs build` to get strict error messages before pushing.
 
 With this setup, any future manual update is simply a conversion + commit + push cycle. The GitHub Actions workflow handles building and deploying the site automatically.
+# Trigger rebuild
