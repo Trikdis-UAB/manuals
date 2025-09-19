@@ -547,6 +547,8 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 ### Settings for connection with Central Monitoring Station  {#settings-for-connection-with-central-monitoring-station}
 
+<!-- Force rebuild 2025-09-19 -->
+
 **In "System settings" window:**
 
 <img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.2440944881889764in" />
