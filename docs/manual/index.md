@@ -116,7 +116,7 @@ Works with Protegus2 app:
 </tbody>
 </table>
 
-> **[Underlined]{.underline}** - Control panels directly controlled by ***GT.*** Firmware PARADOX security panels, which are directly controlled, must be V.4 or higher.
+> **<u>Underlined</u>** - Control panels directly controlled by ***GT.*** Firmware PARADOX security panels, which are directly controlled, must be V.4 or higher.
 >
 > \*Other manufacturers\' control panels connect to the ***GT*** communicator via the control panel\'s TIP/RING terminals (which supports the Contact ID communication protocol transmitted by DTMF tones) of the control panel.
 
@@ -1073,7 +1073,7 @@ Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when
 
 With ***Protegus2*** users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
 
-1.  Download and launch the ***Protegus2*** application or use the browser version: [[web.protegus.app]{.underline}](https://web.protegus.app/login).
+1.  Download and launch the ***Protegus2*** application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
 2.  Log in with your user name and password or register and create new account.
 
