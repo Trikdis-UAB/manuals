@@ -116,9 +116,9 @@ Works with Protegus2 app:
 </tbody>
 </table>
 
-> **<u>Underlined</u>** - Control panels directly controlled by ***GT.*** Firmware PARADOX security panels, which are directly controlled, must be V.4 or higher.
->
-> \*Other manufacturers\' control panels connect to the ***GT*** communicator via the control panel\'s TIP/RING terminals (which supports the Contact ID communication protocol transmitted by DTMF tones) of the control panel.
+**<u>Underlined</u>** - Control panels directly controlled by ***GT.*** Firmware PARADOX security panels, which are directly controlled, must be V.4 or higher.
+
+\*Other manufacturers\' control panels connect to the ***GT*** communicator via the control panel\'s TIP/RING terminals (which supports the Contact ID communication protocol transmitted by DTMF tones) of the control panel.
 
 ### Communicator model types  {#communicator-model-types}
 
