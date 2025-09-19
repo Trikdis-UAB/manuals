@@ -567,19 +567,15 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:3.3503937007874014in" />
 
-4.  **Communication type** - select the **IP** connection method.
-
-5.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
-
-6.  **Encryption key** - enter the encryption key that is set in the receiver.
-
-7.  **Domain or IP** - enter the receiver's Domain or IP address.
-
-8.  **Port** - enter receiver's network port number.
-
-9.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
-
-10. (Recommended) Configure "**Primary channel Backup**" settings.
+<ol start="4">
+<li><strong>Communication type</strong> - select the <strong>IP</strong> connection method.</li>
+<li><strong>Protocol</strong> - select the protocol type for event messages: <strong>TRK8</strong> (to TRIKDIS receivers), <strong>DC-09_2007</strong> or <strong>DC-09_2012</strong> (to universal receivers), <strong>TL150</strong> (to SUR-GUARD receivers).</li>
+<li><strong>Encryption key</strong> - enter the encryption key that is set in the receiver.</li>
+<li><strong>Domain or IP</strong> - enter the receiver's Domain or IP address.</li>
+<li><strong>Port</strong> - enter receiver's network port number.</li>
+<li><strong>TCP or UDP</strong> - choose event transmission protocol (<strong>TCP</strong> or <strong>UDP</strong>) in which events should be sent.</li>
+<li>(Recommended) Configure "<strong>Primary channel Backup</strong>" settings.</li>
+</ol>
 
 **  **
 
@@ -587,13 +583,12 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 <img alt="" src="./image15.png" style="width:7.086614173228346in;height:3.02755905511811in" />
 
-11. Enter "**SIM card PIN**" code.
-
-12. Change the **APN** name. **APN** can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).
-
-13. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
-
-14. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+<ol start="11">
+<li>Enter "<strong>SIM card PIN</strong>" code.</li>
+<li>Change the <strong>APN</strong> name. <strong>APN</strong> can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).</li>
+<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
+<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
+</ol>
 
 After finishing configuration, click **Write \[F5\]** and disconnect the USB cable.
 
