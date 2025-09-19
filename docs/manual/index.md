@@ -64,7 +64,7 @@ Works with Protegus2 app:
 
 ### List of compatible control panels  {#list-of-compatible-control-panels}
 
-<table class="two-col">
+<table>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 74%" />
@@ -126,7 +126,7 @@ This manual is for 4G communicators.
 
 ### Specifications  {#specifications}
 
-<table class="two-col">
+<table >
 <colgroup>
 <col style="width: 26%" />
 <col style="width: 73%" />
@@ -261,7 +261,7 @@ This manual is for 4G communicators.
 
 ### Purpose of terminals  {#purpose-of-terminals}
 
-<table class="two-col">
+<table >
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 82%" />
@@ -681,7 +681,7 @@ Follow this schematic if the control panel will be armed/disarmed with a ***GT**
     settings to arm/disarm the system using the control panel's keyswitch
     zone".
 
-<table class="two-col">
+<table >
 <colgroup>
 <col style="width: 44%" />
 <col style="width: 1%" />
@@ -1091,7 +1091,7 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
     4.  Registered to the network ("NETWORK" LED illuminates green and
     blinks yellow).
 
-<table class="two-col">
+<table >
 <colgroup>
 <col style="width: 55%" />
 <col style="width: 44%" />
@@ -1120,7 +1120,7 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
     The control panel zone to which the ***GT*** output OUT is connected to
     has to be set to keyswitch mode.
 
-<table class="two-col">
+<table >
 <colgroup>
 <col style="width: 63%" />
 <col style="width: 36%" />
@@ -1171,7 +1171,7 @@ After connecting the ***GT*** and clicking **Read \[F4\], *TrikdisConfig*** will
 
 <img alt="" src="./image42.png" style="width:7.086614173228346in;height:0.594488188976378in" />
 
-<table class="two-col">
+<table >
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 79%" />
