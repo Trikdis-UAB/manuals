@@ -1,3 +1,5 @@
+![GT Cellular Communicator](image1.png)
+
 ## Description
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the ***Protegus2*** application.
@@ -8,9 +10,9 @@ Communicator transmits full event information to the Central Monitoring Station.
 
 Communicator also works with ***Protegus2*** application. With ***Protegus2*** users can control their alarm system remotely and get notifications about security system events. ***Protegus2*** app is compatible with all security alarm panels from various manufacturers that are supported by the ***GT*** communicator. Communicator can transmit event notifications to the Central Monitoring Station and work with ***Protegus2*** simultaneously.
 
-**Features**
+## Features
 
-Connects to the control panel's serial or keyboard bus or telephone line (TIP/RING).
+**Connects to the control panel's serial or keyboard bus or telephone line (TIP/RING).**
 
 **Sends events to monitoring station receiver:**
 

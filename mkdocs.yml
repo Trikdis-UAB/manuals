@@ -19,6 +19,8 @@ plugins:
   - add-number:
       order: 2
       strict_mode: false
+      excludes:
+        - Features
 
 markdown_extensions:
   - attr_list
