@@ -1,104 +1,99 @@
-/* MkDocs Material heading numbering */
-/* Numbers are now injected by mkdocs-add-number-plugin into HTML text */
-/* Plugin configured with order: 2 to start numbering from H2 level */
+/* Custom CSS-based heading numbering */
+/* Provides exact control over numbering without plugin conflicts */
 
-/* Force Description heading to be numbered as "1." */
-h2:first-of-type::before {
+/* Only number H2 headings, not H3 */
+article h2:first-of-type::before {
     content: "1. ";
     font-weight: bold;
 }
 
-/* Adjust subsequent H2 numbering to start from 2 */
-h2:nth-of-type(2)::before {
+article h2:nth-of-type(2)::before {
     content: "2. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(3)::before {
+article h2:nth-of-type(3)::before {
     content: "3. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(4)::before {
+article h2:nth-of-type(4)::before {
     content: "4. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(5)::before {
+article h2:nth-of-type(5)::before {
     content: "5. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(6)::before {
+article h2:nth-of-type(6)::before {
     content: "6. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(7)::before {
+article h2:nth-of-type(7)::before {
     content: "7. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(8)::before {
+article h2:nth-of-type(8)::before {
     content: "8. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(9)::before {
+article h2:nth-of-type(9)::before {
     content: "9. ";
     font-weight: bold;
 }
 
-h2:nth-of-type(10)::before {
+article h2:nth-of-type(10)::before {
     content: "10. ";
     font-weight: bold;
 }
 
-/* Number H3 headings under the first H2 (Description) as 1.1, 1.2, etc. */
-h2:first-of-type + * h3:nth-of-type(1)::before,
-h2:first-of-type ~ h3:nth-of-type(1)::before {
+/* Number H3 headings only under the first H2 (Description) */
+article h2:first-of-type ~ h3:nth-of-type(1)::before {
     content: "1.1. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(2)::before,
-h2:first-of-type ~ h3:nth-of-type(2)::before {
+article h2:first-of-type ~ h3:nth-of-type(2)::before {
     content: "1.2. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(3)::before,
-h2:first-of-type ~ h3:nth-of-type(3)::before {
+article h2:first-of-type ~ h3:nth-of-type(3)::before {
     content: "1.3. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(4)::before,
-h2:first-of-type ~ h3:nth-of-type(4)::before {
+article h2:first-of-type ~ h3:nth-of-type(4)::before {
     content: "1.4. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(5)::before,
-h2:first-of-type ~ h3:nth-of-type(5)::before {
+article h2:first-of-type ~ h3:nth-of-type(5)::before {
     content: "1.5. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(6)::before,
-h2:first-of-type ~ h3:nth-of-type(6)::before {
+article h2:first-of-type ~ h3:nth-of-type(6)::before {
     content: "1.6. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(7)::before,
-h2:first-of-type ~ h3:nth-of-type(7)::before {
+article h2:first-of-type ~ h3:nth-of-type(7)::before {
     content: "1.7. ";
     font-weight: bold;
 }
 
-h2:first-of-type + * h3:nth-of-type(8)::before,
-h2:first-of-type ~ h3:nth-of-type(8)::before {
+article h2:first-of-type ~ h3:nth-of-type(8)::before {
     content: "1.8. ";
     font-weight: bold;
+}
+
+/* Stop H3 numbering after the second H2 appears */
+article h2:nth-of-type(2) ~ h3::before {
+    content: none !important;
 }
