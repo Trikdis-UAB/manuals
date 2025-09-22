@@ -498,19 +498,17 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 <img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
-<ol>
-<li>If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "<strong>Dual tone</strong>" setting.</li>
-</ol>
+1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "**Dual tone**" setting.
 
 <img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-<ol start="2">
-<li>Select "<strong>Security panel model</strong>" that will be connected to the communicator.</li>
-<li>Select "<strong>Remote Arm/Disarm</strong>" if you want users to be able to control the panel in <strong><em>Protegus2</em></strong> app with their keypad code. This setting is only shown for directly controlled panels.</li>
-<li>For the direct control of Paradox and Texecom panels enter "<strong>Security panel PC download password</strong>". It must match the password that is entered in the control panel.</li>
-</ol>
+2.  Select "**Security panel model**" that will be connected to the communicator.
+
+3.  Select "**Remote Arm/Disarm**" if you want users to be able to control the panel in ***Protegus2*** app with their keypad code. This setting is only shown for directly controlled panels.
+
+4.  For the direct control of Paradox and Texecom panels enter "**Security panel PC download password**". It must match the password that is entered in the control panel.
 
 !!! note
     For the direct panel control to work, you will need to change the panel
@@ -522,10 +520,9 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 <img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9645669291338583in" />
 
-<ol start="5">
-<li>Tick the checkbox "<strong>Enable connection</strong>" to the <strong><em>Protegus</em></strong> Cloud.</li>
-<li>Change the "<strong>PROTEGUS Cloud access Code</strong>" for logging in to <strong><em>Protegus2</em></strong> if you want users to be asked to enter it when adding the system to <strong><em>Protegus2</em></strong> app (default password -- 123456). Important: If you change the code via <strong><em>TrikdisConfig</em></strong>, you also need to change it in the <strong><em>Protegus2</em></strong> application.</li>
-</ol>
+5.  Tick the checkbox "**Enable connection**" to the ***Protegus*** Cloud.
+
+6.  Change the "**PROTEGUS Cloud access Code**" for logging in to ***Protegus2*** if you want users to be asked to enter it when adding the system to ***Protegus2*** app (default password -- 123456). Important: If you change the code via ***TrikdisConfig***, you also need to change it in the ***Protegus2*** application.
 
 **  **
 
@@ -533,12 +530,13 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 <img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.0236220472440944in" />
 
-<ol start="7">
-<li>Enter "<strong>SIM card PIN</strong>" code.</li>
-<li>Change <strong>APN</strong> name. <strong>APN</strong> can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).</li>
-<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
-<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
-</ol>
+7.  Enter "**SIM card PIN**" code.
+
+8.  Change **APN** name. **APN** can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).
+
+9.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+
+10. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
 After finishing configuration, click the button **Write \[F5\]** and disconnect the USB cable.
 
@@ -555,35 +553,33 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 <img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.2440944881889764in" />
 
-<ol>
-<li>Enter "<strong>Object ID</strong>" (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. <strong>Do not use FFFE, FFFF Object ID</strong>).</li>
-</ol>
+1.  Enter "**Object ID**" (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
 <img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.2598425196850394in" />
 
-<ol start="2">
-<li>If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "<strong>Dual tone</strong>" setting.</li>
-</ol>
+2.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "**Dual tone**" setting.
 
 <img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
-<ol start="3">
-<li>The communicator is connected to the keypad bus or the serial bus of control panel. Select „<strong>Security panel model</strong>" that will be connected to the communicator.</li>
-</ol>
+3.  The communicator is connected to the keypad bus or the serial bus of control panel. Select „**Security panel model**" that will be connected to the communicator.
 
 **In "CMS reporting" window settings for "Primary channel":**
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:3.3503937007874014in" />
 
-<ol start="4">
-<li><strong>Communication type</strong> - select the <strong>IP</strong> connection method.</li>
-<li><strong>Protocol</strong> - select the protocol type for event messages: <strong>TRK8</strong> (to TRIKDIS receivers), <strong>DC-09_2007</strong> or <strong>DC-09_2012</strong> (to universal receivers), <strong>TL150</strong> (to SUR-GUARD receivers).</li>
-<li><strong>Encryption key</strong> - enter the encryption key that is set in the receiver.</li>
-<li><strong>Domain or IP</strong> - enter the receiver's Domain or IP address.</li>
-<li><strong>Port</strong> - enter receiver's network port number.</li>
-<li><strong>TCP or UDP</strong> - choose event transmission protocol (<strong>TCP</strong> or <strong>UDP</strong>) in which events should be sent.</li>
-<li>(Recommended) Configure "<strong>Primary channel Backup</strong>" settings.</li>
-</ol>
+4.  **Communication type** - select the **IP** connection method.
+
+5.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+
+6.  **Encryption key** - enter the encryption key that is set in the receiver.
+
+7.  **Domain or IP** - enter the receiver's Domain or IP address.
+
+8.  **Port** - enter receiver's network port number.
+
+9.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
+
+10. (Recommended) Configure "**Primary channel Backup**" settings.
 
 **  **
 
@@ -591,12 +587,13 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 <img alt="" src="./image15.png" style="width:7.086614173228346in;height:3.02755905511811in" />
 
-<ol start="11">
-<li>Enter "<strong>SIM card PIN</strong>" code.</li>
-<li>Change the <strong>APN</strong> name. <strong>APN</strong> can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).</li>
-<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
-<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
-</ol>
+11. Enter "**SIM card PIN**" code.
+
+12. Change the **APN** name. **APN** can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).
+
+13. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+
+14. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
 After finishing configuration, click **Write \[F5\]** and disconnect the USB cable.
 

@@ -1,0 +1,6 @@
+/* MkDocs Material heading numbering */
+/* Numbers are now injected by enumerate-headings plugin into HTML text */
+/* This file is kept for potential future MkDocs-specific heading styling */
+
+/* Note: The mkdocs-enumerate-headings-plugin handles numbering by injecting */
+/* numbers directly into the HTML text, making them copyable from the website */

@@ -115,3 +115,35 @@ table th {
   word-break: break-word;
   vertical-align: top;
 }
+
+/* Numbered Headings for Typora */
+/* Consistent with MkDocs via CSS counters */
+
+/* Counter resets for Typora */
+#write { counter-reset: h2counter; }
+#write h2 { counter-reset: h3counter; }
+#write h3 { counter-reset: h4counter; }
+
+/* H2: 1, 2, 3... */
+#write h2::before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ". ";
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* H3: 1.1, 1.2... */
+#write h3::before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter) " ";
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+/* H4: 1.1.1, 1.1.2... */
+#write h4::before {
+  counter-increment: h4counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) " ";
+  color: #c0c4cc;
+  font-weight: 600;
+}

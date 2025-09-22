@@ -10,11 +10,21 @@ nav:
       - GT Cellular Communicator (ENG): manual/index.md
 extra_css:
   - stylesheets/base.user.css
+  - stylesheets/numbered-headings.css
 extra_javascript:
   - javascripts/redirect-trailing-slash.js
+plugins:
+  - enumerate-headings:
+      toc_depth: 0
+      strict: false
+      increment_across_pages: false
+      exclude:
+        - index.md
+
 markdown_extensions:
   - attr_list
   - admonition
+  - sane_lists
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.blocks.admonition
