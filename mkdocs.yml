@@ -14,10 +14,11 @@ extra_css:
 extra_javascript:
   - javascripts/redirect-trailing-slash.js
 plugins:
-  - add-number:
-      order: 2
-      strict_mode: false
-      excludes:
+  - enumerate-headings:
+      toc_depth: 0
+      strict: false
+      increment_across_pages: false
+      exclude:
         - index.md
 
 markdown_extensions:
