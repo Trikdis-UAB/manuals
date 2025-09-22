@@ -29,4 +29,3 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.blocks.admonition
   - pymdownx.blocks.details
-  - pymdownx.blocks.callouts
