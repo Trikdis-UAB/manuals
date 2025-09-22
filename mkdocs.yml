@@ -16,9 +16,9 @@ extra_javascript:
   - javascripts/redirect-trailing-slash.js
 plugins:
   - search
-  - add-number:
-      order: 2
-      strict_mode: false
+  - enumerate-headings:
+      toc_depth: 6
+      strict: false
       increment_across_pages: false
 
 markdown_extensions:
