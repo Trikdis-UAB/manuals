@@ -1,6 +1,6 @@
 ![GT Cellular Communicator](image1.png)
 
-## 1. Description
+## Description
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the ***Protegus2*** application.
 
