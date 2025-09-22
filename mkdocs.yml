@@ -1,5 +1,6 @@
 site_name: TRIKDIS Manuals (Public)
 site_url: https://docs.trikdis.com
+# Force rebuild to ensure markdown-callouts extension is active
 theme:
   name: material
   features:
