@@ -137,16 +137,13 @@ This manual is for 4G communicators.
 </colgroup>
 <tbody>
 <tr>
-<th rowspan="2"><strong>Parameter</strong></th>
-
-<p>Connection to the control panel</p>
-</td>
-<th rowspan="2"><strong>Description</strong></th>
-
-<p>Serial bus, Keypad bus or TIP RING</p>
-</td>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
 </tr>
-
+<tr>
+<td><p>Connection to the control panel</p></td>
+<td><p>Serial bus, Keypad bus or TIP RING</p></td>
+</tr>
 <tr>
 <td>
 <p>Dual purpose terminals [IN/​OUT]</p>
@@ -269,12 +266,13 @@ This manual is for 4G communicators.
 </colgroup>
 <tbody>
 <tr>
-<th rowspan="2"><strong>Terminal</strong></th>
-<p>+12 VDC</p></td>
-<th rowspan="2"><strong>Description</strong></th>
-<p>+10 V/​+32 V DC power supply</p></td>
+<th><strong>Terminal</strong></th>
+<th><strong>Description</strong></th>
 </tr>
-
+<tr>
+<td><p>+12 VDC</p></td>
+<td><p>+10 V/​+32 V DC power supply</p></td>
+</tr>
 <tr>
 <td>-12 VDC</td>
 <td>0 V DC power supply</td>
