@@ -1,11 +1,20 @@
-/* Manual numbering for Description heading and its subsections */
+/* Adjust plugin numbering to get desired structure:
+   - Description: 1.
+   - Features: 1.1.
+   - Quick configuration: 2.
+*/
 
-/* Add "1." to Description heading (first H2) since plugin excludes it */
+/* Force Description (first H2) to show as "1." */
 .md-content h2:first-of-type::before {
     content: "1. ";
 }
 
-/* Features should be numbered as "1.1." since it's under Description */
-.md-content h2:first-of-type ~ h3:first-of-type::before {
-    content: "1.1. ";
+/* Hide default plugin number on first H2 to avoid duplication */
+.md-content h2:first-of-type .headerlink::before {
+    display: none !important;
+}
+
+/* Change Features (first H3 under Description) from "1." to "1.1." */
+.md-content h2:first-of-type ~ h3:first-of-type .headerlink::before {
+    content: "1.1. " !important;
 }
