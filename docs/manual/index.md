@@ -498,17 +498,19 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 <img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
-1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "**Dual tone**" setting.
+<ol>
+<li>If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "<strong>Dual tone</strong>" setting.</li>
+</ol>
 
 <img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-2.  Select "**Security panel model**" that will be connected to the communicator.
-
-3.  Select "**Remote Arm/Disarm**" if you want users to be able to control the panel in ***Protegus2*** app with their keypad code. This setting is only shown for directly controlled panels.
-
-4.  For the direct control of Paradox and Texecom panels enter "**Security panel PC download password**". It must match the password that is entered in the control panel.
+<ol start="2">
+<li>Select "<strong>Security panel model</strong>" that will be connected to the communicator.</li>
+<li>Select "<strong>Remote Arm/Disarm</strong>" if you want users to be able to control the panel in <strong><em>Protegus2</em></strong> app with their keypad code. This setting is only shown for directly controlled panels.</li>
+<li>For the direct control of Paradox and Texecom panels enter "<strong>Security panel PC download password</strong>". It must match the password that is entered in the control panel.</li>
+</ol>
 
 !!! note
     For the direct panel control to work, you will need to change the panel
@@ -553,15 +555,21 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 <img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.2440944881889764in" />
 
-1.  Enter "**Object ID**" (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+<ol>
+<li>Enter "<strong>Object ID</strong>" (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. <strong>Do not use FFFE, FFFF Object ID</strong>).</li>
+</ol>
 
 <img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.2598425196850394in" />
 
-2.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "**Dual tone**" setting.
+<ol start="2">
+<li>If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "<strong>Dual tone</strong>" setting.</li>
+</ol>
 
 <img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
-3.  The communicator is connected to the keypad bus or the serial bus of control panel. Select „**Security panel model**" that will be connected to the communicator.
+<ol start="3">
+<li>The communicator is connected to the keypad bus or the serial bus of control panel. Select „<strong>Security panel model</strong>" that will be connected to the communicator.</li>
+</ol>
 
 **In "CMS reporting" window settings for "Primary channel":**
 
