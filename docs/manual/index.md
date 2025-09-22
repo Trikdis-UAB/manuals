@@ -520,9 +520,10 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 <img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9645669291338583in" />
 
-5.  Tick the checkbox "**Enable connection**" to the ***Protegus*** Cloud.
-
-6.  Change the "**PROTEGUS Cloud access Code**" for logging in to ***Protegus2*** if you want users to be asked to enter it when adding the system to ***Protegus2*** app (default password -- 123456). Important: If you change the code via ***TrikdisConfig***, you also need to change it in the ***Protegus2*** application.
+<ol start="5">
+<li>Tick the checkbox "<strong>Enable connection</strong>" to the <strong><em>Protegus</em></strong> Cloud.</li>
+<li>Change the "<strong>PROTEGUS Cloud access Code</strong>" for logging in to <strong><em>Protegus2</em></strong> if you want users to be asked to enter it when adding the system to <strong><em>Protegus2</em></strong> app (default password -- 123456). Important: If you change the code via <strong><em>TrikdisConfig</em></strong>, you also need to change it in the <strong><em>Protegus2</em></strong> application.</li>
+</ol>
 
 **  **
 
@@ -530,13 +531,12 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 <img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.0236220472440944in" />
 
-7.  Enter "**SIM card PIN**" code.
-
-8.  Change **APN** name. **APN** can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).
-
-9.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
-
-10. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+<ol start="7">
+<li>Enter "<strong>SIM card PIN</strong>" code.</li>
+<li>Change <strong>APN</strong> name. <strong>APN</strong> can be found on the website of the SIM card operator ("internet" is universal and works in many operator networks).</li>
+<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
+<li>Google DNS server is set by default. <strong>Regardless of IP settings, make sure the DNS addresses match those supported by your ISP</strong>.</li>
+</ol>
 
 After finishing configuration, click the button **Write \[F5\]** and disconnect the USB cable.
 
