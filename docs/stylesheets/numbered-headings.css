@@ -1,20 +1,46 @@
-/* Adjust plugin numbering to get desired structure:
+/* Custom numbering using CSS counters to achieve:
    - Description: 1.
    - Features: 1.1.
    - Quick configuration: 2.
 */
 
-/* Force Description (first H2) to show as "1." */
-.md-content h2:first-of-type::before {
-    content: "1. ";
-}
-
-/* Hide default plugin number on first H2 to avoid duplication */
-.md-content h2:first-of-type .headerlink::before {
+/* Reset all plugin numbering */
+.md-content h2::before,
+.md-content h2 .headerlink::before,
+.md-content h3::before,
+.md-content h3 .headerlink::before {
     display: none !important;
 }
 
-/* Change Features (first H3 under Description) from "1." to "1.1." */
-.md-content h2:first-of-type ~ h3:first-of-type .headerlink::before {
-    content: "1.1. " !important;
+/* Initialize counters on the content area */
+.md-content {
+    counter-reset: section subsection;
+}
+
+/* Number Description as "1." */
+.md-content h2:first-of-type {
+    counter-increment: section;
+}
+
+.md-content h2:first-of-type::before {
+    content: counter(section) ". ";
+}
+
+/* Number Features as "1.1." */
+.md-content h2:first-of-type ~ h3:first-of-type {
+    counter-increment: subsection;
+}
+
+.md-content h2:first-of-type ~ h3:first-of-type::before {
+    content: counter(section) "." counter(subsection) ". ";
+}
+
+/* Number subsequent H2s starting from 2 */
+.md-content h2:nth-of-type(n+2) {
+    counter-increment: section;
+    counter-reset: subsection;
+}
+
+.md-content h2:nth-of-type(n+2)::before {
+    content: counter(section) ". ";
 }
