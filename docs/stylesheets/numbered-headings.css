@@ -1,6 +1,16 @@
 /* MkDocs Material heading numbering */
 /* Numbers are now injected by enumerate-headings plugin into HTML text */
-/* This file is kept for potential future MkDocs-specific heading styling */
 
-/* Note: The mkdocs-enumerate-headings-plugin handles numbering by injecting */
-/* numbers directly into the HTML text, making them copyable from the website */
+/* Hide H1 numbering - H1 is for document title, not numbered sections */
+h1 .enumerate-headings-plugin {
+    display: none;
+}
+
+/* Ensure H2+ numbering is visible */
+h2 .enumerate-headings-plugin,
+h3 .enumerate-headings-plugin,
+h4 .enumerate-headings-plugin,
+h5 .enumerate-headings-plugin,
+h6 .enumerate-headings-plugin {
+    display: inline;
+}
