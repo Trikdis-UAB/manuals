@@ -12,7 +12,7 @@ Communicator also works with ***Protegus2*** application. With ***Protegus2*** u
 
 Connects to the control panel's serial or keyboard bus or telephone line (TIP/RING).
 
-Sends events to monitoring station receiver:
+**Sends events to monitoring station receiver:**
 
 - Sends events to TRIKDIS software or hardware receivers that work with any monitoring software.
 
