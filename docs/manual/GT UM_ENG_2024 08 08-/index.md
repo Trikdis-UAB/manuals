@@ -1,9 +1,3 @@
-# GT Cellular Communicator (ENG)
-
-<div style="text-align: center;">
-<img alt="" src="./image3.png" style="width:2.3622047244094486in;height:3.4448818897637796in" />
-</div>
-
 ## Description
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the ***Protegus2*** application.
@@ -137,16 +131,17 @@ This manual is for 4G communicators.
 </colgroup>
 <tbody>
 <tr>
-<th rowspan="2"><strong>Parameter</strong></th>
+<td rowspan="2"><h1 id="parameter"><strong>Parameter</strong></h1>
 
 <p>Connection to the control panel</p>
 </td>
-<th rowspan="2"><strong>Description</strong></th>
+<td rowspan="2"><h1 id="description-1"><strong>Description</strong></h1>
 
 <p>Serial bus, Keypad bus or TIP RING</p>
 </td>
 </tr>
-
+<tr>
+</tr>
 <tr>
 <td>
 <p>Dual purpose terminals [IN/​OUT]</p>
@@ -258,7 +253,7 @@ This manual is for 4G communicators.
 
 7.  SIM card slot
 
-<img alt="" src="./image4.png" style="width:4.630009842519685in;height:3.11000656167979in" />
+`<img alt="" src="./image4.png" style="width:4.630009842519685in;height:3.11000656167979in" />`{=html}
 
 ### Purpose of terminals
 
@@ -269,12 +264,13 @@ This manual is for 4G communicators.
 </colgroup>
 <tbody>
 <tr>
-<th rowspan="2"><strong>Terminal</strong></th>
+<td rowspan="2"><h1 id="terminal"><strong>Terminal</strong></h1>
 <p>+12 VDC</p></td>
-<th rowspan="2"><strong>Description</strong></th>
+<td rowspan="2"><h1 id="description-2"><strong>Description</strong></h1>
 <p>+10 V/​+32 V DC power supply</p></td>
 </tr>
-
+<tr>
+</tr>
 <tr>
 <td>-12 VDC</td>
 <td>0 V DC power supply</td>
@@ -452,10 +448,9 @@ This manual is for 4G communicators.
 
 ### Structural schematic with *GT* usage
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:3.0104166666666665in" />
+`<img alt="" src="./image5.png" style="width:7.0875in;height:3.0104166666666665in" />`{=html}
 
-> [!NOTE]
-> Before you begin, make sure that you have the necessary:
+> \[!NOTE\] Before you begin, make sure that you have the necessary:
 >
 > 1.  USB-C cable for configuration.
 >
@@ -472,8 +467,6 @@ This manual is for 4G communicators.
 > 7.  Particular security control panel\'s installation manual.
 >
 > Order the necessary components separately from your local distributor.
->
->
 
 ## Quick configuration with *TrikdisConfig* software
 
@@ -481,13 +474,13 @@ This manual is for 4G communicators.
 
 2.  Open the casing of the ***GT*** with a flat-head screwdriver as shown below:
 
-    <img alt="" src="./image6.png" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    `<img alt="" src="./image6.png" style="width:6.543346456692913in;height:1.7866699475065617in" />`{=html}
 
 3.  Using a USB-C cable connect the ***GT*** to the computer.
 
 4.  Run ***TrikdisConfig***. The software will automatically recognize the connected communicator and will open a window for configuration.
 
-5.  Click **Read [F4]** to read the communicator's settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window.
+5.  Click **Read \[F4\]** to read the communicator's settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window.
 
 Below we describe what settings need to be set for the communicator to begin sending events to the Alarm Receiving Center and to allow the security system to be controlled with the ***Protegus2*** app.
 
@@ -495,11 +488,11 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In "Panel settings" window:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.2401574803149606in" />
+`<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.2401574803149606in" />`{=html}
 
 1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "**Dual tone**" setting.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0078740157480315in" />
+`<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0078740157480315in" />`{=html}
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
@@ -509,14 +502,11 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 4.  For the direct control of Paradox and Texecom panels enter "**Security panel PC download password**". It must match the password that is entered in the control panel.
 
-> [!NOTE]
-> For the direct panel control to work, you will need to change the panel settings. How to do this is described in chapter 4 "Programming the control panel". In this section you will find information on how to change the PC download/UDL password.
->
->
+> \[!NOTE\] For the direct panel control to work, you will need to change the panel settings. How to do this is described in chapter 4 "Programming the control panel". In this section you will find information on how to change the PC download/UDL password.
 
 **In "User reporting" window, "PROTEGUS Cloud" tab:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9645669291338583in" />
+`<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9645669291338583in" />`{=html}
 
 5.  Tick the checkbox "**Enable connection**" to the ***Protegus*** Cloud.
 
@@ -526,7 +516,7 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 **In "SIM card" window:**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.0236220472440944in" />
+`<img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.0236220472440944in" />`{=html}
 
 7.  Enter "**SIM card PIN**" code.
 
@@ -536,32 +526,29 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 10. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
-After finishing configuration, click the button **Write [F5]** and disconnect the USB cable.
+After finishing configuration, click the button **Write \[F5\]** and disconnect the USB cable.
 
-> [!NOTE]
-> For more information about other ***GT*** settings in ***TrikdisConfig***, see chapter **6 "TrikdisConfig window description"**.
->
->
+> \[!NOTE\] For more information about other ***GT*** settings in ***TrikdisConfig***, see chapter **6 "TrikdisConfig window description"**.
 
 ### Settings for connection with Central Monitoring Station
 
 **In "System settings" window:**
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.2440944881889764in" />
+`<img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.2440944881889764in" />`{=html}
 
 1.  Enter "**Object ID**" (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.2598425196850394in" />
+`<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.2598425196850394in" />`{=html}
 
 2.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the "**Dual tone**" setting.
 
-<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
+`<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.6023622047244095in" />`{=html}
 
 3.  The communicator is connected to the keypad bus or the serial bus of control panel. Select „**Security panel model**" that will be connected to the communicator.
 
 **In "CMS reporting" window settings for "Primary channel":**
 
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:3.3503937007874014in" />
+`<img alt="" src="./image14.png" style="width:7.086614173228346in;height:3.3503937007874014in" />`{=html}
 
 4.  **Communication type** - select the **IP** connection method.
 
@@ -581,7 +568,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In "SIM card" window:**
 
-<img alt="" src="./image15.png" style="width:7.086614173228346in;height:3.02755905511811in" />
+`<img alt="" src="./image15.png" style="width:7.086614173228346in;height:3.02755905511811in" />`{=html}
 
 11. Enter "**SIM card PIN**" code.
 
@@ -591,12 +578,9 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 14. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
-After finishing configuration, click **Write [F5]** and disconnect the USB cable.
+After finishing configuration, click **Write \[F5\]** and disconnect the USB cable.
 
-> [!NOTE]
-> For more information about other ***GT*** settings in ***TrikdisConfig***, see chapter **6 "TrikdisConfig window description"**.
->
->
+> \[!NOTE\] For more information about other ***GT*** settings in ***TrikdisConfig***, see chapter **6 "TrikdisConfig window description"**.
 
 ## Installation and wiring
 
@@ -616,34 +600,31 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 7.  Close the top cover.
 
-<img alt="" src="./image16.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+`<img alt="" src="./image16.png" style="width:3.937007874015748in;height:2.015748031496063in" />`{=html}
 
-<img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
+`<img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />`{=html}
 
-> [!NOTE]
-> Ensure that the SIM card is activated.
+> \[!NOTE\] Ensure that the SIM card is activated.
 >
 > Ensure that mobile internet service (mobile data) is enabled if connected via IP channel.
 >
 > To avoid entering the PIN code in ***TrikdisConfig***, insert the SIM card into your mobile phone and turn off the PIN request function.
->
->
 
 ### Schematics for wiring the communicator to a security control panel
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="" src="./image18.png" style="width:7.0875in;height:2.7888888888888888in" />
+`<img alt="" src="./image18.png" style="width:7.0875in;height:2.7888888888888888in" />`{=html}
 
-<img alt="" src="./image19.png" style="width:7.0875in;height:2.7756944444444445in" />
+`<img alt="" src="./image19.png" style="width:7.0875in;height:2.7756944444444445in" />`{=html}
 
-<img alt="" src="./image20.png" style="width:7.0875in;height:2.772222222222222in" />
+`<img alt="" src="./image20.png" style="width:7.0875in;height:2.772222222222222in" />`{=html}
 
-<img alt="" src="./image21.png" style="width:6.860014216972878in;height:2.713338801399825in" />
+`<img alt="" src="./image21.png" style="width:6.860014216972878in;height:2.713338801399825in" />`{=html}
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel
 
-<img alt="" src="./image22.png" style="width:3.4666732283464565in;height:2.8900054680664917in" />
+`<img alt="" src="./image22.png" style="width:3.4666732283464565in;height:2.8900054680664917in" />`{=html}
 
 When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the ***GT*** communicator:
 
@@ -655,7 +636,7 @@ When connecting the communicator to the keypad bus and the TIP/RING terminals of
 
 4.  To directly control the security panel, enter the "**Security panel PC download password**". It must match the password entered in the security panel.
 
-<img alt="" src="./image23.png" style="width:7.086614173228346in;height:1.9960629921259843in" />
+`<img alt="" src="./image23.png" style="width:7.086614173228346in;height:1.9960629921259843in" />`{=html}
 
 The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the ***Protegus2*** application.
 
@@ -669,10 +650,7 @@ The Paradox control panel must be programmed to transmit events to the CMS and f
 
 Follow this schematic if the control panel will be armed/disarmed with a ***GT*** PGM output turning on/off the panel's keyswitch zone.
 
-> [!NOTE]
-> ***GT*** communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in ***TrikdisConfig***, in the \"**System settings**\" window, uncheck **Remote Arm/Disarm**. The ***Protegus2*** apps must be configured with the settings described in chapter 5.2 "Additional settings to arm/disarm the system using the control panel's keyswitch zone".
->
->
+> \[!NOTE\] ***GT*** communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in ***TrikdisConfig***, in the \"**System settings**\" window, uncheck **Remote Arm/Disarm**. The ***Protegus2*** apps must be configured with the settings described in chapter 5.2 "Additional settings to arm/disarm the system using the control panel's keyswitch zone".
 
 <table style="width:100%;">
 <colgroup>
@@ -702,24 +680,21 @@ The communicator has 2 universal input / output terminals that can be set to inp
 
 Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="" src="./image26.png" style="width:5.169291338582677in;height:4.003937007874016in" />
+`<img alt="" src="./image26.png" style="width:5.169291338582677in;height:4.003937007874016in" />`{=html}
 
-> [!NOTE]
-> If more inputs or outputs need to be connected to the communicator, connect the TRIKDIS ***iO-8*** expander. Connection method is described in the ***iO-8*** manual and chapter 3.7 "Schematics for connecting iO-8 expansion modules".
->
->
+> \[!NOTE\] If more inputs or outputs need to be connected to the communicator, connect the TRIKDIS ***iO-8*** expander. Connection method is described in the ***iO-8*** manual and chapter 3.7 "Schematics for connecting iO-8 expansion modules".
 
 ### Schematic for wiring a relay
 
 With relay contacts you can control (turn on/off) various electronic appliances. The I/O terminal of the communicator must be set to an output (OUT) mode.
 
-<img alt="" src="./image27.png" style="width:2.3300043744531935in;height:0.9100021872265966in" />
+`<img alt="" src="./image27.png" style="width:2.3300043744531935in;height:0.9100021872265966in" />`{=html}
 
 ### Schematics for connecting iO-8 expansion modules
 
 If more inputs or outputs need to be connected to the communicator connect the TRIKDIS *iO-8* expander. Configuration of expander modules connected to the *GT* is described in chapter 6.8. ""RS485 modules" window".
 
-<img alt="" src="./image28.png" style="width:3.56750656167979in;height:2.0600043744531935in" />
+`<img alt="" src="./image28.png" style="width:3.56750656167979in;height:2.0600043744531935in" />`{=html}
 
 ### Turn on the communicator
 
@@ -729,16 +704,13 @@ To start the communicator, turn on the security control panel's power supply. Th
 
 - "NETWORK" LED illuminates green and blinks yellow when the communicator is registered to the network.
 
-> [!NOTE]
-> Sufficient strength of 4G signal is level three (three "NETWORK" indicator flashes in yellow color).
+> \[!NOTE\] Sufficient strength of 4G signal is level three (three "NETWORK" indicator flashes in yellow color).
 >
 > If you count less yellow "NETWORK" LED flashes, the network signal strength is insufficient. We recommend to select a different place to install the communicator, or to use a more sensitive cellular antenna.
 >
 > If you see a different LED indication, it indicates a certain malfunction. Diagnose it by following the LED indication table in chapter 1.6 "LED indication of operation".
 >
 > If the ***GT*** indication does not illuminate at all, check the power supply and connections.
->
->
 
 ## Programming the control panel
 
@@ -774,23 +746,23 @@ The security control panel can be programmed with Texecom software - Wintex. Ent
 
 Also, you can program with a keypad connected to the security control panel:
 
-1.  Enter the 4-digit installer's code and press the [Menu] button to enter the programming menu.
+1.  Enter the 4-digit installer's code and press the \[Menu\] button to enter the programming menu.
 
-2.  Press the [9] key immediately afterwards.
+2.  Press the \[9\] key immediately afterwards.
 
-3.  Press [7][6], and then [2]. Enter the 4-digit "**UDL** **passcode**" ("**UDL passcode**" must match the ***GT*** communicator's "**PC login password**"**).**
+3.  Press \[7\]\[6\], and then \[2\]. Enter the 4-digit "**UDL** **passcode**" ("**UDL passcode**" must match the ***GT*** communicator's "**PC login password**"**).**
 
-4.  Press [Yes] and leave the programming mode by pressing [Menu].
+4.  Press \[Yes\] and leave the programming mode by pressing \[Menu\].
 
 ***UTC INTERLOGIX (CADDX)***
 
 With the keypad connected to the security control panel:
 
-5.  Press [\*][8] and enter the installer's code (default - 9713).
+5.  Press \[\*\]\[8\] and enter the installer's code (default - 9713).
 
 6.  Enter the device number assigned to the connected communicator (default - 0).
 
-7.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking [\*] (asterisk) will return you to the local input field.
+7.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking \[\*\] (asterisk) will return you to the local input field.
 
 <table style="width:88%;">
 <colgroup>
@@ -858,7 +830,7 @@ With the keypad connected to the security control panel:
 </tbody>
 </table>
 
-After having programmed all the fields listed, press [Exit] twice to exit the programming mode.
+After having programmed all the fields listed, press \[Exit\] twice to exit the programming mode.
 
 ***INNERRANGE***
 
@@ -868,7 +840,7 @@ The control panel must be connected to the internet. Connect to **Innerrange Inc
 
 Open **Configuration \> General \> Alarm Reporting**. In the **3rd Party Device Configuration** settings group you need to enter:
 
-<img alt="" src="./image29.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+`<img alt="" src="./image29.png" style="width:6.625984251968504in;height:3.2125984251968505in" />`{=html}
 
 1.  **Enable 3rd Party Device Reporting** - select this checkbox.
 
@@ -882,13 +854,13 @@ Open **Configuration \> General \> Alarm Reporting**. In the **3rd Party Device 
 
 Follow these steps for **Honeywell Ademco Vista-20** and **Honeywell Ademco Vista-48** panels. **The panel's firmware version must be V5.3 or higher.** With a keypad that is connected to the panel:
 
-1.  Enter the programming mode. Enter the installer code [4][1][1][2] and after that [8][0][0] . Alternatively, turn on the panel's power supply. In 50 seconds after the power supply is turned on, press the buttons [\*] and [#] at the same time (this method can be used when programming mode was exited by pressing in keypad [\*][9][8] ).
+1.  Enter the programming mode. Enter the installer code \[4\]\[1\]\[1\]\[2\] and after that \[8\]\[0\]\[0\] . Alternatively, turn on the panel's power supply. In 50 seconds after the power supply is turned on, press the buttons \[\*\] and \[#\] at the same time (this method can be used when programming mode was exited by pressing in keypad \[\*\]\[9\]\[8\] ).
 
-2.  Turn on the sending of Contact ID events via LRR. Press [\*][2][9][1][\*] in keypad.
+2.  Turn on the sending of Contact ID events via LRR. Press \[\*\]\[2\]\[9\]\[1\]\[\*\] in keypad.
 
-3.  When using the „**Remote Arm/Disarm**" function, allow to use the 2nd AUI address. In keypad press [\*][1][8][9][1][\*] .
+3.  When using the „**Remote Arm/Disarm**" function, allow to use the 2nd AUI address. In keypad press \[\*\]\[1\]\[8\]\[9\]\[1\]\[\*\] .
 
-Exit the programming mode. In keypad press [\*][9][9]
+Exit the programming mode. In keypad press \[\*\]\[9\]\[9\]
 
 ### Programming of control panels when the communicator is connected to the terminals of the telephone communicator of the control panel
 
@@ -906,10 +878,7 @@ For the control panel to send events via the landline dialer, it must be turned 
 
 The control panel zone to which the ***GT*** output OUT is connected should be set to keyswitch zone for arming/disarming the control panel remotely.
 
-> [!NOTE]
-> Keyswitch zone can be momentary (pulse) or level. By default, the GT controllable output OUT is set to 3 second pulse mode. You can change the impulse duration or change to level mode in Protegus2 settings. See chapter see the referenced section "see the referenced section".
->
->
+> \[!NOTE\] Keyswitch zone can be momentary (pulse) or level. By default, the GT controllable output OUT is set to 3 second pulse mode. You can change the impulse duration or change to level mode in Protegus2 settings. See chapter see the referenced section "see the referenced section".
 
 \***\***
 
@@ -921,13 +890,13 @@ Using the control panel's keypad enter these sections and set them as described:
 
 - \*43 -- enter control panel's account number;
 
-- \*47 -- set the Tone dial to [1] and enter the number of dial attempts;
+- \*47 -- set the Tone dial to \[1\] and enter the number of dial attempts;
 
 - \*48 -- use default setting, \*48 must be set to 7;
 
 - \*49 -- Split/Dual message. \*49 must be set to 5;
 
-- \*50 -- delay for sending burglary alarm events (optional). Default value is [2,0]. With it the event message transmission will be delayed for 30 seconds. If you want the message to be sent immediately, set [0,0].
+- \*50 -- delay for sending burglary alarm events (optional). Default value is \[2,0\]. With it the event message transmission will be delayed for 30 seconds. If you want the message to be sent immediately, set \[0,0\].
 
 ***SPECIAL SETTINGS FOR HONEYWELL VISTA 48 PANEL***
 
@@ -945,7 +914,7 @@ If you want to use ***GT*** communicator with Honeywell Vista 48 panel, set the 
 | \*50 | 1 |  | \*67 | 1 |  | \*76 | 1 |
 | \*59 | 0 |  | \*68 | 1 |  |  |  |
 
-When all required settings are set, it is necessary to exit programming mode. Enter [\*][9][9] in keypad.
+When all required settings are set, it is necessary to exit programming mode. Enter \[\*\]\[9\]\[9\] in keypad.
 
 ***UTC INTERLOGIX(CADDX)***
 
@@ -1063,8 +1032,7 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 2.  Log in with your user name and password or register and create new account.
 
-> [!IMPORTANT]
-> When adding the ***GT*** to ***Protegus2*** check if:
+> \[!IMPORTANT\] When adding the ***GT*** to ***Protegus2*** check if:
 >
 > 1.  The inserted SIM card is activated and the PIN code is either entered or disabled;
 >
@@ -1073,8 +1041,6 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 > 3.  Power supply is connected ("POWER" LED illuminates green);
 >
 > 4.  Registered to the network ("NETWORK" LED illuminates green and blinks yellow).
->
->
 
 <table>
 <colgroup>
@@ -1101,10 +1067,7 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 ### Additional settings to arm/disarm the system using the control panel's keyswitch zone
 
-> [!IMPORTANT]
-> The control panel zone to which the ***GT*** output OUT is connected to has to be set to keyswitch mode.
->
->
+> \[!IMPORTANT\] The control panel zone to which the ***GT*** output OUT is connected to has to be set to keyswitch mode.
 
 <table>
 <colgroup>
@@ -1148,11 +1111,11 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="" src="./image41.png" style="width:2.220472440944882in;height:2.661417322834646in" />
+`<img alt="" src="./image41.png" style="width:2.220472440944882in;height:2.661417322834646in" />`{=html}
 
 <div>
 
-<img alt="" src="./image3.png" style="width:2.36in;height:3.44in" />
+`<img alt="" src="./image3.png" style="width:2.36in;height:3.44in" />`{=html}
 
 </div>
 
@@ -1160,9 +1123,9 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 ### *TrikdisConfig* status bar description
 
-After connecting the ***GT*** and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
+After connecting the ***GT*** and clicking **Read \[F4\], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image42.png" style="width:7.086614173228346in;height:0.594488188976378in" />
+`<img alt="" src="./image42.png" style="width:7.086614173228346in;height:0.594488188976378in" />`{=html}
 
 <table style="width:92%;">
 <colgroup>
@@ -1255,11 +1218,11 @@ After connecting the ***GT*** and clicking **Read [F4], *TrikdisConfig*** will p
 </tbody>
 </table>
 
-After pressing **Read [F4]**, the program will read and show the settings which are set in the ***GT*.** Set the necessary settings according to the ***TrikdisConfig*** window descriptions given below.
+After pressing **Read \[F4\]**, the program will read and show the settings which are set in the ***GT*.** Set the necessary settings according to the ***TrikdisConfig*** window descriptions given below.
 
 ### "System settings" window
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:2.779527559055118in" />
+`<img alt="" src="./image43.png" style="width:7.086614173228346in;height:2.779527559055118in" />`{=html}
 
 "General" settings group
 
@@ -1285,7 +1248,7 @@ When setting up the communicator ***GT*** there are two levels of access for, th
 
 **"TLC" settings group**
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:4.05511811023622in" />
+`<img alt="" src="./image44.png" style="width:7.086614173228346in;height:4.05511811023622in" />`{=html}
 
 When the communicator is connected to the TIP/RING terminals of the control panel, the following settings must be made.
 
@@ -1299,7 +1262,7 @@ When the communicator is connected to the TIP/RING terminals of the control pane
 
 **"Serial bus" settings group**
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:1.9566929133858268in" />
+`<img alt="" src="./image45.png" style="width:7.086614173228346in;height:1.9566929133858268in" />`{=html}
 
 When the communicator is connected to keypad bus or serial bus of the control panel, the following settings must be made.
 
@@ -1315,7 +1278,7 @@ When the communicator is connected to keypad bus or serial bus of the control pa
 
 **"CMS settings" tab**
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:3.358267716535433in" />
+`<img alt="" src="./image46.png" style="width:7.086614173228346in;height:3.358267716535433in" />`{=html}
 
 The communicator sends events to the monitoring station via cellular internet (IP).
 
@@ -1349,7 +1312,7 @@ Events are transmitted in parallel with the first channel through this channel. 
 
 **"Settings" tab**
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:2.574803149606299in" />
+`<img alt="" src="./image47.png" style="width:7.086614173228346in;height:2.574803149606299in" />`{=html}
 
 "Settings" settings group
 
@@ -1375,7 +1338,7 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 **"PROTEGUS cloud" tab**
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.9606299212598426in" />
+`<img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.9606299212598426in" />`{=html}
 
 ***Protegus*** service allows users to remotely monitor and control the communicator. For more information about ***Protegus*** service, visit [www.protegus.app](http://www.protegus.app).
 
@@ -1389,14 +1352,11 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 ### "Network settings" window
 
-> [!IMPORTANT]
-> 1. Ensure that the SIM card is activated and working before using it.
+> \[!IMPORTANT\] 1. Ensure that the SIM card is activated and working before using it.
 >
 > 2\. If mobile internet connection will be used for sending events via IP channel or to ***Protegus2***, ensure that mobile data service is enabled.
->
->
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:3.031496062992126in" />
+`<img alt="" src="./image49.png" style="width:7.086614173228346in;height:3.031496062992126in" />`{=html}
 
 "SIM card" settings group
 
@@ -1418,7 +1378,7 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 ### "IN/OUT" windows
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:2.452755905511811in" />
+`<img alt="" src="./image50.png" style="width:7.086614173228346in;height:2.452755905511811in" />`{=html}
 
 The communicator has 2 universal (input / output) terminals. The table can set the terminal operating mode (Off, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -1442,7 +1402,7 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 
 ***iO-8*** expanders can be connected to the communicator to add additional inputs, outputs. Connected expanders must be added to the "**Modules list**" table.
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.968503937007874in" />
+`<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.968503937007874in" />`{=html}
 
 - **Module type** -- select the module that is connected to the communicator via RS485 from the list.
 
@@ -1456,7 +1416,7 @@ After adding the expander to the communicator as described above, in the "**RS48
 
 **iO-8 expander settings window**
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.562992125984252in" />
+`<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.562992125984252in" />`{=html}
 
 Expander ***iO-8*** has 8 universal (input/output) terminal contacts. Up to four ***iO-8*** expanders can be connected.
 
@@ -1502,7 +1462,7 @@ In the table inputs can be assigned Contact ID event and restore codes. After in
 
 This window allows you to turn on, off, and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.1338582677165356in" />
+`<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.1338582677165356in" />`{=html}
 
 In this window, you can turn on, turn off or change the internal event messages sent by the device. After turning off the internal event in this window, it will not be sent irrespective of other settings.
 
@@ -1516,10 +1476,7 @@ In this window, you can turn on, turn off or change the internal event messages 
 
 - **TEST** -- periodic test message.
 
-> [!NOTE]
-> To enable periodic TEST messages and set their period, go to **CMS reporting -\> Settings -\> Test period**.
->
->
+> \[!NOTE\] To enable periodic TEST messages and set their period, go to **CMS reporting -\> Settings -\> Test period**.
 
 - **Enable** -- when selected, the sending of messages is enabled.
 
@@ -1529,7 +1486,7 @@ You can change the Contact ID code for each event, and also the zone and partiti
 
 To restore the communicator\'s factory settings, you need to click the „**Restore"** button in the ***TrikdisConfig*** window.
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:1.0in" />
+`<img alt="" src="./image54.png" style="width:7.086614173228346in;height:1.0in" />`{=html}
 
 Another way to restore factory settings.
 
@@ -1537,8 +1494,7 @@ Power supply is connected to the communicator. Press and hold the "RESET" button
 
 ## Remote configuration
 
-> [!IMPORTANT]
-> Remote configuration will work only if:
+> \[!IMPORTANT\] Remote configuration will work only if:
 >
 > 1.  The inserted SIM card is activated and the PIN code is either entered or disabled;
 >
@@ -1547,22 +1503,20 @@ Power supply is connected to the communicator. Press and hold the "RESET" button
 > 3.  Power supply is connected ("POWER" LED illuminates green);
 >
 > 4.  Registered to the network ("NETWORK" LED illuminates green and blinks yellow).
->
->
 
 1.  Start the configuration program ***TrikdisConfig***.
 
 2.  In the "**Remote access**" section enter the communicator's "**IMEI/Unique ID**" number. This number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.8307086614173227in" />
+`<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.8307086614173227in" />`{=html}
 
 3.  (Optional) in the "**System name**" field, enter the desired name for the ***GT*** with this Unique ID.
 
 4.  Press "**Configure**".
 
-5.  In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code*.* To save the password, select "**Remember password**".
+5.  In the newly opened window click **Read \[F4\]**. If required, enter the administrator or installer code*.* To save the password, select "**Remember password**".
 
-6.  Set the necessary settings and when finished, click **Write [F5]**.
+6.  Set the necessary settings and when finished, click **Write \[F5\]**.
 
 ## Test communicator performance
 
@@ -1584,10 +1538,7 @@ When the configuration and installation is complete, perform a system check:
 
 ## Firmware update
 
-> [!NOTE]
-> When the communicator is connected to ***TrikdisConfig***, the program will automatically offer to update the device's firmware if updates are present. Updates require an internet connection. Antivirus software, firewall or strict access to internet settings can block the automatic firmware updates. In this case, you will need to reconfigure your antivirus program.
->
->
+> \[!NOTE\] When the communicator is connected to ***TrikdisConfig***, the program will automatically offer to update the device's firmware if updates are present. Updates require an internet connection. Antivirus software, firewall or strict access to internet settings can block the automatic firmware updates. In this case, you will need to reconfigure your antivirus program.
 
 The communicator's firmware can also be updated or changed manually. After an update, all previously set settings will remain unchanged. When writing firmware manually, it can be changed to a newer or older version. To update:
 
@@ -1599,11 +1550,11 @@ The communicator's firmware can also be updated or changed manually. After an up
 
 3.  In ***TrikdisConfig*** select "**Firmware**".
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.5078740157480315in" />
+`<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.5078740157480315in" />`{=html}
 
 4.  Press „**Open firmware**" and select the required firmware file.
 
-5.  Press **Update [F12]**.
+5.  Press **Update \[F12\]**.
 
 6.  Wait for the update to complete.
 
