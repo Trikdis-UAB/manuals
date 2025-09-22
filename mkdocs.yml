@@ -27,5 +27,4 @@ markdown_extensions:
   - sane_lists
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.blocks.admonition
-  - pymdownx.blocks.details
+  - markdown_callouts
