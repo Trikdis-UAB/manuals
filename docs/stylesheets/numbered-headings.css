@@ -1,1 +1,4 @@
-/* Manual numbering in markdown - no CSS counters needed */
+/* Hide plugin numbering on Features (first H3) since we manually numbered it as 1.1. */
+.md-content h2:first-of-type ~ h3:first-of-type .headerlink::before {
+    display: none !important;
+}
