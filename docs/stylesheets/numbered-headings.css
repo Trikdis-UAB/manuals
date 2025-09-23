@@ -1,4 +1,6 @@
-/* Hide plugin numbering on Features (first H3) since we manually numbered it as 1.1. */
-.md-content h2:first-of-type ~ h3:first-of-type .headerlink::before {
-    display: none !important;
-}
+/* MkDocs Material heading numbering */
+/* Numbers are now injected by mkdocs-add-number-plugin into HTML text */
+/* Plugin configured with order: 2 to start numbering from H2 level */
+
+/* This should automatically exclude H1 and number H2 as "1., 2., 3." */
+/* No custom CSS hiding needed with order: 2 configuration */
