@@ -1,3 +1,5 @@
+# GT Cellular Communicator
+
 ![GT Cellular Communicator](image1.png)
 
 ## Description
@@ -466,7 +468,7 @@ This manual is for 4G communicators.
     7.  Particular security control panel's installation manual.
     
     Order the necessary components separately from your local distributor.
-## Quick configuration with *TrikdisConfig* software
+### Quick configuration with *TrikdisConfig* software
 
 1.  Download **TrikdisConfig** configuration software from [www.trikdis.com](http://www.trikdis.com) (type "TrikdisConfig" in the search field) and install it.
 
@@ -580,7 +582,7 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 !!! note
     For more information about other ***GT*** settings in ***TrikdisConfig***, see chapter **6 "TrikdisConfig window description"**.
-## Installation and wiring
+### Installation and wiring
 
 ### Installation process
 
@@ -710,7 +712,7 @@ To start the communicator, turn on the security control panel's power supply. Th
     If you see a different LED indication, it indicates a certain malfunction. Diagnose it by following the LED indication table in chapter 1.6 "LED indication of operation".
     
     If the ***GT*** indication does not illuminate at all, check the power supply and connections.
-## Programming the control panel
+### Programming the control panel
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus
 
@@ -1020,7 +1022,7 @@ Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when
 </tbody>
 </table>
 
-## Remote control
+### Remote control
 
 ### Adding the security system to Protegus2 app
 
@@ -1117,7 +1119,7 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 </div>
 
-## TrikdisConfig window description
+### TrikdisConfig window description
 
 ### *TrikdisConfig* status bar description
 
@@ -1490,7 +1492,7 @@ Another way to restore factory settings.
 
 Power supply is connected to the communicator. Press and hold the "RESET" button on the communicator PCB board. Hold the "RESET" button pressed for 10 seconds until the LED indicators (\"NETWORK\", \"POWER\", \"TROUBLE\") turn off and the LED \"POWER\" indicator lights up. Release the \"RESET\" button. The communicator's factory settings have been restored.
 
-## Remote configuration
+### Remote configuration
 
 !!! warning "Important"
     Remote configuration will work only if:
@@ -1516,7 +1518,7 @@ Power supply is connected to the communicator. Press and hold the "RESET" button
 
 6.  Set the necessary settings and when finished, click **Write [F5]**.
 
-## Test communicator performance
+### Test communicator performance
 
 When the configuration and installation is complete, perform a system check:
 
@@ -1534,7 +1536,7 @@ When the configuration and installation is complete, perform a system check:
 
 5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the ***Protegus2*** app.
 
-## Firmware update
+### Firmware update
 
 !!! note
     When the communicator is connected to ***TrikdisConfig***, the program will automatically offer to update the device's firmware if updates are present. Updates require an internet connection. Antivirus software, firewall or strict access to internet settings can block the automatic firmware updates. In this case, you will need to reconfigure your antivirus program.
@@ -1556,7 +1558,7 @@ The communicator's firmware can also be updated or changed manually. After an up
 
 6.  Wait for the update to complete.
 
-## Annex
+### Annex
 
 The communicator converts Contact ID codes received from the alarm control panel into SIA codes.
 
