@@ -17,6 +17,7 @@ extra_javascript:
 plugins:
   - search
   - add-number:
+      order: 2
       strict_mode: false
       excludes:
         - index.md
