@@ -4,6 +4,7 @@ site_url: https://docs.trikdis.com
 theme:
   name: material
   logo: images/logo.png
+  favicon: images/favicon.png
   font: false
   palette:
     primary: custom
