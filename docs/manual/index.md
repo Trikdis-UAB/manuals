@@ -1,6 +1,8 @@
 # GT Cellular Communicator
 
-![GT Cellular Communicator](image1.png)
+<div style="text-align: center;">
+  <img src="image1.png" alt="GT Cellular Communicator" width="400">
+</div>
 
 ## Description
 

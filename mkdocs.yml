@@ -1,6 +1,5 @@
 site_name: Installation Manuals
 site_url: https://docs.trikdis.com
-# Force rebuild to ensure markdown-callouts extension is active
 theme:
   name: material
   logo: images/logo.png
@@ -9,31 +8,31 @@ theme:
   palette:
     primary: custom
   features:
-    - navigation.instant
-    - navigation.expand
-    - search.suggest
-    - search.highlight
+  - navigation.instant
+  - navigation.expand
+  - search.suggest
+  - search.highlight
 nav:
-  - Home: index.md
-  - English:
-      - Alarm Communicators:
-          - GT Cellular Communicator: manual/index.md
+- Home: index.md
+- English:
+  - Alarm Communicators:
+    - GT Cellular Communicator: manual/index.md
 extra_css:
-  - stylesheets/base.user.css
-  - stylesheets/numbered-headings.css
+- stylesheets/base.user.css
+- stylesheets/numbered-headings.css
 extra_javascript:
-  - javascripts/redirect-trailing-slash.js
+- javascripts/redirect-trailing-slash.js
 plugins:
   - search
   - add-number:
-      strict_mode: true
+      order: 2
+      strict_mode: false
       excludes:
         - index.md
-
 markdown_extensions:
-  - attr_list
-  - admonition
-  - sane_lists
-  - pymdownx.details
-  - pymdownx.superfences
-  - markdown_callouts
+- attr_list
+- admonition
+- sane_lists
+- pymdownx.details
+- pymdownx.superfences
+- markdown_callouts

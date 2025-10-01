@@ -27,8 +27,9 @@ Manuals originate from DOCX files and are converted with the companion project `
 Typical flow for a new or updated manual:
 
 1. From the pipeline project run `./convert-single.sh "docx manuals/<file>.docx"`.
-2. Copy the generated folder (`docs/manuals/<manual-name>/`) into this repo as `docs/manual/` (or another nav location).
-3. Commit the Markdown + images.
+2. Copy the generated folder to this repo: `cp -r <pipeline>/docs/<manual-name> docs/`
+3. Run `python3 update_navigation.py && python3 generate_homepage.py` (or let GitHub Actions do it)
+4. Commit and push
 
 ## Preview Locally
 
@@ -51,9 +52,46 @@ Publishing is fully automated via GitHub Pages:
 
 The deploy workflow also publishes a `CNAME` so the custom domain stays pinned to `docs.trikdis.com`. No manual intervention is needed after a push—wait for the Pages deployment badge to turn green.
 
-## Updating Navigation / Styling
+## Automatic Navigation & Homepage
 
-- Edit `mkdocs.yml` to add manuals to the nav (`nav:` section). Use relative paths such as `manual/index.md`.
+Both the navigation (`mkdocs.yml`) and homepage (`docs/index.md`) are automatically generated from the `docs/` directory structure.
+
+### How It Works
+
+1. **Scan docs/**: `update_navigation.py` finds all folders with `index.md` files
+2. **Update nav**: Updates `mkdocs.yml` with discovered manuals
+3. **Generate homepage**: `generate_homepage.py` creates homepage from nav structure
+
+### Manual Updates
+
+After adding a new manual to `docs/`:
+
+```bash
+python3 update_navigation.py    # Scan docs/ and update mkdocs.yml
+python3 generate_homepage.py    # Generate homepage from nav
+```
+
+### Automatic Updates
+
+During GitHub Actions deployment:
+1. Navigation is auto-updated from `docs/` structure
+2. Homepage is auto-generated from navigation
+3. Site is built and deployed
+
+**You don't need to manually edit `mkdocs.yml` or `docs/index.md`!**
+
+### Category Detection
+
+Manuals are categorized by folder name:
+- `alarm-communicators/` → Alarm Communicators
+- `control-panels/` → Control Panels
+- `controllers/` → Controllers
+- etc.
+
+If no category keyword is found in the folder name, it defaults to "Alarm Communicators".
+
+## Updating Styling
+
 - Adjust shared styling in `docs/stylesheets/base.user.css`. Typora is symlinked to the same file, so changes affect both the local Markdown editor and the published site.
 
 ## Troubleshooting

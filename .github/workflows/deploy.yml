@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install -r requirements.txt
+      - name: Update navigation from docs structure
+        run: python3 update_navigation.py
+      - name: Generate homepage from nav
+        run: python3 generate_homepage.py
       - run: mkdocs build --strict
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
