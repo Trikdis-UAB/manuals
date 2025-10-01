@@ -13,7 +13,7 @@ hide:
 
 ### Alarm Communicators
 
-- [GT Cellular Communicator](manual/index.md)
+- [GT Cellular Communicator](en/alarm-communicators/gt-cellular/)
 
 ---
 

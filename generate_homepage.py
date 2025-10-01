@@ -8,14 +8,22 @@ def format_nav_item(item, level=0):
     """Format a single navigation item as markdown."""
 
     if isinstance(item, str):
-        # Simple string item (like 'index.md')
+        # Simple string item (like 'index.md' or '!include ...')
         return ""
     elif isinstance(item, dict):
         lines = []
         for key, value in item.items():
             if isinstance(value, str):
-                # Page link: "Title: path/to/page.md"
-                lines.append(f"- [{key}]({value})")
+                # Skip !include directives - they're not regular links
+                if value.startswith('!include'):
+                    # Extract the path and convert to a proper link
+                    # !include en/alarm-communicators/gt-cellular/mkdocs.yml
+                    # → link to en/alarm-communicators/gt-cellular/
+                    path = value.replace('!include ', '').replace('/mkdocs.yml', '/')
+                    lines.append(f"- [{key}]({path})")
+                else:
+                    # Regular page link
+                    lines.append(f"- [{key}]({value})")
             elif isinstance(value, list):
                 # Section with children
                 if level == 0:

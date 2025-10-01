@@ -13,10 +13,10 @@ theme:
   - search.suggest
   - search.highlight
 nav:
-- Home: index.md
-- English:
-  - Alarm Communicators:
-    - GT Cellular Communicator: manual/index.md
+  - Home: index.md
+  - English:
+      - Alarm Communicators:
+          - GT Cellular Communicator: '!include en/alarm-communicators/gt-cellular/mkdocs.yml'
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
@@ -24,6 +24,7 @@ extra_javascript:
 - javascripts/redirect-trailing-slash.js
 plugins:
   - search
+  - monorepo
   - add-number:
       order: 2
       strict_mode: false

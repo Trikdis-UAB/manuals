@@ -1,0 +1,14 @@
+site_name: GT Cellular Communicator
+
+# Navigation for this manual only
+nav:
+  - Home: index.md
+
+# Heading numbering
+plugins:
+  - search
+  - add-number:
+      order: 2           # Start numbering from H2 (skip H1)
+      strict_mode: false # Required for proper numbering - DO NOT CHANGE!
+
+# Markdown extensions (inherited from root, don't duplicate)
