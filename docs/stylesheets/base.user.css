@@ -1,3 +1,42 @@
+/* Import Google Fonts - matching trikdis.com */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+/* Override MkDocs Material font variables */
+:root {
+  --md-text-font: "Open Sans", sans-serif;
+  --md-code-font: "Roboto Mono", monospace;
+}
+
+/* Use Poppins for headings - matching trikdis.com */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Header title uses Poppins */
+.md-header__title,
+.md-header__topic {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Custom TRIKDIS brand color for header - RGB(203, 34, 21) */
+[data-md-color-primary=custom] {
+  --md-primary-fg-color: rgb(203, 34, 21);
+  --md-primary-fg-color--light: rgb(223, 54, 41);
+  --md-primary-fg-color--dark: rgb(183, 14, 1);
+}
+
+/* Make logo larger */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2rem;
+  width: auto;
+}
+
 /* GitHub-style alerts for Typora and MkDocs */
 .md-alert,
 .md-typeset .md-alert,
@@ -177,24 +216,39 @@ table th {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
+  padding: 10px;
 }
 
 .product-category img {
   display: block;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+/* Adjust vertical position for specific images */
+.product-category:nth-child(1) img,
+.product-category:nth-child(3) img {
+  margin-top: 8px;
 }
 
 .product-category h3 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-size: 1.2rem;
   color: #1976d2;
+  min-height: 2.8rem;
+  line-height: 1.4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.5rem;
 }
 
 .product-category p {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 0;
+  margin: 0;
+  text-align: center;
 }

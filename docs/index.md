@@ -5,9 +5,7 @@ hide:
 
 # TRIKDIS Product Documentation
 
-## Languages / Kalbos
-
-**[English](#english)** | **[Lietuvių](#lietuviu)** | **[Español](#espanol)** | **[Русский](#russian)**
+**Languages:** [English](#english) | [Lietuvių](#lietuviu) | [Español](#espanol) | [Русский](#russian)
 
 ---
 
@@ -19,7 +17,7 @@ hide:
       <img src="images/categories/alarm-communicators.png" alt="Alarm Communicators" width="150">
     </div>
     <h3>Alarm Communicators</h3>
-    <p>Cellular, Dual-path, Ethernet, Fire Panel, and Radio communicators for alarm system connectivity.</p>
+    <p>Cellular, Dual-path, Ethernet, Fire Panel, and Radio.</p>
   </div>
 
   <div class="product-category">
