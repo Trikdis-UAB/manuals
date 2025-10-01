@@ -5,10 +5,14 @@ theme:
   name: material
   features:
     - navigation.instant
+    - navigation.expand
+    - search.suggest
+    - search.highlight
 nav:
   - Home: index.md
-  - Manuals:
-      - GT Cellular Communicator (ENG): manual/index.md
+  - English:
+      - Alarm Communicators:
+          - GT Cellular Communicator: manual/index.md
 extra_css:
   - stylesheets/base.user.css
   - stylesheets/numbered-headings.css
@@ -27,4 +31,4 @@ markdown_extensions:
   - sane_lists
   - pymdownx.details
   - pymdownx.superfences
-  - github-callouts
+  - markdown_callouts
