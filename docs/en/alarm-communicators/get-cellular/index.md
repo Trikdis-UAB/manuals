@@ -1145,12 +1145,6 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 <img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
 
-<div>
-
-<img src="./image3.png" alt="" width="400">
-
-</div>
-
 ## TrikdisConfig window description
 
 ### *TrikdisConfig* status bar description
@@ -1378,7 +1372,6 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - **Communication path test** -- specify the time period for which the selected connection types should be tested (LAN, SIM1, SIM2).
 
-[]{#_Ref526770803}
 
 ### "User reporting" window
 
