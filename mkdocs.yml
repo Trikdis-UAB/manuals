@@ -23,7 +23,18 @@ extra_css:
 extra_javascript:
 - javascripts/redirect-trailing-slash.js
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+      separator: '[\s\-]+'
+  - redirects:
+      redirect_maps: {}  # Add redirects here when renaming pages
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
   - add-number:
       order: 2
       strict_mode: false
@@ -36,3 +47,6 @@ markdown_extensions:
 - pymdownx.details
 - pymdownx.superfences
 - markdown_callouts
+- toc:
+    permalink: true
+    permalink_title: Link to this section
