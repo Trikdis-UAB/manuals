@@ -1,20 +1,8 @@
 # GET Cellular Communicator
 
 <div style="text-align: center;">
-  <img src="image1.png" alt="GET Cellular Communicator" width="400">
+  <img src="./image1.png" alt="Product Image" width="400">
 </div>
-
-**Safety requirements**
-
-The communicator should be installed and maintained by qualified personnel.
-
-Prior to installation, please read this manual carefully in order to avoid mistakes that can lead to malfunction or even damage to the equipment.
-
-Disconnect the power supply before making any electrical connections.
-
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
-
-Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 ## Description
 

@@ -16,9 +16,9 @@ nav:
   - Home: index.md
   - English:
       - Alarm Communicators:
-          - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
           - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
           - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
+          - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
