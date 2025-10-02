@@ -66,7 +66,7 @@ Sends events to monitoring station receiver:
 
 ### List of compatible control panels
 
-<table style="width:89%;">
+<table>
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 66%" />
@@ -245,7 +245,7 @@ This manual is for LTE communicators.
 
 ### Purpose of terminals
 
-<table style="width:89%;">
+<table>
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 73%" />
@@ -309,7 +309,7 @@ This manual is for LTE communicators.
 
 ### LED indication of operation
 
-<table style="width:89%;">
+<table>
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 16%" />
@@ -790,7 +790,7 @@ With the keyboard connected to the security control panel:
 
 7.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking [\*] (asterisk) will return you to the local input field.
 
-<table style="width:88%;">
+<table>
 <colgroup>
 <col style="width: 28%" />
 <col style="width: 28%" />
@@ -946,7 +946,7 @@ When all required settings are set, it is necessary to exit programming mode. En
 
 Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when the communicator is connected to the TIP/RING terminals of the control panel.
 
-<table style="width:92%;">
+<table>
 <colgroup>
 <col style="width: 13%" />
 <col style="width: 20%" />
@@ -1155,7 +1155,7 @@ After connecting the ***GET*** communicator and clicking **Read [F4], *TrikdisCo
 
 <img alt="" src="./image45.png" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
-<table style="width:92%;">
+<table>
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 70%" />
