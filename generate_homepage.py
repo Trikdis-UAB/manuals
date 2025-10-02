@@ -14,22 +14,12 @@ def format_nav_item(item, level=0):
         lines = []
         for key, value in item.items():
             if isinstance(value, str):
-                # Skip !include directives - they're not regular links
-                if value.startswith('!include'):
-                    # Extract the path and convert to a proper link
-                    # !include ./en/alarm-communicators/gt-cellular/mkdocs.yml
-                    # → The monorepo plugin creates alias from the last folder name
-                    # → Link should be: gt-cellular/
-                    path_parts = value.replace('!include ', '').replace('./','').replace('/mkdocs.yml', '').split('/')
-                    # Use the last folder name as the alias (how monorepo plugin works)
-                    alias = path_parts[-1] + '/' if path_parts else value
-                    # Convert gt-cellular to gt-cellular-communicator based on folder name
-                    # Actually, use the full path to folder name
-                    folder_name = path_parts[-1] if path_parts else ''
-                    # The plugin uses folder name as alias, so link is /folder-name/
-                    lines.append(f"- [{key}]({folder_name}/)")
+                # Regular page link - convert .md paths to clean URLs
+                if value.endswith('.md'):
+                    # Convert path/to/index.md -> path/to/
+                    clean_path = value.replace('/index.md', '/').replace('.md', '/')
+                    lines.append(f"- [{key}]({clean_path})")
                 else:
-                    # Regular page link
                     lines.append(f"- [{key}]({value})")
             elif isinstance(value, list):
                 # Section with children

@@ -16,7 +16,7 @@ nav:
   - Home: index.md
   - English:
       - Alarm Communicators:
-          - GT Cellular Communicator: '!include ./en/alarm-communicators/gt-cellular/mkdocs.yml'
+          - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
