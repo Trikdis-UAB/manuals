@@ -133,16 +133,13 @@ This manual is for LTE communicators.
 <col style="width: 22%" />
 <col style="width: 77%" />
 </colgroup>
-<thead>
-<tr>
-<th><strong>Parameter</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td><p>Network connectivity</p></td>
-<td>LTE /​ Ethernet</td>
+<td rowspan="2"><strong>Parameter</strong>
+
+<p>Network connectivity</p>
+</td>
+<td rowspan="2">DescriptionLTE /​ Ethernet</td>
 </tr>
 
 <tr>
@@ -250,16 +247,12 @@ This manual is for LTE communicators.
 <col style="width: 15%" />
 <col style="width: 73%" />
 </colgroup>
-<thead>
-<tr>
-<th><strong>Terminal</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>+12 VDC</td>
-<td>+10 V/​+18 V DC power supply</td>
+<td rowspan="2"><strong>Terminal</strong>
+<p>+12 VDC</p></td>
+<td rowspan="2"><strong>Description</strong>
+<p>+10 V/​+18 V DC power supply</p></td>
 </tr>
 
 <tr>
@@ -561,8 +554,6 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 3.  Select "**Security panel model"** that will be connected to the communicator.
 
-\*\*\*\*
-
 **In "CMS reporting" window settings for "Primary channel":**
 
 <img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
@@ -584,8 +575,6 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 <img alt="" src="./image17.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
 11. In the group of options \"**Reporting mode**\", the order of communication channels is set, how the communicator will send messages to CMS and to ***Protegus2***. The connection types are specified in order. If the communicator fails to connect using the "**Main type"** connection , it switches to the"**Backup type"**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
-
-\*\*\*\*
 
 **In "Network settings" window:**
 
@@ -1145,6 +1134,12 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 <img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
 
+<div>
+
+<img src="./image3.png" alt="" width="400">
+
+</div>
+
 ## TrikdisConfig window description
 
 ### *TrikdisConfig* status bar description
@@ -1372,6 +1367,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - **Communication path test** -- specify the time period for which the selected connection types should be tested (LAN, SIM1, SIM2).
 
+[]{#_Ref526770803}
 
 ### "User reporting" window
 
@@ -1412,8 +1408,6 @@ For setting parameters on how the control panel will communicate with the CMS ch
 <!-- -->
 
 - **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel "**Domain or IP"** field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
-
-\*\*\*\*
 
 **"SIM1" tab**
 
