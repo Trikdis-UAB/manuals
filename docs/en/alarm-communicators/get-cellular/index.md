@@ -135,11 +135,11 @@ This manual is for LTE communicators.
 </colgroup>
 <tbody>
 <tr>
-<td rowspan="2"><h1 id="parameter">Parameter</h1>
+<td rowspan="2"><strong>Parameter</strong>
 
 <p>Network connectivity</p>
 </td>
-<td rowspan="2">Description :============================================================== LTE /​ Ethernet</td>
+<td rowspan="2">DescriptionLTE /​ Ethernet</td>
 </tr>
 
 <tr>
@@ -249,9 +249,9 @@ This manual is for LTE communicators.
 </colgroup>
 <tbody>
 <tr>
-<td rowspan="2"><h1 id="terminal">Terminal</h1>
+<td rowspan="2"><strong>Terminal</strong>
 <p>+12 VDC</p></td>
-<td rowspan="2"><h1 id="description-1">Description</h1>
+<td rowspan="2"><strong>Description</strong>
 <p>+10 V/​+18 V DC power supply</p></td>
 </tr>
 
