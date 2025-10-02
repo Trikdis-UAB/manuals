@@ -17,10 +17,17 @@ def format_nav_item(item, level=0):
                 # Skip !include directives - they're not regular links
                 if value.startswith('!include'):
                     # Extract the path and convert to a proper link
-                    # !include en/alarm-communicators/gt-cellular/mkdocs.yml
-                    # → link to en/alarm-communicators/gt-cellular/
-                    path = value.replace('!include ', '').replace('/mkdocs.yml', '/')
-                    lines.append(f"- [{key}]({path})")
+                    # !include ./en/alarm-communicators/gt-cellular/mkdocs.yml
+                    # → The monorepo plugin creates alias from the last folder name
+                    # → Link should be: gt-cellular/
+                    path_parts = value.replace('!include ', '').replace('./','').replace('/mkdocs.yml', '').split('/')
+                    # Use the last folder name as the alias (how monorepo plugin works)
+                    alias = path_parts[-1] + '/' if path_parts else value
+                    # Convert gt-cellular to gt-cellular-communicator based on folder name
+                    # Actually, use the full path to folder name
+                    folder_name = path_parts[-1] if path_parts else ''
+                    # The plugin uses folder name as alias, so link is /folder-name/
+                    lines.append(f"- [{key}]({folder_name}/)")
                 else:
                     # Regular page link
                     lines.append(f"- [{key}]({value})")
