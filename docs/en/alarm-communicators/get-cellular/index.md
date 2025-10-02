@@ -932,17 +932,17 @@ When all required settings are set, it is necessary to exit programming mode. En
 
 If you want to use ***GET*** communicator with Honeywell Vista 48 panel, set the following sections as described:
 
-| Section | Data                             |     | Section | Data | S   | Section | Data |
-|:-------:|:---------------------------------|-----|:-------:|:----:|:----|:-------:|:----:|
-|  \*41   | 1111 (receiver telephone number) |     |  \*60   |  1   |     |  \*69   |  1   |
-|  \*42   | 1111                             |     |  \*61   |  1   |     |  \*70   |  1   |
-|  \*43   | 1234 (panel account number)      |     |  \*62   |  1   |     |  \*71   |  1   |
-|  \*44   | 1234                             |     |  \*63   |  1   |     |  \*72   |  1   |
-|  \*45   | 1111                             |     |  \*64   |  1   |     |  \*73   |  1   |
-|  \*47   | 1                                |     |  \*65   |  1   |     |  \*74   |  1   |
-|  \*48   | 7                                |     |  \*66   |  1   |     |  \*75   |  1   |
-|  \*50   | 1                                |     |  \*67   |  1   |     |  \*76   |  1   |
-|  \*59   | 0                                |     |  \*68   |  1   |     |         |      |
+| Section | Data | Section | Data | Section | Data |
+|:-------:|:-----|:-------:|:----:|:-------:|:----:|
+| \*41 | 1111 (receiver telephone number) | \*60 | 1 | \*69 | 1 |
+| \*42 | 1111 | \*61 | 1 | \*70 | 1 |
+| \*43 | 1234 (panel account number) | \*62 | 1 | \*71 | 1 |
+| \*44 | 1234 | \*63 | 1 | \*72 | 1 |
+| \*45 | 1111 | \*64 | 1 | \*73 | 1 |
+| \*47 | 1 | \*65 | 1 | \*74 | 1 |
+| \*48 | 7 | \*66 | 1 | \*75 | 1 |
+| \*50 | 1 | \*67 | 1 | \*76 | 1 |
+| \*59 | 0 | \*68 | 1 | | |
 
 When all required settings are set, it is necessary to exit programming mode. Enter \*99 in keypad.
 
