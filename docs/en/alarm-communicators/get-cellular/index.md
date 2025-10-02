@@ -133,16 +133,13 @@ This manual is for LTE communicators.
 <col style="width: 22%" />
 <col style="width: 77%" />
 </colgroup>
-<thead>
-<tr>
-<th><strong>Parameter</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td><p>Network connectivity</p></td>
-<td>LTE /​ Ethernet</td>
+<td rowspan="2"><strong>Parameter</strong>
+
+<p>Network connectivity</p>
+</td>
+<td rowspan="2">DescriptionLTE /​ Ethernet</td>
 </tr>
 
 <tr>
@@ -250,16 +247,12 @@ This manual is for LTE communicators.
 <col style="width: 15%" />
 <col style="width: 73%" />
 </colgroup>
-<thead>
-<tr>
-<th><strong>Terminal</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>+12 VDC</td>
-<td>+10 V/​+18 V DC power supply</td>
+<td rowspan="2"><strong>Terminal</strong>
+<p>+12 VDC</p></td>
+<td rowspan="2"><strong>Description</strong>
+<p>+10 V/​+18 V DC power supply</p></td>
 </tr>
 
 <tr>
@@ -679,11 +672,11 @@ When connecting the communicator to the keypad bus and the TIP/RING terminals of
 
 The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the ***Protegus2*** application.
 
-| **Cell** |     **Data**     |     | **Cell** | **Data** |
-|:--------:|:----------------:|-----|:--------:|:--------:|
-|   801    | \*\*\*\*\*\*\*\* |     |   815    |  123456  |
-|   811    |       1111       |     |   911    |   1234   |
-|   812    |       2222       |     |          |          |
+| **Cell** |     **Data**     | **Cell** | **Data** |
+|:--------:|:----------------:|:--------:|:--------:|
+|   801    | \*\*\*\*\*\*\*\* |   815    |  123456  |
+|   811    |       1111       |   911    |   1234   |
+|   812    |       2222       |          |          |
 
 ### Schematic for wiring the communicator to the control panel keyswitch zone
 
@@ -932,17 +925,17 @@ When all required settings are set, it is necessary to exit programming mode. En
 
 If you want to use ***GET*** communicator with Honeywell Vista 48 panel, set the following sections as described:
 
-| Section | Data | Section | Data | Section | Data |
-|:-------:|:-----|:-------:|:----:|:-------:|:----:|
-| \*41 | 1111 (receiver telephone number) | \*60 | 1 | \*69 | 1 |
-| \*42 | 1111 | \*61 | 1 | \*70 | 1 |
-| \*43 | 1234 (panel account number) | \*62 | 1 | \*71 | 1 |
-| \*44 | 1234 | \*63 | 1 | \*72 | 1 |
-| \*45 | 1111 | \*64 | 1 | \*73 | 1 |
-| \*47 | 1 | \*65 | 1 | \*74 | 1 |
-| \*48 | 7 | \*66 | 1 | \*75 | 1 |
-| \*50 | 1 | \*67 | 1 | \*76 | 1 |
-| \*59 | 0 | \*68 | 1 | | |
+| Section | Data                             | Section | Data | Section | Data |
+|:-------:|:---------------------------------|:-------:|:----:|:-------:|:----:|
+|  \*41   | 1111 (receiver telephone number) |  \*60   |  1   |  \*69   |  1   |
+|  \*42   | 1111                             |  \*61   |  1   |  \*70   |  1   |
+|  \*43   | 1234 (panel account number)      |  \*62   |  1   |  \*71   |  1   |
+|  \*44   | 1234                             |  \*63   |  1   |  \*72   |  1   |
+|  \*45   | 1111                             |  \*64   |  1   |  \*73   |  1   |
+|  \*47   | 1                                |  \*65   |  1   |  \*74   |  1   |
+|  \*48   | 7                                |  \*66   |  1   |  \*75   |  1   |
+|  \*50   | 1                                |  \*67   |  1   |  \*76   |  1   |
+|  \*59   | 0                                |  \*68   |  1   |         |      |
 
 When all required settings are set, it is necessary to exit programming mode. Enter \*99 in keypad.
 
