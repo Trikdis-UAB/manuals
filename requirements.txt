@@ -3,4 +3,3 @@ mkdocs-material>=9.0.0
 mkdocs-add-number-plugin>=1.2.0
 markdown-callouts>=0.3.0
 PyYAML>=6.0
-mkdocs-monorepo-plugin>=1.1.0

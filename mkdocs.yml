@@ -23,7 +23,6 @@ extra_css:
 extra_javascript:
 - javascripts/redirect-trailing-slash.js
 plugins:
-  - monorepo
   - search
   - add-number:
       order: 2
