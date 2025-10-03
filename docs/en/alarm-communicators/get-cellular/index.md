@@ -1103,11 +1103,6 @@ Follow the instructions below if the security control panel will be controlled w
 
 <img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
 
-<div>
-
-<img src="./image3.png" alt="" width="400">
-
-</div>
 
 ## TrikdisConfig window description
 
