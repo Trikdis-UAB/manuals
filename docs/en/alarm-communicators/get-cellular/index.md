@@ -687,26 +687,17 @@ Follow this schematic if the control panel will be armed/disarmed with a communi
 
 !!! note
     ***GET*** communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in ***TrikdisConfig***, in the "**Panel settings**" window, uncheck "**Remote Arm/Disarm"**. The ***Protegus2*** apps must be configured with the settings described in chapter 5.2"Additional settings to arm/disarm the system using the control panel's keyswitch zone".
-<table>
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 76%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;"><p>The communicator is connected to the keypad bus or serial bus of the control panel.</p>
-<p>Arming/​disarming the panel via keyswitch zone.</p></th>
-<th style="text-align: left;"><img alt="" src="./image28.png" style="width:3.313339895013123in;height:2.4466721347331584in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><p>The communicator is connected to the telephone communicator (TIP/​RING terminals) of the control panel.</p>
-<p>Arming/​disarming the panel via the keyswitch zone.</p></td>
-<td style="text-align: left;"><img alt="" src="./image29.png" style="width:3.46000656167979in;height:2.903338801399825in" /></td>
-</tr>
-</tbody>
-</table>
+The communicator is connected to the keypad bus or serial bus of the control panel.
+
+Arming/disarming the panel via keyswitch zone.
+
+<img alt="" src="./image28.png" style="width:3.313339895013123in;height:2.4466721347331584in" />
+
+The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel.
+
+Arming/disarming the panel via the keyswitch zone.
+
+<img alt="" src="./image29.png" style="width:3.46000656167979in;height:2.903338801399825in" />
 
 ### Schematics for input connection
 
@@ -1070,68 +1061,39 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
     4.  Power supply is connected ("POWER" LED illuminates green);
     
     5.  Registered to the network ("NETWORK LTE" LED illuminates green and blinks yellow).
-<table>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 73%" />
-</colgroup>
-<thead>
-<tr>
-<th><ol start="3" type="1">
-<li>Click “<strong>Add new system”</strong> and enter the <strong><em>GET</em></strong>’s”<em>IMEI/​Unique ID</em>” number. This number can be found on the device and the packaging sticker. Click “<strong>Next”</strong>.</li>
-</ol></th>
-<th style="text-align: right;"><img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ol start="4" type="1">
-<li>Enter the system „<strong>Name</strong>”. Click "<strong>Next</strong>".</li>
-</ol></td>
-<td style="text-align: right;"><img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" /></td>
-</tr>
-</tbody>
-</table>
+3.  Click "**Add new system"** and enter the ***GET***'s"*IMEI/Unique ID*" number. This number can be found on the device and the packaging sticker. Click "**Next"**.
+
+<img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" />
+
+4.  Enter the system „**Name**". Click "**Next**".
+
+<img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Additional settings to arm/disarm the system using the control panel's keyswitch zone
 
 !!! warning "Important"
     The control panel zone to which the ***GET*** output OUT is connected to has to be set to keyswitch mode.
-<table>
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 71%" />
-</colgroup>
-<thead>
-<tr>
-<th><p>Follow the instructions below if the security control panel will be controlled with a <strong><em>GET</em></strong> PGM output, turning on/​off the control panel keyswitch zone.</p>
-<ol type="1">
-<li>Click „<strong>Continue</strong>”.</li>
-</ol></th>
-<th style="text-align: right;"><img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ol start="2" type="1">
-<li>Enter “<strong>Area name</strong>”. Enable PGM output control using the <strong><em>Protegus2</em></strong> application.</li>
-</ol>
+Follow the instructions below if the security control panel will be controlled with a ***GET*** PGM output, turning on/off the control panel keyswitch zone.
+
+1.  Click „**Continue**".
+
+<img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+
+2.  Enter "**Area name**". Enable PGM output control using the ***Protegus2*** application.
+
 <!-- -->
-<ol start="3" type="1">
-<li><p>Select “<strong>Pulse</strong>” or “<strong>Level</strong>”, depending on how the keyswitch zone type is configured. If necessary, you can change the "<strong>Pulse</strong>" interval.</p></li>
-<li><p>Click „<strong>Save</strong>”.</p></li>
-</ol></td>
-<td style="text-align: right;"><img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.5118110236220472in" /></td>
-</tr>
-<tr>
-<td><ol start="5" type="1">
-<li><p>If there is another Area for the security system, then you need to click “<strong>Click to add an area</strong>”. Setting up the PGM output is similar to that described above.</p></li>
-<li><p>After completing the settings, click the “<strong>Skip</strong>” button.</p></li>
-</ol></td>
-<td style="text-align: right;"><img alt="" src="./image43.png" style="width:2.2244094488188977in;height:2.0078740157480315in" /></td>
-</tr>
-</tbody>
-</table>
+
+3.  Select "**Pulse**" or "**Level**", depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+
+4.  Click „**Save**".
+
+<img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
+
+5.  If there is another Area for the security system, then you need to click "**Click to add an area**". Setting up the PGM output is similar to that described above.
+
+6.  After completing the settings, click the "**Skip**" button.
+
+<img alt="" src="./image43.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Arming/disarming the alarm system with Protegus2
 
