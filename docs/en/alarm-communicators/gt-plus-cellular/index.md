@@ -484,8 +484,6 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 6.  Change the "**PROTEGUS Cloud access Code**" for logging in to ***Protegus2*** if you want users to be asked to enter it when adding the system to ***Protegus2*** app (default password -- 123456). Important: If you change the code via ***TrikdisConfig***, you also need to change it in the ***Protegus2*** application.
 
-\*\*\*\*
-
 **In "SIM card" window:**
 
 <img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.0393700787401574in" />
@@ -535,8 +533,6 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 9.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
 
 10. (Recommended) Configure "**Primary channel Backup**" settings.
-
-\*\*\*\*
 
 **In "SIM card" window:**
 
@@ -616,18 +612,18 @@ When connecting the communicator to the keypad bus and the TIP/RING terminals of
 
 The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the ***Protegus2*** application.
 
-| **Cell** |     **Data**     |     | **Cell** | **Data** |
-|:--------:|:----------------:|-----|:--------:|:--------:|
-|   801    | \*\*\*\*\*\*\*\* |     |   815    |  123456  |
-|   811    |       1111       |     |   911    |   1234   |
-|   812    |       2222       |     |          |          |
+| **Cell** |     **Data**     | **Cell** | **Data** |
+|:--------:|:----------------:|:--------:|:--------:|
+|   801    | \*\*\*\*\*\*\*\* |   815    |  123456  |
+|   811    |       1111       |   911    |   1234   |
+|   812    |       2222       |          |          |
 
 ### Schematic for connecting to panel keyswitch zone
 
 Follow this schematic if the control panel will be armed/disarmed with a ***GT+*** PGM output turning on/off the panel's keyswitch zone.
 
 !!! note
-    ***GT+*** communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in ***TrikdisConfig***, in the \"**System settings**\" window, uncheck **Remote Arm/Disarm**. The ***Protegus2*** apps must be configured with the settings described in chapter 5.2 "Additional settings to arm/disarm the system using the control panel's keyswitch zone".
+    ***GT+*** communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in ***TrikdisConfig***, in the "**System settings**" window, uncheck **Remote Arm/Disarm**. The ***Protegus2*** apps must be configured with the settings described in chapter 5.2 "Additional settings to arm/disarm the system using the control panel's keyswitch zone".
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
 Arming/disarming the panel via keyswitch zone.
@@ -868,17 +864,17 @@ Using the control panel's keypad enter these sections and set them as described:
 
 If you want to use ***GT+*** communicator with Honeywell Vista 48 panel, set the following sections as described:
 
-| **Section** | **Data** |  | **Section** | **Data** | **S** | **Section** | **Data** |
-|:--:|:---|----|:--:|:--:|:---|:--:|:--:|
-| \*41 | 1111 (receiver telephone number) |  | \*60 | 1 |  | \*69 | 1 |
-| \*42 | 1111 |  | \*61 | 1 |  | \*70 | 1 |
-| \*43 | 1234 (panel account number) |  | \*62 | 1 |  | \*71 | 1 |
-| \*44 | 1234 |  | \*63 | 1 |  | \*72 | 1 |
-| \*45 | 1111 |  | \*64 | 1 |  | \*73 | 1 |
-| \*47 | 1 |  | \*65 | 1 |  | \*74 | 1 |
-| \*48 | 7 |  | \*66 | 1 |  | \*75 | 1 |
-| \*50 | 1 |  | \*67 | 1 |  | \*76 | 1 |
-| \*59 | 0 |  | \*68 | 1 |  |  |  |
+| **Section** | **Data** | **Section** | **Data** | **S** | **Section** | **Data** |
+|:--:|:---|:--:|:--:|:---|:--:|:--:|
+| \*41 | 1111 (receiver telephone number) | \*60 | 1 |  | \*69 | 1 |
+| \*42 | 1111 | \*61 | 1 |  | \*70 | 1 |
+| \*43 | 1234 (panel account number) | \*62 | 1 |  | \*71 | 1 |
+| \*44 | 1234 | \*63 | 1 |  | \*72 | 1 |
+| \*45 | 1111 | \*64 | 1 |  | \*73 | 1 |
+| \*47 | 1 | \*65 | 1 |  | \*74 | 1 |
+| \*48 | 7 | \*66 | 1 |  | \*75 | 1 |
+| \*50 | 1 | \*67 | 1 |  | \*76 | 1 |
+| \*59 | 0 | \*68 | 1 |  |  |  |
 
 When all required settings are set, it is necessary to exit programming mode. Enter [\*][9][9] in keypad.
 
@@ -1008,68 +1004,39 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
     3.  Power supply is connected ("POWER" LED illuminates green);
     
     4.  Registered to the network ("NETWORK" LED illuminates green and blinks yellow).
-<table>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 73%" />
-</colgroup>
-<thead>
-<tr>
-<th><ol start="3" type="1">
-<li>Click “<strong>Add new system”</strong> and enter the <strong><em>GT+</em></strong>’s”<em>IMEI/​Unique ID</em>” number. This number can be found on the device and the packaging sticker. Click “<strong>Next”</strong>.</li>
-</ol></th>
-<th><img alt="" src="./image37.png" style="width:2.858267716535433in;height:3.704724409448819in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ol start="4" type="1">
-<li>Enter the system „<strong>Name</strong>”. Click "<strong>Next</strong>".</li>
-</ol></td>
-<td><img alt="" src="./image38.png" style="width:2.220472440944882in;height:2.220472440944882in" /></td>
-</tr>
-</tbody>
-</table>
+3.  Click "**Add new system"** and enter the ***GT+***'s"*IMEI/Unique ID*" number. This number can be found on the device and the packaging sticker. Click "**Next"**.
+
+<img alt="" src="./image37.png" style="width:2.858267716535433in;height:3.704724409448819in" />
+
+4.  Enter the system „**Name**". Click "**Next**".
+
+<img alt="" src="./image38.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Additional settings to arm/disarm the system using the control panel's keyswitch zone
 
 !!! warning "Important"
     The control panel zone to which the ***GT+*** output OUT is connected to has to be set to keyswitch mode.
-<table>
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 71%" />
-</colgroup>
-<thead>
-<tr>
-<th><p>Follow the instructions below if the security control panel will be controlled with a <strong><em>GT+</em></strong> PGM output, turning on/​off the control panel keyswitch zone.</p>
-<ol type="1">
-<li>Click „<strong>Continue</strong>”.</li>
-</ol></th>
-<th><img alt="" src="./image39.png" style="width:2.220472440944882in;height:3.4803149606299213in" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ol start="2" type="1">
-<li>Enter “<strong>Area name</strong>”. Enable PGM output control using the <strong><em>Protegus2</em></strong> application.</li>
-</ol>
+Follow the instructions below if the security control panel will be controlled with a ***GT+*** PGM output, turning on/off the control panel keyswitch zone.
+
+1.  Click „**Continue**".
+
+<img alt="" src="./image39.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+
+2.  Enter "**Area name**". Enable PGM output control using the ***Protegus2*** application.
+
 <!-- -->
-<ol start="3" type="1">
-<li><p>Select “<strong>Pulse</strong>” or “<strong>Level</strong>”, depending on how the keyswitch zone type is configured. If necessary, you can change the "<strong>Pulse</strong>" interval.</p></li>
-<li><p>Click „<strong>Save</strong>”.</p></li>
-</ol></td>
-<td><img alt="" src="./image40.png" style="width:2.220472440944882in;height:3.5118110236220472in" /></td>
-</tr>
-<tr>
-<td><ol start="5" type="1">
-<li><p>If there is another Area for the security system, then you need to click “<strong>Click to add an area</strong>”. Setting up the PGM output is similar to that described above.</p></li>
-<li><p>After completing the settings, click the “<strong>Skip</strong>” button.</p></li>
-</ol></td>
-<td><img alt="" src="./image41.png" style="width:2.2244094488188977in;height:2.0078740157480315in" /></td>
-</tr>
-</tbody>
-</table>
+
+3.  Select "**Pulse**" or "**Level**", depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+
+4.  Click „**Save**".
+
+<img alt="" src="./image40.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
+
+5.  If there is another Area for the security system, then you need to click "**Click to add an area**". Setting up the PGM output is similar to that described above.
+
+6.  After completing the settings, click the "**Skip**" button.
+
+<img alt="" src="./image41.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Arming/disarming the alarm system with Protegus2
 
@@ -1330,8 +1297,6 @@ Events are transmitted in parallel with the first channel through this channel. 
 
 Enable the backup channel mode to send events via backup channel if connection via primary channel is lost. Backup channel settings are same as described above.
 
-\*\*\*\*
-
 **"Settings" tab**
 
 <img alt="" src="./image48.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
@@ -1389,8 +1354,6 @@ Notifications about system events can be transmitted to users' mobile phones via
 - **CID event table** - you can change which phone numbers receive SMS messages or phone calls notifying about the events on the list.
 
 You can change the texts for SMS messages of default events, change the contact ID (CID) codes and enter new events with descriptions.
-
-\*\*\*\*
 
 **"Control by SMS" tab**
 
@@ -1550,7 +1513,7 @@ To restore the communicator's factory settings, you need to click the „**Resto
 
 Another way to restore factory settings.
 
-Power supply is connected to the communicator. Press and hold the "RESET" button on the communicator PCB board. Hold the "RESET" button pressed for 10 seconds until the LED indicators (\"NETWORK\", \"POWER\", \"TROUBLE\") turn off and the LED \"POWER\" indicator lights up. Release the \"RESET\" button. The communicator's factory settings have been restored.
+Power supply is connected to the communicator. Press and hold the "RESET" button on the communicator PCB board. Hold the "RESET" button pressed for 10 seconds until the LED indicators ("NETWORK", "POWER", "TROUBLE") turn off and the LED "POWER" indicator lights up. Release the "RESET" button. The communicator's factory settings have been restored.
 
 ## Remote configuration
 
@@ -1626,219 +1589,219 @@ The communicator converts Contact ID codes received from the alarm control panel
 
 | **System Event** | **CID Report Code** | **SIA Report Code** |
 |:---|:--:|:--:|
-| Medical alarm | E100 | \"MA\" |
-| Personal emergency | E101 | \"QA\" |
-| Fire in zone: \<z\> | E110 | \"FA\" |
-| Water flow detected in zone: \<z\> | E113 | \"SA\" |
-| Pull station alarm in zone: \<z\> | E115 | \"FA\" |
-| Panic in zone: \<z\> | E120 | \"PA\" |
-| Panic alarm by user: \<v\> | E121 | \"HA\" |
-| Panic alarm in zone: \<z\> | E122 | \"PA\" |
-| Panic alarm in zone: \<z\> | E123 | \"PA\" |
-| Panic alarm in zone: \<z\> | E124 | \"HA\" |
-| Panic alarm in zone: \<z\> | E125 | \"HA\" |
-| Alarm active in zone: \<z\> | E130 | \"BA\" |
-| Alarm active in zone: \<z\> | E131 | \"BA\" |
-| Alarm active in zone: \<z\> | E132 | \"BA\" |
-| Alarm active in zone: \<z\> | E133 | \"BA\" |
-| Alarm active in zone: \<z\> | E134 | \"BA\" |
-| Alarm active in zone: \<z\> | E135 | \"BA\" |
-| Tamper active in zone: \<z\> | E137 | \"TA\" |
-| Intrusion verified in zone: \<z\> | E139 | \"BV\" |
-| Alarm active in zone: \<z\> | E140 | \"UA\" |
-| System failure (143) | E143 | \"ET\" |
-| Tamper active in zone: \<z\> | E144 | \"TA\" |
-| Tamper active in zone: \<z\> | E145 | \"TA\" |
-| Alarm active in zone: \<z\> | E146 | \"BA\" |
-| Alarm active in zone: \<z\> | E150 | \"UA\" |
-| Gas detected in zone: \<z\> | E151 | \"GA\" |
-| Water leakage detected in zone: \<z\> | E154 | \"WA\" |
-| Foil break detected in zone: \<z\> | E155 | \"BA\" |
-| High temperature at sensor: \<n\> | E158 | \"KA\" |
-| Low temperature at sensor: \<n\> | E159 | \"ZA\" |
-| CO detected in zone: \<z\> | E162 | \"GA\" |
-| Fire failure in zone: \<z\> | E200 | \"FS\" |
-| Monitored alarm | E220 | \"BA\" |
-| System failure (300) | E300 | \"YP\" |
-| AC power supply loss | E301 | \"AT\" |
-| Low battery | E302 | \"YT\" |
-| System failure (304) | E304 | \"YF\" |
-| System reset in zone: \<z\> | E305 | \"RR\" |
-| Panel programming changed | E306 | \"YG\" |
-| System shutdown | E308 | \"RR\" |
-| Battery failure (309) | E309 | \"YT\" |
-| Ground fault | E310 | \"US\" |
-| Battery failure (311) | E311 | \"YM\" |
-| Power supply overcurrent (312) | E312 | \"YP\" |
-| Engineer reset by user: \<v\> (313) | E313 | \"RR\" |
-| Sounder/Relay failure | E320 | \"RC\" |
-| System failure (321) | E321 | \"YA\" |
-| System failure (330) | E330 | \"ET\" |
-| System failure (332) | E332 | \"ET\" |
-| System failure (333) | E333 | \"ET\" |
-| System failure (336) | E336 | \"VT\" |
-| System failure (338) | E338 | \"ET\" |
-| System failure (341) | E341 | \"ET\" |
-| System failure (342) | E342 | \"ET\" |
-| System failure (343) | E343 | \"ET\" |
-| System failure (344) | E344 | \"XQ\" |
-| System communication failure (350) | E350 | \"YC\" |
-| System communication failure (351) | E351 | \"LT\" |
-| System communication failure (352) | E352 | \"LT\" |
-| System failure (353) | E353 | \"YC\" |
-| System communication failure (354) | E354 | \"YC\" |
-| System failure (355) | E355 | \"UT\" |
-| Fire trouble in zone: \<z\> | E373 | \"FT\" |
-| Trouble in zone: \<z\> | E374 | \"EE\" |
-| Trouble in zone: \<z\> | E378 | \"BG\" |
-| Trouble in zone: \<z\> | E380 | \"UT\" |
-| Wireless zone fault: \<z\> | E381 | \"US\" |
-| Wireless module failure (382) | E382 | \"UY\" |
-| Tamper active in zone: \<z\> | E383 | \"TA\" |
-| Low battery in wireless zone: \<z\> | E384 | \"XT\" |
-| Trouble in zone: \<z\> (389) | E389 | \"ET\" |
-| Trouble in zone: \<z\> (391) | E391 | \"NA\" |
-| Trouble in zone: \<z\> (393) | E393 | \"NC\" |
-| User \<v\> disarmed the system | E400 | \"OP\" |
-| User \<v\> disarmed the system | E401 | \"OP\" |
-| Automatic disarm | E403 | \"OA\" |
-| Deferred disarm \<v\> user | E405 | \"OR\" |
-| Alarm cancelled by user: \<v\> | E406 | \"BC\" |
-| User \<v\> disarmed remotely | E407 | \"OP\" |
-| Quick disarm | E408 | \"OP\" |
-| Remote disarm | E409 | \"OS\" |
-| Callback request made by CMS | E411 | \"RB\" |
-| Successful data download | E412 | \"RS\" |
-| Entry access denied for user \<v\> | E421 | \"JA\" |
-| Entry by user \<v\> | E422 | \"DG\" |
-| Forced Access \<z\> zone | E423 | \"DF\" |
-| Exit access denied for user \<v\> | E424 | \"DD\" |
-| Exit by user \<v\> | E425 | \"DR\" |
-| User \<v\> disarmed too early | E451 | \"OK\" |
-| User \<v\> armed too late | E452 | \"OJ\" |
-| User \<v\> Failed to Disarm | E453 | \"CT\" |
-| User \<v\> Failed to Arm | E454 | \"CI\" |
-| Auto arm failed | E455 | \"CI\" |
-| Partial arm by user: \<v\> | E456 | \"CG\" |
-| Exit violation by user: \<v\> | E457 | \"EE\" |
-| System disarmed after alarm by user: \<v\> | E458 | \"OR\" |
-| Recent arm \<v\> user | E459 | \"CR\" |
-| Wrong code entered | E461 | \"JA\" |
-| Auto-arm time extended by user: \<v\> | E464 | \"CE\" |
-| Device disabled (501) | E501 | \"RL\" |
-| Device disabled (520) | E520 | \"RO\" |
-| Wireless sensor disabled in zone:\<z\> (552) | E552 | \"YS\" |
-| Zone \<z\> bypassed | E570 | \"UB\" |
-| Zone \<z\> bypassed | E571 | \"FB\" |
-| Zone \<z\> bypassed | E572 | \"MB\" |
-| Zone \<z\> bypassed | E573 | \"BB\" |
-| Group bypass by user: \<v\> | E574 | \"CG\" |
-| Zone \<z\> bypassed | E576 | \"UB\" |
-| Zone \<z\> bypass cancelled | E577 | \"UB\" |
-| Vent zone bypass | E579 | \"UB\" |
-| Walk test activated by user:\<v\> | E607 | \"TS\" |
-| Manual test report | E601 | \"RX\" |
-| Periodic test report | E602 | \"RP\" |
-| System event (605) | E605 | \"JL\" |
-| System event (606) | E606 | \"LF\" |
-| Periodic test report with trouble | E608 | \"RY\" |
-| System event (622) | E622 | \"JL\" |
-| System event (623) | E623 | \"JL\" |
-| Time/Date was reset by user \<v\> | E625 | \"JT\" |
-| Inaccurate Time/Date | E626 | \"JT\" |
-| System programming started | E627 | \"LB\" |
-| System programming finished | E628 | \"LS\" |
-| System event (631) | E631 | \"JS\" |
-| System event (632) | E632 | \"JS\" |
-| System not active (654) | E654 | \"CD\" |
-| Medical alarm restored | R100 | \"MH\" |
-| Personal emergency restored | R101 | \"QH\" |
-| No more fire alarm in zone :\<z\> | R110 | \"FH\" |
-| No more water flow alarm in zone:\<z\> | R113 | \"SH\" |
-| Panic alarm restored in zone:\<z\> | R120 | \"PH\" |
-| Panic alarm cancelled by user: \<v\> | R121 | \"HH\" |
-| Panic alarm restored in zone:\<z\> | R122 | \"PH\" |
-| Panic alarm restored in zone: \<z\> | R123 | \"PH\" |
-| Panic alarm restored in zone: \<z\> | R124 | \"HH\" |
-| Panic alarm restored in zone: \<z\> | R125 | \"HH\" |
-| No more alarm in zone: \<z\> | R130 | \"BH\" |
-| No more alarm in zone: \<z\> | R131 | \"BH\" |
-| No more alarm in zone: \<z\> | R132 | \"BH\" |
-| No more alarm in zone: \<z\> | R133 | \"BH\" |
-| No more alarm in zone: \<z\> | R134 | \"BH\" |
-| No more alarm in zone: \<z\> | R135 | \"BH\" |
-| No more tamper in zone: \<z\> | R137 | \"TA\" |
-| No more alarm in zone:\<z\> | R140 | \"UH\" |
-| No more system failure (143) | R143 | \"UR\" |
-| No more tamper in zone: \<z\> | R144 | \"TR\" |
-| No more tamper in zone: \<z\> | R145 | \"TR\" |
-| No more alarm in zone: \<z\> | R146 | \"BH\" |
-| No more alarm in zone: \<z\> | R150 | \"UH\" |
-| No more gas alarm in zone:\<z\> | R151 | \"GH\" |
-| No more water leakage alarm in zone: \<z\> | R154 | \"WH\" |
-| Foil break restored in zone: \<z\> | R155 | \"BH\" |
-| Temperature has normalized at sensor: \<n\> | R158 | \"KH\" |
-| Temperature has normalized at sensor: \<n\> | R159 | \"ZH\" |
-| No more CO alarm in zone: \<z\> | R162 | \"GH\" |
-| No more fire failure in zone: \<z\> | R200 | \"FV\" |
-| Monitored restore alarm | R220 | \"BH\" |
-| No more system failure (300) | R300 | \"YA\" |
-| AC power supply OK | R301 | \"AR\" |
-| Battery OK | R302 | \"YR\" |
-| No more system failure (304) | R304 | \"YG\" |
-| System reset restored in zone: \<z\> | R305 | \"RR\" |
-| No more battery failure (309) | R309 | \"YR\" |
-| Restore ground fault | R310 | \"UR\" |
-| No more battery failure (311) | R311 | \"YR\" |
-| Restore power supply overcurrent (312) | R312 | \"YQ\" |
-| No more sounder/Relay failure | R320 | \"RO\" |
-| No more system failure (321) | R321 | \"YH\" |
-| No more system failure (330) | R330 | \"ER\" |
-| No more system failure (332) | R332 | \"ER\" |
-| No more system failure (333) | R333 | \"ER\" |
-| No more system failure (336) | R336 | \"VR\" |
-| No more system failure (338) | R338 | \"ER\" |
-| No more system failure (341) | R341 | \"ER\" |
-| No more system failure (342) | R342 | \"ER\" |
-| No more system failure (344) | R344 | \"XH\" |
-| No more system communication failure (350) | R350 | \"YK\" |
-| No more system communication failure (351) | R351 | \"LR\" |
-| No more system communication failure (352) | R352 | \"LR\" |
-| No more system failure (353) | R353 | \"YK\" |
-| No more system communication failure (354) | R354 | \"YK\" |
-| No more system failure (355) | R355 | \"UJ\" |
-| Fire trouble restored in zone: \<z\> | R373 | \"FJ\" |
-| No more trouble in zone: \<z\> | R374 | \"EA\" |
-| No more trouble in zone: \<z\> | R380 | \"UJ\" |
-| No more wireless zone fault: \<z\> | R381 | \"UR\" |
-| No more wireless module failure (382) | R382 | \"BR\" |
-| No more tamper in zone: \<z\> | R383 | \"TR\" |
-| Battery OK in wireless zone: \<z\> | R384 | \"XR\" |
-| No more trouble in zone: \<z\> (391) | R391 | \"NS\" |
-| No more trouble in zone: \<z\> (393) | R393 | \"NS\" |
-| User \<v\> armed the system | R400 | \"CL\" |
-| User \<v\> armed the system | R401 | \"CL\" |
-| Automatic arm | R403 | \"CA\" |
-| User \<v\> armed remotely | R407 | \"CL\" |
-| Quick arm | R408 | \"CL\" |
+| Medical alarm | E100 | "MA" |
+| Personal emergency | E101 | "QA" |
+| Fire in zone: \<z\> | E110 | "FA" |
+| Water flow detected in zone: \<z\> | E113 | "SA" |
+| Pull station alarm in zone: \<z\> | E115 | "FA" |
+| Panic in zone: \<z\> | E120 | "PA" |
+| Panic alarm by user: \<v\> | E121 | "HA" |
+| Panic alarm in zone: \<z\> | E122 | "PA" |
+| Panic alarm in zone: \<z\> | E123 | "PA" |
+| Panic alarm in zone: \<z\> | E124 | "HA" |
+| Panic alarm in zone: \<z\> | E125 | "HA" |
+| Alarm active in zone: \<z\> | E130 | "BA" |
+| Alarm active in zone: \<z\> | E131 | "BA" |
+| Alarm active in zone: \<z\> | E132 | "BA" |
+| Alarm active in zone: \<z\> | E133 | "BA" |
+| Alarm active in zone: \<z\> | E134 | "BA" |
+| Alarm active in zone: \<z\> | E135 | "BA" |
+| Tamper active in zone: \<z\> | E137 | "TA" |
+| Intrusion verified in zone: \<z\> | E139 | "BV" |
+| Alarm active in zone: \<z\> | E140 | "UA" |
+| System failure (143) | E143 | "ET" |
+| Tamper active in zone: \<z\> | E144 | "TA" |
+| Tamper active in zone: \<z\> | E145 | "TA" |
+| Alarm active in zone: \<z\> | E146 | "BA" |
+| Alarm active in zone: \<z\> | E150 | "UA" |
+| Gas detected in zone: \<z\> | E151 | "GA" |
+| Water leakage detected in zone: \<z\> | E154 | "WA" |
+| Foil break detected in zone: \<z\> | E155 | "BA" |
+| High temperature at sensor: \<n\> | E158 | "KA" |
+| Low temperature at sensor: \<n\> | E159 | "ZA" |
+| CO detected in zone: \<z\> | E162 | "GA" |
+| Fire failure in zone: \<z\> | E200 | "FS" |
+| Monitored alarm | E220 | "BA" |
+| System failure (300) | E300 | "YP" |
+| AC power supply loss | E301 | "AT" |
+| Low battery | E302 | "YT" |
+| System failure (304) | E304 | "YF" |
+| System reset in zone: \<z\> | E305 | "RR" |
+| Panel programming changed | E306 | "YG" |
+| System shutdown | E308 | "RR" |
+| Battery failure (309) | E309 | "YT" |
+| Ground fault | E310 | "US" |
+| Battery failure (311) | E311 | "YM" |
+| Power supply overcurrent (312) | E312 | "YP" |
+| Engineer reset by user: \<v\> (313) | E313 | "RR" |
+| Sounder/Relay failure | E320 | "RC" |
+| System failure (321) | E321 | "YA" |
+| System failure (330) | E330 | "ET" |
+| System failure (332) | E332 | "ET" |
+| System failure (333) | E333 | "ET" |
+| System failure (336) | E336 | "VT" |
+| System failure (338) | E338 | "ET" |
+| System failure (341) | E341 | "ET" |
+| System failure (342) | E342 | "ET" |
+| System failure (343) | E343 | "ET" |
+| System failure (344) | E344 | "XQ" |
+| System communication failure (350) | E350 | "YC" |
+| System communication failure (351) | E351 | "LT" |
+| System communication failure (352) | E352 | "LT" |
+| System failure (353) | E353 | "YC" |
+| System communication failure (354) | E354 | "YC" |
+| System failure (355) | E355 | "UT" |
+| Fire trouble in zone: \<z\> | E373 | "FT" |
+| Trouble in zone: \<z\> | E374 | "EE" |
+| Trouble in zone: \<z\> | E378 | "BG" |
+| Trouble in zone: \<z\> | E380 | "UT" |
+| Wireless zone fault: \<z\> | E381 | "US" |
+| Wireless module failure (382) | E382 | "UY" |
+| Tamper active in zone: \<z\> | E383 | "TA" |
+| Low battery in wireless zone: \<z\> | E384 | "XT" |
+| Trouble in zone: \<z\> (389) | E389 | "ET" |
+| Trouble in zone: \<z\> (391) | E391 | "NA" |
+| Trouble in zone: \<z\> (393) | E393 | "NC" |
+| User \<v\> disarmed the system | E400 | "OP" |
+| User \<v\> disarmed the system | E401 | "OP" |
+| Automatic disarm | E403 | "OA" |
+| Deferred disarm \<v\> user | E405 | "OR" |
+| Alarm cancelled by user: \<v\> | E406 | "BC" |
+| User \<v\> disarmed remotely | E407 | "OP" |
+| Quick disarm | E408 | "OP" |
+| Remote disarm | E409 | "OS" |
+| Callback request made by CMS | E411 | "RB" |
+| Successful data download | E412 | "RS" |
+| Entry access denied for user \<v\> | E421 | "JA" |
+| Entry by user \<v\> | E422 | "DG" |
+| Forced Access \<z\> zone | E423 | "DF" |
+| Exit access denied for user \<v\> | E424 | "DD" |
+| Exit by user \<v\> | E425 | "DR" |
+| User \<v\> disarmed too early | E451 | "OK" |
+| User \<v\> armed too late | E452 | "OJ" |
+| User \<v\> Failed to Disarm | E453 | "CT" |
+| User \<v\> Failed to Arm | E454 | "CI" |
+| Auto arm failed | E455 | "CI" |
+| Partial arm by user: \<v\> | E456 | "CG" |
+| Exit violation by user: \<v\> | E457 | "EE" |
+| System disarmed after alarm by user: \<v\> | E458 | "OR" |
+| Recent arm \<v\> user | E459 | "CR" |
+| Wrong code entered | E461 | "JA" |
+| Auto-arm time extended by user: \<v\> | E464 | "CE" |
+| Device disabled (501) | E501 | "RL" |
+| Device disabled (520) | E520 | "RO" |
+| Wireless sensor disabled in zone:\<z\> (552) | E552 | "YS" |
+| Zone \<z\> bypassed | E570 | "UB" |
+| Zone \<z\> bypassed | E571 | "FB" |
+| Zone \<z\> bypassed | E572 | "MB" |
+| Zone \<z\> bypassed | E573 | "BB" |
+| Group bypass by user: \<v\> | E574 | "CG" |
+| Zone \<z\> bypassed | E576 | "UB" |
+| Zone \<z\> bypass cancelled | E577 | "UB" |
+| Vent zone bypass | E579 | "UB" |
+| Walk test activated by user:\<v\> | E607 | "TS" |
+| Manual test report | E601 | "RX" |
+| Periodic test report | E602 | "RP" |
+| System event (605) | E605 | "JL" |
+| System event (606) | E606 | "LF" |
+| Periodic test report with trouble | E608 | "RY" |
+| System event (622) | E622 | "JL" |
+| System event (623) | E623 | "JL" |
+| Time/Date was reset by user \<v\> | E625 | "JT" |
+| Inaccurate Time/Date | E626 | "JT" |
+| System programming started | E627 | "LB" |
+| System programming finished | E628 | "LS" |
+| System event (631) | E631 | "JS" |
+| System event (632) | E632 | "JS" |
+| System not active (654) | E654 | "CD" |
+| Medical alarm restored | R100 | "MH" |
+| Personal emergency restored | R101 | "QH" |
+| No more fire alarm in zone :\<z\> | R110 | "FH" |
+| No more water flow alarm in zone:\<z\> | R113 | "SH" |
+| Panic alarm restored in zone:\<z\> | R120 | "PH" |
+| Panic alarm cancelled by user: \<v\> | R121 | "HH" |
+| Panic alarm restored in zone:\<z\> | R122 | "PH" |
+| Panic alarm restored in zone: \<z\> | R123 | "PH" |
+| Panic alarm restored in zone: \<z\> | R124 | "HH" |
+| Panic alarm restored in zone: \<z\> | R125 | "HH" |
+| No more alarm in zone: \<z\> | R130 | "BH" |
+| No more alarm in zone: \<z\> | R131 | "BH" |
+| No more alarm in zone: \<z\> | R132 | "BH" |
+| No more alarm in zone: \<z\> | R133 | "BH" |
+| No more alarm in zone: \<z\> | R134 | "BH" |
+| No more alarm in zone: \<z\> | R135 | "BH" |
+| No more tamper in zone: \<z\> | R137 | "TA" |
+| No more alarm in zone:\<z\> | R140 | "UH" |
+| No more system failure (143) | R143 | "UR" |
+| No more tamper in zone: \<z\> | R144 | "TR" |
+| No more tamper in zone: \<z\> | R145 | "TR" |
+| No more alarm in zone: \<z\> | R146 | "BH" |
+| No more alarm in zone: \<z\> | R150 | "UH" |
+| No more gas alarm in zone:\<z\> | R151 | "GH" |
+| No more water leakage alarm in zone: \<z\> | R154 | "WH" |
+| Foil break restored in zone: \<z\> | R155 | "BH" |
+| Temperature has normalized at sensor: \<n\> | R158 | "KH" |
+| Temperature has normalized at sensor: \<n\> | R159 | "ZH" |
+| No more CO alarm in zone: \<z\> | R162 | "GH" |
+| No more fire failure in zone: \<z\> | R200 | "FV" |
+| Monitored restore alarm | R220 | "BH" |
+| No more system failure (300) | R300 | "YA" |
+| AC power supply OK | R301 | "AR" |
+| Battery OK | R302 | "YR" |
+| No more system failure (304) | R304 | "YG" |
+| System reset restored in zone: \<z\> | R305 | "RR" |
+| No more battery failure (309) | R309 | "YR" |
+| Restore ground fault | R310 | "UR" |
+| No more battery failure (311) | R311 | "YR" |
+| Restore power supply overcurrent (312) | R312 | "YQ" |
+| No more sounder/Relay failure | R320 | "RO" |
+| No more system failure (321) | R321 | "YH" |
+| No more system failure (330) | R330 | "ER" |
+| No more system failure (332) | R332 | "ER" |
+| No more system failure (333) | R333 | "ER" |
+| No more system failure (336) | R336 | "VR" |
+| No more system failure (338) | R338 | "ER" |
+| No more system failure (341) | R341 | "ER" |
+| No more system failure (342) | R342 | "ER" |
+| No more system failure (344) | R344 | "XH" |
+| No more system communication failure (350) | R350 | "YK" |
+| No more system communication failure (351) | R351 | "LR" |
+| No more system communication failure (352) | R352 | "LR" |
+| No more system failure (353) | R353 | "YK" |
+| No more system communication failure (354) | R354 | "YK" |
+| No more system failure (355) | R355 | "UJ" |
+| Fire trouble restored in zone: \<z\> | R373 | "FJ" |
+| No more trouble in zone: \<z\> | R374 | "EA" |
+| No more trouble in zone: \<z\> | R380 | "UJ" |
+| No more wireless zone fault: \<z\> | R381 | "UR" |
+| No more wireless module failure (382) | R382 | "BR" |
+| No more tamper in zone: \<z\> | R383 | "TR" |
+| Battery OK in wireless zone: \<z\> | R384 | "XR" |
+| No more trouble in zone: \<z\> (391) | R391 | "NS" |
+| No more trouble in zone: \<z\> (393) | R393 | "NS" |
+| User \<v\> armed the system | R400 | "CL" |
+| User \<v\> armed the system | R401 | "CL" |
+| Automatic arm | R403 | "CA" |
+| User \<v\> armed remotely | R407 | "CL" |
+| Quick arm | R408 | "CL" |
 | Remote arm | R409 | "CS" |
-| User \<v\> armed to Stay mode | R441 | \"CG\" |
+| User \<v\> armed to Stay mode | R441 | "CG" |
 | User \<v\> armed too early | R451 | "CK" |
 | User \<v\> disarmed too late | R452 | "CJ" |
 | User \<v\> Failed to Disarm | R454 | "CI" |
-| Partial Arm by user: \<v\> | R456 | \"CG\" |
+| Partial Arm by user: \<v\> | R456 | "CG" |
 | Recent disarm \<v\> user | R459 | "CR" |
-| Device enabled (501) | R501 | \"RG\" |
-| Device enabled (520) | R520 | \"RC\" |
-| Wireless sensor enabled in zone: \<z\> (552) | R552 | \"YK\" |
-| Zone \<z\> bypass cancelled | R570 | \"UU\" |
-| Zone \<z\> bypass cancelled | R571 | \"FU\" |
-| Zone \<z\> bypass cancelled | R572 | \"MU\" |
-| Zone \<z\> bypass cancelled | R573 | \"BU\" |
-| Group bypass by user: \<v\> cancelled | R574 | \"CF\" |
-| Zone \<z\> bypass cancelled | R576 | \"UU\" |
-| Zone \<z\> bypass cancelled | R577 | \"UU\" |
-| Vent zone bypass cancelled | R579 | \"UU\" |
-| Walk test deactivated by user \<v\> | R607 | \"TE\" |
-| Time/Date was reset by user \<v\> | R625 | \"JT\" |
-| System active (654) | R654 | \"CD\" |
+| Device enabled (501) | R501 | "RG" |
+| Device enabled (520) | R520 | "RC" |
+| Wireless sensor enabled in zone: \<z\> (552) | R552 | "YK" |
+| Zone \<z\> bypass cancelled | R570 | "UU" |
+| Zone \<z\> bypass cancelled | R571 | "FU" |
+| Zone \<z\> bypass cancelled | R572 | "MU" |
+| Zone \<z\> bypass cancelled | R573 | "BU" |
+| Group bypass by user: \<v\> cancelled | R574 | "CF" |
+| Zone \<z\> bypass cancelled | R576 | "UU" |
+| Zone \<z\> bypass cancelled | R577 | "UU" |
+| Vent zone bypass cancelled | R579 | "UU" |
+| Walk test deactivated by user \<v\> | R607 | "TE" |
+| Time/Date was reset by user \<v\> | R625 | "JT" |
+| System active (654) | R654 | "CD" |
