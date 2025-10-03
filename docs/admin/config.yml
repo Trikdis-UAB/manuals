@@ -1,0 +1,75 @@
+# Decap CMS Configuration
+# Documentation: https://decapcms.org/docs/configuration-options/
+
+# Local development backend (test-repo for local testing)
+# Switch to github backend when deployed
+backend:
+  name: test-repo
+
+# Production backend (commented out for local testing)
+# backend:
+#   name: github
+#   repo: Trikdis-UAB/manuals
+#   branch: main
+#   base_url: https://YOUR_WORKER_DOMAIN.workers.dev  # Replace with your Cloudflare Worker URL
+#   auth_endpoint: /auth
+
+# Publishing mode
+publish_mode: editorial_workflow  # Enable draft/review workflow
+
+# Media files configuration
+media_folder: "docs/images"  # Where uploaded images will be stored
+public_folder: "/images"     # URL path for images
+
+# Collections define the structure for different content types
+collections:
+  # English Manuals - Alarm Communicators
+  - name: "en_alarm_communicators"
+    label: "English - Alarm Communicators"
+    folder: "docs/en/alarm-communicators"
+    create: true
+    slug: "{{product}}/index"
+    path: "{{slug}}"
+    media_folder: "{{dirname}}"
+    public_folder: "."
+    fields:
+      - {label: "Product Name", name: "product", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # English Manuals - Alarm Panels
+  - name: "en_alarm_panels"
+    label: "English - Alarm Panels"
+    folder: "docs/en/alarm-panels"
+    create: true
+    slug: "{{product}}/*/index"  # Allows subdirectories
+    path: "{{slug}}"
+    media_folder: "{{dirname}}"
+    public_folder: "."
+    fields:
+      - {label: "Product Name", name: "product", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # Lithuanian Manuals (future)
+  - name: "lt_manuals"
+    label: "Lithuanian - Manuals"
+    folder: "docs/lt"
+    create: true
+    slug: "{{category}}/{{product}}/index"
+    path: "{{slug}}"
+    media_folder: "{{dirname}}"
+    public_folder: "."
+    fields:
+      - {label: "Category", name: "category", widget: "select", options: ["alarm-communicators", "alarm-panels", "other"]}
+      - {label: "Product Name", name: "product", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+# Editor configuration
+editor:
+  preview: true  # Enable preview pane
+
+# Display URL (for preview links)
+site_url: https://docs.trikdis.com
+display_url: https://docs.trikdis.com
+
+# Logo
+logo_url: https://docs.trikdis.com/images/logo.png
