@@ -13,9 +13,12 @@ hide:
 
 ### Alarm Communicators
 
-- [GET Cellular Communicator](en/alarm-communicators/get-cellular/)
-- [GT Cellular Communicator](en/alarm-communicators/gt-cellular/)
-- [GT+ Cellular Communicator](en/alarm-communicators/gt-plus-cellular/)
+- [GT Cellular Communicator](en/alarm-communicators/gt-cellular/GT UM_ENG_2025 09 11/)
+- [GT+ Cellular Communicator](en/alarm-communicators/gt-plus-cellular/GT+ UM_ENG_2025 09 11/)
+- [GET Cellular Communicator](en/alarm-communicators/get-cellular/GET UM_ENG_2025 09 03/)
+### Alarm Panels
+
+- [SP3 Alarm Panel](en/alarm-panels/sp3/SP3_TAIM_EN_2025 09 12/)
 
 ---
 

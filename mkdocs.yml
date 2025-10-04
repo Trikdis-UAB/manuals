@@ -16,9 +16,11 @@ nav:
   - Home: index.md
   - English:
       - Alarm Communicators:
-          - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
-          - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
-          - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
+          - GT Cellular Communicator: en/alarm-communicators/gt-cellular/GT UM_ENG_2025 09 11/index.md
+          - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/GT+ UM_ENG_2025 09 11/index.md
+          - GET Cellular Communicator: en/alarm-communicators/get-cellular/GET UM_ENG_2025 09 03/index.md
+      - Alarm Panels:
+          - SP3 Alarm Panel: en/alarm-panels/sp3/SP3_TAIM_EN_2025 09 12/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
@@ -46,6 +48,7 @@ markdown_extensions:
 - attr_list
 - admonition
 - sane_lists
+- tables
 - pymdownx.details
 - pymdownx.superfences
 - markdown_callouts
