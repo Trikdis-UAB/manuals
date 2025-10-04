@@ -182,6 +182,7 @@ Calls 8 mobile phones. If a user answers the call, announces what happened using
 7. Nano-SIM card holder.
 8. SMA screw-on type connector for GSM antenna.
 9. USB Mini-B connector for configuring the control panel's settings.
+
 | Terminal | Description |
 |:---|:---|
 | Power terminal | Power supply terminal (16 V AC or positive 16-24 V DC) |
