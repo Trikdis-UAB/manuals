@@ -342,30 +342,15 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
     service (mobile data) is enabled if connected via IP channel. / To avoid
     entering the PIN code in TrikdisConfig, insert the SIM card into
     your mobile phone and turn off the PIN request function.
-### Schematics for wiring the communicator to a security control panel
+### Schematics for wiring the communicator to a security control panel 
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image18-left.png" alt="DSC panel connection diagram" style="width: 64.3%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image18-right.png" alt="PARADOX panel connection diagram" style="width: 35.7%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image18.png" style="width:7.0875in;height:2.7888888888888888in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image19-left.png" alt="Wiring schematic - configuration 1" style="width: 42.8%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image19-right.png" alt="Wiring schematic - configuration 2" style="width: 57.2%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image19.png" style="width:7.0875in;height:2.7756944444444445in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image20-left.png" alt="TIP/RING connection - configuration 1" style="width: 37.2%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image20-right.png" alt="TIP/RING connection - configuration 2" style="width: 62.8%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image20.png" style="width:7.0875in;height:2.772222222222222in" />
 
 | <img alt="" src="./image21.png" style="width:3.2833398950131234in;height:2.733338801399825in" /> | <img alt="" src="./image22.png" style="width:3.5600076552930884in;height:2.2800043744531933in" /> |
 |----|----|
@@ -598,17 +583,17 @@ Using the control panel’s keypad enter these sections and set them as describe
 
 If you want to use GT+ communicator with Honeywell Vista 48 panel, set the following sections as described:
 
-| Section | Data                             | Section | Data | Section | Data |
-|:-------:|----------------------------------|:-------:|:----:|:-------:|:----:|
-|  \*41   | 1111 (receiver telephone number) |  \*60   |  1   |  \*69   |  1   |
-|  \*42   | 1111                             |  \*61   |  1   |  \*70   |  1   |
-|  \*43   | 1234 (panel account number)      |  \*62   |  1   |  \*71   |  1   |
-|  \*44   | 1234                             |  \*63   |  1   |  \*72   |  1   |
-|  \*45   | 1111                             |  \*64   |  1   |  \*73   |  1   |
-|  \*47   | 1                                |  \*65   |  1   |  \*74   |  1   |
-|  \*48   | 7                                |  \*66   |  1   |  \*75   |  1   |
-|  \*50   | 1                                |  \*67   |  1   |  \*76   |  1   |
-|  \*59   | 0                                |  \*68   |  1   |         |      |
+| **Section** | **Data** | **Section** | **Data** | **S** | **Section** | **Data** |
+|:--:|----|:--:|:--:|----|:--:|:--:|
+| \*41 | 1111 (receiver telephone number) | \*60 | 1 |  | \*69 | 1 |
+| \*42 | 1111 | \*61 | 1 |  | \*70 | 1 |
+| \*43 | 1234 (panel account number) | \*62 | 1 |  | \*71 | 1 |
+| \*44 | 1234 | \*63 | 1 |  | \*72 | 1 |
+| \*45 | 1111 | \*64 | 1 |  | \*73 | 1 |
+| \*47 | 1 | \*65 | 1 |  | \*74 | 1 |
+| \*48 | 7 | \*66 | 1 |  | \*75 | 1 |
+| \*50 | 1 | \*67 | 1 |  | \*76 | 1 |
+| \*59 | 0 | \*68 | 1 |  |  |  |
 
 When all required settings are set, it is necessary to exit programming mode. Enter [\*][9][9] in keypad.
 
@@ -1137,6 +1122,18 @@ The communicator’s firmware can also be updated or changed manually. After an 
 5.  Press **Update [F12]**.
 
 6.  Wait for the update to complete.
+
+## Safety requirements
+
+The communicator should be installed and maintained by qualified personnel.
+
+Prior to installation, please read this manual carefully in order to avoid mistakes that can lead to malfunction or even damage to the equipment.
+
+Disconnect the power supply before making any electrical connections.
+
+<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
+
+Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 ## Annex 
 

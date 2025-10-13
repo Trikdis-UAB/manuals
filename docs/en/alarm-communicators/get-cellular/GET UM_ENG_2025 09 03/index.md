@@ -377,37 +377,17 @@ The GET communicator must be installed inside the intrusion control panel enclos
 
 If the host enclosure does not allow secure installation as described above, the communicator may be installed in a separate tampered enclosure.
 
-### Schematics for wiring the communicator to a security control panel
+### Schematics for wiring the communicator to a security control panel 
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image22-left.png" alt="DSC panel connection diagram" style="width: 41.2%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image22-right.png" alt="PARADOX panel connection diagram" style="width: 58.8%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image23-left.png" alt="Wiring schematic - configuration 1" style="width: 40.2%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image23-right.png" alt="Wiring schematic - configuration 2" style="width: 59.8%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image24-left.png" alt="TIP/RING connection - configuration 1" style="width: 38.8%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image24-right.png" alt="TIP/RING connection - configuration 2" style="width: 61.2%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image25-left.png" alt="Wiring configuration - left panel" style="width: 44%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image25-right.png" alt="Wiring configuration - right panel" style="width: 56%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image25.png" style="width:6.996680883639545in;height:3.28000656167979in" />
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
@@ -1101,6 +1081,18 @@ The communicator’s firmware can also be updated or changed manually. After an 
 5.  Press **Update [F12]**.
 
 6.  Wait for the update to complete.
+
+## Safety requirements
+
+The communicator should be installed and maintained by qualified personnel.
+
+Prior to installation, please read this manual carefully in order to avoid mistakes that can lead to malfunction or even damage to the equipment.
+
+Disconnect the power supply before making any electrical connections.
+
+<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
+
+Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 ## Annex
 
