@@ -1,17 +1,5 @@
 ## **GSM gate controller GATOR**
 
-## Safety precautions 
-
-The GSM gate controller should only be installed and maintained by qualified personnel.
-
-Please read this manual carefully prior to installation in order to avoid mistakes that can lead to malfunction or even damage to the equipment.
-
-Always disconnect the power supply before making any electrical connections.
-
-Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
-
-> <img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
-
 <div style="text-align: center;">
   <img src="./image3.png" alt="" width="400">
 </div>
@@ -121,10 +109,21 @@ Inputs and outputs
 
 | Indicator | Light status | Description |
 |-----------|--------------|-------------|
-| NETWORK | Green solid<br>Yellow blinking |  |
-| DATA | Green solid<br>Yellow solid |  |
-| POWER | Green blinking<br>Yellow blinking<br>Red and yellow blinking |  |
-| TROUBLE | Off<br>1 blink<br>2 blinks<br>3 blinks<br>4 blinks<br>5 blinks<br>6 blinks<br>7 blinks |  |
+| NETWORK | Green solid | Connected to GSM network |
+| NETWORK | Yellow blinking | Indication of GSM signal strength from 0 to 5. Sufficient strength is 3. |
+| DATA | Green solid | Message is being sent |
+| DATA | Yellow solid | There are unsent event messages in the data buffer |
+| POWER | Green blinking | The power supply voltage is sufficient |
+| POWER | Yellow blinking | The power supply voltage is insufficient |
+| POWER | Red and yellow blinking | Configuration mode is on |
+| TROUBLE | Off | No operation problems |
+| TROUBLE | 1 blink | No SIM card inserted |
+| TROUBLE | 2 blinks | The PIN code of the SIM card is incorrect |
+| TROUBLE | 3 blinks | Unable to connect to GSM network |
+| TROUBLE | 4 blinks | Unable to connect to GATOR or to the primary IP receiver |
+| TROUBLE | 5 blinks | Unable to connect to the backup IP receiver |
+| TROUBLE | 6 blinks | Internal clock is not set |
+| TROUBLE | 7 blinks | The power supply voltage is insufficient |
 
 If the LED indication is not working, check the power supply and connections.
 
@@ -408,11 +407,11 @@ Find Protegus2 in the settings bar.
 
 Control the relay output OUT5 with these SMS commands:
 
-> OUTPUT5 xxxxxx ON
+> #### OUTPUT5 xxxxxx ON
 >
-> OUTPUT5 xxxxxx OFF
+> #### OUTPUT5 xxxxxx OFF
 >
-> OUTPUT5 xxxxxx PULSE=002
+> #### OUTPUT5 xxxxxx PULSE=002
 
 | xxxxxx | 6-symbol administrator password. (default code – 123456). |
 |----|----|
@@ -426,7 +425,9 @@ SMS control command list
 
 | Command | Data | Description |
 |---------|------|-------------|
-| OUTPUTx | ON<br>OFF<br>PULSE=ttt |  |
+| OUTPUTx | ON | Turn on output. “x” – output number. E.g.: OUTPUT5 123456 ON |
+| OUTPUTx | OFF | Turn off output. “x” – output number. E.g.: OUTPUT5 123456 OFF |
+| OUTPUTx | PULSE=ttt | Turn on output for a period of time. “ttt” is pulse time in seconds, from 1 to 999. E.g.: OUTPUT5 123456 PULSE=002 |
 
 ### Configuration with SMS messages 
 
@@ -434,7 +435,7 @@ SMS control command list
 
 For safety reasons, change the default administrator password. Send an SMS message of this format:
 
-> PSW 123456 xxxxxx
+> #### PSW 123456 xxxxxx
 
 | 123456 | Default administrator password.      |
 |--------------|--------------------------------------|
@@ -444,7 +445,7 @@ For safety reasons, change the default administrator password. Send an SMS messa
 
 You can allow only specific people to control the system. From an administrator’s phone, send SMS messages with the users’ phone numbers and names:
 
-> SETU xxxxxx +PHONENO#NAME#EMAIL
+> #### SETU xxxxxx +PHONENO#NAME#EMAIL
 
 | xxxxxx  | 6-symbol administrator password. |
 |---------------|----------------------------------|
@@ -458,7 +459,7 @@ Once the first number is added to the controller’s user phone list, the contro
 
 You can give administrator rights to other people. They will receive system information messages and will be able to add users. Send an SMS message of this format:
 
-> SETA xxxxxx Nox=+PHONENO#NAME#EMAIL
+> #### SETA xxxxxx Nox=+PHONENO#NAME#EMAIL
 
 | xxxxxx | 6-symbol administrator password. |
 |----|:---|
@@ -474,11 +475,14 @@ SMS configuration command list
 | INFO |  | Request information about the controller. The response will include: controller type, IMEI number, GSM signal strength, power voltage magnitude, software version, serial number, date and time. E.g.: INFO 123456 |
 | ASKI |  | Input status inquiry. E.g.: ASKI 123456 |
 | ASKO |  | Output status inquiry. E.g.: ASKO 123456 |
-| SETA | NoX=phoneno#name#email<br>NoX=DEL |  |
+| SETA | NoX=phoneno#name#email | Add administrator to list (administrator number from 1A to 7A). Adds the phone number, name and e-mail to the specified line. The number must be separated from the name with a hash (#). The number must start with “+” and the international code. / E.g.: SETA 123456 No3=+37061234567#John#john_M@trikdis.com |
+| SETA | NoX=DEL | Deletes phone number and name from the specified line. / E.g.: SETA 123456 No2=DEL |
 | SETU | phoneno#name#email | Add new user (user number from 11 to 1010). Adds the phone number, name and e-mail to the list. The number must be separated from the name with a hash (#). The number must start with „+” and the international code. / E.g.: SETU 123456 +37061234567#Peter#peter@trikdis.com |
-| DELU | phoneno<br>name |  |
+| DELU | phoneno | Delete user with specified phone number. E.g.: DELU 123456 +37061234567 |
+| DELU | name | Delete user with specified name. E.g.: DELU 123456 Peter |
 | SETB | Email/phoneNo | Add entry into black-list (e-mail; phone No.). / E.g.: SETB 123456 john_S@trikdis.com / E.g.: SETB 123456 +37060123456 |
-| DELB | ALL<br>Email/phoneNo |  |
+| DELB | ALL | Delete all black-list. E.g.: DELB 123456 ALL |
+| DELB | Email/phoneNo | Delete a particular entry from the black list (for e-mail field small and capital letters are important). / E.g.: DELB 123456 john_S@trikdis.com / E.g.: DELB 123456 +37060123456 |
 | RESET |  | Restart the controller. E.g.: RESET 123456 |
 | PSW | New password | Change password. E.g.: PSW 123456 654123 |
 | TXTA | Object name | Set object name. E.g.: TXTA 123456 House |
@@ -488,9 +492,15 @@ SMS configuration command list
 | RESD | IDx | Resets inactivity time for input “x”, if the countdown has started. / E.g.: RESD 123456 ID1 |
 | TIME | YYYY/MM/DD, / HH:mm:ss | Set date and time. / E.g.: TIME 123456 2018/01/03,12:23:00 |
 | RDR | PhoneNO#SMStext | Forwards the SMS text to the specified number. / E.g.: RDR 123456 +37061234567#Refill account by 10EUR |
-| HELLO | ON<br>OFF |  |
+| HELLO | ON | Enable the function of informing a new user by SMS message about his addition to the GATOR controller via the Protegus2 app or SMS message. / E.g.: HELLO 123456 ON |
+| HELLO | OFF | Disable the function of informing a new user by SMS message about his addition to the GATOR controller via the Protegus2 app or SMS message. / E.g.: HELLO 123456 OFF |
 | UUSD | *UUSD code# | Sends UUSD code to mobile operator. Operator specified UUSD codes are for checking or refilling the SIM card’s balance and for similar operations. / E.g.: UUSD 123456 *245# |
-| CONNECT | Protegus=ON<br>Protegus=OFF<br>APN=Internet<br>USER=user<br>PSW=password<br>Code=password |  |
+| CONNECT | Protegus=ON | Connect to Protegus cloud. E.g.: CONNECT 123456 PROTEGUS=ON |
+| CONNECT | Protegus=OFF | Disconnect from Protegus cloud. E.g.: CONNECT 123456 PROTEGUS=OFF |
+| CONNECT | APN=Internet | APN name. E.g.: CONNECT 123456 APN=INTERNET |
+| CONNECT | USER=user | APN user. E.g.: CONNECT 123456 USER=User |
+| CONNECT | PSW=password | APN password. E.g.: CONNECT 123456 PSW=password |
+| CONNECT | Code=password | Change Protegus Cloud login password. / E.g.: CONNECT 123456 Code=123456 |
 
 ## Setting parameters using *TrikdisConfig* software 
 
@@ -1059,3 +1069,15 @@ The controller’s firmware can also be updated and changed manually. All prior 
 5.  Click the button **Start update [F12]**.
 
 6.  Wait for the update to finish.
+
+## Safety precautions 
+
+The GSM gate controller should only be installed and maintained by qualified personnel.
+
+Please read this manual carefully prior to installation in order to avoid mistakes that can lead to malfunction or even damage to the equipment.
+
+Always disconnect the power supply before making any electrical connections.
+
+Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
+
+> <img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
