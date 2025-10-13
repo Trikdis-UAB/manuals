@@ -23,8 +23,6 @@ nav:
           - SP3 Alarm Panel: en/alarm-panels/sp3/SP3_TAIM_EN_2025 09 12/index.md
       - Gate Controllers:
           - Cellular Gate Controller GATOR: en/gate-controllers/gator/GATOR_UM_ENG_2025 02 07/index.md
-  - Work in Progress:
-      - GT+ UM_ENG_2025 09 11: wip/GT+ UM_ENG_2025 09 11/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
