@@ -381,13 +381,33 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img src="./image22.png" alt="DSC and PARADOX panel connection diagrams" style="max-width: 100%; height: auto; margin: 1rem 0;" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image22-left.png" alt="DSC panel connection diagram" style="width: 41.2%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image22-right.png" alt="PARADOX panel connection diagram" style="width: 58.8%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
-<img src="./image23.png" alt="Wiring schematics - additional configurations" style="max-width: 100%; height: auto; margin: 1rem 0;" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image23-left.png" alt="Wiring schematic - configuration 1" style="width: 40.2%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image23-right.png" alt="Wiring schematic - configuration 2" style="width: 59.8%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
-<img src="./image24.png" alt="TIP/RING connection schematics" style="max-width: 100%; height: auto; margin: 1rem 0;" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image24-left.png" alt="TIP/RING connection - configuration 1" style="width: 38.8%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image24-right.png" alt="TIP/RING connection - configuration 2" style="width: 61.2%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
-<img src="./image25.png" alt="Additional wiring configurations" style="max-width: 100%; height: auto; margin: 1rem 0;" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image25-left.png" alt="Wiring configuration - left panel" style="width: 44%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image25-right.png" alt="Wiring configuration - right panel" style="width: 56%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
