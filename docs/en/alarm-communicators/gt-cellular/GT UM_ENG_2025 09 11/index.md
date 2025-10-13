@@ -580,7 +580,6 @@ The control panel zone to which the GT output OUT is connected should be set to 
     change the impulse duration or change to level mode in Protegus2
     settings. See chapter 5.2 "Additional settings to arm/disarm the system
     using the control panel's keyswitch zone".
-####  
 
 #### PROGRAMMING HONEYWELL VISTA LANDLINE DIALER
 
