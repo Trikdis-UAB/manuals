@@ -1,0 +1,73 @@
+{
+  "markdown.preview.breaks": false,
+  "markdown.extension.toc.levels": "2..4",
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.tableFormatter.enabled": true,
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD033": { "allowed_elements": ["br", "details", "summary", "div", "span", "kbd", "sup", "sub", "img"] },
+    "MD041": false,
+    "MD024": { "siblings_only": true }
+  },
+
+  "yaml.validate": true,
+  "yaml.format.enable": true,
+
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.autoSlashAfterDirectory": true,
+
+  "pasteImage.basePath": "${workspaceFolder}/docs",
+  "pasteImage.path": "${currentFileDir}",
+  "pasteImage.namePrefix": "image",
+  "pasteImage.showFilePathConfirmInputBox": false,
+  "pasteImage.insertPattern": "![${imageFileName}](${imageFilePath})",
+  "pasteImage.forceUnixStyleSeparator": true,
+
+  "cSpell.language": "en,en-US",
+  "cSpell.words": [
+    "MkDocs",
+    "TRIKDIS",
+    "Protegus",
+    "LoRa",
+    "DSC",
+    "Paradox",
+    "Honeywell",
+    "GET",
+    "E16T",
+    "SP3",
+    "SP4",
+    "SP5",
+    "Anixter",
+    "Wesco",
+    "EMCS",
+    "Caddx",
+    "Redcare",
+    "Codespaces"
+  ],
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [100],
+  "editor.wordWrap": "on",
+  "editor.renderWhitespace": "boundary",
+
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "files.trimTrailingWhitespace": false
+  },
+
+  "files.exclude": {
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "site": true
+  },
+
+  "search.exclude": {
+    "site": true,
+    "**/.venv": true,
+    "**/__pycache__": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "DavidAnson.vscode-markdownlint",
+    "ChrisChinchilla.vale-vscode",
+    "redhat.vscode-yaml",
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    "mushan.vscode-paste-image",
+    "bierner.markdown-mermaid",
+    "csholmq.excel-to-markdown-table"
+  ]
+}

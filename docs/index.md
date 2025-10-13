@@ -19,6 +19,9 @@ hide:
 ### Alarm Panels
 
 - [SP3 Alarm Panel](en/alarm-panels/sp3/SP3_TAIM_EN_2025 09 12/)
+### Gate Controllers
+
+- [GATOR GSM Gate Controller](en/gate-controllers/gator/GATOR_UM_ENG_2025 02 07/)
 
 ---
 

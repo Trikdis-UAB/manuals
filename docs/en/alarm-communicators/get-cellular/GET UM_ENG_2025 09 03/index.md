@@ -4,15 +4,15 @@
   <img src="./image1.png" alt="Product Image" width="400">
 </div>
 
-## Description
+## Description 
 
-The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the ***Protegus2*** application.
+The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the Protegus2 application.
 
-Cellular/Ethernet communicator ***GET*** can be directly connected to DSC, Paradox, UTC Interlogix (CADDX), Texecom, Innerrange, Honeywell control panels. The communicator can also be connected to the telephone communicators (which supports the Contact ID communication protocol transmitted by DTMF tones) of control panels.
+Cellular/Ethernet communicator GET can be directly connected to DSC, Paradox, UTC Interlogix (CADDX), Texecom, Innerrange, Honeywell control panels. The communicator can also be connected to the telephone communicators (which supports the Contact ID communication protocol transmitted by DTMF tones) of control panels.
 
 Communicator transmits full event information to the Central Monitoring Station.
 
-Communicator works with ***Protegus2*** application. With ***Protegus2*** users can control their alarm system remotely and get notifications about security system events. The ***Protegus2*** app works with all security alarm panels from various manufacturers to which the ***GET*** communicator is connected. Communicator can transmit event notifications to the Central Monitoring Station and work with ***Protegus2*** simultaneously.
+Communicator works with Protegus2 application. With Protegus2 users can control their alarm system remotely and get notifications about security system events. The Protegus2 app works with all security alarm panels from various manufacturers to which the GET communicator is connected. Communicator can transmit event notifications to the Central Monitoring Station and work with Protegus2 simultaneously.
 
 ### Features
 
@@ -45,13 +45,13 @@ Sends events to monitoring station receiver:
 
 **Notifies users:**
 
-- Users can be notified about events with ***Protegus2*** app.
+- Users can be notified about events with Protegus2 app.
 
 **Controllable outputs and inputs:**
 
 - 2 double I/O terminals that can be set either as input (IN) or controllable output (OUT) terminals.
 
-- Outputs controlled by the ***Protegus2*** app.
+- Outputs controlled by the Protegus2 app.
 
 **Quick setup:**
 
@@ -61,158 +61,53 @@ Sends events to monitoring station receiver:
 
 - Remote configuration and firmware updates.
 
-### List of compatible control panels
+### List of compatible control panels 
 
-<table style="width:60%;">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 38%" />
-<col style="width: 2%" />
-</colgroup>
-<tbody>
-<tr>
-<td rowspan="2"><strong>Manufacturer</strong>
-<p>DSC®</p></td>
-<td colspan="2" rowspan="2">Model | ==============================+ <u>PC585</u>, | <u>PC1404</u>, | <u>PC1565</u>, | <u>PC1616</u>, | <u>PC1832</u>, | <u>PC1864</u>, | <u>PC5020</u> |</td>
-</tr>
-
-<tr>
-<td rowspan="5">PARADOX®</td>
-<td colspan="2"><u>SPECTRA SP4000</u>, | <u>SP5500</u>, | <u>SP6000</u>, | <u>SP7000</u>, | <u>SP65</u>, | <u>SP5500+</u>, | <u>SP6000+</u>, | <u>SP7000+</u> |</td>
-</tr>
-<tr>
-<td colspan="2"><u>MAGELLAN MG5000</u>, | <u>MG5050</u>, | <u>MG5050E</u>, | <u>MG5050+</u>, | <u>MG5075</u> |</td>
-</tr>
-<tr>
-<td colspan="2"><u>DIGIPLEX</u> | EVO48, <u>EVO192</u>, | <u>EVOHD</u>, | <u>EVOHD+</u> |</td>
-</tr>
-<tr>
-<td>SPECTRA 1727, 1728, 1738</td>
-<td></td>
-</tr>
-<tr>
-<td>ESPRIT E55</td>
-<td></td>
-</tr>
-<tr>
-<td>UTC Interlogix®</td>
-<td colspan="2"><u>NetworX (Caddx) NX-4v2</u>, | <u>NX-6v2</u>, | <u>NX-8v2</u>, | <u>NX-8e</u> |</td>
-</tr>
-<tr>
-<td>Texecom®</td>
-<td colspan="2"><u>Premier 24</u>, | <u>48</u>, | <u>88</u>, | <u>168</u>, | <u>640</u> /​ <u>Premier | Elite 12</u>, | <u>24</u>, | <u>48</u>, | <u>64</u>, | <u>88</u>, | <u>168</u>, | <u>640</u> |</td>
-</tr>
-<tr>
-<td>Innerrange®</td>
-<td>Inception, Integriti</td>
-<td></td>
-</tr>
-<tr>
-<td>Honeywell®</td>
-<td colspan="2"><u>Ademco Vista-15</u>, | <u>Ademco Vista-20</u>, | <u>Ademco Vista-48</u> |</td>
-</tr>
-</tbody>
-</table>
+| Manufacturer | Model |
+|--------------|-------|
+| DSC® | <u>PC585</u>, <u>PC1404</u>, <u>PC1565</u>, <u>PC1616</u>, <u>PC1832</u>, <u>PC1864</u>, <u>PC5020</u> |
+| PARADOX® | <u>SPECTRA SP4000</u>, <u>SP5500</u>, <u>SP6000</u>, <u>SP7000</u>, <u>SP65</u>, <u>SP5500+</u>, <u>SP6000+</u>, <u>SP7000+</u> |
+| PARADOX® | <u>MAGELLAN MG5000</u>, <u>MG5050</u>, <u>MG5050E</u>, <u>MG5050+</u>, <u>MG5075</u> |
+| PARADOX® | <u>DIGIPLEX</u> EVO48, <u>EVO192</u>, <u>EVOHD</u>, <u>EVOHD+</u> |
+| PARADOX® | SPECTRA 1727, 1728, 1738 |
+| PARADOX® | ESPRIT E55 |
+| UTC Interlogix® | <u>NetworX (Caddx) NX-4v2</u>, <u>NX-6v2</u>, <u>NX-8v2</u>, <u>NX-8e</u> |
+| Texecom® | <u>Premier 24</u>, <u>48</u>, <u>88</u>, <u>168</u>, <u>640</u> /​ <u>Premier Elite 12</u>, <u>24</u>, <u>48</u>, <u>64</u>, <u>88</u>, <u>168</u>, <u>640</u> |
+| Innerrange® | Inception, Integriti |
+| Honeywell® | <u>Ademco Vista-15</u>, <u>Ademco Vista-20</u>, <u>Ademco Vista-48</u> |
 
 **<u>Underlined</u>** - Control panels directly controlled by communicator***.*** Firmware PARADOX control panels, which are directly controlled, must be V.4 or higher.
 
-\* Connect control panels from other manufacturers to the ***GET*** communicator using the TIP RING terminals of the control panel.
+\* Connect control panels from other manufacturers to the GET communicator using the TIP RING terminals of the control panel.
 
-### Communicator model types
+### Communicator model types 
 
 This manual is for LTE communicators.
 
-### Specifications
+### Specifications 
 
-<table>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 73%" />
-</colgroup>
-<tbody>
-<tr>
-<td rowspan="2"><strong>Parameter</strong>
+| Parameter | Description |
+|-----------|-------------|
+| Network connectivity | LTE /​ Ethernet |
+| Connection to control panel | Serial bus, Keypad bus or TIP RING |
+| Dual purpose terminals [IN/​OUT] | 2, can be set as either NC;​ NO;​ NC/​EOL;​ NO/​EOL;​ NC/​DEOL;​ NO/​DEOL (2,2 kΩ) type inputs or open collector (OC) type outputs with current up to 0,15 A, 30 VDC max. |
+| Modem EG915U-EU /​ (Europe) | LTE FDD: B1/​B3/​B5/​B7/​B8/​B20/​B28 |
+| Modem EG915U-EU /​ (Europe) | GSM: B2/​B3/​B5/​B8 |
+| Modem EG915U-LA /​ (Latin America) | LTE FDD: B2/​B3/​B4/​B5/​B7/​B8/​B28/​B66 |
+| Modem EG915U-LA /​ (Latin America) | GSM: B2/​B3/​B5/​B8 |
+| Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
+| Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
+| Power supply voltage | 10-18 V DC |
+| Current consumption | 175 mA |
+| Transmission protocols | TRK8, DC-09_2007, DC-09_2012, TL150 |
+| Message encryption | AES 128 |
+| Buffer memory capacity | 60 events |
+| Changing settings | With TrikdisConfig computer program remotely or locally via USB-C port |
+| Operating environment | Temperature from -10 °C to 50 °C, relative humidity - up to 80% at +20 °C |
+| Communicator dimensions | 113 x 70 x 25 mm |
+| Weight | 110 g |
 
-<p>Network connectivity</p>
-</td>
-<td rowspan="2">DescriptionLTE /​ Ethernet</td>
-</tr>
-
-<tr>
-<td>
-<p>Connection to control panel</p>
-</td>
-<td>Serial bus, Keypad bus or TIP RING</td>
-</tr>
-<tr>
-<td>
-<p>Dual purpose terminals [IN/​OUT]</p>
-</td>
-<td>
-<p>2, can be set as either NC;​ NO;​ NC/​EOL;​ NO/​EOL;​ NC/​DEOL;​ NO/​DEOL (2,2 kΩ) type inputs or open collector (OC) type outputs with current up to 0,15 A, 30 VDC max.</p>
-</td>
-</tr>
-<tr>
-<td rowspan="2">Modem EG915U-EU /​ (Europe)</td>
-<td>LTE FDD: B1/​B3/​B5/​B7/​B8/​B20/​B28</td>
-</tr>
-<tr>
-<td>GSM: B2/​B3/​B5/​B8</td>
-</tr>
-<tr>
-<td rowspan="2">Modem EG915U-LA /​ (Latin America)</td>
-<td>LTE FDD: B2/​B3/​B4/​B5/​B7/​B8/​B28/​B66</td>
-</tr>
-<tr>
-<td>GSM: B2/​B3/​B5/​B8</td>
-</tr>
-<tr>
-<td rowspan="2">Modem BG95-M5 (Cat M1)</td>
-<td>LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85</td>
-</tr>
-<tr>
-<td>EGPRS: 850/​900/​1800/​1900 MHz</td>
-</tr>
-<tr>
-<td>Power supply voltage</td>
-<td>10-18 V DC</td>
-</tr>
-<tr>
-<td>Current consumption</td>
-<td>175 mA</td>
-</tr>
-<tr>
-<td>Transmission protocols</td>
-<td>TRK8, DC-09_2007, DC-09_2012, TL150</td>
-</tr>
-<tr>
-<td>Message encryption</td>
-<td>AES 128</td>
-</tr>
-<tr>
-<td>Buffer memory capacity</td>
-<td>60 events</td>
-</tr>
-<tr>
-<td>Changing settings</td>
-<td>With <strong><em>TrikdisConfig</em></strong> computer program remotely or locally via USB-C port</td>
-</tr>
-<tr>
-<td>Operating environment</td>
-<td>Temperature from -10 °C to 50 °C, relative humidity - up to 80% at +20 °C</td>
-</tr>
-<tr>
-<td>Communicator dimensions</td>
-<td>113 x 70 x 25 mm</td>
-</tr>
-<tr>
-<td>Weight</td>
-<td>110 g</td>
-</tr>
-</tbody>
-</table>
-
-### Communicator elements
+### Communicator elements 
 
 1.  Cellular antenna SMA connector
 
@@ -234,7 +129,7 @@ This manual is for LTE communicators.
 
 <img alt="" src="./image4.png" style="width:4.926676509186351in;height:3.24000656167979in" />
 
-### Purpose of terminals
+### Purpose of terminals 
 
 | Terminal | Description |
 |----------|-------------|
@@ -249,40 +144,54 @@ This manual is for LTE communicators.
 | TIP | Terminal to connect with control panel TIP terminal |
 | RING | Terminal to connect with control panel RING terminal |
 
-### LED indication of operation
+### LED indication of operation 
 
 | Indicator | Light status | Description |
 |-----------|--------------|-------------|
 | NETWORK LTE | Off | No connection to cellular network |
+| NETWORK LTE | Yellow blinking | Connecting to cellular network |
+| NETWORK LTE | Green solid with yellow blinking | Communicator is connected to cellular network. / Sufficient cellular signal strength for 4G level 3 (three yellow flashes) |
 | NETWORK LAN | Off | No connection to a computer network |
+| NETWORK LAN | Green solid | Communicator is connected to a computer network |
 | DATA | Off | No unsent events |
+| DATA | Green solid | Unsent events are stored in buffer |
+| DATA | Green blinking | (Configuration mode) Data is being transferred to/from communicator |
 | POWER | Off | Power supply is off or disconnected |
+| POWER | Green solid | Power supply is on with sufficient voltage |
+| POWER | Yellow solid | Power supply voltage is insufficient (≤11.5V) |
+| POWER | Green solid and yellow blinking | (Configuration mode) Communicator is ready for configuration |
+| POWER | Yellow solid | (Configuration mode) No connection with computer |
 | TROUBLE | OFF | No operation problems |
+| TROUBLE | 1 red blink | Connection error at the "physical" level (PHY Link status error), check LAN cable |
+| TROUBLE | 2 red blinks | SIM1 card error |
+| TROUBLE | 3 red blinks | SIM2 card error |
+| TROUBLE | 7 red blinks | Lost connection with control panel (serial bus) |
 | INTERFACE | - | Not used |
 
-### Structural schematic of using the GET communicator
+### Structural schematic of using the GET communicator 
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
 
 !!! note
     Before you begin, make sure that you have the necessary:
-    
+
     1.  USB-C cable for configuration.
-    
+
     2.  At least 4-wire cable for connecting communicator to control panel.
-    
-    3.  CRP2 cable for connecting to Paradox panel's serial port.
-    
+
+    3.  CRP2 cable for connecting to Paradox panel\`s serial port.
+
     4.  Flat-head 2,5 mm screwdriver.
-    
-    5.  Sufficient gain cellular antenna if network coverage in the area is poor.
-    
+
+    5.  Sufficient gain cellular antenna if network coverage in the area is
+        poor.
+
     6.  Activated SIM card (PIN code request can be turned off).
-    
-    7.  Particular security control panel's installation manual.
-    
+
+    7.  Particular security control panel\`s installation manual.
+
     Order the necessary components separately from your local distributor.
-## Quick configuration with *TrikdisConfig* software
+## Quick configuration with *TrikdisConfig* software 
 
 1.  Download **TrikdisConfig** configuration software from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it.
 
@@ -292,13 +201,13 @@ This manual is for LTE communicators.
 
 3.  Using a USB-C cable connect the communicator to the computer.
 
-4.  Run ***TrikdisConfig***. The software will automatically recognize the connected communicator and will open a window for configuration.
+4.  Run TrikdisConfig. The software will automatically recognize the connected communicator and will open a window for configuration.
 
 5.  Click **Read [F4]** to read the communicator’s settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window.
 
-Below we describe what settings need to be set for the communicator to begin sending events to the Central Monitoring Station (CMS) and to allow the security system to be controlled with the ***Protegus2*** app.
+Below we describe what settings need to be set for the communicator to begin sending events to the Central Monitoring Station (CMS) and to allow the security system to be controlled with the Protegus2 app.
 
-### Settings for connection with Protegus2 app
+### Settings for connection with Protegus2 app 
 
 **In “Panel settings” window:**
 
@@ -312,19 +221,23 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 2.  Select “**Security panel model”** that will be connected to the communicator.
 
-3.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in ***Protegus2*** app with their keypad code. This setting is only shown for directly controlled panels.
+3.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
 4.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password”**. It must match the password that is entered in the control panel.
 
 !!! note
-    For the direct panel control to work, you will need to change the panel settings. How to do this is described in chapter 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”. In this section you will find information on how to change the “**PC download/UDL password**”.
+    For the direct panel control to work, you will need to change the panel
+    settings. How to do this is described in chapter 4.1 "Programming of
+    control panels when the communicator is connected to the keypad bus or
+    serial bus". In this section you will find information on how to change
+    the "**PC download/UDL password**".
 **In “User reporting” window, “PROTEGUS Cloud” tab:**
 
 <img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9606299212598426in" />
 
 5.  Tick the checkbox “**Enable connection”** to the Protegus Cloud.
 
-6.  Change the “**PROTEGUS Cloud access Code”** for logging in to ***Protegus2*** if you want users to be asked to enter it when adding the system to ***Protegus2*** app (default password – 123456).
+6.  Change the “**PROTEGUS Cloud access Code”** for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456).
 
 **In “Network settings” window:**
 
@@ -340,7 +253,7 @@ These settings must be made if the SIM (or two SIM cards) card is inserted into 
 
 8.  Enter “**SIM card PIN”** code.
 
-9.  Change “**APN”** name.”**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+9.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
 10. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
@@ -350,13 +263,15 @@ These settings must be made if the SIM (or two SIM cards) card is inserted into 
 
 <img alt="" src="./image12.png" style="width:7.086614173228346in;height:2.562992125984252in" />
 
-12. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to ***Protegus2***. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the”**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the Return to main connection type will be attempted after the specified time interval.
+12. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the Return to main connection type will be attempted after the specified time interval.
 
 After finishing configuration, click the button **Write [F5]** and disconnect the USB cable.
 
 !!! note
-    For more information about other ***GET*** settings in ***TrikdisConfig***, see chapter 6 „**TrikdisConfig window description**”.
-### Settings for connection with Central Monitoring Station
+    For more information about other GET settings in
+    TrikdisConfig, see chapter 6 „**TrikdisConfig window
+    description**".
+### Settings for connection with Central Monitoring Station 
 
 **In “System settings” window:**
 
@@ -373,6 +288,8 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 <img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 3.  Select “**Security panel model”** that will be connected to the communicator.
+
+**  **
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
@@ -394,7 +311,9 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 <img alt="" src="./image17.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
-11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to ***Protegus2***. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the”**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
+11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
+
+**  **
 
 **In “Network settings” window:**
 
@@ -410,7 +329,7 @@ If a SIM card (or two SIM cards) is inserted in the communicator, the following 
 
 13. Enter “**SIM card PIN”** code.
 
-14. Change the “**APN”** name.”**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+14. Change the “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
 15. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
@@ -419,10 +338,12 @@ If a SIM card (or two SIM cards) is inserted in the communicator, the following 
 After finishing configuration, click **Write [F5]** and disconnect the USB cable.
 
 !!! note
-    For more information about other ***GET*** settings in ***TrikdisConfig***, see chapter 6 „**TrikdisConfig window description**”.
-## Installation and wiring
+    For more information about other GET settings in
+    TrikdisConfig, see chapter 6 „**TrikdisConfig window
+    description**".
+## Installation and wiring 
 
-### Installation process
+### Installation process 
 
 1.  Remove the top cover and pull out the contact terminal.
 
@@ -445,10 +366,14 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 <img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
 !!! note
-    One or two SIM cards can be inserted into the communicator. / Ensure that the SIM card is activated. / Ensure that mobile internet service (mobile data) is enabled if connected via IP channel. / To avoid entering the PIN code in ***TrikdisConfig***, insert the SIM card into your mobile phone and turn off the PIN request function.
-### Installation in intrusion control panel enclosure panel
+    One or two SIM cards can be inserted into the communicator. / Ensure
+    that the SIM card is activated. / Ensure that mobile internet service
+    (mobile data) is enabled if connected via IP channel. / To avoid
+    entering the PIN code in TrikdisConfig, insert the SIM card into
+    your mobile phone and turn off the PIN request function.
+### Installation in intrusion control panel enclosure panel 
 
-The ***GET*** communicator must be installed inside the intrusion control panel enclosure, which is protected by a lid tamper. It is mounted on the internal rear surface of the enclosure using the supplied industrial-grade double-sided acrylic foam mounting tape. The tape must be applied to a clean, dry surface with firm pressure to ensure reliable adhesion.
+The GET communicator must be installed inside the intrusion control panel enclosure, which is protected by a lid tamper. It is mounted on the internal rear surface of the enclosure using the supplied industrial-grade double-sided acrylic foam mounting tape. The tape must be applied to a clean, dry surface with firm pressure to ensure reliable adhesion.
 
 If the host enclosure does not allow secure installation as described above, the communicator may be installed in a separate tampered enclosure.
 
@@ -456,31 +381,31 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
+<img src="./image22.png" alt="DSC and PARADOX panel connection diagrams" style="max-width: 100%; height: auto; margin: 1rem 0;" />
 
-<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
+<img src="./image23.png" alt="Wiring schematics - additional configurations" style="max-width: 100%; height: auto; margin: 1rem 0;" />
 
-<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
+<img src="./image24.png" alt="TIP/RING connection schematics" style="max-width: 100%; height: auto; margin: 1rem 0;" />
 
-<img alt="" src="./image25.png" style="width:6.996680883639545in;height:3.28000656167979in" />
+<img src="./image25.png" alt="Additional wiring configurations" style="max-width: 100%; height: auto; margin: 1rem 0;" />
 
-### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel
+### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
 <img alt="" src="./image26.png" style="width:3.37000656167979in;height:3.0333398950131234in" />
 
-When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the ***GET*** communicator:
+When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
 
 1.  Select “**AUTO**”.
 
-2.  Select the control panel model “**7. Paradox SP+/MG+ series KeyBus**”.
+2.  Select the control panel model “**7. Paradox SP+/MG+ series KeyBus**“.
 
-3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the ***Protegus2*** app using their own keypad code.
+3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the Protegus2 app using their own keypad code.
 
 4.  To directly control the security panel, enter the “**Security panel PC download password**”. It must match the password entered in the security panel.
 
 <img alt="" src="./image27.png" style="width:7.086614173228346in;height:2.0196850393700787in" />
 
-The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the ***Protegus2*** application.
+The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the Protegus2 application.
 
 | **Cell** |     **Data**     | **Cell** | **Data** |
 |:--------:|:----------------:|:--------:|:--------:|
@@ -488,61 +413,76 @@ The Paradox control panel must be programmed to transmit events to the CMS and f
 |   811    |       1111       |   911    |   1234   |
 |   812    |       2222       |          |          |
 
-### Schematic for wiring the communicator to the control panel keyswitch zone
+### Schematic for wiring the communicator to the control panel keyswitch zone 
 
 Follow this schematic if the control panel will be armed/disarmed with a communicator PGM output turning on/off the panel’s keyswitch zone.
 
 !!! note
-    ***GET*** communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in ***TrikdisConfig***, in the "**Panel settings**" window, uncheck “**Remote Arm/Disarm”**. The ***Protegus2*** apps must be configured with the settings described in chapter 5.2”Additional settings to arm/disarm the system using the control panel’s keyswitch zone”.
-    
-    The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
+    GET communicator has 2 universal input / output terminals that can
+    be set to the OUT (PGM) operating mode. The outputs (OUT) can control
+    two areas of the security system. If you want to control the system in
+    this way, in TrikdisConfig, in the "**Panel settings**" window,
+    uncheck "**Remote Arm/Disarm"**. The Protegus2 apps must be
+    configured with the settings described in chapter 5.2 "Additional
+    settings to arm/disarm the system using the control panel's keyswitch
+    zone".
+The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
+
 <img alt="" src="./image28.png" style="width:3.313339895013123in;height:2.4466721347331584in" />
 
 The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel. / Arming/disarming the panel via the keyswitch zone.
 
 <img alt="" src="./image29.png" style="width:3.46000656167979in;height:2.903338801399825in" />
 
-### Schematics for input connection
+### Schematics for input connection 
 
-The communicator has 2 universal input / output terminals that can be set to input IN mode. NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL circuits can be connected to the input terminal. The input type can be changed in the ***TrikdisConfig*** window „**IN/OUT” -> “Type”.**
+The communicator has 2 universal input / output terminals that can be set to input IN mode. NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL circuits can be connected to the input terminal. The input type can be changed in the TrikdisConfig window „**IN/OUT” -> “Type”.**
 
 Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
 <img alt="" src="./image30.png" style="width:5.169291338582677in;height:4.003937007874016in" />
 
-### Schematics for wiring a relay
+### Schematics for wiring a relay 
 
 With relay contacts you can control (turn on/off) various electric appliances. The I/O terminal of the communicator must be set to an output (OUT) mode.
 
 <img alt="" src="./image31.png" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
-### Turn on the communicator
+### Turn on the communicator 
 
-To start the communicator, turn on the security control panel’s power supply. This LED indication on the ***GET*** communicator must show:
+To start the communicator, turn on the security control panel’s power supply. This LED indication on the GET communicator must show:
 
 - “POWER” LED illuminates green when the power is on;
 
 - “NETWORK LTE” LED illuminates green and blinks yellow when the communicator is registered to the cellular network.
 
 !!! note
-    Sufficient strength of LTE signal is level three (three “NETWORK LTE” indicator flashes in yellow color). / If you count less yellow “NETWORK LTE” LED flashes, the network signal strength is insufficient. We recommend to select a different place to install the communicator, or to use a more sensitive cellular antenna. / If you see a different LED indication, it indicates a certain malfunction. Diagnose it by following the LED indication table in chapter 1.6 “LED indication of operation”. / If the ***GET*** indication does not illuminate at all, check the power supply and connections.
-## Programming the control panel
+    Sufficient strength of LTE signal is level three (three "NETWORK LTE"
+    indicator flashes in yellow color). / If you count less yellow "NETWORK
+    LTE" LED flashes, the network signal strength is insufficient. We
+    recommend to select a different place to install the communicator, or to
+    use a more sensitive cellular antenna. / If you see a different LED
+    indication, it indicates a certain malfunction. Diagnose it by following
+    the LED indication table in chapter 1.6 "LED indication of
+    operation". / If the GET indication does not illuminate at all,
+    check the power supply and connections.
+## Programming the control panel 
 
-### Programming of control panels when the communicator is connected to the keypad bus or serial bus
+### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
 
-Below it is described how to program the security control panel so that the ***GET*** communicator could read events from the panel and control it remotely.
+Below it is described how to program the security control panel so that the GET communicator could read events from the panel and control it remotely.
 
-To enable remote control of the security panel, make sure that the checkbox “**Remote Arm/Disarm”** is selected in the ***TrikdisConfig*** window **“Panel settings”.**
+To enable remote control of the security panel, make sure that the checkbox “**Remote Arm/Disarm”** is selected in the TrikdisConfig window **“Panel settings”.**
 
-***DSC***
+#### DSC
 
 DSC panels do not need to be programmed.
 
-***PARADOX***
+#### PARADOX
 
-Paradox control panels need to be programmed only for direct control with ***Protegus2***. You do not need to program Paradox panels for reading events.
+Paradox control panels need to be programmed only for direct control with Protegus2. You do not need to program Paradox panels for reading events.
 
-For remote control of Paradox panels, you need to set up a PC download password. This password must match the password which was set in the ***TrikdisConfig*** window **“Panel settings”**, when the checkbox next to “**Remote Arm/Disarm”** was selected.
+For remote control of Paradox panels, you need to set up a PC download password. This password must match the password which was set in the TrikdisConfig window **“Panel settings”**, when the checkbox next to “**Remote Arm/Disarm”** was selected.
 
 To set this password, with the keyboard connected to the security control panel:
 
@@ -550,13 +490,13 @@ To set this password, with the keyboard connected to the security control panel:
 
 - For DIGIPLEX EVO series: go to cell 3012 and enter 4-digit PC download password.
 
-***TEXECOM***
+#### TEXECOM
 
 Texecom control panels need to be programmed for both reading events and remote control.
 
-You need to set the Texecom panel’s “**UDL** **passcode”**. This password must match the password which was set in the ***TrikdisConfig*** window **”Panel settings”,** when the box next to”**Remote Arm/Disarm”** was selected.
+You need to set the Texecom panel’s “**UDL** **passcode”**. This password must match the password which was set in the TrikdisConfig window **“Panel settings”,** when the box next to “**Remote Arm/Disarm”** was selected.
 
-The security control panel can be programmed with Texecom software - Wintex. Enter “**UDL passcode”** (4-digit code) in the”**Communication Options”** window, “**Options”** tab.
+The security control panel can be programmed with Texecom software - Wintex. Enter “**UDL passcode”** (4-digit code) in the “**Communication Options”** window, “**Options”** tab.
 
 Also, you can program with a keypad connected to the security control panel:
 
@@ -564,11 +504,11 @@ Also, you can program with a keypad connected to the security control panel:
 
 2.  Press the [9] key immediately afterwards.
 
-3.  Press [7][6], and then [2]. Enter the 4-digit “**UDL** **passcode”** (”**UDL passcode”** must match the ***GET*** communicator’s “**PC login password”).**
+3.  Press [7][6], and then [2]. Enter the 4-digit “**UDL** **passcode”** (“**UDL passcode”** must match the GET communicator’s “**PC login password”).**
 
 4.  Press [Yes] and leave the programming mode by pressing [Menu].
 
-***UTC INTERLOGIX (CADDX)***
+#### UTC INTERLOGIX (CADDX)
 
 With the keyboard connected to the security control panel:
 
@@ -582,6 +522,7 @@ With the keyboard connected to the security control panel:
 |----------|---------|---------|
 | 23 | 3 | 12345678 |
 | 37 (not necessary) | 3 | 12345678 |
+| 37 (not necessary) | 4 | 1234567* |
 | 90 | 3 | 12345678 |
 | 93 | 3 | 12345678 |
 | 96 | 3 | 12345678 |
@@ -592,7 +533,7 @@ With the keyboard connected to the security control panel:
 
 After having programmed all the fields listed, press [Exit] twice to exit the programming mode.
 
-***INNERRANGE***
+#### INNERRANGE
 
 **Innerrange Inception** security control panel version must be **2.3.0.3507-r0** or higher.
 
@@ -610,25 +551,25 @@ Open **Configuration > General > Alarm Reporting**. In the **3rd Party Device Co
 
 4.  Save settings and exit the application.
 
-***HONEYWELL ADEMCO VISTA***
+#### HONEYWELL ADEMCO VISTA
 
 Follow these steps for **Honeywell Ademco Vista-20** and **Honeywell Ademco Vista-48** panels. **The panel’s firmware version must be V5.3 or higher.** With a keypad that is connected to the panel:
 
-1.  Enter the programming mode. Enter the installer code 4][1][1][2] and after that [8][0][0] . Alternatively, turn on the panel’s power supply. In 50 seconds after the power supply is turned on, press the buttons [\*] and [#] at the same time (this method can be used when programming mode was exited by pressing in keypad [\*][9][8] ).
+1.  Enter the programming mode. Enter the installer code 4][1][1][2] and after that [8][0][0] . Alternatively, turn on the panel‘s power supply. In 50 seconds after the power supply is turned on, press the buttons [\*] and [#] at the same time (this method can be used when programming mode was exited by pressing in keypad [\*][9][8] ).
 
 2.  Turn on the sending of Contact ID events via LRR. Press [\*][2][9][1][#] in keypad.
 
-3.  When using the „Remote Arm/Disarm” function, allow to use the 2nd AUI address. In keypad press [\*][1][8][9][1][1][#] .
+3.  When using the „Remote Arm/Disarm“ function, allow to use the 2nd AUI address. In keypad press [\*][1][8][9][1][1][#] .
 
 Exit the programming mode. In keypad press [\*][9][9].
 
-### Programming of control panels when the communicator is connected to the TIP/RING terminals of the control panel
+### Programming of control panels when the communicator is connected to the TIP/RING terminals of the control panel 
 
 For the control panel to send events via the landline dialer, it must be turned on and properly set up. Following the panel’s programming manual, configure the control panel’s landline dialer:
 
 1.  Turn on the panel’s PSTN landline dialer.
 
-2.  Enter the monitoring station receiver’s telephone number (you can use any number longer than 4 digits. The ***GET*** communicator will pick up and answer when the panel calls to any phone number).
+2.  Enter the monitoring station receiver’s telephone number (you can use any number longer than 4 digits. The GET communicator will pick up and answer when the panel calls to any phone number).
 
 3.  Choose DTMF mode.
 
@@ -636,11 +577,15 @@ For the control panel to send events via the landline dialer, it must be turned 
 
 5.  Enter the panel’s 4 digit account number.
 
-The control panel zone to which the ***GET*** output OUT is connected should be set to keyswitch zone for arming/disarming the control panel remotely.
+The control panel zone to which the GET output OUT is connected should be set to keyswitch zone for arming/disarming the control panel remotely.
 
 !!! note
-    Keyswitch zone can be momentary (pulse) or level. By default, the ***GET*** controllable output OUT is set to 3 second pulse mode. You can change the impulse duration or change to level mode in ***Protegus2*** settings. See chapter **5**.2 “Additional settings to arm/disarm the system using the control panel’s keyswitch zone”.
-***PROGRAMMING HONEYWELL VISTA LANDLINE DIALER***
+    Keyswitch zone can be momentary (pulse) or level. By default, the
+    GET controllable output OUT is set to 3 second pulse mode. You can
+    change the impulse duration or change to level mode in Protegus2
+    settings. See chapter **5**.2 "Additional settings to arm/disarm the
+    system using the control panel's keyswitch zone".
+#### PROGRAMMING HONEYWELL VISTA LANDLINE DIALER
 
 Using the control panel’s keypad enter these sections and set them as described:
 
@@ -658,12 +603,12 @@ Using the control panel’s keypad enter these sections and set them as describe
 
 When all required settings are set, it is necessary to exit programming mode. Enter \*99 in keypad.
 
-***SPECIAL SETTINGS FOR HONEYWELL VISTA 48 PANEL***
+#### SPECIAL SETTINGS FOR HONEYWELL VISTA 48 PANEL
 
-If you want to use ***GET*** communicator with Honeywell Vista 48 panel, set the following sections as described:
+If you want to use GET communicator with Honeywell Vista 48 panel, set the following sections as described:
 
 | Section | Data                             | Section | Data | Section | Data |
-|:-------:|:---------------------------------|:-------:|:----:|:-------:|:----:|
+|:-------:|----------------------------------|:-------:|:----:|:-------:|:----:|
 |  \*41   | 1111 (receiver telephone number) |  \*60   |  1   |  \*69   |  1   |
 |  \*42   | 1111                             |  \*61   |  1   |  \*70   |  1   |
 |  \*43   | 1234 (panel account number)      |  \*62   |  1   |  \*71   |  1   |
@@ -676,7 +621,7 @@ If you want to use ***GET*** communicator with Honeywell Vista 48 panel, set the
 
 When all required settings are set, it is necessary to exit programming mode. Enter \*99 in keypad.
 
-***UTC INTERLOGIX(CADDX)***
+#### UTC INTERLOGIX(CADDX)
 
 Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when the communicator is connected to the TIP/RING terminals of the control panel.
 
@@ -685,36 +630,50 @@ Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when
 |  | *89713 | Enter programming mode |
 |  | 0# |  |
 | Location 0 | 0# |  |
+| Location 0 | 1*2*3*4*# |  |
 | Location 1 | 1# |  |
+| Location 1 | 1*2*3*4*# |  |
 | Location 2 | 2# |  |
-| Location 4 | 4# |  |
-| Location 23 | 23# |  |
-| Location 37 | 37# |  |
+| Location 2 | 1*# |  |
+| Location 4 | 4# | All zones LEDs are ON (segment 1) |
+| Location 4 | 12345678* | All zones LEDs are ON (segment 2) |
+| Location 4 | 12345678*# |  |
+| Location 23 | 23# | All zones LEDs are ON (segment 3) |
+| Location 23 | ** | All zones LEDs are ON (segment 3) |
+| Location 23 | 12345678*# | All zones LEDs are ON (segment 3) |
+| Location 37 | 37# | All zones LEDs are ON (segment 3) |
+| Location 37 | ** | All zones LEDs are ON (segment 4) |
+| Location 37 | 12345678* |  |
+| Location 37 | 12345678*# |  |
 |  | EXIT EXIT | Exit programming mode |
 
-## Remote control
+## Remote control 
 
-### Adding the security system to Protegus2 app
+### Adding the security system to Protegus2 app 
 
-With ***Protegus2*** users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
+With Protegus2 users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
 
-1.  Download and launch the ***Protegus2*** application or use the browser version: <u>[web.protegus.app</u>](https://web.protegus.app/login).
+1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
 2.  Log in with your user name and password or register and create new account.
 
-!!! warning "Important"
-    When adding the ***GET*** communicator to ***Protegus2*** check if:
+!!! warning
+    "Important"
+    When adding the GET communicator to Protegus2 check if:
     
-    1.  The inserted SIM card is activated and the PIN code is either entered or disabled;
+    1.  The inserted SIM card is activated and the PIN code is either
+        entered or disabled;
     
     2.  Or a LAN cable is connected.
     
-    3.  \*\*\*“Protegus\*\*\* ***cloud”*** is enabled. See chapter 6.5 ”User reporting” window;
+    3.  "Protegus cloud" is enabled. See chapter 6.5 "User
+        reporting" window;
     
-    4.  Power supply is connected (“POWER” LED illuminates green);
+    4.  Power supply is connected ("POWER" LED illuminates green);
     
-    5.  Registered to the network (“NETWORK LTE” LED illuminates green and blinks yellow).
-3.  Click “**Add new system”** and enter the ***GET***’s”*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
+    5.  Registered to the network ("NETWORK LTE" LED illuminates green and
+        blinks yellow).
+3.  Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
 <img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" />
 
@@ -722,20 +681,22 @@ With ***Protegus2*** users will be able to control their alarm system remotely. 
 
 <img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
-### Additional settings to arm/disarm the system using the control panel’s keyswitch zone
+### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
-!!! warning "Important"
-    The control panel zone to which the ***GET*** output OUT is connected to has to be set to keyswitch mode.
-Follow the instructions below if the security control panel will be controlled with a ***GET*** PGM output, turning on/off the control panel keyswitch zone.
+!!! warning
+    "Important"
+    The control panel zone to which the GET output OUT is connected to
+    has to be set to keyswitch mode.
+Follow the instructions below if the security control panel will be controlled with a GET PGM output, turning on/off the control panel keyswitch zone.
 
-1.  Click „**Continue**”.
+1.  Click „**Continue**“.
 
 <img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
-2.  Enter “**Area name**”. Enable PGM output control using the ***Protegus2*** application.
+2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
-4.  Click „**Save**”.
+4.  Click „**Save**“.
 
 <img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
@@ -745,7 +706,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 <img alt="" src="./image43.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
-### Arming/disarming the alarm system with Protegus2
+### Arming/disarming the alarm system with Protegus2 
 
 1.  In the “System Home Screen” window, click on the “Disarm” status icon.
 
@@ -753,17 +714,15 @@ Follow the instructions below if the security control panel will be controlled w
 
 <img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
 
-<div>
-
-<img src="./image3.png" alt="" width="400">
-
+<div style="text-align: center;">
+  <img src="./image3.png" alt="" width="400">
 </div>
 
-## TrikdisConfig window description
+## TrikdisConfig window description 
 
-### *TrikdisConfig* status bar description
+### *TrikdisConfig* status bar description 
 
-After connecting the ***GET*** communicator and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
+After connecting the GET communicator and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
 <img alt="" src="./image45.png" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
@@ -779,9 +738,9 @@ After connecting the ***GET*** communicator and clicking **Read [F4], *TrikdisCo
 | State | Connection to program type (via USB or remote) |
 | Administrator | Access level (shown after access code is approved) |
 
-After pressing **Read [F4]**, the program will read and show the settings which are set in the ***GET*.** Set the necessary settings according to the ***TrikdisConfig*** window descriptions given below.
+After pressing **Read [F4]**, the program will read and show the settings which are set in the ***GET*.** Set the necessary settings according to the TrikdisConfig window descriptions given below.
 
-### “System settings” window
+### “System settings” window 
 
 <img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.767716535433071in" />
 
@@ -795,7 +754,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 **“Access” settings group**
 
-When setting up the communicator ***GET*** there are two levels of access for, the administrator and the installer:
+When setting up the communicator GET there are two levels of access for, the administrator and the installer:
 
 - **Administrator code -** allows you to access all configuration fields (default code - 123456).
 
@@ -805,7 +764,7 @@ When setting up the communicator ***GET*** there are two levels of access for, t
 
 - **Allow installer to change** – the administrator can specify which settings can be changed by the installer.
 
-### “Panel settings” window
+###  “Panel settings” window 
 
 <img alt="" src="./image47.png" style="width:7.086614173228346in;height:4.043307086614173in" />
 
@@ -833,13 +792,13 @@ The communicator is connected to the control panel via a Serial Bus.
 
 - **Security panel model** – select the control panel model that will be connected to the communicator.
 
-- **Remote Arm/Disarm** – when the checkbox is selected, the ***GET*** will directly control the control panel remotely. This setting will be visible only for directly controlled panels. For direct control of the control panels you need to change the panel settings, as described in section 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”.
+- **Remote Arm/Disarm** – when the checkbox is selected, the GET will directly control the control panel remotely. This setting will be visible only for directly controlled panels. For direct control of the control panels you need to change the panel settings, as described in section 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”.
 
-- **Event** – check the box so that the communicator sends events to the CMS and to ***Protegus2***.
+- **Event** – check the box so that the communicator sends events to the CMS and to Protegus2.
 
 - **Security panel PC download password** - for the direct control of Paradox and Texecom control panels you need to enter the PC/UDL password. It must match the password that was entered in the control panel. How to change this password is described in section 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”*.*
 
-### “CMS reporting” window
+### “CMS reporting” window 
 
 **“CMS settings” tab**
 
@@ -889,7 +848,7 @@ Events are transmitted in parallel with the primary channel through this channel
 
 - **Backup reporting after** - indicates the number of unsuccessful attempts to send the message via “**Primary**” channel. If device fails to transmit specified number of times, the device will connect to transmit the messages via “**Backup**” channel.
 
-- **Return from backup after** - time after which the communicator ***GET*** will attempt to reconnect and transmit messages via the Primary channel.
+- **Return from backup after** - time after which the communicator GET will attempt to reconnect and transmit messages via the Primary channel.
 
   - **Line No.** - enter line number of the receiver.
 
@@ -897,35 +856,35 @@ Events are transmitted in parallel with the primary channel through this channel
 
 **“Reporting mode” settings group**
 
-For setting parameters on how the control panel will communicate with the CMS channels and with ***Protegus2***. The connection types are specified in order. If the control panel fails to connect using the “**Main type”** connection , it switches to the”**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the “**Return to main”** connection type will be attempted after the specified time interval.
+For setting parameters on how the control panel will communicate with the CMS channels and with Protegus2. The connection types are specified in order. If the control panel fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the “**Return to main”** connection type will be attempted after the specified time interval.
 
-- **Main type** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and ***Protegus2***.
+- **Main type** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and Protegus2.
 
-- **Backup type** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and ***Protegus2***.
+- **Backup type** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and Protegus2.
 
-- **Backup type 2** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and ***Protegus2***.
+- **Backup type 2** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and Protegus2.
 
 - **Communication path test** – specify the time period for which the selected connection types should be tested (LAN, SIM1, SIM2).
 
 <span id="_Ref526770803"></span>
 
-### “User reporting” window
+### “User reporting” window 
 
 **“PROTEGUS cloud” tab**
 
 <img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.9448818897637796in" />
 
-***Protegus2*** service allows users to remotely monitor and control the communicator. For more information about ***Protegus2*** service, visit [www.protegus.eu](http://www.protegus.eu).
+Protegus2 service allows users to remotely monitor and control the communicator. For more information about Protegus2 service, visit [www.protegus.eu](http://www.protegus.eu).
 
 **“Protegus Cloud” settings group**
 
-- **Enable connection** – enable the ***Protegus2*** service, the ***GET*** communicator will be able to exchange data with ***Protegus2*** app and to be remotely configured via ***TrikdisConfig*.**
+- **Enable connection** – enable the Protegus2 service, the GET communicator will be able to exchange data with Protegus2 app and to be remotely configured via ***TrikdisConfig*.**
 
-- **Protegus Cloud access Code -** 6-digit code for connecting to the ***Protegus2*** app (default - 123456).
+- **Protegus Cloud access Code -** 6-digit code for connecting to the Protegus2 app (default - 123456).
 
-- **Parallel reporting** – allow parallel report sending using the *primary channel* and to ***Protegus2***. Reports will only be sent to ***Protegus2*** and to users after they’ve been sent to the security company.
+- **Parallel reporting** – allow parallel report sending using the *primary channel* and to Protegus2. Reports will only be sent to Protegus2 and to users after they’ve been sent to the security company.
 
-### “Network settings” window
+### “Network settings” window 
 
 **“LAN” tab**
 
@@ -943,10 +902,14 @@ For setting parameters on how the control panel will communicate with the CMS ch
 - **Default gateway** – gateway address for when manual registering mode is set.
 - **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel “**Domain or IP”** field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
 
+**  **
+
 **“SIM1” tab**
 
-!!! warning "Important"
-    1. Ensure that the SIM card is activated and working before using it. / 2. Ensure that mobile data service is enabled.
+!!! warning
+    "Important"
+    1\. Ensure that the SIM card is activated and working before using
+    it. / 2. Ensure that mobile data service is enabled.
 <img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 **These settings must be made if the SIM card is inserted into the SIM1 slot of the communicator.**
@@ -983,27 +946,27 @@ For setting parameters on how the control panel will communicate with the CMS ch
 - **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel Domain or IP field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
 - **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes.
 
-### “IN/OUT” windows
+### “IN/OUT” windows 
 
 <img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.4488188976377954in" />
 
 The communicator has 2 universal (input / output) terminals. The table can set the terminal operating mode (Disabled, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
-Additional sensors can be connected to the communicator inputs. When the sensor is triggered, the communicator will send an event message. The input is assigned a Contact ID (SIA) code, which will be sent to CMS and ***Protegus2***.
+Additional sensors can be connected to the communicator inputs. When the sensor is triggered, the communicator will send an event message. The input is assigned a Contact ID (SIA) code, which will be sent to CMS and Protegus2.
 
-- **Enable** – checked event fields where messages will be sent to CMS and ***Protegus2***.
+- **Enable** – checked event fields where messages will be sent to CMS and Protegus2.
 
-- **E/R** – choose what type of event will be sent when input is triggered – “**Event”** or”**Restore”**.
+- **E/R** – choose what type of event will be sent when input is triggered – “**Event”** or “**Restore”**.
 
-- **CID** – enter the event code or leave the default value. Upon entering the event, the event code will be sent to ***Protegus2*** and CMS.
+- **CID** – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
 
-- **SIA** - – enter the event code or leave the default value. Upon entering the event, the event code will be sent to ***Protegus2*** and CMS.
+- **SIA** - – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
 
 - **Part**. – enter the partition (area) number that will be sent when an internal event occurs and the system is restored.
 
 - **Zone** - enter the zone number that will be sent when an internal event occurs and the system is restored.
 
-### “Event summary” window
+###  “Event summary” window 
 
 In this window, you can enable, disable and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
 
@@ -1015,9 +978,9 @@ In this window, you can enable, disable and modify internal messages sent by you
 
 - **POWER** – message about low power supply voltage.
 
-- **REMOTE_FINISHED** – message about disconnection from remote configuration with ***TrikdisConfig***.
+- **REMOTE_FINISHED** – message about disconnection from remote configuration with TrikdisConfig.
 
-- **REMOTE_STARTED** – message about remote connection to configure ***GET*** with ***TrikdisConfig***.
+- **REMOTE_STARTED** – message about remote connection to configure GET with TrikdisConfig.
 
 - **SIM1_FAILURE** - mobile communication failure message.
 
@@ -1026,14 +989,15 @@ In this window, you can enable, disable and modify internal messages sent by you
 - **TEST** – periodic test message.
 
 !!! note
-    To enable periodic TEST messages and set their period, go to “**CMS reporting” -> “Settings” -> “Test period”**.
+    To enable periodic TEST messages and set their period, go to "**CMS
+    reporting" -> "Settings" -> "Test period"**.
 - **Enable** – when selected, the sending of messages is enabled.
 
 You can change the Contact ID (SIA) code for each event, and also the zone and partition number.
 
-### Restoring factory settings
+### Restoring factory settings 
 
-To restore the communicator's factory settings, you need to click the “**Restore”** button in the ***TrikdisConfig*** window.
+To restore the communicator's factory settings, you need to click the “**Restore”** button in the TrikdisConfig window.
 
 <img alt="" src="./image57.png" style="width:7.086614173228346in;height:0.9645669291338582in" />
 
@@ -1041,23 +1005,27 @@ Another way to restore factory settings.
 
 Power supply is connected to the communicator. Press and hold the “RESET” button on the communicator PCB board. Hold the “RESET” button pressed for 10 seconds until the LED indicators ("NETWORK", "POWER", "TROUBLE") turn off and the LED "POWER" indicator lights up. Release the "RESET" button. The communicator's factory settings have been restored.
 
-## Remote configuration
+## Remote configuration 
 
-!!! warning "Important"
+!!! warning
+    "Important"
     Remote configuration will work only if:
     
-    1.  The inserted SIM card is activated and the PIN code is either entered or disabled;
+    1.  The inserted SIM card is activated and the PIN code is either
+        entered or disabled;
     
     2.  Or a LAN cable is connected.
     
-    3.  “Protegus ***cloud***” is enabled. How to enable cloud is described in section 6.5 “User reporting” window;
+    3.  "Protegus cloud" is enabled. How to enable cloud is
+        described in section 6.5 "User reporting" window;
     
-    4.  Power supply is connected (“POWER” LED illuminates green);
+    4.  Power supply is connected ("POWER" LED illuminates green);
     
-    5.  Registered to the cellular network (“NETWORK LTE” LED illuminates green and blinks yellow).
-1.  Start the configuration program ***TrikdisConfig***.
+    5.  Registered to the cellular network ("NETWORK LTE" LED illuminates
+        green and blinks yellow).
+1.  Start the configuration program TrikdisConfig.
 
-2.  In the “**Remote access”** section enter the communicator’s”**IMEI/Unique ID”** number. This number can be found on the device and the packaging sticker.
+2.  In the “**Remote access”** section enter the communicator’s “**IMEI/Unique ID”** number. This number can be found on the device and the packaging sticker.
 
 <img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.8346456692913384in" />
 
@@ -1069,7 +1037,7 @@ Power supply is connected to the communicator. Press and hold the “RESET” bu
 
 6.  Set the necessary settings and when finished, click **Write [F5]**.
 
-## Test communicator performance
+## Test communicator performance 
 
 When the configuration and installation is complete, perform a system check:
 
@@ -1079,18 +1047,23 @@ When the configuration and installation is complete, perform a system check:
 
 - by triggering a zone alarm when the security system is armed.
 
-2.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the ***Protegus2*** application.
+2.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
 
 3.  To test communicator input, trigger it and make sure to receive the correct event.
 
 4.  To test the communicator outputs, activate them remotely and check their operation.
 
-5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the ***Protegus2*** app.
+5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
 
-## Firmware update
+## Firmware update 
 
 !!! note
-    When the communicator is connected to ***TrikdisConfig***, the program will automatically offer to update the device’s firmware if updates are present. Updates require an internet connection. Antivirus software, firewall or strict access to internet settings can block the automatic firmware updates. In this case, you will need to reconfigure your antivirus program.
+    When the communicator is connected to TrikdisConfig, the program
+    will automatically offer to update the device's firmware if updates are
+    present. Updates require an internet connection. Antivirus software,
+    firewall or strict access to internet settings can block the automatic
+    firmware updates. In this case, you will need to reconfigure your
+    antivirus program.
 The communicator’s firmware can also be updated or changed manually. After an update, all previously set settings will remain unchanged. When writing firmware manually, it can be changed to a newer or older version. To update:
 
 1.  Run ***TrikdisConfig**.*
@@ -1116,7 +1089,7 @@ The communicator converts Contact ID codes received from the alarm control panel
 **Contact ID to SIA code conversion table**
 
 | **System Event** | **CID Report Code** | **SIA Report Code** |
-|:---|:--:|:--:|
+|----|:--:|:--:|
 | Medical alarm | E100 | "MA" |
 | Personal emergency | E101 | "QA" |
 | Fire in zone: <z> | E110 | "FA" |

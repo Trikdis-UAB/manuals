@@ -91,306 +91,140 @@ Reporting to the security company’s central monitoring station (CMS):
 ### Technical specifications {#technical-specifications .2-Po-Pag}
 
 | Parameter | Description |
-
 |-----------|-------------|
-
 | Power supply voltage[AC /​ DC] | 16 V AC or 16-24 V DC, 2,5 A |
-
 | Current consumption | Up to 50 mA (stand-by), /​ Up to 200 mA (short-term, while sending) |
-
 | Backup power source [BAT] | 12 V lead – acid battery, 4 Ah/​7 Ah |
-
 | Battery charge current | Up to 500 mA |
-
 | Power voltage and current for external devices [AUX] | 12 V DC, up to 1 A |
-
 | Siren output [BELL] | 1 A |
-
 | Output [LED] | 0,1 A |
-
 | PGM output | 0,1 A |
-
 | WiFi module | Yes, built-in |
-
 | WiFi frequency, protocol, encryption type | 2,4 GHz, 802.11 b/​g/​n, WPA, WPA2, WPA mixed |
-
 | WiFi network configuration type | DHCP or manual |
-
 | SIM card | 1, NANO size |
-
 | GSM/​GPRS modem frequencies | 850 /​ 900 /​ 1800 /​ 1900 MHz |
-
 | 4G modem frequencies „FLEXi” SP3_14E /​ „FLEXi” SP3_24E /​ EMEA/​Thailand | B1/​B3/​B7/​B8/​B20/​B28 |
-
 | 4G modem frequencies „FLEXi” SP3_24S /​ Latin America/​Australia/​New Zealand | B1/​B3/​B4/​B5/​B7/​B8/​B28 |
-
 | 4G modem frequencies „FLEXi” SP3_24A /​ North America | B2/​B4/​B12 |
-
 | Report transmission directions | To main and backup receivers of 2 different security companies;​
 To Protegus cloud, to iOS/​Android Protegus2 mobile apps;​
 To 8 mobile phones via SMS messages.
 Calls 8 mobile phones. If a user answers the call, announces what happened using voice (For сontrol panel SP3_12xx with firmware version up to 1.13 inclusive). |
-
 | Event reporting transmission channels | GPRS or 4G, WiFi, LAN (with module E485), SMS, Voice call (up to 8 cellular numbers. For сontrol panel SP3_12xx with firmware version up to 1.13 inclusive), VHF/​UHF radio waves (with transmitter T16) |
-
 | Protocols for connection to CMS | TCP /​ IP or UDP /​ IP, or SMS |
-
 | Event encoding | Contact ID codes |
-
 | Report encryption | TRK AES 128, SIA IP AES 128 |
-
 | Internal clock | Yes |
-
 | Buffer memory capacity | 60 events |
-
 | Events log memory | Up to 1000 events. Oldest entries deleted automatically. |
-
 | User codes | 40 |
-
 | Duress code | Two code entry methods can be chosen during programming |
-
 | Dual purpose terminals [I/​O] | 10;​ IN or OUT function selected during programming. When IN is selected, available types: NC, NO, EOL, EOL_T, 3EOL, ATZ, ATZ_T. When OUT is selected, the terminal becomes open collector (OC) type with up to 100 mA current |
-
 | No. of partitions | 8 |
-
 | No. of zones | 10 (20 zones if using ATZ), (can be expanded to 32 zones using expanders) |
-
 | No. of PGM outputs | 2 (can be 12 if IO terminals are set as outputs. Can be expanded to 16 outputs with expanders) |
-
 | Max. number of connected keypads | 8 |
-
 | Supported keypads | SK-LED TouchPad (Protegus SK232 LED W) /​ SK-LCD TouchPad (FLEXi SK232LCD) /​ Paradox K636 /​ Paradox K10H(V) /​ Paradox K32 LED /​ Paradox K32+ LED /​ Paradox K32LCD+ /​ Paradox K35 /​ Paradox TM50 /​ Paradox TM70 /​ Crow CR16 /​ Crow CR-LCD |
-
 | Max. number of RFID readers (Wiegand 26/​34) | 2 |
-
 | 1-Wire data bus length [1 WIRE] | Up to 30 m |
-
 | Compatible temperature sensors | Maxim®/​Dallas® DS18S20, DS18B20;​ AM2301 series |
-
 | Max. number of temperature sensors connected to 1-Wire data bus | 8 (Dallas) or 1 (if an AM2301 series sensor is used) |
-
 | Compatible electronic (iButton) keys [1 WIRE] | Maxim®/​Dallas® DS1990A |
-
 | Max. no. of electronic (iButton) keys | 40 |
-
 | RS485 data bus length | Up to 100 m |
-
 | Max. no. of devices connected to RS485 data bus | 8 |
-
 | Supported modules | iO-8 – expander module;​ /​ iO – expander module;​ /​ iO-MOD – iO-WL radio wave transceiver;​ /​ iO-WL – wireless expander module;​ /​ RF-SH – radio wave receiver for wireless sensors;​ /​ E485 – module for connecting to Ethernet network;​ /​ TM17 – iButton key reader;​ /​ CZ-Dallas – iButton key reader;​ /​ T16 – VHF or UHF radio wave transmitter;​ /​ iO-LORA - expander module;​ /​ iO8-LORA - expander module;​ /​ RFID reader. |
-
 | Operating environment | Temperature from -10 °C to +50 °C, relative humidity 80% at +20°C, no condensation. |
-
 | Dimensions of the control panel | 117x79x25 mm |
-
 | Weight | 0,1 kg |
 
 ### List of compatible modules {#list-of-compatible-modules .2-Po-Pag}
 
 | Module name                                   | Current                |
-
 |:----------------------------------------------|:-----------------------|
-
 | Keypad SK-LED TouchPad (Protegus SK232 LED W) | Min 60 mA, max 150 mA  |
-
 | Keypad SK-LCD TouchPad (FLEXi SK232LCD)       | Min. 25 mA, max. 60 mA |
-
 | Keypad Paradox K636                           | Min 40 mA, max 70 mA   |
-
 | Keypad Paradox K10H(V)                        | Min 44 mA, max 72 mA   |
-
 | Keypad Paradox K32 LED                        | Min 49 mA, max 148 mA  |
-
 | Keypad Paradox K32+ LED                       | Min 49 mA, max 148 mA  |
-
 | Keypad Paradox K32LCD+                        | Min 70 mA, max 150 mA  |
-
 | Keypad Paradox K35                            | Min 30 mA, max 70 mA   |
-
 | Keypad Paradox ТМ50                           | Мin 100 mA, max 230 mA |
-
 | Keypad Paradox ТМ70                           | Min 200 mA, max 330 mA |
-
 | Keypad Crow CR16                              | Min 40 mA, max 75 mA   |
-
 | Keypad Crow CR-LCD                            | Min 40 mA, max 75 mA   |
-
 | iO-8 expander module                          | Max 20 mA              |
-
 | iO expander module                            | Max 50 mA              |
-
 | iO-MOD – iO-WL radio wave transceiver         | Min 50 mA, max 150 mA  |
-
 | iO-WL wireless expander module                | Max 200 mA             |
-
 | RF-SH transceiver for wireless sensors        | Max 100 mA             |
-
 | E485 Ethernet communicator                    | Min 50 mA, max 150 mA  |
-
 | TM17 iButton key reader                       | Max 50 mA              |
-
 | CZ-Dallas iButton key reader                  | Max 25 mА              |
-
 | T16 (VHF or UHF) radio wave transmitter       | Min 100 mA, max 1,2 A  |
-
 | RFID reader (Wiegand 26/​34)                   | Max 100 mA             |
-
 | iO-LORA expander module                       | Max 50 mА              |
-
 | iO8-LORA expander module                      | Max 50 mА              |
 
 ### Purpose of external terminals {#purpose-of-external-terminals .2-Po-Pag}
 
 <img alt="" src="./image4.png" style="width:5.480010936132984in;height:3.826674321959755in" />
 
-!!! note
-    2. Backup power supply terminal block.
-    
-    3.  Main power supply terminal block.
-    
-    4.  External terminal block.
-    
-    5.  1-WIRE data bus terminal block.
-    6.  SMA screw-on type connector for WiFi antenna.
-    
-    7.  Nano-SIM card holder.
-    
-    8.  SMA screw-on type connector for GSM antenna.
-    
-    9.  USB Mini-B connector for configuring the control panel’s settings.
 
+1. Control panel board.
+2. Backup power supply terminal block.
+3.  Main power supply terminal block.
+4.  External terminal block.
+5.  1-WIRE data bus terminal block.
+6.  SMA screw-on type connector for WiFi antenna.
+7.  Nano-SIM card holder.
+8.  SMA screw-on type connector for GSM antenna.
+9.  USB Mini-B connector for configuring the control panel’s settings.
 | Terminal | Description |
-
 |:---|:---|
-
 | Power terminal | Power supply terminal (16 V AC or positive 16-24 V DC) |
-
 | Power terminal | Power supply terminal (16 V AC or negative 16-24 V DC) |
-
 | BAT+ | Backup power supply positive terminal 12 V |
-
 | BAT- | Backup power supply negative terminal 12 V |
-
 | AUX+ | Positive 12 V power terminal for external devices |
-
 | AUX- | Common negative terminal |
-
 | GRN | Keypad data bus |
-
 | YEL | Keypad data bus |
-
 | A 485 | Terminal A of *RS485* data bus |
-
 | B 485 | Terminal B of *RS485* data bus |
-
 | IO1 – IO9 | Input/​output terminals (default setting – input) |
-
 | IO10 | Input/​output terminal (default setting – PGM output, Fire Sensor Reset) |
-
 | C | Common negative terminal |
-
 | LED | PGM output (default setting – System State) |
-
 | +5 V | Positive 5 V power terminal for *1-Wire* devices |
-
 | 1 WIRE | *1-Wire* data bus terminal |
-
 | C | Common negative terminal |
 
 ### LED indication of operation {#led-indication-of-operation .2-Po-Pag}
 
-<table style="width:48%;">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 13%" />
-<col style="width: 18%" />
-</colgroup>
-<thead>
-<tr>
-<th>LED indicator</th>
-<th>Light status</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3"><strong>NET</strong></td>
-<td>Green blinking</td>
-<td>SIM card is registering on GSM network.</td>
-</tr>
-<tr>
-<td>Green solid</td>
-<td>SIM card registered on GSM network.</td>
-</tr>
-<tr>
-<td>Yellow blinking</td>
-<td>Indicates GSM signal strength from 0 to 5. 3 is sufficient.</td>
-</tr>
-<tr>
-<td rowspan="3"><strong>DAT</strong></td>
-<td>Off</td>
-<td>No unsent event messages.</td>
-</tr>
-<tr>
-<td>Green solid</td>
-<td>Message is being sent.</td>
-</tr>
-<tr>
-<td>Yellow solid</td>
-<td>There are unsent event messages in buffer memory.</td>
-</tr>
-<tr>
-<td rowspan="2"><strong>MOD</strong></td>
-<td>Green blinking</td>
-<td>Connecting to WiFi network.</td>
-</tr>
-<tr>
-<td>Green solid</td>
-<td>Connected to WiFi network.</td>
-</tr>
-<tr>
-<td rowspan="10"><strong>PWR</strong></td>
-<td>Green blinking</td>
-<td>No operational problems.</td>
-</tr>
-<tr>
-<td>1 red flash</td>
-<td>No SIM card detected</td>
-</tr>
-<tr>
-<td>2 red flashes</td>
-<td>The PIN card of the SIM card is incorrect</td>
-</tr>
-<tr>
-<td>3 red flashes</td>
-<td>Unable to connect to GSM network</td>
-</tr>
-<tr>
-<td>4 red flashes</td>
-<td>Unable to connect to CMS receiver using channel 1</td>
-</tr>
-<tr>
-<td>5 red flashes</td>
-<td>Unable to connect to CMS receiver using channel 2</td>
-</tr>
-<tr>
-<td>6 red flashes</td>
-<td>Internal clock not set</td>
-</tr>
-<tr>
-<td>7 red flashes</td>
-<td>Insufficient backup power supply voltage</td>
-</tr>
-<tr>
-<td>8 red flashes</td>
-<td>No AC power</td>
-</tr>
-<tr>
-<td>9 red flashes</td>
-<td>Unable to connect to WiFi network</td>
-</tr>
-</tbody>
-</table>
+| LED indicator | Light status | Description |
+|:---|:---|:---|
+| **NET** | Green blinking | SIM card is registering on GSM network. |
+| **NET** | Green solid | SIM card registered on GSM network. |
+| **NET** | Yellow blinking |  |
+| **DAT** | Off | No unsent event messages. |
+| **DAT** | Green solid | Message is being sent. |
+| **DAT** | Yellow solid |  |
+| **MOD** | Green blinking | Connecting to WiFi network. |
+| **MOD** | Green solid |  |
+| **PWR** | Green blinking | No operational problems. |
+| **PWR** | 1 red flash | No SIM card detected |
+| **PWR** | 2 red flashes | The PIN card of the SIM card is incorrect |
+| **PWR** | 3 red flashes | Unable to connect to GSM network |
+| **PWR** | 4 red flashes | Unable to connect to CMS receiver using channel 1 |
+| **PWR** | 5 red flashes | Unable to connect to CMS receiver using channel 2 |
+| **PWR** | 6 red flashes | Internal clock not set |
+| **PWR** | 7 red flashes | Insufficient backup power supply voltage |
+| **PWR** | 8 red flashes | No AC power |
+| **PWR** | 9 red flashes |  |
 
 ## Powering the security control panel
 
@@ -407,63 +241,38 @@ If there are problems with powering the system from the main power supply, an *A
 #### Control panel *„FLEXi” SP3* {#control-panel-flexi-sp3 .3-po-Pag}
 
 | Name                                  | Quantity |
-
 |:--------------------------------------|:---------|
-
 | „FLEXi” SP3 control panel board | 1 pc.    |
-
 | Wire for connecting battery           | 1 pc.    |
-
 | Resistor 2,2 kΩ                       | 20 pcs.  |
-
 | Resistor 4,7 kΩ                       | 10 pcs.  |
-
 | Plastic spacer (mounting parts)       | 4 pcs.   |
-
 | Antenna ME301M with 2,5 m long cable  | 2 pcs.   |
 
 #### Control panel *„FLEXi” SP3* KIT {#control-panel-flexi-sp3-kit .3-po-Pag}
 
 | Name                                                            | Quantity |
-
 |:----------------------------------------------------------------|:---------|
-
 | „FLEXi” SP3 control panel board, built into metal housing | 1 pc.    |
-
 | Metal housing K01 with 40 VA transformer                        | 1 pc.    |
-
 | Resistor 2,2 kΩ                                                 | 20 pcs.  |
-
 | Resistor 4,7 kΩ                                                 | 10 pcs.  |
-
 | Antenna ME301M with 2,5 m long cable                            | 2 pcs.   |
-
 | Wire for connecting battery                                     | 1 pc.    |
-
 | Tamper sensor                                                   | 1 pc.    |
-
 | Terminal block with 0,5 A fuse                                  | 1 pc.    |
 
 #### Control panel *„FLEXi” SP3* KITi {#control-panel-flexi-sp3-kiti .3-po-Pag}
 
 | Name                                                            | Quantity |
-
 |:----------------------------------------------------------------|:---------|
-
 | „FLEXi” SP3 control panel board, built into metal housing | 1 pc.    |
-
 | Metal housing K02 with Mean Well impulse power supply           | 1 pc.    |
-
 | Resistor 2,2 kΩ                                                 | 20 pcs.  |
-
 | Resistor 4,7 kΩ                                                 | 10 pcs.  |
-
 | Antenna ME301M with 2,5 m long cable                            | 2 pcs.   |
-
 | Wire for connecting battery                                     | 1 pc.    |
-
 | Tamper sensor                                                   | 1 pc.    |
-
 | Terminal block with 3,15 A fuse                                 | 1 pc.    |
 
 !!! note
@@ -728,67 +537,36 @@ The control panel’s default SMS password is **123456**. For safety reasons we 
 > SMS command list
 
 | Command | Data | Description |
-
 |:---|:---|:---|
-
 | *INFO* |  | Request information about the control panel. Object name, partition state, IMEI number, GSM signal strength, firmware version and serial number will be included in the reply. E. g.: INFO 123456 |
-
 | *RESET* |  | Reset the device. E.g.: RESET 123456 |
-
 | *OUTPUTx* | *ON* | Turn on an output, “x” is the output number. E.g.: OUTPUT1 123456 ON |
-
 |  | *OFF* | Turn off an output, “x” is the output number. E.g.: OUTPUT1 123456 OFF |
-
 |  | *PULSE=ttt* | Turn on an output for a specified time - “x” is the output OUT number and “ttt” is a three-digit number that specifies pulse time in seconds. / E.g.: OUTPUT1 123456 PULSE=002 |
-
 | *PSW* | *New password* | Change password. E.g.: PSW 123456 654123 |
-
 | *TIME* | *YYYY/MM/DD,12:00:00* | Set date and time. E.g.: TIME 123456 2018/01/03,12:23:00 |
-
 | *TXTA* | *Object name* | Specify object name. E.g.: TXTA 123456 Namas |
-
 | *RDR* | *PhoneNR#SMStext* | Forwards SMS messages to the specified number. The phone number must start with a "+" symbol and the international country code. / E.g.: RDR 123456 +37061234567#forwarded text |
-
 | *ASKI* |  | Send SMS message with statuses of inputs IN. E.g.: ASKI 123456 |
-
 | *ASKO* |  | Send SMS message with statuses of outputs OUT. E.g.: ASKO 123456 |
-
 | *ASKA* |  | Send SMS message with statuses of areas. E.g.: ASKA 123456 |
-
 | *ASKT* |  | Send SMS message with values of all temperature sensors. / E.g.: ASKT 123456 |
-
 | *DISARM* | *SYS:x* | Disarm the alarm, “x” is the partition number (1-8). E.g.: DISARM 123456 SYS:1 |
-
 | *ARM* | *SYS:x* | Arm the alarm, “x” is the partition number (1-8). E.g.: ARM 123456 SYS:1 |
-
 | *STAY* | *SYS:x* | Arm area “x” in Stay mode, “x” is the partition number (1-8). / E.g.: STAY 123456 SYS:1 |
-
 | *SLEEP* | *SYS:x* | Arm area “x” in Sleep mode, “x” is the partition number (1-8). / E.g.: SLEEP 123456 SYS:1 |
-
 | *FRS* |  | Resets the fire sensor’s output, if the output OUT is assigned the function “Fire sensor reset”. E.g.: FRS 123456 |
-
 | *SETN* | *PhoneX=PhoneNR#Name#email* | Add a phone number, username and assign it to user “x”. “x” is the phone number’s line on the list. The phone number must start with a "+" symbol and international country code. The phone number and username must be separated by a \# symbol. / E.g.: SETN 123456 PHONE5=+37061234567#JOHN#john@peter.com |
-
 |  | *PhoneX=DEL* | Delete phone number and username from the list. / E.g.: SETN 123456 PHONE5=DEL |
-
 | *UUSD* | *\*Uusd code#* | Sends a UUSD code to the operator. E.g.: ***UUSD 123456 \*245#*** |
-
 | *CONNECT* | *Protegus=ON* | Connect to Protegus cloud service. E.g.: CONNECT 123456 PROTEGUS=ON |
-
 |  | *Protegus=OFF* | Disconnect from Protegus cloud service. E.g.: CONNECT 123456 PROTEGUS=OFF |
-
 |  | *Code=123456* | Protegus cloud service code. E.g.: CONNECT 123456 CODE=123456 |
-
 |  | *IP=0.0.0.0:8000* | Specify the main server’s connection channel’s TCP IP and Port. / E.g.: CONNECT 123456 IP=0.0.0.0:8000 |
-
 |  | *IP=0* | For turning off the main channel. E.g.: CONNECT 123456 IP=0 |
-
 |  | *ENC=123456* | TRK encryption key. E.g.: CONNECT 123456 ENC=123456 |
-
 |  | *APN=Internet* | APN name. E.g.: CONNECT 123456 APN=INTERNET |
-
 |  | *USER=user* | APN user. E.g.: CONNECT 123456 USER=User |
-
 |  | *PSW=password* | APN passwod. E.g.: CONNECT 123456 PSW=Password |
 
 ### Control via phone call {#control-via-phone-call .2-Po-Pag}
@@ -804,19 +582,12 @@ Controlling outputs OUT and alarm system partitions using phone calls:
 Mobile phone keypad command list
 
 | Keypad buttons | Function | Description |
-
 |----------------|----------|-------------|
-
 | [1][area no][#] | Arm selected alarm system area | E.g. (arm area 2): 12# |
-
 | [2][ area no][#] | Disarm selected alarm system area | E.g. (disarm area 2): 22# |
-
 | [3][output no][#][stay no] | Control selected output OUT | Controls a specified output OUT. / State: / [0] – output turned off; / [1] – output turned on; / [2] – turned off for pulse time; / [3] – turned on for pulse time; / (pulse time is specified using TrikdisConfig software, in the “PGM” window) / E.g. (set output 1OUT to “on” state): 31#1 / E.g. (set output 2OUT to “on” state for Pulse time specified in the TrikdisConfig “PGM” table): 32#3 |
-
 | [4][#][recording number][#] | Start recording of selected sound file | E.g. (start voice recording 1): 4#1# |
-
 | [5] | Listen (1-5) to the voice recording just made | E.g.: 5 |
-
 | [6] | Save the voice recording | E.g.: 6 |
 
 An audio signal accompanies the beginning and end of the audio file recording. Audio file recording time 15 sec. An audio signal accompanies the end of audio playback. Recording is complete when you hear a beep. Other actions can only be taken when the beep is heard.
@@ -840,25 +611,15 @@ When the „FLEXI” SP3 is connected, TrikdisConfig will show information about
 <img alt="" src="./image42.png" style="width:7.086614173228346in;height:0.5905511811023622in" />
 
 | Name | Description |
-
 |:---|:---|
-
 | IMEI/​Unique ID | IMEI number of the device |
-
 | Status | Operational status |
-
 | Device | Device type (must show SP3_xxxx) |
-
 | SN | Device serial number |
-
 | BL | Bootloader version |
-
 | FW | Device firmware version |
-
 | HW | Device hardware version |
-
 | State | Type of connection with the program (USB or remote) |
-
 | Role | Shows the access level (shown after entering an access code) |
 
 When the **Read [F4]** button is clicked, the program will read and display the settings currently stored inside the „FLEXi” SP3. With TrikdisConfig, alter the desired settings according to the program window descriptions given below.
@@ -1778,3 +1539,61 @@ Perform these steps:
 6.  Wait for the updates to finish.
 
 Once configuration is complete, click the **Write [F5]** button and disconnect the USB cable.
+
+## Warranty and limitation of liability
+
+**The control panel is given a 24-month warranty effective from the date of sale-purchase. For the duration of the warranty period, free repairs are guaranteed for faults caused by the manufacturer.**
+
+**The warranty is valid if the control panel was installed by qualified personnel following the instructions in this document and the applicable regulations for installing electrical equipment and operated following the instructions in this document and the applicable regulations for safe operation of electrical equipment.**
+
+**The control panel must be submitted for repairs in the manufacturer’s packaging along with a defect report stating the nature of the malfunction.**
+
+**Once the warranty has expired, the control panel’s technical maintenance and repairs are performed at the buyer’s expense.**
+
+The warranty can be terminated prematurely if:
+
+- Unauthorized personnel repaired or tried to repair the control panel;
+
+- The panel was used for anything other than its intended purpose;
+
+- The panel was stored and (or) installed in unsuitable premises that had incompatible climate conditions or an aggressive chemical environment;
+
+- The panel was mechanically broken and (or) intentionally damaged;
+
+- The panel was damaged by *force majeure* circumstances (lightning discharge etc.).
+
+The manufacturer is not responsible for:
+
+- the control panel’s malfunctions if the panel is installed or used not according to its manual.
+
+- the control panel’s malfunctions if the cause is a malfunction or loss of GSM/GPRS/Internet connectivity or malfunctions in the operator’s network.
+
+- restrictions or termination of GSM/GPRS/Internet connectivity services to the panel’s buyer or user, and shall not compensate the panel’s buyer or user for any property or non-property damages suffered from this.
+
+- restrictions or termination of electricity supply service to the panel’s buyer or user, and shall not compensate the panel’s buyer or user for any property or non-property damages suffered from this.
+
+- robbery, fire of the premises or any other losses suffered by the panel’s buyer or user, and shall not compensate the panel’s buyer or user for any property or non-property damages suffered from these events.
+
+**Safety precautions**
+
+Read this manual carefully before using the control panel.
+
+The „FLEXi” SP3 control panel is an electrical device, which means it must be installed and serviced only by qualified personnel following the instructions in this document and applicable regulations for installing electrical equipment.
+
+Power to the panel must be switched off during installation!
+
+The control panel must be installed in a limited access location inside the premises and maintaining a safe distance from sensitive electronic equipment. The panel is not resistant to vibrations, other mechanical effects, humidity and aggressive chemical environments. The control panel complies with the demands applicable to Class II environmental specification of the EN 50131 standard.
+
+The casings, transformers, batteries and programming equipment used must meet the safety requirements of the EN 60950 standard.
+
+The device is powered from a 230 V voltage 50 Hz frequency power grid through a Class II step-down transformer that reduces the voltage to 16 – 18 V or from a 16 – 24 V DC power supply. A 12 V battery with at least 7 Ah capacity is used as a backup power supply. The current consumption depends on the power of the connected external devices.
+
+A two-pole automatic safety switch must be installed in the power supply circuit for protection. The gap between switch off contacts must be at least 3mm. The safety switch must be installed in a location known to the specialists servicing the control panel.
+
+To disconnect the control panel from the power network:
+
+- from the AC network – switch off the automatic safety switch;
+
+- from the battery – disconnect the terminals.
+
+<img alt="" src="./image2.png" style="width:0.4465277777777778in;height:0.4465277777777778in" />
