@@ -19,10 +19,10 @@ nav:
           - GT Cellular Communicator: en/alarm-communicators/gt-cellular/GT UM_ENG_2025 09 11/index.md
           - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/GT+ UM_ENG_2025 09 11/index.md
           - GET Cellular Communicator: en/alarm-communicators/get-cellular/GET UM_ENG_2025 09 03/index.md
-      - Alarm Panels:
-          - SP3 Alarm Panel: en/alarm-panels/sp3/SP3_TAIM_EN_2025 09 12/index.md
+      - Control Panels:
+          - SP3 FLEXi Control Panel: en/control-panels/sp3-flexi/SP3_TAIM_EN_2025 09 12/index.md
       - Gate Controllers:
-          - Cellular Gate Controller GATOR: en/gate-controllers/gator/GATOR_UM_ENG_2025 02 07/index.md
+          - GATOR Gate Controller: en/gate-controllers/gator/GATOR_UM_ENG_2025 10 16/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css

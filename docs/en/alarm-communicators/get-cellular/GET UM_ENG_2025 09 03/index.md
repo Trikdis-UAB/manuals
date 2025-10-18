@@ -174,22 +174,22 @@ This manual is for LTE communicators.
 
 !!! note
     Before you begin, make sure that you have the necessary:
-
+    
     1.  USB-C cable for configuration.
-
+    
     2.  At least 4-wire cable for connecting communicator to control panel.
-
+    
     3.  CRP2 cable for connecting to Paradox panel\`s serial port.
-
+    
     4.  Flat-head 2,5 mm screwdriver.
-
+    
     5.  Sufficient gain cellular antenna if network coverage in the area is
         poor.
-
+    
     6.  Activated SIM card (PIN code request can be turned off).
-
+    
     7.  Particular security control panel\`s installation manual.
-
+    
     Order the necessary components separately from your local distributor.
 ## Quick configuration with *TrikdisConfig* software 
 
@@ -219,11 +219,11 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-2.  Select “**Security panel model”** that will be connected to the communicator.
+1.  Select “**Security panel model”** that will be connected to the communicator.
 
-3.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
+2.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
-4.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password”**. It must match the password that is entered in the control panel.
+3.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password”**. It must match the password that is entered in the control panel.
 
 !!! note
     For the direct panel control to work, you will need to change the panel
@@ -235,9 +235,9 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 <img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9606299212598426in" />
 
-5.  Tick the checkbox “**Enable connection”** to the Protegus Cloud.
+4. Tick the checkbox “**Enable connection”** to the Protegus Cloud.
 
-6.  Change the “**PROTEGUS Cloud access Code”** for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456).
+2.  Change the “**PROTEGUS Cloud access Code”** for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456).
 
 **In “Network settings” window:**
 
@@ -245,19 +245,19 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 These settings must be made if the communicator is connected to a LAN network.
 
-7.  Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+1.  Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
 
 <img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.9173228346456694in" />
 
 These settings must be made if the SIM (or two SIM cards) card is inserted into the communicator.
 
-8.  Enter “**SIM card PIN”** code.
+1.  Enter “**SIM card PIN”** code.
 
-9.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+2.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
-10. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+3.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
-11. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+4.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
 **In “CMS reporting” window:**
 
@@ -283,37 +283,33 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:1.5866141732283465in" />
 
-2.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
+2. If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
 
 <img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
-3.  Select “**Security panel model”** that will be connected to the communicator.
-
-**  **
+1.  Select “**Security panel model”** that will be connected to the communicator.
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
 <img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
 
-4.  **Communication type** - select the **IP** connection method.
+2. **Communication type** - select the **IP** connection method.
 
-5.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
-6.  **Encryption key** - enter the encryption key that is set in the receiver.
+3.  **Encryption key** - enter the encryption key that is set in the receiver.
 
-7.  **Domain or IP** - enter the receiver’s Domain or IP address.
+4.  **Domain or IP** - enter the receiver’s Domain or IP address.
 
-8.  **Port** - enter receiver’s network port number.
+5.  **Port** - enter receiver’s network port number.
 
-9.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
+6.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
 
-10. (Recommended) Configure “**Primary channel Backup”** settings.
+7.  (Recommended) Configure “**Primary channel Backup”** settings.
 
 <img alt="" src="./image17.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
 11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
-
-**  **
 
 **In “Network settings” window:**
 
@@ -381,13 +377,33 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image22-left.png" alt="DSC panel" style="width: 41.2%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image22-right.png" alt="PARADOX panel" style="width: 58.8%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
-<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image23-left.png" alt="DSC panel" style="width: 40.2%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image23-right.png" alt="PARADOX panel" style="width: 59.8%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
-<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image24-left.png" alt="Innerrange Inception panel" style="width: 53.3%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image24-right.png" alt="Texecom Premier Elite panel" style="width: 46.7%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
-<img alt="" src="./image25.png" style="width:6.996680883639545in;height:3.28000656167979in" />
+<div style="max-width: 1200px; margin: 1rem auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
+    <img src="./image25-left.png" alt="DSC panel" style="width: 44.0%; min-width: 300px; height: auto; border: 0;" />
+    <img src="./image25-right.png" alt="PARADOX panel" style="width: 56.0%; min-width: 300px; height: auto; border: 0;" />
+  </div>
+</div>
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
@@ -466,7 +482,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     the LED indication table in chapter 1.6 "LED indication of
     operation". / If the GET indication does not illuminate at all,
     check the power supply and connections.
-## Programming the control panel 
+# Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
 
@@ -512,11 +528,11 @@ Also, you can program with a keypad connected to the security control panel:
 
 With the keyboard connected to the security control panel:
 
-5.  Press [\*][8] and enter the installer’s code (default - 9713).
+1.  Press [\*][8] and enter the installer’s code (default - 9713).
 
-6.  Enter the device number assigned to the connected communicator (default - 0).
+2.  Enter the device number assigned to the connected communicator (default - 0).
 
-7.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking [\*] (asterisk) will return you to the local input field.
+3.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking [\*] (asterisk) will return you to the local input field.
 
 | Position | Segment | Setting |
 |----------|---------|---------|
@@ -673,11 +689,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
     
     5.  Registered to the network ("NETWORK LTE" LED illuminates green and
         blinks yellow).
-3.  Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
+1.  Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
 <img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" />
 
-4.  Enter the system „**Name**”. Click "**Next**".
+2. Enter the system „**Name**”. Click "**Next**".
 
 <img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
@@ -693,16 +709,16 @@ Follow the instructions below if the security control panel will be controlled w
 
 <img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
-2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
-3.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
+1.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
-4.  Click „**Save**“.
+2.  Click „**Save**“.
 
 <img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
-5.  If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
+3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
-6.  After completing the settings, click the “**Skip**” button.
+2.  After completing the settings, click the “**Skip**” button.
 
 <img alt="" src="./image43.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
@@ -902,8 +918,6 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 - **Default gateway** – gateway address for when manual registering mode is set.
 - **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel “**Domain or IP”** field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
 
-**  **
-
 **“SIM1” tab**
 
 !!! warning
@@ -1029,13 +1043,13 @@ Power supply is connected to the communicator. Press and hold the “RESET” bu
 
 <img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.8346456692913384in" />
 
-3.  (Optional) in the “**System name”** field, enter the desired name for the communicator with this Unique ID.
+3. (Optional) in the “**System name”** field, enter the desired name for the communicator with this Unique ID.
 
-4.  Press “**Configure”**.
+2.  Press “**Configure”**.
 
-5.  In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code*.* To save the password, select **“Remember password”**.
+3.  In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code*.* To save the password, select **“Remember password”**.
 
-6.  Set the necessary settings and when finished, click **Write [F5]**.
+4.  Set the necessary settings and when finished, click **Write [F5]**.
 
 ## Test communicator performance 
 
@@ -1047,13 +1061,13 @@ When the configuration and installation is complete, perform a system check:
 
 - by triggering a zone alarm when the security system is armed.
 
-2.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
+1.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
 
-3.  To test communicator input, trigger it and make sure to receive the correct event.
+2.  To test communicator input, trigger it and make sure to receive the correct event.
 
-4.  To test the communicator outputs, activate them remotely and check their operation.
+3.  To test the communicator outputs, activate them remotely and check their operation.
 
-5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
+4.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
 
 ## Firmware update 
 
@@ -1076,11 +1090,11 @@ The communicator’s firmware can also be updated or changed manually. After an 
 
 <img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.543307086614173in" />
 
-4.  Press “**Open firmware”** and select the required firmware file.
+4. Press “**Open firmware”** and select the required firmware file.
 
-5.  Press **Update [F12]**.
+2.  Press **Update [F12]**.
 
-6.  Wait for the update to complete.
+3.  Wait for the update to complete.
 
 ## Safety requirements
 

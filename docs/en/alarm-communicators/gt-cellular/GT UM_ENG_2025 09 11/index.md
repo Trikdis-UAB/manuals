@@ -178,22 +178,22 @@ This manual is for 4G communicators.
 
 !!! note
     Before you begin, make sure that you have the necessary:
-
+    
     1.  USB-C cable for configuration.
-
+    
     2.  At least 4-wire cable for connecting communicator to control panel.
-
+    
     3.  CRP2 cable for connecting to Paradox panel\`s serial port.
-
+    
     4.  Flat-head 2,5 mm screwdriver.
-
+    
     5.  Sufficient gain cellular antenna if network coverage in the area is
         poor.
-
+    
     6.  Activated SIM card (PIN code request can be turned off).
-
+    
     7.  Particular security control panel\`s installation manual.
-
+    
     Order the necessary components separately from your local distributor.
 ## Quick configuration with *TrikdisConfig* software 
 
@@ -223,11 +223,11 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-2.  Select “**Security panel model**” that will be connected to the communicator.
+1.  Select “**Security panel model**” that will be connected to the communicator.
 
-3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
+2.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
-4.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password**”. It must match the password that is entered in the control panel.
+3.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password**”. It must match the password that is entered in the control panel.
 
 !!! note
     For the direct panel control to work, you will need to change the panel
@@ -238,23 +238,21 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 <img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
-5.  Tick the checkbox “**Enable connection**” to the Protegus Cloud.
+4. Tick the checkbox “**Enable connection**” to the Protegus Cloud.
 
-6.  Change the “**PROTEGUS Cloud access Code**” for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456). Important: If you change the code via TrikdisConfig, you also need to change it in the Protegus2 application.
-
-**  **
+2.  Change the “**PROTEGUS Cloud access Code**” for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456). Important: If you change the code via TrikdisConfig, you also need to change it in the Protegus2 application.
 
 **In “SIM card” window:**
 
 <img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.043307086614173in" />
 
-7.  Enter “**SIM card PIN**” code.
+3. Enter “**SIM card PIN**” code.
 
-8.  Change **APN** name. **APN** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+2.  Change **APN** name. **APN** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
-9.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+3.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
-10. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+4.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
 After finishing configuration, click the button **Write [F5]** and disconnect the USB cable.
 
@@ -271,31 +269,29 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 <img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
-2.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**Dual tone**” setting.
+1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**Dual tone**” setting.
 
 <img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.5984251968503937in" />
 
-3.  The communicator is connected to the keypad bus or the serial bus of control panel. Select „**Security panel model**” that will be connected to the communicator.
+2. The communicator is connected to the keypad bus or the serial bus of control panel. Select „**Security panel model**” that will be connected to the communicator.
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:3.3503937007874014in" />
 
-4.  **Communication type** - select the **IP** connection method.
+3. **Communication type** - select the **IP** connection method.
 
-5.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
-6.  **Encryption key** - enter the encryption key that is set in the receiver.
+3.  **Encryption key** - enter the encryption key that is set in the receiver.
 
-7.  **Domain or IP** - enter the receiver’s Domain or IP address.
+4.  **Domain or IP** - enter the receiver’s Domain or IP address.
 
-8.  **Port** - enter receiver’s network port number.
+5.  **Port** - enter receiver’s network port number.
 
-9.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
+6.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
 
-10. (Recommended) Configure “**Primary channel Backup**” settings.
-
-**  **
+7.  (Recommended) Configure “**Primary channel Backup**” settings.
 
 **In “SIM card” window:**
 
@@ -441,7 +437,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     the LED indication table in chapter 1.6 "LED indication of
     operation". / If the GT indication does not illuminate at all,
     check the power supply and connections.
-## Programming the control panel 
+# Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
 
@@ -487,11 +483,11 @@ Also, you can program with a keypad connected to the security control panel:
 
 With the keypad connected to the security control panel:
 
-5.  Press [\*][8] and enter the installer’s code (default - 9713).
+1.  Press [\*][8] and enter the installer’s code (default - 9713).
 
-6.  Enter the device number assigned to the connected communicator (default - 0).
+2.  Enter the device number assigned to the connected communicator (default - 0).
 
-7.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking [\*] (asterisk) will return you to the local input field.
+3.  Set the settings below for each row. In sequence, enter the position, segment number and the required setting. Clicking [\*] (asterisk) will return you to the local input field.
 
 | Position | Segment | Setting |
 |----------|---------|---------|
@@ -645,11 +641,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
     
     4.  Registered to the network ("NETWORK" LED illuminates green and
         blinks yellow).
-3.  Click “**Add new system”** and enter the GT’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
+1.  Click “**Add new system”** and enter the GT’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
 <img alt="" src="./image36.png" style="width:2.858267716535433in;height:3.704724409448819in" />
 
-4.  Enter the system „**Name**”. Click "**Next**".
+2. Enter the system „**Name**”. Click "**Next**".
 
 <img alt="" src="./image37.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
@@ -665,16 +661,16 @@ Follow the instructions below if the security control panel will be controlled w
 
 <img alt="" src="./image38.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
-2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
-3.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
+1.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
-4.  Click „**Save**“.
+2.  Click „**Save**“.
 
 <img alt="" src="./image39.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
-5.  If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
+3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
-6.  After completing the settings, click the “**Skip**” button.
+2.  After completing the settings, click the “**Skip**” button.
 
 <img alt="" src="./image40.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
@@ -690,11 +686,11 @@ Follow the instructions below if the security control panel will be controlled w
 
 You can remotely control the communicator with SMS messages.
 
-Message structure is: Password <sub>space</sub> Command <sub>space</sub> Data
+Message structure is: Password `[space]` Command `[space]` Data
 
 For password use the **Administrator code** for *INFO, RESET, OUTPUTx* commands, and **Installer code** for *INFO, OUTPUTx* commands.
 
-> **SMS command list**
+#### SMS command list
 
 | Command | Data | Description |
 |---------|------|-------------|
@@ -1064,13 +1060,13 @@ Power supply is connected to the communicator. Press and hold the “RESET” bu
 
 <img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.1929133858267718in" />
 
-3.  (Optional) in the “**System name**” field, enter the desired name for the GT with this Unique ID.
+3. (Optional) in the “**System name**” field, enter the desired name for the GT with this Unique ID.
 
-4.  Press “**Configure**”.
+2.  Press “**Configure**”.
 
-5.  In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code*.* To save the password, select “**Remember password**”.
+3.  In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code*.* To save the password, select “**Remember password**”.
 
-6.  Set the necessary settings and when finished, click **Write [F5]**.
+4.  Set the necessary settings and when finished, click **Write [F5]**.
 
 ## Test communicator performance 
 
@@ -1082,13 +1078,13 @@ When the configuration and installation is complete, perform a system check:
 
 - by triggering a zone alarm when the security system is armed.
 
-2.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
+1.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
 
-3.  To test communicator input, trigger it and make sure to receive the correct event.
+2.  To test communicator input, trigger it and make sure to receive the correct event.
 
-4.  To test the communicator outputs, activate them remotely and check their operation.
+3.  To test the communicator outputs, activate them remotely and check their operation.
 
-5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
+4.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
 
 ## Firmware update 
 
@@ -1111,11 +1107,11 @@ The communicator’s firmware can also be updated or changed manually. After an 
 
 <img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.52755905511811in" />
 
-4.  Press „**Open firmware**” and select the required firmware file.
+4. Press „**Open firmware**” and select the required firmware file.
 
-5.  Press **Update [F12]**.
+2.  Press **Update [F12]**.
 
-6.  Wait for the update to complete.
+3.  Wait for the update to complete.
 
 ## Safety requirements
 
