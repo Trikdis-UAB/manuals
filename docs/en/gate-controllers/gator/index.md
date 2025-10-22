@@ -12,7 +12,7 @@ Users can control controller with Protegus2 application, telephone calls and SMS
 
 ### Features
 
-Remote control
+**Remote control**
 
 - With Mobile/Internet application *Protegus2*.
 
@@ -20,11 +20,11 @@ Remote control
 
 - With phone call.
 
-Messages for users
+**Messages for users**
 
 - Sends messages about events to the *Protegus2* application or with text SMS messages.
 
-Messages for the safety company
+**Messages for the safety company**
 
 - Sends event information in Contact ID codes to TRIKDIS software and hardware receivers, which work with any monitoring software.
 
@@ -32,11 +32,9 @@ Messages for the safety company
 
 - If connection with the main receiver is lost, the messages are automatically sent to a backup receiver.
 
-Inputs and outputs
+**Inputs and outputs**
 
 - 2 inputs (IN), of selectable type: NO; NC; EOL.
-
-
 - 2 universal inputs/outputs. Mode of operation is set as either input or output.
 
 - 1 output (OUT) - relay.
@@ -89,8 +87,6 @@ Inputs and outputs
 5.  Nano-SIM card slot.
 
 6.  GSM antenna SMA connector.
-
-<img alt="" src="./image4.png" style="width:4.606299212598425in;height:2.7874015748031495in" />
 
 ### Purpose of terminals 
 
@@ -176,33 +172,21 @@ If the LED indication is not working, check the power supply and connections.
 
 7.  Close the top lid.
 
-<img alt="" src="./image5.png" style="width:3.4645669291338583in;height:1.7716535433070866in" />
-
-<img alt="" src="./image6.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
-
 ### Schematic for connecting the power supply 
 
 Using wires, connect the controller according to the schematic shown below.
-
-<img alt="" src="./image7.png" style="width:4.0in;height:2.8464566929133857in" />
 
 ### Schematics for connecting inputs 
 
 The controller has four inputs IN (two of which are universal and can operate either as inputs or outputs) for the connection of various alarm sensors. These inputs can operate in NC, NO, EOL modes. Connect the inputs according to the set input type (NC, NO, EOL) as is shown in the schematics bellow:
 
-<img alt="" src="./image8.png" style="width:5.417322834645669in;height:1.7007874015748032in" />
-
 ### Schematic for connecting the relay 
 
 Above is the schematic for connecting the relay when the controller is connected to a DC power source. Using the terminals of the relay, it is possible to remotely control (turn on/off) various electric devices. The I/O terminal of the controller must be set to an output (OUT) mode.
 
-<img alt="" src="./image9.png" style="width:2.4645669291338583in;height:0.8740157480314961in" />
-
 ### Schematic for connecting an automatic gate opener to the controller 
 
 All wiring should be done with the power supply disconnected. / The purposes and voltages of the automatic gate opener‘s terminals are described in detail in the automatic gate‘s manual. / The automatic gate‘s IN, COM terminals are used for controlling the gates. / The automatic gate has a gate state output (OUT) that shows when the gates are closed and when they are open. The gate‘s state output can be a voltage output or a relay output. In the schematic, relay K1 is connected to a voltage automated gate output. There is voltage (~230V) between the voltage outputs OUT and N of the automated gates when the gates are open. The intermediate relay K1 is turned on when the gates are open and it activates
-
-<img alt="" src="./image10.png" style="width:3.8858267716535435in;height:2.6692913385826773in" />
 
 > the controller‘s 1IN input. The state of the controller‘s 1IN input gives precise information about the state of the gates (when the gates are closed and when they are open).
 >
@@ -214,31 +198,19 @@ Configuring controller with an RFID Reader is described in chapter 5.3. „„IN
 
 Schematic for connecting of single RFID reader to GATOR controller.
 
-<img alt="" src="./image11.png" style="width:4.590009842519685in;height:3.9033409886264216in" />
-
 In the TrikdisConfig program, it should be noted that one RFID reader and the "**Exit**" button will be used. When by pressing the “**Exit**” button, the 5OUT output of the controller will be activated for the set pulse duration. When the “**Exit**” button is not connected to the controller, then it is not necessary to mark the field “**IO3** **as exit button**”.
-
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:2.594488188976378in" />
 
 Schematic for connecting of two RFID readers to GATOR controller.
 
-<img alt="" src="./image13.png" style="width:4.830009842519685in;height:3.9000076552930882in" />
-
 When connecting two RFID readers to the controller, it should be noted in the TrikdisConfig program that two RFID readers will be used.
-
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:2.4448818897637796in" />
 
 ### Schematic for connecting the W485 WiFi module 
 
 Controller firmware version from 1.06. / The *W485* module sends messages to the CMS (Central Monitoring Station) and to *Protegus2* apps using a WiFi internet router. When WiFi connectivity is available, the controller sends event messages via the *W485* module. When WiFi connectivity is disrupted, the controller sends messages via GPRS. When WiFi connectivity is re-established, the controller returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the controller is described in chapter 5.4. „„Modules” window”. / You do not need a SIM card, when using the *W485* with the controller*.*
 
-<img alt="" src="./image15.png" style="width:3.141732283464567in;height:2.1496062992125986in" />
-
 ### Schematic for connecting the E485 “Ethernet” module 
 
 Controller firmware version from 1.06. / The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* apps using a wired internet connection. Using the *E485* with controller, CMS and *GATOR* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the controller sends messages via the mobile Internet. When the wired Internet connectivity is re-established, controller starts sending messages via *E485*. / Configuration of the *E485* module to work with the controller is described in chapter 5.4. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the controller*.*
-
-<img alt="" src="./image16.png" style="width:3.141732283464567in;height:2.1496062992125986in" />
 
 ### Schematic for connecting of the iO-LORA expander with RFID reader 
 
@@ -246,19 +218,11 @@ Firmware version of the GATOR controller from 2.13.
 
 Connect the RF-LORA transceiver to the GATOR controller. After that, you can use the iO-LORA expander, to which the RFID reader (Wiegand 26/34) is connected. The RFID reader controls the PGM output of the iO-LORA expander, to which it is connected.
 
-<img alt="" src="./image17.png" style="width:7.086805555555555in;height:5.251388888888889in" />
-
 Launch TrikdisConfig. Connect GATOR via USB Mini-B cable to the computer or remotely. Press the **Read [F4]** button and the TrikdisConfig program will display the current controller settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window. Select "**iO-LORA controller**" from the "**Modules**" list. In the "**Serial No.**" field, enter the serial number of the device.
-
-<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.3700787401574803in" />
 
 In the "**IN/OUT**" list, the "**EXIT button**" must be specified for the "**6 IN**" input. When the "**Exit**" button is pressed, the iO-LORA "**7 OUT**" output is activated for the set pulse duration.
 
-<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.283464566929134in" />
-
 In the "**Users**" list, specify the number of the RFID card, the user's name, enable the permission to control the PGM output, specify the PGM output (which will be controlled by the user), the code. After completing the settings, click **Write [F5]**. Wait until the process of updating the controller settings is finished. Click "**Disconnect**" and disconnect the USB cable.
-
-<img alt="" src="./image20.png" style="width:7.086614173228346in;height:2.9015748031496065in" />
 
 Activate PGM output with RFID card/code. Press the "**Exit**" button (the PGM output must activate for the set pulse duration).
 
@@ -266,11 +230,7 @@ Activate PGM output with RFID card/code. Press the "**Exit**" button (the PGM ou
 
 The *GATOR* controller can be connected to an *iO8* or *iO8-LORA* expander to increase the number of inputs (IN) and outputs (OUT). One *iO8* or *iO8-LORA* expansion module can be connected to the controller. / *iO8* expander connection diagram.
 
-<img alt="" src="./image21.png" style="width:3.346673228346457in;height:2.1333377077865268in" />
-
 iO8-LORA expander connection diagram.
-
-<img alt="" src="./image22.png" style="width:5.936678696412948in;height:1.94667104111986in" />
 
 ## Quick set up of the controller 
 
@@ -343,27 +303,15 @@ With Protegus2 cloud users will be able to control controller remotely. They wil
         and blink yellow).
 3. Choose “**Add new system”**.
 
-<img alt="" src="./image27.png" style="width:2.7559055118110236in;height:2.5826771653543306in" />
-
 4. Enter the controller “Unique ID (IMEI)” number found on the product or on the packaging sticker. Press “**Next**”.
-
-<img alt="" src="./image28.png" style="width:2.7559055118110236in;height:4.606299212598425in" />
 
 5. Enter the system name. Press "**Next**".
 
-<img alt="" src="./image29.png" style="width:2.7559055118110236in;height:2.7598425196850394in" />
+1.  Press „**Skip**“.
 
-6. Press „**Skip**“.
+1.  Wait 1 minute.
 
-<img alt="" src="./image30.png" style="width:2.7559055118110236in;height:3.8464566929133857in" />
-
-7. Wait 1 minute.
-
-<img alt="" src="./image31.png" style="width:2.7559055118110236in;height:2.405511811023622in" />
-
-8. Activate the PGM output by clicking on the "**Output5**" icon.
-
-<img alt="" src="./image32.png" style="width:2.7559055118110236in;height:2.0in" />
+1.  Activate the PGM output by clicking on the "**Output5**" icon.
 
 ### Adding a Widget on your phone 
 
@@ -373,39 +321,23 @@ Touch the screen with your finger and hold. A settings bar will appear.
 
 1.  Press “**Widgets**”**.**
 
-<img alt="" src="./image33.png" style="width:2.7559055118110236in;height:3.02755905511811in" />
-
 Find Protegus2 in the settings bar.
 
-2. Select „Protegus2“.
+1.  Select „Protegus2“.
 
-<img alt="" src="./image34.png" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+1.  Click on „**Switch** **Protegus2**“.
 
-3. Click on „**Switch** **Protegus2**“.
-
-<img alt="" src="./image35.png" style="width:2.7559055118110236in;height:3.0708661417322833in" />
-
-4. Select “**Gator Output5**” controller output.
+1.  Select “**Gator Output5**” controller output.
 
 2.  Click on “**ADD WIDGET**”.
 
-<img alt="" src="./image36.png" style="width:2.7559055118110236in;height:2.2755905511811023in" />
+1.  An icon will appear on the phone‘s screen.
 
-3. An icon will appear on the phone‘s screen.
-
-<img alt="" src="./image37.png" style="width:2.7559055118110236in;height:3.1141732283464565in" />
-
-4. Return to the home screen. Press the icon.
-
-<img alt="" src="./image38.png" style="width:2.7559055118110236in;height:1.6456692913385826in" />
+1.  Return to the home screen. Press the icon.
 
 > A circle that shows when the PGM is turned on will appear on the screen.
 
-<img alt="" src="./image39.png" style="width:2.7559055118110236in;height:2.8818897637795278in" />
-
-5. When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
-
-<img alt="" src="./image40.png" style="width:2.7559055118110236in;height:1.5393700787401574in" />
+1.  When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
 
 ### Adding users on your phone 
 
@@ -525,9 +457,6 @@ With TrikdisConfig you can change the controller’s settings (if default settin
 1.  Download the configuration software TrikdisConfig from [www.trikdis.com/lt](http://www.trikdis.com/lt)/ (enter “TrikdisConfig” in the search field) and install it.
 
 2.  Using a flat-head screwdriver, remove the controller’s lid as shown below:
-
-<img alt="" src="./image47.png" style="width:5.905511811023622in;height:1.562992125984252in" />
-
 1.  Connect the controller to a computer using a USB Mini-B cable.
 
 2.  Launch the configuration software TrikdisConfig. The program will automatically recognize the connected device and will automatically open the controller configuration window.
@@ -548,8 +477,6 @@ With TrikdisConfig you can change the controller’s settings (if default settin
 
 After connecting the controller to the TrikdisConfig software, the software will show information about the connected device in the status bar:
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:0.6614173228346457in" />
-
 | Name | Description |
 |------|-------------|
 | IMEI/​Unique ID | The device’s IMEI number |
@@ -565,8 +492,6 @@ After connecting the controller to the TrikdisConfig software, the software will
 When the button **Read [F4]** is clicked, the program will read and show the settings currently saved on the controller. With TrikdisConfig, adjust the required settings according to the program window descriptions below.
 
 ### “System Options” window 
-
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:4.188976377952756in" />
 
 **Settings group “General”**
 
@@ -627,8 +552,6 @@ The text of SMS messages that the user will receive after sending SMS commands.
 ###  “IN/OUT” window 
 
 **“IN/OUT” tab**
-
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:3.015748031496063in" />
 
 **Settings group „Input/Output settings“**
 
@@ -713,8 +636,6 @@ The text of SMS messages that the user will receive after sending SMS commands.
 
 Enter the calendar holidays during which it will be possible to set the additional activation of the PGM output provided in the Scheduler table.
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.0984251968503935in" />
-
 - **En.** – check the box to specify a specific holiday interval.
 
 - **Start date –** specify the start date of the holidays.
@@ -739,8 +660,6 @@ Only one iO8 or iO8-LORA expander can be connected to the GATOR controller.
 
 If there is wireless internet (WiFi) or wired internet at the controller installation site, the W485 WiFi module or the E485 „Ethernet“ module can be connected to the controller. The module will be able to transfer data to Protegus2 cloud and CMS (central monitoring station) via the Internet. Using a module (W485 or E485) with controller: 1) does not use mobile internet, it is also possible to disable controller GPRS data transmission; 2) You can use the controller without a SIM card (controlled by the Protegus2 apps).
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.2755905511811023in" />
-
 - **Modules** – select the module that is connected to the gate controller via RS485 from the list.
 
 - **Serial No.** – enter the module serial number (6 digits), which is indicated on stickers on the module’s case and packaging.
@@ -750,8 +669,6 @@ After selecting the connected module and entering its serial number, go to **Mod
 **„Parameters“ tab**
 
 **WiFi module W485 settings window**
-
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.7007874015748032in" />
 
 **Settings group „Communicator network settings“**
 
@@ -777,8 +694,6 @@ After selecting the connected module and entering its serial number, go to **Mod
 
 **„Ethernet“ module E485 settings windows**
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.094488188976378in" />
-
 **Settings group „ Communicator network settings“**
 
 - **DHCP mode** – „Ethernet” module’s mode for registering to network (manual or automatic).
@@ -798,8 +713,6 @@ After selecting the connected module and entering its serial number, go to **Mod
 - **Disable the use of SIM card mobile data** – checking the box will disable the use of mobile data from the SIM card. Data will only be sent via module E485. If the internet disappears, controller will store data in memory. When the Internet is restored, the controller will send the saved data via the “Ethernet” E485 module.
 
 ### “IP Reporting” window 
-
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:3.4960629921259843in" />
 
 The controller can send messages to the security company's CMS receiver.
 
@@ -847,8 +760,6 @@ The settings are identical to those of the main communication channel.
 
 **“Users” tab**
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
-
 - **ID** - user serial number. Numbers with the letter "A" (1A to 7A) are administrator numbers that can make settings on the controller, control outputs, and receive messages from the gate controller. Other user numbers (11 to 1010) can control outputs.
 
 - **E-mail address –** specify user’s e-mail address.
@@ -892,9 +803,6 @@ The settings are identical to those of the main communication channel.
 - ACK for SMS message – administrator will get answer SMS messages when they control and configure the controller with SMS messages.
 
 - Receive test SMS – check the box and administrator will receive test messages.
-
-<img alt="" src="./image58.png" style="width:4.330708661417323in;height:3.4803149606299213in" />
-
 - **Forward unknown SMS** – SMS message forwarding from unknown numbers.
 
 - **SMS notification for** – specify events (IN1, IN2, OUT3, OUT4, OUT5) that the administrator will receive SMS notifications about.
@@ -923,9 +831,6 @@ The settings are identical to those of the main communication channel.
 - Valid from – specify date and time from when the user can control the controller.
 
 - Valid until – specify date and time until when the user can control the controller.
-
-<img alt="" src="./image59.png" style="width:4.330708661417323in;height:3.9763779527559056in" />
-
 - **Enable counter** – check the box to enable the counter.
 
 - **Set counter** – specify number of times that user can control the controller during the chosen time.
@@ -942,37 +847,21 @@ The settings are identical to those of the main communication channel.
 
 1.  Connect the RFID reader to the controller (see p.2.6 " Schematic for connecting for RFID reader (Wiegand 26/34)"). Turn on the power to the controller. Connect the USB Mini-B cable to the controller. Specify how many RFID readers are connected in the TrikdisConfig window "IN / OUT".
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:2.97244094488189in" />
-
 Click “**Register RFID**” in the “User list” window.
-
-<img alt="" src="./image61.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 The RFID pendants (cards) registration window will open.
 
-<img alt="" src="./image62.png" style="width:2.854330708661417in;height:2.3070866141732282in" />
-
 Attach the RFID pendant (card) to the RFID reader. A new window will open when the reader scans the pendant (card). In it, “**Enter user name**” and select the “**User can control PGM Output 5**”. Press the “**ADD**” button. / Repeat the steps above to add more RFID pendant (cards). When the registration of all RFID pendant (cards) is completed, press the “**STOP registration**” button. / Press the button **Write [F5]** to save the RFID pendant list to the controller.
-
-<img alt="" src="./image63.png" style="width:2.858267716535433in;height:2.6653543307086616in" />
 
 RFID pendants (cards) can be registered in *TrikdisConfig* by entering their ID numbers in the “Phone/RFID” field. Give the user a Name, check field the “En.” and a managed “Outputs” field. Press the Write [F5] button to save the list of RFID pendants (cards) to the controller.
 
-<img alt="" src="./image64.png" style="width:2.3818897637795278in;height:1.515748031496063in" />
-
-<img alt="" src="./image65.png" style="width:7.086614173228346in;height:1.9133858267716535in" />
-
-2. RFID pendant (card) registration with Protegus2 application.
+1.  RFID pendant (card) registration with Protegus2 application.
 
 In the *Protegus2* application, select “Add New User”. Enter e-mail address, user name, RFID pendant (card) ID number, user 4-character code (when using an RFID keypad reader). Mark the controlled “Output”. Press “NEXT”. New user with RFID pendant (card) added to user list.
-
-<img alt="" src="./image66.png" style="width:2.7559055118110236in;height:5.6141732283464565in" />
 
 **“Scheduler” tab**
 
 The user can control the Outputs according to the set schedule. Schedule must be assigned to user.
-
-<img alt="" src="./image67.png" style="width:7.086614173228346in;height:2.2125984251968505in" />
 
 - **Name** - enter a name for the schedule.
 
@@ -984,15 +873,11 @@ The user can control the Outputs according to the set schedule. Schedule must be
 
 **“Black list” tab**
 
-<img alt="" src="./image68.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
-
 The “**Black list**” contains e-mail addresses, phone numbers, RFID pendant (card) ID numbers of users who are banned from controlling the controller.
 
 There is an easy way to add new items to the black list straight from the events log. Right-click on a telephone number, e-mail address, RFID pendant (card) ID number and choose “**Add to black list**”.
 
 ### “System events” window 
-
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:2.295275590551181in" />
 
 Setting up sending controller events to the CMS (central monitoring station) and to the Protegus2 application.
 
@@ -1010,15 +895,11 @@ Setting up sending controller events to the CMS (central monitoring station) and
 
 ### “Events Log” window 
 
-<img alt="" src="./image70.png" style="width:7.086614173228346in;height:2.1141732283464565in" />
-
 Click the button “**Read Log**”. The events log will be read from the controller’s memory. The “**Events log**“ provides information about the controller’s actions and its internal events.
 
 ### Restore default settings 
 
 To restore the default settings of the controller you need to click the “**Restore**” button in the TrikdisConfig program window.
-
-<img alt="" src="./image71.png" style="width:7.086614173228346in;height:1.0118110236220472in" />
 
 ### Settings for gate state indication 
 
@@ -1026,17 +907,11 @@ Protegus2 app and Widget can show the current state of the gates (closed or open
 
 In the TrikdisConfig window “**IN/OUT**”, assign the connected input to the controller output that will control the gates:
 
-<img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
-
 If you want to receive SMS messages about the gates opening/closing, enter SMS texts for input 1IN event/restore.
 
 In the "**Users**" window, click on the “**More settings**” button.
 
-<img alt="" src="./image73.png" style="width:7.086614173228346in;height:1.7440944881889764in" />
-
 In the “User settings” window, tick the IN1 box if you want the user to receive SMS messages about the state of the gate. Click “Save”.
-
-<img alt="" src="./image74.png" style="width:4.330708661417323in;height:3.4606299212598426in" />
 
 ## Setting parameters remotely 
 
@@ -1056,10 +931,7 @@ In the “User settings” window, tick the IN1 box if you want the user to rece
 2.  Make sure that the controller is connected to the internet and connection to Protegus is enabled***.***
 
 3.  Launch the configuration program TrikdisConfig and in the field “**Unique ID**” of the “**Remote access**” section enter the “**IMEI/Unique ID**” number of your controller (the IMEI number is given on the stickers that can be found on the lower part of the device’s case and on the packaging).
-
-<img alt="" src="./image75.png" style="width:7.086614173228346in;height:2.043307086614173in" />
-
-4. In the field “**System Name**” you can give any name to this controller. Click “**Configure**”.
+1.  In the field “**System Name**” you can give any name to this controller. Click “**Configure**”.
 
 2.  The controller configuration window will open. Click the button **Read [F4]** for the program to read the parameters currently set for the controller. If a window for entering the *Administrator code* opens, enter the six-symbol *administrator code*. To make the program remember the code, tick the box next to “**Remember password**” and click the button **Write [F5]**.
 
