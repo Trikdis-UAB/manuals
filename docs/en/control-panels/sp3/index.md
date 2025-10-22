@@ -166,24 +166,15 @@
 
 <img alt="" src="./image4.png" style="width:5.480010936132984in;height:3.826674321959755in" />
 
-!!! note
-    1. Connectivity and operation indicator lights.
-    
-    2. Backup power supply terminal block.
-    
-    3. Main power supply terminal block.
-    
-    4. External terminal block.
-    
-    5. 1-WIRE data bus terminal block.
-    
-    6. SMA screw-on type connector for WiFi antenna.
-    
-    7. Nano-SIM card holder.
-    
-    8. SMA screw-on type connector for GSM antenna.
-    
-    9. USB Mini-B connector for configuring the control panel’s settings.
+1.  Connectivity and operation indicator lights.
+2.  Backup power supply terminal block.
+3.  Main power supply terminal block.
+4.  External terminal block.
+5.  1-WIRE data bus terminal block.
+6.  SMA screw-on type connector for WiFi antenna.
+7.  Nano-SIM card holder.
+8.  SMA screw-on type connector for GSM antenna.
+9.  USB Mini-B connector for configuring the control panel’s settings.
 
 | Terminal | Description |
 |----|----|
