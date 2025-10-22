@@ -1,4 +1,88 @@
-## **Security control panel “FLEXi” SP3**
+# Security control panel “FLEXi” SP3
+
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
+## Description
+
+**The *„FLEXi“ SP3* control panel** is a processor part of intrusion and fire alarm system. It comes with a built-in WiFi module and 2G/4G cellular modem. The „FLEXi“ SP3 allows grouping of 32 wired and wireless zones into an 8 partition system. Users can switch protection modes of different areas of the premises remotely and with ease (with mobile app Protegus2, SMS or phone call) or with devices that support personal identification (wired and wireless keypads, electronic keys, RFID cards, etc.). Any triggered system event is reported to the central monitoring station (CMS) and to Protegus cloud via WiFi and (or) via cellular network if a SIM card is inserted.
+
+**When it’s recommended to choose the *„FLEXi“ SP3* control panel?**
+
+- For securing small or medium sized premises which will be monitored by a security company. The „FLEXi“ SP3 supports both wired and wireless zones. The panel can provide remote control and system information to both end-users and the security company.
+
+- As a replacement for existing intrusion alarm panel. „FLEXi“ SP3 allows to set a different resistor value to the type used with the old alarm panel. This saves a lot of time during installation, as then there is no need to change resistors in each sensor.
+
+- When the alarm system needs to perform more functions than just protection of the premises. For example: opening the doors and gates, watering the lawn, lighting, heating, ventilation, cooling, controlling as well as many other automatic start and stop functions.
+
+### Features
+
+Reporting to the security company‘s central monitoring station (CMS):
+
+- Event reporting either via the built-in WiFi module or cellular 2G/4G modem.
+
+- Additional modules to send reports via Ethernet or VHF/UHF radio waves or Sigfox with chosen priority.
+
+- Any CMS can receive reports, as long as they have TRIKDIS software/IP receiver or any other manufacturer’s IP receiver supporting SIA DC-09 IP protocol.
+
+- Design based on two decades of experience in transmitting reports to main and backup central monitoring station receivers, which allows security companies to provide the highest level of protection to premises
+
+
+- A setting for necessity to send to CMS, to mandatorily send reports to CMS first, and only then to customers.
+- Possibility to send event reports to CMS of two different security companies.
+
+- Multitude number of message transmission channels and multiple transmission priority settings.
+
+**Reporting to user:**
+
+- Via Protegus2 mobile app, which gives warnings about alarm system events using push and special sound notifications.
+
+- Event reporting via SMS messages to 8 cellular numbers.
+
+- Reporting about events using pre-recorded voice notifications (up to 8 cellular numbers. For сontrol panel SP3_12xx with firmware version up to 1.13 inclusive.).
+
+- Remote control of selected premises’ protection mode (Arm/Disarm/Stay/Sleep).
+
+- Remote control of connected devices (lighting system, automatic gates, ventilation, heating, watering systems, etc.).
+- Remote temperature measuring.
+
+**Inputs and outputs:**
+
+- 10 I/O terminals, each one can be set as an input (IN) or output (OUT). Input (IN) types: ATZ, EOL, NC, NO. Different parameters of resistors can be used in EOL and ATZ type circuits. The number of inputs IN can be expanded to 32 by using keypads, iO-8 and iO-WL expander modules.
+
+- The board has 2 dedicated outputs: the bell and the LED. The bell is to control the siren, and the LED is to control indicator lights. The number of outputs can be expanded to 16 by using iO-8 and iO-WL expander modules.
+
+- Seven output operational settings. Each output can be assigned with an operational logic, a preset operation schedule or qualities, for example, thermostat mode.
+
+- One-wire data bus (“1-Wire”) is designated to connect temperature sensors (up to 8), a temperature and humidity sensor (1) or a key fob (“iButton”) reader.
+
+- The GRN-YEL data bus is designated to connect 8 keypads of the same type.
+
+- The RS485 data bus connects iO series expander modules, RF-SH radio wave wireless sensor transceiver, E485 Ethernet module, T16 VHF or UHF radio wave transmitter, **Sigfox** module.
+
+**Control of alarm system**
+
+- 4-digit long control codes (40 in total), which may be used as a coercion code as well. In such scenario, entering the user code will disarm the alarm, yet a special report will be sent to the CMS indicating that the alarm was disarmed as a result of coercion.
+
+- Control using keypads: SK-LED TouchPad (Protegus SK232LED W), SK-LCD TouchPad (FLEXi SK232LCD); Paradox K636, K10H(V) K32+LED, K32LED, K32LCD+, K35, TM50, TM70; Crow keypad CR16, CR-LCD; CZ-Dallas electronic (“iButton”) key reader; TM17 electronic key reader, RFID reader (Wiegand 26/34).
+
+- Remote control via Protegus2 mobile app, phone call or SMS.
+
+**Simple installation:**
+
+- Multiple sizes of „FLEXi“ SP3 mounting kits that include a decorative white metal housing with a built-in step-down transformer or impulse power supply.
+
+- Default „FLEXi“ SP3 operational settings are based on many years of experience. That allows to install the system in 7 out of 10 small and medium-sized premises without the need to change the default settings.
+
+- The „FLEXi“ SP3 control panel allows to replace the previous panel without changing the resistors in each wired sensor.
+
+- Settings can be saved as a file to be used later.
+
+- Device configuration via USB cable or remotely by using TrikdisConfig software.
+
+- Remote connection via TrikdisConfig software allows not only altering „FLEXi“ SP3 parameters but monitoring the operation of the panel as well.
+- Two access levels for parameter settings: installer and administrator.
 
 ### Technical specifications 
 
@@ -84,18 +168,18 @@
 
 !!! note
     2.  Backup power supply terminal block.
-
+    
     3.  Main power supply terminal block.
-
+    
     4.  External terminal block.
-
+    
     5.  1-WIRE data bus terminal block.
     6.  SMA screw-on type connector for WiFi antenna.
-
+    
     7.  Nano-SIM card holder.
-
+    
     8.  SMA screw-on type connector for GSM antenna.
-
+    
     9.  USB Mini-B connector for configuring the control panel's settings.
 
 | Terminal | Description |
@@ -209,8 +293,6 @@ The control panel’s board can be installed into a mounting housing that alread
 
 <img alt="" src="./image5.png" style="width:2.6766721347331583in;height:1.810003280839895in" />
 
-**  **
-
 **Dimensions of the „FLEXi“ SP3 board**
 
 The picture below shows the dimensions of the board and its mounting holes (in millimeters), and also the locations of the holes.
@@ -236,9 +318,9 @@ The picture below shows the dimensions of the board and its mounting holes (in m
     meet security Class II or 24 hours to meet security Class III.
 #### Recommendations for setting the control panel’s parameters 
 
-6.  See chapter 5 “Setting parameters using TrikdisConfig” for information on how to connect to the panel to configure it.
+1.  See chapter 5 “Setting parameters using TrikdisConfig” for information on how to connect to the panel to configure it.
 
-7.  System settings:
+2.  System settings:
 
     1.  **Partitions.** If you would like to turn on protection for specific zone groups separately, the alarm system can be divided into partitions. See chapter 5.2 ““System Options” window” on how to divide the system and set the required partition attributes.
 
@@ -246,7 +328,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
     3.  **Users.** System *users* must be created to control the alarm system via keypad, iButton key or phone call (SMS message). See chapter 5.4 ““Users & Reporting” window” on how to create *users* and assign them permissions.
 
-8.  Message sending:
+3.  Message sending:
 
     1.  **Time setting.** The control panel’s time must be set in order to receive messages with exact timestamps. See chapter 5.2 ““System Options” window”.
 
@@ -258,7 +340,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
     5.  **Reports to user.** Communication with Protegus cloud is enabled by default, and sending reports using SMS messages and phone calls is disabled. See chapter 5.10 ““System events” window” on how to set parameters for sending reports to the user’s mobile phone.
 
-9.  Remote control of the system:
+4.  Remote control of the system:
 
     1.  **User access.** The alarm system can be controlled remotely (via phone call and (or) SMS messages) by users whose phone numbers are entered into the User list. See chapter 5.4 ““Users & Reporting” window” on how to enter phone numbers.
 
@@ -266,7 +348,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
     3.  **Control via** **SMS** **messages.** With SMS messages, it is possible to change some of the control panel’s operational parameters, arm or disarm all or part of the premises, control (turn on or off) equipment connected to the PGM outputs. See the list of SMS commands on chapter 4.3 “Configuration and control via SMS messages”.
 
-10. Additionally:
+5.  Additionally:
 
     1.  **Changing control codes.** We recommend changing the panel’s default alarm control and configuration codes to something only You know.
 
@@ -280,16 +362,40 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
 There are 10 terminals IO1–IO10 (inputs) on the control panel board for connecting sensor circuits. The number of inputs can be expanded to 32 using input expanders (***iO, iO8, iO-WL, RF-SH, iO-LORA, iO8-LORA**)*. Any terminal can be set as an input and assigned zone attributes: circuit type (NO, NC, EOL, EOL_T, 3EOL, ATZ, ATZ_T); sensitivity to temporary circuit events; zone function (Delay, Instant, Instant Stay, Interior, Interior Stay, Fire, Keyswitch, 24_hour, Silent, Silent 24h), see chapter 5.7 ““Zones” window”. The iO8 and iO8-LORA expanders support all types of zone resistor (EOL types) of the control panel.
 
-> **Schematics for connecting sensors.**
+#### Schematics for connecting sensors.
 
-| <img alt="" src="./image8.png" style="width:1.2900021872265968in;height:0.98333552055993in" /> | <img alt="" src="./image9.png" style="width:1.2500021872265967in;height:0.98333552055993in" /> |  | <img alt="" src="./image10.png" style="width:1.2266688538932633in;height:1.4266699475065616in" /> |
-|----|----|----|----|
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image10.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
-| <img alt="" src="./image11.png" style="width:1.3200021872265966in;height:1.3966699475065616in" /> | <img alt="" src="./image12.png" style="width:1.5433366141732283in;height:1.2066688538932633in" /> | <img alt="" src="./image13.png" style="width:2.2633377077865267in;height:1.5033366141732283in" /> |
-|----|----|----|
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image13.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
-| <img alt="" src="./image14.png" style="width:1.850003280839895in;height:1.7833366141732283in" /> | <img alt="" src="./image15.png" style="width:3.570007655293088in;height:1.690003280839895in" /> |
-|----|----|
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image14.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image15.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
 <img alt="" src="./image16.png" style="width:3.15000656167979in;height:1.6633366141732284in" />
 
@@ -383,8 +489,14 @@ With the *RF-SH* it is possible to connect 64 wireless remote controls, 16 wire
 
 If the security control panel „FLEXi“ SP3 needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander. The „FLEXi“ SP3 ’s configuration for expander modules is described in chapter 5.5 ““Modules” window”.
 
-| <img alt="" src="./image35.png" style="width:2.2700043744531935in;height:1.2600021872265967in" /> | <img alt="" src="./image36.png" style="width:2.38667104111986in;height:1.26333552055993in" /> |
-|----|----|
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image35.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image36.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
 ### Schematics for connecting RF transmitter T16 
 
@@ -429,7 +541,7 @@ With Protegus2, users can control the alarm system remotely. They can also see t
 
 <img alt="" src="./image39.png" style="width:5.903345363079615in;height:0.786667760279965in" />
 
-4.  Launch the Protegus2 mobile app on your smartphone and log in using your username and password.
+4. Launch the Protegus2 mobile app on your smartphone and log in using your username and password.
 
 !!! warning
     "Important"
@@ -446,7 +558,7 @@ With Protegus2, users can control the alarm system remotely. They can also see t
     4.  Must be connected to network ("NET" LED must be green solid when
         connected to GSM network; and/or "MOD" LED must be green solid when
         connected to WiFi network).
-5.  Click „Add new system” and enter the *„FLEXi“ SP3*’s “*Unique ID/IMEI*” number. You can find it on the packaging sticker. After entering the ID, click “Next”.
+1.  Click „Add new system” and enter the *„FLEXi“ SP3*’s “*Unique ID/IMEI*” number. You can find it on the packaging sticker. After entering the ID, click “Next”.
 
 <img alt="" src="./image40.png" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
@@ -465,11 +577,11 @@ With Protegus2, users can control the alarm system remotely. They can also see t
 
 The „FLEXi“ SP3 security control panel can be controlled and configured remotely using SMS messages.
 
-Structue of SMS message: Command <sub>space</sub> Password <sub>space</sub> Data
+Structue of SMS message: Command `[space]` Password `[space]` Data
 
 The control panel’s default SMS password is **123456**. For safety reasons we recommend changing it to something only You know and not forgetting Your password!
 
-> #### SMS command list
+#### SMS command list
 
 | Command | Data | Description |
 |----|----|----|
@@ -541,9 +653,9 @@ An audio signal accompanies the beginning and end of the audio file recording. A
 
 **Note:** If you connect the „FLEXi“ SP3 to a computer using a USB cable while it is powered on and operating, the „FLEXi“ SP3 will stop performing its control panel functions and will switch to programming mode.
 
-3.  Launch the configuration software TrikdisConfig. The program will automatically recognize the connected device and will automatically open the „FLEXi“ SP3 configuration window.
+1.  Launch the configuration software TrikdisConfig. The program will automatically recognize the connected device and will automatically open the „FLEXi“ SP3 configuration window.
 
-4.  Click **Read [F4]** to see current „FLEXi“ SP3 parameters. If a pop-up window appears, enter the *administrator* or *installer* code.
+2.  Click **Read [F4]** to see current „FLEXi“ SP3 parameters. If a pop-up window appears, enter the *administrator* or *installer* code.
 
 ### Description of TrikdisConfig status bar 
 
@@ -644,8 +756,6 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
 - **Tamper** – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when protected“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will will switch on even when the alarm system is disarmed.
 
-**  **
-
 **“Scheduler” tab**
 
 <img alt="" src="./image45.png" style="width:7.086614173228346in;height:1.736220472440945in" />
@@ -679,8 +789,6 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 - **Stop date** – set the end date of the holiday. If the holiday is only one day long, this date should match the **Start date**.
 
 - **Group 1, Group 2, Group 3, Group 4** – combine holidays into groups.
-
-**  **
 
 **“System troubles” tab**
 
@@ -729,8 +837,6 @@ If at least one control panel internal fault field is checked, then the control 
 - **Encryption key** – 6-digit encryption key that must match the encryption key of the CMS receiver.
 
 If parameters are set for the parallel channel, reports will be sent using both channels simultaneously. Both channels cannot be configured for the same receiver.
-
-**  **
 
 **“Settings” tab**
 
@@ -847,15 +953,15 @@ Linking electronic keys using the TM17 reader.
 
 Linking electronic keys using the CZ-Dallas reader.
 
-6.  If the **Tag code** list is empty, the first added key should be written to the first line of the list and becomes the **Master key.**
+1.  If the **Tag code** list is empty, the first added key should be written to the first line of the list and becomes the **Master key.**
 
-7.  To turn on contact key linking mode, hold the **Master key** against the “eye” of the key reader for at least 10 seconds.
+2.  To turn on contact key linking mode, hold the **Master key** against the “eye” of the key reader for at least 10 seconds.
 
-8.  To link user keys, hold them against the „eye” of the key reader one by one.
+3.  To link user keys, hold them against the „eye” of the key reader one by one.
 
-9.  When you finish linking the user electronic (*iButton*) keys, hold the **Master key** against the key reader again to disable linking mode.
+4.  When you finish linking the user electronic (*iButton*) keys, hold the **Master key** against the key reader again to disable linking mode.
 
-10. To delete all keys (including the master key), hold the **Master key** against the reader for at least 20 seconds.
+5.  To delete all keys (including the master key), hold the **Master key** against the reader for at least 20 seconds.
 
 !!! warning
     "Important"
@@ -865,8 +971,6 @@ Linking electronic keys using the CZ-Dallas reader.
 **“Protegus” tab**
 
 <img alt="" src="./image53.png" style="width:7.086614173228346in;height:1.7440944881889764in" />
-
-**  **
 
 **Settings group “Cloud application”**
 
@@ -1018,11 +1122,11 @@ All wireless sensors can be linked simultaneously.
 
 !!! note
     To delete wireless sensors from the „FLEXi" SP3's memory:
-
+    
     1.  Connect a USB Mini-B cable to the „FLEXi" SP3.
-
+    
     2.  Launch **TrikdisConfig**, click the **Read [F4]** button.
-
+    
     3.  In the TrikdisConfig window **Wireless**, in the column
         **Device type**, select **Disabled** instead of the w**ireless
         sensor** that you wish to delete and click **Write [F5]**. The
@@ -1067,10 +1171,10 @@ All wireless sensors can be linked simultaneously.
 
 !!! note
     Reverting the wireless controller to default settings:
-
+    
     1.  Press buttons 2 and 3 at the same time and hold until the indicator
         starts blinking in green and red.
-
+    
     2.  You can release the buttons when the indicator stops blinking. The
         controller's memory is cleared.
 #### Linking a wireless (FW2 series) siren 
@@ -1113,19 +1217,19 @@ All wireless sensors can be linked simultaneously.
 
 !!! note
     Reverting the wireless siren to default settings:
-
+    
     1.  Remove the lid from the siren.
-
+    
     2.  Disconnect the power from the siren.
-
+    
     3.  Press the **LEARN** button on the siren's board and turn on the
         power.
-
+    
     4.  Hold the **LEARN** button until the siren's flash blinks 3 times.
-
+    
     5.  Release the **LEARN** button. The siren's flash will blink in rare
         intervals for another 30 seconds.
-
+    
     6.  The flash will stop blinking. The wireless siren's default settings
         have been restored.
 #### Linking wireless (SH series) sensors 
@@ -1160,11 +1264,11 @@ All wireless sensors can be linked simultaneously.
 
 !!! note
     To delete wireless sensors from the „FLEXi" SP3's memory:
-
+    
     1.  Connect a USB Mini-B cable to the „FLEXi" SP3.
-
+    
     2.  Launch **TrikdisConfig**, click the **Read [F4]** button.
-
+    
     3.  In the TrikdisConfig window **Wireless**, in the column
         **Device type**, select **Disabled** instead of the **wireless
         sensor** that you wish to delete and click **Write [F5]**. The
@@ -1201,11 +1305,11 @@ All wireless sensors can be linked simultaneously.
 
 !!! note
     To delete wireless sensors from the „FLEXi" SP3's memory:
-
+    
     1.  Connect a USB Mini-B cable to the „FLEXI" SP3.
-
+    
     2.  Launch **TrikdisConfig**, click the **Read [F4]** button.
-
+    
     3.  In the TrikdisConfig window **Wireless**, in the column
         **Device type**, select **Disabled** instead of **Keypad SH** and
         click **Write [F5]**. The wireless keypad is now removed from the
@@ -1228,23 +1332,23 @@ All wireless sensors can be linked simultaneously.
 
   - **Delay** – for connecting a magnetic entrance door contact. You can set entry and exit times for this type of zone.
 
-> After the alarm is armed, the violation of the “Delay” zone is allowed within the exit time. If the zone is still violated when the time is up, outputs OUT “Siren” and “Flash” are turned on and alarm reports are sent.
->
-> When the alarm is armed, a violation of the “Delay” zone starts the entry time counter, during which the alarm must be disarmed. If the alarm is still not disarmed when the time is up, outputs OUT “Siren” and “Flash” are turned on and alarm reports are sent.
+After the alarm is armed, the violation of the “Delay” zone is allowed within the exit time. If the zone is still violated when the time is up, outputs OUT “Siren” and “Flash” are turned on and alarm reports are sent.
+
+When the alarm is armed, a violation of the “Delay” zone starts the entry time counter, during which the alarm must be disarmed. If the alarm is still not disarmed when the time is up, outputs OUT “Siren” and “Flash” are turned on and alarm reports are sent.
 
 - **Interior** – for connecting a motion sensor to the entry door.
 
-> If the alarm system is armed and the “Interior” zone is triggered, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
->
-> If the alarm system is armed and the “Delay” zone is triggered first, the “Interior” zone can also be triggered during the set entry time. If the alarm is not disarmed during the set entry time, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
+If the alarm system is armed and the “Interior” zone is triggered, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
+
+If the alarm system is armed and the “Delay” zone is triggered first, the “Interior” zone can also be triggered during the set entry time. If the alarm is not disarmed during the set entry time, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
 
 - **Interior Stay** – for connecting a motion sensor to the entry door.
 
-> If the alarm system is armed and the “Interior Stay” zone is violated, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
->
-> If the alarm system is armed and the “Delay” zone is triggered first, the “Interior Stay” zone can also be triggered during the set entry time. If the alarm is not disarmed during the set entry time, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
->
-> When the alarm system is armed in STAY mode, “Interior Stay” zones are not protected.
+If the alarm system is armed and the “Interior Stay” zone is violated, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
+
+If the alarm system is armed and the “Delay” zone is triggered first, the “Interior Stay” zone can also be triggered during the set entry time. If the alarm is not disarmed during the set entry time, output signals for “Siren” and “Flash” are turned on and a report about the triggering of the alarm system is sent.
+
+When the alarm system is armed in STAY mode, “Interior Stay” zones are not protected.
 
 - **Instant** – for connecting motion sensors. If the “Instant” zone is violated when the alarm is armed, OUT outputs “Siren” and “Flash” are turned on and a message about the alarm being triggered is sent.
 
@@ -1349,13 +1453,13 @@ All wireless sensors can be linked simultaneously.
 
 - **Set value** – depending on the condition chosen in the **Factor** column (SMS received, Temperature) a value (text of received SMS message, voltage or temperature) can be specified. If this value is identified, the action (chosen in the **Action** column) will be performed. The text of the SMS message can be separated by using % symbols. % symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
 
-> **%.....%** - part of the received SMS message text must match with the text entered between % symbols (e.g. **%hoUSe%**. The text in an SMS message must include the text “**hoUSe**”. Example of an SMS message: **VacationhoUSe25864**).
->
-> **.....%** - the beginning of the received SMS message must match the text entered until the % symbol (e.g. **hoUSe%**. The SMS message must start with the text **“hoUSe”**. Example of an SMS message: **hoUSeddss**).
->
-> **%.....** – the ending of the received SMS message must match with the text entered after the % symbol. (e.g. **%hoUSe**. The SMS message must end with the text **“hoUSe”**. Example of an SMS message: **1144hoUSe**).
->
-> The SMS message text is case-sensitive.
+**%.....%** - part of the received SMS message text must match with the text entered between % symbols (e.g. **%hoUSe%**. The text in an SMS message must include the text “**hoUSe**”. Example of an SMS message: **VacationhoUSe25864**).
+
+**.....%** - the beginning of the received SMS message must match the text entered until the % symbol (e.g. **hoUSe%**. The SMS message must start with the text **“hoUSe”**. Example of an SMS message: **hoUSeddss**).
+
+**%.....** – the ending of the received SMS message must match with the text entered after the % symbol. (e.g. **%hoUSe**. The SMS message must end with the text **“hoUSe”**. Example of an SMS message: **1144hoUSe**).
+
+The SMS message text is case-sensitive.
 
 **“Control” tab**
 
@@ -1376,8 +1480,6 @@ All wireless sensors can be linked simultaneously.
 **Settings group “Paradox keypad control”**
 
 - **Utility key** – pressing and holding the utility keys for 3 seconds will trigger the PGM output. The PGM output will activate for the duration of the pulse (if the operating mode is **Pulse**) or the level of the PGM output signal will change (if the operating mode is **Level**).
-
-**  **
 
 **“Scheduler” tab**
 
@@ -1509,11 +1611,11 @@ Perform these steps:
 
 <img alt="" src="./image74.png" style="width:7.086614173228346in;height:3.1377952755905514in" />
 
-4.  Click the **Open firmware** button and choose the required firmware file. If you do not have the file, the newest firmware file can be downloaded from the „FLEXi“ SP3 downloads section of [www.trikdis.com](http://www.trikdis.com) <u>by registered users</u>.
+4. Click the **Open firmware** button and choose the required firmware file. If you do not have the file, the newest firmware file can be downloaded from the „FLEXi“ SP3 downloads section of [www.trikdis.com](http://www.trikdis.com) <u>by registered users</u>.
 
-5.  Click the **Update [F12]** button.
+2.  Click the **Update [F12]** button.
 
-6.  Wait for the updates to finish.
+3.  Wait for the updates to finish.
 
 Once configuration is complete, click the **Write [F5]** button and disconnect the USB cable.
 
