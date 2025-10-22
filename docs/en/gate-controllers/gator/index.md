@@ -1,5 +1,9 @@
 # GATOR Gate Controller
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ##  Description 
 
 GSM gate controller can remotely control automatic gates and other equipment.
@@ -32,7 +36,6 @@ Inputs and outputs
 
 - 2 inputs (IN), of selectable type: NO; NC; EOL.
 
-<img alt="" src="./image3.png" style="width:2.3622047244094486in;height:3.47244094488189in" />
 
 - 2 universal inputs/outputs. Mode of operation is set as either input or output.
 
@@ -338,27 +341,27 @@ With Protegus2 cloud users will be able to control controller remotely. They wil
     
     3.  Must be registered in to network („NETWORK" LED must be green solid
         and blink yellow).
-1.  Choose “**Add new system”**.
+3. Choose “**Add new system”**.
 
 <img alt="" src="./image27.png" style="width:2.7559055118110236in;height:2.5826771653543306in" />
 
-2. Enter the controller “Unique ID (IMEI)” number found on the product or on the packaging sticker. Press “**Next**”.
+4. Enter the controller “Unique ID (IMEI)” number found on the product or on the packaging sticker. Press “**Next**”.
 
 <img alt="" src="./image28.png" style="width:2.7559055118110236in;height:4.606299212598425in" />
 
-3. Enter the system name. Press "**Next**".
+5. Enter the system name. Press "**Next**".
 
 <img alt="" src="./image29.png" style="width:2.7559055118110236in;height:2.7598425196850394in" />
 
-4. Press „**Skip**“.
+6. Press „**Skip**“.
 
 <img alt="" src="./image30.png" style="width:2.7559055118110236in;height:3.8464566929133857in" />
 
-5. Wait 1 minute.
+7. Wait 1 minute.
 
 <img alt="" src="./image31.png" style="width:2.7559055118110236in;height:2.405511811023622in" />
 
-6. Activate the PGM output by clicking on the "**Output5**" icon.
+8. Activate the PGM output by clicking on the "**Output5**" icon.
 
 <img alt="" src="./image32.png" style="width:2.7559055118110236in;height:2.0in" />
 

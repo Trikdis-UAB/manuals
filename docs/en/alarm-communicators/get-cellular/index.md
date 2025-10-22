@@ -4,6 +4,10 @@
   <img src="./image1.png" alt="Product Image" width="400">
 </div>
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Description 
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the Protegus2 application.
@@ -39,6 +43,8 @@ Sends events to monitoring station receiver:
 - “*Push*” and special sound notifications informing about events.
 
 - Remote system Arm/Disarm.
+
+
 - Remote control of connected devices (lights, gates, ventilation systems, heating, sprinklers, etc.).
 
 - Different user rights for administrator, installer and user.
@@ -219,7 +225,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-1.  Select “**Security panel model”** that will be connected to the communicator.
+2. Select “**Security panel model”** that will be connected to the communicator.
 
 2.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
@@ -245,13 +251,13 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 These settings must be made if the communicator is connected to a LAN network.
 
-1.  Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+3. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
 
 <img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.9173228346456694in" />
 
 These settings must be made if the SIM (or two SIM cards) card is inserted into the communicator.
 
-1.  Enter “**SIM card PIN”** code.
+4. Enter “**SIM card PIN”** code.
 
 2.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
@@ -287,13 +293,13 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 <img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
-1.  Select “**Security panel model”** that will be connected to the communicator.
+3. Select “**Security panel model”** that will be connected to the communicator.
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
 <img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
 
-2. **Communication type** - select the **IP** connection method.
+4. **Communication type** - select the **IP** connection method.
 
 2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
@@ -377,33 +383,13 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image22-left.png" alt="DSC panel" style="width: 41.2%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image22-right.png" alt="PARADOX panel" style="width: 58.8%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image23-left.png" alt="DSC panel" style="width: 40.2%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image23-right.png" alt="PARADOX panel" style="width: 59.8%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image24-left.png" alt="Innerrange Inception panel" style="width: 53.3%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image24-right.png" alt="Texecom Premier Elite panel" style="width: 46.7%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
 
-<div style="max-width: 1200px; margin: 1rem auto;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0;">
-    <img src="./image25-left.png" alt="DSC panel" style="width: 44.0%; min-width: 300px; height: auto; border: 0;" />
-    <img src="./image25-right.png" alt="PARADOX panel" style="width: 56.0%; min-width: 300px; height: auto; border: 0;" />
-  </div>
-</div>
+<img alt="" src="./image25.png" style="width:6.996680883639545in;height:3.28000656167979in" />
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
@@ -482,7 +468,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     the LED indication table in chapter 1.6 "LED indication of
     operation". / If the GET indication does not illuminate at all,
     check the power supply and connections.
-# Programming the control panel 
+## Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
 
@@ -689,11 +675,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
     
     5.  Registered to the network ("NETWORK LTE" LED illuminates green and
         blinks yellow).
-1.  Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
+3. Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
 <img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" />
 
-2. Enter the system „**Name**”. Click "**Next**".
+4. Enter the system „**Name**”. Click "**Next**".
 
 <img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
@@ -710,7 +696,7 @@ Follow the instructions below if the security control panel will be controlled w
 <img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
-1.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
@@ -729,10 +715,6 @@ Follow the instructions below if the security control panel will be controlled w
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
 <img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
-
-<div style="text-align: center;">
-  <img src="./image3.png" alt="" width="400">
-</div>
 
 ## TrikdisConfig window description 
 
