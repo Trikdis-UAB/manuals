@@ -18,7 +18,7 @@
 
 ### Features
 
-Reporting to the security company‘s central monitoring station (CMS):
+**Reporting to the security company‘s central monitoring station (CMS):**
 
 - Event reporting either via the built-in WiFi module or cellular 2G/4G modem.
 
@@ -558,7 +558,7 @@ With Protegus2, users can control the alarm system remotely. They can also see t
     4.  Must be connected to network ("NET" LED must be green solid when
         connected to GSM network; and/or "MOD" LED must be green solid when
         connected to WiFi network).
-1.  Click „Add new system” and enter the *„FLEXi“ SP3*’s “*Unique ID/IMEI*” number. You can find it on the packaging sticker. After entering the ID, click “Next”.
+5. Click „Add new system” and enter the *„FLEXi“ SP3*’s “*Unique ID/IMEI*” number. You can find it on the packaging sticker. After entering the ID, click “Next”.
 
 <img alt="" src="./image40.png" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
@@ -1094,31 +1094,31 @@ All wireless sensors can be linked simultaneously.
 
 #### Linking wireless (FW2 series) sensors 
 
-14. Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
+1.  Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
 
-15. Switch on the power supply.
+2.  Switch on the power supply.
 
-16. Remove the top cover from the RF-SH transceiver.
+3.  Remove the top cover from the RF-SH transceiver.
 
-17. Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
+4.  Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
 
-18. Release the button.
+5.  Release the button.
 
-19. The green blinking **LEARN** indicator means that the RF-SH is in wireless sensor linking mode.
+6.  The green blinking **LEARN** indicator means that the RF-SH is in wireless sensor linking mode.
 
-20. Insert a battery into the wireless sensor and wait until the sensor’s LED indicators stop blinking.
+7.  Insert a battery into the wireless sensor and wait until the sensor’s LED indicators stop blinking.
 
-21. Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator stops blinking green. The RF-SH transceiver has exited linking mode.
+8.  Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator stops blinking green. The RF-SH transceiver has exited linking mode.
 
-22. Connect a USB Mini-B cable to the „FLEXi“ SP3.
+9.  Connect a USB Mini-B cable to the „FLEXi“ SP3.
 
-23. Launch TrikdisConfig, click the **Read [F4]** button.
+10. Launch TrikdisConfig, click the **Read [F4]** button.
 
-24. You can find a list of linked wireless sensors in the TrikdisConfig software window **Wireless**. The 7-digit codes in the **Serial No.** column must match the codes printed on the casings or boards of the sensors.
+11. You can find a list of linked wireless sensors in the TrikdisConfig software window **Wireless**. The 7-digit codes in the **Serial No.** column must match the codes printed on the casings or boards of the sensors.
 
-25. You must assign the sensors to zones and partitions of the security control panel (**Zones** window). Click **Write [F5]** after making the changes.
+12. You must assign the sensors to zones and partitions of the security control panel (**Zones** window). Click **Write [F5]** after making the changes.
 
-26. The wireless sensor is now successfully linked to the system.
+13. The wireless sensor is now successfully linked to the system.
 
 !!! note
     To delete wireless sensors from the „FLEXi" SP3's memory:
@@ -1133,41 +1133,41 @@ All wireless sensors can be linked simultaneously.
         wireless sensor is now removed from the „FLEXi" SP3's memory.
 #### Linking a wireless (FW2 series) remote controller 
 
-27. Make sure that the *RF-SH* transceiver is linked to the *„FLEXi“ SP3* (see chapter 5.6.1 above).
+1.  Make sure that the *RF-SH* transceiver is linked to the *„FLEXi“ SP3* (see chapter 5.6.1 above).
 
-28. Switch on the power supply.
+2.  Switch on the power supply.
 
-29. Remove the top cover from the *RF-SH* transceiver.
+3.  Remove the top cover from the *RF-SH* transceiver.
 
-30. Hold down the LEARN button on the *RF-SH* module until the LEARN LED indicator starts blinking green.
+4.  Hold down the LEARN button on the *RF-SH* module until the LEARN LED indicator starts blinking green.
 
-31. Release the button.
+5.  Release the button.
 
-32. The green blinking LEARN indicator means that the *RF-SH* is in wireless equipment linking mode.
+6.  The green blinking LEARN indicator means that the *RF-SH* is in wireless equipment linking mode.
 
-33. On the wireless controller, hold down buttons 3 and 4 at the same time. The LED indicator will start blinking in yellow. After a few seconds it will stop and a green indicator will light up for a short period of time.
+7.  On the wireless controller, hold down buttons 3 and 4 at the same time. The LED indicator will start blinking in yellow. After a few seconds it will stop and a green indicator will light up for a short period of time.
 
-34. Release buttons 3 and 4. The wireless controller is linked.
+8.  Release buttons 3 and 4. The wireless controller is linked.
 
 <img alt="" src="./image59.png" style="width:1.5354330708661417in;height:1.8818897637795275in" />
 
-35. Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking green. The **RF-SH** transceiver has exited linking mode.
+9. Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking green. The **RF-SH** transceiver has exited linking mode.
 
-36. Connect a USB Mini-B cable to the „FLEXi“ SP3.
+2.  Connect a USB Mini-B cable to the „FLEXi“ SP3.
 
-37. Launch TrikdisConfig, click **Read [F4]**.
+3.  Launch TrikdisConfig, click **Read [F4]**.
 
-38. In the TrikdisConfig software window **Wireless**, the text **Wireless controller** must appear in the **Device type** field and the field **Serial No.** must have a 7-symbol code matching the code on the back of the remote controller.
+4.  In the TrikdisConfig software window **Wireless**, the text **Wireless controller** must appear in the **Device type** field and the field **Serial No.** must have a 7-symbol code matching the code on the back of the remote controller.
 
-39. In the **Area** field specify the security system area that the wireless controller will control (arm/disarm).
+5.  In the **Area** field specify the security system area that the wireless controller will control (arm/disarm).
 
-40. In the **User** field specify the user’s number.
+6.  In the **User** field specify the user’s number.
 
-41. You can assign additional functions to the controller’s buttons 3 and 4 (Arm, Disarm area; Silent alarm; Panic alarm).
+7.  You can assign additional functions to the controller’s buttons 3 and 4 (Arm, Disarm area; Silent alarm; Panic alarm).
 
-42. Click **Write [F5]** after making the changes.
+8.  Click **Write [F5]** after making the changes.
 
-43. The wireless controller is now successfully linked to the system.
+9.  The wireless controller is now successfully linked to the system.
 
 !!! note
     Reverting the wireless controller to default settings:
@@ -1179,41 +1179,41 @@ All wireless sensors can be linked simultaneously.
         controller's memory is cleared.
 #### Linking a wireless (FW2 series) siren 
 
-44. Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
+1.  Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
 
-45. Switch on the power supply.
+2.  Switch on the power supply.
 
-46. Remove the top cover from the RF-SH transceiver.
+3.  Remove the top cover from the RF-SH transceiver.
 
-47. Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
+4.  Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
 
-48. Release the button.
+5.  Release the button.
 
-49. The green blinking **LEARN** indicator means that the RF-SH is in wireless equipment linking mode.
+6.  The green blinking **LEARN** indicator means that the RF-SH is in wireless equipment linking mode.
 
-50. Remove the cover from the siren.
+7.  Remove the cover from the siren.
 
-51. Connect a power supply to the siren.
+8.  Connect a power supply to the siren.
 
-52. The flash of the siren will blink rarely for 30 seconds. When the indicator stops blinking, the siren is ready for linking.
+9.  The flash of the siren will blink rarely for 30 seconds. When the indicator stops blinking, the siren is ready for linking.
 
-53. Press and hold the **LEARN** button on the siren’s board.
+10. Press and hold the **LEARN** button on the siren’s board.
 
-54. The flash will start to blink.
+11. The flash will start to blink.
 
-55. Release the button. When the flash stops blinking, the siren will have linked successfully.
+12. Release the button. When the flash stops blinking, the siren will have linked successfully.
 
-56. Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking in green. The **RF-SH** transceiver has exited linking mode.
+13. Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking in green. The **RF-SH** transceiver has exited linking mode.
 
-57. Connect a USB Mini-B cable to the „FLEXi“ SP3.
+14. Connect a USB Mini-B cable to the „FLEXi“ SP3.
 
-58. Launch TrikdisConfig, click **Read [F4]**.
+15. Launch TrikdisConfig, click **Read [F4]**.
 
-59. In the TrikdisConfig software window **Wireless**, the text **Siren** must appear in the **Device type** field and the field **Serial No.** must have a 7-symbol code matching the code on the board of the siren.
+16. In the TrikdisConfig software window **Wireless**, the text **Siren** must appear in the **Device type** field and the field **Serial No.** must have a 7-symbol code matching the code on the board of the siren.
 
-60. Specify an area number in the **Area** field and click **Write [F5]**.
+17. Specify an area number in the **Area** field and click **Write [F5]**.
 
-61. The wireless internal siren is now successfully linked to the system.
+18. The wireless internal siren is now successfully linked to the system.
 
 !!! note
     Reverting the wireless siren to default settings:
@@ -1234,33 +1234,33 @@ All wireless sensors can be linked simultaneously.
         have been restored.
 #### Linking wireless (SH series) sensors 
 
-62. Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
+1.  Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
 
-63. Switch on the power supply.
+2.  Switch on the power supply.
 
-64. Remove the top cover from the RF-SH transceiver.
+3.  Remove the top cover from the RF-SH transceiver.
 
-65. Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
+4.  Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
 
-66. Release the button.
+5.  Release the button.
 
-67. The green blinking **LEARN** indicator means that the RF-SH is in wireless sensor linking mode.
+6.  The green blinking **LEARN** indicator means that the RF-SH is in wireless sensor linking mode.
 
-68. Insert a battery into the wireless sensor and wait until the sensor’s LED indicator stops blinking in green and yellow. When the linking process is complete, the green LED indicator on the sensor will light up for 3 seconds and then it will go out.
+7.  Insert a battery into the wireless sensor and wait until the sensor’s LED indicator stops blinking in green and yellow. When the linking process is complete, the green LED indicator on the sensor will light up for 3 seconds and then it will go out.
 
-69. If the linking process is unsuccessful, the LED indicator stops blinking. Remove the battery, wait for about 10 seconds and repeat the linking process.
+8.  If the linking process is unsuccessful, the LED indicator stops blinking. Remove the battery, wait for about 10 seconds and repeat the linking process.
 
-70. Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking in green. The **RF-SH** transceiver has exited linking mode.
+9.  Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking in green. The **RF-SH** transceiver has exited linking mode.
 
-71. Connect a USB Mini-B cable to the „FLEXi“ SP3.
+10. Connect a USB Mini-B cable to the „FLEXi“ SP3.
 
-72. Launch TrikdisConfig, click **Read [F4]**.
+11. Launch TrikdisConfig, click **Read [F4]**.
 
-73. You can find a list of linked wireless sensors in the TrikdisConfig software window **Wireless**. The 7-digit codes in the **Serial No.** column must match the codes printed on the casings or boards of the sensors.
+12. You can find a list of linked wireless sensors in the TrikdisConfig software window **Wireless**. The 7-digit codes in the **Serial No.** column must match the codes printed on the casings or boards of the sensors.
 
-74. You must assign the sensors to zones and partitions of the security control panel (**Zones** window). Click **Write [F5]** after making the changes.
+13. You must assign the sensors to zones and partitions of the security control panel (**Zones** window). Click **Write [F5]** after making the changes.
 
-75. The wireless sensor is now successfully linked to the system.
+14. The wireless sensor is now successfully linked to the system.
 
 !!! note
     To delete wireless sensors from the „FLEXi" SP3's memory:
@@ -1275,33 +1275,33 @@ All wireless sensors can be linked simultaneously.
         wireless sensor is now removed from the „FLEXi" SP3's memory.
 #### Linking a wireless (SH series) keypad
 
-76. Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
+1.  Make sure that the RF-SH transceiver is linked to the „FLEXi“ SP3 (see chapter 5.6.1 above).
 
-77. Switch on the power supply.
+2.  Switch on the power supply.
 
-78. Remove the top cover from the RF-SH transceiver.
+3.  Remove the top cover from the RF-SH transceiver.
 
-79. Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
+4.  Hold down the **LEARN** button on the RF-SH module until the **LEARN** LED indicator starts blinking green.
 
-80. Release the button.
+5.  Release the button.
 
-81. The green blinking **LEARN** indicator means that the RF-SH is in wireless equipment linking mode.
+6.  The green blinking **LEARN** indicator means that the RF-SH is in wireless equipment linking mode.
 
-82. Insert batteries into the keypad and wait for the green - red LED indicator <img alt="" src="./image60.png" style="width:0.25in;height:0.28000109361329834in" /> to stop blinking. When the linking process is complete, the green <img alt="" src="./image60.png" style="width:0.25in;height:0.28000109361329834in" /> LED indicator on the keypad will light up for 3 seconds and then it will go out.
+7.  Insert batteries into the keypad and wait for the green - red LED indicator <img alt="" src="./image60.png" style="width:0.25in;height:0.28000109361329834in" /> to stop blinking. When the linking process is complete, the green <img alt="" src="./image60.png" style="width:0.25in;height:0.28000109361329834in" /> LED indicator on the keypad will light up for 3 seconds and then it will go out.
 
-83. Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking green. The **RF-SH** transceiver has exited linking mode.
+8.  Press and hold the **RF-SH** transceiver’s **LEARN** button until the **LEARN** LED indicator stops blinking green. The **RF-SH** transceiver has exited linking mode.
 
-84. Connect a USB Mini-B cable to the „FLEXi“ SP3.
+9.  Connect a USB Mini-B cable to the „FLEXi“ SP3.
 
-85. Launch TrikdisConfig, click **Read [F4]**.
+10. Launch TrikdisConfig, click **Read [F4]**.
 
-86. In the TrikdisConfig software window **Wireless**, the text **Keypad SH** must appear in the **Device type** field and the field **Serial No.** must have a 7-symbol code matching the code on the back of the keypad’s casing.
+11. In the TrikdisConfig software window **Wireless**, the text **Keypad SH** must appear in the **Device type** field and the field **Serial No.** must have a 7-symbol code matching the code on the back of the keypad’s casing.
 
-87. Specify an area number in the **Area** field.
+12. Specify an area number in the **Area** field.
 
-88. Click **Write [F5]** after making the changes.
+13. Click **Write [F5]** after making the changes.
 
-89. The wireless keypad is now successfully linked to the system.
+14. The wireless keypad is now successfully linked to the system.
 
 !!! note
     To delete wireless sensors from the „FLEXi" SP3's memory:
