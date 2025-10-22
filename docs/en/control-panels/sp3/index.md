@@ -1647,7 +1647,7 @@ The manufacturer is not responsible for:
 
 - robbery, fire of the premises or any other losses suffered by the panel‘s buyer or user, and shall not compensate the panel‘s buyer or user for any property or non-property damages suffered from these events.
 
-### Safety precautions
+## Safety precautions
 
 Read this manual carefully before using the control panel.
 
