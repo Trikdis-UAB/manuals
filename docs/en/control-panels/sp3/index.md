@@ -1613,7 +1613,41 @@ Perform these steps:
 
 Once configuration is complete, click the **Write [F5]** button and disconnect the USB cable.
 
-## Safety precautions
+## Warranty and limitation of liability
+
+**The control panel is given a 24-month warranty effective from the date of sale-purchase. For the duration of the warranty period, free repairs are guaranteed for faults caused by the manufacturer.**
+
+**The warranty is valid if the control panel was installed by qualified personnel following the instructions in this document and the applicable regulations for installing electrical equipment and operated following the instructions in this document and the applicable regulations for safe operation of electrical equipment.**
+
+**The control panel must be submitted for repairs in the manufacturer‘s packaging along with a defect report stating the nature of the malfunction.**
+
+**Once the warranty has expired, the control panel‘s technical maintenance and repairs are performed at the buyer‘s expense.**
+
+The warranty can be terminated prematurely if:
+
+- Unauthorized personnel repaired or tried to repair the control panel;
+
+- The panel was used for anything other than its intended purpose;
+
+- The panel was stored and (or) installed in unsuitable premises that had incompatible climate conditions or an aggressive chemical environment;
+
+- The panel was mechanically broken and (or) intentionally damaged;
+
+- The panel was damaged by *force majeure* circumstances (lightning discharge etc.).
+
+The manufacturer is not responsible for:
+
+- the control panel‘s malfunctions if the panel is installed or used not according to its manual.
+
+- the control panel‘s malfunctions if the cause is a malfunction or loss of GSM/GPRS/Internet connectivity or malfunctions in the operator‘s network.
+
+- restrictions or termination of GSM/GPRS/Internet connectivity services to the panel‘s buyer or user, and shall not compensate the panel‘s buyer or user for any property or non-property damages suffered from this.
+
+- restrictions or termination of electricity supply service to the panel‘s buyer or user, and shall not compensate the panel‘s buyer or user for any property or non-property damages suffered from this.
+
+- robbery, fire of the premises or any other losses suffered by the panel‘s buyer or user, and shall not compensate the panel‘s buyer or user for any property or non-property damages suffered from these events.
+
+### Safety precautions
 
 Read this manual carefully before using the control panel.
 
