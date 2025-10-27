@@ -16,8 +16,8 @@ nav:
   - Home: index.md
   - English:
       - Alarm Communicators:
-          - GT Cellular Communicator: en/alarm-communicators/gt-cellular/GT UM_ENG_2025 09 11/index.md
-          - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/GT+ UM_ENG_2025 09 11/index.md
+          - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
+          - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
           - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
       - Control Panels:
           - SP3 FLEXi Control Panel: en/control-panels/sp3/index.md
