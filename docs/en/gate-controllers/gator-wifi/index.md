@@ -236,13 +236,12 @@ With Protegus2 app users will be able to control controller remotely. They will 
 
 2.  Log in with your user name and password or register and create a new account.
 
-!!! warning
-    "Important"
-    > When adding the controller to Protegus2 app:
-    
+!!! warning "Important"
+    When adding the controller to Protegus2 app:
+
     1.  The power supply must be turned on („**STATUS**" LED must blink
         green);
-    
+
     2.  Must be registered in to network („**NETWORK**" LED must be green
         solid and blink yellow).
 Choose “**Add new system”**.
@@ -684,13 +683,12 @@ Connect GATOR WiFi to your computer using a USB Mini-B cable. To restore the def
 
 ## Setting parameters remotely 
 
-!!! warning
-    "Important"
+!!! warning "Important"
     Remote configuration will only work when:
-    
+
     1.  Protegus2 service is enabed. Enabling the service is described
         in chapter 5.5 ""IP reporting" window";
-    
+
     2.  Connected to network („**NETWORK**" LED is green solid and yellow
         blinking).
 1.  Download the program TrikdisConfig from [www.trikdis.com](http://www.trikdis.com).

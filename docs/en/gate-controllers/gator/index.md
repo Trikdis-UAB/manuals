@@ -251,7 +251,7 @@ Configuration of the *E485* module to work with the controller is described in c
 
 You do not need a SIM card, when using the *E485* with the controller*.*
 
-<a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank"><img src="./image16.png" alt="Download Protegus2" style="height:40px; margin:5px;"></a>
+<img alt="" src="./image16.png" style="width:3.141732283464567in;height:2.1496062992125986in" />
 
 ### Schematic for connecting of the iO-LORA expander with RFID reader 
 
@@ -259,19 +259,19 @@ Firmware version of the GATOR controller from 2.13.
 
 Connect the RF-LORA transceiver to the GATOR controller. After that, you can use the iO-LORA expander, to which the RFID reader (Wiegand 26/34) is connected. The RFID reader controls the PGM output of the iO-LORA expander, to which it is connected.
 
-<a href="https://www.protegus.app" target="_blank"><img src="./image17.png" alt="Download Protegus2" style="height:40px; margin:5px;"></a>
+<img alt="" src="./image17.png" style="width:7.086805555555555in;height:5.251388888888889in" />
 
 Launch TrikdisConfig. Connect GATOR via USB Mini-B cable to the computer or remotely. Press the **Read [F4]** button and the TrikdisConfig program will display the current controller settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window. Select "**iO-LORA controller**" from the "**Modules**" list. In the "**Serial No.**" field, enter the serial number of the device.
 
-<a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank"><img src="./image18.png" alt="Download Protegus2" style="height:40px; margin:5px;"></a>
+<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.3700787401574803in" />
 
 In the "**IN/OUT**" list, the "**EXIT button**" must be specified for the "**6 IN**" input. When the "**Exit**" button is pressed, the iO-LORA "**7 OUT**" output is activated for the set pulse duration.
 
-<a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank"><img src="./image19.png" alt="Download Protegus2" style="height:40px; margin:5px;"></a>
+<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 In the "**Users**" list, specify the number of the RFID card, the user's name, enable the permission to control the PGM output, specify the PGM output (which will be controlled by the user), the code. After completing the settings, click **Write [F5]**. Wait until the process of updating the controller settings is finished. Click "**Disconnect**" and disconnect the USB cable.
 
-<a href="https://www.protegus.app" target="_blank"><img src="./image20.png" alt="Download Protegus2" style="height:40px; margin:5px;"></a>
+<img alt="" src="./image20.png" style="width:7.086614173228346in;height:2.9015748031496065in" />
 
 Activate PGM output with RFID card/code. Press the "**Exit**" button (the PGM output must activate for the set pulse duration).
 
@@ -281,7 +281,7 @@ The *GATOR* controller can be connected to an *iO8* or *iO8-LORA* expander to in
 
 *iO8* expander connection diagram.
 
-<a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank"><img src="./image21.png" alt="Download Protegus2" style="height:40px; margin:5px;"></a>
+<img alt="" src="./image21.png" style="width:3.346673228346457in;height:2.1333377077865268in" />
 
 iO8-LORA expander connection diagram.
 
@@ -345,28 +345,27 @@ With Protegus2 cloud users will be able to control controller remotely. They wil
 
 <div style="margin: 20px 0; text-align: left;">
   <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./image16.png" alt="Get it on Google Play" style="height:50px;">
+    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
   </a>
   <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./image18.png" alt="Open Web App" style="height:50px;">
+    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
   </a>
   <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./image17.png" alt="Download on the App Store" style="height:50px;">
+    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
   </a>
 </div>
 
 
 2.  Log in with your user name and password or register and create a new account.
 
-!!! warning
-    "Important"
-    > When adding the controller to Protegus2 app:
-    
+!!! warning "Important"
+    When adding the controller to Protegus2 app:
+
     1.  The Protegus service must be turned on. Turning on the
         service is described in chapter 5.5 ""IP reporting" window";
-    
+
     2.  The power supply must be turned on („POWER" LED must blink green);
-    
+
     3.  Must be registered in to network („NETWORK" LED must be green solid
         and blink yellow).
 3. Choose “**Add new system”**.
@@ -1074,15 +1073,14 @@ In the “User settings” window, tick the IN1 box if you want the user to rece
 
 ## Setting parameters remotely 
 
-!!! warning
-    "Important"
+!!! warning "Important"
     Remote configuration will only work when:
-    
+
     1.  Protegus service is enabed. Enabling the service is
         described in chapter 5.5 ""IP reporting" window";
-    
+
     2.  Power is on („POWER" LED is blinking green);
-    
+
     3.  Connected to network („NETWORK" LED is green solid and yellow
         blinking).
 1.  Download the program TrikdisConfig from [www.trikdis.com](http://www.trikdis.com).
