@@ -4,6 +4,7 @@
   <img src="./image1.png" alt="Product Image" width="400">
 </div>
 
+
 ## Description 
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the Protegus2 application.
@@ -43,6 +44,7 @@ Sends events to monitoring station receiver:
 - Remote control of connected devices (lights, gates, ventilation systems, heating, sprinklers, etc.).
 
 - Different user rights for administrator, installer and user.
+
 
 **Notifies users:**
 
@@ -159,7 +161,7 @@ This manual is for 4G communicators.
 | TROUBLE | 1 red blink | SIM card not found |
 | TROUBLE | 2 red blinks | SIM card PIN code problem (incorrect PIN code) |
 | TROUBLE | 3 red blinks | Programming problem (No APN) |
-| TROUBLE | 4 red blinks | Registration to GSM network problem |
+| TROUBLE | 4 red blinks | Registration to Cellular network problem |
 | TROUBLE | 5 red blinks | Registration to GPRS/UMTS network problem |
 | TROUBLE | 6 red blinks | No connection with the receiver |
 | TROUBLE | 7 red blinks | Lost connection with control panel |
@@ -224,7 +226,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-1.  Select “**Security panel model**” that will be connected to the communicator.
+2. Select “**Security panel model**” that will be connected to the communicator.
 
 2.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
@@ -334,10 +336,13 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 <img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note
-    Ensure that the SIM card is activated. / Ensure that mobile internet
-    service (mobile data) is enabled if connected via IP channel. / To avoid
-    entering the PIN code in TrikdisConfig, insert the SIM card into
-    your mobile phone and turn off the PIN request function.
+    Ensure that the SIM card is activated.
+    
+    Ensure that mobile internet service (mobile data) is enabled if
+    connected via IP channel.
+    
+    To avoid entering the PIN code in TrikdisConfig, insert the SIM
+    card into your mobile phone and turn off the PIN request function.
 ### Schematics for wiring the communicator to a security control panel 
 
 Following one of the schematics provided below, connect communicator to the control panel.
@@ -394,11 +399,15 @@ Follow this schematic if the control panel will be armed/disarmed with a GT+ PGM
     configured with the settings described in chapter 5.2 "Additional
     settings to arm/disarm the system using the control panel's keyswitch
     zone".
-The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
+The communicator is connected to the keypad bus or serial bus of the control panel.
+
+Arming/disarming the panel via keyswitch zone.
 
 <img alt="" src="./image25.png" style="width:3.813340988626422in;height:2.28667104111986in" />
 
-The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel. / Arming/disarming the panel via the key switch zone.
+The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel.
+
+Arming/disarming the panel via the key switch zone.
 
 <img alt="" src="./image26.png" style="width:3.806674321959755in;height:2.533338801399825in" />
 
@@ -437,15 +446,19 @@ To start the communicator, turn on the security control panel’s power supply. 
 
 !!! note
     Sufficient strength of 4G signal is level three (three "NETWORK"
-    indicator flashes in yellow color). / If you count less yellow "NETWORK"
-    LED flashes, the network signal strength is insufficient. We recommend
-    to select a different place to install the communicator, or to use a
-    more sensitive cellular antenna. / If you see a different LED
-    indication, it indicates a certain malfunction. Diagnose it by following
-    the LED indication table in chapter 1.6 "LED indication of
-    operation". / If the GT+ indication does not illuminate at all,
-    check the power supply and connections.
-# Programming the control panel 
+    indicator flashes in yellow color).
+    
+    If you count less yellow "NETWORK" LED flashes, the network signal
+    strength is insufficient. We recommend to select a different place to
+    install the communicator, or to use a more sensitive cellular antenna.
+    
+    If you see a different LED indication, it indicates a certain
+    malfunction. Diagnose it by following the LED indication table in
+    chapter 1.6 "LED indication of operation".
+    
+    If the GT+ indication does not illuminate at all, check the power
+    supply and connections.
+## Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus
 
@@ -633,34 +646,45 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
+<div style="margin: 20px 0; text-align: left;">
+  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+  </a>
+  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+  </a>
+  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+  </a>
+</div>
+
+
 2.  Log in with your user name and password or register and create new account.
 
-!!! warning
-    "Important"
+!!! warning "Important"
     When adding the GT+ to Protegus2 check if:
-    
+
     1.  The inserted SIM card is activated and the PIN code is either
         entered or disabled;
-    
+
     2.  "**Protegus** **cloud**" is enabled. See chapter **6.5 "User
         reporting" window**;
-    
+
     3.  Power supply is connected ("POWER" LED illuminates green);
-    
+
     4.  Registered to the network ("NETWORK" LED illuminates green and
         blinks yellow).
-1.  Click “**Add new system”** and enter the GT+’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
+3. Click “**Add new system”** and enter the GT+’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
 <img alt="" src="./image37.png" style="width:2.858267716535433in;height:3.704724409448819in" />
 
-2. Enter the system „**Name**”. Click "**Next**".
+4. Enter the system „**Name**”. Click "**Next**".
 
 <img alt="" src="./image38.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
-!!! warning
-    "Important"
+!!! warning "Important"
     The control panel zone to which the GT+ output OUT is connected to
     has to be set to keyswitch mode.
 Follow the instructions below if the security control panel will be controlled with a GT+ PGM output, turning on/off the control panel keyswitch zone.
@@ -670,7 +694,7 @@ Follow the instructions below if the security control panel will be controlled w
 <img alt="" src="./image39.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
-1.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
@@ -710,10 +734,6 @@ For password use the **Administrator code** for *INFO, RESET, OUTPUTx* commands,
 
 You can restrict the phone numbers from which the communicator will accept the commands. See chapter 6.5 “User reporting” window, “Control by SMS” tab.
 
-<div style="text-align: center;">
-  <img src="./image3.png" alt="" width="400">
-</div>
-
 ## TrikdisConfig window description 
 
 ### *TrikdisConfig* status bar description 
@@ -740,7 +760,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 <img alt="" src="./image44.png" style="width:7.086614173228346in;height:2.767716535433071in" />
 
-“General” settings group
+**“General” settings group**
 
 - **Object ID** – if the events will be sent to the CMS (Central Monitoring Station), enter the account number provided by the CMS (6 characters hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
@@ -804,7 +824,7 @@ Communication is encoded and password protected. A TRIKDIS receiver is required 
 
 - For connection over IP - software receiver IPcom Windows/Linux, hardware IP/SMS receiver RL14 or multichannel receiver RM14.
 
-“Primary channel” settings group
+**“Primary channel” settings group**
 
 - **Communication type** - select which method for connecting to the monitoring station receiver will be used: **IP**.
 
@@ -826,11 +846,9 @@ Events are transmitted in parallel with the first channel through this channel. 
 
 Enable the backup channel mode to send events via backup channel if connection via primary channel is lost. Backup channel settings are same as described above.
 
-**“Settings” tab**
-
 <img alt="" src="./image48.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
-“Settings” settings group
+****“Settings” tab** “Settings” settings group**
 
 - **Test period** - TEST event period for testing the connection. Test events are sent as Contact ID messages and forwarded to the monitoring software.
 
@@ -900,15 +918,15 @@ You can send an SMS command to the GT+ communicator, which will activate the out
     enter administrator or installer password in the SMS command.
 ### “Network settings” window 
 
-!!! warning
-    "Important"
-    1\. Ensure that the SIM card is activated and working before using
-    it. / 2. If mobile internet connection will be used for sending events
-    via IP channel or to Protegus2, ensure that mobile data service is
+!!! warning "Important"
+    1\. Ensure that the SIM card is activated and working before using it.
+
+    2\. If mobile internet connection will be used for sending events via IP
+    channel or to Protegus2, ensure that mobile data service is
     enabled.
 <img alt="" src="./image52.png" style="width:7.086614173228346in;height:3.02755905511811in" />
 
-“SIM card” settings group
+**“SIM card” settings group**
 
 - **SIM card PIN** - enter the SIM card PIN code. This code can be disabled by inserting the SIM card into a mobile phone and disabling the request. If you disabled the SIM card PIN request, leave the default value in this field.
 
@@ -993,7 +1011,7 @@ In the table inputs can be assigned Contact ID event and restore codes. After in
 
 - **Zone** – set the zone number for the input.
 
-**Contact ID restore code**:
+****Contact ID restore code**:**
 
 - **Enable** – allow message transmission when the input is restored.
 
@@ -1048,18 +1066,17 @@ Power supply is connected to the communicator. Press and hold the “RESET” bu
 
 ## Remote configuration 
 
-!!! warning
-    "Important"
+!!! warning "Important"
     Remote configuration will work only if:
-    
+
     1.  The inserted SIM card is activated and the PIN code is either
         entered or disabled;
-    
+
     2.  "**Protegus** **cloud**" is enabled. How to enable cloud is
         described in section 6.5 "User reporting" window;
-    
+
     3.  Power supply is connected ("POWER" LED illuminates green);
-    
+
     4.  Registered to the network ("NETWORK" LED illuminates green and
         blinks yellow).
 1.  Start the configuration program TrikdisConfig.

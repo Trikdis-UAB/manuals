@@ -40,6 +40,8 @@ Sends events to monitoring station receiver:
 - “*Push*” and special sound notifications informing about events.
 
 - Remote system Arm/Disarm.
+
+
 - Remote control of connected devices (lights, gates, ventilation systems, heating, sprinklers, etc.).
 
 - Different user rights for administrator, installer and user.
@@ -128,6 +130,8 @@ This manual is for LTE communicators.
 
 9.  Ethernet connection RJ45 socket
 
+<img alt="" src="./image4.png" style="width:4.926676509186351in;height:3.24000656167979in" />
+
 ### Purpose of terminals 
 
 | Terminal | Description |
@@ -169,6 +173,8 @@ This manual is for LTE communicators.
 
 ### Structural schematic of using the GET communicator 
 
+<img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
+
 !!! note
     Before you begin, make sure that you have the necessary:
     
@@ -208,11 +214,15 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “Panel settings” window:**
 
+<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.5984251968503937in" />
+
 1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
+
+<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0118110236220472in" />
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
-1.  Select “**Security panel model”** that will be connected to the communicator.
+2. Select “**Security panel model”** that will be connected to the communicator.
 
 2.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
@@ -226,19 +236,25 @@ The communicator is connected to the keypad bus or serial bus of the control pan
     the "**PC download/UDL password**".
 **In “User reporting” window, “PROTEGUS Cloud” tab:**
 
-1.  Tick the checkbox “**Enable connection”** to the Protegus Cloud.
+<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9606299212598426in" />
+
+4. Tick the checkbox “**Enable connection”** to the Protegus Cloud.
 
 2.  Change the “**PROTEGUS Cloud access Code”** for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456).
 
 **In “Network settings” window:**
 
+<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.8070866141732282in" />
+
 These settings must be made if the communicator is connected to a LAN network.
 
-1.  Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+3. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+
+<img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.9173228346456694in" />
 
 These settings must be made if the SIM (or two SIM cards) card is inserted into the communicator.
 
-1.  Enter “**SIM card PIN”** code.
+4. Enter “**SIM card PIN”** code.
 
 2.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
@@ -247,6 +263,8 @@ These settings must be made if the SIM (or two SIM cards) card is inserted into 
 4.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
 **In “CMS reporting” window:**
+
+<img alt="" src="./image12.png" style="width:7.086614173228346in;height:2.562992125984252in" />
 
 12. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the Return to main connection type will be attempted after the specified time interval.
 
@@ -260,16 +278,25 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System settings” window:**
 
+<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.4173228346456692in" />
+
 1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
 **In “Panel settings” window:**
 
-1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
-1.  Select “**Security panel model”** that will be connected to the communicator.
+<img alt="" src="./image14.png" style="width:7.086614173228346in;height:1.5866141732283465in" />
+
+2. If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
+
+<img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+
+3. Select “**Security panel model”** that will be connected to the communicator.
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
-1.  **Communication type** - select the **IP** connection method.
+<img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
+
+4. **Communication type** - select the **IP** connection method.
 
 2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
@@ -282,13 +309,20 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 6.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
 
 7.  (Recommended) Configure “**Primary channel Backup”** settings.
+
+<img alt="" src="./image17.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
+
 11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
 
 **In “Network settings” window:**
 
+<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.7913385826771653in" />
+
 These settings must be made if the communicator is connected to a LAN network.
 
 12. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+
+<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.858267716535433in" />
 
 If a SIM card (or two SIM cards) is inserted in the communicator, the following settings must be made.
 
@@ -326,12 +360,20 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 8.  If the LAN network will be used to transmit events to the CMS, a LAN cable must be connected to the communicator.
 
+<img alt="" src="./image20.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+
+<img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
+
 !!! note
-    One or two SIM cards can be inserted into the communicator. / Ensure
-    that the SIM card is activated. / Ensure that mobile internet service
-    (mobile data) is enabled if connected via IP channel. / To avoid
-    entering the PIN code in TrikdisConfig, insert the SIM card into
-    your mobile phone and turn off the PIN request function.
+    One or two SIM cards can be inserted into the communicator.
+    
+    Ensure that the SIM card is activated.
+    
+    Ensure that mobile internet service (mobile data) is enabled if
+    connected via IP channel.
+    
+    To avoid entering the PIN code in TrikdisConfig, insert the SIM
+    card into your mobile phone and turn off the PIN request function.
 ### Installation in intrusion control panel enclosure panel 
 
 The GET communicator must be installed inside the intrusion control panel enclosure, which is protected by a lid tamper. It is mounted on the internal rear surface of the enclosure using the supplied industrial-grade double-sided acrylic foam mounting tape. The tape must be applied to a clean, dry surface with firm pressure to ensure reliable adhesion.
@@ -342,7 +384,17 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
+<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
+
+<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
+
+<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
+
+<img alt="" src="./image25.png" style="width:6.996680883639545in;height:3.28000656167979in" />
+
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
+
+<img alt="" src="./image26.png" style="width:3.37000656167979in;height:3.0333398950131234in" />
 
 When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
 
@@ -353,6 +405,8 @@ When connecting the communicator to the keypad bus and the TIP/RING terminals of
 3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the Protegus2 app using their own keypad code.
 
 4.  To directly control the security panel, enter the “**Security panel PC download password**”. It must match the password entered in the security panel.
+
+<img alt="" src="./image27.png" style="width:7.086614173228346in;height:2.0196850393700787in" />
 
 The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the Protegus2 application.
 
@@ -377,7 +431,11 @@ Follow this schematic if the control panel will be armed/disarmed with a communi
     zone".
 The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
 
+<img alt="" src="./image28.png" style="width:3.313339895013123in;height:2.4466721347331584in" />
+
 The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel. / Arming/disarming the panel via the keyswitch zone.
+
+<img alt="" src="./image29.png" style="width:3.46000656167979in;height:2.903338801399825in" />
 
 ### Schematics for input connection 
 
@@ -385,9 +443,13 @@ The communicator has 2 universal input / output terminals that can be set to inp
 
 Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
+<img alt="" src="./image30.png" style="width:5.169291338582677in;height:4.003937007874016in" />
+
 ### Schematics for wiring a relay 
 
 With relay contacts you can control (turn on/off) various electric appliances. The I/O terminal of the communicator must be set to an output (OUT) mode.
+
+<img alt="" src="./image31.png" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
 ### Turn on the communicator 
 
@@ -399,14 +461,18 @@ To start the communicator, turn on the security control panel’s power supply. 
 
 !!! note
     Sufficient strength of LTE signal is level three (three "NETWORK LTE"
-    indicator flashes in yellow color). / If you count less yellow "NETWORK
-    LTE" LED flashes, the network signal strength is insufficient. We
-    recommend to select a different place to install the communicator, or to
-    use a more sensitive cellular antenna. / If you see a different LED
-    indication, it indicates a certain malfunction. Diagnose it by following
-    the LED indication table in chapter 1.6 "LED indication of
-    operation". / If the GET indication does not illuminate at all,
-    check the power supply and connections.
+    indicator flashes in yellow color).
+    
+    If you count less yellow "NETWORK LTE" LED flashes, the network signal
+    strength is insufficient. We recommend to select a different place to
+    install the communicator, or to use a more sensitive cellular antenna.
+    
+    If you see a different LED indication, it indicates a certain
+    malfunction. Diagnose it by following the LED indication table in
+    chapter 1.6 "LED indication of operation".
+    
+    If the GET indication does not illuminate at all, check the power
+    supply and connections.
 ## Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
@@ -481,6 +547,8 @@ After having programmed all the fields listed, press [Exit] twice to exit the pr
 The control panel must be connected to the internet. Connect to **Innerrange Inception** by entering: <https://skytunnel.com.au/inception/SERIALNUMBER>, where SERIALNUMBER is the number of the controller that you can find on the panel’s enclosure.
 
 Open **Configuration > General > Alarm Reporting**. In the **3rd Party Device Configuration** settings group you need to enter:
+
+<img alt="" src="./image32.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** - select this checkbox.
 
@@ -594,46 +662,67 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
+<div style="margin: 20px 0; text-align: left;">
+  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+  </a>
+  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+  </a>
+  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+  </a>
+</div>
+
+
 2.  Log in with your user name and password or register and create new account.
 
-!!! warning
-    "Important"
+!!! warning "Important"
     When adding the GET communicator to Protegus2 check if:
-    
+
     1.  The inserted SIM card is activated and the PIN code is either
         entered or disabled;
-    
+
     2.  Or a LAN cable is connected.
-    
+
     3.  "Protegus cloud" is enabled. See chapter 6.5 "User
         reporting" window;
-    
+
     4.  Power supply is connected ("POWER" LED illuminates green);
-    
+
     5.  Registered to the network ("NETWORK LTE" LED illuminates green and
         blinks yellow).
 3. Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
+<img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" />
+
 4. Enter the system „**Name**”. Click "**Next**".
+
+<img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
-!!! warning
-    "Important"
+!!! warning "Important"
     The control panel zone to which the GET output OUT is connected to
     has to be set to keyswitch mode.
 Follow the instructions below if the security control panel will be controlled with a GET PGM output, turning on/off the control panel keyswitch zone.
 
 1.  Click „**Continue**“.
 
-1.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
-1.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+<img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+
+2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
+3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
-1.  If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
+<img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
+
+3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 2.  After completing the settings, click the “**Skip**” button.
+
+<img alt="" src="./image43.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Arming/disarming the alarm system with Protegus2 
 
@@ -641,11 +730,15 @@ Follow the instructions below if the security control panel will be controlled w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
+<img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
+
 ## TrikdisConfig window description 
 
 ### *TrikdisConfig* status bar description 
 
 After connecting the GET communicator and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
+
+<img alt="" src="./image45.png" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 | Object | Description |
 |--------|-------------|
@@ -662,6 +755,8 @@ After connecting the GET communicator and clicking **Read [F4], *TrikdisConfig**
 After pressing **Read [F4]**, the program will read and show the settings which are set in the ***GET*.** Set the necessary settings according to the TrikdisConfig window descriptions given below.
 
 ### “System settings” window 
+
+<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.767716535433071in" />
 
 **“General” settings group**
 
@@ -684,6 +779,8 @@ When setting up the communicator GET there are two levels of access for, the adm
 - **Allow installer to change** – the administrator can specify which settings can be changed by the installer.
 
 ###  “Panel settings” window 
+
+<img alt="" src="./image47.png" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **“TLC” settings group**
 
@@ -719,6 +816,8 @@ The communicator is connected to the control panel via a Serial Bus.
 
 **“CMS settings” tab**
 
+<img alt="" src="./image49.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
+
 Events can be sent over several channels of communication. The primary and parallel communication channels can operate simultaneously, this way the communicator can send events to two receivers at the same time. Backup channels can be assigned for both primary and parallel channels, which will be used when the connection via the primary or parallel channel is interrupted.
 
 Communication is encoded and password protected. A TRIKDIS receiver is required for receiving and sending event information to the monitoring programs:
@@ -747,9 +846,9 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 Events are transmitted in parallel with the primary channel through this channel. When the second channel is enabled, events can be sent simultaneously to two receivers (e.g., local and centralized monitoring stations). Parallel channel settings are the same as described above.
 
-**“Settings” tab**
+<img alt="" src="./image50.png" style="width:7.086614173228346in;height:2.562992125984252in" />
 
-**“Settings” settings group**
+**“Settings” tab** **“Settings” settings group**
 
 - **Test period** - TEST event period for testing the connection. Test events are sent as Contact ID messages and forwarded to the monitoring software.
 
@@ -785,6 +884,8 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 **“PROTEGUS cloud” tab**
 
+<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.9448818897637796in" />
+
 Protegus2 service allows users to remotely monitor and control the communicator. For more information about Protegus2 service, visit [www.protegus.eu](http://www.protegus.eu).
 
 **“Protegus Cloud” settings group**
@@ -798,6 +899,8 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 ### “Network settings” window 
 
 **“LAN” tab**
+
+<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.3188976377952755in" />
 
 **These settings must be made if the communicator is connected to a LAN network.**
 
@@ -813,10 +916,12 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 
 **“SIM1” tab**
 
-!!! warning
-    "Important"
-    1\. Ensure that the SIM card is activated and working before using
-    it. / 2. Ensure that mobile data service is enabled.
+!!! warning "Important"
+    1\. Ensure that the SIM card is activated and working before using it.
+
+    2\. Ensure that mobile data service is enabled.
+<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.877952755905512in" />
+
 **These settings must be made if the SIM card is inserted into the SIM1 slot of the communicator.**
 
 **“SIM card” settings group**
@@ -834,6 +939,8 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 
 **“SIM2” tab**
 
+<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.874015748031496in" />
+
 **These settings must be made if the SIM card is inserted into the SIM2 slot of the communicator.**
 
 **“SIM card” settings group**
@@ -850,6 +957,8 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 - **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes.
 
 ### “IN/OUT” windows 
+
+<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.4488188976377954in" />
 
 The communicator has 2 universal (input / output) terminals. The table can set the terminal operating mode (Disabled, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -870,6 +979,8 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 ###  “Event summary” window 
 
 In this window, you can enable, disable and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
+
+<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.1338582677165356in" />
 
 - **COMMUNICATION** – message about connection error between the control panel and communicator.
 
@@ -898,32 +1009,36 @@ You can change the Contact ID (SIA) code for each event, and also the zone and p
 
 To restore the communicator's factory settings, you need to click the “**Restore”** button in the TrikdisConfig window.
 
+<img alt="" src="./image57.png" style="width:7.086614173228346in;height:0.9645669291338582in" />
+
 Another way to restore factory settings.
 
 Power supply is connected to the communicator. Press and hold the “RESET” button on the communicator PCB board. Hold the “RESET” button pressed for 10 seconds until the LED indicators ("NETWORK", "POWER", "TROUBLE") turn off and the LED "POWER" indicator lights up. Release the "RESET" button. The communicator's factory settings have been restored.
 
 ## Remote configuration 
 
-!!! warning
-    "Important"
+!!! warning "Important"
     Remote configuration will work only if:
-    
+
     1.  The inserted SIM card is activated and the PIN code is either
         entered or disabled;
-    
+
     2.  Or a LAN cable is connected.
-    
+
     3.  "Protegus cloud" is enabled. How to enable cloud is
         described in section 6.5 "User reporting" window;
-    
+
     4.  Power supply is connected ("POWER" LED illuminates green);
-    
+
     5.  Registered to the cellular network ("NETWORK LTE" LED illuminates
         green and blinks yellow).
 1.  Start the configuration program TrikdisConfig.
 
 2.  In the “**Remote access”** section enter the communicator’s “**IMEI/Unique ID”** number. This number can be found on the device and the packaging sticker.
-1.  (Optional) in the “**System name”** field, enter the desired name for the communicator with this Unique ID.
+
+<img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.8346456692913384in" />
+
+3. (Optional) in the “**System name”** field, enter the desired name for the communicator with this Unique ID.
 
 2.  Press “**Configure”**.
 
@@ -967,7 +1082,10 @@ The communicator’s firmware can also be updated or changed manually. After an 
     - If a newer firmware version exists, the software will offer to download the newer firmware version file.
 
 3.  Select the menu branch “**Firmware”**.
-1.  Press “**Open firmware”** and select the required firmware file.
+
+<img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.543307086614173in" />
+
+4. Press “**Open firmware”** and select the required firmware file.
 
 2.  Press **Update [F12]**.
 
