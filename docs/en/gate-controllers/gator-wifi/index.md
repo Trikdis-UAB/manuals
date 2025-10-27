@@ -226,10 +226,10 @@ With Protegus2 app users will be able to control controller remotely. They will 
     <img src="./image16.png" alt="Get it on Google Play" style="height:50px;">
   </a>
   <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./image17.png" alt="Open Web App" style="height:50px;">
+    <img src="./image18.png" alt="Open Web App" style="height:50px;">
   </a>
   <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./image18.png" alt="Download on the App Store" style="height:50px;">
+    <img src="./image17.png" alt="Download on the App Store" style="height:50px;">
   </a>
 </div>
 
