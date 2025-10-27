@@ -23,6 +23,7 @@ nav:
           - SP3 FLEXi Control Panel: en/control-panels/sp3/index.md
       - Gate Controllers:
           - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
+          - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
