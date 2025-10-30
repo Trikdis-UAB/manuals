@@ -336,13 +336,10 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 <img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note
-    Ensure that the SIM card is activated.
-    
-    Ensure that mobile internet service (mobile data) is enabled if
-    connected via IP channel.
-    
-    To avoid entering the PIN code in TrikdisConfig, insert the SIM
-    card into your mobile phone and turn off the PIN request function.
+    Ensure that the SIM card is activated. / Ensure that mobile internet
+    service (mobile data) is enabled if connected via IP channel. / To avoid
+    entering the PIN code in TrikdisConfig, insert the SIM card into
+    your mobile phone and turn off the PIN request function.
 ### Schematics for wiring the communicator to a security control panel 
 
 Following one of the schematics provided below, connect communicator to the control panel.
@@ -435,18 +432,14 @@ To start the communicator, turn on the security control panel’s power supply. 
 
 !!! note
     Sufficient strength of 4G signal is level three (three "NETWORK"
-    indicator flashes in yellow color).
-    
-    If you count less yellow "NETWORK" LED flashes, the network signal
-    strength is insufficient. We recommend to select a different place to
-    install the communicator, or to use a more sensitive cellular antenna.
-    
-    If you see a different LED indication, it indicates a certain
-    malfunction. Diagnose it by following the LED indication table in
-    chapter 1.6 "LED indication of operation".
-    
-    If the GT indication does not illuminate at all, check the power
-    supply and connections.
+    indicator flashes in yellow color). / If you count less yellow "NETWORK"
+    LED flashes, the network signal strength is insufficient. We recommend
+    to select a different place to install the communicator, or to use a
+    more sensitive cellular antenna. / If you see a different LED
+    indication, it indicates a certain malfunction. Diagnose it by following
+    the LED indication table in chapter 1.6 "LED indication of
+    operation". / If the GT indication does not illuminate at all,
+    check the power supply and connections.
 ## Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
@@ -635,18 +628,17 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
-<div style="margin: 20px 0; text-align: left;">
-  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
-  </a>
-  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
-  </a>
-  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
-  </a>
-</div>
-
+    <div style="margin: 20px 0; text-align: left;">
+      <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+      </a>
+      <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+      </a>
+      <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+      </a>
+    </div>
 
 2.  Log in with your user name and password or register and create new account.
 
@@ -908,10 +900,9 @@ You can send an SMS command to the GT communicator, which will activate the outp
 ### “Network settings” window 
 
 !!! warning "Important"
-    1\. Ensure that the SIM card is activated and working before using it.
-
-    2\. If mobile internet connection will be used for sending events via IP
-    channel or to Protegus2, ensure that mobile data service is
+    1\. Ensure that the SIM card is activated and working before using
+    it. / 2. If mobile internet connection will be used for sending events
+    via IP channel or to Protegus2, ensure that mobile data service is
     enabled.
 <img alt="" src="./image51.png" style="width:7.086614173228346in;height:3.043307086614173in" />
 

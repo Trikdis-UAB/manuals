@@ -24,6 +24,19 @@ nav:
       - Gate Controllers:
           - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
           - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
+  - Lithuanian:
+      - Apsaugos komunikatoriai:
+          - Mobiliojo ryšio komunikatorius GT: lt/alarm-communicators/gt-cellular/index.md
+  - Spanish:
+      - Comunicadores de alarma:
+          - Comunicador celular GT: es/alarm-communicators/gt-cellular/index.md
+          - Comunicador celular GT+: es/alarm-communicators/gt-plus-cellular/index.md
+          - Comunicador celular GET: es/alarm-communicators/get-cellular/index.md
+      - Paneles de control:
+          - Panel de control FLEXi SP3: es/control-panels/sp3/index.md
+      - Controladores de portón:
+          - Controlador celular GATOR: es/gate-controllers/gator/index.md
+          - Controlador WiFi GATOR: es/gate-controllers/gator-wifi/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
@@ -33,6 +46,8 @@ plugins:
   - search:
       lang:
         - en
+        - lt
+        - es
       separator: '[\s\-]+'
   - redirects:
       redirect_maps: {}  # Add redirects here when renaming pages

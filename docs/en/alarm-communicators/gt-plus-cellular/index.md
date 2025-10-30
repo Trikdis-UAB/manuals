@@ -336,13 +336,10 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 <img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note
-    Ensure that the SIM card is activated.
-    
-    Ensure that mobile internet service (mobile data) is enabled if
-    connected via IP channel.
-    
-    To avoid entering the PIN code in TrikdisConfig, insert the SIM
-    card into your mobile phone and turn off the PIN request function.
+    Ensure that the SIM card is activated. / Ensure that mobile internet
+    service (mobile data) is enabled if connected via IP channel. / To avoid
+    entering the PIN code in TrikdisConfig, insert the SIM card into
+    your mobile phone and turn off the PIN request function.
 ### Schematics for wiring the communicator to a security control panel 
 
 Following one of the schematics provided below, connect communicator to the control panel.
@@ -399,15 +396,11 @@ Follow this schematic if the control panel will be armed/disarmed with a GT+ PGM
     configured with the settings described in chapter 5.2 "Additional
     settings to arm/disarm the system using the control panel's keyswitch
     zone".
-The communicator is connected to the keypad bus or serial bus of the control panel.
-
-Arming/disarming the panel via keyswitch zone.
+The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
 
 <img alt="" src="./image25.png" style="width:3.813340988626422in;height:2.28667104111986in" />
 
-The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel.
-
-Arming/disarming the panel via the key switch zone.
+The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel. / Arming/disarming the panel via the key switch zone.
 
 <img alt="" src="./image26.png" style="width:3.806674321959755in;height:2.533338801399825in" />
 
@@ -446,18 +439,14 @@ To start the communicator, turn on the security control panel’s power supply. 
 
 !!! note
     Sufficient strength of 4G signal is level three (three "NETWORK"
-    indicator flashes in yellow color).
-    
-    If you count less yellow "NETWORK" LED flashes, the network signal
-    strength is insufficient. We recommend to select a different place to
-    install the communicator, or to use a more sensitive cellular antenna.
-    
-    If you see a different LED indication, it indicates a certain
-    malfunction. Diagnose it by following the LED indication table in
-    chapter 1.6 "LED indication of operation".
-    
-    If the GT+ indication does not illuminate at all, check the power
-    supply and connections.
+    indicator flashes in yellow color). / If you count less yellow "NETWORK"
+    LED flashes, the network signal strength is insufficient. We recommend
+    to select a different place to install the communicator, or to use a
+    more sensitive cellular antenna. / If you see a different LED
+    indication, it indicates a certain malfunction. Diagnose it by following
+    the LED indication table in chapter 1.6 "LED indication of
+    operation". / If the GT+ indication does not illuminate at all,
+    check the power supply and connections.
 ## Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus
@@ -598,17 +587,17 @@ Using the control panel’s keypad enter these sections and set them as describe
 
 If you want to use GT+ communicator with Honeywell Vista 48 panel, set the following sections as described:
 
-| **Section** | **Data** | **Section** | **Data** | **S** | **Section** | **Data** |
-|:--:|----|:--:|:--:|----|:--:|:--:|
-| \*41 | 1111 (receiver telephone number) | \*60 | 1 |  | \*69 | 1 |
-| \*42 | 1111 | \*61 | 1 |  | \*70 | 1 |
-| \*43 | 1234 (panel account number) | \*62 | 1 |  | \*71 | 1 |
-| \*44 | 1234 | \*63 | 1 |  | \*72 | 1 |
-| \*45 | 1111 | \*64 | 1 |  | \*73 | 1 |
-| \*47 | 1 | \*65 | 1 |  | \*74 | 1 |
-| \*48 | 7 | \*66 | 1 |  | \*75 | 1 |
-| \*50 | 1 | \*67 | 1 |  | \*76 | 1 |
-| \*59 | 0 | \*68 | 1 |  |  |  |
+| **Section** | **Data** | **Section** | **Data** | **Section** | **Data** |
+|:--:|----|:--:|:--:|:--:|:--:|
+| \*41 | 1111 (receiver telephone number) | \*60 | 1 | \*69 | 1 |
+| \*42 | 1111 | \*61 | 1 | \*70 | 1 |
+| \*43 | 1234 (panel account number) | \*62 | 1 | \*71 | 1 |
+| \*44 | 1234 | \*63 | 1 | \*72 | 1 |
+| \*45 | 1111 | \*64 | 1 | \*73 | 1 |
+| \*47 | 1 | \*65 | 1 | \*74 | 1 |
+| \*48 | 7 | \*66 | 1 | \*75 | 1 |
+| \*50 | 1 | \*67 | 1 | \*76 | 1 |
+| \*59 | 0 | \*68 | 1 |  |  |
 
 When all required settings are set, it is necessary to exit programming mode. Enter [\*][9][9] in keypad.
 
@@ -646,18 +635,17 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
-<div style="margin: 20px 0; text-align: left;">
-  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
-  </a>
-  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
-  </a>
-  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
-  </a>
-</div>
-
+    <div style="margin: 20px 0; text-align: left;">
+      <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+      </a>
+      <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+      </a>
+      <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+      </a>
+    </div>
 
 2.  Log in with your user name and password or register and create new account.
 
@@ -919,10 +907,9 @@ You can send an SMS command to the GT+ communicator, which will activate the out
 ### “Network settings” window 
 
 !!! warning "Important"
-    1\. Ensure that the SIM card is activated and working before using it.
-
-    2\. If mobile internet connection will be used for sending events via IP
-    channel or to Protegus2, ensure that mobile data service is
+    1\. Ensure that the SIM card is activated and working before using
+    it. / 2. If mobile internet connection will be used for sending events
+    via IP channel or to Protegus2, ensure that mobile data service is
     enabled.
 <img alt="" src="./image52.png" style="width:7.086614173228346in;height:3.02755905511811in" />
 

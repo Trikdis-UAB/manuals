@@ -365,15 +365,11 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 <img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
 !!! note
-    One or two SIM cards can be inserted into the communicator.
-    
-    Ensure that the SIM card is activated.
-    
-    Ensure that mobile internet service (mobile data) is enabled if
-    connected via IP channel.
-    
-    To avoid entering the PIN code in TrikdisConfig, insert the SIM
-    card into your mobile phone and turn off the PIN request function.
+    One or two SIM cards can be inserted into the communicator. / Ensure
+    that the SIM card is activated. / Ensure that mobile internet service
+    (mobile data) is enabled if connected via IP channel. / To avoid
+    entering the PIN code in TrikdisConfig, insert the SIM card into
+    your mobile phone and turn off the PIN request function.
 ### Installation in intrusion control panel enclosure panel 
 
 The GET communicator must be installed inside the intrusion control panel enclosure, which is protected by a lid tamper. It is mounted on the internal rear surface of the enclosure using the supplied industrial-grade double-sided acrylic foam mounting tape. The tape must be applied to a clean, dry surface with firm pressure to ensure reliable adhesion.
@@ -461,18 +457,14 @@ To start the communicator, turn on the security control panel’s power supply. 
 
 !!! note
     Sufficient strength of LTE signal is level three (three "NETWORK LTE"
-    indicator flashes in yellow color).
-    
-    If you count less yellow "NETWORK LTE" LED flashes, the network signal
-    strength is insufficient. We recommend to select a different place to
-    install the communicator, or to use a more sensitive cellular antenna.
-    
-    If you see a different LED indication, it indicates a certain
-    malfunction. Diagnose it by following the LED indication table in
-    chapter 1.6 "LED indication of operation".
-    
-    If the GET indication does not illuminate at all, check the power
-    supply and connections.
+    indicator flashes in yellow color). / If you count less yellow "NETWORK
+    LTE" LED flashes, the network signal strength is insufficient. We
+    recommend to select a different place to install the communicator, or to
+    use a more sensitive cellular antenna. / If you see a different LED
+    indication, it indicates a certain malfunction. Diagnose it by following
+    the LED indication table in chapter 1.6 "LED indication of
+    operation". / If the GET indication does not illuminate at all,
+    check the power supply and connections.
 ## Programming the control panel 
 
 ### Programming of control panels when the communicator is connected to the keypad bus or serial bus 
@@ -662,18 +654,17 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app/login).
 
-<div style="margin: 20px 0; text-align: left;">
-  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
-  </a>
-  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
-  </a>
-  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
-  </a>
-</div>
-
+    <div style="margin: 20px 0; text-align: left;">
+      <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+      </a>
+      <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+      </a>
+      <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+      </a>
+    </div>
 
 2.  Log in with your user name and password or register and create new account.
 
@@ -917,9 +908,8 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 **“SIM1” tab**
 
 !!! warning "Important"
-    1\. Ensure that the SIM card is activated and working before using it.
-
-    2\. Ensure that mobile data service is enabled.
+    1\. Ensure that the SIM card is activated and working before using
+    it. / 2. Ensure that mobile data service is enabled.
 <img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 **These settings must be made if the SIM card is inserted into the SIM1 slot of the communicator.**

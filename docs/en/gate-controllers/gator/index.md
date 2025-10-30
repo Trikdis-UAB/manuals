@@ -322,17 +322,18 @@ Controller answers and allows to control the outputs with a phone call the user 
 With Protegus2 cloud users will be able to control controller remotely. They will also be able to see the system state and receive all system event messages.
 
 1.  Download and launch the Protegus2 app or use the browser version of Protegus2 at [www.protegus.app](http://www.protegus.app).
-<div style="margin: 20px 0; text-align: left;">
-  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
-  </a>
-  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
-  </a>
-  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
-  </a>
-</div>
+
+    <div style="margin: 20px 0; text-align: left;">
+      <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+      </a>
+      <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+      </a>
+      <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+      </a>
+    </div>
 
 2.  Log in with your user name and password or register and create a new account.
 
