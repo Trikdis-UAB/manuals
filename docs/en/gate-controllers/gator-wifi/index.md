@@ -220,19 +220,17 @@ The “Output” mode must be set to the xI/O terminal.
 With Protegus2 app users will be able to control controller remotely. They will also be able to see the system state and receive all system event messages.
 
 1.  Download and launch the Protegus2 app or use the browser version of Protegus2 at [www.protegus.app](http://www.protegus.app).
-
 <div style="margin: 20px 0; text-align: left;">
   <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./image16.png" alt="Get it on Google Play" style="height:50px;">
+    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
   </a>
   <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./image18.png" alt="Open Web App" style="height:50px;">
+    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
   </a>
   <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./image17.png" alt="Download on the App Store" style="height:50px;">
+    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
   </a>
 </div>
-
 
 2.  Log in with your user name and password or register and create a new account.
 
@@ -356,20 +354,14 @@ With TrikdisConfig you can change the GATOR WiFi controller’s settings accordi
 
 !!! note
     The button **Read [F4]** will make the program read and show the
-    settings currently saved on the device.
-    
-    The button **Write [F5]** will save the settings made in the program
-    to the device.
-    
-    The button **Save [F9]** will save the settings into a configuration
-    file. You can upload the saved settings to other devices later. This
-    allows to quickly configure multiple devices with the same settings.
-    
-    The button **Open [F8]** will allow to choose a configuration file and
-    open saved settings.
-    
-    If you want to revert to default settings, click on the "**Restore"**
-    button at the bottom left of the window.
+    settings currently saved on the device. / The button **Write [F5]**
+    will save the settings made in the program to the device. / The button
+    **Save [F9]** will save the settings into a configuration file. You
+    can upload the saved settings to other devices later. This allows to
+    quickly configure multiple devices with the same settings. / The button
+    **Open [F8]** will allow to choose a configuration file and open saved
+    settings. / If you want to revert to default settings, click on the
+    "**Restore"** button at the bottom left of the window.
 ### TrikdisConfig status bar 
 
 After connecting the GATOR WiFi to the TrikdisConfig software, the software will show information about the connected device in the status bar.
@@ -722,11 +714,10 @@ When configuration and installation are finished, test the system:
 !!! note
     When the GATOR WiFi is connected to TrikdisConfig, the
     program will offer to update the device's firmware if updates are
-    available. Updates require an internet connection.
-    
-    If antivirus software is installed in your computer, it might block the
-    automatic firmware update function. In this case you will have to
-    reconfigure your antivirus software.
+    available. Updates require an internet connection. / If antivirus
+    software is installed in your computer, it might block the automatic
+    firmware update function. In this case you will have to reconfigure your
+    antivirus software.
 The GATOR WiFi’s firmware can also be updated and changed manually. All prior GATOR WiFi parameters remain after update. When writing manually, the firmware can be changed to an older or a newer version. Follow these steps:
 
 1.  Launch ***TrikdisConfig**.*
@@ -753,4 +744,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-> <img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
