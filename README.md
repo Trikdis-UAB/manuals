@@ -42,6 +42,24 @@ pipx run --spec mkdocs-material mkdocs serve --dev-addr 127.0.0.1:8000
 
 The command installs MkDocs Material (via `pipx`) if necessary and serves the site at `http://127.0.0.1:8000`. Stop with `Ctrl+C`.
 
+### Quick restart on the shared preview port (127.0.0.1:8892)
+
+We often reuse `mkdocs serve -a 127.0.0.1:8892` during multi-manual QA. The process sometimes leaves a background child bound to the port after you stop the parent, so a fresh `mkdocs serve` fails with `OSError: [Errno 48] Address already in use`.
+
+```bash
+# Kill any stale preview instances first (fast, idempotent)
+pkill -f 'mkdocs serve -a 127.0.0.1:8892' || true
+
+# Relaunch in the background so the shell is free immediately
+cd /Users/local/projects/trikdis-docs/manuals
+nohup mkdocs serve -a 127.0.0.1:8892 >/tmp/mkdocs-serve.log 2>&1 &
+
+# Confirm the listener (optional)
+lsof -nP -i tcp:8892
+```
+
+With this sequence the old process is removed instantly and the new server starts within a second or two. Logs stream to `/tmp/mkdocs-serve.log` for inspection.
+
 ## Publishing Pipeline
 
 Publishing is fully automated via GitHub Pages:

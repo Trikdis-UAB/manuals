@@ -13,15 +13,54 @@ hide:
 
 ### Alarm Communicators
 
-- [GT Cellular Communicator](en/alarm-communicators/gt-cellular/GT UM_ENG_2025 09 11/)
-- [GT+ Cellular Communicator](en/alarm-communicators/gt-plus-cellular/GT+ UM_ENG_2025 09 11/)
-- [GET Cellular Communicator](en/alarm-communicators/get-cellular/GET UM_ENG_2025 09 03/)
-### Alarm Panels
+- [GET Cellular Communicator](en/alarm-communicators/get-cellular/)
+- [GT Cellular Communicator](en/alarm-communicators/gt-cellular/)
+- [GT+ Cellular Communicator](en/alarm-communicators/gt-plus-cellular/)
+### Cellular control panels
 
-- [SP3 Alarm Panel](en/alarm-panels/sp3/SP3_TAIM_EN_2025 09 12/)
-### Gate Controllers
+- [Security control panel “FLEXi” SP3](en/control-panels/sp3/)
+### Controllers
 
-- [GATOR GSM Gate Controller](en/gate-controllers/gator/GATOR_UM_ENG_2025 02 07/)
+- [GATOR Cellular Gate Controller](en/gate-controllers/gator/)
+- [GATOR WiFi Gate Controller](en/gate-controllers/gator-wifi/)
+
+## Spanish
+
+### Comunicadores de alarma
+
+- [GT Comunicador](es/alarm-communicators/gt-cellular/)
+- [GT+ Comunicador](es/alarm-communicators/gt-plus-cellular/)
+- [celular/Ethernet GET Comunicador](es/alarm-communicators/get-cellular/)
+### Controladores
+
+- [Gator](es/gate-controllers/gator/)
+- [Gator Wifi](es/gate-controllers/gator-wifi/)
+### Paneles de control celular
+
+- [Panel de control FLEXi SP3](es/control-panels/sp3/)
+
+## Lithuanian
+
+### Apsaugos centrelės
+
+- [Apsaugos centralė “FLEXi” SP3](lt/control-panels/sp3/)
+- [GSM apsaugos centralė *CG17*](lt/control-panels/cg17/)
+### Komunikatoriai
+
+- [G16 GSM komunikatorius](lt/alarm-communicators/g16/)
+- [G16T](lt/alarm-communicators/g16t/)
+- [GSM/Ethernet komunikatorius GET](lt/alarm-communicators/get-cellular/)
+- [GT GSM komunikatorius](lt/alarm-communicators/gt-cellular/)
+- [GT+ GSM komunikatorius](lt/alarm-communicators/gt-plus-cellular/)
+- [Priešgaisrinės centralės GSM komunikatorius G17F](lt/alarm-communicators/g17f/)
+- [Priešgaisrinės centralės komunikatorius FIRECOM](lt/alarm-communicators/firecom/)
+- [T16](lt/alarm-communicators/t16/)
+- [„Ethernet“ komunikatorius E16](lt/alarm-communicators/e16/)
+- [„Ethernet“ komunikatorius E16T](lt/alarm-communicators/e16t/)
+### Valdikliai
+
+- [Gator](lt/gate-controllers/gator/)
+- [Gator Wifi](lt/gate-controllers/gator-wifi/)
 
 ---
 

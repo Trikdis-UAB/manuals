@@ -13,55 +13,65 @@ theme:
   - search.suggest
   - search.highlight
 nav:
-  - Home: index.md
-  - English:
-      - Alarm Communicators:
-          - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
-          - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
-          - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
-      - Control Panels:
-          - SP3 FLEXi Control Panel: en/control-panels/sp3/index.md
-      - Gate Controllers:
-          - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
-          - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
-  - Lithuanian:
-      - Apsaugos komunikatoriai:
-          - Mobiliojo ryšio komunikatorius GT: lt/alarm-communicators/gt-cellular/index.md
-  - Spanish:
-      - Comunicadores de alarma:
-          - Comunicador celular GT: es/alarm-communicators/gt-cellular/index.md
-          - Comunicador celular GT+: es/alarm-communicators/gt-plus-cellular/index.md
-          - Comunicador celular GET: es/alarm-communicators/get-cellular/index.md
-      - Paneles de control:
-          - Panel de control FLEXi SP3: es/control-panels/sp3/index.md
-      - Controladores de portón:
-          - Controlador celular GATOR: es/gate-controllers/gator/index.md
-          - Controlador WiFi GATOR: es/gate-controllers/gator-wifi/index.md
+- Home: index.md
+- English:
+  - Alarm Communicators:
+    - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
+    - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
+    - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
+  - Cellular control panels:
+    - Security control panel “FLEXi” SP3: en/control-panels/sp3/index.md
+  - Controllers:
+    - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
+    - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
+- Spanish:
+  - Comunicadores de alarma:
+    - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
+    - GT+ Comunicador: es/alarm-communicators/gt-plus-cellular/index.md
+    - celular/Ethernet GET Comunicador: es/alarm-communicators/get-cellular/index.md
+  - Controladores:
+    - Gator: es/gate-controllers/gator/index.md
+    - Gator Wifi: es/gate-controllers/gator-wifi/index.md
+  - Paneles de control celular:
+    - Panel de control FLEXi SP3: es/control-panels/sp3/index.md
+- Lithuanian:
+  - Apsaugos centrelės:
+    - Apsaugos centralė “FLEXi” SP3: lt/control-panels/sp3/index.md
+    - GSM apsaugos centralė *CG17*: lt/control-panels/cg17/index.md
+  - Komunikatoriai:
+    - G16 GSM komunikatorius: lt/alarm-communicators/g16/index.md
+    - G16T: lt/alarm-communicators/g16t/index.md
+    - GSM/Ethernet komunikatorius GET: lt/alarm-communicators/get-cellular/index.md
+    - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
+    - GT+ GSM komunikatorius: lt/alarm-communicators/gt-plus-cellular/index.md
+    - Priešgaisrinės centralės GSM komunikatorius G17F: lt/alarm-communicators/g17f/index.md
+    - Priešgaisrinės centralės komunikatorius FIRECOM: lt/alarm-communicators/firecom/index.md
+    - T16: lt/alarm-communicators/t16/index.md
+    - „Ethernet“ komunikatorius E16: lt/alarm-communicators/e16/index.md
+    - „Ethernet“ komunikatorius E16T: lt/alarm-communicators/e16t/index.md
+  - Valdikliai:
+    - Gator: lt/gate-controllers/gator/index.md
+    - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
 extra_javascript:
 - javascripts/redirect-trailing-slash.js
 plugins:
-  - search:
-      lang:
-        - en
-        - lt
-        - es
-      separator: '[\s\-]+'
-  - redirects:
-      redirect_maps: {}  # Add redirects here when renaming pages
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
-      htmlmin_opts:
-        remove_comments: true
-  - add-number:
-      order: 2
-      strict_mode: false
-      excludes:
-        - index.md
+- search:
+    lang:
+    - en
+    - lt
+    - es
+    separator: '[\s\-]+'
+- redirects:
+    redirect_maps: {}
+- minify:
+    minify_html: true
+    minify_js: true
+    minify_css: true
+    htmlmin_opts:
+      remove_comments: true
 markdown_extensions:
 - attr_list
 - admonition
