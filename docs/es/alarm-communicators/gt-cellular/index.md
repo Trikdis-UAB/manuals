@@ -621,7 +621,7 @@ Programación del panel de control **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) cu
 
 Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remota. Podrán ver el estado del sistema y recibir notificaciones sobre eventos del sistema.
 
-1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: web.protegus.app:
+1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: www.protegus.app:
 
     <div style="margin: 20px 0; text-align: left;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">

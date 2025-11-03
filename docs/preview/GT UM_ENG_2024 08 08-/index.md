@@ -1071,7 +1071,7 @@ Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when
 
 With ***Protegus2*** users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
 
-1.  Download and launch the ***Protegus2*** application or use the browser version: [[web.protegus.app]{.underline}](https://web.protegus.app/login).
+1.  Download and launch the ***Protegus2*** application or use the browser version: [[www.protegus.app]{.underline}](https://www.protegus.app/login).
 
 2.  Log in with your user name and password or register and create new account.
 
