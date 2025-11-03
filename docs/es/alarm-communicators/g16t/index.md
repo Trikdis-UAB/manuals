@@ -131,10 +131,48 @@ Este manual se aplica a estos modelos G16T:
 | A 485 | Bus RS485 de contactos A |
 | B 485 | Bus RS485 de contactos B |
 
-### Indicación de la Luz LED. 
+### Indicación de la Luz LED 
 
-| Indicador | Estado de la luz | Descripción | NETWORK | Off<br>Amarillo parpadeando<br>Verde sólido con parpadeo amarillo | Sin conexión a la red celular<br>Conectándose a la red celular<br>El comunicador está conectado a la red celular. / La potencia de la señal celular suficiente para 2G es el nivel 5 (cinco parpadeos amarillos) y para el nivel 3 de 3G, 4G (tres parpadeos amarillos) | DATA | Off<br>Verde sólido<br>Verde parpadeando | No hay eventos no enviados<br>Los eventos no enviados se almacenan en el búfer<br>(Modo de configuración) Los datos se transfieren a/desde el comunicador | POWER | Off<br>Verde sólido<br>Amarillo sólido<br>Verde sólido y parpadeo amarillo<br>Amarillo sólido | La fuente de alimentación está apagada o desconectada<br>La fuente de alimentación está encendida con suficiente voltaje<br>La tensión de alimentación es insuficiente (≤11.5V)<br>(Modo de configuración) Comunicador está listo para la configuración<br>(Modo de configuración) No hay conexión con la computadora | TROUBLE | Off<br>1 parpadeo rojo<br>2 parpadeos rojos<br>3 parpadeos rojos<br>4 parpadeos rojos<br>5 parpadeos rojos<br>6 parpadeos rojos<br>7 parpadeos rojos<br>Parpadeo rojo<br>Rojo sólido | No hay problemas de operación<br>Tarjeta SIM no encontrada<br>Problema con el código PIN de la tarjeta SIM (código PIN incorrecto)<br>Problema de programación (No APN)<br>Problema con el registro a la red GSM<br>Problemas con el registro a la red GPRS/UMTS<br>No hay conexión con el receptor<br>Conexión perdida con el panel de control<br>(Modo de configuración) Fallo de memoria<br>(Modo de configuración) El firmware está dañado |
-|-----------|------------------|-------------|---------|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+#### NETWORK
+
+| Estado de la luz | Descripción |
+| --- | --- |
+| Off | Sin conexión a la red celular. |
+| Amarillo parpadeando | Conectándose a la red celular. |
+| Verde sólido con parpadeo amarillo | El comunicador está conectado a la red celular. La intensidad suficiente de la señal celular para 2G es el nivel 5 (cinco parpadeos amarillos) y para 3G/4G es el nivel 3 (tres parpadeos amarillos). |
+
+#### DATA
+
+| Estado de la luz | Descripción |
+| --- | --- |
+| Off | No hay eventos no enviados. |
+| Verde sólido | Los eventos no enviados se almacenan en el búfer. |
+| Verde parpadeando | *(Modo de configuración)* los datos se transfieren hacia/desde el comunicador. |
+
+#### POWER
+
+| Estado de la luz | Descripción |
+| --- | --- |
+| Off | La fuente de alimentación está apagada o desconectada. |
+| Verde sólido | La fuente de alimentación está encendida con suficiente voltaje. |
+| Amarillo sólido | La tensión de alimentación es insuficiente (≤11,5 V). |
+| Verde sólido y parpadeo amarillo | *(Modo de configuración)* el comunicador está listo para la configuración. |
+| Amarillo sólido (modo de configuración) | *(Modo de configuración)* no hay conexión con la computadora. |
+
+#### TROUBLE
+
+| Estado de la luz | Descripción |
+| --- | --- |
+| Off | No hay problemas de operación. |
+| 1 parpadeo rojo | Tarjeta SIM no encontrada. |
+| 2 parpadeos rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto). |
+| 3 parpadeos rojos | Problema de programación (no APN). |
+| 4 parpadeos rojos | Problema con el registro a la red GSM. |
+| 5 parpadeos rojos | Problema con el registro a la red GPRS/UMTS. |
+| 6 parpadeos rojos | No hay conexión con el receptor. |
+| 7 parpadeos rojos | Conexión perdida con el panel de control. |
+| Parpadeo rojo | *(Modo de configuración)* fallo de memoria. |
+| Rojo sólido | *(Modo de configuración)* el firmware está dañado. |
 
 ### Esquema estructural del uso del dispositivo G16T 
 

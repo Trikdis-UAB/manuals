@@ -142,8 +142,46 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 ### Šviesinė veikimo indikacija 
 
-| Indikatorius | Būklė | Aprašymas | NETWORK (Tinklas) | Nešviečia<br>Geltonas mirksi<br>Šviečia žalia ir mirksi geltona | Nėra ryšio su GSM tinklu.<br>Jungiasi prie GSM tinklo.<br>Komunikatorius prisijungė prie GSM tinklo. Pakankamas GSM signalo stiprumas 2G ryšiui yra 5 lygis (penki geltoni sumirksėjimai), o 3G, 4G ryšiui – 3 lygis (trys geltoni sumirksėjimai). | DATA (Duomenys) | Nešviečia<br>Šviečia žaliai<br>Mirksi žaliai | Nėra neišsiųstų įvykių pranešimų.<br>Yra neišsiųstų pranešimų.<br>(konfigūravimo režimas) duomenys perkeliami į komunikatorių arba iš jo. | POWER (Maitinimas) | Nešviečia<br>Šviečia žalia<br>Šviečia geltona<br>Šviečia žalia ir mirksi geltona<br>Šviečia geltona | Nėra maitinimo .<br>Maitinimo įtampa yra pakankama.<br>Maitinimo įtampa yra nepakankama (≤11.5 V).<br>(konfigūravimo režimas) komunikatorius parengtas konfigūravimui.<br>(konfigūravimo režimas) nėra ryšio su kompiuteriu. | TROUBLE (Nesklandumas) | Nešviečia<br>1 raudonas mirksnis<br>2 raudoni mirksniai<br>3 raudoni mirksniai<br>4 raudoni mirksniai<br>5 raudoni mirksniai<br>6 raudoni mirksniai<br>7 raudoni mirksniai<br>Mirksi raudona<br>Šviečia raudona | Komunikatorius veikia gerai, be nesklandumų.<br>SIM kortelė neaptikta.<br>Problemos su SIM kortelės PIN kodu (neteisingas PIN kodas).<br>Programavimo problemos (nėra APN).<br>Prisijungimo prie GSM tinklo problemos.<br>Prisijungimo prie mobiliojo duomenų tinklo problemos.<br>Nėra ryšio su imtuvu.<br>Dingo ryšys su centrale.<br>(konfigūravimo režimas) atminties klaida.<br>(konfigūravimo režimas) programinės įrangos klaida. |
-|--------------|-------|-----------|-------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+#### NETWORK (tinklas)
+
+| Būklė | Aprašymas |
+| --- | --- |
+| Nešviečia | Nėra ryšio su GSM tinklu. |
+| Geltonas mirksi | Jungiasi prie GSM tinklo. |
+| Šviečia žalia ir mirksi geltona | Komunikatorius prisijungė prie GSM tinklo. Pakankamas GSM signalo stiprumas 2G ryšiui yra 5 lygis (penki geltoni sumirksėjimai), o 3G/4G ryšiui – 3 lygis (trys geltoni sumirksėjimai). |
+
+#### DATA (duomenys)
+
+| Būklė | Aprašymas |
+| --- | --- |
+| Nešviečia | Nėra neišsiųstų įvykių pranešimų. |
+| Šviečia žaliai | Yra neišsiųstų pranešimų. |
+| Mirksi žaliai | *(Konfigūravimo režimas)* duomenys perkeliami į komunikatorių arba iš jo. |
+
+#### POWER (maitinimas)
+
+| Būklė | Aprašymas |
+| --- | --- |
+| Nešviečia | Nėra maitinimo. |
+| Šviečia žalia | Maitinimo įtampa yra pakankama. |
+| Šviečia geltona | Maitinimo įtampa yra nepakankama (≤11,5 V). |
+| Šviečia žalia ir mirksi geltona | *(Konfigūravimo režimas)* komunikatorius parengtas konfigūravimui. |
+| Šviečia geltona (konfigūravimo režimas) | *(Konfigūravimo režimas)* nėra ryšio su kompiuteriu. |
+
+#### TROUBLE (nesklandumas)
+
+| Būklė | Aprašymas |
+| --- | --- |
+| Nešviečia | Komunikatorius veikia be nesklandumų. |
+| 1 raudonas mirksnis | SIM kortelė neaptikta. |
+| 2 raudoni mirksniai | Problemos su SIM kortelės PIN kodu (neteisingas PIN kodas). |
+| 3 raudoni mirksniai | Programavimo problemos (nėra APN). |
+| 4 raudoni mirksniai | Prisijungimo prie GSM tinklo problemos. |
+| 5 raudoni mirksniai | Prisijungimo prie mobiliojo duomenų tinklo problemos. |
+| 6 raudoni mirksniai | Nėra ryšio su imtuvu. |
+| 7 raudoni mirksniai | Dingo ryšys su centrale. |
+| Mirksi raudona | *(Konfigūravimo režimas)* atminties klaida. |
+| Šviečia raudona | *(Konfigūravimo režimas)* programinės įrangos klaida. |
 
 ### Komunikatoriaus G16T panaudojimo struktūrinė schema 
 

@@ -143,8 +143,46 @@ This manual applies to these G16T models:
 
 ### LED indication of operation 
 
-| Indicator | Light status | Description | NETWORK | Off<br>Yellow blinking<br>Green solid with yellow blinking | No connection to cellular network.<br>Connecting to cellular network.<br>Communicator is connected to cellular network. / Sufficient cellular signal strength for 2G is level 5 (five yellow flashes) and for 3G, 4G network - level 3 (three yellow flashes). | DATA | Off<br>Green solid<br>Green blinking | No unseen events.<br>Unsent event events are stored in buffer.<br>(Configuration mode) Data is transferred to/from communicator. | POWER | Off<br>Green solid<br>Yellow solid<br>Green solid and yellow blinking<br>Yellow solid | Power supply is off or disconnected.<br>Power supply is on with sufficient voltage.<br>Power supply voltage is not sufficient (≤11.5V).<br>(Configuration mode) Communicator is ready for configuration.<br>(Configuration mode) No connection with computer. | TROUBLE | OFF<br>1 red blink<br>2 red blinks<br>3 red blinks<br>4 red blinks<br>5 red blinks<br>6 red blinks<br>7 red blinks<br>Red blinking<br>Red solid | No operation problems.<br>SIM card not found.<br>SIM card PIN code problem (incorrect PIN code).<br>Programming problem (No APN).<br>Registration to Cellular network problem.<br>Registration to mobile data network problem.<br>No connection with the receiver.<br>Lost connection with control panel.<br>(Configuration mode) Memory fault.<br>(Configuration mode) Firmware is corrupted. |
-|-----------|--------------|-------------|---------|------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-------|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+#### NETWORK
+
+| Light status | Description |
+| --- | --- |
+| Off | No connection to the cellular network. |
+| Yellow blinking | Connecting to the cellular network. |
+| Green solid with yellow blinking | Communicator is connected to the cellular network. Sufficient cellular signal strength for 2G is level 5 (five yellow flashes) and for 3G/4G network – level 3 (three yellow flashes). |
+
+#### DATA
+
+| Light status | Description |
+| --- | --- |
+| Off | No unsent events. |
+| Green solid | Unsent events are stored in the buffer. |
+| Green blinking | *(Configuration mode)* Data is being transferred to/from the communicator. |
+
+#### POWER
+
+| Light status | Description |
+| --- | --- |
+| Off | Power supply is off or disconnected. |
+| Green solid | Power supply is on with sufficient voltage. |
+| Yellow solid | Power supply voltage is not sufficient (≤11.5 V). |
+| Green solid and yellow blinking | *(Configuration mode)* Communicator is ready for configuration. |
+| Yellow solid (configuration mode) | *(Configuration mode)* No connection with the computer. |
+
+#### TROUBLE
+
+| Light status | Description |
+| --- | --- |
+| Off | No operation problems. |
+| 1 red blink | SIM card not found. |
+| 2 red blinks | SIM card PIN code problem (incorrect PIN code). |
+| 3 red blinks | Programming problem (no APN). |
+| 4 red blinks | Registration to cellular network problem. |
+| 5 red blinks | Registration to mobile data network problem. |
+| 6 red blinks | No connection with the receiver. |
+| 7 red blinks | Lost connection with the control panel. |
+| Red blinking | *(Configuration mode)* Memory fault. |
+| Red solid | *(Configuration mode)* Firmware is corrupted. |
 
 ### Structural schematic with G16T usage 
 
