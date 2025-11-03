@@ -25,6 +25,23 @@ PRODUCT_CATEGORY_MAP = {
     'GATOR_WIFI': 'gate-controllers',
 }
 
+PRODUCT_SLUG_MAP = {
+    'get-cellular': 'GET',
+    'gt-cellular': 'GT',
+    'gt-plus-cellular': 'GT_PLUS',
+    'firecom': 'FIRECOM',
+    'e16': 'E16',
+    'e16t': 'E16T',
+    'g16': 'G16',
+    'g16t': 'G16T',
+    'g17f': 'G17F',
+    't16': 'T16',
+    'sp3': 'SP3',
+    'cg17': 'CG17',
+    'gator': 'GATOR_CELL',
+    'gator-wifi': 'GATOR_WIFI',
+}
+
 LANGUAGE_LABELS = {
     'en': 'English',
     'lt': 'Lithuanian',
@@ -34,12 +51,13 @@ LANGUAGE_LABELS = {
 
 
 
-def load_category_labels(csv_path: Path):
-    """Create mapping of language/category folder to display label using doc_sources.csv."""
+def load_source_labels(csv_path: Path):
+    """Create mapping of category and product labels from doc_sources.csv."""
 
     labels = {}
+    product_titles = {}
     if not csv_path.exists():
-        return labels
+        return labels, product_titles
 
     with csv_path.open('r', encoding='utf-8-sig') as fh:
         reader = csv.DictReader(fh)
@@ -47,15 +65,25 @@ def load_category_labels(csv_path: Path):
             product = row.get('product_code', '').strip()
             language = row.get('language', '').strip()
             category_text = row.get('category', '').strip()
+            product_name = row.get('product_name', '').strip()
 
             folder = PRODUCT_CATEGORY_MAP.get(product)
-            if not folder or not language or not category_text:
-                continue
+            if folder and language and category_text:
+                labels.setdefault(language, {})
+                labels[language].setdefault(folder, category_text)
 
-            labels.setdefault(language, {})
-            labels[language].setdefault(folder, category_text)
+            if product and language and product_name:
+                product_titles.setdefault(language, {})
+                product_titles[language][product] = product_name
 
-    return labels
+    return labels, product_titles
+
+def resolve_product_code(rel_parts):
+    """Determine product code from docs path parts."""
+    if len(rel_parts) < 3:
+        return None
+    slug = rel_parts[2]
+    return PRODUCT_SLUG_MAP.get(slug)
 
 def get_title_from_markdown(md_path):
     """Extract the first H1 heading from a markdown file."""
@@ -70,7 +98,7 @@ def get_title_from_markdown(md_path):
     except Exception:
         return md_path.parent.name.replace('-', ' ').title()
 
-def scan_docs_directory(docs_path, category_labels):
+def scan_docs_directory(docs_path, category_labels, product_titles):
     """Scan docs directory and build navigation structure grouped by language."""
 
     categories = {
@@ -105,7 +133,13 @@ def scan_docs_directory(docs_path, category_labels):
             categories.get(category_key, category_key.replace('-', ' ').title() or 'Manuals')
         )
 
-        title = get_title_from_markdown(index_file)
+        product_code = resolve_product_code(rel_parts)
+        title = None
+        if product_code:
+            title = product_titles.get(language, {}).get(product_code)
+        if not title:
+            title = get_title_from_markdown(index_file)
+
         nav_structure.setdefault(language, {})
         nav_structure[language].setdefault(category_name, [])
         nav_structure[language][category_name].append({
@@ -177,8 +211,8 @@ def main():
     mkdocs_path = script_dir / 'mkdocs.yml'
 
     print("Scanning docs directory...")
-    category_labels = load_category_labels(DOC_SOURCES_PATH)
-    nav_structure = scan_docs_directory(docs_path, category_labels)
+    category_labels, product_titles = load_source_labels(DOC_SOURCES_PATH)
+    nav_structure = scan_docs_directory(docs_path, category_labels, product_titles)
 
     if not nav_structure:
         print("⚠ No manuals found in docs/")

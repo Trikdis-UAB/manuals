@@ -44,7 +44,7 @@ hide:
 ### Apsaugos centrelės
 
 - [Apsaugos centralė “FLEXi” SP3](lt/control-panels/sp3/)
-- [GSM apsaugos centralė *CG17*](lt/control-panels/cg17/)
+- [GSM apsaugos centralė CG17](lt/control-panels/cg17/)
 ### Komunikatoriai
 
 - [G16 GSM komunikatorius](lt/alarm-communicators/g16/)
