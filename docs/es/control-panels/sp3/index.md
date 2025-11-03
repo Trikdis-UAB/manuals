@@ -1,4 +1,4 @@
-# El panel de control *„FLEXi“ SP3* es el procesador de un sistema de alarma contra incendios y de allanamiento (a las instalaciones) con un módulo WiFi incorporado y un módem celular 2G o 4G. El panel de control permite agrupar 32 alámbricas e inalámbricas en un sistema de 8 particiones. Los usuarios pueden cambiar los modos de protección para estas áreas de forma remota (por ejemplo, a través de la aplicación móvil Protegus2, SMS, llamadas telefónicas) y mediante el uso de varios dispositivos que permiten la identificación personal (por ejemplo, teclados alámbricos e inalámbricos, llaves electrónicas, tarjetas RFID, etc.). Después de cualquier evento del sistema, se enviará un informe a la estación central de monitoreo (CRA) y/o al servidor en la nube de Protegus a través de redes de internet usando WiFi, y/o a través de redes móviles usando una tarjeta SIM
+# Panel de control FLEXi SP3
 
 <div style="text-align: center;">
 
@@ -1650,8 +1650,6 @@ Realiza estos pasos:
 6.  Espera a que finalicen las actualizaciones.
 
 Una vez que se finalice la configuración, haz clic en el botón **Escribir \[F5\]** y desconecta el cable USB.
-
-## Panel de Control
 
 ## Garantía y Limitación de Responsabilidad.
 
