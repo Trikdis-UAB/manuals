@@ -1,4 +1,4 @@
-# „Ethernet“ komunikatorius E16T
+# Ethernet komunikatorius E16T
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

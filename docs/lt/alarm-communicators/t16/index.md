@@ -1,4 +1,4 @@
-# Radijo siųstuvas T16
+# Siųstuvas T16
 
 <div style="text-align: center;">
 

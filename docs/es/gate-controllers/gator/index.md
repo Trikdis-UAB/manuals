@@ -2,7 +2,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-##  Descripción 
+# Gator
 
 GSM controlador puede controlar de forma remota puertas automáticas y otros equipos.
 

@@ -1,4 +1,4 @@
-# GSM apsaugos centralė *CG17*
+# GSM apsaugos centralė CG17
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

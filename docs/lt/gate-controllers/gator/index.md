@@ -2,7 +2,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## Aprašymas
+# Gator
 
 GSM vartų valdiklis GATOR gali valdyti vartų automatiką ir kitą įrangą nuotoliniu būdu.
 

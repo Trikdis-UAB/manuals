@@ -1,4 +1,4 @@
-# G16T_3xxx – the 3rd HW revision on G16T. Changes
+# GSM komunikatorius G16T
 
 
 1.  SIM card holder for 4F SIM card (Nano size).

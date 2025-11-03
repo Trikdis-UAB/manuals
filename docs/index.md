@@ -11,14 +11,14 @@ hide:
 
 ## English
 
-### Alarm Communicators
+### Cellular
 
 - [GET Cellular Communicator](en/alarm-communicators/get-cellular/)
 - [GT Cellular Communicator](en/alarm-communicators/gt-cellular/)
 - [GT+ Cellular Communicator](en/alarm-communicators/gt-plus-cellular/)
 ### Cellular control panels
 
-- [Security control panel “FLEXi” SP3](en/control-panels/sp3/)
+- [Security control panel FLEXi SP3](en/control-panels/sp3/)
 ### Controllers
 
 - [GATOR Cellular Gate Controller](en/gate-controllers/gator/)
@@ -26,11 +26,11 @@ hide:
 
 ## Spanish
 
-### Comunicadores de alarma
+### Celular
 
+- [Comunicador GET](es/alarm-communicators/get-cellular/)
 - [GT Comunicador](es/alarm-communicators/gt-cellular/)
 - [GT+ Comunicador](es/alarm-communicators/gt-plus-cellular/)
-- [celular/Ethernet GET Comunicador](es/alarm-communicators/get-cellular/)
 ### Controladores
 
 - [Gator](es/gate-controllers/gator/)
@@ -45,18 +45,18 @@ hide:
 
 - [Apsaugos centralė “FLEXi” SP3](lt/control-panels/sp3/)
 - [GSM apsaugos centralė CG17](lt/control-panels/cg17/)
-### Komunikatoriai
+### Mobilaus ryšio
 
-- [G16 GSM komunikatorius](lt/alarm-communicators/g16/)
-- [G16T](lt/alarm-communicators/g16t/)
+- [Ethernet komunikatorius E16](lt/alarm-communicators/e16/)
+- [Ethernet komunikatorius E16T](lt/alarm-communicators/e16t/)
+- [GSM komunikatorius G16](lt/alarm-communicators/g16/)
+- [GSM komunikatorius G16T](lt/alarm-communicators/g16t/)
 - [GSM/Ethernet komunikatorius GET](lt/alarm-communicators/get-cellular/)
 - [GT GSM komunikatorius](lt/alarm-communicators/gt-cellular/)
 - [GT+ GSM komunikatorius](lt/alarm-communicators/gt-plus-cellular/)
 - [Priešgaisrinės centralės GSM komunikatorius G17F](lt/alarm-communicators/g17f/)
 - [Priešgaisrinės centralės komunikatorius FIRECOM](lt/alarm-communicators/firecom/)
-- [T16](lt/alarm-communicators/t16/)
-- [„Ethernet“ komunikatorius E16](lt/alarm-communicators/e16/)
-- [„Ethernet“ komunikatorius E16T](lt/alarm-communicators/e16t/)
+- [Siųstuvas T16](lt/alarm-communicators/t16/)
 ### Valdikliai
 
 - [Gator](lt/gate-controllers/gator/)

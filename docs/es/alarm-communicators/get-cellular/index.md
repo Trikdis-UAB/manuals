@@ -1,4 +1,4 @@
-# celular/Ethernet GET Comunicador
+# Comunicador GET
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

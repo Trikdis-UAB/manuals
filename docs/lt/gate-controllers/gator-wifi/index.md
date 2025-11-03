@@ -2,7 +2,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## Aprašymas
+# Gator Wifi
 
 Wi-Fi valdiklis GATOR WiFi skirtas automatinių durų (arba kitai elektros įrangai) valdymui nuotoliniu būdu.
 

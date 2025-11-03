@@ -15,20 +15,20 @@ theme:
 nav:
 - Home: index.md
 - English:
-  - Alarm Communicators:
+  - Cellular:
     - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
     - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
     - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
   - Cellular control panels:
-    - Security control panel “FLEXi” SP3: en/control-panels/sp3/index.md
+    - Security control panel FLEXi SP3: en/control-panels/sp3/index.md
   - Controllers:
     - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
     - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
 - Spanish:
-  - Comunicadores de alarma:
+  - Celular:
+    - Comunicador GET: es/alarm-communicators/get-cellular/index.md
     - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
     - GT+ Comunicador: es/alarm-communicators/gt-plus-cellular/index.md
-    - celular/Ethernet GET Comunicador: es/alarm-communicators/get-cellular/index.md
   - Controladores:
     - Gator: es/gate-controllers/gator/index.md
     - Gator Wifi: es/gate-controllers/gator-wifi/index.md
@@ -38,17 +38,17 @@ nav:
   - Apsaugos centrelės:
     - Apsaugos centralė “FLEXi” SP3: lt/control-panels/sp3/index.md
     - GSM apsaugos centralė CG17: lt/control-panels/cg17/index.md
-  - Komunikatoriai:
-    - G16 GSM komunikatorius: lt/alarm-communicators/g16/index.md
-    - G16T: lt/alarm-communicators/g16t/index.md
+  - Mobilaus ryšio:
+    - Ethernet komunikatorius E16: lt/alarm-communicators/e16/index.md
+    - Ethernet komunikatorius E16T: lt/alarm-communicators/e16t/index.md
+    - GSM komunikatorius G16: lt/alarm-communicators/g16/index.md
+    - GSM komunikatorius G16T: lt/alarm-communicators/g16t/index.md
     - GSM/Ethernet komunikatorius GET: lt/alarm-communicators/get-cellular/index.md
     - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
     - GT+ GSM komunikatorius: lt/alarm-communicators/gt-plus-cellular/index.md
     - Priešgaisrinės centralės GSM komunikatorius G17F: lt/alarm-communicators/g17f/index.md
     - Priešgaisrinės centralės komunikatorius FIRECOM: lt/alarm-communicators/firecom/index.md
-    - T16: lt/alarm-communicators/t16/index.md
-    - „Ethernet“ komunikatorius E16: lt/alarm-communicators/e16/index.md
-    - „Ethernet“ komunikatorius E16T: lt/alarm-communicators/e16t/index.md
+    - Siųstuvas T16: lt/alarm-communicators/t16/index.md
   - Valdikliai:
     - Gator: lt/gate-controllers/gator/index.md
     - Gator Wifi: lt/gate-controllers/gator-wifi/index.md

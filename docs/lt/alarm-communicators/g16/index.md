@@ -1,4 +1,4 @@
-# G16 GSM komunikatorius
+# GSM komunikatorius G16
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
