@@ -15,43 +15,58 @@ theme:
 nav:
 - Home: index.md
 - English:
-  - Cellular:
-    - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
-    - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
-    - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
-  - Cellular control panels:
-    - Security control panel FLEXi SP3: en/control-panels/sp3/index.md
-  - Controllers:
-    - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
-    - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
-- Spanish:
-  - Celular:
-    - Comunicador GET: es/alarm-communicators/get-cellular/index.md
-    - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
-    - GT+ Comunicador: es/alarm-communicators/gt-plus-cellular/index.md
-  - Controladores:
-    - Gator: es/gate-controllers/gator/index.md
-    - Gator Wifi: es/gate-controllers/gator-wifi/index.md
-  - Paneles de control celular:
-    - Panel de control FLEXi SP3: es/control-panels/sp3/index.md
+  - Communicators:
+    - Cellular:
+      - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
+      - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
+    - Dual-path:
+      - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
+  - Control Panels:
+    - Cellular control panels:
+      - Security control panel FLEXi SP3: en/control-panels/sp3/index.md
+  - Gate Controllers:
+    - Controllers:
+      - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
+      - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
 - Lithuanian:
+  - Komunikatoriai:
+    - Mobilaus ryšio:
+      - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
+      - GT+ GSM komunikatorius: lt/alarm-communicators/gt-plus-cellular/index.md
+      - GSM komunikatorius G16: lt/alarm-communicators/g16/index.md
+      - GSM komunikatorius G16T: lt/alarm-communicators/g16t/index.md
+    - Dvigubas Kanalas:
+      - GSM/Ethernet komunikatorius GET: lt/alarm-communicators/get-cellular/index.md
+    - Priešgaisrinėms centralėms:
+      - Priešgaisrinės centralės komunikatorius FIRECOM: lt/alarm-communicators/firecom/index.md
+      - Priešgaisrinės centralės GSM komunikatorius G17F: lt/alarm-communicators/g17f/index.md
+    - Ethernet:
+      - Ethernet komunikatorius E16: lt/alarm-communicators/e16/index.md
+      - Ethernet komunikatorius E16T: lt/alarm-communicators/e16t/index.md
+    - UHF radijo bangomis:
+      - Siųstuvas T16: lt/alarm-communicators/t16/index.md
   - Apsaugos centrelės:
-    - Apsaugos centralė “FLEXi” SP3: lt/control-panels/sp3/index.md
-    - GSM apsaugos centralė CG17: lt/control-panels/cg17/index.md
-  - Mobilaus ryšio:
-    - Ethernet komunikatorius E16: lt/alarm-communicators/e16/index.md
-    - Ethernet komunikatorius E16T: lt/alarm-communicators/e16t/index.md
-    - GSM komunikatorius G16: lt/alarm-communicators/g16/index.md
-    - GSM komunikatorius G16T: lt/alarm-communicators/g16t/index.md
-    - GSM/Ethernet komunikatorius GET: lt/alarm-communicators/get-cellular/index.md
-    - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
-    - GT+ GSM komunikatorius: lt/alarm-communicators/gt-plus-cellular/index.md
-    - Priešgaisrinės centralės GSM komunikatorius G17F: lt/alarm-communicators/g17f/index.md
-    - Priešgaisrinės centralės komunikatorius FIRECOM: lt/alarm-communicators/firecom/index.md
-    - Siųstuvas T16: lt/alarm-communicators/t16/index.md
+    - Apsaugos centrelės:
+      - Apsaugos centralė “FLEXi” SP3: lt/control-panels/sp3/index.md
+      - GSM apsaugos centralė CG17: lt/control-panels/cg17/index.md
   - Valdikliai:
-    - Gator: lt/gate-controllers/gator/index.md
-    - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
+    - Valdikliai:
+      - Gator: lt/gate-controllers/gator/index.md
+      - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
+- Spanish:
+  - Comunicadores:
+    - Celular:
+      - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
+      - GT+ Comunicador: es/alarm-communicators/gt-plus-cellular/index.md
+    - Comunicación de Doble Vía:
+      - Comunicador GET: es/alarm-communicators/get-cellular/index.md
+  - Paneles de control:
+    - Paneles de control celular:
+      - Panel de control FLEXi SP3: es/control-panels/sp3/index.md
+  - Controladores:
+    - Controladores:
+      - Gator: es/gate-controllers/gator/index.md
+      - Gator Wifi: es/gate-controllers/gator-wifi/index.md
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
