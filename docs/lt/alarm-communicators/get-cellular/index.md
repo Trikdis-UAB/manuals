@@ -4,7 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## 1. Aprašymas 
+## Aprašymas
 
 Komunikatorius GET skirtas perduoti įvykių pranešimus iš centralės į CSP ir Protegus2 programėlę.
 
@@ -63,7 +63,7 @@ Veikia su Protegus2 programėle:
 
 - Nuotolinis konfigūravimas ir programinės įrangos atnaujinimas.
 
-### 1.1 Suderinamų centralių sąrašas 
+### Suderinamų centralių sąrašas
 
 | Gamintojas | Modelis |
 |------------|---------|
@@ -82,11 +82,11 @@ Veikia su Protegus2 programėle:
 
 \*Kitų gamintojų centrales prijunkite su komunikatoriumi GET naudojant centralės gnybtus TIP RING.
 
-### 1.2 Komunikatoriaus modelio tipas 
+### Komunikatoriaus modelio tipas
 
 Ši instrukcija skirta LTE komunikatoriaus modeliams.
 
-### 1.3 Techniniai parametrai 
+### Techniniai parametrai
 
 | Parametras | Aprašymas |
 |------------|-----------|
@@ -109,7 +109,7 @@ Veikia su Protegus2 programėle:
 | Komunikatoriaus matmenys | 113 x 70 x 25 mm |
 | Svoris | 110 g |
 
-### 1.4 Komunikatoriaus elementai 
+### Komunikatoriaus elementai
 
 1.  GSM antenos SMA jungtis.
 
@@ -131,7 +131,7 @@ Veikia su Protegus2 programėle:
 
 <img alt="" src="./image4.png" style="width:4.926676509186351in;height:3.24000656167979in" />
 
-### 1.5 Išorinių kontaktų paskirtis 
+### Išorinių kontaktų paskirtis
 
 | Gnybtas | Aprašymas |
 |---------|-----------|
@@ -146,7 +146,7 @@ Veikia su Protegus2 programėle:
 | TIP | Gnybtas sujungiamas su apsaugos centralės TIP gnybtu |
 | RING | Gnybtas sujungiamas su apsaugos centralės RING gnybtu |
 
-### 1.6 Šviesinė veikimo indikacija 
+### Šviesinė veikimo indikacija
 
 | Indikatorius | Būklė | Aprašymas |
 |--------------|-------|-----------|
@@ -170,7 +170,7 @@ Veikia su Protegus2 programėle:
 | TROUBLE | 7 raudoni mirksniai | Nėra ryšio su centrale (tik serial šynai) |
 | INTERFACE | - | Nenaudojama |
 
-### 1.7 Komunikatoriaus GET panaudojimo struktūrinė schema 
+### Komunikatoriaus GET panaudojimo struktūrinė schema
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
 
@@ -194,7 +194,7 @@ Veikia su Protegus2 programėle:
         komunikatorius.
     
     Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
-## 2. Greitas konfigūravimas su programa *TrikdisConfig* 
+## Greitas konfigūravimas su programa *TrikdisConfig*
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.lt](http://www.trikdis.lt) (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiekite*.*
 
@@ -210,7 +210,7 @@ Veikia su Protegus2 programėle:
 
 Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į Stebėjimo pultą ir kad apsaugos centralę būtų galima valdyti su Protegus2 programėle.
 
-### 2.1 Nustatymai ryšiui su Protegus2 programėle 
+### Nustatymai ryšiui su Protegus2 programėle
 
 **Lange „Centralės sąsaja“:**
 
@@ -274,7 +274,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 !!! note
     Plačiau apie kitus komunikatoriaus GET nustatymus
     TrikdisConfig žr. 6 „TrikdisConfig langų aprašymas".
-### 2.2 Nustatymai ryšiui su Stebėjimo pultu 
+### Nustatymai ryšiui su Stebėjimo pultu
 
 **Lange „Sistemos parinktys“:**
 
@@ -339,9 +339,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus komunikatoriaus GET nustatymus
     TrikdisConfig žr. skyrių 6 „TrikdisConfig langų aprašymas".
-## 3. Sujungimų schemos, įrengimas ir paleidimas veikti 
+## Sujungimų schemos, įrengimas ir paleidimas veikti
 
-### 3.1 Tvirtinimas 
+### Tvirtinimas
 
 1.  Nuimkite viršutinį dangtelį, ištraukite kontaktinių kaladėlių kištukinę dalį.
 
@@ -370,7 +370,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
     Protegus2 programėlė arba ryšys su pultu IP kanalu. / Jei norite
     išvengti PIN kodo įvedimo TrikdisConfig, įdėkite SIM kortelę į
     telefoną ir išjunkite PIN kodo užklausos funkciją.
-### 3.2 Komunikatoriaus prie centralės nuosekliosios arba klaviatūros sąsajos prijungimo schemos 
+### Komunikatoriaus prie centralės nuosekliosios arba klaviatūros sąsajos prijungimo schemos
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
@@ -382,7 +382,7 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 <img alt="" src="./image25.png" style="width:6.70001312335958in;height:3.0466732283464566in" />
 
-### 3.3 Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų) 
+### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų)
 
 <img alt="" src="./image26.png" style="width:3.4033398950131235in;height:3.0466732283464566in" />
 
@@ -406,7 +406,7 @@ Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pult
 |     811     |       1111       |     911     |     1234     |
 |     812     |       2222       |             |              |
 
-### 3.4 Kominikatoriaus prie centralės jungiklio (angl. keyswitch) zonos prijungimo schema 
+### Kominikatoriaus prie centralės jungiklio (angl. keyswitch) zonos prijungimo schema
 
 Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su komunikatoriaus PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
@@ -426,7 +426,7 @@ Komunikatorius yra prijungtas prie centralės telefono komunikatoriaus (TIP/RING
 
 <img alt="" src="./image29.png" style="width:3.48000656167979in;height:2.653338801399825in" />
 
-### 3.5 Įėjimo prijungimo schemos 
+### Įėjimo prijungimo schemos
 
 Komunikatorius turi 2 universalius įėjimo/išėjimo gnybtus, kuriems galima nustatyti įėjimo IN veikimo režimą. Prie įėjimo gnybto galima prijungti NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandines. Įėjimo tipą galima nustatyti TrikdisConfig lange „**IN/OUT**“ **-> Tipas**.
 
@@ -436,13 +436,13 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
 
 <img alt="" src="./image31.png" style="width:4.921259842519685in;height:1.905511811023622in" />
 
-### 3.6 Relės prijungimo schema 
+### Relės prijungimo schema
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
 <img alt="" src="./image32.png" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
-### 3.7 Komunikatoriaus paleidimas veikti 
+### Komunikatoriaus paleidimas veikti
 
 Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maitinimo šaltinį. Turi užsidegti ši GET komunikatoriaus šviesinė indikacija:
 
@@ -459,9 +459,9 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
     nutikę žiūrėkite skyrių 1.6 „Šviesinė veikimo indikacija". / Jei
     GET indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir
     sujungimus.
-## 4. Centralės programavimas
+## Centralės programavimas
 
-### 4.1 Centralės programavimas kai komunikatorius yra prijungtas prie centralės nuosekliosios magistralės arba prie klaviatūros magistralės 
+### Centralės programavimas kai komunikatorius yra prijungtas prie centralės nuosekliosios magistralės arba prie klaviatūros magistralės
 
 Žemiau aprašome, kaip reikia programuoti apsaugos centrales, kad komunikatorius GET galėtų nuskaityti centralės pranešimus ir ją tiesiogiai valdyti nuotoliniu būdu.
 
@@ -556,7 +556,7 @@ Programavimas skirtas centralėms **Honeywell Ademco Vista-20** ir **Honeywell
 
 4.  Išeikite iš programavimo režimo. Klaviatūroje nuspauskite [\*][9][9] .
 
-### 4.2 Centralės programavimas kai komunikatorius prijungtas prie centralės TIP/RING gnybtų 
+### Centralės programavimas kai komunikatorius prijungtas prie centralės TIP/RING gnybtų
 
 Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis turi būti įjungtas ir tinkamai sukonfigūruotas. Vadovaudamiesi tam tikros apsaugos centralės programavimo vadovu, nustatykite centralės telefoninį komunikatorių:
 
@@ -642,9 +642,9 @@ Kai visi reikalingi nustatymai padaryti, būtina išeiti iš programavimo režim
 | Location 37 | 12345678*# |  |
 |  | EXIT EXIT | Išeikite iš programavimo režimo |
 
-## 5. Nuotolinis valdymas 
+## Nuotolinis valdymas
 
-### 5.1 Apsaugos sistemos pridėjimas Protegus2 programėlėje 
+### Apsaugos sistemos pridėjimas Protegus2 programėlėje
 
 Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
@@ -669,7 +669,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 | Paspauskite “Pridėti sistemą” ir įveskite GET „IMEI/​Unikalus ID“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“. |  |
 | Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau". |  |
 
-### 5.2 Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
+### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
 !!! note
     Centralės zonai, prie kurios prijungtas GET išėjimas OUT, turi
@@ -693,16 +693,16 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GET PGM išėjim
 
 <img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.031496062992126in" />
 
-### 5.3 Sistemos įjungimas/išjungimas su *Protegus2* 
+### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
 <img alt="" src="./image45.png" style="width:2.220472440944882in;height:2.7125984251968505in" />
 
-## 6. TrikdisConfig langų aprašymas 
+## TrikdisConfig langų aprašymas
 
-### 6.1 *TrikdisConfig* būsenos juostos aprašymas 
+### *TrikdisConfig* būsenos juostos aprašymas
 
 Prijungus GET TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
@@ -722,7 +722,7 @@ Prijungus GET TrikdisConfig būsenų juostoje pateiks informaciją apie prijungt
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti GET. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 6.2 Langas „Sistemos parinktys“ 
+### Langas „Sistemos parinktys“
 
 <img alt="" src="./image47.png" style="width:7.086614173228346in;height:2.7992125984251968in" />
 
@@ -746,7 +746,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 - **Instaliuotojui leisti keisti** – administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.
 
-### 6.3 Langas “Centralės sąsaja” 
+### Langas “Centralės sąsaja”
 
 <img alt="" src="./image48.png" style="width:7.086614173228346in;height:4.062992125984252in" />
 
@@ -780,7 +780,7 @@ Komunikatorius prie centralės yra prijungtas per nuosekliąją sąsają.
 
 - **Centralės PC download slaptažodis -** Paradox ir Texecom centralių tiesioginiam valdymui reikia suvesti PC/UDL slaptažodį. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje. Kaip pakeisti šį slaptažodį centralėje aprašyta skyriuje 4.1 „Centralės programavimas kai komunikatorius yra prijungtas prie centralės nuosekliosios magistralės arba prie klaviatūros magistralės***“***.
 
-### 6.4 Langas “Pranešimai į CSP” 
+### Langas “Pranešimai į CSP”
 
 **Skirtukas „CSP nustatymai“**
 
@@ -848,7 +848,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP ir į Protegu
 
 - **Komunikacijos tikrinimas** – nurodykite laiko periodą, kas kiek laiko būtu testuojami parinkti ryšio tipai (LAN, SIM1, SIM2).
 
-### 6.5 Langas „Pranešimai vartotojui” 
+### Langas „Pranešimai vartotojui”
 
 **Skirtukas “Protegus servisas”**
 
@@ -863,7 +863,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 - **Lygiagretus siuntimas** – įgalintas lygiagretus pranešimų siuntimas *pagrindiniu* kanalu ir į Protegus2. Pranešimai į Protegus2 ir vartotojams bus siunčiami tik kai pranešimai bus perduoti saugos tarnybai.
 
-### 6.6 Langas “Tinklo nustatymai” 
+### Langas “Tinklo nustatymai”
 
 **Skirtukas „LAN“**
 
@@ -926,7 +926,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 - **Numatytasis operatorius** – įvedus mobilaus tinklo operatoriaus kodą, komunikatorius jungsis tik prie pasirinkto operatoriaus tinklo. Mobilaus tinklo operatoriaus kodas susideda iš MCC ir MNS kodų.
 
-### 6.7 Langas „IN/OUT“ 
+### Langas „IN/OUT“
 
 <img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.456692913385827in" />
 
@@ -946,7 +946,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 - **Zona** - įrašykite zonos numerį, kuris bus siunčiamas įvykus vidiniam įvykiui ir atsistačius sistemai.
 
-### 6.8 Langas „Įvykių aprašas” 
+### Langas „Įvykių aprašas”
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
@@ -976,7 +976,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Galite pakeisti kiekvieno įvykio Contact ID (SIA) kodą, taip pat su pranešimu nurodomą zonos ir srities numerį.
 
-### 6.9 Gamyklinių nustatymų atstatymas 
+### Gamyklinių nustatymų atstatymas
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
@@ -1016,7 +1016,7 @@ Maitinimas prijungtas prie komunikatoriaus. Paspauskite ir palaikykite mygtuką 
 
 4.  Nustatykite norimus nustatymus ir pabaigę nuspauskite **Įrašyti [F5]**.
 
-## 7. Komunikatoriaus testavimas 
+## Komunikatoriaus testavimas
 
 Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
@@ -1034,7 +1034,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 4.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus2 programėle.
 
-## 8. Programinės įrangos atnaujinimas 
+## Programinės įrangos atnaujinimas
 
 !!! note
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
@@ -1061,7 +1061,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Palaukite, kol bus atlikti atnaujinimai.
 
-## 9. Saugos reikalavimai
+## Saugos reikalavimai
 
 Komunikatorių turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 
@@ -1073,7 +1073,7 @@ Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo
 
 <img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
-## 10. Priedas 
+## Priedas
 
 Komunikatorius, gautus iš signalizacijos centralės, Contact ID kodus konvertuoja į SIA kodus.
 

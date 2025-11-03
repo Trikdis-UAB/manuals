@@ -4,7 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## 1. Aprašymas 
+## Aprašymas
 
 CG17 yra daugiafunkcė apsaugos centralė su integruotu mobiliojo ryšio komunikatoriumi. Centralė leidžia sukurti į 8 sritis sugrupuotų 12 laidinių ir belaidžių zonų sistemą.
 
@@ -101,7 +101,7 @@ Dirba su „Protegus2“ programėle:
 
 - Du parametrų nustatymo lygiai (paskyros), instaliuotojui ir administratoriui.
 
-### 1.1 Įrenginio tipai 
+### Įrenginio tipai
 
 Ši instrukcija galioja šiems CG17 modeliams:
 
@@ -109,7 +109,7 @@ Dirba su „Protegus2“ programėle:
 
 - CG17_14, CG17_1E, CG17_1S, CG17 centralė su 4G modemu.
 
-### 1.2 Techniniai parametrai
+### Techniniai parametrai
 
 | Parametras | Aprašymas |
 |------------|-----------|
@@ -143,7 +143,7 @@ Dirba su „Protegus2“ programėle:
 | Matmenys | 113x 70 x 25 mm |
 | Svoris | 0,10 kg |
 
-### 1.3 Išorinių kontaktų paskirtis
+### Išorinių kontaktų paskirtis
 
 1.  GSM antenos SMA tipo jungtis.
 
@@ -178,7 +178,7 @@ Dirba su „Protegus2“ programėle:
 | 5 OUT | OC tipo išėjimo kontaktas (gamyklinis nustatymas „Gaisro daviklių atstatymas“) |
 | 6 OUT | OC tipo išėjimo kontaktas (gamyklinis nustatymas „Sirena“) |
 
-### 1.4 Šviesinė veikimo indikacija 
+### Šviesinė veikimo indikacija
 
 | Indikatorius | Būklė | Aprašymas |
 |--------------|-------|-----------|
@@ -200,11 +200,11 @@ Dirba su „Protegus2“ programėle:
 | TROUBLE (Nesklandumas) | 8 mirktelėjimai | Nėra maitinimo iš kintamos srovės tinklo |
 | TROUBLE (Nesklandumas) | 9 mirktelėjimai | Ryšio sutrikimas su RS485 moduliu |
 
-### 1.5 Medžiagos, reikalingos montavimo darbams 
+### Medžiagos, reikalingos montavimo darbams
 
 <img alt="" src="./image5.png" style="width:5.511811023622047in;height:0.531496062992126in" />Prieš pradėdami montavimą įsitikinkite, kad turite reikiamas medžiagas, kurias galite užsisakyti iš vietinio platintojo.
 
-## 2. Greitas konfigūravimas su programa *TrikdisConfig* 
+## Greitas konfigūravimas su programa *TrikdisConfig*
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.lt](http://www.trikdis.lt) (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiekite*.*
 
@@ -220,7 +220,7 @@ Dirba su „Protegus2“ programėle:
 
 Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad CG17 pradėtų siųsti pranešimus į Stebėjimo pultą ir kad apsaugos centralę būtų galima valdyti su Protegus2 programėle.
 
-### 2.1 Nustatymai ryšiui su Protegus2 programėle 
+### Nustatymai ryšiui su Protegus2 programėle
 
 **Lango „Sistemos parinktys“ kortelėje „SIM“:**
 
@@ -243,7 +243,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 !!! note
     Plačiau apie kitus CG17 nustatymus TrikdisConfig žr. 4
     „Veikimo parametrų nustatymas su programa TrikdisConfig".
-### 2.2 Nustatymai ryšiui su Stebėjimo pultu 
+### Nustatymai ryšiui su Stebėjimo pultu
 
 **Lange „Sistemos parinktys“:**
 
@@ -286,9 +286,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus CG17 nustatymus TrikdisConfig žr. skyrių
     4 „Veikimo parametrų nustatymas su programa TrikdisConfig".
-## 3. Sujungimų schemos ir įrengimas 
+## Sujungimų schemos ir įrengimas
 
-### 3.1 Tvirtinimas 
+### Tvirtinimas
 
 1.  Prieš diegdami įsitikinkite, kad toje vietoje, kur bus įrengtas *CG17*, yra geras GSM signalo lygis.
 
@@ -324,7 +324,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 3.  Uždarykite viršutinį dangtį.
 
-### 3.2 Zonų įėjimų prijungimo schemos 
+### Zonų įėjimų prijungimo schemos
 
 CG17 turi keturis įėjimus IN įvairiems signalizacijos jutikliams prijungti. Galimi jutiklių pajungimai: NO – normaliai atviras kontaktas; NC- normaliai uždaras kontaktas; EOL – normaliai uždara grandinė su 10 kΩ varža linijos gale; EOL_T - normaliai uždara grandinė su 10 kΩ varža linijos gale ir tamperio stebėjimu.
 
@@ -343,7 +343,7 @@ Galimos sujungimų schemos:
 
 <img alt="" src="./image13.png" style="width:6.39001312335958in;height:1.430003280839895in" />
 
-### 3.3 Dūmų jutiklio prijungimo schemos 
+### Dūmų jutiklio prijungimo schemos
 
 Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti iš naujo, PGM išėjimui priskirkite funkciją „**Gaisro daviklių atstatymas“** (žr. TrikdisConfig langas „[PGM išėjimai“ –> skirtukas „Išėjimai“](#Output_tab)).
 
@@ -363,7 +363,7 @@ Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti 
 
 \*SM1 – Trikdžio pagamintas suderinimo modulis, leidžiantis nuotoliniu būdu 2 laidų dūmų jutiklį po suveikimo paleisti veikti iš naujo.
 
-### 3.4 Temperatūros daviklio prijungimo schema 
+### Temperatūros daviklio prijungimo schema
 
 - Temperatūros davikliai jungiami pagal pateiktą schemą. Prie *CG17* galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros daviklius (iki 8 vnt.).
 
@@ -379,11 +379,11 @@ Laidų spalvos:
 
 **GND** - juodas laidas, junkite jį prie *COM* kontakto.
 
-### 3.5 Relės ir LED prijungimo schemos 
+### Relės ir LED prijungimo schemos
 
 <img alt="" src="./image18.png" style="width:4.4175087489063865in;height:0.8850021872265966in" />
 
-### 3.6 Kontaktinių raktų skaitytuvų prijungimo schemos 
+### Kontaktinių raktų skaitytuvų prijungimo schemos
 
 **TM17** skaitytuvas prie CG17 jungiamas per *RS485* duomenų jungtį. *RS485* duomenų jungties laidų ilgis gali būti iki 100 m. Prie CG17 galima prijungti iki 8 skaitytuvų TM17.
 
@@ -396,13 +396,13 @@ Laidų spalvos:
 !!! note
     Raktų priregistravimas prie CG17 aprašytas p. 4.4.1 „Kontaktinių
     (iButton) raktų registravimas".
-### 3.7 Belaidžių jutiklių imtuvo RF-SH prijungimo schema 
+### Belaidžių jutiklių imtuvo RF-SH prijungimo schema
 
 Belaidžių jutiklių imtuvas *RF-SH* skirtas dirbti su *Crow* firmos belaidžiais gaminiais (judesio jutikliai, magnetiniai kontaktai, sirenos, nuotolinio valdymo pulteliai ir t.t.). Prie *CG17* galima prijungti vieną *RF-SH* imtuvą.
 
 <img alt="" src="./image21.png" style="width:2.60625in;height:1.175in" />
 
-### 3.8 iO serijos išplėtimo modulių prijungimo schemos 
+### iO serijos išplėtimo modulių prijungimo schemos
 
 Jei reikia, kad apsaugos centralė CG17 turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. CG17 konfigūravimas su plėtimo moduliais aprašytas p. 4.5. „Langas „Moduliai““. Prie CG17 galima prijungti iki 8 plėtimo iO-8 modulių. iO-8 modulyje galima išnaudoti visas arba tik kelias zonas. Bendras CG17 zonų skaičius yra 12 vnt.
 
@@ -415,13 +415,13 @@ Jei reikia, kad apsaugos centralė CG17 turėtų daugiau įėjimų IN arba išė
   </figure>
 </div>
 
-### 3.9 Klaviatūros Crow CR-16 prijungimo schema 
+### Klaviatūros Crow CR-16 prijungimo schema
 
 Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner arba Crow CR-16 PowerWave). Programoje *TrikdisConfig* reikia pažymėti, kad bus naudojama Crow klaviatūra (žr. p. 4.2 „Langas „Sistemos parinktys““).
 
 <img alt="" src="./image24.png" style="width:3.35000656167979in;height:1.490003280839895in" />
 
-### 3.10 Sirenos prijungimo schema 
+### Sirenos prijungimo schema
 
 - Sireną, naudojančią iki 1 A srovę, galima prijungti prie 5 OUT išėjimo arba 6 OUT išėjimo.
 
@@ -431,7 +431,7 @@ Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Run
 
 <img alt="" src="./image25.png" style="width:2.803472222222222in;height:1.1534722222222222in" />
 
-### 3.11 iO serijos plėtimo modulių prijungimo schemos 
+### iO serijos plėtimo modulių prijungimo schemos
 
 <img alt="" src="./image26.png" style="width:7.0875in;height:4.688194444444444in" />
 
@@ -447,7 +447,7 @@ Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Run
     
     **iButton raktų skaitytuvai** ir **temperatūros davikliai** jungiami
     prie *1-Wire* gnybto.
-### 3.12 Kuro lygio jutiklio Strela RS485 prijungimo schema 
+### Kuro lygio jutiklio Strela RS485 prijungimo schema
 
 <img alt="" src="./image27.png" style="width:3.7025076552930885in;height:1.2375021872265968in" />
 
@@ -495,7 +495,7 @@ Kuro jutiklį „STRELA S485“ (http://strela-fls.com/products/fuel_level_sens
 
 13. Atjunkite kuro jutiklį ir prijunkite jį prie CG17.
 
-### 3.13 Akumuliatoriaus prijungimo schema 
+### Akumuliatoriaus prijungimo schema
 
 Prie CG17 gali būti prijungtas 12 V akumuliatorius. Nutrūkus maitinimui iš kintamos srovės elektros tinklo, bus siunčiamas įvykio pranešimas „*Nėra maitinimo kintamos srovės įtampos“ („AC fault“)*, o CG17 automatiškai persijungs į 12 V akumuliatorių.
 
@@ -517,13 +517,13 @@ Prie CG17 gali būti prijungtas 12 V akumuliatorius. Nutrūkus maitinimui iš k
 
 <img alt="" src="./image34.png" style="width:1.98667104111986in;height:1.360003280839895in" />
 
-### 3.14 CG17 prijungimo prie apsaugos centralės schema 
+### CG17 prijungimo prie apsaugos centralės schema
 
 *CG17*, dirbant komunikatoriaus režime, įėjimams IN (I/O) turi būti priskirta „24 valandų“ funkcija ir nurodytas grandinės tipas „NO“ arba „NC“. / *CG17* įėjimų suveikimui/atsistatymui galima įrašyti SMS įvykių pranešimų tekstus, kuriuos gaus vartotojas. / Apsaugos centralės PGM išėjimams turi būti priskirti įvykiai.
 
 <img alt="" src="./image35.png" style="width:2.60625in;height:1.4791666666666667in" />
 
-### 3.15 Įtampos matavimas su CG17 
+### Įtampos matavimas su CG17
 
 Su *CG17* galima atlikti nuolatinės įtampos matavimą. Įtampai matuoti galima pasirinkti keturis *CG17* įėjimus 1IN, 2IN, 3IN, 4IN. Matuojama įtampa nuo 0 V iki 30 V (viršijus 30 V apsaugos centralė *CG17* bus sugadinta). Prie „1IN“ ir „COM“ gnybtų reikia prijungti matuojamą įtampą. „1IN“ - teigiamas gnybtas. „COM“ – neigiamas gnybtas.
 
@@ -566,19 +566,19 @@ Pereikite prie skirtuko **Nustatyti veikimą**.
 - **Pradėti, kai** – nustatykite papildomą PGM išėjimo valdymo sąlygą.
 - **Nustatyta reikšmė** – nurodykite įtampos dydį (V), kurį stebės valdiklis ir valdys PGM išėjimą.
 
-### 3.16 WiFi modulio W485 prijungimo schema 
+### WiFi modulio W485 prijungimo schema
 
 Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *CG17* (programinės įrangos versija nuo Ver.1.13) pranešimai į CSP ir į *Protegus2* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *CG17* pradeda toliau siusti pranešimus per *W485*. / *CG17* konfigūravimas su WiFi moduliu *W485* aprašytas p. 4.5. „Langas „Moduliai“. / Naudojant modulį *W485* kartu su apsaugos centrale *CG17* SIM kortelė nebūtina. / Prie *CG17* galima prijungti vieną *W485* modulį.
 
 <img alt="" src="./image40.png" style="width:3.22750656167979in;height:2.4225043744531933in" />
 
-### 3.17 „Ethernet“ modulio E485 prijungimo schema 
+### „Ethernet“ modulio E485 prijungimo schema
 
 Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *CG17* (programinės įrangos versija nuo Ver.1.13) pranešimai į CSP ir į *Protegus2* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *CG17* pradeda toliau siusti pranešimus per *E485*. / *CG17* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 4.5. „Langas „Moduliai“. / Naudojant modulį *E485* kartu su apsaugos centrale *CG17* SIM kortelė nebūtina. / Prie *CG17* galima prijungti vieną *E485* modulį.
 
 <img alt="" src="./image41.png" style="width:3.22750656167979in;height:2.4225043744531933in" />
 
-### 3.18 iO-LORA plėtimo modulių prijungimo schema 
+### iO-LORA plėtimo modulių prijungimo schema
 
 Valdiklio veikimo programos versija nuo 1.18 arba aukštesnė.
 
@@ -592,7 +592,7 @@ Paleiskite TrikdisConfig. Prijunkite CG17 per USB Mini-B kabelį prie kompiuteri
 
 Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai. Nuspauskite "**Atsijungti**" ir atjunkite USB kabelį.
 
-## 4. Veikimo parametrų nustatymas su programa *TrikdisConfig* 
+## Veikimo parametrų nustatymas su programa *TrikdisConfig*
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.com/lt](http://www.trikdis.com/lt)/ (programą rasite paieškos lauke surinkę „TrikdisConfig“) ir ją įdiekite.
 
@@ -606,7 +606,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 3.  Spustelkite programos mygtuką **Skaityti [F4]**, kad ji pateiktų esamas CG17 veikimo parametrų reikšmes. Jei reikalaujama, įveskite *administratoriaus* arba *instaliuotojo* kodą iššokančiame langelyje.
 
-### 4.1 TrikdisConfig būklės juostos aprašymas 
+### TrikdisConfig būklės juostos aprašymas
 
 Prijungus CG17 prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
@@ -640,7 +640,7 @@ Prijungus CG17 prie programos TrikdisConfig, programa būsenų juostoje pateiks 
     kairėje.
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti CG17. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 4.2 Langas „Sistemos parinktys“ 
+### Langas „Sistemos parinktys“
 
 **Skirtukas „Pagrindiniai“**
 
@@ -719,7 +719,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 - Nurodo montuotojo teises.
 
-### 4.3 Langas „Pranešimai į ST pultą“ 
+### Langas „Pranešimai į ST pultą“
 
 <img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.547244094488189in" />
 
@@ -759,7 +759,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 - **Telefono numeris** - CSP imtuvo, galinčio priimti SMS pranešimus, telefono numeris (pvz.: 370xxxxxxxx). *Atsarginiu* *SMS* kanalu pranešimai siunčiami tada, kai jų nepavyksta perduoti *pagrindiniu* ir *atsarginiu* kanalais. Jis ypatingai naudingas, nes veikia net ir tada, kai sutrinka IP ryšys mobiliojo ryšio operatoriaus tinkle. Šis kanalas veikia tik tada, kai yra nustatytas GPRS režimas *pagrindiniame* kanale ir *atsarginiame* kanale. SMS pranešimai bus siunčiami į stebėjimo pulto SMS imtuvą: 1) iš karto, pradėjus veikti CG17 pirmą kartą; ir 2) po TCP/IP ar UDP/IP ryšio nutrūkimo *pagrindiniame* ir *atsarginio ryšio* kanaluose.
 
-### 4.4 Langas „Vartotojai ir pranešimai“ 
+### Langas „Vartotojai ir pranešimai“
 
 **Skirtukas „Vartotojai“**
 
@@ -858,7 +858,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 - Atsakymų į SMS žinutėmis siųstas valdymo komandas tekstus galima redaguoti laukelyje „**SMS žinutės tekstas**“.
 
-### 4.5 Langas „Moduliai“ 
+### Langas „Moduliai“
 
 **Skirtukas „RS485 moduliai“**
 
@@ -1021,7 +1021,7 @@ Kas kartą įjungiant kuro lygio jutiklį jis pamatuoja esamą degalų lygį ir 
 
 Darbo metu kuro lygio jutiklis kiekvieną laiko intervalą matuoja kuro lygį ir lygina jį su vartojimo rodikliu. Jei kuro sunaudojimas per konkretų laiko intervalą didesnis už įvestą vartojimo rodiklį, tai CG17 siunčia pranešimą į saugos tarnybą ir/arba vartotojams.
 
-### 4.6 Langas „Bevieliai jutikliai“ 
+### Langas „Bevieliai jutikliai“
 
 <img alt="" src="./image59.png" style="width:7.086614173228346in;height:1.736220472440945in" />
 
@@ -1286,7 +1286,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
         „**Klaviatūra SH**", nurodykite „**Išjungtas**" ir paspauskite
         **Įrašyti [F5]**. Belaidė klaviatūra ištrinta iš CG17
         atminties.
-### 4.7 Langas „Zonų įėjimai“ 
+### Langas „Zonų įėjimai“
 
 <img alt="" src="./image62.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
@@ -1350,7 +1350,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 - **SMS/Skamb** – pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvienos zonos įvykius – SMS žinutėmis ar/ir skambučiais.
 
-### 4.8 Langas „PGM išėjimai“ 
+### Langas „PGM išėjimai“
 
 **Skirtukas „Išėjimai“**
 
@@ -1456,7 +1456,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Vartotojas / SMS ir Skambutis** – galite parinkti, kurį vartotoją SMS žinute ar/ir skambučiu informuoti, kada OUT išėjimas bus įjungtas/išjungtas.
 
-### 4.9 Langas „Jutikliai“ 
+### Langas „Jutikliai“
 
 <img alt="" src="./image69.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
@@ -1472,7 +1472,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Min.** – mažiausia ribinė temperatūros daviklio reikšmė, žemiau kurios nukritus, bus formuojamas pranešimas apie įvykį. Kad būtų formuojamas pranešimas, turi būti uždėta varnelė „**Min**“ stulpelyje.
 
-### 4.10 Langas „Sistemos įvykiai“ 
+### Langas „Sistemos įvykiai“
 
 **Skirtukas „Įvykiai“**
 
@@ -1504,7 +1504,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Vartotojas / SMS ir Skambutis** – pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvieną įvykį – SMS žinute ir/arba skambučiu.
 
-### 4.11 Langas „Įvykių žurnalas“ 
+### Langas „Įvykių žurnalas“
 
 <img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.6181102362204722in" />
 
@@ -1514,15 +1514,15 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - Lentelėje galima rasti „**Įvykio Nr.**“, „**Laiką**, **CID**“ kodą, „**Įvykio pavadinimą**“. Įvykių žurnalo istorijoje gali būti parodyta iki 1000 įvykių išsaugotų CG17 atmintyje.
 
-### 4.12 Gamyklinių nustatymų atstatymas 
+### Gamyklinių nustatymų atstatymas
 
 Norint atkurti centralės gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
 <img alt="" src="./image73.png" style="width:7.086614173228346in;height:1.0748031496062993in" />
 
-## 5. Nuotolinis valdymas 
+## Nuotolinis valdymas
 
-### 5.1 Valdymas su *Protegus2* programėle 
+### Valdymas su *Protegus2* programėle
 
 Su Protegus2 vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
@@ -1609,7 +1609,7 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 <img alt="" src="./image87.png" style="width:2.7559055118110236in;height:3.6181102362204722in" />
 
-### 5.2 Valdymas SMS komandomis 
+### Valdymas SMS komandomis
 
 1.  **Įjunkite arba išjunkite apsaugos sistemą SMS žinute**
 
@@ -1697,7 +1697,7 @@ Dūmų jutiklių perkrovimas nuotoliniu būdu SMS žinute:
 |  |  | Viena SMS žinute gali būti keičiami vienas ar keli parametrai. Atskiri nustatymai atskiriami kableliu. / Pvz.: SETH2 123465 T2=55,S3=5,A=3,O=1,M=H / Antram termostatui nustatoma antra temperatūra +55<sup>o</sup>C; trečias režimas veiks pagal 5 temperatūros jutiklį; bus aktyvus 3 režimo temperatūros jutiklis; priskirtas valdymui išėjimas 1 OUT; termostato darbo režimas šildymas. |
 | ASKH |  | Atsiunčia visų termostatų nustatymus SMS žinute. Pagrindinė informacija – ar termostatas įjungtas, šaldymas ar šildymas, aktyvaus termostato režimo numeris, ir visų nustatytų temperatūrų reikšmės. / Pvz.: ASKH 123456 |
 
-### 5.3 Valdymas skambučiu 
+### Valdymas skambučiu
 
 !!! note
     Jei sistemoje nėra pridėtų vartotojų, pirmasis paskambinęs į CG17
@@ -1722,7 +1722,7 @@ Išėjimų OUT ir signalizacijos sričių valdymas skambučiu:
 | [6][srities nr][#] | Pasirinktos signalizacijos srities įjungimas | Pvz. (įjungti apsaugai 2 signalizacijos sritį): 62# |
 | [7][srities nr][#] | Pasirinktos srities signalizacijos išjungimas | Pvz. (išjungti apsaugą 1 signalizacijos sričiai): 71# |
 
-### 5.4 Nuotolinis veikimo parametrų nustatymas 
+### Nuotolinis veikimo parametrų nustatymas
 
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai CG17:
@@ -1750,7 +1750,7 @@ Išėjimų OUT ir signalizacijos sričių valdymas skambučiu:
 
 6.  Nustatykite norimus nustatymus CG17 ir pabaigę nuspauskite **Įrašyti [F5]**. Jei norite atsijungti nuo CG17 nuspauskite „**Atsijungti**“ ir išeikite iš programos TrikdisConfig.
 
-### 5.5 Nuotolinis valdymas su TrikdisConfig 
+### Nuotolinis valdymas su TrikdisConfig
 
 1.  Parsisiųskite programą TrikdisConfig iš [www.trikdis.lt](http://www.trikdis.lt)
 
@@ -1784,7 +1784,7 @@ Išėjimų OUT ir signalizacijos sričių valdymas skambučiu:
 
 <img alt="" src="./image94.png" style="width:7.086614173228346in;height:3.15748031496063in" />
 
-## 6. GSM apsaugos centralės CG17 testavimas 
+## GSM apsaugos centralės CG17 testavimas
 
 Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
@@ -1798,7 +1798,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 5.  Atlikite signalizacijos bandymą, kad įsitikintumėte, jog CSP tinkamai priima įvykius.
 
-## 7. Programinės įrangos atnaujinimas 
+## Programinės įrangos atnaujinimas
 
 !!! note
     Prijungus CG17 prie TrikdisConfig, programa pasiūlys
@@ -1825,9 +1825,9 @@ Atlikite šiuos žingsnius:
 
 3.  Palaukite, kol bus atlikti atnaujinimai.
 
-## 8. Turinys 
+## Turinys
 
-## 9. Saugos reikalavimai 
+## Saugos reikalavimai
 
 Patalpų elektroninės apsaugos nuo įsibrovimo sistemą įrengti ir aptarnauti gali tik kvalifikuoti asmenys.
 

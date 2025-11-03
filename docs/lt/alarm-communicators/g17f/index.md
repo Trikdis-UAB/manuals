@@ -4,7 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## 1. Aprašymas 
+## Aprašymas
 
 Komunikatorius G17F atitinka standarto EN 54-21:2006 reikalavimus.
 
@@ -75,7 +75,7 @@ Pranešimai vartotojams
 
 - Naudojant iO serijos išplėtėjus, įėjimų (IN) arba išėjimų (OUT) skaičių galima išplėsti iki 12 vnt.
 
-### 1.1 Techniniai parametrai
+### Techniniai parametrai
 
 | Parametras | Aprašymas |
 |------------|-----------|
@@ -97,7 +97,7 @@ Pranešimai vartotojams
 | Komunikatoriaus matmenys | 92 x 62 x 25 mm |
 | Svoris | g |
 
-### 1.2 G17F komunikatoriaus elementai 
+### G17F komunikatoriaus elementai
 
 1.  GSM antenos SMA jungtis.
 
@@ -113,7 +113,7 @@ Pranešimai vartotojams
 
 <img alt="" src="./image4.png" style="width:4.575in;height:2.8722222222222222in" />
 
-### 1.3 Išorinių kontaktų paskirtis
+### Išorinių kontaktų paskirtis
 
 | Gnybtas | Aprašymas |
 |---------|-----------|
@@ -129,7 +129,7 @@ Pranešimai vartotojams
 | 6 IN | 6-as įėjimo gnybtas, pasirenkamo tipo NO, NC, EOL (4,7kΩ, 10 kΩ) (gamyklinis nustatymas: IN, EOL=10 kΩ) |
 | A RS485 | RS485 gnybtai skirti prijungti iO serijos įėjimų ir išėjimų plėtikliams, INIM Smartline priešgaisrinei centralei, NSC Solution priešgaisrinei centralei, C-TEC Cast ZFP priešgaisrinei centralei, priešgaisrinei centralei su ESPA4.4.4 protokolu, moduliams E485 ir W485 |
 
-### 1.4 Šviesinė veikimo indikacija 
+### Šviesinė veikimo indikacija
 
 | Indikatorius | Būklė | Aprašymas |
 |--------------|-------|-----------|
@@ -150,7 +150,7 @@ Pranešimai vartotojams
 | Trouble / (Nesklandumas) | 7 mirktelėjimai | Nepakankama maitinimo įtampa |
 | Trouble / (Nesklandumas) | 9 mirktelėjimai | Ryšio su RS485 moduliu sutrikimas |
 
-### 1.5 Medžiagos reikalingos montavimo darbams 
+### Medžiagos reikalingos montavimo darbams
 
 Prieš pradėdami įrengimą, įsitikinkite, kad turite:
 
@@ -168,7 +168,7 @@ Prieš pradėdami įrengimą, įsitikinkite, kad turite:
 
 Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
-## 2. Greitas konfigūravimas su programa *TrikdisConfig* 
+## Greitas konfigūravimas su programa *TrikdisConfig*
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš <u>www.trikdis.lt</u> (programą rasite paieškos lauke surinkę „TrikdisConfig“) ir ją įdiekite*.*
 
@@ -184,7 +184,7 @@ Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
 Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į Protegus2 programėlę arba į stebėjimo pultą.
 
-### 2.1 Nustatymai ryšiui su Protegus2 programėle 
+### Nustatymai ryšiui su Protegus2 programėle
 
 **Lango „Vartotojai ir pranešimai“ kortelėje „Mobilioji aplikacija“:**
 
@@ -225,7 +225,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus G17F nustatymus TrikdisConfig žr. skyrių
     5 „TrikdisConfig langų aprašymas".
-### 2.2 Nustatymai ryšiui su Stebėjimo pultu 
+### Nustatymai ryšiui su Stebėjimo pultu
 
 **Lange „Sistemos parinktys“:**
 
@@ -268,9 +268,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus G17F nustatymus TrikdisConfig žr. skyrių
     5 „TrikdisConfig langų aprašymas".
-## 3. Sistemos sujungimų schemos, įrengimas ir paleidimas 
+## Sistemos sujungimų schemos, įrengimas ir paleidimas
 
-### 3.1 Tvirtinimas 
+### Tvirtinimas
 
 1.  Prieš įrengdami sistemą įsitikinkite, kad toje vietoje, kur bus tvirtinamas *G17F*, geras GSM signalo stiprumas.
 
@@ -302,13 +302,13 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 3.  Uždarykite viršutinį dangtį.
 
-### 3.2 Priešgaisrinės centralės ir komunikatoriaus jungimo schema 
+### Priešgaisrinės centralės ir komunikatoriaus jungimo schema
 
 Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus jo išėjimus prie *G17F* įėjimų. Priešgaisrinės centralės išėjimai (PGM1, PGM2, PGM3) turi būti sukonfigūruoti kaip centralės būsenos išėjimai (Aliarmas, Gedimas ir kt.).
 
 <img alt="" src="./image15.png" style="width:3.047244094488189in;height:2.877952755905512in" />
 
-## 4. Priešgaisrinės centralės ESPA4.4.4 prijungimo schema 
+## Priešgaisrinės centralės ESPA4.4.4 prijungimo schema
 
 <img alt="" src="./image16.png" style="width:2.673338801399825in;height:1.350003280839895in" />
 
@@ -336,7 +336,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17F pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-## 5. Priešgaisrinės centralės NSC Solution prijungimo schema 
+## Priešgaisrinės centralės NSC Solution prijungimo schema
 
 <img alt="" src="./image21.png" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
@@ -364,7 +364,7 @@ Sukonfigūravus komunikatorių G17F, įjunkite priešgaisrinės centralės maiti
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17F pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-### 5.1 Priešgaisrinės centralės INIM Smartline ir komunikatoriaus jungimo schema 
+### Priešgaisrinės centralės INIM Smartline ir komunikatoriaus jungimo schema
 
 <img alt="" src="./image26.png" style="width:3.643340988626422in;height:1.1800021872265967in" />
 
@@ -401,7 +401,7 @@ Nustatymai TrikdisConfig, kai prijungta priešgaisrinė centralė INIM Smartline
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17F pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-## 6. Priešgaisrinės centralės C-TEC Cast ZFP prijungimo schema 
+## Priešgaisrinės centralės C-TEC Cast ZFP prijungimo schema
 
 <img alt="" src="./image32.png" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
@@ -473,7 +473,7 @@ Priešgaisrinė centralė užprogramuota. Atjunkite USB2.0 A-B kabelį nuo prie�
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17F pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-### 6.1 Įėjimo prijungimo schemos 
+### Įėjimo prijungimo schemos
 
 Komunikatorius turi šešis (1IN – 6IN) įėjimo gnybtus (trys gnybtai yra dvigubos paskirties IN/OUT) prijungti NO, NC, EOL (4,7kΩ, 10 kΩ) tipo grandinėms. Gamyklinis įėjimo nustatymas – stebėti EOL tipo grandinę. Kitą įėjimo tipą galima nustatyti TrikdisConfig lange **Zonų įėjimai**.
 
@@ -481,37 +481,37 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 <img alt="" src="./image45.png" style="width:6.299212598425197in;height:1.6220472440944882in" />
 
-### 6.2 iO serijos plėtimo modulių prijungimo schema 
+### iO serijos plėtimo modulių prijungimo schema
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
 
 <img alt="" src="./image46.png" style="width:6.82751312335958in;height:5.095009842519685in" />
 
-### 6.3 iO-8 plėtimo modulio prijungimo schema 
+### iO-8 plėtimo modulio prijungimo schema
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį TRIKDIS *iO-8* įėjimų ir išėjimų plėtiklį.
 
 <img alt="" src="./image47.png" style="width:2.2401574803149606in;height:1.2086614173228347in" />
 
-### 6.4 LORA serijos išplėtimo modulių prijungimo schema 
+### LORA serijos išplėtimo modulių prijungimo schema
 
 LORA plėtimo modulių prijungimo schema.
 
 <img alt="" src="./image48.png" style="width:5.26667760279965in;height:6.646679790026247in" />
 
-### 6.5 WiFi modulio W485 (W17U) prijungimo schema 
+### WiFi modulio W485 (W17U) prijungimo schema
 
 Komunikatoriaus *G17F* veikimo programos versija nuo 1.08. / Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *G17F* pranešimai į CSP ir į *Protegus2* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *G17F* pradeda toliau siusti pranešimus per *W485*. / *G17F* konfigūravimas su WiFi moduliu *W485* aprašytas p. 5.5. „Langas „Moduliai“. / Naudojant modulį *W485* kartu su *G17F* SIM kortelė nebūtina.
 
 <img alt="" src="./image49.png" style="width:3.1496062992125986in;height:2.1929133858267718in" />
 
-### 6.6 „Ethernet“ modulio E485 prijungimo schema 
+### „Ethernet“ modulio E485 prijungimo schema
 
 Komunikatoriaus *G17F* veikimo programos versija nuo 1.08. / Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *G17F* pranešimai į CSP ir į *Protegus2* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *G17F* pradeda toliau siusti pranešimus per *E485*. / *G17F* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 5.5. „Langas „Moduliai“. / Naudojant modulį *E485* kartu su *G17F* SIM kortelė nebūtina.
 
 <img alt="" src="./image50.png" style="width:3.1496062992125986in;height:2.204724409448819in" />
 
-### 6.7 Komunikatoriaus įjungimas 
+### Komunikatoriaus įjungimas
 
 Norint įjungti komunikatorių, pirma reikia užtikrinti maitinimo šaltinį priešgaisrinei centralei. Jei komunikatorius veikia tinkamai, turi užsidegti ši G17F šviesinė indikacija:
 
@@ -529,9 +529,9 @@ Norint įjungti komunikatorių, pirma reikia užtikrinti maitinimo šaltinį pri
     ieškokite indikacijos reikšmės skyriuje 1.4 „Šviesinė veikimo
     indikacija". / Jei G17F šviesos indikatorius visiškai neaktyvus,
     patikrinkite maitinimo šaltinį ir sujungimus.
-## 7. Nuotolinis valdymas 
+## Nuotolinis valdymas
 
-### 7.1 Komunikatoriaus registravimas Protegus2 programėlėje 
+### Komunikatoriaus registravimas Protegus2 programėlėje
 
 Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti pranešimus apie sistemos įvykius.
 
@@ -569,7 +569,7 @@ Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti 
 
 <img alt="" src="./image54.png" style="width:2.9803149606299213in;height:3.8858267716535435in" />
 
-### 7.2 Konfigūravimas ir valdymas SMS žinutėmis 
+### Konfigūravimas ir valdymas SMS žinutėmis
 
 1.  **Pakeiskite administratoriaus slaptažodį**
 
@@ -625,7 +625,7 @@ Sistemą galima valdyti su SMS arba skambučiu tik tais telefono numeriais, kuri
 | CONNECT | USER=user | APN naudotojas. Pvz.: CONNECT 123456 USER=User |
 | CONNECT | PSW=password | APN slaptažodis. Pvz.: CONNECT 123456 PSW=Password |
 
-### 7.3 PGM išėjimų valdymas skambučiu 
+### PGM išėjimų valdymas skambučiu
 
 !!! note
     Jei sistemoje nėra pridėtų naudotojų, pirmasis paskambinęs į G17F
@@ -646,9 +646,9 @@ Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 | [išėjimo nr]*[būsenos nr]# | Pasirinkto OUT išėjimo valdymas | Valdo konkretų PGM išėjimą. Būsena: [0] – išėjimas išjungtas; [1] – išėjimas įjungtas; [2] – išjungtas impulso trukmei; [3] – įjungtas impulso trukmei; (impulso trukmė aprašyta TrikdisConfig programoje, PGM lentelėje). [#] – šis simbolis reiškia kodo pabaigą. Pvz. (įjungti 1 išėjimą): 1*1# Pvz. (išjungti 1 išėjimą): 1*0# Pvz. (įjungti 2 išėjimą Impulso trukmei, nurodytai TrikdisConfig „PGM išėjimai“ lentelėje): 2*3# |
 | # | Įvesti komandą iš naujo | Jei įvedant komandą padarėte klaidą, nuspauskite telefono klaviatūroje # ir įveskite komandą iš naujo. |
 
-## 8. *TrikdisConfig* langų aprašymas 
+## *TrikdisConfig* langų aprašymas
 
-### 8.1 TrikdisConfig būsenos juostos aprašymas 
+### TrikdisConfig būsenos juostos aprašymas
 
 Prijungus G17F TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
@@ -668,7 +668,7 @@ Prijungus G17F TrikdisConfig būsenų juostoje pateiks informaciją apie prijung
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti G17F. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 8.2 Langas „Sistemos parinktys“ 
+### Langas „Sistemos parinktys“
 
 **Skirtukas „Pagrindiniai“**
 
@@ -723,7 +723,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 Administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.
 
-## 9. Langas „Pranešimai į ST pultą“ 
+## Langas „Pranešimai į ST pultą“
 
 <img alt="" src="./image58.png" style="width:7.086614173228346in;height:4.039370078740157in" />
 
@@ -785,7 +785,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **Telefono numeris** - (tik SMS pranešimams) įrašykite TRIKDIS SMS imtuvo telefono numerį. Telefono numeris turi būti su šalies kodu (pvz., 370xxxxxxxx).
 
-### 9.1 Langas „Vartotojai ir pranešimai“ 
+### Langas „Vartotojai ir pranešimai“
 
 **Skirtukas „Vartotojai“**
 
@@ -835,7 +835,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **Vartotojas / SMS ir Skambutis** - pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvieną įvykį – SMS žinute ir/arba skambučiu.
 
-### 9.2 Langas „Moduliai“
+### Langas „Moduliai“
 
 <img alt="" src="./image62.png" style="width:7.086614173228346in;height:3.3464566929133857in" />
 
@@ -901,7 +901,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **Išjungti SIM kortelės mobiliųjų duomenų naudojimą** – pažymėdami langelį, bus išjungtas mobiliųjų duomenų naudojimas iš SIM kortelės. Duomenys bus siunčiami tik per „Ethernet“ modulį E485. Jei dings internetas G17F kaups duomenys atmintyje. Kai internetas atsistatys G17F išsius duomenys per „Ethernet“ modulį E485.
 
-### 9.3 Langas „Zonų įėjimai“ 
+### Langas „Zonų įėjimai“
 
 **Skirtukas „Zonų nustatymai“**
 
@@ -943,7 +943,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **Vartotojas / SMS ir Skambutis** – pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvienos zonos įvykius – SMS žinutėmis ar/ir skambučiais.
 
-### 9.4 Langas „PGM išėjimai“
+### Langas „PGM išėjimai“
 
 **Skirtukas „Išėjimai“**
 
@@ -977,7 +977,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **Vartotojas / SMS ir Skambutis** – galima parinkti, kurį vartotoją SMS žinute ar/ir skambučiu informuoti, kai OUT išėjimas bus įjungtas/išjungtas.
 
-### 9.5 Langas „Sistemos įvykiai“ 
+### Langas „Sistemos įvykiai“
 
 **Skirtukas „Įvykiai“**
 
@@ -1017,7 +1017,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **Vartotojas / SMS ir Skambutis** - pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvieną įvykį – SMS žinute ir/arba skambučiu.
 
-### 9.6 Langas „Įvykių žurnalas“
+### Langas „Įvykių žurnalas“
 
 <img alt="" src="./image71.png" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
@@ -1027,13 +1027,13 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - Lentelėje galima rasti **Įvykio Nr.**, **Laiką**, **CID** kodą, **Įvykio pavadinimą**. Įvykių žurnalo istorijoje gali būti parodyta iki 1000 įvykių išsaugotų G17F atmintyje.
 
-### 9.7 Gamyklinių nustatymų atstatymas 
+### Gamyklinių nustatymų atstatymas
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
 <img alt="" src="./image72.png" style="width:7.086614173228346in;height:1.0748031496062993in" />
 
-## 10. Nuotolinis veikimo parametrų nustatymas 
+## Nuotolinis veikimo parametrų nustatymas
 
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai G17F:
@@ -1064,7 +1064,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 4.  Nustatykite norimus parametrus ir pabaigę nuspauskite **Įrašyti [F5]**. Jei norite baigti darbą su TrikdisConfig, spauskite **Atsijungti.**
 
-## 11. GSM komunikatoriaus G17F testavimas 
+## GSM komunikatoriaus G17F testavimas
 
 Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
@@ -1074,7 +1074,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 3.  Atlikite priešgaisrinės signalizacijos bandymą, kad įsitikintumėte, jog CSP tinkamai priima įvykius.
 
-## 12. Programinės įrangos atnaujinimas 
+## Programinės įrangos atnaujinimas
 
 !!! note
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
@@ -1098,7 +1098,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Palaukite, kol bus atlikti atnaujinimai.
 
-## 13. Saugos reikalavimai 
+## Saugos reikalavimai
 
 Komunikatorių turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 

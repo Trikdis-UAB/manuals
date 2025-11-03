@@ -1,4 +1,12 @@
-## 1. Aprašymas 
+# Radijo siųstuvas T16
+
+<div style="text-align: center;">
+
+<img src="./image1.png" alt="" width="400">
+
+</div>
+
+## Aprašymas 
 
 Radijo siųstuvas T16 yra daugiafunkcinis radijo įrenginys, naudojamas apsaugos centralių įvykių pranešimams perduoti per "Trikdis" radijo tinklus.
 
@@ -46,11 +54,8 @@ Nuoseklus prievadas, įėjimai ir išėjimai
 
 2 išėjimai. (*T16U5*)
 
-<div style="text-align: center;">
-  <img src="./image4.png" alt="" width="400">
-</div>
 
-### 1.1 Veikimo aprašymas 
+### Veikimo aprašymas 
 
 Siųstuvas jungiamas prie apsauginės centralės išvadų, nuskaito ten esamus signalus ir juos transformuoja į pranešimus, atitinkančius protokolo Contact ID kodus.
 
@@ -74,7 +79,7 @@ Maitinimo įtampai nukritus žemiau 10 ±0,2 V ribos, siųstuvas persijungs ve
 
 **RS485 sąsaja**. Prie siųstuvo RS485 sąsajos galima prijungti modulius W485, E485 ir TM17. Kai RS485 magistralės ilgis yra didesnis nei 1 m, naudokite vytos poros kabelį (STP 4x2x0,5). Venkite kabelio montavimo lygiagrečiai su kintamos srovės jėgos kabeliais, antenos kabeliu ir kitais stipriais elektromagnetinio lauko šaltiniais.
 
-### 1.2 Techniniai parametrai 
+### Techniniai parametrai 
 
 | Parametras | T16V | T16U | T16U5 |
 |------------|------|------|-------|
@@ -104,13 +109,13 @@ Imtuvai, priimantys *T16* serijos siųstuvo skirtingais radijo sistemų formatai
 | TRIKDIS RF11   |  **+**  | **+**  | **+** | **+** | **+** |
 | Kitų gamintojų |         |        | **+** | **+** |       |
 
-### 1.3 Siųstuvo elementai 
+### Siųstuvo elementai 
 
 |  |  | Antenos SMA jungtis. Šviesos indikatoriai. Priekinio dangtelio atidarymo plyšys. Gnybtai laidų prijungimui. |
 |--|--|-------------------------------------------------------------------------------------------------------------|
 | T16V, T16U | T16U5 |  |
 
-### 1.4 Išorinių gnybtų paskirtis 
+### Išorinių gnybtų paskirtis 
 
 | Kontaktas | Aprašymas |
 |----|----|
@@ -133,7 +138,7 @@ Imtuvai, priimantys *T16* serijos siųstuvo skirtingais radijo sistemų formatai
 | OUT1 /​ arba | Išėjimo gnybtas, atviro kolektoriaus tipo, srovė iki 1 A. (T16V, T16U) |
 | OUT2 | Išėjimo gnybtas, atviro kolektoriaus tipo, srovė iki 1 A. (T16U5) |
 
-### 1.5 Šviesinė veikimo indikacija 
+### Šviesinė veikimo indikacija 
 
 | Indikatorius | Veikimas | Aprašymas |
 |--------------|----------|-----------|
@@ -146,7 +151,7 @@ Imtuvai, priimantys *T16* serijos siųstuvo skirtingais radijo sistemų formatai
 | POWER (Maitinimas) | Mirksi geltonai | Žemo lygio maitinimo įtampa |
 | POWER (Maitinimas) | Mirksi žaliai ir geltonai | (Konfigūravimo režimas) prijungtas USB kabelis |
 
-### 1.6 Medžiagos reikalingos montavimo darbams 
+### Medžiagos reikalingos montavimo darbams 
 
 Prieš pradėdami įsitikinkite, kad turite:
 
@@ -162,9 +167,9 @@ Prieš pradėdami įsitikinkite, kad turite:
 
 Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
-## 2. Sujungimų schemos ir įrengimas 
+## Sujungimų schemos ir įrengimas 
 
-### 2.1 Apsaugos centralių prijungimo schemos 
+### Apsaugos centralių prijungimo schemos 
 
 **Apsaugos centralių, prie kurių galima prijungti siųstuvus *T16V****, **T16U*** **ir *T16U5,* sąrašas**
 
@@ -208,7 +213,7 @@ Siųstuvų ***T16V**, **T16U**, **T16U5*** zonas (įėjimus IN) galima tiesiogia
 
 <img alt="" src="./image13.png" style="width:3.36750656167979in;height:1.792503280839895in" />
 
-### 2.2 Apsaugos centralės telefoninio komunikatoriaus prijungimo schema
+### Apsaugos centralės telefoninio komunikatoriaus prijungimo schema
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
@@ -230,7 +235,7 @@ Suformuokite centralės pranešimą ir patikrinkite sąsajos veikimą. Šviesos 
 
 Patikrinkite, ar nustatytam adresatui siųstuvas teisingai perdavė visus bandymo metu suformuotus centralės pranešimus.
 
-### 2.3 Įėjimo zonų prijungimo schemos 
+### Įėjimo zonų prijungimo schemos 
 
 Siųstuvas turi 6 (arba 5) įėjimo gnybtus (IN1, IN2, IN3, IN4, IN5, IN6) NO, NC, EOL tipo grandinėms prijungti. Gamyklinis įėjimų nustatymas – stebėti NO tipo grandinę. Kitą įėjimo grandinės tipą galima nustatyti TrikdisConfig lange **Reports → Inputs**.
 
@@ -238,19 +243,19 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 <img alt="" src="./image15.png" style="width:5.874015748031496in;height:2.0196850393700787in" />
 
-### 2.4 Centralės PGM-ų prijungimo schema 
+### Centralės PGM-ų prijungimo schema 
 
 <img alt="" src="./image16.png" style="width:3.24250656167979in;height:2.387504374453193in" />
 
 Siųstuvo įėjimų (IN) nustatymo tipas NO arba NC.
 
-### 2.5 Sirenos prijungimo schema 
+### Sirenos prijungimo schema 
 
 Sirena jungiama, kai prie siųstuvo yra prijungtas skaitytuvais *TM17*. Sireną, naudojančią iki 1 A srovę, galima prijungti prie siųstuvo *T16* OUT1 (arba OUT2) išėjimo. Jį aktyvuojama jei saugojimo režime siųstuve suveikia vienas iš įėjimų (IN). Sirena išjungiama po 3 minučių arba naudojant kontaktinį raktą (iButton).
 
 <img alt="" src="./image17.png" style="width:3.437007874015748in;height:1.2440944881889764in" />
 
-### 2.6 RS485 modulių prijungimo schemos 
+### RS485 modulių prijungimo schemos 
 
 <img alt="" src="./image18.png" style="width:6.8075131233595805in;height:3.04250656167979in" />
 
@@ -262,7 +267,7 @@ Wi-Fi modulis W485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užpr
 
 „Ethernet“ modulis E485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užprogramuosite, E485 laidiniu kompiuteriniu tinklu išsiųs pranešimus iš T16 į CSP (centralizuotą stebėjimo pultą).
 
-## 3. Veikimo parametrų nustatymas su programa TrikdisConfig 
+## Veikimo parametrų nustatymas su programa TrikdisConfig 
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.com/lt](http://www.trikdis.com/lt)/ (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiekite.
 
@@ -274,7 +279,7 @@ Wi-Fi modulis W485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užpr
 
 2.  Paleiskite konfigūravimo programą TrikdisConfig. Programa automatiškai atpažins prijungtą gaminį. Jei reikalaujama, įveskite administratoriaus arba instaliuotojo kodą iššokančiame langelyje ir TrikdisConfig automatiškai atidarys T16 konfigūravimo langą.
 
-### 3.1 TrikdisConfig būsenos juostos aprašymas 
+### TrikdisConfig būsenos juostos aprašymas 
 
 Prijungus T16 prie programos TrikdisConfig ir nuspaudus mygtuką **Skaityti [F4]**, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
@@ -306,7 +311,7 @@ Prijungus T16 prie programos TrikdisConfig ir nuspaudus mygtuką **Skaityti [F4
     nustatymus, paspauskite **Atkurti** mygtuką lango apačioje kairėje.
 Naujai programuojant T16, pirmiausia reikia nuskaityti jo konfigūraciją (gamyklinę), nuspaudus mygtuką **Skaityti [F4]**. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 3.2 Langas “Pagrindinis”
+### Langas “Pagrindinis”
 
 **Skirtukas „Nustatymai“**
 
@@ -360,7 +365,7 @@ Nustatymai analogiški kaip ir **Radijo dažnis 1**.
 
 Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus ir instaliuotojo). Administratoriaus prieiga leidžia prieiti prie visų konfigūravimo funkcijų. Instaliuotojo prieiga leidžia ribotai keisti siųstuvo konfigūraciją. Administratorius nustato, kuriuos parametrus galės keisti instaliuotojas (vartotojas).
 
-### 3.3 Langas “Pranešimai” 
+### Langas “Pranešimai” 
 
 **Skirtukas „Įėjimai“**
 
@@ -422,7 +427,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 - **Siųsti Ping tik tuo atveju, jei nėra įvykio** – pažymėkite langelį PING signalo siuntimui, tik kai nėra siunčiamų įvykiu pranešimų.
 
-### 3.4 Langas “RS485 moduliai” 
+### Langas “RS485 moduliai” 
 
 **Skirtukas „Modulių sąrašas“**
 
@@ -563,7 +568,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 - **DNS1, DNS2** – (angl. Domain Name System) nurodomas serveris, kuris nurodo domeno IP adresą. Naudojamas, kai ryšio kanalo **Domenas arba IP** lauke nurodytas ne IP adresas, o domenas. Gamykliškai nustatyti Google DNS serverių adresai.
 
-### 3.5 Langas “Parinktys” 
+### Langas “Parinktys” 
 
 <img alt="" src="./image31.png" style="width:7.086614173228346in;height:3.574803149606299in" />
 
@@ -571,7 +576,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 Galima Pridėti/Pašalinti radijo dažnius prie sąrašo, kuriuose gali dirbti siųstuvas T16. Radijo dažniams suteikiami „Pavadinimai“.
 
-### 3.6 Langas „Iš CID į UNI lentelė” 
+### Langas „Iš CID į UNI lentelė” 
 
 <img alt="" src="./image32.png" style="width:7.086614173228346in;height:3.2125984251968505in" />
 
@@ -580,13 +585,13 @@ Contact ID kodai, gauti iš signalizacijos centralės, konvertuojami į radijo 
 !!! note
     Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]**, sulaukite
     kol duomenys bus įrašyti ir atjunkite USB kabelį.
-### 3.7 Gamyklinių nustatymų atstatymas 
+### Gamyklinių nustatymų atstatymas 
 
 Norint atkurti siųstuvo gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
 <img alt="" src="./image33.png" style="width:7.086614173228346in;height:1.188976377952756in" />
 
-## 4. Radijo siųstuvo T16 testavimas 
+## Radijo siųstuvo T16 testavimas 
 
 Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
@@ -596,7 +601,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 3.  Atlikite signalizacijos bandymą, kad įsitikintumėte, jog signalizacijos įvykių pranešimus CSP (centralizuotas stebėjimo pultas) tinkamai priima.
 
-## 5. Programinės aparatinės įrangos atnaujinimas 
+## Programinės aparatinės įrangos atnaujinimas 
 
 !!! note
     Prijungus T16 prie TrikdisConfig, programa pasiūlys
@@ -621,7 +626,7 @@ T16 veikimo programą galima atnaujinti ar pakeisti rankiniu būdu. Po atnaujini
 
 6.  Palaukite, kol bus atlikti atnaujinimai.
 
-## 6. Saugos reikalavimai 
+## Saugos reikalavimai 
 
 Radijo siųstuvą turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 

@@ -4,7 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## 1.  Aprašymas 
+## Aprašymas
 
 Komunikatorius E16T patobulina apsaugos centrales, turinčias telefoninį komunikatorių įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį.
 
@@ -66,7 +66,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 - Nuotolinis konfigūravimas ir programinės įrangos atnaujinimas.
 
-### 1.1 Techniniai parametrai 
+### Techniniai parametrai
 
 | Parametras | Aprašymas |
 |:---|----|
@@ -81,7 +81,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 | Matmenys | 88 x 62 x 26 mm |
 | Svoris | 80 g |
 
-### 1.2 Komunikatoriaus elementai 
+### Komunikatoriaus elementai
 
 1.  Šviesos indikatoriai.
 
@@ -94,7 +94,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 5.  RJ45 lizdas LAN kabeliui prijungti.
 
 
-### 1.3 Išorinių kontaktų paskirtis 
+### Išorinių kontaktų paskirtis
 
 | Gnybtas | Aprašymas |
 |----|----|
@@ -109,7 +109,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 | A 485 | *RS485* magistralės A kontaktas |
 | B 485 | *RS485* magistralės B kontaktas |
 
-### 1.4 Šviesinė veikimo indikacija 
+### Šviesinė veikimo indikacija
 
 | Indikatorius | Veikimas | Aprašymas |
 |--------------|----------|-----------|
@@ -123,7 +123,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 | TROUBLE (Nesklandumas) | Nešviečia ir nemirksi | Veikia be nesklandumų |
 | LINE | Šviečia žaliai | Apsauginė centralė “pakėlus” telefono ragelį |
 
-### 1.5 Internetinio komunikatoriaus E16T panaudojimo struktūrinė schema 
+### Internetinio komunikatoriaus E16T panaudojimo struktūrinė schema
 
 <img alt="" src="./image4.png" style="width:7.086805555555555in;height:2.95in" />
 
@@ -143,7 +143,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
         komunikatorius.
     
     Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
-## 2. Greitas konfigūravimas su programa *<u>TrikdisConfig</u>* 
+## Greitas konfigūravimas su programa *<u>TrikdisConfig</u>*
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.com/lt](http://www.trikdis.com/lt)/ (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiekite.
 
@@ -159,7 +159,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į stebėjimo pultą ir kad apsaugos centralę būtų galima valdyti su Protegus programėle.
 
-### 2.1 Nustatymai ryšiui su Protegus programėle 
+### Nustatymai ryšiui su Protegus programėle
 
 **Lange „Sistemos parametrai“:**
 
@@ -180,7 +180,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 !!! note
     Plačiau apie kitus E16T nustatymus TrikdisConfig žr.
     7 "TrikdisConfig langų aprašymas".
-### 2.2 Nustatymai ryšiui su Stebėjimo pultu 
+### Nustatymai ryšiui su Stebėjimo pultu
 
 **Lange „Sistemos parametrai“:**
 
@@ -237,9 +237,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus E16T nustatymus TrikdisConfig žr.
     7 "TrikdisConfig langų aprašymas".
-## 3. Sujungimų schemos ir įrengimas 
+## Sujungimų schemos ir įrengimas
 
-### 3.1 Komunikatoriaus prijungimas prie apsaugos centralių 
+### Komunikatoriaus prijungimas prie apsaugos centralių
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
@@ -247,7 +247,7 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 <img alt="" src="./image12.png" style="width:4.31496062992126in;height:2.641732283464567in" />
 
-### 3.2 Įėjimų prijungimo schemos 
+### Įėjimų prijungimo schemos
 
 Komunikatorius turi 2 įėjimo gnybtus (IN1, IN2) prijungti NC, NO, EOL tipo grandinėms. Gamyklinis įėjimų nustatymas – stebėti NO tipo grandinę. Kitą įėjimo grandinės tipą galima nustatyti TrikdisConfig lange „**Įvykių aprašas“**.
 
@@ -255,15 +255,15 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 <img alt="" src="./image13.png" style="width:5.586614173228346in;height:1.669291338582677in" />
 
-### 3.3 LAN kabelio prijungimas 
+### LAN kabelio prijungimas
 
 <img alt="" src="./image14.png" style="width:2.8346456692913384in;height:2.3622047244094486in" />
 
-### 3.4 Relės ir LED prijungimo schemos 
+### Relės ir LED prijungimo schemos
 
 <img alt="" src="./image15.png" style="width:4.559055118110236in;height:0.984251968503937in" />
 
-## 4. Apsaugos centralės programavimas 
+## Apsaugos centralės programavimas
 
 Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis turi būti įjungtas ir tinkamai sukonfigūruotas. Vadovaudamiesi tam tikros apsaugos centralės programavimo vadovu, nustatykite centralės telefoninį komunikatorių:
 
@@ -277,7 +277,7 @@ Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis tur
 
 5.  Įveskite centralės 4 skaitmenų objekto numerį.
 
-### 4.1 Honeywell Vista centralės telefoninio komunikatoriaus programavimas 
+### Honeywell Vista centralės telefoninio komunikatoriaus programavimas
 
 Naudodami klaviatūrą, eikite į nurodytas sekcijas ir nustatykite jas taip, kaip nurodyta:
 
@@ -315,9 +315,9 @@ Jei norite naudoti E16T su "**Honeywell Vista 48**" centrale, atlikite toliau nu
 
 Kai visi reikalingi nustatymai padaryti būtina išeiti iš programavimo režimo. Klaviatūroje surinkite \*99.
 
-## 5. Nuotolinis valdymas 
+## Nuotolinis valdymas
 
-### 5.1 Valdymas per *Protegus* debesiją 
+### Valdymas per *Protegus* debesiją
 
 Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
@@ -351,7 +351,7 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
 
     <img alt="" src="./image19.png" style="width:6.535433070866142in;height:1.9448818897637796in" />
 
-### 5.2 Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
+### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
 !!! note
     Centralės zonai, prie kurios prijungtas E16T išėjimas OUT, turi
@@ -374,7 +374,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
     <img alt="" src="./image25.png" style="width:5.830708661417323in;height:2.6496062992125986in" />
 
-### 5.3 Sistemos įjungimas/išjungimas su *Protegus* 
+### Sistemos įjungimas/išjungimas su *Protegus*
 
 1.  Kad suvaldytumėte sistemą, eikite į langą „**Sritys**“.
 
@@ -384,7 +384,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
     <img alt="" src="./image26.png" style="width:5.826771653543307in;height:3.1023622047244093in" />
 
-## 6. Nuotolinis veikimo parametrų nustatymas 
+## Nuotolinis veikimo parametrų nustatymas
 
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai E16T:
@@ -410,9 +410,9 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 3.  Nustatykite norimus nustatymus E16T ir pabaigą nuspauskite **Įrašyti [F5]**. Jei norite atsijungti nuo E16T nuspauskite **Atsijungti** ir išeikite iš programos TrikdisConfig.
 
-## 7. TrikdisConfig langų aprašymas 
+## TrikdisConfig langų aprašymas
 
-### 7.1 *TrikdisConfig* būsenos juostos aprašymas 
+### *TrikdisConfig* būsenos juostos aprašymas
 
 Prijungus E16T TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
@@ -432,7 +432,7 @@ Prijungus E16T TrikdisConfig būsenų juostoje pateiks informaciją apie prijung
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti E16T. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 7.2 Langas „Sistemos parametrai“ 
+### Langas „Sistemos parametrai“
 
 <img alt="" src="./image29.png" style="width:7.082677165354331in;height:4.043307086614173in" />
 
@@ -486,7 +486,7 @@ Konfigūruojant komunikatorių E16T yra du prieigos lygiai (administratoriaus ir
   - **Lygis** - būsena pasikeis ir liks nepakitusi iki kitos komandos.
 - **Impulso trukmė** – nurodomas impulso trukmes laikas, sek.. OUT išėjimas suveiks nustatytam laikui, kai išėjimui priskirtas režimas **Impulsas**.
 
-### 7.3 Langas „Pranešimai“ 
+### Langas „Pranešimai“
 
 **Skirtukas „CSP parametrai“**
 
@@ -546,7 +546,7 @@ Nustatymus galima keisti, kai ryšio kanalo **TCP protokolas** lauke pasirinkta 
 
 - **Slaptažodis** – prisijungimo su Protegus 6 skaitmenų kodas (gamyklinis kodas - 123456). Slaptažodį pakeitus, jį prašys suvesti pridedant sistemą Protegus programėlėje. Tai papildoma saugumo priemonė.
 
-### 7.4 Langas „Įvykių aprašas“ 
+### Langas „Įvykių aprašas“
 
 <img alt="" src="./image32.png" style="width:7.082677165354331in;height:4.051181102362205in" />
 
@@ -582,13 +582,13 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 - **Zona** – įrašykite zonos numerį, kuris bus siunčiamas įvykus vidiniam įvykiui ir atsistačius sistemai.
 
-### 7.5 Gamyklinių nustatymų atstatymas 
+### Gamyklinių nustatymų atstatymas
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti**.
 
 <img alt="" src="./image33.png" style="width:7.078740157480315in;height:1.0669291338582678in" />
 
-## 8. Komunikatoriaus E16T testavimas 
+## Komunikatoriaus E16T testavimas
 
 Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
@@ -610,7 +610,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 4.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus programėle.
 
-## 9. Programinės aparatinės įrangos atnaujinimas 
+## Programinės aparatinės įrangos atnaujinimas
 
 !!! note
     Prijungus komunikatorių E16T prie TrikdisConfig, programa
@@ -634,9 +634,9 @@ E16T veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnau
 
 6.  Palaukite, kol bus atlikti atnaujinimai.
 
-## 10. Turinys
+## Turinys
 
-## 11. Saugos reikalavimai
+## Saugos reikalavimai
 
 „Ethernet“ komunikatorių įrengti ir aptarnauti gali tik kvalifikuoti asmenys.
 

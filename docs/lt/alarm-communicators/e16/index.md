@@ -4,7 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## 1. Aprašymas 
+## Aprašymas
 
 „Ethernet“ komunikatorius E16 gali būti tiesiogiai prijungtas prie DSC, Paradox, UTC Interlogix (CADDX), Innerrange, Texecom, Honeywell,Crow ir Pyronix apsaugos centralių.
 
@@ -66,7 +66,7 @@ Veikia su Protegus2 programėle:
 
 - Nuotolinis konfigūravimas ir programinės įrangos atnaujinimas.
 
-### 1.1 Suderinamų centralių sąrašas 
+### Suderinamų centralių sąrašas
 
 | Gamintojas | Modelis |
 |------------|---------|
@@ -87,7 +87,7 @@ Veikia su Protegus2 programėle:
 
 \*Kitų gamintojų centrales prijunkite su komunikatoriu E16T.
 
-### 1.2 Techniniai parametrai 
+### Techniniai parametrai
 
 | Parametras | Aprašymas |
 |----|:---|
@@ -103,7 +103,7 @@ Veikia su Protegus2 programėle:
 | Komunikatoriaus matmenys | 88 x 65 x 25 mm |
 | Svoris | 80 g |
 
-### 1.3 Komunikatoriaus elementai 
+### Komunikatoriaus elementai
 
 1.  Šviesos indikatoriai.
 
@@ -117,7 +117,7 @@ Veikia su Protegus2 programėle:
 
 <img alt="" src="./image4.png" style="width:4.750009842519685in;height:2.853338801399825in" />
 
-### 1.4 Išorinių kontaktų paskirtis 
+### Išorinių kontaktų paskirtis
 
 | Gnybtas | Aprašymas |
 |---------|-----------|
@@ -130,7 +130,7 @@ Veikia su Protegus2 programėle:
 | COM | Bendras (neigiamas) |
 | A 485 | RS485 gnybtai prijungti iO įėjimų ir išėjimų plėtiklį arba kitus priedus |
 
-### 1.5 Šviesinė veikimo indikacija 
+### Šviesinė veikimo indikacija
 
 | Indikatorius | Būklė | Aprašymas |
 |--------------|-------|-----------|
@@ -153,7 +153,7 @@ Veikia su Protegus2 programėle:
 | TROUBLE | Mirksi raudonai | (konfigūravimo režimas) atminties klaida. |
 | TROUBLE | Šviečia raudonai | (konfigūravimo režimas) programinės įrangos klaida. |
 
-### 1.6 „Ethernet“ komunikatoriaus E16 panaudojimo struktūrinė schema 
+### „Ethernet“ komunikatoriaus E16 panaudojimo struktūrinė schema
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.9138888888888888in" />
 
@@ -173,7 +173,7 @@ Veikia su Protegus2 programėle:
         komunikatorius.
     
     Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
-## 2. Greitas konfigūravimas su programa *TrikdisConfig* 
+## Greitas konfigūravimas su programa *TrikdisConfig*
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.lt](http://www.trikdis.lt) (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiegite*.*
 
@@ -189,7 +189,7 @@ Veikia su Protegus2 programėle:
 
 Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į Stebėjimo pultą ir kad apsaugos centralę būtų galima valdyti su Protegus2 programėle.
 
-### 2.1 Nustatymai ryšiui su Protegus2 programėle 
+### Nustatymai ryšiui su Protegus2 programėle
 
 **Lange „Sistemos parinktys“:**
 
@@ -219,7 +219,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus E16 nustatymus TrikdisConfig žr. **6
     „TrikdisConfig langų aprašymas".**
-### 2.2 Nustatymai ryšiui su Stebėjimo pultu 
+### Nustatymai ryšiui su Stebėjimo pultu
 
 **Lange „Sistemos parinktys“:**
 
@@ -258,9 +258,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus E16 nustatymus TrikdisConfig žr. skyrių
     **6 „TrikdisConfig langų aprašymas"**.
-## 3. Sujungimų schemos, įrengimas ir paleidimas veikti 
+## Sujungimų schemos, įrengimas ir paleidimas veikti
 
-### 3.1 Apsaugos centralių prijungimo schemos su komunikatoriumi 
+### Apsaugos centralių prijungimo schemos su komunikatoriumi
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
@@ -274,7 +274,7 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 <img alt="" src="./image15.png" style="width:3.28500656167979in;height:2.7475054680664917in" />
 
-### 3.2 E16 prijungimo prie centralės jungiklio (angl. keyswitch) zonos schema 
+### E16 prijungimo prie centralės jungiklio (angl. keyswitch) zonos schema
 
 Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su E16 PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
@@ -289,7 +289,7 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su E16 PGM išėji
     zoną".
 <img alt="" src="./image16.png" style="width:3.22250656167979in;height:2.5975054680664917in" />
 
-### 3.3 Įėjimo prijungimo schemos 
+### Įėjimo prijungimo schemos
 
 Komunikatorius turi 3 universalius įėjimo/išėjimo gnybtus, kuriems galima nustatyti įėjimo IN veikimo režimą. Prie įėjimo gnybto galima prijungti NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandines. Gamyklinis įėjimo nustatymas – stebėti NO tipo grandinę. Kitą įėjimo tipą galima nustatyti TrikdisConfig lange**Langas „Sistemos** parinktys“ **-> Tipas**.
 
@@ -303,23 +303,23 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
     OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį
     arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
-### 3.4 LAN kabelio prijungimas 
+### LAN kabelio prijungimas
 
 <img alt="" src="./image19.png" style="width:2.8250054680664918in;height:2.282504374453193in" />
 
-### 3.5 Relės prijungimo schema 
+### Relės prijungimo schema
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
 <img alt="" src="./image20.png" style="width:2.552505468066492in;height:0.9575021872265966in" />
 
-### 3.6 iO serijos plėtimo modulių prijungimo schemos 
+### iO serijos plėtimo modulių prijungimo schemos
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. E16 konfigūravimas su plėtimo moduliais aprašytas p. 6.7. „Langas „RS485 moduliai“.
 
 <img alt="" src="./image21.png" style="width:7.0875in;height:3.4375in" />
 
-### 3.7 Komunikatoriaus paleidimas veikti 
+### Komunikatoriaus paleidimas veikti
 
 Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maitinimo šaltinį. Turi užsidegti ši E16 komunikatoriaus šviesinė indikacija:
 
@@ -331,17 +331,17 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
     Jei šviesinė indikacija kitokia, kad nustatytumėte, kas nutikę žiūrėkite
     skyrių **1.5 „Šviesinė veikimo indikacija".** / Jei E16 indikacija
     visai nešviečia, patikrinkite maitinimo šaltinį ir sujungimus.
-## 4. Apsaugos centralių programavimas 
+## Apsaugos centralių programavimas
 
 Žemiau aprašome, kaip reikia programuoti apsaugos centrales, kad komunikatorius E16 galėtų nuskaityti centralės pranešimus ir ją tiesiogiai valdyti nuotoliniu būdu.
 
 Jei norite įgalinti nuotolinį centralės valdymą, įsitikinkite, kad yra uždėta varnelė prie **Nuotolinis centralės valdymas** TrikdisConfig lange Langas „Sistemos parinktys“.
 
-### 4.1 DSC
+### DSC
 
 DSC centralių programuoti nereikia.
 
-### 4.2 PARADOX
+### PARADOX
 
 Paradox centrales reikia programuoti tik tiesioginiam valdymui su Protegus. Pranešimų nuskaitymui Paradox centralių programuoti nereikia.
 
@@ -353,7 +353,7 @@ Norėdami nustatyti šį slaptažodį, su prie apsaugos centralės prijungta kla
 
 - DIGIPLEX EVO serijai: eikite į ląstelę 3012 ir įveskite 4 skaičių PC prisijungimo slaptažodį.
 
-### 4.3 TEXECOM
+### TEXECOM
 
 Texecom centrales reikia programuoti tiek pranešimų nuskaitymui, tiek ir nuotoliniam valdymui.
 
@@ -371,7 +371,7 @@ Taip pat galite programuoti ir su prie apsaugos centralės prijungta klaviatūra
 
 4.  Paspauskite [Yes] ir išeikite iš programavimo rėžimo paspaudę [Menu].
 
-### 4.4 UTC INTERLOGIX(CADDX)
+### UTC INTERLOGIX(CADDX)
 
 Centralės programinės įrangos versija turi būti **V2** arba aukštesnė**.** Prie centralės prijungtoje klaviatūroje:
 
@@ -396,7 +396,7 @@ Centralės programinės įrangos versija turi būti **V2** arba aukštesnė**.**
 
 Suprogramavę visus nurodytus laukus, paspauskite [Exit] du kartus, kad išeitumėte iš programavimo režimo.
 
-### 4.5 INNERRANGE
+### INNERRANGE
 
 **Innerrange Inception** centralės programinės įrangos versija turi būti **2.3.0.3507-r0** arba aukštesnė.
 
@@ -418,7 +418,7 @@ Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupė
 
 Centralės konfigūravimo programoje nurodykite Trikdis ryšio protokolą. Duomenų formatas Contact ID. Centralės prievadui TTL Port-0, prie kurio prijungtas komunikatorius E16, numatytieji parametrai 19200, 8, N, 1. Išsaugokite nustatymus ir išeikite iš programos.
 
-### 4.6 Honeywell Ademco Vista
+### Honeywell Ademco Vista
 
 Programavimas skirtas centralėms **Honeywell Ademco Vista-20** ir **Honeywell Ademco Vista-48**. **Centralės veikimo programos versija turi būti ne žemesnė nei V5.3**. Prie centralės prijungtoje klaviatūroje:
 
@@ -430,13 +430,13 @@ Programavimas skirtas centralėms **Honeywell Ademco Vista-20** ir **Honeywell
 
 4.  Išeikite iš programavimo režimo. Klaviatūroje nuspauskite [\*][9][9].
 
-### 4.7 Crow
+### Crow
 
 Crow Runner 4/8 ir Runner 8/16 centralių programuoti nereikia.
 
-## 5. Nuotolinis valdymas 
+## Nuotolinis valdymas
 
-### 5.1 Apsaugos sistemos pridėjimas Protegus2 programėlėje 
+### Apsaugos sistemos pridėjimas Protegus2 programėlėje
 
 Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
@@ -471,7 +471,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
 <img alt="" src="./image29.png" style="width:3.0in;height:3.673228346456693in" />
 
-### 5.2 Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
+### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
 !!! note
     Centralės zonai, prie kurios prijungtas E16 išėjimas OUT, turi
@@ -495,16 +495,16 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjim
 
 <img alt="" src="./image32.png" style="width:2.220472440944882in;height:2.031496062992126in" />
 
-### 5.3 Sistemos įjungimas/išjungimas su *Protegus2* 
+### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
 <img alt="" src="./image33.png" style="width:2.220472440944882in;height:2.688976377952756in" />
 
-## 6. TrikdisConfig langų aprašymas 
+## TrikdisConfig langų aprašymas
 
-### 6.1 *TrikdisConfig* būsenos juostos aprašymas 
+### *TrikdisConfig* būsenos juostos aprašymas
 
 Prijungus E16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
@@ -524,7 +524,7 @@ Prijungus E16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungt
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti E16. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 6.2 Langas „Sistemos parinktys“ 
+### Langas „Sistemos parinktys“
 
 <img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.090551181102362in" />
 
@@ -552,7 +552,7 @@ Parinkčių grupė „Prisijungimas“
 
 - **Instaliuotojui leisti keisti** – administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.
 
-### 6.3 Langas “Pranešimai į CSP” 
+### Langas “Pranešimai į CSP”
 
 **Skirtukas „CSP parametrai“**
 
@@ -617,7 +617,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **DC-09 imtuvo Nr.** – įveskite imtuvo numerį.
 
-### 6.4 Langas „Pranešimai vartotojui” 
+### Langas „Pranešimai vartotojui”
 
 **Skirtukas “Protegus servisas”**
 
@@ -631,7 +631,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 - **PROTEGUS Cloud prieigos kodas** - prisijungimo su Protegus2 6 skaitmenų kodas (gamyklinis kodas - 123456).
 
-### 6.5 Langas “Ethernet parinktys” 
+### Langas “Ethernet parinktys”
 
 <img alt="" src="./image39.png" style="width:7.082677165354331in;height:2.2401574803149606in" />
 
@@ -646,7 +646,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
   - **Numatytasis šliuzas** – prisijungimui prie interneto.
 - **DNS1 ir DNS2** – (angl. Domain Name System) nurodomas serveris, kuris nurodo domeno IP adresą. Naudojamas, kai ryšio kanalo **Domenas arba IP** lauke nurodytas ne IP adresas, o domenas. Gamyklos nustatyti Google DNS serverių adresai.
 
-### 6.6 Langas „IN/OUT“ 
+### Langas „IN/OUT“
 
 <img alt="" src="./image40.png" style="width:7.086614173228346in;height:2.47244094488189in" />
 
@@ -664,7 +664,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 - **Zona** - įrašykite zonos numerį, kuris bus siunčiamas įvykus vidiniam įvykiui ir atsistačius sistemai.
 
-### 6.7 Langas „RS485 moduliai“ 
+### Langas „RS485 moduliai“
 
 Prie komunikatoriaus galima prijungti iO serijos plėtiklius, kuriais pridėsite papildomus įėjimus, valdomus išėjimus ir magistralę temperatūros jutikliams. Prijungti plėtikliai turi būti įtraukti į **Modulių sąrašo** lentelę.
 
@@ -740,7 +740,7 @@ Relės išėjimo valdymas galimas pagal loginių (IR, ARBA, XOR) sąlygų išpil
 
 Lentelėje įvykiams galima priskirti Contact ID, SIA, 4+2 įvykių ir atsistatymo kodus. Suveiksminus įėjimą, komunikatorius pranešimą su nurodytu įėjimo kodu išsiųs į stebėjimo pulto imtuvą ir Protegus2 programėlę. Nustatykite kaip aprašyta ankstesniame puslapyje apie **iO-8 plėtiklio nustatymų langą**.
 
-### 6.8 Langas „Įvykių aprašas” 
+### Langas „Įvykių aprašas”
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
@@ -766,7 +766,7 @@ Lentelėje įvykiams galima priskirti Contact ID, SIA, 4+2 įvykių ir atsistaty
 
 Galite pakeisti kiekvieno įvykio Contact ID kodą, taip pat su pranešimu nurodomą zonos ir srities numerį.
 
-### 6.9 Gamyklinių nustatymų atstatymas 
+### Gamyklinių nustatymų atstatymas
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
@@ -797,7 +797,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 4.  Nustatykite norimus nustatymus ir pabaigę nuspauskite **Įrašyti [F5]**.
 
-## 7. „Ethernet“ komunikatoriaus *E16* testavimas 
+## „Ethernet“ komunikatoriaus *E16* testavimas
 
 Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
@@ -819,7 +819,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 4.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus2 programėle.
 
-## 8. Programinės įrangos atnaujinimas 
+## Programinės įrangos atnaujinimas
 
 !!! note
     Prijungus komunikatorių E16 prie TrikdisConfig, programa
@@ -846,9 +846,9 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Palaukite, kol bus atlikti atnaujinimai.
 
-## 9. Turinys
+## Turinys
 
-## 10. Saugos reikalavimai 
+## Saugos reikalavimai
 
 Komunikatorių turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 
@@ -860,7 +860,7 @@ Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo
 
 <img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
-## 11. Priedas 
+## Priedas
 
 Komunikatorius gali dirbti su SUR-GARD imtuvu. Komunikatorius, gautus iš signalizacijos centralės, Contact ID kodus konvertuoja į SIA kodus.
 

@@ -6,7 +6,7 @@
 
 </div>
 
-## 1. Aprašymas
+## Aprašymas
 
 Apsaugos centralė *“FLEXi” SP3 – tai apsaugos ir gaisro signalizavimo sistema su integruotu WiFi moduliu ir 2G/4G mobiliojo ryšio modemu. Centralė leidžia sukurti į 8 sritis sugrupuotų 32 laidinių ir belaidžių zonų sistemą. Patalpų apsaugą galima valdyti tiek nuotoliniu būdu (su mobiliąja programa Protegus2*, SMS, skambučiu), tiek klaviatūromis ir RFID. Informacija apie sistemos būklę gali būti siunčiama į saugos tarnybos centralizuoto stebėjimo pultą (CSP) ir objekto šeimininkui per WiFi ir (arba) per mobiliojo interneto tinklus.
 
@@ -87,7 +87,7 @@ Pranešimų perdavimas į saugos tarnybos centralizuoto stebėjimo pultą (CSP):
 
 - Du parametrų keitimo prieigos nustatymo lygiai: montuotojo ir administratoriaus.
 
-### 1.1 Techniniai parametrai
+### Techniniai parametrai
 
 | Parametras | Aprašymas |
 |----|----|
@@ -136,7 +136,7 @@ Pranešimų perdavimas į saugos tarnybos centralizuoto stebėjimo pultą (CSP):
 | Centralės matmenys | 117x79x25 mm |
 | Svoris | 0,1 kg |
 
-### 1.2 Suderinamų modulių sąrašas
+### Suderinamų modulių sąrašas
 
 | Modulio pavadinimas                               | Srovė                  |
 |---------------------------------------------------|------------------------|
@@ -166,7 +166,7 @@ Pranešimų perdavimas į saugos tarnybos centralizuoto stebėjimo pultą (CSP):
 | iO-LORA plėtimo modulis                           | Iki 50 mA              |
 | iO-8 LORA plėtimo modulis                         | Iki 50 mA              |
 
-### 1.3 Išorinių kontaktų paskirtis
+### Išorinių kontaktų paskirtis
 
 <img alt="" src="./image4.png" style="width:5.480010936132984in;height:3.826674321959755in" />
 
@@ -200,7 +200,7 @@ Pranešimų perdavimas į saugos tarnybos centralizuoto stebėjimo pultą (CSP):
 | 1 WIRE | *1-Wire* duomenų magistralės kontaktas |
 | C | Bendras neigiamas gnybtas |
 
-### 1.4 Šviesinė veikimo indikacija
+### Šviesinė veikimo indikacija
 
 | LED indikatorius | Veikimas | Aprašymas |
 |----|----|----|
@@ -223,17 +223,17 @@ Pranešimų perdavimas į saugos tarnybos centralizuoto stebėjimo pultą (CSP):
 | PWR / (Maitinimas) | 8 raudoni mirksniai | Nėra maitinimo iš kintamos srovės tinklo |
 | PWR / (Maitinimas) | 9 raudoni mirksniai | Nepavyksta prisijungti prie WiFi tinklo |
 
-## 2. Apsaugos centralės maitinimas
+## Apsaugos centralės maitinimas
 
-### 2.1 Pagrindinis maitinimas
+### Pagrindinis maitinimas
 
 Centralė ir visa apsaugos sistema gali būti maitinamos arba iš kintamos, arba iš nuolatinės srovės šaltinio. Abiem atvejais, nenutrūkstamam sistemos maitinimui užtikrinti, prie centralės dar turi būti prijungtas rezervinio maitinimo šaltinis – 12 V akumuliatorius. Siekiant užtikrinti standarto EN50131 reikalavimus, rezervinio maitinimo akumuliatorius turi būti toks, kad sistemai praradus maitinimą iš pagrindinio šaltinio, ji galėtų veikti 12 val. pagal II-ą apsaugos klasę arba 60 val. pagal III-ą apsaugos klasę. Įvertinkite papildomų įrenginių naudojamą srovę, ji nurodyta skyriuje 1.2 „Suderinamų modulių sąrašas“.
 
-### 2.2 Rezervinis maitinimas
+### Rezervinis maitinimas
 
 Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojamas įvykio *AC Fault* pranešimas ir centralė automatiškai persijungs sistemą maitinti iš rezervinio – 12 V akumuliatoriaus. Akumuliatoriaus įtampai sumažėjus iki 11,5 V, bus formuojamas įvykio *Low* *Battery* pranešimas. Akumuliatorius bus atjungtas jei jis išsikraus žemiau 9,5 V. Atsiradus kintamos srovės tinklo įtampai, bus formuojamas *AC Restore* pranešimas ir automatiškai prasidės akumuliatoriaus įkrovimo procesas. Akumuliatoriaus įtampai atsistačius iki 12,6 V, bus formuojamas įvykio *Battery Restore* pranešimas.
 
-### 2.3 Centralės komplektai
+### Centralės komplektai
 
 #### Centralė *„FLEXi” SP3*
 
@@ -272,9 +272,12 @@ Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojama
 | Sabotažo jutiklis (angl. Tamper)                                  | 1 vnt.  |
 | Kontaktų kaladėlė su 3,15 A saugikliu                             | 1 vnt.  |
 
-!!! note USB laidas (Mini-B tipo), skirtas centralei programuoti, kartu neteikiamas. \## 3. Sistemos įrengimas
+!!! note
+    USB laidas (Mini-B tipo), skirtas centralei programuoti, kartu neteikiamas.
 
-### 3.1 Rekomenduojama įrengimo tvarka
+## Sistemos įrengimas
+
+### Rekomenduojama įrengimo tvarka
 
 **Sistemos planavimas:**
 
@@ -308,7 +311,10 @@ Paveikslėlyje pateiktos centralės plokštės ir jos tvirtinimo kiaurymių matm
 
 5.  Į montažinį korpusą įstatykite rezervinio maitinimo akumuliatorių. Jo gnybtus prijunkite prie centralės rezervinio maitinimo šaltinio jungties BAT+ / BAT–.
 
-!!! note Akumuliatorius turi būti įkraunamas ne ilgiau nei per 72 val., kad apsaugos sistema atitiktų II-ą apsaugos klasę arba 24val., kad atitiktų III-ą apsaugos klasę. \#### Rekomendacijos centralės veikimo parametrams nustatyti
+!!! note
+    Akumuliatorius turi būti įkraunamas ne ilgiau nei per 72 val., kad apsaugos sistema atitiktų II-ą apsaugos klasę arba 24val., kad atitiktų III-ą apsaugos klasę.
+
+#### Rekomendacijos centralės veikimo parametrams nustatyti
 
 1.  Kaip prisijungti centralės konfigūravimui žr. sk. 5 „Veikimo parametrų nustatymas su programa TrikdisConfig
 
@@ -350,7 +356,7 @@ Paveikslėlyje pateiktos centralės plokštės ir jos tvirtinimo kiaurymių matm
 
         - **Instaliuotojo kodas** yra keičiamas programos meniu šakoje **Sistemos parinktys** skiltyje **Prisijungimas**.
 
-### 3.2 Jutiklių jungimas
+### Jutiklių jungimas
 
 Centralės plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių grandinėms prijungti. Panaudojus įėjimų plėtiklius (***iO, iO8, iO-WL, RF-SH, iO-LORA, iO8-LORA**)*, įėjimų skaičių galima padidinti iki 32. Bet kurį kontaktą galima nustatyti kaip įėjimą ir priskirti zonos atributus: grandinės tipą (NO, NC, EOL, EOL_T, 3EOL, ATZ, ATZ_T); jautrumą į trumpalaikius grandinės įvykius; zonos funkciją („Delay“, „Instant“, „Instant Stay“, „Interior“, „Interior Stay“, „Fire“, „Keyswitch“, „24_hour“, „Silent“, „Silent 24h“), žr. 5.7 „Langas „Zonų įėjimai““. iO8 ir iO8-LORA plėtikliai palaiko visus apsaugos centralės zonų varžų nominalus (EOL tipus).
 
@@ -411,7 +417,7 @@ Centralės plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių grandin
 | <img alt="" src="./image16.png" style="width:3.1466732283464567in;height:1.690003280839895in" /> |  |
 |----|----|
 
-### 3.3 Dūmų jutiklių jungimas
+### Dūmų jutiklių jungimas
 
 Dvilaidžių dūmų jutiklių prijungimo schemos.
 
@@ -433,7 +439,7 @@ Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia įėj
 
 <img alt="" src="./image20.png" style="width:4.8366765091863515in;height:1.5166699475065617in" />
 
-### 3.4 Sirenos prijungimo schema
+### Sirenos prijungimo schema
 
 <img alt="" src="./image21.png" style="width:3.40000656167979in;height:1.2166688538932633in" />
 
@@ -441,7 +447,7 @@ Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia įėj
 
 Lauko sirenos MR100 pajungimas ir nustatymai pavaizduoti schemoje. Jei apsaugos centralėje bus naudojamas kitas sirenos tamperio (SAB gnybtai) grandinės EOL stebėjimo būdas (gamyklinis nustatymas EOL 2,2 kΩ), tai reikia trumpikliu užtrumpinti kontaktus JPS1 ir nuosekliai į tamperio grandinę įjungti reikiamo nominalo rezistorių. IO9 įėjimui gamykliškai yra nustatytas **24 valandų** zonos tipas.
 
-### 3.5 Klaviatūrų, RFID skaitytuvų (Wiegand 26/34) prijungimo schemos
+### Klaviatūrų, RFID skaitytuvų (Wiegand 26/34) prijungimo schemos
 
 Prie klaviatūros magistralės galima prijungti iki 8 įrenginių. Programoje TrikdisConfig reikia nurodyti prijungiamos klaviatūros tipą (žr. 5.5 „Langas „Moduliai““). Centralė automatiškai atpažins ir užregistruos prijungtus įrenginius.
 
@@ -457,7 +463,7 @@ Prie centralės galima prijungti iki 2 RFID skaitytuvų. Klaviatūros prie centr
 
 <img alt="" src="./image27.png" style="width:4.31334208223972in;height:3.38000656167979in" />
 
-### 3.6 TM17, CZ-Dallas skaitytuvų prijungimo schemos
+### TM17, CZ-Dallas skaitytuvų prijungimo schemos
 
 **CZ-Dallas iButton raktų skaitytuvas** prie „FLEXi” SP3 jungiamas per „*1 Wire“* magistralės. Magistralės laidų ilgis gali būti iki 30 m:
 
@@ -467,7 +473,7 @@ Prie centralės galima prijungti iki 2 RFID skaitytuvų. Klaviatūros prie centr
 
 <img alt="" src="./image29.png" style="width:4.156675415573053in;height:2.0733377077865267in" />
 
-### 3.7 Temperatūros jutiklio prijungimo schema
+### Temperatūros jutiklio prijungimo schema
 
 <img alt="" src="./image30.png" style="width:3.2066732283464567in;height:1.2366688538932633in" /> / <img alt="" src="./image31.png" style="width:3.12000656167979in;height:1.31333552055993in" />
 
@@ -475,13 +481,13 @@ Prie centralės galima prijungti iki 2 RFID skaitytuvų. Klaviatūros prie centr
 
 <img alt="" src="./image31.png" style="width:3.12000656167979in;height:1.31333552055993in" />
 
-### 3.8 Relės, LED indikatoriaus prijungimo schemos
+### Relės, LED indikatoriaus prijungimo schemos
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Centralės universaliam įėjimo/išėjimo (I/O) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas Nuotolinis valdymas.
 
 <img alt="" src="./image32.png" style="width:4.196675415573053in;height:0.97333552055993in" />
 
-### 3.9 „Ethernet“ komunikatoriaus E485 prijungimo schema
+### „Ethernet“ komunikatoriaus E485 prijungimo schema
 
 Modulis *E485* leidžia centralei siųsti ir priimti valdymo komandas per laidinį interneto ryšį. Prie centralės prijungus modulį *E485*, pranešimai į CSP ir į *Protegus2* mobiliąją programą siunčiami laidiniais interneto tinklais, o mobilusis internetas nenaudojamas. Jei nutrūksta ryšys per laidinį internetą, pranešimai į CSP perduodami per mobilųjį internetą. Atsikūrus laidinio interneto ryšiui, centralė automatiškai išjungia pranešimų siuntimą per mobilųjį internetą ir vėl pradeda komunikuoti su CSP ir *Protegus2* mobiliąja programa per *E485*, t.y. per laidinį internetą.
 
@@ -491,13 +497,13 @@ Skyriuje p.5.3 „Langas „Pranešimai į ST pulta““ pasirenkamas ryšio p
 
 Prijungus modulį E485 prie centralės ir jei mobilus ryšis nenaudojamas, centralėje SIM kortelė nebūtina.
 
-### 3.10 RF-SH prijungimo schema
+### RF-SH prijungimo schema
 
 Su *RF-SH* apsaugos sistemai galima priskirti iki 64 bevielių pultelių, 16 bevielių sirenų, 32 bevielių jutiklių ir 8 bevielių klaviatūrų. / *„FLEXi” SP3* konfigūravimas su plėtimo moduliais aprašytas p. 5.5. „Langas „Moduliai“.
 
 <img alt="" src="./image34.png" style="width:2.510005468066492in;height:1.2800021872265968in" />
 
-### 3.11 iO serijos išplėtimo modulių prijungimo schemos
+### iO serijos išplėtimo modulių prijungimo schemos
 
 Jei reikia, kad apsaugos centralė „FLEXi” SP3 turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. „FLEXi” SP3 konfigūravimas su plėtimo moduliais aprašytas p. 5.5. „Langas „Moduliai“.
 
@@ -515,19 +521,19 @@ Jei reikia, kad apsaugos centralė „FLEXi” SP3 turėtų daugiau įėjimų IN
 
 </div>
 
-### 3.12 Radijo siųstuvo T16 prijungimo schema
+### Radijo siųstuvo T16 prijungimo schema
 
 Radijo siųstuvas *T16* naudojamas apsaugos centralių įvykių pranešimams perduoti per “Trikdis” radijo tinklus. / Siųstuvas gali siųsti savus įvykių pranešimus ir įvykių pranešimus, gautus iš apsaugos centralių į CSP (centralizuotą stebėjimo pultą) su galimybe iš CSP nukreipti galutiniam vartotojui.
 
 <img alt="" src="./image37.png" style="width:2.253337707786527in;height:1.2600021872265967in" />
 
-### 3.13 SF485 modulio prijungimo schema
+### SF485 modulio prijungimo schema
 
 *SF485* veikia kaip rezervinis ryšio kanalas, skirtas apsaugos centralės įvykiams perduoti į CSP (centralizuota stebėjimo pultą) arba į *Protegus2* mobiliąją programėlę per SigFox tinklą, kai nepavyksta įvykius perduoti pagrindiniu ryšio kanalu. Pranešimai perduodami „Contact ID“ formatu.
 
 <img alt="" src="./image38.png" style="width:2.25667104111986in;height:1.2600021872265967in" />
 
-### 3.14 Apsaugos centralės paleidimas veikti
+### Apsaugos centralės paleidimas veikti
 
 Norint centralę paleisti veikti, reikia įjungti jos maitinimo šaltinį. Centralės plokštės šviesiniai diodai turi veikti taip:
 
@@ -535,9 +541,12 @@ Norint centralę paleisti veikti, reikia įjungti jos maitinimo šaltinį. Centr
 
 - Diodas „NET“ turi šviesti žaliai ir periodiškai ne mažiau nei 3 kartus sužybsėti geltonai – žalia spalva indikuoja, kad SIM kortelė sėkmingai priregistruota prie mobiliojo ryšio tinklo, o geltonų žybsnių skaičius reiškia mobiliojo signalo lygį.
 
-!!! note Pakankamas mobiliojo ryšio signalo lygis - 3 (trys „NET” indikatoriaus geltoni žybsniai). / Jei suskaičiuojate mažiau geltonų „NET” diodo žybsnių, tai mobiliojo ryšio signalo lygis nepakankamas. Rekomenduojame arba pasirinkti kitą centralės įrengimo vietą, arba pakeisti antenos vietą, arba naudoti jautresnę mobiliojo ryšio anteną. / Jei centralės šviesinė indikacija kitokia, kad nustatytumėte, kas nutikę, žiūrėkite skyrių 1.4 „Šviesinė veikimo indikacija”. / Jei „FLEXi” SP3 indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir laidinius sujungimus. \## 4. Nuotolinis valdymas
+!!! note
+    Pakankamas mobiliojo ryšio signalo lygis - 3 (trys „NET” indikatoriaus geltoni žybsniai). / Jei suskaičiuojate mažiau geltonų „NET” diodo žybsnių, tai mobiliojo ryšio signalo lygis nepakankamas. Rekomenduojame arba pasirinkti kitą centralės įrengimo vietą, arba pakeisti antenos vietą, arba naudoti jautresnę mobiliojo ryšio anteną. / Jei centralės šviesinė indikacija kitokia, kad nustatytumėte, kas nutikę, žiūrėkite skyrių 1.4 „Šviesinė veikimo indikacija”. / Jei „FLEXi” SP3 indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir laidinius sujungimus.
 
-### 4.1 *„FLEXi” SP3* priskyrimas prie vartotojo *Protegus2* paskyros
+## Nuotolinis valdymas
+
+### *„FLEXi” SP3* priskyrimas prie vartotojo *Protegus2* paskyros
 
 Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus sistemos įvykių pranešimus.
 
@@ -551,7 +560,8 @@ Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie t
 
 2.  Spustelkite elektroniniu paštu gautą nuorodą, kad patvirtintumėte paskyros sukūrimą. Telefone paleiskite Protegus2 aplikaciją ir savo vartotojo vardu ir slaptažodžiu prie jos prisijunkite.
 
-!!! note Pridėjimo prie Protegus2 metu „FLEXi” SP3 turi būti:
+!!! note
+    Pridėjimo prie Protegus2 metu „FLEXi” SP3 turi būti:
 
     1.  Įstatyta aktyvuota SIM kortelė su įvestu PIN arba išjungtu PIN kodo
         reikalavimu;
@@ -569,7 +579,7 @@ Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie t
 
 <img alt="" src="./image40.png" style="width:3.0in;height:3.909448818897638in" />
 
-### 4.2 Sistemos įjungimas/išjungimas su *Protegus2*
+### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Kad suvaldytumėte sistemą, eikite į *Protegus2*.
 
@@ -579,7 +589,7 @@ Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie t
 
 <img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.283464566929134in" />
 
-### 4.3 Konfigūravimas ir valdymas SMS žinutėmis
+### Konfigūravimas ir valdymas SMS žinutėmis
 
 Apsaugos centralę „FLEXi” SP3 nuotoliniu būdu galima valdyti ir konfigūruoti SMS pranešimais.
 
@@ -624,9 +634,10 @@ Pirminėje centralės konfigūracijoje SMS slaptažodžio reikšmė **123456**. 
 | CONNECT | USER=user | APN naudotojas. Pvz.: CONNECT 123456 USER=User |
 | CONNECT | PSW=password | APN slaptažodis. Pvz.: CONNECT 123456 PSW=Password |
 
-### 4.4 Valdymas skambučiu
+### Valdymas skambučiu
 
-!!! note Sistemos administratorius gali valdyti „FLEXi” SP3 telefono skambučiu ir SMS komandomis. / Jei norite leisti sistemą valdyti skambučiu kitiems asmenims, įveskite jų identifikavimo duomenis su programa TrikdisConfig arba SMS komandomis. / **<u>Valdymas skambučiu neveikia su apsaugos centralėmis *SP3_хх7х*. *SP3_12xx* apsaugos centralės neturi balso pranešimo su 1.14 ir naujesne programinės įrangos versija.</u>** **„FLEXi” SP3 valdymo komandos telefono skambučiu**
+!!! note
+    Sistemos administratorius gali valdyti „FLEXi” SP3 telefono skambučiu ir SMS komandomis. / Jei norite leisti sistemą valdyti skambučiu kitiems asmenims, įveskite jų identifikavimo duomenis su programa TrikdisConfig arba SMS komandomis. / **<u>Valdymas skambučiu neveikia su apsaugos centralėmis *SP3_хх7х*. *SP3_12xx* apsaugos centralės neturi balso pranešimo su 1.14 ir naujesne programinės įrangos versija.</u>** **„FLEXi” SP3 valdymo komandos telefono skambučiu**
 
 Išėjimų OUT ir apsaugos sričių valdymas skambučiu:
 
@@ -645,7 +656,7 @@ Išėjimų OUT ir apsaugos sričių valdymas skambučiu:
 
 Garso failo įrašo pradžią ir pabaigą palydi garso signalas. Garso failo įrašo trukmė 15 sek. Garso įrašo perklausos pabaigą palydi garso signalas. Garso įrašo išsaugojimo pabaigą pažymi garso signalas. Tik išgirdus garsinį signalą galima atlikti kitus veiksmus.
 
-## 5. Veikimo parametrų nustatymas su programa TrikdisConfig
+## Veikimo parametrų nustatymas su programa TrikdisConfig
 
 1.  Iš tinklapio [www.trikdis.com/lt](http://www.trikdis.com/lt)/ į kompiuterį įdiekite konfigūravimo programą TrikdisConfig (programą rasite paieškos lauke surinkę „TrikdisConfig“).
 
@@ -657,7 +668,7 @@ Garso failo įrašo pradžią ir pabaigą palydi garso signalas. Garso failo įr
 
 2.  Spustelkite programos mygtuką **Skaityti \[F4\]**, kad ji pateiktų esamas „FLEXi” SP3 veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite *administratoriaus* arba *montuotojo* kodą.
 
-### 5.1 TrikdisConfig būsenos juostos aprašymas
+### TrikdisConfig būsenos juostos aprašymas
 
 Prijungus „FLEXi” SP3, TrikdisConfig būsenų juostoje pateiks prijungto gaminio informaciją.
 
@@ -677,7 +688,7 @@ Prijungus „FLEXi” SP3, TrikdisConfig būsenų juostoje pateiks prijungto gam
 
 Paspaudus mygtuką **Skaityti \[F4\]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti „FLEXi” SP3. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### 5.2 Langas „Sistemos parinktys“
+### Langas „Sistemos parinktys“
 
 **Skirtukas „Pagrindiniai”**
 
@@ -809,11 +820,12 @@ Jei yra pažymėtas bent vienas apsaugos centralės vidinio gedimo laukas, tai a
 
 - **Instaliuotojo kodas** – (*gamyklinis kodas - 654321*) suteikia prieigą prie sistemos konfigūravimo montuotojui. Saugumui užtikrinti, pakeiskite jį į tik Jums žinomą šešiaženklį kodą.
 
-!!! note Jei nustatytas numatytasis *administratoriaus kodas* (123456), programa nereikalaus jo įvesti ir po mygtuko **Skaityti \[F4\]** paspaudimo pateiks esamų nustatytų gaminio veikimo parametrų reikšmes. **Parinkčių grupė „Instaliuotojo teisės“**
+!!! note
+    Jei nustatytas numatytasis *administratoriaus kodas* (123456), programa nereikalaus jo įvesti ir po mygtuko **Skaityti \[F4\]** paspaudimo pateiks esamų nustatytų gaminio veikimo parametrų reikšmes. **Parinkčių grupė „Instaliuotojo teisės“**
 
 - Nurodo montuotojo teises.
 
-### 5.3 Langas „Pranešimai į ST pultą“
+### Langas „Pranešimai į ST pultą“
 
 **Skirtukas „Pranešimai“**
 
@@ -863,7 +875,8 @@ Nustačius lygiagretaus pulto kanalo parametrus, pranešimai vienu metu bus siun
 
 - **Esamas laikas SIA** - pažymėkite langelį, kad stebėjimo pultui siunčiamuose pranešimuose būtų nurodytas modulyje nustatytas laikas.
 
-!!! note Nepriklausomai nuo jūsų IP nustatymų, įsitikinkite, kad jūsų DNS adresai atitinka tuos, kuriuos palaiko jūsų IPT. **Parinkčių grupė „Siuntimo tvarka“**
+!!! note
+    Nepriklausomai nuo jūsų IP nustatymų, įsitikinkite, kad jūsų DNS adresai atitinka tuos, kuriuos palaiko jūsų IPT. **Parinkčių grupė „Siuntimo tvarka“**
 
 Nustatomi parametrai, kaip centralė siųs pranešimus į CSP kanalus ir į Protegus2. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į CSP, tai **Grįžimą į pagrindinį** ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
 
@@ -899,7 +912,7 @@ Nustatomi parametrai, kaip centralė siųs pranešimus į CSP kanalus ir į Prot
 
 - **Išjungti SIM kortelės mobiliųjų duomenų naudojimą** – pažymėjus langelį, bus išjungtas mobiliųjų duomenų naudojimas. Duomenys bus siunčiami tik per WiFi. Jei dings WiFi ryšis „FLEXi” SP3 kaups duomenis atmintyje. Kai WiFi ryšis atsistatys „FLEXi” SP3 išsiųs duomenys per WiFi.
 
-### 5.4 Langas „Vartotojai ir pranešimai“
+### Langas „Vartotojai ir pranešimai“
 
 **Skirtukas „Vartotojai“**
 
@@ -961,7 +974,8 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 5.  Norint ištrinti visus raktus (ir pagrindinį), reikia palaikyti **„Pagrindinį raktą“** priglaudus prie skaitytuvo ne trumpiau 20 s.
 
-!!! note „Pagrindinio rakto” paskirtis – kitiems kontaktiniams raktams registruoti. Naudojant „Pagrindinį raktą” komandų (ARM/DISARM) vykdymas turės uždelsimą. **Skirtukas „Protegus“**
+!!! note
+    „Pagrindinio rakto” paskirtis – kitiems kontaktiniams raktams registruoti. Naudojant „Pagrindinį raktą” komandų (ARM/DISARM) vykdymas turės uždelsimą. **Skirtukas „Protegus“**
 
 <img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
@@ -981,7 +995,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 - Atsakymų į SMS žinutėmis siųstas valdymo komandas tekstus galima redaguoti laukelyje **SMS žinutės tekstas**.
 
-### 5.5 Langas „Moduliai“
+### Langas „Moduliai“
 
 **Skirtukas „Klaviatūros“**
 
@@ -1049,7 +1063,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 - **Numatytasis šliuzas** - tinklų sietuvo adresas įrašomas pasirinkus rankinį registracijos rėžimą.
 
-### 5.6 Langas „Belaidžiai“
+### Langas „Belaidžiai“
 
 <img alt="" src="./image58.png" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
@@ -1113,7 +1127,8 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 13. Belaidis jutiklis pilnai priregistruotas.
 
-!!! note Belaidžių jutiklių ištrynimas iš „FLEXi” SP3 atminties:
+!!! note
+    Belaidžių jutiklių ištrynimas iš „FLEXi” SP3 atminties:
 
     1.  Prijunkite USB Mini-B kabelį prie „FLEXi" SP3.
 
@@ -1161,7 +1176,8 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 17. Belaidis valdymo pultelis pilnai priregistruotas.
 
-!!! note Belaidžio valdymo pultelio gamyklinių nustatymų atstatymas:
+!!! note
+    Belaidžio valdymo pultelio gamyklinių nustatymų atstatymas:
 
     1.  Pultelyje vienu metu paspaudžiami 2 ir 3 mygtukai ir laikomi kol
         indikatorius pradės mirksėti žaliai ir raudonai.
@@ -1207,7 +1223,8 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 18. Belaidė vidinė sirena pilnai priregistruota.
 
-!!! note Belaidės sirenos gamyklinių nustatymų atstatymas:
+!!! note
+    Belaidės sirenos gamyklinių nustatymų atstatymas:
 
     1.  Nuimkite sirenos dangtį.
 
@@ -1255,7 +1272,8 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 14. Belaidis jutiklis pilnai priregistruotas.
 
-!!! note Belaidžių jutiklių ištrynimas iš „FLEXi” SP3 atminties:
+!!! note
+    Belaidžių jutiklių ištrynimas iš „FLEXi” SP3 atminties:
 
     1.  Prijunkite USB Mini-B kabelį prie „FLEXi" SP3.
 
@@ -1297,7 +1315,8 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 14. Belaidė klaviatūra pilnai priregistruota.
 
-!!! note Belaidžių jutiklių ištrynimas iš „FLEXi” SP3 atminties:
+!!! note
+    Belaidžių jutiklių ištrynimas iš „FLEXi” SP3 atminties:
 
     1.  Prijunkite USB Mini-B kabelį prie „FLEXi" SP3.
 
@@ -1309,7 +1328,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
         nurodykite **Išjungtas** ir paspauskite **Įrašyti [F5]**. Belaidė
         klaviatūra ištrinta iš „FLEXi" SP3 atminties.
 
-### 5.7 Langas „Zonų įėjimai“
+### Langas „Zonų įėjimai“
 
 **Skirtukas „Zonų nustatymai“**
 
@@ -1389,7 +1408,7 @@ Kai apsauga įjungta STAY režimu, „Vidaus (nakties)“ zona nesaugoma.
 
 - **Vartotojas / SMS ir Skambutis** – pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvienos zonos įvykius – SMS žinutėmis ar/ir skambučiais.
 
-### 5.8 Langas „PGM išėjimai“
+### Langas „PGM išėjimai“
 
 **Skirtukas „Išėjimas“**
 
@@ -1527,7 +1546,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Vartotojas / SMS ir Skambutis** – galite parinkti, kurį vartotoją SMS žinute ar/ir skambučiu informuoti, kada OUT išėjimas bus įjungtas/išjungtas.
 
-### 5.9 Langas „Jutikliai“
+### Langas „Jutikliai“
 
 <img alt="" src="./image69.png" style="width:7.086614173228346in;height:2.874015748031496in" />
 
@@ -1547,7 +1566,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Jutiklio tipas** – nurodykite prijungiamo temperatūros jutiklio tipą (Dallas 1Wire – galima prijungti 8 vnt. temperatūros jutiklių. Pasirinkus Dallas jutiklius jie bus priregistruojami automatiškai; Humidity & Temperature – galima prijungti 1 vnt. AM2301 temperatūros ir drėgmės jutiklį. Pasirinkus Humidity & Temperature jutiklį reikia rankiniu būdu iš sąrašo juos priskirti **Įrenginys** stulpelyje.).
 
-### 5.10 Langas „Sistemos įvykiai“
+### Langas „Sistemos įvykiai“
 
 **Skirtukas „Įvykiai“**
 
@@ -1579,7 +1598,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Vartotojas / SMS ir Skambutis** – pažymėkite, kokiu būdu vartotojai turi būti informuoti apie kiekvieną įvykį – SMS žinute ir/arba skambučiu.
 
-### 5.11 Langas „Įvykių žurnalas“
+### Langas „Įvykių žurnalas“
 
 <img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.6850393700787403in" />
 
@@ -1589,15 +1608,16 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - Lentelėje galima rasti **Įvykio Nr.**, **Laiką**, **CID** kodą, **Įvykio pavadinimą**. Įvykių žurnalo istorijoje gali būti parodyta iki 1000 įvykių išsaugotų „FLEXi” SP3 atmintyje.
 
-### 5.12 Gamyklinių nustatymų atstatymas
+### Gamyklinių nustatymų atstatymas
 
 Norint atkurti centralės gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
 <img alt="" src="./image73.png" style="width:7.086614173228346in;height:1.0826771653543308in" />
 
-### 5.13 Programinės įrangos atnaujinimas
+### Programinės įrangos atnaujinimas
 
-!!! note Prijungus „FLEXi” SP3 prie TrikdisConfig, programa pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų. Šiam veikimui reikalingas interneto ryšys. / Jei jūsų kompiuteryje yra instaliuota antivirusinė programa, ji gali blokuoti automatinio gamyklinės programinės įrangos atnaujinimo funkciją. Šiuo atveju turėsite perkonfigūruoti savo antivirusinę programą. „FLEXi” SP3 veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnaujinimo išlieka visi ankstesni „FLEXi” SP3 parametrai. Veikimo programą įrašant rankiniu būdu, ji gali būti pakeista į naujesnę arba senesnę versiją.
+!!! note
+    Prijungus „FLEXi” SP3 prie TrikdisConfig, programa pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų. Šiam veikimui reikalingas interneto ryšys. / Jei jūsų kompiuteryje yra instaliuota antivirusinė programa, ji gali blokuoti automatinio gamyklinės programinės įrangos atnaujinimo funkciją. Šiuo atveju turėsite perkonfigūruoti savo antivirusinę programą. „FLEXi” SP3 veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnaujinimo išlieka visi ankstesni „FLEXi” SP3 parametrai. Veikimo programą įrašant rankiniu būdu, ji gali būti pakeista į naujesnę arba senesnę versiją.
 
 Atlikite šiuos žingsnius:
 
@@ -1617,7 +1637,7 @@ Atlikite šiuos žingsnius:
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti \[F5\]** ir atjunkite USB kabelį.
 
-## 6. Turinys
+## Turinys
 
 **Garantija ir atsakomybės ribojimas**
 
@@ -1653,7 +1673,7 @@ Gamintojas neatsako:
 
 - už centralės pirkėjo arba centralės vartotojo patalpų plėšimą, gaisrą, ar kitus patirtus nuostolius, ir dėl minėtų įvykių neatlygina centralės pirkėjui arba centralės vartotojui padarytos turtinės arba neturtinės žalos.
 
-## 7. Saugos reikalavimai
+## Saugos reikalavimai
 
 Prieš naudodami centralę, būtinai susipažinkite su šia instrukcija.
 
