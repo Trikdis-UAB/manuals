@@ -22,12 +22,8 @@ hide:
 - [GET Cellular Communicator](en/alarm-communicators/get-cellular/)
 ### Control Panels
 
-### Cellular control panels
-
 - [Security control panel FLEXi SP3](en/control-panels/sp3/)
 ### Gate Controllers
-
-### Controllers
 
 - [GATOR Cellular Gate Controller](en/gate-controllers/gator/)
 - [GATOR WiFi Gate Controller](en/gate-controllers/gator-wifi/)
@@ -58,12 +54,8 @@ hide:
 - [Siųstuvas T16](lt/alarm-communicators/t16/)
 ### Apsaugos centrelės
 
-### Apsaugos centrelės
-
 - [Apsaugos centralė “FLEXi” SP3](lt/control-panels/sp3/)
 - [GSM apsaugos centralė CG17](lt/control-panels/cg17/)
-### Valdikliai
-
 ### Valdikliai
 
 - [Gator](lt/gate-controllers/gator/)
@@ -82,11 +74,7 @@ hide:
 - [Comunicador GET](es/alarm-communicators/get-cellular/)
 ### Paneles de control
 
-### Paneles de control celular
-
 - [Panel de control FLEXi SP3](es/control-panels/sp3/)
-### Controladores
-
 ### Controladores
 
 - [Gator](es/gate-controllers/gator/)

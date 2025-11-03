@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 from collections import OrderedDict
 from pathlib import Path
+from typing import Union
 
 import yaml
 
@@ -85,9 +86,16 @@ TOP_LEVEL_LABELS = {
     },
 }
 
+SUBCATEGORY_CATEGORY_DIRS = {'alarm-communicators'}
+
+NavItem = dict[str, str]
+NavGroup = OrderedDict[str, list[NavItem]]
+NavEntry = Union[NavGroup, list[NavItem]]
+NavStructure = dict[str, OrderedDict[str, NavEntry]]
+
 
 def build_nav_from_sources(csv_path: Path):
-    nav: dict[str, OrderedDict[str, OrderedDict[str, list[dict[str, str]]]]] = {}
+    nav: NavStructure = {}
 
     with csv_path.open('r', encoding='utf-8-sig') as fh:
         reader = csv.DictReader(fh)
@@ -115,15 +123,39 @@ def build_nav_from_sources(csv_path: Path):
             )
 
             lang_nav = nav.setdefault(language, OrderedDict())
-            top_nav = lang_nav.setdefault(top_label, OrderedDict())
-            manual_list = top_nav.setdefault(category_label, [])
-
             entry = {
                 'title': product_name,
                 'path': '/'.join(md_path.relative_to(DOCS_DIR).parts)
             }
-            if entry not in manual_list:
-                manual_list.append(entry)
+
+            is_subcategorized = category_dir in SUBCATEGORY_CATEGORY_DIRS
+
+            if is_subcategorized:
+                top_nav = lang_nav.get(top_label)
+                if top_nav is None or isinstance(top_nav, list):
+                    # Initialize or convert to an OrderedDict for subcategories
+                    top_nav = OrderedDict()
+                    lang_nav[top_label] = top_nav
+                manual_list = top_nav.setdefault(category_label, [])
+                if entry not in manual_list:
+                    manual_list.append(entry)
+            else:
+                top_nav = lang_nav.get(top_label)
+                if top_nav is None:
+                    lang_nav[top_label] = [entry]
+                elif isinstance(top_nav, list):
+                    if entry not in top_nav:
+                        top_nav.append(entry)
+                else:
+                    flattened: list[dict[str, str]] = []
+                    for manuals in top_nav.values():
+                        for manual in manuals:
+                            if manual not in flattened:
+                                flattened.append(manual)
+                    if entry not in flattened:
+                        flattened.append(entry)
+                    lang_nav[top_label] = flattened
+
 
     return nav
 
@@ -136,13 +168,23 @@ def update_mkdocs(nav_structure):
 
     for language, top_categories in nav_structure.items():
         lang_label = LANGUAGE_LABELS.get(language, language.upper())
+        communicator_label = TOP_LEVEL_LABELS.get(language, {}).get('alarm-communicators')
         lang_section = []
-        for top_label, sub_categories in top_categories.items():
-            sub_entries = []
-            for sub_label, manuals in sub_categories.items():
-                items = [{manual['title']: manual['path']} for manual in manuals]
-                sub_entries.append({sub_label: items})
-            lang_section.append({top_label: sub_entries})
+        for top_label, value in top_categories.items():
+            if isinstance(value, list):
+                items = [{manual['title']: manual['path']} for manual in value]
+                lang_section.append({top_label: items})
+            elif communicator_label and top_label != communicator_label:
+                items = []
+                for manuals in value.values():
+                    items.extend({manual['title']: manual['path']} for manual in manuals)
+                lang_section.append({top_label: items})
+            else:
+                sub_entries = []
+                for sub_label, manuals in value.items():
+                    items = [{manual['title']: manual['path']} for manual in manuals]
+                    sub_entries.append({sub_label: items})
+                lang_section.append({top_label: sub_entries})
         new_nav.append({lang_label: lang_section})
 
     config['nav'] = new_nav
@@ -150,12 +192,14 @@ def update_mkdocs(nav_structure):
     with MKDOCS_PATH.open('w', encoding='utf-8') as fh:
         yaml.dump(config, fh, sort_keys=False, allow_unicode=True, default_flow_style=False)
 
-    total = sum(
-        len(manuals)
-        for top_categories in nav_structure.values()
-        for sub_categories in top_categories.values()
-        for manuals in sub_categories.values()
-    )
+    total = 0
+    for top_categories in nav_structure.values():
+        for value in top_categories.values():
+            if isinstance(value, list):
+                total += len(value)
+            else:
+                for manuals in value.values():
+                    total += len(manuals)
     print(f"✓ Updated {MKDOCS_PATH}")
     print(f"  Found {total} manual(s) across {len(nav_structure)} language(s)")
 
