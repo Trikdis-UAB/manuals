@@ -122,9 +122,16 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 ### Elements of the *FIRECOM* communicator
 
-|  |
-|----|
-| Connectivity and operation indicator lights. Button. Not used. Backup power supply terminal block. Main power supply terminal block. RESET button. External terminal block. |
+<img src="./image4.png" alt="FIRECOM communicator elements" style="width: 100%; height: auto;" />
+
+1. Connectivity and operation indicator lights
+2. Button
+3. Not used
+4. Backup power supply terminal block
+5. Main power supply terminal block
+6. RESET button
+7. External terminal block
+
 
 ### Purpose of terminals
 

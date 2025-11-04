@@ -119,9 +119,16 @@ Envía eventos al receptor en una CRA
 
 ### Elementos del comunicador FIRECOM 
 
-|  |
-|--|
-| Indicadores luminosos. Botón. No está activo. Bloque de terminales de la fuente de alimentación de respaldo. Bloque de terminales de la fuente de alimentación principal. Botón “RESET”. Terminales para conectar dispositivos externos. |
+<img src="./image4.png" alt="Elementos del comunicador FIRECOM" style="width: 100%; height: auto;" />
+
+1. Indicadores luminosos
+2. Botón
+3. No está activo
+4. Bloque de terminales de la fuente de alimentación de respaldo
+5. Bloque de terminales de la fuente de alimentación principal
+6. Botón “RESET”
+7. Terminales para conectar dispositivos externos
+
 
 ### Propósito de los terminales 
 
