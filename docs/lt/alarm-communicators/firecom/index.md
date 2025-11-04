@@ -4,7 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-## Aprašymas
+## Aprašymas 
 
 FIRECOM komunikatorius atitinka EN 54-21:2006 standarto reikalavimus; EN 54-4:1997/AC:1999/A1:2002/A2:2006.
 
@@ -118,13 +118,20 @@ Pranešimai saugos tarnybai
 | Komunikatoriaus matmenys | 235 x 205 x 92 mm |
 | Svoris | 1.35 kg |
 
-### Komunikatoriaus FIRECOM elementai
+### Komunikatoriaus FIRECOM elementai 
 
-|  |
-|--|
-| Ryšio ir veikimo šviesinė indikacija. Mygtukas. Nenaudojamas. Rezervinio maitinimo kontaktų kaladėlė. Pagrindinio maitinimo kontaktų kaladėlė. „RESET“ mygtukas. Išorinių kontaktų kaladėlė. |
+<img src="./image4.png" alt="Komunikatoriaus FIRECOM elementai" style="width: 100%; height: auto;" />
 
-### Išorinių kontaktų paskirtis
+1. Ryšio ir veikimo šviesinė indikacija
+2. Mygtukas
+3. Nenaudojamas
+4. Rezervinio maitinimo kontaktų kaladėlė
+5. Pagrindinio maitinimo kontaktų kaladėlė
+6. „RESET“ mygtukas
+7. Išorinių kontaktų kaladėlė
+
+
+### Išorinių kontaktų paskirtis 
 
 | Gnybtas | Aprašymas |
 |---------|-----------|
@@ -147,7 +154,7 @@ Pranešimai saugos tarnybai
 | NO2/​C2/​NC2 | 2-o relinio PGM išėjimo gnybtai |
 | NO3/​C3/​NC3 | 3-o relinio PGM išėjimo gnybtai |
 
-### Šviesinė veikimo indikacija
+### Šviesinė veikimo indikacija 
 
 | Indikatorius | Būklė | Aprašymas |
 |--------------|-------|-----------|
@@ -177,7 +184,7 @@ Pranešimai saugos tarnybai
 | FPS / POWER | 1 žalias mirktelėjimas | Nėra maitinimo iš kintamos srovės tinklo |
 | FPS / POWER | 2 žali mirktelėjimai | Nepakankama maitinimo įtampa atsarginio maitinimo šaltinyje |
 
-### Medžiagos reikalingos montavimo darbams
+### Medžiagos reikalingos montavimo darbams 
 
 Prieš pradėdami įrengimą, įsitikinkite, kad turite:
 
@@ -195,17 +202,17 @@ Prieš pradėdami įrengimą, įsitikinkite, kad turite:
 
 Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
-## Komunikatoriaus maitinimas
+## Komunikatoriaus maitinimas 
 
-### Pagrindinis maitinimas
+### Pagrindinis maitinimas 
 
 Komunikatorius turi būti maitinamas iš nuolatinės srovės šaltinio. Nenutrūkstamam sistemos maitinimui užtikrinti, prie komunikatoriaus dar turi būti prijungtas rezervinio maitinimo šaltinis – 12 V akumuliatorius.
 
-### Rezervinis maitinimas
+### Rezervinis maitinimas 
 
 Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojamas įvykio „*Tinklo maitinimo dingimas*“ pranešimas ir komunikatorius automatiškai persijungs sistemą maitinti iš rezervinio 12 V akumuliatoriaus. Akumuliatoriaus įtampai sumažėjus iki 11,5 V, bus formuojamas įvykio „*Žema baterijos įtampa*“ pranešimas. Akumuliatorius bus atjungtas jei jis išsikraus žemiau 9,5 V. Atsiradus kintamos srovės tinklo įtampai, bus formuojamas „*Tinklo maitinimo atsistatymas*“ pranešimas ir automatiškai prasidės akumuliatoriaus įkrovimo procesas. Akumuliatoriaus įtampai atsistačius iki 12,6 V, bus formuojamas įvykio „*Baterijos įtampos atsistatymas*“ pranešimas.
 
-### Komunikatoriaus komplektas
+### Komunikatoriaus komplektas 
 
 | Pavadinimas | Kiekis |
 |----|:--:|
@@ -220,7 +227,7 @@ Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojama
 !!! note
     USB Type-C kabelis, skirtas komunikatoriui programuoti, kartu
     neteikiamas.
-## Sistemos įrengimas
+## Sistemos įrengimas 
 
 **FIRECOM plokštės matmenys**
 
@@ -285,7 +292,7 @@ Komunikatoriaus plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių gr
   </figure>
 </div>
 
-### Dūmų jutiklių jungimas
+### Dūmų jutiklių jungimas 
 
 Dvilaidžių dūmų jutiklių prijungimo schemos.
 
@@ -311,7 +318,7 @@ Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia aktyv
 
 <img alt="" src="./image18.png" style="width:5.956678696412949in;height:1.4466699475065616in" />
 
-### Priešgaisrinės centralės ir komunikatoriaus jungimo schema
+### Priešgaisrinės centralės ir komunikatoriaus jungimo schema 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -324,7 +331,7 @@ Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia aktyv
 
 Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus jo išėjimus prie FIRECOM įėjimų. Priešgaisrinės centralės išėjimai (PGM1, PGM2, PGM3) turi būti sukonfigūruoti kaip centralės būsenos išėjimai (Aliarmas, Gedimas ir kt.).
 
-## Priešgaisrinės centralės su protokolų ESPA4.4.4 prijungimo schema
+### Priešgaisrinės centralės su protokolų ESPA4.4.4 prijungimo schema 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -359,7 +366,7 @@ FIRECOM komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine c
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIRECOM pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-## Priešgaisrinės centralės NSC Solution prijungimo schema
+### Priešgaisrinės centralės NSC Solution prijungimo schema 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -394,7 +401,7 @@ Sukonfigūravus komunikatorių FIRECOM, įjunkite priešgaisrinės centralės ma
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIRECOM pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-## Priešgaisrinės centralės INIM SMARTLINE prijungimo schema
+### Priešgaisrinės centralės INIM SMARTLINE prijungimo schema 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -434,7 +441,7 @@ FIRECOM komunikatoriaus nustatymai su TrikdisConfig jungiant su **INIM SMARTLINE
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIRECOM pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-## Priešgaisrinės centralės C-TEC Cast ZFP prijungimo schema
+### Priešgaisrinės centralės C-TEC Cast ZFP prijungimo schema 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -513,7 +520,7 @@ Priešgaisrinė centralė užprogramuota. Atjunkite USB2.0 A-B kabelį nuo prie�
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIRECOM pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
-### Temperatūros jutiklio prijungimo schema
+### Temperatūros jutiklio prijungimo schema 
 
 <img alt="" src="./image54.png" style="width:3.5400076552930884in;height:1.1900021872265967in" /> / <img alt="" src="./image55.png" style="width:3.5400076552930884in;height:1.3200021872265966in" />
 
@@ -521,7 +528,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIR
 
 <img alt="" src="./image55.png" style="width:3.5400076552930884in;height:1.3200021872265966in" />
 
-### Relės, LED indikatoriaus prijungimo schemos
+### Relės, LED indikatoriaus prijungimo schemos 
 
 <img alt="" src="./image56.png" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.png" style="width:2.1233377077865265in;height:0.9066688538932633in" />
 
@@ -529,13 +536,13 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIR
 
 <img alt="" src="./image57.png" style="width:2.1233377077865265in;height:0.9066688538932633in" />
 
-### Priešgaisrinės centralės įėjimų ir komunikatoriaus jungimo schema
+### Priešgaisrinės centralės įėjimų ir komunikatoriaus jungimo schema 
 
 Pagal EN54 standartą gaisrinė centralė iš komunikatoriaus turi gauti informaciją apie ryšio su stebėjimo pultu gedimą, taip pat apie sėkmingą pranešimo gavimą į CSP. Prijunkite komunikatoriaus PGM išėjimus (pvz.: „Relay1“ ir „Relay2“) prie specialių gaisrinės centralės įėjimų. „Relay1“ PGM išėjimui turi būti nustatytas „Pulto kanalo sutrikimas“ režimas. „Relay2“ PGM išėjimui turi būti nustatytas „Patvirtinimas gautas“ režimas. „Relay1“ išėjimas aktyvuojamas kai dingsta ryšys su stebėjimo pultu. „Relay2“ išėjimas aktyvuojamas 5 sek. sėkmingai išsiuntus pranešimą stebėjimo pultui.
 
 <img alt="" src="./image58.png" style="width:3.38000656167979in;height:1.660003280839895in" />
 
-### iO serijos išplėtimo modulių prijungimo schemos
+### iO serijos išplėtimo modulių prijungimo schemos 
 
 Jei reikia, kad komunikatorius FIRECOM turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. FIRECOM konfigūravimas su plėtimo moduliais aprašytas p. 6.5. „Langas „Moduliai“.
 
@@ -552,7 +559,7 @@ LORA plėtimo modulių prijungimo schema
 
 <img alt="" src="./image61.png" style="width:5.57667760279965in;height:6.636679790026247in" />
 
-### Komunikatoriaus įjungimas
+### Komunikatoriaus įjungimas 
 
 Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komunikatorius veikia tinkamai, turi užsidegti ši FIRECOM šviesinė indikacija:
 
@@ -569,7 +576,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
     reikšmės skyriuje 1.4 „Šviesinė veikimo indikacija". / Jei FIRECOM
     šviesos indikatorius visiškai neaktyvus, patikrinkite maitinimo šaltinį
     ir sujungimus.
-## Greitas konfigūravimas su programa *TrikdisConfig*
+## Greitas konfigūravimas su programa *TrikdisConfig* 
 
 1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš <u>www.trikdis.lt</u> (programą rasite paieškos lauke surinkę „TrikdisConfig“) ir ją įdiekite*.*
 
@@ -581,7 +588,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į Protegus2 programėlę arba į stebėjimo pultą.
 
-### Nustatymai ryšiui su Protegus2 programėle
+### Nustatymai ryšiui su Protegus2 programėle 
 
 **Lange „Sistemos parinktys“:**
 
@@ -630,7 +637,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus FIRECOM nustatymus TrikdisConfig žr.
     skyrių 6 „TrikdisConfig langų aprašymas".
-### Nustatymai ryšiui su Stebėjimo pultu
+### Nustatymai ryšiui su Stebėjimo pultu 
 
 **Lange „Sistemos parinktys“:**
 
@@ -674,9 +681,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 !!! note
     Plačiau apie kitus FIRECOM nustatymus TrikdisConfig žr.
     skyrių 6 „TrikdisConfig langų aprašymas".
-## Nuotolinis valdymas
+## Nuotolinis valdymas 
 
-### Komunikatoriaus registravimas Protegus2 programėlėje
+### Komunikatoriaus registravimas Protegus2 programėlėje 
 
 Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti pranešimus apie sistemos įvykius.
 
@@ -715,7 +722,7 @@ Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti 
 
 <img alt="" src="./image74.png" style="width:3.0in;height:3.909448818897638in" />
 
-### Konfigūravimas ir valdymas SMS žinutėmis
+### Konfigūravimas ir valdymas SMS žinutėmis 
 
 1.  **Pakeiskite administratoriaus slaptažodį**
 
@@ -770,7 +777,7 @@ Sistemą galima valdyti su SMS arba skambučiu tik tais telefono numeriais, kuri
 | CONNECT | USER=user | APN naudotojas. Pvz.: CONNECT 123456 USER=User |
 | CONNECT | PSW=password | APN slaptažodis. Pvz.: CONNECT 123456 PSW=Password |
 
-### PGM išėjimų valdymas skambučiu
+### PGM išėjimų valdymas skambučiu 
 
 Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 
@@ -785,9 +792,9 @@ Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 | [išėjimo nr]*[būsenos nr]# | Pasirinkto OUT išėjimo valdymas | Valdo konkretų PGM išėjimą. Būsena: [0] – išėjimas išjungtas; [1] – išėjimas įjungtas; [2] – išjungtas impulso trukmei; [3] – įjungtas impulso trukmei; (impulso trukmė aprašyta TrikdisConfig programoje, PGM lentelėje). [#] – šis simbolis reiškia kodo pabaigą. Pvz. (įjungti 1 išėjimą): 1*1# Pvz. (išjungti 1 išėjimą): 1*0# Pvz. (įjungti 2 išėjimą „Impulso trukmei“, nurodytai TrikdisConfig „PGM išėjimai“ lentelėje): 2*3# |
 | # | Įvesti komandą iš naujo | Jei įvedant komandą padarėte klaidą, nuspauskite telefono klaviatūroje „#“ ir įveskite komandą iš naujo. |
 
-## TrikdisConfig langų aprašymas
+## TrikdisConfig langų aprašymas 
 
-### TrikdisConfig būsenos juostos aprašymas
+### TrikdisConfig būsenos juostos aprašymas 
 
 Prijungus komunikatorių FIRECOM TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
@@ -807,7 +814,7 @@ Prijungus komunikatorių FIRECOM TrikdisConfig būsenų juostoje pateiks informa
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti komunikatorių. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### Langas „Sistemos parinktys“
+### Langas „Sistemos parinktys“ 
 
 **Skirtukas „Pagrindiniai“**
 
@@ -884,7 +891,7 @@ Zonas galima priskirti grupėms. Kiekvienos grupės pavadinimas gali būti pakei
 
 Administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.
 
-### Langas „Pranešimai į ST pultą“
+### Langas „Pranešimai į ST pultą“ 
 
 **Skirtukas „Pranešimai“**
 
@@ -974,7 +981,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 - **Išjungti SIM kortelės mobiliųjų duomenų naudojimą** – pažymėjus langelį, bus išjungtas mobiliųjų duomenų naudojimas. Duomenys bus siunčiami tik per LAN. Jei dings LAN ryšis FIRECOM kaups duomenis atmintyje. Kai LAN ryšis atsistatys FIRECOM išsiųs duomenys per LAN.
 
-### Langas „Vartotojai ir pranešimai“
+### Langas „Vartotojai ir pranešimai“ 
 
 **Skirtukas „Vartotojai“**
 
@@ -1040,7 +1047,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 Priešgaisrines centrales (**ESPA4.4.4** sąsaja, **NSC solution**, **INIM smartline**, **C-TEC Cast ZFP**) galima prijungti prie FIRECOM komunikatoriaus RS485 2 sąsajos. Priešgaisrinių centralių prijungimo schemos ir nustatymai pateikti 3.5-3.8 punktuose.
 
-### Langas „Zonų įėjimai“
+### Langas „Zonų įėjimai“ 
 
 **Skirtukas „Zonų nustatymai“**
 
@@ -1090,7 +1097,7 @@ Suveikus zonai komunikatorius išsius pranešimą apie įvykį. Įėjimui priski
 
 - **Zona** - įrašykite zonos numerį, kuris bus siunčiamas įvykus įvykiui.
 
-### Langas „PGM išėjimai“
+### Langas „PGM išėjimai“ 
 
 **Skirtukas „Išėjimai“**
 
@@ -1166,7 +1173,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Vartotojas / SMS ir Skambutis** – galima parinkti, kurį vartotoją SMS žinute ar/ir skambučiu informuoti, kai OUT išėjimas bus įjungtas/išjungtas.
 
-### Langas „Jutikliai“
+### Langas „Jutikliai“ 
 
 <img alt="" src="./image93.png" style="width:7.086614173228346in;height:2.8503937007874014in" />
 
@@ -1186,7 +1193,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - **Jutiklio tipas** – nurodykite prijungiamo temperatūros jutiklio tipą („Dallas 1Wire“ – galima prijungti 8 vnt. temperatūros jutiklių. Pasirinkus Dallas jutiklius jie bus priregistruojami automatiškai; „Drėgmės ir temperatūros (AM23xx tipo)“ – galima prijungti 1 vnt. AM2301 temperatūros ir drėgmės jutiklį. Pasirinkus „Drėgmės ir temperatūros (AM23xx tipo)“ jutiklį jis turi būti rankiniu būdu priskirtas stulpelyje **„Įrenginys“**.).
 
-### Langas „Sistemos įvykiai“
+### Langas „Sistemos įvykiai“ 
 
 **Skirtukas „Įvykiai“**
 
@@ -1230,13 +1237,13 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 - Lentelėje galima rasti **Įvykio Nr.**, **Laiką**, **CID** kodą, **Įvykio pavadinimą**. Įvykių žurnalo istorijoje gali būti parodyta iki 1000 įvykių išsaugotų FIRECOM atmintyje.
 
-### Gamyklinių nustatymų atstatymas
+### Gamyklinių nustatymų atstatymas 
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką „**Atkurti“.**
 
 <img alt="" src="./image97.png" style="width:7.086614173228346in;height:1.0708661417322836in" />
 
-## Nuotolinis veikimo parametrų nustatymas
+## Nuotolinis veikimo parametrų nustatymas 
 
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai FIRECOM:
@@ -1268,7 +1275,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 4.  Nustatykite norimus parametrus ir pabaigę nuspauskite **Įrašyti [F5]**. Jei norite baigti darbą su TrikdisConfig, spauskite „**Atsijungti“.**
 
-## Komunikatoriaus testavimas
+## Komunikatoriaus testavimas 
 
 Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
@@ -1278,7 +1285,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 3.  Atlikite priešgaisrinės signalizacijos bandymą, kad įsitikintumėte, jog CSP tinkamai priima įvykius.
 
-## Programinės įrangos atnaujinimas
+## Programinės įrangos atnaujinimas 
 
 !!! note
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
@@ -1305,7 +1312,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Palaukite, kol bus atlikti atnaujinimai.
 
-## Saugos reikalavimai
+## Saugos reikalavimai 
 
 Komunikatorių turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 
