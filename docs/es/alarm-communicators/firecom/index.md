@@ -1,4 +1,4 @@
-# Comunicador FireCom
+# FIRECOM para centrales de alarma contra incendios Comunicador
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
@@ -322,7 +322,7 @@ Para conectar un circuito de detector de humo a la entrada seleccionada, debe ac
 
 Si desea monitorear el estado del panel de alarma contra incendios, conecte sus salidas correspondientes a las entradas FIRECOM. Las salidas (PGM1, PGM2, PGM3) del panel de incendios deben configurarse como salidas de estado del panel (Alarma, Problema, etc.).
 
-## Diagrama para conectar a la central de incendios con el protocolo ESPA4.4.4 
+### Diagrama para conectar a la central de incendios con el protocolo ESPA4.4.4 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -357,7 +357,7 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
-## Diagrama para conectar a la central de incendios NSC Solution 
+### Diagrama para conectar a la central de incendios NSC Solution 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -392,7 +392,7 @@ Después de configurar el comunicador FIRECOM, encienda la alimentación del pan
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
-##  Diagrama para conectar a la central de incendios INIM Smartline 
+###  Diagrama para conectar a la central de incendios INIM Smartline 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -432,7 +432,7 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
-## Diagrama para conectar a la central de incendios C-TEC Cast ZFP 
+### Diagrama para conectar a la central de incendios C-TEC Cast ZFP 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">

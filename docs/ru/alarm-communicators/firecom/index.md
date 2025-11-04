@@ -1,4 +1,4 @@
-# Коммуникатор FireCom
+# Коммуникатор FIRECOM соответствует требованиям стандарта EN 54-21:2006; EN 54-4:1997/AC:1999/A1:2002/A2:2006
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
@@ -325,7 +325,7 @@
 
 Если хотите контролировать состояние пожарной панели, подключите ее соответствующие выходы к входам FIRECOM. Выходы панели пожарной сигнализации (PGM1, PGM2, PGM3) должны быть настроены как выходы состояния панели (Тревога, Неисправность и т. д.).
 
-## Схема подключения пожарной панели с протоколом ESPA4.4.4 
+### Схема подключения пожарной панели с протоколом ESPA4.4.4 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -360,7 +360,7 @@
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что FIRECOM отправляет сообщения на приемник ПЦН и в Protegus2.
 
-## Схема подключения пожарной панели NSC Solution 
+### Схема подключения пожарной панели NSC Solution 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -395,7 +395,7 @@
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что FIRECOM отправляет сообщения в приемник ПЦН и в Protegus2.
 
-## Схема подключения пожарной панели INIM Smartline 
+### Схема подключения пожарной панели INIM Smartline 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -436,7 +436,7 @@
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что FIRECOM отправляет сообщения в приемник ПЦН и в Protegus2.
 
-## Схема подключения пожарной панели C-TEC Cast ZFP 
+### Схема подключения пожарной панели C-TEC Cast ZFP 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">

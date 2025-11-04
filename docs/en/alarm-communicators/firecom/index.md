@@ -1,4 +1,10 @@
-# Communicator FireCom
+# Communicator FIRECOM for fire alarm control panel
+
+<div style="text-align: center;">
+
+<img src="./image1.png" alt="" width="400">
+
+</div>
 
 ## Description
 
@@ -75,7 +81,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 - RS485 2 bus is used to connect fire alarm control panels.
 
-## Specifications
+### Specifications
 
 | Parameter | Description |
 |----|----|
@@ -114,13 +120,13 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | Dimensions | 235 x 205 x 92 mm |
 | Weight | 1.35 kg |
 
-## Elements of the *FIRECOM* communicator
+### Elements of the *FIRECOM* communicator
 
 |  |
 |----|
 | Connectivity and operation indicator lights. Button. Not used. Backup power supply terminal block. Main power supply terminal block. RESET button. External terminal block. |
 
-## Purpose of terminals
+### Purpose of terminals
 
 | Terminal           | Description                                            |
 |--------------------|--------------------------------------------------------|
@@ -143,7 +149,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | NO2/​C2/​NC2         | 2nd PGM relay output terminals                         |
 | NO3/​C3/​NC3         | 3rd PGM relay output terminals                         |
 
-## LED indication of operation
+### LED indication of operation
 
 | Indicator | Light status | Description |
 |----|----|----|
@@ -173,7 +179,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | FPS / POWER | 1 green flash | No AC power |
 | FPS / POWER | 2 green flashes | Insufficient backup power supply voltage |
 
-## Components necessary for installation
+### Components necessary for installation
 
 Before beginning installation, make sure that you have:
 
@@ -193,15 +199,15 @@ Order the necessary components separately from your local distributor.
 
 ## Powering the communicator
 
-## Main power supply
+### Main power supply
 
 The communicator must be powered by a DC source. A backup power supply – a 12 V battery – must be connected to the system to ensure the supply of power is uninterrupted.
 
-## Backup power supply
+### Backup power supply
 
 If there are problems with powering the system from the main power supply, an “*DC Fault”* event report will be generated and the panel will automatically switch to the backup 12 V battery. If the battery’s voltage falls to 11,5 V, a “*Low* *Battery”* event report will be generated. The battery will be disconnected if the voltage falls bellow 9,5 V. If DC voltage is restored, an “*DC Restore”* report will be generated and the battery charging process will begin automatically. When the battery’s voltage rises to 12,6 V, a “*Battery Restore”* event report will be generated.
 
-## Communicator kit
+### Communicator kit
 
 | Name | Quantity |
 |----|:--:|
@@ -226,7 +232,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
 <img alt="" src="./image5.png" style="width:6.080012029746282in;height:4.020007655293089in" />
 
-## Order of connecting devices
+### Order of connecting devices
 
 <img alt="" src="./image6.png" style="width:7.086805555555555in;height:3.696527777777778in" />
 
@@ -243,7 +249,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 !!! note
     When choosing a battery, it must be charged to 80% capacity within 24 hours, and the remaining capacity is reached within the next 48 hours to meet the requirements of the EN54 standard.
 
-## Connecting sensors
+### Connecting sensors
 
 There are 10 terminals IO1–IO10 (inputs) on the communicator board for connecting sensor circuits. The number of inputs can be expanded to 32 using input expanders (***iO-8, iO-MO, iO-LORA, iO8-LORA**)*. Any terminal can be set as an input and assigned zone attributes: circuit type (NO, NC, EOL, EOL_T, ATZ, ATZ_T); sensitivity to temporary circuit events; see chapter 6.6 ““Zones” window”.
 
@@ -301,7 +307,7 @@ There are 10 terminals IO1–IO10 (inputs) on the communicator board for connect
 
 </div>
 
-## Connecting smoke detectors
+### Connecting smoke detectors
 
 Schematic for connecting two-wire smoke detectors.
 
@@ -327,7 +333,7 @@ In order to connect the smoke detector circuit to the selected input, it is nece
 
 <img alt="" src="./image18.png" style="width:6.060012029746281in;height:1.490003280839895in" />
 
-## Schematic for connecting the communicator to a fire alarm control panel
+### Schematic for connecting the communicator to a fire alarm control panel
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -345,7 +351,7 @@ In order to connect the smoke detector circuit to the selected input, it is nece
 
 If you want to monitor the status of the fire alarm panel, connect its corresponding outputs to the FIRECOM inputs. The outputs (PGM1, PGM2, PGM3) of the fire panel must be configured as panel status outputs (Alarm, Trouble, etc.).
 
-## Schematic for connecting the fire panel with the ESPA4.4.4 protocol
+### Schematic for connecting the fire panel with the ESPA4.4.4 protocol
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -385,7 +391,7 @@ FIRECOM communicator settings with TrikdisConfig when connecting the fire alarm 
 
 Test the system. Activate the fire alarm and check that FIRECOM messages are sent to the CMS (central monitoring station) and to Protegus2.
 
-## Schematic for connecting the fire panel NSC Solution
+### Schematic for connecting the fire panel NSC Solution
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -425,7 +431,7 @@ After setting up the FIRECOM communicator, turn on power supply the fire control
 
 Test the system. Activate the fire alarm and check that FIRECOM messages are sent to the CMS (central monitoring station) and to Protegus2.
 
-## Schematic for connecting the fire panel INIM SMARTLINE
+### Schematic for connecting the fire panel INIM SMARTLINE
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -466,7 +472,7 @@ Test the system. Activate the fire alarm and check that FIRECOM messages are sen
 
 Test the system. Activate the fire alarm and check that FIRECOM messages are sent to the CMS (central monitoring station) and to Protegus2.
 
-## Schematic for connecting the fire panel C-TEC Cast ZFP
+### Schematic for connecting the fire panel C-TEC Cast ZFP
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -550,7 +556,7 @@ The fire panel is programmed. Disconnect the cable from USB2.0 A-B of the fire p
 
 Test the system. Activate the fire alarm and check that FIRECOM messages are sent to the CMS (central monitoring station) and to Protegus2.
 
-## Schematic for connecting a temperature sensor
+### Schematic for connecting a temperature sensor
 
 <img alt="" src="./image52.png" style="width:3.616674321959755in;height:1.1900021872265967in" /> / <img alt="" src="./image53.png" style="width:3.616674321959755in;height:1.3200021872265966in" />
 
@@ -558,7 +564,7 @@ Test the system. Activate the fire alarm and check that FIRECOM messages are sen
 
 <img alt="" src="./image53.png" style="width:3.616674321959755in;height:1.3200021872265966in" />
 
-## Schematics for connecting a relay and an LED indicator
+### Schematics for connecting a relay and an LED indicator
 
 <img alt="" src="./image54.png" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image55.png" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
@@ -566,13 +572,13 @@ Test the system. Activate the fire alarm and check that FIRECOM messages are sen
 
 <img alt="" src="./image55.png" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
-## Schematics of connecting the inputs of the fire panel to the communicator
+### Schematics of connecting the inputs of the fire panel to the communicator
 
 According to the EN54 standard, the fire panel from the communicator must receive information about the failure of communication with the monitoring station, as well as about the successful received of messages to the monitoring station. It is necessary to connect the PGM outputs (for example: “Relay1” and “Relay2”) of the communicator to the special inputs of the fire panel. The PGM output of “Relay1” must be set to “CMS fail”. The PGM output of “Relay2” must be set to “ACK received”. “Relay1” output is activated in case of violation of the communication channel with the CMS. “Relay2” output is activated for 5 sec. upon successful sending of a message to the CMS.
 
 <img alt="" src="./image56.png" style="width:3.42000656167979in;height:1.6966699475065616in" />
 
-## Schematics for connecting iO series expander modules
+### Schematics for connecting iO series expander modules
 
 If the communicator FIRECOM needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander. The FIRECOM’s configuration for expander modules is described in chapter 6.5 ““Modules” window”.
 
@@ -594,7 +600,7 @@ Schematics for connecting LORA modules.
 
 <img alt="" src="./image59.png" style="width:5.57667760279965in;height:6.636679790026247in" />
 
-## Turning on the communicator
+### Turning on the communicator
 
 To turn on the communicator, first you need to turn on its power supply. The communicator’s LED indicators must operate in the following way:
 
