@@ -1,4 +1,9 @@
-# Cellular communicator G17F
+# GSM communicator for fire alarm control panel G17F
+
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 
 ## Description 
 
@@ -109,7 +114,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 <img alt="" src="./image4.png" style="width:4.575in;height:2.8722222222222222in" />
 
-## Purpose of terminals 
+### Purpose of terminals 
 
 | Terminal | Description |
 |----------|-------------|
@@ -125,7 +130,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | 6 IN | 6th input terminal, selectable type: NO, NC, EOL (10 kΩ default setting) |
 | A RS485 | RS485 bus for connecting iO expanders, INIM Smartline fire control panels, NSC Solution fire control panels, C-TEC Cast ZFP fire control panels, fire control panels with ESPA4.4.4 protocol, and E485 and W485 modules. |
 
-## LED indication of operation 
+### LED indication of operation 
 
 | Indicator | Light status | Description |
 |-----------|--------------|-------------|
@@ -180,7 +185,7 @@ Order the necessary components separately from your local distributor.
 
 Below we describe the settings you need to edit to make the controller send events to the Protegus2 app or to the Central Monitoring Station (CMS).
 
-## Settings for connecting to *Protegus2* app 
+### Settings for connecting to *Protegus2* app 
 
 **In the “Users & Reporting” window, “Cloud application” settings group:**
 
@@ -221,7 +226,7 @@ After finishing configuration, click the **Write [F5]** button and disconnect th
 !!! note
     See chapter **5 "Description of TrikdisConfig windows"** to find more
     about other G17F settings in ***TrikdisConfig*.**
-## Settings for connecting to Central Monitoring Station 
+### Settings for connecting to Central Monitoring Station 
 
 **In the “System Options” window:**
 
@@ -304,7 +309,7 @@ If you want to monitor the status of the fire alarm panel, connect its correspon
 
 <img alt="" src="./image15.png" style="width:3.047244094488189in;height:2.87007874015748in" />
 
-## Connection diagram of the ESPA4.4.4 fire control panel and the G17F communicator 
+### Connection diagram of the ESPA4.4.4 fire control panel and the G17F communicator 
 
 <img alt="" src="./image16.png" style="width:2.673338801399825in;height:1.350003280839895in" />
 
@@ -332,7 +337,7 @@ G17F communicator settings using TrikdisConfig when connected to the **ESPA4.4.4
 
 Test the system. Activate the fire alarm and check that G17F messages are sent to the CMS (central monitoring station) and to Protegus2.
 
-## Connection diagram of the NSC Solution fire control panel and the G17F communicator 
+### Connection diagram of the NSC Solution fire control panel and the G17F communicator 
 
 <img alt="" src="./image21.png" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
@@ -398,7 +403,7 @@ Setting up communicator parameters for operation with the **INIM Smartline** fir
 
 Test the system. Activate the fire alarm and ensure that the G17F sends messages to the central monitoring station (CMS) and Protegus2.
 
-## Connection diagram of the C-TEC Cast ZFP fire control panel and the G17F communicator 
+### Connection diagram of the C-TEC Cast ZFP fire control panel and the G17F communicator 
 
 <img alt="" src="./image32.png" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
@@ -935,7 +940,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 - **User SMS/Call** – choose how to inform users about every zone event – via SMS message and/or call.
 
-## “PGM” window
+### “PGM” window
 
 **“Outputs” tab**
 
