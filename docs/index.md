@@ -26,7 +26,7 @@ Installers can jump straight to the right document by using the search icon in t
 ## Quick actions
 
 - **Search the library** with product codes or keywords from wiring diagrams.
-- **Switch languages** using the globe icon in the header.
+- **Switch languages** using the cards above.
 - **Need help?** Reach the support team through the links in the top-right corner.
 
 ## Helpful resources

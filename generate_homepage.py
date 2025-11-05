@@ -1,79 +1,46 @@
 #!/usr/bin/env python3
-"""Generate homepage index from mkdocs.yml nav structure."""
-
-import yaml
+"""Generate the custom homepage layout used on docs.trikdis.com."""
 from pathlib import Path
 
-def format_nav_item(item, level=0):
-    """Format a single navigation item as markdown."""
-
-    if isinstance(item, str):
-        # Simple string item (like 'index.md' or '!include ...')
-        return ""
-    elif isinstance(item, dict):
-        lines = []
-        for key, value in item.items():
-            if isinstance(value, str):
-                # Regular page link - convert .md paths to clean URLs
-                if value.endswith('.md'):
-                    # Convert path/to/index.md -> path/to/
-                    clean_path = value.replace('/index.md', '/').replace('.md', '/')
-                    lines.append(f"- [{key}]({clean_path})")
-                else:
-                    lines.append(f"- [{key}]({value})")
-            elif isinstance(value, list):
-                # Section with children
-                if level == 0:
-                    lines.append(f"## {key}\n")
-                else:
-                    lines.append(f"### {key}\n")
-                for child in value:
-                    child_lines = format_nav_item(child, level + 1)
-                    if child_lines:
-                        lines.append(child_lines)
-        return "\n".join(lines)
-    return ""
-
 def generate_homepage():
-    """Generate homepage content from mkdocs.yml nav."""
+    """Write the custom homepage content to docs/index.md."""
 
-    # Read mkdocs.yml
-    mkdocs_path = Path(__file__).parent / "mkdocs.yml"
-    with open(mkdocs_path, 'r') as f:
-        config = yaml.safe_load(f)
-
-    # Start building content
+    # Static homepage content tailored for the new UX
     content = """---
 hide:
   - toc
+class: language-home
 ---
 
-# TRIKDIS Product Documentation
+# <span id=\"welcome-message\" lang=\"en\">Welcome! Pick your language:</span>
 
-**Languages:** [English](#english) | [Lietuvių](#lietuviu) | [Español](#espanol) | [Русский](#russian)
+<style>
+  nav[aria-label=\"Table of contents\"] {
+    display: none !important;
+  }
+</style>
 
----
+<div class=\"language-grid\">
+  <a class=\"language-card\" data-lang=\"en\" href=\"en/\" lang=\"en\">English</a>
+  <a class=\"language-card\" data-lang=\"lt\" href=\"lt/\" lang=\"lt\">Lietuvių</a>
+  <a class=\"language-card\" data-lang=\"es\" href=\"es/\" lang=\"es\">Español</a>
+  <a class=\"language-card\" data-lang=\"ru\" href=\"ru/\" lang=\"ru\">Русский</a>
+</div>
 
-"""
+## Find your manual fast
 
-    # Process navigation items (skip Home page)
-    nav_items = config.get('nav', [])
-    for item in nav_items:
-        if isinstance(item, dict):
-            for key, value in item.items():
-                if key != "Home":  # Skip Home page itself
-                    content += format_nav_item({key: value})
-                    content += "\n\n"
+Installers can jump straight to the right document by using the search icon in the header or browsing the navigation tabs. Each manual includes PDF downloads, wiring diagrams, and configuration notes.
 
-    content += """---
+## Quick actions
 
-## How to Use This Site
+- **Search the library** with product codes or keywords from wiring diagrams.
+- **Switch languages** using the cards above.
+- **Need help?** Reach the support team through the links in the top-right corner.
 
-- **Browse by category** - Use the navigation menu on the left
-- **Search** - Click the search icon in the header
-- **Download PDF** - Available on individual manual pages
+## Helpful resources
 
-**Need support?** Visit [www.trikdis.com](https://www.trikdis.com) or contact your local distributor.
+- [Trikdis Support](https://www.trikdis.com/support-ticket/) — open a support ticket or reach the help desk.
+- [Find a distributor](https://www.trikdis.com/all-distributors/) — connect with a regional partner for training or certification updates.
 """
 
     # Write to index.md
