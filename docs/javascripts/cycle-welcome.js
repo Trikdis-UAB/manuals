@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function initWelcomeCycle() {
   var heading = document.getElementById("welcome-message");
   var languageCards = document.querySelectorAll(".language-card");
 
@@ -38,10 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveCard(current.lang);
   }
 
+  if (heading.dataset.cycling === "true") {
+    return;
+  }
+  heading.dataset.cycling = "true";
+
   showMessage(index);
 
-  setInterval(function () {
+  if (heading.dataset.intervalId) {
+    clearInterval(Number(heading.dataset.intervalId));
+  }
+
+  var intervalId = setInterval(function () {
     index = (index + 1) % messages.length;
     showMessage(index);
   }, intervalMs);
-});
+
+  heading.dataset.intervalId = String(intervalId);
+}
+
+if (window.document$ && typeof window.document$.subscribe === "function") {
+  window.document$.subscribe(initWelcomeCycle);
+} else {
+  document.addEventListener("DOMContentLoaded", initWelcomeCycle);
+}
