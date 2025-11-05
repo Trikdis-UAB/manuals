@@ -6,15 +6,32 @@ theme:
   favicon: images/favicon.png
   font: false
   palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
     primary: custom
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: custom
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
   features:
   - navigation.instant
+  - navigation.tabs
+  - navigation.sections
+  - navigation.top
   - navigation.expand
+  - content.code.copy
+  - search.share
   - search.suggest
   - search.highlight
 nav:
 - Home: index.md
 - English:
+  - Overview: en/index.md
   - Communicators:
     - Cellular:
       - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
@@ -38,6 +55,7 @@ nav:
     - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
     - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
 - Lithuanian:
+  - Apžvalga: lt/index.md
   - Komunikatoriai:
     - Mobilaus ryšio:
       - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
@@ -55,12 +73,13 @@ nav:
     - UHF radijo bangomis:
       - Siųstuvas T16: lt/alarm-communicators/t16/index.md
   - Apsaugos centrelės:
-    - Apsaugos centralė “FLEXi” SP3: lt/control-panels/sp3/index.md
+    - Apsaugos centralė FLEXi SP3: lt/control-panels/sp3/index.md
     - GSM apsaugos centralė CG17: lt/control-panels/cg17/index.md
   - Valdikliai:
     - Gator: lt/gate-controllers/gator/index.md
     - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
 - Spanish:
+  - Visión general: es/index.md
   - Comunicadores:
     - Celular:
       - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
@@ -84,6 +103,7 @@ nav:
     - Gator: es/gate-controllers/gator/index.md
     - Gator Wifi: es/gate-controllers/gator-wifi/index.md
 - Russian:
+  - Обзор: ru/index.md
   - Коммуникаторы:
     - GSM/GPRS:
       - GSM коммуникатор GT: ru/alarm-communicators/gt-cellular/index.md
@@ -106,11 +126,21 @@ nav:
   - Контроллеры:
     - Контроллер управления воротами GATOR: ru/gate-controllers/gator/index.md
     - Wi-Fi контроллер GATOR: ru/gate-controllers/gator-wifi/index.md
+extra:
+  social:
+  - icon: material/help-circle
+    name: Support
+    link: https://www.trikdis.com/support
+  - icon: material/email-outline
+    name: Contact Support
+    link: mailto:support@trikdis.com
 extra_css:
 - stylesheets/base.user.css
 - stylesheets/numbered-headings.css
 extra_javascript:
 - javascripts/redirect-trailing-slash.js
+- javascripts/close-language-select.js
+- javascripts/cycle-welcome.js
 plugins:
 - search:
     lang:
@@ -133,6 +163,7 @@ plugins:
     htmlmin_opts:
       remove_comments: true
 markdown_extensions:
+- meta
 - attr_list
 - admonition
 - sane_lists
