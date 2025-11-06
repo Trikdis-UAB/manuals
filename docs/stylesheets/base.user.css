@@ -44,6 +44,7 @@
   text-transform: none;
   border-radius: 0.4rem;
   line-height: 1;
+  margin-top: 0.15rem;
 }
 
 .md-lang-button::after {
