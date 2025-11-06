@@ -55,14 +55,15 @@
     ["md-select--active", "md-select--fade", "md-select--focused"].forEach(function (cls) {
       select.classList.remove(cls);
     });
-    try {
-      if (select.dataset) {
-        delete select.dataset.mdState;
-      }
-    } catch (err) {}
+    if (select.dataset) {
+      delete select.dataset.mdState;
+    }
     var toggle = select.querySelector("button");
     if (toggle) {
       toggle.setAttribute("aria-expanded", "false");
+      if (toggle.dataset) {
+        delete toggle.dataset.mdState;
+      }
       requestAnimationFrame(function () {
         toggle.blur();
       });
@@ -70,9 +71,6 @@
     var inner = select.querySelector(".md-select__inner");
     if (inner) {
       inner.removeAttribute("style");
-      inner.style.maxHeight = "0px";
-      inner.style.opacity = "0";
-      inner.style.pointerEvents = "none";
     }
   }
 

@@ -12,31 +12,35 @@ function attachLanguageSelectCloser() {
       ["md-select--active", "md-select--fade", "md-select--focused"].forEach(function (cls) {
         select.classList.remove(cls);
       });
-      try {
-        if (select.dataset) {
-          delete select.dataset.mdState;
+      if (select.dataset) {
+        delete select.dataset.mdState;
+      }
+      var toggle = select.querySelector("button");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+        if (toggle.dataset) {
+          delete toggle.dataset.mdState;
         }
-      } catch (err) {}
-     var toggle = select.querySelector("button");
-     if (toggle) {
-       toggle.setAttribute("aria-expanded", "false");
         requestAnimationFrame(function () {
           toggle.blur();
         });
-     }
-     var inner = select.querySelector(".md-select__inner");
-     if (inner) {
-       inner.removeAttribute("style");
-        inner.style.maxHeight = "0px";
-        inner.style.opacity = "0";
-        inner.style.pointerEvents = "none";
-     }
-     setTimeout(function () {
+      }
+      var inner = select.querySelector(".md-select__inner");
+      if (inner) {
+        inner.removeAttribute("style");
+      }
+      setTimeout(function () {
         ["md-select--active", "md-select--fade", "md-select--focused"].forEach(function (cls) {
           select.classList.remove(cls);
         });
+        if (select.dataset) {
+          delete select.dataset.mdState;
+        }
         if (toggle) {
           toggle.setAttribute("aria-expanded", "false");
+          if (toggle.dataset) {
+            delete toggle.dataset.mdState;
+          }
         }
       }, 120);
     });
