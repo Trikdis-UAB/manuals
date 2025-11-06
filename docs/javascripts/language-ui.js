@@ -47,6 +47,19 @@
     button.setAttribute("aria-label", "Select language (current: " + label + ")");
   }
 
+  function closeLanguageSelect() {
+    var select = document.querySelector("header .md-select");
+    if (!select) {
+      return;
+    }
+    select.classList.remove("md-select--active");
+    var toggle = select.querySelector("button");
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.blur();
+    }
+  }
+
   function filterNavigation(lang) {
     var navTarget = LANGUAGE_NAV_LABELS[lang];
     if (!navTarget || lang === "home") {
@@ -86,6 +99,7 @@
     requestAnimationFrame(function () {
       updateLanguageButton(lang);
       filterNavigation(lang);
+      closeLanguageSelect();
     });
   }
 
