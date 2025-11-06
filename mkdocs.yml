@@ -20,7 +20,6 @@ theme:
       name: Switch to light mode
   features:
   - navigation.instant
-  - navigation.tabs
   - navigation.sections
   - navigation.top
   - navigation.expand
@@ -127,6 +126,19 @@ nav:
     - Контроллер управления воротами GATOR: ru/gate-controllers/gator/index.md
     - Wi-Fi контроллер GATOR: ru/gate-controllers/gator-wifi/index.md
 extra:
+  alternate:
+  - name: English
+    link: /en/
+    lang: en
+  - name: Lietuvių
+    link: /lt/
+    lang: lt
+  - name: Español
+    link: /es/
+    lang: es
+  - name: Русский
+    link: /ru/
+    lang: ru
   social:
   - icon: material/help-circle
     name: Support
@@ -141,6 +153,7 @@ extra_javascript:
 - javascripts/redirect-trailing-slash.js
 - javascripts/close-language-select.js
 - javascripts/cycle-welcome.js
+- javascripts/language-ui.js
 plugins:
 - search:
     lang:
