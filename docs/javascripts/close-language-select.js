@@ -4,7 +4,7 @@ function attachLanguageSelectCloser() {
     return;
   }
   languageLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (event) {
       var select = link.closest(".md-select");
       if (!select) {
         return;
@@ -43,6 +43,16 @@ function attachLanguageSelectCloser() {
           }
         }
       }, 120);
+
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
+        return;
+      }
+
+      event.preventDefault();
+      var target = link.getAttribute("href");
+      setTimeout(function () {
+        window.location.href = target;
+      }, 80);
     });
   });
 }
