@@ -9,18 +9,32 @@ function attachLanguageSelectCloser() {
       if (!select) {
         return;
       }
-      select.classList.remove("md-select--active");
-      var toggle = select.querySelector("button");
-      if (toggle) {
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.blur();
-      }
-      var inner = select.querySelector(".md-select__inner");
-      if (inner) {
-        inner.removeAttribute("style");
-      }
-      setTimeout(function () {
-        select.classList.remove("md-select--active");
+      ["md-select--active", "md-select--fade", "md-select--focused"].forEach(function (cls) {
+        select.classList.remove(cls);
+      });
+      try {
+        if (select.dataset) {
+          delete select.dataset.mdState;
+        }
+      } catch (err) {}
+     var toggle = select.querySelector("button");
+     if (toggle) {
+       toggle.setAttribute("aria-expanded", "false");
+        requestAnimationFrame(function () {
+          toggle.blur();
+        });
+     }
+     var inner = select.querySelector(".md-select__inner");
+     if (inner) {
+       inner.removeAttribute("style");
+        inner.style.maxHeight = "0px";
+        inner.style.opacity = "0";
+        inner.style.pointerEvents = "none";
+     }
+     setTimeout(function () {
+        ["md-select--active", "md-select--fade", "md-select--focused"].forEach(function (cls) {
+          select.classList.remove(cls);
+        });
         if (toggle) {
           toggle.setAttribute("aria-expanded", "false");
         }

@@ -52,9 +52,14 @@
     if (!select) {
       return;
     }
-    ["md-select--active", "md-select--fade"].forEach(function (cls) {
+    ["md-select--active", "md-select--fade", "md-select--focused"].forEach(function (cls) {
       select.classList.remove(cls);
     });
+    try {
+      if (select.dataset) {
+        delete select.dataset.mdState;
+      }
+    } catch (err) {}
     var toggle = select.querySelector("button");
     if (toggle) {
       toggle.setAttribute("aria-expanded", "false");
@@ -65,6 +70,9 @@
     var inner = select.querySelector(".md-select__inner");
     if (inner) {
       inner.removeAttribute("style");
+      inner.style.maxHeight = "0px";
+      inner.style.opacity = "0";
+      inner.style.pointerEvents = "none";
     }
   }
 
