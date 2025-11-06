@@ -52,11 +52,15 @@
     if (!select) {
       return;
     }
-    select.classList.remove("md-select--active");
+    ["md-select--active", "md-select--fade"].forEach(function (cls) {
+      select.classList.remove(cls);
+    });
     var toggle = select.querySelector("button");
     if (toggle) {
       toggle.setAttribute("aria-expanded", "false");
-      toggle.blur();
+      requestAnimationFrame(function () {
+        toggle.blur();
+      });
     }
     var inner = select.querySelector(".md-select__inner");
     if (inner) {
@@ -100,7 +104,9 @@
 
   function scheduleClose() {
     closeLanguageSelect();
-    setTimeout(closeLanguageSelect, 120);
+    setTimeout(closeLanguageSelect, 60);
+    setTimeout(closeLanguageSelect, 150);
+    setTimeout(closeLanguageSelect, 300);
   }
 
   function applyLanguageUI() {
