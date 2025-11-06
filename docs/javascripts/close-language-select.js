@@ -15,6 +15,16 @@ function attachLanguageSelectCloser() {
         toggle.setAttribute("aria-expanded", "false");
         toggle.blur();
       }
+      var inner = select.querySelector(".md-select__inner");
+      if (inner) {
+        inner.removeAttribute("style");
+      }
+      setTimeout(function () {
+        select.classList.remove("md-select--active");
+        if (toggle) {
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      }, 120);
     });
   });
 }

@@ -58,6 +58,10 @@
       toggle.setAttribute("aria-expanded", "false");
       toggle.blur();
     }
+    var inner = select.querySelector(".md-select__inner");
+    if (inner) {
+      inner.removeAttribute("style");
+    }
   }
 
   function filterNavigation(lang) {
@@ -94,12 +98,17 @@
     });
   }
 
+  function scheduleClose() {
+    closeLanguageSelect();
+    setTimeout(closeLanguageSelect, 120);
+  }
+
   function applyLanguageUI() {
     var lang = detectLanguage();
     requestAnimationFrame(function () {
       updateLanguageButton(lang);
       filterNavigation(lang);
-      closeLanguageSelect();
+      scheduleClose();
     });
   }
 
