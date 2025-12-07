@@ -1,4 +1,6 @@
 site/
 .DS_Store
 */.DS_Store
+Icon*
+*/Icon*
 .venv/

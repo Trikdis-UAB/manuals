@@ -21,7 +21,7 @@ class: language-home
 
 ## Find your manual fast
 
-You can jump straight to the right document by using the search icon in the header or browsing the navigation tabs. Manuals include wiring diagrams and configuration notes.
+Installers can jump straight to the right document by using the search icon in the header or browsing the navigation tabs. Each manual includes PDF downloads, wiring diagrams, and configuration notes.
 
 ## Quick actions
 

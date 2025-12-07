@@ -6,13 +6,13 @@ theme:
   favicon: images/favicon.png
   font: false
   palette:
-  - media: "(prefers-color-scheme: light)"
+  - media: '(prefers-color-scheme: light)'
     scheme: default
     primary: custom
     toggle:
       icon: material/weather-night
       name: Switch to dark mode
-  - media: "(prefers-color-scheme: dark)"
+  - media: '(prefers-color-scheme: dark)'
     scheme: slate
     primary: custom
     toggle:
@@ -30,7 +30,6 @@ theme:
 nav:
 - Home: index.md
 - English:
-  - Overview: en/index.md
   - Communicators:
     - Cellular:
       - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
@@ -53,8 +52,12 @@ nav:
   - Gate Controllers:
     - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
     - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
+  - Keypads:
+    - Keypad SK-LCD Button: en/keypads/sk-lcd-button/index.md
+    - Keypad SK-LED Button: en/keypads/sk-led-button/index.md
+    - Keypad FLEXi SK LCD: en/keypads/flexi-sk-lcd/index.md
+    - Keypad FLEXi SK LED: en/keypads/flexi-sk-led/index.md
 - Lithuanian:
-  - Apžvalga: lt/index.md
   - Komunikatoriai:
     - Mobilaus ryšio:
       - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
@@ -72,13 +75,17 @@ nav:
     - UHF radijo bangomis:
       - Siųstuvas T16: lt/alarm-communicators/t16/index.md
   - Apsaugos centrelės:
-    - Apsaugos centralė FLEXi SP3: lt/control-panels/sp3/index.md
+    - Apsaugos centralė “FLEXi” SP3: lt/control-panels/sp3/index.md
     - GSM apsaugos centralė CG17: lt/control-panels/cg17/index.md
   - Valdikliai:
     - Gator: lt/gate-controllers/gator/index.md
     - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
+  - Klaviatūros:
+    - SK-LCD mygtukinė klaviatūra: lt/keypads/sk-lcd-button/index.md
+    - SK-LED Button klaviatūra: lt/keypads/sk-led-button/index.md
+    - Klaviatūra FLEXi SK LCD: lt/keypads/flexi-sk-lcd/index.md
+    - Klaviatūra FLEXi SK LED: lt/keypads/flexi-sk-led/index.md
 - Spanish:
-  - Visión general: es/index.md
   - Comunicadores:
     - Celular:
       - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
@@ -101,8 +108,12 @@ nav:
   - Controladores:
     - Gator: es/gate-controllers/gator/index.md
     - Gator Wifi: es/gate-controllers/gator-wifi/index.md
+  - Teclados:
+    - Teclado SK-LCD Button: es/keypads/sk-lcd-button/index.md
+    - Teclado SK-LED Button: es/keypads/sk-led-button/index.md
+    - Teclado FLEXi SK LCD: es/keypads/flexi-sk-lcd/index.md
+    - Teclado FLEXi SK LED: es/keypads/flexi-sk-led/index.md
 - Russian:
-  - Обзор: ru/index.md
   - Коммуникаторы:
     - GSM/GPRS:
       - GSM коммуникатор GT: ru/alarm-communicators/gt-cellular/index.md
@@ -125,6 +136,10 @@ nav:
   - Контроллеры:
     - Контроллер управления воротами GATOR: ru/gate-controllers/gator/index.md
     - Wi-Fi контроллер GATOR: ru/gate-controllers/gator-wifi/index.md
+  - Клавиатуры:
+    - Клавиатура SK-LCD Button: ru/keypads/sk-lcd-button/index.md
+    - Клавиатура SK-LED Button: ru/keypads/sk-led-button/index.md
+    - Клавиатура FLEXi SK LCD: ru/keypads/flexi-sk-lcd/index.md
 extra:
   alternate:
   - name: English

@@ -44,6 +44,11 @@ PRODUCT_CATEGORY_DIR = {
     'CG17': 'control-panels',
     'GATOR_CELL': 'gate-controllers',
     'GATOR_WIFI': 'gate-controllers',
+    'SK_LCD_BUTTON': 'keypads',
+    'SK_LED_BUTTON': 'keypads',
+    'FLEXI_SK_LCD': 'keypads',
+    'FLEXI_SK_LED': 'keypads',
+    'SH_KP': 'keypads',
 }
 
 PRODUCT_SLUG = {
@@ -61,6 +66,11 @@ PRODUCT_SLUG = {
     'CG17': 'cg17',
     'GATOR_CELL': 'gator',
     'GATOR_WIFI': 'gator-wifi',
+    'SK_LCD_BUTTON': 'sk-lcd-button',
+    'SK_LED_BUTTON': 'sk-led-button',
+    'FLEXI_SK_LCD': 'flexi-sk-lcd',
+    'FLEXI_SK_LED': 'flexi-sk-led',
+    'SH_KP': 'sh-kp',
 }
 
 TOP_LEVEL_LABELS = {
@@ -68,21 +78,25 @@ TOP_LEVEL_LABELS = {
         'alarm-communicators': 'Communicators',
         'control-panels': 'Control Panels',
         'gate-controllers': 'Gate Controllers',
+        'keypads': 'Keypads',
     },
     'es': {
         'alarm-communicators': 'Comunicadores',
         'control-panels': 'Paneles de control',
         'gate-controllers': 'Controladores',
+        'keypads': 'Teclados',
     },
     'lt': {
         'alarm-communicators': 'Komunikatoriai',
         'control-panels': 'Apsaugos centrelės',
         'gate-controllers': 'Valdikliai',
+        'keypads': 'Klaviatūros',
     },
     'ru': {
         'alarm-communicators': 'Коммуникаторы',
         'control-panels': 'Панели управления',
         'gate-controllers': 'Контроллеры',
+        'keypads': 'Клавиатуры',
     },
 }
 
