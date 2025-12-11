@@ -1,6 +1,8 @@
-<img alt="" src="./image1.png" style="width:2.3622047244094486in;height:3.3149606299212597in" />
+# El controlador GATOR WiFi está diseñado para el control remoto de puertas automáticas (u otros equipos eléctricos)
 
-# Gator Wifi
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
 
 ##  Descripción 
 
@@ -50,25 +52,25 @@ Entradas y salidas
 ### Parámetros Técnicos 
 
 | Parámetro | Descripción |
-|-----------|-------------|
-| Tensión de alimentación | 9-32 V DC |
-| Consumo actual | 150 mA |
+|:---|----|
+| Tensión de alimentación | 9-32 V DC |
+| Consumo actual | 150 mA |
 | Entradas /​Salidas universales | 4 , se puede establecer ya sea como entrada IN con el tipo: NC, NO, EOL = 10 kΩ, o la salida OUT (colector abierto (OC) 50 mA) |
 | Salida | 1, relé, 1 A 30 V DC, 0,5 A 125 V AC |
 | Comunicación con CRA | TCP/​IP o UDP/​IP a través de Wi-Fi |
 | Protocolo de transferencia de datos | TRK_TCP o TRK_UDP |
 | Clave de encriptación | Clave de cifrado de 6 dígitos |
-| Frecuencia Wi-Fi | 2,4 GHz |
-| Protocolo de Wi-Fi | 802.11 b/​g/​n |
+| Frecuencia Wi-Fi | 2,4 GHz |
+| Protocolo de Wi-Fi | 802.11 b/​g/​n |
 | Tipo de encriptación | WPA, WPA2, WPA mixed |
 | Tipo de configuración de red Wi-Fi | Configuración de red DHCP o manual (usando un teléfono móvil o computadora portátil) |
 | Memoria de eventos no enviados | Hasta 60 eventos |
 | Memoria de registro de eventos | Hasta 5000 eventos |
 | Los usuarios que tienen permiso para controlar | 1000 |
-| Módulos soportados | iO-LORA - módulo expansor (Al utilizar iO-LORA, se debe conectar un transceptor RF- LORA al GATOR WiFi) |
+| Módulos soportados | iO-LORA - módulo expansor (Al utilizar iO-LORA, se debe conectar un transceptor RF- LORA al GATOR WiFi) |
 | Entorno operativo | Temperatura de -20 ° C a +50 ° C, humedad relativa - de hasta 80% a +20 ° C |
 | Dimensiones | 88 x 62 x 26 mm |
-| Peso | 80 g |
+| Peso | 80 g |
 
 ### Elementos de Controlador 
 
@@ -87,19 +89,19 @@ Entradas y salidas
 ### Descripción del Bloque de Terminales 
 
 | Terminal | Descripción |
-|----------|-------------|
+|----|:---|
 | +DC | Terminal de poder (9-32 V CC, terminal positive) |
 | -DC | Terminal de poder (9-32 V CC, terminal negativo) |
-| 1 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Entrada, NO) |
-| 2 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Entrada, NO) |
-| 3 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Salida) |
-| 4 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Salida) |
+| 1 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Entrada, NO) |
+| 2 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Entrada, NO) |
+| 3 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Salida) |
+| 4 I/​O | Entrada /​ Salida de terminal universal (configuración de fábrica: Salida) |
 | +AUX | Terminal de potencia positiva para conectar dispositivos externos |
 | NC | Terminal de relevo NC |
 | C | Terminal de relevo C |
 | NO | Terminal de relevo NO |
-| A RS485 | Contacto A de RS485 bus |
-| B RS485 | Contacto B de RS485 bus |
+| A RS485 | Contacto A de *RS485* bus |
+| B RS485 | Contacto B de *RS485* bus |
 
 ### Indicación de LED 
 
@@ -135,11 +137,11 @@ Si el indicador LED no está funcionando, compruebe la alimentación y las conex
     Solicite los componentes faltantes por separado a su distribuidor local.
 ### Controlador GATOR WiFi lista de embalaje estándar 
 
-| - | Controlador GATOR WiFi | 1 und. |
-|---|------------------------|--------|
-| - | Resistencia de 10 kΩ | 3 und. |
-| - | Cinta adhesiva de doble cara (5 cm) | 1 und. |
-| - | Tornillo | 2 und. |
+|  \- | Controlador GATOR WiFi        | 1 und. |
+|----:|-------------------------------------|--------|
+|  \- | Resistencia de 10 kΩ                | 3 und. |
+|  \- | Cinta adhesiva de doble cara (5 cm) | 1 und. |
+|  \- | Tornillo                            | 2 und. |
 
 ## Esquemas de cableado para el controlador GATOR WiFi
 
@@ -219,9 +221,9 @@ El terminal de I/O del controlador debe configurarse en un modo de salida (OUT).
 
 Con la aplicación Protegus2 usuarios podrán controlar de forma remota controlador. También será capaz de ver el estado del sistema y recibir todos los mensajes de eventos del sistema.
 
-1.  Descargar y ejecutar la aplicación Protegus2 o utilizar la versión del navegador de Protegus2 en [www.protegus.app](http://www.protegus.app).
+1.  Descargar y ejecutar la aplicación Protegus2 o utilizar la versión del navegador de Protegus2 en [www.protegus.app](https://www.protegus.app).
 
-    <div style="margin: 20px 0; text-align: left;">
+    <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
         <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
       </a>
@@ -236,7 +238,7 @@ Con la aplicación Protegus2 usuarios podrán controlar de forma remota controla
 2.  Iniciar sesión con su nombre de usuario y contraseña o registrarse y crear una cuenta nueva.
 
 !!! note
-    > Al agregar controlador a Protegus2, verifique si:
+    Al agregar controlador a Protegus2, verifique si:
     
     1.  La fuente de alimentación debe estar encendida (el LED
         "**STATUS**" debe parpadear en verde);
@@ -371,16 +373,16 @@ Después de conectar el controlador GATOR WiFi al software TrikdisConfig, el sof
 
 <img alt="" src="./image44.png" style="width:7.086614173228346in;height:0.5275590551181102in" />
 
-| Nombre | Descripción |
-|--------|-------------|
-| IMEI/​ ID único | Número MAC del dispositivo |
-| Estado | Estado operativo |
-| Dispositivo | Tipo de dispositivo (debe mostrar – WP17_xxxx) |
-| SN | Número de serie del dispositivo |
-| BL | Versión lanzador |
-| FW | Versión del firmware del dispositivo |
-| HW | Versión de hardware del dispositivo |
-| Estado | Tipo de conexión con el software (vía USB o remoto) |
+| Nombre         | Descripción                                          |
+|----------------|------------------------------------------------------|
+| IMEI/​ ID único | Número MAC del dispositivo                           |
+| Estado         | Estado operativo                                     |
+| Dispositivo    | Tipo de dispositivo (debe mostrar – WP17_xxxx) |
+| SN             | Número de serie del dispositivo                      |
+| BL             | Versión lanzador                                     |
+| FW             | Versión del firmware del dispositivo                 |
+| HW             | Versión de hardware del dispositivo                  |
+| Estado         | Tipo de conexión con el software (vía USB o remoto)  |
 
 Cuando se hace clic en el botón **Leer [F4**], el programa leerá y mostrará los ajustes guardados actualmente en el controlador GATOR WiFi. Con TrikdisConfig, ajuste la configuración requerida de acuerdo con las descripciones de la ventana del programa a continuación.
 
@@ -741,4 +743,4 @@ Siempre desconecte la fuente de alimentación antes de realizar las conexiones e
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-> <img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

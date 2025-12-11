@@ -4,6 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
+
 ##  Description 
 
 Cellular gate controller can remotely control automatic gates and other equipment.
@@ -94,20 +95,20 @@ Users can control controller with Protegus2 application, telephone calls and SMS
 
 ### Purpose of terminals 
 
-| Terminal | Description |
-|----------|-------------|
-| AC/​+DC | Power terminal (9-32 V DC positive;​ 12-24 V AC) |
-| AC/​-DC | Power terminal (9-32 V DC negative;​ 12-24 V AC) |
-| 1 IN | 1st input, of selectable type NO, NC, EOL (factory setting: NO) |
-| 2 IN | 2nd input, of selectable type NO, NC, EOL (factory setting: Disabled) |
+| **Terminal** | **Description** |
+|----|:---|
+| AC/​+DC | Power terminal (9-32 V DC positive;​ 12-24 V AC) |
+| AC/​-DC | Power terminal (9-32 V DC negative;​ 12-24 V AC) |
+| 1 IN | 1<sup>st</sup> input, of selectable type NO, NC, EOL (factory setting: NO) |
+| 2 IN | 2<sup>nd</sup> input, of selectable type NO, NC, EOL (factory setting: Disabled) |
 | COM | Common terminal |
-| 3 I/​O | Input/​output (factory setting: Disabled) |
-| 4 I/​O | Input/​output (factory setting: Disabled) |
+| 3 I/​O | Input/​output (factory setting: Disabled) |
+| 4 I/​O | Input/​output (factory setting: Disabled) |
 | NC | Relay terminal NC |
 | C | Relay terminal C |
 | NO | Relay terminal NO |
-| A RS485 | Contact A of RS485 bus |
-| B RS485 | Contact B of RS485 bus |
+| A RS485 | Contact A of *RS485* bus |
+| B RS485 | Contact B of *RS485* bus |
 
 ### LED indication of operation 
 
@@ -150,12 +151,12 @@ If the LED indication is not working, check the power supply and connections.
     Order the necessary components separately from your local retailer.
 ### Cellular gate controller *GATOR* standard packing list 
 
-| - | Cellular gate controller GATOR | 1 pc. |
-|---|---------------------------|-------|
-| - | Cellular antenna | 1 pc. |
-| - | Resistor 10 kΩ | 3 pcs. |
-| - | Double-sided adhesive tape (5 cm) | 1 pc. |
-| - | Screw | 2 pcs. |
+|  \- | Cellular gate controller GATOR   | 1 pc.  |
+|----:|-----------------------------------|--------|
+|  \- | Cellular antenna                       | 1 pc.  |
+|  \- | Resistor 10 kΩ                    | 3 pcs. |
+|  \- | Double-sided adhesive tape (5 cm) | 1 pc.  |
+|  \- | Screw                             | 2 pcs. |
 
 ## Wiring schematics for the Cellular gate controller 
 
@@ -321,9 +322,9 @@ Controller answers and allows to control the outputs with a phone call the user 
 
 With Protegus2 cloud users will be able to control controller remotely. They will also be able to see the system state and receive all system event messages.
 
-1.  Download and launch the Protegus2 app or use the browser version of Protegus2 at [www.protegus.app](http://www.protegus.app).
+1.  Download and launch the Protegus2 app or use the browser version of Protegus2 at [www.protegus.app](https://www.protegus.app).
 
-    <div style="margin: 20px 0; text-align: left;">
+    <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
         <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
       </a>
@@ -405,7 +406,7 @@ Find Protegus2 in the settings bar.
 
 <img alt="" src="./image38.png" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
-> A circle that shows when the PGM is turned on will appear on the screen.
+A circle that shows when the PGM is turned on will appear on the screen.
 
 <img alt="" src="./image39.png" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
@@ -556,17 +557,17 @@ After connecting the controller to the TrikdisConfig software, the software will
 
 <img alt="" src="./image48.png" style="width:7.086614173228346in;height:0.6614173228346457in" />
 
-| Name | Description |
-|------|-------------|
-| IMEI/​Unique ID | The device’s IMEI number |
-| State | Operational state |
-| Device | Device type (must show GV17_xxxx) |
-| SN | Device’s serial number |
-| BL | Launcher version |
-| FW | Device’s firmware version |
-| HW | Device’s hardware version |
-| State | Type of connection with the software (with USB or remote) |
-| Role | Access level (shown after access code is approved) |
+| Name           | Description                                               |
+|----------------|-----------------------------------------------------------|
+| IMEI/​Unique ID | The device’s IMEI number                                  |
+| State          | Operational state                                         |
+| Device         | Device type (must show GV17_xxxx)                   |
+| SN             | Device’s serial number                                    |
+| BL             | Launcher version                                          |
+| FW             | Device’s firmware version                                 |
+| HW             | Device’s hardware version                                 |
+| State          | Type of connection with the software (with USB or remote) |
+| Role           | Access level (shown after access code is approved)        |
 
 When the button **Read [F4]** is clicked, the program will read and show the settings currently saved on the controller. With TrikdisConfig, adjust the required settings according to the program window descriptions below.
 

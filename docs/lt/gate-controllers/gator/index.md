@@ -1,8 +1,10 @@
+# GSM vartų valdiklis GATOR gali valdyti vartų automatiką ir kitą įrangą nuotoliniu būdu
+
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
 </div>
 
-# Gator
+##  Aprašymas 
 
 GSM vartų valdiklis GATOR gali valdyti vartų automatiką ir kitą įrangą nuotoliniu būdu.
 
@@ -55,7 +57,7 @@ Pranešimai saugos tarnybai
 
 - Du parametrų nustatymo lygiai (paskyros), instaliuotojui ir administratoriui.
 
-### Techniniai parametrai
+### Techniniai parametrai 
 
 | Parametras | Aprašymas |
 |------------|-----------|
@@ -74,7 +76,7 @@ Pranešimai saugos tarnybai
 | Matmenys | 92 x 62 x 26 mm |
 | Svoris | 80 g |
 
-### Valdiklio elementai
+### Valdiklio elementai 
 
 1.  Šviesos indikatoriai.
 
@@ -90,7 +92,7 @@ Pranešimai saugos tarnybai
 
 <img alt="" src="./image4.png" style="width:4.606676509186352in;height:2.7866721347331582in" />
 
-### Išorinių kontaktų paskirtis
+### Išorinių kontaktų paskirtis 
 
 | Gnybtas | Aprašymas |
 |---------|-----------|
@@ -107,7 +109,7 @@ Pranešimai saugos tarnybai
 | A RS485 | RS485 magistralės A kontaktas |
 | B RS485 | RS485 magistralės B kontaktas |
 
-### Šviesinė veikimo indikacija
+### Šviesinė veikimo indikacija 
 
 | Indikatorius | Veikimas | Aprašymas |
 |--------------|----------|-----------|
@@ -149,7 +151,7 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
     
     Trūkstamus komponentus užsisakykite atskirai iš savo vietinio
     platintojo.
-### GSM vartų valdiklio *GATOR* pakuotės turinys
+### GSM vartų valdiklio *GATOR* pakuotės turinys 
 
 |  \- | GSM vartų valdiklis GATOR | 1 vnt. |
 |----:|---------------------------------|--------|
@@ -158,7 +160,7 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 |  \- | Dvipusė lipni juostelė (5 cm)   | 1 vnt. |
 |  \- | Varžtas                         | 2 vnt. |
 
-## GSM vartų valdiklio laidinių sujungimų schemos
+## GSM vartų valdiklio laidinių sujungimų schemos 
 
 ### Tvirtinimas
 
@@ -180,13 +182,13 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 
 <img alt="" src="./image6.png" style="width:2.748031496062992in;height:1.1811023622047243in" />
 
-### Maitinimo prijungimo schema
+### Maitinimo prijungimo schema 
 
 Laidais sujunkite valdiklį GATOR pagal pateiktą sujungimų schemą.
 
 <img alt="" src="./image7.png" style="width:4.0in;height:2.8464566929133857in" />
 
-### Zonų laidinių įėjimų sujungimų schemos
+### Zonų laidinių įėjimų sujungimų schemos 
 
 Valdiklis GATOR turi keturis įėjimus IN (du iš kurių yra universalūs ir gali veikti kaip įėjimai arba išėjimai) įvairiems signalizacijos jutikliams prijungti. Įėjimai gali veikti NC, NO, EOL režimais. Prijunkite įėjimus pagal nustatytą įėjimo tipą (NC, NO, EOL), kaip tai pavaizduota žemiau pateiktose schemose:
 
@@ -198,7 +200,7 @@ Relės prijungimo schema, kai valdiklio *GATOR* maitinamas nuo nuolatinės srov�
 
 <img alt="" src="./image9.png" style="width:2.4645669291338583in;height:0.8740157480314961in" />
 
-### Valdiklio ir vartų automatikos prijungimo schema
+### Valdiklio ir vartų automatikos prijungimo schema 
 
 Visi laidų prijungimo darbai atliekami tik atjungus maitinimo įtampą. / Vartų automatikos instrukcijoje yra detaliai aprašyta gnybtų paskirtis ir jų įtampa. / Vartų automatikos gnybtai IN, COM skirti vartų valdymui. / Vartų automatika turi vartų padėties išėjimą (OUT), kuris parodo kada vartai yra uždaryti arba atidaryti. Vartų padėties išėjimas gali būti įtampinis arba relinis. Schemoje pavaizduotas relės K1 prijungimas prie įtampinio vartų automatikos išėjimo. Vartų automatikos išėjimo įtampiniai gnybtai (OUT, N) turi įtampą (~230V) kai vartai atviri. Tarpinė relė K1 suveikia kai vartai atviri ir valdiklio *GATOR* 1IN įėjimas aktyvuojamas. Pagal *GATOR* 1IN įėjimo būseną turime tikslią informaciją apie vartų padėti (kada vartai yra uždaryti arba atidaryti).
 
@@ -206,7 +208,7 @@ Visi laidų prijungimo darbai atliekami tik atjungus maitinimo įtampą. / Vart�
 
 GATOR konfigūravimą su vartų būsenos indikacija žr. p. 5.9 „Nustatymai vartų būsenos indikacijai“.
 
-### RFID skaitytuvo (Wiegand 26/34) prijungimo schema
+### RFID skaitytuvo (Wiegand 26/34) prijungimo schema 
 
 Valdiklio GATOR konfigūravimas su RFID skaitytuvu aprašytas p. 5.3. „Langas „IN/OUT“.
 
@@ -226,7 +228,7 @@ Kai prie valdiklio yra prijungti du RFID skaitytuvai, tai programoje TrikdisConf
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:2.4448818897637796in" />
 
-### WiFi modulio W485 prijungimo schema
+### WiFi modulio W485 prijungimo schema 
 
 Vartų valdiklio veikimo programos versija nuo 1.06. / Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su valdikliu pranešimai į CSP ir į *Protegus2* programėlę siunčiami WiFi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka WiFi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, valdiklis pradeda toliau siusti pranešimus per *W485*. / Valdiklio konfigūravimas su WiFi moduliu *W485* aprašytas p. 5.4. „Langas „Moduliai“. / Naudojant modulį *W485* kartu su valdikliu SIM kortelė nebūtina.
 
@@ -238,7 +240,7 @@ Vartų valdiklio veikimo programos versija nuo 1.06. / Modulis *E485* skirtas į
 
 <img alt="" src="./image16.png" style="width:3.1929133858267718in;height:2.1496062992125986in" />
 
-### Plėtiklio iO-LORA su RFID skaitytuvu prijungimo schema
+### Plėtiklio iO-LORA su RFID skaitytuvu prijungimo schema 
 
 Vartų valdiklio veikimo programos versija nuo 2.13.
 
@@ -260,7 +262,7 @@ Sąraše "**Vartotojai**" įrašykite RFID kortelės numerį, vartotojo vardą, 
 
 Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuką (turi suveikti PGM išėjimas).
 
-### Plėtiklio iO8, iO8-LORA prijungimo schema
+### Plėtiklio iO8, iO8-LORA prijungimo schema 
 
 Jei reikia, kad vartų valdiklis *GATOR* turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite TRIKDIS *iO8* arba *iO8-LORA* serijos įėjimų ir išėjimų plėtiklį. Prie *GATOR* galima prijungti vieną *iO8* arba *iO8-LORA* plėtiklį. / *iO8* plėtiklio prijungimo schema.
 
@@ -270,7 +272,7 @@ iO8-LORA plėtiklio prijungimo schema.
 
 <img alt="" src="./image22.png" style="width:5.823345363079615in;height:2.0900043744531933in" />
 
-## Greitas valdiklio paleidimas veikti
+## Greitas valdiklio paleidimas veikti 
 
 !!! note
     Valdiklis yra gamykliškai sukonfigūruotas veikti. Paskambinus į
@@ -295,9 +297,9 @@ Nusiuntus SMS komandą su pirmojo naudotojo numeriu į valdiklį vartotojų tele
     Jei norite pakeisti gamyklinius nustatymus arba įjungti kitas valdiklio
     funkcijas, skaitykite skyrių 5 „Veikimo parametrų nustatymas programa
     TrikdisConfig".
-## Nuotolinis valdymas
+## Nuotolinis valdymas 
 
-### Valdymas skambučiu
+### Valdymas skambučiu 
 
 !!! note
     Pirmasis paskambinęs į valdiklį (arba nusiuntęs SMS) taps sistemos
@@ -305,7 +307,7 @@ Nusiuntus SMS komandą su pirmojo naudotojo numeriu į valdiklį vartotojų tele
     su SMS komandomis.
 Paskambinkite į įdėtos SIM kortelės telefono numerį. Valdiklis automatiškai atmeta skambutį ir 3 (trims) sekundėms įjungiamas *<u>5 OUT</u>* relinis išėjimas. Gamykliniai nustatymai leidžia valdyti visiems, paskambinusiems į valdiklio SIM kortelės numerį.
 
-### Valdymas telefono klaviatūra
+### Valdymas telefono klaviatūra 
 
 Valdiklis GATOR atsiliepia ir leidžia išėjimus valdyti skambučiu, kai vartotojui priskirti valdyti keli išėjimai OUT. Kaip suvaldyti skambučiu:
 
@@ -320,7 +322,7 @@ Valdiklis GATOR atsiliepia ir leidžia išėjimus valdyti skambučiu, kai vartot
 | OUTPUT*STATE# | Išėjimo valdymas | Išėjimo valdymo komanda (įjungti/išjungti; įjungti/išjungti impulso trukmei). OUTPUT – valdomo išėjimo numeris. STATE – valdymo komanda: 0 – išjungti išėjimą; 1 – įjungti išėjimą; 2 – išjungti išėjimą impulso trukmei; 3 – įjungti išėjimą impulso trukmei; (išėjimo impulso trukmė nustatoma programoje TrikdisConfig, įėjimų/išėjimų nustatymų lentelėje) # - valdymo komandos užbaigimo ženklas. Pvz. (įjungti 5 išėjimą): 5*1# Pvz. (įjungti 4 išėjimą impulso trukmei): 4*3# |
 | # | Komandos užbaigimo ženklas | Jei rašydami komandą suklydote, nuspauskite # ir pradėkite rašyti valdymo komandą iš naujo. |
 
-### Valdymas su *Protegus2* programėle
+### Valdymas su *Protegus2* programėle 
 
 Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus visus sistemos įvykių pranešimus.
 
@@ -374,7 +376,7 @@ Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pa
 
 <img alt="" src="./image34.png" style="width:2.7559055118110236in;height:1.9330708661417322in" />
 
-### Widget pridėjimas telefone
+### Widget pridėjimas telefone 
 
 Vartų valdymo Widget galima įkelti į telefono ekraną. Valdiklis turi būti priregistruotas programėlėje Protegus2. Telefone prisijunkite prie programėlės Protegus2. Uždarykite programėlės langą.
 
@@ -414,7 +416,7 @@ Ekrane atsiras apskritimas, kuriame bus atvaizduotas PGM suveikimas.
 
 <img alt="" src="./image42.png" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
-### Vartotojų pridėjimas telefone
+### Vartotojų pridėjimas telefone 
 
 Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
@@ -452,7 +454,7 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 <img alt="" src="./image48.png" style="width:2.7559055118110236in;height:5.078740157480315in" />
 
-### Valdymas SMS žinutėmis
+### Valdymas SMS žinutėmis 
 
 Valdykite relinį OUT5 išėjimą su šiomis SMS komandomis:
 
@@ -478,7 +480,7 @@ SMS valdymo komandų sąrašas
 | OUTPUTx | OFF | Išjungti išėjimą. „x“ – išėjimo numeris. Pvz.: OUTPUT5 123456 OFF |
 | OUTPUTx | PULSE=ttt | Įjungti išėjimą tam tikram laikui. „ttt“ yra impulso trukmė sekundėmis, nuo 1 iki 999. Pvz.: OUTPUT5 123456 PULSE=002 |
 
-### Administravimas SMS žinutėmis
+### Administravimas SMS žinutėmis 
 
 1.  **Pakeiskite administratoriaus slaptažodį**
 
@@ -554,7 +556,7 @@ SMS konfigūravimo komandų sąrašas
 | CONNECT | PSW=password | APN slaptažodis. Pvz.: CONNECT 123456 PSW=password |
 | CONNECT | Code=password | Pakeisti Protegus Cloud prisijungimo slaptažodį. Pvz.: CONNECT 123456 Code=123456 |
 
-## Veikimo parametrų nustatymas programa *TrikdisConfig*
+## Veikimo parametrų nustatymas programa *TrikdisConfig* 
 
 Su TrikdisConfig galite pakeisti valdiklio nustatymus (jei gamyklinių nustatymų nepakanka) pagal žemiau pateiktus programos langų aprašymus.
 
@@ -582,7 +584,7 @@ Su TrikdisConfig galite pakeisti valdiklio nustatymus (jei gamyklinių nustatym�
     bus atverti ir parodyti išsaugoti nustatymai. / Norėdami atkurti
     gamyklinius nustatymus, paspauskite **Atkurti** mygtuką lango apačioje
     kairėje.
-### TrikdisConfig būsenų juosta
+### TrikdisConfig būsenų juosta 
 
 Prijungus valdiklį prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
@@ -602,7 +604,7 @@ Prijungus valdiklį prie programos TrikdisConfig, programa būsenų juostoje pat
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti į valdiklį. Su TrikdisConfig nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### Langas „Sistemos parinktys“
+### Langas „Sistemos parinktys“ 
 
 <img alt="" src="./image51.png" style="width:7.086614173228346in;height:4.047244094488189in" />
 
@@ -660,7 +662,7 @@ Protegus2 galite nustatyti esama savo šalies laiką. Norėdami tai padaryti, tu
 
 - **Forsuoti pasisveikinimo žinutę** – pažymėkite lauką varnele, kad prie valdiklio naujam pridėtam su SMS žinute arba su programėle Protegus2 vartotojui būtų išsiųsta SMS žinutė. (Šią funkciją galima išjungti SMS žinute (HELLO 123456 OFF)).
 
-### Langas „IN/OUT“
+### Langas „IN/OUT“ 
 
 **Skirtukas „IN/OUT“**
 
@@ -761,7 +763,7 @@ Išėjimai (OUT) gali būti valdomi automatiškai pagal nustatyta tvarkaraštį.
 
 - **Pabaigos laikas per šventes** - nurodykite šventinės dienos pabaigos valandas.
 
-### Langas „Moduliai“
+### Langas „Moduliai“ 
 
 **Skirtukas „Moduliai“**
 
@@ -827,7 +829,7 @@ Jei valdiklio įrengimo vietoje yra bevielis internetas (WiFi) arba laidinis int
 
 - **Išjungti SIM kortelės mobiliųjų duomenų naudojimą** – pažymėdami langelį, bus išjungtas mobiliųjų duomenų naudojimas iš SIM kortelės. Duomenys bus siunčiami tik per „Ethernet“ modulį E485. Jei dings internetas valdiklis kaups duomenys atmintyje. Kai internetas atsistatys valdiklis išsius duomenys per „Ethernet“ modulį E485.
 
-### Langas „IP pranešimai“
+### Langas „IP pranešimai“ 
 
 <img alt="" src="./image58.png" style="width:7.086614173228346in;height:3.5196850393700787in" />
 
@@ -873,7 +875,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 - **Aplikacijos prieigos kodas** - prisijungimo su Protegus2 6 skaitmenų kodas (gamyklinis kodas - 123456).
 
-### Langas „Vartotojai“
+### Langas „Vartotojai“ 
 
 **Skirtukas „Vartotojai“**
 
@@ -1016,7 +1018,7 @@ Išėjimai (OUT) gali būti valdomi vartotojo pagal nustatyta tvarkaraštį. Tva
 
 Patogu į juodąjį sąrašą pridėti vartotojus tiesiai iš įvykių žurnalo. Reikia ant telefono numerio, E-pašto adreso, RFID pakabuko (kortelės) ID numerio paspausti dešinį pelės klavišą ir pasirinkti "**Pridėti į juodąjį sąrašą**".
 
-### Langas „Sistemos įvykiai“
+### Langas „Sistemos įvykiai“ 
 
 <img alt="" src="./image71.png" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
@@ -1034,19 +1036,19 @@ Valdiklio įvykių siuntimo nustatymas į CSP ir Protegus2 programėlę.
 
 - **CID kodas** – įvykio Contact ID kodas.
 
-### Langas „Įvykių žurnalas“
+### Langas „Įvykių žurnalas“ 
 
 <img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
 Nuspauskite mygtuką „**Nuskaityti**“. „**Įvykių žurnalas**“ bus nuskaitytas iš valdiklio atminties. „**Įvykių žurnalas**“ suteikia informaciją apie valdiklio atliktus veiksmus ir jo vidinius įvykius.
 
-### Gamyklinių nustatymų atstatymas
+### Gamyklinių nustatymų atstatymas 
 
 Valdiklio gamykliniams nustatymams atstatyti reikia programos TrikdisConfig lange nuspausti mygtuką „**Atkurti**“.
 
 <img alt="" src="./image73.png" style="width:7.086614173228346in;height:0.8543307086614174in" />
 
-### Nustatymai vartų būsenos indikacijai
+### Nustatymai vartų būsenos indikacijai 
 
 Protegus2 programėlė ir Widget gali rodyti realią vartų padėtį (vartai atidaryti ar uždaryti). Tam valdiklio įėjimas IN1 turi būti prijungtas prie vartų automatikos padėties išėjimo, kaip tai pavaizduota p.2.5 „Valdiklio ir vartų automatikos prijungimo schema“.
 
@@ -1062,7 +1064,7 @@ Lange „Vartotojai“ reikia pažymėti lauką IN1 varnele, kad vartotojas gaut
 
 <img alt="" src="./image76.png" style="width:4.330708661417323in;height:3.4803149606299213in" />
 
-## Nuotolinis veikimo parametrų nustatymas
+## Nuotolinis veikimo parametrų nustatymas 
 
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai valdiklyje:
@@ -1088,7 +1090,7 @@ Lange „Vartotojai“ reikia pažymėti lauką IN1 varnele, kad vartotojas gaut
 
 3.  Nustatykite norimus nustatymus valdiklyje, o pabaigę nuspauskite **Įrašyti [F5]**. Jei norite atsijungti nuo valdiklio nuspauskite „**Atsijungti**“ ir išjunkite programą TrikdisConfig.
 
-## GSM vartų valdiklio testavimas
+## GSM vartų valdiklio testavimas 
 
 Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
@@ -1100,7 +1102,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 4.  Norėdami patikrinti valdiklio išėjimus, aktyvinkite juos nuotoliniu būdu ir įsitikinkite, kad gavėjams yra pasiekiami teisingi pranešimai, o išėjimai aktyvuojami taip, kaip turėtų.
 
-## Programinės aparatinės įrangos atnaujinimas
+## Programinės aparatinės įrangos atnaujinimas 
 
 !!! note
     Prijungus valdiklį prie TrikdisConfig, programa pasiūlys

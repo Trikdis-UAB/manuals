@@ -253,9 +253,9 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 2.  Cambie el nombre **APN**, el **APN** puede ser encontrado en el sitio del operador de la tarjeta SIM (el “Internet” es universal y funciona en muchas redes de los operadores).
 
-3.  **DNS1** - dirección predeterminada del servidor DNS de Google. **Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP**.
+3.  **DNS1** - dirección predeterminada del servidor DNS de Google. Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP.
 
-4.  **DNS2** - dirección predeterminada del servidor DNS de Google. **Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP**.
+4.  **DNS2** - dirección predeterminada del servidor DNS de Google. Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP.
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
@@ -279,7 +279,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 2. Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
-**En la ventana de opciones de “Ajustes CRA” para el “Canal de comunicación principal”:**
+En la ventana de opciones de “Ajustes CRA” para el “Canal de comunicación principal”:
 
 <img alt="" src="./image13.png" style="width:7.086614173228346in;height:3.3503937007874014in" />
 
@@ -305,9 +305,9 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 12. Cambie el nombre APN, el APN puede ser encontrado en el sitio del operador de la tarjeta SIM (el “Internet” es universal y funciona en muchas redes de los operadores).
 
-13. **DNS1** - dirección predeterminada del servidor DNS de Google. **Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP**.
+13. **DNS1** - dirección predeterminada del servidor DNS de Google. Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP.
 
-14. **DNS2** - dirección predeterminada del servidor DNS de Google. **Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP**.
+14. **DNS2** - dirección predeterminada del servidor DNS de Google. Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP.
 
 Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte el cable USB.
 
@@ -536,7 +536,7 @@ Para que el panel de control envíe eventos a través del comunicador telefónic
 
 1.  Active el comunicador telefónico del panel PSTN.
 
-2.  Introduzca el número de teléfono receptor de la Centro de Monitoreo (se puede utilizar cualquier número de más de 4 dígitos. El GT recogerá y responderá cuando la central llama a cualquier número de teléfono).
+2.  Introduzca el número de teléfono receptor de la Centro de Monitoreo (se puede utilizar cualquier número de más de 4 dígitos. El *GT* recogerá y responderá cuando la central llama a cualquier número de teléfono).
 
 3.  Elegir el modo DTMF.
 
@@ -621,20 +621,9 @@ Programación del panel de control **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) cu
 
 Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remota. Podrán ver el estado del sistema y recibir notificaciones sobre eventos del sistema.
 
-1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: www.protegus.app:
+1\. Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: www.protegus.app:
 
-    <div style="margin: 20px 0; text-align: left;">
-      <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
-      </a>
-      <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
-      </a>
-      <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
-      </a>
-    </div>
-2. Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
+1.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
 !!! note
     Al agregar GT a Protegus2, revise si:
@@ -652,11 +641,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
     4.  El comunicador GT está conectado a la red móvil (el LED de
         "NETWORK" de iluminarse de color verde y parpadear de color
         amarillo).
-3. De clic en "**Añadir nuevo sistema**" e ingrese el número de GT “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
+2. De clic en "**Añadir nuevo sistema**" e ingrese el número de GT “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
 <img alt="" src="./image33.png" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
-4. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
+3. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
 <img alt="" src="./image34.png" style="width:2.220472440944882in;height:2.220472440944882in" />
 
@@ -837,9 +826,9 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 - **Periodo de ping IP** – período para enviar señales de ping PING internas. Estos mensajes se envían únicamente por el canal IP. El receptor no envía mensajes PING al software de monitoreo sin sobrecargarlo. El software de monitoreo recibe información solo cuando el receptor no recibe mensajes PING del comunicador dentro de un período de tiempo establecido.
 
-> De manera predeterminada, el receptor enviará un mensaje de "Conexión perdida" al software de monitoreo después de que haya transcurrido tres veces el período de tiempo establecido para el mensaje PING del comunicador. Por ejemplo: si el período PING se establece en 3 minutos. El receptor transmitirá un mensaje de pérdida de comunicación después de 9 minutos.
->
-> Juntos, los mensajes PING mantienen una sesión de comunicación activa entre el dispositivo y el receptor. Se requiere una sesión de comunicación activa para la configuración y el control remotos del comunicador. Se recomienda establecer la duración del período PING en no más de 5 minutos.
+De manera predeterminada, el receptor enviará un mensaje de "Conexión perdida" al software de monitoreo después de que haya transcurrido tres veces el período de tiempo establecido para el mensaje PING del comunicador. Por ejemplo: si el período PING se establece en 3 minutos. El receptor transmitirá un mensaje de pérdida de comunicación después de 9 minutos.
+
+Juntos, los mensajes PING mantienen una sesión de comunicación activa entre el dispositivo y el receptor. Se requiere una sesión de comunicación activa para la configuración y el control remotos del comunicador. Se recomienda establecer la duración del período PING en no más de 5 minutos.
 
 - **Ir al canal de reserva después de... intentos** – indica el número de intentos fallidos al tratar de enviar el mensaje a través del canal primario. Si es dispositivo falla en la transmisión un número específico de veces, el dispositivo se conectará para transmitir el mensaje a través del canal de Respaldo.
 
@@ -854,7 +843,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 <img alt="" src="./image47.png" style="width:7.086614173228346in;height:1.9645669291338583in" />
 
-El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.app](http://www.protegus.app).
+El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.app](https://www.protegus.app).
 
 - **Activar conexión** – marque la casilla para habilitar el servicio Protegus2. El comunicador GT podrá intercambiar datos con la aplicación Protegus2. Con el programa TrikdisConfig podrás configurar tu comunicador de forma remota.
 
@@ -916,7 +905,7 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
 
 - **SIM ICCID** – ingrese el número ICCID de la tarjeta SIM si desea que el comunicador funcione solo con esta tarjeta SIM.
 
-- **DNS1/DNS2** - (Domain Name System en inglés) ingrese la dirección IP del servidor de dominio. Se usa cuando el campo Dominio o IP especifica un dominio. De forma predeterminada, las direcciones del servidor DNS de Google están configuradas. **Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP.**
+- **DNS1/DNS2** - (Domain Name System en inglés) ingrese la dirección IP del servidor de dominio. Se usa cuando el campo Dominio o IP especifica un dominio. De forma predeterminada, las direcciones del servidor DNS de Google están configuradas. Independientemente de su configuración de IP, asegúrese de que sus direcciones DNS coincidan con las admitidas por su ISP.
 
 - **Preferred operator (Operador preferido)** – después de ingresar el código del operador de la red móvil, el comunicador se conectará solo a la red del operador seleccionado. El código del operador de telefonía móvil consta de códigos MCC y MNS.
 

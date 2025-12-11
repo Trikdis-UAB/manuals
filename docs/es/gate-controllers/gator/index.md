@@ -1,8 +1,10 @@
+# GSM controlador puede controlar de forma remota puertas automáticas y otros equipos
+
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
 </div>
 
-# Gator
+##  Descripción 
 
 GSM controlador puede controlar de forma remota puertas automáticas y otros equipos.
 
@@ -92,20 +94,20 @@ Entradas y salidas
 
 ### Descripción del Bloque de Terminales 
 
-| Terminal | Descripción |
-|----------|-------------|
+| **Terminal** | **Descripción** |
+|----|:---|
 | AC/​+DC | Terminal de poder (9-32 V DC positive;​ 12-24 V AC) |
 | AC/​-DC | Terminal de poder (9-32 V DC negativo;​ 12-24 V AC) |
-| 1 IN | 1ra entrada, tipo seleccionable NO, NC, EOL (configuración de fábrica: NO) |
-| 2 IN | 2da entrada, tipo seleccionable NO, NC, EOL (configuración de fábrica: Desactivado) |
+| 1 IN | 1<sup>ra</sup> entrada, tipo seleccionable NO, NC, EOL (configuración de fábrica: NO) |
+| 2 IN | 2<sup>da</sup> entrada, tipo seleccionable NO, NC, EOL (configuración de fábrica: Desactivado) |
 | COM | Terminal común |
 | 3I/​O | Entrada/​Salida (configuración de fábrica: Desactivado) |
 | 4 I/​O | Entrada/​Salida (configuración de fábrica: Desactivado) |
 | NC | Terminal de relevo NC |
 | C | Terminal de relevo C |
 | NO | Terminal de relevo NO |
-| A RS485 | Contacto A de RS485 bus |
-| B RS485 | Contacto B de RS485 bus |
+| A RS485 | Contacto A de *RS485* bus |
+| B RS485 | Contacto B de *RS485* bus |
 
 ### Indicación de LED 
 
@@ -147,15 +149,15 @@ Si el indicador LED no está funcionando, compruebe la alimentación y las conex
     6.  Manual de instrucciones para la puerta automática a la que el
         controlador de puerta GSM está a punto de ser conectados.
     
-    > Pídalos por separado de su distribuidor local.
+    Pídalos por separado de su distribuidor local.
 ### Controlador de puerta GSM GATOR lista de embalaje estándar 
 
-| - | GATOR GSM controlador de puerta | 1 und. |
-|---|---------------------------------|--------|
-| - | Antena GSM | 1 und. |
-| - | Resistencia de 10 kΩ | 3 und. |
-| - | Cinta adhesiva de doble cara (5 cm) | 1 und. |
-| - | Tornillo | 2 und. |
+|  \- | GATOR GSM controlador de puerta | 1 und. |
+|----:|---------------------------------------|--------|
+|  \- | Antena GSM                            | 1 und. |
+|  \- | Resistencia de 10 kΩ                  | 3 und. |
+|  \- | Cinta adhesiva de doble cara (5 cm)   | 1 und. |
+|  \- | Tornillo                              | 2 und. |
 
 ## Esquemas de cableado para el GSM controlador 
 
@@ -326,9 +328,9 @@ Controlador responde y permite controlar las salidas con una llamada telefónica
 
 Con GATOR usuarios podrán controlar de forma remota controlador. También será capaz de ver el estado del sistema y recibir todos los mensajes de eventos del sistema.
 
-1.  Descargar y ejecutar la aplicación Protegus2 o utilizar la versión del navegador de Protegus2 en [www.protegus.app](http://www.protegus.app).
+1.  Descargar y ejecutar la aplicación Protegus2 o utilizar la versión del navegador de Protegus2 en [www.protegus.app](https://www.protegus.app).
 
-    <div style="margin: 20px 0; text-align: left;">
+    <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
         <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
       </a>
@@ -411,7 +413,7 @@ Encuentre a Protegus2 en la barra de configuración.
 
 <img alt="" src="./image38.png" style="width:2.7559055118110236in;height:1.3031496062992125in" />
 
-> Aparecerá en la pantalla un círculo que indica cuándo se activa el PGM.
+Aparecerá en la pantalla un círculo que indica cuándo se activa el PGM.
 
 <img alt="" src="./image39.png" style="width:2.7559055118110236in;height:2.5393700787401574in" />
 
@@ -1145,4 +1147,4 @@ Siempre desconecte la fuente de alimentación antes de realizar las conexiones e
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-> <img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

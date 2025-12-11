@@ -226,7 +226,10 @@ If there are problems with powering the system from the main power supply, an �
 | Terminal block with 3,15 A fuse | 1 pc. |
 | Fastening elements (screws - 4 pcs., nylon plugs - 4 pcs.). | 1 |
 
-!!! note USB cable (Type-C type) for programming the communicator sold separately. \## Installation of the system
+!!! note
+    USB cable (Type-C type) for programming the communicator sold separately.
+
+## Installation of the system
 
 The communicator board is installed into a mounting housing that already has a DC power supply with a 3,15 A fuse installed and also has space intended for a backup battery.
 
@@ -250,7 +253,10 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
 5.  Insert a backup battery into the mounting housing. Connect the battery’s terminals to the BAT+ / BAT– terminals on the communicator.
 
-!!! note When choosing a battery, it must be charged to 80% capacity within 24 hours, and the remaining capacity is reached within the next 48 hours to meet the requirements of the EN54 standard. \### Connecting sensors
+!!! note
+    When choosing a battery, it must be charged to 80% capacity within 24 hours, and the remaining capacity is reached within the next 48 hours to meet the requirements of the EN54 standard.
+
+### Connecting sensors
 
 There are 10 terminals IO1–IO10 (inputs) on the communicator board for connecting sensor circuits. The number of inputs can be expanded to 32 using input expanders (***iO-8, iO-MO, iO-LORA, iO8-LORA**)*. Any terminal can be set as an input and assigned zone attributes: circuit type (NO, NC, EOL, EOL_T, ATZ, ATZ_T); sensitivity to temporary circuit events; see chapter 6.6 ““Zones” window”.
 
@@ -452,7 +458,8 @@ Test the system. Activate the fire alarm and check that FIRECOM messages are sen
 
 <img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.031496062992126in" />
 
-!!! note You cannot connect the FIRECOM using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the FIRECOM is connected to the **INIM Smartline** panel via RS485 bus. FIRECOM communicator settings with TrikdisConfig when connecting the **INIM SMARTLINE** fire alarm control panel.
+!!! note
+    You cannot connect the FIRECOM using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the FIRECOM is connected to the **INIM Smartline** panel via RS485 bus. FIRECOM communicator settings with TrikdisConfig when connecting the **INIM SMARTLINE** fire alarm control panel.
 
 1.  Choose the **Inim Smartline** fire alarm control panel.
 
@@ -608,7 +615,10 @@ To turn on the communicator, first you need to turn on its power supply. The com
 
 - The “**SIM**” diode must be green solid and periodically blink in yellow no less than 3 times – the green color indicates that the SIM card is successfully registered on the mobile network, while the number of yellow flashes indicate the mobile signal strength. The “**ETH**” indicator lights up green when the communicator is connected to the LAN network.
 
-!!! note Sufficient 4G mobile network strength is 3 (three yellow flashes of the “**SIM**” indicator). / If you see fewer yellow flashes of the “**SIM**” diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the communicator, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.4 “LED indication of operation” to find out the reason. / If all of the FIRECOM indicator lights are off, check the power supply and connections. \## Quick configuration using *TrikdisConfig* software
+!!! note
+    Sufficient 4G mobile network strength is 3 (three yellow flashes of the “**SIM**” indicator). / If you see fewer yellow flashes of the “**SIM**” diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the communicator, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.4 “LED indication of operation” to find out the reason. / If all of the FIRECOM indicator lights are off, check the power supply and connections.
+
+## Quick configuration using *TrikdisConfig* software
 
 1.  Download the configuration software TrikdisConfig from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it*.*
 
@@ -666,7 +676,10 @@ Below we describe the settings you need to edit to make the controller send even
 
 After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
 
-!!! note See chapter 6** “Description of TrikdisConfig windows”** to find more about other FIRECOM settings in ***TrikdisConfig*.** \### Settings for connecting to Central Monitoring Station
+!!! note
+    See chapter 6** “Description of TrikdisConfig windows”** to find more about other FIRECOM settings in ***TrikdisConfig*.**
+
+### Settings for connecting to Central Monitoring Station
 
 **In the “System Options” window, “System general” tab:**
 
@@ -700,13 +713,17 @@ After finishing configuration, click the **Write \[F5\]** button and disconnect 
 
 7.  **Encryption Key** – enter the receiver’s encryption key.
 
-!!! note If you chose **DC-09** as the transmission protocol, additionally enter the object, line and receiver numbers in the “**Settings”** setting group of the **“Reporting to CMS”** window. 11. (Recommended) Configure the “**Backup channel”** settings.
+!!! note
+    If you chose **DC-09** as the transmission protocol, additionally enter the object, line and receiver numbers in the “**Settings”** setting group of the **“Reporting to CMS”** window. 11. (Recommended) Configure the “**Backup channel”** settings.
 
 12. Configure „**Parallel channel**” if messages will be sent to the second receiver of the CMS.
 
 After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
 
-!!! note See chapter **6 “Description of TrikdisConfig windows”** to find more about other FIRECOM settings in ***TrikdisConfig*.** \## Remote control
+!!! note
+    See chapter **6 “Description of TrikdisConfig windows”** to find more about other FIRECOM settings in ***TrikdisConfig*.**
+
+## Remote control
 
 ### Adding the communicator to Protegus2 app
 
@@ -722,7 +739,8 @@ Using Protegus2, users can see the system’s state and receive notifications ab
 
 2.  Create a new account or log in with your user name and password.
 
-!!! warning “Important” When adding the system to Protegus2 the FIRECOM communicator must:
+!!! warning
+    “Important” When adding the system to Protegus2 the FIRECOM communicator must:
 
     1.  Have an inserted and activated SIM card with the PIN code entered or
         disabled;
@@ -902,7 +920,8 @@ Zones can be assigned to groups. The name of each group can be changed. Group na
 
 - **Installer Code** – gives limited access to changing the communicator’s configuration (default code – 654321).
 
-!!! note If the default *administrator code* is set (123456), after pressing **Read \[F4\]** the program will immediately show the current operational parameters of the device without asking for the code. **Settings group “Installer permissions”**
+!!! note
+    If the default *administrator code* is set (123456), after pressing **Read \[F4\]** the program will immediately show the current operational parameters of the device without asking for the code. **Settings group “Installer permissions”**
 
 The administrator can set which parameters can be changed by the installer.
 
@@ -1263,7 +1282,8 @@ To restore the communicator’s default settings, click the TrikdisConfig button
 
 ## Setting parameters remotely
 
-!!! warning “Important” Remote configuration will only work when the FIRECOM:
+!!! warning
+    “Important” Remote configuration will only work when the FIRECOM:
 
     1.  Has an inserted and activated SIM card with the PIN code entered or
         disabled.
@@ -1306,7 +1326,8 @@ When configuration and installation are complete, perform a system check:
 
 ## Updating firmware
 
-!!! note After connecting the communicator to TrikdisConfig, the program will automatically offer to update the firmware if any updates are available. Internet connection is needed for this feature. Antivirus software, firewall or strict internet access settings can block the automatic update feature. In this case, you will have to reconfigure your antivirus software. The communicator’s firmware can also be updated or changed manually. All prior settings of the communicator remain after an update. If the firmware is installed manually, it can be changed to a newer or an older version. Perform these steps:
+!!! note
+    After connecting the communicator to TrikdisConfig, the program will automatically offer to update the firmware if any updates are available. Internet connection is needed for this feature. Antivirus software, firewall or strict internet access settings can block the automatic update feature. In this case, you will have to reconfigure your antivirus software. The communicator’s firmware can also be updated or changed manually. All prior settings of the communicator remain after an update. If the firmware is installed manually, it can be changed to a newer or an older version. Perform these steps:
 
 1.  Launch ***TrikdisConfig**.*
 

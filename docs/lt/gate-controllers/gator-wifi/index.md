@@ -1,8 +1,10 @@
+# Wi-Fi valdiklis GATOR WiFi skirtas automatinių durų (arba kitai elektros įrangai) valdymui nuotoliniu būdu
+
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
 </div>
 
-# Gator Wifi
+##  Aprašymas
 
 Wi-Fi valdiklis GATOR WiFi skirtas automatinių durų (arba kitai elektros įrangai) valdymui nuotoliniu būdu.
 
@@ -82,7 +84,7 @@ Pranešimai saugos tarnybai
 
 <img alt="" src="./image4.png" style="width:4.853343175853018in;height:2.8366721347331585in" />
 
-### Išorinių kontaktų paskirtis
+### Išorinių kontaktų paskirtis 
 
 | Gnybtas | Aprašymas                                                         |
 |---------|:------------------------------------------------------------------|
@@ -99,7 +101,7 @@ Pranešimai saugos tarnybai
 | A RS485 | *RS485* magistralės A kontaktas                                   |
 | B RS485 | *RS485* magistralės B kontaktas                                   |
 
-### Šviesinė veikimo indikacija
+### Šviesinė veikimo indikacija 
 
 | Indikatorius | Veikimas | Aprašymas |
 |--------------|----------|-----------|
@@ -132,7 +134,7 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
     
     Trūkstamus komponentus užsisakykite atskirai iš savo vietinio
     platintojo.
-### Valdiklio *GATOR WiFi* pakuotės turinys
+### Valdiklio *GATOR WiFi* pakuotės turinys 
 
 |  \- | Valdiklis GATOR WiFi    | 1 vnt. |
 |----:|-------------------------------|--------|
@@ -140,7 +142,7 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 |  \- | Dvipusė lipni juostelė (5 cm) | 1 vnt. |
 |  \- | Varžtas                       | 2 vnt. |
 
-## Valdiklio GATOR WiFi laidinių sujungimų schemos
+## Valdiklio GATOR WiFi laidinių sujungimų schemos 
 
 ### Tvirtinimas
 
@@ -156,13 +158,13 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 
 <img alt="" src="./image5.png" style="width:3.937007874015748in;height:2.0551181102362204in" />
 
-### Maitinimo prijungimo schema
+### Maitinimo prijungimo schema 
 
 Laidais sujunkite valdiklį GATOR WiFi pagal pateiktą sujungimų schemą.
 
 <img alt="" src="./image6.png" style="width:3.6900076552930883in;height:2.652505468066492in" />
 
-### RFID skaitytuvo (Wiegand 26/34) prijungimo schema
+### RFID skaitytuvo (Wiegand 26/34) prijungimo schema 
 
 Valdiklio GATOR WiFi konfigūravimas su RFID skaitytuvų aprašytas p.5.3 „Langas IN/OUT“. Su RFID skaitytuvu galima valdyti tik išėjimą 5 OUT.
 
@@ -174,7 +176,7 @@ Programoje TrikdisConfig būtina pažymėti lauką **„Wiegand“ skaitytuvo re
 
 <img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.437007874015748in" />
 
-### iO-LORA plėtimo modulių prijungimo schema
+### iO-LORA plėtimo modulių prijungimo schema 
 
 Vartų valdiklio veikimo programos versija nuo 1.21.
 
@@ -196,7 +198,7 @@ Sąraše "**Vartotojai**" įrašykite RFID kortelės numerį, vartotojo vardą, 
 
 Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuką (turi suveikti PGM išėjimas).
 
-### Zonų įėjimų laidinių sujungimų schemos
+### Zonų įėjimų laidinių sujungimų schemos 
 
 GATOR WiFi turi keturis universalius **I/O** (įėjimas/išėjimas) gnybtus, kurie gali veikti kaip įėjimai arba išėjimai. Įėjimai gali veikti NC, NO, EOL režimais. Prijunkite įėjimus pagal nustatytą įėjimo tipą (NC, NO, EOL), kaip tai pavaizduota žemiau pateiktose schemose:
 
@@ -214,7 +216,7 @@ xI/O gnybtui turi būti nustatytas Išėjimo veikimo režimas.
 
 <img alt="" src="./image15.png" style="width:2.242504374453193in;height:0.7475010936132983in" />
 
-## Valdymas su *Protegus2* programėle
+## Valdymas su *Protegus2* programėle 
 
 Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus visus sistemos įvykių pranešimus.
 
@@ -293,7 +295,7 @@ Suvaldykite PGM išėjimą paspausdami ikoną „**Output5**“.
 
 <img alt="" src="./image34.png" style="width:2.7559055118110236in;height:1.9645669291338583in" />
 
-## Widget pridėjimas telefone
+## Widget pridėjimas telefone 
 
 Vartų valdymo Widget galima įkelti į telefono ekraną. Telefonas turi turėti Android operacinę sistemą. Valdiklis turi būti priregistruotas programėlėje Protegus2. Telefone prisijunkite prie programėlės Protegus2. Uždarykite programėlės langą.
 
@@ -335,7 +337,7 @@ Ekrane atsiras apskritimas, kuriame bus atvaizduotas PGM suveikimas.
 
 <img alt="" src="./image42.png" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
-## Veikimo parametrų nustatymas programa *TrikdisConfig*
+## Veikimo parametrų nustatymas programa *TrikdisConfig* 
 
 Su TrikdisConfig galite pakeisti valdiklio GATOR WiFi nustatymus (jei gamyklinių nustatymų nepakanka) pagal žemiau pateiktus programos langų aprašymus.
 
@@ -362,7 +364,7 @@ Su TrikdisConfig galite pakeisti valdiklio GATOR WiFi nustatymus (jei gamyklini�
     mygtuką **Atverti [F8** ir pasirinkus konfigūravimo bylą programoje bus
     atverti ir parodyti išsaugoti nustatymai. / Norėdami atkurti gamyklinius
     nustatymus, paspauskite **Atkurti** mygtuką lango apačioje kairėje.
-### TrikdisConfig būsenų juosta
+### TrikdisConfig būsenų juosta 
 
 Prijungus GATOR WiFi prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
@@ -381,7 +383,7 @@ Prijungus GATOR WiFi prie programos TrikdisConfig, programa būsenų juostoje pa
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti į GATOR WiFi. Su TrikdisConfig nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### Langas „Sistemos parinktys“
+### Langas „Sistemos parinktys“ 
 
 <img alt="" src="./image45.png" style="width:7.086614173228346in;height:4.05511811023622in" />
 
@@ -424,7 +426,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 - **Wifi SSID pavadinimas** – Wi-Fi tinklo pavadinimas, prie kurio jungsis valdiklis GATOR WiFi.
 - **Wifi SSID slaptažodis** – Wi-Fi tinklo slaptažodis.
 
-### Langas „IN/OUT“
+### Langas „IN/OUT“ 
 
 **Skirtukas „IN/OUT“**
 
@@ -508,7 +510,7 @@ OUT išėjimas gali būti aktyvuotas pagal nustatyta grafiką. Būtina nurodyti 
 
 - **Pabaigos laikas per šventes** - nurodykite šventinės dienos pabaigos valandas.
 
-### Langas „Moduliai“
+### Langas „Moduliai“ 
 
 Prie GATOR WiFi valdiklio galima prijungti iO-LORA modulius.
 
@@ -520,7 +522,7 @@ Prijungus RF-LORA transiverį, prie valdiklio GATOR WiFi galima prijungti iki 8 
 
 - **Serijos Nr**. - įveskite prijungto modulio serijinį numerį (6 skaitmenys). Numerį rasite ant lipduko, užklijuoto ant prijungto modulio arba jo įpakavimo dėžutės.
 
-### Langas „IP pranešimai“
+### Langas „IP pranešimai“ 
 
 <img alt="" src="./image50.png" style="width:7.086614173228346in;height:3.251968503937008in" />
 
@@ -556,7 +558,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 - **Aplikacijos prieigos kodas** - prisijungimo su Protegus2 6 skaitmenų kodas (gamyklinis kodas - 123456).
 
-### Langas „Vartotojai“
+### Langas „Vartotojai“ 
 
 **Skirtukas „Vartotojai“**
 
@@ -655,19 +657,19 @@ Vartotojui galima sudaryti tvarkarašti, nurodant laiką ir savaitės dienas kad
 
 Patogu į juodąjį sąrašą pridėti vartotojus tiesiai iš „**Įvykių žurnalo**. **Įvykių žurnale“** dešiniuoju pelės mygtuku spustelkite ant „**Vardo“** arba ID numerio RFID kortelės ir pasirinkite „**Pridėti į juodąjį sąrašą**“.
 
-### Langas „Įvykių žurnalas“
+### Langas „Įvykių žurnalas“ 
 
 <img alt="" src="./image60.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 Nuspauskite mygtuką „**Nuskaityti**. **Įvykių žurnalas“** bus nuskaitytas iš valdiklio atminties. „**Įvykių žurnalas“** suteikia informaciją apie valdiklio atliktus veiksmus ir jo vidinius įvykius.
 
-### Gamyklinių nustatymų atstatymas
+### Gamyklinių nustatymų atstatymas 
 
 Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį. Valdiklio GATOR WiFi gamykliniams nustatymams atstatyti reikia programos TrikdisConfig lange nuspausti mygtuką „**Atkurti“**.
 
 <img alt="" src="./image61.png" style="width:7.086614173228346in;height:0.8582677165354331in" />
 
-## Nuotolinis veikimo parametrų nustatymas
+## Nuotolinis veikimo parametrų nustatymas 
 
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai valdiklyje:
@@ -691,7 +693,7 @@ Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį. Valdiklio 
 
 3.  Nustatykite norimus nustatymus valdiklyje, o pabaigę nuspauskite **Įrašyti [F5]**. Jei norite atsijungti nuo valdiklio nuspauskite „**Atsijungti“** ir išjunkite programą TrikdisConfig.
 
-## Valdiklio GATOR WiFi testavimas
+## Valdiklio GATOR WiFi testavimas 
 
 Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
@@ -703,7 +705,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 4.  Norėdami patikrinti GATOR WiFi išėjimus, aktyvinkite juos nuotoliniu būdu ir įsitikinkite, kad gavėjams yra pasiekiami teisingi pranešimai, o išėjimai aktyvuojami taip, kaip turėtų.
 
-## Programinės aparatinės įrangos atnaujinimas
+## Programinės aparatinės įrangos atnaujinimas 
 
 !!! note
     Prijungus GATOR WiFi prie TrikdisConfig, programa pasiūlys
@@ -728,9 +730,9 @@ GATOR WiFi veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po
 
 6.  Palaukite, kol bus atlikti atnaujinimai.
 
-## Turinys
+## Turinys 
 
-## Saugos reikalavimai
+## Saugos reikalavimai 
 
 Valdiklį įrengti ir aptarnauti gali tik kvalifikuoti asmenys.
 

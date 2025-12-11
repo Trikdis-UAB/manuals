@@ -4,6 +4,7 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
+
 ##  Description
 
 The Wi-Fi controller GATOR WiFi is designed for remote control of an automatic door (or other electrical equipment).
@@ -50,25 +51,25 @@ GATOR WiFi can be controlled with Protegus2 app. The controller can enter 1000 u
 ### Specifications 
 
 | Parameter | Description |
-|-----------|-------------|
-| Power supply voltage | 9-32 V DC |
-| Current consumption | 150 mA |
-| Universal inputs/​outputs | 4, can be set either as input IN with type: NC, NO, EOL=10 kΩ, or output OUT (open collector (OC) 50 mA) |
-| Output | 1 vnt., relay, 1 A 30 V DC, 0,5 A 125 V AC |
+|:---|----|
+| Power supply voltage | 9-32 V DC |
+| Current consumption | 150 mA |
+| Universal inputs/​outputs | 4, can be set either as input IN with type: NC, NO, EOL=10 kΩ, or output OUT (open collector (OC) 50 mA) |
+| Output | 1 vnt., relay, 1 A 30 V DC, 0,5 A 125 V AC |
 | Connection to CMS | TCP/​IP or UDP/​IP via Wi-Fi |
 | Event transmission protocol | TRK_TCP or TRK_UDP |
 | Encryption key | 6 symbol encryption key |
-| Wi-Fi frequency | 2,4 GHz |
-| Wi-Fi protocol | 802.11 b/​g/​n |
+| Wi-Fi frequency | 2,4 GHz |
+| Wi-Fi protocol | 802.11 b/​g/​n |
 | Security mode | WPA, WPA2, WPA mixed |
 | Network configuration type | DHCP or manual network configuration (using phone or laptop) |
-| Unsent events memory | Up to 60 events |
-| Event log memory | Up to 5000 events |
-| Users who have permission to control | 1000 |
+| Unsent events memory | Up to 60 events |
+| Event log memory | Up to 5000 events |
+| Users who have permission to control | 1000  |
 | Supported modules | iO-LORA – expander module (when using iO-LORA, an RF-LORA transceiver must be connected to GATOR WiFi) |
-| Operating environment | Temperature from –10 °C to +50 °C, relative air humidity – up to 80 % at +20 °C |
+| Operating environment | Temperature from –10 °C to +50 °C, relative air humidity – up to 80 % at +20 °C |
 | Dimensions | 88 x 62 x 26 mm |
-| Weight | 80 g |
+| Weight | 80 g |
 
 ### Controller elements 
 
@@ -86,20 +87,20 @@ GATOR WiFi can be controlled with Protegus2 app. The controller can enter 1000 u
 
 ### Purpose of terminals 
 
-| Terminal | Description |
-|----------|-------------|
-| +DC | Power terminal (9-32 V DC positive) |
-| -DC | Power terminal (9-32 V DC negative) |
-| 1 I/​O | Input/​output (factory setting: input, NO) |
-| 2 I/​O | Input/​output (factory setting: input. NO) |
-| 3 I/​O | Input/​output (factory setting: type OC output) |
-| 4 I/​O | Input/​output (factory setting: type OC output) |
-| +AUX | Positive power terminal for external devices |
-| NC | Relay terminal NC |
-| C | Relay terminal C |
-| NO | Relay terminal NO |
-| A RS485 | RS485 bus A terminal |
-| B RS485 | RS485 bus B terminal |
+| Terminal | Description                                    |
+|----------|:-----------------------------------------------|
+| +DC      | Power terminal (9-32 V DC positive)            |
+| -DC      | Power terminal (9-32 V DC negative)            |
+| 1 I/​O    | Input/​output (factory setting: input, NO)      |
+| 2 I/​O    | Input/​output (factory setting: input. NO)      |
+| 3 I/​O    | Input/​output (factory setting: type OC output) |
+| 4 I/​O    | Input/​output (factory setting: type OC output) |
+| +AUX     | Positive power terminal for external devices   |
+| NC       | Relay terminal NC                              |
+| C        | Relay terminal C                               |
+| NO       | Relay terminal NO                              |
+| A RS485  | *RS485* bus A terminal                         |
+| B RS485  | *RS485* bus B terminal                         |
 
 ### LED indication of operation 
 
@@ -135,11 +136,11 @@ If the LED indication is not working, check the power supply and connections.
     Order the necessary components separately from your local retailer.
 ### Controller *GATOR WiFi* standard packing list
 
-| - | Controller GATOR WiFi | 1 pc. |
-|---|-----------------------|-------|
-| - | Resistor 10 kΩ | 3 pcs. |
-| - | Double-sided adhesive tape (5 cm) | 1 pc. |
-| - | Screw | 2 pcs. |
+|  \- | Controller GATOR WiFi       | 1 pc.  |
+|----:|-----------------------------------|--------|
+|  \- | Resistor 10 kΩ                    | 3 pcs. |
+|  \- | Double-sided adhesive tape (5 cm) | 1 pc.  |
+|  \- | Screw                             | 2 pcs. |
 
 ## Wiring schematics for the controller *GATOR WiFi* 
 
@@ -219,18 +220,19 @@ The “Output” mode must be set to the xI/O terminal.
 
 With Protegus2 app users will be able to control controller remotely. They will also be able to see the system state and receive all system event messages.
 
-1.  Download and launch the Protegus2 app or use the browser version of Protegus2 at [www.protegus.app](http://www.protegus.app).
-<div style="margin: 20px 0; text-align: left;">
-  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
-  </a>
-  <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-    <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
-  </a>
-  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-    <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
-  </a>
-</div>
+1.  Download and launch the Protegus2 app or use the browser version of Protegus2 at [www.protegus.app](https://www.protegus.app).
+
+    <div style="margin: 20px 0; text-align: center;">
+      <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+      </a>
+      <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
+        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+      </a>
+      <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+      </a>
+    </div>
 
 2.  Log in with your user name and password or register and create a new account.
 
@@ -328,7 +330,7 @@ Find Protegus2 in the settings bar.
 
 <img alt="" src="./image40.png" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
-> A circle that shows when the PGM is turned on will appear on the screen.
+A circle that shows when the PGM is turned on will appear on the screen.
 
 <img alt="" src="./image41.png" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
@@ -368,16 +370,16 @@ After connecting the GATOR WiFi to the TrikdisConfig software, the software will
 
 <img alt="" src="./image44.png" style="width:7.086614173228346in;height:0.5275590551181102in" />
 
-| Name | Description |
-|------|-------------|
-| IMEI/​Unique ID | The device’s MAC number |
-| State | Operational state |
-| Device | Device type (must show WP17_xxxx) |
-| SN | Device’s serial number |
-| BL | Launcher version |
-| FW | Device’s firmware version |
-| HW | Device’s hardware version |
-| State | Type of connection with the software (with USB or remote) |
+| Name           | Description                                               |
+|----------------|-----------------------------------------------------------|
+| IMEI/​Unique ID | The device’s MAC number                                   |
+| State          | Operational state                                         |
+| Device         | Device type (must show WP17_xxxx)                   |
+| SN             | Device’s serial number                                    |
+| BL             | Launcher version                                          |
+| FW             | Device’s firmware version                                 |
+| HW             | Device’s hardware version                                 |
+| State          | Type of connection with the software (with USB or remote) |
 
 When the button **Read [F4]** is clicked, the program will read and show the settings currently saved on the GATOR WiFi. With TrikdisConfig, adjust the required settings according to the program window descriptions below.
 
