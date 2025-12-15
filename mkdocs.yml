@@ -33,8 +33,12 @@ nav:
   - Overview: en/index.md
   - Communicators:
     - Cellular:
-      - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
-      - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
+      - GT/GT+/GET manuals:
+        - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
+        - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
+        - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
+        - Quick setup GT/GT+/GET:
+          - Paradox SP/SP+/MG/MG+ (GT+): en/alarm-communicators/gt-plus-cellular/paradox-setup/index.md
       - Cellular communicator G16: en/alarm-communicators/g16/index.md
       - Cellular communicator G16T: en/alarm-communicators/g16t/index.md
     - Dual-path:
