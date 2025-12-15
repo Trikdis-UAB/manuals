@@ -11,14 +11,12 @@ Browse by category or use the search box in the header to find a specific topic.
 
 ### Cellular
 
-- [GT Cellular Communicator](alarm-communicators/cellular/gt/index.md)
-- [GT+ Cellular Communicator](alarm-communicators/cellular/gt-plus/index.md)
-- [Cellular communicator G16](alarm-communicators/g16/index.md)
-- [Cellular communicator G16T](alarm-communicators/g16t/index.md)
-
-### Dual-path
-
-- [GET Cellular Communicator](alarm-communicators/dual-path/get/index.md)
+- [Quick setup GT/GT+/GET (Paradox SP(+)/MG(+))](alarm-communicators/cellular/quick-setup/paradox/index.md)
+- [GT](alarm-communicators/cellular/gt/index.md)
+- [GT+](alarm-communicators/cellular/gt-plus/index.md)
+- [GET](alarm-communicators/dual-path/get/index.md)
+- [G16](alarm-communicators/g16/index.md)
+- [G16T](alarm-communicators/g16t/index.md)
 
 ### For fire panels
 
