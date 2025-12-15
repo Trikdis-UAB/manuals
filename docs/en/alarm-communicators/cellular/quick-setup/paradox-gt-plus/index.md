@@ -1,22 +1,22 @@
-# GT+ with Paradox SP/SP+/MG/MG+ (quick setup)
+# GT/GT+/GET with Paradox SP/SP+/MG/MG+ (quick setup)
 
-Short wiring and programming steps to connect the GT+ communicator to Paradox SP/SP+/MG/MG+ panels using TIP/RING and KeyBus, then enroll the system in Protegus2. Use this alongside the full GT+ manual for all other settings.
+Short wiring and programming steps to connect the GT/GT+/GET communicator to Paradox SP/SP+/MG/MG+ panels using TIP/RING and KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.)
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
 
 ## Prerequisites
 
-- GT+ firmware V4+; SIM inserted, PIN disabled, data plan active.
+- GT/GT+/GET firmware V4+; SIM inserted, PIN disabled, data plan active.
 - Paradox SP/SP+/MG/MG+ panel with keypad access (installer code available).
 - CMS account number if reporting to CMS.
 - Protegus2 company/installer account and communicator IMEI.
 
 ## Wiring
 
-Follow the schematic below to connect GT+ to the panel:
+Follow the schematic below to connect the communicator to the panel:
 
-| GT+ terminal | Paradox panel | Notes |
+| GT/GT+/GET terminal | Paradox panel | Notes |
 | --- | --- | --- |
 | TIP / RING | TIP / RING | For PSTN line emulation (Contact ID). |
 | A / B (KeyBus) | A / B (KeyBus) | For serial bus control. |
