@@ -11,19 +11,19 @@ Browse by category or use the search box in the header to find a specific topic.
 
 ### Cellular
 
-- [GT Cellular Communicator](alarm-communicators/gt-cellular/index.md)
-- [GT+ Cellular Communicator](alarm-communicators/gt-plus-cellular/index.md)
+- [GT Cellular Communicator](alarm-communicators/cellular/gt/index.md)
+- [GT+ Cellular Communicator](alarm-communicators/cellular/gt-plus/index.md)
 - [Cellular communicator G16](alarm-communicators/g16/index.md)
 - [Cellular communicator G16T](alarm-communicators/g16t/index.md)
 
 ### Dual-path
 
-- [GET Cellular Communicator](alarm-communicators/get-cellular/index.md)
+- [GET Cellular Communicator](alarm-communicators/dual-path/get/index.md)
 
 ### For fire panels
 
-- [Communicator FireCom](alarm-communicators/firecom/index.md)
-- [Cellular communicator G17F](alarm-communicators/g17f/index.md)
+- [Communicator FireCom](alarm-communicators/fire-panels/firecom/index.md)
+- [Cellular communicator G17F](alarm-communicators/fire-panels/g17f/index.md)
 
 ### Ethernet
 

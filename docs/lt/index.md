@@ -11,19 +11,19 @@ Pasirinkite kategoriją arba naudokite paiešką viršuje, kad greitai rastumėt
 
 ### Mobilaus ryšio
 
-- [GT GSM komunikatorius](alarm-communicators/gt-cellular/index.md)
-- [GT+ GSM komunikatorius](alarm-communicators/gt-plus-cellular/index.md)
+- [GT GSM komunikatorius](alarm-communicators/cellular/gt/index.md)
+- [GT+ GSM komunikatorius](alarm-communicators/cellular/gt-plus/index.md)
 - [GSM komunikatorius G16](alarm-communicators/g16/index.md)
 - [GSM komunikatorius G16T](alarm-communicators/g16t/index.md)
 
 ### Dvigubas kanalas
 
-- [GSM/Ethernet komunikatorius GET](alarm-communicators/get-cellular/index.md)
+- [GSM/Ethernet komunikatorius GET](alarm-communicators/dual-path/get/index.md)
 
 ### Priešgaisrinėms centralėms
 
-- [Priešgaisrinės centralės komunikatorius FIRECOM](alarm-communicators/firecom/index.md)
-- [Priešgaisrinės centralės GSM komunikatorius G17F](alarm-communicators/g17f/index.md)
+- [Priešgaisrinės centralės komunikatorius FIRECOM](alarm-communicators/fire-panels/firecom/index.md)
+- [Priešgaisrinės centralės GSM komunikatorius G17F](alarm-communicators/fire-panels/g17f/index.md)
 
 ### Ethernet
 

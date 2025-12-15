@@ -34,18 +34,18 @@ nav:
   - Communicators:
     - Cellular:
       - Quick setup GT/GT+/GET:
-        - Paradox SP/SP+/MG/MG+ (GT+): en/alarm-communicators/gt-plus-cellular/paradox-setup/index.md
+        - Paradox SP/SP+/MG/MG+ (GT+): en/alarm-communicators/cellular/quick-setup/paradox-gt-plus/index.md
       - GT/GT+/GET manuals:
-        - GT Cellular Communicator: en/alarm-communicators/gt-cellular/index.md
-        - GT+ Cellular Communicator: en/alarm-communicators/gt-plus-cellular/index.md
-        - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
+        - GT Cellular Communicator: en/alarm-communicators/cellular/gt/index.md
+        - GT+ Cellular Communicator: en/alarm-communicators/cellular/gt-plus/index.md
+        - GET Cellular Communicator: en/alarm-communicators/dual-path/get/index.md
       - Cellular communicator G16: en/alarm-communicators/g16/index.md
       - Cellular communicator G16T: en/alarm-communicators/g16t/index.md
     - Dual-path:
-      - GET Cellular Communicator: en/alarm-communicators/get-cellular/index.md
+      - GET Cellular Communicator: en/alarm-communicators/dual-path/get/index.md
     - For Fire Panels:
-      - Communicator FireCom: en/alarm-communicators/firecom/index.md
-      - Cellular communicator G17F: en/alarm-communicators/g17f/index.md
+      - Communicator FireCom: en/alarm-communicators/fire-panels/firecom/index.md
+      - Cellular communicator G17F: en/alarm-communicators/fire-panels/g17f/index.md
     - Ethernet:
       - Ethernet communicator E16: en/alarm-communicators/e16/index.md
       - Ethernet communicator E16T: en/alarm-communicators/e16t/index.md
@@ -57,19 +57,19 @@ nav:
   - Gate Controllers:
     - GATOR Cellular Gate Controller: en/gate-controllers/gator/index.md
     - GATOR WiFi Gate Controller: en/gate-controllers/gator-wifi/index.md
-- Lithuanian:
-  - Apžvalga: lt/index.md
-  - Komunikatoriai:
-    - Mobilaus ryšio:
-      - GT GSM komunikatorius: lt/alarm-communicators/gt-cellular/index.md
-      - GT+ GSM komunikatorius: lt/alarm-communicators/gt-plus-cellular/index.md
-      - GSM komunikatorius G16: lt/alarm-communicators/g16/index.md
-      - GSM komunikatorius G16T: lt/alarm-communicators/g16t/index.md
-    - Dvigubas Kanalas:
-      - GSM/Ethernet komunikatorius GET: lt/alarm-communicators/get-cellular/index.md
-    - Priešgaisrinėms centralėms:
-      - Priešgaisrinės centralės komunikatorius FIRECOM: lt/alarm-communicators/firecom/index.md
-      - Priešgaisrinės centralės GSM komunikatorius G17F: lt/alarm-communicators/g17f/index.md
+  - Lithuanian:
+    - Apžvalga: lt/index.md
+    - Komunikatoriai:
+      - Mobilaus ryšio:
+        - GT GSM komunikatorius: lt/alarm-communicators/cellular/gt/index.md
+        - GT+ GSM komunikatorius: lt/alarm-communicators/cellular/gt-plus/index.md
+        - GSM komunikatorius G16: lt/alarm-communicators/g16/index.md
+        - GSM komunikatorius G16T: lt/alarm-communicators/g16t/index.md
+      - Dvigubas Kanalas:
+        - GSM/Ethernet komunikatorius GET: lt/alarm-communicators/dual-path/get/index.md
+      - Priešgaisrinėms centralėms:
+        - Priešgaisrinės centralės komunikatorius FIRECOM: lt/alarm-communicators/fire-panels/firecom/index.md
+        - Priešgaisrinės centralės GSM komunikatorius G17F: lt/alarm-communicators/fire-panels/g17f/index.md
     - Ethernet:
       - Ethernet komunikatorius E16: lt/alarm-communicators/e16/index.md
       - Ethernet komunikatorius E16T: lt/alarm-communicators/e16t/index.md
@@ -81,19 +81,19 @@ nav:
   - Valdikliai:
     - Gator: lt/gate-controllers/gator/index.md
     - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
-- Spanish:
-  - Visión general: es/index.md
-  - Comunicadores:
-    - Celular:
-      - GT Comunicador: es/alarm-communicators/gt-cellular/index.md
-      - GT+ Comunicador: es/alarm-communicators/gt-plus-cellular/index.md
-      - Comunicador celular G16: es/alarm-communicators/g16/index.md
-      - Comunicador celular G16T: es/alarm-communicators/g16t/index.md
-    - Comunicación de Doble Vía:
-      - Comunicador GET: es/alarm-communicators/get-cellular/index.md
-    - Celular para Incendio:
-      - Comunicador FireCom: es/alarm-communicators/firecom/index.md
-      - Comunicador Celular G17F: es/alarm-communicators/g17f/index.md
+  - Spanish:
+    - Visión general: es/index.md
+    - Comunicadores:
+      - Celular:
+        - GT Comunicador: es/alarm-communicators/cellular/gt/index.md
+        - GT+ Comunicador: es/alarm-communicators/cellular/gt-plus/index.md
+        - Comunicador celular G16: es/alarm-communicators/g16/index.md
+        - Comunicador celular G16T: es/alarm-communicators/g16t/index.md
+      - Comunicación de Doble Vía:
+        - Comunicador GET: es/alarm-communicators/dual-path/get/index.md
+      - Celular para Incendio:
+        - Comunicador FireCom: es/alarm-communicators/fire-panels/firecom/index.md
+        - Comunicador Celular G17F: es/alarm-communicators/fire-panels/g17f/index.md
     - Ethernet:
       - Comunicador Ethernet E16: es/alarm-communicators/e16/index.md
       - Comunicador Ethernet E16T: es/alarm-communicators/e16t/index.md
@@ -105,19 +105,19 @@ nav:
   - Controladores:
     - Gator: es/gate-controllers/gator/index.md
     - Gator Wifi: es/gate-controllers/gator-wifi/index.md
-- Russian:
-  - Обзор: ru/index.md
-  - Коммуникаторы:
-    - GSM/GPRS:
-      - GSM коммуникатор GT: ru/alarm-communicators/gt-cellular/index.md
-      - GSM коммуникатор GT+: ru/alarm-communicators/gt-plus-cellular/index.md
-      - GSM коммуникатор G16: ru/alarm-communicators/g16/index.md
-      - GSM коммуникатор G16T: ru/alarm-communicators/g16t/index.md
-    - Двойной Коммуникатор:
-      - коммуникатор GET: ru/alarm-communicators/get-cellular/index.md
-    - Для противопожарной охранной панели:
-      - Коммуникатор FireCom: ru/alarm-communicators/firecom/index.md
-      - GSM коммуникатор G17F: ru/alarm-communicators/g17f/index.md
+  - Russian:
+    - Обзор: ru/index.md
+    - Коммуникаторы:
+      - GSM/GPRS:
+        - GSM коммуникатор GT: ru/alarm-communicators/cellular/gt/index.md
+        - GSM коммуникатор GT+: ru/alarm-communicators/cellular/gt-plus/index.md
+        - GSM коммуникатор G16: ru/alarm-communicators/g16/index.md
+        - GSM коммуникатор G16T: ru/alarm-communicators/g16t/index.md
+      - Двойной Коммуникатор:
+        - коммуникатор GET: ru/alarm-communicators/dual-path/get/index.md
+      - Для противопожарной охранной панели:
+        - Коммуникатор FireCom: ru/alarm-communicators/fire-panels/firecom/index.md
+        - GSM коммуникатор G17F: ru/alarm-communicators/fire-panels/g17f/index.md
     - Ethernet:
       - Ethernet коммуникатор E16: ru/alarm-communicators/e16/index.md
       - Ethernet модуль E16T: ru/alarm-communicators/e16t/index.md

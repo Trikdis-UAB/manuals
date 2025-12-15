@@ -11,19 +11,19 @@ Utilice la búsqueda del encabezado o las categorías siguientes para localizar 
 
 ### Celular
 
-- [GT Comunicador](alarm-communicators/gt-cellular/index.md)
-- [GT+ Comunicador](alarm-communicators/gt-plus-cellular/index.md)
+- [GT Comunicador](alarm-communicators/cellular/gt/index.md)
+- [GT+ Comunicador](alarm-communicators/cellular/gt-plus/index.md)
 - [Comunicador celular G16](alarm-communicators/g16/index.md)
 - [Comunicador celular G16T](alarm-communicators/g16t/index.md)
 
 ### Comunicación de doble vía
 
-- [Comunicador GET](alarm-communicators/get-cellular/index.md)
+- [Comunicador GET](alarm-communicators/dual-path/get/index.md)
 
 ### Celular para incendio
 
-- [Comunicador FireCom](alarm-communicators/firecom/index.md)
-- [Comunicador celular G17F](alarm-communicators/g17f/index.md)
+- [Comunicador FireCom](alarm-communicators/fire-panels/firecom/index.md)
+- [Comunicador celular G17F](alarm-communicators/fire-panels/g17f/index.md)
 
 ### Ethernet
 

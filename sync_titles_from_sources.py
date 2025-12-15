@@ -32,15 +32,15 @@ PRODUCT_CATEGORY_MAP = {
 }
 
 PRODUCT_SLUG_MAP = {
-    "GET": "get-cellular",
-    "GT": "gt-cellular",
-    "GT_PLUS": "gt-plus-cellular",
-    "FIRECOM": "firecom",
+    "GET": "dual-path/get",
+    "GT": "cellular/gt",
+    "GT_PLUS": "cellular/gt-plus",
+    "FIRECOM": "fire-panels/firecom",
     "E16": "e16",
     "E16T": "e16t",
     "G16": "g16",
     "G16T": "g16t",
-    "G17F": "g17f",
+    "G17F": "fire-panels/g17f",
     "T16": "t16",
     "SP3": "sp3",
     "CG17": "cg17",

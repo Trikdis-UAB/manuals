@@ -11,19 +11,19 @@ hide:
 
 ### GSM/GPRS
 
-- [GSM коммуникатор GT](alarm-communicators/gt-cellular/index.md)
-- [GSM коммуникатор GT+](alarm-communicators/gt-plus-cellular/index.md)
+- [GSM коммуникатор GT](alarm-communicators/cellular/gt/index.md)
+- [GSM коммуникатор GT+](alarm-communicators/cellular/gt-plus/index.md)
 - [GSM коммуникатор G16](alarm-communicators/g16/index.md)
 - [GSM коммуникатор G16T](alarm-communicators/g16t/index.md)
 
 ### Двойной коммуникатор
 
-- [коммуникатор GET](alarm-communicators/get-cellular/index.md)
+- [коммуникатор GET](alarm-communicators/dual-path/get/index.md)
 
 ### Для противопожарной охранной панели
 
-- [Коммуникатор FireCom](alarm-communicators/firecom/index.md)
-- [GSM коммуникатор G17F](alarm-communicators/g17f/index.md)
+- [Коммуникатор FireCom](alarm-communicators/fire-panels/firecom/index.md)
+- [GSM коммуникатор G17F](alarm-communicators/fire-panels/g17f/index.md)
 
 ### Ethernet
 
