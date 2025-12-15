@@ -23,7 +23,6 @@ theme:
   - navigation.sections
   - navigation.top
   - navigation.expand
-  - toc.integrate
   - content.code.copy
   - search.share
   - search.suggest
