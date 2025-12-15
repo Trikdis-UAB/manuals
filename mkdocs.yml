@@ -23,6 +23,7 @@ theme:
   - navigation.sections
   - navigation.top
   - navigation.expand
+  - toc.integrate
   - content.code.copy
   - search.share
   - search.suggest
@@ -158,6 +159,7 @@ extra_javascript:
 - javascripts/close-language-select.js
 - javascripts/cycle-welcome.js
 - javascripts/language-ui.js
+- javascripts/mobile-toc-toggle.js
 plugins:
 - search:
     lang:

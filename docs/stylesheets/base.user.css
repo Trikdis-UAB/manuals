@@ -200,6 +200,47 @@ table th {
   vertical-align: top;
 }
 
+/* Mobile nav: toggle between sitemap and page TOC */
+@media (max-width: 959px) {
+  .mobile-nav-toggle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+    background: var(--md-default-bg-color, #fff);
+  }
+  .mobile-nav-toggle button {
+    flex: 1 1 0;
+    padding: 8px 10px;
+    border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+    border-radius: 6px;
+    background: var(--md-default-bg-color, #fff);
+    color: var(--md-typeset-color);
+    font-weight: 600;
+  }
+  .mobile-nav-toggle button.is-active {
+    border-color: var(--md-primary-fg-color);
+    color: var(--md-primary-fg-color);
+  }
+  /* Hide cloned TOC on desktop */
+  .mobile-toc {
+    display: none;
+  }
+  /* In mobile TOC mode, hide sitemap nav and show cloned TOC */
+  body.mobile-toc-mode .md-sidebar--primary nav.md-nav:not(#mobile-toc) {
+    display: none;
+  }
+  body.mobile-toc-mode #mobile-toc {
+    display: block;
+    margin-top: 4px;
+  }
+  /* In mobile nav mode, hide the cloned TOC */
+  body.mobile-nav-mode #mobile-toc {
+    display: none;
+  }
+}
+
 /* Homepage language selector */
 .language-home nav[aria-label="Table of contents"] {
   display: none !important;
