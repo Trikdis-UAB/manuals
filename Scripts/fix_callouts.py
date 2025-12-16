@@ -9,6 +9,7 @@ Usage:
 """
 
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -18,6 +19,8 @@ TARGETS = [
     ROOT / "docs/es/control-panels/sp3/index.md",
     ROOT / "docs/ru/control-panels/sp3/index.md",
 ]
+
+HEADING_LINE = re.compile(r"^\s{1,3}(#{1,6}\s+.+)$")
 
 
 def normalize_callout(line: str) -> list[str]:
@@ -45,8 +48,23 @@ def process_file(path: Path) -> bool:
     original = path.read_text(encoding="utf-8").splitlines(keepends=True)
     out: list[str] = []
     changed = False
+    in_code = False
 
     for line in original:
+        # Track fenced code blocks to avoid mutating headings inside
+        if line.strip().startswith("```"):
+            in_code = not in_code
+            out.append(line)
+            continue
+
+        # De-indent headings that were indented (conversion artifact)
+        if not in_code:
+            m = HEADING_LINE.match(line)
+            if m:
+                out.append(m.group(1) + ("\n" if not line.endswith("\n") else ""))
+                changed = True
+                continue
+
         if line.lstrip().startswith("!!! note") and line.strip() != "!!! note":
             expanded = normalize_callout(line)
             out.extend(expanded)
