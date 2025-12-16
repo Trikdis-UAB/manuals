@@ -273,7 +273,9 @@ If there are problems with powering the system from the main power supply, an *A
 | Tamper sensor                                             | 1 pc.    |
 | Terminal block with 3,15 A fuse                           | 1 pc.    |
 
-!!! note USB wire (Mini-B type) for programming the control panel sold separately. \## Installation of the system
+!!! note
+    USB wire (Mini-B type) for programming the control panel sold separately. 
+    ## Installation of the system
 
 ### Recommended order of installation
 
@@ -309,7 +311,9 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
 5.  Insert a backup battery into the mounting housing. Connect the battery’s terminals to the BAT+ / BAT– terminals on the control panel.
 
-!!! note The battery must recharge in less than 72 hours for the alarm system to meet security Class II or 24 hours to meet security Class III. \#### Recommendations for setting the control panel’s parameters
+!!! note
+    The battery must recharge in less than 72 hours for the alarm system to meet security Class II or 24 hours to meet security Class III. 
+    #### Recommendations for setting the control panel’s parameters
 
 1.  See chapter 5 “Setting parameters using TrikdisConfig” for information on how to connect to the panel to configure it.
 
@@ -535,7 +539,9 @@ To turn on the control panel, first you need to turn on its power supply. The co
 
 - The NET diode must be green solid and periodically blink in yellow no less than 3 times – the green color indicates that the SIM card is successfully registered on the mobile network, while the number of green flashes indicate the mobile signal strength.
 
-!!! note Sufficient mobile network strength is 3 (three yellow flashes of the NET indicator). / If you see fewer yellow flashes of the NET diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the control panel, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.4 “LED indication of operation” to find out the reason. / If all of the „FLEXi” SP3 indicator lights are off, check the power supply and connections. \## Remote control
+!!! note
+    Sufficient mobile network strength is 3 (three yellow flashes of the NET indicator). / If you see fewer yellow flashes of the NET diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the control panel, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.4 “LED indication of operation” to find out the reason. / If all of the „FLEXi” SP3 indicator lights are off, check the power supply and connections. 
+    ## Remote control
 
 ### Linking the *„FLEXi“ SP3* to a user’s *Protegus2* account
 
@@ -629,7 +635,8 @@ The control panel’s default SMS password is **123456**. For safety reasons we 
 
 ### Control via phone call
 
-!!! note The system administrator can control the „FLEXi” SP3 by SMS messages and phone calls. / If you want to allow others to control the system using phone calls, enter their identification data using TrikdisConfig software or SMS commands. / **<u>Control via phone call does not work with control panels *SP3_хх7х*. Control panel *SP3_12xx* does not have a voice message with firmware 1.14 and higher.</u>** **„FLEXi“ SP3 phone call control commands**
+!!! note
+    The system administrator can control the „FLEXi” SP3 by SMS messages and phone calls. / If you want to allow others to control the system using phone calls, enter their identification data using TrikdisConfig software or SMS commands. / **<u>Control via phone call does not work with control panels *SP3_хх7х*. Control panel *SP3_12xx* does not have a voice message with firmware 1.14 and higher.</u>** **„FLEXi“ SP3 phone call control commands**
 
 Controlling outputs OUT and alarm system partitions using phone calls:
 
@@ -812,7 +819,8 @@ If at least one control panel internal fault field is checked, then the control 
 
 - **Installer Code** – (*default code - 654321*) gives installers access to configuring the system. For safety purposes, change it into a 6-symbol code only You know.
 
-!!! note If the default *administrator code* is set (123456), after pressing **Read \[F4\]** the program will immediately show the current operational parameters of the device without asking for the code. **Settings group “Installer permissions”**
+!!! note
+    If the default *administrator code* is set (123456), after pressing **Read \[F4\]** the program will immediately show the current operational parameters of the device without asking for the code. **Settings group “Installer permissions”**
 
 - Specifies the installer’s permissions.
 
@@ -1112,7 +1120,8 @@ All wireless sensors can be linked simultaneously.
 
 13. The wireless sensor is now successfully linked to the system.
 
-!!! note To delete wireless sensors from the „FLEXi” SP3’s memory:
+!!! note
+    To delete wireless sensors from the „FLEXi” SP3’s memory:
 
     1.  Connect a USB Mini-B cable to the „FLEXi" SP3.
 
@@ -1161,7 +1170,8 @@ All wireless sensors can be linked simultaneously.
 
 17. The wireless controller is now successfully linked to the system.
 
-!!! note Reverting the wireless controller to default settings:
+!!! note
+    Reverting the wireless controller to default settings:
 
     1.  Press buttons 2 and 3 at the same time and hold until the indicator
         starts blinking in green and red.
@@ -1207,7 +1217,8 @@ All wireless sensors can be linked simultaneously.
 
 18. The wireless internal siren is now successfully linked to the system.
 
-!!! note Reverting the wireless siren to default settings:
+!!! note
+    Reverting the wireless siren to default settings:
 
     1.  Remove the lid from the siren.
 
@@ -1254,7 +1265,8 @@ All wireless sensors can be linked simultaneously.
 
 14. The wireless sensor is now successfully linked to the system.
 
-!!! note To delete wireless sensors from the „FLEXi” SP3’s memory:
+!!! note
+    To delete wireless sensors from the „FLEXi” SP3’s memory:
 
     1.  Connect a USB Mini-B cable to the „FLEXi" SP3.
 
@@ -1295,7 +1307,8 @@ All wireless sensors can be linked simultaneously.
 
 14. The wireless keypad is now successfully linked to the system.
 
-!!! note To delete wireless sensors from the „FLEXi” SP3’s memory:
+!!! note
+    To delete wireless sensors from the „FLEXi” SP3’s memory:
 
     1.  Connect a USB Mini-B cable to the „FLEXI" SP3.
 
@@ -1592,7 +1605,8 @@ To restore the control panel’s default settings, click the TrikdisConfig butto
 
 ### Updating firmware
 
-!!! note After connecting the „FLEXi” SP3 to TrikdisConfig, the program will automatically offer to update the firmware if any updates are available. An internet connection is needed for this feature. / If antivirus software is installed on your computer, it may block the automatic firmware update function. In this case, you will have to reconfigure your antivirus software. The „FLEXi“ SP3’s firmware can also be updated or changed manually. All prior settings of the „FLEXi“ SP3 remain unchanged after an update. If the firmware is installed manually, it can be changed to a newer or an older version.
+!!! note
+    After connecting the „FLEXi” SP3 to TrikdisConfig, the program will automatically offer to update the firmware if any updates are available. An internet connection is needed for this feature. / If antivirus software is installed on your computer, it may block the automatic firmware update function. In this case, you will have to reconfigure your antivirus software. The „FLEXi“ SP3’s firmware can also be updated or changed manually. All prior settings of the „FLEXi“ SP3 remain unchanged after an update. If the firmware is installed manually, it can be changed to a newer or an older version.
 
 Perform these steps:
 
