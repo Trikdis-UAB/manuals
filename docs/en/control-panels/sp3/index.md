@@ -341,7 +341,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
     1.  **User access.** The alarm system can be controlled remotely (via phone call and (or) SMS messages) by users whose phone numbers are entered into the User list. See chapter 5.4 ““Users & Reporting” window” on how to enter phone numbers.
 
-    2.  **Control via phone call.** Phone calls allow not only to arm or disarm all or part of the security system, but also to control (turn on or off) equipment connected to PGM outputs. See chapter 4.4 “Control via phone call” on what parameters to change to allow phone calls to modify the state of a selected PGM output that has an equipment control circuit connected to it.
+    2.  **Control via phone call.** Phone calls allow not only to arm or disarm all or part of the security system, but also to control (turn on or off) equipment connected to PGM outputs. [See chapter Control via phone call](#control-via-phone-call) on what parameters to change to allow phone calls to modify the state of a selected PGM output that has an equipment control circuit connected to it.
 
     3.  **Control via** **SMS** **messages.** With SMS messages, it is possible to change some of the control panel’s operational parameters, arm or disarm all or part of the premises, control (turn on or off) equipment connected to the PGM outputs. See the list of SMS commands on chapter 4.3 “Configuration and control via SMS messages”.
 
@@ -540,7 +540,7 @@ To turn on the control panel, first you need to turn on its power supply. The co
 - The NET diode must be green solid and periodically blink in yellow no less than 3 times – the green color indicates that the SIM card is successfully registered on the mobile network, while the number of green flashes indicate the mobile signal strength.
 
 !!! note
-    Sufficient mobile network strength is 3 (three yellow flashes of the NET indicator). / If you see fewer yellow flashes of the NET diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the control panel, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.4 “LED indication of operation” to find out the reason. / If all of the „FLEXi” SP3 indicator lights are off, check the power supply and connections. 
+    Sufficient mobile network strength is 3 (three yellow flashes of the NET indicator). / If you see fewer yellow flashes of the NET diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the control panel, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, [see chapter LED indication of operation](#led-indication-of-operation) to find out the reason. / If all of the „FLEXi” SP3 indicator lights are off, check the power supply and connections. 
     ## Remote control
 
 ### Linking the *„FLEXi“ SP3* to a user’s *Protegus2* account
