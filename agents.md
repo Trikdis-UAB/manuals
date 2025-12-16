@@ -27,7 +27,6 @@
 - UI/behavior changes: run relevant targeted checks (e.g., `Scripts/check_mobile_toc.py` for mobile drawer/TOC).
 - After conversions: re-run `fix_callouts.py` and `link_chapters.py` to prevent regressions.
 - Add small, scriptable checks when introducing new behaviors; document the command in PR notes.
-- If the repo has an `AGENTS.md`, follow its build/test commands exactly; treat them as authoritative.
 
 ## Commit & Pull Request Guidelines
 - Commits: concise, imperative (e.g., “Normalize SP3 callouts”, “Lazy-load content images”).
