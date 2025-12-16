@@ -150,6 +150,7 @@ extra_javascript:
 - javascripts/cycle-welcome.js
 - javascripts/language-ui.js
 - javascripts/mobile-toc-default.js
+- javascripts/lazy-images.js
 plugins:
 - search:
     lang:
