@@ -7,7 +7,7 @@ Short wiring and programming steps to connect the GT/GT+/GET communicator to Par
 
 ## Prerequisites
 
-- GT/GT+/GET firmware V4+; SIM inserted, PIN disabled, data plan active.
+- GT/GT+/GET firmware 1.21; SIM inserted, PIN disabled, data plan active.
 - Paradox SP/SP+/MG/MG+ panel with keypad access (installer code available).
 - CMS account number if reporting to CMS.
 - Protegus2 company/installer account and communicator IMEI.
@@ -22,7 +22,17 @@ Follow the schematic below to connect the communicator to the panel:
 | A / B (KeyBus) | A / B (KeyBus) | For serial bus control. |
 | +12V / GND | AUX + / GND | Power the communicator. |
 
-![Wiring diagram](./wiring-diagram.png)
+<style>
+.wiring-diagram {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+<img src="./wiring-diagram.svg" alt="Wiring diagram" class="wiring-diagram">
 
 ## Program Paradox panel (LCD keypad)
 
