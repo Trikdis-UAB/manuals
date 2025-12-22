@@ -13,12 +13,12 @@ Pasirinkite kategoriją arba naudokite paiešką viršuje, kad greitai rastumėt
 
 - [GT GSM komunikatorius](alarm-communicators/cellular/gt/index.md)
 - [GT+ GSM komunikatorius](alarm-communicators/cellular/gt-plus/index.md)
-- [GSM komunikatorius G16](alarm-communicators/g16/index.md)
-- [GSM komunikatorius G16T](alarm-communicators/g16t/index.md)
+- [GSM komunikatorius G16](alarm-communicators/cellular/g16/index.md)
+- [GSM komunikatorius G16T](alarm-communicators/cellular/g16t/index.md)
 
 ### Dvigubas kanalas
 
-- [GSM/Ethernet komunikatorius GET](alarm-communicators/dual-path/get/index.md)
+- [GSM/Ethernet komunikatorius GET](alarm-communicators/cellular/get/index.md)
 
 ### Priešgaisrinėms centralėms
 

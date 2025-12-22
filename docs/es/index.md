@@ -13,12 +13,12 @@ Utilice la búsqueda del encabezado o las categorías siguientes para localizar 
 
 - [GT Comunicador](alarm-communicators/cellular/gt/index.md)
 - [GT+ Comunicador](alarm-communicators/cellular/gt-plus/index.md)
-- [Comunicador celular G16](alarm-communicators/g16/index.md)
-- [Comunicador celular G16T](alarm-communicators/g16t/index.md)
+- [Comunicador celular G16](alarm-communicators/cellular/g16/index.md)
+- [Comunicador celular G16T](alarm-communicators/cellular/g16t/index.md)
 
 ### Comunicación de doble vía
 
-- [Comunicador GET](alarm-communicators/dual-path/get/index.md)
+- [Comunicador GET](alarm-communicators/cellular/get/index.md)
 
 ### Celular para incendio
 

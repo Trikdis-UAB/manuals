@@ -14,9 +14,9 @@ Browse by category or use the search box in the header to find a specific topic.
 - [Quick setup GT/GT+/GET (Paradox SP(+)/MG(+))](alarm-communicators/cellular/quick-setup/paradox/index.md)
 - [GT](alarm-communicators/cellular/gt/index.md)
 - [GT+](alarm-communicators/cellular/gt-plus/index.md)
-- [GET](alarm-communicators/dual-path/get/index.md)
-- [G16](alarm-communicators/g16/index.md)
-- [G16T](alarm-communicators/g16t/index.md)
+- [GET](alarm-communicators/cellular/get/index.md)
+- [G16](alarm-communicators/cellular/g16/index.md)
+- [G16T](alarm-communicators/cellular/g16t/index.md)
 
 ### For fire panels
 

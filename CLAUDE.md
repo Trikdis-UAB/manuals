@@ -406,7 +406,7 @@ cd /Users/local/projects/trikdis-docs
 
 # Optimize images in a manual directory (manual optimization)
 cd /Users/local/projects/trikdis-docs
-./optimize-images.sh manuals/docs/en/alarm-communicators/dual-path/get
+./optimize-images.sh manuals/docs/en/alarm-communicators/cellular/get
 
 # Note: Image optimization is now AUTOMATIC during conversion
 # The convert-single.sh script automatically optimizes all images:

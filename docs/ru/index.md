@@ -13,12 +13,12 @@ hide:
 
 - [GSM коммуникатор GT](alarm-communicators/cellular/gt/index.md)
 - [GSM коммуникатор GT+](alarm-communicators/cellular/gt-plus/index.md)
-- [GSM коммуникатор G16](alarm-communicators/g16/index.md)
-- [GSM коммуникатор G16T](alarm-communicators/g16t/index.md)
+- [GSM коммуникатор G16](alarm-communicators/cellular/g16/index.md)
+- [GSM коммуникатор G16T](alarm-communicators/cellular/g16t/index.md)
 
 ### Двойной коммуникатор
 
-- [коммуникатор GET](alarm-communicators/dual-path/get/index.md)
+- [коммуникатор GET](alarm-communicators/cellular/get/index.md)
 
 ### Для противопожарной охранной панели
 

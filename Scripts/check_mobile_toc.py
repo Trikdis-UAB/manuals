@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 URLS = [
     "http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/",
-    "http://127.0.0.1:8001/en/alarm-communicators/dual-path/get/",
+    "http://127.0.0.1:8001/en/alarm-communicators/cellular/get/",
 ]
 
 

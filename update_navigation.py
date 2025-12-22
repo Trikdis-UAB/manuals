@@ -47,14 +47,14 @@ PRODUCT_CATEGORY_DIR = {
 }
 
 PRODUCT_SLUG = {
-    'GET': 'dual-path/get',
+    'GET': 'cellular/get',
     'GT': 'cellular/gt',
     'GT_PLUS': 'cellular/gt-plus',
     'FIRECOM': 'fire-panels/firecom',
     'E16': 'e16',
     'E16T': 'e16t',
-    'G16': 'g16',
-    'G16T': 'g16t',
+    'G16': 'cellular/g16',
+    'G16T': 'cellular/g16t',
     'G17F': 'fire-panels/g17f',
     'T16': 't16',
     'SP3': 'sp3',

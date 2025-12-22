@@ -37,9 +37,9 @@ nav:
           - Paradox SP(+)/MG(+): en/alarm-communicators/cellular/quick-setup/paradox/index.md
         - GT: en/alarm-communicators/cellular/gt/index.md
         - GT+: en/alarm-communicators/cellular/gt-plus/index.md
-        - GET: en/alarm-communicators/dual-path/get/index.md
-      - G16: en/alarm-communicators/g16/index.md
-      - G16T: en/alarm-communicators/g16t/index.md
+        - GET: en/alarm-communicators/cellular/get/index.md
+      - G16: en/alarm-communicators/cellular/g16/index.md
+      - G16T: en/alarm-communicators/cellular/g16t/index.md
     - For Fire Panels:
       - FireCom: en/alarm-communicators/fire-panels/firecom/index.md
       - G17F: en/alarm-communicators/fire-panels/g17f/index.md
@@ -59,9 +59,9 @@ nav:
     - Mobilaus ryšio:
       - GT: lt/alarm-communicators/cellular/gt/index.md
       - GT+: lt/alarm-communicators/cellular/gt-plus/index.md
-      - GET: lt/alarm-communicators/dual-path/get/index.md
-      - G16: lt/alarm-communicators/g16/index.md
-      - G16T: lt/alarm-communicators/g16t/index.md
+      - GET: lt/alarm-communicators/cellular/get/index.md
+      - G16: lt/alarm-communicators/cellular/g16/index.md
+      - G16T: lt/alarm-communicators/cellular/g16t/index.md
     - Priešgaisrinėms centralėms:
       - FIRECOM: lt/alarm-communicators/fire-panels/firecom/index.md
       - G17F: lt/alarm-communicators/fire-panels/g17f/index.md
@@ -81,9 +81,9 @@ nav:
     - Celular:
       - GT: es/alarm-communicators/cellular/gt/index.md
       - GT+: es/alarm-communicators/cellular/gt-plus/index.md
-      - GET: es/alarm-communicators/dual-path/get/index.md
-      - G16: es/alarm-communicators/g16/index.md
-      - G16T: es/alarm-communicators/g16t/index.md
+      - GET: es/alarm-communicators/cellular/get/index.md
+      - G16: es/alarm-communicators/cellular/g16/index.md
+      - G16T: es/alarm-communicators/cellular/g16t/index.md
     - Celular para Incendio:
       - FireCom: es/alarm-communicators/fire-panels/firecom/index.md
       - G17F: es/alarm-communicators/fire-panels/g17f/index.md
@@ -103,9 +103,9 @@ nav:
     - GSM/GPRS:
       - GT: ru/alarm-communicators/cellular/gt/index.md
       - GT+: ru/alarm-communicators/cellular/gt-plus/index.md
-      - GET: ru/alarm-communicators/dual-path/get/index.md
-      - G16: ru/alarm-communicators/g16/index.md
-      - G16T: ru/alarm-communicators/g16t/index.md
+      - GET: ru/alarm-communicators/cellular/get/index.md
+      - G16: ru/alarm-communicators/cellular/g16/index.md
+      - G16T: ru/alarm-communicators/cellular/g16t/index.md
     - Для противопожарной охранной панели:
       - FireCom: ru/alarm-communicators/fire-panels/firecom/index.md
       - G17F: ru/alarm-communicators/fire-panels/g17f/index.md
