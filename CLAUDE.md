@@ -1,3 +1,6 @@
+# Note on instructions
+`agents.md` contains the newer, authoritative instructions for this repo. Follow `agents.md` first when there is any overlap or conflict.
+
 # TRIKDIS Documentation Project
 
 **Location:** `/Users/local/projects/trikdis-docs/`
@@ -49,11 +52,11 @@ This project contains **two separate git repositories**:
    ```bash
    # Copy to working directory first
    cp -r docs/<manual-name>/ /Users/local/projects/trikdis-docs/manuals-darbiniai/docs/manual/
-
+   
    # Review and test
    cd /Users/local/projects/trikdis-docs/manuals-darbiniai
    mkdocs serve
-
+   
    # When ready, copy to public site
    cp -r docs/manual/ /Users/local/projects/trikdis-docs/manuals/docs/manual/
    cd /Users/local/projects/trikdis-docs/manuals
@@ -480,8 +483,3 @@ This applies the same optimization settings to all PNG/JPG/JPEG files in the dir
 10. **Single Build:** All manuals build together (~1-2 min for 50 manuals)
 11. **Image Optimization:** Automatic during conversion - no manual intervention needed
 12. **ALWAYS VERIFY:** Check actual output before claiming completion (see Quality Checklist above)
-
-## Contact
-
-Project Owner: Andrius (obsmind)
-TRIKDIS Organization: Trikdis-UAB (public), Trikdis (working files)

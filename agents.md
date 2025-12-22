@@ -6,6 +6,9 @@
 - `Scripts/` — maintenance helpers (e.g., `fix_callouts.py`, `link_chapters.py`, `check_mobile_toc.py`).
 - `docs/javascripts/` & `docs/stylesheets/` — custom behavior and theming.
 - `.venv/` — local Python env (pinned in `requirements.txt`).
+- General project description: see `CLAUDE.md` (this file is the core instructions source and takes precedence).
+- Repo: https://github.com/Trikdis-UAB/manuals (source of truth).
+- DOCX → Markdown pipeline: https://github.com/Trikdis-UAB/knowledgebase-conversion-pipeline (use for imports; local clone often at `~/Projects/knowledgebase-conversion-pipeline`).
 
 ## Build, Test, and Development
 - Install deps (once): `python3 -m pip install -r requirements.txt` (or use `.venv/bin/pip`).
