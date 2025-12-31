@@ -113,6 +113,10 @@ manuals/
 **Rejected words** (avoid these):
 - utilise, whilst, simply, very, obviously, basically
 
+**Config notes:**
+- `vale.ini` sets `MinAlertLevel = warning` for lower-noise linting.
+- Vocab rules are wired in `.vale/styles/Vocab/Vocab.yml`.
+
 ## Settings Highlights
 
 ### Markdown Formatting
