@@ -1,0 +1,4 @@
+extends: vocabulary
+message: "Avoid '%s'."
+level: warning
+ignorecase: false
