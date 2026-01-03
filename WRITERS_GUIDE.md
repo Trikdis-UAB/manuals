@@ -40,7 +40,7 @@ Complete guide for creating and editing TRIKDIS product manuals using Markdown, 
 - **Start with purpose**: Begin each section explaining what the user will accomplish
 - **Step-by-step procedures**: Number sequential actions
 - **Prerequisites**: Always list what's needed before starting
-- **Safety first**: Lead with safety information and warnings
+- **Safety first**: Repeat critical safety warnings directly before installation, wiring, or power-related steps using alerts (WARNING / CAUTION).
 
 ---
 
