@@ -6,15 +6,25 @@ Complete guide for creating and editing TRIKDIS product manuals using Markdown, 
 
 ## Table of Contents
 
-1. [Writing Standards](#writing-standards)
-2. [Document Structure](#document-structure)
-3. [Formatting Guidelines](#formatting-guidelines)
-4. [GitHub-style Alerts](#github-style-alerts)
-5. [Tables](#tables)
-6. [Images](#images)
-7. [Typora Setup](#typora-setup)
-8. [Quality Checklist](#quality-checklist)
-9. [Common Patterns](#common-patterns)
+1. [Getting started (5 minutes)](#getting-started-5-minutes)
+2. [Writing Standards](#writing-standards)
+3. [Document Structure](#document-structure)
+4. [Formatting Guidelines](#formatting-guidelines)
+5. [GitHub-style Alerts](#github-style-alerts)
+6. [Tables](#tables)
+7. [Images](#images)
+8. [Typora Setup](#typora-setup)
+9. [Quality Checklist](#quality-checklist)
+10. [Common Patterns](#common-patterns)
+
+---
+
+## Getting started (5 minutes)
+
+1. Open the `docs/` folder in Typora (not the repository root).
+2. Open `docs/_NAVIGATION.md` to browse manuals in the same order as the website.
+3. Edit the relevant Markdown files.
+4. Commit and push changes via GitHub Desktop.
 
 ---
 
@@ -247,13 +257,18 @@ For configuration parameters:
 
 ## Typora Setup
 
+### Start here
+- Always open the `docs/` folder, not the repository root.
+- Use `docs/_NAVIGATION.md` as the browsing map to follow the website order.
+
 ### Required CSS
 Ensure you have the custom `base.user.css` installed at:
 
 
 
+macOS path:
 ```
-/Users/local/Library/Application Support/abnerworks.Typora/themes/base.user.css
+~/Library/Application Support/abnerworks.Typora/themes/base.user.css
 ```
 
 This provides:

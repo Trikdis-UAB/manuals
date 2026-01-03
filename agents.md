@@ -9,6 +9,7 @@
 - General project description: see `CLAUDE.md` (this file is the core instructions source and takes precedence).
 - Repo: https://github.com/Trikdis-UAB/manuals (source of truth).
 - DOCX → Markdown pipeline: https://github.com/Trikdis-UAB/knowledgebase-conversion-pipeline (use for imports; local clone often at `~/Projects/knowledgebase-conversion-pipeline`).
+- Navigation helper: `docs/_NAVIGATION.md` should mirror `mkdocs.yml` ordering; update it when nav changes.
 
 ## Build, Test, and Development
 - Install deps (once): `python3 -m pip install -r requirements.txt` (or use `.venv/bin/pip`).

@@ -2,19 +2,24 @@
 
 **Last Updated:** 2025-10-02
 
-This document describes the VS Code configuration for editing TRIKDIS MkDocs documentation. All configuration files are located in `/Users/local/projects/trikdis-docs/manuals/`.
+This document describes the VS Code configuration for editing TRIKDIS MkDocs documentation.
 
-## Quick Start
+VS Code is optional. For daily writing, Typora + GitHub Desktop is recommended. Use VS Code for advanced cases (bulk edits, `mkdocs.yml`, troubleshooting).
+This guide is for advanced or optional use.
 
-1. Open the `manuals/` folder in VS Code
+All configuration files are located in the repository root (${workspaceFolder}/).
+
+## Quick Start (Optional)
+
+1. Open the repository root (${workspaceFolder}) in VS Code
 2. Install recommended extensions (VS Code will prompt automatically)
 3. Reload window to activate configuration
-4. Press **Cmd+Shift+B** to start MkDocs preview server
+4. Optional: Press **Cmd+Shift+B** to start the MkDocs preview server when needed
 
 ## Configuration Files
 
 ```
-manuals/
+${workspaceFolder}/
 ├── .vscode/
 │   ├── extensions.json              # 8 recommended extensions
 │   ├── settings.json                # Editor and extension settings
@@ -37,7 +42,7 @@ manuals/
 ### DavidAnson.vscode-markdownlint
 **Purpose:** Linting for Markdown files
 **Features:** Enforces consistency in headings, spacing, code blocks
-**Why:** Prevents small mistakes that break MkDocs builds
+**Why:** Helps catch formatting issues and keep Markdown consistent
 
 ### ChrisChinchilla.vale-vscode
 **Purpose:** Style and terminology checking
@@ -145,10 +150,6 @@ For command-line style checking:
 # Install Vale
 brew install vale
 
-# Download Vale styles (first time only)
-cd /Users/local/projects/trikdis-docs/manuals
-vale sync
-
 # Check a file
 vale docs/en/alarm-communicators/gt-cellular/index.md
 ```
@@ -170,7 +171,7 @@ vale docs/en/alarm-communicators/gt-cellular/index.md
 - Check `.vscode/settings.json` has `pasteImage.basePath` set to `${workspaceFolder}/docs`
 
 ### MkDocs task not found
-- Ensure you've opened the `manuals/` folder as workspace root
+- Ensure you've opened the repository root (${workspaceFolder}) as the workspace
 - Check `.vscode/tasks.json` exists
 - Verify `mkdocs` is installed: `python3 -m pip install -r requirements.txt`
 
@@ -202,13 +203,13 @@ To set up a new team member:
    - Cmd+Shift+P → "Developer: Reload Window"
 
 6. **Test setup:**
-   - Press Cmd+Shift+B (should start MkDocs server)
-   - Visit http://127.0.0.1:8000
+   - Optional: Press Cmd+Shift+B to start the MkDocs server when troubleshooting
+   - Optional: Visit http://127.0.0.1:8000 to confirm preview
 
 ## Reference: Project Documentation
 
-- **Main project docs:** `/Users/local/projects/trikdis-docs/CLAUDE.md`
-- **Conversion pipeline:** `/Users/local/projects/knowledgebase-conversion-pipeline/`
+- **Main project docs:** `CLAUDE.md` (repository root)
+- **Conversion pipeline:** https://github.com/Trikdis-UAB/knowledgebase-conversion-pipeline
 - **Live site:** https://docs.trikdis.com
 - **GitHub repo:** https://github.com/Trikdis-UAB/manuals
 
