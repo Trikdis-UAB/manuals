@@ -28,6 +28,33 @@ Complete guide for creating and editing TRIKDIS product manuals using Markdown, 
 
 ---
 
+## Using GitHub Desktop (save & publish)
+
+GitHub Desktop is used to save and publish your changes after editing manuals.
+
+### Typical workflow
+1. Edit files in Typora.
+2. Open GitHub Desktop.
+3. Review the list of changed files.
+4. Write a short commit message (what you changed).
+5. Click **Commit to main**.
+6. Click **Push origin**.
+
+### When to use GitHub Desktop
+- After finishing a set of edits
+- When updating multiple files
+- When you want to review changes before publishing
+
+### For very small fixes (typos)
+Editing directly in GitHub web is also acceptable.
+
+### Notes
+- No command line is needed.
+- If something looks wrong, you can undo changes before committing.
+- If unsure, stop and ask — nothing is published until you click Push.
+
+---
+
 ## Writing Standards
 
 ### Language and Tone
