@@ -3,8 +3,8 @@
 This file mirrors the MkDocs navigation order for easier browsing in editors.
 
 Editor entry points (start here when editing):
-- [Writer's guide](../WRITERS_GUIDE.md)
-- [VS Code setup (optional)](../VS_CODE_SETUP.md)
+- [Writer's guide](https://github.com/Trikdis-UAB/manuals/blob/main/WRITERS_GUIDE.md)
+- [VS Code setup (optional)](https://github.com/Trikdis-UAB/manuals/blob/main/VS_CODE_SETUP.md)
 
 - [Home](index.md)
 ## English
