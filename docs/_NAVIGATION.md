@@ -33,6 +33,11 @@ Editor entry points (start here when editing):
 - Gate Controllers
   - [GATOR](en/gate-controllers/gator/index.md)
   - [GATOR WiFi](en/gate-controllers/gator-wifi/index.md)
+- Keypads
+  - [Keypad SK-LCD Button](en/keypads/sk-lcd-button/index.md)
+  - [Keypad SK-LED Button](en/keypads/sk-led-button/index.md)
+  - [Keypad FLEXi SK LCD](en/keypads/flexi-sk-lcd/index.md)
+  - [Keypad FLEXi SK LED](en/keypads/flexi-sk-led/index.md)
 
 ## Lithuanian
 
@@ -57,6 +62,11 @@ Editor entry points (start here when editing):
 - Valdikliai
   - [Gator](lt/gate-controllers/gator/index.md)
   - [Gator Wifi](lt/gate-controllers/gator-wifi/index.md)
+- Klaviatūros
+  - [SK-LCD mygtukinė klaviatūra](lt/keypads/sk-lcd-button/index.md)
+  - [SK-LED Button klaviatūra](lt/keypads/sk-led-button/index.md)
+  - [Klaviatūra FLEXi SK LCD](lt/keypads/flexi-sk-lcd/index.md)
+  - [Klaviatūra FLEXi SK LED](lt/keypads/flexi-sk-led/index.md)
 
 ## Spanish
 
@@ -81,6 +91,11 @@ Editor entry points (start here when editing):
 - Controladores
   - [Gator](es/gate-controllers/gator/index.md)
   - [Gator Wifi](es/gate-controllers/gator-wifi/index.md)
+- Teclados
+  - [Teclado SK-LCD Button](es/keypads/sk-lcd-button/index.md)
+  - [Teclado SK-LED Button](es/keypads/sk-led-button/index.md)
+  - [Teclado FLEXi SK LCD](es/keypads/flexi-sk-lcd/index.md)
+  - [Teclado FLEXi SK LED](es/keypads/flexi-sk-led/index.md)
 
 ## Russian
 
@@ -105,3 +120,7 @@ Editor entry points (start here when editing):
 - Контроллеры
   - [GATOR](ru/gate-controllers/gator/index.md)
   - [GATOR WiFi](ru/gate-controllers/gator-wifi/index.md)
+- Клавиатуры
+  - [Клавиатура SK-LCD Button](ru/keypads/sk-lcd-button/index.md)
+  - [Клавиатура SK-LED Button](ru/keypads/sk-led-button/index.md)
+  - [Клавиатура FLEXi SK LCD](ru/keypads/flexi-sk-lcd/index.md)

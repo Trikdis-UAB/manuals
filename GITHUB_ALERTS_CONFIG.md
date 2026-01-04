@@ -8,13 +8,15 @@ The site uses GitHub-style alerts that work in both Typora and MkDocs Material.
 
 ### mkdocs.yml Configuration
 ```yaml
+hooks:
+  - mkdocs_hooks.py
 markdown_extensions:
   - attr_list
   - admonition
   - sane_lists
   - pymdownx.details
   - pymdownx.superfences
-  - markdown_callouts  # CRITICAL: Enables GitHub alerts
+  - markdown_callouts  # Enables callouts (used after hook normalization)
 ```
 
 ### requirements.txt
@@ -65,7 +67,7 @@ The manuals use these GitHub alert types:
 3. Ensure `markdown_callouts` is in mkdocs.yml extensions list
 
 ### If local development shows plain blockquotes:
-1. Install extension: `python3 -m pip install "markdown-callouts>=0.3.0"`
+1. Ensure `mkdocs_hooks.py` is configured in `mkdocs.yml`
 2. Restart MkDocs dev server
 3. Check for configuration errors in mkdocs.yml
 

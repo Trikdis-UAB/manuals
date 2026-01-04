@@ -54,6 +54,11 @@ nav:
   - Gate Controllers:
     - GATOR: en/gate-controllers/gator/index.md
     - GATOR WiFi: en/gate-controllers/gator-wifi/index.md
+  - Keypads:
+    - Keypad SK-LCD Button: en/keypads/sk-lcd-button/index.md
+    - Keypad SK-LED Button: en/keypads/sk-led-button/index.md
+    - Keypad FLEXi SK LCD: en/keypads/flexi-sk-lcd/index.md
+    - Keypad FLEXi SK LED: en/keypads/flexi-sk-led/index.md
 - Lithuanian:
   - Komunikatoriai:
     - Mobilaus ryšio:
@@ -76,6 +81,11 @@ nav:
   - Valdikliai:
     - Gator: lt/gate-controllers/gator/index.md
     - Gator Wifi: lt/gate-controllers/gator-wifi/index.md
+  - Klaviatūros:
+    - SK-LCD mygtukinė klaviatūra: lt/keypads/sk-lcd-button/index.md
+    - SK-LED Button klaviatūra: lt/keypads/sk-led-button/index.md
+    - Klaviatūra FLEXi SK LCD: lt/keypads/flexi-sk-lcd/index.md
+    - Klaviatūra FLEXi SK LED: lt/keypads/flexi-sk-led/index.md
 - Spanish:
   - Comunicadores:
     - Celular:
@@ -98,6 +108,11 @@ nav:
   - Controladores:
     - Gator: es/gate-controllers/gator/index.md
     - Gator Wifi: es/gate-controllers/gator-wifi/index.md
+  - Teclados:
+    - Teclado SK-LCD Button: es/keypads/sk-lcd-button/index.md
+    - Teclado SK-LED Button: es/keypads/sk-led-button/index.md
+    - Teclado FLEXi SK LCD: es/keypads/flexi-sk-lcd/index.md
+    - Teclado FLEXi SK LED: es/keypads/flexi-sk-led/index.md
 - Russian:
   - Коммуникаторы:
     - GSM/GPRS:
@@ -120,6 +135,10 @@ nav:
   - Контроллеры:
     - GATOR: ru/gate-controllers/gator/index.md
     - GATOR WiFi: ru/gate-controllers/gator-wifi/index.md
+  - Клавиатуры:
+    - Клавиатура SK-LCD Button: ru/keypads/sk-lcd-button/index.md
+    - Клавиатура SK-LED Button: ru/keypads/sk-led-button/index.md
+    - Клавиатура FLEXi SK LCD: ru/keypads/flexi-sk-lcd/index.md
 extra:
   alternate:
   - name: English
@@ -172,6 +191,8 @@ plugins:
     minify_css: true
     htmlmin_opts:
       remove_comments: true
+hooks:
+- mkdocs_hooks.py
 markdown_extensions:
 - meta
 - attr_list
