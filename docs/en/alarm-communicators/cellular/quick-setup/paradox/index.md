@@ -19,7 +19,7 @@ Follow the schematic below to connect the communicator to the panel:
 | GT/GT+/GET terminal | Paradox panel | Notes |
 | --- | --- | --- |
 | TIP / RING | TIP / RING | For PSTN line emulation (Contact ID). |
-| A / B (KeyBus) | A / B (KeyBus) | For serial bus control. |
+| CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | For serial bus control. |
 | +12V / GND | AUX + / GND | Power the communicator. |
 
 <style>
