@@ -8,6 +8,10 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
+> [!NOTE]
+> El teclado SK-LED TouchPad para control del sistema de alarma muestra los estados de 32 zonas y 2 participaciones. Además, el teclado SK- LED TouchPad se puede asignar para controlar una o dos áreas deseadas (versión del programa operativo del teclado desde FW:3.0, versión del programa operativo del panel de control desde FW:SP3_xxx4_0119). El teclado mostrará los estados del área asignada y de las zonas del área.
+
+
 </div>
 
 ## Armado/Desarmado del Sistema de Alarma
@@ -64,7 +68,7 @@ El indicador de SLEEP se iluminará cuando se encuentre en modo SLEEP.
 
 3.  Presione el botón de área para activarlo.
 
-4.  Presione el botón [OK].
+4.  Presione el botón OK.
 
 5.  El modo STAY se activará inmediatamente, sin retardo de salida.
 
@@ -125,4 +129,3 @@ Ingrese un número de secuencia de dos dígitos de una zona en particular para d
 1.  Presione los números secuenciales de las áreas que deberán ser controladas por el usuario.
 1.  Ingrese código *Maestro*. Los indicadores de zona, mostrando la secuencia numérica de esos Usuarios, cuyos códigos hayan sido ingresados, se iluminarán.
 
-El teclado SK-LED TouchPad para control del sistema de alarma muestra los estados de 32 zonas y 2 participaciones. Además, el teclado SK- LED TouchPad se puede asignar para controlar una o dos áreas deseadas (versión del programa operativo del teclado desde FW:3.0, versión del programa operativo del panel de control desde FW:SP3_xxx4_0119). El teclado mostrará los estados del área asignada y de las zonas del área.

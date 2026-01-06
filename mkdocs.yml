@@ -57,6 +57,8 @@ nav:
   - Keypads:
     - Keypad SK-LCD Button: en/keypads/sk-lcd-button/index.md
     - Keypad SK-LED Button: en/keypads/sk-led-button/index.md
+    - Keypad SK-LCD TouchPad: en/keypads/sk-lcd-touchpad/index.md
+    - Keypad SK-LED TouchPad: en/keypads/sk-led-touchpad/index.md
     - Keypad FLEXi SK LCD: en/keypads/flexi-sk-lcd/index.md
     - Keypad FLEXi SK LED: en/keypads/flexi-sk-led/index.md
 - Lithuanian:
@@ -84,6 +86,8 @@ nav:
   - Klaviatūros:
     - SK-LCD mygtukinė klaviatūra: lt/keypads/sk-lcd-button/index.md
     - SK-LED Button klaviatūra: lt/keypads/sk-led-button/index.md
+    - SK-LCD TouchPad klaviatūra: lt/keypads/sk-lcd-touchpad/index.md
+    - SK-LED TouchPad klaviatūra: lt/keypads/sk-led-touchpad/index.md
     - Klaviatūra FLEXi SK LCD: lt/keypads/flexi-sk-lcd/index.md
     - Klaviatūra FLEXi SK LED: lt/keypads/flexi-sk-led/index.md
 - Spanish:
@@ -111,6 +115,8 @@ nav:
   - Teclados:
     - Teclado SK-LCD Button: es/keypads/sk-lcd-button/index.md
     - Teclado SK-LED Button: es/keypads/sk-led-button/index.md
+    - Teclado SK-LCD TouchPad: es/keypads/sk-lcd-touchpad/index.md
+    - Teclado SK-LED TouchPad: es/keypads/sk-led-touchpad/index.md
     - Teclado FLEXi SK LCD: es/keypads/flexi-sk-lcd/index.md
     - Teclado FLEXi SK LED: es/keypads/flexi-sk-led/index.md
 - Russian:
@@ -138,6 +144,7 @@ nav:
   - Клавиатуры:
     - Клавиатура SK-LCD Button: ru/keypads/sk-lcd-button/index.md
     - Клавиатура SK-LED Button: ru/keypads/sk-led-button/index.md
+    - Клавиатура SK-LCD TouchPad: ru/keypads/sk-lcd-touchpad/index.md
     - Клавиатура FLEXi SK LCD: ru/keypads/flexi-sk-lcd/index.md
 extra:
   alternate:

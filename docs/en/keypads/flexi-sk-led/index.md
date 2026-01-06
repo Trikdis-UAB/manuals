@@ -8,6 +8,10 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
+> [!NOTE]
+> The keypad SK-LED TouchPad for alarm system control displays the states of 32 zones and 2 partitions. Also, the SK-LED TouchPad keypad can be assigned to control one or two desired areas (keypad firmware version from FW:3.0, control panel firmware version from FW:SP3_xxx4_0119). The keypad will display the statuses of the assigned area and area zones.
+
+
 </div>
 
 ## Alarm system arming / disarming
@@ -125,4 +129,3 @@ Repeat the same actions as in deactivation of particular zone monitoring.
 1.  Press the sequence numbers of areas which should be controlled by User.
 1.  Enter *Master* code. Zone indicators, showing the sequence numbers of those Users, whose codes have been already entered, will illuminate.
 
-The keypad SK-LED TouchPad for alarm system control displays the states of 32 zones and 2 partitions. Also, the SK-LED TouchPad keypad can be assigned to control one or two desired areas (keypad firmware version from FW:3.0, control panel firmware version from FW:SP3_xxx4_0119). The keypad will display the statuses of the assigned area and area zones.

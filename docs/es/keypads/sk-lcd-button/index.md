@@ -1,167 +1,193 @@
-# Panel de control FLEXi SP3
+# FLEXi / Teclado SK-LCD button – Breve guía del usuario
 
 ## Vista General del Teclado
 
-<div>
-
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+<img src="./image1.png" alt="" width="400">
 </div>
 
-</div>
+> [!NOTE]
+> El teclado “SK-LCD button” para control del sistema de alarma muestra los estados de **64 zonas y 8 áreas.** Además, el teclado “SK- LCD button” se puede asignar para controlar una o más áreas deseadas (versión del programa operativo del panel de control desde FW: SP3_xxx4_0121). El teclado mostrará los estados del área asignada y de las zonas del área.
+
 
 ## Armado/Desarmado del Sistema de Alarma
 
-## <u>Armado de Sistema de Alarma:</u>
+### Armado de Sistema de Alarma
 
-1.  Asegúrese de que todas las zonas no estén violadas.
+1. Asegúrese de que todas las zonas no estén violadas.
 
-2.  Presione el botón [<img alt="" src="./image2.png" style="width:0.124016in;height:0.141732in" />].
+2. Presione el botón <img src="./image2.png" alt="" style="width:0.3500in;" />.
 
-3.  Ingrese el código de usuario.
+3. Ingrese el código de usuario.
 
-4.  Seleccione las áreas que desea activar.
+4. Seleccione las áreas que desea activar.
 
-5.  Presione el botón [<img alt="" src="./image3.png" style="width:0.180000in;height:0.175000in" />].
+5. Presione el botón <img src="./image3.png" style="width:0.3500in;" />.
 
-6.  Salga de las instalaciones dentro del tiempo establecido.
+6. Salga de las instalaciones dentro del tiempo establecido.
 
-Cuando el sistema esté armado, el icono <img alt="" src="./image4.jpeg" style="width:0.236220in;height:0.230315in" /> se iluminará.
+Cuando el sistema esté armado, el icono <img src="./image4.jpeg" style="width:0.3500in;" /> se iluminará.
 
-**<u>Desarmado del Sistema de Alarma</u>:**
+### Desarmado del Sistema de Alarma
 
-7. Ingrese el código de usuario.
+1. Ingrese el código de usuario.
 
-2.  Presione el botón que corresponde al área que desea desactivar.
+2. Presione el botón que corresponde al área que desea desactivar.
 
-3.  Presione el botón [<img alt="" src="./image3.png" style="width:0.180000in;height:0.175000in" />].
+3. Presione el botón <img src="./image3.png" style="width:0.3500in;" />.
 
-Después de desactivar la alarma, el icono <img alt="" src="./image5.jpeg" style="width:0.236220in;height:0.265748in" /> debería iluminarse.
+Después de desactivar la alarma, el icono <img src="./image5.jpeg" style="width:0.3500in;" /> debería iluminarse.
 
-## <u>Activación del Modo SLEEP:</u>
+### Activación del Modo SLEEP
 
 (El perímetro de las instalaciones se encuentra asegurado. Se permite el movimiento en el interior. Si abre la puerta de entrada, la alarma se activará inmediatamente.):
 
-1.  Presione el botón [<img alt="" src="./image6.png" style="width:0.153543in;height:0.141732in" />].
+1. Presione el botón <img src="./image6.png" style="width:0.3500in;" />.
 
-2.  Ingrese el código de usuario.
+2. Ingrese el código de usuario.
 
-3.  Presione el botón de área para activarlo.
+3. Presione el botón de área para activarlo.
 
-4.  Presione el botón [<img alt="" src="./image3.png" style="width:0.180000in;height:0.175000in" />].
+4. Presione el botón <img src="./image3.png" style="width:0.3500in;" />.
 
-5.  El modo SLEEP se activará inmediatamente, sin retardo de salida.
+5. El modo SLEEP se activará inmediatamente, sin retardo de salida.
 
-El indicador de <img alt="" src="./image7.jpeg" style="width:0.236220in;height:0.230315in" /> se iluminará cuando se encuentre en modo SLEEP.
-
-**<u>Activación del Modo STAY</u>**:
-
+El indicador de <img src="./image7.jpeg" style="width:0.3500in;" /> se iluminará cuando se encuentre en modo SLEEP.
+### Activación del Modo STAY
 (El perímetro de las instalaciones está asegurado. Se permite el movimiento en el interior. Cualquier apertura de la puerta de entrada permite un retraso de tiempo durante el cual debe desactivar la alarma):
 
-6. Presione el botón [<img alt="" src="./image8.png" style="width:0.165354in;height:0.165354in" />].
+6. Presione el botón <img src="./image10.png" style="width:0.3500in;" />.
 
-2.  Ingrese el código de usuario.
+2. Ingrese el código de usuario.
 
-3.  Presione el botón de área para activarlo.
+3. Presione el botón de área para activarlo.
 
-4.  Presione el botón [<img alt="" src="./image3.png" style="width:0.180000in;height:0.175000in" />].
+4. Presione el botón <img src="./image3.png" style="width:0.3500in;" />.
 
-5.  El modo STAY se activará inmediatamente, sin retardo de salida.
+5. El modo STAY se activará inmediatamente, sin retardo de salida.
 
-El indicador <img alt="" src="./image9.jpg" style="width:0.236220in;height:0.242126in" /> se iluminará cuando se encuentre en modo STAY.
+El indicador <img src="./image9.jpg" style="width:0.3500in;" /> se iluminará cuando se encuentre en modo STAY.
 
-<div>
-
-Para cambiar el estado del área al contrario, basta con ingresar el código de usuario y seleccionar el área deseada. / Presione el botón [<img alt="" src="./image10.png" style="width:0.206693in;height:0.141732in" />] para eliminar los caracteres combinados o el comando.
-
-</div>
-
+> [!NOTE]
+> Para cambiar el estado del área al contrario, basta con ingresar el código de usuario y seleccionar el área deseada. Presione el botón <img src="./image10.png" alt="" style="width:0.3500in;" /> para eliminar los caracteres combinados o el comando.
 ## Botones de Emergencia
 
-#### Restablecimiento del Detector de Incendios (Humo)
+**<u>Para enviar un mensaje de emergencia a su servicio de seguridad</u>**
+- **Policía** – mantenga presionado el botón **1** por 3 seg.
 
-**<u>Para enviar un mensaje de emergencia a su servicio de seguridad:</u>**
+- **Ayuda Médica** – mantenga presionado el botón **4** por 3 seg.
 
-- **Policía** – mantenga presionado el botón [**1**] por 3 seg.
-
-- **Ayuda Médica** – mantenga presionado el botón [**4**] por 3 seg.
-
-- **Servicio de Incendios** – mantenga presionado el botón [**7**] por 3 seg.
-
-**<u>Para reestablecer el Detector de Incendios (Humo) :</u>**
-
-- Mantenga presionado el botón [<img alt="" src="./image10.png" style="width:0.205000in;height:0.140000in" />] por 3 segundos.
-
-**<u>Nota.</u>** Los detectores de incendio no se reinician automáticamente después de la detección de emergencia por incendio. Solo se pueden reiniciar manualmente.
+- **Servicio de Incendios** – mantenga presionado el botón **7** por 3 seg.
 
 ## Ajuste de Brillo de Iluminación e Indicador de Sonido
 
-Desactivación del Monitoreo de la Zona Temporal. (Función BYPASS)
+### Brillo de los botones del teclado
 
-**<u>Brillo de los botones del teclado:</u>**
+1. Presione el botón <img src="./image11.png" style="width:0.3500in;" />, luego **5** **3**.
 
-1.  Seleccione el brillo preferido de la luz de fondo de los botones del teclado usando los botones [**2**] y [**8**].
+2. Seleccione el brillo preferido de la luz de fondo de los botones del teclado usando los botones **2** y **8**.
+
+3. Presione <img src="./image3.png" style="width:0.3500in;" /> para guardar el nuevo valor.
 
 **<u>El brillo de la pantalla LCD:</u>**
 
-1.  Utilice los botones [**2**] y [**8**] para seleccionar el brillo de retroiluminación LCD deseado.
+4. Presione el botón <img src="./image11.png" style="width:0.3500in;" />, luego **5** **2**.
+
+5. Utilice los botones **2** y **8** para seleccionar el brillo de retroiluminación LCD deseado.
+
+6. Presione <img src="./image3.png" style="width:0.3500in;" /> para guardar el nuevo valor.
 
 **<u>Volumen de pulsaciones de teclas del teclado:</u>**
 
-1.  Seleccione el nivel de indicación de sonido preferido usando los botones [**2**] y [**8**].
+7. Presione el botón <img src="./image11.png" style="width:0.3500in;" />, luego **5** **1**.
 
-**<u>Nota:</u>** Apague la iluminación del teclado en modo de espera. Presione [<img alt="" src="./image11.png" style="width:0.171260in;height:0.177165in" />] seguido de [**5**] [**4**]. Cambie el estado de la retroiluminación del teclado en modo de espera presionando [**1**] (retroiluminación encendida) o [**2**] (retroiluminación apagada). Presione [<img alt="" src="./image3.png" style="width:0.180000in;height:0.175000in" />] para guardar el nuevo valor.
+8. Seleccione el nivel de indicación de sonido preferido usando los botones **2** y **8**.
 
-**<u>Activación de la Función BYPASS:</u>**
+9. Presione <img src="./image3.png" style="width:0.3500in;" /> para guardar el nuevo valor.
+> [!NOTE]
+> Apague la iluminación del teclado en modo de espera. Presione <img src="./image11.png" style="width:0.3500in;" /> seguido de **5** **4**. Cambie el estado de la retroiluminación del teclado en modo de espera presionando **1** (retroiluminación encendida) o **2** (retroiluminación apagada). Presione <img src="./image3.png" style="width:0.3500in;" /> para guardar el nuevo valor.
+
+## Ingresar o Cambiar / Códigos de Usuario o Maestro
+
+### Para ingresar un Nuevo código o cambiar uno existente
+
+1. Presione el botón <img src="./image11.png" style="width:0.3500in;" />, luego **0**.
+
+2. Ingrese código **Maestro**, código por defecto – 1234.
+
+3. Ingrese la secuencia numérica de doble dígito del usuario, ej., **02**.
+> [!NOTE]
+> Secuencia Numérica del código **Maestro**- **01**.
+
+4. Ingrese un código de Nuevo usuario dos veces.
+
+5. Presione los números secuenciales de las áreas que deberán ser controladas por el usuario.
+
+6. Presione el botón <img src="./image3.png" style="width:0.3500in;" />. Presione el botón <img src="./image10.png" style="width:0.3500in;" /> para salir.
+
+## Restablecimiento del Detector de Incendios (Humo)
+
+### Para reestablecer el Detector de Incendios (Humo)
+
+- Mantenga presionado el botón <img src="./image10.png" style="width:0.3500in;" /> por 3 segundos.
+> [!NOTE]
+> Los detectores de incendio no se reinician automáticamente después de la detección de emergencia por incendio. Solo se pueden reiniciar manualmente.
+
+## Desactivación del Monitoreo de la Zona Temporal. (Función BYPASS)
+
+### Activación de la Función BYPASS
+
+1. Presione el botón <img src="./image11.png" style="width:0.3500in;" />, luego **6**.
 
 2. Ingrese el código de control de la alarma.
+
+3. Ingrese un número secuencial de dos dígitos de una zona en particular para deshabilitar su monitoreo. Para deshabilitar el monitoreo de varias zonas, ingrese números de dos dígitos de tales zonas.
+
+4. Presione el botón <img src="./image3.png" style="width:0.3500in;" />. El icono <img src="./image12.jpg" style="width:0.3500in;" /> aparece en la pantalla LCD.
 
 **<u>Desactivar la función BYPASS:</u>**
 
 Repita las mismas acciones que en la desactivación del monitoreo de una zona particular.
 
-## Ingresar o Cambiar / Códigos de Usuario o Maestro
+## Eliminar Códigos de Usuario
 
-#### Eliminar Códigos de Usuario
+### Para eliminar el código de usuario
 
-**<u>Para ingresar un Nuevo código o cambiar uno existente:</u>**
+1. Presione el botón <img src="./image11.png" style="width:0.3500in;" />, luego **0**.
 
-1.  Ingrese código **Maestro**, código por defecto – 1234.
+2. Ingrese código **Maestro**.
 
-**<u>Nota.</u>** Secuencia Numérica del código **Maestro**- [**01**].
+3. Ingrese la secuencia numérica de doble dígito del usuario, ej., **02**.
 
-**<u>Para eliminar el código de usuario:</u>**
+4. Presione el botón <img src="./image6.png" style="width:0.3500in;" /> del teclado. Una señal Sonora se escuchará.
 
-1.  Presione los números secuenciales de las áreas que deberán ser controladas por el usuario.
-1.  Ingrese código **Maestro**.
-
-El teclado “SK-LCD button” para control del sistema de alarma muestra los estados de **64 zonas y 8 áreas.** Además, el teclado “SK- LCD button” se puede asignar para controlar una o más áreas deseadas (versión del programa operativo del panel de control desde FW: SP3_xxx4_0121). El teclado mostrará los estados del área asignada y de las zonas del área.
+5. Presione el botón <img src="./image3.png" style="width:0.3500in;" />.
 
 ## Símbolos gráficos
 
 | Símbolo | Descripción | Símbolo | Descripción |
-|----|----|----|----|
-| <img alt="" src="./image13.jpeg" style="width:0.375in;height:0.500000in" /> | Panel de control no conectado | <img alt="" src="./image14.jpeg" style="width:0.390625in;height:0.312500in" /> | Problema con el circuito de fuego |
-| <img alt="" src="./image15.jpeg" style="width:0.359375in;height:0.343750in" /> | Partición 1 Armada | <img alt="" src="./image16.jpeg" style="width:0.406250in;height:0.296875in" /> | Lista de fallos de red |
-| <img alt="" src="./image17.jpeg" style="width:0.362723in;height:0.406250in" /> | Partición 4 Desarmada | <img alt="" src="./image18.jpeg" style="width:0.468750in;height:0.359375in" /> | CRA 1 (2) problemas |
-| <img alt="" src="./image19.jpeg" style="width:0.312500in;height:0.312500in" /> | Partición 2 Stay | <img alt="" src="./image20.jpeg" style="width:0.359375in;height:0.265625in" /> | No hay conexión con el servidor |
-| <img alt="" src="./image21.jpeg" style="width:0.375000in;height:0.359375in" /> | Partición 3 Sleep | <img alt="" src="./image22.jpeg" style="width:0.421875in;height:0.343750in" /> | Problema con la tarjeta SIM |
-| <img alt="" src="./image23.jpeg" style="width:0.468750in;height:0.379214in" /> | Botón MENÚ | <img alt="" src="./image24.jpeg" style="width:0.3706146106736658in;height:0.406250in" /> | Problema con la contraseña de la tarjeta SIM |
-| <img alt="" src="./image25.jpeg" style="width:0.406250in;height:0.406250in" /> | Botón de función ENTER | <img alt="" src="./image26.jpeg" style="width:0.453125in;height:0.328125in" /> | Problema de red con la tarjeta SIM |
-| <img alt="" src="./image27.jpeg" style="width:0.500000in;height:0.507490in" /> | Área | <img alt="" src="./image28.jpeg" style="width:0.468750in;height:0.296875in" /> | Problema con WiFi |
-| <img alt="" src="./image29.jpeg" style="width:0.468750in;height:0.499588in" /> | Alarma | <img alt="" src="./image30.jpeg" style="width:0.390625in;height:0.265625in" /> | Problema con la interfaz RS485 |
-| <img alt="" src="./image31.jpeg" style="width:0.300126in;height:0.390625in" /> | Fuego | <img alt="" src="./image32.jpeg" style="width:0.500000in;height:0.419475in" /> | Problema con la tarjeta SIM 2 |
-| <img alt="" src="./image33.jpeg" style="width:0.428957in;height:0.375000in" /> | Código de usuario | <img alt="" src="./image34.jpeg" style="width:0.390625in;height:0.328125in" /> | Problema de LAN |
-| <img alt="" src="./image35.jpeg" style="width:0.308548in;height:0.390625in" /> | Usuario | <img alt="" src="./image36.jpeg" style="width:0.515625in;height:0.415310in" /> | Batería baja sensor inalámbrico |
-| <img alt="" src="./image37.jpeg" style="width:0.362500in;height:0.512805in" /> | Entrada/Salir | <img alt="" src="./image38.jpeg" style="width:0.375000in;height:0.328125in" /> | Problema con la fuente de alimentación |
-| <img alt="" src="./image39.jpeg" style="width:0.307544in;height:0.453125in" /> | Zona abierta | <img alt="" src="./image40.jpeg" style="width:0.468750in;height:0.428573in" /> | Mal funcionamiento de la sirena |
-| <img alt="" src="./image41.jpeg" style="width:0.428125in;height:0.493533in" /> | Bypass | <img alt="" src="./image42.jpeg" style="width:0.359375in;height:0.265625in" /> | Problemas de tamper |
-| <img alt="" src="./image43.jpeg" style="width:0.362500in;height:0.430358in" /> | Memoria | <img alt="" src="./image44.jpeg" style="width:0.3645833333333333in;height:0.37855096237970254in" /> | Problemas con el antienmascaramiento |
-| <img alt="" src="./image45.jpeg" style="width:0.428125in;height:0.470735in" /> | Problema | <img alt="" src="./image46.jpeg" style="width:0.493225in;height:0.375000in" /> | Problemas con la conexión inalámbrica |
-| <img alt="" src="./image47.jpeg" style="width:0.502233in;height:0.375000in" /> | Lista de fallos del sistema | <img alt="" src="./image48.jpeg" style="width:0.406250in;height:0.359375in" /> | Problema con el módulo expansor |
-| <img alt="" src="./image49.jpeg" style="width:0.437500in;height:0.281250in" /> | Falla de alimentación de AC | <img alt="" src="./image50.jpeg" style="width:0.375000in;height:0.417613in" /> | Ajustes |
-| <img alt="" src="./image51.jpeg" style="width:0.453125in;height:0.343750in" /> | Fallo de la batería | <img alt="" src="./image52.jpeg" style="width:0.453125in;height:0.495080in" /> | Volumen |
-| <img alt="" src="./image53.jpeg" style="width:0.500000in;height:0.359375in" /> | Sobrecorriente AUX | <img alt="" src="./image54.jpeg" style="width:0.3645833333333333in;height:0.296875in" /> | Brillo del LCD |
-| <img alt="" src="./image55.jpeg" style="width:0.421875in;height:0.328125in" /> | Hora no establecida | <img alt="" src="./image56.jpeg" style="width:0.3541666666666667in;height:0.343750in" /> | Brillo del teclado |
-| <img alt="" src="./image57.jpeg" style="width:0.437500in;height:0.343750in" /> | Sobrecorriente de sirena | <img alt="" src="./image58.jpeg" style="width:0.484375in;height:0.359375in" /> | Luz de espera O-Encendida / I- Apagada |
-| <img alt="" src="./image59.jpeg" style="width:0.421875in;height:0.343750in" /> | La sirena no está conectada | <img alt="" src="./image60.jpeg" style="width:0.359375in;height:0.398077in" /> | Información |
+|---|---|---|---|
+| <img alt="" src="./image13.jpeg" style="width:1.1250in;" /> | Panel de control no conectado | <img alt="" src="./image14.jpeg" style="width:0.7812in;" /> | Problema de lazo de incendio |
+| <img alt="" src="./image15.jpeg" style="width:0.7188in;" /> | Partición 1 armada | <img alt="" src="./image16.jpeg" style="width:0.8125in;" /> | Lista de problemas de red |
+| <img alt="" src="./image17.jpeg" style="width:0.7254in;" /> | Partición 4 desarmada | <img alt="" src="./image18.jpeg" style="width:0.9375in;" /> | Problema de CMS 1 (2) |
+| <img alt="" src="./image19.jpeg" style="width:0.6250in;" /> | Partición 2 en STAY | <img alt="" src="./image20.jpeg" style="width:0.7188in;" /> | Problema de nube |
+| <img alt="" src="./image21.jpeg" style="width:0.7500in;" /> | Partición 3 en SLEEP | <img alt="" src="./image22.jpeg" style="width:0.8438in;" /> | Problema de tarjeta SIM |
+| <img alt="" src="./image23.jpeg" style="width:0.9375in;" /> | Botón MENU | <img alt="" src="./image24.jpeg" style="width:1.1118in;" /> | Problema de contraseña de SIM |
+| <img alt="" src="./image25.jpeg" style="width:0.8125in;" /> | Botón ENTER | <img alt="" src="./image26.jpeg" style="width:0.9062in;" /> | Problema de red de SIM |
+| <img alt="" src="./image27.jpeg" style="width:1.0000in;" /> | Partición | <img alt="" src="./image28.jpeg" style="width:0.9375in;" /> | Problema de WiFi |
+| <img alt="" src="./image29.jpeg" style="width:0.9375in;" /> | Alarma | <img alt="" src="./image30.jpeg" style="width:0.7812in;" /> | Problema de interfaz RS485 |
+| <img alt="" src="./image31.jpeg" style="width:0.6003in;" /> | Incendio | <img alt="" src="./image32.jpeg" style="width:1.0000in;" /> | Problema de tarjeta SIM 2 |
+| <img alt="" src="./image33.jpeg" style="width:0.8579in;" /> | Código de usuario | <img alt="" src="./image34.jpeg" style="width:0.7812in;" /> | Problema de LAN |
+| <img alt="" src="./image35.jpeg" style="width:0.6171in;" /> | Usuario | <img alt="" src="./image36.jpeg" style="width:1.0312in;" /> | Batería baja inalámbrica |
+| <img alt="" src="./image37.jpeg" style="width:0.7250in;" /> | Entrada/Salida | <img alt="" src="./image38.jpeg" style="width:0.7500in;" /> | Problema de alimentación |
+| <img alt="" src="./image39.jpeg" style="width:0.6151in;" /> | Zona abierta | <img alt="" src="./image40.jpeg" style="width:0.9375in;" /> | Problema de sirena |
+| <img alt="" src="./image41.jpeg" style="width:0.8562in;" /> | Bypass | <img alt="" src="./image42.jpeg" style="width:0.7188in;" /> | Problema de sabotaje |
+| <img alt="" src="./image43.jpeg" style="width:0.7250in;" /> | Memoria | <img alt="" src="./image44.jpeg" style="width:1.0938in;" /> | Problema de anti-enmascaramiento |
+| <img alt="" src="./image45.jpeg" style="width:0.8562in;" /> | Problema | <img alt="" src="./image46.jpeg" style="width:0.9865in;" /> | Problema inalámbrico |
+| <img alt="" src="./image47.jpeg" style="width:1.0045in;" /> | Lista de problemas del sistema | <img alt="" src="./image48.jpeg" style="width:0.8125in;" /> | Problema de módulo expansor |
+| <img alt="" src="./image49.jpeg" style="width:0.8750in;" /> | Problema de alimentación AC | <img alt="" src="./image50.jpeg" style="width:0.7500in;" /> | Ajustes |
+| <img alt="" src="./image51.jpeg" style="width:0.9062in;" /> | Problema de batería | <img alt="" src="./image52.jpeg" style="width:0.9062in;" /> | Volumen |
+| <img alt="" src="./image53.jpeg" style="width:1.0000in;" /> | Sobrecorriente AUX | <img alt="" src="./image54.jpeg" style="width:1.0938in;" /> | Brillo de LCD |
+| <img alt="" src="./image55.jpeg" style="width:0.8438in;" /> | Hora no configurada | <img alt="" src="./image56.jpeg" style="width:1.0625in;" /> | Brillo del teclado |
+| <img alt="" src="./image57.jpeg" style="width:0.8750in;" /> | Sobrecorriente de sirena | <img alt="" src="./image58.jpeg" style="width:0.9688in;" /> | Luz de espera O-Encendido / I-Apagado |
+| <img alt="" src="./image59.jpeg" style="width:0.8438in;" /> | Sirena no detectada | <img alt="" src="./image60.jpeg" style="width:0.7188in;" /> | Información |

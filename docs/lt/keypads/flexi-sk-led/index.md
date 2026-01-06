@@ -8,6 +8,10 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
+> [!NOTE]
+> Signalizacijos valdymo klaviatūra SK-LED TouchPad užtikrina 32 zonų ir 2 sričių atvaizdavimą. Taip pat klaviatūra SK-LED TouchPad gali būti priskirta valdyti vieną ar dvi norimas sritis (klaviatūros veikimo programos versija nuo FW:3.0, centralės veikimo programos versija nuo FW:SP3_xxx4_0119). Klaviatūroje bus atvaizduojamos priskirtos srities ir srities zonų būsenos.
+
+
 </div>
 
 ## Signalizacijos įjungimas ir išjungimas
@@ -52,7 +56,7 @@ Surinkus kodą, per laiko atskaitą mirksės indikatorius ARM.
 
 3.  Paspauskite įjungiamos srities mygtuką.
 
-4.  Paspauskite mygtuką [OK].
+4.  Paspauskite mygtuką OK.
 
 5.  STAY režimas įsijungs nedelsiant, be išėjimo laiko atskaitos.
 
@@ -128,4 +132,3 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 1.  Paspauskite eilės numerius sričių, kurias vartotojas galės valdyti.
 1.  Surinkite *Master* kodą. Pradės šviesti zonų indikatoriai, rodantys eilės numerius tų vartotojų, kurių kodai jau įvesti.
 
-Signalizacijos valdymo klaviatūra SK-LED TouchPad užtikrina 32 zonų ir 2 sričių atvaizdavimą. Taip pat klaviatūra SK-LED TouchPad gali būti priskirta valdyti vieną ar dvi norimas sritis (klaviatūros veikimo programos versija nuo FW:3.0, centralės veikimo programos versija nuo FW:SP3_xxx4_0119). Klaviatūroje bus atvaizduojamos priskirtos srities ir srities zonų būsenos.
