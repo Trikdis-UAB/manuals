@@ -127,6 +127,5 @@ Refer to the full Paradox manual if your keypad codes differ.
     <img src="./protegus-finished.png" alt="Finished">
   </div>
 </div>
-
 !!! tip
-    If Protegus2 cannot finish writing data, verify the KeyBus wiring (A/B), IMEI entry, and that CMS/Contact ID settings are saved on the panel.
+    If Protegus2 cannot finish writing data, verify the KeyBus wiring (YEl/GRN), IMEI entry, and that CMS/Contact ID settings are saved on the panel.
