@@ -28,9 +28,17 @@ Follow the schematic below to connect the communicator to the panel:
 | +12V DC/-12V DC         | POS/COM              | Power the communicator |
 | DATA                    | DATA                 | KeyBus                 |
 
-![image-20260107101557697](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107101557697.png)
+<style>
+.GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31 {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+</style>
 
-![image-20260107101620702](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107101620702.png)
+<img src="./GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31.png" alt="GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31" class="GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31">
 
 ## **3.**   **Programming the Interlogix NX-4V2, Interlogix NX-6V2 Alarm Panel via the LCD Keypad** 
 
@@ -141,5 +149,6 @@ After completing the setup and installation perform a system check:
 ​	\- by arming/disarming the system with the control panel’s keypad; 
 
 ​	\- by triggering a zone alarm when the security system is armed. 
+
 
 2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
