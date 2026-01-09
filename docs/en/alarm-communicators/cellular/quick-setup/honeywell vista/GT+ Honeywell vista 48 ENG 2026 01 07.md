@@ -11,7 +11,7 @@ Short wiring and programming steps to connect the **GT/GT+/GET** communicator to
 
 ## **1.**   **Prerequisites** 
 
-·    **GT/GT+/GET** firmware 1.21; SIM inserted, PIN disabled, data plan active.
+·    **GT/GT+/GET** firmware 1.21, SIM inserted, PIN disabled, data plan active.
 
 ·    **Honeywell Ademco Vista-48  (Vista-20, Vista-15)** panel with keypad access (installer code available).
 
@@ -28,7 +28,17 @@ Follow the schematic below to connect the communicator to the panel:
 | +12V DC/-12V DC         | 5/4                 | Power the communicator |
 | CLK/DATA                | 7/8                 | KeyBus                 |
 
-![image-20260107110018732](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107110018732.png)
+<style>
+.GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05 {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+<img src="./GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.png" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
 
 ## **3.**   **Programming the Honeywell Ademco Vista-48 (Vista-20, Vista-15) Alarm Panel via Keypad** 
 
@@ -126,5 +136,6 @@ After completing the setup and installation perform a system check:
 ​	\- by arming/disarming the system with the control panel’s keypad; 
 
 ​	\- by triggering a zone alarm when the security system is armed. 
+
 
 2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
