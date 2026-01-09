@@ -128,61 +128,110 @@ Using the control panel’s keypad enter these sections and set them as describe
 
 ## **5.**   **Add system to Protegus2** 
 
-**Step 1.** Tap **Add new system**.
+<style>
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.step-card {
+  padding: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+  border-radius: 6px;
+  background: var(--md-default-bg-color, #fff);
+}
+.step-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
 
-![image-20260107100735559](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100735559.png)
 
-**Step 2.** Enter the communicator **IMEI**, tap **Next**. 
+<div class="steps-grid">
+  <div class="step-card">
+        <strong>Step 1.</strong> Tap <strong>Add new system</strong>.
+        <img src="./GT+ interlogix nx 8v2 1 ENG 2025 12 29.png" alt="Add new system">
+  </div>
+  
+ 
+  <div class="step-card">
+        <strong>Step 2.</strong> Enter the communicator <strong>IMEI</strong>, tap <strong>Next</strong>.    
+        <img src="./GT+ interlogix nx 8v2 2 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-![image-20260107100743975](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100743975.png)
 
-**Step 3.** Select security company. 
+  <div class="step-card">
+        <strong>Step 3.</strong> Select security company. 
+        <img src="./GT+ interlogix nx 8v2 3 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-![image-20260107100754581](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100754581.png)
 
-**Step 4.** Choose **Interlogix.** 
+  <div class="step-card">
+        <strong>Step 4.</strong> Choose <strong>Interlogix</strong>.
+        <img src="./GT+ interlogix nx 8v2 4 ENG 2025 12 29.png" alt="Add new system">
+  </div>
+  
 
-![image-20260107100802108](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100802108.png)
+  <div class="step-card">
+        <strong>Step 5.</strong> Choose <strong>NX-8</strong>.
+        <img src="./GT+ interlogix nx 8v2 5 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 5.** Choose **NX-8**. 
 
-![image-20260107100810844](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100810844.png)
+  <div class="step-card">
+        <strong>Step 6.</strong> Enter <strong>Object ID</strong> and <strong>Module ID</strong>, tap <strong>Next</strong>.
+        <img src="./GT+ interlogix nx 8v2 6 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 6.** Enter **Object ID** and **Module ID**, tap **NEXT**. 
 
-![image-20260107100818719](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100818719.png)
+  <div class="step-card">
+        <strong>Step 7.</strong> Wait while data is written.
+        <img src="./GT+ interlogix nx 8v2 7 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 7.** Wait while data is written. 
 
-![image-20260107100827942](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100827942.png)
+  <div class="step-card">
+        <strong>Step 8.</strong> Tap <strong>Add to Protegus2</strong>.
+        <img src="./GT+ interlogix nx 8v2 8 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 8.** Tap **Add to Protegus2**. 
 
-![image-20260107100835871](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100835871.png)
+  <div class="step-card">
+        <strong>Step 9.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
+        <img src="./GT+ interlogix nx 8v2 9 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 9.** Enter system **Name**, tap **Next**. 
 
-![image-20260107100846017](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100846017.png)
+  <div class="step-card">
+        <strong>Step 10.</strong> Tap <strong>Skip</strong> (if you do not add users now).
+        <img src="./GT+ interlogix nx 8v2 10 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 10.** Press **Skip** (if you do not add users now). 
 
-![image-20260107100852512](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100852512.png)
+  <div class="step-card">
+        <strong>Step 11.</strong> Tap on system.
+        <img src="./GT+ interlogix nx 8v2 11 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 11.** Press on system. 
 
-![image-20260107100901552](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100901552.png)
+  <div class="step-card">
+        <strong>Step 12.</strong> Wait 1 minute for completion and tap <strong>Transfer</strong>.
+        <img src="./GT+ interlogix nx 8v2 12 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 12.** Wait 1 minute for completion and tap **Transfer**. 
 
-![image-20260107100910486](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100910486.png)
+  <div class="step-card">
+        <strong>Step 13.</strong> Enter the e-mail of the user to whom the installer will transfer the system. Tap <strong>Transfer</strong>.
+        <img src="./GT+ interlogix nx 8v2 13 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 13.** Enter the e-mail of the user to whom the installer will transfer the system. Tap **Transfer**.
 
-![image-20260107100918514](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100918514.png)
+  <div class="step-card">
+        <strong>Step 14.</strong> The system will appear in Protegus on the user's phone.
+        <img src="./GT+ interlogix nx 8v2 14 ENG 2025 12 29.png" alt="Add new system">
+  </div>
 
-**Step 14.** The system will appear in Protegus on the user's phone. 
-
-![image-20260107100926359](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107100926359.png)
 
 After completing the setup and installation perform a system check: 
 
@@ -194,3 +243,4 @@ After completing the setup and installation perform a system check:
 
 
 2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
+
