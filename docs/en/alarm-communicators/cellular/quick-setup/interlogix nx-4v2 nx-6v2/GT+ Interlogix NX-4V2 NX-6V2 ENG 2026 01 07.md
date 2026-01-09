@@ -29,7 +29,7 @@ Follow the schematic below to connect the communicator to the panel:
 | DATA                    | DATA                 | KeyBus                 |
 
 <style>
-.GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31 {
+.GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31 {
   max-width: 900px;
   width: 100%;
   height: auto;
@@ -38,7 +38,21 @@ Follow the schematic below to connect the communicator to the panel:
 }
 </style>
 
-<img src="./GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31.png" alt="GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31" class="GT+ interlogix nx 4v2 prijungimo schema ENG 2025 12 31">
+<img src="./GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
+
+
+<style>
+.GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31 {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+<img src="./GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
+
 
 ## **3.**   **Programming the Interlogix NX-4V2, Interlogix NX-6V2 Alarm Panel via the LCD Keypad** 
 
@@ -152,3 +166,4 @@ After completing the setup and installation perform a system check:
 
 
 2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
+
