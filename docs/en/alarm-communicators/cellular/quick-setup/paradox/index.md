@@ -7,7 +7,7 @@ Short wiring and programming steps to connect the GT/GT+/GET communicator to Par
 
 ## Prerequisites
 
-- GT/GT+/GET firmware 1.21; SIM inserted, PIN disabled, data plan active.
+- GT/GT+/GET firmware 1.21, SIM inserted, PIN disabled, data plan active.
 - Paradox SP/SP+/MG/MG+ panel with keypad access (installer code available).
 - CMS account number if reporting to CMS.
 - Protegus2 company/installer account and communicator IMEI.
