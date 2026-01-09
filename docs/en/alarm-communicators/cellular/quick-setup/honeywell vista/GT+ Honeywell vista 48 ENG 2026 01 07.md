@@ -73,61 +73,110 @@ Using the control panel‘s keypad enter these sections and set them as describe
 
 ## **4.**   **Add system to Protegus2** 
 
-**Step 1.** Tap **Add new system**. 
+<style>
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.step-card {
+  padding: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+  border-radius: 6px;
+  background: var(--md-default-bg-color, #fff);
+}
+.step-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
 
-![image-20260107111526224](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111526224.png)
 
-**Step 2.** Enter the communicator **IMEI**, tap **Next**. 
+<div class="steps-grid">
+  <div class="step-card">
+        <strong>Step 1.</strong> Tap <strong>Add new system</strong>.
+        <img src="./GT+ honeywell vista 48 1 ENG 2026 01 05.png" alt="Add new system">
+  </div>
+  
+ 
+  <div class="step-card">
+        <strong>Step 2.</strong> Enter the communicator <strong>IMEI</strong>, tap <strong>Next</strong>.    
+        <img src="./GT+ honeywell vista 48 2 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-![image-20260107111531771](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111531771.png)
 
-**Step 3.** Select security company. 
+  <div class="step-card">
+        <strong>Step 3.</strong> Select security company. 
+        <img src="./GT+ honeywell vista 48 3 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-![image-20260107111539394](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111539394.png)
 
-**Step 4.** Choose **Honeywell.** 
+  <div class="step-card">
+        <strong>Step 4.</strong> Choose <strong>Honeywell</strong>.
+        <img src="./GT+ honeywell vista 48 4 ENG 2026 01 05.png" alt="Add new system">
+  </div>
+  
 
-![image-20260107111550642](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111550642.png)
+  <div class="step-card">
+        <strong>Step 5.</strong> Choose <strong>Vista 48 (Vista 20, Vista 15)</strong>.
+        <img src="./GT+ honeywell vista 48 5 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 5.** Choose **Vista 48  (Vista-20, Vista-15)** . 
 
-![image-20260107111604256](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111604256.png)
+  <div class="step-card">
+        <strong>Step 6.</strong> Enter <strong>Object ID</strong> and <strong>Module ID</strong>, tap <strong>Next</strong>.
+        <img src="./GT+ honeywell vista 48 6 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 6.** Enter **Object ID** and **Module ID**, tap **Next**. 
 
-![image-20260107111610389](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111610389.png)
+  <div class="step-card">
+        <strong>Step 7.</strong> Wait while data is written.
+        <img src="./GT+ honeywell vista 48 7 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 7.** Wait while data is written. 
 
-![image-20260107111618172](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111618172.png)
+  <div class="step-card">
+        <strong>Step 8.</strong> Tap <strong>Add to Protegus2</strong>.
+        <img src="./GT+ honeywell vista 48 8 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 8.** Tap **Add to Protegus2**. 
 
-![image-20260107111625443](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111625443.png)
+  <div class="step-card">
+        <strong>Step 9.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
+        <img src="./GT+ honeywell vista 48 9 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 9.** Enter system **Name**, tap **Next**. 
 
-![image-20260107111633956](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111633956.png)
+  <div class="step-card">
+        <strong>Step 10.</strong> Tap <strong>Skip</strong> (if you do not add users now).
+        <img src="./GT+ honeywell vista 48 10 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 10.** Tap **Skip** (if you do not add users now). 
 
-![image-20260107111641373](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111641373.png)
+  <div class="step-card">
+        <strong>Step 11.</strong> Tap on system.
+        <img src="./GT+ honeywell vista 48 11 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 11.** Tap on system. 
 
-![image-20260107111650869](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111650869.png)
+  <div class="step-card">
+        <strong>Step 12.</strong> Wait 1 minute for completion and tap <strong>Transfer</strong>.
+        <img src="./GT+ honeywell vista 48 12 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 12.** Wait 1 minute for completion and tap **Transfer**. 
 
-![image-20260107111656987](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111656987.png)
+  <div class="step-card">
+        <strong>Step 13.</strong> Enter the e-mail of the user to whom the installer will transfer the system. Tap <strong>Transfer</strong>.
+        <img src="./GT+ honeywell vista 48 13 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 13.** Enter the e-mail of the user to whom the installer will transfer the system. Tap **Transfer**.
 
-![image-20260107111704567](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111704567.png)
+  <div class="step-card">
+        <strong>Step 14.</strong> The system will appear in Protegus on the user's phone.
+        <img src="./GT+ honeywell vista 48 14 ENG 2026 01 05.png" alt="Add new system">
+  </div>
 
-**Step 14.** The system will appear in Protegus on the user's phone. 
-
-![image-20260107111712691](C:\Users\i.simkevic\AppData\Roaming\Typora\typora-user-images\image-20260107111712691.png)
 
 After completing the setup and installation perform a system check: 
 
@@ -139,3 +188,4 @@ After completing the setup and installation perform a system check:
 
 
 2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
+
