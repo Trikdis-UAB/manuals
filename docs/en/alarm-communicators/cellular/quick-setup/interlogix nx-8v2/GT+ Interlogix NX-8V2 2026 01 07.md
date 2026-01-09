@@ -204,7 +204,7 @@ Using the control panel’s keypad enter these sections and set them as describe
 
 
   <div class="step-card">
-        <strong>Step 10.</strong> Tap <strong>Skip</strong> (if you do not add users now).
+        <strong>Step 10.</strong> Tap <strong>Skip</strong>.
         <img src="./GT+ interlogix nx 8v2 10 ENG 2025 12 29.png" alt="Add new system">
   </div>
 
@@ -243,4 +243,5 @@ After completing the setup and installation perform a system check:
 
 
 2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
+
 
