@@ -212,8 +212,9 @@ table th {
   flex-wrap: wrap;
   justify-content: center;
   gap: clamp(0.75rem, 2.5vw, 1.5rem);
-  margin: 2rem auto 3rem;
-  max-width: 880px;
+  width: 100%;
+  margin: 1.5rem auto 2.5rem;
+  max-width: 760px;
   padding: 0 1.25rem;
 }
 
@@ -224,7 +225,7 @@ table th {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(1rem, 2.2vw, 1.6rem);
+  padding: 20px;
   border-radius: 0.9rem;
   font-size: clamp(1.25rem, 2.4vw, 1.7rem);
   font-weight: 600;
@@ -257,6 +258,72 @@ table th {
   .language-card {
     flex: 1 1 calc(50% - 1rem);
   }
+}
+
+#welcome-message {
+  font-size: clamp(1.6rem, 2.4vw, 2.15rem);
+  font-weight: 500;
+  color: #6b6b6b;
+  letter-spacing: 0.01em;
+}
+
+/* Left navigation depth styling (level 3+) */
+.md-nav--primary .md-nav__list .md-nav__list {
+  margin-left: 0.6rem;
+  padding-left: 0.75rem;
+}
+
+.md-nav__item--nested > .md-nav__link {
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.md-nav--primary label.md-nav__link,
+.md-nav--primary label.md-nav__link .md-nav__icon {
+  pointer-events: auto !important;
+}
+
+.md-nav--primary .md-nav__toggle:not(:checked) ~ nav.md-nav {
+  display: none;
+}
+
+.md-nav--primary .md-nav__toggle:checked ~ nav.md-nav {
+  display: block;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link .md-nav__icon {
+  display: inline-flex;
+  order: 0;
+  margin-left: 0;
+  margin-right: 0.4rem;
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link .md-ellipsis {
+  order: 1;
+}
+
+.md-nav--primary .md-nav__list .md-nav__list .md-nav__list {
+  border-left: 1px solid #d2d1d1;
+  margin-left: 0.6rem;
+  padding-left: 0.75rem;
+}
+
+.md-nav--primary > .md-nav__title,
+.md-sidebar--primary .md-nav--primary > .md-nav__title {
+  display: none;
+}
+
+/* Right sidebar (TOC) styling */
+.md-sidebar--secondary {
+  background: #f6f6f6;
+  border-left: 1px solid #d2d1d1;
+}
+
+.md-sidebar--secondary .md-nav__link--active,
+.md-sidebar--secondary .md-nav__item--active > .md-nav__link,
+.md-sidebar--secondary .md-nav__link[aria-current="true"] {
+  background: #e4e4e4;
+  border-radius: 0.35rem;
 }
 
 /* Numbered Headings for Typora */

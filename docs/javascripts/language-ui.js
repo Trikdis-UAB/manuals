@@ -5,15 +5,8 @@
     es: "Español",
     ru: "Русский"
   };
-
-  var LANGUAGE_NAV_LABELS = {
-    en: "English",
-    lt: "Lithuanian",
-    es: "Spanish",
-    ru: "Russian"
-  };
-
   var HOME_LABELS = new Set(["Home", "Pagrindinis", "Inicio", "Главная"]);
+  var COLLAPSIBLE_LABELS = new Set(["Keypads", "Klaviatūros", "Teclados", "Клавиатуры"]);
 
   function detectLanguage() {
     if (typeof window === "undefined") {
@@ -47,6 +40,90 @@
     button.setAttribute("aria-label", "Select language (current: " + label + ")");
   }
 
+  function updateLogoLinks(lang) {
+    var targetLang = lang === "home" ? "en" : lang;
+    var href = "/" + targetLang + "/";
+    document.querySelectorAll("a.md-logo").forEach(function (logo) {
+      logo.setAttribute("href", href);
+    });
+  }
+
+  function hideHomeNavItem() {
+    document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
+      var list = nav.querySelector(":scope > ul.md-nav__list");
+      if (!list) {
+        return;
+      }
+      list.querySelectorAll(":scope > li.md-nav__item").forEach(function (item) {
+        var label = item.querySelector(":scope > a .md-ellipsis, :scope > label .md-ellipsis");
+        if (!label) {
+          return;
+        }
+        if (HOME_LABELS.has(label.textContent.trim())) {
+          item.style.display = "none";
+        }
+      });
+    });
+  }
+
+  function setCollapsibleSections() {
+    var pathname = window.location.pathname || "/";
+    var keepExpanded = pathname.indexOf("/keypads/") !== -1;
+    document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
+      if (nav.dataset.defaultsApplied === "true") {
+        return;
+      }
+      var list = nav.querySelector(":scope > ul.md-nav__list");
+      if (!list) {
+        return;
+      }
+      list.querySelectorAll(":scope > li.md-nav__item").forEach(function (item) {
+        var label = item.querySelector(":scope > label .md-ellipsis");
+        var toggle = item.querySelector(":scope > input.md-nav__toggle");
+        var subnav = item.querySelector(":scope > nav.md-nav");
+        if (!label || !toggle) {
+          return;
+        }
+        if (item.dataset.userToggled === "true") {
+          return;
+        }
+        var text = label.textContent.trim();
+        var shouldExpand = !COLLAPSIBLE_LABELS.has(text) || keepExpanded;
+        toggle.checked = shouldExpand;
+        if (subnav) {
+          subnav.setAttribute("aria-expanded", shouldExpand ? "true" : "false");
+        }
+      });
+      nav.dataset.defaultsApplied = "true";
+    });
+  }
+
+  function attachToggleStateTracking() {
+    document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
+      var list = nav.querySelector(":scope > ul.md-nav__list");
+      if (!list) {
+        return;
+      }
+      list.querySelectorAll(":scope > li.md-nav__item").forEach(function (item) {
+        var toggle = item.querySelector(":scope > input.md-nav__toggle");
+        if (!toggle || item.dataset.toggleTracked === "true") {
+          return;
+        }
+        item.dataset.toggleTracked = "true";
+        toggle.addEventListener("change", function () {
+          item.dataset.userToggled = "true";
+        });
+      });
+    });
+  }
+
+  function scheduleCollapsibleSections() {
+    attachToggleStateTracking();
+    setCollapsibleSections();
+    setTimeout(setCollapsibleSections, 120);
+    setTimeout(setCollapsibleSections, 300);
+  }
+
   function closeLanguageSelect() {
     var select = document.querySelector("header .md-select");
     if (!select) {
@@ -74,39 +151,6 @@
     }
   }
 
-  function filterNavigation(lang) {
-    var navTarget = LANGUAGE_NAV_LABELS[lang];
-    if (!navTarget || lang === "home") {
-      return;
-    }
-    var navs = document.querySelectorAll('nav.md-nav[aria-label="Navigation"]');
-    navs.forEach(function (nav) {
-      var list = nav.querySelector(":scope > ul.md-nav__list");
-      if (!list) {
-        return;
-      }
-      list.querySelectorAll(":scope > li.md-nav__item").forEach(function (item) {
-        var labelEl = item.querySelector(":scope > label .md-ellipsis, :scope > a .md-ellipsis");
-        if (!labelEl) {
-          return;
-        }
-        var text = labelEl.textContent.trim();
-        if (HOME_LABELS.has(text) || text === "Overview") {
-          item.style.display = "";
-          return;
-        }
-        if (text === navTarget) {
-          item.style.display = "";
-          var toggle = item.querySelector(":scope > input.md-nav__toggle");
-          if (toggle) {
-            toggle.checked = true;
-          }
-        } else {
-          item.style.display = "none";
-        }
-      });
-    });
-  }
 
   function scheduleClose() {
     closeLanguageSelect();
@@ -119,7 +163,9 @@
     var lang = detectLanguage();
     requestAnimationFrame(function () {
       updateLanguageButton(lang);
-      filterNavigation(lang);
+      updateLogoLinks(lang);
+      hideHomeNavItem();
+      scheduleCollapsibleSections();
       scheduleClose();
     });
   }
