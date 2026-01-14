@@ -186,6 +186,41 @@ def assert_mobile_toc(page, url: str):
         f"[{url}] TOC visibility: {toc_visible}, items: {toc_has_items}, label: {toc_has_label}"
     )
 
+  sidebar_shadow = get_style(page, ".md-sidebar--primary", "box-shadow")
+  if sidebar_shadow not in ("none", ""):
+    raise RuntimeError(f"[{url}] Mobile sidebar box-shadow {sidebar_shadow} should be none")
+
+  sidebar_shadow_any = page.evaluate(
+      """
+      () => {
+        const items = Array.from(document.querySelectorAll('.md-sidebar--primary *'));
+        return items
+          .map((el) => getComputedStyle(el).boxShadow)
+          .filter((shadow) => shadow && shadow !== 'none');
+      }
+      """
+  )
+  if sidebar_shadow_any:
+    raise RuntimeError(f"[{url}] Sidebar contains box-shadow: {sidebar_shadow_any}")
+
+  header_shadow = get_style(page, ".md-header", "box-shadow")
+  if header_shadow not in ("none", ""):
+    raise RuntimeError(f"[{url}] Mobile header box-shadow {header_shadow} should be none")
+
+  header_shadow_after = page.evaluate(
+      """
+      () => {
+        const header = document.querySelector('.md-header');
+        if (!header) return null;
+        return getComputedStyle(header, '::after').boxShadow;
+      }
+      """
+  )
+  if header_shadow_after not in (None, "", "none"):
+    raise RuntimeError(
+        f"[{url}] Mobile header ::after box-shadow {header_shadow_after} should be none"
+    )
+
   print(f"✅ Mobile drawer defaults to TOC on {url}")
 
 
@@ -205,15 +240,14 @@ def assert_desktop_styles(page, url: str, lang: str):
   )
   page.wait_for_timeout(400)
 
-  toc_bg = get_style(page, ".md-sidebar--secondary", "background-color")
-  toc_border = get_style(page, ".md-sidebar--secondary", "border-left-color")
+  toc_bg = get_style(page, ".md-sidebar--primary .md-sidebar__inner", "background-color")
   toc_active = page.evaluate(
       """
       () => {
-        const nav = document.querySelector('.md-sidebar--secondary');
+        const nav = document.querySelector('.md-sidebar--primary');
         if (!nav) return null;
         const link = nav.querySelector(
-          '.md-nav__link--active, .md-nav__item--active > .md-nav__link, .md-nav__link[aria-current="true"]'
+          'a.md-nav__link--active, a.md-nav__link[aria-current="page"]'
         );
         if (!link) return null;
         return getComputedStyle(link).backgroundColor;
@@ -222,11 +256,9 @@ def assert_desktop_styles(page, url: str, lang: str):
   )
 
   if toc_bg != EXPECTED_COLORS["toc_bg"]:
-    raise RuntimeError(f"[{url}] TOC background {toc_bg} != {EXPECTED_COLORS['toc_bg']}")
-  if toc_border != EXPECTED_COLORS["toc_border"]:
-    raise RuntimeError(f"[{url}] TOC border {toc_border} != {EXPECTED_COLORS['toc_border']}")
+    raise RuntimeError(f"[{url}] Left sidebar background {toc_bg} != {EXPECTED_COLORS['toc_bg']}")
   if toc_active != EXPECTED_COLORS["toc_active"]:
-    raise RuntimeError(f"[{url}] TOC active {toc_active} != {EXPECTED_COLORS['toc_active']}")
+    raise RuntimeError(f"[{url}] Left sidebar active {toc_active} != {EXPECTED_COLORS['toc_active']}")
 
   collapsible = page.evaluate(
       """
@@ -458,6 +490,125 @@ def assert_homepage_styles(page, url: str):
   nav_title_visible = is_visible(page, ".md-nav--primary > .md-nav__title")
   if nav_title_visible:
     raise RuntimeError(f"[{url}] Nav title should be hidden.")
+
+  nav_padding = get_style(page, ".md-sidebar--primary", "padding-top")
+  if nav_padding != "0px":
+    raise RuntimeError(f"[{url}] Left nav padding-top {nav_padding} != 0px")
+
+  nav_bg = get_style(page, ".md-sidebar--primary", "background-color")
+  if nav_bg != EXPECTED_COLORS["toc_bg"]:
+    raise RuntimeError(f"[{url}] Left nav background {nav_bg} != {EXPECTED_COLORS['toc_bg']}")
+
+  nav_container_bg = get_style(page, ".md-sidebar--primary .md-nav", "background-color")
+  if nav_container_bg != EXPECTED_COLORS["toc_bg"]:
+    raise RuntimeError(
+        f"[{url}] Left nav container background {nav_container_bg} != {EXPECTED_COLORS['toc_bg']}"
+    )
+
+  nav_list_shadow = get_style(page, ".md-nav--primary > .md-nav__list", "box-shadow")
+  if nav_list_shadow not in ("none", ""):
+    raise RuntimeError(f"[{url}] Left nav list box-shadow {nav_list_shadow} should be none")
+
+  sidebar_mask = page.evaluate(
+      """
+      () => {
+        const sidebar = document.querySelector('.md-sidebar--primary');
+        if (!sidebar) return null;
+        const style = getComputedStyle(sidebar, '::before');
+        return {
+          content: style.content,
+          height: style.height,
+          background: style.backgroundColor,
+        };
+      }
+      """
+  )
+  if not sidebar_mask:
+    raise RuntimeError(f"[{url}] Sidebar ::before mask not found.")
+  if sidebar_mask["content"] == "none":
+    raise RuntimeError(f"[{url}] Sidebar ::before mask content should be set.")
+  if sidebar_mask["height"] not in ("6px", "5px"):
+    raise RuntimeError(f"[{url}] Sidebar ::before height {sidebar_mask['height']} != 6px")
+  if sidebar_mask["background"] != EXPECTED_COLORS["toc_bg"]:
+    raise RuntimeError(
+        f"[{url}] Sidebar ::before background {sidebar_mask['background']} != "
+        f"{EXPECTED_COLORS['toc_bg']}"
+    )
+
+  sidebar_shadows = page.evaluate(
+      """
+      () => {
+        const lists = Array.from(
+          document.querySelectorAll('.md-sidebar--primary .md-nav__list')
+        );
+        return lists
+          .map((list) => getComputedStyle(list).boxShadow)
+          .filter((shadow) => shadow && shadow !== 'none');
+      }
+      """
+  )
+  if sidebar_shadows:
+    raise RuntimeError(f"[{url}] Sidebar nav list shadows present: {sidebar_shadows}")
+
+  footer_overlap = page.evaluate(
+      """
+      () => {
+        const sidebar = document.querySelector('.md-sidebar--primary');
+        const footer = document.querySelector('.md-footer');
+        if (!sidebar || !footer) return null;
+        const s = sidebar.getBoundingClientRect();
+        const f = footer.getBoundingClientRect();
+        return {
+          sidebarBottom: s.bottom,
+          footerTop: f.top,
+        };
+      }
+      """
+  )
+  if footer_overlap is None:
+    raise RuntimeError(f"[{url}] Footer overlap measurement unavailable.")
+  if footer_overlap["sidebarBottom"] > footer_overlap["footerTop"] + 1:
+    raise RuntimeError(
+        f"[{url}] Sidebar overlaps footer: "
+        f"{footer_overlap['sidebarBottom']} > {footer_overlap['footerTop']}"
+    )
+
+  gap = page.evaluate(
+      """
+      () => {
+        const sidebar = document.querySelector('.md-sidebar--primary');
+        const scrollwrap = document.querySelector('.md-sidebar__scrollwrap');
+        if (!sidebar || !scrollwrap) return null;
+        return {
+          gap: scrollwrap.getBoundingClientRect().top - sidebar.getBoundingClientRect().top,
+          sidebarHeight: sidebar.offsetHeight,
+          scrollwrapHeight: scrollwrap.offsetHeight,
+        };
+      }
+      """
+  )
+  if gap is None:
+    raise RuntimeError(f"[{url}] Left nav gap measurement unavailable.")
+  if gap["gap"] > 1:
+    raise RuntimeError(f"[{url}] Left nav top gap {gap['gap']}px > 1px")
+  if gap["sidebarHeight"] + 1 < gap["scrollwrapHeight"]:
+    raise RuntimeError(
+        f"[{url}] Left nav height {gap['sidebarHeight']}px < "
+        f"scrollwrap {gap['scrollwrapHeight']}px"
+    )
+
+  nav_title_height = page.evaluate(
+      """
+      () => {
+        const el = document.querySelector('.md-nav--primary > .md-nav__title');
+        return el ? el.getBoundingClientRect().height : null;
+      }
+      """
+  )
+  if nav_title_height is None:
+    raise RuntimeError(f"[{url}] Nav title not found for height check.")
+  if nav_title_height > 1:
+    raise RuntimeError(f"[{url}] Nav title height {nav_title_height}px > 1px")
 
   nav_text = page.evaluate(
       "() => document.querySelector('.md-nav--primary')?.innerText || ''"
