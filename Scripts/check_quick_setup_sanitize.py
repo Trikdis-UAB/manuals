@@ -15,6 +15,7 @@ TARGET_DIRS = [
 ]
 
 BAD_HEADING_RE = re.compile(r"^#{2,6}\\s+\\*\\*\\d+\\.\\*\\*")
+BAD_IMAGE_SRC_RE = re.compile(r'src="\\./')
 
 
 def main() -> int:
@@ -36,6 +37,8 @@ def main() -> int:
                     errors.append(f"{path}:{idx} contains inline <style>")
                 if BAD_HEADING_RE.match(line):
                     errors.append(f"{path}:{idx} has manual heading numbering")
+                if BAD_IMAGE_SRC_RE.search(line):
+                    errors.append(f"{path}:{idx} uses src=./ (should be ../ for assets)")
 
     if errors:
         print("Quick setup sanitation checks failed:")

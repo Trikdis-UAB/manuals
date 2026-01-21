@@ -28,7 +28,7 @@ Follow the schematic below to connect the communicator to the panel:
 | CLK/DATA                | 7/8                 | KeyBus                 |
 
 
-<img src="./GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.png" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
+<img src="../GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.png" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
 
 ## Programming the Honeywell Ademco Vista-48 (Vista-20, Vista-15) Alarm Panel via Keypad
 
@@ -68,85 +68,85 @@ Using the control panel‘s keypad enter these sections and set them as describe
 <div class="steps-grid">
   <div class="step-card">
         <strong>Step 1.</strong> Tap <strong>Add new system</strong>.
-        <img src="./GT+ honeywell vista 48 1 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 1 ENG 2026 01 05.png" alt="Add new system">
   </div>
   
  
   <div class="step-card">
         <strong>Step 2.</strong> Enter the communicator <strong>IMEI</strong>, tap <strong>Next</strong>.    
-        <img src="./GT+ honeywell vista 48 2 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 2 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 3.</strong> Select security company. 
-        <img src="./GT+ honeywell vista 48 3 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 3 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 4.</strong> Choose <strong>Honeywell</strong>.
-        <img src="./GT+ honeywell vista 48 4 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 4 ENG 2026 01 05.png" alt="Add new system">
   </div>
   
 
   <div class="step-card">
         <strong>Step 5.</strong> Choose <strong>Vista 48 (Vista 20, Vista 15)</strong>.
-        <img src="./GT+ honeywell vista 48 5 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 5 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 6.</strong> Enter <strong>Object ID</strong> and <strong>Module ID</strong>, tap <strong>Next</strong>.
-        <img src="./GT+ honeywell vista 48 6 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 6 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 7.</strong> Wait while data is written.
-        <img src="./GT+ honeywell vista 48 7 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 7 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 8.</strong> Tap <strong>Add to Protegus2</strong>.
-        <img src="./GT+ honeywell vista 48 8 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 8 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 9.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
-        <img src="./GT+ honeywell vista 48 9 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 9 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 10.</strong> Tap <strong>Skip</strong>.
-        <img src="./GT+ honeywell vista 48 10 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 10 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 11.</strong> Tap on system.
-        <img src="./GT+ honeywell vista 48 11 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 11 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 12.</strong> Wait 1 minute for completion and tap <strong>Transfer</strong>.
-        <img src="./GT+ honeywell vista 48 12 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 12 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 13.</strong> Enter the e-mail of the user to whom the installer will transfer the system. Tap <strong>Transfer</strong>.
-        <img src="./GT+ honeywell vista 48 13 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 13 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 14.</strong> The system will appear in Protegus on the user's phone.
-        <img src="./GT+ honeywell vista 48 14 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 14 ENG 2026 01 05.png" alt="Add new system">
   </div>
 
 
