@@ -13,6 +13,11 @@ Editor entry points (start here when editing):
     - GT/GT+/GET
       - Quick setup GT/GT+/GET
         - [Paradox SP(+)/MG(+)](en/alarm-communicators/cellular/quick-setup/paradox/index.md)
+        - [DSC NEO HS2016](en/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
+        - [DSC PC585](en/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
+        - [Honeywell Vista-48](en/alarm-communicators/cellular/quick-setup/honeywell%20vista/GT+%20Honeywell%20vista%2048%20ENG%202026%2001%2007.md)
+        - [Interlogix NX-4V2 / NX-6V2](en/alarm-communicators/cellular/quick-setup/interlogix%20nx-4v2%20nx-6v2/GT+%20Interlogix%20NX-4V2%20NX-6V2%20ENG%202026%2001%2007.md)
+        - [Interlogix NX-8V2](en/alarm-communicators/cellular/quick-setup/interlogix%20nx-8v2/GT+%20Interlogix%20NX-8V2%202026%2001%2007.md)
       - [GT](en/alarm-communicators/cellular/gt/index.md)
       - [GT+](en/alarm-communicators/cellular/gt-plus/index.md)
       - [GET](en/alarm-communicators/cellular/get/index.md)

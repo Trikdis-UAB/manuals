@@ -1,6 +1,5 @@
 **Content**
 
-[TOC]
 
 **GT/GT+/GET with Honeywell Ademco Vista-48 (Vista-20, Vista-15), quick setup** 
 
@@ -9,7 +8,7 @@ Short wiring and programming steps to connect the **GT/GT+/GET** communicator to
 | **CAUTION** | Install and service only by qualified personnel. Disconnect power  before wiring. Unauthorized changes void warranty. |
 | ----------- | ------------------------------------------------------------ |
 
-## **1.**   **Prerequisites** 
+## Prerequisites
 
 ·    **GT/GT+/GET** firmware 1.21, SIM inserted, PIN disabled, data plan active.
 
@@ -19,7 +18,7 @@ Short wiring and programming steps to connect the **GT/GT+/GET** communicator to
 
 ·    **Protegus2** company/installer account and communicator IMEI.
 
-## **2.**   **Wiring** 
+## Wiring
 
 Follow the schematic below to connect the communicator to the panel: 
 
@@ -28,19 +27,10 @@ Follow the schematic below to connect the communicator to the panel:
 | +12V DC/-12V DC         | 5/4                 | Power the communicator |
 | CLK/DATA                | 7/8                 | KeyBus                 |
 
-<style>
-.GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05 {
-  max-width: 900px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-</style>
 
 <img src="./GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.png" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
 
-## **3.**   **Programming the Honeywell Ademco Vista-48 (Vista-20, Vista-15) Alarm Panel via Keypad** 
+## Programming the Honeywell Ademco Vista-48 (Vista-20, Vista-15) Alarm Panel via Keypad
 
 Using the control panel‘s keypad enter these sections and set them as described:
 
@@ -71,26 +61,8 @@ Using the control panel‘s keypad enter these sections and set them as describe
 | *1891 *          | Enable “AUI Device 1 and 2 Enable”.       |
 | *99              | Exit programming mode.                    |
 
-## **4.**   **Add system to Protegus2** 
+## Add system to Protegus2
 
-<style>
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
-}
-.step-card {
-  padding: 8px;
-  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
-  border-radius: 6px;
-  background: var(--md-default-bg-color, #fff);
-}
-.step-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-</style>
 
 
 <div class="steps-grid">
