@@ -69,6 +69,8 @@
   function setCollapsibleSections() {
     var pathname = window.location.pathname || "/";
     var keepExpanded = pathname.indexOf("/keypads/") !== -1;
+    var segments = pathname.split("/").filter(Boolean);
+    var isLangRoot = segments.length === 1 && LANGUAGE_BUTTON_LABELS[segments[0]];
     document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
       if (nav.dataset.defaultsApplied === "true") {
         return;
@@ -88,10 +90,18 @@
           return;
         }
         var text = label.textContent.trim();
-        var shouldExpand = !COLLAPSIBLE_LABELS.has(text) || keepExpanded;
-        toggle.checked = shouldExpand;
-        if (subnav) {
-          subnav.setAttribute("aria-expanded", shouldExpand ? "true" : "false");
+        if (COLLAPSIBLE_LABELS.has(text)) {
+          toggle.checked = keepExpanded;
+          if (subnav) {
+            subnav.setAttribute("aria-expanded", keepExpanded ? "true" : "false");
+          }
+          return;
+        }
+        if (isLangRoot) {
+          toggle.checked = true;
+          if (subnav) {
+            subnav.setAttribute("aria-expanded", "true");
+          }
         }
       });
       nav.dataset.defaultsApplied = "true";

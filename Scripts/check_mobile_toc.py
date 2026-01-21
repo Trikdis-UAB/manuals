@@ -260,6 +260,64 @@ def assert_desktop_styles(page, url: str, lang: str):
   if toc_active != EXPECTED_COLORS["toc_active"]:
     raise RuntimeError(f"[{url}] Left sidebar active {toc_active} != {EXPECTED_COLORS['toc_active']}")
 
+  sidebar_position = get_style(page, ".md-sidebar--primary", "position")
+  sidebar_top = get_style(page, ".md-sidebar--primary", "top")
+  if sidebar_position != "sticky":
+    raise RuntimeError(f"[{url}] Left sidebar position {sidebar_position} should be sticky")
+  if sidebar_top != "64px":
+    raise RuntimeError(f"[{url}] Left sidebar top {sidebar_top} should be 64px")
+
+  page.evaluate("window.scrollTo(0, 2000)")
+  page.wait_for_timeout(200)
+  sticky_offset = page.evaluate(
+      """
+      () => {
+        const sidebar = document.querySelector('.md-sidebar--primary');
+        if (!sidebar) return null;
+        return sidebar.getBoundingClientRect().top;
+      }
+      """
+  )
+  if sticky_offset is None:
+    raise RuntimeError(f"[{url}] Left sidebar not found for sticky check.")
+  if abs(sticky_offset - 64) > 1:
+    raise RuntimeError(f"[{url}] Left sidebar sticky offset {sticky_offset} != 64px")
+
+  toc_border = get_style(page, ".md-content", "border-right-color")
+  toc_border_width = get_style(page, ".md-content", "border-right-width")
+  if toc_border != EXPECTED_COLORS["toc_border"] or toc_border_width != "1px":
+    raise RuntimeError(
+        f"[{url}] Right TOC border {toc_border}/{toc_border_width} != "
+        f"{EXPECTED_COLORS['toc_border']}/1px"
+    )
+  toc_span = page.evaluate(
+      """
+      () => {
+        const toc = document.querySelector('.md-content');
+        const main = document.querySelector('.md-main__inner');
+        if (!toc || !main) return null;
+        const tocRect = toc.getBoundingClientRect();
+        const mainRect = main.getBoundingClientRect();
+        return {
+          tocTop: tocRect.top,
+          tocBottom: tocRect.bottom,
+          mainTop: mainRect.top,
+          mainBottom: mainRect.bottom,
+        };
+      }
+      """
+  )
+  if toc_span is None:
+    raise RuntimeError(f"[{url}] Right TOC span measurement unavailable.")
+  if abs(toc_span["tocTop"] - toc_span["mainTop"]) > 1:
+    raise RuntimeError(
+        f"[{url}] Right TOC top {toc_span['tocTop']} != main top {toc_span['mainTop']}"
+    )
+  if abs(toc_span["tocBottom"] - toc_span["mainBottom"]) > 1:
+    raise RuntimeError(
+        f"[{url}] Right TOC bottom {toc_span['tocBottom']} != main bottom {toc_span['mainBottom']}"
+    )
+
   collapsible = page.evaluate(
       """
       () => {
@@ -616,9 +674,27 @@ def assert_homepage_styles(page, url: str):
   if "Home" in nav_text:
     raise RuntimeError(f"[{url}] Home should not appear in nav text.")
 
+  lang_cards = page.evaluate(
+      """
+      () => Array.from(document.querySelectorAll('.language-grid .language-card'))
+        .map((card) => ({
+          text: card.textContent.trim(),
+          top: card.getBoundingClientRect().top,
+        }))
+      """
+  )
+  if len(lang_cards) != 3:
+    raise RuntimeError(f"[{url}] Language cards count {len(lang_cards)} != 3")
+  labels = [card["text"] for card in lang_cards]
+  if labels != ["English", "Lietuvių", "Español"]:
+    raise RuntimeError(f"[{url}] Language cards {labels} != expected list")
+  tops = [card["top"] for card in lang_cards]
+  if max(tops) - min(tops) > 4:
+    raise RuntimeError(f"[{url}] Language cards should be one row, tops: {tops}")
+
   grid_max_width = get_style(page, ".language-grid", "max-width")
-  if grid_max_width not in ("760px", "47.5rem"):
-    raise RuntimeError(f"[{url}] Language grid max-width {grid_max_width} != 760px")
+  if grid_max_width not in ("520px", "32.5rem"):
+    raise RuntimeError(f"[{url}] Language grid max-width {grid_max_width} != 520px")
 
   padding = page.evaluate(
       """
@@ -651,10 +727,10 @@ def assert_homepage_styles(page, url: str):
     raise RuntimeError(f"[{url}] Welcome message not found.")
   if welcome["color"] != "rgb(107, 107, 107)":
     raise RuntimeError(f"[{url}] Welcome color {welcome['color']} != rgb(107, 107, 107)")
-  if float(welcome["weight"]) > 600:
+  if float(welcome["weight"]) > 500:
     raise RuntimeError(f"[{url}] Welcome font-weight {welcome['weight']} too heavy")
   size_px = float(welcome["size"].replace("px", ""))
-  if size_px > 36:
+  if size_px > 28:
     raise RuntimeError(f"[{url}] Welcome font-size {welcome['size']} too large")
 
   print(f"✅ Homepage sizing and left nav ok on {url}")

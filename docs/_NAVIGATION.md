@@ -6,8 +6,7 @@ Editor entry points (start here when editing):
 - [Writer's guide](https://github.com/Trikdis-UAB/manuals/blob/main/WRITERS_GUIDE.md)
 - [VS Code setup (optional)](https://github.com/Trikdis-UAB/manuals/blob/main/VS_CODE_SETUP.md)
 
-- [Home](index.md)
-## English
+## Home (root redirects to /en/; homepage is not in nav)
 
 - Communicators
   - Cellular

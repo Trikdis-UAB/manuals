@@ -33,6 +33,18 @@
 - Add small, scriptable checks when introducing new behaviors; document the command in PR notes.
 - When converting other-language manuals for a product that was just updated in English, compare the converted outputs against the English version to catch missing/extra headings, duplicated text, and broken button markers.
 
+## Handoff Note (docs UI tweaks)
+- Status: Active (continuing docs.trikdis.com UI tweaks task; added / → /en/ redirect and homepage duplication, updated checks; investigating left sidebar top “bulge”).
+- TODO: Add per-language search support and constrain search to the selected document/manual.
+- UI CSS updates already applied in `docs/stylesheets/base.user.css`: responsive language selector (no fixed width), `.language-card` padding 20px, smaller grey `#welcome-message`, TOC background `#F6F6F6`, active TOC item `#E4E4E4`, TOC left border `#D2D1D1`, and deep-nav (level 3+) left border `#D2D1D1`.
+- JS nav behavior now sets default top-level expansion (Keypads collapsed unless on /keypads/) without overriding native chevron clicks in `docs/javascripts/language-ui.js`.
+- Began MkDocs i18n refactor in `mkdocs.yml`: top-level nav now points to `en/...`, and `mkdocs-static-i18n` config adds a dummy default locale `xx` plus per-language navs; build currently fails because default build cannot resolve `en/...` docs with folder-based i18n.
+- `requirements.txt` now includes `mkdocs-static-i18n==1.2.3`.
+- `Scripts/check_mobile_toc.py` expanded to check desktop styles and language nav isolation in addition to mobile TOC behavior.
+- Bulge investigation: DevTools shows `.md-nav__title` still has height (5.6rem) and nav was `position:absolute` inside `.md-sidebar__inner` with height 0. Applied CSS in `docs/stylesheets/base.user.css` to hard-hide title (`display:none !important; height:0; margin/padding 0`) and set `.md-sidebar--primary .md-nav--primary { position: static !important; }`. Local Playwright checks show nav/inner top alignment and no visible bulge, but user still sees it in browser.
+- If bulge persists, check for cached CSS or other styles overriding `base.user.css` in dev server. Ask user to hard refresh after restarting `mkdocs serve`. Next step: use newly added Chrome DevTools MCP to inspect live DOM/computed styles for `.md-sidebar--primary` and confirm final computed `position`/`height`/`display` values for nav/title/inner.
+- MCP note: user added Chrome DevTools MCP (https://github.com/ChromeDevTools/chrome-devtools-mcp); restart required to access it.
+
 ## Commit & Pull Request Guidelines
 - Commits: concise, imperative (e.g., “Normalize SP3 callouts”, “Lazy-load content images”).
 - Include what changed and why in the PR description; link related issues/tasks.

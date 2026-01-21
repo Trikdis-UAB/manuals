@@ -1,46 +1,32 @@
 ---
 hide:
   - toc
+class: language-home
 ---
 
-# English manuals
+# <span id="welcome-message" lang="en">Welcome! Pick your language:</span>
 
-Browse by category or use the search box in the header to find a specific topic.
+<style>
+  nav[aria-label="Table of contents"] {
+    display: none !important;
+  }
+</style>
 
-## Communicators
+<div class="language-grid">
+  <a class="language-card" data-lang="en" href="/en/" lang="en">English</a>
+  <a class="language-card" data-lang="lt" href="/lt/" lang="lt">Lietuvių</a>
+  <a class="language-card" data-lang="es" href="/es/" lang="es">Español</a>
+</div>
 
-### Cellular
+## Find your manual fast
 
-- [Quick setup GT/GT+/GET (Paradox SP(+)/MG(+))](alarm-communicators/cellular/quick-setup/paradox/index.md)
-- [GT](alarm-communicators/cellular/gt/index.md)
-- [GT+](alarm-communicators/cellular/gt-plus/index.md)
-- [GET](alarm-communicators/cellular/get/index.md)
-- [G16](alarm-communicators/cellular/g16/index.md)
-- [G16T](alarm-communicators/cellular/g16t/index.md)
+Installers can jump straight to the right document by using the search icon in the header or browsing the navigation tabs. Each manual includes PDF downloads, wiring diagrams, and configuration notes.
 
-### For fire panels
+## Quick actions
 
-- [Communicator FireCom](alarm-communicators/fire-panels/firecom/index.md)
-- [Cellular communicator G17F](alarm-communicators/fire-panels/g17f/index.md)
-
-### Ethernet
-
-- [Ethernet communicator E16](alarm-communicators/e16/index.md)
-- [Ethernet communicator E16T](alarm-communicators/e16t/index.md)
-
-### Radio
-
-- [Transmitter T16](alarm-communicators/t16/index.md)
-
-## Control panels
-
-- [Security control panel FLEXi SP3](control-panels/sp3/index.md)
-- [Cellular security control panel CG17](control-panels/cg17/index.md)
-
-## Gate controllers
-
-- [GATOR Cellular Gate Controller](gate-controllers/gator/index.md)
-- [GATOR WiFi Gate Controller](gate-controllers/gator-wifi/index.md)
+- **Search the library** with product codes or keywords from wiring diagrams.
+- **Switch languages** using the cards above.
+- **Need help?** Reach the support team through the links in the top-right corner.
 
 ## Helpful resources
 

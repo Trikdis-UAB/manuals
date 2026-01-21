@@ -2,6 +2,7 @@
 mkdocs==1.6.1
 mkdocs-material==9.6.20
 mkdocs-add-number-plugin==1.2.2
+mkdocs-static-i18n==1.2.3
 markdown-callouts==0.4.0
 PyYAML==6.0.2
 

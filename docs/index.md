@@ -13,15 +13,14 @@ class: language-home
 </style>
 
 <div class="language-grid">
-  <a class="language-card" data-lang="en" href="en/" lang="en">English</a>
-  <a class="language-card" data-lang="lt" href="lt/" lang="lt">Lietuvių</a>
-  <a class="language-card" data-lang="es" href="es/" lang="es">Español</a>
-  <a class="language-card" data-lang="ru" href="ru/" lang="ru">Русский</a>
+  <a class="language-card" data-lang="en" href="/en/" lang="en">English</a>
+  <a class="language-card" data-lang="lt" href="/lt/" lang="lt">Lietuvių</a>
+  <a class="language-card" data-lang="es" href="/es/" lang="es">Español</a>
 </div>
 
 ## Find your manual fast
 
-You can jump straight to the right document by using the search icon in the header or browsing the navigation tabs. Manuals include wiring diagrams and configuration notes.
+Installers can jump straight to the right document by using the search icon in the header or browsing the navigation tabs. Each manual includes PDF downloads, wiring diagrams, and configuration notes.
 
 ## Quick actions
 

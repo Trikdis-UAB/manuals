@@ -21,10 +21,9 @@ class: language-home
 </style>
 
 <div class=\"language-grid\">
-  <a class=\"language-card\" data-lang=\"en\" href=\"en/\" lang=\"en\">English</a>
-  <a class=\"language-card\" data-lang=\"lt\" href=\"lt/\" lang=\"lt\">Lietuvių</a>
-  <a class=\"language-card\" data-lang=\"es\" href=\"es/\" lang=\"es\">Español</a>
-  <a class=\"language-card\" data-lang=\"ru\" href=\"ru/\" lang=\"ru\">Русский</a>
+  <a class=\"language-card\" data-lang=\"en\" href=\"/en/\" lang=\"en\">English</a>
+  <a class=\"language-card\" data-lang=\"lt\" href=\"/lt/\" lang=\"lt\">Lietuvių</a>
+  <a class=\"language-card\" data-lang=\"es\" href=\"/es/\" lang=\"es\">Español</a>
 </div>
 
 ## Find your manual fast
@@ -43,12 +42,16 @@ Installers can jump straight to the right document by using the search icon in t
 - [Find a distributor](https://www.trikdis.com/all-distributors/) — connect with a regional partner for training or certification updates.
 """
 
-    # Write to index.md
-    index_path = Path(__file__).parent / "docs" / "index.md"
-    with open(index_path, 'w') as f:
-        f.write(content)
-
-    print(f"✓ Generated {index_path}")
+    docs_dir = Path(__file__).parent / "docs"
+    targets = [
+        docs_dir / "index.md",
+        docs_dir / "en" / "index.md",
+    ]
+    for target in targets:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with open(target, "w") as f:
+            f.write(content)
+        print(f"✓ Generated {target}")
 
 if __name__ == "__main__":
     generate_homepage()
