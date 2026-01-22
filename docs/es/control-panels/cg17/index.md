@@ -240,7 +240,7 @@ A continuación, describimos qué configuraciones deben establecerse para que el
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información sobre otras configuraciones de CG17
     en TrikdisConfig, consulte el capítulo 4 „Descripción de la
     ventana de TrikdisConfig".
@@ -270,7 +270,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 5.  **Clave de encriptación** - Ingrese la llave de encriptación que está establecida en el receptor.
 
-!!! note
+!!! note "Nota"
     Si quiere que la comunicación con CRA sea establecida a través de
     mensajes SMS, sólo necesita establecer la llave de "**Encriptación**" y
     el "**Número de Teléfono**". Los mensajes SMS pueden ser recibidos por
@@ -284,7 +284,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
     Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información sobre otras configuraciones de CG17
     en TrikdisConfig, consulte el capítulo 4 „Descripción de la
     ventana de TrikdisConfig".
@@ -310,7 +310,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 <img alt="" src="./image12.png" style="width:2.213337707786527in;height:1.3566699475065618in" />
 
-!!! note
+!!! note "Nota"
     Cheque si la tarjeta SIM ha sido activada. / Asegúrese de que el
     servicio de Internet móvil esté activado si se utilizará la conexión a
     través del canal IP. / Para evitar ingresar el código PIN en
@@ -391,7 +391,7 @@ El lector de llaves **iButton** debe estar conectado al CG17 utilizando el puert
 
 <img alt="" src="./image20.png" style="width:4.655008748906386in;height:2.5400054680664916in" />
 
-!!! note
+!!! note "Nota"
     La vinculación de la llave electrónica al CG17 se describe en el
     capítulo 4.4.1 "Registro de llaves de contacto (iButton)".
 ### Esquema para conectar un sensor inalámbrico transceptor RF-SH 
@@ -623,7 +623,7 @@ Una vez que el CG17 está conectado al software TrikdisConfig, el programa mostr
 | Estado | Estado de conexión |
 | Propósito | Nivel de acceso (aparece después de que sea confirmado el código de acceso) |
 
-!!! note
+!!! note "Nota"
     Haga clic en **Leer [F4]** para que el programa lea y muestre las
     configuraciones que están guardadas actualmente en el
     dispositivo. / Haga clic en **Escribir [F5]** para guardar la
@@ -709,7 +709,7 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 - **Código del instalador** - (código predeterminado: 654321) le da al instalador acceso a la configuración. Para garantizar la seguridad, cámbielo a un código de 6 símbolos que solo usted conoce.
 
-!!! note
+!!! note "Nota"
     Si se establece el *código de administrador* predeterminado (123456), el
     software no requerirá que se ingrese y al hacer clic en **Leer [F4]**
     se mostrarán de inmediato los parámetros actualmente guardados en el
@@ -800,7 +800,7 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 **Grupo de opciones de “iButton llave”**
 
-!!! note
+!!! note "Nota"
     ¡Se puede asignar más de una llave a un usuario! Todas las llaves recién
     registradas se asignarán al "Usuario ID9" (sin nombre). Los nombres solo
     se pueden asignar a ocho usuarios. Los permisos para el "Usuario ID9" se
@@ -826,7 +826,7 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 5.  Para eliminar todas las llaves (incluida la “**llave maestra**”), sostenga la clave maestra contra el lector durante al menos 20 segundos*.*
 
-!!! note
+!!! note "Nota"
     ¡La "**Llave maestra**" solo debe usarse para registrar otras llaves
     de contacto!
 #### Registro de tarjeta RFID 
@@ -890,7 +890,7 @@ Haga clic en Escribir [F5] después de realizar cambios. Espere a que se complet
 
 En la tabla, puede asignar eventos de Contacto ID y códigos de restauración al evento de falla del bus de datos RS485. Cuando la conexión entre el W485 y el CG17 se interrumpe o se restablece, el CG17 enviará un mensaje con el código CID asignado a la aplicación CRA y Protegus2.
 
-!!! note
+!!! note "Nota"
     Debe configurar el CG17 para enviar mensajes a CRA y
     Protegus2, consulte los capítulos 2.2 "Configuración para
     conectarse con el CRA" y. 2.1 "Opciones de conexión para la app
@@ -920,7 +920,7 @@ En la tabla, puede asignar eventos de Contacto ID y códigos de restauración al
 
 En la tabla, puede asignar eventos de Contacto ID y códigos de restauración al evento de falla del bus de datos RS485. Cuando la conexión entre el W485 y el CG17 se interrumpe o se restablece, el CG17 enviará un mensaje con el código CID asignado a la aplicación CRA y Protegus2.
 
-!!! note
+!!! note "Nota"
     Debe configurar el CG17 para enviar mensajes a CRA y
     Protegus, consulte los capítulos 2.2 "Configuración para
     conectarse con el CRA" y. 2.1 "Opciones de conexión para la app
@@ -952,7 +952,7 @@ Los mensajes con las coordenadas se envían al programa de monitoreo Monas MS.
 
 #### Vinculación de un sensor de nivel de combustible “STRELA RS485” 
 
-!!! note
+!!! note "Nota"
     El sensor de nivel de combustible "**Strela RS485**" debe calibrarse con
     la configuración "**DUTconfig**" del software del fabricante antes de
     usarse. El sensor de nivel de combustible se conecta a la computadora
@@ -1081,7 +1081,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 15. El sensor inalámbrico ahora está emparejado con el sistema.
 
-!!! note
+!!! note "Nota"
     Eliminar sensores inalámbricos de la memoria del CG17:
     
     1.  Conecte un cable USB Mini-B al CG17.
@@ -1131,7 +1131,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 10. El controlador inalámbrico ahora está emparejado con el Sistema.
 
-!!! note
+!!! note "Nota"
     Restaurar la configuración de fábrica del control remoto:
     
     1.  Mantenga presionados simultáneamente los botones 2 y 3 del llavero.
@@ -1177,7 +1177,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 18. La sirena inalámbrica ahora está completamente emparejada con el sistema.
 
-!!! note
+!!! note "Nota"
     Restaurar la configuración de fábrica de la sirena:
     
     1.  Retire la cubierta de la sirena.
@@ -1224,7 +1224,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 14. El sensor inalámbrico ahora está emparejado con el sistema.
 
-!!! note
+!!! note "Nota"
     Eliminar sensores inalámbricos de la memoria del CG17:
     
     1.  Conecte un cable USB Mini-B al CG17.
@@ -1266,7 +1266,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 14. El teclado inalámbrico está completamente registrado.
 
-!!! note
+!!! note "Nota"
     Eliminar sensores inalámbricos de la memoria del CG17:
     
     1.  Conecte un cable USB Mini-B al CG17.
@@ -1535,7 +1535,7 @@ Los usuarios de Protegus2 pueden controlar su sistema de seguridad de forma remo
 
 <img alt="" src="./image81.png" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
-!!! note
+!!! note "Nota"
     Al agregar el CG17 a Protegus2:
     
     1.  El servicio en la nube Protegus debe estar habilitado. La
@@ -1616,9 +1616,9 @@ Restablezca los detectores de humo de forma remota mediante un mensaje SMS:
 
 #### FRS xxxxxx
 
-!!! note
+!!! note "Nota"
     Contraseña de administrador de 6 símbolos
-!!! note
+!!! note "Nota"
     La salida OUT a la que están conectados los sensores de incendio debe
     tener configurado el tipo "Sensor de fuego reiniciado". La salida 5
     OUT tiene este tipo de conjunto establecido de forma predeterminada.
@@ -1666,7 +1666,7 @@ Restablezca los detectores de humo de forma remota mediante un mensaje SMS:
 
 ### Control mediante llamada telefónica
 
-!!! note
+!!! note "Nota"
     Si no se han agregado usuarios al sistema, el primero en llamar al
     CG17 se convertirá en el administrador del sistema y será el único
     que pueda controlar el CG17 mediante llamadas telefónicas y
@@ -1692,7 +1692,7 @@ Control de salidas OUT utilizando llamadas telefónicas:
 
 ### Establecer parámetros de forma remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota solo funcionará cuando:
     
     1.  El servicio en la servicio Protegus está habilitado. La
@@ -1773,7 +1773,7 @@ Después de la instalación y configuración, realice una prueba del sistema:
 
 ## Actualización del firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el CG17 esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al

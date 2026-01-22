@@ -154,7 +154,7 @@ Funciona con la aplicación Protegus2:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.923611111111111in" />
 
-!!! note
+!!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
     
     1.  Cable USB (tipo Mini-B) para la configuración.
@@ -199,7 +199,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 3.  Para el control directo de los paneles de Paradox, Texecom, DSC, Caddx ingrese la contraseña de la descarga del panel de su Computadora. Debe ser idéntica a la contraseña que fue ingresada en el panel de control.
 
-!!! note
+!!! note "Nota"
     Para que funcione el control directo del panel, usted necesitará cambiar
     las opciones del panel. El cómo hacer esto está descrito en el capitulo
     4 "Programando el panel de control para leer eventos y tener control
@@ -215,7 +215,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de E16 en
     TrikdisConfig vea el capitulo 6 de "Descripción de la ventana de
     TrikdisConfig".
@@ -245,7 +245,7 @@ En la ventana de opciones de “CRA ajustes” para el “Canal de comunicación
 
 6.  **TCP o UDP** – elija un protocolo de transmisión de evento (TCP o UDP, en donde se transmitirán los eventos.
 
-!!! note
+!!! note "Nota"
     SI usted seleccione el protocolo DC-09, adicionalmente en la pestaña de
     Opciones ingrese los números del objeto, línea y receptor.
 7. (Recomendado) Configure las opciones de respaldo del canal primario.
@@ -254,7 +254,7 @@ En la ventana de opciones de “CRA ajustes” para el “Canal de comunicación
 
 Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de E16 en
     TrikdisConfig, vea el capitulo 6 "Descripción de la ventana de
     TrikdisConfig".
@@ -290,7 +290,7 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
 
 <img alt="" src="./image18.png" style="width:5.232283464566929in;height:2.437007874015748in" />
 
-!!! note
+!!! note "Nota"
     Si más entradas o salidas necesitan ser conectadas al comunicador,
     conecte el expansor alámbrico o inalámbrico serie iO de TRIKDIS.
     El método de conexión está descrito en el manual de iO.
@@ -318,7 +318,7 @@ Prenda la fuente de alimentación del panel de control. El indicador de luz LED 
 
 - El LED de “NETWORK” se iluminará de color verde cuando se registre a una red.
 
-!!! note
+!!! note "Nota"
     Si la indicación de luz es diferente, consulte la sección 1.5 "LED
     indicator de operación" para determinar qué sucede. Si la indicación
     E16 no está encendida, verifique la fuente de alimentación y las
@@ -451,7 +451,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 <img alt="" src="./image29.png" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
-!!! note
+!!! note "Nota"
     Al agregar E16 a Protegus2, revise si:
     
     1.  La servicio Protegus está activada. Podrá encontrar
@@ -465,7 +465,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
         color verde).
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch
 
-!!! note
+!!! note "Nota"
     La zona de panel de control, donde la salida del E16 se encuentra
     conectada, tiene que ser establecida a modo de keyswitch.
 Siga las instrucciones de abajo si el panel de control no será controlado de forma directa, pero con la salida del E16 PGM, prendiendo/apagando el panel de control de la zona de keyswitch.
@@ -548,7 +548,7 @@ Al configurar el comunicador E16 hay dos niveles de acceso para el administrador
 
 - **Permitir que el instalador cambie** – puede especificar que opciones pueden ser cambiadas por el instalador.
 
-!!! note
+!!! note "Nota"
     Los códigos de Administrador y de Instalador deben consistir de 6
     dígitos o caracteres en latín.
 ### Ventana de “CRA informes”
@@ -749,7 +749,7 @@ Esta ventana le permitirá prender, apagar y modificar los mensajes internos env
 
 - **TEST** – mensaje de prueba periódica.
 
-!!! note
+!!! note "Nota"
     Para habilitar los mensajes de PRUEBA periódicos y establecer el
     período, vaya a la ventana "**CRA informes**" **→ Ajustes → Período de
     prueba.**
@@ -765,7 +765,7 @@ Para restablecer el comunicador a la configuración de fábrica, presione el bot
 
 ## Configuración Remota
 
-!!! note
+!!! note "Nota"
     La configuración remota sólo funcionará sí:
     
     1.  La servicio Protegus está activada. Podrá encontrar
@@ -819,7 +819,7 @@ Genere un evento:
 
 ## Actualización del firmware
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al

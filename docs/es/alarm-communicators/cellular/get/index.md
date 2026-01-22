@@ -172,7 +172,7 @@ Este manual es para comunicadores LTE.
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
 
-!!! note
+!!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
     
     1.  Cable USB-C para la configuración.
@@ -226,7 +226,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 3.  Para controlar directamente los paneles de control de Paradox y Texecom, ingrese la “**Contraseña de descarga de PC**”. El código debe coincidir con el código ingresado en el panel de control.
 
-!!! note
+!!! note "Nota"
     Para que funcione el control directo del panel, usted necesitará cambiar
     las opciones del panel. El cómo hacer esto está descrito en el capítulo
     4 "Programación del panel de control". En esta sección usted encontrará
@@ -267,7 +267,7 @@ Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe 
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de comunicador GET en
     TrikdisConfig vea el capítulo 6 de "Configuración con el programa
     TrikdisConfig".
@@ -333,7 +333,7 @@ Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe 
 
 Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de comunicador GET en
     TrikdisConfig vea el capítulo 6 de "Configuración con el programa
     TrikdisConfig".
@@ -361,7 +361,7 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 <img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
-!!! note
+!!! note "Nota"
     Puede instalar una o dos tarjetas SIM en el comunicador. / Asegúrese de
     que la tarjeta SIM esté activada. / Asegúrese de que el servicio de
     Internet móvil esté habilitado si se utilizará la aplicación
@@ -409,7 +409,7 @@ El panel de control Paradox debe programarse para transmitir eventos al CMS y pa
 
 Siga este esquema si el panel de control será controlado, pero no de forma directa, pero con una salida PGM GET para prender/apagar la zona de keyswitch del sistema.
 
-!!! note
+!!! note "Nota"
     El comunicador GET tiene 2 terminales de entrada/salida
     universales que se pueden configurar para que funcionen como SALIDA. Las
     salidas PGM (OUT) pueden controlar dos áreas (secciones) de la alarma de
@@ -451,7 +451,7 @@ Prenda la fuente de alimentación del panel de control. El indicador de luz LED 
 
 - El LED de “NETWORK LTE” se iluminará de color verde y parpadeará de color amarilla cuando se registre a una red.
 
-!!! note
+!!! note "Nota"
     Nivel de señal 4G suficiente - 3 (3 destellos amarillos del indicador
     "NETWORK LTE"). / Si cuenta menos destellos amarillos del indicador
     "NETWORK LTE", entonces la intensidad de la señal de la red móvil es
@@ -574,7 +574,7 @@ Para que el panel de control envíe eventos a través del comunicador telefónic
 
 Establezca la zona de panel de control, al que está conectada la salida OUT GET, para utilizarse con el interruptor de llave de zona para activar/ desactivar el panel de control de forma remota.
 
-!!! note
+!!! note "Nota"
     La llave de zona puede ser momentánea (pulso) o nivel. Por defecto, la
     salida controlable del GET se establece en modo de pulso por 3
     segundos. Se puede cambiar la duración del impulso o cambiar al modo de
@@ -663,7 +663,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
-!!! note
+!!! note "Nota"
     Al agregar GET a Protegus2, revise si:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -688,7 +688,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
-!!! note
+!!! note "Nota"
     La zona de panel de control, donde la salida del comunicador GET
     se encuentra conectada, tiene que ser establecida a modo de keyswitch.
 Siga las instrucciones de abajo si el panel de control no será controlado de forma directa, pero con la salida del GET PGM, prendiendo/apagando el panel de control de la zona de keyswitch.
@@ -769,7 +769,7 @@ Nota: Si el campo " **Sólo un administrador puede restaurar** " está marcado y
 
 - **Permitir que el instalador cambie** – el administrador establece qué parámetros podrá cambiar el instalador.
 
-!!! note
+!!! note "Nota"
     Los códigos de Administrador y de Instalador deben consistir de 6
     dígitos o caracteres en latín.
 ### Ventana de “Configuración del panel” 
@@ -907,7 +907,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar remotamente e
 
 **Pestaña de la “SIM1”**
 
-!!! note
+!!! note "Nota"
     1.  Asegúrese de que la tarjeta SIM ha sido activada y funciona, antes
         de usarla.
     
@@ -993,7 +993,7 @@ Esta ventana le permitirá prender, apagar y modificar los mensajes internos env
 
 - **TEST** – mensaje de prueba periódica.
 
-!!! note
+!!! note "Nota"
     Los mensajes de prueba periódicos se configuran en la ventana del
     programa "**CRA informes**" **→ Ajustes → Período de prueba.**
 - **Activar** – marque la casilla para habilitar el envío de mensajes.
@@ -1012,7 +1012,7 @@ La fuente de alimentación está conectada al comunicador. Mantenga presionado e
 
 ## Configuración Remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota sólo funcionará sí:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -1065,7 +1065,7 @@ Genere un evento:
 
 ## Actualización del firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al

@@ -128,7 +128,7 @@ Funciona con la aplicación Protegus:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.6942683727034122in" />
 
-!!! note
+!!! note "Nota"
     Antes de comenzar, asegúrese de tener lo necesario:
     
     1.  Cable USB (tipo Mini-B, no incluido) para la configuración del
@@ -217,7 +217,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 14. **Núm. de línea DC-09** — introduzca el número de línea del receptor.
 
-!!! note
+!!! note "Nota"
     Si ha seleccionado la codificación de transmisión de mensajes DC-09,
     además de la ventana "Informes", en la pestaña "Configuración", ingrese
     los números de objeto, línea y receptor.
@@ -231,7 +231,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de E16T en TrikdisConfig
     vea el capitulo 7 de "Descripción de la ventana TrikdisConfig".
 ## Proceso de Instalación 
@@ -332,7 +332,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
 
 2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una cuenta nueva.
 
-!!! note
+!!! note "Nota"
     Al agregar E16T al Protegus, compruebe si:
     
     1.  La Nube Protegus está habilitada. Véase el capítulo **7.3 en
@@ -348,7 +348,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
 
 ### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
 
-!!! note
+!!! note "Nota"
     La zona del panel de control, a la que está conectada la salida
     E16T OUT, debe configurarse en el modo de interruptor de llave.
 Siga las instrucciones a continuación si el panel de control se controlará con la salida E16T, activación/desactivación de la zona de interruptor de llave de panel de control.
@@ -381,7 +381,7 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 ## Configuración remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota funcionará sólo si:
     
     1.  La nube Protegus está habilitada. La forma de habilitar la
@@ -592,7 +592,7 @@ Cuando la configuración y la instalación está completa, realice una comprobac
 
 ## Actualización manual del Firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador está conectado a TrikdisConfig, el programa
     ofrecerá automáticamente actualizar el firmware del dispositivo si están
     disponibles. Las actualizaciones requieren una conexión a Internet. El

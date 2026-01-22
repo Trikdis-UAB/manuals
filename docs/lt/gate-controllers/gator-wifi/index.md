@@ -122,7 +122,7 @@ Pranešimai saugos tarnybai
 
 Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir sujungimus.
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami įrengimą patikrinkite, ar turite visus reikiamus
     komponentus:
     
@@ -236,7 +236,7 @@ Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pa
 
 2.  Prisijunkite savo vartotojo vardu ir slaptažodžiu arba registruokitės ir susikurkite naują paskyrą.
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie programėlės metu valdiklis turi būti:
     
     1.  Įjungtas maitinimas („**STATUS**" LED mirksi žaliai);
@@ -353,7 +353,7 @@ Su TrikdisConfig galite pakeisti valdiklio GATOR WiFi nustatymus (jei gamyklini�
 
 3.  Spustelkite programos mygtuką **Skaityti [F4]**, kad ji pateiktų esamas GATOR WiFi veikimo parametrų reikšmes. Jei reikalaujama, įveskite administratoriaus arba instaliuotojo kodą iššokančiame lange.
 
-!!! note
+!!! note "Pastaba"
     Nuspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys
     nustatymus, kurie yra įrašyti įrenginyje. / Nuspaudus mygtuką **Įrašyti
     [F5]**, įrenginį bus įrašyti programoje padaryti
@@ -671,7 +671,7 @@ Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį. Valdiklio 
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai valdiklyje:
     
     1.  Įjungta Protegus2 servisas paslauga. Paslaugos įjungimas
@@ -707,7 +707,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 ## Programinės aparatinės įrangos atnaujinimas 
 
-!!! note
+!!! note "Pastaba"
     Prijungus GATOR WiFi prie TrikdisConfig, programa pasiūlys
     atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų. Šiam
     veikimui reikalingas interneto ryšys. / Jei jūsų kompiuteryje yra

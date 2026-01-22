@@ -187,7 +187,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:3.022222222222222in" />
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami, įsitikinkite, kad turite:
     
     1.  USB Mini-B tipo kabelį, reikalingas konfigūravimui.
@@ -242,10 +242,10 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus G16T nustatymus TrikdisConfig žr. skyrių
     **6 „TrikdisConfig langų aprašymas"**.
-!!! note
+!!! note "Pastaba"
     Nepamirškite įjungti centralės telefoninio komunikatoriaus ir jį
     tinkamai nustatyti, kad centralė siųstų įvykius. Apsaugos centralės
     konfigūravimas aprašytas skyriuje **4 „Apsaugos centralės
@@ -274,7 +274,7 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 6.  **TCP arba UDP** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai.
 
-!!! note
+!!! note "Pastaba"
     Jei norite nustatyti ryšį su pultu **SMS** žinutėmis, reikės nustatyti
     tik **šifravimo raktą** ir **telefono numerį**. SMS pranešimus gali
     priimti tik TRIKDIS stebėjimo pulto IP/SMS imtuvas RL14, daugiakanalis
@@ -295,10 +295,10 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus G16T nustatymus TrikdisConfig žr. skyrių
     6 „TrikdisConfig langų aprašymas".
-!!! note
+!!! note "Pastaba"
     Nepamirškite įjungti centralės telefoninio komunikatoriaus ir jį
     tinkamai nustatyti, kad centralė siųstų įvykius. Kaip tai atlikti
     aprašyta skyriuje **4 „Apsaugos centralės programavimas"**.
@@ -324,7 +324,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 <img alt="" src="./image13.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
-!!! note
+!!! note "Pastaba"
     Įsitikinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
     mobilaus interneto paslauga, jei bus naudojama Protegus programėlė
     arba ryšys su pultu IP kanalu. / Jei norite išvengti PIN kodo įvedimo
@@ -342,7 +342,7 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 Vadovaukitės šiomis schemomis, jei apsaugos centralė bus valdoma su G16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-!!! note
+!!! note "Pastaba"
     G16T komunikatorius turi vieną programuojamą išėjimą OUT (PGM),
     kuris gali valdyti viena apsaugos sistemos sritį. TrikdisConfig
     lange "**Sistemos parinktys**" **Išėjimo OUT1 valdymas** turi būti
@@ -357,7 +357,7 @@ NO, NC, NO/EOL, C/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sch
 
 <img alt="" src="./image17.png" style="width:4.921259842519685in;height:1.9291338582677164in" />
 
-!!! note
+!!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
     OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį
     arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
@@ -393,7 +393,7 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
 
 - Diodas „NETWORK“ turi šviesti žaliai ir mirksėti geltonai, kai prisiregistravęs prie tinklo.
 
-!!! note
+!!! note "Pastaba"
     Pakankamas GSM signalo lygis -- 5 (5 „NETWORK" diodo geltoni mirksniai).
     Pakankamas 3G/4G signalo lygis - 3 (3 „NETWORK" diodo geltoni
     mirksniai). / Jeigu suskaičiuojate mažiau geltonų „NETWORK" diodo
@@ -419,7 +419,7 @@ Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis tur
 
 Nustatykite centralės zonos, prie kurios prijungtas G16T išėjimas OUT, tipą į jungiklio (angl. keyswitch) zoną apsaugos centralei įjungti/išjungti nuotoliniu būdu.
 
-!!! note
+!!! note "Pastaba"
     Jungiklio zonos tipas gali būti impulsas arba lygis. G16T valdomas
     išėjimas OUT numatytai veiks 3 sekundžių impulsiniu režimu. Galite
     pakeisti impulso trukmę arba pakeisti išėjimo režimą į lygis
@@ -485,7 +485,7 @@ Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. J
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie Protegus metu G16T turi būti:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas;
@@ -503,7 +503,7 @@ Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. J
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
 
-!!! note
+!!! note "Pastaba"
     Centralės zonai, prie kurios prijungtas G16T išėjimas OUT, turi
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną:
@@ -745,14 +745,14 @@ Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba p
 
 - **Telefonų numeriai nuotoliniam valdymui** – galite įrašyti telefono numerius, iš kurių siunčiamas komandas įrenginys priims ir vykdys.
 
-!!! note
+!!! note "Pastaba"
     Jeigu nebus įrašytas nei vienas telefono numeris, įrenginys priims
     komandas iš bet kurio telefono numerio. Bet kuriuo atveju, saugumą
     užtikrina reikalavimas į SMS komandą įvesti administratoriaus arba
     instaliuotojo slaptažodį.
 ### Langas „SIM kortelė“ 
 
-!!! note
+!!! note "Pastaba"
     1\. Prieš naudodami SIM kortelę, įsitikinkite, ar ji aktyvuota. / 2. Jei
     bus naudojamas mobilusis interneto ryšys pranešimams perduoti IP kanalu
     į saugos tarnybos imtuvą arba į Protegus, patikrinkite, ar įjungta
@@ -863,7 +863,7 @@ Lentelėje įvykiams galima priskirti Contact ID įvykių ir atsistatymo kodus. 
 
 Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirti Contact ID įvykio ir atsistatymo kodus. Sutrikus arba atsistačius ryšiui tarp W485 ir G16T, komunikatorius G16T pranešimą su nurodytu CID kodu išsiųs į stebėjimo pulto imtuvą ir Protegus programėlę.
 
-!!! note
+!!! note "Pastaba"
     Kad pranešimai būtu siunčiami į CSP ir į Protegus reikia
     sukonfigūruoti G16T, žr. p. 2.1 „Nustatymai ryšiui su
     Protegus programėle" ir p. 2.2 „Nustatymai ryšiui su stebėjimo
@@ -883,7 +883,7 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
 
 Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirti Contact ID įvykio ir atsistatymo kodus. Sutrikus arba atsistačius ryšiui tarp E485 ir G16T, komunikatorius G16T pranešimą su nurodytu CID kodu išsiųs į stebėjimo pulto imtuvą ir Protegus programėlę.
 
-!!! note
+!!! note "Pastaba"
     Kad pranešimai būtu siunčiami į CSP ir į Protegus reikia sukonfigūruoti
     G16T, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo pultu" ir
     p. 2.1 „Nustatymai ryšiui su Protegus programėle". / **Komunikatoriuje
@@ -912,7 +912,7 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
 
 - **TEST** – periodinis testo pranešimas.
 
-!!! note
+!!! note "Pastaba"
     Norėdami įjungti periodinius TEST pranešimus ir nustatyti laikotarpį,
     eikite į **Langas „Siuntimas į CSP" → Parametrai → Testo periodas**.
 - **Įgalinti** – pažymėjus varnele, įgalinamas pranešimo siuntimas.
@@ -927,7 +927,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai G16T:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas;
@@ -970,7 +970,7 @@ Kai konfigūravimas ir diegimas bus baigti, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas 
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,

@@ -240,7 +240,7 @@ Dirba su „Protegus2“ programėle:
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus CG17 nustatymus TrikdisConfig žr. 4
     „Veikimo parametrų nustatymas su programa TrikdisConfig".
 ### Nustatymai ryšiui su Stebėjimo pultu
@@ -269,7 +269,7 @@ Lange „Pranešimai į ST pultą“, parinkčių grupėje „Pagrindinis kanala
 
 5.  **Šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
 
-!!! note
+!!! note "Pastaba"
     Jei norite nustatyti ryšį su pultu **SMS** žinutėmis, reikės nustatyti
     tik „**Šifravimo raktą"** ir „**Telefono numerį"**. SMS pranešimus gali
     priimti TRIKDIS stebėjimo pulto IP/SMS imtuvas RL14, daugiakanalis
@@ -283,7 +283,7 @@ Lange „Pranešimai į ST pultą“, parinkčių grupėje „Pagrindinis kanala
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus CG17 nustatymus TrikdisConfig žr. skyrių
     4 „Veikimo parametrų nustatymas su programa TrikdisConfig".
 ## Sujungimų schemos ir įrengimas
@@ -308,7 +308,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 <img alt="" src="./image12.png" style="width:2.213337707786527in;height:1.3566699475065618in" />
 
-!!! note
+!!! note "Pastaba"
     \*\*
     
     Įsitinkite, kad SIM kortelė yra aktyvuota.
@@ -393,7 +393,7 @@ Laidų spalvos:
 
 <img alt="" src="./image20.png" style="width:5.030009842519685in;height:2.5975054680664917in" />
 
-!!! note
+!!! note "Pastaba"
     Raktų priregistravimas prie CG17 aprašytas p. 4.4.1 „Kontaktinių
     (iButton) raktų registravimas".
 ### Belaidžių jutiklių imtuvo RF-SH prijungimo schema
@@ -435,7 +435,7 @@ Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Run
 
 <img alt="" src="./image26.png" style="width:7.0875in;height:4.688194444444444in" />
 
-!!! note
+!!! note "Pastaba"
     Jungiant temperatūros daviklį laidu, ilgesniu nei 0,5 m, rekomenduojama
     naudoti **vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5**).
     
@@ -626,7 +626,7 @@ Prijungus CG17 prie programos TrikdisConfig, programa būsenų juostoje pateiks 
 | Būsena | Sujungimo su programa būdas (per USB arba nuotolinis) |
 | Teisės | Prieigos lygis (rodomas po to, kai patvirtintas prieigos kodas) |
 
-!!! note
+!!! note "Pastaba"
     Paspauskite **Skaityti [F4]**, kad programa nuskaitytų ir parodytų
     nustatymus, kurie yra įrašyti įrenginyje. / Paspauskite **Įrašyti
     [F5]**, kad įrašytumėte ekrane rodomus nustatymus į
@@ -711,7 +711,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 - **Instaliuotojo kodas** – (*gamyklinis kodas - 654321*) suteikia prieigą prie sistemos konfigūravimo montuotojui. Saugumui užtikrinti, pakeiskite jį į tik Jums žinomą šešiaženklį kodą.
 
-!!! note
+!!! note "Pastaba"
     Jei nustatytas numatytasis *administratoriaus kodas* (123456), programa
     nereikalaus jo įvesti ir po mygtuko **Skaityti [F4]** paspaudimo
     pateiks esamų nustatytų gaminio veikimo parametrų reikšmes.
@@ -801,7 +801,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 **Parinkčių grupė „*iButton* raktai“**
 
-!!! note
+!!! note "Pastaba"
     Vienam vartotojui galima priskirti daugiau nei vieną raktą! Visi naujai
     priregistruoti raktai bus priskirti „*Vartotojui ID9*" (Be vardo). Tik
     aštuoniems vartotojams galima priskirti vardus. Leidimai „*Vartotojui ID
@@ -839,7 +839,7 @@ Kontaktinių raktų registravimas su skaitytuvu TM17.
 
 5.  Norint ištrinti visus raktus (ir pagrindinį), reikia palaikyti **„Pagrindinį raktą“** priglaudus prie skaitytuvo ne trumpiau 20 s.
 
-!!! note
+!!! note "Pastaba"
     „Pagrindinio rakto" paskirtis -- kitiems kontaktiniams raktams
     registruoti.
 #### RFID kortelių registravimas 
@@ -903,7 +903,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 - **Išjungti SIM kortelės mobiliųjų duomenų naudojimą** – pažymėjus lauką bus išjungtas mobiliųjų duomenų naudojimas iš SIM kortelės. Duomenys bus siunčiami tik per WiFi modulį W485. Jei dings WiFi tinklas CG17 kaups duomenys atmintyje. Kai WiFi tinklas atsistatys CG17 išsius duomenys per WiFi modulį W485.
 
-!!! note
+!!! note "Pastaba"
     Kad pranešimai būtu siunčiami į CSP ir į Protegus2 reikia
     sukonfigūruoti CG17, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo
     pultu" ir p. 2.1 „Nustatymai ryšiui su Protegus2
@@ -932,7 +932,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 - **Išjungti SIM kortelės mobiliųjų duomenų naudojimą** – pažymėjus lauką bus išjungtas mobiliųjų duomenų naudojimas iš SIM kortelės. Duomenys bus siunčiami tik per modulį E485. Jei dings internetas CG17 kaups duomenys atmintyje. Kai internetas atsistatys CG17 išsius duomenys per modulį E485.
 
-!!! note
+!!! note "Pastaba"
     Kad pranešimai būtu siunčiami į CSP ir į Protegus2 reikia
     sukonfigūruoti CG17, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo
     pultu" ir p. 2.1 „Nustatymai ryšiui su Protegus2
@@ -965,7 +965,7 @@ Pranešimas su koordinatėmis siunčiamas į stebėjimo programą Monas MS.
 
 #### Kuro lygio jutiklio STRELA RS485 registravimas 
 
-!!! note
+!!! note "Pastaba"
     Prieš naudojant kuro jutiklį „**Strela RS485**"**,** jis turi būti
     sukalibruotas su gamintojo programa „**DUTconfig**". Kuro jutiklis per
     adapterį prijungiamas prie kompiuterio ir kalibruojamas. Prijungus kuro
@@ -1085,7 +1085,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 13. Belaidis jutiklis pilnai priregistruotas.
 
-!!! note
+!!! note "Pastaba"
     Belaidžių jutiklių ištrynimas iš CG17 atminties:
     
     1.  Prijunkite USB Mini-B kabelį prie CG17.
@@ -1136,7 +1136,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 9.  Belaidis valdymo pultelis pilnai priregistruotas.
 
-!!! note
+!!! note "Pastaba"
     Belaidžio valdymo pultelio gamyklinių nustatymų atstatymas:
     
     1.  Pultelyje vienu metu paspaudžiami 2 ir 3 mygtukai ir laikomi kol
@@ -1182,7 +1182,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 18. Belaidė vidinė sirena pilnai priregistruota.
 
-!!! note
+!!! note "Pastaba"
     Belaidės sirenos gamyklinių nustatymų atstatymas:
     
     1.  Nuimkite sirenos dangtį.
@@ -1230,7 +1230,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 14. Belaidis jutiklis pilnai priregistruotas.
 
-!!! note
+!!! note "Pastaba"
     Belaidžių jutiklių ištrynimas iš CG17 atminties:
     
     1.  Prijunkite USB Mini-B kabelį prie CG17.
@@ -1273,7 +1273,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 14. Belaidė klaviatūra pilnai priregistruota.
 
-!!! note
+!!! note "Pastaba"
     Belaidžių jutiklių ištrynimas iš CG17 atminties:
     
     1.  Prijunkite USB Mini-B kabelį prie CG17.
@@ -1545,7 +1545,7 @@ Su Protegus2 vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie
 
 <img alt="" src="./image80.png" style="width:2.9803149606299213in;height:3.8858267716535435in" />
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie Protegus2 metu CG17 turi būti:
     
     1.  Įjungta „Protegus servisas" paslauga. Paslaugos
@@ -1649,9 +1649,9 @@ Dūmų jutiklių perkrovimas nuotoliniu būdu SMS žinute:
 
 #### FRS xxxxxx
 
-!!! note
+!!! note "Pastaba"
     6-ženklis administratoriaus slaptažodis
-!!! note
+!!! note "Pastaba"
     Išėjimui OUT, prie kurio prijungti dūmu jutikliai, turi būti priskirtas
     tipas „Gaisro daviklių atstatymas", pagal gamyklinius nustatymus tai
     5 OUT išėjimas.
@@ -1699,7 +1699,7 @@ Dūmų jutiklių perkrovimas nuotoliniu būdu SMS žinute:
 
 ### Valdymas skambučiu
 
-!!! note
+!!! note "Pastaba"
     Jei sistemoje nėra pridėtų vartotojų, pirmasis paskambinęs į CG17
     taps sistemos administratoriumi ir vienintelis galės valdyti CG17
     telefono skambučiu ir SMS komandomis. / Jei norite leisti sistemą
@@ -1724,7 +1724,7 @@ Išėjimų OUT ir signalizacijos sričių valdymas skambučiu:
 
 ### Nuotolinis veikimo parametrų nustatymas
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai CG17:
     
     1.  Įjungta Protegus servisas paslauga. Paslaugos įjungimas
@@ -1800,7 +1800,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas
 
-!!! note
+!!! note "Pastaba"
     Prijungus CG17 prie TrikdisConfig, programa pasiūlys
     atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų. Šiam
     veikimui reikalingas interneto ryšys. / Jei jūsų kompiuteryje yra

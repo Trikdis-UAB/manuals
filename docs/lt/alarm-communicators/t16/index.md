@@ -217,7 +217,7 @@ Siųstuvų ***T16V**, **T16U**, **T16U5*** zonas (įėjimus IN) galima tiesiogia
 
 <img alt="" src="./image14.png" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
-!!! note
+!!! note "Pastaba"
     T16 negalima jungti prie veikiančios telefoninės linijos.
 Vadovaudamiesi centralės programavimo instrukcija, nustatykite centralės telefoninio komunikatoriaus veikimo parametrus:
 
@@ -297,7 +297,7 @@ Prijungus T16 prie programos TrikdisConfig ir nuspaudus mygtuką **Skaityti [F4
 | Būsena | Sujungimo su programa būdas (per USB arba nuotolinis) |
 | Role | Prieigos lygis (rodomas po to, kai patvirtintas prieigos kodas) |
 
-!!! note
+!!! note "Pastaba"
     Mygtukas **Skaityti [F4]**, kuri nuspaudus programa nuskaitytų ir
     parodytų nustatymus, kurie yra įrašyti įrenginyje. / Mygtukas **Įrašyti
     [F5]**, kuri nuspaudus bus įrašyti į įrenginį programoje padaryti
@@ -441,7 +441,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 - **Siųsti patvirtinimą į centralę** – jei IP siųstuvas (WiFi, LAN) yra prijungtas prie T16 RS485 magistralės kaip pagrindinis kanalas. Pažymėjus langelį varnele centralė gauna patvirtinimą apie išsiusto pranešimo gavimą pultu. Taip užtikrinamas didesnis pranešimų perdavimo patikimumas. Ne visos centralės turi tokia galimybę. Išrinkus centralė, kurį šios galimybės neturi langelis bus neaktyvus.
 
-!!! note
+!!! note "Pastaba"
     Prie siųstuvo T16 galima prijungti tik po vieną TM17,
     W485(arba E485) modulius.
 **Skirtukas „ТМ17“**
@@ -582,7 +582,7 @@ Galima Pridėti/Pašalinti radijo dažnius prie sąrašo, kuriuose gali dirbti s
 
 Contact ID kodai, gauti iš signalizacijos centralės, konvertuojami į radijo sistemos (RAS2M, LARS) kodus. Tik Contact ID pranešimai, aprašyti lentelėje (CID stulpelis), yra konvertuojami į radijo sistemos kodus ir perduodami CSP. Simbolis "?" reiškia bet kurį skaičių pozicijoje. Simbolis "z" reiškia, kad numeris pozicijoje pridedamas prie pagrindinio radijo sistemos kodo. <u>Lentelė redaguojama, tačiau prašome padaryti tai atsakingai ir tik tuo atveju, jei tai tikrai būtina, nes jei lentelėje atsiras klaidų, sistema gali netinkamai veikti.</u>
 
-!!! note
+!!! note "Pastaba"
     Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]**, sulaukite
     kol duomenys bus įrašyti ir atjunkite USB kabelį.
 ### Gamyklinių nustatymų atstatymas 
@@ -603,7 +603,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 ## Programinės aparatinės įrangos atnaujinimas 
 
-!!! note
+!!! note "Pastaba"
     Prijungus T16 prie TrikdisConfig, programa pasiūlys
     atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų. Šiam
     veikimui reikalingas interneto ryšys. / Jei jūsų kompiuteryje yra

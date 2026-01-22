@@ -178,7 +178,7 @@ Este manual se aplica a estos modelos G16T:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.995138888888889in" />
 
-!!! note
+!!! note "Nota"
     Antes de empezar, asegúrese de que usted tiene lo necesario:
     
     1.  Cable USB (tipo mini-B) para la configuración.
@@ -233,11 +233,11 @@ A continuación, se describe qué ajustes deben establecerse para que el comunic
 
 Después de terminar la configuración, haga clic en el botón **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información acerca de otros ajustes en G16T
     TrikdisConfig véase el capítulo **6 Descripción de la ventana
     TrikdisConfig.**
-!!! note
+!!! note "Nota"
     No se olvide de activar comunicador telefónico del panel de control y
     configurarlo correctamente, por lo que el panel enviaría a los eventos.
     Configuración del panel de control se describe en el capítulo **4
@@ -266,7 +266,7 @@ En “Ajustes CRA” configure la ventana para “Canal de comunicación princip
 
 6.  **TCP o UDP**- elija el protocolo de transmisión (TCP o UDP), en la que se deben enviar los eventos.
 
-!!! note
+!!! note "Nota"
     Si desea establecer comunicación con CRA a través de mensajes SMS, sólo
     es necesario para establecer la clave de cifrado y número de teléfono.
     Los mensajes SMS pueden ser recibidas únicamente por receptores TRIKDIS:
@@ -288,11 +288,11 @@ En “Ajustes CRA” configure la ventana para “Canal de comunicación princip
 
 Después de terminar la configuración, haga clic en **Escribir [F5**] y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información acerca de otros ajustes en ***G16T
     TrikdisConfig*** véase el capítulo **6 Descripción de la ventana
     TrikdisConfig.**
-!!! note
+!!! note "Nota"
     No se olvide de activar comunicador telefónico del panel de control y
     configurarlo correctamente, por lo que el panel enviaría a los eventos.
     Configuración del panel de control se describe en el capítulo **4
@@ -317,7 +317,7 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 <img alt="" src="./image13.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
-!!! note
+!!! note "Nota"
     Asegúrese de que la tarjeta SIM esté activada. / Asegúrese de que el
     servicio de Internet móvil (datos móviles) esté habilitado si se
     utilizará la aplicación Protegus o la conexión IP con CRA. / Para
@@ -336,7 +336,7 @@ Siguiendo uno de los esquemas proporcionados a continuación, conecte el comunic
 
 Siga estos esquemas si el panel de control se armará/desarmará con la salida PGM del G16T activando/desactivando la zona de interruptor de llave del panel.
 
-!!! note
+!!! note "Nota"
     El comunicador G16T tiene una salida programable OUT, que puede
     controlar una partición del sistema de alarma. En la ventana
     TrikdisConfig "**Ajustes del sistema**" modo de salida OUT1 debe
@@ -351,7 +351,7 @@ Conecte la entrada de acuerdo con el tipo de entrada seleccionada (NO, NC, NO / 
 
 <img alt="" src="./image17.png" style="width:5.232283464566929in;height:2.4291338582677167in" />
 
-!!! note
+!!! note "Nota"
     Si es necesario conectar más entradas o salidas al comunicador, o si
     desea conectar un sensor de temperatura, conecte el expansor de salida
     inalámbrico o por cable de la serie TRIKDIS iO.
@@ -389,7 +389,7 @@ Para iniciar el comunicador, encienda la fuente de alimentación del panel de co
 
 - “NETWORK” este LED se ilumina en verde y amarillo parpadeante cuando el comunicador está registrado en la red.
 
-!!! note
+!!! note "Nota"
     Fuerza suficiente de señal celular es nivel cinco (cinco indicadores de
     "NETWORK" parpadean en color amarillo). Resistencia suficiente de la
     señal 3G/ 4G es nivel tres (tres indicadores de "NETWORK" parpadean en
@@ -417,7 +417,7 @@ Para que el panel de control envíe eventos a través del comunicador telefónic
 
 Establezca la zona de panel de control, al que está conectada la salida OUT G16T, para utilizarse con el interruptor de llave de zona para activar/ desactivar el panel de control de forma remota.
 
-!!! note
+!!! note "Nota"
     La llave de zona puede ser momentánea (pulso) o nivel. Por defecto, la
     salida controlable del G16T se establece en modo de pulso por 3
     segundos. Se puede cambiar la duración del impulso o cambiar al modo de
@@ -480,7 +480,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
 
 2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una cuenta nueva.
 
-!!! note
+!!! note "Nota"
     Al agregar G16T al Protegus, compruebe si:
     
     1.  La tarjeta SIM insertada está activada y el código PIN se introduce
@@ -508,7 +508,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
 
 ### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
 
-!!! note
+!!! note "Nota"
     La zona del panel de control, a la que está conectada la salida
     G16T OUT, debe configurarse en el modo de interruptor de llave.
 Siga las instrucciones a continuación si el panel de control se controlará con la salida G16T, activación/desactivación de la zona de interruptor de llave de panel de control.
@@ -737,14 +737,14 @@ Puede enviar un comando SMS al comunicador que controlará la salida o cambiará
 
 - **Números de teléfono para el control remoto -**puede introducir números de teléfono, de la cual el comunicador aceptará los comandos.
 
-!!! note
+!!! note "Nota"
     Si no se introduce ningún número de teléfono, el dispositivo aceptará
     comandos desde cualquier número de teléfono. En cualquier caso, la
     seguridad está garantizada por el requisito de ingresar la contraseña
     del administrador o instalador en el comando SMS.
 ### Ventana “Tarjeta SIM” 
 
-!!! note
+!!! note "Nota"
     1\. Asegúrese de que la tarjeta SIM esté activada y funcionando, antes
     de usarla. / 2. Si va a utilizar la conexión a Internet móvil para
     enviar eventos a través del canal IP al receptor de la CRA o para
@@ -858,7 +858,7 @@ En la tabla de entradas se pueden asignar eventos Contacto ID y recuperar los c�
 
 En la tabla, puede asignar el evento de Contacto ID y códigos de restauración al evento de error del bus de datos RS485. Cuando se interrumpe o restablezca la conexión entre el W485 y el G16T, el G16T enviará un mensaje con el código CID asignado al CRA y a la aplicación Protegus.
 
-!!! note
+!!! note "Nota"
     Debe configurar el G16T para enviar mensajes a CRA y Protegus,
     consulte los capítulos 2.2 "Adjustes para la conexión con la Central
     Receptora de Alarmas" y. 2.1 "Adjustes para la conexión com la app
@@ -878,7 +878,7 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
 
 En la tabla, puede asignar el evento de Contacto ID y códigos de restauración al evento de error del bus de datos RS485. Cuando se interrumpe o restablezca la conexión entre el E485 y el G16T, el G16T enviará un mensaje con el código CID asignado al CRA y a la aplicación Protegus.
 
-!!! note
+!!! note "Nota"
     Debe configurar el G16T para enviar mensajes a CRA y Protegus,
     consulte los capítulos 2.2 "Adjustes para la conexión con la Central
     Receptora de Alarmas" y. 2.1 "Adjustes para la conexión com la app
@@ -908,7 +908,7 @@ En esta ventana, puede activar, desactivar o cambiar los mensajes de eventos int
 
 - **TEST** - mensaje de prueba periódica.
 
-!!! note
+!!! note "Nota"
     Para activar los mensajes de pruebas periódicas y establecer su período,
     ir a **Informes CRA -> Ajustes -> Periodo de prueba.**
 - **Activar** - cuando se selecciona, el envío de mensajes está habilitado.
@@ -925,7 +925,7 @@ Para **Restaurar** la configuración de fábrica del comunicador, es necesario h
 
 1.  Iniciar el programa de configuración TrikdisConfig.
 
-!!! note
+!!! note "Nota"
     La configuración remota funcionará sólo si:
     
     1.  La tarjeta SIM insertada está activada y el código PIN está
@@ -972,7 +972,7 @@ Cuando la configuración y la instalación está completa, realice una comprobac
 
 ## Actualización manual del Firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador está conectado a TrikdisConfig, el programa
     ofrecerá automáticamente actualizar el firmware del dispositivo si están
     disponibles. Las actualizaciones requieren una conexión a Internet. El

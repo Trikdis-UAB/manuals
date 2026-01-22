@@ -127,7 +127,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 <img alt="" src="./image4.png" style="width:7.086805555555555in;height:2.95in" />
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami, įsitikinkite, kad turite:
     
     1.  USB Mini-B tipo kabelį, reikalingas konfigūravimui.
@@ -177,7 +177,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 3.  Baigę konfigūravimą paspauskite mygtuką Įrašytu [F5] ir atjunkite kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus E16T nustatymus TrikdisConfig žr.
     7 "TrikdisConfig langų aprašymas".
 ### Nustatymai ryšiui su Stebėjimo pultu
@@ -218,7 +218,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 14. **DC-09 linijos Nr**. – įrašykite imtuvo linijos numerį.
 
-!!! note
+!!! note "Pastaba"
     Jei pasirinkote **DC-09** pranešimų perdavimo koduotę, papildomai
     **Siuntimas į CSP** lange, skirtuke **Parametrai**, įveskite objekto,
     linijos ir imtuvo numerius.
@@ -234,7 +234,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus E16T nustatymus TrikdisConfig žr.
     7 "TrikdisConfig langų aprašymas".
 ## Sujungimų schemos ir įrengimas
@@ -337,7 +337,7 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie Protegus metu E16T turi būti:
     
     1.  Įjungta Protegus servisas paslauga. Paslaugos įjungimas
@@ -353,7 +353,7 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
-!!! note
+!!! note "Pastaba"
     Centralės zonai, prie kurios prijungtas E16T išėjimas OUT, turi
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
@@ -386,7 +386,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 ## Nuotolinis veikimo parametrų nustatymas
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai E16T:
     
     1.  įjungta Protegus servisas paslauga. Paslaugos įjungimas
@@ -470,7 +470,7 @@ Konfigūruojant komunikatorių E16T yra du prieigos lygiai (administratoriaus ir
 
 - **Leisti instaliuotojui keisti** – administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.
 
-!!! note
+!!! note "Pastaba"
     Administratoriaus ir instaliuotojo kodai turi būti iš šešių skaitmenų
     arba lotyniškų raidžių.
 **Parinkčių grupė „Išėjimas“**
@@ -612,7 +612,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 ## Programinės aparatinės įrangos atnaujinimas
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių E16T prie TrikdisConfig, programa
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,

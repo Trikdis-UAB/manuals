@@ -222,7 +222,7 @@ Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
 Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus G17F nustatymus TrikdisConfig žr. skyrių
     5 „TrikdisConfig langų aprašymas".
 ### Nustatymai ryšiui su Stebėjimo pultu
@@ -251,7 +251,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 5.  **Šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
 
-!!! note
+!!! note "Pastaba"
     Jei norite nustatyti ryšį su pultu **SMS** žinutėmis, reikės nustatyti
     tik **šifravimo raktą** ir **telefono numerį**. SMS pranešimus gali
     priimti TRIKDIS stebėjimo pulto IP/SMS imtuvas RL14, daugiakanalis
@@ -265,7 +265,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus G17F nustatymus TrikdisConfig žr. skyrių
     5 „TrikdisConfig langų aprašymas".
 ## Sistemos sujungimų schemos, įrengimas ir paleidimas
@@ -290,7 +290,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 <img alt="" src="./image14.png" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
-!!! note
+!!! note "Pastaba"
     Įsitinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
     mobiliojo interneto paslauga, jei bus naudojamas ryšys IP kanalu arba
     bus naudojama programėlė Protegus2. / Jei norite išvengti PIN kodo
@@ -372,7 +372,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17
 
 <img alt="" src="./image27.png" style="width:7.082677165354331in;height:3.031496062992126in" />
 
-!!! note
+!!! note "Pastaba"
     Jei prie **INIM Smartline** centralės prijungti kartotuvai, tai
     G17F negalite prijungti per RS485 sąsają. / Kai G17F
     prijungtas prie **INIM Smartline** centralės per RS485 sąsają, iO
@@ -519,7 +519,7 @@ Norint įjungti komunikatorių, pirma reikia užtikrinti maitinimo šaltinį pri
 
 - Diodas „NETWORK“ turi šviesti žaliai ir mirksėti geltonai, kai komunikatorius prisiregistravęs prie mobilaus ryšio tinklo.
 
-!!! note
+!!! note "Pastaba"
     Pakankamas GSM signalo lygis - 5 (penki „NETWORK" indikatoriaus geltoni
     mirksniai). Pakankamas 4G signalo lygis - 3 (trys „NETWORK"
     indikatoriaus geltoni mirksniai). / Jeigu suskaičiuojate mažiau nei 3
@@ -551,7 +551,7 @@ Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti 
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note
+!!! note "Pastaba"
     Sistemos registravimo prie Protegus2 metu G17F
     komunikatorius turi būti:
     
@@ -627,7 +627,7 @@ Sistemą galima valdyti su SMS arba skambučiu tik tais telefono numeriais, kuri
 
 ### PGM išėjimų valdymas skambučiu
 
-!!! note
+!!! note "Pastaba"
     Jei sistemoje nėra pridėtų naudotojų, pirmasis paskambinęs į G17F
     taps sistemos administratoriumi ir bus vienintelis naudotojas, kuris
     galės valdyti G17F telefono skambučiu ir SMS komandomis. / Jei
@@ -1035,7 +1035,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 ## Nuotolinis veikimo parametrų nustatymas
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai G17F:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
@@ -1076,7 +1076,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,

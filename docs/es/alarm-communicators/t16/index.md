@@ -216,7 +216,7 @@ Las zonas (entradas IN) de los tranmisores T16V, T16U, T16U5 se pueden conectar 
 
 <img alt="" src="./image14.png" style="width:7.0875in;height:2.5708333333333333in" />
 
-!!! note
+!!! note "Nota"
     El *T16* no puede ser conectado a una línea telefónica fija. Refiriéndose a las instrucciones de programación del panel de control, configure los siguientes parámetros para el marcador de línea fija del panel de control:
 
 - Introducir el número de identificación de 4 símbolos del panel de control (Número de cuenta, 0-9, A-F);
@@ -295,7 +295,7 @@ Una vez el T16 esté conectado al software TrikdisConfig, el programa mostrará 
 | Estado | Tipo de conexión con el programa (vía USB o remoto) |
 | Propósito | Nivel de acceso (se muestra después de que se aprueba el código de acceso) |
 
-!!! note
+!!! note "Nota"
     Haga clic en **Leer \[F4\]** para hacer que el programa lea y muestre las configuraciones que actualmente están guardadas en el dispositivo. / Haga clic en **Escribir \[F5\]** para guardar las configuraciones realizadas en el programa en el dispositivo. / Haga clic en **Guardar \[F9\]** para guardar la configuración en un archivo de configuración. Puede cargar la configuración guardada en otros dispositivos más tarde. Esto permite configurar rápidamente múltiples dispositivos con la misma configuración. / Haga clic en **Abrir \[F8\]** y elija un archivo de configuración para ver las configuraciones previamente guardadas. / Si desea volver a la configuración predeterminada, haga clic en el botón **Restaurar** en la parte inferior izquierda de la pantalla. Después de hacer clic en el botón Leer \[F4\], el programa leerá la configuración de la configuración actualmente guardado en el T16. Con TrikdisConfig, configure los parámetros requeridos usando las siguientes descripciones de la ventana del programa.
 
 ### Ventana „Principal“
@@ -432,7 +432,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 - **Serial Núm. -** especifique el número de serie del módulo conectado. Puede encontrar el número en una etiqueta en el módulo conectado o en su embalaje.
 
-!!! note
+!!! note "Nota"
     Solo puedes conectar uno de cada uno TM17 y Módulos W485(o E485) al transmisor T16. **Pestaña “Módulo 1”**
 
 <img alt="" src="./image28.png" style="width:7.086614173228346in;height:2.7283464566929134in" />
@@ -570,7 +570,7 @@ Puede Añadir/Eliminar frecuencias de radio que el transmisor T16 puede usar par
 
 Los códigos de Contact ID recibidos desde el panel de control se convierten en códigos del sistema de radio (RAS2M, LARS). Solamente los mensajes de Contact ID descritos en la tabla (columna CID) se convierten a los códigos del sistema de radio y enviado al CRA. El símbolo “?” indica cualquier número en esta posición. El símbolo “z” significa que el número en la posición se agrega al código del sistema de radio principal. La tabla es editable, pero cámbiela de forma responsable y solo si es obligatorio hacerlo, porque si hay errores en la tabla, es posible que el sistema no funcione correctamente.
 
-!!! note
+!!! note "Nota"
     Después de terminar la configuración, haga clic en **Escribir** **\[F5\]**, espere a que se guarden los datos y desconecte el cable USB.
 
 ### Restauracion de la configuración de fabrica
@@ -591,7 +591,7 @@ Cuando la configuración y la instalación hayan finalizado, realice una comprob
 
 ### Actualización de firmware
 
-!!! note
+!!! note "Nota"
     Después de conectar el T16 a TrikdisConfig, el programa ofrecerá automáticamente actualizar el firmware del dispositivo si hay actualizaciones disponibles. Esta función requiere una conexión a internet. / Si el software antivirus está instalado en su computadora, puede bloquear la función de actualización automática del firmware. En este caso, tendrá que reconfigurar su software antivirus. El firmware del T16 se puede actualizar o cambiar manualmente. Todos los ajustes anteriores del T16 permanecerán después de la actualización si la casilla **“Guardar configuraciones”** está marcada. Si el firmware se instala manualmente, se puede cambiar a una versión más nueva o más antigua. Realice estos pasos:
 
 1.  Lanzamiento TrikdisConfig.

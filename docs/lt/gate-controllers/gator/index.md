@@ -131,7 +131,7 @@ Pranešimai saugos tarnybai
 
 Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir sujungimus.
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami įrengimą patikrinkite, ar turite visus reikiamus
     komponentus:
     
@@ -274,7 +274,7 @@ iO8-LORA plėtiklio prijungimo schema.
 
 ## Greitas valdiklio paleidimas veikti 
 
-!!! note
+!!! note "Pastaba"
     Valdiklis yra gamykliškai sukonfigūruotas veikti. Paskambinus į
     valdiklio SIM kortelės numerį iš bet kurio telefono, 3 (trims) sekundėms
     įjungiamas 5 OUT relinis išėjimas. Jei toks valdiklio veikimas tinka, jį
@@ -293,7 +293,7 @@ Gamykliniai nustatymai leidžia valdyti visiems, kurie paskambina į valdiklį �
 
 Nusiuntus SMS komandą su pirmojo naudotojo numeriu į valdiklį vartotojų telefonų sąrašą (SMS komandos pvz.: ***SETU 123456 +370xxxxxxxx#Petras**)* valdiklis reaguos tik sąraše esančių numerių skambučius. Valdiklis ignoruos skambučius iš kitų numerių.
 
-!!! note
+!!! note "Pastaba"
     Jei norite pakeisti gamyklinius nustatymus arba įjungti kitas valdiklio
     funkcijas, skaitykite skyrių 5 „Veikimo parametrų nustatymas programa
     TrikdisConfig".
@@ -301,7 +301,7 @@ Nusiuntus SMS komandą su pirmojo naudotojo numeriu į valdiklį vartotojų tele
 
 ### Valdymas skambučiu 
 
-!!! note
+!!! note "Pastaba"
     Pirmasis paskambinęs į valdiklį (arba nusiuntęs SMS) taps sistemos
     administratoriumi ir vienintelis galės administruoti ir valdyti valdiklį
     su SMS komandomis.
@@ -342,7 +342,7 @@ Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pa
 
 2.  Prisijunkite savo vartotojo vardu ir slaptažodžiu arba registruokitės ir susikurkite naują paskyrą.
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie programėlės metu valdiklis turi būti:
     
     1.  Įjungta „Protegus servisas" paslauga. Paslaugos
@@ -572,7 +572,7 @@ Su TrikdisConfig galite pakeisti valdiklio nustatymus (jei gamyklinių nustatym�
 
 3.  Spustelkite programos mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei reikalaujama, įveskite administratoriaus arba instaliuotojo kodą iššokančiame lange.
 
-!!! note
+!!! note "Pastaba"
     Nuspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys
     nustatymus, kurie yra įrašyti įrenginyje. / Nuspaudus mygtuką **Įrašyti
     [F5]**, į valdiklį bus įrašyti programoje padaryti
@@ -903,7 +903,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 - **Daugiau parametrų** – nuspaudus lauką, atsidaro papildomas langas su vartotojo nustatymais.
 
-!!! note
+!!! note "Pastaba"
     Atžymėjus lauką „**Įj.**" vartotojui „**Nr.10**" su vardu „**Not
     authorised**" bus uždraustas valdiklio valdymas skambučiu vartotojams,
     neįtrauktiems į vartotoju sąrašą.
@@ -1066,7 +1066,7 @@ Lange „Vartotojai“ reikia pažymėti lauką IN1 varnele, kad vartotojas gaut
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai valdiklyje:
     
     1.  Įjungta Protegus serviso paslauga. Paslaugos įjungimas
@@ -1104,7 +1104,7 @@ Kai konfigūracija ir diegimas bus baigti, atlikite sistemos patikrą:
 
 ## Programinės aparatinės įrangos atnaujinimas 
 
-!!! note
+!!! note "Pastaba"
     Prijungus valdiklį prie TrikdisConfig, programa pasiūlys
     atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų. Šiam
     veikimui reikalingas interneto ryšys. / Jei jūsų kompiuteryje yra

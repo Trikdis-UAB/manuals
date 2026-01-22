@@ -157,7 +157,7 @@ Veikia su Protegus2 programėle:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.9138888888888888in" />
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
     
     1.  USB Mini-B tipo kabelį, reikalingas konfigūravimui.
@@ -201,7 +201,7 @@ Veikia su Protegus2 programėle:
 
 3.  Paradox ir Texecom centralių tiesioginiam valdymui įveskite **Centralės PC download/UDL slaptažodį**. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje.
 
-!!! note
+!!! note "Pastaba"
     Kad veiktų tiesioginis centralės valdymas, reikės pakeisti centralės
     nustatymus. Kaip tai padaryti aprašyta skyriuje **4 „Apsaugos**
     centralių programavimas**"**. Šiame skyriuje aprašyta ir kaip pakeisti
@@ -216,7 +216,7 @@ Veikia su Protegus2 programėle:
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus E16 nustatymus TrikdisConfig žr. **6
     „TrikdisConfig langų aprašymas".**
 ### Nustatymai ryšiui su Stebėjimo pultu
@@ -245,7 +245,7 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 6.  **TCP arba UDP** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai.
 
-!!! note
+!!! note "Pastaba"
     Jei pasirinkote **DC-09** pranešimų perdavimo koduotę, papildomai **  **
      / **Langas "Pranešimai į** CSP", skirtuke **Parametrai**, įveskite
     objekto, linijos ir imtuvo numerius.
@@ -255,7 +255,7 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus E16 nustatymus TrikdisConfig žr. skyrių
     **6 „TrikdisConfig langų aprašymas"**.
 ## Sujungimų schemos, įrengimas ir paleidimas veikti
@@ -278,7 +278,7 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su E16 PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-!!! note
+!!! note "Pastaba"
     E16 komunikatorius turi 3 universalius įėjimo/išėjimo gnybtus,
     kuriems galima nustatyti išėjimo OUT (PGM) veikimo režimą. Išėjimai gali
     valdyti tris apsaugos sistemos sritis. Valdant šiuo būdu,
@@ -299,7 +299,7 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
 
 <img alt="" src="./image18.png" style="width:4.921259842519685in;height:1.905511811023622in" />
 
-!!! note
+!!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
     OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį
     arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
@@ -327,7 +327,7 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
 
 - Diodas „NETWORK“ turi šviesti žaliai , kai komunikatorius prisijungęs prie tinklo.
 
-!!! note
+!!! note "Pastaba"
     Jei šviesinė indikacija kitokia, kad nustatytumėte, kas nutikę žiūrėkite
     skyrių **1.5 „Šviesinė veikimo indikacija".** / Jei E16 indikacija
     visai nešviečia, patikrinkite maitinimo šaltinį ir sujungimus.
@@ -456,7 +456,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie Protegus2 metu E16 turi būti:
     
     1.  Įjungta Protegus servisas paslauga. Žr. **6.4 Langas
@@ -473,7 +473,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
-!!! note
+!!! note "Pastaba"
     Centralės zonai, prie kurios prijungtas E16 išėjimas OUT, turi
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
@@ -758,7 +758,7 @@ Lentelėje įvykiams galima priskirti Contact ID, SIA, 4+2 įvykių ir atsistaty
 
 - **TEST** – periodinis testo pranešimas.
 
-!!! note
+!!! note "Pastaba"
     Norėdami įjungti periodinius TEST pranešimus ir nustatyti laikotarpį,
     eikite į / Langas **"Pranešimai į** CSP" **→ Parametrai
     → Testo periodas**.
@@ -774,7 +774,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 1.  <span id="_Toc169871370"></span>**Nuotolinis veikimo parametrų nustatymas**
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai E16:
     
     1.  Įjungta Protegus servisas paslauga. Žr. **6.4 Langas
@@ -821,7 +821,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių E16 prie TrikdisConfig, programa
     automatiškai pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra
     atnaujinimų. Šiam veikimui reikalingas interneto ryšys. Antivirusinė

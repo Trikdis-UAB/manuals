@@ -224,7 +224,7 @@ Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojama
 | Kontaktų kaladėlė su 3,15 A saugikliu | 1 vnt. |
 | Tvirtinimo elementai (medvaržtis – 4 vnt., plastikinis diubelis – 4vnt.) | 1 kompl. |
 
-!!! note
+!!! note "Pastaba"
     USB Type-C kabelis, skirtas komunikatoriui programuoti, kartu
     neteikiamas.
 ## Sistemos įrengimas 
@@ -249,7 +249,7 @@ Paveikslėlyje pateiktos komunikatoriaus plokštės ir jos tvirtinimo kiaurymių
 
 5.  Į montažinį korpusą įstatykite rezervinio maitinimo akumuliatorių. Jo gnybtus prijunkite prie komunikatoriaus rezervinio maitinimo šaltinio jungties BAT+ / BAT–.
 
-!!! note
+!!! note "Pastaba"
     Renkantis akumuliatorių, jis turi būti įkrautas iki 80% per 24 valandas,
     o likusi talpa pasiekiama per artimiausias 48 valandas, kad atitiktų
     EN54 standarto reikalavimus.
@@ -416,7 +416,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIR
 
 <img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.031496062992126in" />
 
-!!! note
+!!! note "Pastaba"
     Jei prie **INIM Smartline** centralės prijungti kartotuvai, tai
     FIRECOM negalite prijungti per RS485 sąsają. / Kai FIRECOM
     prijungtas prie **INIM Smartline** centralės per RS485 sąsają, iO
@@ -567,7 +567,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 - Diodas „**SIM**“ turi šviesti žaliai ir mirksėti geltonai, kai komunikatorius prisiregistravęs prie mobilaus ryšio tinklo; ir/arba „**ETH**“ indikatorius šviečia žaliai, kai komunikatorius yra prijungtas prie LAN tinklo.
 
-!!! note
+!!! note "Pastaba"
     Pakankamas 4G signalo lygis - 3 (trys „**SIM**" indikatoriaus geltoni
     mirksniai). / Jeigu suskaičiuojate mažiau nei 3 geltonus „**SIM**" diodo
     mirksnius, tai mobilaus ryšio signalo lygis nepakankamas. Rekomenduojame
@@ -634,7 +634,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus FIRECOM nustatymus TrikdisConfig žr.
     skyrių 6 „TrikdisConfig langų aprašymas".
 ### Nustatymai ryšiui su Stebėjimo pultu 
@@ -668,7 +668,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 3.  **Šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
 
-!!! note
+!!! note "Pastaba"
     Jei pasirinkote **DC-09** pranešimų perdavimo koduotę, papildomai
     **„Pranešimai į ST pultą"** lange, skirtuke „**Nuostatos"**, įveskite
     objekto, linijos ir imtuvo numerius.
@@ -678,7 +678,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus FIRECOM nustatymus TrikdisConfig žr.
     skyrių 6 „TrikdisConfig langų aprašymas".
 ## Nuotolinis valdymas 
@@ -703,7 +703,7 @@ Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti 
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note
+!!! note "Pastaba"
     Sistemos registravimo prie Protegus2 metu FIRECOM
     komunikatorius turi būti:
     
@@ -883,7 +883,7 @@ Zonas galima priskirti grupėms. Kiekvienos grupės pavadinimas gali būti pakei
 
 - **Instaliuotojo kodas** – (*gamyklinis kodas - 654321*) suteikia prieigą prie sistemos konfigūravimo montuotojui. Saugumui užtikrinti, pakeiskite jį į tik Jums žinomą šešiaženklį kodą.
 
-!!! note
+!!! note "Pastaba"
     Jei nustatytas numatytasis *administratoriaus kodas* (123456), programa
     nereikalaus jo įvesti ir po mygtuko **Skaityti [F4]** paspaudimo
     pateiks esamų nustatytų gaminio veikimo parametrų reikšmes.
@@ -1245,7 +1245,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai FIRECOM:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
@@ -1287,7 +1287,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas 
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,

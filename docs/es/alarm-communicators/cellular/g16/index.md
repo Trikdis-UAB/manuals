@@ -178,7 +178,7 @@ Este manual aplica para estos modelos G16:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.995138888888889in" />
 
-!!! note
+!!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
     
     1.  Cable USB (tipo Mini-B) para la configuración
@@ -228,7 +228,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 3\. Para el control directo de los paneles de Paradox, Texecom, DSC, Caddx ingrese la contraseña de la descarga del panel de su Computadora. Debe ser idéntica a la contraseña que fue ingresada en el panel de control.
 
-!!! note
+!!! note "Nota"
     Para que funcione el control directo del panel, usted necesitará cambiar
     las opciones del panel. El cómo hacer esto está descrito en el capitulo
     4 "PROGRAMANDO EL PANEL DE ALARMA PARA LEER EVENTOS Y TENER CONTROL
@@ -252,7 +252,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de G16 en TrikdisConfig
     vea el capitulo 7 de "Descripción de la ventana de TrikdisConfig".
 ### Configuración para conectarse con el CRA
@@ -281,7 +281,7 @@ En la ventana de opciones de “Ajustes CRA” para el “Canal de cimunicacion 
 
 6.  **TCP o UDP** – elija un protocolo de transmisión de evento (TCP o UDP, en donde se transmitirán los eventos.
 
-!!! note
+!!! note "Nota"
     Si quiere que la comunicación con CRA sea establecida a través de
     mensajes SMS, sólo necesita establecer la llave de Encriptación y el
     Número de Teléfono. Los mensajes SMS pueden ser recibidos por los
@@ -303,7 +303,7 @@ En la ventana de opciones de “Ajustes CRA” para el “Canal de cimunicacion 
 
 Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones de G16 en TrikdisConfig
     vea el capitulo 7 de "Descripción de la ventana de TrikdisConfig".
 ## Proceso de Instalación 
@@ -320,7 +320,7 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 <img alt="" src="./image14.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
-!!! note
+!!! note "Nota"
     Cheque si la tarjeta SIM ha sido activada. / Asegúrese que el servicio
     de internet móvil se encuentra habilitado (datos móviles) si se conecta
     a través del canal de IP. / Para evitar ingresar el código PIN en
@@ -360,7 +360,7 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NO, NC, EOL o DEO
 
 <img alt="" src="./image22.png" style="width:5.232283464566929in;height:2.437007874015748in" />
 
-!!! note
+!!! note "Nota"
     Si más entradas o salidas necesitan ser conectadas al comunicador,
     conecte el expansor alámbrico o inalámbrico serie iO de TRIKDIS. El
     método de conexión está descrito en el manual de iO.
@@ -396,7 +396,7 @@ Prenda la fuente de alimentación del panel de control. El indicador de luz LED 
 
 - El LED de “NETWORK” se iluminará de color verde y parpadeará de color amarilla cuando se registre a una red.
 
-!!! note
+!!! note "Nota"
     La fuerza necesaria de la señal GSM debe ser de cinco (cinco luces
     indicadoras de color amarillo en donde dice "NETWORK") La fuerza
     suficiente de señal 3G debe ser de tres (la luz indicadora de "NETWORK"
@@ -533,7 +533,7 @@ Con Protegus, los usuarios podrán controlar su sistema de alamas de forma remot
 
     <img alt="" src="./image31.png" style="width:6.0236220472440944in;height:2.0039370078740157in" />
 
-!!! note
+!!! note "Nota"
     Al agregar G16 a Protegus, revise si:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -555,7 +555,7 @@ Con Protegus, los usuarios podrán controlar su sistema de alamas de forma remot
     Protegus.
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch
 
-!!! note
+!!! note "Nota"
     La zona de panel de control, donde la salida del G16 se encuentra
     conectada, tiene que ser establecida a modo de keyswitch.
 Siga las instrucciones de abajo si el panel de control no será controlado de forma directa, pero con la salida del G16 PGM, prendiendo/apagando el panel de control de la zona de keyswitch.
@@ -586,7 +586,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 ## Configuración Remota
 
-!!! note
+!!! note "Nota"
     La configuración remota sólo funcionará sí:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -669,7 +669,7 @@ Al configurar el comunicador G16 hay dos niveles de acceso para el administrador
 
 - **Permitir que el instalador cambie** – puede especificar que opciones pueden ser cambiadas por el instalador.
 
-!!! note
+!!! note "Nota"
     Los códigos de Administrador y de Instalador deben consistir de 6
     dígitos o caracteres en latín.
 ### Ventana de “Informes CRA”
@@ -790,7 +790,7 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
 
 - **Números de teléfono para el control remoto** – usted puede ingresar los números de teléfono para enviar comandos al dispositivo. El dispositivo recibirá y ejecutará estos comandos.
 
-!!! note
+!!! note "Nota"
     Si no se ingresó ni un número telefónico, el dispositivo aceptará
     comandos de cualquier número. En cualquier caso, la seguridad es
     garantizada por el requerimiento de ingresar la contraseña del
@@ -820,7 +820,7 @@ Si se usará internet móvil para enviar notificaciones a través del canal IP o
 
 ### Ventana de “Tarjeta SIM”
 
-!!! note
+!!! note "Nota"
     1.  Asegúrese de que la tarjeta SIM ha sido activada y funciona, antes
         de usarla.
     
@@ -933,7 +933,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID y códigos de r
 
 En la tabla, puede asignar el evento de Contacto ID y códigos de restauración al evento de error del bus de datos RS485. Cuando se interrumpe o restablezca la conexión entre el W485 y el G16, el G16 enviará un mensaje con el código CID asignado al CRA y a la aplicación Protegus.
 
-!!! note
+!!! note "Nota"
     Debe configurar el G16 para enviar mensajes a CRA y Protegus,
     consulte los capítulos 2.2 "Configuración para conectarse con el CRA" y.
     2.1 "Opciones de conexión para la app Protegus". / **Inserte la tarjeta
@@ -952,7 +952,7 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
 
 En la tabla, puede asignar el evento de Contacto ID y códigos de restauración al evento de error del bus de datos RS485. Cuando se interrumpe o restablezca la conexión entre el E485 y el G16, el G16 enviará un mensaje con el código CID asignado al CRA y a la aplicación Protegus.
 
-!!! note
+!!! note "Nota"
     Debe configurar el G16 para enviar mensajes a CRA y Protegus,
     consulte los capítulos 2.2 "Configuración para conectarse con el CRA" y.
     2.1 "Opciones de conexión para la app Protegus". / **Inserte la tarjeta
@@ -989,7 +989,7 @@ Genere un evento:
 
 ### Actualización del firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al
@@ -1014,7 +1014,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Espere a que se complete la actualización.
 
-!!! note
+!!! note "Nota"
     Si hay un antivirus instalado en su computadora, puede que este bloquee
     la opción de actualización de firmware. En este caso usted debe
     reconfigurar su software de antivirus.

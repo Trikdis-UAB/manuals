@@ -131,7 +131,7 @@ Entradas y salidas
 
 Si el indicador LED no está funcionando, compruebe la alimentación y las conexiones.
 
-!!! note
+!!! note "Nota"
     Antes de comenzar la instalación, asegúrese de que tiene los componentes
     necesarios:
     
@@ -271,7 +271,7 @@ Diagrama de conexión del expansor iO8-LORA.
 
 ## Configuración rápida del controlador 
 
-!!! note
+!!! note "Nota"
     El controlador viene preconfigurado de fábrica para funcionar. Una
     llamada desde cualquier teléfono al número de tarjeta SIM del
     controlador activará la salida del relé 5 OUT durante 3 (tres) segundos.
@@ -295,7 +295,7 @@ Si desea permitir que solo determinadas personas controlen el controlador, enví
 
 SETU 123456 +370xxxxxxxx#Peter). Después de recibir dicho comando, controlador solo reaccionará a los números de teléfono en la lista. El controlador ignorará las llamadas entrantes de otros números.
 
-!!! note
+!!! note "Nota"
     Si desea modificar los ajustes predeterminados de fábrica o activar
     otras funciones del controlador, consulte el capítulo 5"Configuración
     de los parámetros utilizando el software TrikdisConfig".
@@ -303,7 +303,7 @@ SETU 123456 +370xxxxxxxx#Peter). Después de recibir dicho comando, controlador 
 
 ### Control con llamada telefónica 
 
-!!! note
+!!! note "Nota"
     El primero en llamar (o enviar un SMS) al controlador se convertirá en
     el administrador del sistema y será el único que podrá administrar y
     controlar el controlador con comandos de SMS.
@@ -344,7 +344,7 @@ Con GATOR usuarios podrán controlar de forma remota controlador. También será
 
 2.  Iniciar sesión con su nombre de usuario y contraseña o registrarse y crear una cuenta nueva.
 
-!!! note
+!!! note "Nota"
     Al agregar controlador a Protegus2, verifique si:
     
     1.  El servicio Protegus2 debe estar encendido. La activación del
@@ -573,7 +573,7 @@ Con TrikdisConfig puede cambiar la configuración del controlador (si la configu
 
 3.  Haga clic en **Leer [F4]** para ver los parámetros actuales controlador. Si se le solicita, introduzca el código del administrador o instalador de en la ventana emergente.
 
-!!! note
+!!! note "Nota"
     El botón **Leer [F4]** hará que el programa lea y muestre la
     configuración actualmente guardada en el dispositivo. / El botón
     **Escribir [F5]** guardará los ajustes realizados en el programa para
@@ -906,7 +906,7 @@ Las configuraciones son idénticas a las del canal de comunicación principal.
 
 - **Más ajustes** - al hacer clic en el campo, se abrirá una ventana de configuración de usuario adicional.
 
-!!! note
+!!! note "Nota"
     Si la casilla "**En**" no está habilitada para el usuario num.10 con el
     nombre "**No autorizado**", los usuarios que no estén en la lista de
     usuarios tendrán prohibido controlar el controlador con una llamada
@@ -1076,7 +1076,7 @@ En la ventana "Lista de Usuarios", marque la casilla IN1 si desea que el usuario
 
 ## Configuración de los parámetros de forma remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota sólo funcionará cuando:
     
     1.  El servicio Protegus2 está habilitado. Habilitación del
@@ -1114,7 +1114,7 @@ Cuando la configuración e instalación están acabados, probar el sistema:
 
 ## La actualización del firmware de forma manual 
 
-!!! note
+!!! note "Nota"
     Cuando el controlador está conectado a TrikdisConfig, el programa
     ofrecerá para actualizar el firmware del dispositivo si hay
     actualizaciones disponibles. Actualizaciones requieren una conexión a

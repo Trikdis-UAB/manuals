@@ -174,7 +174,7 @@ Veikia su Protegus2 programėle:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
     
     1.  USB-C tipo kabelį, kuris reikalingas konfigūravimui.
@@ -228,7 +228,7 @@ Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba
 
 3.  Paradox ir Texecom centralių tiesioginiam valdymui įveskite „**Centralės PC download slaptažodį“**. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje.
 
-!!! note
+!!! note "Pastaba"
     Kad veiktų tiesioginis centralės valdymas, reikės pakeisti centralės
     nustatymus. Kaip tai padaryti aprašyta skyriuje 4 „Centralės
     programavimas kai komunikatorius yra prijungtas prie centralės
@@ -271,7 +271,7 @@ Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikt
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus komunikatoriaus GET nustatymus
     TrikdisConfig žr. 6 „TrikdisConfig langų aprašymas".
 ### Nustatymai ryšiui su Stebėjimo pultu
@@ -336,7 +336,7 @@ Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikt
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus komunikatoriaus GET nustatymus
     TrikdisConfig žr. skyrių 6 „TrikdisConfig langų aprašymas".
 ## Sujungimų schemos, įrengimas ir paleidimas veikti
@@ -363,7 +363,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 <img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
-!!! note
+!!! note "Pastaba"
     Į komunikatorių galima įstatyti viena arba dvi SIM
     korteles. / Įsitikinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite,
     kad įjungta mobilaus interneto paslauga, jei bus naudojama
@@ -410,7 +410,7 @@ Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pult
 
 Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su komunikatoriaus PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-!!! note
+!!! note "Pastaba"
     Komunikatorius GET turi 2 universalius įėjimo/išėjimo gnybtus,
     kuriems galima nustatyti išėjimo OUT (PGM) veikimo režimą. Išėjimai gali
     valdyti dvi apsaugos sistemos sritis. Valdant šiuo būdu,
@@ -450,7 +450,7 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
 
 - Diodas „NETWORK LTE“ turi šviesti žaliai ir mirksi geltonai, kai prisiregistravęs prie tinklo.
 
-!!! note
+!!! note "Pastaba"
     Pakankamas LTE signalo lygis - 3 (trys „NETWORK LTE" indikatoriaus
     geltoni mirksniai). / Jeigu suskaičiuojate mažiau geltonų „NETWORK LTE"
     diodo mirksnių, tai GSM signalo lygis nepakankamas. Rekomenduojame arba
@@ -572,7 +572,7 @@ Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis tur
 
 Nustatykite centralės zonos, prie kurios prijungtas GET išėjimas OUT, tipą į jungiklio (angl. keyswitch) zoną apsaugos centralei įjungti/išjungti nuotoliniu būdu.
 
-!!! note
+!!! note "Pastaba"
     Jungiklio zonos tipas gali būti impulsas arba lygis. Komunikatoriaus
     GET valdomas išėjimas OUT numatytai veiks 3 sekundžių impulsiniu
     režimu. Galite pakeisti impulso trukmę arba pakeisti išėjimo režimą į
@@ -671,7 +671,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
-!!! note
+!!! note "Pastaba"
     Centralės zonai, prie kurios prijungtas GET išėjimas OUT, turi
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GET PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
@@ -885,7 +885,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
   **Skirtukas „SIM1“**
 
-!!! note
+!!! note "Pastaba"
     1\. Prieš naudodami SIM kortelę, įsitikinkite, ar ji aktyvuota. / 2.
     Patikrinkite, ar įjungta mobiliųjų duomenų perdavimo paslauga.
 <img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.877952755905512in" />
@@ -968,7 +968,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 - **TEST** – periodinis testo pranešimas.
 
-!!! note
+!!! note "Pastaba"
     Norėdami įjungti periodinius TEST pranešimus ir nustatyti laikotarpį,
     eikite į langą „**Pranešimai į CSP**" **→ „Parametrai" → Testo
     periodas.**
@@ -988,7 +988,7 @@ Maitinimas prijungtas prie komunikatoriaus. Paspauskite ir palaikykite mygtuką 
 
 1.  <span id="_Toc172799572"></span>**Nuotolinis veikimo parametrų nustatymas**
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai GET:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
@@ -1036,7 +1036,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,

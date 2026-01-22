@@ -222,7 +222,7 @@ En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS"
 
 Después de terminar la configuración, haga clic en el botón **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información acerca de otros ajustes en G17F
     TrikdisConfig véase el capítulo 5 "Descripción de la ventana de
     TrikdisConfig ".
@@ -252,7 +252,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 5.  **Clave de encriptación** – introduzca la clave de cifrado que se establece en el receptor.
 
-!!! note
+!!! note "Nota"
     Si desea establecer comunicación con CRA a través de mensajes SMS, sólo
     es necesario para establecer la clave de cifrado y número de teléfono.
     Los mensajes SMS pueden ser recibidas únicamente por receptores TRIKDIS:
@@ -266,7 +266,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 Después de terminar la configuración, haga clic en **Escribir [F5**] y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información acerca de otros ajustes en ***G17F
     TrikdisConfig*** véase el capítulo 5 „Descripción de la ventana de
     TrikdisConfig".
@@ -292,7 +292,7 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 <img alt="" src="./image14.png" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
-!!! note
+!!! note "Nota"
     Asegúrese de que la tarjeta SIM esté activada. / Asegúrese de que el
     servicio de Internet móvil (datos móviles) esté habilitado si se
     utilizará la aplicación Protegus2 o la conexión IP con CRA. / Para
@@ -375,7 +375,7 @@ El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se
 
 <img alt="" src="./image27.png" style="width:7.082677165354331in;height:3.031496062992126in" />
 
-!!! note
+!!! note "Nota"
     No puede conectar el G17F usando el bus RS485 si los repetidores
     están conectados al panel **INIM Smartline**. / Los módulos de expansión
     iO no son compatibles cuando el G17F está conectado al panel
@@ -518,7 +518,7 @@ Para encender el comunicador, primero debe proporcionar una fuente de alimentaci
 
 - El LED de “**NETWORK**” debe estar verde fijo y parpadear en amarillo cuando el comunicador está conectado a una red.
 
-!!! note
+!!! note "Nota"
     Nivel de señal 2G suficiente: 5 (cinco destellos amarillos del indicador
     "NETWORK"). Nivel de señal 4G suficiente: 3 (tres destellos amarillos
     del indicador "NETWORK"). / Si cuenta menos de 3 destellos amarillos
@@ -551,7 +551,7 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
 
 2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
-!!! note
+!!! note "Nota"
     Al agregar el sistema a Protegus2, el comunicador G17F debe:
     
     1.  Tener una tarjeta SIM insertada y activada con el código PIN
@@ -632,7 +632,7 @@ Solo los números de teléfono de la lista de usuarios pueden controlar el siste
 
 ### Controle las salidas PGM mediante llamadas telefónicas 
 
-!!! note
+!!! note "Nota"
     Si no se han agregado usuarios al sistema, el primero en llamar al
     G17F se convertirá en el administrador del sistema y será el único
     que podrá controlar el G17F mediante llamadas telefónicas y
@@ -1044,7 +1044,7 @@ Para restablecer el comunicador a la configuración de fábrica, presione el bot
 
 ## Configuración Remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota solo funcionará cuando el G17F:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -1090,7 +1090,7 @@ Después de que la configuración y la instalación hayan sido completadas, llev
 
 ## Actualización del firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al

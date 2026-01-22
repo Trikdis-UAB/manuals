@@ -124,9 +124,17 @@ plugins:
       - Home: index.md
       - Komunikatoriai:
         - Mobilaus ryšio:
-          - GT: alarm-communicators/cellular/gt/index.md
-          - GT+: alarm-communicators/cellular/gt-plus/index.md
-          - GET: alarm-communicators/cellular/get/index.md
+          - GT/GT+/GET:
+            - Greitas paruošimas GT/GT+/GET:
+              - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
+              - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
+              - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
+              - Honeywell Vista-48: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
+              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+            - GT: alarm-communicators/cellular/gt/index.md
+            - GT+: alarm-communicators/cellular/gt-plus/index.md
+            - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - Priešgaisrinėms centralėms:
@@ -157,9 +165,17 @@ plugins:
       - Home: index.md
       - Comunicadores:
         - Celular:
-          - GT: alarm-communicators/cellular/gt/index.md
-          - GT+: alarm-communicators/cellular/gt-plus/index.md
-          - GET: alarm-communicators/cellular/get/index.md
+          - GT/GT+/GET:
+            - Configuración rápida GT/GT+/GET:
+              - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
+              - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
+              - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
+              - Honeywell Vista-48: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
+              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+            - GT: alarm-communicators/cellular/gt/index.md
+            - GT+: alarm-communicators/cellular/gt-plus/index.md
+            - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - Celular para Incendio:
@@ -190,9 +206,17 @@ plugins:
       - Home: index.md
       - Коммуникаторы:
         - GSM/GPRS:
-          - GT: alarm-communicators/cellular/gt/index.md
-          - GT+: alarm-communicators/cellular/gt-plus/index.md
-          - GET: alarm-communicators/cellular/get/index.md
+          - GT/GT+/GET:
+            - Быстрая настройка GT/GT+/GET:
+              - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
+              - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
+              - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
+              - Honeywell Vista-48: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
+              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+            - GT: alarm-communicators/cellular/gt/index.md
+            - GT+: alarm-communicators/cellular/gt-plus/index.md
+            - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - Для противопожарной охранной панели:

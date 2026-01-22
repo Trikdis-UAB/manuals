@@ -178,7 +178,7 @@ Veikia su Protegus2 programėle:
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:3.0104166666666665in" />
 
-!!! note
+!!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
     
     1.  USB-C tipo kabelį, reikalingas konfigūravimui.
@@ -232,7 +232,7 @@ Komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuo
 
 3.  Paradox ir Texecom centralių tiesioginiam valdymui įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje.
 
-!!! note
+!!! note "Pastaba"
     Kad veiktų tiesioginis centralės valdymas, reikės pakeisti centralės
     nustatymus. Kaip tai padaryti aprašyta skyriuje **4 „Apsaugos centralių
     programavimas"**. Šiame skyriuje aprašyta ir kaip pakeisti centralės PC
@@ -259,7 +259,7 @@ Komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuo
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus GT nustatymus TrikdisConfig žr. **6
     „TrikdisConfig langų aprašymas"**.
 ### Nustatymai ryšiui su Stebėjimo pultu 
@@ -310,7 +310,7 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
-!!! note
+!!! note "Pastaba"
     Plačiau apie kitus GT nustatymus TrikdisConfig žr. **6
     „TrikdisConfig langų aprašymas"**.
 ## Sujungimų schemos, įrengimas ir paleidimas veikti 
@@ -335,7 +335,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 <img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
-!!! note
+!!! note "Pastaba"
     Įsitikinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
     mobilaus interneto paslauga, jei bus naudojama Protegus2
     programėlė arba ryšys su pultu IP kanalu. / Jei norite išvengti PIN kodo
@@ -381,7 +381,7 @@ Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pult
 
 Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su GT PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-!!! note
+!!! note "Pastaba"
     GT komunikatorius turi 2 universalius įėjimo/išėjimo gnybtus,
     kuriems galima nustatyti išėjimo OUT (PGM) veikimo režimą. Išėjimai gali
     valdyti dvi apsaugos sistemos sritis. Valdant šiuo būdu,
@@ -408,7 +408,7 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
 
 <img alt="" src="./image27.png" style="width:4.921259842519685in;height:1.905511811023622in" />
 
-!!! note
+!!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
     OUT, prijunkite TRIKDIS iO-8 įėjimų ir išėjimų plėtiklį.
 ### Relės prijungimo schema 
@@ -431,7 +431,7 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
 
 - Diodas „NETWORK“ turi šviesti žaliai ir mirksi geltonai, kai prisiregistravęs prie mobilaus ryšio tinklo.
 
-!!! note
+!!! note "Pastaba"
     Pakankamas 4G signalo lygis - 3 (trys „NETWORK" indikatoriaus geltoni
     mirksniai). / Jeigu suskaičiuojate mažiau geltonų „NETWORK" diodo
     mirksnių, tai GSM signalo lygis nepakankamas. Rekomenduojame arba
@@ -554,7 +554,7 @@ Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis tur
 
 Nustatykite centralės zonos, prie kurios prijungtas GT išėjimas OUT, tipą į jungiklio (angl. keyswitch) zoną apsaugos centralei įjungti/išjungti nuotoliniu būdu.
 
-!!! note
+!!! note "Pastaba"
     Jungiklio zonos tipas gali būti impulsas arba lygis. GT valdomas
     išėjimas OUT numatytai veiks 3 sekundžių impulsiniu režimu. Galite
     pakeisti impulso trukmę arba pakeisti išėjimo režimą į lygis
@@ -646,7 +646,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note
+!!! note "Pastaba"
     Pridėjimo prie Protegus2 metu GT turi būti:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas;
@@ -668,7 +668,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
 
-!!! note
+!!! note "Pastaba"
     Centralės zonai, prie kurios prijungtas GT išėjimas OUT, turi būti
     nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GT PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
@@ -894,14 +894,14 @@ Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba a
 
 - **Telefono numeriai nuotoliniam valdymui** – galite įrašyti telefono numerius, iš kurių siunčiamas komandas įrenginys priims ir vykdys.
 
-!!! note
+!!! note "Pastaba"
     Jeigu nebus įrašytas nei vienas telefono numeris, įrenginys priims
     komandas iš bet kurio telefono numerio. Bet kuriuo atveju saugumą
     užtikrina reikalavimas į SMS komandą įvesti administratoriaus arba
     instaliuotojo slaptažodį.
 ### Langas “Tinklo nustatymai” 
 
-!!! note
+!!! note "Pastaba"
     1\. Prieš naudodami SIM kortelę, įsitikinkite, ar ji aktyvuota. / 2. Jei
     bus naudojamas mobilusis interneto ryšys pranešimams perduoti IP kanalu
     į saugos tarnybos imtuvą arba į Protegus2, patikrinkite, ar
@@ -1031,7 +1031,7 @@ Lentelėje įėjimams (INPUT) galima priskirti Contact ID (SIA) įvykių ir ats
 
 - **TEST** – periodinis testo pranešimas.
 
-!!! note
+!!! note "Pastaba"
     Norėdami įjungti periodinius TEST pranešimus ir nustatyti laikotarpį,
     eikite į langą / „**Pranešimai į CSP" langas „Pranešimai į
     CSP"→ Parametrai → Testo periodas**
@@ -1051,7 +1051,7 @@ Komunikatoriaus maitinimas įjungtas. Paspauskite ir palaikykite mygtuką „RES
 
 1.  <span id="_Toc208219790"></span>**Nuotolinis veikimo parametrų nustatymas**
 
-!!! note
+!!! note "Pastaba"
     Nuotolinis konfigūravimas veiks tik tuomet, kai GT:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
@@ -1097,7 +1097,7 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 ## Programinės įrangos atnaujinimas 
 
-!!! note
+!!! note "Pastaba"
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,

@@ -223,7 +223,7 @@ Si ocurriesen problemas con la alimentación del sistema desde la fuente de alim
 | Bloque de terminales con fusible de 3.15 A | 1 pza. |
 | Elementos de fijación (tornillos - 4 und., tacos de nailon - 4 und.) | 1 |
 
-!!! note
+!!! note "Nota"
     El cable USB Type-C para programar el comunicador se vende por separado.
 ## Instalación del comunicador 
 
@@ -247,7 +247,7 @@ La figura muestra las dimensiones de la placa y sus orificios de montaje. Las di
 
 5.  Inserta la batería de respaldo en el marco de montaje. Conecta las terminales de la batería a las terminales BAT + / BAT– del comunicador.
 
-!!! note
+!!! note "Nota"
     Al elegir una batería, tenga en cuenta que debe cargarse al 80 % en 24
     horas y la capacidad restante en las siguientes 48 horas para cumplir
     con la norma EN54.
@@ -414,7 +414,7 @@ El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se
 
 <img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.031496062992126in" />
 
-!!! note
+!!! note "Nota"
     No puede conectar el FIRECOM usando el bus RS485 si los
     repetidores están conectados al panel **INIM Smartline**. / Los módulos
     de expansión iO no son compatibles cuando el FIRECOM está
@@ -565,7 +565,7 @@ Encienda el comunicador. Los LED del comunicador deberían funcionar de la sigui
 
 - El indicador "**SIM**" debe brillar en verde y parpadear en amarillo periódicamente al menos 3 veces; y/o el indicador "**ETH**" es verde cuando está conectado a una red LAN.
 
-!!! note
+!!! note "Nota"
     Nivel de señal móvil suficiente: 3 (tres destellos amarillos del
     indicador "**SIM**"). / Si se cuentan menos destellos amarillos del
     indicador "**SIM**", entonces la intensidad de la señal móvil es
@@ -633,7 +633,7 @@ A continuación, describiremos las configuraciones que deben cambiarse para que 
 
 Después de terminar la configuración, haga clic en el botón **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información acerca de otros ajustes en FIRECOM
     TrikdisConfig véase el capítulo 6 "Configuración de parámetros con
     el software TrikdisConfig".
@@ -671,7 +671,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 5.  **Clave de encriptación** – introduzca la clave de cifrado que se establece en el receptor.
 
-!!! note
+!!! note "Nota"
     Si seleccionó el protocolo **DC-09**, además, en la pestaña
     "**Configuraciones"** de la ventana de **"Informes a CRA"** ingrese los
     números de objeto, línea y receptor.
@@ -681,7 +681,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 Después de terminar la configuración, haga clic en **Escribir [F5**] y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para obtener más información acerca de otros ajustes en FIRECOM
     TrikdisConfig véase el capítulo 6 "Configuración de parámetros con
     el software TrikdisConfig ".
@@ -707,7 +707,7 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
 
 2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
-!!! note
+!!! note "Nota"
     Al agregar el sistema a Protegus2, el comunicador FIRECOM
     debe:
     
@@ -895,7 +895,7 @@ Las zonas se pueden combinar en grupos. El nombre de cada grupo se puede cambiar
 
 - **Código de instalador** – (código predeterminado: 654321) da acceso a instaladores para configurar el sistema. Por razones de seguridad, modifícala a un código de 6 símbolos que solamente usted conozca.
 
-!!! note
+!!! note "Nota"
     Si se establece el *código de administrador* predeterminado (123456),
     después de presionar **Leer [F4]**, el programa inmediatamente
     mostrará los parámetros operativos actuales del dispositivo sin
@@ -1256,7 +1256,7 @@ Para restablecer la configuración predeterminada del comunicador, haz clic en e
 
 ## Configuración Remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota solo funcionará cuando el FIRECOM:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -1302,7 +1302,7 @@ Después de que la configuración y la instalación hayan sido completadas, llev
 
 ## Actualización del firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al

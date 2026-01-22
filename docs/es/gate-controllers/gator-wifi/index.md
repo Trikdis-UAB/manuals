@@ -124,7 +124,7 @@ Entradas y salidas
 
 Si el indicador LED no está funcionando, compruebe la alimentación y las conexiones.
 
-!!! note
+!!! note "Nota"
     Antes de comenzar la instalación, asegúrese de que tiene los componentes
     necesarios:
     
@@ -237,7 +237,7 @@ Con la aplicación Protegus2 usuarios podrán controlar de forma remota controla
 
 2.  Iniciar sesión con su nombre de usuario y contraseña o registrarse y crear una cuenta nueva.
 
-!!! note
+!!! note "Nota"
     Al agregar controlador a Protegus2, verifique si:
     
     1.  La fuente de alimentación debe estar encendida (el LED
@@ -355,7 +355,7 @@ Con TrikdisConfig puede cambiar la configuración del controlador GATOR WiFi (si
 
 3.  Haga clic en **Leer [F4]** para ver los parámetros actuales controlador. Si se le solicita, introduzca el código del administrador o instalador de en la ventana emergente.
 
-!!! note
+!!! note "Nota"
     El botón **Leer [F4]** hará que el programa lea y muestre la
     configuración actualmente guardada en el dispositivo. / El botón
     **Escribir [F5]** guardará los ajustes realizados en el programa para
@@ -674,7 +674,7 @@ Conecte GATOR WiFi a su computadora mediante un cable USB Mini-B. Para restaurar
 
 ## Configuración de los parámetros de forma remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota sólo funcionará cuando:
     
     1.  El servicio Protegus2 está habilitado. Habilitación del
@@ -710,7 +710,7 @@ Cuando la configuración e instalación están acabados, probar el sistema:
 
 ## La actualización del firmware de forma manual 
 
-!!! note
+!!! note "Nota"
     Cuando el controlador está conectado a TrikdisConfig, el programa
     ofrecerá para actualizar el firmware del dispositivo si hay
     actualizaciones disponibles. Actualizaciones requieren una conexión a

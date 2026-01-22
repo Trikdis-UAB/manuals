@@ -178,7 +178,7 @@ Este manual es para comunicadores 4G.
 
 <img alt="" src="./image5.png" style="width:7.0875in;height:3.0104166666666665in" />
 
-!!! note
+!!! note "Nota"
     Antes de la instalación, asegúrese de tener:
     
     1.  Cable USB-C para configuración.
@@ -231,7 +231,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 3.  Para controlar directamente los paneles de control de Paradox y Texecom, ingrese la “**Contraseña de descarga de PC**”. El código debe coincidir con el código ingresado en el panel de control.
 
-!!! note
+!!! note "Nota"
     Para que funcione el control directo del panel, usted necesitará cambiar
     las opciones del panel. El cómo hacer esto está descrito en el capítulo
     4 "Programando el panel de control para leer eventos y tener control
@@ -259,7 +259,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones GT en
     TrikdisConfig vea el capitulo 6 de „Descripción de la ventana de
     TrikdisConfig".
@@ -311,7 +311,7 @@ En la ventana de opciones de “Ajustes CRA” para el “Canal de comunicación
 
 Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte el cable USB.
 
-!!! note
+!!! note "Nota"
     Para más información sobre otras opciones GT en
     TrikdisConfig vea el capitulo 6 de „Descripción de la ventana de
     TrikdisConfig".
@@ -337,7 +337,7 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 <img alt="" src="./image16.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
-!!! note
+!!! note "Nota"
     Cheque si la tarjeta SIM ha sido activada. / Asegúrese que el servicio
     de internet móvil se encuentra habilitado (datos móviles) si se conecta
     a través del canal de IP. / Para evitar ingresar el código PIN en
@@ -398,7 +398,7 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
 
 <img alt="" src="./image26.png" style="width:4.397637795275591in;height:2.047244094488189in" />
 
-!!! note
+!!! note "Nota"
     Si necesita que el comunicador tenga más entradas (IN) o salidas (OUT),
     conecte el expansor TRIKDIS iO-8.
 ### Diagrama de conexión de un relé 
@@ -421,7 +421,7 @@ Prenda la fuente de alimentación del panel de control. El indicador de luz LED 
 
 - El LED de “NETWORK” se iluminará de color verde y parpadeará de color amarilla cuando se registre a una red.
 
-!!! note
+!!! note "Nota"
     Nivel de señal 4G suficiente: 3 (la luz indicadora de "NETWORK" deberá
     parpadear de color amarillo tres veces). Si usted ve una indicación LED
     distinta, esto quiere decir que hay algún error. / Si cuenta menos
@@ -546,7 +546,7 @@ Para que el panel de control envíe eventos a través del comunicador telefónic
 
 Establezca la zona de panel de control, al que está conectada la salida OUT GT, para utilizarse con el interruptor de llave de zona para activar/ desactivar el panel de control de forma remota.
 
-!!! note
+!!! note "Nota"
     La llave de zona puede ser momentánea (pulso) o nivel. Por defecto, la
     salida controlable del GT se establece en modo de pulso por 3
     segundos. Se puede cambiar la duración del impulso o cambiar al modo de
@@ -625,7 +625,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 1.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
-!!! note
+!!! note "Nota"
     Al agregar GT a Protegus2, revise si:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -651,7 +651,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
-!!! note
+!!! note "Nota"
     La zona de panel de control, donde la salida del GT se encuentra
     conectada, tiene que ser establecida a modo de keyswitch.
 Siga las instrucciones de abajo si el panel de control no será controlado de forma directa, pero con la salida del GT PGM, prendiendo/apagando el panel de control de la zona de keyswitch.
@@ -879,14 +879,14 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
 
 - “**Números de teléfono para el control remoto**” – usted puede ingresar los números de teléfono para enviar comandos al dispositivo. El dispositivo recibirá y ejecutará estos comandos.
 
-!!! note
+!!! note "Nota"
     Si no se ingresó ni un número telefónico, el dispositivo aceptará
     comandos de cualquier número. En cualquier caso, la seguridad es
     garantizada por el requerimiento de ingresar la contraseña del
     administrador o instalador en el comando SMS.
 ### Ventana de “Configuración de la red” 
 
-!!! note
+!!! note "Nota"
     1.  Asegúrese de que la tarjeta SIM ha sido activada y funciona, antes
         de usarla.
     
@@ -1015,7 +1015,7 @@ Esta ventana le permitirá prender, apagar y modificar los mensajes internos env
 
 - **TEST** – mensaje de prueba periódica.
 
-!!! note
+!!! note "Nota"
     Para habilitar los mensajes de PRUEBA periódicos y establecer el
     período, vaya a la ventana "**CRA informes**" **→ Ajustes → Período de
     prueba.**
@@ -1035,7 +1035,7 @@ La fuente de alimentación está conectada al comunicador. Mantenga presionado e
 
 ## Configuración Remota 
 
-!!! note
+!!! note "Nota"
     La configuración remota sólo funcionará sí:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
@@ -1084,7 +1084,7 @@ Después de que la configuración y la instalación hayan sido completadas, llev
 
 ## Actualización del firmware 
 
-!!! note
+!!! note "Nota"
     Cuando el comunicador esté conectado a TrikdisConfig, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión el
