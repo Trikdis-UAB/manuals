@@ -128,7 +128,5 @@ Refer to the full Paradox manual if your keypad codes differ.
   </div>
 </div>
 
-</div>
-
 !!! tip
     If Protegus2 cannot finish writing data, verify the KeyBus wiring (YEl/GRN), IMEI entry, and that CMS/Contact ID settings are saved on the panel.

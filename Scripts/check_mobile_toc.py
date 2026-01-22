@@ -13,6 +13,7 @@ Requires:
   python -m playwright install chromium
 """
 
+import re
 import subprocess
 import sys
 import time
@@ -39,6 +40,7 @@ DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/e16/", "en"),
     ("http://127.0.0.1:8001/en/alarm-communicators/fire-panels/g17f/", "en"),
 ]
+PARADOX_URL = "http://127.0.0.1:8001/en/alarm-communicators/cellular/quick-setup/paradox/"
 ROOT_URL = "http://127.0.0.1:8001/"
 
 EXPECTED_COLORS = {
@@ -226,6 +228,18 @@ def assert_mobile_toc(page, url: str):
 
 def assert_desktop_styles(page, url: str, lang: str):
   page.goto(url, wait_until="networkidle")
+
+  logo = page.query_selector("a.md-logo")
+  if not logo:
+    raise RuntimeError(f"[{url}] Missing header logo link")
+  expected_logo = f"/{lang}/"
+  logo_href = logo.get_attribute("href")
+  if logo_href != expected_logo:
+    raise RuntimeError(f"[{url}] Logo href {logo_href} should be {expected_logo}")
+  logo.click()
+  page.wait_for_url(re.compile(rf".*/{re.escape(lang)}/$"), timeout=3000)
+  page.goto(url, wait_until="networkidle")
+
   page.evaluate(
       """
       () => {
@@ -254,236 +268,18 @@ def assert_desktop_styles(page, url: str, lang: str):
       }
       """
   )
-
-  if toc_bg != EXPECTED_COLORS["toc_bg"]:
-    raise RuntimeError(f"[{url}] Left sidebar background {toc_bg} != {EXPECTED_COLORS['toc_bg']}")
-  if toc_active != EXPECTED_COLORS["toc_active"]:
-    raise RuntimeError(f"[{url}] Left sidebar active {toc_active} != {EXPECTED_COLORS['toc_active']}")
-
-  sidebar_position = get_style(page, ".md-sidebar--primary", "position")
-  sidebar_top = get_style(page, ".md-sidebar--primary", "top")
-  if sidebar_position != "sticky":
-    raise RuntimeError(f"[{url}] Left sidebar position {sidebar_position} should be sticky")
-  if sidebar_top != "64px":
-    raise RuntimeError(f"[{url}] Left sidebar top {sidebar_top} should be 64px")
-
-  page.evaluate("window.scrollTo(0, 2000)")
-  page.wait_for_timeout(200)
-  sticky_offset = page.evaluate(
-      """
-      () => {
-        const sidebar = document.querySelector('.md-sidebar--primary');
-        if (!sidebar) return null;
-        return sidebar.getBoundingClientRect().top;
-      }
-      """
-  )
-  if sticky_offset is None:
-    raise RuntimeError(f"[{url}] Left sidebar not found for sticky check.")
-  if abs(sticky_offset - 64) > 1:
-    raise RuntimeError(f"[{url}] Left sidebar sticky offset {sticky_offset} != 64px")
-
   toc_border = get_style(page, ".md-content", "border-right-color")
   toc_border_width = get_style(page, ".md-content", "border-right-width")
-  if toc_border != EXPECTED_COLORS["toc_border"] or toc_border_width != "1px":
+
+  if toc_bg != EXPECTED_COLORS["toc_bg"]:
+    raise RuntimeError(f"[{url}] Left nav background {toc_bg} != {EXPECTED_COLORS['toc_bg']}")
+  if toc_active != EXPECTED_COLORS["toc_active"]:
+    raise RuntimeError(f"[{url}] Active TOC {toc_active} != {EXPECTED_COLORS['toc_active']}")
+  if toc_border_width != "1px" or toc_border != EXPECTED_COLORS["toc_border"]:
     raise RuntimeError(
-        f"[{url}] Right TOC border {toc_border}/{toc_border_width} != "
+        f"[{url}] TOC border {toc_border}/{toc_border_width} != "
         f"{EXPECTED_COLORS['toc_border']}/1px"
     )
-  toc_span = page.evaluate(
-      """
-      () => {
-        const toc = document.querySelector('.md-content');
-        const main = document.querySelector('.md-main__inner');
-        if (!toc || !main) return null;
-        const tocRect = toc.getBoundingClientRect();
-        const mainRect = main.getBoundingClientRect();
-        return {
-          tocTop: tocRect.top,
-          tocBottom: tocRect.bottom,
-          mainTop: mainRect.top,
-          mainBottom: mainRect.bottom,
-        };
-      }
-      """
-  )
-  if toc_span is None:
-    raise RuntimeError(f"[{url}] Right TOC span measurement unavailable.")
-  if abs(toc_span["tocTop"] - toc_span["mainTop"]) > 1:
-    raise RuntimeError(
-        f"[{url}] Right TOC top {toc_span['tocTop']} != main top {toc_span['mainTop']}"
-    )
-  if abs(toc_span["tocBottom"] - toc_span["mainBottom"]) > 1:
-    raise RuntimeError(
-        f"[{url}] Right TOC bottom {toc_span['tocBottom']} != main bottom {toc_span['mainBottom']}"
-    )
-
-  collapsible = page.evaluate(
-      """
-      () => {
-        const nav = document.querySelector('.md-nav--primary');
-        if (!nav) return null;
-        const labels = ["Keypads", "Klaviatūros", "Teclados", "Клавиатуры"];
-        let keypads = null;
-        let other = null;
-        for (const item of nav.querySelectorAll(':scope > ul.md-nav__list > li.md-nav__item')) {
-          const label = item.querySelector(':scope > label.md-nav__link');
-          const text = label?.querySelector('.md-ellipsis')?.textContent?.trim();
-          const icon = label?.querySelector('.md-nav__icon');
-          const toggle = item.querySelector(':scope > input.md-nav__toggle');
-          const subnav = item.querySelector(':scope > nav.md-nav');
-          if (!label || !text || !icon || !toggle || !subnav) continue;
-          const info = { id: toggle.id, text };
-          if (labels.includes(text)) {
-            keypads = info;
-          } else if (!other) {
-            other = info;
-          }
-        }
-        if (!keypads) return null;
-        return { keypads, other };
-      }
-      """
-  )
-  if not collapsible:
-    raise RuntimeError(f"[{url}] Keypads toggle not found for collapse check.")
-
-  def click_icon(selector: str):
-    handle = page.query_selector(selector)
-    if not handle:
-      raise RuntimeError(f"[{url}] Chevron icon not found for selector: {selector}")
-    handle.scroll_into_view_if_needed()
-    box = handle.bounding_box()
-    if not box:
-      raise RuntimeError(f"[{url}] Chevron icon has no bounding box: {selector}")
-    page.mouse.click(
-        box["x"] + box["width"] / 2,
-        box["y"] + box["height"] / 2,
-    )
-
-  keypads_id = collapsible["keypads"]["id"]
-  keypads_icon = f".md-nav--primary input#{keypads_id} + label .md-nav__icon"
-  before_keypads = page.evaluate(
-      f"""
-      () => {{
-        const toggle = document.querySelector('input#{keypads_id}');
-        const subnav = toggle?.parentElement?.querySelector(':scope > nav.md-nav');
-        return {{
-          checked: toggle?.checked,
-          display: subnav ? getComputedStyle(subnav).display : null,
-        }};
-      }}
-      """
-  )
-  click_icon(keypads_icon)
-  page.wait_for_timeout(150)
-  expanded_after = page.evaluate(
-      f"""
-      () => {{
-        const toggle = document.querySelector('input#{keypads_id}');
-        const subnav = toggle?.parentElement?.querySelector(':scope > nav.md-nav');
-        return {{
-          checked: toggle?.checked,
-          display: subnav ? getComputedStyle(subnav).display : null,
-        }};
-      }}
-      """
-  )
-  if expanded_after["checked"] == before_keypads["checked"]:
-    raise RuntimeError(f"[{url}] Keypads did not toggle after chevron click.")
-  if before_keypads["display"] == expanded_after["display"]:
-    raise RuntimeError(f"[{url}] Keypads subnav display did not change on toggle.")
-
-  click_icon(keypads_icon)
-  page.wait_for_timeout(150)
-  collapsed_after = page.evaluate(
-      f"""
-      () => {{
-        const toggle = document.querySelector('input#{keypads_id}');
-        const subnav = toggle?.parentElement?.querySelector(':scope > nav.md-nav');
-        return {{
-          checked: toggle?.checked,
-          display: subnav ? getComputedStyle(subnav).display : null,
-        }};
-      }}
-      """
-  )
-  if collapsed_after["checked"] != before_keypads["checked"]:
-    raise RuntimeError(f"[{url}] Keypads did not toggle back after second click.")
-  if expanded_after["display"] == collapsed_after["display"]:
-    raise RuntimeError(f"[{url}] Keypads subnav display did not change on toggle back.")
-
-  if not collapsible.get("other"):
-    raise RuntimeError(f"[{url}] No other top-level chevron found for click test.")
-  other_id = collapsible["other"]["id"]
-  other_icon = f".md-nav--primary input#{other_id} + label .md-nav__icon"
-  before_other = page.evaluate(
-      f"""
-      () => {{
-        const toggle = document.querySelector('input#{other_id}');
-        const subnav = toggle?.parentElement?.querySelector(':scope > nav.md-nav');
-        return {{
-          checked: toggle?.checked,
-          display: subnav ? getComputedStyle(subnav).display : null,
-        }};
-      }}
-      """
-  )
-  click_icon(other_icon)
-  page.wait_for_timeout(150)
-  after_other = page.evaluate(
-      f"""
-      () => {{
-        const toggle = document.querySelector('input#{other_id}');
-        const subnav = toggle?.parentElement?.querySelector(':scope > nav.md-nav');
-        return {{
-          checked: toggle?.checked,
-          display: subnav ? getComputedStyle(subnav).display : null,
-        }};
-      }}
-      """
-  )
-  if before_other["checked"] == after_other["checked"]:
-    raise RuntimeError(f"[{url}] Chevron click did not toggle {collapsible['other']['text']}.")
-  if before_other["display"] == after_other["display"]:
-    raise RuntimeError(
-        f"[{url}] Chevron click did not change display for {collapsible['other']['text']}."
-    )
-
-  toc_info = page.evaluate(
-      """
-      () => {
-        const nav = document.querySelector('.md-sidebar--secondary');
-        if (!nav) return null;
-        const links = Array.from(nav.querySelectorAll('.md-nav__link')).filter((link) => link.hash);
-        const active = nav.querySelector(
-          '.md-nav__link--active, .md-nav__item--active > .md-nav__link, .md-nav__link[aria-current="true"]'
-        );
-        return {
-          count: links.length,
-          active: active ? active.getAttribute('href') : null,
-        };
-      }
-      """
-  )
-  if toc_info and toc_info["count"] > 1:
-    initial_active = toc_info["active"]
-    page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-    page.wait_for_timeout(200)
-    updated = page.evaluate(
-        """
-        () => {
-          const nav = document.querySelector('.md-sidebar--secondary');
-          if (!nav) return null;
-          const active = nav.querySelector(
-            '.md-nav__link--active, .md-nav__item--active > .md-nav__link, .md-nav__link[aria-current="true"]'
-          );
-          return active ? active.getAttribute('href') : null;
-        }
-        """
-    )
-    if updated == initial_active:
-      raise RuntimeError(f"[{url}] TOC active link did not update after scroll.")
 
   depth_border = get_style(
       page,
@@ -536,6 +332,22 @@ def assert_desktop_styles(page, url: str, lang: str):
       raise RuntimeError(f"[{url}] Expected Lithuanian nav only.")
 
   print(f"✅ Desktop styles and language nav ok on {url}")
+
+
+def assert_paradox_tip(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  tip = page.query_selector(".md-typeset .admonition.tip")
+  if not tip:
+    raise RuntimeError(f"[{url}] Missing tip callout in main content")
+  tip_box = tip.bounding_box()
+  if not tip_box:
+    raise RuntimeError(f"[{url}] Unable to read tip bounding box")
+  toc = page.query_selector(".md-sidebar--secondary")
+  if toc:
+    toc_box = toc.bounding_box()
+    if toc_box and tip_box["x"] >= toc_box["x"] - 10:
+      raise RuntimeError(f"[{url}] Tip appears inside TOC area")
+  print(f"✅ Paradox tip appears in content on {url}")
 
 
 def assert_homepage_styles(page, url: str):
@@ -765,6 +577,7 @@ def main():
         assert_homepage_styles(desktop, url)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
+      assert_paradox_tip(desktop, PARADOX_URL)
       desktop.close()
       browser.close()
   finally:

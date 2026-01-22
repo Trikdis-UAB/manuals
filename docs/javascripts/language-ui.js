@@ -8,6 +8,16 @@
   var HOME_LABELS = new Set(["Home", "Pagrindinis", "Inicio", "Главная"]);
   var COLLAPSIBLE_LABELS = new Set(["Keypads", "Klaviatūros", "Teclados", "Клавиатуры"]);
 
+  function findLanguageIndex(segments) {
+    for (var i = 0; i < segments.length; i += 1) {
+      var code = segments[i].toLowerCase();
+      if (LANGUAGE_BUTTON_LABELS[code]) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   function detectLanguage() {
     if (typeof window === "undefined") {
       return "en";
@@ -17,9 +27,9 @@
     if (segments.length === 0) {
       return "home";
     }
-    var code = segments[0].toLowerCase();
-    if (LANGUAGE_BUTTON_LABELS[code]) {
-      return code;
+    var langIndex = findLanguageIndex(segments);
+    if (langIndex !== -1) {
+      return segments[langIndex].toLowerCase();
     }
     return "en";
   }
@@ -42,7 +52,14 @@
 
   function updateLogoLinks(lang) {
     var targetLang = lang === "home" ? "en" : lang;
-    var href = "/" + targetLang + "/";
+    var pathname = window.location.pathname || "/";
+    var segments = pathname.split("/").filter(Boolean);
+    var langIndex = findLanguageIndex(segments);
+    var prefix = "";
+    if (langIndex > 0) {
+      prefix = "/" + segments.slice(0, langIndex).join("/");
+    }
+    var href = prefix + "/" + targetLang + "/";
     document.querySelectorAll("a.md-logo").forEach(function (logo) {
       logo.setAttribute("href", href);
     });
