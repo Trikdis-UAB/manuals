@@ -2,8 +2,7 @@
   var messages = [
     { text: "Welcome! Pick your language:", lang: "en" },
     { text: "Sveiki! Pasirinkite kalbą:", lang: "lt" },
-    { text: "¡Bienvenido! Elige tu idioma:", lang: "es" },
-    { text: "Добро пожаловать! Выберите язык:", lang: "ru" }
+    { text: "¡Bienvenido! Elige tu idioma:", lang: "es" }
   ];
 
   var messageByLang = {};

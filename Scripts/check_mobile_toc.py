@@ -545,6 +545,26 @@ def assert_homepage_styles(page, url: str):
   if size_px > 28:
     raise RuntimeError(f"[{url}] Welcome font-size {welcome['size']} too large")
 
+  allowed_messages = {
+      "Welcome! Pick your language:",
+      "Sveiki! Pasirinkite kalbą:",
+      "¡Bienvenido! Elige tu idioma:",
+  }
+  seen_messages = set()
+  for _ in range(4):
+    message = page.evaluate(
+        "() => document.getElementById('welcome-message')?.textContent?.trim() || ''"
+    )
+    if message:
+      seen_messages.add(message)
+      if re.search(r"[\u0400-\u04FF]", message):
+        raise RuntimeError(f"[{url}] Welcome message contains Cyrillic: {message}")
+    page.wait_for_timeout(2200)
+
+  unexpected = [msg for msg in seen_messages if msg not in allowed_messages]
+  if unexpected:
+    raise RuntimeError(f"[{url}] Unexpected welcome messages: {unexpected}")
+
   print(f"✅ Homepage sizing and left nav ok on {url}")
 
 
