@@ -2,6 +2,7 @@
 """
 Playwright smoke test:
 - Mobile: drawer opens directly to the page TOC (with the built-in back button).
+- Mobile: sidebar overlay does not reserve layout space and opens via drawer.
 - Desktop: right sidebar styles, deep-nav guides, and language-specific nav isolation.
 
 Usage:
@@ -30,6 +31,10 @@ URLS = [
     "http://127.0.0.1:8001/en/alarm-communicators/cellular/get/",
     "http://127.0.0.1:8001/en/alarm-communicators/e16/",
     "http://127.0.0.1:8001/en/alarm-communicators/fire-panels/g17f/",
+]
+MOBILE_LAYOUT_URLS = [
+    "http://127.0.0.1:8001/en/",
+    "http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/",
 ]
 HOME_URLS = [
     "http://127.0.0.1:8001/en/",
@@ -224,6 +229,148 @@ def assert_mobile_toc(page, url: str):
     )
 
   print(f"✅ Mobile drawer defaults to TOC on {url}")
+
+
+def assert_mobile_sidebar_layout(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  viewport = page.viewport_size
+  if not viewport:
+    raise RuntimeError(f"[{url}] Missing viewport size for mobile layout check.")
+
+  layout = page.evaluate(
+      """
+      () => {
+        const sidebar = document.querySelector('.md-sidebar--primary');
+        const content = document.querySelector('.md-content');
+        if (!sidebar || !content) return null;
+        const s = sidebar.getBoundingClientRect();
+        const c = content.getBoundingClientRect();
+        const drawer = document.getElementById('__drawer');
+        return {
+          drawerChecked: drawer ? drawer.checked : null,
+          sidebar: {
+            left: s.left,
+            right: s.right,
+            width: s.width,
+            position: getComputedStyle(sidebar).position,
+          },
+          content: {
+            left: c.left,
+            right: c.right,
+            width: c.width,
+          },
+        };
+      }
+      """
+  )
+  if not layout:
+    raise RuntimeError(f"[{url}] Unable to read mobile layout.")
+
+  if layout["sidebar"]["position"] not in ("fixed", "absolute"):
+    raise RuntimeError(
+        f"[{url}] Sidebar position {layout['sidebar']['position']} should be fixed on mobile."
+    )
+  if layout["content"]["left"] > 2:
+    raise RuntimeError(
+        f"[{url}] Content left {layout['content']['left']}px should be near 0."
+    )
+  if layout["content"]["right"] < viewport["width"] - 2:
+    raise RuntimeError(
+        f"[{url}] Content right {layout['content']['right']}px should reach viewport width."
+    )
+
+  page.evaluate(
+      """
+      () => {
+        const drawer = document.getElementById('__drawer');
+        if (drawer) {
+          drawer.checked = true;
+          drawer.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+      """
+  )
+  page.wait_for_timeout(300)
+
+  open_layout = page.evaluate(
+      """
+      () => {
+        const sidebar = document.querySelector('.md-sidebar--primary');
+        const content = document.querySelector('.md-content');
+        const drawer = document.getElementById('__drawer');
+        if (!sidebar || !content) return null;
+        const s = sidebar.getBoundingClientRect();
+        const c = content.getBoundingClientRect();
+        return {
+          drawerChecked: drawer ? drawer.checked : null,
+          sidebar: { left: s.left, right: s.right, width: s.width },
+          content: { left: c.left, right: c.right, width: c.width },
+        };
+      }
+      """
+  )
+  if not open_layout:
+    raise RuntimeError(f"[{url}] Unable to read drawer-open layout.")
+  if not open_layout["drawerChecked"]:
+    raise RuntimeError(f"[{url}] Drawer did not open for mobile layout check.")
+  if open_layout["sidebar"]["right"] < 160:
+    raise RuntimeError(
+        f"[{url}] Sidebar not visible when open: {open_layout['sidebar']}"
+    )
+  if open_layout["content"]["left"] > 2:
+    raise RuntimeError(
+        f"[{url}] Content shifts when drawer opens: left {open_layout['content']['left']}px"
+    )
+
+  toc_lines = page.evaluate(
+      """
+      () => {
+        const selectors = [
+          '.md-nav--secondary .md-nav__list',
+          '.md-nav--secondary .md-nav__list .md-nav__list',
+          '.md-nav--primary .md-nav__list .md-nav__list',
+          '.md-nav--primary .md-nav__list .md-nav__list .md-nav__list',
+        ];
+        return selectors.map((selector) => {
+          const el = document.querySelector(selector);
+          const style = el ? getComputedStyle(el) : null;
+          return {
+            selector,
+            borderLeftWidth: style ? style.borderLeftWidth : null,
+          };
+        });
+      }
+      """
+  )
+  for entry in toc_lines:
+    if entry["borderLeftWidth"] not in (None, "", "0px"):
+      raise RuntimeError(
+          f"[{url}] Mobile nav border {entry['selector']} has {entry['borderLeftWidth']}"
+      )
+
+  toc_title = page.evaluate(
+      """
+      () => {
+        const title = document.querySelector('.md-nav--secondary .md-nav__title');
+        const icon = title?.querySelector('.md-nav__icon');
+        if (!title || !icon) return null;
+        const style = getComputedStyle(title);
+        const i = icon.getBoundingClientRect();
+        return {
+          paddingLeft: style.paddingLeft,
+          iconRight: i.right,
+        };
+      }
+      """
+  )
+  if toc_title:
+    padding_left = float(toc_title["paddingLeft"].replace("px", ""))
+    if padding_left < 40:
+      raise RuntimeError(
+          f"[{url}] TOC title padding-left {padding_left}px too small."
+      )
+
+  print(f"✅ Mobile sidebar layout ok on {url}")
 
 
 def assert_desktop_styles(page, url: str, lang: str):
@@ -588,6 +735,8 @@ def main():
       page.on("console", lambda msg: print(f"[console] {msg.type}: {msg.text}"))
       for url in URLS:
         assert_mobile_toc(page, url)
+      for url in MOBILE_LAYOUT_URLS:
+        assert_mobile_sidebar_layout(page, url)
       page.close()
 
       desktop = browser.new_page(viewport={"width": 1280, "height": 900})

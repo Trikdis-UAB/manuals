@@ -29,6 +29,7 @@
 ## Testing Guidelines
 - Minimum: run `mkdocs build --strict` before commit.
 - UI/behavior changes: run relevant targeted checks (e.g., `Scripts/check_mobile_toc.py` for mobile drawer/TOC).
+- Mobile layout sanity: `Scripts/check_mobile_toc.py` also validates mobile sidebar overlay/no reserved space; run after UI CSS/JS tweaks.
 - After conversions: re-run `fix_callouts.py` and `link_chapters.py` to prevent regressions.
 - Add small, scriptable checks when introducing new behaviors; document the command in PR notes.
 - When converting other-language manuals for a product that was just updated in English, compare the converted outputs against the English version to catch missing/extra headings, duplicated text, and broken button markers.

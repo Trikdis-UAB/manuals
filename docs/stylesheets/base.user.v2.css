@@ -354,7 +354,6 @@ table th {
 .md-sidebar--primary .md-nav--primary {
   margin-top: 0 !important;
   padding-top: 0 !important;
-  position: static !important;
 }
 
 .md-sidebar--primary .md-nav__list,
@@ -368,8 +367,6 @@ table th {
   padding-top: 0 !important;
   margin-top: 0 !important;
   box-shadow: none !important;
-  position: relative;
-  height: auto !important;
 }
 
 @media screen and (min-width: 76.25em) {
@@ -377,18 +374,25 @@ table th {
     position: sticky;
     top: 64px;
     align-self: flex-start;
+    height: auto !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary {
+    position: static !important;
   }
 }
 
-.md-sidebar--primary::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -2px;
-  height: 6px;
-  background: #f6f6f6;
-  pointer-events: none;
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2px;
+    height: 6px;
+    background: #f6f6f6;
+    pointer-events: none;
+  }
 }
 
 .md-sidebar--primary .md-nav__title {
@@ -436,6 +440,21 @@ table th {
   .md-sidebar--primary,
   .md-sidebar--primary * {
     box-shadow: none !important;
+  }
+
+  .md-nav--primary .md-nav__list .md-nav__list,
+  .md-nav--primary .md-nav__list .md-nav__list .md-nav__list,
+  .md-nav--secondary .md-nav__list,
+  .md-nav--secondary .md-nav__list .md-nav__list {
+    border-left: none !important;
+  }
+
+  .md-nav--secondary .md-nav__title {
+    padding-left: 2.5rem;
+  }
+
+  .md-nav--secondary .md-nav__title .md-nav__icon {
+    left: 0.75rem;
   }
 }
 
