@@ -1,4 +1,4 @@
-# GT/GT+/GET with Paradox SP(+)/MG(+), quick setup
+# Paradox SP(+)/MG(+) with GT/GT+/GET quick setup
 
 Short wiring and programming steps to connect the GT/GT+/GET communicator to Paradox SP/SP+/MG/MG+ panels using TIP/RING and KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.)
 
@@ -127,5 +127,8 @@ Refer to the full Paradox manual if your keypad codes differ.
     <img src="./protegus-finished.png" alt="Finished">
   </div>
 </div>
+
+</div>
+
 !!! tip
     If Protegus2 cannot finish writing data, verify the KeyBus wiring (YEl/GRN), IMEI entry, and that CMS/Contact ID settings are saved on the panel.

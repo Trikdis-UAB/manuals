@@ -1,22 +1,16 @@
-**Content**
+# Honeywell Vista-48 with GT/GT+/GET quick setup
 
+Short wiring and programming steps to connect the GT/GT+/GET communicator to Honeywell Ademco Vista-48 (Vista-20, Vista-15) panel using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
 
-**GT/GT+/GET with Honeywell Ademco Vista-48 (Vista-20, Vista-15), quick setup** 
-
-Short wiring and programming steps to connect the **GT/GT+/GET** communicator to **Honeywell Ademco Vista-48 (Vista-20, Vista-15)** panel using KeyBus, then enroll the system in **Protegus2**. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between **GT/GT+/GET**, but the connections are the same.) 
-
-| **CAUTION** | Install and service only by qualified personnel. Disconnect power  before wiring. Unauthorized changes void warranty. |
-| ----------- | ------------------------------------------------------------ |
+!!! caution
+    Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
 
 ## Prerequisites
 
-·    **GT/GT+/GET** firmware 1.21, SIM inserted, PIN disabled, data plan active.
-
-·    **Honeywell Ademco Vista-48  (Vista-20, Vista-15)** panel with keypad access (installer code available).
-
-·    CMS account number if reporting to CMS.
-
-·    **Protegus2** company/installer account and communicator IMEI.
+1. GT/GT+/GET firmware 1.21, SIM inserted, PIN disabled, data plan active.
+1. Honeywell Ademco Vista-48 (Vista-20, Vista-15) panel with keypad access (installer code available).
+1. CMS account number if reporting to CMS.
+1. Protegus2 company/installer account and communicator IMEI.
 
 ## Wiring
 
@@ -150,15 +144,16 @@ Using the control panel‘s keypad enter these sections and set them as describe
   </div>
 
 
-After completing the setup and installation perform a system check: 
-
-1. Create an event: 
-
-​	\- by arming/disarming the system with the control panel’s keypad; 
-
-​	\- by triggering a zone alarm when the security system is armed. 
 
 
-2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the **Protegus2** app. 
+</div>
 
+!!! tip
+    After completing the setup and installation perform a system check:
 
+    1. Create an event:
+
+       - by arming/disarming the system with the control panel’s keypad.
+       - by triggering a zone alarm when the security system is armed.
+
+    2. Make sure that the event arrives to the CMS (Central Monitoring Station) and the Protegus2 app.
