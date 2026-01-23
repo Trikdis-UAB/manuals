@@ -449,8 +449,24 @@ table th {
     border-left: none !important;
   }
 
+  .md-nav--primary .md-nav__title {
+    padding-left: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    white-space: normal;
+    line-height: 1.3;
+    min-height: 0;
+    height: auto;
+  }
+
+  .md-nav--primary .md-nav__title .md-nav__icon {
+    left: 0.75rem;
+  }
+
   .md-nav--secondary .md-nav__title {
     padding-left: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .md-nav--secondary .md-nav__title .md-nav__icon {

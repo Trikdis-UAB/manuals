@@ -1,6 +1,7 @@
 site/
 .DS_Store
 */.DS_Store
+Icon?
 .venv/
 artifacts/ui/
 artifacts/

@@ -358,6 +358,8 @@ def assert_mobile_sidebar_layout(page, url: str):
         const i = icon.getBoundingClientRect();
         return {
           paddingLeft: style.paddingLeft,
+          paddingTop: style.paddingTop,
+          paddingBottom: style.paddingBottom,
           iconRight: i.right,
         };
       }
@@ -369,6 +371,57 @@ def assert_mobile_sidebar_layout(page, url: str):
       raise RuntimeError(
           f"[{url}] TOC title padding-left {padding_left}px too small."
       )
+    padding_bottom = float(toc_title["paddingBottom"].replace("px", ""))
+    if padding_bottom < 6:
+      raise RuntimeError(
+          f"[{url}] TOC title padding-bottom {padding_bottom}px too small."
+      )
+    padding_top = float(toc_title["paddingTop"].replace("px", ""))
+    if padding_top < 6:
+      raise RuntimeError(
+          f"[{url}] TOC title padding-top {padding_top}px too small."
+      )
+
+  nav_title = page.evaluate(
+      """
+      () => {
+        const titles = Array.from(
+          document.querySelectorAll('.md-nav--primary .md-nav__title')
+        );
+        for (const title of titles) {
+          const rect = title.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            const style = getComputedStyle(title);
+            return {
+              paddingLeft: style.paddingLeft,
+              paddingTop: style.paddingTop,
+              paddingBottom: style.paddingBottom,
+              whiteSpace: style.whiteSpace,
+            };
+          }
+        }
+        return null;
+      }
+      """
+  )
+  if nav_title:
+    padding_left = float(nav_title["paddingLeft"].replace("px", ""))
+    if padding_left < 40:
+      raise RuntimeError(
+          f"[{url}] Nav title padding-left {padding_left}px too small."
+      )
+    padding_bottom = float(nav_title["paddingBottom"].replace("px", ""))
+    if padding_bottom < 6:
+      raise RuntimeError(
+          f"[{url}] Nav title padding-bottom {padding_bottom}px too small."
+      )
+    padding_top = float(nav_title["paddingTop"].replace("px", ""))
+    if padding_top < 6:
+      raise RuntimeError(
+          f"[{url}] Nav title padding-top {padding_top}px too small."
+      )
+    if nav_title["whiteSpace"] == "nowrap":
+      raise RuntimeError(f"[{url}] Nav title should wrap on mobile.")
 
   print(f"✅ Mobile sidebar layout ok on {url}")
 
