@@ -148,6 +148,7 @@ body[data-md-color-scheme="slate"] {
   --trik-text-muted: #b7beca;
   --trik-link: #f4a39a;
   --trik-link-hover: #f8b8b1;
+  --trik-link-soft: rgba(244, 163, 154, 0.45);
 }
 
 body[data-md-color-scheme="slate"] .md-sidebar--primary,
@@ -214,7 +215,7 @@ body[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link[aria-cur
 body[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__item--active > .md-nav__link {
   background-color: var(--trik-surface-3);
   color: var(--trik-text);
-  box-shadow: inset 2px 0 0 var(--trik-link);
+  box-shadow: inset 1px 0 0 var(--trik-link-soft);
 }
 
 body[data-md-color-scheme="slate"] .md-content__inner {
