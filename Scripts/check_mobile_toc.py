@@ -39,6 +39,9 @@ MOBILE_LAYOUT_URLS = [
 HOME_URLS = [
     "http://127.0.0.1:8001/en/",
 ]
+DARK_MODE_URLS = [
+    "http://127.0.0.1:8001/en/",
+]
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),
@@ -54,6 +57,14 @@ EXPECTED_COLORS = {
     "toc_active": "rgb(228, 228, 228)",
     "nav_depth_border": "rgb(210, 209, 209)",
 }
+
+DARK_MODE_SURFACES = [
+    ".md-sidebar--primary",
+    ".md-sidebar__scrollwrap",
+    ".md-nav--primary",
+    ".md-sidebar--primary .md-nav__list",
+    ".md-sidebar--primary .md-nav__list .md-nav__list",
+]
 
 
 def find_headless_shell(cache_root: Path) -> Optional[Path]:
@@ -170,6 +181,71 @@ def get_style(page, selector: str, prop: str):
       "(el, prop) => getComputedStyle(el).getPropertyValue(prop)",
       prop,
   )
+
+
+def parse_rgba(value: Optional[str]):
+  if not value:
+    return None
+  value = value.strip().lower()
+  if value in ("transparent", ""):
+    return (0, 0, 0, 0)
+  match = re.match(r"rgba?\\(([^)]+)\\)", value)
+  if not match:
+    return None
+  parts = [p.strip() for p in match.group(1).split(",")]
+  if len(parts) < 3:
+    return None
+  r = int(float(parts[0]))
+  g = int(float(parts[1]))
+  b = int(float(parts[2]))
+  a = float(parts[3]) if len(parts) > 3 else 1.0
+  return (r, g, b, a)
+
+
+def is_light_background(value: Optional[str], threshold: int = 200) -> bool:
+  rgba = parse_rgba(value)
+  if not rgba:
+    return False
+  r, g, b, a = rgba
+  if a == 0:
+    return False
+  return min(r, g, b) >= threshold
+
+
+def set_color_scheme(page, scheme: str):
+  page.evaluate(
+      """
+      (scheme) => {
+        const input = document.querySelector(
+          `input[data-md-color-scheme="${scheme}"]`
+        );
+        if (input) input.click();
+      }
+      """,
+      scheme,
+  )
+  page.wait_for_function(
+      f"document.body.getAttribute('data-md-color-scheme') === '{scheme}'",
+      timeout=2000,
+  )
+
+
+def assert_dark_mode_surfaces(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  set_color_scheme(page, "slate")
+
+  failures = []
+  for selector in DARK_MODE_SURFACES:
+    color = get_style(page, selector, "background-color")
+    if is_light_background(color):
+      failures.append(f"{selector}: {color}")
+
+  if failures:
+    raise RuntimeError(
+        f"[{url}] Dark mode surfaces too light: {', '.join(failures)}"
+    )
+
+  print(f"✅ Dark mode surfaces ok on {url}")
 
 
 def assert_mobile_toc(page, url: str):
@@ -428,6 +504,7 @@ def assert_mobile_sidebar_layout(page, url: str):
 
 def assert_desktop_styles(page, url: str, lang: str):
   page.goto(url, wait_until="networkidle")
+  set_color_scheme(page, "default")
 
   logo = page.query_selector("a.md-logo")
   if not logo:
@@ -552,6 +629,7 @@ def assert_paradox_tip(page, url: str):
 
 def assert_homepage_styles(page, url: str):
   page.goto(url, wait_until="networkidle")
+  set_color_scheme(page, "default")
 
   nav_visible = is_visible(page, ".md-sidebar--primary")
   if not nav_visible:
@@ -797,6 +875,8 @@ def main():
       assert_root_redirect(desktop, ROOT_URL, "/en/")
       for url in HOME_URLS:
         assert_homepage_styles(desktop, url)
+      for url in DARK_MODE_URLS:
+        assert_dark_mode_surfaces(desktop, url)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_paradox_tip(desktop, PARADOX_URL)

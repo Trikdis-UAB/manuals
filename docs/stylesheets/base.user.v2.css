@@ -138,6 +138,129 @@
   color: #d17e00;
 }
 
+/* Dark mode palette tuning */
+body[data-md-color-scheme="slate"] {
+  --trik-surface-1: #1e2129;
+  --trik-surface-2: #222734;
+  --trik-surface-3: #2a3142;
+  --trik-border: #343a48;
+  --trik-text: #e6e9ef;
+  --trik-text-muted: #b7beca;
+  --trik-link: #f4a39a;
+  --trik-link-hover: #f8b8b1;
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--primary,
+body[data-md-color-scheme="slate"] .md-sidebar--secondary,
+body[data-md-color-scheme="slate"] .md-nav--primary,
+body[data-md-color-scheme="slate"] .md-nav--secondary,
+body[data-md-color-scheme="slate"] .md-sidebar__scrollwrap {
+  background-color: var(--trik-surface-2) !important;
+  color: var(--trik-text);
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--primary,
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap,
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner,
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav,
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav--primary,
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav--primary > .md-nav__list {
+  background: var(--trik-surface-2) !important;
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--primary::before {
+  background: var(--trik-surface-2) !important;
+}
+
+body[data-md-color-scheme="slate"] .md-nav__title,
+body[data-md-color-scheme="slate"] .md-nav__link {
+  color: var(--trik-text);
+}
+
+body[data-md-color-scheme="slate"] .md-nav__title {
+  color: var(--trik-text-muted);
+  background-color: var(--trik-surface-2);
+}
+
+body[data-md-color-scheme="slate"] .md-nav__link--active,
+body[data-md-color-scheme="slate"] .md-nav__link:hover,
+body[data-md-color-scheme="slate"] .md-nav__link:focus-visible {
+  background-color: var(--trik-surface-3);
+  color: var(--trik-text);
+}
+
+body[data-md-color-scheme="slate"] .md-nav__list {
+  border-color: var(--trik-border);
+}
+
+body[data-md-color-scheme="slate"] .md-content {
+  border-right: 1px solid var(--trik-border);
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__title,
+body[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__title {
+  background-color: var(--trik-surface-2);
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__list,
+body[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__list .md-nav__list {
+  background-color: var(--trik-surface-2);
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--primary a.md-nav__link--active,
+body[data-md-color-scheme="slate"] .md-sidebar--primary a.md-nav__link[aria-current="page"],
+body[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link--active,
+body[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link[aria-current="true"],
+body[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__item--active > .md-nav__link {
+  background-color: var(--trik-surface-3);
+  color: var(--trik-text);
+  box-shadow: inset 2px 0 0 var(--trik-link);
+}
+
+body[data-md-color-scheme="slate"] .md-content__inner {
+  color: var(--trik-text);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #d6dbe3;
+}
+
+body[data-md-color-scheme="slate"] .md-typeset h2,
+body[data-md-color-scheme="slate"] .md-typeset h3,
+body[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--trik-text);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--trik-link);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--trik-link-hover);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .admonition {
+  background: rgba(47,115,218,.16);
+  color: #d6e0f3;
+  border-left-color: #4f7de1;
+  box-shadow: none;
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .admonition-title {
+  background: rgba(68,138,255,.18);
+  color: #d6e0f3;
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .admonition.note > .admonition-title {
+  color: #d6e0f3;
+  background: rgba(79,125,225,.2);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .admonition.important > .admonition-title {
+  color: #f5d7b0;
+  background: rgba(255,152,0,.18);
+}
+
 /* WARNING → orange (same as important) */
 .md-alert-warning,
 .md-typeset .admonition.warning {
