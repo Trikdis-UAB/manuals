@@ -78,52 +78,44 @@ Refer to the full Paradox manual if your keypad codes differ.
     <strong>Step 2.</strong> Enter the communicator <strong>IMEI</strong>, tap <strong>Next</strong>.
     <img src="./protegus-enter-imei.png" alt="Enter IMEI">
   </div>
-  <div class="step-card">
-    <strong>Step 3.</strong> Select <strong>TIP RING</strong>, tap <strong>Next</strong>.
-    <img src="./protegus-select-tip-ring.png" alt="Select TIP RING">
-  </div>
-  <div class="step-card">
-    <strong>Step 4.</strong> Tap <strong>Back</strong>.
-    <img src="./protegus-back.png" alt="Press back">
-  </div>
-  <div class="step-card">
-    <strong>Step 5.</strong> Select <strong>Serial BUS</strong>, tap <strong>Next</strong>.
+   <div class="step-card">
+    <strong>Step 3.</strong> Select <strong>Serial BUS</strong>, tap <strong>Next</strong>.
     <img src="./protegus-select-serial-bus.png" alt="Select Serial BUS">
   </div>
   <div class="step-card">
-    <strong>Step 6.</strong> Choose <strong>PARADOX</strong>.
+    <strong>Step 4.</strong> Choose <strong>PARADOX</strong>.
     <img src="./protegus-select-paradox.png" alt="Select Paradox">
   </div>
   <div class="step-card">
-    <strong>Step 7.</strong> Choose <strong>PARADOX SP+/MG+ series KeyBus</strong>.
+    <strong>Step 5.</strong> Choose <strong>PARADOX SP+/MG+ series KeyBus</strong>.
     <img src="./protegus-select-paradox-keybus.png" alt="Select Paradox KeyBus">
   </div>
   <div class="step-card">
-    <strong>Step 8.</strong> Enter <strong>Primary Object ID</strong>, tap <strong>Next</strong>.
+    <strong>Step 6.</strong> Enter <strong>Primary Object ID</strong>, tap <strong>Next</strong>.
     <img src="./protegus-primary-object-id.png" alt="Enter Primary Object ID">
   </div>
   <div class="step-card">
-    <strong>Step 9.</strong> Wait while data is written.
+    <strong>Step 7.</strong> Wait while data is written.
     <img src="./protegus-writing-data.png" alt="Writing data">
   </div>
   <div class="step-card">
-    <strong>Step 10.</strong> Tap <strong>Next</strong>.
+    <strong>Step 8.</strong> Tap <strong>Next</strong>.
     <img src="./protegus-press-next.png" alt="Press Next">
   </div>
   <div class="step-card">
-    <strong>Step 11.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
+    <strong>Step 9.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
     <img src="./protegus-enter-name.png" alt="Enter name">
   </div>
   <div class="step-card">
-    <strong>Step 12.</strong> Tap <strong>Skip</strong> (if you do not add users now).
+    <strong>Step 10.</strong> Tap <strong>Skip</strong> (if you do not add users now).
     <img src="./protegus-skip.png" alt="Skip">
   </div>
   <div class="step-card">
-    <strong>Step 13.</strong> Wait ~1 minute for completion.
+    <strong>Step 11.</strong> Wait ~1 minute for completion.
     <img src="./protegus-wait.png" alt="Wait">
   </div>
   <div class="step-card">
-    <strong>Step 14.</strong> Setup finished.
+    <strong>Step 12.</strong> Setup finished.
     <img src="./protegus-finished.png" alt="Finished">
   </div>
 </div>
