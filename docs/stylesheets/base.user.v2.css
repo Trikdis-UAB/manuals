@@ -540,6 +540,12 @@ table th {
   border-radius: 0.35rem;
 }
 
+.md-sidebar--primary a.md-nav__link:hover,
+.md-sidebar--primary a.md-nav__link:focus-visible {
+  background: #e4e4e4;
+  border-radius: 0.35rem;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-content {
     border-right: 1px solid #d2d1d1;
