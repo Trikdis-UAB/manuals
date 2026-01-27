@@ -30,6 +30,9 @@
 - Minimum: run `mkdocs build --strict` before commit.
 - UI/behavior changes: run relevant targeted checks (e.g., `Scripts/check_mobile_toc.py` for mobile drawer/TOC).
 - Mobile layout sanity: `Scripts/check_mobile_toc.py` also validates mobile sidebar overlay/no reserved space; run after UI CSS/JS tweaks.
+- For UI regressions, add or expand targeted checks with explicit assertions for the observed behavior (layout, visibility, interactions) and document the command in handoffs.
+- For mobile nav/dropdown issues, extend `Scripts/check_mobile_toc.py` to click-expand a product category and assert the submenu renders.
+- Before implementing changes, review the objective, surface risks/unknowns, and add or extend automated checks so new behavior is validated to a professional standard.
 - After conversions: re-run `fix_callouts.py` and `link_chapters.py` to prevent regressions.
 - Add small, scriptable checks when introducing new behaviors; document the command in PR notes.
 - When converting other-language manuals for a product that was just updated in English, compare the converted outputs against the English version to catch missing/extra headings, duplicated text, and broken button markers.
