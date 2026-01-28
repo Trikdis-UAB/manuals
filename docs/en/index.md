@@ -4,7 +4,7 @@ hide:
 class: language-home
 ---
 
-# <span id="welcome-message" lang="en">Welcome! Pick your language:</span>
+# Installation Manuals
 
 <style>
   nav[aria-label="Table of contents"] {
@@ -12,10 +12,13 @@ class: language-home
   }
 </style>
 
-<div class="language-grid">
-  <a class="language-card" data-lang="en" href="/en/" lang="en">English</a>
-  <a class="language-card" data-lang="lt" href="/lt/" lang="lt">Lietuvių</a>
-  <a class="language-card" data-lang="es" href="/es/" lang="es">Español</a>
+<div class="nav-callout" role="note">
+  <span class="nav-callout__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z" />
+    </svg>
+  </span>
+  <span class="nav-callout__text">Start on the left: use the navigation to pick a manual.</span>
 </div>
 
 ## Find your manual fast
@@ -25,7 +28,7 @@ Installers can jump straight to the right document by using the search icon in t
 ## Quick actions
 
 - **Search the library** with product codes or keywords from wiring diagrams.
-- **Switch languages** using the cards above.
+- **Change language** from the header menu.
 - **Need help?** Reach the support team through the links in the top-right corner.
 
 ## Helpful resources

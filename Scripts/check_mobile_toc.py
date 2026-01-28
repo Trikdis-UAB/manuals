@@ -539,6 +539,85 @@ def assert_mobile_sidebar_layout(page, url: str):
   print(f"✅ Mobile sidebar layout ok on {url}")
 
 
+def assert_mobile_home_button(page, url: str, lang: str):
+  page.goto(url, wait_until="networkidle")
+
+  button = page.query_selector("header .md-home-button")
+  if not button:
+    raise RuntimeError(f"[{url}] Missing mobile home button in header.")
+
+  display = button.evaluate("el => getComputedStyle(el).display")
+  if display == "none":
+    raise RuntimeError(f"[{url}] Mobile home button is hidden.")
+
+  expected_href = f"/{lang}/"
+  href = button.get_attribute("href")
+  if href != expected_href:
+    raise RuntimeError(f"[{url}] Home button href {href} != {expected_href}")
+
+  palette = page.query_selector("header form[data-md-component='palette']")
+  if not palette:
+    raise RuntimeError(f"[{url}] Missing palette control for header order check.")
+
+  order_ok = page.evaluate(
+      """
+      () => {
+        const btn = document.querySelector('header .md-home-button');
+        const pal = document.querySelector('header form[data-md-component="palette"]');
+        if (!btn || !pal) return false;
+        return !!(btn.compareDocumentPosition(pal) & Node.DOCUMENT_POSITION_FOLLOWING);
+      }
+      """
+  )
+  if not order_ok:
+    raise RuntimeError(f"[{url}] Home button should appear before palette control.")
+
+  button_box = button.bounding_box()
+  palette_box = palette.bounding_box()
+  if button_box and palette_box:
+    if button_box["x"] >= palette_box["x"] - 1:
+      raise RuntimeError(
+          f"[{url}] Home button should be left of palette control: "
+          f"{button_box['x']} >= {palette_box['x']}"
+      )
+    if abs(button_box["y"] - palette_box["y"]) > 6:
+      raise RuntimeError(
+          f"[{url}] Home button vertical alignment off: "
+          f"{button_box['y']} vs {palette_box['y']}"
+      )
+
+  print(f"✅ Mobile home button ok on {url}")
+
+
+def assert_mobile_header_spacing(page, url: str):
+  page.goto(url, wait_until="networkidle")
+
+  padding = page.evaluate(
+      """
+      () => {
+        const btn = document.querySelector('header .md-home-button');
+        if (!btn) return null;
+        const style = getComputedStyle(btn);
+        return {
+          paddingLeft: style.paddingLeft,
+          paddingRight: style.paddingRight,
+        };
+      }
+      """
+  )
+  if not padding:
+    raise RuntimeError(f"[{url}] Missing header home button for spacing check.")
+
+  left = float(padding["paddingLeft"].replace("px", ""))
+  right = float(padding["paddingRight"].replace("px", ""))
+  if left > 6.5 or right > 6.5:
+    raise RuntimeError(
+        f"[{url}] Header button padding too wide: left {left}px, right {right}px"
+    )
+
+  print(f"✅ Mobile header spacing ok on {url}")
+
+
 def assert_desktop_styles(page, url: str, lang: str):
   page.goto(url, wait_until="networkidle")
   set_color_scheme(page, "default")
@@ -801,84 +880,22 @@ def assert_homepage_styles(page, url: str):
   if "Home" in nav_text:
     raise RuntimeError(f"[{url}] Home should not appear in nav text.")
 
-  lang_cards = page.evaluate(
-      """
-      () => Array.from(document.querySelectorAll('.language-grid .language-card'))
-        .map((card) => ({
-          text: card.textContent.trim(),
-          top: card.getBoundingClientRect().top,
-        }))
-      """
+  if page.query_selector(".language-grid"):
+    raise RuntimeError(f"[{url}] Language grid should not appear on the homepage.")
+  if page.query_selector("#welcome-message"):
+    raise RuntimeError(f"[{url}] Welcome cycler should not appear on the homepage.")
+
+  callout = page.query_selector(".nav-callout")
+  if not callout:
+    raise RuntimeError(f"[{url}] Navigation callout missing on homepage.")
+  callout_visible = is_visible(page, ".nav-callout")
+  if not callout_visible:
+    raise RuntimeError(f"[{url}] Navigation callout should be visible on desktop.")
+  callout_text = page.evaluate(
+      "() => document.querySelector('.nav-callout__text')?.textContent?.trim() || ''"
   )
-  if len(lang_cards) != 3:
-    raise RuntimeError(f"[{url}] Language cards count {len(lang_cards)} != 3")
-  labels = [card["text"] for card in lang_cards]
-  if labels != ["English", "Lietuvių", "Español"]:
-    raise RuntimeError(f"[{url}] Language cards {labels} != expected list")
-  tops = [card["top"] for card in lang_cards]
-  if max(tops) - min(tops) > 4:
-    raise RuntimeError(f"[{url}] Language cards should be one row, tops: {tops}")
-
-  grid_max_width = get_style(page, ".language-grid", "max-width")
-  if grid_max_width not in ("520px", "32.5rem"):
-    raise RuntimeError(f"[{url}] Language grid max-width {grid_max_width} != 520px")
-
-  padding = page.evaluate(
-      """
-      () => {
-        const card = document.querySelector('.language-card');
-        if (!card) return null;
-        const style = getComputedStyle(card);
-        return [style.paddingTop, style.paddingRight, style.paddingBottom, style.paddingLeft];
-      }
-      """
-  )
-  if padding != ["20px", "20px", "20px", "20px"]:
-    raise RuntimeError(f"[{url}] Language card padding {padding} != 20px")
-
-  welcome = page.evaluate(
-      """
-      () => {
-        const el = document.querySelector('#welcome-message');
-        if (!el) return null;
-        const style = getComputedStyle(el);
-        return {
-          color: style.color,
-          size: style.fontSize,
-          weight: style.fontWeight,
-        };
-      }
-      """
-  )
-  if not welcome:
-    raise RuntimeError(f"[{url}] Welcome message not found.")
-  if welcome["color"] != "rgb(107, 107, 107)":
-    raise RuntimeError(f"[{url}] Welcome color {welcome['color']} != rgb(107, 107, 107)")
-  if float(welcome["weight"]) > 500:
-    raise RuntimeError(f"[{url}] Welcome font-weight {welcome['weight']} too heavy")
-  size_px = float(welcome["size"].replace("px", ""))
-  if size_px > 28:
-    raise RuntimeError(f"[{url}] Welcome font-size {welcome['size']} too large")
-
-  allowed_messages = {
-      "Welcome! Pick your language:",
-      "Sveiki! Pasirinkite kalbą:",
-      "¡Bienvenido! Elige tu idioma:",
-  }
-  seen_messages = set()
-  for _ in range(4):
-    message = page.evaluate(
-        "() => document.getElementById('welcome-message')?.textContent?.trim() || ''"
-    )
-    if message:
-      seen_messages.add(message)
-      if re.search(r"[\u0400-\u04FF]", message):
-        raise RuntimeError(f"[{url}] Welcome message contains Cyrillic: {message}")
-    page.wait_for_timeout(2200)
-
-  unexpected = [msg for msg in seen_messages if msg not in allowed_messages]
-  if unexpected:
-    raise RuntimeError(f"[{url}] Unexpected welcome messages: {unexpected}")
+  if "navigation" not in callout_text.lower():
+    raise RuntimeError(f"[{url}] Navigation callout text unexpected: {callout_text}")
 
   print(f"✅ Homepage sizing and left nav ok on {url}")
 
@@ -905,7 +922,15 @@ def main():
         assert_mobile_toc(page, url)
       for url in MOBILE_LAYOUT_URLS:
         assert_mobile_sidebar_layout(page, url)
+      for url in HOME_URLS:
+        assert_mobile_home_button(page, url, "en")
       page.close()
+
+      narrow = browser.new_page(viewport={"width": 320, "height": 812})
+      narrow.on("console", lambda msg: print(f"[console] {msg.type}: {msg.text}"))
+      for url in HOME_URLS:
+        assert_mobile_header_spacing(narrow, url)
+      narrow.close()
 
       desktop = browser.new_page(viewport={"width": 1280, "height": 900})
       desktop.on("console", lambda msg: print(f"[console] {msg.type}: {msg.text}"))

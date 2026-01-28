@@ -60,8 +60,8 @@ extra_css:
 extra_javascript:
 - javascripts/redirect-trailing-slash.js
 - javascripts/close-language-select.js
-- javascripts/cycle-welcome.js
 - javascripts/language-ui.js
+- javascripts/header-home-button.js
 - javascripts/mobile-toc-default.js
 - javascripts/toc-active.js
 - javascripts/lazy-images.js
