@@ -42,6 +42,9 @@ HOME_URLS = [
 DARK_MODE_URLS = [
     "http://127.0.0.1:8001/en/",
 ]
+DARK_MODE_HOVER_URLS = [
+    "http://127.0.0.1:8001/en/control-panels/cg17/",
+]
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),
@@ -246,6 +249,40 @@ def assert_dark_mode_surfaces(page, url: str):
     )
 
   print(f"✅ Dark mode surfaces ok on {url}")
+
+
+def assert_dark_mode_hover(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  set_color_scheme(page, "slate")
+
+  selectors = [
+      ".md-sidebar--primary a.md-nav__link",
+      ".md-sidebar--secondary a.md-nav__link",
+  ]
+  failures = []
+  for selector in selectors:
+    handles = page.query_selector_all(selector)
+    handle = None
+    for candidate in handles:
+      is_visible = candidate.evaluate("el => !!(el.offsetParent)")
+      if is_visible:
+        handle = candidate
+        break
+    if not handle:
+      continue
+    handle.hover()
+    color = handle.evaluate(
+        "(el) => getComputedStyle(el).getPropertyValue('background-color')"
+    )
+    if is_light_background(color):
+      failures.append(f"{selector}: {color}")
+
+  if failures:
+    raise RuntimeError(
+        f"[{url}] Dark mode hover background too light: {', '.join(failures)}"
+    )
+
+  print(f"✅ Dark mode hover ok on {url}")
 
 
 def assert_mobile_toc(page, url: str):
@@ -877,6 +914,8 @@ def main():
         assert_homepage_styles(desktop, url)
       for url in DARK_MODE_URLS:
         assert_dark_mode_surfaces(desktop, url)
+      for url in DARK_MODE_HOVER_URLS:
+        assert_dark_mode_hover(desktop, url)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_paradox_tip(desktop, PARADOX_URL)
