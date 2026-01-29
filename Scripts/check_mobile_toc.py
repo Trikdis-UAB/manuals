@@ -285,6 +285,45 @@ def assert_dark_mode_hover(page, url: str):
   print(f"✅ Dark mode hover ok on {url}")
 
 
+def assert_dark_mode_active_markers(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  set_color_scheme(page, "slate")
+
+  selectors = [
+      (
+          ".md-sidebar--primary a.md-nav__link--active, "
+          ".md-sidebar--primary a.md-nav__link[aria-current='page']"
+      ),
+      (
+          ".md-sidebar--secondary a.md-nav__link--active, "
+          ".md-sidebar--secondary a.md-nav__link[aria-current='true']"
+      ),
+  ]
+  failures = []
+  for selector in selectors:
+    handle = page.query_selector(selector)
+    if not handle:
+      failures.append(f"{selector}: missing")
+      continue
+    box_shadow = handle.evaluate(
+        "(el) => getComputedStyle(el).getPropertyValue('box-shadow')"
+    )
+    border_left = handle.evaluate(
+        "(el) => getComputedStyle(el).getPropertyValue('border-left-width')"
+    )
+    if box_shadow not in ("none", ""):
+      failures.append(f"{selector}: box-shadow {box_shadow}")
+    if border_left not in ("0px", "0"):
+      failures.append(f"{selector}: border-left-width {border_left}")
+
+  if failures:
+    raise RuntimeError(
+        f"[{url}] Dark mode active markers not neutral: {', '.join(failures)}"
+    )
+
+  print(f"✅ Dark mode active markers ok on {url}")
+
+
 def assert_mobile_toc(page, url: str):
   page.goto(url, wait_until="networkidle")
 
@@ -618,6 +657,46 @@ def assert_mobile_header_spacing(page, url: str):
   print(f"✅ Mobile header spacing ok on {url}")
 
 
+def assert_mobile_homepage_copy(page, url: str):
+  page.goto(url, wait_until="networkidle")
+
+  paragraph = page.evaluate(
+      """
+      () => {
+        const p = document.querySelector('.md-content .md-typeset p');
+        return p ? p.textContent.trim() : null;
+      }
+      """
+  )
+  if not paragraph or "menu on the left" not in paragraph.lower():
+    raise RuntimeError(f"[{url}] Homepage intro paragraph unexpected: {paragraph}")
+
+  callout = page.query_selector(".nav-callout")
+  if not callout:
+    raise RuntimeError(f"[{url}] Navigation callout missing on homepage.")
+  callout_visible = is_visible(page, ".nav-callout")
+  if not callout_visible:
+    raise RuntimeError(f"[{url}] Navigation callout should be visible on mobile.")
+  mobile_text = page.evaluate(
+      "() => document.querySelector('.nav-callout__text--mobile')?.textContent?.trim() || ''"
+  )
+  if "menu" not in mobile_text.lower():
+    raise RuntimeError(f"[{url}] Mobile callout text unexpected: {mobile_text}")
+  desktop_text_visible = page.evaluate(
+      """
+      () => {
+        const el = document.querySelector('.nav-callout__text');
+        if (!el) return null;
+        return getComputedStyle(el).display !== 'none';
+      }
+      """
+  )
+  if desktop_text_visible:
+    raise RuntimeError(f"[{url}] Desktop callout text should be hidden on mobile.")
+
+  print(f"✅ Mobile homepage copy ok on {url}")
+
+
 def assert_desktop_styles(page, url: str, lang: str):
   page.goto(url, wait_until="networkidle")
   set_color_scheme(page, "default")
@@ -880,10 +959,35 @@ def assert_homepage_styles(page, url: str):
   if "Home" in nav_text:
     raise RuntimeError(f"[{url}] Home should not appear in nav text.")
 
+  nested_toc_visible = is_visible(page, ".md-sidebar--primary .md-nav--secondary")
+  if nested_toc_visible:
+    raise RuntimeError(f"[{url}] TOC should not appear inside the left nav on desktop.")
+
+  toc_nested_border = get_style(
+      page,
+      ".md-sidebar--secondary .md-nav__list .md-nav__list",
+      "border-left-width",
+  )
+  if toc_nested_border not in (None, "", "0px"):
+    raise RuntimeError(
+        f"[{url}] TOC nested border should be none, got {toc_nested_border}"
+    )
+
   if page.query_selector(".language-grid"):
     raise RuntimeError(f"[{url}] Language grid should not appear on the homepage.")
   if page.query_selector("#welcome-message"):
     raise RuntimeError(f"[{url}] Welcome cycler should not appear on the homepage.")
+
+  paragraph = page.evaluate(
+      """
+      () => {
+        const p = document.querySelector('.md-content .md-typeset p');
+        return p ? p.textContent.trim() : null;
+      }
+      """
+  )
+  if not paragraph or "menu on the left" not in paragraph.lower():
+    raise RuntimeError(f"[{url}] Homepage intro paragraph unexpected: {paragraph}")
 
   callout = page.query_selector(".nav-callout")
   if not callout:
@@ -894,8 +998,19 @@ def assert_homepage_styles(page, url: str):
   callout_text = page.evaluate(
       "() => document.querySelector('.nav-callout__text')?.textContent?.trim() || ''"
   )
-  if "navigation" not in callout_text.lower():
+  if "menu on the left" not in callout_text.lower():
     raise RuntimeError(f"[{url}] Navigation callout text unexpected: {callout_text}")
+  mobile_text_visible = page.evaluate(
+      """
+      () => {
+        const el = document.querySelector('.nav-callout__text--mobile');
+        if (!el) return null;
+        return getComputedStyle(el).display !== 'none';
+      }
+      """
+  )
+  if mobile_text_visible:
+    raise RuntimeError(f"[{url}] Mobile callout text should be hidden on desktop.")
 
   print(f"✅ Homepage sizing and left nav ok on {url}")
 
@@ -932,6 +1047,12 @@ def main():
         assert_mobile_header_spacing(narrow, url)
       narrow.close()
 
+      mobile_home = browser.new_page(viewport={"width": 375, "height": 812})
+      mobile_home.on("console", lambda msg: print(f"[console] {msg.type}: {msg.text}"))
+      for url in HOME_URLS:
+        assert_mobile_homepage_copy(mobile_home, url)
+      mobile_home.close()
+
       desktop = browser.new_page(viewport={"width": 1280, "height": 900})
       desktop.on("console", lambda msg: print(f"[console] {msg.type}: {msg.text}"))
       assert_root_redirect(desktop, ROOT_URL, "/en/")
@@ -941,6 +1062,7 @@ def main():
         assert_dark_mode_surfaces(desktop, url)
       for url in DARK_MODE_HOVER_URLS:
         assert_dark_mode_hover(desktop, url)
+        assert_dark_mode_active_markers(desktop, url)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_paradox_tip(desktop, PARADOX_URL)
