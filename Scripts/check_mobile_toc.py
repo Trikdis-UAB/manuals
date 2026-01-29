@@ -19,6 +19,7 @@ import subprocess
 import sys
 import time
 import platform
+from urllib.parse import urlparse, urljoin
 from pathlib import Path
 from typing import Optional
 
@@ -59,6 +60,10 @@ COVER_IMAGE_URLS = [
     "http://127.0.0.1:8001/es/alarm-communicators/e16t/",
     "http://127.0.0.1:8001/ru/alarm-communicators/e16t/",
 ]
+LANGUAGE_SWITCH_URLS = [
+    "http://127.0.0.1:8001/en/control-panels/cg17/",
+]
+LANGUAGE_CODES = ["en", "lt", "es", "ru"]
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),
@@ -1038,6 +1043,59 @@ def assert_root_redirect(page, url: str, target_suffix: str):
   print(f"✅ Root redirect ok on {url}")
 
 
+def expected_language_path(current_url: str, target_lang: str) -> str:
+  parsed = urlparse(current_url)
+  path = parsed.path or "/"
+  segments = [segment for segment in path.split("/") if segment]
+  lang_index = next(
+      (idx for idx, seg in enumerate(segments) if seg in LANGUAGE_CODES),
+      -1,
+  )
+  new_segments = list(segments)
+  if not new_segments:
+    new_segments = [target_lang]
+  elif lang_index != -1:
+    new_segments[lang_index] = target_lang
+  else:
+    new_segments.insert(0, target_lang)
+  new_path = "/" + "/".join(new_segments)
+  if path.endswith("/") and not new_path.endswith("/"):
+    new_path += "/"
+  return new_path
+
+
+def assert_language_switch_links(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  current_url = page.url
+  base = current_url
+  links = page.evaluate(
+      """
+      () => Array.from(document.querySelectorAll('.md-select__inner .md-select__link'))
+        .map((link) => ({
+          href: link.getAttribute('href'),
+          lang: link.getAttribute('hreflang')
+        }))
+      """
+  )
+  failures = []
+  for item in links:
+    lang = (item.get("lang") or "").lower()
+    href = item.get("href") or ""
+    if lang not in LANGUAGE_CODES:
+      continue
+    expected_path = expected_language_path(current_url, lang)
+    resolved = urljoin(base, href)
+    if urlparse(resolved).path != expected_path:
+      failures.append(f"{lang}: {href} != {expected_path}")
+
+  if failures:
+    raise RuntimeError(
+        f"[{url}] Language links should preserve current path: {', '.join(failures)}"
+    )
+
+  print(f"✅ Language links preserve page path on {url}")
+
+
 def assert_cover_images(page, url: str):
   page.goto(url, wait_until="networkidle")
   cover = page.query_selector(".md-content__inner img[src$='image1.png']")
@@ -1085,6 +1143,8 @@ def main():
       for url in DARK_MODE_HOVER_URLS:
         assert_dark_mode_hover(desktop, url)
         assert_dark_mode_active_markers(desktop, url)
+      for url in LANGUAGE_SWITCH_URLS:
+        assert_language_switch_links(desktop, url)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_paradox_tip(desktop, PARADOX_URL)

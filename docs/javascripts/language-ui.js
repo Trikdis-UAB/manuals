@@ -65,6 +65,35 @@
     });
   }
 
+  function updateLanguageLinks() {
+    var pathname = window.location.pathname || "/";
+    var search = window.location.search || "";
+    var hash = window.location.hash || "";
+    var segments = pathname.split("/").filter(Boolean);
+    var langIndex = findLanguageIndex(segments);
+    var origin = window.location.origin || "";
+
+    document.querySelectorAll(".md-select__inner .md-select__link").forEach(function (link) {
+      var targetLang = (link.getAttribute("hreflang") || "").toLowerCase();
+      if (!LANGUAGE_BUTTON_LABELS[targetLang]) {
+        return;
+      }
+      var newSegments = segments.slice();
+      if (newSegments.length === 0) {
+        newSegments = [targetLang];
+      } else if (langIndex !== -1) {
+        newSegments[langIndex] = targetLang;
+      } else {
+        newSegments.unshift(targetLang);
+      }
+      var newPath = "/" + newSegments.join("/");
+      if (pathname.endsWith("/") && !newPath.endsWith("/")) {
+        newPath += "/";
+      }
+      link.setAttribute("href", origin + newPath + search + hash);
+    });
+  }
+
   function hideHomeNavItem() {
     document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
       var list = nav.querySelector(":scope > ul.md-nav__list");
@@ -191,6 +220,7 @@
     requestAnimationFrame(function () {
       updateLanguageButton(lang);
       updateLogoLinks(lang);
+      updateLanguageLinks();
       hideHomeNavItem();
       scheduleCollapsibleSections();
       scheduleClose();
