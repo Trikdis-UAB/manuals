@@ -11,7 +11,7 @@ Editor entry points (start here when editing):
 - Communicators
   - Cellular
     - GT/GT+/GET
-      - Quick setup GT/GT+/GET
+      - Quick setup
         - [Paradox SP(+)/MG(+)](en/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](en/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](en/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
@@ -50,7 +50,7 @@ Editor entry points (start here when editing):
 - Komunikatoriai
   - Mobilaus ryšio
     - GT/GT+/GET
-      - Greitas paruošimas GT/GT+/GET
+      - Greitas paruošimas
         - [Paradox SP(+)/MG(+)](lt/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](lt/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](lt/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
@@ -89,7 +89,7 @@ Editor entry points (start here when editing):
 - Comunicadores
   - Celular
     - GT/GT+/GET
-      - Configuración rápida GT/GT+/GET
+      - Configuración rápida
         - [Paradox SP(+)/MG(+)](es/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](es/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](es/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
@@ -128,7 +128,7 @@ Editor entry points (start here when editing):
 - Коммуникаторы
   - GSM/GPRS
     - GT/GT+/GET
-      - Быстрая настройка GT/GT+/GET
+      - Быстрая настройка
         - [Paradox SP(+)/MG(+)](ru/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](ru/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](ru/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)

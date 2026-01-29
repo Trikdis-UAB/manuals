@@ -84,7 +84,7 @@ plugins:
       - Communicators:
         - Cellular:
           - GT/GT+/GET:
-            - Quick setup GT/GT+/GET:
+            - Quick setup:
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
@@ -125,7 +125,7 @@ plugins:
       - Komunikatoriai:
         - Mobilaus ryšio:
           - GT/GT+/GET:
-            - Greitas paruošimas GT/GT+/GET:
+            - Greitas paruošimas:
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
@@ -166,7 +166,7 @@ plugins:
       - Comunicadores:
         - Celular:
           - GT/GT+/GET:
-            - Configuración rápida GT/GT+/GET:
+            - Configuración rápida:
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
@@ -207,7 +207,7 @@ plugins:
       - Коммуникаторы:
         - GSM/GPRS:
           - GT/GT+/GET:
-            - Быстрая настройка GT/GT+/GET:
+            - Быстрая настройка:
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC NEO HS2016: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PC585: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
