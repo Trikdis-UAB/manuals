@@ -29,9 +29,9 @@ Use the menu on the left to browse manuals by product.
 - Use Search to jump straight to a model or keyword.
 - Switch language from the header.
 
-### What’s new / Did you know
+### What's new / Did you know
 
-- Quick installation via the app — enroll and set up devices in minutes using the mobile app (QR-based onboarding).
+- Quick installation via the app - enroll and set up devices in minutes using the mobile app (QR-based onboarding).
 
 ### Helpful resources
 
