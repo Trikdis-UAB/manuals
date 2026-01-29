@@ -45,6 +45,20 @@ DARK_MODE_URLS = [
 DARK_MODE_HOVER_URLS = [
     "http://127.0.0.1:8001/en/control-panels/cg17/",
 ]
+COVER_IMAGE_URLS = [
+    "http://127.0.0.1:8001/en/control-panels/cg17/",
+    "http://127.0.0.1:8001/lt/control-panels/cg17/",
+    "http://127.0.0.1:8001/es/control-panels/cg17/",
+    "http://127.0.0.1:8001/ru/control-panels/cg17/",
+    "http://127.0.0.1:8001/en/alarm-communicators/e16/",
+    "http://127.0.0.1:8001/lt/alarm-communicators/e16/",
+    "http://127.0.0.1:8001/es/alarm-communicators/e16/",
+    "http://127.0.0.1:8001/ru/alarm-communicators/e16/",
+    "http://127.0.0.1:8001/en/alarm-communicators/e16t/",
+    "http://127.0.0.1:8001/lt/alarm-communicators/e16t/",
+    "http://127.0.0.1:8001/es/alarm-communicators/e16t/",
+    "http://127.0.0.1:8001/ru/alarm-communicators/e16t/",
+]
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),
@@ -1024,6 +1038,14 @@ def assert_root_redirect(page, url: str, target_suffix: str):
   print(f"✅ Root redirect ok on {url}")
 
 
+def assert_cover_images(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  cover = page.query_selector(".md-content__inner img[src$='image1.png']")
+  if not cover:
+    raise RuntimeError(f"[{url}] Missing cover image1.png")
+  print(f"✅ Cover image ok on {url}")
+
+
 def main():
   server = start_server()
   time.sleep(1.5)
@@ -1066,6 +1088,8 @@ def main():
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_paradox_tip(desktop, PARADOX_URL)
+      for url in COVER_IMAGE_URLS:
+        assert_cover_images(desktop, url)
       desktop.close()
       browser.close()
   finally:

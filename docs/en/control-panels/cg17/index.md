@@ -1,5 +1,10 @@
 # Cellular security control panel CG17
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="Product Image" width="400">
+</div>
+
+
 ## Description 
 
 CG17 is a multifunctional security control panel with an integrated cellular communicator. The control panel allows grouping of 12 wired and wireless zones into an 8 partition system.

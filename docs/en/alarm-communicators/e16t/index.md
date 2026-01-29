@@ -1,5 +1,10 @@
 # Ethernet communicator E16T
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="Product Image" width="400">
+</div>
+
+
 ##  Description 
 
 Communicator E16T improves security control panels with telephone communicator for sending and managing events using a wired internet connection.

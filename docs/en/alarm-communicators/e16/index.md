@@ -1,5 +1,10 @@
 # Ethernet communicator E16
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="Product Image" width="400">
+</div>
+
+
 ## Description
 
 “Ethernet” communicator E16 directly connects to supported DSC, Paradox, UTC Interlogix (CADDX), Innerrange, Texecom, Honeywell, Crow and Pyronix alarm panels.
