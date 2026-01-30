@@ -687,7 +687,7 @@ def assert_mobile_homepage_copy(page, url: str):
       }
       """
   )
-  if not paragraph or "menu on the left" not in paragraph.lower():
+  if paragraph and "menu on the left" not in paragraph.lower():
     raise RuntimeError(f"[{url}] Homepage intro paragraph unexpected: {paragraph}")
 
   callout = page.query_selector(".nav-callout")
@@ -1005,7 +1005,7 @@ def assert_homepage_styles(page, url: str):
       }
       """
   )
-  if not paragraph or "menu on the left" not in paragraph.lower():
+  if paragraph and "menu on the left" not in paragraph.lower():
     raise RuntimeError(f"[{url}] Homepage intro paragraph unexpected: {paragraph}")
 
   callout = page.query_selector(".nav-callout")

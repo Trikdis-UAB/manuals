@@ -1,50 +1,37 @@
 ---
 hide:
   - toc
+class: language-home
 ---
 
-# Руководства на русском
+# Руководства по установке
 
-Выберите категорию ниже или воспользуйтесь поиском вверху страницы, чтобы быстро найти нужную инструкцию.
+<style>
+  nav[aria-label="Table of contents"] {
+    display: none !important;
+  }
+</style>
 
-## Коммуникаторы
+<div class="nav-callout" role="note">
+  <span class="nav-callout__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z" />
+    </svg>
+  </span>
+  <span class="nav-callout__text">Используйте меню слева, чтобы найти руководство по продукту.</span>
+  <span class="nav-callout__text--mobile">Используйте меню ☰, чтобы найти руководство по продукту.</span>
+</div>
 
-### GSM/GPRS
+### Быстрые действия
 
-- [GSM коммуникатор GT](alarm-communicators/cellular/gt/index.md)
-- [GSM коммуникатор GT+](alarm-communicators/cellular/gt-plus/index.md)
-- [GSM коммуникатор G16](alarm-communicators/cellular/g16/index.md)
-- [GSM коммуникатор G16T](alarm-communicators/cellular/g16t/index.md)
+- Используйте поиск, чтобы быстро перейти к модели или ключевому слову.
+- Переключайте язык в заголовке.
 
-### Двойной коммуникатор
+### Новое / Полезно знать
 
-- [коммуникатор GET](alarm-communicators/cellular/get/index.md)
+- Быстрая установка через приложение — добавляйте и настраивайте устройства за несколько минут (QR-онбординг).
 
-### Для противопожарной охранной панели
+### Полезные ресурсы
 
-- [Коммуникатор FireCom](alarm-communicators/fire-panels/firecom/index.md)
-- [GSM коммуникатор G17F](alarm-communicators/fire-panels/g17f/index.md)
-
-### Ethernet
-
-- [Ethernet коммуникатор E16](alarm-communicators/e16/index.md)
-- [Ethernet модуль E16T](alarm-communicators/e16t/index.md)
-
-### UHF модули
-
-- [Радиопередатчик Т16](alarm-communicators/t16/index.md)
-
-## Панели управления
-
-- [Охранная панель FLEXi SP3](control-panels/sp3/index.md)
-- [GSM oхранная панель CG17](control-panels/cg17/index.md)
-
-## Контроллеры
-
-- [Контроллер управления воротами GATOR](gate-controllers/gator/index.md)
-- [Wi-Fi контроллер GATOR](gate-controllers/gator-wifi/index.md)
-
-## Полезные ресурсы
-
-- [Поддержка TRIKDIS](https://www.trikdis.com/ru/support-ticket/) — отправьте заявку или свяжитесь со службой поддержки.
-- [Дистрибьюторы](https://www.trikdis.com/ru/all-distributors/) — найдите регионального партнёра для обучения и актуализации сертификации.
+- [Trikdis Support](https://www.trikdis.com/ru/podderzhka/) — создайте запрос или свяжитесь со службой поддержки.
+- [Find a distributor](https://www.trikdis.com/ru/distribyutory/) — свяжитесь с региональным партнёром по обучению и сертификации.

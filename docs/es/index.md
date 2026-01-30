@@ -1,50 +1,37 @@
 ---
 hide:
   - toc
+class: language-home
 ---
 
-# Manuales en español
+# Manuales de instalación
 
-Utilice la búsqueda del encabezado o las categorías siguientes para localizar rápidamente el documento adecuado.
+<style>
+  nav[aria-label="Table of contents"] {
+    display: none !important;
+  }
+</style>
 
-## Comunicadores
+<div class="nav-callout" role="note">
+  <span class="nav-callout__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z" />
+    </svg>
+  </span>
+  <span class="nav-callout__text">Usa el menú de la izquierda para buscar manuales por producto.</span>
+  <span class="nav-callout__text--mobile">Usa el menú ☰ para buscar manuales por producto.</span>
+</div>
 
-### Celular
+### Acciones rápidas
 
-- [GT Comunicador](alarm-communicators/cellular/gt/index.md)
-- [GT+ Comunicador](alarm-communicators/cellular/gt-plus/index.md)
-- [Comunicador celular G16](alarm-communicators/cellular/g16/index.md)
-- [Comunicador celular G16T](alarm-communicators/cellular/g16t/index.md)
+- Usa la búsqueda para ir directamente a un modelo o palabra clave.
+- Cambia el idioma desde el encabezado.
 
-### Comunicación de doble vía
+### Novedades / ¿Sabías que?
 
-- [Comunicador GET](alarm-communicators/cellular/get/index.md)
+- Instalación rápida desde la app: registra y configura dispositivos en minutos (con QR).
 
-### Celular para incendio
+### Recursos útiles
 
-- [Comunicador FireCom](alarm-communicators/fire-panels/firecom/index.md)
-- [Comunicador celular G17F](alarm-communicators/fire-panels/g17f/index.md)
-
-### Ethernet
-
-- [Comunicador Ethernet E16](alarm-communicators/e16/index.md)
-- [Comunicador Ethernet E16T](alarm-communicators/e16t/index.md)
-
-### Banda de radio UHF
-
-- [Transmisor T16](alarm-communicators/t16/index.md)
-
-## Paneles de control
-
-- [Panel de control FLEXi SP3](control-panels/sp3/index.md)
-- [Celular panel de control CG17](control-panels/cg17/index.md)
-
-## Controladores
-
-- [Gator](gate-controllers/gator/index.md)
-- [Gator Wifi](gate-controllers/gator-wifi/index.md)
-
-## Recursos útiles
-
-- [Soporte TRIKDIS](https://www.trikdis.com/es/support-ticket/) – abra un ticket o contacte con asistencia técnica.
-- [Distribuidores](https://www.trikdis.com/es/all-distributors/) – localice un socio regional para formaciones y actualizaciones de certificación.
+- [Trikdis Support](https://www.trikdis.com/es/solicitud-de-soporte/) — abre un ticket o contacta con soporte.
+- [Find a distributor](https://www.trikdis.com/es/distribuidores/) — contacta con un socio regional para formación y certificación.

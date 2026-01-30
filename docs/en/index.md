@@ -12,8 +12,6 @@ class: language-home
   }
 </style>
 
-Use the menu on the left to browse manuals by product.
-
 <div class="nav-callout" role="note">
   <span class="nav-callout__icon" aria-hidden="true">
     <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">

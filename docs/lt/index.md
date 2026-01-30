@@ -1,50 +1,37 @@
 ---
 hide:
   - toc
+class: language-home
 ---
 
-# Dokumentacija lietuvių kalba
+# Diegimo instrukcijos
 
-Pasirinkite kategoriją arba naudokite paiešką viršuje, kad greitai rastumėte reikalingą instrukciją.
+<style>
+  nav[aria-label="Table of contents"] {
+    display: none !important;
+  }
+</style>
 
-## Komunikatoriai
+<div class="nav-callout" role="note">
+  <span class="nav-callout__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z" />
+    </svg>
+  </span>
+  <span class="nav-callout__text">Naudokite kairėje esantį meniu, kad rastumėte instrukcijas pagal produktą.</span>
+  <span class="nav-callout__text--mobile">Naudokite ☰ meniu, kad rastumėte instrukcijas pagal produktą.</span>
+</div>
 
-### Mobilaus ryšio
+### Greiti veiksmai
 
-- [GT GSM komunikatorius](alarm-communicators/cellular/gt/index.md)
-- [GT+ GSM komunikatorius](alarm-communicators/cellular/gt-plus/index.md)
-- [GSM komunikatorius G16](alarm-communicators/cellular/g16/index.md)
-- [GSM komunikatorius G16T](alarm-communicators/cellular/g16t/index.md)
+- Naudokite paiešką, kad greitai rastumėte modelį ar raktažodį.
+- Keiskite kalbą antraštėje.
 
-### Dvigubas kanalas
+### Kas naujo / Ar žinojote
 
-- [GSM/Ethernet komunikatorius GET](alarm-communicators/cellular/get/index.md)
+- Greitas diegimas per programėlę – įrenginius galima pridėti ir nustatyti per kelias minutes (QR pagrindu).
 
-### Priešgaisrinėms centralėms
+### Naudingi resursai
 
-- [Priešgaisrinės centralės komunikatorius FIRECOM](alarm-communicators/fire-panels/firecom/index.md)
-- [Priešgaisrinės centralės GSM komunikatorius G17F](alarm-communicators/fire-panels/g17f/index.md)
-
-### Ethernet
-
-- [Ethernet komunikatorius E16](alarm-communicators/e16/index.md)
-- [Ethernet komunikatorius E16T](alarm-communicators/e16t/index.md)
-
-### UHF radijo bangomis
-
-- [Siųstuvas T16](alarm-communicators/t16/index.md)
-
-## Apsaugos centrelės
-
-- [Apsaugos centralė FLEXi SP3](control-panels/sp3/index.md)
-- [GSM apsaugos centralė CG17](control-panels/cg17/index.md)
-
-## Valdikliai
-
-- [Gator](gate-controllers/gator/index.md)
-- [Gator Wifi](gate-controllers/gator-wifi/index.md)
-
-## Naudingi resursai
-
-- [TRIKDIS palaikymas](https://www.trikdis.com/lt/support-ticket/) – pateikite užklausą ar susisiekite su pagalbos komanda.
-- [Platintojų kontaktai](https://www.trikdis.com/lt/all-distributors/) – raskite regioninį partnerį mokymams ir sertifikavimui.
+- [Trikdis Support](https://www.trikdis.com/lt/pagalbos-uzklausa/) — užregistruokite užklausą arba kreipkitės į pagalbą.
+- [Find a distributor](https://www.trikdis.com/all-distributors/) — susisiekite su regioniniu partneriu dėl mokymų ir sertifikavimo.
