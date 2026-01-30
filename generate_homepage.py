@@ -41,8 +41,8 @@ class: language-home
 
 ### Helpful resources
 
-- [Trikdis Support](https://www.trikdis.com/support-ticket/) — open a ticket or contact the help desk.
-- [Find a distributor](https://www.trikdis.com/all-distributors/) — connect with a regional partner for training and certification.
+- [Trikdis Support](https://www.trikdis.com/support-ticket/){: target="_blank" rel="noopener" } — open a ticket or contact the help desk.
+- [Find a distributor](https://www.trikdis.com/all-distributors/){: target="_blank" rel="noopener" } — connect with a regional partner for training and certification.
 """
     content_lt = """---
 hide:
@@ -79,8 +79,8 @@ class: language-home
 
 ### Naudingi resursai
 
-- [Trikdis Support](https://www.trikdis.com/lt/pagalbos-uzklausa/) — užregistruokite užklausą arba kreipkitės į pagalbą.
-- [Find a distributor](https://www.trikdis.com/all-distributors/) — susisiekite su regioniniu partneriu dėl mokymų ir sertifikavimo.
+- [Trikdis pagalba](https://www.trikdis.com/lt/pagalbos-uzklausa/){: target="_blank" rel="noopener" } — užregistruokite užklausą arba kreipkitės į pagalbą.
+- [Rasti prekybininką](https://www.trikdis.com/lt/prekybininkai/){: target="_blank" rel="noopener" } — susisiekite su regioniniu partneriu dėl mokymų ir sertifikavimo.
 """
     content_es = """---
 hide:
@@ -117,8 +117,8 @@ class: language-home
 
 ### Recursos útiles
 
-- [Trikdis Support](https://www.trikdis.com/es/solicitud-de-soporte/) — abre un ticket o contacta con soporte.
-- [Find a distributor](https://www.trikdis.com/es/distribuidores/) — contacta con un socio regional para formación y certificación.
+- [Soporte Trikdis](https://www.trikdis.com/es/solicitud-de-soporte/){: target="_blank" rel="noopener" } — abre un ticket o contacta con soporte.
+- [Encontrar un distribuidor](https://www.trikdis.com/es/distribuidores/){: target="_blank" rel="noopener" } — contacta con un socio regional para formación y certificación.
 """
     content_ru = """---
 hide:
@@ -155,8 +155,8 @@ class: language-home
 
 ### Полезные ресурсы
 
-- [Trikdis Support](https://www.trikdis.com/ru/podderzhka/) — создайте запрос или свяжитесь со службой поддержки.
-- [Find a distributor](https://www.trikdis.com/ru/distribyutory/) — свяжитесь с региональным партнёром по обучению и сертификации.
+- [Поддержка Trikdis](https://www.trikdis.com/ru/podderzhka/){: target="_blank" rel="noopener" } — создайте запрос или свяжитесь со службой поддержки.
+- [Найти дистрибьютора](https://www.trikdis.com/ru/distribyutory/){: target="_blank" rel="noopener" } — свяжитесь с региональным партнёром по обучению и сертификации.
 """
 
     docs_dir = Path(__file__).parent / "docs"

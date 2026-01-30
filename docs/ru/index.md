@@ -33,5 +33,5 @@ class: language-home
 
 ### Полезные ресурсы
 
-- [Trikdis Support](https://www.trikdis.com/ru/podderzhka/) — создайте запрос или свяжитесь со службой поддержки.
-- [Find a distributor](https://www.trikdis.com/ru/distribyutory/) — свяжитесь с региональным партнёром по обучению и сертификации.
+- [Поддержка Trikdis](https://www.trikdis.com/ru/podderzhka/){: target="_blank" rel="noopener" } — создайте запрос или свяжитесь со службой поддержки.
+- [Найти дистрибьютора](https://www.trikdis.com/ru/distribyutory/){: target="_blank" rel="noopener" } — свяжитесь с региональным партнёром по обучению и сертификации.

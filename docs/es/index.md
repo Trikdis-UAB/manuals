@@ -33,5 +33,5 @@ class: language-home
 
 ### Recursos útiles
 
-- [Trikdis Support](https://www.trikdis.com/es/solicitud-de-soporte/) — abre un ticket o contacta con soporte.
-- [Find a distributor](https://www.trikdis.com/es/distribuidores/) — contacta con un socio regional para formación y certificación.
+- [Soporte Trikdis](https://www.trikdis.com/es/solicitud-de-soporte/){: target="_blank" rel="noopener" } — abre un ticket o contacta con soporte.
+- [Encontrar un distribuidor](https://www.trikdis.com/es/distribuidores/){: target="_blank" rel="noopener" } — contacta con un socio regional para formación y certificación.

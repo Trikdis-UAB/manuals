@@ -33,5 +33,5 @@ class: language-home
 
 ### Naudingi resursai
 
-- [Trikdis Support](https://www.trikdis.com/lt/pagalbos-uzklausa/) — užregistruokite užklausą arba kreipkitės į pagalbą.
-- [Find a distributor](https://www.trikdis.com/all-distributors/) — susisiekite su regioniniu partneriu dėl mokymų ir sertifikavimo.
+- [Trikdis pagalba](https://www.trikdis.com/lt/pagalbos-uzklausa/){: target="_blank" rel="noopener" } — užregistruokite užklausą arba kreipkitės į pagalbą.
+- [Rasti prekybininką](https://www.trikdis.com/lt/prekybininkai/){: target="_blank" rel="noopener" } — susisiekite su regioniniu partneriu dėl mokymų ir sertifikavimo.

@@ -33,5 +33,5 @@ class: language-home
 
 ### Helpful resources
 
-- [Trikdis Support](https://www.trikdis.com/support-ticket/) — open a ticket or contact the help desk.
-- [Find a distributor](https://www.trikdis.com/all-distributors/) — connect with a regional partner for training and certification.
+- [Trikdis Support](https://www.trikdis.com/support-ticket/){: target="_blank" rel="noopener" } — open a ticket or contact the help desk.
+- [Find a distributor](https://www.trikdis.com/all-distributors/){: target="_blank" rel="noopener" } — connect with a regional partner for training and certification.
