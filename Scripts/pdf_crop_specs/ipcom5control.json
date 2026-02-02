@@ -1,0 +1,19 @@
+{
+  "dpi": 300,
+  "render_pattern": "page-%02d.png",
+  "crops": [
+    {"page": 1, "box": [156, 1069, 2208, 2098], "dest": "image3.png"},
+    {"page": 2, "box": [363, 2552, 2243, 2815], "dest": "step-users-tab.png"},
+    {"page": 3, "box": [363, 299, 2243, 773], "dest": "step-password-list.png"},
+    {"page": 3, "box": [146, 1057, 2403, 1354], "dest": "step-show-passwords.png"},
+    {"page": 3, "box": [363, 1981, 2243, 2209], "dest": "step-write-settings.png"},
+    {"page": 4, "box": [260, 420, 2399, 1160], "dest": "step-add-user.png"},
+    {"page": 4, "box": [222, 1412, 2337, 1545], "dest": "step-fill-fields.png"},
+    {"page": 4, "box": [222, 1904, 2337, 2036], "dest": "step-scopes-row.png"},
+    {"page": 4, "box": [300, 2320, 1600, 2880], "dest": "image2.png"},
+    {"page": 5, "box": [222, 279, 2337, 412], "dest": "step-visible-receivers-row.png"},
+    {"page": 5, "box": [150, 580, 2000, 2320], "dest": "step-visible-receivers.png"},
+    {"page": 5, "box": [222, 2476, 2337, 2608], "dest": "step-token-time-row.png"},
+    {"page": 6, "box": [300, 430, 2200, 1120], "dest": "image1.png"}
+  ]
+}

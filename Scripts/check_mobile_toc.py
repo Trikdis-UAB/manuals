@@ -66,6 +66,8 @@ LANGUAGE_SWITCH_URLS = [
 LANGUAGE_CODES = ["en", "lt", "es", "ru"]
 COMMUNICATORS_TOGGLE_URL = "http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/"
 MOBILE_HOME_NAV_RESET_URL = "http://127.0.0.1:8001/en/gate-controllers/gator/"
+RECEIVER_MANUAL_URL = "http://127.0.0.1:8001/en/receivers/ipcom5control/"
+RECEIVER_MANUAL_LINK_PATH = "receivers/ipcom5control/"
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),
@@ -1351,6 +1353,29 @@ def assert_cover_images(page, url: str):
   print(f"✅ Cover image ok on {url}")
 
 
+def assert_receiver_manual(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  title = page.text_content("h1")
+  if not title or "IPCom (v.5) Control web" not in title:
+    raise RuntimeError(f"[{url}] Receiver H1 missing or unexpected: {title}")
+  has_data_images = page.evaluate(
+      """
+      () => Array.from(document.images).some((img) => img.src.startsWith('data:'))
+      """
+  )
+  if has_data_images:
+    raise RuntimeError(f"[{url}] Receiver manual includes data: image URLs")
+  print(f"✅ Receiver manual ok on {url}")
+
+
+def assert_receiver_link_on_home(page, home_url: str, link_path: str):
+  page.goto(home_url, wait_until="networkidle")
+  link = page.query_selector(f"a[href$='{link_path}']")
+  if not link:
+    raise RuntimeError(f"[{home_url}] Receiver link {link_path} missing on home page")
+  print(f"✅ Receiver link ok on {home_url}")
+
+
 def main():
   server = start_server()
   time.sleep(1.5)
@@ -1387,6 +1412,7 @@ def main():
       assert_root_redirect(desktop, ROOT_URL, "/en/")
       for url in HOME_URLS:
         assert_homepage_styles(desktop, url)
+      assert_receiver_link_on_home(desktop, HOME_URLS[0], RECEIVER_MANUAL_LINK_PATH)
       for url in DARK_MODE_URLS:
         assert_dark_mode_surfaces(desktop, url)
       for url in DARK_MODE_HOVER_URLS:
@@ -1394,6 +1420,7 @@ def main():
         assert_dark_mode_active_markers(desktop, url)
       for url in LANGUAGE_SWITCH_URLS:
         assert_language_switch_links(desktop, url)
+      assert_receiver_manual(desktop, RECEIVER_MANUAL_URL)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_communicators_toggle(desktop, COMMUNICATORS_TOGGLE_URL, mobile=False)

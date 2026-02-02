@@ -18,6 +18,7 @@
 - Mobile TOC smoke: `.venv/bin/python Scripts/check_mobile_toc.py` (Playwright headless check for GT/GET pages).
 - Normalize callouts/headings: `.venv/bin/python Scripts/fix_callouts.py` (run after DOCX conversion).
 - Auto-link “See chapter …”: `.venv/bin/python Scripts/link_chapters.py`.
+- PDF image crops (for matching manuals to PDFs): `Scripts/pdf_crop_images.py` with JSON specs in `Scripts/pdf_crop_specs/`. Example: `.venv/bin/python Scripts/pdf_crop_images.py --pdf "/path/file.pdf" --spec Scripts/pdf_crop_specs/ipcom5control.json --out docs/en/receivers/ipcom5control` (uses Ghostscript, PIL if available; falls back to `sips`).
 - Prefer `.venv/bin/...` commands to avoid picking up system mkdocs/python.
 
 ## Coding Style & Naming
