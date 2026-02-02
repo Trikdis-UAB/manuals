@@ -5,6 +5,7 @@
     es: "Español",
     ru: "Русский"
   };
+  var MOBILE_BREAKPOINT = 960;
   var HOME_LABELS = new Set(["Home", "Pagrindinis", "Inicio", "Главная"]);
   var COLLAPSIBLE_LABELS = new Set(["Keypads", "Klaviatūros", "Teclados", "Клавиатуры"]);
 
@@ -117,8 +118,10 @@
     var keepExpanded = pathname.indexOf("/keypads/") !== -1;
     var segments = pathname.split("/").filter(Boolean);
     var isLangRoot = segments.length === 1 && LANGUAGE_BUTTON_LABELS[segments[0]];
+    var isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+    var forceCollapse = isLangRoot && isMobile;
     document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
-      if (nav.dataset.defaultsApplied === "true") {
+      if (nav.dataset.defaultsApplied === pathname) {
         return;
       }
       var list = nav.querySelector(":scope > ul.md-nav__list");
@@ -132,10 +135,17 @@
         if (!label || !toggle) {
           return;
         }
+        var text = label.textContent.trim();
+        if (forceCollapse) {
+          toggle.checked = false;
+          if (subnav) {
+            subnav.setAttribute("aria-expanded", "false");
+          }
+          return;
+        }
         if (item.dataset.userToggled === "true") {
           return;
         }
-        var text = label.textContent.trim();
         if (COLLAPSIBLE_LABELS.has(text)) {
           toggle.checked = keepExpanded;
           if (subnav) {
@@ -144,13 +154,14 @@
           return;
         }
         if (isLangRoot) {
-          toggle.checked = true;
+          var expand = !isMobile;
+          toggle.checked = expand;
           if (subnav) {
-            subnav.setAttribute("aria-expanded", "true");
+            subnav.setAttribute("aria-expanded", expand ? "true" : "false");
           }
         }
       });
-      nav.dataset.defaultsApplied = "true";
+      nav.dataset.defaultsApplied = pathname;
     });
   }
 

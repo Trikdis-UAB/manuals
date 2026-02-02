@@ -64,6 +64,8 @@ LANGUAGE_SWITCH_URLS = [
     "http://127.0.0.1:8001/en/control-panels/cg17/",
 ]
 LANGUAGE_CODES = ["en", "lt", "es", "ru"]
+COMMUNICATORS_TOGGLE_URL = "http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/"
+MOBILE_HOME_NAV_RESET_URL = "http://127.0.0.1:8001/en/gate-controllers/gator/"
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),
@@ -647,6 +649,118 @@ def assert_mobile_home_button(page, url: str, lang: str):
   print(f"✅ Mobile home button ok on {url}")
 
 
+def assert_mobile_home_nav_reset(page, start_url: str, lang: str):
+  page.goto(start_url, wait_until="networkidle")
+  page.click("header label[for='__drawer']", timeout=2000)
+  page.wait_for_function(
+      "document.querySelector('#__drawer')?.checked === true", timeout=2000
+  )
+  page.evaluate(
+      """
+      () => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return;
+        const items = Array.from(
+          nav.querySelectorAll(':scope > ul.md-nav__list > li.md-nav__item')
+        );
+        for (const item of items) {
+          const label = item.querySelector(
+            ':scope > label .md-ellipsis, :scope > a .md-ellipsis'
+          );
+          if (!label) continue;
+          if (label.textContent.trim() !== 'Gate Controllers') continue;
+          const toggle = item.querySelector(':scope > input.md-nav__toggle');
+          const subnav = item.querySelector(':scope > nav.md-nav');
+          if (toggle) toggle.checked = true;
+          if (subnav) subnav.setAttribute('aria-expanded', 'true');
+        }
+      }
+      """
+  )
+  expanded = page.evaluate(
+      """
+      () => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return null;
+        const items = Array.from(
+          nav.querySelectorAll(':scope > ul.md-nav__list > li.md-nav__item')
+        );
+        for (const item of items) {
+          const label = item.querySelector(
+            ':scope > label .md-ellipsis, :scope > a .md-ellipsis'
+          );
+          if (!label) continue;
+          if (label.textContent.trim() !== 'Gate Controllers') continue;
+          const toggle = item.querySelector(':scope > input.md-nav__toggle');
+          return toggle ? toggle.checked : null;
+        }
+        return null;
+      }
+      """
+  )
+  if expanded is not True:
+    raise RuntimeError(
+        f"[{start_url}] Gate Controllers should be expanded before Home navigation."
+    )
+
+  page.evaluate(
+      """
+      () => {
+        const drawer = document.querySelector('#__drawer');
+        if (drawer) {
+          drawer.checked = false;
+          drawer.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+      """
+  )
+  page.click("header .md-home-button", timeout=2000)
+  page.wait_for_url(re.compile(rf".*/{re.escape(lang)}/$"), timeout=3000)
+
+  page.click("header label[for='__drawer']", timeout=2000)
+  page.wait_for_function(
+      "document.querySelector('#__drawer')?.checked === true", timeout=2000
+  )
+  collapsed = page.evaluate(
+      """
+      () => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return null;
+        const expected = new Set([
+          'Communicators',
+          'Control Panels',
+          'Gate Controllers',
+          'Keypads',
+        ]);
+        const items = Array.from(
+          nav.querySelectorAll(':scope > ul.md-nav__list > li.md-nav__item')
+        );
+        const states = {};
+        for (const item of items) {
+          const label = item.querySelector(
+            ':scope > label .md-ellipsis, :scope > a .md-ellipsis'
+          );
+          if (!label) continue;
+          const text = label.textContent.trim();
+          if (!expected.has(text)) continue;
+          const toggle = item.querySelector(':scope > input.md-nav__toggle');
+          states[text] = toggle ? toggle.checked : null;
+        }
+        return states;
+      }
+      """
+  )
+  if not collapsed:
+    raise RuntimeError(f"[{start_url}] Unable to read mobile nav toggle states.")
+  for label, checked in collapsed.items():
+    if checked:
+      raise RuntimeError(
+          f"[{start_url}] Mobile Home should collapse {label} section."
+      )
+
+  print(f"✅ Mobile home nav reset ok from {start_url}")
+
+
 def assert_mobile_header_spacing(page, url: str):
   page.goto(url, wait_until="networkidle")
 
@@ -1096,6 +1210,139 @@ def assert_language_switch_links(page, url: str):
   print(f"✅ Language links preserve page path on {url}")
 
 
+def open_communicators_subnav(page):
+  labels = {"Communicators", "Komunikatoriai", "Comunicadores", "Коммуникаторы"}
+  opened = page.evaluate(
+      """
+      labels => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return false;
+        const items = Array.from(
+          nav.querySelectorAll(':scope > ul.md-nav__list > li.md-nav__item')
+        );
+        for (const item of items) {
+          const label = item.querySelector(
+            ':scope > label .md-ellipsis, :scope > a .md-ellipsis'
+          );
+          if (!label) continue;
+          if (!labels.includes(label.textContent.trim())) continue;
+          const toggle = item.querySelector(':scope > input.md-nav__toggle');
+          if (toggle) {
+            toggle.checked = true;
+          }
+          const subnav = item.querySelector(':scope > nav.md-nav');
+          if (subnav) {
+            subnav.setAttribute('aria-expanded', 'true');
+          }
+          return true;
+        }
+        return false;
+      }
+      """,
+      sorted(labels),
+  )
+  if not opened:
+    raise RuntimeError("Communicators submenu not found to open.")
+
+
+def assert_communicators_toggle(page, url: str, mobile: bool):
+  page.goto(url, wait_until="networkidle")
+  if mobile:
+    page.click("header label[for='__drawer']", timeout=2000)
+    page.wait_for_function(
+        "document.querySelector('#__drawer')?.checked === true", timeout=2000
+    )
+    page.evaluate(
+        """
+        () => {
+          const tocToggle = document.querySelector('#__toc');
+          if (tocToggle) {
+            tocToggle.checked = false;
+            tocToggle.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        }
+        """
+    )
+
+  open_communicators_subnav(page)
+
+  toggle_visible = is_visible(page, ".md-comm-toggle")
+  if not toggle_visible:
+    raise RuntimeError(f"[{url}] Communicators toggle not visible")
+
+  view = page.evaluate(
+      """
+      () => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return null;
+        const toggle = nav.querySelector('.md-comm-toggle');
+        if (!toggle) return null;
+        const subnav = toggle.closest('nav.md-nav');
+        return subnav ? subnav.dataset.commView : null;
+      }
+      """
+  )
+  if view != "tech":
+    raise RuntimeError(f"[{url}] Default Communicators view {view} != tech")
+
+  page.evaluate(
+      """
+      () => {
+        const button = document.querySelector('.md-comm-toggle__button[data-view=\"az\"]');
+        if (button) {
+          button.scrollIntoView({ block: 'center', inline: 'nearest' });
+          button.click();
+        }
+      }
+      """
+  )
+  page.wait_for_function(
+      """
+      () => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return false;
+        const toggle = nav.querySelector('.md-comm-toggle');
+        if (!toggle) return false;
+        const subnav = toggle.closest('nav.md-nav');
+        return subnav && subnav.dataset.commView === 'az';
+      }
+      """,
+      timeout=2000,
+  )
+
+  az_items = page.evaluate(
+      """
+      () => Array.from(document.querySelectorAll('.md-comm-list--az .md-nav__link'))
+        .map((link) => link.textContent.trim())
+      """
+  )
+  required = {"GT", "GT+", "GET", "E16", "G16"}
+  missing = sorted(required.difference(set(az_items)))
+  if missing:
+    raise RuntimeError(f"[{url}] Missing A–Z items: {', '.join(missing)}")
+
+  active_in_az = page.query_selector(".md-comm-list--az .md-nav__link--active")
+  if not active_in_az:
+    raise RuntimeError(f"[{url}] Active communicator not highlighted in A–Z list")
+
+  if not mobile:
+    page.goto("http://127.0.0.1:8001/en/alarm-communicators/e16/", wait_until="networkidle")
+    open_communicators_subnav(page)
+    persisted = page.evaluate(
+        """
+        () => {
+          const toggle = document.querySelector('.md-comm-toggle');
+          if (!toggle) return null;
+          return toggle.querySelector('[aria-selected=\"true\"]')?.dataset.view || null;
+        }
+        """
+    )
+    if persisted != "az":
+      raise RuntimeError(f"[{url}] Communicators view did not persist: {persisted}")
+
+  print(f"✅ Communicators toggle ok on {url} ({'mobile' if mobile else 'desktop'})")
+
+
 def assert_cover_images(page, url: str):
   page.goto(url, wait_until="networkidle")
   cover = page.query_selector(".md-content__inner img[src$='image1.png']")
@@ -1117,8 +1364,10 @@ def main():
         assert_mobile_toc(page, url)
       for url in MOBILE_LAYOUT_URLS:
         assert_mobile_sidebar_layout(page, url)
+      assert_communicators_toggle(page, COMMUNICATORS_TOGGLE_URL, mobile=True)
       for url in HOME_URLS:
         assert_mobile_home_button(page, url, "en")
+      assert_mobile_home_nav_reset(page, MOBILE_HOME_NAV_RESET_URL, "en")
       page.close()
 
       narrow = browser.new_page(viewport={"width": 320, "height": 812})
@@ -1147,6 +1396,7 @@ def main():
         assert_language_switch_links(desktop, url)
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
+      assert_communicators_toggle(desktop, COMMUNICATORS_TOGGLE_URL, mobile=False)
       assert_paradox_tip(desktop, PARADOX_URL)
       for url in COVER_IMAGE_URLS:
         assert_cover_images(desktop, url)

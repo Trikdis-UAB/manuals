@@ -65,6 +65,7 @@ extra_javascript:
 - javascripts/mobile-toc-default.js
 - javascripts/toc-active.js
 - javascripts/lazy-images.js
+- javascripts/communicators-toggle.js
 plugins:
 - i18n:
     docs_structure: folder
