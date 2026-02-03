@@ -8,20 +8,21 @@ BASE = Path(__file__).resolve().parents[1] / "docs" / "en" / "receivers" / "ipco
 DOC = BASE / "index.md"
 
 REQUIRED_IMAGES = {
-    "image3.png": (1800, 900),
-    "image1.png": (1200, 500),
-    "image2.png": (800, 400),
-    "step-users-tab.png": (1500, 200),
-    "step-password-list.png": (1500, 300),
-    "step-show-passwords.png": (1500, 200),
-    "step-write-settings.png": (1500, 200),
-    "step-add-user.png": (1500, 600),
-    "step-fill-fields.png": (1500, 100),
-    "step-scopes-row.png": (1500, 100),
-    "step-visible-receivers-row.png": (1500, 100),
-    "step-visible-receivers.png": (1200, 1200),
-    "step-token-time-row.png": (1500, 100),
+    "image3.png": (1500, 700),
+    "token-expiration-time.png": (1200, 600),
+    "edit-scopes.png": (600, 400),
+    "step-users-tab.png": (1100, 250),
+    "step-password-list.png": (1100, 400),
+    "step-show-passwords.png": (1100, 250),
+    "step-write-settings.png": (1100, 250),
+    "step-add-user.png": (800, 600),
+    "step-fill-fields.png": (1100, 150),
+    "step-scopes-row.png": (1500, 150),
+    "step-visible-receivers-row.png": (1500, 120),
+    "step-visible-receivers.png": (1200, 1500),
 }
+LANDSCAPE_MIN_WIDTH = 1100
+LANDSCAPE_MIN_RATIO = 1.4
 
 
 def assert_order(text: str, first: str, second: str) -> None:
@@ -59,9 +60,12 @@ def main() -> None:
     lines = text.splitlines()
     for idx, line in enumerate(lines):
         if "Check the box to see passwords" in line:
-            prev = lines[idx - 1] if idx > 0 else ""
-            if prev.lstrip().startswith("!!!"):
-                raise RuntimeError("Show passwords note should not be an admonition.")
+            prev_idx = idx - 1
+            while prev_idx >= 0 and not lines[prev_idx].strip():
+                prev_idx -= 1
+            prev = lines[prev_idx] if prev_idx >= 0 else ""
+            if not prev.lstrip().startswith("!!! note"):
+                raise RuntimeError("Show passwords note should be an admonition.")
 
     if "Create individual user accounts with limited rights" not in text:
         raise RuntimeError("Final NOTE callout missing.")
@@ -81,6 +85,10 @@ def main() -> None:
             if chunk_type != b"IHDR":
                 raise RuntimeError(f"Image {name} missing IHDR chunk.")
             width, height = struct.unpack(">II", handle.read(8))
+        if width > height and (width / height) >= LANDSCAPE_MIN_RATIO and width < LANDSCAPE_MIN_WIDTH:
+            raise RuntimeError(
+                f"Image {name} is landscape and too narrow: {width}px (min {LANDSCAPE_MIN_WIDTH}px)."
+            )
         if width < min_w or height < min_h:
             raise RuntimeError(
                 f"Image {name} too small: {width}x{height} (min {min_w}x{min_h})."

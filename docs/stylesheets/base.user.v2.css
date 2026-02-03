@@ -859,9 +859,9 @@ body[data-md-color-scheme="default"] .md-sidebar--secondary a.md-nav__link:focus
   position: relative;
   margin: 0 0 12px;
   padding: 12px 12px 12px 48px;
-  background: #f2f2f2;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   counter-increment: ipcom-step;
 }
 
@@ -870,7 +870,7 @@ body[data-md-color-scheme="default"] .md-sidebar--secondary a.md-nav__link:focus
 }
 
 .ipcom-steps li::before {
-  content: counter(ipcom-step) " \2192";
+  content: counter(ipcom-step) ".";
   position: absolute;
   left: 12px;
   top: 12px;
@@ -888,6 +888,8 @@ body[data-md-color-scheme="default"] .md-sidebar--secondary a.md-nav__link:focus
 
 .ipcom-step-media {
   margin-top: 8px;
+  margin-left: -36px;
+  width: calc(100% + 36px);
 }
 
 .ipcom-step-media img {
@@ -905,8 +907,8 @@ body[data-md-color-scheme="default"] .md-sidebar--secondary a.md-nav__link:focus
 }
 
 body[data-md-color-scheme="slate"] .ipcom-steps li {
-  background: var(--trik-surface-2);
-  border-color: var(--trik-border);
+  background: transparent;
+  border-color: transparent;
 }
 
 body[data-md-color-scheme="slate"] .ipcom-steps li::before {

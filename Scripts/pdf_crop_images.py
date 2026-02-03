@@ -9,6 +9,7 @@ import argparse
 import json
 import shutil
 import subprocess
+import struct
 import sys
 import tempfile
 from pathlib import Path
@@ -77,6 +78,44 @@ def crop_with_sips(src: Path, dest: Path, box: list[int]) -> None:
     run(cmd)
 
 
+def get_png_size(path: Path) -> tuple[int, int]:
+    with path.open("rb") as handle:
+        signature = handle.read(8)
+        if signature != b"\x89PNG\r\n\x1a\n":
+            raise RuntimeError(f"Image {path} is not a valid PNG.")
+        _length = handle.read(4)
+        chunk_type = handle.read(4)
+        if chunk_type != b"IHDR":
+            raise RuntimeError(f"Image {path} missing IHDR chunk.")
+        width, height = struct.unpack(">II", handle.read(8))
+    return width, height
+
+
+def resize_landscape_with_pil(dest: Path, target_width: int) -> None:
+    with Image.open(dest) as img:
+        width, height = img.size
+        if width == target_width:
+            return
+        new_height = max(1, round(height * (target_width / width)))
+        resized = img.resize((target_width, new_height), Image.LANCZOS)
+        resized.save(dest)
+
+
+def resize_landscape_with_sips(dest: Path, target_width: int) -> None:
+    ensure_tool("sips")
+    tmp = dest.with_suffix(".tmp.png")
+    cmd = [
+        "sips",
+        "--resampleWidth",
+        str(target_width),
+        str(dest),
+        "--out",
+        str(tmp),
+    ]
+    run(cmd)
+    tmp.replace(dest)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Render PDF pages and crop images.")
     parser.add_argument("--pdf", required=True, help="Path to source PDF")
@@ -110,6 +149,8 @@ def main() -> None:
     crops = spec.get("crops", [])
     if not crops:
         raise RuntimeError("Spec has no crops.")
+    landscape_width = spec.get("landscape_width")
+    landscape_min_ratio = float(spec.get("landscape_min_ratio", 1.0))
 
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -129,6 +170,15 @@ def main() -> None:
                 crop_with_pil(src, dest, box)
             else:
                 crop_with_sips(src, dest, box)
+            target_width = entry.get("landscape_width", landscape_width)
+            min_ratio = float(entry.get("landscape_min_ratio", landscape_min_ratio))
+            if target_width:
+                width, height = get_png_size(dest)
+                if width > height and (width / height) >= min_ratio:
+                    if HAS_PIL:
+                        resize_landscape_with_pil(dest, int(target_width))
+                    else:
+                        resize_landscape_with_sips(dest, int(target_width))
 
         if args.keep_pages:
             pages_dir = out_dir / "pages"

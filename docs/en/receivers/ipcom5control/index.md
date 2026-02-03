@@ -10,21 +10,17 @@ IPCom (v.5) Control web is the management interface for the IPCom receiver, used
 
 #### Login via web browser
 
-<ol class="ipcom-steps">
-  <li>In the address bar of the browser, enter the receiver IP address or domain and TCP port.</li>
-  <li>Enter your username and password in the login window.</li>
-  <li>Press the Login button.</li>
-</ol>
+1. In the address bar of the browser, enter the receiver IP address or domain and TCP port.
+2. Enter your username and password in the login window.
+3. Press the Login button.
 
 !!! note
     This method does not save login history. It is recommended to use the bookmarks function of the browser for quick access.
 
 #### Login via .exe program
 
-<ol class="ipcom-steps">
-  <li>Run the IPCOM .exe application.</li>
-  <li>Create and save connections to different receivers.</li>
-</ol>
+1. Run the IPCOM .exe application.
+2. Create and save connections to different receivers.
 
 !!! note
     This method is convenient when working with many different receivers because it saves their address list.
@@ -38,78 +34,57 @@ Administration of user accounts and their rights.
 
 #### Changing your password
 
-<ol class="ipcom-steps">
-  <li>
-    <p>Select a tab from the top menu bar <strong>Users</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-users-tab.png" alt="Users tab in the IPcom Control web interface." />
-    </div>
-  </li>
-  <li>
-    <p>Click on a user in the list <strong>Password</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-password-list.png" alt="User list with Password column highlighted." />
-    </div>
-    <p>Note: Check the box to see passwords, <strong>Show passwords</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-show-passwords.png" alt="Show passwords option highlighted." />
-    </div>
-  </li>
-  <li>Enter a new password in the field.</li>
-  <li>
-    <p>Press to save <strong>Write Settings</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-write-settings.png" alt="Write settings button in the top bar." />
-    </div>
-  </li>
-</ol>
+1. Select a tab from the top menu bar **Users**.
+
+    ![Users tab in the IPcom Control web interface.](./step-users-tab.png)
+
+2. Click on a user in the list **Password**.
+
+    ![User list with Password column highlighted.](./step-password-list.png)
+
+    !!! note
+        Check the box to see passwords, **Show passwords**.
+
+    ![Show passwords option highlighted.](./step-show-passwords.png)
+
+3. Enter a new password in the field.
+4. Press to save **Write Settings**.
+
+    ![Write settings button in the top bar.](./step-write-settings.png)
 
 #### Creating a new user
 
-<ol class="ipcom-steps">
-  <li>
-    <p>Click in the list of users <strong>Add User</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-add-user.png" alt="Add User button in the users list." />
-    </div>
-  </li>
-  <li>
-    <p>Fill in the fields: <strong>Login</strong>, <strong>Name</strong>, <strong>Password</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-fill-fields.png" alt="Login, name, and password fields highlighted." />
-    </div>
-  </li>
-  <li>
-    <p><strong>Scopes (Rights)</strong> section, check the required authorizations.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-scopes-row.png" alt="Scopes column highlighted." />
-    </div>
-    <p>Detailed explanations are provided by hovering over the authority and clicking on the question mark (?) symbol.</p>
-    <div class="ipcom-step-media">
-      <img src="./image2.png" alt="Edit scopes panel with rights list." />
-    </div>
-  </li>
-  <li>
-    <p>Choose which receivers the user will have access to.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-visible-receivers-row.png" alt="Visible receivers column highlighted." />
-    </div>
-    <p>The default option for the user is <strong>All (Visi)</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-visible-receivers.png" alt="Visible receivers selection dialog." />
-    </div>
-  </li>
-  <li>
-    <p>In the box <strong>Token time</strong> set the session lifetime.</p>
-    <div class="ipcom-step-media">
-      <img src="./step-token-time-row.png" alt="Token time column highlighted." />
-    </div>
-    <p>The default option for the user is <strong>An hour</strong>.</p>
-    <div class="ipcom-step-media">
-      <img src="./image1.png" alt="Token expiration time dialog." />
-    </div>
-  </li>
-</ol>
+1. Click in the list of users **Add User**.
+
+    ![Add User button in the users list.](./step-add-user.png)
+
+2. Fill in the fields: **Login**, **Name**, **Password**.
+
+    ![Login, name, and password fields highlighted.](./step-fill-fields.png)
+
+3. **Scopes (Rights)** section, check the required authorizations.
+
+    ![Scopes column highlighted.](./step-scopes-row.png)
+
+    Detailed explanations are provided by hovering over the authority and clicking on the question mark (?) symbol.
+
+    ![Edit scopes panel with rights list.](./edit-scopes.png)
+
+4. Choose which receivers the user will have access to.
+
+    ![Visible receivers column highlighted.](./step-visible-receivers-row.png)
+
+    The default option for the user is **All (Visi)**.
+
+    ![Visible receivers selection dialog.](./step-visible-receivers.png)
+
+5. In the box **Token time** set the session lifetime.
+
+    ![Token time column highlighted.](./step-token-time-row.png)
+
+    The default option for the user is **An hour**.
+
+    ![Token expiration time dialog.](./token-expiration-time.png)
 
 !!! note
     Create individual user accounts with limited rights to ensure system management and traceability of actions.
