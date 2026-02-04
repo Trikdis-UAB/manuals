@@ -29,7 +29,7 @@ class: language-home
 
 ### Kas naujo / Ar žinojote
 
-- Greitas diegimas per programėlę – įrenginius galima pridėti ir nustatyti per kelias minutes (QR pagrindu).
+- Greitas diegimas per programėlę – įrenginius galima pridėti ir nustatyti per kelias minutes (nuskaitant QR kodą, su Protegus Company).
 
 ### Naudingi resursai
 
