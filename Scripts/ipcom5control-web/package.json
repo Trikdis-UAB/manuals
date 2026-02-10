@@ -1,0 +1,24 @@
+{
+  "name": "ipcom5control-web-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture:web": "node capture_web.mjs",
+    "capture:status-sections": "node crop_sections.mjs --spec=screenshot_specs/status-sections.json",
+    "capture:options": "node capture_options.mjs",
+    "generate:manual": "node generate_manual.mjs",
+    "validate:coverage": "node validate_coverage.mjs",
+    "docs:all": "npm run capture:web && npm run generate:manual && npm run validate:coverage",
+    "check:scaffold": "node check_scaffold.mjs",
+    "check:syntax": "node --check capture_web.mjs",
+    "check:accessibility": "node check_accessibility_fallback.mjs",
+    "check:login-capture": "node check_login_capture.mjs",
+    "check:tab-screens": "node check_tab_screens.mjs",
+    "check:intro-page": "node check_intro_page.mjs",
+    "check:monitoring-docs": "node check_monitoring_admin_docs.mjs",
+    "check:ipcom-structure": "node check_ipcom_structure.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.50.0"
+  }
+}

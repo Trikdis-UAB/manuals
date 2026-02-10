@@ -37,6 +37,25 @@ Editor entry points (start here when editing):
 - Gate Controllers
   - [GATOR](en/gate-controllers/gator/index.md)
   - [GATOR WiFi](en/gate-controllers/gator-wifi/index.md)
+- Receivers
+  - IPcom5 Control
+    - [Overview](en/receivers/ipcom5control/index.md)
+    - Tabs
+      - [Status](en/receivers/ipcom5control/ui/screens/status.md)
+      - [Logs](en/receivers/ipcom5control/ui/screens/logs.md)
+      - [General](en/receivers/ipcom5control/ui/screens/general.md)
+      - [Internal events](en/receivers/ipcom5control/ui/screens/internal-events.md)
+      - [Receivers](en/receivers/ipcom5control/ui/screens/receivers.md)
+      - [Outputs](en/receivers/ipcom5control/ui/screens/outputs.md)
+      - [Users](en/receivers/ipcom5control/ui/screens/users.md)
+      - [Incoming events](en/receivers/ipcom5control/ui/screens/incoming-events.md)
+      - [Objects](en/receivers/ipcom5control/ui/screens/objects.md)
+    - Operations
+      - [CMS integration mapping](en/receivers/ipcom5control/ui/cms-integration-mapping.md)
+      - [Networking and firewall](en/receivers/ipcom5control/ui/networking-firewall.md)
+      - [HA, cluster, and backup](en/receivers/ipcom5control/ui/ha-cluster-backup.md)
+      - [Glossary](en/receivers/ipcom5control/ui/glossary.md)
+      - [Team input tracker](en/receivers/ipcom5control/ui/team-input-questions.md)
 - Keypads
   - [Keypad SK-LCD Button](en/keypads/sk-lcd-button/index.md)
   - [Keypad SK-LED Button](en/keypads/sk-led-button/index.md)
