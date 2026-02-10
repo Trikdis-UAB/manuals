@@ -1,5 +1,7 @@
 # Logs
 
+![Logs - Full Screen](../assets/screens/logs.png)
+
 **Purpose:** Provide an audit trail of system activity and administrative actions for troubleshooting and compliance.
 
 ## When to use
@@ -9,26 +11,24 @@
 
 ## Sections and why they matter
 
-### Log table
+### Log table {#logs-table}
 
-Each row records a system or administrative event with a timestamp, type, and message. This is the first place to confirm scheduled cleanup, upgrades, or configuration changes.
+Each row records a system or administrative event with a timestamp, type, and message. This is the first place to confirm scheduled cleanup, upgrades, or configuration changes. Some entries include a `more info` link with extended details that helps identify what changed and who initiated it.
 
-### Detail links
+### Operational checks and actions {#logs-operational-checks}
 
-Some entries include a `more info` link with extended details. Use this to identify what changed and who initiated it.
+Use two quick passes: first monitor patterns in recent entries, then confirm event metadata before escalating.
 
-### Footer summary
+**Monitor these in runtime:**
 
-The footer shows the logged-in user, host, and live object totals. It provides context for the environment where the log entries were recorded.
+- Repeated `error` entries in short time windows. Alert cue: recurrent transport or service instability.
+- Frequent `Settings`-type entries outside maintenance windows. Alert cue: unauthorized or accidental changes.
+- `more info` actor/source does not match expected operator or automation account. Alert cue: unplanned administrative changes.
 
-### Confirmed log type values (IPCom API reference)
+**Confirm before production use:**
 
-The log `Type` field values are documented by the local IPCom API docs:
-
-- `0`: informational messages.
-- `1`: warning messages.
-- `2`: error messages.
-- `3`: settings-change messages.
+- `Type` labels remain consistent (`info`, `warning`, `error`, `settings`).
+- Timestamps follow expected chronological order for the same incident timeline.
 
 ## Incident checklist {#logs-incident-checklist}
 
@@ -36,11 +36,3 @@ The log `Type` field values are documented by the local IPCom API docs:
 - `Receiver ingest failures`: look for listener bind/start errors after port or network changes.
 - `Auth and permission issues`: look for failed login/auth events after account or token changes.
 - `Backlog symptoms`: correlate cleanup or warning entries with buffer growth in `Status`.
-
-
-## Key fields to watch {#logs-key-fields}
-
-- `Time`: establishes incident chronology. Alert cue: repeated errors clustered in short windows.
-- `Type`: classifies log severity/context. Alert cue: repeated `Settings`/error-like types after deployments.
-- `Text`: carries operational detail for root cause. Alert cue: recurring timeout/connectivity phrases.
-- `more info`: reveals change details and actor context. Alert cue: unexpected admin/source or unscheduled changes.

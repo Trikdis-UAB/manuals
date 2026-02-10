@@ -1,5 +1,7 @@
 # Outputs
 
+![Outputs - Full Screen](../assets/screens/outputs.png)
+
 **Purpose:** Configure output destinations for event delivery and automation integrations.
 
 ## When to use
@@ -8,10 +10,6 @@
 - When troubleshooting delivery to a specific destination.
 
 ## Sections and why they matter
-
-### Show passwords
-
-Reveals masked encryption keys for verification. Enable only during controlled maintenance, and disable immediately after verification to avoid exposing secrets in shared screens or screenshots.
 
 ### Outputs table {#outputs-table}
 
@@ -30,55 +28,58 @@ Each row represents a destination and its routing configuration. Key fields:
 - `IP Whitelist`: restricts allowed destination IPs.
 - `Filters`: event routing filters that control which events are sent.
 
+Available `Type` options:
+
+- `TCP`
+- `COM Port`
+- `JSON Server`
+- `TCP Server`
+- `Webhook`
+
+Available `Protocol` options:
+
+- `Surgard MLR2`
+- `Monas 3`
+- `Surgard MLR2 8`
+- `Surgard MLR2 No End`
+- `Ademco 685`
+- `Ademco 685 CID`
+- `SurgardMRL2000 CID`
+- `SIA DC-09`
+- `Surgard MLR2 Line with Account`
+
 Misconfigured fields here are a common cause of undelivered events, so validate changes against the destination system requirements.
 
 `Buffer size` is a queue limit per output. High or growing queue usage indicates destination-side delays or protocol mismatch and can lead to delayed alarm delivery.
 
-Protocol-specific field usage varies by integration. For a cross-tab mapping, see `../cms-integration-mapping.md`.
+Protocol-specific field usage varies by integration and must match the CMS parser profile used in your deployment.
 
-### Confirmed option values (IPCom API reference)
+FYI: if `buffer_size` is set to `0`, IPCom uses the default queue size of `1000` events.
 
-The following values are confirmed by the local IPCom API documentation (`Configuration Reference` and `PUT /api/settings` validation sections):
+### Add output {#outputs-add-output}
 
-| Output type | Value | Operational meaning |
-| --- | --- | --- |
-| `TCP` | `0` | TCP client to external CMS endpoint |
-| `COM` | `1` | Serial output over COM |
-| `JSON_SERVER` | `2` | Local JSON server output |
-| `TCP_SERVER` | `3` | TCP server mode (incoming clients connect to IPCom) |
-| `WEBHOOK` | `4` | HTTP webhook output |
+Use `Add output` to create a new destination and populate routing identifiers and network values.
 
-| Output protocol | Value | Notes |
-| --- | --- | --- |
-| `Surgard` | `0` | Standard Surgard format |
-| `Monas3` | `1` | Monas3 format |
-| `Surgard8` | `2` | Surgard with 8-symbol account length |
-| `SurgardNoEnd` | `3` | Surgard without end terminator (`0x14`) |
-| `Ademco685` | `4` | Ademco 685 |
-| `Ademco685Cid` | `5` | Ademco 685 Contact ID |
-| `Surgard2000` | `6` | Surgard 2000 |
-| `SiaDc09` | `7` | SIA DC-09 |
-| `SurgardMlr2_LineWithAccount` | `8` | MLR2 variant where line uses first two account characters |
+### Operational checks and actions {#outputs-operational-checks}
 
-Validation constraints confirmed by API docs:
+Use two quick passes after any change: first monitor runtime behavior, then confirm configuration details before enabling production delivery.
 
-- `id` must be unique and non-zero; `name` must be non-empty.
-- `type`, `protocol`, and `identificator` must be within allowed backend ranges.
-- `oid`, `receiver_number`, and `line_number` must be within allowed backend ranges.
-- For output settings that use `encryption_key`, key length is 16 characters.
-- For `SiaDc09`, encryption key must be valid when encryption is enabled.
-- `buffer_size = 0` uses the default queue size of `1000`.
+**Monitor these in runtime:**
 
-Format note:
+- `Buffer size` growth on active outputs. Alert cue: queue does not drain while devices continue generating events.
+- Endpoint/protocol edits without coordinated CMS changes. Alert cue: delivery failures or decode errors.
+- Newly enabled output before destination readiness. Alert cue: immediate buffer growth and failed connection attempts.
 
-- The API specifies key length, but does not explicitly define required character set/encoding for output `encryption_key` fields. [REVIEW]
+**Confirm before production use:**
 
-Retry/backoff and queue persistence behavior must be validated in your deployment. [REVIEW]
-Open SME questions for this screen are tracked in `../team-input-questions.md`.
-
-### Add output
-
-Use `Add output` to create a new destination. Populate routing identifiers and network values first, then enable the output after validation.
+- Output `id` is unique and greater than `0`; `name` is not empty.
+- `Type`, `Protocol`, and `Identifier` match the CMS integration profile.
+- `OID`, `Receiver number`, and `Line` match expected routing in CMS.
+- If encryption is enabled, `encryption_key` length is exactly `16` characters.
+- Output `IP Whitelist` and `Host` policy align with `Networking and firewall` guidance.
+- Encryption key character set/encoding is agreed with your integration team.
+- Retry/backoff and queue persistence behavior is documented for your deployment.
+- Run controlled test events per protocol before production enablement.
 
 ## Operations runbook {#outputs-operations-runbook}
 
@@ -86,13 +87,3 @@ Use `Add output` to create a new destination. Populate routing identifiers and n
 - `Frequent reconnects`: tune `Heartbeat interval`, verify network stability, and confirm destination accepts the configured protocol.
 - `Queue growth on one output`: temporarily disable the problematic output, fix endpoint settings, then re-enable and watch buffer recovery.
 - `Changes break delivery`: compare with a known working output and roll back to the last stable values before retrying.
-
-
-## Key fields to watch {#outputs-key-fields}
-
-- `Enabled`: controls whether destination is active. Alert cue: events stop for a destination immediately after disable.
-- `Host` / `Port`: destination endpoint for delivery. Alert cue: connect timeouts or refused sessions.
-- `Protocol`: determines payload and transport semantics. Alert cue: destination receives undecodable or rejected messages.
-- `Buffer size`: per-output queue backlog indicator. Alert cue: sustained growth without drain indicates delivery bottleneck.
-- `Heartbeat interval`: connection liveness cadence. Alert cue: frequent reconnect churn under stable network conditions.
-- `IP Whitelist`: limits permitted target addresses by policy. Alert cue: traffic blocked after destination/network changes.

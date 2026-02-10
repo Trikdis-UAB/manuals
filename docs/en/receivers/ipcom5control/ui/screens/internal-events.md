@@ -1,5 +1,7 @@
 # Internal events
 
+![Internal events - Full Screen](../assets/screens/internal-events.png)
+
 **Purpose:** Review and control system-generated events and the codes that are sent to downstream destinations.
 
 ## When to use
@@ -9,11 +11,11 @@
 
 ## Sections and why they matter
 
-### Internal event list
+### Internal event list {#internal-events-list}
 
 Each row defines how an internal system condition is represented in outgoing messages. This is where you align internal event names with the numeric codes expected by your monitoring platform.
 
-### Columns explained
+### Columns explained {#internal-events-columns}
 
 - `Enabled`: whether the event is active (checked) or suppressed.
 - `Classificator`: event classifier (for example, `E` for event, `R` for restore).
@@ -23,22 +25,24 @@ Each row defines how an internal system condition is represented in outgoing mes
 - `Name`: internal event identifier (for example, `EVENT_SYSTEM_STARTED`).
 
 Disabling events or changing codes affects downstream routing and alarm interpretation, so changes should be coordinated with the monitoring platform.
-Open SME questions for unresolved control labels are tracked in `../team-input-questions.md`.
 
-### Confirmed validation limits (IPCom API reference)
+![Internal events - Columns](../assets/screens/internal-events-sections/columns-explained.png)
 
-The following constraints are confirmed by the local IPCom API documentation (`PUT /api/settings` validation sections):
+### Operational checks and actions {#internal-events-operational-checks}
 
-- `classificator` must be `E` (event) or `R` (restore).
-- `type` must be a valid backend enum value.
-- `event_code`, `group_no`, and `zone_no` must be valid hex-compatible values within backend limits.
-- `name` must be non-empty.
+Use two quick passes after any change: first watch event behavior in downstream systems, then confirm rule integrity in the table.
 
+**Monitor these in runtime:**
 
-## Key fields to watch {#internal-events-key-fields}
+- Enabled/disabled toggles changing unexpectedly. Alert cue: internal alarms stop appearing downstream.
+- Event codes changing unexpectedly after updates. Alert cue: CMS starts decoding internal events incorrectly.
+- `Type` switching between `System` and `Aux` without change request. Alert cue: wrong downstream classification.
+- Paired `E` (event) and `R` (restore) rules drifting out of sync. Alert cue: restore events are missing.
 
-- `Enabled`: controls whether an internal event is emitted. Alert cue: expected alarms/restores stop appearing downstream.
-- `Classificator`: distinguishes event vs restore semantics. Alert cue: one-sided event streams with missing restores.
-- `Event code`: outbound numeric value expected by CMS. Alert cue: CMS decodes events into wrong type/class.
-- `Group no` / `Zone no`: routing context used by integrations. Alert cue: alarms arrive under wrong group/zone.
-- `Name`: internal event identity for traceability. Alert cue: changed mappings without documented change request.
+**Confirm before production use:**
+
+- `classificator` is `E` (event) or `R` (restore).
+- `event_code`, `group_no`, and `zone_no` are within allowed numeric ranges.
+- `name` is non-empty.
+- `type` is one of the supported values.
+- Coding is deployment-aligned with CMS parsing rules before enabling.

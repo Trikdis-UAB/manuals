@@ -63,6 +63,9 @@ Functional differences between editions:
 - HTTP/HTTPS management interface, with SSL usage discussed for secure access.
 - User list, administrator account, role assignment, and session/token controls.
 
+For step-by-step access methods (Web and Windows `.exe`), see [Access and login](./ui/access-and-login.md).
+For user creation, password, scopes, and token procedures, see [Users tab](./ui/screens/users.md).
+
 Operational security baseline:
 
 - Restrict management UI access by network allowlist or VPN.
@@ -97,4 +100,8 @@ Operational security baseline:
 
 ![IPcom5 Control web login screen.](./image3.png)
 
-For screen-by-screen UI behavior and controls, use the `Tabs` section in the left navigation.
+Use these pages as primary entry points:
+
+- Access methods and troubleshooting: [Access and login](./ui/access-and-login.md)
+- Screen-by-screen operational behavior: [Status tab](./ui/screens/status.md) (and the rest of `Tabs`)
+- User and permission procedures: [Users tab](./ui/screens/users.md)

@@ -1,5 +1,7 @@
 # Incoming events
 
+![Incoming events - Full Screen](../assets/screens/incoming-events.png)
+
 **Purpose:** Monitor live incoming device events and pings, and filter them by device or receiver.
 
 ## When to use
@@ -9,7 +11,7 @@
 
 ## Sections and why they matter
 
-### Filters and actions
+### Filters and actions {#incoming-events-filters}
 
 - `Show events` and `Show pings` toggle which message types appear.
 - Filters for `OID`, `UID`, and `Receiver` narrow the stream to a specific device or instance.
@@ -17,29 +19,34 @@
 
 Filters are essential for high-volume receivers where scrolling the raw stream is impractical.
 
-### Incoming event table
+![Incoming events - Filters and actions](../assets/screens/incoming-events-sections/filters-and-actions.png)
+
+### Incoming event table {#incoming-events-table}
 
 The table is wide and grouped by purpose:
 
 - Identification: `Time`, `OID`, `PUID`, `UID`, `ICCID` identify the device.
 - Connectivity: `Signal`, `Com` (communication type), `Con` (protocol), `IP`, `Ping`, `SMS Ping` show transport health.
 - Device version: `HW` and `FW` help correlate behavior with hardware or firmware revisions.
-- Routing: `RR ID`, `RR`, `LL` show receiver and line routing identifiers; `Dev RR` and `Dev LL` are device-reported routing values. `Reg?` indicates registration status.
+- Routing: `RR ID` (route identifier), `RR` (receiver route value), and `LL` (line value) show routing context; `Dev RR` and `Dev LL` are device-reported routing values. `Reg?` indicates registration status.
 - Event details: `Seq`, `C`, `Code`, `Group`, `Zone`, `Type`, `SubType`, `P` define the event payload.
 
 Use these columns to confirm that events are correctly decoded and routed to the intended output.
-Open SME questions for unresolved field semantics are tracked in `../team-input-questions.md`.
+For full field definitions, see `Glossary` in the IPcom navigation.
 
-### Toast notifications
+### Operational checks and actions {#incoming-events-operational-checks}
 
-A brief toast (for example, `Settings loaded`) may appear after the page refreshes. It confirms the UI reloaded configuration data.
+Use two quick passes during incident triage: first make sure the stream view is trustworthy, then validate routing and payload fields.
 
+**Monitor these in runtime:**
 
-## Key fields to watch {#incoming-events-key-fields}
+- Filter state left active unintentionally. Alert cue: operators miss events because the view is narrowed.
+- `Time` drift and delayed rows. Alert cue: latency spike from device to receiver.
+- Routing mismatch between `RR/LL` and expected receiver path. Alert cue: events appear under wrong route context.
+- Repeated bad combinations in `Code/Group/Zone`. Alert cue: decode/parsing mismatch after config changes.
 
-- `Time`: confirms end-to-end event latency and ordering. Alert cue: large delays relative to source event time.
-- `OID` / `UID`: ties event to specific device identity. Alert cue: events from unknown or duplicated identifiers.
-- `Con` / `IP` / `Ping`: indicates transport and reachability state. Alert cue: frequent ping loss or source IP churn.
-- `RR ID` / `RR` / `LL`: routing context used for downstream delivery. Alert cue: events mapped to unexpected receiver/line.
-- `Code` / `Group` / `Zone`: core payload used by CMS rules. Alert cue: unexpected code/group/zone combinations.
-- `Reg?`: registration status indicator. Alert cue: unregistered state with ongoing event anomalies.
+**Confirm before production use:**
+
+- `Clear` returns the table to the expected full stream before broad incident triage.
+- Identification fields (`OID`, `UID`, `PUID`) map to known objects.
+- Transport fields (`Con`, `IP`, `Ping`, `SMS Ping`) are consistent with the device communication mode.

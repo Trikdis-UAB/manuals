@@ -40,6 +40,7 @@ Editor entry points (start here when editing):
 - Receivers
   - IPcom5 Control
     - [Overview](en/receivers/ipcom5control/index.md)
+    - [Access and login](en/receivers/ipcom5control/ui/access-and-login.md)
     - Tabs
       - [Status](en/receivers/ipcom5control/ui/screens/status.md)
       - [Logs](en/receivers/ipcom5control/ui/screens/logs.md)
@@ -50,12 +51,11 @@ Editor entry points (start here when editing):
       - [Users](en/receivers/ipcom5control/ui/screens/users.md)
       - [Incoming events](en/receivers/ipcom5control/ui/screens/incoming-events.md)
       - [Objects](en/receivers/ipcom5control/ui/screens/objects.md)
+    - [Glossary](en/receivers/ipcom5control/ui/glossary.md)
     - Operations
-      - [CMS integration mapping](en/receivers/ipcom5control/ui/cms-integration-mapping.md)
       - [Networking and firewall](en/receivers/ipcom5control/ui/networking-firewall.md)
       - [HA, cluster, and backup](en/receivers/ipcom5control/ui/ha-cluster-backup.md)
-      - [Glossary](en/receivers/ipcom5control/ui/glossary.md)
-      - [Team input tracker](en/receivers/ipcom5control/ui/team-input-questions.md)
+      - [Team questions](en/receivers/ipcom5control/ui/team-questions.md)
 - Keypads
   - [Keypad SK-LCD Button](en/keypads/sk-lcd-button/index.md)
   - [Keypad SK-LED Button](en/keypads/sk-led-button/index.md)

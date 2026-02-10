@@ -1,81 +1,105 @@
 import fs from "fs/promises";
 import { fileExists, resolveRepo } from "./lib/utils.mjs";
 
-const screenPaths = [
-  "docs/en/receivers/ipcom5control/ui/screens/login.md",
-  "docs/en/receivers/ipcom5control/ui/screens/status.md",
-  "docs/en/receivers/ipcom5control/ui/screens/logs.md",
-  "docs/en/receivers/ipcom5control/ui/screens/general.md",
-  "docs/en/receivers/ipcom5control/ui/screens/internal-events.md",
-  "docs/en/receivers/ipcom5control/ui/screens/receivers.md",
-  "docs/en/receivers/ipcom5control/ui/screens/outputs.md",
-  "docs/en/receivers/ipcom5control/ui/screens/users.md",
-  "docs/en/receivers/ipcom5control/ui/screens/incoming-events.md",
-  "docs/en/receivers/ipcom5control/ui/screens/objects.md",
-];
-
-const requiredOrderedSectionsDefault = [
-  "**Purpose:**",
-  "## When to use",
-  "## Sections and why they matter",
-  "## Key fields to watch",
+const remainingTabs = [
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/logs.md",
+    cover: "../assets/screens/logs.png",
+  },
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/internal-events.md",
+    cover: "../assets/screens/internal-events.png",
+  },
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/receivers.md",
+    cover: "../assets/screens/receivers.png",
+  },
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/outputs.md",
+    cover: "../assets/screens/outputs.png",
+  },
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/users.md",
+    cover: "../assets/screens/users.png",
+  },
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/incoming-events.md",
+    cover: "../assets/screens/incoming-events.png",
+  },
+  {
+    path: "docs/en/receivers/ipcom5control/ui/screens/objects.md",
+    cover: "../assets/screens/objects.png",
+  },
 ];
 
 const errors = [];
 
-for (const path of screenPaths) {
-  const absolutePath = resolveRepo(path);
+for (const tab of remainingTabs) {
+  const absolutePath = resolveRepo(tab.path);
 
   if (!(await fileExists(absolutePath))) {
-    errors.push(`${path}: file missing`);
+    errors.push(`${tab.path}: file missing`);
     continue;
   }
 
   const content = await fs.readFile(absolutePath, "utf8");
 
-  if (content.includes("**Location:**")) {
-    errors.push(`${path}: location line should not be present`);
+  if (!content.includes(tab.cover)) {
+    errors.push(`${tab.path}: missing cover image '${tab.cover}'`);
   }
 
-  if (content.includes("\n## Fields and controls (generated reference)\n")) {
-    errors.push(`${path}: generated fields section should not be present`);
-  }
-
-  if (content.includes("\n## Validation\n")) {
-    errors.push(`${path}: validation section should not be present`);
-  }
-
-  const requiredOrderedSections = path.endsWith("/general.md")
-    ? ["**Purpose:**", "## When to use", "## Sections and why they matter"]
-    : requiredOrderedSectionsDefault;
-
+  const orderedMarkers = [
+    "**Purpose:**",
+    "## When to use",
+    "## Sections and why they matter",
+  ];
   let previousIndex = -1;
-  for (const marker of requiredOrderedSections) {
+  for (const marker of orderedMarkers) {
     const markerIndex = content.indexOf(marker);
     if (markerIndex === -1) {
-      errors.push(`${path}: missing required section marker '${marker}'`);
+      errors.push(`${tab.path}: missing required section marker '${marker}'`);
       continue;
     }
     if (markerIndex <= previousIndex) {
-      errors.push(`${path}: section order violation at '${marker}'`);
+      errors.push(`${tab.path}: section order violation at '${marker}'`);
     }
     previousIndex = markerIndex;
   }
 
-  const sectionsIndex = content.indexOf("## Sections and why they matter");
-  const keyFieldsIndex = content.indexOf("## Key fields to watch");
-  const operationsIndex = content.indexOf("## Operations runbook");
-  if (
-    operationsIndex !== -1 &&
-    (operationsIndex <= sectionsIndex || (keyFieldsIndex !== -1 && operationsIndex >= keyFieldsIndex))
-  ) {
-    errors.push(
-      `${path}: '## Operations runbook' must appear after sections explanation and before key fields`,
-    );
+  if (content.includes("## Key fields to watch")) {
+    errors.push(`${tab.path}: standalone key fields section should not be present`);
   }
 
-  if (content.includes("[REVIEW]") && !content.includes("team-input-questions.md")) {
-    errors.push(`${path}: contains [REVIEW] but no link to team-input-questions.md`);
+  if (content.includes("### Confirmed ")) {
+    errors.push(`${tab.path}: standalone confirmed-values section should not be present`);
+  }
+
+  const sectionHeadingRegex = /^### .+$/gm;
+  const sectionMatches = [...content.matchAll(sectionHeadingRegex)];
+
+  if (sectionMatches.length === 0) {
+    errors.push(`${tab.path}: no '###' section headings found`);
+    continue;
+  }
+
+  if (!content.includes("![") || !content.includes("](")) {
+    errors.push(`${tab.path}: missing section imagery`);
+  }
+
+  const hasOperationalBlock =
+    content.includes("**Operational checks and actions:**") ||
+    content.includes("### Operational checks and actions");
+
+  if (!hasOperationalBlock) {
+    errors.push(`${tab.path}: missing 'Operational checks and actions' block`);
+  }
+
+  const hasMonitorGuidance =
+    content.includes("Monitor:") ||
+    content.includes("**Monitor these in runtime:**");
+
+  if (!hasMonitorGuidance) {
+    errors.push(`${tab.path}: missing monitor guidance`);
   }
 }
 

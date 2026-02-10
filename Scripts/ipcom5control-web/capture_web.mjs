@@ -318,8 +318,57 @@ async function captureScreen(pageRef, screen, viewportInfo, options = {}) {
     viewport: viewportInfo,
   });
 
+  await suppressTransientOverlays(pageRef);
+
   await pageRef.screenshot({
     path: path.join(screenDir, "screenshot.png"),
     fullPage: true,
   });
+}
+
+async function suppressTransientOverlays(pageRef) {
+  // Hide transient toast/notification overlays so cover screenshots capture only screen content.
+  await pageRef
+    .addStyleTag({
+      content: `
+      [role="alert"],
+      [aria-live="assertive"],
+      .toast,
+      .toast-container,
+      .Toastify__toast,
+      .Toastify__toast-container,
+      .notification,
+      .snackbar {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+    `,
+    })
+    .catch(() => {});
+
+  await pageRef
+    .evaluate(() => {
+      const markers = [
+        "settings loaded",
+        "list refreshed",
+        "refreshed",
+        "saved",
+        "updated",
+      ];
+      const elements = Array.from(document.querySelectorAll("div,span,p,strong"));
+      for (const element of elements) {
+        const text = (element.textContent || "").toLowerCase().trim();
+        if (!text) continue;
+        if (markers.some((marker) => text.includes(marker))) {
+          const rect = element.getBoundingClientRect();
+          if (rect.width > 80 && rect.height > 20) {
+            element.style.display = "none";
+          }
+        }
+      }
+    })
+    .catch(() => {});
+
+  await pageRef.waitForTimeout(250);
 }

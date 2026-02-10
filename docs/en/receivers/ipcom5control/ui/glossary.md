@@ -26,8 +26,6 @@ Use this glossary when reviewing `Status`, `Incoming events`, and `Objects` tabs
 - `Dev LL` - Device-reported line value. [REVIEW]
 - `Reg?` - Device registration state flag. [REVIEW]
 
-Open SME questions for unresolved term semantics are tracked in `team-input-questions.md`.
-
 ## Event payload fields
 
 - `Seq` - Event sequence number.
@@ -42,3 +40,7 @@ Open SME questions for unresolved term semantics are tracked in `team-input-ques
 - `Online` - Device is actively communicating within supervision thresholds.
 - `Offline` - Device has missed supervision thresholds.
 - `Untracked` - Device is present but not currently supervised by tracker logic.
+
+## Supervision fields {#glossary-supervision-fields}
+
+- `OOVR` - Object supervision/override-related field shown in `Objects`. Exact behavior is still [REVIEW].

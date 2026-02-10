@@ -11,6 +11,15 @@
 
 ## Sections and why they matter
 
+### Footer
+
+- `Left block` shows the logout control, current user identity, and connected host, used to confirm you are operating in the intended environment and account.  
+  ![Status - Footer Left](../assets/screens/status-sections/footer-left.png)
+- `Center block` shows supervision counters (`Total objects`, `Online`, `SMS mode`, `Offline`, `Untracked`) for fast before/after change validation.  
+  ![Status - Footer Center](../assets/screens/status-sections/footer-center.png)
+- `Right block` shows `IPCCw Build` and the live connection indicator to validate running build and UI transport state.  
+  ![Status - Footer Right](../assets/screens/status-sections/footer-right.png)
+
 ### General
 
 Shows the IPCom version and release, start time, uptime, CPU usage, and RAM usage. These metrics help confirm that the receiver is running the expected build and has enough resources for current load. The CPU trend line helps spot spikes that can affect event processing latency.
@@ -39,7 +48,7 @@ Displays queue sizes per destination for events and status updates. Buffers grow
 
 Summarizes device counts by UID/OID, online or offline state, SMS mode usage, and memory usage for tracking. This section helps assess fleet health and confirms that device supervision is functioning.
 
-![Status - Device Tracker](../assets/screens/status-sections/device-tracker.png)
+<img src="../../assets/screens/status-sections/device-tracker.png" alt="Status - Device Tracker" width="560" />
 
 ### Database
 
@@ -51,22 +60,13 @@ Shows database version and event statistics, including the event count since sta
 
 Lists receiver status for modem-based traffic. Use this when SMS or modem channels are part of the deployment, to verify the modem receiver is active.
 
-![Status - Modem Status](../assets/screens/status-sections/modem-status.png)
+<img src="../../assets/screens/status-sections/modem-status.png" alt="Status - Modem Status" width="560" />
 
 ### Connected users
 
 Shows currently authenticated UI sessions and source IP/port. This is useful for identifying concurrent admin sessions and spotting unexpected access during incident response.
 
-![Status - Connected Users](../assets/screens/status-sections/connected-users.png)
-
-### Footer
-
-- `Left block` shows the logout control, current user identity, and connected host, used to confirm you are operating in the intended environment and account.  
-  ![Status - Footer Left](../assets/screens/status-sections/footer-left.png)
-- `Center block` shows supervision counters (`Total objects`, `Online`, `SMS mode`, `Offline`, `Untracked`) for fast before/after change validation.  
-  ![Status - Footer Center](../assets/screens/status-sections/footer-center.png)
-- `Right block` shows `IPCCw Build` and the live connection indicator to validate running build and UI transport state.  
-  ![Status - Footer Right](../assets/screens/status-sections/footer-right.png)
+<img src="../../assets/screens/status-sections/connected-users.png" alt="Status - Connected Users" width="560" />
 
 ## Trends and charts
 
@@ -79,12 +79,20 @@ The small red trend graphs under CPU and event statistics show recent activity c
 - `Average events suddenly drops`: confirm device connectivity in `Objects` and check recent errors in `Logs`.
 - `CPU or RAM spikes`: review recent config changes, reduce noisy traffic, and validate retention settings in `General`.
 
+### Operational checks and actions {#status-operational-checks}
 
-## Key fields to watch {#status-key-fields}
+Use two quick passes for routine supervision: first watch live health signals, then confirm session and UI state before escalation.
 
-- `CPU (current/system)`: indicates current processing pressure. Alert cue: sustained high usage with growing output buffers.
-- `RAM`: shows memory headroom for event processing and cache. Alert cue: rising usage plus slower UI/API responses.
-- `Active sessions`: confirms current receiver ingest connectivity. Alert cue: abrupt drop to zero on active receivers.
-- `Output buffer`: indicates delivery backlog to each destination. Alert cue: continuous growth instead of draining.
-- `Online` / `Offline` / `Untracked`: summarizes fleet supervision health. Alert cue: sudden offline growth after network/config changes.
-- `Events (average)`: indicates inbound traffic baseline. Alert cue: unexpected drop/spike not explained by schedule.
+**Monitor these in runtime:**
+
+- `CPU (current/system)` and `RAM`. Alert cue: sustained high usage with slower UI/API response.
+- `Active sessions` per receiver. Alert cue: abrupt drop to zero on active receivers.
+- `Output buffer` trends. Alert cue: continuous growth instead of draining.
+- `Online` / `Offline` / `Untracked` counters. Alert cue: sudden offline growth after network/config changes.
+- `Events (average)` trend. Alert cue: unexpected drop/spike not explained by schedule.
+- Repeated error toasts during routine actions. Alert cue: processing or state synchronization issues.
+
+**Confirm before production use:**
+
+- Toast message text matches the action just performed.
+- Footer environment identity (`user`, `host`, `build`) matches the intended instance.

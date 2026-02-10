@@ -114,6 +114,7 @@ plugins:
       - Receivers:
         - IPcom5 Control:
           - Overview: receivers/ipcom5control/index.md
+          - Access and login: receivers/ipcom5control/ui/access-and-login.md
           - Tabs:
             - Status: receivers/ipcom5control/ui/screens/status.md
             - Logs: receivers/ipcom5control/ui/screens/logs.md
@@ -124,12 +125,11 @@ plugins:
             - Users: receivers/ipcom5control/ui/screens/users.md
             - Incoming events: receivers/ipcom5control/ui/screens/incoming-events.md
             - Objects: receivers/ipcom5control/ui/screens/objects.md
+          - Glossary: receivers/ipcom5control/ui/glossary.md
           - Operations:
-            - CMS integration mapping: receivers/ipcom5control/ui/cms-integration-mapping.md
             - Networking and firewall: receivers/ipcom5control/ui/networking-firewall.md
             - HA, cluster, and backup: receivers/ipcom5control/ui/ha-cluster-backup.md
-            - Glossary: receivers/ipcom5control/ui/glossary.md
-            - Team input tracker: receivers/ipcom5control/ui/team-input-questions.md
+            - Team questions: receivers/ipcom5control/ui/team-questions.md
       - Keypads:
         - Keypad SK-LCD Button: keypads/sk-lcd-button/index.md
         - Keypad SK-LED Button: keypads/sk-led-button/index.md
