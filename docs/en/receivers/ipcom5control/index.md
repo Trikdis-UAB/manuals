@@ -27,6 +27,46 @@ Functional differences between editions:
 
 `Relay via receiver` means device events and statuses are forwarded to Protegus 2 through IPCom, and supported actions can be sent back through IPCom to devices.
 
+## Hardware requirements
+
+Use these sizing baselines when planning new installations.
+
+### Linux install (hardware or VM)
+
+Linux platform requirements:
+
+- IPCom v5 Linux edition is supported on `amd64` (`x86_64`) only.
+- Recommended base OS is Debian Stable (`amd64`).
+- Debian `netinst` links point to the current Stable release and can change over time.
+- For controlled deployments, pin the exact Debian ISO filename/version in your rollout documentation.
+- Non-`amd64` platforms (for example `arm64`/`aarch64`) are not supported for IPCom v5 Linux deployment.
+- If hardware is non-`amd64`, use a supported alternative such as Windows installation or RL25 hardware.
+
+| Deployment size | RAM | Storage |
+| --- | --- | --- |
+| Baseline deployment | 4 GB | 128 GB SSD |
+| Large object load (around 100,000 objects) | 8 GB | 128 GB SSD |
+| Large object load with database enabled | 8 GB | 256 GB enterprise SSD |
+
+Notes:
+
+- For database-heavy deployments, the 256 GB enterprise SSD recommendation is mainly for endurance (higher DWPD), not only raw capacity.
+- Plan additional free disk space for logs, backups, and update rollback files.
+
+### Windows install
+
+Minimum recommended specification:
+
+- Windows 11 Pro or Windows 11 Enterprise
+- 2-core CPU
+- 8 GB RAM
+- 128 GB HDD/SSD (SSD preferred)
+
+### RL25 hardware receiver
+
+- RL25 ships with SSD and RAM preinstalled.
+- Use RL25 when appliance-style deployment and prevalidated hardware are preferred.
+
 ## Shared capabilities (all variants)
 
 ### Core receiving and control
