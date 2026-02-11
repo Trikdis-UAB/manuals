@@ -1,6 +1,6 @@
 # Outputs
 
-![Outputs - Full Screen](../assets/screens/outputs.png)
+![Outputs tab full-screen view](../assets/screens/outputs.webp)
 
 **Purpose:** Configure output destinations for event delivery and automation integrations.
 

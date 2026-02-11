@@ -1,6 +1,6 @@
 # Internal events
 
-![Internal events - Full Screen](../assets/screens/internal-events.png)
+![Internal events tab full-screen view](../assets/screens/internal-events.webp)
 
 **Purpose:** Review and control system-generated events and the codes that are sent to downstream destinations.
 
@@ -26,7 +26,7 @@ Each row defines how an internal system condition is represented in outgoing mes
 
 Disabling events or changing codes affects downstream routing and alarm interpretation, so changes should be coordinated with the monitoring platform.
 
-![Internal events - Columns](../assets/screens/internal-events-sections/columns-explained.png)
+![Internal events tab columns section](../assets/screens/internal-events-sections/columns-explained.png)
 
 ### Operational checks and actions {#internal-events-operational-checks}
 

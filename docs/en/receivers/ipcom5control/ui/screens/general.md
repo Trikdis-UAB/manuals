@@ -1,6 +1,6 @@
 # General
 
-![General - Full Screen](../assets/screens/general.png)
+![General tab full-screen view](../assets/screens/general.webp)
 
 **Purpose:** Configure instance-wide settings that affect timekeeping, supervision, database behavior, API access, and startup event handling.
 
@@ -15,7 +15,7 @@
 
 Defines the instance name and session behaviors. The instance name appears in the UI and helps operators confirm they are working on the correct receiver. Options like `Generate restore on new session` influence how restore events are emitted after reconnects, which affects downstream monitoring. Time synchronization settings control whether IPCom pushes its clock to devices and how frequently it does so, which directly impacts event timestamps.
 
-![General - Misc](../assets/screens/general-sections/misc.png)
+![General tab Misc. section](../assets/screens/general-sections/misc.png)
 
 **Operational checks and actions:**
 
@@ -28,7 +28,7 @@ Defines the instance name and session behaviors. The instance name appears in th
 
 Controls supervision timing for tracked devices. Timeout multipliers and tolerances determine when a device is considered offline. Separate SMS values apply when devices report over SMS. Restore event counts tune when the system emits recovery messages after a device returns.
 
-![General - Object tracker settings](../assets/screens/general-sections/object-tracker-settings.png)
+![General tab Object tracker settings section](../assets/screens/general-sections/object-tracker-settings.png)
 
 **Operational checks and actions:**
 
@@ -43,7 +43,7 @@ Defines HTTPS API access, port, and secrets. These settings control how external
 
 API exposure should be restricted to trusted admin/integration networks.
 
-![General - API settings](../assets/screens/general-sections/api-settings.png)
+![General tab API settings section](../assets/screens/general-sections/api-settings.png)
 
 **Operational checks and actions:**
 
@@ -57,7 +57,7 @@ API exposure should be restricted to trusted admin/integration networks.
 
 Enables a status export listener and configures its port and IP whitelist. Use this for downstream systems that consume device status updates. Encryption can be enabled when the export is sent over untrusted networks.
 
-![General - Device STATUS export settings](../assets/screens/general-sections/device-status-export-settings.png)
+![General tab Device STATUS export settings section](../assets/screens/general-sections/device-status-export-settings.png)
 
 **Operational checks and actions:**
 
@@ -69,7 +69,7 @@ Enables a status export listener and configures its port and IP whitelist. Use t
 
 Enables the SQL database and configures connection details (user, password, host, port, database). In-memory device and event management options control what is cached and how cleanup works. The `Remove lost objects` and `Remove events` retention values determine how long data is kept before cleanup, which affects storage and audit depth.
 
-![General - Database settings](../assets/screens/general-sections/database-settings.png)
+![General tab Database settings section](../assets/screens/general-sections/database-settings.png)
 
 **Operational checks and actions:**
 
@@ -85,7 +85,7 @@ Enables the SQL database and configures connection details (user, password, host
 
 Lets you suppress specific event codes on device startup. This is useful to reduce noise during mass reconnects or scheduled maintenance. Use the event list to add or remove codes that should be ignored.
 
-![General - Ignorable startup event settings](../assets/screens/general-sections/ignorable-startup-event-settings.png)
+![General tab Ignorable startup event settings section](../assets/screens/general-sections/ignorable-startup-event-settings.png)
 
 **Operational checks and actions:**
 

@@ -5,7 +5,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/status.md",
     snippets: [
-      "![Status - Full Screen](../assets/screens/status.png)",
+      "![Status tab full-screen view](../assets/screens/status.webp)",
       "### Connected users",
       "### Footer",
       "## Operations runbook",
@@ -15,7 +15,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/general.md",
     snippets: [
-      "![General - Full Screen](../assets/screens/general.png)",
+      "![General tab full-screen view](../assets/screens/general.webp)",
       "**Operational checks and actions:**",
       "### Database settings",
       "### Ignorable startup event settings",
@@ -25,7 +25,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/logs.md",
     snippets: [
-      "![Logs - Full Screen](../assets/screens/logs.png)",
+      "![Logs tab full-screen view](../assets/screens/logs.webp)",
       "### Log table",
       "## Incident checklist",
       "### Operational checks and actions",
@@ -34,7 +34,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/internal-events.md",
     snippets: [
-      "![Internal events - Full Screen](../assets/screens/internal-events.png)",
+      "![Internal events tab full-screen view](../assets/screens/internal-events.webp)",
       "### Internal event list",
       "### Columns explained",
       "### Operational checks and actions",
@@ -43,7 +43,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/receivers.md",
     snippets: [
-      "![Receivers - Full Screen](../assets/screens/receivers.png)",
+      "![Receivers tab full-screen view](../assets/screens/receivers.webp)",
       "### TCP Receivers",
       "### UDP Receivers",
       "### COM Receivers",
@@ -56,7 +56,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/outputs.md",
     snippets: [
-      "![Outputs - Full Screen](../assets/screens/outputs.png)",
+      "![Outputs tab full-screen view](../assets/screens/outputs.webp)",
       "### Outputs table",
       "`Buffer size` is a queue limit per output.",
       "Available `Type` options:",
@@ -69,7 +69,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/users.md",
     snippets: [
-      "![Users - Full Screen](../assets/screens/users.png)",
+      "![Users tab full-screen view](../assets/screens/users.webp)",
       "### Users table",
       "## Common procedures",
       "### Create a new user",
@@ -83,7 +83,7 @@ const checks = [
     path: "docs/en/receivers/ipcom5control/ui/access-and-login.md",
     snippets: [
       "# Access and login",
-      "![Access and login - Full Screen](./assets/screens/login.png)",
+      "![Access and login page full-screen view](./assets/screens/login.webp)",
       "## Access methods",
       "## Web access flow",
       "## Windows `.exe` access flow",
@@ -95,7 +95,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/incoming-events.md",
     snippets: [
-      "![Incoming events - Full Screen](../assets/screens/incoming-events.png)",
+      "![Incoming events tab full-screen view](../assets/screens/incoming-events.webp)",
       "### Filters and actions",
       "### Incoming event table",
       "### Operational checks and actions",
@@ -104,7 +104,7 @@ const checks = [
   {
     path: "docs/en/receivers/ipcom5control/ui/screens/objects.md",
     snippets: [
-      "![Objects - Full Screen](../assets/screens/objects.png)",
+      "![Objects tab full-screen view](../assets/screens/objects.webp)",
       "### Actions and filters",
       "### Object list table",
       "### Operational checks and actions",
