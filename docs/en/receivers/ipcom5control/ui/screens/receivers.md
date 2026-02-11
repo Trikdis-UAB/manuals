@@ -1,6 +1,6 @@
 # Receivers
 
-![Receivers - Full Screen](../assets/screens/receivers.png)
+![Receivers tab full-screen view](../assets/screens/receivers.webp)
 
 **Purpose:** Configure receiver endpoints (TCP, UDP, COM, and Modem) that accept incoming device traffic and define routing parameters.
 
@@ -17,7 +17,7 @@ Defines TCP listening endpoints. `Port` controls where devices connect. `Receive
 
 Use consistent receiver/line mapping with outputs and CMS expectations.
 
-![Receivers - TCP Receivers](../assets/screens/receivers-sections/tcp-receivers.png)
+![Receivers tab TCP Receivers section](../assets/screens/receivers-sections/tcp-receivers.png)
 
 **Operational checks and actions:**
 
@@ -32,7 +32,7 @@ Use consistent receiver/line mapping with outputs and CMS expectations.
 
 Defines UDP listening endpoints. Use this when devices report over UDP. Field meanings mirror TCP receivers, with the same routing identifiers.
 
-![Receivers - UDP Receivers](../assets/screens/receivers-sections/udp-receivers.png)
+![Receivers tab UDP Receivers section](../assets/screens/receivers-sections/udp-receivers.png)
 
 **Operational checks and actions:**
 
@@ -44,7 +44,7 @@ Defines UDP listening endpoints. Use this when devices report over UDP. Field me
 
 Defines serial (RS232/COM) receivers for local integrations. These are typically used when hardware or legacy panels report over serial links.
 
-![Receivers - COM Receivers](../assets/screens/receivers-sections/com-receivers.png)
+![Receivers tab COM Receivers section](../assets/screens/receivers-sections/com-receivers.png)
 
 **Operational checks and actions:**
 
@@ -55,7 +55,7 @@ Defines serial (RS232/COM) receivers for local integrations. These are typically
 
 Defines modem-based receivers for SMS or dial-up style traffic. Use this when SMS or modem channels are part of the deployment.
 
-![Receivers - Modem Receivers](../assets/screens/receivers-sections/modem-receivers.png)
+![Receivers tab Modem Receivers section](../assets/screens/receivers-sections/modem-receivers.png)
 
 **Operational checks and actions:**
 
@@ -67,7 +67,7 @@ Defines modem-based receivers for SMS or dial-up style traffic. Use this when SM
 
 The `Assigned outputs` column shows which outputs are linked to each receiver. The red `X` action removes a receiver entry, so use it only with explicit approval.
 
-![Receivers - Assigned outputs](../assets/screens/receivers-sections/assigned-outputs-and-removal.png)
+![Receivers tab Assigned outputs section](../assets/screens/receivers-sections/assigned-outputs-and-removal.png)
 
 **Operational checks and actions:**
 

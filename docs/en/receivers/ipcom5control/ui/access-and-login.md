@@ -1,6 +1,6 @@
 # Access and login
 
-![Access and login - Full Screen](./assets/screens/login.png)
+![Access and login page full-screen view](./assets/screens/login.webp)
 
 **Purpose:** Explain how operators access IPCom5 Control and sign in using the supported deployment methods.
 
@@ -16,7 +16,7 @@
 3. Sign in with your user account.
 4. After login, verify environment and health on `Status`.
 
-![Web login screen](../image3.png)
+![Access and login page web login screen](../image3.png)
 
 ## Windows `.exe` access flow
 

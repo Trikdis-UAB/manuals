@@ -1,6 +1,6 @@
 # Logs
 
-![Logs - Full Screen](../assets/screens/logs.png)
+![Logs tab full-screen view](../assets/screens/logs.webp)
 
 **Purpose:** Provide an audit trail of system activity and administrative actions for troubleshooting and compliance.
 

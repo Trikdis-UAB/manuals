@@ -1,6 +1,6 @@
 # Incoming events
 
-![Incoming events - Full Screen](../assets/screens/incoming-events.png)
+![Incoming events tab full-screen view](../assets/screens/incoming-events.webp)
 
 **Purpose:** Monitor live incoming device events and pings, and filter them by device or receiver.
 
@@ -19,7 +19,7 @@
 
 Filters are essential for high-volume receivers where scrolling the raw stream is impractical.
 
-![Incoming events - Filters and actions](../assets/screens/incoming-events-sections/filters-and-actions.png)
+![Incoming events tab filters and actions section](../assets/screens/incoming-events-sections/filters-and-actions.png)
 
 ### Incoming event table {#incoming-events-table}
 

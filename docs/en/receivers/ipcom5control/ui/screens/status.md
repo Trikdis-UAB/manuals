@@ -1,6 +1,6 @@
 # Status
 
-![Status - Full Screen](../assets/screens/status.png)
+![Status tab full-screen view](../assets/screens/status.webp)
 
 **Purpose:** Provide a live operational overview of the selected IPCom instance so operators can confirm health, throughput, and connectivity at a glance.
 
@@ -14,59 +14,59 @@
 ### Footer
 
 - `Left block` shows the logout control, current user identity, and connected host, used to confirm you are operating in the intended environment and account.  
-  ![Status - Footer Left](../assets/screens/status-sections/footer-left.png)
+  ![Status tab footer left block](../assets/screens/status-sections/footer-left.png)
 - `Center block` shows supervision counters (`Total objects`, `Online`, `SMS mode`, `Offline`, `Untracked`) for fast before/after change validation.  
-  ![Status - Footer Center](../assets/screens/status-sections/footer-center.png)
+  ![Status tab footer center block](../assets/screens/status-sections/footer-center.png)
 - `Right block` shows `IPCCw Build` and the live connection indicator to validate running build and UI transport state.  
-  ![Status - Footer Right](../assets/screens/status-sections/footer-right.png)
+  ![Status tab footer right block](../assets/screens/status-sections/footer-right.png)
 
 ### General
 
 Shows the IPCom version and release, start time, uptime, CPU usage, and RAM usage. These metrics help confirm that the receiver is running the expected build and has enough resources for current load. The CPU trend line helps spot spikes that can affect event processing latency.
 
-![Status - General](../assets/screens/status-sections/general.png)
+![Status tab General section](../assets/screens/status-sections/general.png)
 
 ### API
 
 Lists total API calls by endpoint. This is a quick indicator of how heavily external integrations or UI actions are using the API. Sudden increases in `login` or `settings` calls can indicate automation activity or misconfigured polling.
 
-![Status - API](../assets/screens/status-sections/api.png)
+![Status tab API section](../assets/screens/status-sections/api.png)
 
 ### TCP Connections
 
 Shows active sessions per receiver. Each receiver entry represents a listening endpoint with active device connections. A sudden drop to zero typically points to network, firewall, or receiver-side issues.
 
-![Status - TCP Connections](../assets/screens/status-sections/tcp-connections.png)
+![Status tab TCP Connections section](../assets/screens/status-sections/tcp-connections.png)
 
 ### Output buffers
 
 Displays queue sizes per destination for events and status updates. Buffers grow when IPCom cannot deliver messages fast enough. Persistent growth indicates connectivity problems to the destination or oversized bursts that need rate control.
 
-![Status - Output Buffers](../assets/screens/status-sections/output-buffers.png)
+![Status tab Output buffers section](../assets/screens/status-sections/output-buffers.png)
 
 ### Device Tracker
 
 Summarizes device counts by UID/OID, online or offline state, SMS mode usage, and memory usage for tracking. This section helps assess fleet health and confirms that device supervision is functioning.
 
-<img src="../../assets/screens/status-sections/device-tracker.png" alt="Status - Device Tracker" width="560" />
+<img src="../../assets/screens/status-sections/device-tracker.png" alt="Status tab Device Tracker section" width="560" />
 
 ### Database
 
 Shows database version and event statistics, including the event count since start and average event rate. The trend line helps you detect drops or surges in activity. Cache counts and RAM usage hint at data retention or scaling constraints.
 
-![Status - Database](../assets/screens/status-sections/database.png)
+![Status tab Database section](../assets/screens/status-sections/database.png)
 
 ### Modem status
 
 Lists receiver status for modem-based traffic. Use this when SMS or modem channels are part of the deployment, to verify the modem receiver is active.
 
-<img src="../../assets/screens/status-sections/modem-status.png" alt="Status - Modem Status" width="560" />
+<img src="../../assets/screens/status-sections/modem-status.png" alt="Status tab Modem status section" width="560" />
 
 ### Connected users
 
 Shows currently authenticated UI sessions and source IP/port. This is useful for identifying concurrent admin sessions and spotting unexpected access during incident response.
 
-<img src="../../assets/screens/status-sections/connected-users.png" alt="Status - Connected Users" width="560" />
+<img src="../../assets/screens/status-sections/connected-users.png" alt="Status tab Connected users section" width="560" />
 
 ## Trends and charts
 

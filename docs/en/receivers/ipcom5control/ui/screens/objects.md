@@ -1,6 +1,6 @@
 # Objects
 
-![Objects - Full Screen](../assets/screens/objects.png)
+![Objects tab full-screen view](../assets/screens/objects.webp)
 
 **Purpose:** Review and manage the list of tracked objects (devices), their status, and connection details.
 
@@ -19,7 +19,7 @@
 - Filter fields for `OID` and `UID` help narrow large lists, with `+` to apply and `Clear` to reset.
 - `Show Related Objects` expands the list with related entries.
 
-![Objects - Actions and filters](../assets/screens/objects-sections/actions-and-filters.png)
+![Objects tab actions and filters section](../assets/screens/objects-sections/actions-and-filters.png)
 
 ### Object list table {#objects-object-list}
 
@@ -35,7 +35,7 @@ Key columns include:
 Red `X` indicators in the `Ping` column typically mean no recent ping was recorded.
 For full field definitions, see `Glossary` in the IPcom navigation.
 
-![Objects - Object list table](../assets/screens/objects-sections/object-list-table.png)
+![Objects tab object list table section](../assets/screens/objects-sections/object-list-table.png)
 
 ### Operational checks and actions {#objects-operational-checks}
 
