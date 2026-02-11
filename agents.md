@@ -89,3 +89,40 @@ Rules:
 ### Installed tools (global / system-wide)
 - Chrome DevTools MCP. Purpose: UI inspection/debugging (DOM/CSS/console/network/performance) with evidence artifacts. Invocation: MCP server `chrome-devtools` (see `~/.codex/config.toml`).
 - MkDocs MCP. Purpose: query MkDocs upstream documentation when working on MkDocs-based sites. Invocation: MCP server `mkdocs` (`npx -y @serverless-dna/mkdocs-mcp https://www.mkdocs.org`).
+
+## 11) Manuals deploy workflow (GitHub Actions + Pages)
+
+Use this repo-specific deployment flow for docs updates.
+
+- Production publish is triggered by `.github/workflows/deploy.yml` on `push` to `main` only.
+- Do not expect auto-deploy from feature branch pushes.
+- Direct deploys from non-`main` branches can be blocked by `github-pages` environment protection rules.
+
+### Required release path
+
+1. Push branch updates.
+2. Open PR into `main`.
+3. Merge PR.
+4. Confirm `Deploy docs` run on `main` completes successfully.
+
+### Standard `gh` commands
+
+```bash
+# Create PR from current branch to main
+gh pr create --base main --head "$(git branch --show-current)"
+
+# Merge PR (or enable auto-merge if checks are configured)
+gh pr merge --merge
+
+# Check latest deploy runs
+gh run list --workflow "Deploy docs" --branch main --limit 5
+```
+
+### Fast verification after merge
+
+```bash
+# Verify published docs endpoint
+curl -I https://docs.trikdis.com/en/receivers/ipcom5control/
+```
+
+Expected result: `HTTP/2 200`.

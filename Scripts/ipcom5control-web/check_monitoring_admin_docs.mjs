@@ -134,7 +134,7 @@ const checks = [
     path: "mkdocs.yml",
     snippets: [
       "- Receivers:",
-      "- IPcom5 Control:",
+      "- IPcom 5:",
       "- Overview: receivers/ipcom5control/index.md",
       "- Status: receivers/ipcom5control/ui/screens/status.md",
       "- Team questions: receivers/ipcom5control/ui/team-questions.md",

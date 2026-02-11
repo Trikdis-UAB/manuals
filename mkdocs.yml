@@ -112,7 +112,7 @@ plugins:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md
       - Receivers:
-        - IPcom5 Control:
+        - IPcom 5:
           - Overview: receivers/ipcom5control/index.md
           - Access and login: receivers/ipcom5control/ui/access-and-login.md
           - Tabs:
