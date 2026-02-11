@@ -6,3 +6,8 @@ Icon?
 artifacts/ui/
 artifacts/
 .mkdocs-serve.log
+
+# IPcom5 Control Web UI pipeline
+artifacts/ui/ipcom5control-web/
+Scripts/ipcom5control-web/node_modules/
+Scripts/ipcom5control-web/.env

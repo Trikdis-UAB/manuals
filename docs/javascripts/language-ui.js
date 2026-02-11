@@ -7,6 +7,7 @@
   };
   var MOBILE_BREAKPOINT = 960;
   var HOME_LABELS = new Set(["Home", "Pagrindinis", "Inicio", "Главная"]);
+  var RECEIVER_LABELS = new Set(["Receivers", "Imtuvai", "Receptores", "Приемники"]);
   var COLLAPSIBLE_LABELS = new Set(["Keypads", "Klaviatūros", "Teclados", "Клавиатуры"]);
 
   function findLanguageIndex(segments) {
@@ -96,6 +97,11 @@
   }
 
   function hideHomeNavItem() {
+    var pathname = window.location.pathname || "/";
+    var inIpcomSection =
+      pathname.indexOf("/receivers/ipcom5control/") !== -1 ||
+      pathname.endsWith("/receivers/ipcom5control");
+
     document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
       var list = nav.querySelector(":scope > ul.md-nav__list");
       if (!list) {
@@ -106,8 +112,13 @@
         if (!label) {
           return;
         }
-        if (HOME_LABELS.has(label.textContent.trim())) {
+        var text = label.textContent.trim();
+        if (HOME_LABELS.has(text)) {
           item.style.display = "none";
+          return;
+        }
+        if (RECEIVER_LABELS.has(text)) {
+          item.style.display = inIpcomSection ? "" : "none";
         }
       });
     });

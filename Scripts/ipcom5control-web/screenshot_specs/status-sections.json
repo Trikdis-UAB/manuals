@@ -1,0 +1,19 @@
+{
+  "screen": "status",
+  "source": "docs/en/receivers/ipcom5control/ui/assets/screens/status.png",
+  "outputDir": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections",
+  "notes": "Coordinates captured from live DOM .statistics-card bounds and footer element bounds on 2026-02-09 (includes card titles).",
+  "sections": [
+    { "id": "general", "x": 8, "y": 114, "w": 394, "h": 397 },
+    { "id": "api", "x": 418, "y": 114, "w": 382, "h": 397 },
+    { "id": "tcp-connections", "x": 816, "y": 114, "w": 292, "h": 565 },
+    { "id": "output-buffers", "x": 1125, "y": 114, "w": 292, "h": 720 },
+    { "id": "device-tracker", "x": 8, "y": 527, "w": 394, "h": 592 },
+    { "id": "database", "x": 418, "y": 527, "w": 382, "h": 592 },
+    { "id": "modem-status", "x": 816, "y": 695, "w": 292, "h": 152 },
+    { "id": "connected-users", "x": 8, "y": 1135, "w": 394, "h": 215 },
+    { "id": "footer-left", "x": 0, "y": 866, "w": 320, "h": 34 },
+    { "id": "footer-center", "x": 384, "y": 866, "w": 736, "h": 34 },
+    { "id": "footer-right", "x": 1188, "y": 866, "w": 252, "h": 34 }
+  ]
+}

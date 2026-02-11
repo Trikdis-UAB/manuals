@@ -1,61 +1,91 @@
-# Repository Guidelines
+# AGENTS.md (Parent) - Execution Protocol + Safety Rails
 
-## Project Structure & Modules
-- `docs/` — source markdown and assets (images per manual folder).
-- `mkdocs.yml` — site config, nav, plugins, extra JS/CSS.
-- `Scripts/` — maintenance helpers (e.g., `fix_callouts.py`, `link_chapters.py`, `check_mobile_toc.py`).
-- `docs/javascripts/` & `docs/stylesheets/` — custom behavior and theming.
-- `.venv/` — local Python env (pinned in `requirements.txt`).
-- General project description: see `CLAUDE.md` (this file is the core instructions source and takes precedence).
-- Repo: https://github.com/Trikdis-UAB/manuals (source of truth).
-- DOCX → Markdown pipeline: https://github.com/Trikdis-UAB/knowledgebase-conversion-pipeline (use for imports; local clone often at `~/Projects/knowledgebase-conversion-pipeline`).
-- Navigation helper: `docs/_NAVIGATION.md` should mirror `mkdocs.yml` ordering; update it when nav changes.
+This file defines how the agent should operate across projects. Treat these instructions as the global baseline. Project-level `AGENTS.md` may add constraints or additional required commands, but may not weaken the safety or verification rules here. If any conflict exists, stop and ask the user. Higher-level system/developer/app instructions always take precedence; if that prevents compliance with this file, ask the user.
 
-## Build, Test, and Development
-- Install deps (once): `python3 -m pip install -r requirements.txt` (or use `.venv/bin/pip`).
-- Strict build: `.venv/bin/mkdocs build --strict` (fails on nav/link/format issues).
-- Local preview: `.venv/bin/mkdocs serve --dev-addr 127.0.0.1:8000 --strict`.
-- Mobile TOC smoke: `.venv/bin/python Scripts/check_mobile_toc.py` (Playwright headless check for GT/GET pages).
-- Normalize callouts/headings: `.venv/bin/python Scripts/fix_callouts.py` (run after DOCX conversion).
-- Auto-link “See chapter …”: `.venv/bin/python Scripts/link_chapters.py`.
-- PDF image crops (for matching manuals to PDFs): `Scripts/pdf_crop_images.py` with JSON specs in `Scripts/pdf_crop_specs/`. Example: `.venv/bin/python Scripts/pdf_crop_images.py --pdf "/path/file.pdf" --spec Scripts/pdf_crop_specs/ipcom5control.json --out docs/en/receivers/ipcom5control` (uses Ghostscript, PIL if available; falls back to `sips`).
-- Prefer `.venv/bin/...` commands to avoid picking up system mkdocs/python.
+## 1) Core behavior (work independently, finish the job)
+- Operate end-to-end: clarify the objective from repo docs/issues, plan the smallest complete change, implement, verify, and only then report completion.
+- Keep going until you can verify the result is working as intended using evidence from the project's documented build/test commands and targeted checks you add.
+- If verification cannot be completed due to missing tools, permissions, or environment limits, state what blocked it and provide the best available evidence.
+- Default to proactive problem-solving: surface risks/unknowns early, but do not stop unless you are blocked by missing inputs, permissions, or a required tool install.
 
-## Coding Style & Naming
-- Keep Markdown plain and numbered headings consistent (plugin config in `mkdocs.yml`; do not change `add-number` order/strict settings).
-- Admonitions: use standard markdown callouts (`> [!NOTE] …`) or `!!! note` blocks; avoid inline fused headings.
-- Paths: use relative `./imageX.png` for assets; keep filenames ASCII, hyphen-separated where possible.
-- Custom JS/CSS: brief, focused; avoid heavy frameworks; keep mobile behavior tested.
+## 2) Research-first policy (avoid reinventing wheels)
+- Before implementing anything non-trivial, do a short, focused pass (online + repo search) for the best existing approach.
+- Timebox research by default (e.g., 5-15 minutes), but extend it when the task requires selecting a framework/tooling approach or evaluating tradeoffs.
+- If network access is unavailable, state it and proceed with repo search only.
+- Prefer reuse over novelty: use existing repo utilities, shared components, and established frameworks already in the stack.
+- If adding a dependency, prefer mature, well-maintained packages with good docs and wide adoption.
+- Document the chosen approach briefly in the handoff: what you used, why, and what alternatives you rejected.
 
-## Testing Guidelines
-- Minimum: run `mkdocs build --strict` before commit.
-- UI/behavior changes: run relevant targeted checks (e.g., `Scripts/check_mobile_toc.py` for mobile drawer/TOC).
-- Mobile layout sanity: `Scripts/check_mobile_toc.py` also validates mobile sidebar overlay/no reserved space; run after UI CSS/JS tweaks.
-- For UI regressions, add or expand targeted checks with explicit assertions for the observed behavior (layout, visibility, interactions) and document the command in handoffs.
-- For mobile nav/dropdown issues, extend `Scripts/check_mobile_toc.py` to click-expand a product category and assert the submenu renders.
-- Before implementing changes, review the objective, surface risks/unknowns, and add or extend automated checks so new behavior is validated to a professional standard.
-- After conversions: re-run `fix_callouts.py` and `link_chapters.py` to prevent regressions.
-- Add small, scriptable checks when introducing new behaviors; document the command in PR notes.
-- When converting other-language manuals for a product that was just updated in English, compare the converted outputs against the English version to catch missing/extra headings, duplicated text, and broken button markers.
+## 3) Safety / permissions (network ok, installs require approval)
+- Assume network access is allowed for research and fetching dependencies inside the project sandbox.
+- If network access is restricted, state it and proceed with repo-only research.
+- NEVER install anything system-wide without explicit user approval.
+- If a tool is needed (e.g., Playwright for UI testing, linters, test runners), ask to install it first.
+- Prefer project-local installs: `.venv`, `npm devDependencies`, etc.
+- Avoid `sudo`, global `brew install`, or writes outside the repo unless the user explicitly approves.
+- If a tool would be broadly useful across multiple projects, propose a global install as an option and explain the tradeoff.
+- Global install advantages: reuse across projects, faster setup, consistent tooling.
+- Global install risks: wider blast radius, version drift, unexpected interactions.
+- Default to local install unless the user explicitly approves global.
 
-## Handoff Note (docs UI tweaks)
-- Status: Active (continuing docs.trikdis.com UI tweaks task; added / → /en/ redirect and homepage duplication, updated checks; investigating left sidebar top “bulge”).
-- TODO: Add per-language search support and constrain search to the selected document/manual.
-- UI CSS updates already applied in `docs/stylesheets/base.user.css`: responsive language selector (no fixed width), `.language-card` padding 20px, smaller grey `#welcome-message`, TOC background `#F6F6F6`, active TOC item `#E4E4E4`, TOC left border `#D2D1D1`, and deep-nav (level 3+) left border `#D2D1D1`.
-- JS nav behavior now sets default top-level expansion (Keypads collapsed unless on /keypads/) without overriding native chevron clicks in `docs/javascripts/language-ui.js`.
-- Began MkDocs i18n refactor in `mkdocs.yml`: top-level nav now points to `en/...`, and `mkdocs-static-i18n` config adds a dummy default locale `xx` plus per-language navs; build currently fails because default build cannot resolve `en/...` docs with folder-based i18n.
-- `requirements.txt` now includes `mkdocs-static-i18n==1.2.3`.
-- `Scripts/check_mobile_toc.py` expanded to check desktop styles and language nav isolation in addition to mobile TOC behavior.
-- Bulge investigation: DevTools shows `.md-nav__title` still has height (5.6rem) and nav was `position:absolute` inside `.md-sidebar__inner` with height 0. Applied CSS in `docs/stylesheets/base.user.css` to hard-hide title (`display:none !important; height:0; margin/padding 0`) and set `.md-sidebar--primary .md-nav--primary { position: static !important; }`. Local Playwright checks show nav/inner top alignment and no visible bulge, but user still sees it in browser.
-- If bulge persists, check for cached CSS or other styles overriding `base.user.css` in dev server. Ask user to hard refresh after restarting `mkdocs serve`. Next step: use newly added Chrome DevTools MCP to inspect live DOM/computed styles for `.md-sidebar--primary` and confirm final computed `position`/`height`/`display` values for nav/title/inner.
-- MCP note: user added Chrome DevTools MCP (https://github.com/ChromeDevTools/chrome-devtools-mcp); restart required to access it.
+### Credentials (local only)
+- Fetch login details from macOS Keychain.
+- When adding new credentials, store them in Keychain (not the repo).
 
-## Commit & Pull Request Guidelines
-- Commits: concise, imperative (e.g., “Normalize SP3 callouts”, “Lazy-load content images”).
-- Include what changed and why in the PR description; link related issues/tasks.
-- For UI changes, note manual test steps and viewports; attach screenshots/gifs if relevant.
-- Ensure Playwright/targeted scripts and strict build are run; mention the commands in the PR.
+```bash
+security find-generic-password -w -s <service-name>
+security add-generic-password -a "$USER" -s <service-name> -w "<value>"
+```
 
-## Security & Configuration
-- No secrets in repo; use local env/.venv only.
-- Extra JS/CSS is loaded from `docs/javascripts`/`stylesheets`; avoid remote/CDN dependencies unless already approved.
+## 4) Verification standard (no "seems fine")
+- Every change must be verified with evidence.
+- First run the project's official verification commands (from repo docs).
+- Then add or extend a targeted check that proves the specific behavior you changed.
+- Targeted checks can be: unit test, integration test, smoke script, lint rule, or a small reproducible harness.
+- If there is no existing test framework, create a minimal check script under `Scripts/` or `tools/` and run it.
+- For UI changes, verification must include at least one automated check or a reproducible browser-based evidence set (see section 8).
+- Only conclude "fixed" when the official commands pass and the targeted check passes, and there are no new warnings/errors attributable to the change; list any pre-existing warnings.
+- Example (docs sites): run the documented build command (e.g., `mkdocs build --strict`) plus a targeted check for the specific pages/features you changed.
+
+## 5) Change hygiene (small diffs, predictable structure)
+- Make the smallest coherent change that fully solves the problem.
+- Keep diffs clean: avoid drive-by refactors unless they are necessary to complete the task safely.
+- Prefer incremental commits locally; do not push unless asked.
+- Update docs when behavior changes so README / docs / comments match reality after your change.
+
+## 6) Proactive documentation maintenance (keep docs true)
+- When you discover outdated, incomplete, or misleading documentation, proactively update it as part of the change.
+- Documentation candidates: project `AGENTS.md`, README, CONTRIBUTING, docs pages, troubleshooting notes.
+- When adding a new verification command, dependency, or workflow requirement, document it where it applies.
+- Do not commit documentation-only changes if the user asked for "no commits"; otherwise keep doc updates small and aligned with the code change.
+
+## 7) Reporting format (evidence-based handoff)
+- In handoffs, include: what changed (1-3 bullets), commands run (exact), targeted checks added/updated (and where), documentation updates made (and where), evidence summary, remaining risks/follow-ups.
+
+## 8) UI / browser debugging protocol (evidence, not vibes)
+- When the task involves UI, CSS, layout, DOM behavior, console errors, network failures, or web performance, gather evidence with a browser automation/debugging tool when available.
+- Produce artifacts under `artifacts/ui/` (do not commit unless requested).
+- Artifacts include: screenshot (before/after), console errors/warnings export (before/after), network failures export (before/after), DOM snapshot (or outerHTML) of the relevant region, computed styles + box metrics for key selectors, and if performance-related a performance trace + metric(s) improved.
+- Workflow: reproduce and collect artifacts (before), identify the exact cause, implement the minimal fix, re-check and collect artifacts (after), conclude "fixed" only when after-artifacts match expected behavior and no new errors appear.
+- If the debugging tool is not available, fall back to Playwright (ask to install first) or manual reproduction with screenshots and console logs plus clear steps.
+
+## 9) Automation mindset (script recurring fixes)
+- If you perform the same edit pattern more than once, script it.
+- Add a `Scripts/` tool (or equivalent) to normalize or automate the change.
+- Re-run automation after conversions/migrations or repeated content generation to avoid regressions.
+
+## 10) Tool registry (keep installed tools visible and up to date)
+
+Location: `/Users/andriaus/.codex/AGENTS.md`
+
+Purpose: Maintain a single, always-visible inventory of globally available tools and what they are used for, so the agent can reuse them across projects and avoid redundant installs.
+
+Rules:
+- Before asking to install a new tool, check this registry and reuse what exists.
+- When a new tool is installed globally (or enabled system-wide), ask the user to update THIS file with tool name and version (if available), install method, primary purposes, typical commands, and important notes (auth, env vars, paths, constraints).
+- If you propose installing a new global tool, include the exact registry entry you want the user to paste into this file.
+- If a tool is installed locally in a repo, prefer documenting it in that repo's `AGENTS.md` (or README) instead of this global registry.
+
+### Installed tools (global / system-wide)
+- Chrome DevTools MCP. Purpose: UI inspection/debugging (DOM/CSS/console/network/performance) with evidence artifacts. Invocation: MCP server `chrome-devtools` (see `~/.codex/config.toml`).
+- MkDocs MCP. Purpose: query MkDocs upstream documentation when working on MkDocs-based sites. Invocation: MCP server `mkdocs` (`npx -y @serverless-dna/mkdocs-mcp https://www.mkdocs.org`).

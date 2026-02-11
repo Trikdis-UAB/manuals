@@ -1,0 +1,74 @@
+{
+  "screens": [
+    {
+      "id": "login",
+      "title": "Login",
+      "url": "/",
+      "navPath": ["Login"],
+      "type": "route"
+    },
+    {
+      "id": "status",
+      "title": "Status tab",
+      "url": "/main/stats",
+      "navPath": ["Status"],
+      "type": "route"
+    },
+    {
+      "id": "logs",
+      "title": "Logs",
+      "url": "/main/logs",
+      "navPath": ["Logs"],
+      "type": "route"
+    },
+    {
+      "id": "general",
+      "title": "General",
+      "url": "/main/general",
+      "navPath": ["General"],
+      "type": "route"
+    },
+    {
+      "id": "internal-events",
+      "title": "Internal events",
+      "url": "/main/internal-events",
+      "navPath": ["Internal events"],
+      "type": "route"
+    },
+    {
+      "id": "receivers",
+      "title": "Receivers",
+      "url": "/main/receivers",
+      "navPath": ["Receivers"],
+      "type": "route"
+    },
+    {
+      "id": "outputs",
+      "title": "Outputs",
+      "url": "/main/outputs",
+      "navPath": ["Outputs"],
+      "type": "route"
+    },
+    {
+      "id": "users",
+      "title": "Users",
+      "url": "/main/users",
+      "navPath": ["Users"],
+      "type": "route"
+    },
+    {
+      "id": "incoming-events",
+      "title": "Incoming events",
+      "url": "/main/events",
+      "navPath": ["Incoming events"],
+      "type": "route"
+    },
+    {
+      "id": "objects",
+      "title": "Objects",
+      "url": "/main/objects",
+      "navPath": ["Objects"],
+      "type": "route"
+    }
+  ]
+}
