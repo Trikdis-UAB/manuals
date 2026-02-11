@@ -38,7 +38,7 @@ Editor entry points (start here when editing):
   - [GATOR](en/gate-controllers/gator/index.md)
   - [GATOR WiFi](en/gate-controllers/gator-wifi/index.md)
 - Receivers
-  - IPcom5 Control
+  - IPcom 5
     - [Overview](en/receivers/ipcom5control/index.md)
     - [Access and login](en/receivers/ipcom5control/ui/access-and-login.md)
     - Tabs

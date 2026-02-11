@@ -97,7 +97,7 @@ Minimum recommended specification:
 - Remote update.
 - Multi-level user list.
 
-## Operational scope (from presentation summary)
+## Operational scope
 
 ### Access and security
 
@@ -139,8 +139,6 @@ Operational security baseline:
 - Licensing and server-side operational considerations.
 
 ## Quick access
-
-![IPCom Control web login screen](./image3.png)
 
 Use these pages as primary entry points:
 

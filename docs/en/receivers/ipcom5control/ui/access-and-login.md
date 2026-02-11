@@ -16,8 +16,6 @@
 3. Sign in with your user account.
 4. After login, verify environment and health on `Status`.
 
-![Access and login page web login screen](../image3.png)
-
 ## Windows `.exe` access flow
 
 1. Start the IPCom Control `.exe` from the Windows installation.
