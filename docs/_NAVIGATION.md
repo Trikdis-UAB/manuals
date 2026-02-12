@@ -52,10 +52,7 @@ Editor entry points (start here when editing):
       - [Incoming events](en/receivers/ipcom5control/ui/screens/incoming-events.md)
       - [Objects](en/receivers/ipcom5control/ui/screens/objects.md)
     - [Glossary](en/receivers/ipcom5control/ui/glossary.md)
-    - Operations
-      - [Networking and firewall](en/receivers/ipcom5control/ui/networking-firewall.md)
-      - [HA, cluster, and backup](en/receivers/ipcom5control/ui/ha-cluster-backup.md)
-      - [Team questions](en/receivers/ipcom5control/ui/team-questions.md)
+    - [Networking and Firewall](en/receivers/ipcom5control/ui/networking-firewall.md)
 - Keypads
   - [Keypad SK-LCD Button](en/keypads/sk-lcd-button/index.md)
   - [Keypad SK-LED Button](en/keypads/sk-led-button/index.md)

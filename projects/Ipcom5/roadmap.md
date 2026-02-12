@@ -11,7 +11,7 @@ This sub‑project maintains the automated capture → generate → validate wor
 ## Sources (priority)
 
 1. Live UI capture artifacts (`artifacts/ui/ipcom5control-web/`)
-2. Internal presentation summary (`projects/ipcom5control-web/sources/captions_topics_timed.en.md`)
+2. Internal presentation summary (`projects/Ipcom5/sources/captions_topics_timed.en.md`)
 3. Engineering installation documentation (pending)
 
 ## Rules

@@ -16,7 +16,9 @@
     "check:tab-screens": "node check_tab_screens.mjs",
     "check:intro-page": "node check_intro_page.mjs",
     "check:monitoring-docs": "node check_monitoring_admin_docs.mjs",
-    "check:ipcom-structure": "node check_ipcom_structure.mjs"
+    "check:ipcom-structure": "node check_ipcom_structure.mjs",
+    "redact:images": "python3 redact_sensitive_images.py --spec ../../projects/Ipcom5/redaction-spec.json",
+    "check:redaction": "python3 check_redaction.py --spec ../../projects/Ipcom5/redaction-spec.json"
   },
   "dependencies": {
     "playwright": "^1.50.0"

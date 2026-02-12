@@ -1,0 +1,556 @@
+{
+  "items": [
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "status_ips",
+          "rule": "ipv4_any",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "waw_badge",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "footer_hostname",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/logs.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "logs_identifiers",
+          "rule": "logs_identifiers",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "waw_badge",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "footer_hostname",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ],
+        "allowed_zero": [
+          "logs_identifiers"
+        ]
+      }
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "general_sensitive_values",
+          "rule": "general_db_values",
+          "match": {
+            "reason_in": [
+              "sql_user_value",
+              "sql_host_value",
+              "sql_port_value",
+              "private_key_value_seg",
+              "public_key_value_seg",
+              "sql_database_value"
+            ]
+          },
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "must_keep_visible": [
+        {
+          "id": "label_private_key",
+          "phrase": "Private key",
+          "check_overlap": false
+        },
+        {
+          "id": "status_valid",
+          "phrase": "Status Valid",
+          "check_visible": false
+        },
+        {
+          "id": "enable_http_api",
+          "phrase": "Enable HTTP API",
+          "check_visible": false
+        },
+        {
+          "id": "sql_label",
+          "token": "SQL",
+          "check_visible": false
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "waw_badge",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "footer_hostname",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "general_db_values",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "\\bbeta2ipcom5\\b",
+        "\\blocalhost\\b",
+        "\\b6033\\b",
+        "\\b30003\\b",
+        "\\b8080\\b",
+        "/etc/letsencrypt\\S*",
+        "beta2\\.protegus\\.app",
+        "\\bipcom\\b"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/api-settings.png",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "api_sensitive_values",
+          "rule": "general_db_values",
+          "match": {
+            "reason_in": [
+              "private_key_value_seg",
+              "public_key_value_seg"
+            ]
+          },
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "api_ports",
+          "rule": "api_ports",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "must_keep_visible": [
+        {
+          "id": "label_private_key",
+          "phrase": "Private key"
+        },
+        {
+          "id": "label_public_key",
+          "phrase": "Public key"
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "general_db_values",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "api_ports",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "\\b30003\\b",
+        "\\b8080\\b",
+        "/etc/letsencrypt\\S*",
+        "beta2\\.protegus\\.app"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/database-settings.png",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "db_sensitive_values",
+          "rule": "general_db_values",
+          "match": {
+            "reason_in": [
+              "sql_user_value",
+              "sql_host_value",
+              "sql_database_value"
+            ]
+          },
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "db_port",
+          "rule": "db_ports",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "must_keep_visible": [
+        {
+          "id": "label_sql_database",
+          "phrase": "SQL database"
+        },
+        {
+          "id": "label_sql_port",
+          "phrase": "SQL port"
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "general_db_values",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "db_ports",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "\\bbeta2ipcom5\\b",
+        "\\blocalhost\\b",
+        "\\b6033\\b",
+        "\\bipcom\\b"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/internal-events.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "waw_badge",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "footer_hostname",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "receiver_ports",
+          "rule": "receiver_ports",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "receiver_ports",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "\\b5500[0-9]\\b",
+        "\\b45000\\b",
+        "\\b44444\\b"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/outputs.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "whitelist_ips",
+          "rule": "outputs_ip_whitelist",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "outputs_ip_whitelist",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "non_admin_users",
+          "rule": "users_name_login_non_admin",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "must_keep_visible": [
+        {
+          "id": "admin_name",
+          "token": "Admin"
+        },
+        {
+          "id": "administrator_login",
+          "token": "administrator"
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "users_name_login_non_admin",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/incoming-events.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "incoming_ids_ips",
+          "rule": "incoming_events_ids_ips",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "waw_badge",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "footer_hostname",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "(?:\\d{1,3}\\.){3}\\d{1,3}",
+        "\\b\\d{12,}\\b"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects.webp",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "waw_badge",
+          "rule": "waw_badge",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "footer_hostname",
+          "rule": "footer_hostname",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "object_ids",
+          "rule": "objects_uid_iccid",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "object_ips",
+          "rule": "ipv4_any",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "objects_uid_iccid",
+            "min_before": 0,
+            "max_after": 0
+          },
+          {
+            "rule": "ipv4_any",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "89370010100042284486",
+        "\\b89\\d{18,22}\\b"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects-sections/object-list-table.png",
+      "critical": true,
+      "must_redact": [
+        {
+          "id": "object_table_ids",
+          "rule": "objects_uid_iccid",
+          "min_before": 0,
+          "max_after": 0
+        },
+        {
+          "id": "object_table_ips",
+          "rule": "ipv4_any",
+          "min_before": 0,
+          "max_after": 0
+        }
+      ],
+      "rule_expectations": {
+        "min_masks": 0,
+        "required_hits": [
+          {
+            "rule": "objects_uid_iccid",
+            "min_before": 0,
+            "max_after": 0
+          }
+        ]
+      },
+      "must_not_ocr": [
+        "89370010100042284486",
+        "89\\d{18,22}"
+      ]
+    }
+  ]
+}

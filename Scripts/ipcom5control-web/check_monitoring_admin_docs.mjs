@@ -111,33 +111,12 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/team-questions.md",
-    snippets: [
-      "# Team Questions (CMS/IT Admin)",
-      "## Open questions by priority",
-      "## Completion checklist",
-      "#network-ip-allowlist",
-      "#status-operations-runbook",
-    ],
-    forbidden: [
-      "#general-key-fields",
-      "#outputs-key-fields",
-      "#objects-key-fields",
-      "#incoming-events-key-fields",
-      "#users-key-fields",
-      "#receivers-key-fields",
-      "#logs-key-fields",
-      "#internal-events-key-fields",
-    ],
-  },
-  {
     path: "mkdocs.yml",
     snippets: [
       "- Receivers:",
       "- IPcom 5:",
       "- Overview: receivers/ipcom5control/index.md",
       "- Status: receivers/ipcom5control/ui/screens/status.md",
-      "- Team questions: receivers/ipcom5control/ui/team-questions.md",
     ],
   },
 ];

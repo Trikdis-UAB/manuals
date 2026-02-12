@@ -8,7 +8,7 @@ The editions below are the same IPCom v5 product with different deployment model
 
 - Windows install
 - Linux install (hardware or VM)
-- Linux install in RL25 hardware receiver
+- RL25 hardware receiver
 
 ## Deployment variants
 
@@ -16,7 +16,7 @@ The editions below are the same IPCom v5 product with different deployment model
 | --- | --- | --- |
 | Windows install | IPCom v5 installed on Windows | Smaller or Windows-centric environments |
 | Linux install (hardware or VM) | IPCom v5 installed on Linux server or virtual machine | Scalable deployments and server infrastructure |
-| Linux install in RL25 hardware receiver | IPCom v5 on dedicated RL25 hardware | Appliance-style deployment with Linux preconfigured |
+| RL25 hardware receiver | IPCom v5 on dedicated RL25 hardware | Appliance-style deployment with Linux preconfigured |
 
 ## Capability comparison by deployment
 

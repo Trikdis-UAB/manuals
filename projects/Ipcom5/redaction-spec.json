@@ -1,0 +1,584 @@
+{
+  "style": {
+    "fill": "#E0E0E0",
+    "padding": 2
+  },
+  "review_dir": "artifacts/ui/ipcom5-redaction-review",
+  "items": [
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "ipv4_any"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/footer-left.png",
+      "rules": [
+        "hostname_any"
+      ],
+      "fallback": {
+        "hostname_any": [
+          0.46,
+          0.12,
+          0.99,
+          0.56
+        ]
+      },
+      "critical": false,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "geometry_limits": {
+        "max_single_ratio": 0.4,
+        "max_total_ratio": 0.45,
+        "max_width_ratio": 0.95,
+        "max_height_ratio": 0.6
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/output-buffers.png",
+      "rules": [
+        "ipv4_any"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/connected-users.png",
+      "rules": [
+        "ipv4_any"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/logs.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "logs_identifiers"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "general_db_values"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.315,
+          0.012,
+          0.355,
+          0.05
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ],
+      "force_fallback_rules": [
+        "waw_badge"
+      ],
+      "section_scopes": {
+        "api_settings": {
+          "headers": [
+            "API settings"
+          ],
+          "x_pad": 20,
+          "min_width": 280,
+          "y_pad_top": 10,
+          "y_pad_bottom": 14
+        },
+        "database_settings": {
+          "headers": [
+            "Database settings"
+          ],
+          "x_pad": 20,
+          "min_width": 300,
+          "y_pad_top": 10,
+          "y_pad_bottom": 14
+        }
+      },
+      "scopes": {
+        "general_db_values": [
+          "section:api_settings",
+          "section:database_settings"
+        ],
+        "default": []
+      },
+      "max_passes": 1,
+      "correction_rules": [],
+      "padding": 0
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/api-settings.png",
+      "rules": [
+        "general_db_values",
+        "api_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.06,
+        "max_total_ratio": 0.18,
+        "max_width_ratio": 0.92,
+        "max_height_ratio": 0.28
+      },
+      "fallback_rules": [],
+      "max_passes": 1,
+      "correction_rules": [],
+      "padding": 1
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/database-settings.png",
+      "rules": [
+        "general_db_values",
+        "db_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": [],
+      "max_passes": 1,
+      "correction_rules": [],
+      "padding": 1
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/internal-events.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ],
+      "force_fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/internal-events-sections/columns-explained.png",
+      "rules": [
+        "waw_badge",
+        "footer_hostname"
+      ],
+      "critical": false,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "receiver_ports"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ],
+      "max_passes": 1,
+      "correction_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/tcp-receivers.png",
+      "rules": [
+        "receiver_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/udp-receivers.png",
+      "rules": [
+        "receiver_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/com-receivers.png",
+      "rules": [
+        "receiver_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/modem-receivers.png",
+      "rules": [
+        "receiver_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/assigned-outputs-and-removal.png",
+      "rules": [
+        "receiver_ports"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/outputs.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "outputs_ip_whitelist"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.315,
+          0.012,
+          0.355,
+          0.05
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "users_name_login_non_admin"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users-sections/users-table.png",
+      "rules": [
+        "users_name_login_non_admin"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users-sections/add-user-and-removal.png",
+      "rules": [],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/incoming-events.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "incoming_events_ids_ips"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/incoming-events-sections/filters-and-actions.png",
+      "rules": [
+        "waw_badge",
+        "footer_hostname"
+      ],
+      "critical": false,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects.webp",
+      "rules": [
+        "waw_badge",
+        "footer_hostname",
+        "objects_uid_iccid",
+        "ipv4_any"
+      ],
+      "fallback": {
+        "waw_badge": [
+          0.295,
+          0.005,
+          0.365,
+          0.055
+        ],
+        "footer_hostname": [
+          0.115,
+          0.958,
+          0.285,
+          0.998
+        ]
+      },
+      "critical": true,
+      "protected_tokens": [
+        "Logout",
+        "Admin"
+      ],
+      "fallback_rules": [
+        "waw_badge"
+      ]
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects-sections/actions-and-filters.png",
+      "rules": [
+        "objects_uid_iccid",
+        "ipv4_any"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    },
+    {
+      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects-sections/object-list-table.png",
+      "rules": [
+        "objects_uid_iccid",
+        "ipv4_any"
+      ],
+      "critical": false,
+      "geometry_limits": {
+        "max_single_ratio": 0.035,
+        "max_total_ratio": 0.14,
+        "max_width_ratio": 0.68,
+        "max_height_ratio": 0.24
+      },
+      "fallback_rules": []
+    }
+  ],
+  "defaults": {
+    "geometry_limits": {
+      "max_single_ratio": 0.05,
+      "max_total_ratio": 0.18,
+      "max_width_ratio": 0.72,
+      "max_height_ratio": 0.28
+    },
+    "protected_tokens": [
+      "Logout",
+      "Admin"
+    ]
+  },
+  "requirements_file": "redaction-requirements.json"
+}

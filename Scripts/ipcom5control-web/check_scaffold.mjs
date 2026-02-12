@@ -1,7 +1,7 @@
 import { fileExists, resolveRepo } from "./lib/utils.mjs";
 
 const requiredFiles = [
-  "projects/ipcom5control-web/roadmap.md",
+  "projects/Ipcom5/roadmap.md",
   "Scripts/ipcom5control-web/capture_web.mjs",
   "Scripts/ipcom5control-web/generate_manual.mjs",
   "Scripts/ipcom5control-web/validate_coverage.mjs",

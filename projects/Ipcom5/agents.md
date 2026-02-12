@@ -26,11 +26,19 @@ npm --prefix Scripts/ipcom5control-web run capture:web
 
 ## Core rules
 
-- Treat `projects/ipcom5control-web/roadmap.md` as the authoritative project plan and workflow.
+- Treat `projects/Ipcom5/roadmap.md` as the authoritative project plan and workflow.
 - Never hardcode credentials; use environment variables.
 - The DOM + accessibility tree are the source of truth for control listings.
 - If behavior or purpose is uncertain, mark it `[REVIEW]`.
 - Keep generated artifacts in `artifacts/ui/ipcom5control-web/` and do not commit them.
+
+## Unredacted screenshot backup rule
+
+- Before applying or re-running redaction, preserve unredacted screenshots in a local backup folder under:
+  - `artifacts/private/ipcom5-unredacted-<timestamp>/`
+- Include `MANIFEST.sha256` and keep a `.tar.gz` archive of that folder for rollback.
+- Never commit unredacted backups to git.
+- If screenshots are re-captured, create a new timestamped backup instead of overwriting the previous one.
 
 ## Required checks
 
@@ -44,3 +52,8 @@ When adding or modifying pipeline scripts or templates, run:
 - `npm --prefix Scripts/ipcom5control-web run check:intro-page`
 - `npm --prefix Scripts/ipcom5control-web run check:monitoring-docs`
 - `.venv/bin/mkdocs build --strict`
+
+For sensitive screenshot redaction workflow, also run:
+
+- `npm --prefix Scripts/ipcom5control-web run redact:images`
+- `npm --prefix Scripts/ipcom5control-web run check:redaction`
