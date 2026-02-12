@@ -3,31 +3,31 @@ import { fileExists, resolveRepo } from "./lib/utils.mjs";
 
 const remainingTabs = [
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/logs.md",
+    path: "docs/en/receivers/ipcom/ui/screens/logs.md",
     cover: "../assets/screens/logs.webp",
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/internal-events.md",
+    path: "docs/en/receivers/ipcom/ui/screens/internal-events.md",
     cover: "../assets/screens/internal-events.webp",
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/receivers.md",
+    path: "docs/en/receivers/ipcom/ui/screens/receivers.md",
     cover: "../assets/screens/receivers.webp",
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/outputs.md",
+    path: "docs/en/receivers/ipcom/ui/screens/outputs.md",
     cover: "../assets/screens/outputs.webp",
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/users.md",
+    path: "docs/en/receivers/ipcom/ui/screens/users.md",
     cover: "../assets/screens/users.webp",
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/incoming-events.md",
+    path: "docs/en/receivers/ipcom/ui/screens/incoming-events.md",
     cover: "../assets/screens/incoming-events.webp",
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/objects.md",
+    path: "docs/en/receivers/ipcom/ui/screens/objects.md",
     cover: "../assets/screens/objects.webp",
   },
 ];

@@ -66,8 +66,8 @@ LANGUAGE_SWITCH_URLS = [
 LANGUAGE_CODES = ["en", "lt", "es", "ru"]
 COMMUNICATORS_TOGGLE_URL = "http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/"
 MOBILE_HOME_NAV_RESET_URL = "http://127.0.0.1:8001/en/gate-controllers/gator/"
-RECEIVER_MANUAL_URL = "http://127.0.0.1:8001/en/receivers/ipcom5control/"
-RECEIVER_MANUAL_LINK_PATH = "receivers/ipcom5control/"
+RECEIVER_MANUAL_URL = "http://127.0.0.1:8001/en/receivers/ipcom/"
+RECEIVER_MANUAL_LINK_PATH = "receivers/ipcom/"
 DESKTOP_URLS = [
     ("http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/", "en"),
     ("http://127.0.0.1:8001/lt/alarm-communicators/cellular/gt/", "lt"),

@@ -22,14 +22,14 @@ Spec source: `Scripts/ipcom5control-web/screenshot_specs/status-sections.json`
 
 Generated files:
 
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/general.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/api.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/tcp-connections.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/output-buffers.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/device-tracker.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/database.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/modem-status.png`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/footer-totals.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/general.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/api.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/tcp-connections.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/output-buffers.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/device-tracker.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/database.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/modem-status.png`
+- `docs/en/receivers/ipcom/ui/assets/screens/status-sections/footer-totals.png`
 
 ## Regeneration command
 

@@ -32,7 +32,7 @@ exclude_docs: |
   _NAVIGATION.md
   _temp/
   preview/
-  en/receivers/ipcom5control/ui/ha-cluster-backup.md
+  en/receivers/ipcom/ui/ha-cluster-backup.md
 
 extra:
   alternate:
@@ -113,21 +113,21 @@ plugins:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md
       - Receivers:
-        - IPcom 5:
-          - Overview: receivers/ipcom5control/index.md
-          - Access and login: receivers/ipcom5control/ui/access-and-login.md
+        - IPcom:
+          - Overview: receivers/ipcom/index.md
+          - Access and login: receivers/ipcom/ui/access-and-login.md
           - Tabs:
-            - Status: receivers/ipcom5control/ui/screens/status.md
-            - Logs: receivers/ipcom5control/ui/screens/logs.md
-            - General: receivers/ipcom5control/ui/screens/general.md
-            - Internal events: receivers/ipcom5control/ui/screens/internal-events.md
-            - Receivers: receivers/ipcom5control/ui/screens/receivers.md
-            - Outputs: receivers/ipcom5control/ui/screens/outputs.md
-            - Users: receivers/ipcom5control/ui/screens/users.md
-            - Incoming events: receivers/ipcom5control/ui/screens/incoming-events.md
-            - Objects: receivers/ipcom5control/ui/screens/objects.md
-          - Glossary: receivers/ipcom5control/ui/glossary.md
-          - Networking and Firewall: receivers/ipcom5control/ui/networking-firewall.md
+            - Status: receivers/ipcom/ui/screens/status.md
+            - Logs: receivers/ipcom/ui/screens/logs.md
+            - General: receivers/ipcom/ui/screens/general.md
+            - Internal events: receivers/ipcom/ui/screens/internal-events.md
+            - Receivers: receivers/ipcom/ui/screens/receivers.md
+            - Outputs: receivers/ipcom/ui/screens/outputs.md
+            - Users: receivers/ipcom/ui/screens/users.md
+            - Incoming events: receivers/ipcom/ui/screens/incoming-events.md
+            - Objects: receivers/ipcom/ui/screens/objects.md
+          - Glossary: receivers/ipcom/ui/glossary.md
+          - Networking and Firewall: receivers/ipcom/ui/networking-firewall.md
       - Keypads:
         - Keypad SK-LCD Button: keypads/sk-lcd-button/index.md
         - Keypad SK-LED Button: keypads/sk-led-button/index.md

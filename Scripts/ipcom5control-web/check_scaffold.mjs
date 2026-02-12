@@ -6,7 +6,7 @@ const requiredFiles = [
   "Scripts/ipcom5control-web/generate_manual.mjs",
   "Scripts/ipcom5control-web/validate_coverage.mjs",
   "Scripts/ipcom5control-web/templates/screen.md",
-  "docs/en/receivers/ipcom5control/ui/index.md",
+  "docs/en/receivers/ipcom/ui/index.md",
 ];
 
 let missing = 0;

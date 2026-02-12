@@ -29,8 +29,8 @@ Artifacts live in `artifacts/ui/ipcom5control-web/`:
 
 Screens and screenshots are copied into:
 
-- `docs/en/receivers/ipcom5control/ui/screens/`
-- `docs/en/receivers/ipcom5control/ui/assets/screens/`
+- `docs/en/receivers/ipcom/ui/screens/`
+- `docs/en/receivers/ipcom/ui/assets/screens/`
 
 ## Notes
 

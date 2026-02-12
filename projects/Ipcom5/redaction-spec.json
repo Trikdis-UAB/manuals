@@ -6,7 +6,7 @@
   "review_dir": "artifacts/ui/ipcom5-redaction-review",
   "items": [
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/status.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/footer-left.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/status-sections/footer-left.png",
       "rules": [
         "hostname_any"
       ],
@@ -62,7 +62,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/output-buffers.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/status-sections/output-buffers.png",
       "rules": [
         "ipv4_any"
       ],
@@ -76,7 +76,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections/connected-users.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/status-sections/connected-users.png",
       "rules": [
         "ipv4_any"
       ],
@@ -90,7 +90,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/logs.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/logs.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/general.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -183,7 +183,7 @@
       "padding": 0
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/api-settings.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/general-sections/api-settings.png",
       "rules": [
         "general_db_values",
         "api_ports"
@@ -201,7 +201,7 @@
       "padding": 1
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/database-settings.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/general-sections/database-settings.png",
       "rules": [
         "general_db_values",
         "db_ports"
@@ -219,7 +219,7 @@
       "padding": 1
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/internal-events.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/internal-events.webp",
       "rules": [
         "waw_badge",
         "footer_hostname"
@@ -251,7 +251,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/internal-events-sections/columns-explained.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/internal-events-sections/columns-explained.png",
       "rules": [
         "waw_badge",
         "footer_hostname"
@@ -270,7 +270,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -302,7 +302,7 @@
       "correction_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/tcp-receivers.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers-sections/tcp-receivers.png",
       "rules": [
         "receiver_ports"
       ],
@@ -316,7 +316,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/udp-receivers.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers-sections/udp-receivers.png",
       "rules": [
         "receiver_ports"
       ],
@@ -330,7 +330,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/com-receivers.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers-sections/com-receivers.png",
       "rules": [
         "receiver_ports"
       ],
@@ -344,7 +344,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/modem-receivers.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers-sections/modem-receivers.png",
       "rules": [
         "receiver_ports"
       ],
@@ -358,7 +358,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers-sections/assigned-outputs-and-removal.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers-sections/assigned-outputs-and-removal.png",
       "rules": [
         "receiver_ports"
       ],
@@ -372,7 +372,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/outputs.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/outputs.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -402,7 +402,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/users.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -432,7 +432,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users-sections/users-table.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/users-sections/users-table.png",
       "rules": [
         "users_name_login_non_admin"
       ],
@@ -446,7 +446,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users-sections/add-user-and-removal.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/users-sections/add-user-and-removal.png",
       "rules": [],
       "critical": false,
       "geometry_limits": {
@@ -458,7 +458,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/incoming-events.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/incoming-events.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -488,7 +488,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/incoming-events-sections/filters-and-actions.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/incoming-events-sections/filters-and-actions.png",
       "rules": [
         "waw_badge",
         "footer_hostname"
@@ -507,7 +507,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/objects.webp",
       "rules": [
         "waw_badge",
         "footer_hostname",
@@ -538,7 +538,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects-sections/actions-and-filters.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/objects-sections/actions-and-filters.png",
       "rules": [
         "objects_uid_iccid",
         "ipv4_any"
@@ -553,7 +553,7 @@
       "fallback_rules": []
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects-sections/object-list-table.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/objects-sections/object-list-table.png",
       "rules": [
         "objects_uid_iccid",
         "ipv4_any"

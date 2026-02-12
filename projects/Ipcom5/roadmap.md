@@ -40,8 +40,8 @@ From repo root:
 ## Output locations
 
 - Artifacts: `artifacts/ui/ipcom5control-web/`
-- Generated pages: `docs/en/receivers/ipcom5control/ui/`
-- Screenshots for docs: `docs/en/receivers/ipcom5control/ui/assets/screens/`
+- Generated pages: `docs/en/receivers/ipcom/ui/`
+- Screenshots for docs: `docs/en/receivers/ipcom/ui/assets/screens/`
 
 ## Roadmap
 

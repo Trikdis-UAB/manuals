@@ -99,8 +99,8 @@
   function hideHomeNavItem() {
     var pathname = window.location.pathname || "/";
     var inIpcomSection =
-      pathname.indexOf("/receivers/ipcom5control/") !== -1 ||
-      pathname.endsWith("/receivers/ipcom5control");
+      pathname.indexOf("/receivers/ipcom/") !== -1 ||
+      pathname.endsWith("/receivers/ipcom");
 
     document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
       var list = nav.querySelector(":scope > ul.md-nav__list");

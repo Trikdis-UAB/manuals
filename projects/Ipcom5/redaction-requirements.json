@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/status.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/status.webp",
       "critical": true,
       "must_redact": [
         {
@@ -40,7 +40,7 @@
       }
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/logs.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/logs.webp",
       "critical": true,
       "must_redact": [
         {
@@ -82,7 +82,7 @@
       }
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/general.webp",
       "critical": true,
       "must_redact": [
         {
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/api-settings.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/general-sections/api-settings.png",
       "critical": true,
       "must_redact": [
         {
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/general-sections/database-settings.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/general-sections/database-settings.png",
       "critical": true,
       "must_redact": [
         {
@@ -279,7 +279,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/internal-events.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/internal-events.webp",
       "critical": true,
       "must_redact": [
         {
@@ -312,7 +312,7 @@
       }
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/receivers.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers.webp",
       "critical": true,
       "must_redact": [
         {
@@ -351,7 +351,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/outputs.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/outputs.webp",
       "critical": true,
       "must_redact": [
         {
@@ -385,7 +385,7 @@
       }
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/users.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/users.webp",
       "critical": true,
       "must_redact": [
         {
@@ -429,7 +429,7 @@
       }
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/incoming-events.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/incoming-events.webp",
       "critical": true,
       "must_redact": [
         {
@@ -472,7 +472,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects.webp",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/objects.webp",
       "critical": true,
       "must_redact": [
         {
@@ -521,7 +521,7 @@
       ]
     },
     {
-      "path": "docs/en/receivers/ipcom5control/ui/assets/screens/objects-sections/object-list-table.png",
+      "path": "docs/en/receivers/ipcom/ui/assets/screens/objects-sections/object-list-table.png",
       "critical": true,
       "must_redact": [
         {

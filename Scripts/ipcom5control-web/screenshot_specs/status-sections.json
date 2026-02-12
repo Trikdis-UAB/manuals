@@ -1,7 +1,7 @@
 {
   "screen": "status",
-  "source": "docs/en/receivers/ipcom5control/ui/assets/screens/status.png",
-  "outputDir": "docs/en/receivers/ipcom5control/ui/assets/screens/status-sections",
+  "source": "docs/en/receivers/ipcom/ui/assets/screens/status.png",
+  "outputDir": "docs/en/receivers/ipcom/ui/assets/screens/status-sections",
   "notes": "Coordinates captured from live DOM .statistics-card bounds and footer element bounds on 2026-02-09 (includes card titles).",
   "sections": [
     { "id": "general", "x": 8, "y": 114, "w": 394, "h": 397 },

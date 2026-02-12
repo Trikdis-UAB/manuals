@@ -29,7 +29,7 @@ class: language-home
 
 ### Receivers
 
-- [IPCom (v.5) Control web](receivers/ipcom5control/index.md)
+- [IPCom (v.5) Control web](receivers/ipcom/index.md)
 
 ### What's new / Did you know
 

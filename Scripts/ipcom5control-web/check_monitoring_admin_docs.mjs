@@ -3,7 +3,7 @@ import { fileExists, resolveRepo } from "./lib/utils.mjs";
 
 const checks = [
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/status.md",
+    path: "docs/en/receivers/ipcom/ui/screens/status.md",
     snippets: [
       "![Status tab full-screen view](../assets/screens/status.webp)",
       "### Connected users",
@@ -13,7 +13,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/general.md",
+    path: "docs/en/receivers/ipcom/ui/screens/general.md",
     snippets: [
       "![General tab full-screen view](../assets/screens/general.webp)",
       "**Operational checks and actions:**",
@@ -23,7 +23,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/logs.md",
+    path: "docs/en/receivers/ipcom/ui/screens/logs.md",
     snippets: [
       "![Logs tab full-screen view](../assets/screens/logs.webp)",
       "### Log table",
@@ -32,7 +32,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/internal-events.md",
+    path: "docs/en/receivers/ipcom/ui/screens/internal-events.md",
     snippets: [
       "![Internal events tab full-screen view](../assets/screens/internal-events.webp)",
       "### Internal event list",
@@ -41,7 +41,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/receivers.md",
+    path: "docs/en/receivers/ipcom/ui/screens/receivers.md",
     snippets: [
       "![Receivers tab full-screen view](../assets/screens/receivers.webp)",
       "### TCP Receivers",
@@ -54,7 +54,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/outputs.md",
+    path: "docs/en/receivers/ipcom/ui/screens/outputs.md",
     snippets: [
       "![Outputs tab full-screen view](../assets/screens/outputs.webp)",
       "### Outputs table",
@@ -67,7 +67,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/users.md",
+    path: "docs/en/receivers/ipcom/ui/screens/users.md",
     snippets: [
       "![Users tab full-screen view](../assets/screens/users.webp)",
       "### Users table",
@@ -80,7 +80,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/access-and-login.md",
+    path: "docs/en/receivers/ipcom/ui/access-and-login.md",
     snippets: [
       "# Access and login",
       "![Access and login page full-screen view](./assets/screens/login.webp)",
@@ -93,7 +93,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/incoming-events.md",
+    path: "docs/en/receivers/ipcom/ui/screens/incoming-events.md",
     snippets: [
       "![Incoming events tab full-screen view](../assets/screens/incoming-events.webp)",
       "### Filters and actions",
@@ -102,7 +102,7 @@ const checks = [
     ],
   },
   {
-    path: "docs/en/receivers/ipcom5control/ui/screens/objects.md",
+    path: "docs/en/receivers/ipcom/ui/screens/objects.md",
     snippets: [
       "![Objects tab full-screen view](../assets/screens/objects.webp)",
       "### Actions and filters",
@@ -114,9 +114,9 @@ const checks = [
     path: "mkdocs.yml",
     snippets: [
       "- Receivers:",
-      "- IPcom 5:",
-      "- Overview: receivers/ipcom5control/index.md",
-      "- Status: receivers/ipcom5control/ui/screens/status.md",
+      "- IPcom:",
+      "- Overview: receivers/ipcom/index.md",
+      "- Status: receivers/ipcom/ui/screens/status.md",
     ],
   },
 ];

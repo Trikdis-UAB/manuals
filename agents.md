@@ -122,18 +122,18 @@ gh run list --workflow "Deploy docs" --branch main --limit 5
 
 ```bash
 # Verify published docs endpoint
-curl -I https://docs.trikdis.com/en/receivers/ipcom5control/
+curl -I https://docs.trikdis.com/en/receivers/ipcom/
 ```
 
 Expected result: `HTTP/2 200`.
 
 ### IPcom deferred page pointer
 
-- `docs/en/receivers/ipcom5control/ui/ha-cluster-backup.md` is intentionally kept in-repo but excluded from public deployment.
+- `docs/en/receivers/ipcom/ui/ha-cluster-backup.md` is intentionally kept in-repo but excluded from public deployment.
 - Exclusion is controlled in `mkdocs.yml` via `exclude_docs`.
 - When resuming HA documentation work, re-enable it by:
   1. Removing the exclude entry for that file.
-  2. Adding it back to `IPcom 5 -> Operations` navigation in `mkdocs.yml` and `docs/_NAVIGATION.md`.
+  2. Adding it back to `IPcom` navigation in `mkdocs.yml` and `docs/_NAVIGATION.md`.
   3. Re-running docs checks and strict build before merge.
 - Internal question backlog for this manual is stored at `projects/Ipcom5/team-questions.md` (not published).
 - Unredacted screenshot safety copies must be kept locally under `artifacts/private/ipcom5-unredacted-<timestamp>/` (with `MANIFEST.sha256`) and must never be committed.

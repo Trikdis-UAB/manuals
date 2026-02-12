@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import { fileExists, resolveRepo } from "./lib/utils.mjs";
 
-const introPath = resolveRepo("docs/en/receivers/ipcom5control/index.md");
+const introPath = resolveRepo("docs/en/receivers/ipcom/index.md");
 
 if (!(await fileExists(introPath))) {
   throw new Error(`Missing intro page: ${introPath}`);
