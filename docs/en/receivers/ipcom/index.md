@@ -143,5 +143,5 @@ Operational security baseline:
 Use these pages as primary entry points:
 
 - Access methods and troubleshooting: [Access and login](./ui/access-and-login.md)
-- Screen-by-screen operational behavior: [Status tab](./ui/screens/status.md) (and the rest of `Tabs`)
+- Screen-by-screen operational behavior: [Status tab](./ui/screens/status.md) (and the rest of `User interface`)
 - User and permission procedures: [Users tab](./ui/screens/users.md)

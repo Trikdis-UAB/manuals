@@ -116,7 +116,7 @@ plugins:
         - IPcom:
           - Overview: receivers/ipcom/index.md
           - Access and login: receivers/ipcom/ui/access-and-login.md
-          - Tabs:
+          - User interface:
             - Status: receivers/ipcom/ui/screens/status.md
             - Logs: receivers/ipcom/ui/screens/logs.md
             - General: receivers/ipcom/ui/screens/general.md

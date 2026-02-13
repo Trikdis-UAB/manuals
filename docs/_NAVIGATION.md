@@ -41,7 +41,7 @@ Editor entry points (start here when editing):
   - IPcom
     - [Overview](en/receivers/ipcom/index.md)
     - [Access and login](en/receivers/ipcom/ui/access-and-login.md)
-    - Tabs
+    - User interface
       - [Status](en/receivers/ipcom/ui/screens/status.md)
       - [Logs](en/receivers/ipcom/ui/screens/logs.md)
       - [General](en/receivers/ipcom/ui/screens/general.md)
