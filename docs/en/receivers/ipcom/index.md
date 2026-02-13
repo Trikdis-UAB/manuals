@@ -2,7 +2,7 @@
 
 ![IPCom Control overview cover with Debian amd64, Windows 11, and RL25 deployment options](./ui/assets/screens/overview.webp)
 
-IPCom v5 is a receiver platform for collecting, processing, routing, and monitoring security system events. It provides a web interface for operations and administration.
+IPCom v5 is a receiver for collecting, processing, routing, and monitoring security system events. It provides a web interface for operations and administration.
 
 The editions below are the same IPCom v5 product with different deployment models:
 
