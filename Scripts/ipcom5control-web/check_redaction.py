@@ -6,6 +6,7 @@ from pathlib import Path
 from PIL import Image
 
 from redact_sensitive_images import (
+    _filter_hits_inside_safe_replace_ops,
     build_segments,
     check_protected_collisions,
     collect_words,
@@ -73,6 +74,9 @@ def main():
         segments = build_segments(words)
         residual_hits = detect_item_hits(item, words, segments, img_rgb.size, allow_fallback=False)
         residual_hits = [h for h in residual_hits if h.get("text") != "<fallback>"]
+        render_ops = rep.get("render_operations", [])
+        if isinstance(render_ops, list):
+            residual_hits = _filter_hits_inside_safe_replace_ops(residual_hits, render_ops)
 
         if residual_hits:
             errors.append(f"{rel_path}: residual sensitive tokens found ({len(residual_hits)})")
@@ -105,6 +109,14 @@ def main():
         if rep.get("status") not in ("ok", None):
             errors.append(f"{rel_path}: report status is {rep.get('status')}")
 
+        render_summary = rep.get("render_summary")
+        if not isinstance(render_summary, dict):
+            errors.append(f"{rel_path}: report missing render_summary")
+        render_ops = rep.get("render_operations")
+        if not isinstance(render_ops, list):
+            errors.append(f"{rel_path}: report missing render_operations")
+        replace_ops = [op for op in (render_ops if isinstance(render_ops, list) else []) if str(op.get("render_mode", "")).lower() == "replace"]
+
         mask_quality = rep.get("mask_quality")
         if not isinstance(mask_quality, dict):
             errors.append(f"{rel_path}: report missing mask_quality")
@@ -121,6 +133,29 @@ def main():
             else:
                 if req_result.get("status") != "ok":
                     errors.append(f"{rel_path}: requirements failed ({'; '.join(req_result.get('violations', []))})")
+                replace_checks = req_result.get("must_replace_patterns")
+                if req_item.get("must_replace_patterns") and not isinstance(replace_checks, list):
+                    errors.append(f"{rel_path}: missing must_replace_patterns result")
+                must_not_ocr_box_checks = req_result.get("must_not_ocr_in_boxes")
+                if req_item.get("must_not_ocr_in_boxes") and not isinstance(must_not_ocr_box_checks, list):
+                    errors.append(f"{rel_path}: missing must_not_ocr_in_boxes result")
+                elif isinstance(must_not_ocr_box_checks, list):
+                    failed_box_checks = [x for x in must_not_ocr_box_checks if x.get("status") != "ok"]
+                    if failed_box_checks:
+                        errors.append(f"{rel_path}: must_not_ocr_in_boxes failed ({len(failed_box_checks)})")
+                expected_box_checks = req_result.get("expected_boxes")
+                if req_item.get("expected_boxes") and not isinstance(expected_box_checks, list):
+                    errors.append(f"{rel_path}: missing expected_boxes result")
+                forbid_checks = req_result.get("forbid_render_mode")
+                if req_item.get("forbid_render_mode") and not isinstance(forbid_checks, list):
+                    errors.append(f"{rel_path}: missing forbid_render_mode result")
+                replace_integrity = req_result.get("replace_integrity")
+                if replace_ops and not isinstance(replace_integrity, list):
+                    errors.append(f"{rel_path}: missing replace_integrity result")
+                elif isinstance(replace_integrity, list):
+                    failed_replace = [x for x in replace_integrity if x.get("status") != "ok"]
+                    if failed_replace:
+                        errors.append(f"{rel_path}: replace integrity failed ({len(failed_replace)})")
                 if req_result.get("missed_targets"):
                     errors.append(f"{rel_path}: missed requirement targets ({len(req_result.get('missed_targets', []))})")
                 if req_result.get("forbidden_overlaps"):

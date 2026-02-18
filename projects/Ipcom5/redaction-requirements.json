@@ -37,7 +37,59 @@
             "max_after": 0
           }
         ]
-      }
+      },
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        },
+        {
+          "id": "ipv4_replace",
+          "pattern": "\\b123\\.123\\.123\\.\\d{1,3}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "ipv4_any"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        },
+        {
+          "id": "ipv4_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "ipv4_any"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ]
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/logs.webp",
@@ -79,7 +131,43 @@
         "allowed_zero": [
           "logs_identifiers"
         ]
-      }
+      },
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ]
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/general.webp",
@@ -165,6 +253,97 @@
         "/etc/letsencrypt\\S*",
         "beta2\\.protegus\\.app",
         "\\bipcom\\b"
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        },
+        {
+          "id": "sql_host_replace",
+          "pattern": "\\bdb\\.example\\.internal\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "sql_user_replace",
+          "pattern": "\\bdbuser\\d{2}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "sql_db_replace",
+          "pattern": "\\bipcom_demo\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "private_key_replace",
+          "pattern": "/etc/ssl/private/example-key\\.pem",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "public_key_replace",
+          "pattern": "/etc/ssl/certs/example-cert\\.pem",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        },
+        {
+          "id": "general_db_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "general_db_values"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ],
+      "must_not_ocr_in_boxes": [
+        {
+          "id": "waw_badge_box_no_text",
+          "box": [
+            0.317,
+            0.02,
+            0.359,
+            0.051
+          ],
+          "max_hits": 0,
+          "patterns": [
+            "(?i)[a-z0-9]{2,}"
+          ]
+        }
       ]
     },
     {
@@ -220,7 +399,68 @@
         "\\b8080\\b",
         "/etc/letsencrypt\\S*",
         "beta2\\.protegus\\.app"
-      ]
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "api_port_replace",
+          "pattern": "\\b123\\d{2}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "api_ports"
+        },
+        {
+          "id": "sql_host_replace",
+          "pattern": "\\bdb\\.example\\.internal\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "sql_user_replace",
+          "pattern": "\\bdbuser\\d{2}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "sql_db_replace",
+          "pattern": "\\bipcom_demo\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "private_key_replace",
+          "pattern": "/etc/ssl/private/example-key\\.pem",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "public_key_replace",
+          "pattern": "/etc/ssl/certs/example-cert\\.pem",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "api_port_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "api_ports"
+          }
+        },
+        {
+          "id": "general_db_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "general_db_values"
+          }
+        }
+      ],
+      "expected_boxes": []
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/general-sections/database-settings.png",
@@ -276,7 +516,68 @@
         "\\blocalhost\\b",
         "\\b6033\\b",
         "\\bipcom\\b"
-      ]
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "db_port_replace",
+          "pattern": "\\b123\\d{2}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "db_ports"
+        },
+        {
+          "id": "sql_host_replace",
+          "pattern": "\\bdb\\.example\\.internal\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "sql_user_replace",
+          "pattern": "\\bdbuser\\d{2}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "sql_db_replace",
+          "pattern": "\\bipcom_demo\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "private_key_replace",
+          "pattern": "/etc/ssl/private/example-key\\.pem",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        },
+        {
+          "id": "public_key_replace",
+          "pattern": "/etc/ssl/certs/example-cert\\.pem",
+          "min_hits": 1,
+          "require_when_before_rule": "general_db_values"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "db_port_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "db_ports"
+          }
+        },
+        {
+          "id": "general_db_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "general_db_values"
+          }
+        }
+      ],
+      "expected_boxes": []
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/internal-events.webp",
@@ -309,7 +610,58 @@
             "max_after": 0
           }
         ]
-      }
+      },
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ],
+      "must_not_ocr_in_boxes": [
+        {
+          "id": "waw_badge_box_no_text",
+          "box": [
+            0.313,
+            0.022,
+            0.363,
+            0.05
+          ],
+          "max_hits": 0,
+          "patterns": [
+            "(?i)[a-z0-9]{2,}"
+          ]
+        }
+      ]
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/receivers.webp",
@@ -348,6 +700,58 @@
         "\\b5500[0-9]\\b",
         "\\b45000\\b",
         "\\b44444\\b"
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        },
+        {
+          "id": "receiver_port_replace",
+          "pattern": "\\b123\\d{2}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "receiver_ports"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        },
+        {
+          "id": "receiver_port_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "receiver_ports"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
       ]
     },
     {
@@ -382,7 +786,74 @@
             "max_after": 0
           }
         ]
-      }
+      },
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        },
+        {
+          "id": "outputs_ipv4_replace",
+          "pattern": "\\b123\\.123\\.123\\.\\d{1,3}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "outputs_ip_whitelist"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        },
+        {
+          "id": "outputs_ip_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "outputs_ip_whitelist"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ],
+      "must_not_ocr_in_boxes": [
+        {
+          "id": "waw_badge_box_no_text",
+          "box": [
+            0.318,
+            0.022,
+            0.357,
+            0.048
+          ],
+          "max_hits": 0,
+          "patterns": [
+            "(?i)[a-z0-9]{2,}"
+          ]
+        }
+      ]
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/users.webp",
@@ -426,7 +897,43 @@
             "max_after": 0
           }
         ]
-      }
+      },
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ]
     },
     {
       "path": "docs/en/receivers/ipcom/ui/assets/screens/incoming-events.webp",
@@ -469,6 +976,76 @@
       "must_not_ocr": [
         "(?:\\d{1,3}\\.){3}\\d{1,3}",
         "\\b\\d{12,}\\b"
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        },
+        {
+          "id": "incoming_ipv4_replace",
+          "pattern": "\\b123\\.123\\.123\\.\\d{1,3}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "incoming_events_ids_ips"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        },
+        {
+          "id": "incoming_ip_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "incoming_events_ids_ips",
+            "reason_in": [
+              "incoming_ip"
+            ]
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
+      ],
+      "must_not_ocr_in_boxes": [
+        {
+          "id": "waw_badge_box_no_text",
+          "box": [
+            0.313,
+            0.022,
+            0.363,
+            0.05
+          ],
+          "max_hits": 0,
+          "patterns": [
+            "(?i)[a-z0-9]{2,}"
+          ]
+        }
       ]
     },
     {
@@ -518,6 +1095,58 @@
       "must_not_ocr": [
         "89370010100042284486",
         "\\b89\\d{18,22}\\b"
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "footer_hostname_replace",
+          "pattern": "\\bexample\\.domain\\.com\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "footer_hostname"
+        },
+        {
+          "id": "ipv4_replace",
+          "pattern": "\\b123\\.123\\.123\\.\\d{1,3}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "ipv4_any"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "footer_hostname_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "footer_hostname"
+          }
+        },
+        {
+          "id": "ipv4_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "ipv4_any"
+          }
+        }
+      ],
+      "expected_boxes": [
+        {
+          "id": "footer_hostname_box",
+          "rule": "footer_hostname",
+          "box": [
+            0.115,
+            0.958,
+            0.285,
+            0.998
+          ],
+          "overlap_mode": "center",
+          "max_width_scale": 2.3,
+          "max_height_scale": 2.3,
+          "required": false
+        }
       ]
     },
     {
@@ -550,7 +1179,28 @@
       "must_not_ocr": [
         "89370010100042284486",
         "89\\d{18,22}"
-      ]
+      ],
+      "must_replace_patterns": [
+        {
+          "id": "ipv4_replace",
+          "pattern": "\\b123\\.123\\.123\\.\\d{1,3}\\b",
+          "min_hits": 1,
+          "require_when_before_rule": "ipv4_any"
+        }
+      ],
+      "forbid_render_mode": [
+        {
+          "id": "ipv4_no_fill",
+          "modes": [
+            "fill"
+          ],
+          "allow_fallback": true,
+          "match": {
+            "rule": "ipv4_any"
+          }
+        }
+      ],
+      "expected_boxes": []
     }
   ]
 }

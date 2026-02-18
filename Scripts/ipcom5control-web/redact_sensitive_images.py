@@ -2,13 +2,16 @@
 import argparse
 import csv
 import json
+import hashlib
 import re
 import shutil
 import subprocess
 import tempfile
+from collections import defaultdict
+from copy import deepcopy
 from pathlib import Path
 
-from PIL import Image, ImageColor, ImageDraw
+from PIL import Image, ImageColor, ImageDraw, ImageFilter, ImageFont, ImageStat
 
 IP_RE = re.compile(r"(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?")
 WAW_RE = re.compile(r"(?:waw01|vawo1|waw0?1|wawol|wawoi)", re.IGNORECASE)
@@ -18,6 +21,621 @@ MAC_RE = re.compile(r"(?:[0-9A-F]{2}:){5}[0-9A-F]{2}", re.IGNORECASE)
 LABEL_WORDS = {"sql", "user", "host", "port", "private", "public", "key", "pass", "database"}
 SQL_VALUE_RE = re.compile(r"(?:beta2ipcom|localhost|/etc/letsencrypt)", re.IGNORECASE)
 SAFE_KEEP_TOKENS = {"status", "valid", "enable", "http", "api"}
+FONT_CANDIDATES = [
+    "/System/Library/Fonts/Supplemental/Arial.ttf",
+    "/System/Library/Fonts/Supplemental/Verdana.ttf",
+    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+    "DejaVuSansMono.ttf",
+    "DejaVuSans.ttf",
+    "/System/Library/Fonts/Supplemental/Menlo.ttc",
+    "/System/Library/Fonts/Supplemental/Courier New.ttf",
+]
+
+DEFAULT_REPLACE_RULES = {
+    "hostname_primary": {"fixed": "example.domain.com"},
+    "hostname_db": {"fixed": "db.example.internal"},
+    "ipv4_seq": {"kind": "ipv4_seq", "start": "123.123.123.123", "step": 1},
+    "port_seq": {"kind": "port_seq", "start": 12345, "step": 1},
+    "sql_user": {"pattern": "dbuser{n:02d}", "start": 1, "step": 1},
+    "sql_database": {"fixed": "ipcom_demo"},
+    "path_private_key": {"fixed": "/etc/ssl/private/example-key.pem"},
+    "path_public_key": {"fixed": "/etc/ssl/certs/example-cert.pem"},
+}
+
+
+def _is_safe_demo_for_rule(rule, text, reason=""):
+    raw = (text or "").strip().lower()
+    norm = normalize_token(text or "")
+    rsn = (reason or "").lower()
+    if not raw:
+        return False
+
+    ip_match = re.search(r"(?:\d{1,3}\.){3}\d{1,3}", raw)
+    if rule in {"ipv4_any", "outputs_ip_whitelist", "incoming_events_ids_ips"}:
+        if ip_match and ip_match.group(0).startswith("123.123.123."):
+            return True
+
+    if rule in {"receiver_ports", "receivers_ports", "api_ports", "db_ports"}:
+        digits = re.sub(r"\D", "", raw)
+        if re.fullmatch(r"123\d{2}", digits):
+            return True
+
+    if rule in {"footer_hostname", "hostname_any"}:
+        if "example.domain.com" in raw:
+            return True
+
+    if rule == "general_db_values":
+        if "db.example.internal" in raw or "example.domain.com" in raw:
+            return True
+        if re.search(r"\bdbuser\d{2}\b", raw):
+            return True
+        if "ipcom_demo" in raw:
+            return True
+        if "/etc/ssl/private/example-key.pem" in raw or "etcsslprivateexamplekeypem" in norm:
+            return True
+        if "/etc/ssl/certs/example-cert.pem" in raw or "etcsslcertsexamplecertpem" in norm:
+            return True
+        digits = re.sub(r"\D", "", raw)
+        if "port" in rsn and re.fullmatch(r"123\d{2}", digits):
+            return True
+
+    return False
+
+
+def _deep_merge(base, override):
+    out = deepcopy(base) if isinstance(base, dict) else {}
+    if not isinstance(override, dict):
+        return out
+    for key, value in override.items():
+        if isinstance(value, dict) and isinstance(out.get(key), dict):
+            out[key] = _deep_merge(out[key], value)
+        else:
+            out[key] = deepcopy(value)
+    return out
+
+
+def _safe_int(value, default):
+    try:
+        return int(value)
+    except Exception:
+        return int(default)
+
+
+def _safe_float(value, default):
+    try:
+        return float(value)
+    except Exception:
+        return float(default)
+
+
+def _parse_ipv4(value):
+    if not isinstance(value, str):
+        return None
+    parts = value.strip().split(".")
+    if len(parts) != 4:
+        return None
+    nums = []
+    for part in parts:
+        if not part.isdigit():
+            return None
+        n = int(part)
+        if n < 0 or n > 255:
+            return None
+        nums.append(n)
+    return nums
+
+
+def _render_rules(spec, item):
+    merged = {}
+    if isinstance(spec.get("rule_modes"), dict):
+        merged = _deep_merge(merged, spec["rule_modes"])
+    if isinstance(item.get("rule_modes"), dict):
+        merged = _deep_merge(merged, item["rule_modes"])
+    return merged
+
+
+def _build_render_defaults(spec, item):
+    base = {
+        "default_mode": "fill",
+        "fallback_render_mode": "fill",
+        "replace_min_conf": 45.0,
+        "enforce_replace_min_conf": False,
+    }
+    base = _deep_merge(base, spec.get("render", {}))
+    base = _deep_merge(base, item.get("render", {}))
+    if isinstance(item.get("render_mode"), str):
+        base["default_mode"] = item["render_mode"]
+    if isinstance(item.get("fallback_render_mode"), str):
+        base["fallback_render_mode"] = item["fallback_render_mode"]
+    return base
+
+
+def _selector_matches(hit, selector, image_size):
+    if not isinstance(selector, dict):
+        return True
+    if selector.get("rule") and selector.get("rule") != hit.get("rule"):
+        return False
+    reason = hit.get("reason", "")
+    text = hit.get("text", "")
+    norm = normalize_token(text)
+    conf = _safe_float(hit.get("conf", 0.0), 0.0)
+    bbox = hit.get("bbox", [0, 0, 0, 0])
+    bw = max(1, bbox[2] - bbox[0])
+    bh = max(1, bbox[3] - bbox[1])
+    iw = max(1, image_size[0])
+    ih = max(1, image_size[1])
+
+    if selector.get("reason_in") and reason not in set(selector.get("reason_in", [])):
+        return False
+    if selector.get("reason_contains") and selector.get("reason_contains") not in reason:
+        return False
+    if selector.get("text_regex") and not re.search(selector["text_regex"], text, re.IGNORECASE):
+        return False
+    if selector.get("norm_in"):
+        allowed = {normalize_token(x) for x in selector.get("norm_in", []) if normalize_token(x)}
+        if norm not in allowed:
+            return False
+    if selector.get("min_conf") is not None and conf < float(selector.get("min_conf")):
+        return False
+    if selector.get("max_conf") is not None and conf > float(selector.get("max_conf")):
+        return False
+    if selector.get("min_width_ratio") is not None and (bw / iw) < float(selector.get("min_width_ratio")):
+        return False
+    if selector.get("max_width_ratio") is not None and (bw / iw) > float(selector.get("max_width_ratio")):
+        return False
+    if selector.get("min_height_ratio") is not None and (bh / ih) < float(selector.get("min_height_ratio")):
+        return False
+    if selector.get("max_height_ratio") is not None and (bh / ih) > float(selector.get("max_height_ratio")):
+        return False
+    return True
+
+
+def _resolve_hit_render(hit, spec, item, image_size):
+    defaults = _build_render_defaults(spec, item)
+    config = {"render_mode": defaults.get("default_mode", "fill"), "fallback_render_mode": defaults.get("fallback_render_mode", "fill")}
+    rule_cfg = _render_rules(spec, item).get(hit.get("rule"))
+    if isinstance(rule_cfg, dict):
+        base_rule_cfg = {k: v for k, v in rule_cfg.items() if k != "modes"}
+        config = _deep_merge(config, base_rule_cfg)
+        for mode_cfg in rule_cfg.get("modes", []):
+            if isinstance(mode_cfg, dict) and _selector_matches(hit, mode_cfg.get("match"), image_size):
+                config = _deep_merge(config, {k: v for k, v in mode_cfg.items() if k != "match"})
+                break
+    config["render_mode"] = str(config.get("render_mode", defaults.get("default_mode", "fill"))).lower()
+    config["fallback_render_mode"] = str(config.get("fallback_render_mode", defaults.get("fallback_render_mode", "fill"))).lower()
+    config["replace_min_conf"] = _safe_float(config.get("replace_min_conf", defaults.get("replace_min_conf", 45.0)), defaults.get("replace_min_conf", 45.0))
+    return config
+
+
+def _replace_spec(hit_render):
+    replace_cfg = hit_render.get("replace", {})
+    kind = replace_cfg.get("kind")
+    base = DEFAULT_REPLACE_RULES.get(kind, {})
+    return _deep_merge(base, replace_cfg)
+
+
+def _replacement_counter_key(spec):
+    return "|".join(
+        [
+            str(spec.get("kind", "")),
+            str(spec.get("pattern", "")),
+            str(spec.get("fixed", "")),
+            str(spec.get("start", "")),
+            str(spec.get("step", 1)),
+        ]
+    )
+
+
+def _next_sequence_number(repl_ctx, spec):
+    key = _replacement_counter_key(spec)
+    state = repl_ctx["sequence_state"].get(key)
+    if state is None:
+        start = spec.get("start", 1)
+        state = {"current": start, "step": spec.get("step", 1)}
+        repl_ctx["sequence_state"][key] = state
+    value = state["current"]
+    step = state.get("step", 1)
+    if isinstance(value, str) and value.isdigit():
+        next_value = str(int(value) + int(step)).zfill(len(value))
+    elif isinstance(value, (int, float)):
+        next_value = int(value) + int(step)
+    else:
+        next_value = value
+    state["current"] = next_value
+    return value
+
+
+def _build_replacement_text(hit, hit_render, repl_ctx):
+    spec = _replace_spec(hit_render)
+    kind = str(spec.get("kind", "generic"))
+    source_key = normalize_token(hit.get("text", ""))
+    cache_key = f"{kind}:{source_key}"
+    if source_key and cache_key in repl_ctx["token_map"]:
+        return repl_ctx["token_map"][cache_key]
+
+    if spec.get("fixed"):
+        value = str(spec["fixed"])
+    elif kind == "ipv4_seq":
+        start = _parse_ipv4(str(spec.get("start", "123.123.123.123"))) or [123, 123, 123, 123]
+        offset = int(_next_sequence_number(repl_ctx, {"kind": "ipv4_seq", "start": 0, "step": spec.get("step", 1)}))
+        value = f"{start[0]}.{start[1]}.{start[2]}.{max(0, min(255, start[3] + offset))}"
+    elif kind == "port_seq":
+        start = _safe_int(spec.get("start", 12345), 12345)
+        offset = int(_next_sequence_number(repl_ctx, {"kind": "port_seq", "start": 0, "step": spec.get("step", 1)}))
+        value = str(start + offset)
+    elif spec.get("pattern"):
+        n_value = _next_sequence_number(repl_ctx, spec)
+        pattern = str(spec.get("pattern", "{n}"))
+        try:
+            value = pattern.format(n=n_value, value=n_value)
+        except Exception:
+            value = pattern.replace("{n}", str(n_value)).replace("{value}", str(n_value))
+    else:
+        digest = hashlib.sha1((hit.get("text", "") or "masked").encode("utf-8")).hexdigest()[:8]
+        value = f"masked-{digest}"
+
+    if source_key:
+        repl_ctx["token_map"][cache_key] = value
+    return value
+
+
+def _font_candidates_for_family(font_family):
+    if not font_family:
+        return []
+    families = []
+    if isinstance(font_family, str):
+        families = [x.strip(" '\"") for x in font_family.split(",") if x.strip(" '\"")]
+    elif isinstance(font_family, list):
+        families = [str(x).strip(" '\"") for x in font_family if str(x).strip(" '\"")]
+
+    mapped = []
+    for fam in families:
+        low = fam.lower()
+        if low in {"arial", "sans-serif", "sansserif"}:
+            mapped.extend(
+                [
+                    "/System/Library/Fonts/Supplemental/Arial.ttf",
+                    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+                ]
+            )
+        elif low == "verdana":
+            mapped.append("/System/Library/Fonts/Supplemental/Verdana.ttf")
+        elif low == "menlo":
+            mapped.append("/System/Library/Fonts/Supplemental/Menlo.ttc")
+        elif low == "courier new":
+            mapped.append("/System/Library/Fonts/Supplemental/Courier New.ttf")
+        elif "/" in fam:
+            mapped.append(fam)
+    return mapped
+
+
+def _load_font(size, font_family=None):
+    candidates = _font_candidates_for_family(font_family) + FONT_CANDIDATES
+    seen = set()
+    for candidate in candidates:
+        if candidate in seen:
+            continue
+        seen.add(candidate)
+        try:
+            return ImageFont.truetype(candidate, size=max(8, int(size)))
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def _text_color_for_background(bg_color):
+    if not isinstance(bg_color, (list, tuple)) or len(bg_color) < 3:
+        return "#212121"
+    r, g, b = (int(bg_color[0]), int(bg_color[1]), int(bg_color[2]))
+    # Perceived luminance for readable foreground selection.
+    luminance = (0.2126 * r) + (0.7152 * g) + (0.0722 * b)
+    return "#F5F5F5" if luminance < 140 else "#212121"
+
+
+def _draw_replacement_text(image, rect, text, inset_px=2, text_color="#212121", text_style=None):
+    x0, y0, x1, y1 = rect
+    rw = max(1, x1 - x0)
+    rh = max(1, y1 - y0)
+    style = text_style if isinstance(text_style, dict) else {}
+    explicit_size = style.get("font_size_px")
+    min_size = _safe_int(style.get("min_font_size_px", 8), 8)
+    max_size = _safe_int(style.get("max_font_size_px", 999), 999)
+    vpad = _safe_int(style.get("vertical_padding_px", 1), 1)
+    font_family = style.get("font_family")
+
+    if explicit_size is not None:
+        target_size = _safe_int(explicit_size, 12)
+    else:
+        target_size = max(10, int(rh * 0.84))
+    target_size = max(min_size, min(target_size, max_size))
+
+    font = _load_font(target_size, font_family=font_family)
+    canvas = Image.new("RGBA", (rw, rh), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(canvas)
+    for font_size in range(target_size, max(7, min_size) - 1, -1):
+        font = _load_font(font_size, font_family=font_family)
+        bbox = draw.textbbox((0, 0), text, font=font)
+        max_text_w = max(1, rw - inset_px * 2)
+        max_text_h = max(1, rh - vpad * 2)
+        if (bbox[2] - bbox[0]) <= max_text_w and (bbox[3] - bbox[1]) <= max_text_h:
+            break
+
+    bbox = draw.textbbox((0, 0), text, font=font)
+    tw = bbox[2] - bbox[0]
+    th = bbox[3] - bbox[1]
+    tx = inset_px
+    ty = int((rh - th) / 2) - bbox[1]
+
+    # Keep glyph bounds inside the text box so descenders are not clipped.
+    top = ty + bbox[1]
+    bottom = ty + bbox[3]
+    if top < vpad:
+        ty += vpad - top
+        bottom = ty + bbox[3]
+    if bottom > rh - vpad:
+        ty -= bottom - (rh - vpad)
+    draw.text((tx, ty), text, fill=text_color, font=font)
+    image.alpha_composite(canvas, dest=(x0, y0))
+
+
+def _sample_surrounding_color(image, rect, sample_band_px=3, sample_margin_px=1):
+    x0, y0, x1, y1 = rect
+    w, h = image.size
+    band = max(1, int(sample_band_px))
+    margin = max(0, int(sample_margin_px))
+
+    sample_boxes = [
+        [x0 - margin - band, y0, x0 - margin, y1],  # left
+        [x1 + margin, y0, x1 + margin + band, y1],  # right
+        [x0, y0 - margin - band, x1, y0 - margin],  # top
+        [x0, y1 + margin, x1, y1 + margin + band],  # bottom
+    ]
+
+    weighted = [0.0, 0.0, 0.0]
+    weight_sum = 0
+    sample_count = 0
+    for box in sample_boxes:
+        sx0, sy0, sx1, sy1 = clamp_rect(box, w, h)
+        if sx1 <= sx0 or sy1 <= sy0:
+            continue
+        crop = image.crop((sx0, sy0, sx1, sy1)).convert("RGB")
+        if crop.width <= 0 or crop.height <= 0:
+            continue
+        means = ImageStat.Stat(crop).mean
+        pixels = crop.width * crop.height
+        weighted[0] += means[0] * pixels
+        weighted[1] += means[1] * pixels
+        weighted[2] += means[2] * pixels
+        weight_sum += pixels
+        sample_count += 1
+
+    if weight_sum <= 0:
+        fallback_crop = image.crop((x0, y0, x1, y1)).convert("RGB")
+        if fallback_crop.width > 0 and fallback_crop.height > 0:
+            means = ImageStat.Stat(fallback_crop).mean
+            return (int(round(means[0])), int(round(means[1])), int(round(means[2]))), 0
+        return (224, 224, 224), 0
+
+    color = (
+        int(round(weighted[0] / weight_sum)),
+        int(round(weighted[1] / weight_sum)),
+        int(round(weighted[2] / weight_sum)),
+    )
+    return color, sample_count
+
+
+def _apply_render_operations(image, operations, fill_color):
+    if not operations:
+        return image
+    draw = ImageDraw.Draw(image)
+    for op in operations:
+        mode = op.get("render_mode", "fill")
+        rect = op["bbox"]
+        x0, y0, x1, y1 = rect
+        if mode == "fill":
+            draw.rectangle(rect, fill=fill_color)
+            continue
+        if mode == "blur":
+            radius = _safe_float(op.get("blur", {}).get("radius", 6), 6.0)
+            crop = image.crop((x0, y0, x1, y1))
+            image.paste(crop.filter(ImageFilter.GaussianBlur(radius=max(0.1, radius))), (x0, y0))
+            continue
+        if mode == "replace":
+            replace_cfg = op.get("replace", {}) if isinstance(op.get("replace"), dict) else {}
+            bg_cfg = replace_cfg.get("background", {}) if isinstance(replace_cfg.get("background"), dict) else {}
+            sample_band = _safe_int(bg_cfg.get("sample_band_px", 3), 3)
+            sample_margin = _safe_int(bg_cfg.get("sample_margin_px", 1), 1)
+            fixed_bg = bg_cfg.get("fixed_color")
+            if fixed_bg is None:
+                fixed_bg = bg_cfg.get("color")
+            if fixed_bg is None:
+                fixed_bg = bg_cfg.get("fixed")
+            if fixed_bg is not None:
+                try:
+                    bg_color = ImageColor.getrgb(str(fixed_bg))
+                    bg_samples = 0
+                except Exception:
+                    bg_color, bg_samples = _sample_surrounding_color(image, rect, sample_band_px=sample_band, sample_margin_px=sample_margin)
+            else:
+                bg_color, bg_samples = _sample_surrounding_color(image, rect, sample_band_px=sample_band, sample_margin_px=sample_margin)
+            draw.rectangle(rect, fill=bg_color)
+            op["background_color"] = list(bg_color)
+            op["background_samples"] = int(bg_samples)
+            op["background_normalized"] = True
+
+            pre_blur = _safe_float(op.get("replace", {}).get("pre_blur_radius", 0), 0.0)
+            if pre_blur > 0:
+                crop = image.crop((x0, y0, x1, y1))
+                image.paste(crop.filter(ImageFilter.GaussianBlur(radius=pre_blur)), (x0, y0))
+            text_color = _text_color_for_background(bg_color)
+            text_style = replace_cfg.get("text", {}) if isinstance(replace_cfg.get("text"), dict) else {}
+            forced_text_color = text_style.get("color")
+            if forced_text_color:
+                try:
+                    ImageColor.getrgb(str(forced_text_color))
+                    text_color = str(forced_text_color)
+                except Exception:
+                    pass
+            op["text_color"] = text_color
+            _draw_replacement_text(
+                image,
+                rect,
+                op.get("replacement_text", "masked"),
+                inset_px=int(op.get("replace", {}).get("inset_px", 2)),
+                text_color=text_color,
+                text_style=text_style,
+            )
+            continue
+        draw.rectangle(rect, fill=fill_color)
+    return image
+
+
+def _to_rect(value, image_size):
+    if not isinstance(value, list) or len(value) != 4:
+        return None
+    w, h = image_size
+    if all(isinstance(x, (int, float)) for x in value):
+        if all(0 <= x <= 1 for x in value):
+            return clamp_rect([value[0] * w, value[1] * h, value[2] * w, value[3] * h], w, h)
+        return clamp_rect(value, w, h)
+    return None
+
+
+def _bbox_iou(a, b):
+    inter = intersection_area(a, b)
+    if inter <= 0:
+        return 0.0
+    union = area(a) + area(b) - inter
+    if union <= 0:
+        return 0.0
+    return inter / union
+
+
+def _expected_box_checks(hit, req_item, image_size):
+    entries = req_item.get("expected_boxes", []) if isinstance(req_item, dict) else []
+    if not isinstance(entries, list):
+        return [], []
+
+    matched = []
+    failed_ids = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        if entry.get("rule") and entry.get("rule") != hit.get("rule"):
+            continue
+        if not _selector_matches(hit, entry.get("match"), image_size):
+            continue
+        rect = _to_rect(entry.get("box"), image_size)
+        if rect is None:
+            continue
+
+        check_mode = str(entry.get("overlap_mode", "center")).lower()
+        min_iou = _safe_float(entry.get("min_iou", 0.05), 0.05)
+        hit_rect = hit.get("bbox")
+        cx = (hit_rect[0] + hit_rect[2]) / 2
+        cy = (hit_rect[1] + hit_rect[3]) / 2
+        center_pass = rect[0] <= cx <= rect[2] and rect[1] <= cy <= rect[3]
+        iou = _bbox_iou(hit_rect, rect)
+        overlap_ok = center_pass if check_mode != "iou" else iou >= min_iou
+
+        max_w_scale = _safe_float(entry.get("max_width_scale", 1.9), 1.9)
+        max_h_scale = _safe_float(entry.get("max_height_scale", 1.9), 1.9)
+        expected_w = max(1, rect[2] - rect[0])
+        expected_h = max(1, rect[3] - rect[1])
+        hit_w = max(1, hit_rect[2] - hit_rect[0])
+        hit_h = max(1, hit_rect[3] - hit_rect[1])
+        size_ok = (hit_w <= expected_w * max_w_scale) and (hit_h <= expected_h * max_h_scale)
+
+        ok = overlap_ok and size_ok
+        check_id = entry.get("id") or f"{hit.get('rule')}:expected-box"
+        matched.append(
+            {
+                "id": check_id,
+                "rule": hit.get("rule"),
+                "reason": hit.get("reason"),
+                "bbox": hit_rect,
+                "expected_box": rect,
+                "center_pass": center_pass,
+                "iou": round(iou, 6),
+                "size_ok": size_ok,
+                "required": bool(entry.get("required", False)),
+                "status": "ok" if ok else "failed",
+            }
+        )
+        if not ok:
+            failed_ids.append(check_id)
+
+    return matched, failed_ids
+
+
+def _build_operations(spec, item, req_item, hits, image_size, padding, repl_ctx):
+    w, h = image_size
+    operations = []
+    expected_checks = []
+    fallback_events = []
+    for hit in hits:
+        hit_rect = expand_rect(hit["bbox"], padding, w, h)
+        render_cfg = _resolve_hit_render(hit, spec, item, image_size)
+        bbox_inset_px = _safe_int(render_cfg.get("bbox_inset_px", 0), 0)
+        if bbox_inset_px > 0:
+            hit_rect = inset_rect(hit_rect, bbox_inset_px, w, h)
+        mode = render_cfg.get("render_mode", "fill")
+        requested_mode = mode
+        fallback_mode = render_cfg.get("fallback_render_mode", "fill")
+        fallback_reason = None
+        synthetic_fallback_hit = (hit.get("text") == "<fallback>") or ("fallback" in str(hit.get("reason", "")))
+
+        # Token-level safety fallback for weak OCR confidence on replacement rendering.
+        if (
+            mode == "replace"
+            and bool(render_cfg.get("enforce_replace_min_conf", False))
+            and not synthetic_fallback_hit
+            and float(hit.get("conf", 0.0)) < float(render_cfg.get("replace_min_conf", 45.0))
+        ):
+            mode = fallback_mode
+            fallback_reason = "low_confidence"
+
+        replace_text = None
+        checks, failed_check_ids = _expected_box_checks(hit, req_item, image_size)
+        expected_checks.extend(checks)
+        if requested_mode == "replace" and failed_check_ids:
+            mode = fallback_mode
+            fallback_reason = "expected_box_mismatch"
+
+        if mode == "replace":
+            replace_text = _build_replacement_text(hit, render_cfg, repl_ctx)
+            if not replace_text:
+                mode = fallback_mode
+                fallback_reason = "replace_generation_failed"
+
+        op = {
+            "rule": hit.get("rule"),
+            "reason": hit.get("reason"),
+            "text": hit.get("text"),
+            "bbox": hit_rect,
+            "source_bbox": hit.get("bbox"),
+            "conf": float(hit.get("conf", 0.0)),
+            "render_mode": mode,
+            "requested_mode": requested_mode,
+            "fallback_render_mode": fallback_mode,
+            "replacement_text": replace_text,
+            "replace": render_cfg.get("replace", {}),
+            "blur": render_cfg.get("blur", {}),
+            "fallback_reason": fallback_reason,
+        }
+        operations.append(op)
+        if fallback_reason:
+            fallback_events.append(
+                {
+                    "rule": hit.get("rule"),
+                    "reason": hit.get("reason"),
+                    "bbox": hit_rect,
+                    "requested_mode": requested_mode,
+                    "fallback_mode": mode,
+                    "fallback_reason": fallback_reason,
+                }
+            )
+    return operations, expected_checks, fallback_events
 
 
 def phrase_tokens(text: str):
@@ -68,6 +686,16 @@ def expand_rect(rect, pad, w, h):
     return clamp_rect([x0 - pad, y0 - pad, x1 + pad, y1 + pad], w, h)
 
 
+def inset_rect(rect, inset, w, h):
+    if inset <= 0:
+        return clamp_rect(rect, w, h)
+    x0, y0, x1, y1 = rect
+    half_w = max(0, (x1 - x0 - 1) // 2)
+    half_h = max(0, (y1 - y0 - 1) // 2)
+    eff = min(int(inset), half_w, half_h)
+    return clamp_rect([x0 + eff, y0 + eff, x1 - eff, y1 - eff], w, h)
+
+
 def merge_rects(rects, gap=3):
     if not rects:
         return []
@@ -97,10 +725,12 @@ def _shrink_bbox_for_sensitive_value(bbox, text, reason, image_size):
     w, h = image_size
     t = (text or "").lower()
     r = (reason or "").lower()
+
     if "/etc/letsencrypt" in t or "private_key" in r or "public_key" in r:
-        dx = max(1, int((x1 - x0) * 0.02))
-        x0 += dx
-        x1 -= dx
+        # Keep key-path replacements wide so leading slash and suffix stay covered.
+        dx = max(1, int((x1 - x0) * 0.01))
+        x0 -= dx
+        x1 += dx
         if y1 - y0 >= 10:
             y0 += 1
             y1 -= 1
@@ -122,7 +752,8 @@ def _subrect_for_word_span(word, start_idx, end_idx, image_size):
 
 def save_image(image: Image.Image, path: Path):
     if path.suffix.lower() == ".webp":
-        image.save(path, format="WEBP", quality=95, method=6)
+        # Keep replacements OCR-stable; lossy WEBP can reintroduce artifacts.
+        image.save(path, format="WEBP", lossless=True, quality=100, method=6)
     elif path.suffix.lower() == ".png":
         image.save(path, format="PNG", optimize=True)
     else:
@@ -272,6 +903,17 @@ def _build_section_scopes(item, segments, w, h):
         return {}
 
     section_scopes = {}
+    all_header_norms = set()
+    for cfg in section_defs.values():
+        if not isinstance(cfg, dict):
+            continue
+        hdrs = cfg.get("headers", [])
+        if isinstance(hdrs, str):
+            hdrs = [hdrs]
+        for phrase in hdrs:
+            norm = normalize_token(phrase)
+            if norm:
+                all_header_norms.add(norm)
     sorted_segments = sorted(segments, key=lambda s: (s["top"], s["left"]))
     for name, cfg in section_defs.items():
         if not isinstance(cfg, dict):
@@ -307,9 +949,11 @@ def _build_section_scopes(item, segments, w, h):
             if seg["top"] <= match["top"]:
                 continue
             if abs(seg["left"] - match["left"]) <= max(80, int(min_width * 0.22)):
-                if any(hn in seg.get("norm_text", "") for hn in header_norms):
+                seg_norm = seg.get("norm_text", "")
+                if any(hn in seg_norm for hn in header_norms):
                     continue
-                next_headers.append(seg)
+                if any(hn in seg_norm for hn in all_header_norms):
+                    next_headers.append(seg)
         if next_headers:
             y1 = min(y1, next_headers[0]["top"] - y_pad_bottom)
 
@@ -395,14 +1039,21 @@ def _find_label_segments(segments, label_tokens):
 
 def _find_value_segment(label_seg, segments, max_y_gap=120, x_tolerance=220):
     candidates = []
+    label_h = max(1, label_seg["bottom"] - label_seg["top"])
     for seg in segments:
-        if seg["top"] <= label_seg["bottom"]:
+        if seg["bottom"] <= label_seg["bottom"]:
+            continue
+        # Require the value row to start below the label row; this avoids
+        # same-line OCR fragments being selected as value text.
+        if seg["top"] <= label_seg["top"] + max(2, int(label_h * 0.35)):
             continue
         if seg["top"] - label_seg["bottom"] > max_y_gap:
             continue
         if abs(seg["left"] - label_seg["left"]) > x_tolerance:
             continue
-        if len(seg["words"]) > 6:
+        # OCR on some screens can duplicate the same value token multiple times.
+        # Keep rejecting very dense rows, but tolerate moderate duplication.
+        if len(seg["words"]) > 10:
             continue
         candidates.append(seg)
     if not candidates:
@@ -455,7 +1106,9 @@ def _extract_inline_value_words(seg, label_tokens):
             last_label_idx = idx + len(label_norm) - 1
             break
     if last_label_idx < 0:
-        last_label_idx = max((i for i, n in enumerate(norms) if n in set(label_norm)), default=-1)
+        # OCR often emits label tokens in noisy order (for example "SQL ... 6033 ... port").
+        # Use the first matching label token so inline values between label fragments are preserved.
+        last_label_idx = min((i for i, n in enumerate(norms) if n in set(label_norm)), default=-1)
 
     out = []
     for idx, word in enumerate(words):
@@ -500,20 +1153,47 @@ def _detect_rule_hits(rule, words, segments, item, image_size, allow_fallback, s
     def add_word_hit(word, reason="match"):
         if not plausible_word(word):
             return
+        if _is_safe_demo_for_rule(rule, word.get("text", ""), reason=reason):
+            return
         bbox = _shrink_bbox_for_sensitive_value(word_rect(word), word["text"], reason, (w, h))
+        _add_hit_bbox(bbox, word.get("text", ""), reason=reason, conf=float(word.get("conf", 0.0)), word_id=word.get("id"))
+
+    def _add_hit_bbox(bbox, text, reason="match", conf=0.0, word_id=None):
+        bx0, by0, bx1, by1 = bbox
+        if bx1 <= bx0 or by1 <= by0:
+            return
+        bw = max(1, bx1 - bx0)
+        bh = max(1, by1 - by0)
+        width_ratio = bw / max(1, w)
+        height_ratio = bh / max(1, h)
+        norm_text = normalize_token(text or "")
+        if height_ratio > 0.22:
+            return
+        if width_ratio > 0.52 and len(norm_text) < 10:
+            return
+        for existing in hits:
+            if existing.get("rule") != rule or existing.get("reason") != reason:
+                continue
+            existing_word_id = existing.get("word_id")
+            if existing_word_id is not None and word_id is not None and existing_word_id == word_id:
+                return
+            if existing.get("norm") == norm_text and _bbox_iou(existing.get("bbox"), [bx0, by0, bx1, by1]) >= 0.75:
+                return
         hits.append(
             {
                 "rule": rule,
-                "text": word["text"],
-                "norm": word["norm"],
-                "bbox": bbox,
-                "conf": float(word["conf"]),
+                "text": text,
+                "norm": norm_text,
+                "bbox": [bx0, by0, bx1, by1],
+                "conf": float(conf),
                 "reason": reason,
-                "word_id": word.get("id"),
+                "word_id": word_id,
             }
         )
 
     def add_segment_hit(seg, reason="match"):
+        if _is_safe_demo_for_rule(rule, seg.get("text", ""), reason=reason):
+            return
         bbox = [seg["left"], seg["top"], seg["right"], seg["bottom"]]
         if (bbox[2] - bbox[0]) / max(1, w) > 0.58:
             return
@@ -546,7 +1226,7 @@ def _detect_rule_hits(rule, words, segments, item, image_size, allow_fallback, s
 
     elif rule == "footer_hostname":
         for word in scoped_words:
-            if word["top"] >= int(0.78 * h) and HOST_RE.search(word["text"]):
+            if word["top"] >= int(0.90 * h) and HOST_RE.search(word["text"]):
                 add_word_hit(word)
         if not hits and allow_fallback and rule in fallback_rules and fallback.get("footer_hostname"):
             fx0, fy0, fx1, fy1 = fallback["footer_hostname"]
@@ -617,11 +1297,54 @@ def _detect_rule_hits(rule, words, segments, item, image_size, allow_fallback, s
                     break
 
     elif rule == "general_db_values":
+        def accept_value_word(label_name, word):
+            token = normalize_token(word.get("text", ""))
+            raw_text = str(word.get("text", "") or "")
+            if not token:
+                return False
+            if token in LABEL_WORDS:
+                return False
+            if token in {"sql", "sol"}:
+                return False
+            if len(token) < 2 and not token.isdigit():
+                return False
+            if label_name == "sql_port":
+                if not re.fullmatch(r"\d{2,5}", token):
+                    return False
+                value = int(token)
+                return 0 < value <= 65535
+            if label_name in {"sql_host", "sql_database"} and token.isdigit():
+                return False
+            if label_name in {"private_key", "public_key"}:
+                if "/" not in raw_text and "etc" not in token and "ssl" not in token:
+                    return False
+            return True
+
+        def union_words_bbox(words_list):
+            if not words_list:
+                return None
+            x0 = min(wd["left"] for wd in words_list)
+            y0 = min(wd["top"] for wd in words_list)
+            x1 = max(wd["left"] + wd["width"] for wd in words_list)
+            y1 = max(wd["top"] + wd["height"] for wd in words_list)
+            return [x0, y0, x1, y1]
+
+        def scope_for_segment(seg):
+            if not scope_rects:
+                return None
+            cx = (seg["left"] + seg["right"]) / 2
+            cy = (seg["top"] + seg["bottom"]) / 2
+            for sx0, sy0, sx1, sy1 in scope_rects:
+                if sx0 <= cx <= sx1 and sy0 <= cy <= sy1:
+                    return [sx0, sy0, sx1, sy1]
+            return None
+
         label_defs = [
             {"name": "sql_user", "tokens": ["sql", "user"], "segment_only": False, "max_y_gap": 60, "x_tolerance": 220},
             {"name": "sql_host", "tokens": ["sql", "host"], "segment_only": False, "max_y_gap": 60, "x_tolerance": 220},
+            {"name": "sql_host", "tokens": ["host"], "segment_only": False, "max_y_gap": 60, "x_tolerance": 220},
             {"name": "sql_port", "tokens": ["sql", "port"], "segment_only": False, "max_y_gap": 60, "x_tolerance": 220},
-            {"name": "sql_database", "tokens": ["sql", "database"], "segment_only": False, "max_y_gap": 60, "x_tolerance": 220},
+            {"name": "sql_database", "tokens": ["sql", "database"], "segment_only": False, "max_y_gap": 40, "x_tolerance": 220},
             {"name": "private_key", "tokens": ["private", "key"], "segment_only": False, "max_y_gap": 48, "x_tolerance": 180},
             {"name": "public_key", "tokens": ["public", "key"], "segment_only": False, "max_y_gap": 48, "x_tolerance": 180},
         ]
@@ -629,10 +1352,30 @@ def _detect_rule_hits(rule, words, segments, item, image_size, allow_fallback, s
         for label in label_defs:
             for label_seg in _find_label_segments(scoped_segments, label["tokens"]):
                 inline_words = _extract_inline_value_words(label_seg, label["tokens"])
-                for word in inline_words:
-                    add_word_hit(word, f"{label['name']}_value")
-
+                inline_words = [word for word in inline_words if accept_value_word(label["name"], word)]
                 if inline_words:
+                    if label["name"] == "sql_port":
+                        representative = max(inline_words, key=lambda wd: (len(normalize_token(wd.get("text", ""))), float(wd.get("conf", 0.0))))
+                        ibox = word_rect(representative)
+                        scope = scope_for_segment(label_seg)
+                        if scope:
+                            sx0, sy0, sx1, sy1 = scope
+                            x0 = max(label_seg["left"] - 2, ibox[0] - 1)
+                            x1 = max(ibox[2] + 2, sx1 - 4)
+                            y0 = ibox[1] - 1
+                            y1 = ibox[3] + 1
+                            ibox = [x0, y0, x1, y1]
+                        ibox = _shrink_bbox_for_sensitive_value(ibox, representative.get("text", ""), f"{label['name']}_value", (w, h))
+                        _add_hit_bbox(
+                            ibox,
+                            representative.get("text", ""),
+                            reason=f"{label['name']}_value",
+                            conf=float(representative.get("conf", 0.0)),
+                            word_id=representative.get("id"),
+                        )
+                    else:
+                        for word in inline_words:
+                            add_word_hit(word, f"{label['name']}_value")
                     continue
 
                 value_seg = _find_value_segment(
@@ -646,15 +1389,30 @@ def _detect_rule_hits(rule, words, segments, item, image_size, allow_fallback, s
                 if label["segment_only"]:
                     add_segment_hit(value_seg, reason=f"{label['name']}_value_seg")
                     continue
-                for word in value_seg["words"]:
-                    token = normalize_token(word["text"])
-                    if not token:
-                        continue
-                    if token in LABEL_WORDS:
-                        continue
-                    if len(token) < 2 and not token.isdigit():
-                        continue
-                    add_word_hit(word, f"{label['name']}_value")
+                value_words = [word for word in value_seg["words"] if accept_value_word(label["name"], word)]
+                if not value_words:
+                    continue
+                representative = max(value_words, key=lambda wd: (len(normalize_token(wd.get("text", ""))), float(wd.get("conf", 0.0))))
+                value_bbox = union_words_bbox(value_words)
+                if value_bbox is None:
+                    continue
+                if label["name"] in {"sql_user", "sql_host", "sql_port", "sql_database"}:
+                    scope = scope_for_segment(label_seg)
+                    if scope:
+                        sx0, sy0, sx1, sy1 = scope
+                        x0 = min(label_seg["left"] - 2, value_bbox[0] - 1)
+                        x1 = max(value_bbox[2] + 2, sx1 - 4)
+                        y0 = value_bbox[1] - 1
+                        y1 = value_bbox[3] + 1
+                        value_bbox = [x0, y0, x1, y1]
+                value_bbox = _shrink_bbox_for_sensitive_value(value_bbox, representative.get("text", ""), f"{label['name']}_value", (w, h))
+                _add_hit_bbox(
+                    value_bbox,
+                    representative.get("text", ""),
+                    reason=f"{label['name']}_value",
+                    conf=float(representative.get("conf", 0.0)),
+                    word_id=representative.get("id"),
+                )
 
     elif rule == "api_ports":
         label_groups = [["https", "api", "port"], ["http", "api", "port"]]
@@ -1137,6 +1895,38 @@ def _find_pattern_hits(words, patterns):
     return out
 
 
+def _find_words_in_box(words, box, image_size, patterns=None):
+    rect = _to_rect(box, image_size)
+    if rect is None:
+        return None, []
+
+    regexes = []
+    if isinstance(patterns, list):
+        for pat in patterns:
+            rgx = _pattern_to_regex(pat)
+            if rgx:
+                regexes.append(rgx)
+
+    hits = []
+    x0, y0, x1, y1 = rect
+    for word in words:
+        cx = word["left"] + word["width"] / 2
+        cy = word["top"] + word["height"] / 2
+        if not (x0 <= cx <= x1 and y0 <= cy <= y1):
+            continue
+        text = word.get("text", "")
+        if regexes and not any(r.search(text) for r in regexes):
+            continue
+        hits.append(
+            {
+                "text": text,
+                "bbox": word_rect(word),
+                "conf": float(word.get("conf", 0.0)),
+            }
+        )
+    return rect, hits
+
+
 def enforce_must_not_ocr(work_image, patterns, image_size, padding, max_passes=3):
     if not patterns:
         return [], []
@@ -1156,7 +1946,91 @@ def enforce_must_not_ocr(work_image, patterns, image_size, padding, max_passes=3
     return all_hits, merge_rects(all_rects, gap=3)
 
 
-def evaluate_requirements(req_item, item, before_words, before_segments, after_words, after_segments, image_size, masks):
+def _filter_hits_inside_safe_replace_ops(hits, render_ops, min_overlap_ratio=0.55):
+    if not hits or not render_ops:
+        return hits
+
+    safe_replace_ops = []
+    for op in render_ops:
+        if str(op.get("render_mode", "")).lower() != "replace":
+            continue
+        bbox = op.get("bbox")
+        if not isinstance(bbox, list) or len(bbox) != 4:
+            continue
+        rule = str(op.get("rule", "") or "")
+        replacement_text = str(op.get("replacement_text", "") or "")
+        reason = str(op.get("reason", "") or "")
+        if not rule or not replacement_text:
+            continue
+        if _is_safe_demo_for_rule(rule, replacement_text, reason=reason):
+            safe_replace_ops.append((rule, bbox))
+
+    if not safe_replace_ops:
+        return hits
+
+    filtered = []
+    for hit in hits:
+        hbox = hit.get("bbox")
+        if not isinstance(hbox, list) or len(hbox) != 4:
+            filtered.append(hit)
+            continue
+        harea = max(1, area(hbox))
+        hrule = str(hit.get("rule", "") or "")
+        masked = False
+        for op_rule, op_bbox in safe_replace_ops:
+            if hrule != op_rule:
+                continue
+            ov = intersection_area(hbox, op_bbox)
+            if ov <= 0:
+                continue
+            if (ov / harea) >= float(min_overlap_ratio):
+                masked = True
+                break
+        if not masked:
+            filtered.append(hit)
+    return filtered
+
+
+def _infer_pattern_reason_key(pattern_cfg):
+    reason_key = str(pattern_cfg.get("require_when_before_reason_key", "") or "").strip()
+    if reason_key:
+        return normalize_token(reason_key)
+    pattern_id = str(pattern_cfg.get("id", "") or "").strip()
+    if pattern_id.endswith("_replace"):
+        return normalize_token(pattern_id[: -len("_replace")])
+    return ""
+
+
+def _should_enforce_replace_pattern(before_hits, pattern_cfg):
+    if not before_hits:
+        return False
+
+    reason_in = pattern_cfg.get("require_when_before_reason_in")
+    if isinstance(reason_in, list) and reason_in:
+        allowed = {normalize_token(x) for x in reason_in if normalize_token(x)}
+        if not allowed:
+            return True
+        return any(normalize_token(str(hit.get("reason", "") or "")) in allowed for hit in before_hits)
+
+    reason_key = _infer_pattern_reason_key(pattern_cfg)
+    if not reason_key:
+        return True
+    return any(reason_key in normalize_token(str(hit.get("reason", "") or "")) for hit in before_hits)
+
+
+def evaluate_requirements(
+    req_item,
+    item,
+    before_words,
+    before_segments,
+    after_words,
+    after_segments,
+    image_size,
+    masks,
+    render_ops=None,
+    expected_box_checks=None,
+    fallback_events=None,
+):
     if not req_item:
         return {"status": "not_configured"}
 
@@ -1166,11 +2040,20 @@ def evaluate_requirements(req_item, item, before_words, before_segments, after_w
     forbidden_overlaps = []
     violations = []
     must_not_ocr_results = []
+    must_not_ocr_box_results = []
+    must_replace_results = []
+    forbid_mode_results = []
+    expected_box_results = []
+    replace_integrity_results = []
+    render_ops = render_ops or []
+    expected_box_checks = expected_box_checks or []
+    fallback_events = fallback_events or []
 
     for target in req_item.get("must_redact", []):
         tid = target.get("id") if isinstance(target, dict) else str(target)
         before_hits = _target_matches(target, item, before_words, before_segments, image_size)
         after_hits = _target_matches(target, item, after_words, after_segments, image_size)
+        after_hits = _filter_hits_inside_safe_replace_ops(after_hits, render_ops)
         min_before = (target.get("min_before", 1) if isinstance(target, dict) else 1)
         max_after = (target.get("max_after", 0) if isinstance(target, dict) else 0)
         ok_before = len(before_hits) >= min_before
@@ -1246,6 +2129,162 @@ def evaluate_requirements(req_item, item, before_words, before_segments, after_w
         if residuals:
             violations.append(f"must_not_ocr:{len(residuals)}")
 
+    must_not_ocr_in_boxes = req_item.get("must_not_ocr_in_boxes", [])
+    if isinstance(must_not_ocr_in_boxes, list):
+        for idx, entry in enumerate(must_not_ocr_in_boxes, start=1):
+            cfg = entry if isinstance(entry, dict) else {"box": entry}
+            rect, hits = _find_words_in_box(
+                after_words,
+                cfg.get("box"),
+                image_size,
+                patterns=cfg.get("patterns"),
+            )
+            if rect is None:
+                continue
+            max_hits = _safe_int(cfg.get("max_hits", 0), 0)
+            ok = len(hits) <= max_hits
+            if not ok:
+                violations.append(f"must_not_ocr_box:{cfg.get('id', idx)} hits={len(hits)}>{max_hits}")
+            must_not_ocr_box_results.append(
+                {
+                    "id": cfg.get("id", f"box-{idx}"),
+                    "box": rect,
+                    "hits": len(hits),
+                    "max_hits": max_hits,
+                    "samples": [h["text"] for h in hits[:8]],
+                    "status": "ok" if ok else "failed",
+                }
+            )
+
+    must_replace_patterns = req_item.get("must_replace_patterns", [])
+    if isinstance(must_replace_patterns, list):
+        for idx, pattern in enumerate(must_replace_patterns, start=1):
+            pattern_cfg = pattern if isinstance(pattern, dict) else {"pattern": pattern}
+            rgx = _pattern_to_regex(pattern_cfg)
+            if not rgx:
+                continue
+            min_hits = _safe_int(pattern_cfg.get("min_hits", 1), 1)
+            before_rule = pattern_cfg.get("require_when_before_rule")
+            enforce = True
+            if isinstance(before_rule, str):
+                before_hits = detect_item_hits(item, before_words, before_segments, image_size, allow_fallback=False, rules_override=[before_rule])
+                enforce = _should_enforce_replace_pattern(before_hits, pattern_cfg)
+            matches = [w for w in after_words if rgx.search(w.get("text", ""))]
+            op_matches = []
+            for op in render_ops:
+                if str(op.get("render_mode", "")).lower() != "replace":
+                    continue
+                if isinstance(before_rule, str) and op.get("rule") != before_rule:
+                    continue
+                repl_text = str(op.get("replacement_text", "") or "")
+                if rgx.search(repl_text):
+                    op_matches.append(repl_text)
+            total_matches = max(len(matches), len(op_matches))
+            ok = (total_matches >= min_hits) if enforce else True
+            if not ok:
+                violations.append(f"must_replace:{pattern_cfg.get('id', idx)} hits={total_matches}<{min_hits}")
+            must_replace_results.append(
+                {
+                    "id": pattern_cfg.get("id", f"replace-{idx}"),
+                    "pattern": pattern_cfg.get("pattern", pattern),
+                    "matches": total_matches,
+                    "ocr_matches": len(matches),
+                    "render_op_matches": len(op_matches),
+                    "min_hits": min_hits,
+                    "enforced": enforce,
+                    "status": "ok" if ok else "failed",
+                }
+            )
+
+    forbid_render_mode = req_item.get("forbid_render_mode", [])
+    if isinstance(forbid_render_mode, list):
+        for idx, entry in enumerate(forbid_render_mode, start=1):
+            entry_cfg = entry if isinstance(entry, dict) else {"modes": [entry]}
+            modes = {str(m).lower() for m in entry_cfg.get("modes", [])}
+            if not modes:
+                continue
+            selector = entry_cfg.get("match")
+            allow_fallback = bool(entry_cfg.get("allow_fallback", True))
+            offenders = []
+            for op in render_ops:
+                op_mode = str(op.get("render_mode", "")).lower()
+                if op_mode not in modes:
+                    continue
+                if selector and not _selector_matches(op, selector, image_size):
+                    continue
+                if allow_fallback and op.get("fallback_reason"):
+                    continue
+                offenders.append(op)
+            ok = len(offenders) == 0
+            if not ok:
+                violations.append(f"forbid_render_mode:{entry_cfg.get('id', idx)} count={len(offenders)}")
+            forbid_mode_results.append(
+                {
+                    "id": entry_cfg.get("id", f"forbid-{idx}"),
+                    "modes": sorted(modes),
+                    "offenders": len(offenders),
+                    "status": "ok" if ok else "failed",
+                }
+            )
+
+    if expected_box_checks:
+        expected_box_results.extend(expected_box_checks)
+        failed_checks = [x for x in expected_box_checks if x.get("status") != "ok" and bool(x.get("required", False))]
+        if failed_checks:
+            violations.append(f"expected_boxes_failed:{len(failed_checks)}")
+
+    expected_cfg = req_item.get("expected_boxes", [])
+    if isinstance(expected_cfg, list):
+        checks_by_id = defaultdict(int)
+        for check in expected_box_checks:
+            checks_by_id[str(check.get("id", ""))] += 1
+        for idx, entry in enumerate(expected_cfg, start=1):
+            if not isinstance(entry, dict):
+                continue
+            required = bool(entry.get("required", False))
+            check_id = str(entry.get("id", f"expected-{idx}"))
+            if required and checks_by_id.get(check_id, 0) == 0:
+                violations.append(f"expected_box_missing:{check_id}")
+                expected_box_results.append({"id": check_id, "status": "missing"})
+
+    # Replace integrity checks:
+    # 1) background normalization must be marked as successful
+    # 2) source token should not remain OCR-visible inside replaced bbox
+    for idx, op in enumerate(render_ops, start=1):
+        if str(op.get("render_mode", "")).lower() != "replace":
+            continue
+        op_id = f"{op.get('rule', 'replace')}:{idx}"
+        bg_ok = bool(op.get("background_normalized", False))
+        if not bg_ok:
+            violations.append(f"replace_bg:{op_id}")
+
+        source_text = str(op.get("text", "") or "")
+        source_norm = normalize_token(source_text)
+        source_bbox = op.get("bbox") if isinstance(op.get("bbox"), list) and len(op.get("bbox")) == 4 else None
+        residual_matches = []
+        if source_bbox and source_norm and len(source_norm) >= 4 and source_text != "<fallback>":
+            bx0, by0, bx1, by1 = source_bbox
+            for w in after_words:
+                if normalize_token(w.get("text", "")) != source_norm:
+                    continue
+                cx = w["left"] + w["width"] / 2
+                cy = w["top"] + w["height"] / 2
+                if bx0 <= cx <= bx1 and by0 <= cy <= by1:
+                    residual_matches.append(w["text"])
+        residual_ok = len(residual_matches) == 0
+        if not residual_ok:
+            violations.append(f"replace_residual:{op_id}:{len(residual_matches)}")
+
+        replace_integrity_results.append(
+            {
+                "id": op_id,
+                "rule": op.get("rule"),
+                "background_normalized": bg_ok,
+                "source_residuals_in_box": len(residual_matches),
+                "status": "ok" if (bg_ok and residual_ok) else "failed",
+            }
+        )
+
     # Rule expectations
     rule_expectations = req_item.get("rule_expectations", {}) if isinstance(req_item.get("rule_expectations"), dict) else {}
     min_masks = int(rule_expectations.get("min_masks", 0))
@@ -1264,6 +2303,7 @@ def evaluate_requirements(req_item, item, before_words, before_segments, after_w
             continue
         before_hits = detect_item_hits(item, before_words, before_segments, image_size, allow_fallback=False, rules_override=[rule])
         after_hits = detect_item_hits(item, after_words, after_segments, image_size, allow_fallback=False, rules_override=[rule])
+        after_hits = _filter_hits_inside_safe_replace_ops(after_hits, render_ops)
         min_before = int(exp.get("min_before", 1))
         max_after = int(exp.get("max_after", 0))
         if rule in allowed_zero and len(before_hits) == 0:
@@ -1290,6 +2330,12 @@ def evaluate_requirements(req_item, item, before_words, before_segments, after_w
         "must_redact": must_redact_results,
         "must_keep_visible": must_keep_results,
         "must_not_ocr_residuals": must_not_ocr_results,
+        "must_not_ocr_in_boxes": must_not_ocr_box_results,
+        "must_replace_patterns": must_replace_results,
+        "forbid_render_mode": forbid_mode_results,
+        "expected_boxes": expected_box_results,
+        "replace_integrity": replace_integrity_results,
+        "fallback_events": fallback_events,
         "required_hits": required_hit_results,
         "missed_targets": missed_targets,
         "forbidden_overlaps": forbidden_overlaps,
@@ -1427,7 +2473,11 @@ def main():
         req_item = requirements_by_path.get(rel_path, {})
 
         all_rects = []
+        all_render_ops = []
+        all_expected_checks = []
+        all_fallback_events = []
         pass_reports = []
+        repl_ctx = {"token_map": {}, "sequence_state": {}}
 
         max_passes = int(item.get("max_passes", max(1, args.max_passes)))
         correction_rules = item.get("correction_rules")
@@ -1448,13 +2498,27 @@ def main():
                 allow_fallback=(pass_index == 1),
                 rules_override=active_rules,
             )
-            rects = hits_to_rects(hits, (width, height), padding=_effective_padding(spec, item))
+            operations, expected_checks, fallback_events = _build_operations(
+                spec,
+                item,
+                req_item,
+                hits,
+                (width, height),
+                padding=_effective_padding(spec, item),
+                repl_ctx=repl_ctx,
+            )
+            rects = [op["bbox"] for op in operations]
+            mode_counts = defaultdict(int)
+            for op in operations:
+                mode_counts[str(op.get("render_mode", "fill"))] += 1
 
             pass_reports.append(
                 {
                     "index": pass_index,
                     "hit_count": len(hits),
+                    "operation_count": len(operations),
                     "mask_count": len(rects),
+                    "mode_counts": dict(mode_counts),
                     "hits": [
                         {
                             "rule": h["rule"],
@@ -1465,20 +2529,34 @@ def main():
                         }
                         for h in hits
                     ],
+                    "operations": [
+                        {
+                            "rule": op.get("rule"),
+                            "reason": op.get("reason"),
+                            "bbox": op.get("bbox"),
+                            "requested_mode": op.get("requested_mode"),
+                            "render_mode": op.get("render_mode"),
+                            "fallback_reason": op.get("fallback_reason"),
+                            "replacement_text": op.get("replacement_text"),
+                        }
+                        for op in operations
+                    ],
                     "masks": rects,
                 }
             )
 
-            if not rects:
+            if not operations:
                 break
 
-            prev_len = len(all_rects)
-            all_rects.extend(rects)
-            all_rects = merge_rects(all_rects, gap=3)
-            if len(all_rects) == prev_len and pass_index > 1:
+            merged_rects = merge_rects(all_rects + rects, gap=3)
+            if len(merged_rects) == len(all_rects) and pass_index > 1:
                 break
 
-            apply_masks(work_image, rects, fill=style_fill)
+            all_render_ops.extend(operations)
+            all_expected_checks.extend(expected_checks)
+            all_fallback_events.extend(fallback_events)
+            all_rects = merged_rects
+            _apply_render_operations(work_image, operations, fill_color=style_fill)
 
         final_image = work_image.convert("RGB")
         enforced_hits = []
@@ -1502,6 +2580,7 @@ def main():
 
         residual_hits = detect_item_hits(item, final_words, final_segments, (width, height), allow_fallback=False)
         residual_hits = [h for h in residual_hits if h.get("text") != "<fallback>"]
+        residual_hits = _filter_hits_inside_safe_replace_ops(residual_hits, all_render_ops)
 
         limits = _effective_geometry_limits(spec, item)
         geometry = analyze_geometry(all_rects, (width, height), limits)
@@ -1517,6 +2596,9 @@ def main():
             final_segments,
             (width, height),
             all_rects,
+            render_ops=all_render_ops,
+            expected_box_checks=all_expected_checks,
+            fallback_events=all_fallback_events,
         )
 
         critical = bool(item.get("critical", False))
@@ -1542,6 +2624,12 @@ def main():
             _draw_overlays(base_image, final_image, all_rects, overlay_path)
             _draw_crops(base_image, final_image, all_rects, crops_root / Path(rel_path).with_suffix(""))
 
+        render_mode_usage = defaultdict(int)
+        requested_mode_usage = defaultdict(int)
+        for op in all_render_ops:
+            render_mode_usage[str(op.get("render_mode", "fill"))] += 1
+            requested_mode_usage[str(op.get("requested_mode", "fill"))] += 1
+
         item_report = {
             "path": rel_path,
             "critical": critical,
@@ -1558,6 +2646,14 @@ def main():
                 "hits": len(enforced_hits),
                 "masks": enforced_rects,
             },
+            "render_summary": {
+                "requested_mode_usage": dict(requested_mode_usage),
+                "applied_mode_usage": dict(render_mode_usage),
+                "fallback_events": len(all_fallback_events),
+            },
+            "render_operations": all_render_ops,
+            "expected_box_checks": all_expected_checks,
+            "fallback_events": all_fallback_events,
             "geometry": geometry,
             "mask_quality": mask_quality,
             "protected_collisions": protected_collisions,
