@@ -136,4 +136,5 @@ Expected result: `HTTP/2 200`.
   2. Adding it back to `IPcom` navigation in `mkdocs.yml` and `docs/_NAVIGATION.md`.
   3. Re-running docs checks and strict build before merge.
 - Internal question backlog for this manual is stored at `projects/Ipcom5/team-questions.md` (not published).
+- Redaction document index for IPcom5 is `projects/Ipcom5/redaction-docs.md`.
 - Unredacted screenshot safety copies must be kept locally under `artifacts/private/ipcom5-unredacted-<timestamp>/` (with `MANIFEST.sha256`) and must never be committed.

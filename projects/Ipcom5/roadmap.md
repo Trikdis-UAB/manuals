@@ -2,6 +2,12 @@
 
 This sub‑project maintains the automated capture → generate → validate workflow for the IPcom5 Control Web UI manual.
 
+## Documentation map
+
+- Project entrypoint: `projects/Ipcom5/README.md`
+- Redaction docs index: `projects/Ipcom5/redaction-docs.md`
+- Execution protocol: `projects/Ipcom5/agents.md`
+
 ## Objectives
 
 1. Produce screen‑level UI documentation grounded in live UI structure (DOM + accessibility tree).
