@@ -35,10 +35,12 @@ async function readSearchState(page) {
     const meta = document.querySelector(".md-search-result__meta")?.textContent?.trim() || "";
     const fallbackTitle = document.querySelector(".md-search-result__fallback-title")?.textContent?.trim() || "";
     const fallbackEmpty = document.querySelector(".md-search-result__fallback-empty")?.textContent?.trim() || "";
+    const firstTeaserHtml = document.querySelector(".md-search-result__teaser")?.innerHTML || "";
+    const highlightCount = document.querySelectorAll(".md-search-result__teaser mark.md-search__term").length;
     const links = Array.from(document.querySelectorAll(".md-search-result__list a.md-search-result__link"))
       .map((link) => link.getAttribute("href"))
       .filter((href) => typeof href === "string" && href.length > 0);
-    return { meta, fallbackTitle, fallbackEmpty, links };
+    return { meta, fallbackTitle, fallbackEmpty, firstTeaserHtml, highlightCount, links };
   });
 }
 
@@ -130,6 +132,8 @@ test.describe("Pagefind modal scoped search", () => {
     expect(homeG16.links.length).toBeGreaterThan(0);
     expect(homeG16.links.every((href) => href.startsWith("/en/"))).toBeTruthy();
     expect(includesPath(homeG16.links, "/en/alarm-communicators/cellular/g16/")).toBeTruthy();
+    expect(homeG16.highlightCount).toBeGreaterThan(0);
+    expect(homeG16.firstTeaserHtml.toLowerCase()).toContain("<mark");
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "home-g16-language-results.png"), fullPage: false });
 
     const homeNone = await query(page, "qzvwyx123456789");
@@ -226,6 +230,7 @@ test.describe("Pagefind modal scoped search", () => {
     expect(pagefindStatuses.some((status) => status >= 200 && status < 300)).toBeTruthy();
     expect(requestUrls.some((url) => url.includes("/search/search_index.json"))).toBeFalsy();
     expect(mobileState.links.every((href) => href.startsWith("/es/"))).toBeTruthy();
+    expect(mobileState.highlightCount).toBeGreaterThan(0);
     expect(consoleErrors).toEqual([]);
 
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "mobile-es-g16.png"), fullPage: false });

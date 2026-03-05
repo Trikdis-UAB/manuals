@@ -131,6 +131,59 @@
     return (container.textContent || "").replace(/\s+/g, " ").trim();
   }
 
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function escapeRegExp(value) {
+    return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function normalizeQueryTerm(value) {
+    return String(value || "").replace(/^[^A-Za-z0-9\u00C0-\u024F\u0400-\u04FF]+|[^A-Za-z0-9\u00C0-\u024F\u0400-\u04FF]+$/g, "");
+  }
+
+  function getQueryTerms(query) {
+    var seen = new Set();
+    var terms = [];
+    var rawTerms = String(query || "").trim().split(/\s+/);
+    for (var index = 0; index < rawTerms.length; index += 1) {
+      var normalized = normalizeQueryTerm(rawTerms[index]);
+      if (normalized.length < 2) {
+        continue;
+      }
+      var lowered = normalized.toLowerCase();
+      if (seen.has(lowered)) {
+        continue;
+      }
+      seen.add(lowered);
+      terms.push(normalized);
+    }
+    terms.sort(function (left, right) {
+      return right.length - left.length;
+    });
+    return terms.slice(0, 8);
+  }
+
+  function highlightText(text, query) {
+    var plainText = stripHtml(text);
+    if (!plainText) {
+      return "";
+    }
+    var highlighted = escapeHtml(plainText);
+    var terms = getQueryTerms(query);
+    for (var index = 0; index < terms.length; index += 1) {
+      var pattern = new RegExp("(" + escapeRegExp(terms[index]) + ")", "gi");
+      highlighted = highlighted.replace(pattern, '<mark class="md-search__term">$1</mark>');
+    }
+    return highlighted;
+  }
+
   function cleanTitle(value) {
     return String(value || "").replace(/¶/g, "").replace(/\s+/g, " ").trim();
   }
@@ -361,10 +414,10 @@
     title.textContent = entry.title;
     article.appendChild(title);
 
-    if (entry.excerpt) {
+    if (entry.excerptHtml) {
       var teaser = document.createElement("p");
       teaser.className = "md-search-result__teaser";
-      teaser.textContent = entry.excerpt;
+      teaser.innerHTML = entry.excerptHtml;
       article.appendChild(teaser);
     }
 
@@ -385,7 +438,7 @@
     state.list.appendChild(fragment);
   }
 
-  async function hydrateResults(rawResults) {
+  async function hydrateResults(rawResults, query) {
     var items = [];
     for (var index = 0; index < rawResults.length; index += 1) {
       if (items.length >= MAX_RESULTS) {
@@ -410,7 +463,7 @@
             items.push({
               url: sub.url || data.url,
               title: cleanTitle(sub.title || pageTitle || data.url),
-              excerpt: stripHtml(sub.excerpt || data.excerpt || ""),
+              excerptHtml: highlightText(sub.excerpt || data.excerpt || "", query),
               score: score
             });
           }
@@ -420,7 +473,7 @@
         items.push({
           url: data.url,
           title: cleanTitle(pageTitle || data.url),
-          excerpt: stripHtml(data.excerpt || ""),
+          excerptHtml: highlightText(data.excerpt || "", query),
           score: score
         });
       } catch (error) {
@@ -432,7 +485,7 @@
 
   async function searchWithFilters(pagefind, query, filters) {
     var response = await pagefind.search(query, { filters: filters });
-    return hydrateResults(response && response.results ? response.results : []);
+    return hydrateResults(response && response.results ? response.results : [], query);
   }
 
   function setMatchCount(count, options) {
