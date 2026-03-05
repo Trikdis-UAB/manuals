@@ -15,6 +15,30 @@ python3 -m mkdocs serve
 ```
 For the shared preview port we often reuse `mkdocs serve -a 127.0.0.1:8892` (see below for a restart helper).
 
+To verify the production-style search index locally:
+```bash
+.venv/bin/mkdocs build --strict
+node Scripts/check_pagefind_smoke.mjs --site site
+python3 Scripts/check_search_scopes.py --site site
+```
+`mkdocs_hooks.py` now auto-runs Pagefind at the end of each build/serve cycle and writes it to the active `site_dir` (including MkDocs temp dirs used by `mkdocs serve`). If you need to disable that behavior temporarily, use `MKDOCS_PAGEFIND_AUTOINDEX=0`.
+
+For CI parity or manual reindexing, you can still run:
+```bash
+npx -y pagefind --site site
+```
+
+For browser-level modal behavior checks (manual scope + immediate language fallback UI and no Lunr runtime request), run:
+```bash
+npm install
+PAGEFIND_BASE_URL=http://127.0.0.1:8000 npm run test:search-ui
+```
+This expects a running docs server. For a one-shot serve + UI verification flow:
+```bash
+npm install
+Scripts/check_pagefind_serve.sh 8011
+```
+
 ## Repository Layout
 ```
 mkdocs.yml                 # MkDocs configuration (theme, navigation, build settings)
@@ -65,7 +89,7 @@ With this sequence the old process is removed instantly and the new server start
 ## Publishing Pipeline
 Publishing is fully automated via GitHub Pages:
 1. Push or merge into `main`.
-2. The workflow `.github/workflows/deploy.yml` checks out the repo, installs MkDocs + MkDocs Material, runs `mkdocs build --strict` (output in `site/`).
+2. The workflow `.github/workflows/deploy.yml` checks out the repo, installs MkDocs + MkDocs Material, runs `mkdocs build --strict` (output in `site/`), then builds the Pagefind index (`npx -y pagefind --site site`).
 3. The built static site is uploaded as an artifact and deployed with `actions/deploy-pages@v4` to the `gh-pages` branch. GitHub Pages serves the result at `https://docs.trikdis.com`.
 
 The deploy workflow also publishes a `CNAME` so the custom domain stays pinned to `docs.trikdis.com`. No manual intervention is needed after a push—wait for the Pages deployment badge to turn green.
@@ -103,6 +127,18 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
 
 ## Updating Styling
 - Adjust shared styling in `docs/stylesheets/base.user.css`. Typora is symlinked to the same file, so changes affect both the local Markdown editor and the published site.
+
+## Search Behavior
+- Search modal UI stays Material-based, but search execution is handled by Pagefind in `docs/javascripts/pagefind-modal-search.js`.
+- Pagefind indexing is triggered automatically in `mkdocs_hooks.py` (`on_post_build`) for both `mkdocs build` and `mkdocs serve`.
+- Runtime scopes are injected into each language page by `mkdocs_hooks.py`:
+  - `lang`
+  - `manual`
+  - `subcategory`
+- Search fallback flow:
+  1. Current manual scope
+  2. If empty, immediately show whole-language results in the same modal section (with divider + title)
+- The MkDocs `search` plugin remains enabled temporarily for theme compatibility; runtime search results are sourced from Pagefind.
 
 ## Troubleshooting
 - **Images missing**: ensure links look like `![](./image3.png)`; the conversion pipeline adds this automatically. MkDocs copies the files from `docs/manual/` into the published `manual/` folder.

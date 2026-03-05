@@ -1,0 +1,13 @@
+{
+  "name": "manuals-search-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:search-ui",
+    "test:search-ui": "playwright test Scripts/check_pagefind_ui.spec.cjs --workers=1 --reporter=line",
+    "test:search-serve": "Scripts/check_pagefind_serve.sh 8011"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
