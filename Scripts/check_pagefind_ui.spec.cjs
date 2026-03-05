@@ -1,4 +1,4 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect, devices } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
 
@@ -14,10 +14,17 @@ async function ensureModalOpen(page) {
   const toggle = page.locator("#__search");
   await expect(toggle).toHaveCount(1);
   if (!(await toggle.isChecked())) {
-    await input.click();
+    await page.evaluate(() => {
+      const toggleEl = document.getElementById("__search");
+      if (toggleEl) {
+        toggleEl.checked = true;
+        toggleEl.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    });
   }
   await expect(toggle).toBeChecked();
   await expect(input).toBeVisible();
+  await input.focus();
   await expect
     .poll(async () => page.evaluate(() => !document.querySelector(".md-search-result__list")?.hidden))
     .toBeTruthy();
@@ -182,5 +189,46 @@ test.describe("Pagefind modal scoped search", () => {
     );
     fs.writeFileSync(path.join(ARTIFACT_DIR, "console-errors.json"), `${JSON.stringify(consoleErrors, null, 2)}\n`);
     fs.writeFileSync(path.join(ARTIFACT_DIR, "search-dom.html"), searchDomSnapshot);
+  });
+
+  test("mobile emulation loads Pagefind and avoids search-index load error", async ({ browser, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    const context = await browser.newContext({
+      ...devices["Galaxy S9+"],
+    });
+    const page = await context.newPage();
+
+    const requestUrls = [];
+    const pagefindStatuses = [];
+    const consoleErrors = [];
+    page.on("request", (request) => {
+      requestUrls.push(request.url());
+    });
+    page.on("response", (response) => {
+      if (response.url().includes("/pagefind/pagefind.js")) {
+        pagefindStatuses.push(response.status());
+      }
+    });
+    page.on("console", (message) => {
+      if (message.type() === "error") {
+        consoleErrors.push(message.text());
+      }
+    });
+
+    await page.goto(`${BASE_URL}/es/`, { waitUntil: "domcontentloaded" });
+    await ensureModalOpen(page);
+    const mobileState = await query(page, "g16");
+
+    expect(mobileState.meta.toLowerCase()).not.toContain("failed to load the search index");
+    expect(mobileState.meta.toLowerCase()).not.toContain("no se pudo cargar el índice de búsqueda");
+    expect(pagefindStatuses.some((status) => status >= 200 && status < 300)).toBeTruthy();
+    expect(requestUrls.some((url) => url.includes("/search/search_index.json"))).toBeFalsy();
+    expect(mobileState.links.every((href) => href.startsWith("/es/"))).toBeTruthy();
+    expect(consoleErrors).toEqual([]);
+
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "mobile-es-g16.png"), fullPage: false });
+    await context.close();
   });
 });

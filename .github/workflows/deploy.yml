@@ -5,8 +5,11 @@ on:
     paths:
       - docs/**
       - overrides/**
+      - Scripts/**
       - mkdocs.yml
       - mkdocs_hooks.py
+      - package.json
+      - package-lock.json
       - requirements.txt
       - .github/workflows/deploy.yml
   workflow_dispatch:
@@ -44,6 +47,8 @@ jobs:
       - run: python3 -m mkdocs build --strict
       - name: Build Pagefind index
         run: npx -y pagefind --site site
+      - name: Validate scope markers
+        run: python3 Scripts/check_search_scopes.py --site-dir site
       - name: Run Pagefind smoke checks
         run: node Scripts/check_pagefind_smoke.mjs --site site
       - name: Upload artifact
@@ -61,5 +66,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          cname: docs.trikdis.com

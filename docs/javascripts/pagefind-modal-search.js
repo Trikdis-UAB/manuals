@@ -154,10 +154,31 @@
     };
   }
 
-  function buildPagefindScriptUrl() {
+  function ensureTrailingSlash(value) {
+    if (!value) {
+      return value;
+    }
+    return value.endsWith("/") ? value : value + "/";
+  }
+
+  function buildPagefindScriptCandidates() {
     var base = getConfigBase();
-    var normalized = base.endsWith("/") ? base : base + "/";
-    return new URL(normalized + "pagefind/pagefind.js", window.location.href).toString();
+    var normalized = ensureTrailingSlash(base);
+    var primary = new URL(normalized + "pagefind/pagefind.js", window.location.href).toString();
+    var root = new URL("/pagefind/pagefind.js", window.location.origin).toString();
+    var cacheBypass = primary + (primary.indexOf("?") === -1 ? "?" : "&") + "v=" + Date.now();
+
+    var ordered = [primary, root, cacheBypass];
+    var unique = [];
+    var seen = new Set();
+    for (var index = 0; index < ordered.length; index += 1) {
+      var candidate = ordered[index];
+      if (!seen.has(candidate)) {
+        seen.add(candidate);
+        unique.push(candidate);
+      }
+    }
+    return unique;
   }
 
   function createState() {
@@ -281,19 +302,35 @@
     }
 
     state.pagefindPromise = Promise.resolve()
-      .then(function () {
-        return import(buildPagefindScriptUrl());
-      })
-      .then(function (moduleApi) {
-        var api = moduleApi && moduleApi.default ? moduleApi.default : moduleApi;
-        if (!api || typeof api.search !== "function") {
-          throw new Error("Pagefind module loaded but API is missing.");
+      .then(async function () {
+        var candidates = buildPagefindScriptCandidates();
+        var failures = [];
+
+        for (var idx = 0; idx < candidates.length; idx += 1) {
+          var scriptUrl = candidates[idx];
+          try {
+            var moduleApi = await import(scriptUrl);
+            var api = moduleApi && moduleApi.default ? moduleApi.default : moduleApi;
+            if (!api || typeof api.search !== "function") {
+              throw new Error("Pagefind module loaded but API is missing.");
+            }
+            if (typeof api.options === "function") {
+              var basePath = ensureTrailingSlash(new URL("./", scriptUrl).toString());
+              await Promise.resolve(api.options({ basePath: basePath }));
+            }
+            await Promise.resolve(api.init ? api.init() : undefined);
+            state.pagefindApi = api;
+            state.lastLoadError = null;
+            return api;
+          } catch (error) {
+            failures.push({
+              url: scriptUrl,
+              error: error && error.message ? error.message : String(error)
+            });
+          }
         }
-        return Promise.resolve(api.init ? api.init() : undefined).then(function () {
-          state.pagefindApi = api;
-          state.lastLoadError = null;
-          return api;
-        });
+
+        throw new Error("Pagefind init failed for all script candidates: " + JSON.stringify(failures));
       })
       .catch(function (error) {
         state.pagefindPromise = null;
