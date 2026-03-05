@@ -2,6 +2,7 @@ site_name: Installation Manuals
 site_url: https://docs.trikdis.com
 theme:
   name: material
+  custom_dir: overrides
   logo: images/logo.png
   favicon: images/favicon.png
   font: false
@@ -23,9 +24,6 @@ theme:
   - navigation.sections
   - navigation.top
   - content.code.copy
-  - search.share
-  - search.suggest
-  - search.highlight
 nav: []
 
 exclude_docs: |
@@ -54,7 +52,7 @@ extra:
     link: https://www.trikdis.com/support
   - icon: material/email-outline
     name: Contact Support
-    link: mailto:support@trikdis.com
+    link: mailto:support@trikdis.lt
 extra_css:
 - stylesheets/base.user.v2.css
 - stylesheets/numbered-headings.css
@@ -62,6 +60,7 @@ extra_javascript:
 - javascripts/redirect-trailing-slash.js
 - javascripts/close-language-select.js
 - javascripts/language-ui.js
+- javascripts/pagefind-modal-search.js
 - javascripts/header-home-button.js
 - javascripts/mobile-toc-default.js
 - javascripts/toc-active.js

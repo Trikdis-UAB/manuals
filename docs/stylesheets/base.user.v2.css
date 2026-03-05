@@ -914,3 +914,36 @@ body[data-md-color-scheme="slate"] .ipcom-steps li {
 body[data-md-color-scheme="slate"] .ipcom-steps li::before {
   color: var(--trik-text-muted);
 }
+
+.md-search-result__actions {
+  display: block;
+  padding: 0 0.8rem 0.65rem;
+}
+
+.md-search-result__fallback {
+  margin: 0;
+}
+
+.md-search-result__fallback-separator {
+  margin: 0.2rem 0 0.45rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.md-search-result__fallback-title {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-search-result__fallback-empty {
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--lighter);
+}
+
+body[data-md-color-scheme="slate"] .md-search-result__fallback-separator {
+  border-top-color: rgba(255, 255, 255, 0.14);
+}

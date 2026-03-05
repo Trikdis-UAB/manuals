@@ -4,7 +4,9 @@ on:
     branches: [ main ]
     paths:
       - docs/**
+      - overrides/**
       - mkdocs.yml
+      - mkdocs_hooks.py
       - requirements.txt
       - .github/workflows/deploy.yml
   workflow_dispatch:
@@ -26,6 +28,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - uses: actions/cache@v4
         with:
           path: ~/.cache/pip
@@ -37,6 +42,10 @@ jobs:
       - name: Generate homepage from nav
         run: python3 generate_homepage.py
       - run: python3 -m mkdocs build --strict
+      - name: Build Pagefind index
+        run: npx -y pagefind --site site
+      - name: Run Pagefind smoke checks
+        run: node Scripts/check_pagefind_smoke.mjs --site site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
