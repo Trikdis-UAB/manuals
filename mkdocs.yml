@@ -33,7 +33,7 @@ exclude_docs: |
   en/receivers/ipcom/ui/ha-cluster-backup.md
 
 extra:
-  search_synonyms_enabled: false
+  search_synonyms_enabled: true
   alternate:
   - name: English
     link: /en/

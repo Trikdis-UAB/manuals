@@ -137,8 +137,8 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
   - `lang`
   - `manual`
   - `subcategory`
-- Synonym expansion is feature-flagged in `mkdocs.yml` (`extra.search_synonyms_enabled`).
-- Optional runtime override for QA: append `?search_synonyms=1` (enable) or `?search_synonyms=0` (disable).
+- Synonym expansion is enabled by default in `mkdocs.yml` (`extra.search_synonyms_enabled: true`).
+- Optional runtime override for QA/debug: append `?search_synonyms=0` to disable for the current page.
 - Search fallback flow:
   1. Current manual scope
   2. If empty, immediately show whole-language results in the same modal section (with divider + title)
