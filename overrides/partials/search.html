@@ -1,7 +1,11 @@
 <!--
   Material search modal shell overridden for custom Pagefind-driven behavior.
 -->
-<div class="md-search" role="dialog">
+<div
+  class="md-search"
+  role="dialog"
+  data-search-synonyms-enabled="{{ 'true' if config.extra.search_synonyms_enabled else 'false' }}"
+>
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="manual-search">

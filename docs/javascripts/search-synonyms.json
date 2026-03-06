@@ -1,0 +1,715 @@
+{
+  "version": 1,
+  "languages": {
+    "en": {
+      "phrases": [
+        {
+          "id": "sms_control_phrase",
+          "match": [
+            "control with messages",
+            "control by messages",
+            "message control",
+            "control with texts",
+            "control via messages",
+            "control via text messages",
+            "control by text messages",
+            "control through sms",
+            "arm by sms",
+            "disarm by sms",
+            "sms command list",
+            "sms control commands"
+          ],
+          "expand": [
+            "sms control",
+            "control by sms",
+            "control with sms messages",
+            "control using sms commands",
+            "arm or disarm the security system with sms commands"
+          ]
+        },
+        {
+          "id": "cms_receiver_phrase",
+          "match": [
+            "monitoring station receiver",
+            "central station receiver",
+            "cms receiver",
+            "monitoring center receiver",
+            "alarm receiving center"
+          ],
+          "expand": [
+            "central monitoring station",
+            "cms"
+          ]
+        },
+        {
+          "id": "remote_configuration_phrase",
+          "match": [
+            "configure remotely",
+            "remote setup",
+            "remote config",
+            "remote programming",
+            "connect remotely",
+            "remote access setup"
+          ],
+          "expand": [
+            "remote configuration",
+            "trikdisconfig remote access"
+          ]
+        },
+        {
+          "id": "backup_sms_phrase",
+          "match": [
+            "sms backup channel",
+            "secondary sms channel",
+            "backup sms channel",
+            "fallback sms channel",
+            "backup channel for sms",
+            "backup channel not working"
+          ],
+          "expand": [
+            "backup channel 2",
+            "backup sms"
+          ]
+        },
+        {
+          "id": "ping_heartbeat_phrase",
+          "match": [
+            "sms heartbeat",
+            "heartbeat ping",
+            "keepalive ping",
+            "sms keepalive",
+            "ping timeout",
+            "connection lost ping"
+          ],
+          "expand": [
+            "sms ping period",
+            "ping period"
+          ]
+        },
+        {
+          "id": "object_id_phrase",
+          "match": [
+            "object id",
+            "cms account number",
+            "account number for cms",
+            "object number dc 09",
+            "object id in dc 09",
+            "primary object id",
+            "module id and object id"
+          ],
+          "expand": [
+            "object id",
+            "account number",
+            "object id in sia dc-09"
+          ]
+        },
+        {
+          "id": "cms_ack_phrase",
+          "match": [
+            "wait acknowledgement from cms",
+            "wait acknowledgment from cms",
+            "cms confirmation",
+            "ack from ip receiver",
+            "kiss off signal",
+            "no kiss off"
+          ],
+          "expand": [
+            "wait acknowledgment from cms",
+            "kiss off"
+          ]
+        },
+        {
+          "id": "cloud_enable_phrase",
+          "match": [
+            "enable cloud service",
+            "enable protegus cloud",
+            "allow cloud connection",
+            "connect to protegus service"
+          ],
+          "expand": [
+            "enable cloud service",
+            "protegus service"
+          ]
+        },
+        {
+          "id": "remote_access_id_phrase",
+          "match": [
+            "remote access unique id",
+            "remote access imei",
+            "remote access mac",
+            "enter unique id",
+            "enter imei unique id",
+            "unique id in remote access"
+          ],
+          "expand": [
+            "remote access",
+            "unique id",
+            "imei"
+          ]
+        },
+        {
+          "id": "sms_password_answer_phrase",
+          "match": [
+            "sms password",
+            "default sms password",
+            "change administrator sms password",
+            "sms answer texts",
+            "sms response texts"
+          ],
+          "expand": [
+            "sms password",
+            "sms answer texts"
+          ]
+        }
+      ],
+      "tokens": {
+        "messages": ["sms", "text"],
+        "message": ["sms", "text"],
+        "texts": ["sms", "text"],
+        "text": ["sms"],
+        "heartbeat": ["ping"],
+        "keepalive": ["ping"],
+        "smses": ["sms"],
+        "texting": ["sms"],
+        "imei": ["unique id"],
+        "mac": ["unique id"],
+        "kissoff": ["kiss off"]
+      },
+      "protected_terms": [
+        "ipcom",
+        "g16",
+        "g16t",
+        "gt",
+        "gt+",
+        "get",
+        "g17f",
+        "flexi",
+        "firecom",
+        "cg17",
+        "sp3",
+        "rl14",
+        "rm14",
+        "gm14",
+        "w485",
+        "e485",
+        "protegus",
+        "protegus2",
+        "trikdisconfig"
+      ]
+    },
+    "lt": {
+      "phrases": [
+        {
+          "id": "sms_valdymas",
+          "match": [
+            "valdymas zinutemis",
+            "valdymas žinutėmis",
+            "valdymas sms zinutemis",
+            "valdymas sms žinutėmis",
+            "valdymas sms komandomis",
+            "konfigūravimas sms žinutėmis",
+            "konfiguravimas sms zinutemis",
+            "sms komandų sąrašas",
+            "kaip valdyti per sms"
+          ],
+          "expand": ["valdymas sms komandomis", "sms valdymas"]
+        },
+        {
+          "id": "csp_phrase",
+          "match": [
+            "stebejimo pultas",
+            "stebėjimo pultas",
+            "centralizuoto stebejimo pultas",
+            "centralizuoto stebėjimo pultas",
+            "csp imtuvas"
+          ],
+          "expand": ["csp", "stebėjimo pultas"]
+        },
+        {
+          "id": "nuotolinis_konfiguravimas_phrase",
+          "match": [
+            "nuotolinis konfigūravimas",
+            "konfigūravimas nuotoliniu būdu",
+            "nuotoline konfiguracija",
+            "nuotoline prieiga",
+            "prisijungti nuotoliniu būdu"
+          ],
+          "expand": ["nuotoliniu būdu", "trikdisconfig"]
+        },
+        {
+          "id": "atsarginis_sms_kanalas_phrase",
+          "match": [
+            "atsarginis sms kanalas",
+            "antras atsarginis kanalas",
+            "atsarginio sms kanalo numeris",
+            "kanalas atsarginiam sms",
+            "atsarginio kanalo 2 numeris"
+          ],
+          "expand": ["atsarginio kanalo 2", "atsarginis sms kanalas"]
+        },
+        {
+          "id": "ping_periodas_phrase",
+          "match": [
+            "sms ping",
+            "rysio tikrinimo signalas",
+            "ryšio tikrinimo signalas",
+            "ping signalas",
+            "ryšio tikrinimo ping",
+            "ping periodas per ilgas"
+          ],
+          "expand": ["sms ping periodas", "ping periodas"]
+        },
+        {
+          "id": "objekto_numeris_phrase",
+          "match": [
+            "objekto numeris",
+            "objekto id",
+            "centrales objekto numeris",
+            "dc 09 obj nr",
+            "sia dc 09 obj nr",
+            "naudoti centrales obj nr",
+            "naudoti centrales obj nr"
+          ],
+          "expand": [
+            "objekto numeris",
+            "sia dc-09 obj. nr.",
+            "naudoti centralės obj. nr."
+          ]
+        },
+        {
+          "id": "patvirtinimas_csp_phrase",
+          "match": [
+            "laukti patvirtinimo is csp",
+            "laukti patvirtinimo iš csp",
+            "patvirtinimas is ip imtuvo",
+            "patvirtinimas iš ip imtuvo",
+            "kiss off signalas",
+            "rysio pabaigos signalas",
+            "ryšio pabaigos signalas"
+          ],
+          "expand": [
+            "laukti patvirtinimo iš csp",
+            "kiss-off"
+          ]
+        },
+        {
+          "id": "protegus_prisijungimas_phrase",
+          "match": [
+            "leisti prisijungti",
+            "protegus serviso ijungimas",
+            "protegus serviso įjungimas",
+            "igalinti prisijungima",
+            "įgalinti prisijungimą"
+          ],
+          "expand": [
+            "leisti prisijungti",
+            "protegus servisas"
+          ]
+        },
+        {
+          "id": "nuotoline_prieiga_id_phrase",
+          "match": [
+            "nuotoline prieiga unikalus id",
+            "nuotolinė prieiga unikalus id",
+            "nuotoline prieiga imei",
+            "nuotoline prieiga mac",
+            "ivesti unikalu id",
+            "įvesti unikalų id",
+            "imei unikalus id"
+          ],
+          "expand": [
+            "nuotolinė prieiga",
+            "unikalus id",
+            "imei"
+          ]
+        },
+        {
+          "id": "sms_slaptazodis_phrase",
+          "match": [
+            "sms slaptazodis",
+            "sms slaptažodis",
+            "keisti administratoriaus sms slaptazodi",
+            "keisti administratoriaus sms slaptažodį",
+            "sms atsakymo tekstai"
+          ],
+          "expand": [
+            "sms slaptažodis",
+            "sms atsakymo tekstai"
+          ]
+        }
+      ],
+      "tokens": {
+        "zinutes": ["sms"],
+        "zinutemis": ["sms"],
+        "žinutės": ["sms"],
+        "žinutėmis": ["sms"],
+        "ping": ["ryšio tikrinimo", "rysio tikrinimo"],
+        "tekstas": ["sms"],
+        "tekstu": ["sms"],
+        "imei": ["unikalus id"],
+        "mac": ["unikalus id"]
+      },
+      "protected_terms": [
+        "ipcom",
+        "g16",
+        "g16t",
+        "gt",
+        "gt+",
+        "get",
+        "g17f",
+        "flexi",
+        "firecom",
+        "cg17",
+        "sp3",
+        "rl14",
+        "rm14",
+        "gm14",
+        "w485",
+        "e485",
+        "protegus",
+        "protegus2",
+        "trikdisconfig",
+        "csp"
+      ]
+    },
+    "es": {
+      "phrases": [
+        {
+          "id": "control_sms",
+          "match": [
+            "control con mensajes",
+            "control por mensajes",
+            "control por mensajes de texto",
+            "control mediante mensajes",
+            "control con sms",
+            "armar por sms",
+            "desarmar por sms",
+            "lista de comandos sms"
+          ],
+          "expand": ["control por sms", "control sms", "control por sms comandos"]
+        },
+        {
+          "id": "cms_cra_phrase",
+          "match": [
+            "receptor cms",
+            "centro de monitoreo",
+            "estacion central",
+            "estación central",
+            "receptor cra",
+            "centro de recepcion de alarmas",
+            "centro de recepción de alarmas"
+          ],
+          "expand": ["cms", "cra"]
+        },
+        {
+          "id": "configuracion_remota_phrase",
+          "match": [
+            "configuracion remota",
+            "configuración remota",
+            "acceso remoto de configuracion",
+            "programar remotamente",
+            "conectar remotamente"
+          ],
+          "expand": ["configuración remota", "trikdisconfig"]
+        },
+        {
+          "id": "canal_respaldo_sms_phrase",
+          "match": [
+            "canal sms de respaldo",
+            "canal de reserva sms",
+            "respaldo sms",
+            "canal secundario sms",
+            "canal de respaldo 2 sms"
+          ],
+          "expand": ["canal de respaldo 2", "canal de respaldo"]
+        },
+        {
+          "id": "ping_heartbeats_phrase",
+          "match": [
+            "heartbeat sms",
+            "latido ping",
+            "ping de sms",
+            "keepalive sms",
+            "timeout de ping"
+          ],
+          "expand": ["sms ping período", "periodo de ping ip", "período de ping por ip"]
+        },
+        {
+          "id": "object_id_phrase_es",
+          "match": [
+            "object id",
+            "numero de objeto",
+            "número de objeto",
+            "numero de cuenta cms",
+            "object id en dc 09",
+            "object id en sia dc 09",
+            "primary object id"
+          ],
+          "expand": [
+            "object id",
+            "número de objeto",
+            "object id en sia dc-09"
+          ]
+        },
+        {
+          "id": "cra_ack_phrase_es",
+          "match": [
+            "esperar confirmacion de cra",
+            "esperar confirmación de cra",
+            "confirmacion del receptor ip",
+            "confirmación del receptor ip",
+            "senal kiss off",
+            "señal kiss off"
+          ],
+          "expand": [
+            "esperar confirmación de cra",
+            "kiss off"
+          ]
+        },
+        {
+          "id": "activar_conexion_phrase_es",
+          "match": [
+            "activar conexion",
+            "activar conexión",
+            "habilitar servicio protegus",
+            "habilitar nube protegus",
+            "permitir conexion protegus",
+            "permitir conexión protegus"
+          ],
+          "expand": [
+            "activar conexión",
+            "servicio protegus"
+          ]
+        },
+        {
+          "id": "acceso_remoto_id_phrase_es",
+          "match": [
+            "acceso remoto id unico",
+            "acceso remoto id único",
+            "imei id unico",
+            "imei id único",
+            "imei/id unico",
+            "direccion mac acceso remoto",
+            "dirección mac acceso remoto",
+            "introduzca id unico",
+            "introduzca id único"
+          ],
+          "expand": [
+            "acceso remoto",
+            "id único",
+            "imei"
+          ]
+        },
+        {
+          "id": "contrasena_sms_phrase_es",
+          "match": [
+            "contrasena sms",
+            "contraseña sms",
+            "cambiar contrasena sms de administrador",
+            "cambiar contraseña sms de administrador",
+            "textos de respuesta sms"
+          ],
+          "expand": [
+            "contraseña sms",
+            "textos de respuesta sms"
+          ]
+        }
+      ],
+      "tokens": {
+        "mensajes": ["sms"],
+        "mensaje": ["sms"],
+        "texto": ["sms"],
+        "textos": ["sms"],
+        "ping": ["latidos", "heartbeat"],
+        "imei": ["id único"],
+        "mac": ["id único"]
+      },
+      "protected_terms": [
+        "ipcom",
+        "g16",
+        "g16t",
+        "gt",
+        "gt+",
+        "get",
+        "g17f",
+        "flexi",
+        "firecom",
+        "cg17",
+        "sp3",
+        "rl14",
+        "rm14",
+        "gm14",
+        "w485",
+        "e485",
+        "protegus",
+        "protegus2",
+        "trikdisconfig",
+        "cms",
+        "cra"
+      ]
+    },
+    "ru": {
+      "phrases": [
+        {
+          "id": "sms_upravlenie",
+          "match": [
+            "управление сообщениями",
+            "управление по сообщениям",
+            "управление через текстовые сообщения",
+            "управление по смс командам",
+            "список sms команд",
+            "как управлять по sms"
+          ],
+          "expand": ["управление по sms", "управление sms командами"]
+        },
+        {
+          "id": "pcn_cms_phrase",
+          "match": [
+            "пульт централизованного наблюдения",
+            "приемник пцн",
+            "пульт наблюдения",
+            "центральная станция мониторинга",
+            "cms приемник"
+          ],
+          "expand": ["пцн", "cms"]
+        },
+        {
+          "id": "udalennaya_nastroika_phrase",
+          "match": [
+            "удаленная настройка",
+            "настройка удаленно",
+            "удаленная конфигурация",
+            "дистанционная настройка",
+            "подключиться удаленно"
+          ],
+          "expand": ["удаленная настройка", "trikdisconfig"]
+        },
+        {
+          "id": "rezerv_sms_kanal_phrase",
+          "match": [
+            "резервный sms канал",
+            "второй резервный sms",
+            "запасной sms канал",
+            "канал sms резерв",
+            "резервный канал 2 sms"
+          ],
+          "expand": ["резервный 2", "резервный канал"]
+        },
+        {
+          "id": "ping_heartbeat_phrase",
+          "match": [
+            "sms ping",
+            "пинг sms",
+            "heartbeat sms",
+            "сигнал ping",
+            "таймаут ping"
+          ],
+          "expand": ["sms период ping", "период ping"]
+        },
+        {
+          "id": "object_id_phrase_ru",
+          "match": [
+            "объектовый номер",
+            "номер объекта",
+            "object id",
+            "object id в sia dc 09",
+            "объектовый номер sia dc 09",
+            "использовать объектовый номер панели"
+          ],
+          "expand": [
+            "объектовый номер",
+            "объектовый номер sia dc-09"
+          ]
+        },
+        {
+          "id": "pcn_ack_phrase_ru",
+          "match": [
+            "ждать подтверждения от пцн",
+            "подтверждение от ip приемника",
+            "kiss off сигнал",
+            "сигнал kiss off",
+            "нет сигнала конца связи"
+          ],
+          "expand": [
+            "ждать подтверждения от пцн",
+            "kiss off"
+          ]
+        },
+        {
+          "id": "protegus_connect_phrase_ru",
+          "match": [
+            "разрешить подключиться",
+            "включить protegus сервис",
+            "включить облачный сервис",
+            "подключиться к protegus"
+          ],
+          "expand": [
+            "разрешить подключиться",
+            "protegus сервис"
+          ]
+        },
+        {
+          "id": "remote_access_id_phrase_ru",
+          "match": [
+            "удаленный доступ уникальный id",
+            "удаленный доступ imei",
+            "удаленный доступ mac",
+            "введите уникальный id",
+            "imei unique id"
+          ],
+          "expand": [
+            "удаленный доступ",
+            "уникальный id",
+            "imei"
+          ]
+        },
+        {
+          "id": "sms_password_phrase_ru",
+          "match": [
+            "sms пароль",
+            "пароль sms",
+            "изменить sms пароль администратора",
+            "тексты ответа sms"
+          ],
+          "expand": [
+            "sms пароль",
+            "тексты ответа sms"
+          ]
+        }
+      ],
+      "tokens": {
+        "сообщениями": ["sms"],
+        "сообщение": ["sms"],
+        "текст": ["sms"],
+        "текста": ["sms"],
+        "пинг": ["ping"],
+        "ping": ["heartbeat"],
+        "imei": ["уникальный id"],
+        "mac": ["уникальный id"]
+      },
+      "protected_terms": [
+        "ipcom",
+        "g16",
+        "g16t",
+        "gt",
+        "gt+",
+        "get",
+        "g17f",
+        "flexi",
+        "firecom",
+        "cg17",
+        "sp3",
+        "rl14",
+        "rm14",
+        "gm14",
+        "w485",
+        "e485",
+        "protegus",
+        "protegus2",
+        "trikdisconfig",
+        "пцн",
+        "cms"
+      ]
+    }
+  }
+}

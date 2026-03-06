@@ -35,17 +35,31 @@ async function readSearchState(page) {
     const meta = document.querySelector(".md-search-result__meta")?.textContent?.trim() || "";
     const fallbackTitle = document.querySelector(".md-search-result__fallback-title")?.textContent?.trim() || "";
     const fallbackEmpty = document.querySelector(".md-search-result__fallback-empty")?.textContent?.trim() || "";
+    const expandedHint = document.querySelector(".md-search-result__expanded-hint")?.textContent?.trim() || "";
+    const origins = Array.from(document.querySelectorAll(".md-search-result__origin"))
+      .map((node) => node.textContent?.trim() || "")
+      .filter((value) => value.length > 0);
     const firstTeaserHtml = document.querySelector(".md-search-result__teaser")?.innerHTML || "";
     const highlightCount = document.querySelectorAll(".md-search-result__teaser mark.md-search__term").length;
     const links = Array.from(document.querySelectorAll(".md-search-result__list a.md-search-result__link"))
       .map((link) => link.getAttribute("href"))
       .filter((href) => typeof href === "string" && href.length > 0);
-    return { meta, fallbackTitle, fallbackEmpty, firstTeaserHtml, highlightCount, links };
+    return {
+      meta,
+      fallbackTitle,
+      fallbackEmpty,
+      expandedHint,
+      origins,
+      uniqueOriginCount: new Set(origins).size,
+      firstTeaserHtml,
+      highlightCount,
+      links,
+    };
   });
 }
 
 function stateSignature(state) {
-  return `${state.meta}||${state.fallbackTitle}||${state.fallbackEmpty}||${state.links.join("||")}`;
+  return `${state.meta}||${state.fallbackTitle}||${state.fallbackEmpty}||${state.expandedHint}||${state.origins.join("||")}||${state.links.join("||")}`;
 }
 
 function isSettledState(state) {
@@ -132,9 +146,24 @@ test.describe("Pagefind modal scoped search", () => {
     expect(homeG16.links.length).toBeGreaterThan(0);
     expect(homeG16.links.every((href) => href.startsWith("/en/"))).toBeTruthy();
     expect(includesPath(homeG16.links, "/en/alarm-communicators/cellular/g16/")).toBeTruthy();
+    expect(homeG16.origins.length).toBe(homeG16.links.length);
+    expect(homeG16.origins[0]).toContain("Communicators");
+    expect(homeG16.origins[0]).toContain("G16");
     expect(homeG16.highlightCount).toBeGreaterThan(0);
     expect(homeG16.firstTeaserHtml.toLowerCase()).toContain("<mark");
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "home-g16-language-results.png"), fullPage: false });
+
+    const homeSmsCommands = await query(page, "sms command list");
+    expect(homeSmsCommands.links.length).toBeGreaterThan(0);
+    expect(homeSmsCommands.origins.length).toBe(homeSmsCommands.links.length);
+    expect(homeSmsCommands.uniqueOriginCount).toBeGreaterThan(1);
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "home-sms-origin-cross-manual.png"), fullPage: false });
+
+    const homeControlViaText = await query(page, "control via text messages");
+    expect(homeControlViaText.links.length).toBeGreaterThan(0);
+    expect(homeControlViaText.origins.length).toBe(homeControlViaText.links.length);
+    expect(homeControlViaText.uniqueOriginCount).toBeGreaterThan(1);
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "home-control-via-text-origin-cross-manual.png"), fullPage: false });
 
     const homeNone = await query(page, "qzvwyx123456789");
     expect(homeNone.meta).toContain("No matches in this page.");
@@ -147,6 +176,9 @@ test.describe("Pagefind modal scoped search", () => {
     const ipcom = await query(page, "sqlport");
     expect(ipcom.links.length).toBeGreaterThan(0);
     expect(ipcom.links.every((href) => href.startsWith("/en/receivers/ipcom/"))).toBeTruthy();
+    expect(ipcom.origins.length).toBe(ipcom.links.length);
+    expect(ipcom.origins[0]).toContain("Receivers");
+    expect(ipcom.origins[0]).toContain("IPcom");
     expect(ipcom.fallbackTitle).toBe("");
     const expectedTopResult = new URL(ipcom.links[0], BASE_URL).pathname;
     await page.locator(".md-search input[name='query']").press("Enter");
@@ -160,6 +192,7 @@ test.describe("Pagefind modal scoped search", () => {
     expect(sp3G16.links.length).toBeGreaterThan(0);
     expect(sp3G16.links.every((href) => href.startsWith("/en/"))).toBeTruthy();
     expect(includesPath(sp3G16.links, "/en/alarm-communicators/cellular/g16/")).toBeTruthy();
+    expect(sp3G16.origins.length).toBe(sp3G16.links.length);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "sp3-g16-language-results.png"), fullPage: false });
 
     await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/gt/`, { waitUntil: "domcontentloaded" });
@@ -172,6 +205,7 @@ test.describe("Pagefind modal scoped search", () => {
     const ltFlexi = await query(page, "FLEXi");
     expect(ltFlexi.links.length).toBeGreaterThan(0);
     expect(ltFlexi.links.every((href) => href.startsWith("/lt/"))).toBeTruthy();
+    expect(ltFlexi.origins.length).toBe(ltFlexi.links.length);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "lt-language-isolation.png"), fullPage: false });
 
     expect(requestUrls.some((url) => url.includes("/pagefind/pagefind.js"))).toBeTruthy();
@@ -221,19 +255,54 @@ test.describe("Pagefind modal scoped search", () => {
       }
     });
 
-    await page.goto(`${BASE_URL}/es/`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${BASE_URL}/es/?search_synonyms=1`, { waitUntil: "domcontentloaded" });
     await ensureModalOpen(page);
-    const mobileState = await query(page, "g16");
+    const mobileState = await query(page, "control con mensajes");
 
     expect(mobileState.meta.toLowerCase()).not.toContain("failed to load the search index");
     expect(mobileState.meta.toLowerCase()).not.toContain("no se pudo cargar el índice de búsqueda");
     expect(pagefindStatuses.some((status) => status >= 200 && status < 300)).toBeTruthy();
     expect(requestUrls.some((url) => url.includes("/search/search_index.json"))).toBeFalsy();
     expect(mobileState.links.every((href) => href.startsWith("/es/"))).toBeTruthy();
-    expect(mobileState.highlightCount).toBeGreaterThan(0);
+    expect(mobileState.origins.length).toBe(mobileState.links.length);
     expect(consoleErrors).toEqual([]);
 
-    await page.screenshot({ path: path.join(ARTIFACT_DIR, "mobile-es-g16.png"), fullPage: false });
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "mobile-es-synonyms.png"), fullPage: false });
     await context.close();
+  });
+
+  test("synonym expansion shows hint only when expansion contributes", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    await page.goto(`${BASE_URL}/en/?search_synonyms=0`, { waitUntil: "domcontentloaded" });
+    await ensureModalOpen(page);
+    const stableOff = await query(page, "sms command list");
+    expect(stableOff.links.length).toBeGreaterThan(0);
+
+    await page.goto(`${BASE_URL}/en/?search_synonyms=1`, { waitUntil: "domcontentloaded" });
+    await ensureModalOpen(page);
+    const stableOn = await query(page, "sms command list");
+    expect(stableOn.links.length).toBeGreaterThan(0);
+    expect(stableOn.links[0]).toBe(stableOff.links[0]);
+    expect(stableOn.origins.length).toBe(stableOn.links.length);
+    expect(stableOn.uniqueOriginCount).toBeGreaterThan(1);
+    expect(stableOn.expandedHint).toBe("");
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "synonyms-en-stable-exact-ranking.png"), fullPage: false });
+
+    await page.goto(`${BASE_URL}/en/receivers/ipcom/?search_synonyms=1`, { waitUntil: "domcontentloaded" });
+    await ensureModalOpen(page);
+
+    const paraphrase = await query(page, "control via text messages");
+    expect(paraphrase.links.length).toBeGreaterThan(0);
+    expect(paraphrase.links.every((href) => href.startsWith("/en/"))).toBeTruthy();
+    expect(paraphrase.expandedHint).toContain("Expanded with synonyms:");
+    expect(paraphrase.expandedHint).toMatch(/sms/i);
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "synonyms-en-paraphrase.png"), fullPage: false });
+
+    const exactOnly = await query(page, "sqlport");
+    expect(exactOnly.links.length).toBeGreaterThan(0);
+    expect(exactOnly.expandedHint).toBe("");
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "synonyms-en-exact-no-hint.png"), fullPage: false });
   });
 });

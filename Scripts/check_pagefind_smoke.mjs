@@ -340,6 +340,54 @@ async function run() {
       );
     }
 
+    const paraphraseManual = await searchPaths("control with messages", {
+      lang: "en",
+      manual: "/en/control-panels/sp3/",
+    });
+    const expandedLanguage = await searchPaths("sms control", { lang: "en" });
+    const expandedSpanish = await searchPaths("control por sms", { lang: "es" });
+    summary.synonymsSeed = {
+      paraphraseManual: paraphraseManual.length,
+      expandedLanguage: expandedLanguage.length,
+      expandedSpanish: expandedSpanish.length,
+    };
+    assertCondition(
+      paraphraseManual.every((p) => p.startsWith("/en/control-panels/sp3/")),
+      "Expected paraphrase manual results to stay in SP3 manual scope",
+      { paths: paraphraseManual.slice(0, 10) },
+      failures,
+    );
+    assertCondition(
+      expandedLanguage.length > 0,
+      "Expected synonym seed query 'sms control' to produce English language results",
+      { paths: expandedLanguage.slice(0, 10) },
+      failures,
+    );
+    assertCondition(
+      expandedLanguage.some((p) => p.startsWith("/en/control-panels/cg17/")),
+      "Expected 'sms control' language results to include CG17 manual",
+      { paths: expandedLanguage.slice(0, 20) },
+      failures,
+    );
+    assertCondition(
+      expandedLanguage.every((p) => p.startsWith("/en/")),
+      "Expected English synonym seed results to stay within /en/",
+      { paths: expandedLanguage.slice(0, 10) },
+      failures,
+    );
+    assertCondition(
+      expandedSpanish.length > 0,
+      "Expected Spanish synonym seed query 'control por sms' to produce results",
+      { paths: expandedSpanish.slice(0, 10) },
+      failures,
+    );
+    assertCondition(
+      expandedSpanish.every((p) => p.startsWith("/es/")),
+      "Expected Spanish synonym seed results to stay within /es/",
+      { paths: expandedSpanish.slice(0, 10) },
+      failures,
+    );
+
     if (typeof pagefind.destroy === "function") {
       await pagefind.destroy();
     }

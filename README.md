@@ -19,6 +19,7 @@ To verify the production-style search index locally:
 ```bash
 .venv/bin/mkdocs build --strict
 node Scripts/check_pagefind_smoke.mjs --site site
+node Scripts/check_query_expansion.mjs --site site
 python3 Scripts/check_search_scopes.py --site site
 ```
 `mkdocs_hooks.py` now auto-runs Pagefind at the end of each build/serve cycle and writes it to the active `site_dir` (including MkDocs temp dirs used by `mkdocs serve`). If you need to disable that behavior temporarily, use `MKDOCS_PAGEFIND_AUTOINDEX=0`.
@@ -131,13 +132,22 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
 ## Search Behavior
 - Search modal UI stays Material-based, but search execution is handled by Pagefind in `docs/javascripts/pagefind-modal-search.js`.
 - Pagefind indexing is triggered automatically in `mkdocs_hooks.py` (`on_post_build`) for both `mkdocs build` and `mkdocs serve`.
+- Synonym/query expansion dictionary is maintained in `docs/javascripts/search-synonyms.json`.
 - Runtime scopes are injected into each language page by `mkdocs_hooks.py`:
   - `lang`
   - `manual`
   - `subcategory`
+- Synonym expansion is feature-flagged in `mkdocs.yml` (`extra.search_synonyms_enabled`).
+- Optional runtime override for QA: append `?search_synonyms=1` (enable) or `?search_synonyms=0` (disable).
 - Search fallback flow:
   1. Current manual scope
   2. If empty, immediately show whole-language results in the same modal section (with divider + title)
+- Each result card includes an origin breadcrumb (for example `Communicators > Cellular > GT`) derived from scoped path metadata/URL.
+- Balanced expansion flow (when enabled):
+  1. Exact query first
+  2. Phrase synonym variants always run within the same scope
+  3. Token synonym variants run only when exact coverage is low (fewer than 3 unique result pages)
+  4. Expansion hint is shown only when synonym variants contributed to displayed results
 - The MkDocs `search` plugin remains enabled temporarily for theme compatibility; runtime search results are sourced from Pagefind.
 
 ## Troubleshooting
