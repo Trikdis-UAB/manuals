@@ -65,6 +65,7 @@ LANGUAGE_SWITCH_URLS = [
 ]
 LANGUAGE_CODES = ["en", "lt", "es", "ru"]
 COMMUNICATORS_TOGGLE_URL = "http://127.0.0.1:8001/en/alarm-communicators/cellular/gt/"
+COMMUNICATORS_TOGGLE_EDGE_URL = "http://127.0.0.1:8001/en/alarm-communicators/fire-panels/g17f/"
 MOBILE_HOME_NAV_RESET_URL = "http://127.0.0.1:8001/en/gate-controllers/gator/"
 RECEIVER_MANUAL_URL = "http://127.0.0.1:8001/en/receivers/ipcom/"
 RECEIVER_MANUAL_LINK_PATH = "receivers/ipcom/"
@@ -1318,6 +1319,39 @@ def assert_communicators_toggle(page, url: str, mobile: bool):
         .map((link) => link.textContent.trim())
       """
   )
+  az_hash_links = page.evaluate(
+      """
+      () => Array.from(document.querySelectorAll('.md-comm-list--az > .md-nav__item > a.md-nav__link'))
+        .map((link) => link.getAttribute('href') || '')
+        .filter((href) => href.includes('#'))
+      """
+  )
+  quick_setup_item = page.evaluate(
+      """
+      () => {
+        const firstItem = document.querySelector('.md-comm-list--az > .md-nav__item:first-child');
+        if (!firstItem) return null;
+        const label = firstItem.querySelector(':scope > label .md-ellipsis, :scope > a .md-ellipsis');
+        const links = Array.from(firstItem.querySelectorAll('a.md-nav__link'))
+          .map((link) => link.getAttribute('href') || '');
+        return {
+          label: label ? label.textContent.trim() : null,
+          hasQuickSetupLinks: links.some((href) => href.includes('/quick-setup/')),
+        };
+      }
+      """
+  )
+  if not quick_setup_item:
+    raise RuntimeError(f"[{url}] Missing pinned Quick setup item in A–Z list")
+  if quick_setup_item["label"] != "Quick setup":
+    raise RuntimeError(
+        f"[{url}] First A–Z item should be Quick setup, got {quick_setup_item['label']!r}"
+    )
+  if not quick_setup_item["hasQuickSetupLinks"]:
+    raise RuntimeError(f"[{url}] Quick setup item does not expose quick-setup links")
+  if az_hash_links:
+    raise RuntimeError(f"[{url}] A–Z list should not include page anchor links: {az_hash_links}")
+
   required = {"GT", "GT+", "GET", "E16", "G16"}
   missing = sorted(required.difference(set(az_items)))
   if missing:
@@ -1343,6 +1377,77 @@ def assert_communicators_toggle(page, url: str, mobile: bool):
       raise RuntimeError(f"[{url}] Communicators view did not persist: {persisted}")
 
   print(f"✅ Communicators toggle ok on {url} ({'mobile' if mobile else 'desktop'})")
+
+
+def assert_quick_setup_pinned_in_az(page, url: str):
+  page.goto(url, wait_until="networkidle")
+  open_communicators_subnav(page)
+
+  page.evaluate(
+      """
+      () => {
+        const button = document.querySelector('.md-comm-toggle__button[data-view="az"]');
+        if (button) {
+          button.scrollIntoView({ block: 'center', inline: 'nearest' });
+          button.click();
+        }
+      }
+      """
+  )
+  page.wait_for_function(
+      """
+      () => {
+        const nav = document.querySelector('nav.md-nav--primary');
+        if (!nav) return false;
+        const toggle = nav.querySelector('.md-comm-toggle');
+        if (!toggle) return false;
+        const subnav = toggle.closest('nav.md-nav');
+        return subnav && subnav.dataset.commView === 'az';
+      }
+      """,
+      timeout=2000,
+  )
+
+  quick_setup_state = page.evaluate(
+      """
+      () => {
+        const firstItem = document.querySelector('.md-comm-list--az > .md-nav__item:first-child');
+        if (!firstItem) return null;
+        const label = firstItem.querySelector(':scope > label .md-ellipsis, :scope > a .md-ellipsis');
+        const activeLink = firstItem.querySelector('a.md-nav__link[aria-current="page"], a.md-nav__link--active');
+        const toggle = firstItem.querySelector(':scope > input.md-nav__toggle');
+        const hashLinks = Array.from(firstItem.querySelectorAll('a.md-nav__link'))
+          .map((link) => link.getAttribute('href') || '')
+          .filter((href) => href.includes('#'));
+        const nestedLabels = Array.from(
+          firstItem.querySelectorAll(':scope > nav.md-nav > ul.md-nav__list > li.md-nav__item > label .md-ellipsis')
+        ).map((node) => node.textContent.trim());
+        return {
+          label: label ? label.textContent.trim() : null,
+          activeHref: activeLink ? activeLink.getAttribute('href') || '' : null,
+          expanded: toggle ? toggle.checked : null,
+          hashLinks,
+          nestedLabels,
+        };
+      }
+      """
+  )
+  if not quick_setup_state:
+    raise RuntimeError(f"[{url}] Missing pinned Quick setup item on quick-setup page")
+  if quick_setup_state["label"] != "Quick setup":
+    raise RuntimeError(
+        f"[{url}] First A–Z item should be Quick setup, got {quick_setup_state['label']!r}"
+    )
+  if not quick_setup_state["expanded"]:
+    raise RuntimeError(f"[{url}] Quick setup group is not expanded for the active quick-setup page")
+  if not quick_setup_state["activeHref"] or "/quick-setup/" not in quick_setup_state["activeHref"]:
+    raise RuntimeError(f"[{url}] Active quick-setup page is missing from the pinned A–Z group")
+  if quick_setup_state["hashLinks"]:
+    raise RuntimeError(f"[{url}] Quick setup group should not include page anchor links: {quick_setup_state['hashLinks']}")
+  if quick_setup_state["nestedLabels"]:
+    raise RuntimeError(f"[{url}] Quick setup group should not duplicate nested labels: {quick_setup_state['nestedLabels']}")
+
+  print(f"✅ Quick setup pinned in A–Z on {url}")
 
 
 def assert_cover_images(page, url: str):
@@ -1376,6 +1481,20 @@ def assert_receiver_link_on_home(page, home_url: str, link_path: str):
   print(f"✅ Receiver link ok on {home_url}")
 
 
+def clear_communicators_view(page):
+  page.evaluate(
+      """
+      () => {
+        try {
+          window.sessionStorage.removeItem('communicatorsView');
+        } catch (err) {
+          // Ignore storage access issues in smoke checks.
+        }
+      }
+      """
+  )
+
+
 def main():
   server = start_server()
   time.sleep(1.5)
@@ -1390,6 +1509,8 @@ def main():
       for url in MOBILE_LAYOUT_URLS:
         assert_mobile_sidebar_layout(page, url)
       assert_communicators_toggle(page, COMMUNICATORS_TOGGLE_URL, mobile=True)
+      clear_communicators_view(page)
+      assert_communicators_toggle(page, COMMUNICATORS_TOGGLE_EDGE_URL, mobile=True)
       for url in HOME_URLS:
         assert_mobile_home_button(page, url, "en")
       assert_mobile_home_nav_reset(page, MOBILE_HOME_NAV_RESET_URL, "en")
@@ -1424,6 +1545,9 @@ def main():
       for url, lang in DESKTOP_URLS:
         assert_desktop_styles(desktop, url, lang)
       assert_communicators_toggle(desktop, COMMUNICATORS_TOGGLE_URL, mobile=False)
+      clear_communicators_view(desktop)
+      assert_communicators_toggle(desktop, COMMUNICATORS_TOGGLE_EDGE_URL, mobile=False)
+      assert_quick_setup_pinned_in_az(desktop, PARADOX_URL)
       assert_paradox_tip(desktop, PARADOX_URL)
       for url in COVER_IMAGE_URLS:
         assert_cover_images(desktop, url)
