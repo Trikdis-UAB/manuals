@@ -983,3 +983,19 @@ body[data-md-color-scheme="slate"] .md-search-result__expanded-hint {
 body[data-md-color-scheme="slate"] .md-search-result__origin {
   color: rgba(255, 255, 255, 0.78);
 }
+
+.trik-pdf-download {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1.2rem;
+}
+
+.trik-pdf-download__link.md-button {
+  margin: 0;
+}
+
+@media print {
+  .trik-pdf-download {
+    display: none !important;
+  }
+}

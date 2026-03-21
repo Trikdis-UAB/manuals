@@ -1,6 +1,6 @@
 # TRIKDIS Documentation
 
-This repository hosts the TRIKDIS product documentation and manuals, built with MkDocs Material and published to GitHub Pages at https://docs.trikdis.com.
+This repository hosts the TRIKDIS product documentation and manuals, built with MkDocs Material and published to Netlify at https://docs.trikdis.com.
 
 ## Critical Configuration
 - Keep GitHub-style alerts enabled: `markdown_callouts` in `mkdocs.yml` and `markdown-callouts>=0.3.0` in `requirements.txt` (see `GITHUB_ALERTS_CONFIG.md`).
@@ -27,6 +27,15 @@ python3 Scripts/check_search_scopes.py --site site
 For CI parity or manual reindexing, you can still run:
 ```bash
 npx -y pagefind --site site
+```
+
+For a production-equivalent local build, including generated manual PDFs:
+```bash
+TRIKDOCS_INSTALL_DEPS=1 CONTEXT=production Scripts/build_docs.sh
+```
+After the first dependency install, faster reruns can use:
+```bash
+CONTEXT=production Scripts/build_docs.sh
 ```
 
 For browser-level modal behavior checks (manual scope + immediate language fallback UI and no Lunr runtime request), run:
@@ -88,12 +97,17 @@ lsof -nP -i tcp:8892
 With this sequence the old process is removed instantly and the new server starts within a second or two. Logs stream to `/tmp/mkdocs-serve.log` for inspection.
 
 ## Publishing Pipeline
-Publishing is fully automated via GitHub Pages:
-1. Push or merge into `main`.
-2. The workflow `.github/workflows/deploy.yml` checks out the repo, installs MkDocs + MkDocs Material, runs `mkdocs build --strict` (output in `site/`), then builds the Pagefind index (`npx -y pagefind --site site`).
-3. The built static site is uploaded as an artifact and deployed with `actions/deploy-pages@v4` to the `gh-pages` branch. GitHub Pages serves the result at `https://docs.trikdis.com`.
+Production publishing is handled by Netlify:
+1. Push or merge into the production branch connected to Netlify.
+2. Netlify runs `Scripts/build_docs.sh` with production context.
+3. The build script generates `site/`, runs Pagefind once, generates sibling `manual.pdf` files for eligible Markdown manuals, validates the outputs, and publishes the static site.
 
-The deploy workflow also publishes a `CNAME` so the custom domain stays pinned to `docs.trikdis.com`. No manual intervention is needed after a push—wait for the Pages deployment badge to turn green.
+`netlify.toml` is the source of truth for deploy context defaults:
+- production builds enable `TRIKDOCS_PDF_DOWNLOADS=1`
+- preview/dev builds keep `TRIKDOCS_PDF_DOWNLOADS=0`
+- all Netlify builds disable MkDocs' automatic Pagefind hook and run Pagefind explicitly once inside `Scripts/build_docs.sh`
+
+The existing GitHub Actions workflow at `.github/workflows/deploy.yml` is kept as a manual fallback during cutover and no longer auto-deploys on push.
 
 ## Automatic Navigation & Homepage
 Both the navigation (`mkdocs.yml`) and homepage (`docs/index.md`) are automatically generated from the `docs/` directory structure.
@@ -110,7 +124,7 @@ python3 update_navigation.py    # Scan docs/ and update mkdocs.yml
 python3 generate_homepage.py    # Generate homepage from nav
 ```
 ### Automatic Updates
-During GitHub Actions deployment:
+During deployment builds:
 1. Navigation is auto-updated from `docs/` structure
 2. Homepage is auto-generated from navigation
 3. Site is built and deployed
@@ -150,9 +164,18 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
   4. Expansion hint is shown only when synonym variants contributed to displayed results
 - The MkDocs `search` plugin remains enabled temporarily for theme compatibility; runtime search results are sourced from Pagefind.
 
+Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTOINDEX=0` and run `pagefind` explicitly once in `Scripts/build_docs.sh`, after `mkdocs build` and before PDF generation.
+
+## Manual PDF Downloads
+- Production builds emit `site/pdf-manifest.json` with `src_path`, `url`, and site-relative `output` for each eligible Markdown manual page.
+- Eligible pages get a language-aware “Download PDF” button injected at the top of the article body. The button links to sibling `manual.pdf`.
+- PDF generation is handled by `Scripts/export_manual_pdfs.mjs`, which uses Playwright to render the built site in light-mode print media and injects `Scripts/pdf-export.css` during export only.
+- Any rendered `*/receivers/ipcom/**` route is excluded from v1 PDF generation.
+
 ## Troubleshooting
 - **Images missing**: ensure links look like `![](./image3.png)`; the conversion pipeline adds this automatically. MkDocs copies the files from `docs/manual/` into the published `manual/` folder.
-- **New manual not visible**: verify it is referenced in `mkdocs.yml` and that the Pages workflow succeeded.
+- **New manual not visible**: verify it is referenced in `mkdocs.yml` and that the Netlify deploy succeeded.
 - **Local build errors**: run `pipx run --spec mkdocs-material mkdocs build` to get strict error messages before pushing.
+- **Manual PDF missing**: run `CONTEXT=production Scripts/build_docs.sh` and inspect `site/pdf-manifest.json`, `Scripts/check_manual_pdfs.py`, and `Scripts/check_manual_pdf_ui.spec.cjs` failures.
 
-With this setup, any future manual update is simply a conversion + commit + push cycle. The GitHub Actions workflow handles building and deploying the site automatically.
+With this setup, any future manual update is simply a conversion + commit + push cycle. Netlify handles the production build and deploy automatically, while the fallback GitHub Pages workflow remains manual-only during cutover.

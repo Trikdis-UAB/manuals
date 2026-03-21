@@ -1,17 +1,5 @@
-name: Deploy docs
+name: Fallback GitHub Pages deploy
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - docs/**
-      - overrides/**
-      - Scripts/**
-      - mkdocs.yml
-      - mkdocs_hooks.py
-      - package.json
-      - package-lock.json
-      - requirements.txt
-      - .github/workflows/deploy.yml
   workflow_dispatch:
 
 permissions:
@@ -39,18 +27,11 @@ jobs:
           path: ~/.cache/pip
           key: pip-${{ hashFiles('requirements.txt') }}
           restore-keys: pip-
-      - run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Generate homepage from nav
-        run: python3 generate_homepage.py
-      - run: python3 -m mkdocs build --strict
-      - name: Build Pagefind index
-        run: npx -y pagefind --site site
-      - name: Validate scope markers
-        run: python3 Scripts/check_search_scopes.py --site-dir site
-      - name: Run Pagefind smoke checks
-        run: node Scripts/check_pagefind_smoke.mjs --site site
+      - name: Build site
+        env:
+          CONTEXT: production
+          TRIKDOCS_INSTALL_DEPS: "1"
+        run: Scripts/build_docs.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

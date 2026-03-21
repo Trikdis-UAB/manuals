@@ -5,6 +5,7 @@ MkDocs hooks to normalize GitHub-style callouts for markdown-callouts.
 from __future__ import annotations
 
 import html
+import json
 import logging
 import os
 import re
@@ -12,7 +13,7 @@ import shutil
 import subprocess
 from collections import defaultdict
 from pathlib import Path, PurePosixPath
-from typing import Dict, Iterable, Optional, Set, Tuple
+from typing import Dict, Iterable, List, Optional, Set, Tuple
 from urllib.parse import quote
 
 from mkdocs import plugins as mkdocs_plugins
@@ -20,7 +21,16 @@ from mkdocs_add_number_plugin.plugin import AddNumberPlugin
 
 CALLOUT_RE = re.compile(r"^(?P<indent>\s*)>\s*\[!(?P<kind>[A-Z]+)\]\s*(?P<rest>.*)$")
 NUMBERED_H2_RE = re.compile(r"^##\s+\d+\.")
-LOGGER = logging.getLogger("mkdocs.hooks.pagefind")
+LOGGER = logging.getLogger("mkdocs.hooks.manuals")
+PDF_DOWNLOAD_ENABLED_VALUES = {"1", "true", "yes", "on"}
+PDF_DOWNLOAD_LABELS = {
+    "en": "Download PDF",
+    "lt": "Atsisiųsti PDF",
+    "es": "Descargar PDF",
+    "ru": "Скачать PDF",
+}
+_PDF_MANIFEST_ENTRIES: List[Dict[str, str]] = []
+_PDF_MANIFEST_KEYS: Set[Tuple[str, str]] = set()
 
 
 class SearchScopeResolver:
@@ -173,6 +183,14 @@ class SearchScopeResolver:
 _SCOPE_RESOLVER = SearchScopeResolver()
 
 
+def _language_locales(config) -> List[str]:
+    return [
+        alt.get("lang")
+        for alt in (config.get("extra", {}) or {}).get("alternate", [])
+        if alt.get("lang")
+    ]
+
+
 def _should_number_headings(page, markdown: str, config) -> bool:
     if not page or not getattr(page, "file", None):
         return False
@@ -181,11 +199,7 @@ def _should_number_headings(page, markdown: str, config) -> bool:
     if src_path == "index.md":
         return False
 
-    locales = [
-        alt.get("lang")
-        for alt in (config.get("extra", {}) or {}).get("alternate", [])
-        if alt.get("lang")
-    ]
+    locales = _language_locales(config)
     if any(src_path == f"{locale}/index.md" for locale in locales):
         return False
 
@@ -232,6 +246,15 @@ def on_page_markdown(markdown: str, page, config, files):
     return markdown
 
 
+def on_pre_build(config):
+    i18n_plugin = config.plugins.get("i18n")
+    if i18n_plugin and getattr(i18n_plugin, "building", False):
+        return
+
+    _PDF_MANIFEST_ENTRIES.clear()
+    _PDF_MANIFEST_KEYS.clear()
+
+
 def _build_scope_marker(scopes: Dict[str, str]) -> str:
     filter_value = (
         "lang[data-language-scope],"
@@ -253,15 +276,94 @@ def _build_scope_marker(scopes: Dict[str, str]) -> str:
     return f"<div {serialized}></div>"
 
 
+def _pdf_downloads_enabled() -> bool:
+    return os.environ.get("TRIKDOCS_PDF_DOWNLOADS", "0").strip().lower() in PDF_DOWNLOAD_ENABLED_VALUES
+
+
+def _page_route(page) -> str:
+    route = (getattr(page, "url", "") or "").strip("/")
+    return "/" if not route else f"/{route}/"
+
+
+def _is_language_landing_page(src_path: str, config) -> bool:
+    return src_path in {f"{locale}/index.md" for locale in _language_locales(config)}
+
+
+def _is_pdf_eligible(page, config) -> bool:
+    if not _pdf_downloads_enabled() or not page or not getattr(page, "file", None):
+        return False
+
+    src_path = page.file.src_path
+    if src_path == "index.md" or _is_language_landing_page(src_path, config):
+        return False
+
+    route = _page_route(page)
+    if not any(route.startswith(f"/{locale}/") for locale in _language_locales(config)):
+        return False
+
+    return "/receivers/ipcom/" not in route
+
+
+def _pdf_label(page) -> str:
+    src_path = getattr(getattr(page, "file", None), "src_path", "")
+    language = src_path.split("/", 1)[0] if "/" in src_path else "en"
+    return PDF_DOWNLOAD_LABELS.get(language, PDF_DOWNLOAD_LABELS["en"])
+
+
+def _build_pdf_download_action(page) -> str:
+    label = html.escape(_pdf_label(page))
+    return (
+        '<div class="trik-pdf-download" data-manual-pdf-download>'
+        f'<a class="md-button md-button--primary trik-pdf-download__link" href="manual.pdf" download>{label}</a>'
+        "</div>"
+    )
+
+
+def _build_pdf_manifest_entry(page) -> Dict[str, str]:
+    dest_path = PurePosixPath(page.file.dest_path)
+    return {
+        "src_path": page.file.src_path,
+        "url": _page_route(page),
+        "output": dest_path.parent.joinpath("manual.pdf").as_posix(),
+    }
+
+
+def _register_pdf_manifest_entry(page):
+    entry = _build_pdf_manifest_entry(page)
+    key = (entry["src_path"], entry["url"])
+    if key in _PDF_MANIFEST_KEYS:
+        return
+
+    _PDF_MANIFEST_KEYS.add(key)
+    _PDF_MANIFEST_ENTRIES.append(entry)
+
+
+def _write_pdf_manifest(config):
+    if not _pdf_downloads_enabled():
+        return
+
+    site_dir = Path(config.get("site_dir", "site"))
+    if not site_dir.exists():
+        LOGGER.warning("Skipping PDF manifest write: site directory does not exist: %s", site_dir)
+        return
+
+    manifest_path = site_dir / "pdf-manifest.json"
+    manifest_entries = sorted(_PDF_MANIFEST_ENTRIES, key=lambda entry: (entry["url"], entry["src_path"]))
+    manifest_path.write_text(f"{json.dumps(manifest_entries, indent=2, ensure_ascii=False)}\n", encoding="utf-8")
+    LOGGER.info("Wrote PDF manifest with %s entries to '%s'.", len(manifest_entries), manifest_path)
+
+
 def on_page_content(html_content: str, page, config, files):
     scopes = _SCOPE_RESOLVER.get_scopes(page, config)
-    if not scopes:
-        return html_content
+    if scopes and "pagefind-scope-marker" not in html_content:
+        html_content += _build_scope_marker(scopes)
 
-    if "pagefind-scope-marker" in html_content:
-        return html_content
+    if _is_pdf_eligible(page, config):
+        _register_pdf_manifest_entry(page)
+        if "data-manual-pdf-download" not in html_content:
+            html_content = _build_pdf_download_action(page) + html_content
 
-    return html_content + _build_scope_marker(scopes)
+    return html_content
 
 
 def _run_pagefind_index(site_dir: Path) -> bool:
@@ -291,6 +393,8 @@ def on_post_build(config):
     i18n_plugin = config.plugins.get("i18n")
     if i18n_plugin and getattr(i18n_plugin, "building", False):
         return
+
+    _write_pdf_manifest(config)
 
     if os.environ.get("MKDOCS_PAGEFIND_AUTOINDEX", "1").strip() in {"0", "false", "False"}:
         LOGGER.info("Skipping Pagefind indexing: MKDOCS_PAGEFIND_AUTOINDEX disabled.")

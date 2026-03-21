@@ -1,0 +1,21 @@
+[build]
+command = "Scripts/build_docs.sh"
+publish = "site"
+
+[build.environment]
+MKDOCS_PAGEFIND_AUTOINDEX = "0"
+NODE_VERSION = "20"
+PYTHON_VERSION = "3.11"
+TRIKDOCS_INSTALL_DEPS = "1"
+
+[context.production.environment]
+TRIKDOCS_PDF_DOWNLOADS = "1"
+
+[context.deploy-preview.environment]
+TRIKDOCS_PDF_DOWNLOADS = "0"
+
+[context.branch-deploy.environment]
+TRIKDOCS_PDF_DOWNLOADS = "0"
+
+[context.dev.environment]
+TRIKDOCS_PDF_DOWNLOADS = "0"

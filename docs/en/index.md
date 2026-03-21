@@ -27,10 +27,6 @@ class: language-home
 - Use Search to jump straight to a model or keyword.
 - Switch language from the header.
 
-### Receivers
-
-- [IPCom (v.5) Control web](receivers/ipcom/index.md)
-
 ### What's new / Did you know
 
 - Quick installation via the app - enroll and set up devices in minutes using the mobile app (QR-based onboarding).

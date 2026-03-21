@@ -6,6 +6,9 @@ Icon?
 artifacts/ui/
 artifacts/
 .mkdocs-serve.log
+node_modules/
+test-results/
+tmp_*.png
 
 # IPcom5 Control Web UI pipeline
 artifacts/ui/ipcom5control-web/

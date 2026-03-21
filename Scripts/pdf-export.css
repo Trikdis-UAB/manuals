@@ -1,0 +1,84 @@
+@page {
+  size: A4;
+  margin: 12mm 10mm;
+}
+
+html,
+body {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-header,
+.md-sidebar,
+.md-footer,
+.md-top,
+.md-search,
+.md-dialog,
+.md-overlay,
+.md-toggle,
+.md-skip,
+[data-md-component="announce"],
+[data-md-component="skip"],
+.pagefind-scope-marker,
+.headerlink,
+.trik-pdf-download {
+  display: none !important;
+}
+
+.md-container,
+.md-main,
+.md-main__inner,
+.md-content,
+.md-content__inner,
+.md-grid,
+.md-typeset {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+.md-content {
+  width: 100% !important;
+}
+
+.md-content__inner {
+  box-shadow: none !important;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+
+.md-typeset h1 {
+  margin-top: 0 !important;
+}
+
+.md-typeset img,
+.md-typeset svg,
+.md-typeset table,
+.md-typeset pre,
+.md-typeset blockquote,
+.md-typeset figure {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  max-width: 100% !important;
+}
+
+.md-typeset table:not([class]) {
+  display: table !important;
+  width: 100%;
+}
+
+.md-typeset a {
+  color: inherit !important;
+}
