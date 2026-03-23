@@ -1,4 +1,4 @@
-# GSM коммуникатор G17F
+# LTE коммуникатор G17F для панелей пожарной сигнализации
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

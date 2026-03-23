@@ -1,4 +1,4 @@
-# Priešgaisrinės centralės GSM komunikatorius G17F
+# Priešgaisrinių centralių LTE komunikatorius G17F
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

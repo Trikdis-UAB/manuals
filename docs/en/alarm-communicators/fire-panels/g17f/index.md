@@ -1,4 +1,4 @@
-# GSM communicator for fire alarm control panel G17F
+# LTE communicator for fire alarm control panels G17F
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

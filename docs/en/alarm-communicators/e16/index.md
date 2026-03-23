@@ -837,8 +837,6 @@ The communicator’s firmware can also be updated or changed manually. After an 
 
 3.  Wait for the update to complete.
 
-## „Ethernet“ communicator E16
-
 ## Safety requirements
 
 The communicator should be installed and maintained by qualified personnel.

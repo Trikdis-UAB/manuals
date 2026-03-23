@@ -1,4 +1,4 @@
-# Comunicador Celular G17F
+# Comunicador LTE G17F para paneles de alarma contra incendios
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

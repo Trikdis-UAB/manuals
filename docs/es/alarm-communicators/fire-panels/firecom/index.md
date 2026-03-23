@@ -1,4 +1,4 @@
-# FIRECOM para centrales de alarma contra incendios Comunicador
+# Comunicador FIRECOM para paneles de alarma contra incendios
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

@@ -1,4 +1,4 @@
-# Priešgaisrinės centralės komunikatorius FIRECOM
+# Priešgaisrinių centralių komunikatorius FIRECOM
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

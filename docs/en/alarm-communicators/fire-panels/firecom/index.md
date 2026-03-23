@@ -1,4 +1,4 @@
-# Communicator FIRECOM for fire alarm control panel
+# Communicator FIRECOM for fire alarm control panels
 
 <div style="text-align: center;">
 

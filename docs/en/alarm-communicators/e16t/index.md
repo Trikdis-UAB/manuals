@@ -635,8 +635,6 @@ E16T firmware can also be updated or changed manually. After an update, all prev
 
 4.  Wait for the update to complete.
 
-## „Ethernet“ communicator E16T
-
 ## Safety requirements 
 
 The Ethernet communicator should be installed and maintained by qualified personnel.
