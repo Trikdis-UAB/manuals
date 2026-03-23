@@ -40,6 +40,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", required=True, help="Output PDF path.")
     parser.add_argument("--title", required=True, help="Manual title shown in the running header.")
     parser.add_argument("--logo", required=True, help="Path to the white TRIKDIS wordmark PNG.")
+    parser.add_argument("--cover-logo", required=True, help="Path to the full-color TRIKDIS logo for page 1.")
     parser.add_argument("--mark", required=True, help="Path to the red TRIKDIS mark PNG.")
     parser.add_argument("--font-regular", required=True, help="Path to the regular Unicode font.")
     parser.add_argument("--font-bold", required=True, help="Path to the bold Unicode font.")
@@ -171,25 +172,26 @@ def render_footer_strip(
     return image, strip_height, link_annotations
 
 
-def render_first_page_corner_brand(*, width: float, logo_path: Path) -> tuple[Image.Image, float]:
+def render_first_page_corner_brand(*, width: float, cover_logo_path: Path) -> tuple[Image.Image, float]:
     strip_height = mm(18)
     image = Image.new("RGB", (points_to_px(width), points_to_px(strip_height)), "white")
     right = points_to_px(width - mm(10))
-
-    tag_height = mm_to_px(6.6)
-    tag_width = mm_to_px(27.5)
-    tag_x = right - tag_width
-    tag_y = mm_to_px(3.8)
-
-    draw = ImageDraw.Draw(image)
-    draw.rounded_rectangle((tag_x, tag_y, tag_x + tag_width, tag_y + tag_height), radius=mm_to_px(0.9), fill=(203, 34, 21))
+    top = mm_to_px(4.25)
+    target_height = mm_to_px(5.8)
+    max_width = mm_to_px(26.0)
+    cover_source = Image.open(cover_logo_path)
+    target_width = round(target_height * (cover_source.width / cover_source.height))
+    if target_width > max_width:
+        scale = max_width / target_width
+        target_width = round(target_width * scale)
+        target_height = round(target_height * scale)
 
     logo = load_rgba_image(
-        logo_path,
-        target_width_px=tag_width - mm_to_px(3.2),
-        target_height_px=tag_height - mm_to_px(2.1),
+        cover_logo_path,
+        target_width_px=target_width,
+        target_height_px=target_height,
     )
-    image.paste(logo, (tag_x + mm_to_px(1.6), tag_y + mm_to_px(1.05)), logo)
+    image.paste(logo, (right - target_width - mm_to_px(0.7), top), logo)
     return image, strip_height
 
 
@@ -279,6 +281,7 @@ def main() -> int:
     input_path = Path(args.input).resolve()
     output_path = Path(args.output).resolve()
     logo_path = Path(args.logo).resolve()
+    cover_logo_path = Path(args.cover_logo).resolve()
     mark_path = Path(args.mark).resolve()
     font_regular_path = Path(args.font_regular).resolve()
     font_bold_path = Path(args.font_bold).resolve()
@@ -286,6 +289,7 @@ def main() -> int:
     for required_path, label in (
         (input_path, "Input PDF"),
         (logo_path, "Logo image"),
+        (cover_logo_path, "Cover logo image"),
         (mark_path, "Mark image"),
         (font_regular_path, "Regular font"),
         (font_bold_path, "Bold font"),
@@ -316,7 +320,7 @@ def main() -> int:
             if index == 0:
                 header_image, header_height = render_first_page_corner_brand(
                     width=width,
-                    logo_path=logo_path,
+                    cover_logo_path=cover_logo_path,
                 )
             elif (index + 1) >= args.show_header_from:
                 header_image, header_height = render_header_strip(

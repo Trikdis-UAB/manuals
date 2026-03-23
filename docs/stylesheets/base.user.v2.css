@@ -990,13 +990,71 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   margin: 0 0 1.2rem;
 }
 
-.trik-pdf-download__link.md-button {
+.trik-pdf-download__link.md-button,
+.trik-pdf-download__link.md-button:visited {
   margin: 0;
   min-width: 0;
   padding: 0.5rem 0.95rem;
   font-size: 0.68rem;
   line-height: 1.2;
   letter-spacing: 0.01em;
+  color: #fff;
+  background-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+}
+
+.trik-pdf-download__link.md-button:hover,
+.trik-pdf-download__link.md-button:focus,
+.trik-pdf-download__link.md-button:focus-visible {
+  color: #fff;
+  background-color: var(--md-primary-fg-color--light);
+  border-color: var(--md-primary-fg-color--light);
+}
+
+.trik-pdf-download__link.md-button:active {
+  color: #fff;
+  background-color: var(--md-primary-fg-color--dark);
+  border-color: var(--md-primary-fg-color--dark);
+}
+
+html,
+body,
+.md-sidebar__scrollwrap,
+.md-search__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-primary-fg-color) rgba(203, 34, 21, 0.12);
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.md-sidebar__scrollwrap::-webkit-scrollbar,
+.md-search__scrollwrap::-webkit-scrollbar {
+  width: 0.72rem;
+  height: 0.72rem;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+.md-sidebar__scrollwrap::-webkit-scrollbar-track,
+.md-search__scrollwrap::-webkit-scrollbar-track {
+  background: rgba(203, 34, 21, 0.12);
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+.md-search__scrollwrap::-webkit-scrollbar-thumb {
+  background: var(--md-primary-fg-color);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+.md-search__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: var(--md-primary-fg-color--light);
 }
 
 @media print {

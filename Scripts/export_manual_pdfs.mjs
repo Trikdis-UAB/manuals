@@ -362,6 +362,8 @@ async function exportEntry(browser, baseUrl, siteDir, stylePath, stampScriptPath
       titleText,
       "--logo",
       path.resolve("docs/images/logo.png"),
+      "--cover-logo",
+      path.resolve("docs/images/logo-full-color-light-bg.png"),
       "--mark",
       path.resolve("docs/images/favicon.png"),
       "--font-regular",
