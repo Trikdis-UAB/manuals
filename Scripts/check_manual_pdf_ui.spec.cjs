@@ -30,10 +30,11 @@ test.describe("Manual PDF downloads", () => {
       await expect(action).toBeVisible();
       const link = action.locator("a");
       await expect(link).toBeVisible();
-      await expect(link).toHaveAttribute("href", /manual\.pdf$/);
+      await expect(link).toHaveAttribute("href", /\.pdf$/);
+      await expect(link).toHaveAttribute("download", /^TRIKDIS .+\.pdf$/);
       const pdfUrl = await link.getAttribute("href");
       expect(pdfUrl).toBeTruthy();
-      const response = await request.get(pdfUrl);
+      const response = await request.get(new URL(pdfUrl, page.url()).toString());
       expect(response.ok()).toBeTruthy();
       const pdfBytes = await response.body();
       expect(pdfBytes.subarray(0, 4).toString()).toBe("%PDF");

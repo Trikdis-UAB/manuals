@@ -1,6 +1,5 @@
 @page {
   size: A4;
-  margin: 12mm 10mm;
 }
 
 html,
@@ -59,8 +58,36 @@ body {
   page-break-after: avoid;
 }
 
+.md-typeset h2 + *,
+.md-typeset h3 + *,
+.md-typeset h4 + * {
+  break-before: avoid-page;
+  page-break-before: avoid;
+}
+
 .md-typeset h1 {
-  margin-top: 0 !important;
+  margin: 0 0 14px !important;
+  padding: 0 0 14px !important;
+  border-bottom: 2px solid rgba(203, 34, 21, 0.15) !important;
+  text-align: left !important;
+  font-size: 31px !important;
+  line-height: 1.12 !important;
+  font-family: "Poppins", "Open Sans", Arial, sans-serif !important;
+}
+
+.trik-pdf-category {
+  margin: 0 0 10px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: rgb(203, 34, 21) !important;
+}
+
+.md-typeset p,
+.md-typeset li {
+  orphans: 3;
+  widows: 3;
 }
 
 .md-typeset img,
@@ -68,10 +95,28 @@ body {
 .md-typeset table,
 .md-typeset pre,
 .md-typeset blockquote,
-.md-typeset figure {
+.md-typeset figure,
+.md-typeset .admonition,
+.md-typeset .md-alert {
   break-inside: avoid;
   page-break-inside: avoid;
   max-width: 100% !important;
+}
+
+.md-typeset .trik-pdf-schematic-block {
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+  margin: 0 0 12px !important;
+  text-align: center !important;
+}
+
+.md-typeset img.trik-pdf-schematic {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 88% !important;
+  max-height: 205mm !important;
+  margin: 0 auto 12px !important;
 }
 
 .md-typeset table:not([class]) {

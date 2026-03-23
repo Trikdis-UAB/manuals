@@ -9,3 +9,4 @@ PyYAML==6.0.2
 # Additional plugins for better UX
 mkdocs-redirects==1.2.2
 mkdocs-minify-plugin==0.8.0
+pikepdf==9.11.0

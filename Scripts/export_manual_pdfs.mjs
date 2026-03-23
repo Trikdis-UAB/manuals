@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import http from "node:http";
+import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import os from "node:os";
@@ -118,6 +119,72 @@ function validateManifest(data) {
   }
 }
 
+function deriveCategory(entry) {
+  const normalized = entry.url.replace(/^\/+|\/+$/g, "");
+  const parts = normalized.split("/");
+  const locale = parts[0] || "en";
+  const category = parts[1] || "";
+  const labelsByLocale = {
+    en: {
+      "alarm-communicators": "Communicators",
+      "control-panels": "Control Panels",
+      "gate-controllers": "Gate Controllers",
+      keypads: "Keypads",
+      receivers: "Receivers",
+    },
+    lt: {
+      "alarm-communicators": "Komunikatoriai",
+      "control-panels": "Apsaugos centralės",
+      "gate-controllers": "Valdikliai",
+      keypads: "Klaviatūros",
+      receivers: "Imtuvai",
+    },
+    es: {
+      "alarm-communicators": "Comunicadores",
+      "control-panels": "Paneles de control",
+      "gate-controllers": "Controladores",
+      keypads: "Teclados",
+      receivers: "Receptores",
+    },
+    ru: {
+      "alarm-communicators": "Коммуникаторы",
+      "control-panels": "Панели управления",
+      "gate-controllers": "Контроллеры",
+      keypads: "Клавиатуры",
+      receivers: "Приемники",
+    },
+  };
+  const labels = labelsByLocale[locale] || labelsByLocale.en;
+  return labels[category] || "";
+}
+
+function resolvePythonBin() {
+  return process.env.TRIKDOCS_PYTHON_BIN || process.env.PYTHON_BIN || "python3";
+}
+
+async function runCommand(command, args) {
+  await new Promise((resolve, reject) => {
+    const child = spawn(command, args, {
+      stdio: ["ignore", "pipe", "pipe"],
+      env: process.env,
+    });
+
+    let stderr = "";
+    child.stderr.on("data", (chunk) => {
+      stderr += chunk.toString();
+    });
+
+    child.on("error", reject);
+    child.on("exit", (code) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        reject(new Error(`${command} exited with code ${code}\n${stderr}`));
+      }
+    });
+  });
+}
+
 async function forceManualImagesReady(page) {
   await page.evaluate(async () => {
     const raf = () => new Promise((resolve) => requestAnimationFrame(() => resolve()));
@@ -177,7 +244,56 @@ async function forceManualImagesReady(page) {
   });
 }
 
-async function exportEntry(browser, baseUrl, siteDir, stylePath, entry, index, total) {
+async function markPdfSchematics(page) {
+  await page.evaluate(() => {
+    const normalizeText = (value) =>
+      (value || "")
+        .normalize("NFKD")
+        .replace(/\p{M}/gu, "")
+        .toLowerCase();
+    const schematicHeadingPattern =
+      /schematic|schematics|wiring|diagram|schema|schemos|jungimo|pajungimo|esquema|esquemas|cableado|conexion|схем|подключен|структур/u;
+    const contentRoot = document.querySelector(".md-content__inner");
+    if (!contentRoot) {
+      return;
+    }
+
+    const markImage = (image) => {
+      if (!(image instanceof HTMLImageElement)) {
+        return;
+      }
+      if (image.closest(".steps-grid, .step-card")) {
+        return;
+      }
+      image.classList.add("trik-pdf-schematic");
+      const block = image.closest("p, div, figure, li, td, th");
+      if (block) {
+        block.classList.add("trik-pdf-schematic-block");
+      }
+    };
+
+    for (const heading of contentRoot.querySelectorAll("h2, h3, h4")) {
+      if (!schematicHeadingPattern.test(normalizeText(heading.textContent))) {
+        continue;
+      }
+
+      let sibling = heading.nextElementSibling;
+      while (sibling && !/^H[1-6]$/u.test(sibling.tagName)) {
+        sibling.querySelectorAll("img").forEach((image) => markImage(image));
+        sibling = sibling.nextElementSibling;
+      }
+    }
+
+    contentRoot.querySelectorAll("img").forEach((image) => {
+      const src = image.currentSrc || image.getAttribute("src") || "";
+      if (image.classList.contains("wiring-diagram") || /\.svg(?:$|\?)/iu.test(src)) {
+        markImage(image);
+      }
+    });
+  });
+}
+
+async function exportEntry(browser, baseUrl, siteDir, stylePath, stampScriptPath, pythonBin, entry, index, total) {
   const context = await browser.newContext({
     colorScheme: "light",
     viewport: {
@@ -190,6 +306,8 @@ async function exportEntry(browser, baseUrl, siteDir, stylePath, entry, index, t
   try {
     const pageUrl = new URL(entry.url, baseUrl).toString();
     const outputPath = path.join(siteDir, entry.output);
+    const baseOutputPath = `${outputPath}.base.pdf`;
+    const category = deriveCategory(entry);
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
     const response = await page.goto(pageUrl, { waitUntil: "domcontentloaded" });
@@ -199,20 +317,59 @@ async function exportEntry(browser, baseUrl, siteDir, stylePath, entry, index, t
 
     await page.waitForLoadState("networkidle", { timeout: 5000 }).catch(() => {});
     await page.addStyleTag({ path: stylePath });
+    await page.evaluate((categoryValue) => {
+      const h1 = document.querySelector(".md-content__inner h1");
+      if (!h1 || !categoryValue || document.querySelector(".trik-pdf-category")) {
+        return;
+      }
+
+      const kicker = document.createElement("p");
+      kicker.className = "trik-pdf-category";
+      kicker.textContent = categoryValue;
+      h1.parentElement?.insertBefore(kicker, h1);
+    }, category);
     await forceManualImagesReady(page);
+    await markPdfSchematics(page);
     await page.emulateMedia({ media: "print", colorScheme: "light" });
+    const titleText =
+      (await page.locator(".md-content__inner h1").first().evaluate((heading) => {
+        const clone = heading.cloneNode(true);
+        clone.querySelectorAll(".headerlink").forEach((link) => link.remove());
+        return clone.textContent?.replace(/\s+/g, " ").replace(/[¶#]+$/u, "").trim() || "";
+      })) || "TRIKDIS Manual";
     await page.pdf({
       format: "A4",
       margin: {
-        top: "12mm",
+        top: "18mm",
         right: "10mm",
-        bottom: "12mm",
+        bottom: "24mm",
         left: "10mm",
       },
-      path: outputPath,
+      path: baseOutputPath,
+      outline: true,
       preferCSSPageSize: true,
       printBackground: true,
+      tagged: true,
     });
+
+    await runCommand(pythonBin, [
+      stampScriptPath,
+      "--input",
+      baseOutputPath,
+      "--output",
+      outputPath,
+      "--title",
+      titleText,
+      "--logo",
+      path.resolve("docs/images/logo.png"),
+      "--mark",
+      path.resolve("docs/images/favicon.png"),
+      "--font-regular",
+      path.resolve("Scripts/fonts/NotoSans-Regular.ttf"),
+      "--font-bold",
+      path.resolve("Scripts/fonts/NotoSans-Bold.ttf"),
+    ]);
+    await fs.unlink(baseOutputPath).catch(() => {});
 
     console.log(`[${index + 1}/${total}] ${entry.url} -> ${entry.output}`);
   } finally {
@@ -221,7 +378,7 @@ async function exportEntry(browser, baseUrl, siteDir, stylePath, entry, index, t
   }
 }
 
-async function runWorkers(entries, browser, baseUrl, siteDir, stylePath, concurrency) {
+async function runWorkers(entries, browser, baseUrl, siteDir, stylePath, stampScriptPath, pythonBin, concurrency) {
   let currentIndex = 0;
 
   async function worker() {
@@ -231,7 +388,17 @@ async function runWorkers(entries, browser, baseUrl, siteDir, stylePath, concurr
       if (index >= entries.length) {
         return;
       }
-      await exportEntry(browser, baseUrl, siteDir, stylePath, entries[index], index, entries.length);
+      await exportEntry(
+        browser,
+        baseUrl,
+        siteDir,
+        stylePath,
+        stampScriptPath,
+        pythonBin,
+        entries[index],
+        index,
+        entries.length,
+      );
     }
   }
 
@@ -248,6 +415,8 @@ async function run() {
   const siteDir = path.resolve(args.site);
   const manifestPath = path.resolve(args.manifest);
   const stylePath = path.resolve("Scripts/pdf-export.css");
+  const stampScriptPath = path.resolve("Scripts/stamp_manual_pdf.py");
+  const pythonBin = resolvePythonBin();
 
   if (!fsSync.existsSync(siteDir)) {
     console.error(`Site directory not found: ${siteDir}`);
@@ -259,6 +428,10 @@ async function run() {
   }
   if (!fsSync.existsSync(stylePath)) {
     console.error(`PDF export stylesheet not found: ${stylePath}`);
+    return 2;
+  }
+  if (!fsSync.existsSync(stampScriptPath)) {
+    console.error(`PDF stamp helper not found: ${stampScriptPath}`);
     return 2;
   }
 
@@ -278,7 +451,7 @@ async function run() {
 
   const browser = await chromium.launch({ headless: true });
   try {
-    await runWorkers(manifest, browser, baseUrl, siteDir, stylePath, concurrency);
+    await runWorkers(manifest, browser, baseUrl, siteDir, stylePath, stampScriptPath, pythonBin, concurrency);
   } finally {
     await browser.close();
     await new Promise((resolve, reject) => server.close((error) => (error ? reject(error) : resolve())));

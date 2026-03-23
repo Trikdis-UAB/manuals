@@ -11,6 +11,7 @@ import os
 import re
 import shutil
 import subprocess
+import unicodedata
 from collections import defaultdict
 from pathlib import Path, PurePosixPath
 from typing import Dict, Iterable, List, Optional, Set, Tuple
@@ -29,6 +30,10 @@ PDF_DOWNLOAD_LABELS = {
     "es": "Descargar PDF",
     "ru": "Скачать PDF",
 }
+INVALID_FILENAME_CHARS_RE = re.compile(r'[\\/:*?"<>|]+')
+NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
+H1_RE = re.compile(r"<h1\b[^>]*>(?P<content>.*?)</h1>", re.IGNORECASE | re.DOTALL)
+TAG_RE = re.compile(r"<[^>]+>")
 _PDF_MANIFEST_ENTRIES: List[Dict[str, str]] = []
 _PDF_MANIFEST_KEYS: Set[Tuple[str, str]] = set()
 
@@ -310,26 +315,104 @@ def _pdf_label(page) -> str:
     return PDF_DOWNLOAD_LABELS.get(language, PDF_DOWNLOAD_LABELS["en"])
 
 
-def _build_pdf_download_action(page) -> str:
+def _pdf_document_title(page, html_content: str = "") -> str:
+    if html_content:
+        match = H1_RE.search(html_content)
+        if match:
+            content = TAG_RE.sub("", match.group("content"))
+            content = html.unescape(content).replace("¶", "").strip()
+            if content:
+                return content
+    return (getattr(page, "title", "") or "").strip()
+
+
+def _pdf_download_name(page, document_title: str = "") -> str:
+    title = document_title or _pdf_document_title(page)
+    base_name = f"TRIKDIS {title}" if title else "TRIKDIS Manual"
+    sanitized = INVALID_FILENAME_CHARS_RE.sub(" ", base_name)
+    sanitized = re.sub(r"\s+", " ", sanitized).strip().rstrip(".")
+    return f"{sanitized or 'TRIKDIS Manual'}.pdf"
+
+
+def _slugify_ascii(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    ascii_value = normalized.encode("ascii", "ignore").decode("ascii").lower()
+    return NON_ALNUM_RE.sub("-", ascii_value).strip("-")
+
+
+def _fallback_pdf_slug(page) -> str:
+    src_path = getattr(getattr(page, "file", None), "src_path", "")
+    parts = PurePosixPath(src_path).parts
+    slug_parts = []
+    for part in parts[1:]:
+        if part.lower() == "index.md":
+            continue
+        stem = PurePosixPath(part).stem if part.lower().endswith(".md") else part
+        slug = _slugify_ascii(stem)
+        if slug:
+            slug_parts.append(slug)
+    return "-".join(slug_parts) or "manual"
+
+
+def _pdf_internal_slug(page) -> str:
+    src_path = getattr(getattr(page, "file", None), "src_path", "")
+    parts = list(PurePosixPath(src_path).parts)
+    if len(parts) < 2:
+        return _fallback_pdf_slug(page)
+
+    file_name = parts[-1]
+    if "quick-setup" in parts:
+        quick_setup_index = parts.index("quick-setup")
+        if quick_setup_index + 1 < len(parts) - 1:
+            candidate = parts[quick_setup_index + 1]
+        elif quick_setup_index + 1 < len(parts):
+            candidate = parts[quick_setup_index + 1]
+        else:
+            candidate = "quick-setup"
+        slug = _slugify_ascii(candidate)
+        return f"{slug}-quick-setup" if slug else "quick-setup"
+
+    if file_name.lower() == "index.md" and len(parts) >= 2:
+        candidate = parts[-2]
+    else:
+        candidate = PurePosixPath(file_name).stem
+
+    return _slugify_ascii(candidate) or _fallback_pdf_slug(page)
+
+
+def _pdf_output_filename(page, document_title: str = "") -> str:
+    src_path = getattr(getattr(page, "file", None), "src_path", "")
+    language = src_path.split("/", 1)[0] if "/" in src_path else "en"
+    slug = _pdf_internal_slug(page)
+    if not slug.endswith(f"-{language}"):
+        slug = f"{slug}-{language}"
+    return f"trikdis-{slug}.pdf"
+
+
+def _build_pdf_download_action(page, document_title: str = "") -> str:
     label = html.escape(_pdf_label(page))
+    href = html.escape(_pdf_output_filename(page, document_title), quote=True)
+    download_name = html.escape(_pdf_download_name(page, document_title), quote=True)
     return (
         '<div class="trik-pdf-download" data-manual-pdf-download>'
-        f'<a class="md-button md-button--primary trik-pdf-download__link" href="manual.pdf" download>{label}</a>'
+        f'<a class="md-button md-button--primary trik-pdf-download__link" href="{href}" download="{download_name}">{label}</a>'
         "</div>"
     )
 
 
-def _build_pdf_manifest_entry(page) -> Dict[str, str]:
+def _build_pdf_manifest_entry(page, document_title: str = "") -> Dict[str, str]:
     dest_path = PurePosixPath(page.file.dest_path)
+    output_filename = _pdf_output_filename(page, document_title)
     return {
         "src_path": page.file.src_path,
         "url": _page_route(page),
-        "output": dest_path.parent.joinpath("manual.pdf").as_posix(),
+        "output": dest_path.parent.joinpath(output_filename).as_posix(),
+        "download_name": _pdf_download_name(page, document_title),
     }
 
 
-def _register_pdf_manifest_entry(page):
-    entry = _build_pdf_manifest_entry(page)
+def _register_pdf_manifest_entry(page, document_title: str = ""):
+    entry = _build_pdf_manifest_entry(page, document_title)
     key = (entry["src_path"], entry["url"])
     if key in _PDF_MANIFEST_KEYS:
         return
@@ -359,9 +442,10 @@ def on_page_content(html_content: str, page, config, files):
         html_content += _build_scope_marker(scopes)
 
     if _is_pdf_eligible(page, config):
-        _register_pdf_manifest_entry(page)
+        document_title = _pdf_document_title(page, html_content)
+        _register_pdf_manifest_entry(page, document_title)
         if "data-manual-pdf-download" not in html_content:
-            html_content = _build_pdf_download_action(page) + html_content
+            html_content = _build_pdf_download_action(page, document_title) + html_content
 
     return html_content
 

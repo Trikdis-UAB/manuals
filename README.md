@@ -100,7 +100,7 @@ With this sequence the old process is removed instantly and the new server start
 Production publishing is handled by Netlify:
 1. Push or merge into the production branch connected to Netlify.
 2. Netlify runs `Scripts/build_docs.sh` with production context.
-3. The build script generates `site/`, runs Pagefind once, generates sibling `manual.pdf` files for eligible Markdown manuals, validates the outputs, and publishes the static site.
+3. The build script generates `site/`, runs Pagefind once, generates sibling PDF files with descriptive slugs for eligible Markdown manuals, validates the outputs, and publishes the static site.
 
 `netlify.toml` is the source of truth for deploy context defaults:
 - production builds enable `TRIKDOCS_PDF_DOWNLOADS=1`
@@ -168,8 +168,9 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 
 ## Manual PDF Downloads
 - Production builds emit `site/pdf-manifest.json` with `src_path`, `url`, and site-relative `output` for each eligible Markdown manual page.
-- Eligible pages get a language-aware “Download PDF” button injected at the top of the article body. The button links to sibling `manual.pdf`.
-- PDF generation is handled by `Scripts/export_manual_pdfs.mjs`, which uses Playwright to render the built site in light-mode print media and injects `Scripts/pdf-export.css` during export only.
+- Eligible pages get a language-aware “Download PDF” button injected at the top of the article body. The button links to a sibling PDF file with a descriptive slug and downloads it using a human-readable `TRIKDIS ... .pdf` filename.
+- PDF generation is handled by `Scripts/export_manual_pdfs.mjs`, which uses Playwright for the single-pass content export and `Scripts/stamp_manual_pdf.py` (`pikepdf`) to add the branded footer on all pages plus the running header from page 2 onward without reflowing the document.
+- The stamped header/footer uses vendored `Noto Sans` font files under `Scripts/fonts/` so the running title renders correctly for `en`, `lt`, `es`, and `ru`.
 - Any rendered `*/receivers/ipcom/**` route is excluded from v1 PDF generation.
 
 ## Troubleshooting

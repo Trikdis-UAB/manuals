@@ -4,9 +4,13 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
+import re
 import sys
 from pathlib import Path, PurePosixPath
+
+import pikepdf
 
 
 def parse_args() -> argparse.Namespace:
@@ -44,7 +48,7 @@ def validate_manifest(manifest_path: Path) -> list[dict[str, str]]:
     entries: list[dict[str, str]] = []
     seen_urls: set[str] = set()
     seen_outputs: set[str] = set()
-    required_keys = {"src_path", "url", "output"}
+    required_keys = {"src_path", "url", "output", "download_name"}
     for idx, entry in enumerate(data):
         if not isinstance(entry, dict):
             raise RuntimeError(f"Manifest entry #{idx + 1} is not an object.")
@@ -61,8 +65,8 @@ def validate_manifest(manifest_path: Path) -> list[dict[str, str]]:
         output_path = PurePosixPath(output)
         if output_path.is_absolute():
             raise RuntimeError(f"Manifest entry #{idx + 1} output must be site-relative: {output}")
-        if output_path.name != "manual.pdf":
-            raise RuntimeError(f"Manifest entry #{idx + 1} output must end with manual.pdf: {output}")
+        if output_path.suffix.lower() != ".pdf":
+            raise RuntimeError(f"Manifest entry #{idx + 1} output must be a PDF: {output}")
         if url in seen_urls:
             raise RuntimeError(f"Duplicate manifest url: {url}")
         if output in seen_outputs:
@@ -109,9 +113,27 @@ def main() -> int:
             continue
         if output_path.read_bytes()[:4] != b"%PDF":
             failures.append(f"Invalid PDF header: {output_path.relative_to(site_dir)}")
+            continue
 
-        html = html_path.read_text(encoding="utf-8", errors="ignore")
-        if "data-manual-pdf-download" not in html or "href=manual.pdf" not in html:
+        try:
+            with pikepdf.Pdf.open(output_path) as pdf:
+                if pdf.Root.get("/StructTreeRoot") is None:
+                    failures.append(f"Missing tagged PDF structure: {output_path.relative_to(site_dir)}")
+                if pdf.Root.get("/Outlines") is None:
+                    failures.append(f"Missing PDF outlines/bookmarks: {output_path.relative_to(site_dir)}")
+        except pikepdf.PdfError as exc:
+            failures.append(f"Unable to parse PDF {output_path.relative_to(site_dir)}: {exc}")
+
+        page_html = html_path.read_text(encoding="utf-8", errors="ignore")
+        expected_href = html.escape(output_path.name, quote=True)
+        expected_download_name = html.escape(entry["download_name"], quote=True)
+        href_pattern = re.compile(rf'href=(?:"{re.escape(expected_href)}"|{re.escape(expected_href)})')
+        download_pattern = re.compile(rf'download="{re.escape(expected_download_name)}"')
+        if (
+            "data-manual-pdf-download" not in page_html
+            or not href_pattern.search(page_html)
+            or not download_pattern.search(page_html)
+        ):
             failures.append(f"Missing injected PDF link in page HTML: {html_path.relative_to(site_dir)}")
 
     for html_path in site_dir.rglob("index.html"):
@@ -120,8 +142,8 @@ def main() -> int:
             continue
         if not is_explicitly_excluded(route):
             continue
-        html = html_path.read_text(encoding="utf-8", errors="ignore")
-        if "data-manual-pdf-download" in html:
+        page_html = html_path.read_text(encoding="utf-8", errors="ignore")
+        if "data-manual-pdf-download" in page_html:
             failures.append(f"Excluded route contains a PDF link: {route}")
 
     if failures:
@@ -130,7 +152,11 @@ def main() -> int:
             print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"Validated {len(entries)} manual PDFs from {manifest_path.relative_to(site_dir.parent)}.")
+    try:
+        manifest_label = manifest_path.relative_to(site_dir.parent)
+    except ValueError:
+        manifest_label = manifest_path
+    print(f"Validated {len(entries)} manual PDFs from {manifest_label}.")
     return 0
 
 

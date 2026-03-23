@@ -37,6 +37,8 @@ else
   }
 fi
 
+export TRIKDOCS_PYTHON_BIN="${PYTHON_BIN}"
+
 if [[ "${TRIKDOCS_INSTALL_DEPS:-0}" == "1" ]]; then
   "${PYTHON_BIN}" -m pip install --upgrade pip
   "${PYTHON_BIN}" -m pip install -r requirements.txt
