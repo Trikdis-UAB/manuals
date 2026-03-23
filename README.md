@@ -106,8 +106,9 @@ Production publishing is handled by Netlify:
 - production builds enable `TRIKDOCS_PDF_DOWNLOADS=1`
 - preview/dev builds keep `TRIKDOCS_PDF_DOWNLOADS=0`
 - all Netlify builds disable MkDocs' automatic Pagefind hook and run Pagefind explicitly once inside `Scripts/build_docs.sh`
+- production responses explicitly use `Cache-Control: public,max-age=0,must-revalidate` via `netlify.toml`
 
-The existing GitHub Actions workflow at `.github/workflows/deploy.yml` is kept as a manual fallback during cutover and no longer auto-deploys on push.
+The legacy GitHub Actions workflow at `.github/workflows/deploy.yml` remains manual-only and is not part of the normal production publish path.
 
 ## Automatic Navigation & Homepage
 Both the navigation (`mkdocs.yml`) and homepage (`docs/index.md`) are automatically generated from the `docs/` directory structure.
@@ -179,4 +180,4 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 - **Local build errors**: run `pipx run --spec mkdocs-material mkdocs build` to get strict error messages before pushing.
 - **Manual PDF missing**: run `CONTEXT=production Scripts/build_docs.sh` and inspect `site/pdf-manifest.json`, `Scripts/check_manual_pdfs.py`, and `Scripts/check_manual_pdf_ui.spec.cjs` failures.
 
-With this setup, any future manual update is simply a conversion + commit + push cycle. Netlify handles the production build and deploy automatically, while the fallback GitHub Pages workflow remains manual-only during cutover.
+With this setup, any future manual update is simply a conversion + commit + push cycle. Netlify handles the production build and deploy automatically, while the legacy GitHub Pages workflow remains manual-only for exceptional fallback use.

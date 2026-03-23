@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-TRIKDIS product documentation system with automated DOCX-to-Markdown conversion pipeline and GitHub Pages deployment.
+TRIKDIS product documentation system with automated DOCX-to-Markdown conversion pipeline and Netlify deployment.
 
 ## Repository Structure
 
@@ -15,7 +15,7 @@ This project contains **two separate git repositories**:
 
 ### 1. manuals/ (Public Documentation Site)
 - **Repository:** `git@github.com:Trikdis-UAB/manuals.git`
-- **Purpose:** Public documentation site published to GitHub Pages
+- **Purpose:** Public documentation site published to Netlify
 - **URL:** https://docs.trikdis.com
 - **Technology:** MkDocs Material
 - **Working Directory:** `/Users/local/projects/trikdis-docs/manuals/`
@@ -147,37 +147,6 @@ mkdocs serve
 cd /Users/local/projects/trikdis-docs/manuals
 pipx run --spec mkdocs-material mkdocs serve --dev-addr 127.0.0.1:8000
 ```
-
-## Decap CMS (Web-based Content Editor)
-
-**Status:** ✅ Deployed in test-repo mode (OAuth required for production use)
-**Access:** https://docs.trikdis.com/admin/
-**Documentation:** See `manuals/DECAP_CMS_SETUP.md`
-**Deployed:** October 3, 2025
-
-Decap CMS provides a user-friendly web interface for editing documentation through your browser.
-
-### Setup Required
-
-To activate Decap CMS, you need to:
-1. Create a GitHub OAuth App
-2. Deploy a Cloudflare Worker for OAuth proxy
-3. Update `base_url` in `docs/admin/config.yml`
-
-**See detailed instructions:** `manuals/DECAP_CMS_SETUP.md`
-
-### When to Use Decap CMS
-
-**✅ Use CMS for:**
-- Quick typo fixes
-- Minor content updates
-- Adding new Markdown-native content
-- Creating pages not derived from DOCX
-
-**⚠️ DO NOT use CMS for:**
-- Editing converted DOCX manuals (use conversion pipeline instead)
-- Major restructuring
-- Batch updates across multiple files
 
 ## Deployment
 
@@ -367,16 +336,16 @@ trikdis-docs/
 - Handles numbered lists across images and sections
 - Should work automatically during conversion
 
-### Build Fails on GitHub Actions
+### Build Fails in Production
 - Run `mkdocs build --strict` locally first
-- Check deployment workflow logs on GitHub
+- Check the Netlify deploy logs
 - Verify all images are committed
 - Check for broken links in markdown
 
 ### Changes Not Appearing on Site
-- Wait 2-3 minutes for GitHub Pages deployment
-- Check workflow status: `gh run list --repo Trikdis-UAB/manuals`
-- Clear browser cache
+- Check the latest Netlify production deploy
+- Confirm `docs.trikdis.com` returns `server: Netlify`
+- A normal reload should be enough; hard-refresh should no longer be required
 
 ## Related Projects
 

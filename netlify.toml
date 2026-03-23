@@ -2,6 +2,12 @@
 command = "Scripts/build_docs.sh"
 publish = "site"
 
+[[headers]]
+for = "/*"
+
+[headers.values]
+Cache-Control = "public,max-age=0,must-revalidate"
+
 [build.environment]
 MKDOCS_PAGEFIND_AUTOINDEX = "0"
 NODE_VERSION = "20"
