@@ -124,6 +124,41 @@ body {
   width: 100%;
 }
 
+.md-typeset table th,
+.md-typeset table td {
+  padding: 0.22rem 0.4rem !important;
+  line-height: 1.08 !important;
+}
+
+.md-typeset table th > *,
+.md-typeset table td > * {
+  line-height: inherit !important;
+}
+
+.md-typeset table th > *:first-child,
+.md-typeset table td > *:first-child {
+  margin-top: 0 !important;
+}
+
+.md-typeset table th > *:last-child,
+.md-typeset table td > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.md-typeset table th p,
+.md-typeset table td p,
+.md-typeset table th ul,
+.md-typeset table td ul,
+.md-typeset table th ol,
+.md-typeset table td ol {
+  margin-top: 0.08rem !important;
+  margin-bottom: 0.08rem !important;
+}
+
+.md-typeset table {
+  font-size: 0.94em !important;
+}
+
 .md-typeset a {
   color: inherit !important;
 }
