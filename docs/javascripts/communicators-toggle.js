@@ -205,6 +205,14 @@
             matchedBase = candidateBase;
           }
         }
+
+        var prefix = lowerVariant + " ";
+        if (lower.startsWith(prefix)) {
+          var prefixedBase = normalized.slice(prefix.length).trim();
+          if (prefixedBase.length > matchedBase.length) {
+            matchedBase = prefixedBase;
+          }
+        }
       });
     });
 
