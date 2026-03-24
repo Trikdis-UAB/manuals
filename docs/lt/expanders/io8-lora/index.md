@@ -127,7 +127,7 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
     transiveris RF-LORA ir gali būti prijungti iki 8 vnt.
     iO-8-LORA bevielių plėtiklių.
-# Apsaugos centralė “FLEXi” SP3
+## Apsaugos centralė “FLEXi” SP3
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

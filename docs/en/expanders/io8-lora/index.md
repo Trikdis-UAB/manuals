@@ -127,7 +127,7 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
     An RF-LORA transceiver must be connected to the "FLEXi"
     SP3 security panel and then up to 8 pcs. can be connected
     iO-8-LORA wireless expanders**.**
-# Security control panel “FLEXi” SP3
+## Security control panel “FLEXi” SP3
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

@@ -127,7 +127,7 @@ Usando las terminales de relé es posible controlar (encender/apagar) de forma r
     Se debe conectar un transceptor RF-LORA al panel de control
     "FLEXi" SP3 y se pueden conectar hasta 8 expansores
     inalámbricos iO-8-LORA.
-# Security control panel “FLEXi” SP3
+## Panel de control de seguridad “FLEXi” SP3
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
