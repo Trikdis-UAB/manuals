@@ -32,9 +32,9 @@ El módulo principal (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F) est
 
 6.  Ingrese el No. de serie de iO-8 (solo números) en la celda de la derecha. Encontrará este número en la etiqueta de iO-8.
 
-<img alt="" src="./image5.png" style="width:3.263779527559055in;height:1.952755905511811in" />
-
 7.  En la selección del menú desplegable ENTRADAS y SALIDAS (Zonas y ventana de PGM) verá las entradas y salidas de iO-8, que puede habilitar.
+
+    <img alt="" src="./image5.png" style="width:3.263779527559055in;height:1.952755905511811in" />
 
 8.  Una vez que haya terminado, presione Escribir [F5] y desconecte el cable USB.
 
@@ -42,6 +42,6 @@ El módulo principal (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F) est
 
 La configuración puede variar según el dispositivo TRIKDIS principal. Configure los ajustes para zonas y salidas PGM según el manual del dispositivo principal.
 
-<img alt="" src="./image6.jpeg" style="width:1.1811023622047243in;height:0.3346456692913386in" />Visit for support:
+<img alt="" src="./image6.jpeg" style="width:1.1811023622047243in;height:0.3346456692913386in" />Para soporte, visítenos:
 
 [www.trikdis.com](http://www.trikdis.com)

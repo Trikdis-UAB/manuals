@@ -415,7 +415,7 @@ Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, 
 !!! note
     If more inputs or outputs need to be connected to the communicator,
     connect the TRIKDIS iO-8 expander. Connection method is described
-    in the iO-8 manual and chapter 3.7 "Schematics for connecting iO-8
+    in the [iO-8 manual](../../../expanders/io-8/index.md) and chapter 3.7 "Schematics for connecting iO-8
     expansion modules".
 ### Schematics for wiring a relay 
 
