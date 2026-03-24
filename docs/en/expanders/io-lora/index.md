@@ -1,3 +1,5 @@
+# iO-LORA Wireless Expander
+
 ## Description 
 
 iO-LORA wireless expanders with RF-LORA transceiver increase the number of inputs and outputs of the "FLEXi" SP3 control panel using two-way RF communication.
@@ -137,7 +139,7 @@ The **CZ-Dallas** iButton key reader connects to the iO-LORA using the "**1 Wire
     pair cable (UTP4x2x0.5 or STP4x2x0.5) to connect the temperature
     sensor. / **CZ-Dallas** iButton key readers and temperature sensor must
     be connected to "**1-Wire**" bus**.**
-# Security control panel “FLEXi” SP3
+## Security control panel “FLEXi” SP3
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
