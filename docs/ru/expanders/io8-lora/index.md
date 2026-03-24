@@ -1,3 +1,5 @@
+# iO8-LoRa Беспроводной расширитель
+
 # Требование безопасности 
 
 <div style="text-align: center;">
@@ -125,8 +127,7 @@
   </figure>
 </div>
 
-| <img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" /> |  |
-|----|----|
+<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Схема подключения реле 
 

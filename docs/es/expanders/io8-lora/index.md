@@ -1,3 +1,5 @@
+# iO8-LoRa Expansor inalámbrico
+
 ## Descripción 
 
 Los expansores inalámbricos iO-8-LORA con transceptor RF-LORA aumentan el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
@@ -109,8 +111,7 @@ Hay 8 terminales IO1 – IO8 (entradas) en la placa de expansión iO-8-LORA para
   </figure>
 </div>
 
-| <img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" /> |  |
-|----|----|
+<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Esquema para conectar un relé 
 

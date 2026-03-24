@@ -1,3 +1,5 @@
+# iO8-LoRa Belaidis plėtiklis
+
 ## Aprašymas 
 
 iO-8-LORA belaidžiai plėtikliai su RF-LORA moduliu padidina apsaugos centralės "FLEXi" SP3 įėjimų ir išėjimų skaičių naudojant dvipusį belaidį RF ryšį.
@@ -109,8 +111,7 @@ iO-8-LORA plokštėje yra 8 kontaktai IO1–IO8 (įėjimai) jutiklių grandinėm
   </figure>
 </div>
 
-| <img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" /> |  |
-|----|----|
+<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Relės prijungimo schema 
 

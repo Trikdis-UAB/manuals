@@ -1,3 +1,5 @@
+# iO8-LoRa Wireless Expander
+
 ## Description 
 
 iO-8-LORA wireless expanders with RF-LORA transceiver increase the number of inputs and outputs of the "FLEXi" SP3 security panel using two-way RF communication.
@@ -109,8 +111,7 @@ There are 8 terminals IO1–IO8 (inputs) on the iO-8-LORA expander board for con
   </figure>
 </div>
 
-| <img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" /> |  |
-|----|----|
+<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Schematic for connecting a relay 
 
