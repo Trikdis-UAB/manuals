@@ -12,6 +12,9 @@ E16_FILES = [
     ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/index.md",
     ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/index.md",
     ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/index.md",
+    ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/texecom/index.md",
+    ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/innerrange-inception/index.md",
+    ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/innerrange-integriti/index.md",
 ]
 
 E16T_FILE = ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16t/index.md"
@@ -159,15 +162,13 @@ def replace_section(path: Path, pattern: str, replacement: str) -> None:
 
 
 def main() -> None:
-    e16_pattern = r"## Configure E16 in TrikdisConfig\n.*?\n## Wiring\n"
+    e16_pattern = r"## (?:Configure E16 in TrikdisConfig|Quick configuration with \*TrikdisConfig\* software)\n.*?\n## Wiring\n"
     e16_replacement = E16_SECTION + "\n## Wiring\n"
     for path in E16_FILES:
         replace_section(path, e16_pattern, e16_replacement)
 
-    e16t_pattern = r"## Configure E16T in TrikdisConfig\n.*?\n## Wiring\n"
+    e16t_pattern = r"## (?:Configure E16T in TrikdisConfig|Quick configuration with \*TrikdisConfig\* software)\n.*?\n## Wiring\n"
     e16t_replacement = E16T_SECTION + "\n## Wiring\n"
     replace_section(E16T_FILE, e16t_pattern, e16t_replacement)
-
-
 if __name__ == "__main__":
     main()

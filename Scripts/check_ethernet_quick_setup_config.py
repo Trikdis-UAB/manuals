@@ -12,6 +12,9 @@ E16_FILES = [
     ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/index.md",
     ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/index.md",
     ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/index.md",
+    ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/texecom/index.md",
+    ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/innerrange-inception/index.md",
+    ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16/innerrange-integriti/index.md",
 ]
 
 E16T_FILE = ROOT / "docs/en/alarm-communicators/ethernet/quick-setup/e16t/index.md"
@@ -45,12 +48,29 @@ def check_e16(path: Path) -> None:
         "honeywell-vista": ('<img alt="E16 Honeywell panel connection diagram" src="../images/honeywell.png" style="width:5.2in;max-width:100%;height:auto;" />', "honeywell.png"),
         "interlogix-nx-4v2-nx-6v2": ('<img alt="E16 Interlogix panel connection diagram" src="../images/caddx.png" style="width:5.2in;max-width:100%;height:auto;" />', "caddx.png"),
         "interlogix-nx-8v2": ('<img alt="E16 Interlogix panel connection diagram" src="../images/caddx.png" style="width:5.2in;max-width:100%;height:auto;" />', "caddx.png"),
+        "texecom": ('<img alt="E16 Texecom panel connection diagram" src="../images/texecom.png" style="width:5.2in;max-width:100%;height:auto;" />', "texecom.png"),
+        "innerrange-inception": ('<img alt="E16 Innerrange Inception panel connection diagram" src="../images/innerrange-inception.png" style="width:5.2in;max-width:100%;height:auto;" />', "innerrange-inception.png"),
+        "innerrange-integriti": ('<img alt="E16 Innerrange Integriti panel connection diagram" src="../images/innerrange-integriti.png" style="width:5.2in;max-width:100%;height:auto;" />', "innerrange-integriti.png"),
     }
     markdown_ref, image_name = wiring_images[path.parent.name]
     require(text, markdown_ref, path)
     image_path = path.parent.parent / "images" / image_name
     if not image_path.is_file():
         raise AssertionError(f"Missing wiring image file {image_path}")
+
+    if path.parent.name == "texecom":
+        require(text, "Texecom EX-CRP4 cable", path)
+        require(text, "Communication Options", path)
+        require(text, "UDL passcode", path)
+    elif path.parent.name == "innerrange-inception":
+        require(text, "skytunnel.com.au/inception/SERIALNUMBER", path)
+        require(text, "Configuration > General > Alarm Reporting", path)
+        require(text, "![Innerrange Inception alarm reporting settings](../../../../e16/image21.png)", path)
+    elif path.parent.name == "innerrange-integriti":
+        require(text, "TTL Port-0", path)
+        require(text, "Contact ID", path)
+        require(text, "19.1.0.15396", path)
+        forbid(text, "skytunnel.com.au/inception/SERIALNUMBER", path)
 
 
 def check_e16t(path: Path) -> None:
