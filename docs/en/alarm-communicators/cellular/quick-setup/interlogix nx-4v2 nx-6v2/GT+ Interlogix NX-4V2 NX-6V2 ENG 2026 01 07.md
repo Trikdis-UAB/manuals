@@ -1,6 +1,6 @@
-# Interlogix NX-4V2 / NX-6V2 with GT/GT+/GET quick setup
+# Interlogix NX-4v2 / NX-6v2 with GT/GT+/GET quick setup
 
-Short wiring and programming steps to connect the GT/GT+/GET communicator to Interlogix NX-4V2, Interlogix NX-6V2 panels using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
+Short wiring and programming steps to connect the GT/GT+/GET communicator to Interlogix NX-4v2, Interlogix NX-6v2 panels using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
@@ -8,13 +8,14 @@ Short wiring and programming steps to connect the GT/GT+/GET communicator to Int
 ## Prerequisites
 
 1. GT/GT+/GET firmware 1.21, SIM inserted, PIN disabled, data plan active.
-1. Interlogix NX-4V2 / NX-6V2 panel with keypad access (installer code available).
+1. Interlogix NX-4v2 / NX-6v2 panel with keypad access (installer code available).
 1. CMS account number if reporting to CMS.
 1. Protegus2 company/installer account and communicator IMEI.
 
 ## Wiring
 
-Follow the schematic below to connect the communicator to the panel: 
+Follow the schematic below to connect the communicator to the panel.
+The diagram shows the NX-4v2 reference wiring. For NX-6v2, use the same POS/COM and DATA connections listed in the table.
 
 | **GT/GT+/GET terminal** | **Interlogix panel** | **Notes**              |
 | ----------------------- | -------------------- | ---------------------- |
@@ -22,14 +23,12 @@ Follow the schematic below to connect the communicator to the panel:
 | DATA                    | DATA                 | KeyBus                 |
 
 
+<p class="trik-quick-setup-schematic-label">Interlogix NX-4v2</p>
+
 <img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
 
 
-
-<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
-
-
-## Programming the Interlogix NX-4V2, Interlogix NX-6V2 Alarm Panel via the LCD Keypad
+## Programming the Interlogix NX-4v2, Interlogix NX-6v2 Alarm Panel via the LCD Keypad
 
 Using the control panel‘s keypad enter these sections and set them as described:
 
@@ -51,7 +50,7 @@ Using the control panel‘s keypad enter these sections and set them as describe
 | Loc#37 Seg#4         | 12345678*#       | Segment 4. All toggle options should be enabled press * to press and  then # to save and # to go back to the main menu. |
 | Enter location       | EXIT EXIT        | Press “EXIT” twice to exit programming mode.                 |
 
-## Programming the Interlogix NX-4V2, Interlogix NX-6V2 Alarm Panel via the LED Keypad
+## Programming the Interlogix NX-4v2, Interlogix NX-6v2 Alarm Panel via the LED Keypad
 
 Using the control panel’s keypad enter these sections and set them as described: 
 

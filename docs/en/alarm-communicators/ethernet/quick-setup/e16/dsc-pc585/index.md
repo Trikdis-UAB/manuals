@@ -1,6 +1,6 @@
-# DSC PC585 with E16 quick setup
+# DSC PowerSeries with E16 quick setup
 
-Short steps to connect the E16 communicator to DSC PC585 (PC1404, PC1565, PC1616, PC1832, PC1864, PC5020) panels, configure E16 for IP reporting, and add the system to Protegus2. Use this together with the full E16 manual for all other settings.
+Short steps to connect the E16 communicator to DSC PowerSeries panels (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), configure E16 for IP reporting, and add the system to Protegus2. Use this together with the full E16 manual for all other settings.
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
@@ -8,7 +8,7 @@ Short steps to connect the E16 communicator to DSC PC585 (PC1404, PC1565, PC1616
 ## Prerequisites
 
 - E16 communicator with LAN connected and a USB Mini-B cable available for configuration.
-- DSC PC585 family panel with keypad access.
+- DSC PowerSeries panel with keypad access.
 - CMS object ID / account number if reporting to CMS.
 - Protegus2 account and communicator MAC / Unique ID.
 

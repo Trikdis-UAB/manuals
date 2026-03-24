@@ -91,8 +91,8 @@ plugins:
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
               - Honeywell Vista: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
-              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
-              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+              - Interlogix NX-4v2 / NX-6v2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8v2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
             - GT: alarm-communicators/cellular/gt/index.md
             - GT+: alarm-communicators/cellular/gt-plus/index.md
             - GET: alarm-communicators/cellular/get/index.md
@@ -106,8 +106,8 @@ plugins:
             - DSC PowerSeries: alarm-communicators/ethernet/quick-setup/e16/dsc-pc585/index.md
             - Paradox SP(+)/MG(+): alarm-communicators/ethernet/quick-setup/e16/paradox/index.md
             - Honeywell Vista: alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/index.md
-            - Interlogix NX-4V2 / NX-6V2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/index.md
-            - Interlogix NX-8V2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/index.md
+            - Interlogix NX-4v2 / NX-6v2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/index.md
+            - Interlogix NX-8v2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/index.md
           - E16: alarm-communicators/e16/index.md
           - E16T quick setup: alarm-communicators/ethernet/quick-setup/e16t/index.md
           - E16T: alarm-communicators/e16t/index.md
@@ -155,8 +155,8 @@ plugins:
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
               - Honeywell Vista: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
-              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
-              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+              - Interlogix NX-4v2 / NX-6v2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8v2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
             - GT: alarm-communicators/cellular/gt/index.md
             - GT+: alarm-communicators/cellular/gt-plus/index.md
             - GET: alarm-communicators/cellular/get/index.md
@@ -196,8 +196,8 @@ plugins:
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
               - Honeywell Vista: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
-              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
-              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+              - Interlogix NX-4v2 / NX-6v2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8v2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
             - GT: alarm-communicators/cellular/gt/index.md
             - GT+: alarm-communicators/cellular/gt-plus/index.md
             - GET: alarm-communicators/cellular/get/index.md
@@ -237,8 +237,8 @@ plugins:
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
               - Honeywell Vista: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
-              - Interlogix NX-4V2 / NX-6V2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
-              - Interlogix NX-8V2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+              - Interlogix NX-4v2 / NX-6v2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+              - Interlogix NX-8v2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
             - GT: alarm-communicators/cellular/gt/index.md
             - GT+: alarm-communicators/cellular/gt-plus/index.md
             - GET: alarm-communicators/cellular/get/index.md

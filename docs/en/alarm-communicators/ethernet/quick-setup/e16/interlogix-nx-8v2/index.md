@@ -1,6 +1,6 @@
-# Interlogix NX-8V2 with E16 quick setup
+# Interlogix NX-8v2 with E16 quick setup
 
-Short steps to connect the E16 communicator to Interlogix NX-8V2 panels, configure E16 for IP reporting, and add the system to Protegus2. Use this together with the full E16 manual for all other settings.
+Short steps to connect the E16 communicator to Interlogix NX-8v2 panels, configure E16 for IP reporting, and add the system to Protegus2. Use this together with the full E16 manual for all other settings.
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
@@ -8,7 +8,7 @@ Short steps to connect the E16 communicator to Interlogix NX-8V2 panels, configu
 ## Prerequisites
 
 - E16 communicator with LAN connected and a USB Mini-B cable available for configuration.
-- Interlogix NX-8V2 panel with keypad access.
+- Interlogix NX-8v2 panel with keypad access.
 - CMS object ID / account number if reporting to CMS.
 - Protegus2 account and communicator MAC / Unique ID.
 

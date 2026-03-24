@@ -34,6 +34,10 @@ INVALID_FILENAME_CHARS_RE = re.compile(r'[\\/:*?"<>|]+')
 NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
 H1_RE = re.compile(r"<h1\b[^>]*>(?P<content>.*?)</h1>", re.IGNORECASE | re.DOTALL)
 TAG_RE = re.compile(r"<[^>]+>")
+PDF_ACTION_RE = re.compile(
+    r'(<div class="trik-pdf-download" data-manual-pdf-download>.*?</div>)',
+    re.IGNORECASE | re.DOTALL,
+)
 _PDF_MANIFEST_ENTRIES: List[Dict[str, str]] = []
 _PDF_MANIFEST_KEYS: Set[Tuple[str, str]] = set()
 
@@ -410,6 +414,88 @@ def _inject_pdf_download_action(html_content: str, action_html: str) -> str:
     return action_html + html_content
 
 
+def _page_language(page) -> str:
+    url = (getattr(page, "url", "") or "").strip("/")
+    if url:
+        language = url.split("/", 1)[0]
+        if language:
+            return language
+
+    src_path = getattr(getattr(page, "file", None), "src_path", "")
+    if "/" in src_path:
+        return src_path.split("/", 1)[0]
+
+    return "en"
+
+
+def _quick_setup_content_path(page) -> str:
+    src_path = getattr(getattr(page, "file", None), "src_path", "")
+    if "/" in src_path:
+        return src_path.split("/", 1)[1]
+    return src_path
+
+
+def _build_quick_setup_product_block(page) -> str:
+    content_path = _quick_setup_content_path(page)
+    language = _page_language(page)
+
+    if content_path.startswith("alarm-communicators/ethernet/quick-setup/e16/"):
+        image_src = html.escape(f"/{language}/alarm-communicators/e16/image1.png", quote=True)
+        return (
+            '<div class="trik-quick-setup-product trik-quick-setup-product--single" '
+            'data-quick-setup-product="e16">'
+            f'<img class="trik-quick-setup-product__image" src="{image_src}" alt="E16 product image" />'
+            "</div>"
+        )
+
+    if content_path.startswith("alarm-communicators/ethernet/quick-setup/e16t/"):
+        image_src = html.escape(f"/{language}/alarm-communicators/e16t/image1.png", quote=True)
+        return (
+            '<div class="trik-quick-setup-product trik-quick-setup-product--single" '
+            'data-quick-setup-product="e16t">'
+            f'<img class="trik-quick-setup-product__image" src="{image_src}" alt="E16T product image" />'
+            "</div>"
+        )
+
+    if content_path.startswith("alarm-communicators/cellular/quick-setup/"):
+        family_images = [
+            ("GT", f"/{language}/alarm-communicators/cellular/gt/image1.png"),
+            ("GT+", f"/{language}/alarm-communicators/cellular/gt-plus/image1.png"),
+            ("GET", f"/{language}/alarm-communicators/cellular/get/image1.png"),
+        ]
+        items_html = "".join(
+            (
+                '<figure class="trik-quick-setup-product__item">'
+                f'<img class="trik-quick-setup-product__image" src="{html.escape(src, quote=True)}" '
+                f'alt="{html.escape(label)} product image" />'
+                f"<figcaption>{html.escape(label)}</figcaption>"
+                "</figure>"
+            )
+            for label, src in family_images
+        )
+        return (
+            '<div class="trik-quick-setup-product trik-quick-setup-product--family" '
+            'data-quick-setup-product="gt-family">'
+            f'<div class="trik-quick-setup-product__group">{items_html}</div>'
+            "</div>"
+        )
+
+    return ""
+
+
+def _inject_quick_setup_product_block(html_content: str, block_html: str) -> str:
+    if not block_html or "data-quick-setup-product" in html_content:
+        return html_content
+
+    if PDF_ACTION_RE.search(html_content):
+        return PDF_ACTION_RE.sub(lambda match: f"{match.group(1)}{block_html}", html_content, count=1)
+
+    if H1_RE.search(html_content):
+        return H1_RE.sub(lambda match: f"{match.group(0)}{block_html}", html_content, count=1)
+
+    return block_html + html_content
+
+
 def _build_pdf_manifest_entry(page, document_title: str = "") -> Dict[str, str]:
     dest_path = PurePosixPath(page.file.dest_path)
     output_filename = _pdf_output_filename(page, document_title)
@@ -457,6 +543,10 @@ def on_page_content(html_content: str, page, config, files):
         html_content = _inject_pdf_download_action(
             html_content,
             _build_pdf_download_action(page, document_title),
+        )
+        html_content = _inject_quick_setup_product_block(
+            html_content,
+            _build_quick_setup_product_block(page),
         )
 
     return html_content

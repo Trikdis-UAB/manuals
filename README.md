@@ -170,6 +170,7 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 ## Manual PDF Downloads
 - Production builds emit `site/pdf-manifest.json` with `src_path`, `url`, and site-relative `output` for each eligible Markdown manual page.
 - Eligible pages get a language-aware “Download PDF” button injected immediately after the article `h1`. The button links to a sibling PDF file with a descriptive slug and downloads it using a human-readable `TRIKDIS ... .pdf` filename.
+- Quick-setup manuals also get a shared product-image block injected immediately after the PDF button: single-product images for `E16` / `E16T`, and a compact `GT` / `GT+` / `GET` family strip for cellular quick-setup pages.
 - PDF generation is handled by `Scripts/export_manual_pdfs.mjs`, which uses Playwright for the single-pass content export and `Scripts/stamp_manual_pdf.py` (`pikepdf`) to add the branded footer on all pages plus the running header from page 2 onward without reflowing the document.
 - The stamped header/footer uses vendored `Noto Sans` font files under `Scripts/fonts/` so the running title renders correctly for `en`, `lt`, `es`, and `ru`.
 - Any rendered `*/receivers/ipcom/**` route is excluded from v1 PDF generation.

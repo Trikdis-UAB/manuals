@@ -1,6 +1,6 @@
-# Honeywell Vista-48 with GT/GT+/GET quick setup
+# Honeywell Vista with GT/GT+/GET quick setup
 
-Short wiring and programming steps to connect the GT/GT+/GET communicator to Honeywell Ademco Vista-48 (Vista-20, Vista-15) panel using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
+Short wiring and programming steps to connect the GT/GT+/GET communicator to Honeywell Vista panels (Ademco Vista-48, Vista-20, Vista-15) using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
@@ -8,7 +8,7 @@ Short wiring and programming steps to connect the GT/GT+/GET communicator to Hon
 ## Prerequisites
 
 1. GT/GT+/GET firmware 1.21, SIM inserted, PIN disabled, data plan active.
-1. Honeywell Ademco Vista-48 (Vista-20, Vista-15) panel with keypad access (installer code available).
+1. Honeywell Vista panel (Ademco Vista-48, Vista-20, Vista-15) with keypad access (installer code available).
 1. CMS account number if reporting to CMS.
 1. Protegus2 company/installer account and communicator IMEI.
 

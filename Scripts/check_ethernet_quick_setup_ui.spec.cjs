@@ -45,6 +45,17 @@ async function getGroupFontWeight(listLocator, groupText) {
   }, groupText);
 }
 
+async function getQuickSetupProductMetrics(page, selector) {
+  return page.locator(selector).evaluate((element) => {
+    const image = element.querySelector("img");
+    const rect = image ? image.getBoundingClientRect() : { width: 0, height: 0 };
+    return {
+      width: rect.width,
+      height: rect.height,
+    };
+  });
+}
+
 function ensureArtifactsDir() {
   fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
 }
@@ -72,9 +83,18 @@ test.describe("Ethernet quick setup navigation", () => {
       });
     });
 
-    await page.goto(`${BASE_URL}/en/alarm-communicators/ethernet/quick-setup/e16t/`, {
-      waitUntil: "domcontentloaded",
-    });
+    await page.goto(
+      `${BASE_URL}/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/`,
+      {
+        waitUntil: "domcontentloaded",
+      }
+    );
+
+    await expect(page.locator("article > [data-manual-pdf-download] + [data-quick-setup-product='e16']")).toHaveCount(1);
+    await expect(page.locator("[data-quick-setup-product='e16'] img")).toBeVisible();
+    const productMetrics = await getQuickSetupProductMetrics(page, "[data-quick-setup-product='e16']");
+    expect(productMetrics.width).toBeGreaterThanOrEqual(240);
+    expect(productMetrics.width).toBeLessThanOrEqual(320);
 
     const primaryNav = page.locator("nav.md-nav--primary").first();
     await expect(primaryNav).toContainText("Communicators");
@@ -105,7 +125,11 @@ test.describe("Ethernet quick setup navigation", () => {
     expect(topLevelLabels).toContain("E16 quick setup");
     expect(topLevelLabels).toContain("E16T quick setup");
     expect(topLevelLabels).not.toContain("Quick setup");
+    expect(topLevelLabels).not.toContain("Interlogix NX-4v2 / NX-6v2");
     expect(await getGroupFontWeight(azList, "E16 quick setup")).toBe("400");
+    expect(topLevelLabels.indexOf("E16 quick setup")).toBeGreaterThan(topLevelLabels.indexOf("E16"));
+    expect(topLevelLabels.indexOf("E16T quick setup")).toBeGreaterThan(topLevelLabels.indexOf("E16T"));
+    expect(topLevelLabels.indexOf("E16 quick setup")).toBeLessThan(topLevelLabels.indexOf("E16T"));
 
     await page.evaluate(() => {
       const item = Array.from(document.querySelectorAll("li[data-comm-pinned-quick-setup='true']")).find(
@@ -123,8 +147,8 @@ test.describe("Ethernet quick setup navigation", () => {
       "DSC PowerSeries",
       "Paradox SP(+)/MG(+)",
       "Honeywell Vista",
-      "Interlogix NX-4V2 / NX-6V2",
-      "Interlogix NX-8V2",
+      "Interlogix NX-4v2 / NX-6v2",
+      "Interlogix NX-8v2",
     ]);
     await page.screenshot({
       path: path.join(ARTIFACT_DIR, "ethernet-az-view.png"),

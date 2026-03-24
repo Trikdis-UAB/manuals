@@ -1,6 +1,6 @@
-# Honeywell Vista-48 with E16 quick setup
+# Honeywell Vista with E16 quick setup
 
-Short steps to connect the E16 communicator to Honeywell Ademco Vista-48 (Vista-20, Vista-15) panels, configure E16 for IP reporting, and add the system to Protegus2. Use this together with the full E16 manual for all other settings.
+Short steps to connect the E16 communicator to Honeywell Vista panels (Ademco Vista-48, Vista-20, Vista-15), configure E16 for IP reporting, and add the system to Protegus2. Use this together with the full E16 manual for all other settings.
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
@@ -8,7 +8,7 @@ Short steps to connect the E16 communicator to Honeywell Ademco Vista-48 (Vista-
 ## Prerequisites
 
 - E16 communicator with LAN connected and a USB Mini-B cable available for configuration.
-- Honeywell Ademco Vista-48, Vista-20, or Vista-15 panel with keypad access.
+- Honeywell Vista panel (Ademco Vista-48, Vista-20, or Vista-15) with keypad access.
 - Panel firmware version `V5.3` or higher.
 - CMS object ID / account number if reporting to CMS.
 - Protegus2 account and communicator MAC / Unique ID.

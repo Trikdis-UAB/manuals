@@ -40,13 +40,37 @@ async function getGroupFontWeight(listLocator, groupText) {
   }, groupText);
 }
 
+async function getQuickSetupFamilyCaptions(page) {
+  return page.evaluate(() =>
+    Array.from(
+      document.querySelectorAll("[data-quick-setup-product='gt-family'] figcaption")
+    ).map((item) => item.textContent.trim())
+  );
+}
+
+async function getQuickSetupFamilyWidths(page) {
+  return page.evaluate(() =>
+    Array.from(
+      document.querySelectorAll("[data-quick-setup-product='gt-family'] .trik-quick-setup-product__item")
+    ).map((item) => Math.round(item.getBoundingClientRect().width))
+  );
+}
+
 test.describe("Quick setup navigation labels", () => {
-  test("GT/GT+/GET quick setup uses the broader panel family names in A-Z", async ({ page, browserName }) => {
+  test("GT/GT+/GET quick setup labels stay clean in A-Z on an active quick setup page", async ({ page, browserName }) => {
     test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
 
-    await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/quick-setup/paradox/`, {
-      waitUntil: "domcontentloaded",
-    });
+    await page.goto(
+      `${BASE_URL}/en/alarm-communicators/cellular/quick-setup/interlogix%20nx-4v2%20nx-6v2/GT+%20Interlogix%20NX-4V2%20NX-6V2%20ENG%202026%2001%2007/`,
+      {
+        waitUntil: "domcontentloaded",
+      }
+    );
+
+    await expect(page.locator("article > [data-manual-pdf-download] + [data-quick-setup-product='gt-family']")).toHaveCount(1);
+    await expect(page.locator("[data-quick-setup-product='gt-family'] img")).toHaveCount(3);
+    expect(await getQuickSetupFamilyCaptions(page)).toEqual(["GT", "GT+", "GET"]);
+    expect(await getQuickSetupFamilyWidths(page)).toEqual([124, 124, 124]);
 
     const primaryNav = page.locator("nav.md-nav--primary").first();
     await primaryNav.getByRole("tab", { name: "A–Z" }).click();
@@ -65,8 +89,15 @@ test.describe("Quick setup navigation labels", () => {
     const topLevelLabels = await getTopLevelLabels(azList);
     expect(topLevelLabels).toContain("GT/GT+/GET quick setup");
     expect(topLevelLabels).not.toContain("Quick setup");
-    expect(topLevelLabels).not.toContain("Interlogix NX-4V2 / NX-6V2");
+    expect(topLevelLabels).not.toContain("Interlogix NX-4v2 / NX-6v2");
     expect(await getGroupFontWeight(azList, "GT/GT+/GET quick setup")).toBe("400");
+    expect(topLevelLabels.indexOf("GT+")).toBeGreaterThan(topLevelLabels.indexOf("GT"));
+    expect(topLevelLabels.indexOf("GT/GT+/GET quick setup")).toBeGreaterThan(
+      topLevelLabels.indexOf("GT+")
+    );
+    expect(topLevelLabels.indexOf("GT/GT+/GET quick setup")).toBeLessThan(
+      topLevelLabels.indexOf("T16")
+    );
 
     await page.evaluate(() => {
       const item = Array.from(document.querySelectorAll("li[data-comm-pinned-quick-setup='true']")).find(
@@ -88,8 +119,8 @@ test.describe("Quick setup navigation labels", () => {
       "DSC PowerSeries Neo",
       "DSC PowerSeries",
       "Honeywell Vista",
-      "Interlogix NX-4V2 / NX-6V2",
-      "Interlogix NX-8V2",
+      "Interlogix NX-4v2 / NX-6v2",
+      "Interlogix NX-8v2",
     ]);
   });
 });

@@ -173,6 +173,88 @@
     return normalized.slice(0, 1).toLowerCase() + normalized.slice(1);
   }
 
+  function compareLabels(a, b) {
+    return normalizeText(a).localeCompare(normalizeText(b), undefined, {
+      numeric: true,
+      sensitivity: "base"
+    });
+  }
+
+  function extractQuickSetupBaseLabel(text) {
+    var normalized = normalizeText(text);
+    if (!normalized) {
+      return "";
+    }
+
+    var lower = normalized.toLowerCase();
+    var matchedBase = "";
+
+    QUICK_SETUP_LABELS.forEach(function (label) {
+      var variants = [normalizeText(label), decapitalize(label)].filter(Boolean);
+      variants.forEach(function (variant) {
+        var lowerVariant = variant.toLowerCase();
+        if (lower === lowerVariant) {
+          matchedBase = "";
+          return;
+        }
+
+        var suffix = " " + lowerVariant;
+        if (lower.endsWith(suffix)) {
+          var candidateBase = normalized.slice(0, normalized.length - suffix.length).trim();
+          if (candidateBase.length > matchedBase.length) {
+            matchedBase = candidateBase;
+          }
+        }
+      });
+    });
+
+    return matchedBase;
+  }
+
+  function buildSortMeta(text, isQuickSetup) {
+    var normalized = normalizeText(text);
+    if (!isQuickSetup) {
+      return {
+        primary: normalized,
+        secondary: normalized,
+        weight: 0
+      };
+    }
+
+    var base = extractQuickSetupBaseLabel(normalized) || normalized;
+    var familyParts = base
+      .split("/")
+      .map(function (part) {
+        return normalizeText(part);
+      })
+      .filter(Boolean);
+    var anchor = base;
+
+    if (familyParts.length > 1) {
+      familyParts.sort(compareLabels);
+      anchor = familyParts[familyParts.length - 1];
+    }
+
+    return {
+      primary: anchor,
+      secondary: normalized,
+      weight: 1
+    };
+  }
+
+  function compareSortMeta(a, b) {
+    var primaryOrder = compareLabels(a.primary, b.primary);
+    if (primaryOrder !== 0) {
+      return primaryOrder;
+    }
+
+    if (a.weight !== b.weight) {
+      return a.weight - b.weight;
+    }
+
+    return compareLabels(a.secondary, b.secondary);
+  }
+
   function resolveQuickSetupGroupLabel(sourceItem) {
     var sourceLabel = getItemLabelText(sourceItem);
     if (!isGenericQuickSetupLabel(sourceLabel)) {
@@ -290,9 +372,18 @@
 
       var links = Array.from(nestedNav.querySelectorAll("a.md-nav__link"));
       var quickSetupLinks = links.filter(function (link) {
-        return resolvePath(link.getAttribute("href")).indexOf(QUICK_SETUP_PATH) !== -1;
+        var href = link.getAttribute("href") || "";
+        if (href.indexOf("#") !== -1) {
+          return false;
+        }
+        return resolvePath(href).indexOf(QUICK_SETUP_PATH) !== -1;
       });
-      if (quickSetupLinks.length <= 1) {
+      var quickSetupPagePaths = new Set(
+        quickSetupLinks.map(function (link) {
+          return resolvePath(link.getAttribute("href") || "");
+        })
+      );
+      if (quickSetupPagePaths.size <= 1) {
         continue;
       }
 
@@ -397,13 +488,14 @@
     });
 
     items.sort(function (a, b) {
-      return a.text.localeCompare(b.text, undefined, { numeric: true, sensitivity: "base" });
+      return compareSortMeta(buildSortMeta(a.text, false), buildSortMeta(b.text, false));
     });
 
     var entries = [];
     quickSetupGroups.items.forEach(function (item) {
       entries.push({
         text: item.text,
+        sortMeta: buildSortMeta(item.text, true),
         render: function (list) {
           list.appendChild(item.node);
         }
@@ -412,6 +504,7 @@
     standaloneQuickSetupItems.forEach(function (item) {
       entries.push({
         text: item.text,
+        sortMeta: buildSortMeta(item.text, true),
         render: function (list) {
           var li = document.createElement("li");
           li.className = "md-nav__item";
@@ -433,6 +526,7 @@
     items.forEach(function (item) {
       entries.push({
         text: item.text,
+        sortMeta: buildSortMeta(item.text, false),
         render: function (list) {
       var li = document.createElement("li");
       li.className = "md-nav__item";
@@ -452,7 +546,7 @@
     });
 
     entries.sort(function (a, b) {
-      return a.text.localeCompare(b.text, undefined, { numeric: true, sensitivity: "base" });
+      return compareSortMeta(a.sortMeta, b.sortMeta);
     });
 
     var list = document.createElement("ul");

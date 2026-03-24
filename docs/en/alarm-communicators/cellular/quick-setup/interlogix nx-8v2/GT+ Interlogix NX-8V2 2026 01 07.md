@@ -1,6 +1,6 @@
-# Interlogix NX-8V2 with GT/GT+/GET quick setup
+# Interlogix NX-8v2 with GT/GT+/GET quick setup
 
-Short wiring and programming steps to connect the GT/GT+/GET communicator to Interlogix NX-8V2 panel using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
+Short wiring and programming steps to connect the GT/GT+/GET communicator to Interlogix NX-8v2 panel using KeyBus, then enroll the system in Protegus2. Use this alongside the full manuals for all other settings. (Terminal labels differ slightly between GT/GT+/GET, but the connections are the same.) 
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.
@@ -8,7 +8,7 @@ Short wiring and programming steps to connect the GT/GT+/GET communicator to Int
 ## Prerequisites
 
 1. GT/GT+/GET firmware 1.21, SIM inserted, PIN disabled, data plan active.
-1. Interlogix NX-8V2 panel with keypad access (installer code available).
+1. Interlogix NX-8v2 panel with keypad access (installer code available).
 1. CMS account number if reporting to CMS.
 1. Protegus2 company/installer account and communicator IMEI.
 
@@ -24,7 +24,7 @@ Follow the schematic below to connect the communicator to the panel:
 
 <img src="../GT+ interlogix nx 8v2 prijungimo schema ENG 2025 12 30.png" alt="GT+ interlogix nx 8v2 prijungimo schema ENG 2025 12 30" class="GT+ interlogix nx 8v2 prijungimo schema ENG 2025 12 30">
 
-## Programming the Interlogix NX-8V2 Alarm Panel via the LCD Keypad
+## Programming the Interlogix NX-8v2 Alarm Panel via the LCD Keypad
 
 Using the control panel‘s keypad enter these sections and set them as described:
 
@@ -67,7 +67,7 @@ Using the control panel‘s keypad enter these sections and set them as describe
 | Loc#108 Seg#3        | 12345678*#       | Segment 3. All toggle options should be enabled, press * to save and  then # to save and # to go back to the main menu. |
 | Enter location       | EXIT EXIT        | Press “EXIT” twice to exit programming mode.                 |
 
-## Programming the Interlogix NX-8V2 Alarm Panel via the LED Keypad
+## Programming the Interlogix NX-8v2 Alarm Panel via the LED Keypad
 
 Using the control panel’s keypad enter these sections and set them as described: 
 
