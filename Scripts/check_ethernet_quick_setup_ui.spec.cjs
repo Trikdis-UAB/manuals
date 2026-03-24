@@ -83,12 +83,9 @@ test.describe("Ethernet quick setup navigation", () => {
       });
     });
 
-    await page.goto(
-      `${BASE_URL}/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/`,
-      {
-        waitUntil: "domcontentloaded",
-      }
-    );
+    await page.goto(`${BASE_URL}/en/alarm-communicators/ethernet/quick-setup/e16/texecom/`, {
+      waitUntil: "domcontentloaded",
+    });
 
     await expect(page.locator("article > [data-manual-pdf-download] + [data-quick-setup-product='e16']")).toHaveCount(1);
     await expect(page.locator("[data-quick-setup-product='e16'] img")).toBeVisible();
@@ -103,6 +100,9 @@ test.describe("Ethernet quick setup navigation", () => {
     await expect(primaryNav).toContainText("E16");
     await expect(primaryNav).toContainText("E16T quick setup");
     await expect(primaryNav).toContainText("E16T");
+    await expect(primaryNav).toContainText("Texecom");
+    await expect(primaryNav).toContainText("Innerrange Inception");
+    await expect(primaryNav).toContainText("Innerrange Integriti");
     await page.screenshot({
       path: path.join(ARTIFACT_DIR, "ethernet-tech-view.png"),
       fullPage: false,
@@ -149,6 +149,9 @@ test.describe("Ethernet quick setup navigation", () => {
       "Honeywell Vista",
       "Interlogix NX-4v2 / NX-6v2",
       "Interlogix NX-8v2",
+      "Texecom",
+      "Innerrange Inception",
+      "Innerrange Integriti",
     ]);
     await page.screenshot({
       path: path.join(ARTIFACT_DIR, "ethernet-az-view.png"),
