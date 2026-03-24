@@ -121,6 +121,9 @@ test.describe("Quick setup navigation labels", () => {
       "Honeywell Vista",
       "Interlogix NX-4v2 / NX-6v2",
       "Interlogix NX-8v2",
+      "Texecom",
+      "Innerrange Inception",
+      "Innerrange Integriti",
     ]);
   });
 });
