@@ -108,6 +108,9 @@ plugins:
             - Honeywell Vista: alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/index.md
             - Interlogix NX-4v2 / NX-6v2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/index.md
             - Interlogix NX-8v2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/index.md
+            - Texecom: alarm-communicators/ethernet/quick-setup/e16/texecom/index.md
+            - Innerrange Inception: alarm-communicators/ethernet/quick-setup/e16/innerrange-inception/index.md
+            - Innerrange Integriti: alarm-communicators/ethernet/quick-setup/e16/innerrange-integriti/index.md
           - E16: alarm-communicators/e16/index.md
           - E16T quick setup: alarm-communicators/ethernet/quick-setup/e16t/index.md
           - E16T: alarm-communicators/e16t/index.md
@@ -142,6 +145,8 @@ plugins:
         - Keypad SK-LED TouchPad: keypads/sk-led-touchpad/index.md
         - Keypad FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Keypad FLEXi SK LED: keypads/flexi-sk-led/index.md
+      - Expanders:
+        - iO-8: expanders/io-8/index.md
     - locale: lt
       name: Lietuvių
       build: true
@@ -183,6 +188,8 @@ plugins:
         - SK-LED TouchPad klaviatūra: keypads/sk-led-touchpad/index.md
         - Klaviatūra FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Klaviatūra FLEXi SK LED: keypads/flexi-sk-led/index.md
+      - Plėtikliai:
+        - iO-8: expanders/io-8/index.md
     - locale: es
       name: Español
       build: true
@@ -224,6 +231,8 @@ plugins:
         - Teclado SK-LED TouchPad: keypads/sk-led-touchpad/index.md
         - Teclado FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Teclado FLEXi SK LED: keypads/flexi-sk-led/index.md
+      - Expansores:
+        - iO-8: expanders/io-8/index.md
     - locale: ru
       name: Русский
       build: true
@@ -263,6 +272,8 @@ plugins:
         - Клавиатура SK-LED Button: keypads/sk-led-button/index.md
         - Клавиатура SK-LCD TouchPad: keypads/sk-lcd-touchpad/index.md
         - Клавиатура FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
+      - Расширители:
+        - iO-8: expanders/io-8/index.md
 - search:
     lang:
     - en
