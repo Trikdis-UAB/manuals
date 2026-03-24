@@ -1,4 +1,4 @@
-# Apsaugos centralė “FLEXi” SP3
+# RF-S8 Belaidis transiveris
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
@@ -74,9 +74,9 @@ Prijungimas:
 | POWER / (Maitinimas) | Mirksi geltona | Maitinimo įtampa yra žema (≤11.5 V) |
 | POWER / (Maitinimas) | Šviečia geltonai | Nėra ryšio su centrale per RS485 |
 
-## Apsaugos centralės programinės įrangos pakeitimas 
+## Apsaugos centralės programinės įrangos pakeitimas
 
-Centralės „FLEXi“ SP3 veikimo programą reikia pakeisti į 4 revizijos programą SP3_xxx4\_0122.fw (veikimo programos versija 1.22 arba aukštesnė), kad centralė galėtu dirbti su „**S8**“ belaidžiais jutikliais, sirenomis, valdymo pulteliais. Prie centralės reikia prijungti belaidžių jutiklių imtuvą RF-S8.
+Centralės „FLEXi” SP3 veikimo programą reikia pakeisti į 4 revizijos programą SP3_xxx4\_0122.fw (veikimo programos versija 1.22 arba aukštesnė), kad centralė galėtu dirbti su „**S8**“ belaidžiais jutikliais, sirenomis, valdymo pulteliais. Prie centralės reikia prijungti belaidžių jutiklių imtuvą RF-S8.
 
 Programinės įrangos atnaujinimas:
 

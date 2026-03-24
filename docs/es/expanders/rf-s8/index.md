@@ -1,4 +1,4 @@
-# Security control panel “FLEXi” SP3
+# RF-S8 Transceptor inalámbrico
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">

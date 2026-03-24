@@ -1,4 +1,4 @@
-# Охранная панель „FLEXI“ SP3
+# RF-S8 Беспроводной трансивер
 
 <div style="text-align: center;">
   <img src="./image1.png" alt="" width="400">
