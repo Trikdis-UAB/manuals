@@ -400,6 +400,16 @@ def _build_pdf_download_action(page, document_title: str = "") -> str:
     )
 
 
+def _inject_pdf_download_action(html_content: str, action_html: str) -> str:
+    if "data-manual-pdf-download" in html_content:
+        return html_content
+
+    if H1_RE.search(html_content):
+        return H1_RE.sub(lambda match: f"{match.group(0)}{action_html}", html_content, count=1)
+
+    return action_html + html_content
+
+
 def _build_pdf_manifest_entry(page, document_title: str = "") -> Dict[str, str]:
     dest_path = PurePosixPath(page.file.dest_path)
     output_filename = _pdf_output_filename(page, document_title)
@@ -444,8 +454,10 @@ def on_page_content(html_content: str, page, config, files):
     if _is_pdf_eligible(page, config):
         document_title = _pdf_document_title(page, html_content)
         _register_pdf_manifest_entry(page, document_title)
-        if "data-manual-pdf-download" not in html_content:
-            html_content = _build_pdf_download_action(page, document_title) + html_content
+        html_content = _inject_pdf_download_action(
+            html_content,
+            _build_pdf_download_action(page, document_title),
+        )
 
     return html_content
 
