@@ -295,4 +295,3 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 17. Wireless sensors registered.
 
-## Contents 

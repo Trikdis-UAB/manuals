@@ -292,4 +292,3 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite 
 
 17. Belaidžiai jutikliai pilnai priregistruoti.
 
-## Turinys
