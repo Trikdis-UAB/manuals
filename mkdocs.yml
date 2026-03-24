@@ -147,7 +147,8 @@ plugins:
         - Keypad FLEXi SK LED: keypads/flexi-sk-led/index.md
       - Expanders:
         - iO-8: expanders/io-8/index.md
-        - RF-LoRa: expanders/rf-lora/index.md
+        - Transceivers:
+          - RF-LoRa: expanders/rf-lora/index.md
     - locale: lt
       name: Lietuvių
       build: true
@@ -191,7 +192,8 @@ plugins:
         - Klaviatūra FLEXi SK LED: keypads/flexi-sk-led/index.md
       - Plėtikliai:
         - iO-8: expanders/io-8/index.md
-        - RF-LoRa: expanders/rf-lora/index.md
+        - Transivieriai:
+          - RF-LoRa: expanders/rf-lora/index.md
     - locale: es
       name: Español
       build: true
@@ -235,7 +237,8 @@ plugins:
         - Teclado FLEXi SK LED: keypads/flexi-sk-led/index.md
       - Expansores:
         - iO-8: expanders/io-8/index.md
-        - RF-LoRa: expanders/rf-lora/index.md
+        - Transceptores:
+          - RF-LoRa: expanders/rf-lora/index.md
     - locale: ru
       name: Русский
       build: true
@@ -277,7 +280,8 @@ plugins:
         - Клавиатура FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
       - Расширители:
         - iO-8: expanders/io-8/index.md
-        - RF-LoRa: expanders/rf-lora/index.md
+        - Трансиверы:
+          - RF-LoRa: expanders/rf-lora/index.md
 - search:
     lang:
     - en
