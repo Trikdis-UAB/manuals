@@ -18,7 +18,7 @@ Visite la página iO-8 en www.trikdis.com para obtener las especificaciones del 
 
 <img alt="" src="./image2.png" style="width:2.5984251968503935in;height:2.1535433070866143in" />
 
-El módulo principal (SP231, SP3, CG17, G16, G16T, E16, E16T, G17F) establece los diagramas de cableado y la resistencia nominal, al que está conectado el módulo de expansión iO-8.
+El módulo principal (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F) establece los diagramas de cableado y la resistencia nominal, al que está conectado el módulo de expansión iO-8.
 
 3.  Conecte las SALIDAS como se muestra:
 

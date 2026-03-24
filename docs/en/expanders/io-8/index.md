@@ -18,7 +18,7 @@ Visit [iO-8 page on *trikdis.com*](http://www.trikdis.com/) for device specifica
 
 <img alt="" src="./image2.png" style="width:2.5984251968503935in;height:2.0708661417322833in" />
 
-The input wiring diagrams and resistor values are determined by the main unit (SP231, SP3, CG17, G16, G16T, E16, E16T, G17F) to which the iO-8 module is connected.
+The input wiring diagrams and resistor values are determined by the main unit (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F) to which the iO-8 module is connected.
 
 3.  Wire outputs as shown:
 

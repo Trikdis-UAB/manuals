@@ -18,7 +18,7 @@ Apsilankykite iO-8 tinklalapyje trikdis.com, kur rasite prietaiso specifikaciją
 
 <img alt="" src="./image2.png" style="width:2.622047244094488in;height:2.062992125984252in" />
 
-Įėjimų jungimo schemas ir rezistorių dydžius nustato pagrindinis įrenginys (SP231, SP3, CG17, G16, G16T, E16, E16T, G17F), prie kurio prijungtas iO-8 modulis.
+Įėjimų jungimo schemas ir rezistorių dydžius nustato pagrindinis įrenginys (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F), prie kurio prijungtas iO-8 modulis.
 
 3.  Sujunkite išėjimus, kaip parodyta:
 
