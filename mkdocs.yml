@@ -148,6 +148,7 @@ plugins:
       - Expanders:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
+        - iO8-LoRa: expanders/io8-lora/index.md
     - locale: lt
       name: Lietuvių
       build: true
@@ -192,6 +193,7 @@ plugins:
       - Plėtikliai:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
+        - iO8-LoRa: expanders/io8-lora/index.md
     - locale: es
       name: Español
       build: true
@@ -236,6 +238,7 @@ plugins:
       - Expansores:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
+        - iO8-LoRa: expanders/io8-lora/index.md
     - locale: ru
       name: Русский
       build: true
@@ -278,6 +281,7 @@ plugins:
       - Расширители:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
+        - iO8-LoRa: expanders/io8-lora/index.md
 - search:
     lang:
     - en
