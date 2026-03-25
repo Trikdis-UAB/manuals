@@ -4,7 +4,6 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-
 ## Description 
 
 By connecting the RF-S8 transceiver, the *„**FLEXi“ SP3 can work with “S8***” wireless sensors, sirens, and remote controls.
@@ -22,9 +21,6 @@ By connecting the RF-S8 transceiver, the *„**FLEXi“ SP3 can work with “S8*
 **Connection:**
 
 - The *RF-S8* transceiver is connected to the *"FLEXi" SP3* control panel via the RS485 bus.
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Technical specifications 
 
 | **Parameter** | **Description** |
@@ -81,7 +77,6 @@ The “FLEXi” SP3 control panel firmware must be changed to revision 4 **SP3_x
 Follow the steps below to replace the firmware:
 
 1.  Connect the RF-S8 transceiver and the “FLEXi” SP3 according to the diagram.
-
 
 2.  Switch on the power supply to the “FLEXi” SP3 control panel.
 
@@ -294,4 +289,3 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 16. After making changes, press **Write [F5]**.
 
 17. Wireless sensors registered.
-

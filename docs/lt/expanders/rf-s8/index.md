@@ -4,7 +4,6 @@
   <img src="./image1.png" alt="" width="400">
 </div>
 
-
 ## Aprašymas 
 
 Prijungus imtuvą RF-S8, apsaugos centralė „FLEXi” SP3 gali dirbti su „**S8**“ belaidžiais jutikliais, sirenomis, valdymo pulteliais.
@@ -22,9 +21,6 @@ Ryšys:
 Prijungimas:
 
 - Imtuvas *RF-S8* prie apsaugos centralės "*FLEXi*"* SP3* prijungiamas per RS485 šyną.
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Techniniai parametrai 
 
 | Parametras | Aprašymas |
@@ -81,7 +77,6 @@ Centralės „FLEXi” SP3 veikimo programą reikia pakeisti į 4 revizijos prog
 Programinės įrangos atnaujinimas:
 
 1.  Imtuvą RF-S8 ir „FLEXi” SP3 sujunkite pagal schemą.
-
 
 2.  Įjunkite maitinimą centralei „FLEXi“ SP3.
 
@@ -291,4 +286,3 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite 
 16. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
 17. Belaidžiai jutikliai pilnai priregistruoti.
-

@@ -21,9 +21,6 @@ Comunicación:
 Conexión:
 
 - El transceptor *RF-S8* se conecta al panel de control *"FLEXi" SP3* a través del bus RS485*.*
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Parámetros Técnicos 
 
 | Parámetro | Descripción |
@@ -80,7 +77,6 @@ El panel de seguridad **„*FLEXi” SP3*** debe estar equipado con la revisión
 Siga los pasos a continuación para reemplazar el firmware:
 
 1.  De acuerdo con el esquema, conecte el módulo RF-S8 a „FLEXi” SP3.
-
 
 2.  Encienda la fuente de alimentación del panel de control **„*FLEXi” SP3***.
 
