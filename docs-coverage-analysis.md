@@ -14,7 +14,7 @@ This table compares every product listed on **trikdis.com** against the document
 | 🔅 | De-emphasised — product is on trikdis.com but hidden behind a filter (not shown in "All" view) |
 | ⚠️ | Docs-only — page exists on docs.trikdis.com but product is no longer listed on trikdis.com |
 
-> **Language note:** docs.trikdis.com serves EN, LT, ES, and RU. This analysis tracks whether a manual exists at all (any language). EN is most complete; LT/ES/RU mirror the same product set but lack some EN-only content (e.g. Ethernet quick-setup guides and IPcom are English-only).
+> **Language note:** docs.trikdis.com serves EN, LT, ES, and RU. This analysis tracks whether a manual exists at all (any language). EN is most complete; LT/ES/RU mirror the same product set but still lack some EN-only content in specific sections (notably IPcom pages, and in RU two keypad pages).
 
 ---
 
