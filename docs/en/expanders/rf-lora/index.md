@@ -8,6 +8,8 @@
 
 The **RF-LORA** transceiver with iO-LORA and iO-8-LORA wireless expanders increases the number of inputs and outputs of the "FLEXi" SP3 control panel using two-way RF communication.
 
+
+Also compatible with the [GATOR Cellular](../../gate-controllers/gator/index.md) and [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) gate & door access controllers.
 Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEXi" SP3 control panel using the RF-LORA transceiver.
 
 ### Features

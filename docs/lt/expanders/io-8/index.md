@@ -10,6 +10,8 @@ iO-8 turi 8 įėjimo/išėjimo gnybtus, kuriuos galima nustatyti kaip įėjimo a
 
 Apsilankykite iO-8 tinklalapyje trikdis.com, kur rasite prietaiso specifikaciją ir naujausią suderintų **TRIKDIS** įrenginių sąrašą.
 
+Suderinamas su apsaugos centralize [SP3](../../control-panels/sp3/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) ir [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) vartų ir durų prieigos valdikliais.
+
 **Atlikite sekančius žingsnius su iO-8, kad jį parengti darbui:**
 
 1.  Prijunkite iO-8 prie suderinamo **TRIKDIS** įrenginio, kaip parodyta:

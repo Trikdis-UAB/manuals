@@ -8,6 +8,8 @@
 
 iO-LORA wireless expanders with RF-LORA transceiver increase the number of inputs and outputs of the "FLEXi" SP3 control panel using two-way RF communication.
 
+
+Also compatible with the [GATOR Cellular](../../gate-controllers/gator/index.md) and [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) gate & door access controllers.
 Temperature sensor (1 pcs.) and readers of contact ("iButton") keys can be connected to the iO-LORA expander. The PGM output (relay) of the expander can be remotely controlled (on/off) by various electrical devices. iO-LORA has one digital input.
 
 ### Features

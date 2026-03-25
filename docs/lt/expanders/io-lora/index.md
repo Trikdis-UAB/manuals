@@ -8,6 +8,8 @@
 
 iO-LORA belaidžiai plėtikliai su RF-LORA moduliu padidina apsaugos centralės "FLEXi" SP3 įėjimų ir išėjimų skaičių naudojant dvipusį belaidį RF ryšį.
 
+
+Taip pat suderinamas su [GATOR Cellular](../../gate-controllers/gator/index.md) ir [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) vartų ir durų prieigos valdikliais.
 Prie iO-LORA plėtiklio galima prijungti vieną temperatūros jutiklį ir kontaktinių ("iButton") raktų skaitytuvus. Su plėtiklio reliniu PGM išėjimu nuotoliniu būdu galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. iO-LORA turi viena skaitmeninį įėjimą.
 
 **Savybės**

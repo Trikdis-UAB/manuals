@@ -10,6 +10,8 @@ iO-8 tiene 8 contactos, que se pueden configurar en modo de entrada o salida.
 
 Visite la página iO-8 en www.trikdis.com para obtener las especificaciones del dispositivo y una lista actualizada de dispositivos TRIKDIS compatibles.
 
+Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/index.md) y los controladores de acceso [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+
 **Siga estos pasos para configurar iO-8:**
 
 1.  Conecte el iO-8 a un dispositivo TRIKDIS compatible como se muestra:

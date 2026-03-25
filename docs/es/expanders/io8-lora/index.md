@@ -8,6 +8,8 @@
 
 Los expansores inalámbricos iO-8-LORA con transceptor RF-LORA aumentan el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
 
+
+También compatible con el controlador de acceso a puertas y portones [GATOR Cellular](../../gate-controllers/gator/index.md).
 El expansor inalámbrico iO-8-LORA tiene 8 terminales de I/O, cada uno de los cuales se puede configurar como entrada (IN) o como salida (OUT).
 
 **Características**
