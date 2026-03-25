@@ -11,7 +11,7 @@ This table compares every product listed on **trikdis.com** against the document
 |--------|---------|
 | ✅ | Documented — manual exists on docs.trikdis.com |
 | ❌ | **Missing** — product is on trikdis.com but has NO docs page |
-| 🔅 | De-emphasised — product is on trikdis.com but hidden behind a filter (not shown in "All" view) |
+| 🔅 | De-emphasised — product is visible on scroll in the "All" view and accessible via a specific filter, but does not appear in the initial above-the-fold product grid |
 | ⚠️ | Docs-only — page exists on docs.trikdis.com but product is no longer listed on trikdis.com |
 
 > **Language note:** docs.trikdis.com serves EN, LT, ES, and RU. This analysis tracks whether a manual exists at all (any language). EN is most complete; LT/ES/RU mirror the same product set but lack some EN-only content (e.g. Ethernet quick-setup guides and IPcom are English-only).
@@ -20,7 +20,7 @@ This table compares every product listed on **trikdis.com** against the document
 
 ## Communicators
 
-_"All" view on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Three products are hidden behind filters._
+_The initial above-the-fold grid on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Four more products (G16T, E16, E16T, GT original) load on scroll via Elementor client-side rendering — they are visible in the "All" view but only after scrolling, and are absent from the raw HTML returned by a plain HTTP GET request._
 
 | Product | On trikdis.com | Visibility | docs.trikdis.com | Notes |
 |---------|---------------|------------|-----------------|-------|
@@ -30,9 +30,9 @@ _"All" view on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Three produ
 | G17F | ✅ | All view | ✅ | Fire panel communicator |
 | T16 | ✅ | All view | ✅ | VHF/UHF radio communicator |
 | G16 | ✅ | All view | ✅ | |
-| G16T | ✅ 🔅 | 4G LTE filter only | ✅ | De-emphasised but still sold |
-| E16 | ✅ 🔅 | Ethernet filter only | ✅ | De-emphasised but still sold |
-| E16T | ✅ 🔅 | Ethernet filter only | ✅ | De-emphasised but still sold |
+| G16T | ✅ 🔅 | Scroll-loaded in All view; also via 4G LTE filter | ✅ | De-emphasised but still sold |
+| E16 | ✅ 🔅 | Scroll-loaded in All view; also via Ethernet filter | ✅ | De-emphasised but still sold |
+| E16T | ✅ 🔅 | Scroll-loaded in All view; also via Ethernet filter | ✅ | De-emphasised but still sold |
 | GT (original) | ⚠️ | Not listed on trikdis.com | ✅ | Superseded by GT+. Confirm if doc should be kept as legacy or removed |
 
 ---
@@ -72,7 +72,7 @@ _"All" view on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Three produ
 
 ## Receivers / Software
 
-> trikdis.com has a dedicated "Receivers" category with 6 hardware products. **None of these have docs.** The only documented item is IPcom (software), which has no product page on trikdis.com.
+> trikdis.com has a dedicated "Receivers" category with 7 hardware products. **None of these have docs.** The only documented item is IPcom (software), which has no product page on trikdis.com.
 
 | Product | On trikdis.com | Tags | docs.trikdis.com | Notes |
 |---------|---------------|------|-----------------|-------|
@@ -82,13 +82,14 @@ _"All" view on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Three produ
 | **R11** | ✅ | FM/FSK, Multi-Protocol, VHF Radio | ❌ | Hardware receiver |
 | **RF11** | ✅ | Modular Integration, Multi-Protocol, VHF/UHF | ❌ | Hardware receiver |
 | **RT2** | ✅ | Multi-format Decoding, PSTN, Surgard Output | ❌ | Hardware receiver |
-| **RR-IP12** | ✅ | GPRS, Modular Integration, Repeater, VHF/UHF | ❌ | Hardware receiver |
+| **RR-IP12** | ✅ | GPRS, IP, Modular Integration, Repeater, VHF/UHF | ❌ | Hardware receiver |
+| **RTH2** | ✅ | Multi-format Decoding, PSTN, Standalone | ❌ | Hardware receiver |
 
 ---
 
 ## Expanders & Accessories — ❌ ENTIRELY MISSING FROM DOCS
 
-> **Note:** iO-8, RF-S8, and PB-LoRa were in the previous version of this analysis but are **no longer listed on trikdis.com** as of 2026-03-24. The iO-8 is still referenced in the FAQ text ("Our iO-8 expanders allow you to scale your system easily") suggesting it may still be sold but is unlisted. Filter buttons for "S8" and "Panic Buttons" still exist on the page with no products behind them.
+> All 9 products below are confirmed listed on trikdis.com as of 2026-03-24. iO-8, RF-S8, and PB-LoRa are all accessible at their respective `/en/equipment/` URLs. None of these products have documentation on docs.trikdis.com.
 
 | Product | On trikdis.com | Tags | docs.trikdis.com | Priority |
 |---------|---------------|------|-----------------|---------|
@@ -98,9 +99,9 @@ _"All" view on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Three produ
 | AX-ANT-KIT | ✅ | 433 MHz, Antenna | ❌ | 🟡 Low — antenna kit; installation is simple |
 | AX-ANT01S_SF | ✅ | Antenna | ❌ | 🟡 Low — same |
 | SMA–SMF / 50/01 | ✅ | Antenna, Extension cable | ❌ | 🟡 Low — cable accessory |
-| iO-8 | ⚠️ | Expander (unlisted) | ❌ | 🟡 Confirm — referenced in FAQ but removed from product listing; check if still sold |
-| RF-S8 | ⚠️ | 868 MHz, Receiver (unlisted) | ❌ | 🟡 Confirm — filter button "S8" exists but no product behind it |
-| PB-LoRa | ⚠️ | LoRa, Panic Button (unlisted) | ❌ | 🟡 Confirm — filter button "Panic Buttons" exists but no product behind it |
+| **iO-8** | ✅ | 433/868 MHz, Expander | ❌ | 🔴 High — confirmed listed at `/en/equipment/io-8-3/` |
+| **RF-S8** | ✅ | 868 MHz, Expander, Receiver | ❌ | 🔴 High — confirmed listed at `/en/equipment/rf-s8/` |
+| **PB-LoRa** | ✅ | LoRa, Panic Button | ❌ | 🔴 High — confirmed listed at `/en/equipment/pb-lora/` |
 
 ---
 
@@ -125,44 +126,49 @@ _"All" view on trikdis.com shows: GT+, GET, FireCom, G17F, T16, G16. Three produ
 | Control Panels | 2 | 2 | 0 |
 | Keypads | 4 listed (+ 2 FLEXi variants) | 6 | 0 |
 | Gate Controllers | 2 | 2 | 0 |
-| Receivers / Software | 6 hardware + IPcom (software) | 1 (IPcom only) | **6** |
-| Expanders & Accessories | 6 listed (+ 3 possibly unlisted) | 0 | **6 listed** + 3 confirm |
+| Receivers / Software | 7 hardware + IPcom (software) | 1 (IPcom only) | **7** |
+| Expanders & Accessories | 9 listed | 0 | **9** |
 | Wireless Sensors | 6 | 0 | **6** |
-| **TOTAL** | **35 listed** | **20** | **18 confirmed gaps** |
+| **TOTAL** | **39 listed** | **20** | **22 confirmed gaps** |
 
 ---
 
 ## Recommended Action Plan
 
-### 🔴 Immediate — 15 products with no docs (confirmed listed on trikdis.com)
+### 🔴 Immediate — 19 high-priority products with no docs
 
 **Wireless Sensors (6):**
 1. Smart Plug S8, Smart Smoke Detector S8, SOS S8 — S8 ecosystem, document together
 2. Curtain mini, Curtain mini PRO, Corner PIR — M4 433 MHz sensors
 
-**LoRa ecosystem (3):**
-3. iO-LORA, iO8-LoRa, RF-LoRa — form a coherent system, document together
+**LoRa ecosystem (6):**
+3. iO-LORA, iO8-LoRa, RF-LoRa — LoRa hub/expander/receiver trio, document together
+4. iO-8, RF-S8, PB-LoRa — confirmed listed; iO-8 expander, RF-S8 receiver, PB-LoRa panic button
 
-**Hardware Receivers (6) — entirely missing from previous analysis:**
-4. RL14 — IP/SMS rack-mount receiver for CMS
-5. RFH11 — VHF/UHF multi-format receiver with RS232
-6. R11 — FM/FSK VHF radio multi-protocol receiver
-7. RF11 — VHF/UHF modular multi-protocol receiver
-8. RT2 — PSTN multi-format decoder with Surgard output
-9. RR-IP12 — GPRS/VHF modular repeater receiver
+**Hardware Receivers (7):**
+5. RL14 — IP/SMS rack-mount receiver for CMS
+6. RFH11 — VHF/UHF multi-format receiver with RS232
+7. R11 — FM/FSK VHF radio multi-protocol receiver
+8. RF11 — VHF/UHF modular multi-protocol receiver
+9. RT2 — PSTN multi-format decoder with Surgard output
+10. RR-IP12 — GPRS/IP modular repeater receiver
+11. RTH2 — PSTN standalone multi-format decoder
+
+### 🟡 Low priority — 3 accessory products with no docs
+
+- **AX-ANT-KIT** — 433 MHz antenna kit; no complex installation guide needed
+- **AX-ANT01S_SF** — antenna accessory; same
+- **SMA–SMF / 50/01** — antenna extension cable; same
 
 ### 🟡 Confirm with team
 
-- **iO-8** — still referenced in FAQ text but removed from product listing; is it still sold? If yes, add docs. If discontinued, update FAQ.
-- **RF-S8** — "S8" filter button exists but no product behind it; confirm status.
-- **PB-LoRa** — "Panic Buttons" filter exists but no product behind it; confirm status.
 - **GT (original)** — keep or retire the docs page? Product not listed on trikdis.com.
 - **FLEXi SK LCD / FLEXi SK LED** — are these truly separate products from SK-LCD/SK-LED? (docs page exists, trikdis.com does not list them separately)
-- **E16, E16T, G16T** — confirm still actively sold (on trikdis.com behind filters); docs coverage is in place ✅
+- **E16, E16T, G16T** — confirm still actively sold (scroll-loaded in "All" view on trikdis.com, also accessible via Ethernet/4G LTE filters); docs coverage is in place ✅
 
 ### 🟢 Already well covered
 
-- All 9 communicators (GT+, GET, G16, G16T, FireCom, G17F, T16, E16, E16T) ✅
+- All 9 communicators (GT+, GET, G16, G16T, FireCom, G17F, T16, E16, E16T) ✅ — G16T, E16, E16T are scroll-loaded in the "All" view but fully listed and documented
 - Both control panels (FLEXi SP3, CG17) ✅
 - Both gate controllers (GATOR, GATOR WiFi) ✅
 - All 6 keypads (SK-LCD/LED Button, SK-LCD/LED TouchPad, FLEXi SK LCD/LED) ✅
