@@ -140,3 +140,33 @@ Expected headers after cutover: `server: Netlify` and `cache-control: public,max
 - Internal question backlog for this manual is stored at `projects/Ipcom5/team-questions.md` (not published).
 - Redaction document index for IPcom5 is `projects/Ipcom5/redaction-docs.md`.
 - Unredacted screenshot safety copies must be kept locally under `artifacts/private/ipcom5-unredacted-<timestamp>/` (with `MANIFEST.sha256`) and must never be committed.
+
+## 12) PDF download button
+
+Every published manual page gets a **"Download PDF"** button (red, top-right below the H1) injected automatically by `mkdocs_hooks.py` when the `TRIKDOCS_PDF_DOWNLOADS=1` env var is set at build time.
+
+### Normal flow (generated PDF)
+The hook generates a filename like `trikdis-rl14-en.pdf`, writes a `pdf-manifest.json` in the site root, and a separate build step (Netlify) renders the page to PDF and places it at that path.
+
+### Bundled original PDF (front matter `pdf:`)
+For EOL products or manuals where the auto-generated PDF would be degraded (e.g. missing EMF images, lost Word callout overlays), bundle the original source PDF instead:
+
+1. Copy the PDF into the page's docs folder:
+   ```
+   docs/en/<category>/<product>/my-original.pdf
+   ```
+
+2. Add front matter to the page's `index.md`:
+   ```yaml
+   ---
+   pdf: my-original.pdf
+   ---
+   ```
+
+**Effect:**
+- The button appears on every build, even without `TRIKDOCS_PDF_DOWNLOADS=1` (no generation needed).
+- The button label changes to **"Download original PDF"** (localised per language) instead of the standard "Download PDF".
+- The button links directly to the bundled file; the friendly download name is still derived from the page H1.
+- The page is **excluded** from `pdf-manifest.json`, so the PDF generator does not overwrite it.
+
+**Example:** `docs/en/receivers/ip-network/rl14/` — uses `rl14-original.pdf` because the source DOCX contained EMF images and Word callout text-box overlays that Pandoc cannot extract.

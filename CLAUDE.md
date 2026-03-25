@@ -1,6 +1,8 @@
 # Note on instructions
 `agents.md` contains the newer, authoritative instructions for this repo. Follow `agents.md` first when there is any overlap or conflict.
 
+**Nav hiding mechanism** (why WIP sections are invisible until directly navigated to): see `NAV_VISIBILITY.md`.
+
 # TRIKDIS Documentation Project
 
 **Location:** `/Users/local/projects/trikdis-docs/`
