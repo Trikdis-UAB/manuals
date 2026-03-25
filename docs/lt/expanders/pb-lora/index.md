@@ -1,7 +1,7 @@
 # PB-LoRa Belaidis panikinis mygtukas
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="400">
+  <img src="./image3.png" alt="" width="200">
 </div>
 
 ## Aprašymas
