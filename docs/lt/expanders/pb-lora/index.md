@@ -1,5 +1,9 @@
 # PB-LoRa Belaidis panikinis mygtukas
 
+<div style="text-align: center;">
+  <img src="./image3.png" alt="" width="400">
+</div>
+
 ## Aprašymas
 
 Gaminys PB-LORA skirtas perduoti pagalbos kvietimo pranešimą bevielių būdu. Pagalbos kvietimas inicijuojamas paspaudus mygtuką. Kaip pranešimo priėmimo įrenginys naudojamas RF-LORA modulis, kuris prijungtas prie apsaugos centralės “FLEXi” SP3.
@@ -15,9 +19,6 @@ Ryšys:
 Prijungimas:
 
 - Belaidis panikos mygtukas *PB-LORA* prie apsaugos centralės “*FLEXi*”* SP3* prijungiamas per transiverį *RF-LORA*.
-
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Techniniai parametrai
 
 | Parametras | Aprašymas |
@@ -38,7 +39,6 @@ Prijungimas:
 <img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 > **Pastaba:** elemento vieta nurodyta ant gaminio etiketės.
-
 
 ### Šviesinė veikimo indikacija
 
@@ -83,14 +83,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 !!! note
     Prie apsaugos centralės “FLEXi” SP3 turi būti prijungtas transiveris RF-LORA ir gali būti prijungti iki 8 vnt. PB-LORA bevielių pavojaus mygtukų (centralės veikimo programos versija 1.17 arba aukštesnė. Pvz.: SP3_xxxx_0117.fw) arba iki 250 vnt. PB-LORA mygtukų (centralės 2 laidos veikimo programos versija 1.16 arba aukštesnė. Pvz.: SP3_xxx2_0116.fw).
 
-
 ## Apsaugos centralė “FLEXi” SP3
-
-<div style="text-align: center;">
-
-<img src="./image1.png" alt="" width="400">
-
-</div>
 
 “*FLEXi*” *SP3* centralėje turi būti įrašyta veikimo programos versija 1.17 arba aukštesnė (pvz.: SP3_xxxx_0117.fw).
 

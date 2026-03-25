@@ -1,5 +1,9 @@
 # PB-LoRa Botón de pánico inalámbrico
 
+<div style="text-align: center;">
+  <img src="./image3.png" alt="" width="400">
+</div>
+
 ## Description
 
 El *PB-LORA* está diseñado para la transmisión inalámbrica de un mensaje de llamada de emergencia. Una llamada de ayuda se inicia presionando un botón. Como dispositivo receptor de mensajes se utiliza el módulo RF-LORA, que se conecta al panel de control "FLEXi" SP3.
@@ -15,9 +19,6 @@ Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel d
 **Conexión:**
 
 - El pulsador de pánico inalámbrico *PB-LORA* se conecta a la central de seguridad *"FLEXi" SP3* a través del transceptor *RF-LORA*.
-
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Parámetros técnicos 
 
 | Parámetro | Descripción |
@@ -38,7 +39,6 @@ Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel d
 <img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 > **Nota:** consulte la etiqueta del producto para la ubicación de cada elemento.
-
 
 ### Indicación LED de funcionamiento
 
@@ -90,11 +90,6 @@ NOTA: Después de insertar la batería, se recomienda esperar al menos 10 segund
 - 
 
 ## Panel de control de seguridad “FLEXi” SP3
-
-<div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
-</div>
-
 
 El panel de control "FLEXi" SP3 debe tener instalada la versión de firmware 1.17 o superior (por ejemplo, SP3_xxxx_0117.fw).
 
