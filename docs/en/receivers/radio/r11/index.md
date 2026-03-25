@@ -1,15 +1,8 @@
-# RADIO
+# R11 / R11U Radio Receivers
 
 <div style="text-align: center;">
   <img src="./image1.jpeg" alt="" width="400">
 </div>
-
-
-<img alt="" src="./image1.jpeg" style="width:1.8541666666666667in;height:0.5in" />
-
-RADIO
-
-**RECEIVERS R11 AND R11U**
 
 (v130302)
 

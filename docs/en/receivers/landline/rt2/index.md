@@ -1,8 +1,4 @@
-TELEPHONE LINE
-
-RECEIVING MODULE RT2
-
-Telephone line Receiving module RT2
+# RT2 Telephone Line Receiving Module
 
 Receiving module is used as component of multi-channel receiver RM10 and RD10 and is designed for receiving of data being sent via telephonic lines.
 
@@ -34,7 +30,7 @@ Pulse 3/1, 4/1, 4/2 protocols;
 
 9 – Connector for concentrator;
 
-# Description of operation principles and key features
+## Description of operation principles and key features
 
 Receiving module RT2 is a device, providing receiving of reports from telephonic communicator of security control panel. Information is being processed (provided communication according to selected protocols) and transferred to concentrator of multi-channel receiver.
 

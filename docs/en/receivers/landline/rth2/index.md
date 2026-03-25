@@ -197,11 +197,11 @@ USB drivers must be installed on the computer. When the module connects to a com
 
 1.  Start program by clicking GProg2 icon<img alt="" src="./image4.png" style="width:0.22916666666666666in;height:0.22916666666666666in" />, then in Settings window specify serial port (e.g.: COM3).
 
-2.  <img alt="" src="./image5.wmf" style="width:0.18125in;height:0.21875in" />In menu bar choose command [*Devices*] and select RT2.
+2.  In menu bar choose command [*Devices*] and select RT2.
 
 3.  Press the icon in toolbar to connect receiver.
 
-4.  <img alt="" src="./image6.wmf" style="width:0.22916666666666666in;height:0.21875in" />To read the operational parameters stored in the internal memory of device, press the button.
+4.  To read the operational parameters stored in the internal memory of device, press the button.
 
 Menu bar
 
@@ -213,7 +213,7 @@ Settings
 
 **[Open]** – icon for opening saved file with extension “.tcfg”
 
-<img alt="" src="./image9.wmf" style="width:0.23958333333333334in;height:0.21875in" />
+
 
 **[Save]** – icon for saving established parameters file with extension “.tcfg”
 
@@ -221,19 +221,19 @@ Settings
 
 **[Connect]** – icon for connecting to serial port
 
-<img alt="" src="./image5.wmf" style="width:0.22916666666666666in;height:0.21875in" />
+
 
 **[Disconnect]** – icon for disconnecting from serial port
 
-<img alt="" src="./image11.wmf" style="width:0.22916666666666666in;height:0.21875in" />
+
 
 **[Receive config]** – icon for reading parameters of the device
 
-<img alt="" src="./image6.wmf" style="width:0.22916666666666666in;height:0.21875in" />
+
 
 **[Send config]** – icon for writing the new parameters into device memory
 
-<img alt="" src="./image12.wmf" style="width:0.22916666666666666in;height:0.21875in" />
+
 
 **[Generate configuration report]** – icon for printing established parameters report
 

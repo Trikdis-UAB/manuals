@@ -1,4 +1,4 @@
-# IP/SMS receiver RL14 is an electrical device, therefore it may only be installed by qualified specialists following this manual
+# RL14 IP/SMS Receiver
 
 ## Safety requirements
 
@@ -118,7 +118,7 @@ Rear panel elements
 
 ### Position the receiver on a solid clean horizontal surface, unscrew fixing screws and remove the top cover. Insert the SIM card into a SMS receiver‘s SIM card slot. Put side and top covers back on (see picture below). Screw the top cover.
 
-![](./image8.emf)
+*[Diagram: SIM card slot position — see source document for image]*
 
 ### Mount the receiver in a 19” server rack.
 
