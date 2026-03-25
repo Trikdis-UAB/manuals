@@ -152,6 +152,7 @@ plugins:
         - PB-LoRa: expanders/pb-lora/index.md
         - Transceivers:
           - RF-LoRa: expanders/rf-lora/index.md
+          - RF-S8: expanders/rf-s8/index.md
     - locale: lt
       name: Lietuvių
       build: true
@@ -200,6 +201,7 @@ plugins:
         - PB-LoRa: expanders/pb-lora/index.md
         - Transivieriai:
           - RF-LoRa: expanders/rf-lora/index.md
+          - RF-S8: expanders/rf-s8/index.md
     - locale: es
       name: Español
       build: true
@@ -248,6 +250,7 @@ plugins:
         - PB-LoRa: expanders/pb-lora/index.md
         - Transceptores:
           - RF-LoRa: expanders/rf-lora/index.md
+          - RF-S8: expanders/rf-s8/index.md
     - locale: ru
       name: Русский
       build: true
@@ -294,6 +297,7 @@ plugins:
         - PB-LoRa: expanders/pb-lora/index.md
         - Трансиверы:
           - RF-LoRa: expanders/rf-lora/index.md
+          - RF-S8: expanders/rf-s8/index.md
 - search:
     lang:
     - en
