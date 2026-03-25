@@ -1,10 +1,10 @@
 # iO-LORA Беспроводной расширитель
 
-## Требование безопасности
-
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image3.png" alt="" width="400">
 </div>
+
+## Требование безопасности
 
 Только квалифицированный персонал может устанавливать и обслуживать модуль охранной сигнализации.
 
@@ -40,9 +40,6 @@
 - 1 выход (реле).
 
 Подключение:
-
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 - Беспроводный расширитель iO-LORA подключается к охранной панели "FLEXi" SP3 через трансивер RF-LORA.
 
 ### Технические характеристики 
@@ -65,7 +62,6 @@
 ### Элементы расширителя 
 
 <img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
-
 
 ### Назначение внешних клемм 
 

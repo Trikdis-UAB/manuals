@@ -1,5 +1,9 @@
 # iO-LORA Expansor inalámbrico
 
+<div style="text-align: center;">
+  <img src="./image3.png" alt="" width="400">
+</div>
+
 ## Descripción 
 
 Los expansores inalámbricos iO-LORA con transceptor RF-LORA aumentan el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
@@ -22,9 +26,6 @@ Entradas y salidas:
 - 1 entrada, tipo de entrada: NC, NO.
 
 - 1 salida (relé).
-
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 **Conexión:**
 
 - El expansor inalámbrico iO-LORA está conectado al panel de control "FLEXi" SP3 a través del transceptor RF-LORA.
@@ -49,7 +50,6 @@ Entradas y salidas:
 ### Elementos expansores 
 
 <img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
-
 
 ### Descripción del Bloque de Terminales 
 
@@ -140,11 +140,6 @@ El lector iButton **CZ-Dallas** se conecta al iO-LORA utilizando el bus de datos
     temperatura. / Lectores de llaves **CZ-Dallas** iButton y sensor de
     temperatura conectados al bus "**1-Wire**"**.**
 ## Panel de control de seguridad “FLEXi” SP3
-
-<div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
-</div>
-
 
 1.  Se debe conectar un transceptor RF-LORA al panel de control "FLEXi" SP3.
 

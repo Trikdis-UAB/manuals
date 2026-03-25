@@ -1,5 +1,9 @@
 # iO-LORA Belaidis plėtiklis
 
+<div style="text-align: center;">
+  <img src="./image3.png" alt="" width="400">
+</div>
+
 ## Aprašymas 
 
 iO-LORA belaidžiai plėtikliai su RF-LORA moduliu padidina apsaugos centralės "FLEXi" SP3 įėjimų ir išėjimų skaičių naudojant dvipusį belaidį RF ryšį.
@@ -24,9 +28,6 @@ Ryšys:
 - 1 relinis išėjimas.
 
 Prijungimas:
-
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 - Belaidis plėtiklis iO-LORA prie apsaugos centralės "FLEXi" SP3 prijungiamas per transiverį RF-LORA.
 
 ### Techniniai parametrai 
@@ -49,7 +50,6 @@ Prijungimas:
 ### Plėtiklio elementai 
 
 <img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
-
 
 ### Išorinių kontaktų paskirtis
 
@@ -140,11 +140,6 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
     (UTP4x2x0,5 arba STP4x2x0,5). / iButton raktų skaitytuvai ir
     temperatūros jutiklis jungiami prie "**1-Wire**" gnybto.
 ## Apsaugos centralė “FLEXi” SP3
-
-<div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
-</div>
-
 
 1.  Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas transiveris RF-LORA.
 
