@@ -87,8 +87,25 @@ These are the confirmed documentation gaps from `docs-coverage-analysis.md`, in 
 - PB-LoRa
 - iO-8 _(check if already completed by another agent before starting)_
 
-### Batch 2 — Hardware Receivers (7 manuals)
-- RL14, RFH11, R11, RF11, RT2, RR-IP12, RTH2
+### Batch 2 — Hardware Receivers (6 manuals; RF11 source unavailable, skip for now)
+- RL14, RFH11, R11, RT2, RR-IP12, RTH2
+
+**RF11:** DOCX not yet sourced — exclude from this batch, add to a future pass when available.
+
+**Nav structure for receivers** (add entries under the i18n EN nav in `mkdocs.yml`):
+```yaml
+- Receivers:
+    - IP Network:
+        - RL14: en/receivers/ip-network/rl14/index.md
+        - IPcom: en/receivers/ipcom/...   # already exists — do not move, just note it belongs here
+    - Radio:
+        - RFH11: en/receivers/radio/rfh11/index.md
+        - R11: en/receivers/radio/r11/index.md
+        - RR-IP12: en/receivers/radio/rr-ip12/index.md
+    - Landline:
+        - RT2: en/receivers/landline/rt2/index.md
+        - RTH2: en/receivers/landline/rth2/index.md
+```
 
 ### Batch 3 — S8 Wireless Sensors (3 manuals, do in parallel)
 - Smart Plug S8

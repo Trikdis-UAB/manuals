@@ -73,6 +73,8 @@ _The initial above-the-fold grid on trikdis.com shows: GT+, GET, FireCom, G17F, 
 ## Receivers / Software
 
 > trikdis.com has a dedicated "Receivers" category with 7 hardware products. **None of these have docs.** The only documented item is IPcom (software), which has no product page on trikdis.com.
+>
+> **Planned nav structure:** Receivers → IP Network (RL14, IPcom), Radio (RFH11, R11, RR-IP12, RF11), Landline (RT2, RTH2). RF11 DOCX not yet sourced — to be added in a future pass.
 
 | Product | On trikdis.com | Tags | docs.trikdis.com | Notes |
 |---------|---------------|------|-----------------|-------|
@@ -80,7 +82,7 @@ _The initial above-the-fold grid on trikdis.com shows: GT+, GET, FireCom, G17F, 
 | **RL14** | ✅ | CMS Equipment, IP & SMS, Rack Mount | ❌ | Hardware receiver |
 | **RFH11** | ✅ | Multi-format Decoding, RS232, VHF/UHF | ❌ | Hardware receiver |
 | **R11** | ✅ | FM/FSK, Multi-Protocol, VHF Radio | ❌ | Hardware receiver |
-| **RF11** | ✅ | Modular Integration, Multi-Protocol, VHF/UHF | ❌ | Hardware receiver |
+| **RF11** | ✅ | Modular Integration, Multi-Protocol, VHF/UHF | ❌ | Hardware receiver — DOCX not yet sourced, deferred |
 | **RT2** | ✅ | Multi-format Decoding, PSTN, Surgard Output | ❌ | Hardware receiver |
 | **RR-IP12** | ✅ | GPRS, IP, Modular Integration, Repeater, VHF/UHF | ❌ | Hardware receiver |
 | **RTH2** | ✅ | Multi-format Decoding, PSTN, Standalone | ❌ | Hardware receiver |
