@@ -1,7 +1,7 @@
 # RF-LoRa Wireless Expander
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.png" alt="" width="200">
 </div>
 
 ## Description
