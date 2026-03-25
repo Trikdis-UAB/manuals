@@ -4,8 +4,6 @@
   <img src="./cover.png" alt="" width="400">
 </div>
 
-Trumpa instaliavimo instrukcija
-
 Su plėtikliu iO-8 jus galite padidinti įėjimų ir išėjimu skaičių suderinamuose **TRIKDIS** įrenginiuose.
 
 iO-8 turi 8 įėjimo/išėjimo gnybtus, kuriuos galima nustatyti kaip įėjimo arba išėjimo gnybtus.

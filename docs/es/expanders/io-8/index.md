@@ -4,8 +4,6 @@
   <img src="./cover.png" alt="" width="400">
 </div>
 
-Guía de Instalación Rápida
-
 Con el expansor iO-8 puede aumentar el número de entradas y salidas en un dispositivo TRIKDIS compatible.
 
 iO-8 tiene 8 contactos, que se pueden configurar en modo de entrada o salida.

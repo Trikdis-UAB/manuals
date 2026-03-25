@@ -4,8 +4,6 @@
   <img src="./cover.png" alt="" width="400">
 </div>
 
-Quick installation guide
-
 With expander iO-8 you can increase the number of inputs and outputs in a compatible TRIKDIS device.
 
 iO-8 has 8 contacts, which can be set to either input or output mode.
