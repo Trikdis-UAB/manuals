@@ -1,5 +1,9 @@
 # RT2 Telephone Line Receiving Module
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 Receiving module is used as component of multi-channel receiver RM10 and RD10 and is designed for receiving of data being sent via telephonic lines.
 
 Data exchange is being carried out via following protocols:

@@ -30,6 +30,12 @@ PDF_DOWNLOAD_LABELS = {
     "es": "Descargar PDF",
     "ru": "Скачать PDF",
 }
+PDF_DOWNLOAD_ORIGINAL_LABELS = {
+    "en": "Download original PDF",
+    "lt": "Atsisiųsti originalų PDF",
+    "es": "Descargar PDF original",
+    "ru": "Скачать оригинальный PDF",
+}
 INVALID_FILENAME_CHARS_RE = re.compile(r'[\\/:*?"<>|]+')
 NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
 H1_RE = re.compile(r"<h1\b[^>]*>(?P<content>.*?)</h1>", re.IGNORECASE | re.DOTALL)
@@ -289,6 +295,25 @@ def _pdf_downloads_enabled() -> bool:
     return os.environ.get("TRIKDOCS_PDF_DOWNLOADS", "0").strip().lower() in PDF_DOWNLOAD_ENABLED_VALUES
 
 
+def _page_original_pdf(page) -> Optional[str]:
+    """Return the original PDF filename from page front matter ``pdf:`` key, or None.
+
+    When set, the download button will link to this pre-existing file in the page's
+    own directory instead of a generated PDF.  Useful for EOL products where the
+    original PDF manual contains content (e.g. callout overlays, EMF images) that
+    the automated conversion cannot reproduce.
+
+    Usage in page front matter::
+
+        ---
+        pdf: rl14-original.pdf
+        ---
+    """
+    meta = getattr(page, "meta", {}) or {}
+    value = meta.get("pdf")
+    return str(value).strip() if value else None
+
+
 def _page_route(page) -> str:
     route = (getattr(page, "url", "") or "").strip("/")
     return "/" if not route else f"/{route}/"
@@ -299,7 +324,7 @@ def _is_language_landing_page(src_path: str, config) -> bool:
 
 
 def _is_pdf_eligible(page, config) -> bool:
-    if not _pdf_downloads_enabled() or not page or not getattr(page, "file", None):
+    if not page or not getattr(page, "file", None):
         return False
 
     src_path = page.file.src_path
@@ -310,7 +335,15 @@ def _is_pdf_eligible(page, config) -> bool:
     if not any(route.startswith(f"/{locale}/") for locale in _language_locales(config)):
         return False
 
-    return "/receivers/ipcom/" not in route
+    if "/receivers/ipcom/" in route:
+        return False
+
+    # Pages with an original PDF bundled via front matter always show the button,
+    # regardless of the TRIKDOCS_PDF_DOWNLOADS env flag (no generation needed).
+    if _page_original_pdf(page):
+        return True
+
+    return _pdf_downloads_enabled()
 
 
 def _pdf_label(page) -> str:
@@ -394,9 +427,18 @@ def _pdf_output_filename(page, document_title: str = "") -> str:
 
 
 def _build_pdf_download_action(page, document_title: str = "") -> str:
-    label = html.escape(_pdf_label(page))
-    href = html.escape(_pdf_output_filename(page, document_title), quote=True)
-    download_name = html.escape(_pdf_download_name(page, document_title), quote=True)
+    original = _page_original_pdf(page)
+    if original:
+        # Bundled original PDF — use distinct label and link directly to the file.
+        src_path = getattr(getattr(page, "file", None), "src_path", "")
+        language = src_path.split("/", 1)[0] if "/" in src_path else "en"
+        label = html.escape(PDF_DOWNLOAD_ORIGINAL_LABELS.get(language, PDF_DOWNLOAD_ORIGINAL_LABELS["en"]))
+        href = html.escape(original, quote=True)
+        download_name = html.escape(_pdf_download_name(page, document_title), quote=True)
+    else:
+        label = html.escape(_pdf_label(page))
+        href = html.escape(_pdf_output_filename(page, document_title), quote=True)
+        download_name = html.escape(_pdf_download_name(page, document_title), quote=True)
     return (
         '<div class="trik-pdf-download" data-manual-pdf-download>'
         f'<a class="md-button md-button--primary trik-pdf-download__link" href="{href}" download="{download_name}">{label}</a>'
@@ -539,7 +581,9 @@ def on_page_content(html_content: str, page, config, files):
 
     if _is_pdf_eligible(page, config):
         document_title = _pdf_document_title(page, html_content)
-        _register_pdf_manifest_entry(page, document_title)
+        # Only register in the generation manifest when there is no bundled original PDF.
+        if _pdf_downloads_enabled() and not _page_original_pdf(page):
+            _register_pdf_manifest_entry(page, document_title)
         html_content = _inject_pdf_download_action(
             html_content,
             _build_pdf_download_action(page, document_title),

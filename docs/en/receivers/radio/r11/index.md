@@ -1,7 +1,7 @@
 # R11 / R11U Radio Receivers
 
 <div style="text-align: center;">
-  <img src="./image1.jpeg" alt="" width="400">
+  <img src="./image1.png" alt="" width="400">
 </div>
 
 (v130302)
