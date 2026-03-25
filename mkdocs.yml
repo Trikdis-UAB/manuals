@@ -150,6 +150,8 @@ plugins:
         - iO-LORA: expanders/io-lora/index.md
         - iO8-LoRa: expanders/io8-lora/index.md
         - PB-LoRa: expanders/pb-lora/index.md
+        - Transceivers:
+          - RF-LoRa: expanders/rf-lora/index.md
     - locale: lt
       name: Lietuvių
       build: true
@@ -196,6 +198,8 @@ plugins:
         - iO-LORA: expanders/io-lora/index.md
         - iO8-LoRa: expanders/io8-lora/index.md
         - PB-LoRa: expanders/pb-lora/index.md
+        - Transivieriai:
+          - RF-LoRa: expanders/rf-lora/index.md
     - locale: es
       name: Español
       build: true
@@ -242,6 +246,8 @@ plugins:
         - iO-LORA: expanders/io-lora/index.md
         - iO8-LoRa: expanders/io8-lora/index.md
         - PB-LoRa: expanders/pb-lora/index.md
+        - Transceptores:
+          - RF-LoRa: expanders/rf-lora/index.md
     - locale: ru
       name: Русский
       build: true
@@ -286,6 +292,8 @@ plugins:
         - iO-LORA: expanders/io-lora/index.md
         - iO8-LoRa: expanders/io8-lora/index.md
         - PB-LoRa: expanders/pb-lora/index.md
+        - Трансиверы:
+          - RF-LoRa: expanders/rf-lora/index.md
 - search:
     lang:
     - en
