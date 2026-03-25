@@ -1,5 +1,9 @@
 # iO-8 Expansor de entrada y salida
 
+<div style="text-align: center;">
+  <img src="./cover.png" alt="" width="300">
+</div>
+
 Guía de Instalación Rápida
 
 Con el expansor iO-8 puede aumentar el número de entradas y salidas en un dispositivo TRIKDIS compatible.

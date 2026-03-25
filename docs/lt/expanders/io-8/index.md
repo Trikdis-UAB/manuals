@@ -1,5 +1,9 @@
 # iO-8 Įėjimų ir išėjimų plėtiklis
 
+<div style="text-align: center;">
+  <img src="./cover.png" alt="" width="300">
+</div>
+
 Trumpa instaliavimo instrukcija
 
 Su plėtikliu iO-8 jus galite padidinti įėjimų ir išėjimu skaičių suderinamuose **TRIKDIS** įrenginiuose.

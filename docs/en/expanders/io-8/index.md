@@ -1,5 +1,9 @@
 # iO-8 Input/Output Expander
 
+<div style="text-align: center;">
+  <img src="./cover.png" alt="" width="300">
+</div>
+
 Quick installation guide
 
 With expander iO-8 you can increase the number of inputs and outputs in a compatible TRIKDIS device.
