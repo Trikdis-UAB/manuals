@@ -1,7 +1,7 @@
 # iO-8 Įėjimų ir išėjimų plėtiklis
 
 <div style="text-align: center;">
-  <img src="./cover.png" alt="" width="300">
+  <img src="./cover.png" alt="" width="400">
 </div>
 
 Trumpa instaliavimo instrukcija

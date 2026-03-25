@@ -1,7 +1,7 @@
 # iO-8 Расширитель входов и выходов
 
 <div style="text-align: center;">
-  <img src="./cover.png" alt="" width="300">
+  <img src="./cover.png" alt="" width="400">
 </div>
 
 Краткая инструкция по установке

@@ -1,7 +1,7 @@
 # iO-8 Expansor de entrada y salida
 
 <div style="text-align: center;">
-  <img src="./cover.png" alt="" width="300">
+  <img src="./cover.png" alt="" width="400">
 </div>
 
 Guía de Instalación Rápida
