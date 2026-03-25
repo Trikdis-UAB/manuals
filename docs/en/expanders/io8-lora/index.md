@@ -1,5 +1,9 @@
 # iO8-LoRa Wireless Expander
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Description 
 
 iO-8-LORA wireless expanders with RF-LORA transceiver increase the number of inputs and outputs of the "FLEXi" SP3 security panel using two-way RF communication.
@@ -17,9 +21,6 @@ The iO-8-LORA wireless expander has 8 I/O terminals, each of which can be set as
 - Products from HW iO8_x5xx_7_230419 version come with a standard antenna suitable for most applications. <u>In cases where it is necessary to provide high-quality communication at the maximum possible distance, an antenna (AX-ANT-KIT – 433 MHz, AX-ANT01S SF – 868 MHz) with a higher radio signal gain should be used</u>.
 
 Inputs and outputs:
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
-
 - 8 I/O terminals, each one can be set as an input (IN) or output (OUT). Input (IN) types: ATZ, EOL, NC, NO. Different value of resistors can be used in EOL and ATZ type circuits.
 
 **Connection:**
@@ -128,11 +129,6 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
     SP3 security panel and then up to 8 pcs. can be connected
     iO-8-LORA wireless expanders**.**
 ## Security control panel “FLEXi” SP3
-
-<div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
-</div>
-
 
 1.  An RF-LORA transceiver must be connected to the "FLEXi" SP3 control panel.
 

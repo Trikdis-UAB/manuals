@@ -1,5 +1,9 @@
 # iO8-LoRa Expansor inalámbrico
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Descripción 
 
 Los expansores inalámbricos iO-8-LORA con transceptor RF-LORA aumentan el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
@@ -17,9 +21,6 @@ Comunicación:
 - Los productos de la versión HW iO8_x5xx_7_230419 vienen con una antena estándar adecuada para la mayoría de los casos. <u>En los casos en que sea necesario proporcionar una comunicación de alta calidad a la máxima distancia posible, se debe utilizar una antena (AX-ANT-KIT – 433 MHz, AX-ANT01S_SF – 868 MHz) con una mayor ganancia de señal de radio</u>.
 
 Entradas y salidas:
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
-
 - 8 terminales de I/O, cada uno se puede configurar como terminal de entrada (IN) o salida (OUT). Tipos de entrada (IN): ATZ, EOL, NC, NO. Se pueden usar diferentes valores nominales de resistencias en los circuitos de tipo EOL y ATZ.
 
 **Conexión:**
@@ -128,11 +129,6 @@ Usando las terminales de relé es posible controlar (encender/apagar) de forma r
     "FLEXi" SP3 y se pueden conectar hasta 8 expansores
     inalámbricos iO-8-LORA.
 ## Panel de control de seguridad “FLEXi” SP3
-
-<div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
-</div>
-
 
 1.  Se debe conectar un transceptor RF-LORA al panel de control "FLEXi" SP3.
 

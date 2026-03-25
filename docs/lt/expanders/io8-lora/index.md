@@ -1,5 +1,9 @@
 # iO8-LoRa Belaidis plėtiklis
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Aprašymas 
 
 iO-8-LORA belaidžiai plėtikliai su RF-LORA moduliu padidina apsaugos centralės "FLEXi" SP3 įėjimų ir išėjimų skaičių naudojant dvipusį belaidį RF ryšį.
@@ -17,9 +21,6 @@ Ryšys:
 - Gaminiai nuo HW iO8_x5xx_7_230419 versijos komplektuojami su standartine antena, tinkančia daugumoje atvejų. <u>Tais atvejais kai reikia užtikrinti kokybišką ryšį kuo didesniu atstumu, reikia naudoti anteną (AX-ANT-KIT – 433 MHz, AX-ANT01S_SF – 868 MHz) su didesniu radijo signalo stiprinimu</u>.
 
 Įėjimai ir išėjimai:
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
-
 - 8 I/O kontaktai, iš kurių kiekvieną galima nustatyti kaip įėjimo (IN) arba išėjimo (OUT) kontaktą. Įėjimo (IN) tipai: ATZ, EOL, NC, NO. EOL ir ATZ grandinėse galima naudoti skirtingų nominalų rezistorius.
 
 **Prijungimas:**
@@ -128,11 +129,6 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
     transiveris RF-LORA ir gali būti prijungti iki 8 vnt.
     iO-8-LORA bevielių plėtiklių.
 ## Apsaugos centralė “FLEXi” SP3
-
-<div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
-</div>
-
 
 1.  Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas transiveris RF-LORA.
 
