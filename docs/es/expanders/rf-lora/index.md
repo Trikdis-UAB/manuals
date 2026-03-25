@@ -1,5 +1,9 @@
 # RF-LoRa Expansor Inalámbrico
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Descripción
 
 Transceptor RF-LORA con expansores inalámbricos iO-LORA e iO-8-LORA aumenta el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
@@ -19,9 +23,6 @@ Comunicación:
 Conexión:
 
 - El transceptor *RF-LORA* se conecta al panel de control *"FLEXi" SP3* a través del bus RS485*.*
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Parámetros Técnicos 
 
 | Parámetro | Descripción |

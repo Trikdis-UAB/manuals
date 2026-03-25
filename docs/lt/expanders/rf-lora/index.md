@@ -1,5 +1,9 @@
 # RF-LoRa Belaidis Plėtiklis
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Aprašymas
 
 Transiveris RF-LORA su belaidžiais plėtikliais iO-LORA ir iO-8-LORA padidina apsaugos centralės "FLEXi" SP3 įėjimų ir išėjimų skaičių naudojant dvipusį belaidį RF ryšį.
@@ -19,9 +23,6 @@ Ryšys:
 Prijungimas:
 
 - Transiveris *RF-LORA* prie apsaugos centralės "*FLEXi*"* SP3* prijungiamas per RS485 šyną.
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Techniniai parametrai 
 
 | Parametras | Aprašymas |

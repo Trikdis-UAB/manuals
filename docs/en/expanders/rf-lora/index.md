@@ -1,5 +1,9 @@
 # RF-LoRa Wireless Expander
 
+<div style="text-align: center;">
+  <img src="./image1.png" alt="" width="400">
+</div>
+
 ## Description
 
 The **RF-LORA** transceiver with iO-LORA and iO-8-LORA wireless expanders increases the number of inputs and outputs of the "FLEXi" SP3 control panel using two-way RF communication.
@@ -19,9 +23,6 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 **Connection:**
 
 - The *RF-LORA* transceiver is connected to the *"FLEXi" SP3* control panel via the RS485 bus.
-
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
-
 ### Specifications 
 
 | Parameter | Description |
