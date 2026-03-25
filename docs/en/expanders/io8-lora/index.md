@@ -8,6 +8,8 @@
 
 iO-8-LORA wireless expanders with RF-LORA transceiver increase the number of inputs and outputs of the "FLEXi" SP3 security panel using two-way RF communication.
 
+
+Also compatible with the [GATOR Cellular](../../gate-controllers/gator/index.md) gate & door access controller.
 The iO-8-LORA wireless expander has 8 I/O terminals, each of which can be set as an input (IN) or as an output (OUT).
 
 ### Features

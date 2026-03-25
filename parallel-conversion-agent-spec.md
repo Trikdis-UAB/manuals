@@ -6,7 +6,7 @@ _For Claude Code. Covers the goal, repo context, agent roles, worktree strategy,
 
 ## Goal
 
-Convert TRIKDIS product DOCX manuals to MkDocs-compatible Markdown at scale using parallel agents, with a tester-in-the-loop quality gate before anything reaches human review. No output is pushed to the public site automatically — all output lands in `manuals-darbiniai` for human sign-off first.
+Convert TRIKDIS product DOCX manuals to MkDocs-compatible Markdown at scale using parallel agents, with a tester-in-the-loop quality gate before anything reaches human review. No output is pushed to the public site automatically — all output lands in `manuals` for human sign-off first.
 
 ---
 
@@ -17,7 +17,7 @@ Convert TRIKDIS product DOCX manuals to MkDocs-compatible Markdown at scale usin
 | Path | Repo | Purpose |
 |------|------|---------|
 | `/Users/local/projects/knowledgebase-conversion-pipeline/` | `git@github.com:andrius-tr/knowledgebase-conversion-pipeline.git` | The DOCX → Markdown pipeline |
-| `/Users/local/projects/trikdis-docs/manuals-darbiniai/` | `git@github.com:Trikdis/manuals-darbiniai.git` | Working files — conversion output lands here |
+| `/Users/local/projects/trikdis-docs/manuals/` | `git@github.com:Trikdis-UAB/manuals.git` | Working files — conversion output lands here |
 | `/Users/local/projects/trikdis-docs/manuals/` | `git@github.com:Trikdis-UAB/manuals.git` | Public site — **do not touch during automated conversion** |
 
 ### DOCX source files
@@ -49,12 +49,12 @@ cd /Users/local/projects/knowledgebase-conversion-pipeline
 ```bash
 # Copy from pipeline output into darbiniai working branch
 cp -r /Users/local/projects/knowledgebase-conversion-pipeline/docs/<manual-slug>/ \
-      /Users/local/projects/trikdis-docs/manuals-darbiniai/docs/<category>/<manual-slug>/
+      /Users/local/projects/trikdis-docs/manuals/docs/<category>/<manual-slug>/
 ```
 
 ### MkDocs nav entry format
 
-**Important:** The `manuals/` repo uses the `i18n` plugin with per-language nav sections — the root `nav: []` is empty and each language defines its own nav under the i18n plugin config. Check `manuals-darbiniai/mkdocs.yml` before writing nav entries — it may follow the same pattern or may use a simpler flat structure.
+**Important:** The `manuals/` repo uses the `i18n` plugin with per-language nav sections — the root `nav: []` is empty and each language defines its own nav under the i18n plugin config. Check `manuals/mkdocs.yml` before writing nav entries — it may follow the same pattern or may use a simpler flat structure.
 
 **`manuals/` repo format (i18n plugin — for reference):**
 ```yaml
@@ -136,7 +136,7 @@ git worktree add worktrees/convert-<manual-slug> -b convert/<manual-slug>
 
 **Darbiniai worktrees** (one per manual, receives the converted output):
 ```bash
-cd /Users/local/projects/trikdis-docs/manuals-darbiniai
+cd /Users/local/projects/trikdis-docs/manuals
 git worktree add worktrees/convert-<manual-slug> -b convert/<manual-slug>
 ```
 
@@ -241,14 +241,14 @@ Tester reports FAIL
 When a manual passes all Tier 1 checks:
 
 1. The darbiniai worktree branch (`convert/<manual-slug>`) is ready for human review
-2. Open a PR from `convert/<manual-slug>` → `main` in `manuals-darbiniai`
+2. Open a PR from `convert/<manual-slug>` → `main` in `manuals`
 3. PR description should include:
    - Manual name and product category
    - Tester report summary (all checks passed, any Tier 2 warnings)
    - Number of conversion passes required
    - Any pipeline fixes that were applied
 4. Human reviews the PR, checks rendered output via `mkdocs serve`, merges when satisfied
-5. After human merge to `manuals-darbiniai`, a separate step (outside this pipeline) copies to `manuals/` for public deployment — **do not automate this step**
+5. After human merge to `manuals`, a separate step (outside this pipeline) copies to `manuals/` for public deployment — **do not automate this step**
 
 ---
 
@@ -282,7 +282,7 @@ git worktree remove worktrees/convert-<manual-slug>
 git branch -d convert/<manual-slug>
 
 # Remove darbiniai worktree
-cd /Users/local/projects/trikdis-docs/manuals-darbiniai
+cd /Users/local/projects/trikdis-docs/manuals
 git worktree remove worktrees/convert-<manual-slug>
 git branch -d convert/<manual-slug>
 ```
@@ -296,7 +296,7 @@ The orchestrator should track which worktrees are active and clean up after each
 - **Do not push to `manuals/` (public site) at any point during automated conversion**
 - **Do not commit directly to `main` in either repo** — all work goes via worktree branches and PRs
 - **Do not merge pipeline fix branches while other conversions are in-flight** in worktrees that branched from the pre-fix pipeline main
-- **Do not run `mkdocs build` against `manuals/`** — only test against `manuals-darbiniai/`
+- **Do not run `mkdocs build` against `manuals/`** — only test against `manuals/`
 - **Do not edit Markdown manually as a substitute for fixing the pipeline** — if a pattern fails conversion repeatedly, fix the pipeline filter so all future conversions benefit
 
 ---
@@ -310,5 +310,5 @@ The orchestrator should track which worktrees are active and clean up after each
 | `convert-single.sh` | `knowledgebase-conversion-pipeline/` | Main conversion script |
 | `temp-source-docs/` | `knowledgebase-conversion-pipeline/temp-source-docs/` | Staged DOCX source files provided by team |
 | `find-latest-manual.sh` | `trikdis-docs/` | Locates latest DOCX on the network drive |
-| `mkdocs.yml` | `manuals-darbiniai/mkdocs.yml` | Nav structure to update — **read format before editing** |
-| `requirements.txt` | `manuals-darbiniai/requirements.txt` | Pinned MkDocs dependencies — do not change versions |
+| `mkdocs.yml` | `manuals/mkdocs.yml` | Nav structure to update — **read format before editing** |
+| `requirements.txt` | `manuals/requirements.txt` | Pinned MkDocs dependencies — do not change versions |
