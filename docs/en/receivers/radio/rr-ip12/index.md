@@ -40,15 +40,16 @@ Repeater R-IP12 structural diagram is provided in Figure 1.
 
 Potential options of receiver use and kitting, prepared taking into account the task requirements:
 
-| Option | R11 | GM10 | E10C | T10R | R7 | Notes |
-|--------|-----|------|------|------|----|-------|
-| Base_1 | + | + x2 | — | — | — | Receiving via radio channel (RAS-3); transmission via GPRS |
-| Base_2 | + | + | + | — | — | Receiving via radio channel (RAS-3); transmission via GPRS and Ethernet |
-| Radio_1 | + | — | — | + | — | Receiving via radio channel (RAS-3); transmission via radio channel |
-| Double radio_1 | + | + x2 | — | — | + | Receiving via radio channel (RAS-2M and RAS-3); transmission via GPRS |
-| Double radio_2 | + | + | + | — | + | Receiving via radio channel (RAS-2M and RAS-3); transmission via GPRS and Ethernet |
+| Option | R11 | GM10 | E10C | T10R | R7 | Rx / Tx |
+|--------|:---:|:----:|:----:|:----:|:--:|---------|
+| Base_1 | + | + x2 | — | — | — | RAS-3 → GPRS |
+| Base_2 | + | + | + | — | — | RAS-3 → GPRS + Ethernet |
+| Radio_1 | + | — | — | + | — | RAS-3 → Radio |
+| Double radio_1 | + | + x2 | — | — | + | RAS-2M + RAS-3 → GPRS |
+| Double radio_2 | + | + | + | — | + | RAS-2M + RAS-3 → GPRS + Ethernet |
 
-> **Note:** The required transmission modules are installed in the repeater during fabrication.
+!!! note
+    The required transmission modules are installed in the repeater during fabrication.
 
 The base options provide sending of radio messages of monitored objects by system RAS-3 encoding, and receiving by the radio receiver R11. The repeater AC voltage control, casing protection and antenna switch control circuits are also connected to its inputs.
 
@@ -102,7 +103,8 @@ The following components are visible with the front cover removed:
 
 *Fig. 2. General view of the repeater R-IP12 (front cover removed)*
 
-> **Note:** The quantity of inserted transmission and receiving modules may vary depending on the selected kitting option subject to the provided repeater configuration.
+!!! note
+    The quantity of inserted transmission and receiving modules may vary depending on the selected kitting option subject to the provided repeater configuration.
 
 The front cover of casing has hinges and may be completely removed. At operating position the front cover shall be closed and additionally fixed with four screws.
 
@@ -117,7 +119,8 @@ Preparation of the repeater for trading and provision to customer is arranged as
 3. Configuration of receiving modules and transmission modules in accordance with the requirements.
 4. Repeater performance testing and preparation of deliverables.
 
-> **Note:** Deliverables must specify customer's data, repeater kitting option and set parameters of receiving modules and transmission modules.
+!!! note
+    Deliverables must specify customer's data, repeater kitting option and set parameters of receiving modules and transmission modules.
 
 ## Configuration of Repeater
 
@@ -148,7 +151,8 @@ The parameters of the transmission module GM10 are set using parameter setting s
   - Transmission module sequence number
   - Transmission module ID
 
-> **Note:** There cannot be two modules with identical sequence numbers.
+!!! note
+    There cannot be two modules with identical sequence numbers.
 
 - Address of receiving device to which messages are sent:
   - Encryption key
@@ -187,7 +191,8 @@ Parameters of the radio receiver R7 are set using parameter setting software Hyp
 - Set output protocol Surgard MLR2-DG
 - Specified receiver and line numbers
 
-> **Note:** Parameters of other receiving devices are set using the equipment indicated in the installation manuals of such devices.
+!!! note
+    Parameters of other receiving devices are set using the equipment indicated in the installation manuals of such devices.
 
 ## Installation of Repeater
 
@@ -211,7 +216,8 @@ The recommended installation sequence is as follows:
 
 7. Insert the charged battery and connect red wire to battery terminal "+", and black wire to battery terminal "−".
 
-> **Note:** Light indicators of power supply / functioning of R-IP12 devices are blinking when power supply is on.
+!!! note
+    Light indicators of power supply / functioning of R-IP12 devices are blinking when power supply is on.
 
 8. Insert AC mains fuse for the repeater and switch power supply from AC mains on.
 
@@ -228,7 +234,8 @@ Communication with centralized monitoring station shall be tested after complete
 3. Check if the monitoring station receives messages by pressing and releasing the repeater casing protection sensor.
 4. Generate signals of a separate object-related transmitter and check for their reception at the monitoring station. Check for all combinations available in case the repeater receives signals of several encodings or frequencies.
 
-> **Note:** The same messages transmitted by different channels differ among themselves and must be properly described in the monitoring software.
+!!! note
+    The same messages transmitted by different channels differ among themselves and must be properly described in the monitoring software.
 
 Repeater is deemed adequately installed if all messages sent are properly received at the monitoring station.
 

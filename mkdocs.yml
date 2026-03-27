@@ -125,6 +125,21 @@ plugins:
       - Gate Controllers:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md
+      - Keypads:
+        - Keypad SK-LCD Button: keypads/sk-lcd-button/index.md
+        - Keypad SK-LED Button: keypads/sk-led-button/index.md
+        - Keypad SK-LCD TouchPad: keypads/sk-lcd-touchpad/index.md
+        - Keypad SK-LED TouchPad: keypads/sk-led-touchpad/index.md
+        - Keypad FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
+        - Keypad FLEXi SK LED: keypads/flexi-sk-led/index.md
+      - Expanders:
+        - iO-8: expanders/io-8/index.md
+        - iO-LORA: expanders/io-lora/index.md
+        - iO8-LoRa: expanders/io8-lora/index.md
+        - PB-LoRa: expanders/pb-lora/index.md
+        - Transceivers:
+          - RF-LoRa: expanders/rf-lora/index.md
+          - RF-S8: expanders/rf-s8/index.md
       - Receivers:
         - IPcom:
           - Overview: receivers/ipcom/index.md
@@ -141,28 +156,12 @@ plugins:
             - Objects: receivers/ipcom/ui/screens/objects.md
           - Glossary: receivers/ipcom/ui/glossary.md
           - Networking and Firewall: receivers/ipcom/ui/networking-firewall.md
-        - IP Network:
-          - RL14: receivers/ip-network/rl14/index.md
+        - Legacy IP - RL14: receivers/ip-network/rl14/index.md
         - Radio:
           - RFH11: receivers/radio/rfh11/index.md
           - R11: receivers/radio/r11/index.md
           - RR-IP12: receivers/radio/rr-ip12/index.md
         - Landline RTH2: receivers/landline/rth2/index.md
-      - Keypads:
-        - Keypad SK-LCD Button: keypads/sk-lcd-button/index.md
-        - Keypad SK-LED Button: keypads/sk-led-button/index.md
-        - Keypad SK-LCD TouchPad: keypads/sk-lcd-touchpad/index.md
-        - Keypad SK-LED TouchPad: keypads/sk-led-touchpad/index.md
-        - Keypad FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
-        - Keypad FLEXi SK LED: keypads/flexi-sk-led/index.md
-      - Expanders:
-        - iO-8: expanders/io-8/index.md
-        - iO-LORA: expanders/io-lora/index.md
-        - iO8-LoRa: expanders/io8-lora/index.md
-        - PB-LoRa: expanders/pb-lora/index.md
-        - Transceivers:
-          - RF-LoRa: expanders/rf-lora/index.md
-          - RF-S8: expanders/rf-s8/index.md
     - locale: lt
       name: Lietuvių
       build: true
@@ -217,14 +216,6 @@ plugins:
         - SK-LED TouchPad klaviatūra: keypads/sk-led-touchpad/index.md
         - Klaviatūra FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Klaviatūra FLEXi SK LED: keypads/flexi-sk-led/index.md
-      - Imtuvai:
-        - IP tinklai:
-          - RL14: receivers/ip-network/rl14/index.md
-        - Radijo:
-          - R11: receivers/radio/r11/index.md
-          - RFH11: receivers/radio/rfh11/index.md
-          - RR-IP12: receivers/radio/rr-ip12/index.md
-        - Telefoninis RTH2: receivers/landline/rth2/index.md
       - Plėtikliai:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
@@ -233,6 +224,13 @@ plugins:
         - Transivieriai:
           - RF-LoRa: expanders/rf-lora/index.md
           - RF-S8: expanders/rf-s8/index.md
+      - Imtuvai:
+        - Senasis IP - RL14: receivers/ip-network/rl14/index.md
+        - Radijo:
+          - R11: receivers/radio/r11/index.md
+          - RFH11: receivers/radio/rfh11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
+        - Telefoninis RTH2: receivers/landline/rth2/index.md
     - locale: es
       name: Español
       build: true
@@ -287,14 +285,6 @@ plugins:
         - Teclado SK-LED TouchPad: keypads/sk-led-touchpad/index.md
         - Teclado FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Teclado FLEXi SK LED: keypads/flexi-sk-led/index.md
-      - Receptores:
-        - Red IP:
-          - RL14: receivers/ip-network/rl14/index.md
-        - Radio:
-          - R11: receivers/radio/r11/index.md
-          - RFH11: receivers/radio/rfh11/index.md
-          - RR-IP12: receivers/radio/rr-ip12/index.md
-        - Línea telefónica RTH2: receivers/landline/rth2/index.md
       - Expansores:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
@@ -303,6 +293,13 @@ plugins:
         - Transceptores:
           - RF-LoRa: expanders/rf-lora/index.md
           - RF-S8: expanders/rf-s8/index.md
+      - Receptores:
+        - IP anterior - RL14: receivers/ip-network/rl14/index.md
+        - Radio:
+          - R11: receivers/radio/r11/index.md
+          - RFH11: receivers/radio/rfh11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
+        - Línea telefónica RTH2: receivers/landline/rth2/index.md
     - locale: ru
       name: Русский
       build: true
@@ -355,14 +352,6 @@ plugins:
         - Клавиатура SK-LED Button: keypads/sk-led-button/index.md
         - Клавиатура SK-LCD TouchPad: keypads/sk-lcd-touchpad/index.md
         - Клавиатура FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
-      - Приёмники:
-        - IP-сеть:
-          - RL14: receivers/ip-network/rl14/index.md
-        - Радио:
-          - R11: receivers/radio/r11/index.md
-          - RFH11: receivers/radio/rfh11/index.md
-          - RR-IP12: receivers/radio/rr-ip12/index.md
-        - Телефонная линия RTH2: receivers/landline/rth2/index.md
       - Расширители:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
@@ -371,6 +360,13 @@ plugins:
         - Трансиверы:
           - RF-LoRa: expanders/rf-lora/index.md
           - RF-S8: expanders/rf-s8/index.md
+      - Приёмники:
+        - Прежний IP - RL14: receivers/ip-network/rl14/index.md
+        - Радио:
+          - R11: receivers/radio/r11/index.md
+          - RFH11: receivers/radio/rfh11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
+        - Телефонная линия RTH2: receivers/landline/rth2/index.md
 - search:
     lang:
     - en

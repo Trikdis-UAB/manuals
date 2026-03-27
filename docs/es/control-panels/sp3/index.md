@@ -1,7 +1,7 @@
 # Panel de control FLEXi SP3
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./sp3-product.webp" alt="FLEXi SP3" width="400">
 </div>
 
 ## Descripción
@@ -411,11 +411,7 @@ Hay 10 terminales IO1 – IO10 (entradas) en la placa del panel de control para 
   </figure>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-  <figure style="margin: 0;">
-    <img src="./image16.png" alt="" style="width: 100%; height: auto;" />
-  </figure>
-</div>
+<img alt="" src="./image16.png" style="width:3.15in;height:auto;" />
 
 ### Conexión de detectores de humo
 
@@ -479,11 +475,20 @@ El lector **TM17** se conecta al „FLEXi“ SP3 utilizando el bus de datos *RS4
 
 ### Diagrama para conectar un sensor de temperatura
 
-<img alt="" src="./image30.png" style="width:2.713338801399825in;height:1.1966688538932633in" /> / <img alt="" src="./image31.png" style="width:2.9500054680664918in;height:1.3200021872265966in" />
+**Los sensores de temperatura** deben conectarse de acuerdo con el diagrama provisto. Los sensores de temperatura Maxim®/Dallas® DS18S20, DS18B20 (hasta 8) o sensor de temperatura y humedad AM2301 (hasta 1) se pueden conectar al panel de control „FLEXi" SP3.
 
-<img alt="" src="./image30.png" style="width:2.713338801399825in;height:1.1966688538932633in" />
+Si se utiliza un cable mayor a 0.5 metros para conectar un sensor de temperatura, recomendamos utilizar un **cable de par trenzado (UTP4x2x0.5 o STP4x2x0.5)**.
 
-<img alt="" src="./image31.png" style="width:2.9500054680664918in;height:1.3200021872265966in" />
+La terminal +5V en la placa sirve para alimentar dispositivos conectados al bus de datos 1-Wire con voltaje de 5 V DC. La corriente de salida máxima es de 0.2 A. La salida está protegida de sobrecargas. Si se excede la corriente máxima permitida, la alimentación se apagará automáticamente. El panel de control reconoce y vincula automáticamente los dispositivos conectados.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image30.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image31.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
 ### Diagramas para conectar un relé y un indicador LED
 
@@ -539,7 +544,7 @@ La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_x
 
 Si el panel de control „FLEXi“ SP3 necesita más entradas IN o salidas OUT, conecta un expansor de entradas y salidas serie TRIKDIS iO alámbrico o inalámbrico. La configuración del „FLEXi“ SP3 para los módulos de expansión se describe en el capítulo 5.5 Ventana "Módulos".
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; max-width: 66%;">
   <figure style="margin: 0;">
     <img src="./image40.png" alt="" style="width: 100%; height: auto;" />
   </figure>
@@ -753,13 +758,13 @@ Una señal de audio acompaña al principio y al final de la grabación del archi
 
 1.  Descarga el software de configuración TrikdisConfig desde <u>www.trikdis.com/</u> (ingresa “TrikdisConfig” en el campo de búsqueda) e instálalo.
 
-2.  Conecta el „FLEXi“ SP3 a una computadora con un cable USB Mini-B.
+2.  Conecta el „FLEXi” SP3 a una computadora con un cable USB Mini-B.
 
-**Nota:** Si se conecta el „FLEXi“ SP3 a una computadora con un cable USB mientras está encendido y en funcionamiento, el „FLEXi“ SP3 dejará de realizar las funciones del panel de control y cambiará al modo de programación.
+    **Nota:** Si se conecta el „FLEXi” SP3 a una computadora con un cable USB mientras está encendido y en funcionamiento, el „FLEXi” SP3 dejará de realizar las funciones del panel de control y cambiará al modo de programación.
 
-1.  Inicia el software de configuración TrikdisConfig. El programa reconocerá automáticamente el dispositivo conectado y abrirá automáticamente la ventana de configuración del „FLEXi“ SP3.
+3.  Inicia el software de configuración TrikdisConfig. El programa reconocerá automáticamente el dispositivo conectado y abrirá automáticamente la ventana de configuración del „FLEXi” SP3.
 
-2.  Haz clic **en Leer [F4]** para consultar los parámetros actuales del „FLEXi“ SP3. Si aparece una ventana emergente, ingresa el código de *administrador* o *instalador*.
+4.  Haz clic **en Leer [F4]** para consultar los parámetros actuales del „FLEXi” SP3. Si aparece una ventana emergente, ingresa el código de *administrador* o *instalador*.
 
 ### Descripción de la barra de estado de TrikdisConfig
 

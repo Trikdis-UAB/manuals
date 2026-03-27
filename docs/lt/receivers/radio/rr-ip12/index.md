@@ -114,9 +114,8 @@ Antenos komutatorius
 
 2 pav. Retransliatoriaus R-IP12 (priekinis dangtis nuimtas) bendras vaizdas
 
-*Pastaba:*
-
-*Priklausomai nuo pasirinkto komplektavimo varianto į pateikiamo retransliatoriaus konfigūraciją, įstatytų perdavimo ir priėmimo modulių skaičius gali būti kitas.*
+!!! note
+    Priklausomai nuo pasirinkto komplektavimo varianto į pateikiamo retransliatoriaus konfigūraciją, įstatytų perdavimo ir priėmimo modulių skaičius gali būti kitas.
 
 Korpuso priekinis dangtis turi vyrius ir gali būti visai nuimtas. Darbo padėtyje priekinis dangtis uždaromas ir papildomai tvirtinamas keturiais varžtais.
 
@@ -134,9 +133,8 @@ Retransliatoriaus paruošimas pardavimui ir pateikimas užsakovui vykdomas sekan
 
 4)  patikrinamas retransliatoriaus veikimas ir paruošiama lydinčioji dokumentacija.
 
-*Pastaba:*
-
-*Lydinčioje dokumentacijoje turi būti nurodyti užsakovo duomenys, retransliatoriaus komplektavimo variantas bei nustatyti priėmimo ir perdavimo modulių parametrai.*
+!!! note
+    Lydinčioje dokumentacijoje turi būti nurodyti užsakovo duomenys, retransliatoriaus komplektavimo variantas bei nustatyti priėmimo ir perdavimo modulių parametrai.
 
 ## Retransliatoriaus konfigūravimas
 
@@ -190,9 +188,8 @@ eilės numeris
 
 Perdavimo modulio ID
 
-*Pastaba:*
-
-*Negali būti dviejų modulių vienodais eilės numeriais.*
+!!! note
+    Negali būti dviejų modulių vienodais eilės numeriais.
 
 - Priėmimo įrangos, į kurią siunčiami pranešimai, adresas.
 
@@ -258,9 +255,8 @@ Radijo imtuvo R7 parametrai nustatomi parametrų nustatymo programa Hyper Termin
 
 - Nurodyti imtuvo ir linijos numeriai;
 
-*Pastaba:*
-
-*Kitos priėmimo įrangos parametrai nustatomi tų prietaisų įrengimo instrukcijose nurodyta įranga.*
+!!! note
+    Kitos priėmimo įrangos parametrai nustatomi tų prietaisų įrengimo instrukcijose nurodyta įranga.
 
 ## Retransliatoriaus įrengimas
 
@@ -286,9 +282,8 @@ Pastatykite stiebą, sumontuokite anteną, prijunkite kabelį ir patikrinkite an
 
 16. Įstatykite įkrautą akumuliatorių ir prijunkite raudoną laidą prie akumuliatoriaus “+” gnybto, o juoda laidą prie akumuliatoriaus “-“ gnybto.
 
-*Pastaba:*
-
-*Esant maitinimui, mirksi R-IP12 įrenginių maitinimo/funkcionavimo šviesos indikatoriai.*
+!!! note
+    Esant maitinimui, mirksi R-IP12 įrenginių maitinimo/funkcionavimo šviesos indikatoriai.
 
 17. Įjunkite maitinimą iš kintamos srovės tinklo, įstatydami retransliatoriaus kintamos srovės tinklo saugiklį.
 
@@ -308,9 +303,8 @@ Pilnai įrengus retransliatorių, tikrinamas jo ryšys su centralizuoto stebėji
 
 21) Suformuokite atskiro objektinio siųstuvo signalus ir patikrinkite ar jie priimti stebėjimo pulte. Jei retransliatorius priima kelių kodavimų ar dažnių signalus patikrinkite visas galimas kombinacijas.
 
-*Pastaba:*
-
-*Skirtingais kanalais perduodami tie patys pranešimai tarpusavyje skiriasi ir privalo būti teisingai aprašyti stebėjimo programoje.*
+!!! note
+    Skirtingais kanalais perduodami tie patys pranešimai tarpusavyje skiriasi ir privalo būti teisingai aprašyti stebėjimo programoje.
 
 Retransliatorius laikomas įrengtu tinkamai, jei stebėjimo pulte teisingai priimti visi siųsti pranešimai.
 

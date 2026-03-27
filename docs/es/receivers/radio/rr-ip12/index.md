@@ -48,7 +48,8 @@ Opciones posibles de uso y equipamiento del receptor, preparadas según los requ
 | Radio doble_1 | + | + x2 | — | — | + | Recepción por canal de radio (RAS-2M y RAS-3); transmisión por GPRS |
 | Radio doble_2 | + | + | + | — | + | Recepción por canal de radio (RAS-2M y RAS-3); transmisión por GPRS y Ethernet |
 
-> **Nota:** Los módulos de transmisión requeridos se instalan en el repetidor durante la fabricación.
+!!! note
+    Los módulos de transmisión requeridos se instalan en el repetidor durante la fabricación.
 
 Las opciones base permiten el envío de mensajes de radio de los objetos monitorizados con codificación del sistema RAS-3 y la recepción por el receptor de radio R11. Los circuitos de control de tensión AC del repetidor, protección de la carcasa y control del conmutador de antena también se conectan a sus entradas.
 
@@ -102,7 +103,8 @@ Con la cubierta frontal retirada, son visibles los siguientes componentes:
 
 *Fig. 2. Vista general del repetidor R-IP12 (cubierta frontal retirada)*
 
-> **Nota:** La cantidad de módulos de transmisión y recepción instalados puede variar según la opción de equipamiento seleccionada, conforme a la configuración proporcionada del repetidor.
+!!! note
+    La cantidad de módulos de transmisión y recepción instalados puede variar según la opción de equipamiento seleccionada, conforme a la configuración proporcionada del repetidor.
 
 La cubierta frontal de la carcasa tiene bisagras y puede retirarse completamente. En posición de funcionamiento, la cubierta frontal debe estar cerrada y fijada adicionalmente con cuatro tornillos.
 
@@ -117,7 +119,8 @@ La preparación del repetidor para su comercialización y entrega al cliente se 
 3. Configuración de los módulos receptores y módulos de transmisión conforme a los requisitos.
 4. Prueba de funcionamiento del repetidor y preparación de la documentación de entrega.
 
-> **Nota:** La documentación de entrega debe especificar los datos del cliente, la opción de equipamiento del repetidor y los parámetros configurados de los módulos receptores y módulos de transmisión.
+!!! note
+    La documentación de entrega debe especificar los datos del cliente, la opción de equipamiento del repetidor y los parámetros configurados de los módulos receptores y módulos de transmisión.
 
 ## Configuración del repetidor
 
@@ -148,7 +151,8 @@ Los parámetros del módulo de transmisión GM10 se configuran mediante el softw
   - Número de secuencia del módulo de transmisión
   - ID del módulo de transmisión
 
-> **Nota:** No puede haber dos módulos con números de secuencia idénticos.
+!!! note
+    No puede haber dos módulos con números de secuencia idénticos.
 
 - Dirección del dispositivo receptor al que se envían los mensajes:
   - Clave de cifrado
@@ -187,7 +191,8 @@ Los parámetros del receptor de radio R7 se configuran mediante el software de p
 - Configurar el protocolo de salida Surgard MLR2-DG
 - Números de receptor y línea especificados
 
-> **Nota:** Los parámetros de otros dispositivos receptores se configuran utilizando el equipo indicado en los manuales de instalación de dichos dispositivos.
+!!! note
+    Los parámetros de otros dispositivos receptores se configuran utilizando el equipo indicado en los manuales de instalación de dichos dispositivos.
 
 ## Instalación del repetidor
 
@@ -211,7 +216,8 @@ La secuencia de instalación recomendada es la siguiente:
 
 7. Inserte la batería cargada y conecte el cable rojo al terminal «+» de la batería y el cable negro al terminal «−» de la batería.
 
-> **Nota:** Los indicadores luminosos de alimentación/funcionamiento de los dispositivos R-IP12 parpadean cuando se activa la alimentación.
+!!! note
+    Los indicadores luminosos de alimentación/funcionamiento de los dispositivos R-IP12 parpadean cuando se activa la alimentación.
 
 8. Inserte el fusible de red AC del repetidor y active la alimentación desde la red AC.
 
@@ -228,7 +234,8 @@ La comunicación con la central receptora centralizada debe probarse tras la ins
 3. Compruebe que la central receptora recibe mensajes al pulsar y soltar el sensor de protección de la carcasa del repetidor.
 4. Genere señales de un transmisor de objeto individual y compruebe su recepción en la central receptora. Compruebe todas las combinaciones disponibles en caso de que el repetidor reciba señales de varias codificaciones o frecuencias.
 
-> **Nota:** Los mismos mensajes transmitidos por diferentes canales difieren entre sí y deben describirse correctamente en el software de monitorización.
+!!! note
+    Los mismos mensajes transmitidos por diferentes canales difieren entre sí y deben describirse correctamente en el software de monitorización.
 
 El repetidor se considera correctamente instalado si todos los mensajes enviados son recibidos correctamente en la central receptora.
 

@@ -118,7 +118,7 @@
           return;
         }
         if (RECEIVER_LABELS.has(text)) {
-          item.style.display = inIpcomSection ? "" : "none";
+          item.style.display = "";
         }
       });
     });
@@ -130,7 +130,7 @@
     var segments = pathname.split("/").filter(Boolean);
     var isLangRoot = segments.length === 1 && LANGUAGE_BUTTON_LABELS[segments[0]];
     var isMobile = window.innerWidth < MOBILE_BREAKPOINT;
-    var forceCollapse = isLangRoot && isMobile;
+    var forceCollapse = isLangRoot;
     document.querySelectorAll("nav.md-nav--primary").forEach(function (nav) {
       if (nav.dataset.defaultsApplied === pathname) {
         return;
@@ -165,10 +165,9 @@
           return;
         }
         if (isLangRoot) {
-          var expand = !isMobile;
-          toggle.checked = expand;
+          toggle.checked = false;
           if (subnav) {
-            subnav.setAttribute("aria-expanded", expand ? "true" : "false");
+            subnav.setAttribute("aria-expanded", "false");
           }
         }
       });

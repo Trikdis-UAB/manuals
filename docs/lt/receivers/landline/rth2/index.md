@@ -12,7 +12,8 @@ pdf: rth2-original.pdf
 
 **Telefoninio ryšio linijos imtuvas RTH2** priima įvykių ataskaitas iš apsaugos valdymo pulto telefono ryšio modulio. Gauti įvykiai apdorojami ir perduodami į stebėjimo programinę įrangą.
 
-> **Pastaba:** Imtuvą galime sukonfigūruoti su išankstiniais nustatymais pagal kliento pageidavimą.
+!!! note
+    Imtuvą galime sukonfigūruoti su išankstiniais nustatymais pagal kliento pageidavimą.
 
 ## Techniniai Parametrai
 
@@ -44,7 +45,8 @@ pdf: rth2-original.pdf
 | 1,5 m maitinimo kabelis | 1 vnt. |
 | 1,8 m RS232 Null Modem kabelis | 1 vnt. |
 
-> **Pastaba:** *SPROG-1 arba UP2* kabeliai imtuvo programavimui komplekte neįeina.
+!!! note
+    *SPROG-1 arba UP2* kabeliai imtuvo programavimui komplekte neįeina.
 
 ## Maitinimo Šaltinis
 
@@ -52,16 +54,26 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 ## Imtuvo Struktūra
 
-<div style="text-align: center;">
-  <img src="./image1.png" alt="RTH2 Imtuvo struktūra" style="width: 100%; max-width: 600px;">
-</div>
+### Priekinis vaizdas
 
-| Nr. | Elementas | Nr. | Elementas |
-|-----|-----------|-----|-----------|
-| 1 | Šviesos indikacija | 5 | RS232 duomenų išvesties prievadas |
-| 2 | Įrenginio RESET mygtukas | 6 | Atsarginio akumuliatoriaus jungtis |
-| 3 | Įžeminimo jungtis | 7 | Kintamosios srovės kabelio lizdas ir įjungimo/išjungimo mygtukas |
-| 4 | Jungtis — telefoninio ryšio linijos įvestis | | |
+<img alt="RTH2 front view" src="./rth2-front.jpg" style="width: 100%; max-width: 700px;">
+
+| Nr. | Elementas |
+|-----|-----------|
+| 1 | Šviesos indikacija (WDG, HOOK, DATA, LINE šviesos diodai) |
+| 2 | Įrenginio RESET mygtukas |
+| 3 | Įžeminimo jungtis |
+| 4 | Jungtis — telefoninio ryšio linijos įvestis |
+
+### Galinis vaizdas
+
+<img alt="RTH2 rear view" src="./rth2-rear.jpg" style="width: 100%; max-width: 700px;">
+
+| Nr. | Elementas |
+|-----|-----------|
+| 5 | RS232 duomenų išvesties prievadas |
+| 6 | Atsarginio akumuliatoriaus jungtis (-12V+) |
+| 7 | Kintamosios srovės kabelio lizdas (100-240VAC 50/60Hz) ir įjungimo/išjungimo mygtukas |
 
 ### Šviesos Indikacija
 
@@ -76,8 +88,9 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 ### Įrangos Montavimo Žingsniai
 
-> **Pastaba:** 1) *SPROG-1 arba UP2* kabeliai imtuvo programavimui komplekte neįeina.
-> 2) Parametrams nustatyti reikia įdiegti GProg2 programinę įrangą. Norėdami atsisiųsti GProg2 diegimo failą, eikite į [www.trikdis.com](http://www.trikdis.com/)
+!!! note
+    1) *SPROG-1 arba UP2* kabeliai imtuvo programavimui komplekte neįeina.
+    2) Parametrams nustatyti reikia įdiegti GProg2 programinę įrangą. Norėdami atsisiųsti GProg2 diegimo failą, eikite į [www.trikdis.com](http://www.trikdis.com/)
 
 1. Jei gautas įrenginys neturi iš anksto nustatytų eksploatacinių parametrų, nustatykite juos kaip aprašyta skyriuje **Eksploatacinių parametrų nustatymas** žemiau.
 2. Prijunkite imtuvą prie kompiuterio RS232 kabeliu, kad perduotumėte įvykius į stebėjimo programinę įrangą.
@@ -89,7 +102,8 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 Jei nieko negauta: patikrinkite šviesos diodą „Line" — jis turi šviesti geltona spalva. Jei ne, patikrinkite jungtis iš naujo. Jei problema išlieka, įsitikinkite, kad eksploataciniai parametrai nustatyti teisingai, arba kreipkitės į techninę pagalbą.
 
-> **Pastaba:** Integruotas priėmimo modulis generuoja tarnybiniais pranešimus, nurodytus Priede A.
+!!! note
+    Integruotas priėmimo modulis generuoja tarnybiniais pranešimus, nurodytus Priede A.
 
 ## Eksploatacinių Parametrų Nustatymas
 
@@ -116,7 +130,8 @@ Jei nieko negauta: patikrinkite šviesos diodą „Line" — jis turi šviesti g
 
 Imtuvo parametrus galima nustatyti naudojant SPROG-1 arba UP2 programuotoją su GProg2 programine įranga. Taip pat gali reikėti įdiegti USB tvarkyklę. GProg2 ir USB tvarkyklės yra prieinamos mūsų svetainėje www.trikdis.lt.
 
-> **Pastaba:** GProg2 programinė įranga turi būti įdiegta kompiuteryje, veikiančiame MS *Windows* 2000/XP/Vista/Win 7 operacine sistema.
+!!! note
+    GProg2 programinė įranga turi būti įdiegta kompiuteryje, veikiančiame MS *Windows* 2000/XP/Vista/Win 7 operacine sistema.
 
 #### Prisijungimas prie Kompiuterio
 
@@ -135,35 +150,42 @@ Kompiuteryje turi būti įdiegtos USB tvarkyklės. Pirmą kartą prijungus modul
 
 #### GProg2 Paleidimas
 
-1. Paleiskite programą paspausdami GProg2 piktogramą, tada Nustatymų lange nurodykite nuoseklųjį prievadą (pvz.: COM3).
-2. Meniu juostoje pasirinkite komandą [*Devices*] ir pasirinkite RT2.
-3. Įrankių juostoje paspauskite piktogramą, kad prisijungtumėte prie imtuvo.
-4. Norėdami perskaityti įrenginio vidinėje atmintyje saugomus veiklos parametrus, paspauskite mygtuką. Baigus duomenų atsisiuntimą, pasirodys langas *Configuration is received*.
+8. Paleiskite programą paspausdami GProg2 piktogramą <img alt="GProg2" src="./icon-gprog2.png" style="height:22px; vertical-align:middle;">, tada Nustatymų lange nurodykite nuoseklųjį prievadą (pvz.: COM3).
+9. Meniu juostoje pasirinkite komandą [*Devices*] ir pasirinkite RT2.
+10. Įrankių juostoje paspauskite <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> piktogramą, kad prisijungtumėte prie imtuvo.
+11. Norėdami perskaityti įrenginio vidinėje atmintyje saugomus veiklos parametrus, paspauskite <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> mygtuką. Baigus duomenų atsisiuntimą, pasirodys langas *Configuration is received*.
+12. Pasirodys langas *Configuration is received*.
 
-<img alt="GProg2 pagrindinis langas" src="./image4.png" style="width: 100%; max-width: 500px;">
+<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.png" style="width: 100%; max-width: 600px;">
 
 #### Įrankių Juostos Piktogramų Aprašymas
 
 | Piktograma | Funkcija |
 |------------|---------|
-| [Open] | Atidaryti išsaugotą failą su plėtiniu „.tcfg" |
-| [Save] | Išsaugoti nustatytų parametrų failą su plėtiniu „.tcfg" |
-| [Connect] | Prisijungti prie nuosekliojo prievado |
-| [Disconnect] | Atsijungti nuo nuosekliojo prievado |
-| [Receive config] | Perskaityti įrenginio parametrus |
-| [Send config] | Įrašyti naujus parametrus į įrenginio atmintį |
-| [Generate configuration report] | Atspausdinti nustatytų parametrų ataskaitą |
+| <img alt="Open" src="./icon-open.png" style="height:22px; vertical-align:middle;"> **[Open]** | Atidaryti išsaugotą failą su plėtiniu „.tcfg" |
+| <img alt="Save" src="./icon-save.png" style="height:22px; vertical-align:middle;"> **[Save]** | Išsaugoti nustatytų parametrų failą su plėtiniu „.tcfg" |
+| <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> **[Connect]** | Prisijungti prie nuosekliojo prievado |
+| <img alt="Disconnect" src="./icon-disconnect.png" style="height:22px; vertical-align:middle;"> **[Disconnect]** | Atsijungti nuo nuosekliojo prievado |
+| <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> **[Receive config]** | Perskaityti įrenginio parametrus |
+| <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> **[Send config]** | Įrašyti naujus parametrus į įrenginio atmintį |
+| <img alt="Generate report" src="./icon-report.png" style="height:22px; vertical-align:middle;"> **[Generate configuration report]** | Atspausdinti nustatytų parametrų ataskaitą |
 
 #### Parametrų Nustatymas
 
-1. Šakos Main lange nustatykite Surgard protokolą.
-2. Jei reikia, galite keisti parametrus šakoje Communication settings — rekomenduojamos reikšmės nurodytos skyriuje **Imtuvo eksploataciniai parametrai** aukščiau.
-3. Norėdami išsaugoti parametrus, meniu juostoje eikite į [*File/Write device*] arba paspauskite piktogramą.
-4. Norėdami išsaugoti nustatytus parametrus savo kompiuteryje, eikite į [*File/Save as*]. Failo pavadinimą ir išsaugojimo vietą galima pasirinkti laisvai. Vėliau tai galima naudoti kaip šabloną kitiems moduliams konfigūruoti.
+<img alt="GProg2 Main window" src="./gprog2-main-window.png" style="width: 100%; max-width: 600px;">
+
+<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.png" style="width: 100%; max-width: 600px;">
+
+13. Šakos Main lange nustatykite Surgard protokolą.
+14. Jei reikia, galite keisti parametrus šakoje Communication settings — rekomenduojamos reikšmės nurodytos skyriuje **Imtuvo eksploataciniai parametrai** aukščiau.
+15. Norėdami išsaugoti parametrus, meniu juostoje eikite į [*File/Write device*] arba paspauskite <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> piktogramą.
+16. Norėdami išsaugoti nustatytus parametrus savo kompiuteryje, eikite į [*File/Save as*]. Failo pavadinimą ir išsaugojimo vietą galima pasirinkti laisvai. Vėliau tai galima naudoti kaip šabloną kitiems moduliams konfigūruoti.
 
 ## Priedas A — Tarnybiniai Pranešimai
 
 Telefoninio ryšio imtuvo tarnybiniai pranešimai:
+
+<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.png" style="width: 100%; max-width: 600px;">
 
 | Pranešimas | Kodas | Aprašymas |
 |------------|-------|-----------|

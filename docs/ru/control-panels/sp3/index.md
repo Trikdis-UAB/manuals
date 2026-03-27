@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.png" alt="" width="400">
+<img src="./sp3-product.webp" alt="FLEXi SP3" width="400">
 
 </div>
 
@@ -499,11 +499,20 @@
 
 ### Схема подключения датчика температуры
 
-<img alt="" src="./image30.png" style="width:2.9000054680664915in;height:1.2366688538932633in" /> / <img alt="" src="./image31.png" style="width:2.9000054680664915in;height:1.33333552055993in" />
+**Датчики температуры** подсоединяются по приведенной схеме. К охранной панели „FLEXi" SP3 можно подключить температурные датчики Maxim®/Dallas® DS18S20, DS18B20 (до 8 шт.) или датчик влажности и температуры АМ2301 (1 шт.).
 
-<img alt="" src="./image30.png" style="width:2.9000054680664915in;height:1.2366688538932633in" />
+Для подключения датчика температуры рекомендуется применять **кабель с витой парой (UTP4x2x0.5 или STP4x2x0.5)**.
 
-<img alt="" src="./image31.png" style="width:2.9000054680664915in;height:1.33333552055993in" />
+Клемма +5 В предназначена для питания устройств, подключенных к шине „1-WIRE", напряжением постоянного тока. Допустимый ток 0,2 А. Выход защищен от перегрузки. При превышении допустимого тока питание отключается автоматически.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image30.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image31.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
 ### Схема подключения реле и LED индикатора
 

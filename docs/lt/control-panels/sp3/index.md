@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.png" alt="" width="400">
+<img src="./sp3-product.webp" alt="FLEXi SP3" width="400">
 
 </div>
 
@@ -491,11 +491,20 @@ Prie centralės galima prijungti iki 2 RFID skaitytuvų. Klaviatūros prie centr
 
 ### Temperatūros jutiklio prijungimo schema
 
-<img alt="" src="./image30.png" style="width:3.23000656167979in;height:1.1900021872265967in" /> / <img alt="" src="./image31.png" style="width:3.12000656167979in;height:1.31333552055993in" />
+**Temperatūros jutikliai** jungiami pagal pateiktą schemą. Prie apsaugos centralės „FLEXi" SP3 galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (iki 8 vnt.) arba temperatūros ir drėgmės jutiklį AM2301 (1 vnt.).
 
-<img alt="" src="./image30.png" style="width:3.23000656167979in;height:1.1900021872265967in" />
+Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti **vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5)**.
 
-<img alt="" src="./image31.png" style="width:3.12000656167979in;height:1.31333552055993in" />
+Plokštės gnybtas +5V skirtas prie „1-Wire" magistralės prijungtiems įrenginiams maitinti 5 V nuolatine įtampa. Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Viršijus leistiną srovę, maitinimas automatiškai atjungiamas. Prijungtus įrenginius, centralė automatiškai atpažįsta ir registruoja.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image30.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image31.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
 ### Relės, LED indikatoriaus prijungimo schemos
 
@@ -551,7 +560,7 @@ Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 4 revizijos pr
 
 Jei reikia, kad apsaugos centralė „FLEXi” SP3 turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. „FLEXi” SP3 konfigūravimas su plėtimo moduliais aprašytas p. 5.5. „Langas „Moduliai“.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; max-width: 66%;">
 
 <figure style="margin: 0;">
 
@@ -752,11 +761,11 @@ Garso failo įrašo pradžią ir pabaigą palydi garso signalas. Garso failo įr
 
 2.  Su USB Mini-B kabeliu „FLEXi” SP3 prijunkite prie kompiuterio.
 
-**Pastaba:** Jei „FLEXi” SP3 bus maitinama ir veiks, o Jūs ją USB kabeliu sujungsite su kompiuteriu, „FLEXi” SP3 nustos atlikti centralės funkcijas ir įsijungs veikti programavimo režimu.
+    **Pastaba:** Jei „FLEXi” SP3 bus maitinama ir veiks, o Jūs ją USB kabeliu sujungsite su kompiuteriu, „FLEXi” SP3 nustos atlikti centralės funkcijas ir įsijungs veikti programavimo režimu.
 
-1.  Paleiskite konfigūravimo programą TrikdisConfig. Programa automatiškai atpažins prijungtą gaminį ir automatiškai atidarys „FLEXi” SP3 konfigūravimo langą.
+3.  Paleiskite konfigūravimo programą TrikdisConfig. Programa automatiškai atpažins prijungtą gaminį ir automatiškai atidarys „FLEXi” SP3 konfigūravimo langą.
 
-2.  Spustelkite programos mygtuką **Skaityti \[F4\]**, kad ji pateiktų esamas „FLEXi” SP3 veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite *administratoriaus* arba *montuotojo* kodą.
+4.  Spustelkite programos mygtuką **Skaityti \[F4\]**, kad ji pateiktų esamas „FLEXi” SP3 veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite *administratoriaus* arba *montuotojo* kodą.
 
 <a id="trikdisconfig-būsenos-juostos-aprašymas"></a>
 ### TrikdisConfig būsenos juostos aprašymas

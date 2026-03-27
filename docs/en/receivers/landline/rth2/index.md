@@ -5,21 +5,22 @@ pdf: rth2-original.pdf
 # RTH2 Telephone Line Receiver
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.png" alt="RTH2 Telephone Line Receiver" style="width: 100%; max-width: 600px;">
 </div>
 
 ## About Telephone Line Receiver
 
 **Telephone line Receiver RTH2** receives event reports from security control panel's telephone communicator. Received events are processed and transferred to the monitoring software.
 
-> **Note:** We configure the receiver with preset settings on client's request.
+!!! note
+    We configure the receiver with preset settings on client's request.
 
 ## Technical Parameters
 
 | Name | Description |
 |------|-------------|
-| Communication channel | telephone lines — tonal or pulse |
-| Receiving formats | contact ID, SIA, Ademco Express 4+2 and others |
+| Communication channel | Telephone lines — tonal or pulse |
+| Receiving formats | Contact ID, SIA, Ademco Express 4+2 and others |
 | Primary power supply | 100 – 240 V (50 / 60 Hz) AC network |
 | RS232 data output ports | 1 x DB9 |
 | Operating temperature | From 0°C to +55°C |
@@ -44,7 +45,8 @@ pdf: rth2-original.pdf
 | 1.5 m power supply cable | 1 pc. |
 | 1.8 m RS232 Null Modem cable | 1 pc. |
 
-> **Note:** *SPROG-1 or UP2* cables for receiver programming are not included.
+!!! note
+    *SPROG-1 or UP2* cables for receiver programming are not included.
 
 ## Power Supply
 
@@ -52,34 +54,45 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 ## Receiver Structure
 
-<div style="text-align: center;">
-  <img src="./image1.png" alt="RTH2 Receiver Structure" style="width: 100%; max-width: 600px;">
-</div>
+### Front view
 
-| No. | Element | No. | Element |
-|-----|---------|-----|---------|
-| 1 | Light indication | 5 | RS232 data output port |
-| 2 | RESET button of the device | 6 | Backup battery connection |
-| 3 | Earth connection | 7 | AC cable connector and turn on/off button |
-| 4 | Connector — telephone line input | | |
+<img alt="RTH2 front view" src="./rth2-front.jpg" style="width: 100%; max-width: 700px;">
+
+| No. | Element |
+|-----|---------|
+| 1 | Light indication (WDG, HOOK, DATA, LINE LEDs) |
+| 2 | RESET button of the device |
+| 3 | Earth connection |
+| 4 | Connector — telephone line input |
+
+### Rear view
+
+<img alt="RTH2 rear view" src="./rth2-rear.jpg" style="width: 100%; max-width: 700px;">
+
+| No. | Element |
+|-----|---------|
+| 5 | RS232 data output port |
+| 6 | Backup battery connection (-12V+) |
+| 7 | AC cable connector (100-240VAC 50/60Hz) and turn on/off button |
 
 ### Light Indication
 
 | LED Indicator | Operation | Value |
 |---------------|-----------|-------|
-| "LINE" yellow — Telephone line operation | Off | Telephone line not connected or not available |
-| "HOOK" red — Handset lift | Lights up | Handset is lifted |
-| "DATA" yellow — Data reception | Flashing yellow | During data reception from a peripheral device |
-| "WDG" green — Power supply status | Flashes in short periods | Power supply voltage during standby and operation |
+| **"LINE"** yellow — Telephone line operation | Off | Telephone line not connected or not available |
+| **"HOOK"** red — Handset lift | Lights up | Handset is lifted |
+| **"DATA"** yellow — Data reception | Flashing yellow | During data reception from a peripheral device |
+| **"WDG"** green — Power supply status | Flashes in short periods | Power supply voltage during standby and operation |
 
 ## System Installation
 
 ### Equipment Installation Steps
 
-> **Note:** 1) *SPROG-1 or UP2* cables for receiver programming are not included with the receiver.
-> 2) To set the parameters you need to install GProg2 software. To download GProg2 installation file go to [www.trikdis.com](http://www.trikdis.com/)
+!!! note
+    1) *SPROG-1 or UP2* cables for receiver programming are not included with the receiver.
+    2) To set the parameters you need to install GProg2 software. To download GProg2 installation file go to [www.trikdis.com](https://www.trikdis.com/)
 
-1. If received device does not have preset exploitation parameters, please set them as described in **Setting of exploitation parameters** below.
+1. If received device does not have preset exploitation parameters, please set them as described in **Setting of Exploitation Parameters** below.
 2. Connect receiver to computer using RS232 cable to forward events to the monitoring software.
 3. Set up your monitoring software to display receiver messages. Please follow instructions in your monitoring software documentation.
 4. Connect AC power supply cable.
@@ -87,9 +100,10 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 6. Press RESET button.
 7. Check if your monitoring software are displaying messages from RTH2 receiver.
 
-If nothing was received: check LED "Line" — it should be yellow. If not, recheck connections. In case that problem still occurs, please make sure that exploitation parameters are set correctly or contact technical support.
+If nothing was received: check LED "Line" — it should be yellow. If not, recheck connections. In case that problem still occurs, please make sure that exploitation parameters are set correctly or contact technical support. How to check and change parameters please refer to **Setting RTH2 Exploitation Parameters with GProg2** below.
 
-> **Note:** The integrated receiving module generates service messages, indicated in Annex A.
+!!! note
+    The integrated receiving module generates service messages, indicated in Annex A.
 
 ## Setting of Exploitation Parameters
 
@@ -114,9 +128,10 @@ If nothing was received: check LED "Line" — it should be yellow. If not, reche
 
 ### Setting RTH2 Exploitation Parameters with GProg2
 
-The receiver parameters can be set via SPROG-1 or UP2 programmer using GProg2 software. Also you may need to install USB driver. The GProg2 and USB drivers are available on our website www.trikdis.lt.
+The receiver parameters can be set via *SPROG-1* or *UP2* programmer using GProg2 software. Also you may need to install USB driver. The GProg2 and USB drivers are available on our website [www.trikdis.lt](https://www.trikdis.lt).
 
-> **Note:** The software GProg2 should be installed into PC, operating OS MS *Windows* 2000/XP/Vista/Win 7.
+!!! note
+    The software GProg2 should be installed into PC, operating OS MS *Windows* 2000/XP/Vista/Win 7.
 
 #### Connecting to Computer
 
@@ -128,42 +143,49 @@ The receiver parameters can be set via SPROG-1 or UP2 programmer using GProg2 so
 
 USB drivers must be installed on the computer. When the module connects to a computer for the first time, MS Windows OS should open the window *Found New Hardware Wizard* for installing USB drivers.
 
-1. Download the USB driver file *\*.inf* for MS Windows OS from the website www.trikdis.lt.
-2. In the wizard window select the function [*Yes, this time only*] and press the button [*Next*].
-3. When the window *Please choose your search and installation options* opens, press the button [*Browse*] and select the place where the file *\*.inf* was saved.
-4. Follow the remaining wizard instructions to finish the USB driver installation.
+4. Download the USB driver file *\*.inf* for MS Windows OS from the website www.trikdis.lt.
+5. In the wizard window select the function [*Yes, this time only*] and press the button [*Next*].
+6. When the window *Please choose your search and installation options* opens, press the button [*Browse*] and select the place where the file *\*.inf* was saved.
+7. Follow the remaining wizard instructions to finish the USB driver installation.
 
 #### Starting GProg2
 
-1. Start program by clicking the GProg2 icon, then in the Settings window specify the serial port (e.g.: COM3).
-2. In menu bar choose command [*Devices*] and select RT2.
-3. Press the icon in toolbar to connect receiver.
-4. To read the operational parameters stored in the internal memory of device, press the button. When data download has finished a window *Configuration is received* will appear.
+8. Start program by clicking the GProg2 icon <img alt="GProg2" src="./icon-gprog2.png" style="height:22px; vertical-align:middle;">, then in the Settings window specify the serial port (e.g.: COM3).
+9. In menu bar choose command [*Devices*] and select RT2.
+10. Press the <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> icon in toolbar to connect receiver.
+11. To read the operational parameters stored in the internal memory of device, press the <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> button.
+12. When data download has finished a window *Configuration is received* will appear.
 
-<img alt="GProg2 main window" src="./image4.png" style="width: 100%; max-width: 500px;">
+<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.png" style="width: 100%; max-width: 600px;">
 
 #### Toolbar Icons Description
 
 | Icon | Function |
 |------|----------|
-| [Open] | Open saved file with extension ".tcfg" |
-| [Save] | Save established parameters file with extension ".tcfg" |
-| [Connect] | Connect to serial port |
-| [Disconnect] | Disconnect from serial port |
-| [Receive config] | Read parameters of the device |
-| [Send config] | Write the new parameters into device memory |
-| [Generate configuration report] | Print established parameters report |
+| <img alt="Open" src="./icon-open.png" style="height:22px; vertical-align:middle;"> **[Open]** | Open saved file with extension ".tcfg" |
+| <img alt="Save" src="./icon-save.png" style="height:22px; vertical-align:middle;"> **[Save]** | Save established parameters file with extension ".tcfg" |
+| <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> **[Connect]** | Connect to serial port |
+| <img alt="Disconnect" src="./icon-disconnect.png" style="height:22px; vertical-align:middle;"> **[Disconnect]** | Disconnect from serial port |
+| <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> **[Receive config]** | Read parameters of the device |
+| <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> **[Send config]** | Write the new parameters into device memory |
+| <img alt="Generate report" src="./icon-report.png" style="height:22px; vertical-align:middle;"> **[Generate configuration report]** | Print established parameters report |
 
 #### Setting Parameters
 
-1. In branch Main window set Surgard protocol.
-2. If necessary, you can change parameters in branch Communication settings — the recommended values are shown in **Exploitation parameters of the receiver** above.
-3. To save parameters go to [*File/Write device*] in menu bar or press the icon.
-4. To save set parameters in your computer, go to [*File/Save as*]. File name and place to save may be selected freely. It can be used later as a template to configure other modules.
+<img alt="GProg2 Main window" src="./gprog2-main-window.png" style="width: 100%; max-width: 600px;">
+
+<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.png" style="width: 100%; max-width: 600px;">
+
+13. In branch *Main window* set Surgard protocol.
+14. If necessary, you can change parameters in branch *Communication settings* — the recommended values are shown in **Exploitation Parameters of the Receiver** above.
+15. To save parameters go to [*File/Write device*] in menu bar or press the <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> icon.
+16. To save set parameters in your computer, go to [*File/Save as*]. File name, place to save may be selected freely. It can be used later as a template to configure other modules.
 
 ## Annex A — Service Messages
 
 Service messages of telephonic communication receiver:
+
+<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.png" style="width: 100%; max-width: 600px;">
 
 | Message | Code | Description |
 |---------|------|-------------|

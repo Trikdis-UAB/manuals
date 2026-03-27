@@ -1,7 +1,7 @@
 # Security control panel “FLEXi” SP3
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./sp3-product.webp" alt="FLEXi SP3" width="400">
 </div>
 
 
@@ -466,13 +466,22 @@ The **TM17** reader connects to the „FLEXi“ SP3 using the *RS485* data bus. 
 
 <img alt="" src="./image29.png" style="width:3.840007655293088in;height:2.04667104111986in" />
 
-### Schematic for connecting a temperature sensor 
+### Schematic for connecting a temperature sensor
 
-<img alt="" src="./image30.png" style="width:2.9766732283464568in;height:1.2000021872265967in" /> / <img alt="" src="./image31.png" style="width:2.8600054680664915in;height:1.33333552055993in" />
+**Temperature sensors** should be connected according to the given schematic. Maxim®/Dallas® DS18S20, DS18B20 temperature sensors (up to 8) or AM2301 humidity and temperature sensor (up to 1) can be connected to the „FLEXi" SP3 control panel.
 
-<img alt="" src="./image30.png" style="width:2.9766732283464568in;height:1.2000021872265967in" />
+If a wire longer than 0,5 meters is used to connect a temperature sensor, we recommend using **twisted pair cable (UTP4x2x0,5 or STP4x2x0,5)**.
 
-<img alt="" src="./image31.png" style="width:2.8600054680664915in;height:1.33333552055993in" />
+The +5V terminal on the board is for supplying devices connected to the 1-Wire data bus with 5 V DC voltage. The maximum output current is 0,2 A. The output is protected from overload. If the maximum allowed current is exceeded, the power will automatically be switched off. The control panel automatically recognizes and links connected devices.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image30.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image31.png" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
 
 ### Schematics for connecting a relay and an LED indicator 
 
@@ -528,7 +537,7 @@ The *„FLEXi“ SP3* control panel firmware version must be SP3_xxx4_0122.fw (
 
 If the security control panel „FLEXi“ SP3 needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander. The „FLEXi“SP3’s configuration for expander modules is described in chapter 5.5 ““Modules” window”.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; max-width: 66%;">
   <figure style="margin: 0;">
     <img src="./image40.png" alt="" style="width: 100%; height: auto;" />
   </figure>
@@ -743,11 +752,11 @@ An audio signal accompanies the beginning and end of the audio file recording. A
 
 2.  Connect the „FLEXi“ SP3 to a computer using a USB Mini-B cable.
 
-**Note:** If you connect the „FLEXi“ SP3 to a computer using a USB cable while it is powered on and operating, the „FLEXi“ SP3 will stop performing its control panel functions and will switch to programming mode.
+    **Note:** If you connect the „FLEXi“ SP3 to a computer using a USB cable while it is powered on and operating, the „FLEXi“ SP3 will stop performing its control panel functions and will switch to programming mode.
 
-1.  Launch the configuration software TrikdisConfig. The program will automatically recognize the connected device and will automatically open the „FLEXi“ SP3 configuration window.
+3.  Launch the configuration software TrikdisConfig. The program will automatically recognize the connected device and will automatically open the „FLEXi“ SP3 configuration window.
 
-2.  Click **Read [F4]** to see current „FLEXi“ SP3 parameters. If a pop-up window appears, enter the *administrator* or *installer* code.
+4.  Click **Read [F4]** to see current „FLEXi“ SP3 parameters. If a pop-up window appears, enter the *administrator* or *installer* code.
 
 ### Description of TrikdisConfig status bar 
 
