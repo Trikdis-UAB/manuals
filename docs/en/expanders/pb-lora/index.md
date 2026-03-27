@@ -8,6 +8,8 @@
 
 The product PB-LORA is designed to transmit the emergency call message wirelessly. The call for help is initiated by pressing the button. The RF-LORA module is used as a message receiving device, which is connected to the control panel "FLEXi" SP3.
 
+Compatible with the [SP3](../../control-panels/sp3/index.md) security control panel.
+
 8 PB-LORA panic buttons can be assigned to the control panel if the firmware version 1.17 or higher is used (eg: SP3_xxxx_0117.fw). When the control panel is loaded release 2 firmware with version 1.16 or higher (eg: SP3_xxx2_0116.fw), 250 PB-LORA panic buttons can be assigned to the control panel.
 
 ### Features

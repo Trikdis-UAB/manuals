@@ -8,6 +8,8 @@
 
 By connecting the RF-S8 transceiver, the *„**FLEXi“ SP3 can work with “S8***” wireless sensors, sirens, and remote controls.
 
+Compatible with the [SP3](../../control-panels/sp3/index.md) security control panel.
+
 ### Features
 
 **Communication:**

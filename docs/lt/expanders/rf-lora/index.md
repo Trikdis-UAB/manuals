@@ -9,7 +9,7 @@
 Transiveris RF-LORA su belaidžiais plėtikliais iO-LORA ir iO-8-LORA padidina apsaugos centralės "FLEXi" SP3 įėjimų ir išėjimų skaičių naudojant dvipusį belaidį RF ryšį.
 
 
-Taip pat suderinamas su [GATOR Cellular](../../gate-controllers/gator/index.md) ir [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) vartų ir durų prieigos valdikliais.
+Suderinamas su [SP3](../../control-panels/sp3/index.md) apsaugos centralize, [GATOR Cellular](../../gate-controllers/gator/index.md) ir [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) vartų ir durų prieigos valdikliais.
 Prie apsaugos centralės "FLEXi" SP3 per transiverį RF-LORA galima prijungti iki 8 modulių LORA (iO-LORA, iO-8-LORA, PB-LORA).
 
 **Savybės**

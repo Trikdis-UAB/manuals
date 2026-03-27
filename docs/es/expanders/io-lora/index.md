@@ -9,7 +9,7 @@
 Los expansores inalámbricos iO-LORA con transceptor RF-LORA aumentan el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
 
 
-También compatible con los controladores de acceso a puertas y portones [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 Al expansor iO-LORA se pueden conectar sensor de temperatura (1 und.) y lectores de teclas de contacto ("iButton"). La salida PGM (relé) del expansor se puede controlar de forma remota (encendido/apagado) mediante varios dispositivos eléctricos. iO- LORA tiene una entrada digital.
 
 **Características**

@@ -21,7 +21,7 @@
 
 Беспроводные расширители iO-LORA с трансивером RF-LORA увеличивают количество входов и выходов охранной панели "FLEXi" SP3, используя двустороннюю RF связь.
 
-Также совместим с контроллерами доступа [GATOR Cellular](../../gate-controllers/gator/index.md) и [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Совместим с охранной панелью [SP3](../../control-panels/sp3/index.md), контроллерами доступа [GATOR Cellular](../../gate-controllers/gator/index.md) и [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 К расширителю iO-LORA можно подключить датчик температур (1 шт.) и считыватели контактных („iButton“) ключей. PGM выходом (реле) расширителя можно дистанционно управлять (вкл/выкл) различными электрическими устройствами. iO-LORA имеет один цифровой вход.
 

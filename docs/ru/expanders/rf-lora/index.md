@@ -21,7 +21,7 @@
 
 Трансивер RF-LORA c беспроводными расширителями iO-LORA и iO-8-LORA увеличивает количество входов и выходов охранной панели "FLEXi" SP3, используя двустороннюю RF связь.
 
-Также совместим с контроллерами доступа [GATOR Cellular](../../gate-controllers/gator/index.md) и [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Совместим с охранной панелью [SP3](../../control-panels/sp3/index.md), контроллерами доступа [GATOR Cellular](../../gate-controllers/gator/index.md) и [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 К охранной панели "FLEXi" SP3 с помощью трансивера RF-LORA можно подключить до 8 модулей LORA (iO-LORA, iO-8-LORA, PB-LORA).
 

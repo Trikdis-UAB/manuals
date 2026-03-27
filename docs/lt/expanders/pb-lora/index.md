@@ -8,6 +8,8 @@
 
 Gaminys PB-LORA skirtas perduoti pagalbos kvietimo pranešimą bevielių būdu. Pagalbos kvietimas inicijuojamas paspaudus mygtuką. Kaip pranešimo priėmimo įrenginys naudojamas RF-LORA modulis, kuris prijungtas prie apsaugos centralės “FLEXi” SP3.
 
+Suderinamas su [SP3](../../control-panels/sp3/index.md) apsaugos centralize.
+
 Centralei galima priskirti 8 vnt. PB-LORA panikos mygtukų jei naudojama centralės veikimo programos versija 1.17 arba aukštesnė (pvz.: SP3_xxxx_0117.fw). Kai centralėje yra įrašyta 2 laidos veikimo programos versija 1.16 arba aukštesnė (pvz.: SP3_xxx2_0116.fw), tai centralei galima priskirti 250 vnt. PB-LORA panikos mygtukų.
 
 **Savybės**

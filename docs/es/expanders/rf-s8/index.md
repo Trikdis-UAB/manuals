@@ -8,6 +8,8 @@
 
 Al conectar el transceptor RF-S8, "FLEXi" SP3 puede funcionar con sensores inalámbricos, sirenas y controles remotos “S8”.
 
+Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/index.md).
+
 **Características**
 
 Comunicación:

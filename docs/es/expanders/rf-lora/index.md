@@ -9,7 +9,7 @@
 Transceptor RF-LORA con expansores inalámbricos iO-LORA e iO-8-LORA aumenta el número de entradas y salidas del panel de control "FLEXi" SP3 mediante comunicación RF bidireccional.
 
 
-También compatible con los controladores de acceso a puertas y portones [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 Se pueden conectar hasta 8 módulos LORA (iO-LORA, iO-8-LORA, PB-LORA) al panel de control "FLEXi" SP3 mediante el transceptor RF-LORA.
 
 **Características**

@@ -8,6 +8,8 @@
 
 Prijungus imtuvą RF-S8, apsaugos centralė „FLEXi” SP3 gali dirbti su „**S8**“ belaidžiais jutikliais, sirenomis, valdymo pulteliais.
 
+Suderinamas su [SP3](../../control-panels/sp3/index.md) apsaugos centralize.
+
 **Savybės**
 
 Ryšys:

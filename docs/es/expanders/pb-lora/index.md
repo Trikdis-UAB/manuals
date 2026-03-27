@@ -8,6 +8,8 @@
 
 El *PB-LORA* está diseñado para la transmisión inalámbrica de un mensaje de llamada de emergencia. Una llamada de ayuda se inicia presionando un botón. Como dispositivo receptor de mensajes se utiliza el módulo RF-LORA, que se conecta al panel de control "FLEXi" SP3.
 
+Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/index.md).
+
 Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel de control tiene la versión de firmware 1.17 o superior (por ejemplo: SP3_xxxx_0117.fw). Si el panel de control tiene la 2 reversión de firmware 1.16 o superior (por ejemplo, SP3_xxx2_0116.fw), entonces se pueden asignar 250 botones de pánico PB-LORA a este panel de control.
 
 **Características**
