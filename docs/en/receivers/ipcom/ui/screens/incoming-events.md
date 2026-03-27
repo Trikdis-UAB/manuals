@@ -19,7 +19,7 @@
 
 Filters are essential for high-volume receivers where scrolling the raw stream is impractical.
 
-![Incoming events tab filters and actions section](../assets/screens/incoming-events-sections/filters-and-actions.png)
+![Incoming events tab filters and actions section](../assets/screens/incoming-events-sections/filters-and-actions.webp)
 
 ### Incoming event table {#incoming-events-table}
 

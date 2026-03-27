@@ -1,7 +1,7 @@
 # PB-LoRa Wireless Panic Button
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="200">
+  <img src="./image3.webp" alt="" width="200">
 </div>
 
 ## Description 
@@ -38,7 +38,7 @@ Compatible with the [SP3](../../control-panels/sp3/index.md) security control pa
 
 ### Wireless Panic button elements 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 > **Note:** see the product label for the location of each element.
 
@@ -64,7 +64,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 1.  Remove the top lid.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Remove the PCB board.
 
@@ -76,11 +76,11 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 6.  Close the top lid.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Schematic for connecting of the wireless PB-LORA panic button 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     The RF-LORA transceiver must be connected to the "FLEXi"
@@ -109,11 +109,11 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 8.  In the "**Serial No.**" field, enter the serial number of the PB-LORA.
 
-<img alt="" src="./image8.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  In the "**Zones**" tab, make settings for the panic button.
 
-<img alt="" src="./image9.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Once configuration is complete, click the **Write [F5]** button.
 
@@ -129,7 +129,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 16. The firmware version of the PB-LORA will appear in the “**Modules**” window.
 
-<img alt="" src="./image10.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Click the "**Disconnect**" button and disconnect the USB cable.
 
@@ -179,7 +179,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
         yellow blinking).
 6.  Launch the configuration program TrikdisConfig and in the field “**Unique ID”** of the “**Remote access**” section enter the IMEI number of „FLEXi“ SP3. The IMEI number is given on the stickers that can be found on the control panel and on the packaging.
 
-<img alt="" src="./image11.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Click „**Configure”**.
 
@@ -193,7 +193,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 12. Wait for the updates to finish.
 
-<img alt="" src="./image12.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Wait 1 minute.
 
@@ -201,13 +201,13 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 15. The firmware version of the “**RF-LORA transceiver**” will appear in the “**Modules**” window**.**
 
-<img alt="" src="./image13.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Go to the “**Wireless sensor**” window.
 
 17. Click the “**Learn sensors**” button.
 
-<img alt="" src="./image14.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 All wireless panic buttons can be linked simultaneously.
 
@@ -221,7 +221,7 @@ When enrolling PB-LORA panic buttons, the *RF-LORA* module must be at least 1 m 
 
 21. The “**DATA/TROUBLE**” LED on the RF-LORA module will turn green for a few seconds. After that, the “**DATA/TROUBLE**” LED on the RF-LORA module will continue flashing red/green.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. After a few seconds, the PB-LORA panic button will be added to the list of sensors.
 
@@ -231,17 +231,17 @@ When enrolling PB-LORA panic buttons, the *RF-LORA* module must be at least 1 m 
 
 25. Click “**Stop learning**” to complete the registration of wireless panic buttons.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Click “**Yes**” for the sensors to be written to the “FLEXi” SP3 control panel.
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Wait a few minutes. Click **Read [F4].**
 
 TrikdisConfig will display a list of registered wireless panic buttons in the “**Wireless**” window. The “**Serial No.**” field will list the serial number that must match the PB-LORA panic button serial number written on the back of the case.
 
-<img alt="" src="./image18.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     To delete wireless PB-LORA panic buttons from the ***"FLEXi"
@@ -267,4 +267,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.png" style="width:24px;height:auto;vertical-align:middle" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.

@@ -1,7 +1,7 @@
 # Comunicador Ethernet E16
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción
@@ -112,7 +112,7 @@ Funciona con la aplicación Protegus2:
 
 5.  Conexión Ethernet zócalo RJ45.
 
-<img alt="" src="./image4.png" style="width:4.724409448818897in;height:2.838582677165354in" />
+<img alt="" src="./image4.webp" style="width:4.724409448818897in;height:2.838582677165354in" />
 
 ### Propósito de las terminales
 
@@ -152,7 +152,7 @@ Funciona con la aplicación Protegus2:
 
 ### Esquema estructural del uso del dispositivo E16
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.923611111111111in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.923611111111111in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
@@ -177,7 +177,7 @@ Funciona con la aplicación Protegus2:
 
 2.  Abra la cubierta del E16 con el desatornillador de cabeza plana como se muestra a continuación:
 
-    <img alt="" src="./image6.png" style="width:6.876680883639545in;height:1.850003280839895in" />
+    <img alt="" src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
 
 3.  Usando el cable USB mini-B conecte el E16 a la computadora.
 
@@ -191,7 +191,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image7.png" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 1.  Seleccione el tipo de panel de control que será conectado al comunicador.
 
@@ -207,7 +207,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     la contraseña de la descarga de la computadora/UDL.
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
 
 4. Habilitar la conexión a la Servicio Protegus.
 
@@ -223,7 +223,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image9.png" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF.**).
 
@@ -231,7 +231,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 En la ventana de opciones de “CRA ajustes” para el “Canal de comunicación principal”:
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:3.547244094488189in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:3.547244094488189in" />
 
 3. **Modo** – seleccione el método de conexión IP.
 
@@ -264,21 +264,21 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicador con el panel de control.
 
-<img alt="" src="./image11.png" style="width:7.0875in;height:2.825in" />
+<img alt="" src="./image11.webp" style="width:7.0875in;height:2.825in" />
 
-<img alt="" src="./image12.png" style="width:7.0875in;height:2.8305555555555557in" />
+<img alt="" src="./image12.webp" style="width:7.0875in;height:2.8305555555555557in" />
 
-<img alt="" src="./image13.png" style="width:7.0875in;height:2.7180555555555554in" />
+<img alt="" src="./image13.webp" style="width:7.0875in;height:2.7180555555555554in" />
 
-<img alt="" src="./image14.png" style="width:7.0875in;height:2.9479166666666665in" />
+<img alt="" src="./image14.webp" style="width:7.0875in;height:2.9479166666666665in" />
 
-<img alt="" src="./image15.png" style="width:3.25000656167979in;height:2.7250054680664917in" />
+<img alt="" src="./image15.webp" style="width:3.25000656167979in;height:2.7250054680664917in" />
 
 ### **Diagramas de conexión para control el panel de control a través de la zona de keyswitch**
 
 Siga este esquema si el panel de seguridad será controlado, pero no de forma directa, pero con una salida PGM *E16* para prender/apagar la zona de keyswitch del sistema. / El comunicador *E16* tiene tres salidas OUT (PGM) programables que pueden controlar tres áreas del sistema de seguridad. Si usted quiere controlar el sistema de esta forma, no seleccione la casilla de Armado/Desarmado remoto en la ventana de “configuración del sistema” de *TrikdisConfig*.
 
-<img alt="" src="./image16.png" style="width:4.0350076552930885in;height:2.3800043744531933in" />
+<img alt="" src="./image16.webp" style="width:4.0350076552930885in;height:2.3800043744531933in" />
 
 ### Diagramas para la conexión de entrada
 
@@ -286,9 +286,9 @@ El comunicador tiene 3 terminales de entrada / salida universales que se pueden 
 
 Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), como se muestra en los esquemas de abajo:
 
-<img alt="" src="./image17.png" style="width:5.228346456692913in;height:1.720472440944882in" />
+<img alt="" src="./image17.webp" style="width:5.228346456692913in;height:1.720472440944882in" />
 
-<img alt="" src="./image18.png" style="width:5.232283464566929in;height:2.437007874015748in" />
+<img alt="" src="./image18.webp" style="width:5.232283464566929in;height:2.437007874015748in" />
 
 !!! note "Nota"
     Si más entradas o salidas necesitan ser conectadas al comunicador,
@@ -296,19 +296,19 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
     El método de conexión está descrito en el manual de iO.
 ### Conectar el cable LAN
 
-<img alt="" src="./image19.png" style="width:2.8250054680664918in;height:2.282504374453193in" />
+<img alt="" src="./image19.webp" style="width:2.8250054680664918in;height:2.282504374453193in" />
 
 ### Esquemas de cableado de un relé
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos electrónicos. El terminal de I/O del comunicador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image20.png" style="width:2.4775043744531935in;height:0.8950021872265966in" />
+<img alt="" src="./image20.webp" style="width:2.4775043744531935in;height:0.8950021872265966in" />
 
 ### Esquemas para la conexión de módulos de expansión de la serie de iO
 
 Si es necesario conectar más entradas o salidas al comunicador, o si desea conectar un sensor de temperatura, conecte el expansor de salida inalámbrico o por cable de la serie TRIKDIS iO. Configuración de los módulos expansores conectados al E16 se describe en el capítulo 6.7 “Ventana “RS485 modules”.
 
-<img alt="" src="./image21.png" style="width:7.0875in;height:3.5395833333333333in" />
+<img alt="" src="./image21.webp" style="width:7.0875in;height:3.5395833333333333in" />
 
 ### Cambiando en la fuente de alimentación para el panel de control
 
@@ -396,7 +396,7 @@ El panel de control debe estar conectado al internet. Conéctese con Innerrange 
 
 Abra la ventana de Configuración > General > Reporte de Alarmas. En la configuración de Reporte de Dispositivos de Terceras partes usted necesita ingresar:
 
-<img alt="" src="./image22.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image22.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  Habilitar Reporte de Dispositivos de Terceras partes – seleccione esta casilla.
 
@@ -434,13 +434,13 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -449,7 +449,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 2.  Ingrese el nombre del sistema. Haga clic en el botón "Siguiente".
 
-<img alt="" src="./image29.png" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+<img alt="" src="./image29.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
 !!! note "Nota"
     Al agregar E16 a Protegus2, revise si:
@@ -472,7 +472,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="" src="./image30.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image30.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
@@ -480,13 +480,13 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image31.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image31.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 4. Si hay otra sección de alarmas de seguridad, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="" src="./image32.png" style="width:2.216535433070866in;height:1.9921259842519685in" />
+<img alt="" src="./image32.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
 
 ### Control del sistema con Protegus2 
 
@@ -494,7 +494,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="" src="./image33.png" style="width:2.220472440944882in;height:2.688976377952756in" />
+<img alt="" src="./image33.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
 
 ## Descripción de la ventana de TrikdisConfig 
 
@@ -502,7 +502,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 Después de conectar E16 y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image34.png" style="width:7.106299212598425in;height:0.6220472440944882in" />
+<img alt="" src="./image34.webp" style="width:7.106299212598425in;height:0.6220472440944882in" />
 
 **Barra de Estado**
 
@@ -522,7 +522,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.0866141732283463in" />
+<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.0866141732283463in" />
 
 **Grupo de opciones “General”**
 
@@ -553,7 +553,7 @@ Al configurar el comunicador E16 hay dos niveles de acceso para el administrador
     dígitos o caracteres en latín.
 ### Ventana de “CRA informes”
 
-<img alt="" src="./image36.png" style="width:7.082677165354331in;height:4.02755905511811in" />
+<img alt="" src="./image36.webp" style="width:7.082677165354331in;height:4.02755905511811in" />
 
 **Pestaña de parámetros “CRA ajustes”**
 
@@ -587,7 +587,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 **Pestaña de “Ajustes”**
 
-<img alt="" src="./image37.png" style="width:7.090551181102362in;height:2.377952755905512in" />
+<img alt="" src="./image37.webp" style="width:7.090551181102362in;height:2.377952755905512in" />
 
 **Grupo “Ajustes”**
 
@@ -617,7 +617,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 **Pestaña de la “Servicio Protegus”**
 
-<img alt="" src="./image38.png" style="width:7.082677165354331in;height:1.7755905511811023in" />
+<img alt="" src="./image38.webp" style="width:7.082677165354331in;height:1.7755905511811023in" />
 
 - **Activar conexión** – permita que el comunicador se conecte a la nube de Protegus2.
 
@@ -625,7 +625,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 ### Ventana de “Adjustes de Ethernet“ 
 
-<img alt="" src="./image39.png" style="width:7.082677165354331in;height:2.251968503937008in" />
+<img alt="" src="./image39.webp" style="width:7.082677165354331in;height:2.251968503937008in" />
 
 **Grupo de opciones de “Adjustes de Ethernet”**
 
@@ -639,7 +639,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 ### Ventana de “IN/OUT“
 
-<img alt="" src="./image40.png" style="width:7.086614173228346in;height:2.47244094488189in" />
+<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 El comunicador tiene 3 terminales universales (entrada/salida). La tabla puede configurar el modo de funcionamiento del terminal (Apagado, IN, OUT). La entrada debe especificar el tipo de circuito a conectar NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -659,7 +659,7 @@ Se pueden conectar sensores adicionales a las entradas del comunicador. Cuando s
 
 El comunicador se puede conectar a un expansor de la serie iO para agregar entradas adicionales, salidas controladas y un bus para sensores de temperatura. Los extensores conectados deben incluirse en la tabla Lista de módulos.
 
-<img alt="" src="./image41.png" style="width:7.090551181102362in;height:2.141732283464567in" />
+<img alt="" src="./image41.webp" style="width:7.090551181102362in;height:2.141732283464567in" />
 
 Grupo de opciones de “Modules list”
 
@@ -677,7 +677,7 @@ Después de añadir el expansor al comunicador como se ha descrito en el párraf
 
 #### Ventana de ajustes del expansor iO-8
 
-<img alt="" src="./image42.png" style="width:7.082677165354331in;height:2.5354330708661417in" />
+<img alt="" src="./image42.webp" style="width:7.082677165354331in;height:2.5354330708661417in" />
 
 El expansor iO-8 tiene 8 contactos de terminal universales (entrada/salida). Se pueden conectar hasta cuatro expansores iO-8.
 
@@ -715,7 +715,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID y códigos de r
 
 **Ventana de ajustes del expansor iO**
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:3.216535433070866in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:3.216535433070866in" />
 
 El expansor iO dispone de: terminales para 1 entrada, 1 salida (contactos de relé) y bus serie 1-Wire para la conexión de sensores de temperatura.
 
@@ -735,7 +735,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID y códigos de r
 
 Esta ventana le permitirá prender, apagar y modificar los mensajes internos enviados por su dispositivo. Deshabilitar el mensaje interno en esta ventana prevendrá que sea enviado a pesar de otras opciones.
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 - **COMMUNICATION** – mensaje de falla de comunicación entre el panel de control y E16.
 
@@ -761,7 +761,7 @@ Puede cambiar el código de identificación de contacto para cada evento, así c
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón **Restaurar** en ***TrikdisConfig*.**
 
-<img alt="" src="./image45.png" style="width:7.090551181102362in;height:0.952755905511811in" />
+<img alt="" src="./image45.webp" style="width:7.090551181102362in;height:0.952755905511811in" />
 
 ## Configuración Remota
 
@@ -781,7 +781,7 @@ Para restablecer el comunicador a la configuración de fábrica, presione el bot
 
 2.  En la sección de acceso remoto ingrese la dirección MAC del comunicador. Este dirección puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image46.png" style="width:7.0078740157480315in;height:1.0393700787401574in" />
+<img alt="" src="./image46.webp" style="width:7.0078740157480315in;height:1.0393700787401574in" />
 
 3. (Opcional) en el espacio del nombre de Sistema ingrese el nombre deseado para el comunicador.
 
@@ -836,7 +836,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de Firmware del menú.
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.1929133858267718in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.1929133858267718in" />
 
 4. Presione Abrir firmware y seleccione el archivo de firmware requerido. Si no tiene el archivo, el archivo de la versión más nueva del firmware puede ser descargado por usuario registrado desde [www.trikdis.com](http://www.trikdis.com), bajo la sección de descargar del comunicador E16.
 
@@ -852,7 +852,7 @@ Antes de la instalación, por favor lea con cuidado este manual, para poder evit
 
 Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
+<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
 

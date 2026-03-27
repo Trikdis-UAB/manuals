@@ -18,7 +18,7 @@ Pasos breves para conectar el comunicador E16T al comunicador telefónico del pa
 1. Descargue **TrikdisConfig** de [www.trikdis.com](http://www.trikdis.com) e instálelo.
 2. Abra la carcasa del E16T con un destornillador plano.
 
-![Abrir la carcasa del E16T](../../../e16t/image5.png)
+![Abrir la carcasa del E16T](../../../e16t/image5.webp)
 
 3. Conecte el E16T al ordenador mediante un cable USB Mini-B.
 4. Ejecute **TrikdisConfig**. El software reconocerá el comunicador y abrirá la ventana de configuración.
@@ -34,13 +34,13 @@ Complete la subsección que corresponda a la instalación:
 
 **En la ventana de "Ajustes del sistema":**
 
-![Ajustes del sistema E16T](../../../e16t/image6.png)
+![Ajustes del sistema E16T](../../../e16t/image6.webp)
 
 1. Seleccione el **Modelo de panel** que se conectará al comunicador.
 
 **En la ventana de "Informes", pestaña "Servicio Protegus":**
 
-![Ajustes de Protegus E16T](../../../e16t/image7.png)
+![Ajustes de Protegus E16T](../../../e16t/image7.webp)
 
 2. Marque **Habilitar conexión** en la configuración del servicio Protegus.
 3. Cambie el **Código de servicio** si desea que se solicite al añadir el sistema a Protegus.
@@ -51,14 +51,14 @@ Después de terminar la configuración, haga clic en **Escribir [F5]** y descone
 
 **En la ventana de "Ajustes del sistema":**
 
-![Ajustes del sistema E16T para CRA](../../../e16t/image8.png)
+![Ajustes del sistema E16T para CRA](../../../e16t/image8.webp)
 
 1. Introduzca el **Número de cuenta** proporcionado por la Central Receptora.
 2. Seleccione el **Modelo de panel** que se conectará al comunicador.
 
 **En la ventana de "Informes", opciones del canal "Primario":**
 
-![Ajustes de reporte E16T para CRA](../../../e16t/image9.png)
+![Ajustes de reporte E16T para CRA](../../../e16t/image9.webp)
 
 3. Habilite el canal principal de comunicación.
 4. Introduzca el **Host remoto** y el **Puerto remoto** del receptor.
@@ -70,7 +70,7 @@ Después de terminar la configuración, haga clic en **Escribir [F5]** y descone
 
 **En la ventana de "Informes", pestaña "Servicio Protegus":**
 
-![Ajustes del servicio Protegus E16T](../../../e16t/image10.png)
+![Ajustes del servicio Protegus E16T](../../../e16t/image10.webp)
 
 10. Marque **Habilitar conexión** a Protegus si los usuarios utilizarán la app.
 11. Cambie el **Código de servicio** si desea que se solicite al añadir el sistema a Protegus.
@@ -84,7 +84,7 @@ Después de terminar la configuración, haga clic en **Escribir [F5]** y descone
 
 Conecte el E16T a la alimentación del panel, `TIP` / `RING` y LAN como se muestra a continuación:
 
-![Diagrama de conexión del panel E16T](../../../e16t/image11.png)
+![Diagrama de conexión del panel E16T](../../../e16t/image11.webp)
 
 Si el panel va a armarse o desarmarse mediante una salida de keyswitch, conecte la zona keyswitch del panel a `OUT` como se muestra en el mismo diagrama.
 
@@ -124,7 +124,7 @@ Salga del modo de programación con `*99`.
 1. Si conectó `OUT` a una zona keyswitch, abra **Settings** en Protegus y habilite **Arm/Disarm with PGM Output 1**.
 1. Seleccione el modo **Pulse** o **Level** para que coincida con el tipo de zona keyswitch del panel.
 
-![Pantalla de alta del sistema en Protegus](../../../cellular/quick-setup/paradox/protegus-enter-imei.png)
+![Pantalla de alta del sistema en Protegus](../../../cellular/quick-setup/paradox/protegus-enter-imei.webp)
 
 ## Comprobación del sistema
 

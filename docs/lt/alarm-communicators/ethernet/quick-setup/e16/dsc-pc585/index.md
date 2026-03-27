@@ -17,7 +17,7 @@ Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatori�
 1. Parsisiųskite **TrikdisConfig** iš [www.trikdis.com](http://www.trikdis.com) ir ją įdiekite.
 2. Plokščiu atsuktuvu atidarykite E16 korpusą.
 
-![Atidarykite E16 korpusą](../../../../e16/image6.png)
+![Atidarykite E16 korpusą](../../../../e16/image6.webp)
 
 3. Su USB Mini-B kabeliu prijunkite E16 prie kompiuterio.
 4. Paleiskite **TrikdisConfig**. Programa atpažins komunikatorių ir atidarys konfigūravimo langą.
@@ -33,7 +33,7 @@ Atlikite tą poskyrį, kuris atitinka diegimą:
 
 **Lange "Sistemos parinktys":**
 
-![E16 sistemos parinktys](../../../../e16/image7.png)
+![E16 sistemos parinktys](../../../../e16/image7.webp)
 
 1. Pasirinkite **Centralės modelį**, kuris bus prijungtas prie komunikatoriaus.
 2. Pažymėkite **Nuotolinis centralės valdymas**, jei vartotojai turi valdyti centralę per Protegus2 savo klaviatūros kodu.
@@ -44,7 +44,7 @@ Atlikite tą poskyrį, kuris atitinka diegimą:
 
 **Lange "Pranešimai vartotojui", kortelėje "PROTEGUS servisas":**
 
-![E16 Protegus Cloud nustatymai](../../../../e16/image8.png)
+![E16 Protegus Cloud nustatymai](../../../../e16/image8.webp)
 
 4. Pažymėkite **Leisti prisijungti** prie Protegus serviso.
 5. Pakeiskite **PROTEGUS Cloud prieigos kodą**, jei norite, kad vartotojai jį įvestų pridėdami sistemą į Protegus2.
@@ -55,14 +55,14 @@ Baigę konfigūravimą paspauskite **Įrašyti [F5]** ir atjunkite USB kabelį.
 
 **Lange "Sistemos parinktys":**
 
-![E16 CSP sistemos parinktys](../../../../e16/image9.png)
+![E16 CSP sistemos parinktys](../../../../e16/image9.webp)
 
 1. Įveskite **Objekto numerį**, kurį suteikė stebėjimo pultas.
 2. Pasirinkite **Centralės modelį**, kuris bus prijungtas prie komunikatoriaus.
 
 **Lange "Pranešimai į CSP", parinkčių grupėje "Pirminis ryšio kanalas":**
 
-![E16 CSP pranešimų nustatymai](../../../../e16/image10.png)
+![E16 CSP pranešimų nustatymai](../../../../e16/image10.webp)
 
 3. Nustatykite **Ryšio būdą** į **IP**.
 4. Pasirinkite imtuvui reikalingą protokolą: **TRK**, **DC-09_2007**, **DC-09_2012** arba **TL150**.
@@ -87,7 +87,7 @@ Prijunkite centralę prie E16, kaip parodyta žemiau:
 | `CLK` | `YEL` | Klaviatūros magistralės laikrodis |
 | `DATA` | `GRN` | Klaviatūros magistralės duomenys |
 
-<img alt="E16 DSC centralės prijungimo schema" src="../images/dsc.png" style="width:5.2in;max-width:100%;height:auto;" />
+<img alt="E16 DSC centralės prijungimo schema" src="../images/dsc.webp" style="width:5.2in;max-width:100%;height:auto;" />
 
 ## Apsaugos centralės programavimas
 

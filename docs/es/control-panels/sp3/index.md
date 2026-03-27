@@ -174,7 +174,7 @@ Transmite informes a la estación central de monitoreo (CRA) de la compañía de
 
 ### Uso de terminales externos 
 
-<img alt="" src="./image4.png" style="width:5.480010936132984in;height:3.806674321959755in" />
+<img alt="" src="./image4.webp" style="width:5.480010936132984in;height:3.806674321959755in" />
 
 1.  Luces indicadoras de conectividad y operación.
 2.  Bloque de terminales de la fuente de alimentación de respaldo.
@@ -304,17 +304,17 @@ Si ocurriesen problemas con la alimentación del sistema desde la fuente de alim
 
 La placa del panel de control se puede instalar en un marco de montaje que ya cuenta con un transformador reductor con un fusible de 500 mA instalado y espacio destinado a una batería de respaldo. / Instala el panel de control en el marco de plástico o metálico elegido usando separadores de plástico. Si eliges un marco de metal, no olvides colocarla a tierra durante la instalación. El marco elegido debe cumplir con los requerimientos descritas en las normas EN 60950 y EN 50131.
 
-<img alt="" src="./image5.png" style="width:2.6366721347331583in;height:1.6533366141732284in" />
+<img alt="" src="./image5.webp" style="width:2.6366721347331583in;height:1.6533366141732284in" />
 
 **Dimensiones de la placa „FLEXi“ SP3**
 
 La siguiente imagen muestra las dimensiones de la placa y sus orificios de montaje (en milímetros), y la ubicación de los orificios.
 
-<img alt="" src="./image6.png" style="width:5.223344269466317in;height:3.9800076552930883in" />
+<img alt="" src="./image6.webp" style="width:5.223344269466317in;height:3.9800076552930883in" />
 
 #### Orden de conexión de dispositivos 
 
-<img alt="" src="./image7.png" style="width:7.086805555555555in;height:3.286111111111111in" />
+<img alt="" src="./image7.webp" style="width:7.086805555555555in;height:3.286111111111111in" />
 
 1.  Conecta las antenas GSM y WiFi a los conectores para antena.
 
@@ -380,38 +380,38 @@ Hay 10 terminales IO1 – IO10 (entradas) en la placa del panel de control para 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image13.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image14.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image15.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image15.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image16.png" style="width:3.15in;height:auto;" />
+<img alt="" src="./image16.webp" style="width:3.15in;height:auto;" />
 
 ### Conexión de detectores de humo
 
@@ -419,17 +419,17 @@ Diagrama para conectar detectores de humo de dos cables.
 
 Diagrama de cableado para detectores de humo de dos cables a salida PGM (LED). Al utilizar este esquema para conectar detectores de incendios, es necesario marcar el campo " **LED out for 2Wire fire sensor**" con una marca de verificación (consulte el capítulo 5.2 “Ventana “Opciones de sistema””).
 
-<img alt="" src="./image17.png" style="width:4.570009842519685in;height:1.3300021872265966in" />
+<img alt="" src="./image17.webp" style="width:4.570009842519685in;height:1.3300021872265966in" />
 
 Diagramas de cableado para detectores de humo de dos hilos con módulo de relé SM1. Para conectar un circuito detector de humo a una entrada (IOx), la entrada debe tener asignada la función Zona de incendio (consulta el capítulo 5.7 Ventana "Zonas").
 
 Para conectar un circuito detector de humo a una salida PGM (IO10) seleccionada, la función de ***Reinicio del Sensor de Fuego** (Fire Sensor Reset)* debe asignarse a la salida (consulta el capítulo 5.8 Ventana "PGM"). El relé (K1) se utiliza para detectar un cable roto y un detector de incendios retirado.
 
-<img alt="" src="./image18.png" style="width:5.843345363079615in;height:2.193337707786527in" />
+<img alt="" src="./image18.webp" style="width:5.843345363079615in;height:2.193337707786527in" />
 
 o
 
-<img alt="" src="./image19.png" style="width:5.843345363079615in;height:2.00667104111986in" />
+<img alt="" src="./image19.webp" style="width:5.843345363079615in;height:2.00667104111986in" />
 
 Diagrama para conectar detectores de humo de cuatro cables.
 
@@ -437,13 +437,13 @@ Para conectar un circuito detector de humo a una entrada (IOx), la entrada debe 
 
 Para conectar un circuito detector de humo de cuatro cables a una salida PGM (IO10) seleccionada, la función de ***Reinicio del Sensor de Fuego** (Fire Sensor Reset)* debe asignarse a la salida (consulta el capítulo 5.8 Ventana "PGM"). El relé (K1) se utiliza para detectar un cable roto y un detector de incendios retirado.
 
-<img alt="" src="./image20.png" style="width:5.513344269466317in;height:1.4666699475065617in" />
+<img alt="" src="./image20.webp" style="width:5.513344269466317in;height:1.4666699475065617in" />
 
 ### Diagrama para conectar una sirena
 
-<img alt="" src="./image21.png" style="width:3.083339895013123in;height:1.2166688538932633in" />
+<img alt="" src="./image21.webp" style="width:3.083339895013123in;height:1.2166688538932633in" />
 
-<img alt="" src="./image22.png" style="width:4.986676509186352in;height:1.8766699475065616in" />
+<img alt="" src="./image22.webp" style="width:4.986676509186352in;height:1.8766699475065616in" />
 
 El diagrama muestra la conexión y la configuración de la sirena exterior **MR100**. Si el panel de control utilizará un método diferente para monitorear la EOL (la configuración de fábrica es 2.2 kOhm EOL) del circuito de sabotaje de sirena (terminales SAB), es necesario cerrar los contactos JPS1 y conectar una resistencia de la clasificación correspondiente en serie a El circuito de sabotaje. El tipo de zona de **24_horas** está configurado de fábrica para la entrada IO9.
 
@@ -451,27 +451,27 @@ El diagrama muestra la conexión y la configuración de la sirena exterior **MR1
 
 Se pueden conectar hasta 8 dispositivos al bus de datos del teclado. El tipo de teclado conectado debe especificarse en el software TrikdisConfig (consulta el capítulo 5.5 Ventana "Módulos"). El panel de control reconocerá y vinculará automáticamente los dispositivos conectados.
 
-<img alt="" src="./image23.png" style="width:7.086805555555555in;height:1.7215277777777778in" />
+<img alt="" src="./image23.webp" style="width:7.086805555555555in;height:1.7215277777777778in" />
 
-<img alt="" src="./image24.png" style="width:3.9200076552930883in;height:3.5133409886264215in" />
+<img alt="" src="./image24.webp" style="width:3.9200076552930883in;height:3.5133409886264215in" />
 
-<img alt="" src="./image25.png" style="width:3.866674321959755in;height:3.24000656167979in" />
+<img alt="" src="./image25.webp" style="width:3.866674321959755in;height:3.24000656167979in" />
 
 Se pueden conectar hasta 2 lectores RFID al panel de control. Si cuentan con 2 lectores RFID conectados al panel de control, no se pueden conectar teclados.
 
-<img alt="" src="./image26.png" style="width:3.853340988626422in;height:1.770003280839895in" />
+<img alt="" src="./image26.webp" style="width:3.853340988626422in;height:1.770003280839895in" />
 
-<img alt="" src="./image27.png" style="width:3.853340988626422in;height:3.2433398950131234in" />
+<img alt="" src="./image27.webp" style="width:3.853340988626422in;height:3.2433398950131234in" />
 
 ### Diagrama para conectar lectores TM17, CZ-Dallas
 
 El lector iButton **CZ-Dallas** se conecta al „FLEXi“ SP3 utilizando el bus de datos *"1 Wire".* La longitud de los cables que se conectan al bus de datos puede ser de hasta 30 m:
 
-<img alt="" src="./image28.png" style="width:5.000009842519685in;height:2.5966721347331583in" />
+<img alt="" src="./image28.webp" style="width:5.000009842519685in;height:2.5966721347331583in" />
 
 El lector **TM17** se conecta al „FLEXi“ SP3 utilizando el bus de datos *RS485*. La longitud de los cables que se conectan al bus de datos *RS485* puede ser de hasta 100 m.
 
-<img alt="" src="./image29.png" style="width:3.626674321959755in;height:2.043337707786527in" />
+<img alt="" src="./image29.webp" style="width:3.626674321959755in;height:2.043337707786527in" />
 
 ### Diagrama para conectar un sensor de temperatura
 
@@ -483,10 +483,10 @@ La terminal +5V en la placa sirve para alimentar dispositivos conectados al bus 
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image30.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image30.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image31.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image31.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -494,13 +494,13 @@ La terminal +5V en la placa sirve para alimentar dispositivos conectados al bus 
 
 Usando las terminales de relé es posible controlar (encender/apagar) de forma remota varios dispositivos eléctricos. El terminal I/O universal del panel debe configurarse como una salida (OUT) y debe tener asignada la definición de Control remoto.
 
-<img alt="" src="./image32.png" style="width:4.040008748906387in;height:0.9000021872265966in" />
+<img alt="" src="./image32.webp" style="width:4.040008748906387in;height:0.9000021872265966in" />
 
 ### Diagrama para conectar el comunicador Ethernet E485 
 
 El módulo *E485* permite que el panel de control envíe y reciba comandos de control utilizando una conexión a internet alámbrica. Si un módulo *E485* está conectado al panel de control, los informes al CRA y a *Protegus2* se enviarán a través de Internet alámbrico y no se utilizará el internet móvil. Si se pierde la conectividad a internet por cable, se utilizará el internet móvil para enviar informes al CRA. Al restablecerse la conectividad a internet por cable, el panel de control dejará de usar el internet móvil y pasará a comunicarse con CRA y la aplicación móvil *Protegus2* a través del *E485*, es decir, internet por cable.
 
-<img alt="" src="./image33.png" style="width:3.3100065616797902in;height:1.6066699475065618in" />
+<img alt="" src="./image33.webp" style="width:3.3100065616797902in;height:1.6066699475065618in" />
 
 Consulta el capítulo 5.3 Ventana "Informe al CMS" sobre cómo elegir la prioridad de conectividad (GPRS, LAN, WiFi). La configuración del „FLEXi“ SP3 para el módulo Ethernet E485 se describe en el capítulo 5.5. Ventana "Módulos".
 
@@ -510,35 +510,35 @@ Si el E485 está conectado, no es necesaria una tarjeta SIM para el panel de con
 
 La versión del firmware del panel de seguridad „*FLEXi“ SP3* debe ser SP3_xxx0_0101.fw (versión 1.01 o superior). Al conectar el receptor de sensor inalámbrico *RF-SH*, el *„FLEXi“ SP3* es compatible con sensores inalámbricos (hasta 32 unidades), sirenas inalámbricas (hasta 16 unidades), controles remotos (hasta 42 unidades) y teclados inalámbricos (hasta 8 unidades) de Crow.
 
-<img alt="" src="./image34.png" style="width:2.453338801399825in;height:1.2566688538932633in" />
+<img alt="" src="./image34.webp" style="width:2.453338801399825in;height:1.2566688538932633in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RTX3 
 
 La versión de firmware del panel de seguridad *„FLEXi“ SP3* debe ser: SP3_xxx1_0112.fw (versión de firmware 1.12 o superior). Al conectar el receptor de sensor inalámbrico *RTX3*, *„FLEXi“ SP3* puede funcionar con sensores inalámbricos de Paradox (contactos magnéticos, sensores PIR, sensores de rotura de cristales (G550), detectores de humo (SD360), mandos a distancia (REM2, REM25), sirenas (SR230, SR250), teclados (K37), módulo de expansión de zona y PGM (2WPGM), repetidor (RPT1)).
 
-<img alt="" src="./image35.png" style="width:2.2233377077865266in;height:1.20333552055993in" />
+<img alt="" src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RF-HW 
 
 La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_xxx2_0114.fw (versión 1.14 o superior). Al conectar el receptor de sensor inalámbrico *RF-HW*, el *„FLEXi“ SP3* puede funcionar con sensores inalámbricos, sirenas y controles remotos de Honeywell, (hasta 42).
 
-<img alt="" src="./image36.png" style="width:2.6100054680664915in;height:1.21333552055993in" />
+<img alt="" src="./image36.webp" style="width:2.6100054680664915in;height:1.21333552055993in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RF-S8 
 
 La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_xxx4_0122.fw (versión 1.22 o superior). Al conectar el receptor de sensor inalámbrico *RF-S8*, el *„FLEXi“ SP3* podrá funcionar con sensores inalámbricos S8, sirenas y controles remotos, (hasta 42).
 
-<img alt="" src="./image37.png" style="width:2.6066721347331585in;height:1.2300021872265967in" />
+<img alt="" src="./image37.webp" style="width:2.6066721347331585in;height:1.2300021872265967in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RF-LORA 
 
 La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_xxx4_0122.fw (versión 1.22 o superior). Al conectar el receptor de sensor inalámbrico *RF-LORA*, el *„FLEXi“ SP3* es compatible con sensores inalámbricos (hasta 32), sirenas (hasta 16) y llaveros (hasta 32) de Maximum. / La configuración del *„FLEXi“ SP3* mediante módulos de expansión se describe en la sección 5.5 „La ventana "Módulos"“.
 
-<img alt="" src="./image38.png" style="width:2.8466721347331583in;height:1.2200021872265967in" />
+<img alt="" src="./image38.webp" style="width:2.8466721347331583in;height:1.2200021872265967in" />
 
 ### Diagrama de conexión para expansores de la serie LORA 
 
-<img alt="" src="./image39.png" style="width:7.086805555555555in;height:5.384027777777778in" />
+<img alt="" src="./image39.webp" style="width:7.086805555555555in;height:5.384027777777778in" />
 
 ### Diagramas para conectar módulos expansores de la serie iO 
 
@@ -546,32 +546,32 @@ Si el panel de control „FLEXi“ SP3 necesita más entradas IN o salidas OUT, 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; max-width: 66%;">
   <figure style="margin: 0;">
-    <img src="./image40.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image42.png" style="width:7.086805555555555in;height:4.575694444444444in" />
+<img alt="" src="./image42.webp" style="width:7.086805555555555in;height:4.575694444444444in" />
 
 ### Diagrama para conectar el transmisor RF T16
 
 El transmisor RF - *T16* utilizado para la transmisión de mensajes de eventos a través del panel de control por medio de redes de radio TRIKDIS. / El transmisor puede enviar sus propios mensajes de eventos y mensajes de eventos recibidos desde los paneles de control al CRA (centro de recepción de alarmas) con la posibilidad de reenviar hasta el usuario final.
 
-<img alt="" src="./image43.png" style="width:2.2100043744531934in;height:1.2200021872265967in" />
+<img alt="" src="./image43.webp" style="width:2.2100043744531934in;height:1.2200021872265967in" />
 
 ### Diagrama para conectar módulo SF485 
 
 El *SF485* actúa como un canal de comunicación de respaldo para transmitir eventos del panel de control al CRA (centro de recepción de alarmas) o a la aplicación móvil *Protegus2* a través de la red SigFox cuando los eventos no se pueden transmitir en el canal de comunicación principal. Los mensajes se transmiten en formato Contact ID.
 
-<img alt="" src="./image44.png" style="width:2.20667104111986in;height:1.2000021872265967in" />
+<img alt="" src="./image44.webp" style="width:2.20667104111986in;height:1.2000021872265967in" />
 
 ### Medida de tensión con „FLEXi“ SP3 
 
 El *„FLEXi” SP3* se puede utilizar para medir voltaje DC. Se mide el voltaje de 0 V a 30 V (exceder los 30 V causará daños al panel de control *„FLEXI“ SP3*). La tensión medida debe conectarse a los terminales “1IN” y “C”. “1IN” - terminal positivo. “C” - terminal negativo.
 
-<img alt="" src="./image45.png" style="width:3.506674321959755in;height:0.8966688538932633in" />
+<img alt="" src="./image45.webp" style="width:3.506674321959755in;height:0.8966688538932633in" />
 
 Conecte el „FLEXI“ SP3 a una computadora con un cable USB Type-C. Ejecute TrikdisConfig. El software reconocerá automáticamente el „FLEXI“ SP3 conectado y abrirá una ventana para la configuración. En la ventana “**Sensor**”, especifique el “**In1 Voltaje**” y también especifique la cantidad de voltaje por encima de la cual se generará un mensaje.
 
@@ -579,15 +579,15 @@ Conecte el „FLEXI“ SP3 a una computadora con un cable USB Type-C. Ejecute Tr
 
 - **Mínimo** - cuando el voltaje es menor que este ajuste, se generará un mensaje de evento. Para que se genere un mensaje de evento, la casilla “**Baja**” debe estar marcada. El voltaje se indica en Voltios.
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 La salida PGM se puede controlar cuando se mide un voltaje por encima de un valor establecido o por debajo de un valor establecido. En TrikdisConfig, debe seleccionar la salida PGM y configurarla en el modo de funcionamiento del “**Control remoto**”.
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 Vaya a la pestaña “**Establecer acción**”.
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **Habilitar** – habilita la PGM.
 
@@ -637,13 +637,13 @@ Con Protegus2, los usuarios pueden controlar el sistema de alarma de forma remot
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -670,7 +670,7 @@ Con Protegus2, los usuarios pueden controlar el sistema de alarma de forma remot
         fijo si está conectado a la red WiFi).
 5. Haga clic en “Agregar nuevo sistema” e ingrese el número “ID único/IMEI” del *“Flexi” SP3*, que encontrará en el producto o en la etiqueta del embalaje. Haga clic en el botón "Siguiente".
 
-<img alt="" src="./image50.png" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="" src="./image50.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 ### Activar/desactivar el sistema utilizando *Protegus2* 
 
@@ -680,7 +680,7 @@ Con Protegus2, los usuarios pueden controlar el sistema de alarma de forma remot
 
 3.  Si el programa no responde a tus comandos o las vistas de la ventana del programa son completamente diferentes, ingresa a *Configuración* -> *Configuración del sistema* -> ¿Sistema desincronizado? y haz clic en el botón "Sync".
 
-<img alt="" src="./image51.png" style="width:2.220472440944882in;height:3.279527559055118in" />
+<img alt="" src="./image51.webp" style="width:2.220472440944882in;height:3.279527559055118in" />
 
 ### Configuración y control vía mensajes SMS 
 
@@ -770,7 +770,7 @@ Una señal de audio acompaña al principio y al final de la grabación del archi
 
 Cuando el „FLEXi“ SP3 está conectado, TrikdisConfig mostrará información en la barra de estado sobre el dispositivo conectado.
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:0.5551181102362205in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:0.5551181102362205in" />
 
 | Nombre | Descripción |
 |----|----|
@@ -790,7 +790,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 **Pestaña "Sistema general"**
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Grupo de configuraciones "General"**
 
@@ -845,7 +845,7 @@ Puedes configurar la hora haciendo clic en el botón **Establecer hora de PC**. 
 
 **Pestaña "Particiones"**
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.8070866141732282in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.8070866141732282in" />
 
 - **Particiones habilitadas** – ingresa el número de partes independientes en las que se dividirá el sistema de alarma.
 
@@ -869,7 +869,7 @@ Puedes configurar la hora haciendo clic en el botón **Establecer hora de PC**. 
 
 **Pestaña "Agendario"**
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 En esta tabla, puedes organizar escenarios para activar y desactivar automáticamente el sistema de seguridad eligiendo diferentes días de la semana y días festivos.
 
@@ -891,7 +891,7 @@ En esta tabla, puedes organizar escenarios para activar y desactivar automática
 
 **Pestaña "Festivos"**
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 - **Habilitar** –marca esta casilla para habilitar los festivos.
 
@@ -903,13 +903,13 @@ En esta tabla, puedes organizar escenarios para activar y desactivar automática
 
 **Pestaña "Problemas de sistema"**
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:2.984251968503937in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.984251968503937in" />
 
 Si se marca al menos un campo de falla interna del panel de control, entonces el panel de control no podrá armarse si esta falla está presente.
 
 **Pestaña "Acceso"**
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:3.1102362204724407in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.1102362204724407in" />
 
 **Grupo de configuración "Códigos de acceso"**
 
@@ -932,7 +932,7 @@ Si se marca al menos un campo de falla interna del panel de control, entonces el
 
 **Pestaña "Informes"**
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:3.838582677165354in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.838582677165354in" />
 
 Panel de control envía mensajes a la consola de monitoreo a través de Internet (IP) o mensajes SMS.
 
@@ -974,7 +974,7 @@ Las notificaciones SMS serán enviadas al CRA del receptor SMS: 1) Inmediatament
 
 **Pestaña "Ajustes"**
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:3.8818897637795278in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
 
 **Grupo de configuración "Configuraciones"**
 
@@ -1039,7 +1039,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña "Usuarios"**
 
-<img alt="" src="./image61.png" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 **Grupo de configuración "Usuarios y reportes al usuario"**
 
@@ -1069,7 +1069,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 Puedes agregar llaves (tarjetas) RFID ingresando sus números ID en el campo Tag código en *TrikdisConfig*. Haz clic en el botón Escribir [F5] para escribir la lista de llaves (tarjeta) RFID en el panel de control.
 
-<img alt="" src="./image62.png" style="width:2.3833377077865268in;height:1.5166699475065617in" />
+<img alt="" src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
 #### Vinculación de llaves electrónicas (iButton)
 
@@ -1103,7 +1103,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
     ACTIVAR/DESACTIVAR, su ejecución tendrá un retraso.
 **Pestaña "Protegus"**
 
-<img alt="" src="./image63.png" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 **Grupo de configuración "Aplicación en la Nube"**
 
@@ -1115,7 +1115,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "SMS Textos de respuesta"**
 
-<img alt="" src="./image64.png" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
 **Grupo de configuración "Textos de respuesta SMS"**
 
@@ -1125,7 +1125,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "Teclados"**
 
-<img alt="" src="./image65.png" style="width:7.086614173228346in;height:3.688976377952756in" />
+<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:3.688976377952756in" />
 
 - **Serie (Serial)** – el número de serie del teclado detectado automáticamente por el panel de control. Para eliminar un teclado, ingresa ceros.
 
@@ -1167,7 +1167,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "RS485 módulos"**
 
-<img alt="" src="./image66.png" style="width:7.086614173228346in;height:3.6338582677165356in" />
+<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:3.6338582677165356in" />
 
 **Grupo de configuración "Módulos RS485"**
 
@@ -1185,7 +1185,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "E485 configuraciones"**
 
-<img alt="" src="./image67.png" style="width:7.086614173228346in;height:2.106299212598425in" />
+<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
 
 **Grupo de configuración "Configuración de la red del comunicador"**
 
@@ -1199,7 +1199,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 ### Ventana "Sensores inalámbricos" 
 
-<img alt="" src="./image68.png" style="width:7.086614173228346in;height:1.7519685039370079in" />
+<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7519685039370079in" />
 
 Con el módulo RF-LORA conectado, el „FLEXi“ SP3 puede utilizar sensores inalámbricos, sirenas y llaveros de "**Maximum**".
 
@@ -1217,13 +1217,13 @@ El panel de seguridad „FLEXi“ SP3 se actualiza a la versión de firmware 4 (
 
 5.  En la lista de módulos debe aparecer “**RF-LORA receiver**”, y también se indicará el número de serie y la versión del firmware. Si ve la versión de firmware del transceptor RF-LORA, puede omitir los pasos 6 a 14.
 
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 6. Si “**RF-LORA receiver**” no se indica en la lista, entonces debe seleccionar “**RF-LORA receiver**” en la lista.
 
 2.  En el **„Núm. de Serie”** campo, ingrese el número de serie del dispositivo RF-LORA. El número de serie se puede encontrar en el dispositivo y en la etiqueta del embalaje.
 
-<img alt="" src="./image70.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 3. Haga clic en **Escribir [F5]**.
 
@@ -1237,7 +1237,7 @@ El panel de seguridad „FLEXi“ SP3 se actualiza a la versión de firmware 4 (
 
 6.  La versión de firmware del RF-LORA aparecerá en la ventana **„Módulos”**.
 
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 14. El módulo RF-LORA ahora está vinculado al “FLEXi” SP3.
 
@@ -1245,7 +1245,7 @@ El panel de seguridad „FLEXi“ SP3 se actualiza a la versión de firmware 4 (
 
 16. Haga clic en **„Desconectar**.
 
-<img alt="" src="./image71.png" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 17. Espere 1 minuto.
 
@@ -1270,7 +1270,7 @@ Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLE
         fijo y amarillo parpadeando).
 En la sección **„Acceso remoto”** ingrese el número **„ID único”** del panel de control. Este número se puede encontrar en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.1181102362204722in" />
+<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.1181102362204722in" />
 
 Haga clic en **„Configuración”**.
 
@@ -1278,11 +1278,11 @@ En la ventana recién abierta, haga clic en **Leer [F4]**. Si es necesario, intr
 
 Vaya a la ventana **„Sensores inalámbricos”**.
 
-<img alt="" src="./image73.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 Haga clic en el botón **„Emparejamiento de sensor”**.
 
-<img alt="" src="./image74.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la batería (CR2) en el sensor inalámbrico (PIR, contacto magnético, sensor de inundación, sensor de humo (CR123A batería), sirena).
 
@@ -1292,11 +1292,11 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 2.  Módulo RF-LORA: cambia al modo de aprendizaje. TrikdisConfig abrirá la ventana de enlace del sensor.
 
-<img alt="" src="./image75.png" style="width:3.7401574803149606in;height:2.3031496062992125in" />
+<img alt="" src="./image75.webp" style="width:3.7401574803149606in;height:2.3031496062992125in" />
 
 3. Presione el botón „**TAMPER**” en el sensor.
 
-<img alt="" src="./image76.png" style="width:1.7733366141732283in;height:2.37667104111986in" />
+<img alt="" src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
 4. En el módulo RF-LORA, el indicador “**DATA/TROUBLE**” se volverá verde por un corto tiempo (esto significa que el sensor está registrado). Después de unos segundos, el indicador “**DATA/TROUBLE**” comenzará a parpadear en verde/rojo nuevamente.
 
@@ -1304,7 +1304,7 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 3.  Haga clic en **„Guardar”**.
 
-<img alt="" src="./image77.png" style="width:3.0708661417322833in;height:2.1811023622047245in" />
+<img alt="" src="./image77.webp" style="width:3.0708661417322833in;height:2.1811023622047245in" />
 
 4. El sensor inalámbrico está incluido en la lista de sensores.
 
@@ -1312,21 +1312,21 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 3.  Haga clic en **„Dejar de emparejamiento”** para completar el registro de sensores inalámbricos.
 
-<img alt="" src="./image78.png" style="width:3.7401574803149606in;height:2.6535433070866143in" />
+<img alt="" src="./image78.webp" style="width:3.7401574803149606in;height:2.6535433070866143in" />
 
 10. Haga clic en „**Sí**” para que los sensores se escriban en el panel de control **„*FLEXi” SP3*** o „**No**” si desea ajustar los parámetros de manera adicional.
 
-<img alt="" src="./image79.png" style="width:2.7559055118110236in;height:1.1929133858267718in" />
+<img alt="" src="./image79.webp" style="width:2.7559055118110236in;height:1.1929133858267718in" />
 
 Espera unos minutos. Haga clic en **LEER [F4]**.
 
 TrikdisConfig mostrará una lista de sensores inalámbricos registrados en la ventana **„Sensores inalámbricos”**. El campo "**Núm. de serie**" contendrá el número de serie.
 
-<img alt="" src="./image80.png" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 Verifique que los sensores estén correctamente asignados a las **„Zonas”** y **„Áreas”** del panel de control (ventana **„Zonas”**).
 
-<img alt="" src="./image81.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Si establece el tipo de zona **EOL-T**, se habilitará el modo de monitoreo de manipulación del sensor.
 
@@ -1363,7 +1363,7 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 6.  Un indicador parpadeante “**DATA/TROUBLE**” indica que el RF-LORA está en modo de registro de dispositivo inalámbrico.
 1.  Presione el botón „TAMPER” en el sensor.
 
-<img alt="" src="./image76.png" style="width:1.7733366141732283in;height:2.37667104111986in" />
+<img alt="" src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
 2. En el módulo RF-LORA, el indicador “**DATA/TROUBLE**” se volverá verde por un corto tiempo (esto significa que el sensor está registrado).
 
@@ -1379,11 +1379,11 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 
 7.  TrikdisConfig mostrará una lista de sensores inalámbricos registrados en la ventana **„Sensores inalámbricos”**. El campo "**Núm. de serie**" contendrá el número de serie.
 
-<img alt="" src="./image80.png" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 15. Verifique que los sensores estén correctamente asignados a las **„Zonas”** y **„Áreas”** del panel de control (ventana **„Zonas”**).
 
-<img alt="" src="./image81.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 16. Haga clic en **Escribir [F5]** después de realizar los cambios.
 
@@ -1393,7 +1393,7 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 
 **Pestaña "Configuraciones de zonas"**
 
-<img alt="" src="./image82.png" style="width:7.086614173228346in;height:1.9251968503937007in" />
+<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
 
 - **Zona** – el número de la zona en la lista.
 
@@ -1453,7 +1453,7 @@ Cuando el sistema de alarma está activado en modo STAY, las zonas de "Interior 
 
 **Pestaña "SMS y llamadas"**
 
-<img alt="" src="./image83.png" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana *"Usuarios y Reportes".*
 
@@ -1467,7 +1467,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "Salidas"**
 
-<img alt="" src="./image84.png" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - **PGM Núm.** – especifica el número de salida de PGM en la lista.
 
@@ -1499,7 +1499,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "Establecer acción"**
 
-<img alt="" src="./image85.png" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - **Núm.** – número de salida en la lista.
 - **Habilitar** – activa el algoritmo de operación PGM.
@@ -1534,7 +1534,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "Control"**
 
-<img alt="" src="./image86.png" style="width:7.086614173228346in;height:2.5236220472440944in" />
+<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:2.5236220472440944in" />
 
 **Grupo de configuraciones "Control de Entrada/Salida"**
 
@@ -1556,7 +1556,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "Horario"**
 
-<img alt="" src="./image87.png" style="width:7.086614173228346in;height:2.1102362204724407in" />
+<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.1102362204724407in" />
 
 - **Núm.** – número de horario en la lista.
 
@@ -1569,7 +1569,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "Termostato"**
 
-<img alt="" src="./image88.png" style="width:7.086614173228346in;height:3.4173228346456694in" />
+<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:3.4173228346456694in" />
 
 - **Núm.** – el número del termostato en la lista.
 
@@ -1585,7 +1585,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "SMS y llamadas"**
 
-<img alt="" src="./image89.png" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana *"Usuarios y Reportes"*. Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
@@ -1595,7 +1595,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana "Sensores"
 
-<img alt="" src="./image90.png" style="width:7.086614173228346in;height:2.8622047244094486in" />
+<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
 
 - **ID** – número del sensor de temperatura en la lista.
 
@@ -1617,7 +1617,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "Eventos"**
 
-<img alt="" src="./image91.png" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
 
 - **ID** – número de evento en la lista.
 
@@ -1635,7 +1635,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "SMS y llamadas"**
 
-<img alt="" src="./image92.png" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana *"Usuarios y Reportes"*.
 
@@ -1647,7 +1647,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana "Registro de eventos"
 
-<img alt="" src="./image93.png" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
 - Botón **Leer Registro** – comando para leer el registro de eventos desde la memoria del dispositivo.
 
@@ -1659,7 +1659,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 Para restablecer la configuración predeterminada del panel de control, haz clic en el botón **Restaurar** en TrikdisConfig.
 
-<img alt="" src="./image94.png" style="width:7.086614173228346in;height:1.078740157480315in" />
+<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:1.078740157480315in" />
 
 ### Control remoto con TrikdisConfig 
 
@@ -1681,7 +1681,7 @@ Para restablecer la configuración predeterminada del panel de control, haz clic
 
 2.  En el campo "**ID único**", ingrese el número IMEI del control de panel. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image95.png" style="width:7.086614173228346in;height:2.1496062992125986in" />
+<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.1496062992125986in" />
 
 3. En el campo "**Nombre del sistema**", escriba el nombre del control de panel.
 
@@ -1726,7 +1726,7 @@ Realiza estos pasos:
 
 3.  Abre la ventana **Firmware** de TrikdisConfig.
 
-<img alt="" src="./image96.png" style="width:7.086614173228346in;height:2.9488188976377954in" />
+<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.9488188976377954in" />
 
 4. Haz clic en el botón **Abrir firmware** y elige el archivo de firmware requerido.
 

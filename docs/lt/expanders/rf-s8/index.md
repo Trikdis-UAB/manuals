@@ -1,7 +1,7 @@
 # RF-S8 Belaidis transiveris
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="200">
+  <img src="./image1.webp" alt="" width="200">
 </div>
 
 ## Aprašymas 
@@ -50,7 +50,7 @@ Prijungimas:
 
 6.  Mygtukas belaidžių jutikių primokymo režimui įjungti/išjungti.
 
-<img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
+<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
 
 ### Išorinių kontaktų paskirtis 
 
@@ -88,7 +88,7 @@ Programinės įrangos atnaujinimas:
 
 5.  Parinkite gamyklinės programinės įrangos submeniu **„Programos atnaujinimas“**.
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 6.  Paspauskite gamyklinės programinės įrangos atidarymo langelį **„Atverti failą“** ir parinkite **SP3_xxx4\_0122.fw** programinės įrangos bylą.
 
@@ -104,17 +104,17 @@ Programinės įrangos atnaujinimas:
 
 12. TrikdisConfig būsenų juostoje centralės pavadinime turi būti skaičius 4.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 13. **„Modulių“** sąraše turi atsirasti **„RF-S8 imtuvas“** ir rodomas RF-S8 serijos numeris ir mikroprogramos versija**.** Jei matote RF-S8 siųstuvo-imtuvo programinės įrangos versiją, galite praleisti 14–22 veiksmus.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 14. Jei RF-S8 imtuvas neatsirado, tai reikia **„Modulių“** sąraše išsirinkti **„RF-S8 imtuvą“.**
 
 15. Lauke **„Serijos Nr.“** įrašykite gaminio RF-S8 serijos numerį. Serijos numerį rasite ant gaminio ir pakuotės etiketės.
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Nuspauskite **Įrašyti [F5]**.
 
@@ -128,7 +128,7 @@ Programinės įrangos atnaujinimas:
 
 21. Lange „**Moduliai**“ rodoma RF-S8 mikroprogramos versija.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 22. Modulis RF-S8 priregistruotas prie „FLEXi” SP3.
 
@@ -136,7 +136,7 @@ Programinės įrangos atnaujinimas:
 
 24. Nuspauskite **„Atsijungti“**.
 
-<img alt="" src="./image8.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 25. Palaukite 1 minutę.
 
@@ -172,7 +172,7 @@ Dabar atliksime nuotolinį prisijungimą su TrikdisConfig prie centralės „FLE
     ATLIKUS ATMOKYMĄ BEVIELIS JUTIKLIS SU CENTRALE NEBEVEIKS.**
 TrikdisConfig lauke **„Nuotolinė prieiga“** įveskite centralės „FLEXi“ SP3 „**Unikalus ID“** numerį. Šį numerį rasite ant įrenginio pakuotės ir centralės plokštės.
 
-<img alt="" src="./image9.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Paspauskite **„Konfigūravimas“**.
 
@@ -182,7 +182,7 @@ Pereikite į langą **„Bevieliai jutikliai“**.
 
 Paspauskite **„Jutiklių primokymas“**.
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Belaidžių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite į belaidžius jutiklius (PIR, magnetinis kontaktas, vandens nuotėkio jutiklis, dūmų jutiklis, sirena) baterijas.
 
@@ -192,11 +192,11 @@ Registruojant jutiklius *RF-S8* modulis turi būti ne arčiau 1 m atstumu nuo j
 
 2.  RF-S8 modulis yra perėjas į primokymo režimą. TrikdisConfig atvers programos primokymo langą.
 
-<img alt="" src="./image11.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 3.  Nuspausite ir palaikykite primokymo mygtuką 5 sekundes. Atleiskite mygtuką, kai indikatorius keturis kartus sumirksės žaliai.
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 4.  RF-S8 modulyje **„NETWORK“** indikatorius trumpam užsidegs žalia spalva (tai reiškia, kad jutiklis priregistruotas). Po kelių sekundžių indikatorius “**NETWORK**” vėl mirksės žaliai/raudonai.
 
@@ -204,7 +204,7 @@ Registruojant jutiklius *RF-S8* modulis turi būti ne arčiau 1 m atstumu nuo j
 
 6.  Paspauskite **„Išsaugoti“**.
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 7.  Naujas jutiklis įtrauktas į jutiklių sąrašą.
 
@@ -212,21 +212,21 @@ Registruojant jutiklius *RF-S8* modulis turi būti ne arčiau 1 m atstumu nuo j
 
 9.  Jei jutiklių primokymas baigtas nuspauskite **„Sustabdyti“**.
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 10. Atsivėrusiame lange paspauskite „**Yes**“. Priregistruoti belaidžiai jutikliai bus įrašyti į centralės „FLEXi“ SP3 atminti. Arba paspauskite „**No**“, jei norite papildomai nustatyti parametrus.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 Palaukite kelias minutes. Nuspauskite mygtuką **Skaityti [F4]**.
 
 Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų belaidžių jutiklių. Lauke **„Serijos Nr.“** bus įrašytas jutiklio serijinis numeris.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Jei nustatote zonos **„Tipą“** EOL-T, bus įjungtas jutiklio tamperio stebėjimo režimas.
 
@@ -263,7 +263,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite 
 6.  Mirksintis žaliai/raudonai LED “**NETWORK**“ indikatorius parodo, kad RF-S8 yra belaidžių jutiklių registravimo režime.
 7.  Jutiklyje nuspausite ir palaikykite primokymo mygtuką 5 sekundes. Atleiskite mygtuką, kai indikatorius keturis kartus sumirksės žaliai.
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 8.  RF-S8 modulyje **„NETWORK“** indikatorius trumpam užsidegs žalia spalva (tai reiškia, kad jutiklis priregistruotas).
 
@@ -279,11 +279,11 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite 
 
 14. Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų belaidžių jutiklių. Lauke **„Serijos Nr.“** įrašytas jutiklio serijinis numeris.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 15. Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 

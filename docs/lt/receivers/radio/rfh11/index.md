@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Radijo Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Apie Radijo Imtuvą
@@ -98,7 +98,7 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 > **Pastaba:** Jei slaptažodis nežinomas, imtuvo tipą ir programinės / aparatinės įrangos versiją galite sužinoti paspaudę [Device info].
 
-<img alt="R11config prisijungimo ekranas" src="./image4.png" style="width: 100%; max-width: 500px;">
+<img alt="R11config prisijungimo ekranas" src="./image4.webp" style="width: 100%; max-width: 500px;">
 
 > **Pastaba:** **Kompiuteryje turi būti įdiegtos USB tvarkyklės.** Jei imtuvas pirmą kartą jungiamas prie kompiuterio, MS Windows OS turėtų atidaryti langą *Found New Hardware Wizard*, skirtą USB tvarkyklėms įdiegti. Atsisiųskite USB tvarkyklės failą *\*.inf*, skirtą jūsų MS Windows OS, iš svetainės [http://www.trikdis.com/en/](http://www.trikdis.com/en/). Vedlio lange pasirinkite funkciją *Yes, this time only* ir paspauskite mygtuką *Next*. Kai atsidarys langas *Please choose your search and installation options*, paspauskite mygtuką *Browse* ir pasirinkite vietą, kur buvo išsaugotas failas *\*.inf*. Vykdykite likusias vedlio instrukcijas, kad užbaigtumėte USB tvarkyklės diegimą.
 
@@ -106,7 +106,7 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 > **Pastaba:** Konkretus prievadas, prie kurio prijungtas įrenginys, bus rodomas tik tinkamai prijungus įrenginį.
 
-<img alt="R11config nustatymai" src="./image5.png" style="width: 100%; max-width: 400px;">
+<img alt="R11config nustatymai" src="./image5.webp" style="width: 100%; max-width: 400px;">
 
 **Nustatymai šakoje Main:**
 
@@ -120,7 +120,7 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 > **Pastaba:** Parametras [Transmitter ID] turi būti nustatytas vienodai visuose radijo siųstuvuose.
 
-<img alt="R11config pagrindiniai nustatymai" src="./image7.png" style="width: 100%; max-width: 400px;">
+<img alt="R11config pagrindiniai nustatymai" src="./image7.webp" style="width: 100%; max-width: 400px;">
 
 **Nustatymai šakoje Filters:**
 
@@ -131,7 +131,7 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 **Nustatymai šakoje Reports:**
 
-<img alt="R11config ataskaitos nustatymai" src="./image9.png" style="width: 100%; max-width: 400px;">
+<img alt="R11config ataskaitos nustatymai" src="./image9.webp" style="width: 100%; max-width: 400px;">
 
 Išvesties parametrų nustatymas stebėjimo programinei įrangai arba perdavimo moduliams:
 
@@ -147,13 +147,13 @@ Išvesties parametrų nustatymas stebėjimo programinei įrangai arba perdavimo 
 
    7.1. Lentelėje [Events] dukart spustelėkite ant įrašo eilutės. Pažymėkite žymės laukelį [Active], jei įvykio kodas turi būti siunčiamas. Rekomenduojami įvykių kodai nurodyti Priede A.
 
-<img alt="R11config įvykių lentelė" src="./image10.png" style="width: 100%; max-width: 500px;">
+<img alt="R11config įvykių lentelė" src="./image10.webp" style="width: 100%; max-width: 500px;">
 
 **Nustatymai šakoje Settings:**
 
 8. Galima įvesti naujus dažnius arba ištrinti esamus. Vėliau šie dažniai bus prieinami šakoje Main.
 
-<img alt="R11config dažnių nustatymai" src="./image11.png" style="width: 100%; max-width: 500px;">
+<img alt="R11config dažnių nustatymai" src="./image11.webp" style="width: 100%; max-width: 500px;">
 
 9. Visus nustatymus galima išsaugoti paspaudus mygtuką [Save]. Vėliau tai galima naudoti kaip šabloną kitiems moduliams konfigūruoti. Norėdami juos atidaryti, spustelėkite [Open] ir nurodykite vietą. Norėdami uždaryti programą, paspauskite [Exit].
 

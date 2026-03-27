@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.png" alt="" width="400">
+<img src="./image1.webp" alt="" width="400">
 
 </div>
 
@@ -54,7 +54,7 @@ The transmitter can send its own event messages and event messages received from
 
 2 output. (*T16U5*)
 
-<img alt="" src="./image4.png" style="width:2.3622047244094486in;height:3.5669291338582676in" />
+<img alt="" src="./image4.webp" style="width:2.3622047244094486in;height:3.5669291338582676in" />
 
 ### Description of operation 
 
@@ -198,23 +198,23 @@ The zones (inputs IN) of ***T16V,** **T16U, T16U5*** transmitters can be connect
 
 **Data cable**. The data cable connecting the RF transmitter and the control panel must be no longer than 50 cm. If the data cable is longer, a shielded cable must be used. The data cable should be connected to the keypad bus, serial port or telephone communicator on the control panel. Avoid mounting the cable in parallel with AC power cables, the antenna cable or other strong sources of electromagnetic field.
 
-<img alt="" src="./image7.png" style="width:7.0875in;height:2.566666666666667in" />
+<img alt="" src="./image7.webp" style="width:7.0875in;height:2.566666666666667in" />
 
-<img alt="" src="./image8.png" style="width:7.0875in;height:2.546527777777778in" />
+<img alt="" src="./image8.webp" style="width:7.0875in;height:2.546527777777778in" />
 
-<img alt="" src="./image9.png" style="width:7.0875in;height:2.588888888888889in" />
+<img alt="" src="./image9.webp" style="width:7.0875in;height:2.588888888888889in" />
 
-<img alt="" src="./image10.png" style="width:7.0875in;height:1.7743055555555556in" />
+<img alt="" src="./image10.webp" style="width:7.0875in;height:1.7743055555555556in" />
 
-<img alt="" src="./image11.png" style="width:7.0875in;height:2.91875in" />
+<img alt="" src="./image11.webp" style="width:7.0875in;height:2.91875in" />
 
-<img alt="" src="./image12.png" style="width:7.0875in;height:1.66875in" />
+<img alt="" src="./image12.webp" style="width:7.0875in;height:1.66875in" />
 
-<img alt="" src="./image13.png" style="width:3.36750656167979in;height:1.830003280839895in" />
+<img alt="" src="./image13.webp" style="width:3.36750656167979in;height:1.830003280839895in" />
 
 ### Schematic for connecting control panel’s landline dialer 
 
-<img alt="" src="./image14.png" style="width:7.0875in;height:2.286111111111111in" />
+<img alt="" src="./image14.webp" style="width:7.0875in;height:2.286111111111111in" />
 
 !!! warning "Important"
     T16 should not be connected to a working telecom landline.
@@ -240,11 +240,11 @@ The transmitter has 6 (or 5) input terminals (IN1, IN2, IN3, IN4, IN5, IN6) for 
 
 Schematics for connecting NO, NC, EOL type circuits:
 
-<img alt="" src="./image15.png" style="width:6.4763779527559056in;height:2.2283464566929134in" />
+<img alt="" src="./image15.webp" style="width:6.4763779527559056in;height:2.2283464566929134in" />
 
 ### Schematic for connecting control panel’s PGMs 
 
-<img alt="" src="./image16.png" style="width:3.32750656167979in;height:2.3700043744531936in" />
+<img alt="" src="./image16.webp" style="width:3.32750656167979in;height:2.3700043744531936in" />
 
 The transmitter’s inputs (IN) should be set to either NO or NC.
 
@@ -252,13 +252,13 @@ The transmitter’s inputs (IN) should be set to either NO or NC.
 
 The siren should be connected when the *TM17* is connected to the transmitter. A siren that consumes up to 1 A of current can be connected to the *T16* transmitter’s output OUT1 (or OUT2). It is activated if one of the transmitter’s inputs (IN) is triggered in armed mode. The siren turns off after 3 minutes or after using a contact key.
 
-<img alt="" src="./image17.png" style="width:3.01000656167979in;height:1.2066688538932633in" />
+<img alt="" src="./image17.webp" style="width:3.01000656167979in;height:1.2066688538932633in" />
 
 ### Schematics for connecting RS485 modules 
 
-<img alt="" src="./image18.png" style="width:6.807086614173229in;height:2.7086614173228347in" />
+<img alt="" src="./image18.webp" style="width:6.807086614173229in;height:2.7086614173228347in" />
 
-<img alt="" src="./image19.png" style="width:3.783464566929134in;height:2.7086614173228347in" />
+<img alt="" src="./image19.webp" style="width:3.783464566929134in;height:2.7086614173228347in" />
 
 When the RS485 data bus is longer than 1 m, use a twisted-pair cable (STP 4x2x0,5). Avoid mounting the cable in parallel with AC power cables, the antenna cable or other strong sources of electromagnetic field.
 
@@ -272,7 +272,7 @@ The E485 “Ethernet” module is compatible with T16 radio transmitters. The E4
 
 2.  Remove the front cover of the T16 using a flat-head screwdriver as shown below:
 
-<img alt="" src="./image20.png" style="width:6.208661417322834in;height:1.6456692913385826in" />
+<img alt="" src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
 
 1.  Connect the T16 to a computer using a USB Mini-B cable.
 
@@ -282,7 +282,7 @@ The E485 “Ethernet” module is compatible with T16 radio transmitters. The E4
 
 Once the T16 is connected to the TrikdisConfig software, the program will display information about the connected device in the status bar:
 
-<img alt="" src="./image21.png" style="width:7.086614173228346in;height:0.6850393700787402in" />
+<img alt="" src="./image21.webp" style="width:7.086614173228346in;height:0.6850393700787402in" />
 
 | Name          | Description                                             |
 |---------------|---------------------------------------------------------|
@@ -312,7 +312,7 @@ After the Read [F4] button is clicked, the program will read and show settings c
 
 **“Settings” tab**
 
-<img alt="" src="./image22.png" style="width:7.086614173228346in;height:4.0984251968503935in" />
+<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:4.0984251968503935in" />
 
 **Settings group “Main settings”**
 
@@ -350,7 +350,7 @@ Settings are identical to **Radio frequency 1**.
 
 **“Access” tab**
 
-<img alt="" src="./image23.png" style="width:7.086614173228346in;height:3.7007874015748032in" />
+<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7007874015748032in" />
 
 **Settings group “Access”**
 
@@ -366,7 +366,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Inputs” tab**
 
-<img alt="" src="./image24.png" style="width:7.086614173228346in;height:3.4330708661417324in" />
+<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.4330708661417324in" />
 
 - **Enabled** – tick the box to send events when the input is triggered.
 
@@ -386,7 +386,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Events” tab**
 
-<img alt="" src="./image25.png" style="width:7.086614173228346in;height:3.421259842519685in" />
+<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.421259842519685in" />
 
 - **Enabled** – tick the box to turn on the sending of internal events:
 - **Low battery** – power supply voltage less than 11,5 V.
@@ -413,7 +413,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Supervision” tab**
 
-<img alt="" src="./image26.png" style="width:7.086614173228346in;height:2.3661417322834644in" />
+<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:2.3661417322834644in" />
 
 - **Test period** – specify the time interval between two test messages using the 1st and 2nd channels. The purpose of periodic tests is to periodically inspect the functionality of radio systems. A typical test period is 24h. It can be shortened down to 1 hour. CMS monitoring software automatically tracks the test message. A warning is generated if there are no test messages from the object.
 - **First test delay** – specify the time for delaying the first message after powering on. The goal is to be able to spread out the sending of messages across the day (24 hours) to avoid network overloads. Specify times for 1st and 2nd channels.
@@ -428,7 +428,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Modules list” tab**
 
-<img alt="" src="./image27.png" style="width:7.086614173228346in;height:3.822834645669291in" />
+<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:3.822834645669291in" />
 
 - **Detect external RS485 device automatically** – tick the box to enable automatic identification of modules connected to the RS485 bus.
 
@@ -443,7 +443,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
     E485) modules to the T16 transmitter.
 **“Module 1” tab**
 
-<img alt="" src="./image28.png" style="width:7.086614173228346in;height:2.6653543307086616in" />
+<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:2.6653543307086616in" />
 
 It is possible to connect a TM17 reader to the T16 transmitter. After connecting the TM17 reader, the transmitter can be used as a security control panel. Up to 9 contact (iButton) keys can be assigned to the reader (one of which is the “Master key”) for controlling the security system’s state (armed/disarmed).
 
@@ -492,7 +492,7 @@ Blinking LED indicators on the TM17 inform about activated inputs during the tim
 | Trouble | Off | No operational problems |
 | Trouble | 9 red blinks | Problem with the connection to RS485 module |
 
-<img alt="" src="./image29.png" style="width:7.086614173228346in;height:3.677165354330709in" />
+<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.677165354330709in" />
 
 **“W485” tab** **“Primary” settings group**
 
@@ -528,7 +528,7 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 - **Wifi SSID password** - WiFi network password.
 
-<img alt="" src="./image30.png" style="width:7.086614173228346in;height:3.661417322834646in" />
+<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.661417322834646in" />
 
 **“E485” tab** **“Primary” settings group**
 
@@ -562,7 +562,7 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 ### “Options” window 
 
-<img alt="" src="./image31.png" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 **Settings group “Available radio frequencies”**
 
@@ -570,7 +570,7 @@ You can add/delete radio frequencies that the T16 transmitter can use to/from th
 
 ### “CID to UNI table” window 
 
-<img alt="" src="./image32.png" style="width:7.086614173228346in;height:3.1811023622047245in" />
+<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:3.1811023622047245in" />
 
 Contact ID codes received from the security system’s control panel are converted to the radio system’s (RAS2M, LARS) codes. Only Contact ID messages described in the table (CID column) are converted to the radio system’s codes and sent to the CMS. The "?" symbol indicates any number in this position. The "z" symbol means that the number in the position is added to the main radio system code. The table is editable, but please change it responsibly and only if it is mandatory to do so, because if there are errors in the table, the system might not work properly.
 
@@ -581,7 +581,7 @@ Contact ID codes received from the security system’s control panel are conver
 
 To restore the **transmitter’s** factory settings, click the button **Restore** in the TrikdisConfig program**.**
 
-<img alt="" src="./image33.png" style="width:7.086614173228346in;height:1.1338582677165354in" />
+<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.1338582677165354in" />
 
 ## Testing of the T16 RF transmitter 
 
@@ -610,7 +610,7 @@ The T16’s firmware can be updated or changed manually. All prior settings of t
 
 3.  Choose **Firmware**.
 
-    <img alt="" src="./image34.png" style="width:7.086614173228346in;height:3.090551181102362in" />
+    <img alt="" src="./image34.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 4.  Click the button **Open firmware** and select the required firmware file. If you do not have the file, the newest firmware file can be downloaded <u>by registered users</u> from [www.trikdis.com](http://www.trikdis.com), in the T16 download section.
 

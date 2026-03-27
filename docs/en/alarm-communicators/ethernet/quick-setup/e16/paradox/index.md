@@ -18,7 +18,7 @@ Short steps to connect the E16 communicator to Paradox SP/SP+/MG/MG+ panels, con
 1. Download **TrikdisConfig** from [www.trikdis.com](http://www.trikdis.com) and install it.
 2. Open the E16 casing with a flat-head screwdriver.
 
-![Open the E16 casing](../../../../e16/image6.png)
+![Open the E16 casing](../../../../e16/image6.webp)
 
 3. Connect E16 to the computer with a USB Mini-B cable.
 4. Run **TrikdisConfig**. The software will recognize the communicator and open the configuration window.
@@ -34,7 +34,7 @@ Complete the subsection that matches the installation:
 
 **In "System settings" window:**
 
-![E16 system settings](../../../../e16/image7.png)
+![E16 system settings](../../../../e16/image7.webp)
 
 1. Select the **Security panel model** that will be connected to the communicator.
 2. Select **Remote Arm/Disarm** if users must control the panel in Protegus2 with their keypad code.
@@ -45,7 +45,7 @@ Complete the subsection that matches the installation:
 
 **In "User reporting" window, "PROTEGUS Cloud" tab:**
 
-![E16 Protegus Cloud settings](../../../../e16/image8.png)
+![E16 Protegus Cloud settings](../../../../e16/image8.webp)
 
 4. Tick **Enable connection** to the Protegus Cloud.
 5. Change the **Protegus Cloud access Code** if users should be asked to enter it when adding the system to Protegus2.
@@ -56,14 +56,14 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 **In "System settings" window:**
 
-![E16 CMS system settings](../../../../e16/image9.png)
+![E16 CMS system settings](../../../../e16/image9.webp)
 
 1. Enter the **Object ID** provided by the Central Monitoring Station.
 2. Select the **Security panel model** that will be connected to the communicator.
 
 **In "CMS reporting" window settings for "Primary channel":**
 
-![E16 CMS reporting settings](../../../../e16/image10.png)
+![E16 CMS reporting settings](../../../../e16/image10.webp)
 
 3. Set **Communication type** to **IP**.
 4. Select the protocol required by the receiver: **TRK**, **DC-09_2007**, **DC-09_2012**, or **TL150**.
@@ -81,7 +81,7 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 Connect E16 to the Paradox serial connector with the `EX-CRP2.4` cable and power the communicator from the panel:
 
-<img alt="E16 Paradox panel connection diagram" src="../images/paradox.png" style="width:5.2in;max-width:100%;height:auto;" />
+<img alt="E16 Paradox panel connection diagram" src="../images/paradox.webp" style="width:5.2in;max-width:100%;height:auto;" />
 
 ## Panel programming
 

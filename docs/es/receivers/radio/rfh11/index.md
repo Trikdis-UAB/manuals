@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Receptor de Radio
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Sobre el receptor de radio
@@ -98,7 +98,7 @@ El receptor se alimenta mediante corriente alterna (CA). Para garantizar un func
 
 > **Nota:** Si la contraseña es desconocida, puede ver el tipo de receptor y las versiones de software/firmware haciendo clic en [Device info].
 
-<img alt="Pantalla de inicio de R11config" src="./image4.png" style="width: 100%; max-width: 500px;">
+<img alt="Pantalla de inicio de R11config" src="./image4.webp" style="width: 100%; max-width: 500px;">
 
 > **Nota:** **Los controladores USB deben estar instalados en el ordenador.** Si el receptor se conecta al ordenador por primera vez, el SO MS Windows debería abrir la ventana *Asistente para hardware nuevo encontrado* para instalar los controladores USB. Descargue el archivo de controlador USB *\*.inf* para su versión de MS Windows desde el sitio web [http://www.trikdis.com/en/](http://www.trikdis.com/en/). En la ventana del asistente seleccione *Sí, solo esta vez* y pulse *Siguiente*. Cuando aparezca la ventana *Seleccione las opciones de búsqueda e instalación*, pulse *Examinar* y seleccione la ubicación donde guardó el archivo *\*.inf*. Siga las instrucciones restantes para completar la instalación.
 
@@ -106,7 +106,7 @@ El receptor se alimenta mediante corriente alterna (CA). Para garantizar un func
 
 > **Nota:** El puerto específico al que está conectado el dispositivo aparecerá solo después de que el dispositivo esté correctamente conectado.
 
-<img alt="Configuración R11config" src="./image5.png" style="width: 100%; max-width: 400px;">
+<img alt="Configuración R11config" src="./image5.webp" style="width: 100%; max-width: 400px;">
 
 **Configuración en la rama Main:**
 
@@ -120,7 +120,7 @@ El receptor se alimenta mediante corriente alterna (CA). Para garantizar un func
 
 > **Nota:** El parámetro [Transmitter ID] debe configurarse de forma idéntica en todos los transmisores de radio.
 
-<img alt="Configuración principal R11config" src="./image7.png" style="width: 100%; max-width: 400px;">
+<img alt="Configuración principal R11config" src="./image7.webp" style="width: 100%; max-width: 400px;">
 
 **Configuración en la rama Filters:**
 
@@ -131,7 +131,7 @@ El receptor se alimenta mediante corriente alterna (CA). Para garantizar un func
 
 **Configuración en la rama Reports:**
 
-<img alt="Configuración de informes R11config" src="./image9.png" style="width: 100%; max-width: 400px;">
+<img alt="Configuración de informes R11config" src="./image9.webp" style="width: 100%; max-width: 400px;">
 
 Configuración de parámetros de salida para el software de monitorización o módulos de transmisión:
 
@@ -147,13 +147,13 @@ Configuración de parámetros de salida para el software de monitorización o m�
 
    7.1. Haga doble clic en la fila de registro de la tabla [Events]. Marque la casilla [Active] si el código de evento debe enviarse. Los códigos de evento recomendados se especifican en el Anexo A.
 
-<img alt="Tabla de eventos R11config" src="./image10.png" style="width: 100%; max-width: 500px;">
+<img alt="Tabla de eventos R11config" src="./image10.webp" style="width: 100%; max-width: 500px;">
 
 **Configuración en la rama Settings:**
 
 8. Se pueden introducir nuevas frecuencias o eliminar las existentes. Posteriormente estas frecuencias estarán disponibles en la rama Main.
 
-<img alt="Configuración de frecuencias R11config" src="./image11.png" style="width: 100%; max-width: 500px;">
+<img alt="Configuración de frecuencias R11config" src="./image11.webp" style="width: 100%; max-width: 500px;">
 
 9. Todos los ajustes pueden guardarse haciendo clic en el botón [Save]. Se pueden usar posteriormente como plantilla para configurar otros módulos. Para abrirlos, haga clic en [Open] e indique la ubicación. Para salir del programa pulse [Exit].
 

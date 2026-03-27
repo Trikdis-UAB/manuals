@@ -21,13 +21,13 @@ Each row represents a user account.
 - `Visible receivers`: which receiver instances the user can access.
 - `Token time`: token validity period, which affects session lifetimes and security posture.
 
-![Users tab users table section](../assets/screens/users-sections/users-table.png)
+![Users tab users table section](../assets/screens/users-sections/users-table.webp)
 
 ### Add User and removal {#users-add-remove}
 
 Use `Add User` to create a new account. The red `X` action removes a user and should be used with explicit approval.
 
-![Users tab add and remove section](../assets/screens/users-sections/add-user-and-removal.png)
+![Users tab add and remove section](../assets/screens/users-sections/add-user-and-removal.webp)
 
 ### Operational checks and actions {#users-operational-checks}
 
@@ -53,28 +53,28 @@ Use two quick passes when changing accounts: first monitor active risk signals, 
 ### Create a new user
 
 1. Open `Users` tab and select `Add User`.
-   ![Users tab create user step: select Add User](../../step-add-user.png)
+   ![Users tab create user step: select Add User](../../step-add-user.webp)
 2. Fill in account identity fields (`Name`, `Login`, password).
-   ![Users tab create user step: fill identity fields](../../step-fill-fields.png)
+   ![Users tab create user step: fill identity fields](../../step-fill-fields.webp)
 3. Assign minimum required `Scopes` for the role.
-   ![Users tab create user step: open scopes row](../../step-scopes-row.png)
-   ![Users tab create user step: edit scopes dialog](../../edit-scopes.png)
+   ![Users tab create user step: open scopes row](../../step-scopes-row.webp)
+   ![Users tab create user step: edit scopes dialog](../../edit-scopes.webp)
 4. Set `Visible receivers` to only required instances.
-   ![Users tab create user step: open visible receivers row](../../step-visible-receivers-row.png)
-   ![Users tab create user step: set visible receivers](../../step-visible-receivers.png)
+   ![Users tab create user step: open visible receivers row](../../step-visible-receivers-row.webp)
+   ![Users tab create user step: set visible receivers](../../step-visible-receivers.webp)
 5. Set `Token time` according to security policy.
-   ![Users tab create user step: open token time row](../../step-token-time-row.png)
-   ![Users tab create user step: set token expiration time](../../token-expiration-time.png)
+   ![Users tab create user step: open token time row](../../step-token-time-row.webp)
+   ![Users tab create user step: set token expiration time](../../token-expiration-time.webp)
 6. Save settings and validate login with the new account.
-   ![Users tab create user step: save settings](../../step-write-settings.png)
+   ![Users tab create user step: save settings](../../step-write-settings.webp)
 
 ### Change a user password
 
 1. Locate the target account in `Users` table.
 2. Enable password visibility only if required for controlled verification.
-   ![Users tab password change step: show passwords](../../step-show-passwords.png)
+   ![Users tab password change step: show passwords](../../step-show-passwords.webp)
 3. Update password for the account and save.
-   ![Users tab password change step: update password list row](../../step-password-list.png)
+   ![Users tab password change step: update password list row](../../step-password-list.webp)
 4. Confirm the user can authenticate with the new password.
 5. Disable password visibility after verification.
 

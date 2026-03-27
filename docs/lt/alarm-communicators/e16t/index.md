@@ -1,7 +1,7 @@
 # Ethernet komunikatorius E16T
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Aprašymas
@@ -34,7 +34,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 - Kai įjungta *Protegus* paslauga, įvykiai visų pirma siunčiami į CSP ir tik po to - programėlės naudotojams.
 
-<img alt="" src="./image1.png" style="width:2.3622047244094486in;height:3.232283464566929in" />
+<img alt="" src="./image1.webp" style="width:2.3622047244094486in;height:3.232283464566929in" />
 
 **Veikia su Protegus programėle:**
 
@@ -125,7 +125,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 ### Internetinio komunikatoriaus E16T panaudojimo struktūrinė schema
 
-<img alt="" src="./image4.png" style="width:7.086805555555555in;height:2.95in" />
+<img alt="" src="./image4.webp" style="width:7.086805555555555in;height:2.95in" />
 
 !!! note "Pastaba"
     Prieš pradėdami, įsitikinkite, kad turite:
@@ -149,7 +149,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 2.  Plokščiu atsuktuvu nuimkite E16T dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image5.png" style="width:6.192913385826771in;height:1.6653543307086613in" />
+<img alt="" src="./image5.webp" style="width:6.192913385826771in;height:1.6653543307086613in" />
 
 1.  Su USB Mini-B kabeliu sujunkite E16T su kompiuteriu.
 
@@ -163,13 +163,13 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 **Lange „Sistemos parametrai“:**
 
-<img alt="" src="./image6.png" style="width:7.090551181102362in;height:1.8937007874015748in" />
+<img alt="" src="./image6.webp" style="width:7.090551181102362in;height:1.8937007874015748in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
 **Lango „Pranešimai“ kortelėje „Protegus servisas“:**
 
-<img alt="" src="./image7.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 2. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -184,7 +184,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 **Lange „Sistemos parametrai“:**
 
-<img alt="" src="./image8.png" style="width:7.078740157480315in;height:1.8818897637795275in" />
+<img alt="" src="./image8.webp" style="width:7.078740157480315in;height:1.8818897637795275in" />
 
 1.  Įrašykite **Objekto numerį**.
 
@@ -192,7 +192,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 **Lange „Pranešimai“, parinkčių grupėje „Pagrindinis“ ryšio kanalas:**
 
-<img alt="" src="./image9.png" style="width:7.082677165354331in;height:4.059055118110236in" />
+<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:4.059055118110236in" />
 
 3.  **Įgalinti** – įjunkite pagrindinį ryšio kanalą.
 
@@ -224,7 +224,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
     linijos ir imtuvo numerius.
 **Lango „Pranešimai“ kortelėje „Protegus servisas“:**
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 15. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -243,9 +243,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image11.png" style="width:5.043307086614173in;height:2.645669291338583in" />
+<img alt="" src="./image11.webp" style="width:5.043307086614173in;height:2.645669291338583in" />
 
-<img alt="" src="./image12.png" style="width:4.31496062992126in;height:2.641732283464567in" />
+<img alt="" src="./image12.webp" style="width:4.31496062992126in;height:2.641732283464567in" />
 
 ### Įėjimų prijungimo schemos
 
@@ -253,15 +253,15 @@ Komunikatorius turi 2 įėjimo gnybtus (IN1, IN2) prijungti NC, NO, EOL tipo gra
 
 NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image13.png" style="width:5.586614173228346in;height:1.669291338582677in" />
+<img alt="" src="./image13.webp" style="width:5.586614173228346in;height:1.669291338582677in" />
 
 ### LAN kabelio prijungimas
 
-<img alt="" src="./image14.png" style="width:2.8346456692913384in;height:2.3622047244094486in" />
+<img alt="" src="./image14.webp" style="width:2.8346456692913384in;height:2.3622047244094486in" />
 
 ### Relės ir LED prijungimo schemos
 
-<img alt="" src="./image15.png" style="width:4.559055118110236in;height:0.984251968503937in" />
+<img alt="" src="./image15.webp" style="width:4.559055118110236in;height:0.984251968503937in" />
 
 ## Apsaugos centralės programavimas
 
@@ -325,13 +325,13 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -349,7 +349,7 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
         Indikatorius "NETWORK" šviečia žaliai, kai yra ryšys.
 3. Paspauskite **Pridėti sistemą** ir įveskite E16T MAC adresą. MAC adresą rasite ant gaminio arba pakuotės lipduko.
 
-    <img alt="" src="./image19.png" style="width:6.535433070866142in;height:1.9448818897637796in" />
+    <img alt="" src="./image19.webp" style="width:6.535433070866142in;height:1.9448818897637796in" />
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
@@ -360,11 +360,11 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 1.  Įvedus „*IMEI/UnikalusID*“ numerį spustelėkite „**Toliau**“. Naujame lange šoniniame meniu spustelėkite „**Sritys**“. Atsidariusiame lange nurodykite 1 signalizacijos sistemos sritį (komunikatorius turi viena OUT išėjimą) ir paspauskite „**Toliau**“.
 
-    <img alt="" src="./image23.png" style="width:5.826771653543307in;height:2.559055118110236in" />
+    <img alt="" src="./image23.webp" style="width:5.826771653543307in;height:2.559055118110236in" />
 
 2.  Naujame lange nurodykite, koks yra srities numeris sistemoje ir spustelėkite „**Išsaugoti**“.
 
-    <img alt="" src="./image24.png" style="width:5.826771653543307in;height:2.0354330708661417in" />
+    <img alt="" src="./image24.webp" style="width:5.826771653543307in;height:2.0354330708661417in" />
 
 3.  Šoniniame meniu paspauskite „Nustatymai“ ir atsidariusiame lange paspauskite „Nustatymai“. Pažymėkite varnele „**Naudoti PGM sistemos Įjungimui/išjungimui**“ ir nurodykite, kurią sritį valdys išėjimas. Vienas E16T OUT išėjimas gali būti skirtas vienos srities valdymui (1 PGM - 1 sritis).
 
@@ -372,7 +372,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 5.  Papildomam saugumui, galite pasirinkti „**Naudoti programėlės slaptažodį įjungimui/išjungimui**”. Tuomet paspaudus mygtuką įjungti/išjungti apsaugos sistemą, atsivers programėlės slaptažodžio įvedimo užklausos langas.
 
-    <img alt="" src="./image25.png" style="width:5.830708661417323in;height:2.6496062992125986in" />
+    <img alt="" src="./image25.webp" style="width:5.830708661417323in;height:2.6496062992125986in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus*
 
@@ -382,7 +382,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 3.  Paprašius, įveskite vartotojo kodą arba Protegus slaptažodį.
 
-    <img alt="" src="./image26.png" style="width:5.826771653543307in;height:3.1023622047244093in" />
+    <img alt="" src="./image26.webp" style="width:5.826771653543307in;height:3.1023622047244093in" />
 
 ## Nuotolinis veikimo parametrų nustatymas
 
@@ -402,7 +402,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 3.  Paleiskite konfigūravimo programą TrikdisConfig ir skyriaus *Nuotolinė prieiga* laukelyje **Unikalus ID** įrašykite turimo E16T MAC adresą (MAC adresas nurodytas ant lipdukų, užklijuotų ant gaminio korpuso apatinės dalies ir pakuotės).
 
-<img alt="" src="./image27.png" style="width:6.75984251968504in;height:1.1023622047244095in" />
+<img alt="" src="./image27.webp" style="width:6.75984251968504in;height:1.1023622047244095in" />
 
 4. Laukelyje **Sistemos pavadinimas** norimu vardu pavadinkite E16T su šiuo Unikalių ID. Spauskite **Konfigūravimas**.
 
@@ -416,7 +416,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 Prijungus E16T TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image28.png" style="width:7.070866141732283in;height:0.6062992125984252in" />
+<img alt="" src="./image28.webp" style="width:7.070866141732283in;height:0.6062992125984252in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -434,7 +434,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parametrai“
 
-<img alt="" src="./image29.png" style="width:7.082677165354331in;height:4.043307086614173in" />
+<img alt="" src="./image29.webp" style="width:7.082677165354331in;height:4.043307086614173in" />
 
 **Parinkčių grupė „Pagrindinės“**
 
@@ -490,7 +490,7 @@ Konfigūruojant komunikatorių E16T yra du prieigos lygiai (administratoriaus ir
 
 **Skirtukas „CSP parametrai“**
 
-<img alt="" src="./image30.png" style="width:7.082677165354331in;height:4.043307086614173in" />
+<img alt="" src="./image30.webp" style="width:7.082677165354331in;height:4.043307086614173in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per laidinį interneto (IP) ryšį.
 
@@ -538,7 +538,7 @@ Nustatymus galima keisti, kai ryšio kanalo **TCP protokolas** lauke pasirinkta 
 
 **Skirtukas „Protegus servisas“**
 
-<img alt="" src="./image31.png" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="" src="./image31.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
 
 **Parinkčių grupė „Protegus servisas“**
 
@@ -548,7 +548,7 @@ Nustatymus galima keisti, kai ryšio kanalo **TCP protokolas** lauke pasirinkta 
 
 ### Langas „Įvykių aprašas“
 
-<img alt="" src="./image32.png" style="width:7.082677165354331in;height:4.051181102362205in" />
+<img alt="" src="./image32.webp" style="width:7.082677165354331in;height:4.051181102362205in" />
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus ir įėjimų pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
@@ -586,7 +586,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti**.
 
-<img alt="" src="./image33.png" style="width:7.078740157480315in;height:1.0669291338582678in" />
+<img alt="" src="./image33.webp" style="width:7.078740157480315in;height:1.0669291338582678in" />
 
 ## Komunikatoriaus E16T testavimas
 
@@ -628,7 +628,7 @@ E16T veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnau
 
 4.  Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
 
-    <img alt="" src="./image34.png" style="width:7.082677165354331in;height:3.0866141732283463in" />
+    <img alt="" src="./image34.webp" style="width:7.082677165354331in;height:3.0866141732283463in" />
 
 5.  Paspauskite atnaujinimo mygtuką **Naujinti [F12]**.
 
@@ -646,4 +646,4 @@ Visada išjunkite el. energijos tiekimą prieš atliekant prietaiso pajungimą.
 
 Ne gamintojo atlikti gaminio pakeitimai, modifikacijos ar remontai panaikina gamintojo suteiktą garantiją.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.

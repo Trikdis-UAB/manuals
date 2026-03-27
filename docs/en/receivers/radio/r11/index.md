@@ -5,7 +5,7 @@ pdf: r11-original.pdf
 # R11 / R11U Radio Receivers
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 Radio receivers R11, R11U are applied as a component part of the radio protection system RAS-3 and are designed for reception and decoding of encoded messages sent via radio communication channel at VHF (R11) or UHF (R11U) frequency band. Signals sent via the encoding system RAS-3 are received and decoded by the receivers.
@@ -72,7 +72,7 @@ The receiver includes the serial port RS232 through which the information receiv
 
 ## General view and connection layout
 
-![](./image4.jpeg)
+![](./image4.webp)
 
 | Element | Description |
 |---------|-------------|
@@ -81,7 +81,7 @@ The receiver includes the serial port RS232 through which the information receiv
 | Output port RS232 | Serial data output |
 | MCI Bus | MCI bus connector |
 
-![](./image6.jpeg)
+![](./image6.webp)
 
 The USB port and RESET button are located on the rear panel. \* Designation of MCI bus contact terminals is indicated in Table 3.
 
@@ -102,7 +102,7 @@ The USB port and RESET button are located on the rear panel. \* Designation of M
 
 Receiver operation is shown by light indication. Operation of light indicators is specified in Table 4.
 
-![](./image7.jpeg)
+![](./image7.webp)
 
 **Table 4.**
 
@@ -130,19 +130,19 @@ Sequence of preparation:
 
 Setting of operating parameters is executed by the parameter setting software R11config v130226, having connected the computer and receiver by USB cable. Usage of software and change of settings is available both at external power supply activated and at powering via USB port.
 
-<img alt="" src="./image8.png" style="width:1.6145833333333333in;height:1.2604166666666667in" />
+<img alt="" src="./image8.webp" style="width:1.6145833333333333in;height:1.2604166666666667in" />
 
 Run the software R11config and the window will open where:
 
 1. Enter Admin password 1234 using the computer keyboard and click [Enter]
 
-    ![](./image10.png)
+    ![](./image10.webp)
 
     At the bottom of the window are displayed: equipment type **Device**, serial number **SN**, boot loader version **BL ver.**, firmware version **FW ver.**
 
     If password is unknown, information about receiver's type and software / firmware versions will be displayed after clicking [Device info].
 
-    <img alt="" src="./image11.png" style="width:1.2631944444444445in;height:1.301388888888889in" /> <img alt="" src="./image12.png" style="width:3.3020833333333335in;height:2.2395833333333335in" />
+    <img alt="" src="./image11.webp" style="width:1.2631944444444445in;height:1.301388888888889in" /> <img alt="" src="./image12.webp" style="width:3.3020833333333335in;height:2.2395833333333335in" />
 
     USB port settings in the column **Settings**.
 
@@ -150,11 +150,11 @@ Run the software R11config and the window will open where:
 
 3. Set (Repeater mode), (Frequency) and (Transmitter ID) in the program branch **Main**. Having selected Account ID, messages will be allocated by transmitter object number, having selected Transmitter SN – transmitter serial number, having selected Transmitter SN+ Account ID – by both numbers.
 
-    <img alt="" src="./image13.png" style="width:5.145833333333333in;height:3.4791666666666665in" />
+    <img alt="" src="./image13.webp" style="width:5.145833333333333in;height:3.4791666666666665in" />
 
 4. Set the required filter parameters in the program branch **Filters**.
 
-    <img alt="" src="./image14.png" style="width:5.239583333333333in;height:3.5520833333333335in" />
+    <img alt="" src="./image14.webp" style="width:5.239583333333333in;height:3.5520833333333335in" />
 
     - **Time filter** – tolerance time for the same message;
     - **RF code** – tick the checkbox of message reception of the coding system RAS-3;
@@ -166,23 +166,23 @@ Run the software R11config and the window will open where:
 
     a) When messages transmitted to the monitoring software Monas MS:
 
-    <img alt="" src="./image15.png" style="width:5.34375in;height:3.6145833333333335in" />
+    <img alt="" src="./image15.webp" style="width:5.34375in;height:3.6145833333333335in" />
 
     Set the Out Protocol, Receiver Number and Line number, HB time and Baud Rate for RS232.
 
     b) Set those service messages which will be sent. Tick them in the checkbox **Active**. Enter the required subscription number of the receiver number and event codes. The recommended event codes are specified in Attachment B.
 
-    <img alt="" src="./image16.png" style="width:3.3125in;height:0.9479166666666666in" />
+    <img alt="" src="./image16.webp" style="width:3.3125in;height:0.9479166666666666in" />
 
     c) When messages transmitted to the transmission modules (Repeater Mode):
 
-    <img alt="" src="./image17.png" style="width:5.458333333333333in;height:3.6979166666666665in" />
+    <img alt="" src="./image17.webp" style="width:5.458333333333333in;height:3.6979166666666665in" />
 
     Set the Out Protocol, Receiver Number and Line Number, tick the checkbox **Active** for MCI bus enabling, and set Baud Rate. Specify the Self Address the numerical value of which should be lower than the value of connecting transmission modules.
 
     d) Specify the sequence of transmission modules, addresses, answer waiting time **Ack TO**, sending delay (if any) **Tx TO** and ignoring of re-transmitted messages **No Dupl**.
 
-    <img alt="" src="./image18.png" style="width:3.375in;height:1.3958333333333333in" />
+    <img alt="" src="./image18.webp" style="width:3.375in;height:1.3958333333333333in" />
 
     Sending delay Tx TO is applied for sent signal delaying in the radio system. Numerical value repeatable 250 ms.
 
@@ -190,18 +190,18 @@ Run the software R11config and the window will open where:
 
 6. Set the input operating parameters and event codes in the program branch **Inputs/Outputs**.
 
-    <img alt="" src="./image19.png" style="width:5.354166666666667in;height:1.21875in" />
+    <img alt="" src="./image19.webp" style="width:5.354166666666667in;height:1.21875in" />
 
     - **Input Type** – specify the input type;
     - **Delay** – specify the input response time;
     - **Event Code** – event code and sending object number after input actuation;
     - **Restore Code** – event code and sending object number after input restoration.
 
-    <img alt="" src="./image20.png" style="width:3.3125in;height:1.59375in" />
+    <img alt="" src="./image20.webp" style="width:3.3125in;height:1.59375in" />
 
 7. New frequencies may be entered or the existing ones deleted in the program branch **Settings**.
 
-    <img alt="" src="./image21.png" style="width:5.4375in;height:1.4479166666666667in" />
+    <img alt="" src="./image21.webp" style="width:5.4375in;height:1.4479166666666667in" />
 
     Receiver settings, having their storage location indicated in the computer memory, may be stored by clicking the button [Save], and later on they can be used for parameter setup of other receivers. Stored settings may be prompted by clicking [Open] and indicating data storage location.
 

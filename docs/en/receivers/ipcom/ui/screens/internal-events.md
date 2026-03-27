@@ -26,7 +26,7 @@ Each row defines how an internal system condition is represented in outgoing mes
 
 Disabling events or changing codes affects downstream routing and alarm interpretation, so changes should be coordinated with the monitoring platform.
 
-![Internal events tab columns section](../assets/screens/internal-events-sections/columns-explained.png)
+![Internal events tab columns section](../assets/screens/internal-events-sections/columns-explained.webp)
 
 ### Operational checks and actions {#internal-events-operational-checks}
 

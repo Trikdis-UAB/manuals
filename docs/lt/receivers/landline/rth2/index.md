@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Telefoninio Ryšio Linijos Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Apie Telefoninio Ryšio Linijos Imtuvą
@@ -56,7 +56,7 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 ### Priekinis vaizdas
 
-<img alt="RTH2 front view" src="./rth2-front.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 front view" src="./rth2-front.webp" style="width: 100%; max-width: 700px;">
 
 | Nr. | Elementas |
 |-----|-----------|
@@ -67,7 +67,7 @@ Imtuvas maitinamas iš kintamosios srovės (AC) šaltinio. Siekiant užtikrinti 
 
 ### Galinis vaizdas
 
-<img alt="RTH2 rear view" src="./rth2-rear.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 rear view" src="./rth2-rear.webp" style="width: 100%; max-width: 700px;">
 
 | Nr. | Elementas |
 |-----|-----------|
@@ -150,42 +150,42 @@ Kompiuteryje turi būti įdiegtos USB tvarkyklės. Pirmą kartą prijungus modul
 
 #### GProg2 Paleidimas
 
-8. Paleiskite programą paspausdami GProg2 piktogramą <img alt="GProg2" src="./icon-gprog2.png" style="height:22px; vertical-align:middle;">, tada Nustatymų lange nurodykite nuoseklųjį prievadą (pvz.: COM3).
+8. Paleiskite programą paspausdami GProg2 piktogramą <img alt="GProg2" src="./icon-gprog2.webp" style="height:22px; vertical-align:middle;">, tada Nustatymų lange nurodykite nuoseklųjį prievadą (pvz.: COM3).
 9. Meniu juostoje pasirinkite komandą [*Devices*] ir pasirinkite RT2.
-10. Įrankių juostoje paspauskite <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> piktogramą, kad prisijungtumėte prie imtuvo.
-11. Norėdami perskaityti įrenginio vidinėje atmintyje saugomus veiklos parametrus, paspauskite <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> mygtuką. Baigus duomenų atsisiuntimą, pasirodys langas *Configuration is received*.
+10. Įrankių juostoje paspauskite <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> piktogramą, kad prisijungtumėte prie imtuvo.
+11. Norėdami perskaityti įrenginio vidinėje atmintyje saugomus veiklos parametrus, paspauskite <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> mygtuką. Baigus duomenų atsisiuntimą, pasirodys langas *Configuration is received*.
 12. Pasirodys langas *Configuration is received*.
 
-<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.webp" style="width: 100%; max-width: 600px;">
 
 #### Įrankių Juostos Piktogramų Aprašymas
 
 | Piktograma | Funkcija |
 |------------|---------|
-| <img alt="Open" src="./icon-open.png" style="height:22px; vertical-align:middle;"> **[Open]** | Atidaryti išsaugotą failą su plėtiniu „.tcfg" |
-| <img alt="Save" src="./icon-save.png" style="height:22px; vertical-align:middle;"> **[Save]** | Išsaugoti nustatytų parametrų failą su plėtiniu „.tcfg" |
-| <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> **[Connect]** | Prisijungti prie nuosekliojo prievado |
-| <img alt="Disconnect" src="./icon-disconnect.png" style="height:22px; vertical-align:middle;"> **[Disconnect]** | Atsijungti nuo nuosekliojo prievado |
-| <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> **[Receive config]** | Perskaityti įrenginio parametrus |
-| <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> **[Send config]** | Įrašyti naujus parametrus į įrenginio atmintį |
-| <img alt="Generate report" src="./icon-report.png" style="height:22px; vertical-align:middle;"> **[Generate configuration report]** | Atspausdinti nustatytų parametrų ataskaitą |
+| <img alt="Open" src="./icon-open.webp" style="height:22px; vertical-align:middle;"> **[Open]** | Atidaryti išsaugotą failą su plėtiniu „.tcfg" |
+| <img alt="Save" src="./icon-save.webp" style="height:22px; vertical-align:middle;"> **[Save]** | Išsaugoti nustatytų parametrų failą su plėtiniu „.tcfg" |
+| <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> **[Connect]** | Prisijungti prie nuosekliojo prievado |
+| <img alt="Disconnect" src="./icon-disconnect.webp" style="height:22px; vertical-align:middle;"> **[Disconnect]** | Atsijungti nuo nuosekliojo prievado |
+| <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> **[Receive config]** | Perskaityti įrenginio parametrus |
+| <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> **[Send config]** | Įrašyti naujus parametrus į įrenginio atmintį |
+| <img alt="Generate report" src="./icon-report.webp" style="height:22px; vertical-align:middle;"> **[Generate configuration report]** | Atspausdinti nustatytų parametrų ataskaitą |
 
 #### Parametrų Nustatymas
 
-<img alt="GProg2 Main window" src="./gprog2-main-window.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Main window" src="./gprog2-main-window.webp" style="width: 100%; max-width: 600px;">
 
-<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.webp" style="width: 100%; max-width: 600px;">
 
 13. Šakos Main lange nustatykite Surgard protokolą.
 14. Jei reikia, galite keisti parametrus šakoje Communication settings — rekomenduojamos reikšmės nurodytos skyriuje **Imtuvo eksploataciniai parametrai** aukščiau.
-15. Norėdami išsaugoti parametrus, meniu juostoje eikite į [*File/Write device*] arba paspauskite <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> piktogramą.
+15. Norėdami išsaugoti parametrus, meniu juostoje eikite į [*File/Write device*] arba paspauskite <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> piktogramą.
 16. Norėdami išsaugoti nustatytus parametrus savo kompiuteryje, eikite į [*File/Save as*]. Failo pavadinimą ir išsaugojimo vietą galima pasirinkti laisvai. Vėliau tai galima naudoti kaip šabloną kitiems moduliams konfigūruoti.
 
 ## Priedas A — Tarnybiniai Pranešimai
 
 Telefoninio ryšio imtuvo tarnybiniai pranešimai:
 
-<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.webp" style="width: 100%; max-width: 600px;">
 
 | Pranešimas | Kodas | Aprašymas |
 |------------|-------|-----------|

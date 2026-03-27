@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Radio Receiver
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## About Radio Receiver
@@ -98,7 +98,7 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 > **Note:** If password is unknown, you can find receiver's type and software/firmware version by clicking [Device info].
 
-<img alt="R11config login screen" src="./image4.png" style="width: 100%; max-width: 500px;">
+<img alt="R11config login screen" src="./image4.webp" style="width: 100%; max-width: 500px;">
 
 > **Note:** **USB drivers must be installed in the computer.** If the receiver is connected to a computer for the first time, MS Windows OS should open the window *Found New Hardware Wizard* for installing USB drivers. Download the USB driver file *\*.inf* for your MS Windows OS from the website [http://www.trikdis.com/en/](http://www.trikdis.com/en/). In the wizard window select the function *Yes, this time only* and press the button *Next*. When the window *Please choose your search and installation options* opens, press the button *Browse* and select the place where the file *\*.inf* was saved. Follow the remaining wizard instructions to finish the USB driver installation.
 
@@ -106,7 +106,7 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 > **Note:** Specific port to which the device is connected will appear only after the device is properly connected.
 
-<img alt="R11config settings" src="./image5.png" style="width: 100%; max-width: 400px;">
+<img alt="R11config settings" src="./image5.webp" style="width: 100%; max-width: 400px;">
 
 **Settings in branch Main:**
 
@@ -120,7 +120,7 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 > **Note:** [Transmitter ID] parameter should be set identically in all radio transmitters.
 
-<img alt="R11config main settings" src="./image7.png" style="width: 100%; max-width: 400px;">
+<img alt="R11config main settings" src="./image7.webp" style="width: 100%; max-width: 400px;">
 
 **Settings in branch Filters:**
 
@@ -131,7 +131,7 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 **Settings in branch Reports:**
 
-<img alt="R11config reports settings" src="./image9.png" style="width: 100%; max-width: 400px;">
+<img alt="R11config reports settings" src="./image9.webp" style="width: 100%; max-width: 400px;">
 
 Setting output parameters for the monitoring software or transmission modules:
 
@@ -147,13 +147,13 @@ Setting output parameters for the monitoring software or transmission modules:
 
    7.1. Double click on the recording row in the table [Events]. Tick the checkbox [Active] if event code should be sent. The recommended event codes are specified in Attachment A.
 
-<img alt="R11config events table" src="./image10.png" style="width: 100%; max-width: 500px;">
+<img alt="R11config events table" src="./image10.webp" style="width: 100%; max-width: 500px;">
 
 **Settings in branch Settings:**
 
 8. New frequencies may be entered or the existing ones deleted. Later these frequencies will be available in branch Main.
 
-<img alt="R11config frequency settings" src="./image11.png" style="width: 100%; max-width: 500px;">
+<img alt="R11config frequency settings" src="./image11.webp" style="width: 100%; max-width: 500px;">
 
 9. All settings can be saved by clicking [Save] button. It can be used later as a template to configure other modules. To open them click [Open] and indicate location. To exit program press [Exit].
 

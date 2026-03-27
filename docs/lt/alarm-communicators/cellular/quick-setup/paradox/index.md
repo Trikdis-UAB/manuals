@@ -72,59 +72,59 @@ Jei jūsų klaviatūros kodai skiriasi, vadovaukitės pilnu Paradox vadovu.
 <div class="steps-grid">
   <div class="step-card">
     <strong>Žingsnis 1.</strong> Paspauskite <strong>Pridėti naują sistemą</strong>.
-    <img src="./protegus-add-new-system.png" alt="Pridėti naują sistemą">
+    <img src="./protegus-add-new-system.webp" alt="Pridėti naują sistemą">
   </div>
   <div class="step-card">
     <strong>Žingsnis 2.</strong> Įveskite komunikatoriaus <strong>IMEI</strong>, paspauskite <strong>Toliau</strong>.
-    <img src="./protegus-enter-imei.png" alt="Įvesti IMEI">
+    <img src="./protegus-enter-imei.webp" alt="Įvesti IMEI">
   </div>
   <div class="step-card">
     <strong>Žingsnis 3.</strong> Pasirinkite <strong>TIP RING</strong>, paspauskite <strong>Toliau</strong>.
-    <img src="./protegus-select-tip-ring.png" alt="Pasirinkti TIP RING">
+    <img src="./protegus-select-tip-ring.webp" alt="Pasirinkti TIP RING">
   </div>
   <div class="step-card">
     <strong>Žingsnis 4.</strong> Paspauskite <strong>Atgal</strong>.
-    <img src="./protegus-back.png" alt="Atgal">
+    <img src="./protegus-back.webp" alt="Atgal">
   </div>
   <div class="step-card">
     <strong>Žingsnis 5.</strong> Pasirinkite <strong>Serial BUS</strong>, paspauskite <strong>Toliau</strong>.
-    <img src="./protegus-select-serial-bus.png" alt="Pasirinkti Serial BUS">
+    <img src="./protegus-select-serial-bus.webp" alt="Pasirinkti Serial BUS">
   </div>
   <div class="step-card">
     <strong>Žingsnis 6.</strong> Pasirinkite <strong>PARADOX</strong>.
-    <img src="./protegus-select-paradox.png" alt="Pasirinkti Paradox">
+    <img src="./protegus-select-paradox.webp" alt="Pasirinkti Paradox">
   </div>
   <div class="step-card">
     <strong>Žingsnis 7.</strong> Pasirinkite <strong>PARADOX SP+/MG+ series KeyBus</strong>.
-    <img src="./protegus-select-paradox-keybus.png" alt="Pasirinkti Paradox KeyBus">
+    <img src="./protegus-select-paradox-keybus.webp" alt="Pasirinkti Paradox KeyBus">
   </div>
   <div class="step-card">
     <strong>Žingsnis 8.</strong> Įveskite <strong>Primary Object ID</strong>, paspauskite <strong>Toliau</strong>.
-    <img src="./protegus-primary-object-id.png" alt="Įvesti Primary Object ID">
+    <img src="./protegus-primary-object-id.webp" alt="Įvesti Primary Object ID">
   </div>
   <div class="step-card">
     <strong>Žingsnis 9.</strong> Palaukite, kol įrašomi duomenys.
-    <img src="./protegus-writing-data.png" alt="Duomenų įrašymas">
+    <img src="./protegus-writing-data.webp" alt="Duomenų įrašymas">
   </div>
   <div class="step-card">
     <strong>Žingsnis 10.</strong> Paspauskite <strong>Toliau</strong>.
-    <img src="./protegus-press-next.png" alt="Toliau">
+    <img src="./protegus-press-next.webp" alt="Toliau">
   </div>
   <div class="step-card">
     <strong>Žingsnis 11.</strong> Įveskite sistemos <strong>Pavadinimą</strong>, paspauskite <strong>Toliau</strong>.
-    <img src="./protegus-enter-name.png" alt="Įvesti pavadinimą">
+    <img src="./protegus-enter-name.webp" alt="Įvesti pavadinimą">
   </div>
   <div class="step-card">
     <strong>Žingsnis 12.</strong> Paspauskite <strong>Praleisti</strong> (jei dabar nepridedate naudotojų).
-    <img src="./protegus-skip.png" alt="Praleisti">
+    <img src="./protegus-skip.webp" alt="Praleisti">
   </div>
   <div class="step-card">
     <strong>Žingsnis 13.</strong> Palaukite ~1 minutę, kol užbaigiama.
-    <img src="./protegus-wait.png" alt="Palaukite">
+    <img src="./protegus-wait.webp" alt="Palaukite">
   </div>
   <div class="step-card">
     <strong>Žingsnis 14.</strong> Konfigūracija baigta.
-    <img src="./protegus-finished.png" alt="Baigta">
+    <img src="./protegus-finished.webp" alt="Baigta">
   </div>
 </div>
 

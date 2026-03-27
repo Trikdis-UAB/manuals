@@ -3,7 +3,7 @@
 ## Keypad overview
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -72,7 +72,7 @@ The SLEEP indicator will illuminate when SLEEP mode is on.
 The STAY indicator will illuminate when STAY mode is on.
 
 > [!NOTE]
-> For area status changing into the opposite one it is sufficient to enter User code and select the preferred area. To delete symbols or command entered, press button <img src="./image2.png" alt="" style="width:0.3500in;" />.
+> For area status changing into the opposite one it is sufficient to enter User code and select the preferred area. To delete symbols or command entered, press button <img src="./image2.webp" alt="" style="width:0.3500in;" />.
 
 
 
@@ -108,7 +108,7 @@ The STAY indicator will illuminate when STAY mode is on.
 
 ### To enter a new or change the existing User code
 
-1. Press <img src="./image3.png" style="width:0.3500in;" alt="" /> button.
+1. Press <img src="./image3.webp" style="width:0.3500in;" alt="" /> button.
 
 2. Enter *Master* code, default code – 1234. Zone indicators, showing the sequence numbers of those Users, whose codes have been already entered, will illuminate.
 
@@ -126,7 +126,7 @@ The STAY indicator will illuminate when STAY mode is on.
 
 ### To reset two-wire fire (smoke) detectors
 
-- Hold button <img src="./image3.png" style="width:0.3500in;" alt="" /> pressed for 3 seconds.
+- Hold button <img src="./image3.webp" style="width:0.3500in;" alt="" /> pressed for 3 seconds.
 > [!NOTE]
 > Two-wire fire detectors do not reset automatically after fire emergency detection. They can be reset only manually.
 
@@ -150,7 +150,7 @@ Repeat the same actions as in deactivation of particular zone monitoring.
 
 ### To delete User code
 
-1. Press <img src="./image3.png" style="width:0.3500in;" alt="" /> button.
+1. Press <img src="./image3.webp" style="width:0.3500in;" alt="" /> button.
 
 2. Enter *Master* code. Zone indicators, showing the sequence numbers of those Users, whose codes have been already entered, will illuminate.
 

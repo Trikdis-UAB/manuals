@@ -22,7 +22,7 @@ Siga el esquema de abajo para conectar el comunicador al panel:
 | CLK/DATA                | 7/8                 | KeyBus                  |
 
 
-<img src="../GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.png" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
+<img src="../GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.webp" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
 
 ## Programación del panel de alarma Honeywell Ademco Vista-48 (Vista-20, Vista-15) mediante el teclado
 
@@ -62,85 +62,85 @@ Usando el teclado del panel, entre en estas secciones y configúrelas como se in
 <div class="steps-grid">
   <div class="step-card">
         <strong>Paso 1.</strong> Pulse <strong>Agregar nuevo sistema</strong>.
-        <img src="../GT+ honeywell vista 48 1 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 1 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
   
  
   <div class="step-card">
         <strong>Paso 2.</strong> Introduzca el <strong>IMEI</strong> del comunicador, pulse <strong>Siguiente</strong>.
-        <img src="../GT+ honeywell vista 48 2 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 2 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 3.</strong> Seleccione la empresa de seguridad.
-        <img src="../GT+ honeywell vista 48 3 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 3 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 4.</strong> Elija <strong>Honeywell</strong>.
-        <img src="../GT+ honeywell vista 48 4 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 4 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
   
 
   <div class="step-card">
         <strong>Paso 5.</strong> Elija <strong>Vista 48 (Vista 20, Vista 15)</strong>.
-        <img src="../GT+ honeywell vista 48 5 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 5 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 6.</strong> Introduzca <strong>Object ID</strong> y <strong>Module ID</strong>, pulse <strong>Siguiente</strong>.
-        <img src="../GT+ honeywell vista 48 6 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 6 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 7.</strong> Espere mientras se escriben los datos.
-        <img src="../GT+ honeywell vista 48 7 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 7 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 8.</strong> Pulse <strong>Agregar a Protegus2</strong>.
-        <img src="../GT+ honeywell vista 48 8 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 8 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 9.</strong> Introduzca el <strong>Nombre</strong> del sistema, pulse <strong>Siguiente</strong>.
-        <img src="../GT+ honeywell vista 48 9 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 9 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 10.</strong> Pulse <strong>Saltar</strong>.
-        <img src="../GT+ honeywell vista 48 10 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 10 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 11.</strong> Pulse sobre el sistema.
-        <img src="../GT+ honeywell vista 48 11 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 11 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 12.</strong> Espere 1 minuto para completar y pulse <strong>Transferir</strong>.
-        <img src="../GT+ honeywell vista 48 12 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 12 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 13.</strong> Introduzca el correo electrónico del usuario al que el instalador transferirá el sistema. Pulse <strong>Transferir</strong>.
-        <img src="../GT+ honeywell vista 48 13 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 13 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 14.</strong> El sistema aparecerá en Protegus en el teléfono del usuario.
-        <img src="../GT+ honeywell vista 48 14 ENG 2026 01 05.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ honeywell vista 48 14 ENG 2026 01 05.webp" alt="Agregar nuevo sistema">
   </div>
 
 

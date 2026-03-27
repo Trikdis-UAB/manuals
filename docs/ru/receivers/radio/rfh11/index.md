@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Радиоприёмник
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## О радиоприемном устройстве
@@ -112,7 +112,7 @@ pdf: rfh11-original.pdf
 
 **Примечание:** если пароль неизвестен, вы можете найти тип приемного устройства и версии программного обеспечения/прошивки, нажав кнопку [Device info] ([информация об устройстве]).
 
-![](./image4.png)
+![](./image4.webp)
 
 **Примечание:** **на компьютере должны быть установлены драйверы USB** . При первом подключении приемного устройства к компьютеру в ОС MS Windows откроется окно Мастер нового оборудования для установки драйвера USB. Скачайте драйвер для USB \*.*inf* для Вашей ОС MS Windows с сайта http://www.trikdis.com/en/. В окне мастера выберите функцию Да, только в этот раз и нажмите кнопку Далее. В открывшемся окне Выбор параметров поиска и установки нажмите кнопку Обзор и выберите место, где был сохранен файл \*.inf. Следуйте инструкциям мастера для завершения установки драйвера USB.
 
@@ -120,7 +120,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -144,7 +144,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -170,7 +170,7 @@ pdf: rfh11-original.pdf
 
     3.  Установите следующие обязательные параметры: [номер приемного устройства] ([Receiver Number]), [номер линии] ([Line number]), [система] ([System]), [идентификатор учетной записи] ([Account ID]), [период HB] ([HB Period]) и [скорость передачи] ([Baud Rate]) для RS232.
 
-<img alt="" src="./image10.png" style="width:2.5in;height:1.6993055555555556in" />
+<img alt="" src="./image10.webp" style="width:2.5in;height:1.6993055555555556in" />
 
 7.  Укажите, какие сообщения будут отправлены:
 
@@ -178,7 +178,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -188,7 +188,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -196,7 +196,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 

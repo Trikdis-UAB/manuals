@@ -1,7 +1,7 @@
 # GSM коммуникатор GT+
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Описание 
@@ -125,7 +125,7 @@
 
 7.  Держатель SIM карты.
 
-<img alt="" src="./image4.png" style="width:4.630009842519685in;height:3.11000656167979in" />
+<img alt="" src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
 
 ### Клеммы подключения 
 
@@ -175,7 +175,7 @@
 
 ### Структурная схема применения GSM коммуникатора GT+ 
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:3.0104166666666665in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
 
 !!! note "Примечание"
     Перед установкой убедитесь, что имеете:
@@ -202,7 +202,7 @@
 
 2.  Плоской отверткой снимите крышку, как показано на рисунке:
 
-    <img alt="" src="./image6.png" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Кабелем USB-С подключите GT+ к компьютеру.
 
@@ -216,11 +216,11 @@
 
 **Окно „Panel settings“:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
 1.  Если коммуникатор подключен к клеммам TIP/RING охранной панели, то необходимо установить "**AUTO**".
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:1.9960629921259843in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
 
 1.  Если коммуникатор подключен к шине клавиатуры или последовательной шине охранной панели, то выберите модель охранной панели, которая будет подключена к коммуникатору.
 
@@ -235,7 +235,7 @@
     „**Кода доступа ПК"** охранной панели.
 Окно „Сообщения пользователю“, закладка „Сервис PROTEGUS“:
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9724409448818898in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
 4. Отметьте поле „**Разрешить подключиться“** к сервису Protegus2.
 
@@ -243,7 +243,7 @@
 
 **Окно „Network settings“:**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.0708661417322833in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.0708661417322833in" />
 
 3. Введите „**PIN код SIM карты“**.
 
@@ -262,21 +262,21 @@
 
 **Окно „Системные настройки“:**
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.5866141732283465in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.5866141732283465in" />
 
 1.  Введите **Объектовый номер (Не используйте FFFE, FFFF объектовые номера**.**)**.
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
 1.  Если коммуникатор подключен к клеммам TIP/RING охранной панели, то необходимо установить "**AUTO**".
 
-<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 2. Если коммуникатор подключен к шине клавиатуры или последовательной шине охранной панели, то выберите модель охранной панели, которая будет подключена к коммуникатору.
 
 Окно „Сообщение на ПЦН“, группа „Основной канал связи“:
 
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:3.34251968503937in" />
+<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:3.34251968503937in" />
 
 3. **Режим** – выберите **IP** режим связи.
 
@@ -294,7 +294,7 @@
 
 **Окно „Network settings“:**
 
-<img alt="" src="./image15.png" style="width:7.086614173228346in;height:3.0826771653543306in" />
+<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:3.0826771653543306in" />
 
 11. Введите „**PIN код SIM карты“**.
 
@@ -327,9 +327,9 @@
 
 7.  Закройте верхнюю крышку.
 
-<img alt="" src="./image16.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image17.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="" src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Примечание"
     Убедитесь, что SIM карта активирована. / Убедитесь, что включена услуга
@@ -341,24 +341,24 @@
 
 Подсоедините коммуникатор к охранной панели по одной из ниже указанных схем.
 
-<img alt="" src="./image18.png" style="width:7.0875in;height:2.7888888888888888in" />
+<img alt="" src="./image18.webp" style="width:7.0875in;height:2.7888888888888888in" />
 
-<img alt="" src="./image19.png" style="width:7.0875in;height:2.8152777777777778in" />
+<img alt="" src="./image19.webp" style="width:7.0875in;height:2.8152777777777778in" />
 
-<img alt="" src="./image20.png" style="width:7.0875in;height:2.6659722222222224in" />
+<img alt="" src="./image20.webp" style="width:7.0875in;height:2.6659722222222224in" />
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 ### Схема подключения коммуникатора к шине клавиатуры и телефонному коммуникатору (клеммы TIP/RING) охранной панели PARADOX SP/SP+/MG/MG+ 
 
-<img alt="" src="./image23.png" style="width:3.48000656167979in;height:2.936672134733158in" />
+<img alt="" src="./image23.webp" style="width:3.48000656167979in;height:2.936672134733158in" />
 
 При подключении коммуникатора к шине клавиатуры и клеммам TIP/RING охранной панели необходимо сделать следующие настройки коммуникатору GT+:
 
@@ -370,7 +370,7 @@
 
 4.  Для прямого управления охранной панелью введите „**Пароль доступа ПК**“. Он должен совпадать с паролем, введенным в охранной панели.
 
-<img alt="" src="./image24.png" style="width:7.086614173228346in;height:2.0078740157480315in" />
+<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 Охранную панель Paradox необходимо запрограммировать для передачи сообщений на ПЦН и для удаленного управления с приложения Protegus2.
 
@@ -395,11 +395,11 @@
     выключателя".
 Коммуникатор подключен к шине клавиатуры или последовательной шине охранной панели. / Постановка/снятие охранной панели с охраны осуществляется через зону выключателя.
 
-<img alt="" src="./image25.png" style="width:3.826674321959755in;height:2.5866721347331585in" />
+<img alt="" src="./image25.webp" style="width:3.826674321959755in;height:2.5866721347331585in" />
 
 Коммуникатор подключен к клеммам TIP/RING охранной панели. / Постановка/снятие охранной панели с охраны осуществляется через зону выключателя.
 
-<img alt="" src="./image26.png" style="width:3.7433409886264215in;height:2.720005468066492in" />
+<img alt="" src="./image26.webp" style="width:3.7433409886264215in;height:2.720005468066492in" />
 
 ### Схема подключения входа 
 
@@ -407,9 +407,9 @@
 
 Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL:
 
-<img alt="" src="./image27.png" style="width:4.4175087489063865in;height:1.3500021872265966in" />
+<img alt="" src="./image27.webp" style="width:4.4175087489063865in;height:1.3500021872265966in" />
 
-<img alt="" src="./image28.png" style="width:5.340010936132983in;height:1.695003280839895in" />
+<img alt="" src="./image28.webp" style="width:5.340010936132983in;height:1.695003280839895in" />
 
 !!! note "Примечание"
     Подключив к коммуникатору Trikdis iO-8 расширители, можно
@@ -418,13 +418,13 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 При помощи контактов реле можно удаленно управлять (включить/выключить) различными электрическими приборами. I/O клемме коммуникатора должен быть установлен режим работы выход (OUT).
 
-<img alt="" src="./image29.png" style="width:2.4150043744531935in;height:0.9075021872265967in" />
+<img alt="" src="./image29.webp" style="width:2.4150043744531935in;height:0.9075021872265967in" />
 
 ### Схема подключения расширителей iO-8 
 
 Для увеличения количества входов (IN), выходов (OUT) необходимо подключить проводной Trikdis *iO-8* расширитель. Конфигурация *GT+* с модулем расширения описаны в п. 6.8 „Окно „RS485 модули“.
 
-<img alt="" src="./image30.png" style="width:3.5133409886264215in;height:2.11667104111986in" />
+<img alt="" src="./image30.webp" style="width:3.5133409886264215in;height:2.11667104111986in" />
 
 ### Включение коммуникатора 
 
@@ -517,7 +517,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 Войдите в **Configuration>General>Alarm Reporting**. В группе **3rd Party Device Reporting** необходимо установить:
 
-<img alt="" src="./image31.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image31.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – отметьте поле.
 
@@ -637,13 +637,13 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -664,11 +664,11 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
         цветом и мигает желтым).
 3. Нажмите „**Add new system“** и введите „Unique ID/IMEI“ номер GT+, который найдете на изделии или на упаковке. Нажмите кнопку „**Next“**.
 
-<img alt="" src="./image37.png" style="width:3.0in;height:3.704724409448819in" />
+<img alt="" src="./image37.webp" style="width:3.0in;height:3.704724409448819in" />
 
 4. Введите название системы. Нажмите кнопку „**Next**“.
 
-<img alt="" src="./image38.png" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="" src="./image38.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Дополнительные настройки для включения/выключения системы зоной выключателя 
 
@@ -679,20 +679,20 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 1.  Нажмите кнопку „**Continue**“.
 
-<img alt="" src="./image39.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image39.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Введите “**Area name**“. Включите управление PGM выходом приложением Protegus2.
 3. Выберите „**Pulse“** или „**Level“**, в зависимости от того, как настроен тип зоны выключателя (keyswitch). Если необходимо, можете изменить интервал импульса.
 
 2.  Нажмите кнопку „**Save**“.
 
-<img alt="" src="./image40.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
+<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
 3. Если будет еще один раздел охранной сигнализации, то необходимо нажать „**Click to add an area**“. Настройка PGM выхода аналогично описанной выше.
 
 2.  После окончания настроек нажмите кнопку „**Skip**“.
 
-<img alt="" src="./image41.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+<img alt="" src="./image41.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Включение/выключение охранной системы с *Protegus2* 
 
@@ -700,7 +700,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 2.  В *Protegus2* придет сообщение об изменении статуса системы охраны и икона статуса изменит свое состояние.
 
-<img alt="" src="./image42.png" style="width:2.220472440944882in;height:2.661417322834646in" />
+<img alt="" src="./image42.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
 
 ### Управление SMS сообщениями 
 
@@ -729,7 +729,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 Подключив GT+ и TrikdisConfig и нажав на кнопку **Считать [F4]**, программа в строке состояния предоставит информацию о подключенном изделии.
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:0.594488188976378in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:0.594488188976378in" />
 
 | Наименование | Описание |
 |----|----|
@@ -747,7 +747,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 ### Окно „Системные настройки“ 
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:2.8149606299212597in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.8149606299212597in" />
 
 Группа „Основные“
 
@@ -773,7 +773,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 **Группа „TLC”**
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:3.4803149606299213in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:3.4803149606299213in" />
 
 Коммуникатор подсоединен к клеммам TIP/RING охранной панели.
 
@@ -787,7 +787,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 Группа „Serial bus”
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:1.9881889763779528in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
 
 Коммуникатор подсоединен к шине клавиатуры или последовательной (serial) шине охранной панели.
 
@@ -805,7 +805,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 **Закладка „Настройки ПЦН“**
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.3464566929133857in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.3464566929133857in" />
 
 Настройте параметры „**Основных**“ и „**Резервных**“ каналов связи, если коммуникатор будет отправлять сообщения на ПЦН охранной фирмы.
 
@@ -839,7 +839,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 **Закладка „Настройки“**
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:2.562992125984252in" />
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
 
 Группа „Настройки“
 
@@ -863,7 +863,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 **Закладка “Сервис Protegus”**
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 Protegus сервис позволяет пользователям удаленно наблюдать и управлять коммуникатором. Больше информации о Protegus сервисе найдете на [www.protegus.app](https://www.protegus.app).
 
@@ -877,7 +877,7 @@ Protegus сервис позволяет пользователям удален
 
 **Закладка “SMS и звонок”**
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:4.051181102362205in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
 
 Можете установить, чтобы пользователь о событиях был информирован SMS сообщением или звонком.
 
@@ -895,7 +895,7 @@ Protegus сервис позволяет пользователям удален
 
 **Закладка “Управление SMS сообщением”**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.9409448818897639in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:1.9409448818897639in" />
 
 Можете отправить SMS команду коммуникатору GT+, которая активирует выход или отправит информацию о коммуникаторе. SMS команды управления описаны в п. 5.4 „Управление SMS сообщениями“.
 
@@ -917,7 +917,7 @@ Protegus сервис позволяет пользователям удален
     ПЦН или в приложение Protegus2.
 Закладка “SIM1”
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:3.090551181102362in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 Группа „SIM карта“
 
@@ -936,13 +936,13 @@ Protegus сервис позволяет пользователям удален
 
   **Закладка “Connection Type”**
 
-  <img alt="" src="./image53.png" style="width:7.086614173228346in;height:3.543307086614173in" />
+  <img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
 
   Эти настройки действительны для коммуникаторов с модемом CAT-M1. Вы можете указать частоты, на которых будет работать модем коммуникатора.
 
 ### Окно „IN/OUT“ 
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.468503937007874in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.468503937007874in" />
 
 Коммуникатор имеет 2 универсальных клеммы I/O (вход/выход). В таблице устанавливается режим работы клеммы (Выключено; IN; OUT). Входу необходимо указать тип подключаемой цепи NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL.
 
@@ -966,7 +966,7 @@ Protegus сервис позволяет пользователям удален
 
 **Закладка „Список модулей“**
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:1.9488188976377954in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
 
 - **№** – порядковый номер модуля.
 
@@ -982,7 +982,7 @@ Protegus сервис позволяет пользователям удален
 
 **Окно настроек расширителя iO-8**
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.5354330708661417in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.5354330708661417in" />
 
 Модуль расширения iO-8 имеет 8 универсальных (вход/выход) клемм. К коммуникатору можно подключить четыре iO- 8 расширителя.
 
@@ -1028,7 +1028,7 @@ Protegus сервис позволяет пользователям удален
 
 В программном окне можно включить, выключить и изменить отправляемые внутренние события коммуникатора. Выключив внутреннее сообщение в этом программном окне, оно не будет отправляться независимо от других настроек.
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:2.1338582677165356in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.1338582677165356in" />
 
 - **COMMUNICATION** – сообщение о нарушении связи между охранной панелью и коммуникатором GT+.
 
@@ -1051,7 +1051,7 @@ Protegus сервис позволяет пользователям удален
 
 Для восстановления заводских настроек коммуникатора GT+ необходимо в программном окне TrikdisConfig нажать кнопку „**Восстановить“**.
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:0.9724409448818898in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:0.9724409448818898in" />
 
 Другой способ восстановления заводских настроек.
 
@@ -1076,7 +1076,7 @@ Protegus сервис позволяет пользователям удален
 
 2.  В поле „Уникальный №“ введите IMEI номер GT+, который указан на упаковке или на изделии.
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.216535433070866in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.216535433070866in" />
 
 3. В поле „**Название системы**“ напишите название коммуникатора.
 
@@ -1121,7 +1121,7 @@ Protegus сервис позволяет пользователям удален
 
 3.  В программе TrikdisConfig откройте окно „**Обновление программы**“**.**
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:2.52755905511811in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:2.52755905511811in" />
 
 4. Нажмите кнопку „**Открыть файл**“ и выберите нужный файл для установки.
 
@@ -1362,6 +1362,6 @@ Protegus сервис позволяет пользователям удален
 
 Выполняя работы по установке оборудования, обязательно должно быть выключено его внешнее питание.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
 
 Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.

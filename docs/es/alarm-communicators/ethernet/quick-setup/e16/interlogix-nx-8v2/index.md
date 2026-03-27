@@ -17,7 +17,7 @@ Pasos breves para conectar el comunicador E16 a paneles Interlogix NX-8v2, confi
 1. Descargue **TrikdisConfig** de [www.trikdis.com](http://www.trikdis.com) e instálelo.
 2. Abra la carcasa del E16 con un destornillador plano.
 
-![Abrir la carcasa del E16](../../../../e16/image6.png)
+![Abrir la carcasa del E16](../../../../e16/image6.webp)
 
 3. Conecte el E16 al ordenador mediante un cable USB Mini-B.
 4. Ejecute **TrikdisConfig**. El software reconocerá el comunicador y abrirá la ventana de configuración.
@@ -33,7 +33,7 @@ Complete la subsección que corresponda a la instalación:
 
 **En la ventana de "Ajustes del sistema":**
 
-![Ajustes del sistema E16](../../../../e16/image7.png)
+![Ajustes del sistema E16](../../../../e16/image7.webp)
 
 1. Seleccione el **Modelo de panel** que se conectará al comunicador.
 2. Active **Armado/Desarmado Remoto** si los usuarios deben controlar el panel desde Protegus2 con su código de teclado.
@@ -44,7 +44,7 @@ Complete la subsección que corresponda a la instalación:
 
 **En la ventana de "Informes para usuario", pestaña "Servicio PROTEGUS":**
 
-![Ajustes de Protegus Cloud E16](../../../../e16/image8.png)
+![Ajustes de Protegus Cloud E16](../../../../e16/image8.webp)
 
 4. Marque **Habilitar conexión** al servicio Protegus.
 5. Cambie el **Código de acceso a PROTEGUS Cloud** si desea que se solicite al añadir el sistema a Protegus2.
@@ -55,14 +55,14 @@ Después de terminar la configuración, haga clic en **Escribir [F5]** y descone
 
 **En la ventana de "Ajustes del sistema":**
 
-![Ajustes del sistema E16 para CRA](../../../../e16/image9.png)
+![Ajustes del sistema E16 para CRA](../../../../e16/image9.webp)
 
 1. Introduzca el **ID del objeto** proporcionado por la Central Receptora.
 2. Seleccione el **Modelo de panel** que se conectará al comunicador.
 
 **En la ventana de "Ajustes de CRA", opciones del "Canal principal":**
 
-![Ajustes de reporte E16 para CRA](../../../../e16/image10.png)
+![Ajustes de reporte E16 para CRA](../../../../e16/image10.webp)
 
 3. Configure el **Modo de comunicación** en **IP**.
 4. Seleccione el protocolo requerido por el receptor: **TRK**, **DC-09_2007**, **DC-09_2012** o **TL150**.
@@ -86,7 +86,7 @@ Conecte el panel al E16 como se muestra a continuación:
 | `-DC` | `COM` | Tierra del panel |
 | `DATA` | `DATA` | Datos del bus de teclado |
 
-<img alt="Diagrama de conexión E16 Interlogix" src="../images/caddx.png" style="width:5.2in;max-width:100%;height:auto;" />
+<img alt="Diagrama de conexión E16 Interlogix" src="../images/caddx.webp" style="width:5.2in;max-width:100%;height:auto;" />
 
 ## Programación del panel
 

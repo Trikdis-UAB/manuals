@@ -25,7 +25,7 @@ Follow the schematic below to connect the communicator to the panel:
 | CLK                     | Rx 3                           | TTL Port-0 |
 | DATA                    | Tx 2                           | TTL Port-0 |
 
-<img src="../GT+ Innerrange Integriti prijungimo schema ENG 2026 03 24.png" alt="GT+ Innerrange Integriti wiring diagram" class="GT+ Innerrange Integriti prijungimo schema ENG 2026 03 24">
+<img src="../GT+ Innerrange Integriti prijungimo schema ENG 2026 03 24.webp" alt="GT+ Innerrange Integriti wiring diagram" class="GT+ Innerrange Integriti prijungimo schema ENG 2026 03 24">
 
 ## Programming the Innerrange Integriti Alarm Panel
 
@@ -42,19 +42,19 @@ Follow the schematic below to connect the communicator to the panel:
 <div class="steps-grid">
   <div class="step-card">
         <strong>Step 1.</strong> Tap <strong>Add new system</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 1 ENG 2026 01 06.png" alt="Add new system">
+        <img src="../../dsc pc/GT+ dsc pc585 1 ENG 2026 01 06.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 2.</strong> Enter the communicator <strong>IMEI</strong>, tap <strong>Next</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 2 ENG 2026 01 06.png" alt="Enter communicator IMEI">
+        <img src="../../dsc pc/GT+ dsc pc585 2 ENG 2026 01 06.webp" alt="Enter communicator IMEI">
   </div>
 
 
   <div class="step-card">
         <strong>Step 3.</strong> Select security company.
-        <img src="../../dsc pc/GT+ dsc pc585 3 ENG 2026 01 06.png" alt="Select security company">
+        <img src="../../dsc pc/GT+ dsc pc585 3 ENG 2026 01 06.webp" alt="Select security company">
   </div>
 
 
@@ -78,49 +78,49 @@ Follow the schematic below to connect the communicator to the panel:
 
   <div class="step-card">
         <strong>Step 7.</strong> Wait while data is written.
-        <img src="../../dsc pc/GT+ dsc pc585 7 ENG 2026 01 06.png" alt="Wait while data is written">
+        <img src="../../dsc pc/GT+ dsc pc585 7 ENG 2026 01 06.webp" alt="Wait while data is written">
   </div>
 
 
   <div class="step-card">
         <strong>Step 8.</strong> Tap <strong>Add to Protegus2</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 8 ENG 2026 01 06.png" alt="Add to Protegus2">
+        <img src="../../dsc pc/GT+ dsc pc585 8 ENG 2026 01 06.webp" alt="Add to Protegus2">
   </div>
 
 
   <div class="step-card">
         <strong>Step 9.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 9 ENG 2026 01 06.png" alt="Enter system name">
+        <img src="../../dsc pc/GT+ dsc pc585 9 ENG 2026 01 06.webp" alt="Enter system name">
   </div>
 
 
   <div class="step-card">
         <strong>Step 10.</strong> Tap <strong>Skip</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 10 ENG 2026 01 06.png" alt="Skip user setup">
+        <img src="../../dsc pc/GT+ dsc pc585 10 ENG 2026 01 06.webp" alt="Skip user setup">
   </div>
 
 
   <div class="step-card">
         <strong>Step 11.</strong> Tap on system.
-        <img src="../../dsc pc/GT+ dsc pc585 11 ENG 2026 01 06.png" alt="Open the added system">
+        <img src="../../dsc pc/GT+ dsc pc585 11 ENG 2026 01 06.webp" alt="Open the added system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 12.</strong> Wait 1 minute for completion and tap <strong>Transfer</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 12 ENG 2026 01 06.png" alt="Transfer system">
+        <img src="../../dsc pc/GT+ dsc pc585 12 ENG 2026 01 06.webp" alt="Transfer system">
   </div>
 
 
   <div class="step-card">
         <strong>Step 13.</strong> Enter the e-mail of the user to whom the installer will transfer the system. Tap <strong>Transfer</strong>.
-        <img src="../../dsc pc/GT+ dsc pc585 13 ENG 2026 01 06.png" alt="Enter user e-mail">
+        <img src="../../dsc pc/GT+ dsc pc585 13 ENG 2026 01 06.webp" alt="Enter user e-mail">
   </div>
 
 
   <div class="step-card">
         <strong>Step 14.</strong> The system will appear in Protegus on the user's phone.
-        <img src="../../dsc pc/GT+ dsc pc585 14 ENG 2026 01 06.png" alt="System added in Protegus2">
+        <img src="../../dsc pc/GT+ dsc pc585 14 ENG 2026 01 06.webp" alt="System added in Protegus2">
   </div>
 </div>
 

@@ -22,11 +22,11 @@
 | DATA                  | DATA                  | KeyBus                   |
 
 
-<img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
+<img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.webp" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
 
 
 
-<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
+<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.webp" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
 
 
 ## Программирование панели сигнализации Interlogix NX-4V2, Interlogix NX-6V2 через LCD клавиатуру
@@ -80,85 +80,85 @@
 <div class="steps-grid">
   <div class="step-card">
         <strong>Шаг 1.</strong> Нажмите <strong>Add new system</strong>.
-        <img src="../GT+ interlogix nx 4v2 1 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 1 ENG 2025 12 31.webp" alt="Add new system">
   </div>
   
  
   <div class="step-card">
         <strong>Шаг 2.</strong> Введите <strong>IMEI</strong> коммуникатора, нажмите <strong>Next</strong>.
-        <img src="../GT+ interlogix nx 4v2 2 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 2 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 3.</strong> Выберите охранную компанию.
-        <img src="../GT+ interlogix nx 4v2 3 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 3 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 4.</strong> Выберите <strong>Interlogix</strong>.
-        <img src="../GT+ interlogix nx 4v2 4 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 4 ENG 2025 12 31.webp" alt="Add new system">
   </div>
   
 
   <div class="step-card">
         <strong>Шаг 5.</strong> Выберите <strong>NX-4</strong> (<strong>NX-6</strong>).
-        <img src="../GT+ interlogix nx 4v2 5 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 5 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 6.</strong> Введите <strong>Object ID</strong> и <strong>Module ID</strong>, нажмите <strong>Next</strong>.
-        <img src="../GT+ interlogix nx 4v2 6 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 6 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 7.</strong> Подождите, пока записываются данные.
-        <img src="../GT+ interlogix nx 4v2 7 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 7 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 8.</strong> Нажмите <strong>Add to Protegus2</strong>.
-        <img src="../GT+ interlogix nx 4v2 8 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 8 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 9.</strong> Введите <strong>Name</strong> системы, нажмите <strong>Next</strong>.
-        <img src="../GT+ interlogix nx 4v2 9 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 9 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 10.</strong> Нажмите <strong>Skip</strong>.
-        <img src="../GT+ interlogix nx 4v2 10 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 10 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 11.</strong> Нажмите на систему.
-        <img src="../GT+ interlogix nx 4v2 11 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 11 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 12.</strong> Подождите 1 минуту для завершения и нажмите <strong>Transfer</strong>.
-        <img src="../GT+ interlogix nx 4v2 12 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 12 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 13.</strong> Введите e-mail пользователя, которому установщик передаст систему. Нажмите <strong>Transfer</strong>.
-        <img src="../GT+ interlogix nx 4v2 13 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 13 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 14.</strong> Система появится в Protegus на телефоне пользователя.
-        <img src="../GT+ interlogix nx 4v2 14 ENG 2025 12 31.png" alt="Add new system">
+        <img src="../GT+ interlogix nx 4v2 14 ENG 2025 12 31.webp" alt="Add new system">
   </div>
 
 

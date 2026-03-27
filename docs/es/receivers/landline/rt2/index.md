@@ -5,7 +5,7 @@ pdf: rt2-original.pdf
 # Módulo de Recepción por Línea Telefónica RT2
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 El módulo de recepción se utiliza como componente del receptor multicanal RM10 y RD10 y está diseñado para la recepción de datos enviados a través de líneas telefónicas.

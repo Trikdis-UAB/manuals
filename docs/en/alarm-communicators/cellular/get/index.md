@@ -1,7 +1,7 @@
 # GET Cellular Communicator
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="Product Image" width="400">
+  <img src="./image1.webp" alt="Product Image" width="400">
 </div>
 
 
@@ -130,7 +130,7 @@ This manual is for LTE communicators.
 
 9.  Ethernet connection RJ45 socket
 
-<img alt="" src="./image4.png" style="width:4.926676509186351in;height:3.24000656167979in" />
+<img alt="" src="./image4.webp" style="width:4.926676509186351in;height:3.24000656167979in" />
 
 ### Purpose of terminals 
 
@@ -173,7 +173,7 @@ This manual is for LTE communicators.
 
 ### Structural schematic of using the GET communicator 
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9in" />
 
 !!! note
     Before you begin, make sure that you have the necessary:
@@ -200,7 +200,7 @@ This manual is for LTE communicators.
 
 2.  Open the casing of the communicator with a flat-head screwdriver as shown below:
 
-    <img alt="" src="./image6.png" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Using a USB-C cable connect the communicator to the computer.
 
@@ -214,11 +214,11 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “Panel settings” window:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.5984251968503937in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
 
 1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0118110236220472in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
@@ -236,7 +236,7 @@ The communicator is connected to the keypad bus or serial bus of the control pan
     the "**PC download/UDL password**".
 **In “User reporting” window, “PROTEGUS Cloud” tab:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9606299212598426in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
 
 4. Tick the checkbox “**Enable connection”** to the Protegus Cloud.
 
@@ -244,13 +244,13 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 **In “Network settings” window:**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.8070866141732282in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.8070866141732282in" />
 
 These settings must be made if the communicator is connected to a LAN network.
 
 3. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.9173228346456694in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
 
 These settings must be made if the SIM (or two SIM cards) card is inserted into the communicator.
 
@@ -264,7 +264,7 @@ These settings must be made if the SIM (or two SIM cards) card is inserted into 
 
 **In “CMS reporting” window:**
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:2.562992125984252in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
 
 12. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the Return to main connection type will be attempted after the specified time interval.
 
@@ -278,23 +278,23 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System settings” window:**
 
-<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.4173228346456692in" />
+<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
 1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
 **In “Panel settings” window:**
 
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:1.5866141732283465in" />
+<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:1.5866141732283465in" />
 
 2. If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
 
-<img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 3. Select “**Security panel model”** that will be connected to the communicator.
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
-<img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
+<img alt="" src="./image16.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
 
 4. **Communication type** - select the **IP** connection method.
 
@@ -310,19 +310,19 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 7.  (Recommended) Configure “**Primary channel Backup”** settings.
 
-<img alt="" src="./image17.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
+<img alt="" src="./image17.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
 11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
 
 **In “Network settings” window:**
 
-<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.7913385826771653in" />
+<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
 
 These settings must be made if the communicator is connected to a LAN network.
 
 12. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
 
-<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.858267716535433in" />
+<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.858267716535433in" />
 
 If a SIM card (or two SIM cards) is inserted in the communicator, the following settings must be made.
 
@@ -360,9 +360,9 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 8.  If the LAN network will be used to transmit events to the CMS, a LAN cable must be connected to the communicator.
 
-<img alt="" src="./image20.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
+<img alt="" src="./image21.webp" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
 !!! note
     One or two SIM cards can be inserted into the communicator. / Ensure
@@ -380,17 +380,17 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
+<img alt="" src="./image22.webp" style="width:6.743347550306212in;height:2.8466721347331583in" />
 
-<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
+<img alt="" src="./image23.webp" style="width:6.803347550306212in;height:2.9000054680664915in" />
 
-<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
+<img alt="" src="./image24.webp" style="width:6.996680883639545in;height:2.8066721347331582in" />
 
-<img alt="" src="./image25.png" style="width:6.996680883639545in;height:3.28000656167979in" />
+<img alt="" src="./image25.webp" style="width:6.996680883639545in;height:3.28000656167979in" />
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
-<img alt="" src="./image26.png" style="width:3.37000656167979in;height:3.0333398950131234in" />
+<img alt="" src="./image26.webp" style="width:3.37000656167979in;height:3.0333398950131234in" />
 
 When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
 
@@ -402,7 +402,7 @@ When connecting the communicator to the keypad bus and the TIP/RING terminals of
 
 4.  To directly control the security panel, enter the “**Security panel PC download password**”. It must match the password entered in the security panel.
 
-<img alt="" src="./image27.png" style="width:7.086614173228346in;height:2.0196850393700787in" />
+<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:2.0196850393700787in" />
 
 The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the Protegus2 application.
 
@@ -427,11 +427,11 @@ Follow this schematic if the control panel will be armed/disarmed with a communi
     zone".
 The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
 
-<img alt="" src="./image28.png" style="width:3.313339895013123in;height:2.4466721347331584in" />
+<img alt="" src="./image28.webp" style="width:3.313339895013123in;height:2.4466721347331584in" />
 
 The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel. / Arming/disarming the panel via the keyswitch zone.
 
-<img alt="" src="./image29.png" style="width:3.46000656167979in;height:2.903338801399825in" />
+<img alt="" src="./image29.webp" style="width:3.46000656167979in;height:2.903338801399825in" />
 
 ### Schematics for input connection 
 
@@ -439,13 +439,13 @@ The communicator has 2 universal input / output terminals that can be set to inp
 
 Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="" src="./image30.png" style="width:5.169291338582677in;height:4.003937007874016in" />
+<img alt="" src="./image30.webp" style="width:5.169291338582677in;height:4.003937007874016in" />
 
 ### Schematics for wiring a relay 
 
 With relay contacts you can control (turn on/off) various electric appliances. The I/O terminal of the communicator must be set to an output (OUT) mode.
 
-<img alt="" src="./image31.png" style="width:2.1133377077865267in;height:0.92333552055993in" />
+<img alt="" src="./image31.webp" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
 ### Turn on the communicator 
 
@@ -540,7 +540,7 @@ The control panel must be connected to the internet. Connect to **Innerrange Inc
 
 Open **Configuration > General > Alarm Reporting**. In the **3rd Party Device Configuration** settings group you need to enter:
 
-<img alt="" src="./image32.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image32.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** - select this checkbox.
 
@@ -656,13 +656,13 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
     <div style="margin: 20px 0; text-align: left;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -685,11 +685,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
         blinks yellow).
 3. Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
-<img alt="" src="./image39.png" style="width:2.858267716535433in;height:3.704724409448819in" />
+<img alt="" src="./image39.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
 
 4. Enter the system „**Name**”. Click "**Next**".
 
-<img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
@@ -700,20 +700,20 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  Click „**Continue**“.
 
-<img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
-<img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
+<img alt="" src="./image42.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
 3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 2.  After completing the settings, click the “**Skip**” button.
 
-<img alt="" src="./image43.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+<img alt="" src="./image43.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Arming/disarming the alarm system with Protegus2 
 
@@ -721,7 +721,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.661417322834646in" />
+<img alt="" src="./image44.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
 
 ## TrikdisConfig window description 
 
@@ -729,7 +729,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 After connecting the GET communicator and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 | Object | Description |
 |--------|-------------|
@@ -747,7 +747,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 ### “System settings” window 
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.767716535433071in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.767716535433071in" />
 
 **“General” settings group**
 
@@ -771,7 +771,7 @@ When setting up the communicator GET there are two levels of access for, the adm
 
 ###  “Panel settings” window 
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **“TLC” settings group**
 
@@ -787,7 +787,7 @@ The communicator is connected to the TIP RING terminals of the telephone communi
 
 - **Dial tone frequency** - the frequency at which the communicator communicates with the control panel through the telephone communicator.
 
-  <img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.952755905511811in" />
+  <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 **“Serial bus” settings group**
 
@@ -807,7 +807,7 @@ The communicator is connected to the control panel via a Serial Bus.
 
 **“CMS settings” tab**
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:3.3976377952755907in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
 
 Events can be sent over several channels of communication. The primary and parallel communication channels can operate simultaneously, this way the communicator can send events to two receivers at the same time. Backup channels can be assigned for both primary and parallel channels, which will be used when the connection via the primary or parallel channel is interrupted.
 
@@ -837,7 +837,7 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 Events are transmitted in parallel with the primary channel through this channel. When the second channel is enabled, events can be sent simultaneously to two receivers (e.g., local and centralized monitoring stations). Parallel channel settings are the same as described above.
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:2.562992125984252in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
 
 **“Settings” tab** **“Settings” settings group**
 
@@ -875,7 +875,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 **“PROTEGUS cloud” tab**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.9448818897637796in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:1.9448818897637796in" />
 
 Protegus2 service allows users to remotely monitor and control the communicator. For more information about Protegus2 service, visit [www.protegus.eu](http://www.protegus.eu).
 
@@ -891,7 +891,7 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 
 **“LAN” tab**
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.3188976377952755in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.3188976377952755in" />
 
 **These settings must be made if the communicator is connected to a LAN network.**
 
@@ -910,7 +910,7 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 !!! warning "Important"
     1\. Ensure that the SIM card is activated and working before using
     it. / 2. Ensure that mobile data service is enabled.
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 **These settings must be made if the SIM card is inserted into the SIM1 slot of the communicator.**
 
@@ -929,7 +929,7 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 
 **“SIM2” tab**
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.874015748031496in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
 
 **These settings must be made if the SIM card is inserted into the SIM2 slot of the communicator.**
 
@@ -948,7 +948,7 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 
 ### “IN/OUT” windows 
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.4488188976377954in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
 
 The communicator has 2 universal (input / output) terminals. The table can set the terminal operating mode (Disabled, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -970,7 +970,7 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 
 In this window, you can enable, disable and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.1338582677165356in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.1338582677165356in" />
 
 - **COMMUNICATION** – message about connection error between the control panel and communicator.
 
@@ -999,7 +999,7 @@ You can change the Contact ID (SIA) code for each event, and also the zone and p
 
 To restore the communicator's factory settings, you need to click the “**Restore”** button in the TrikdisConfig window.
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:0.9645669291338582in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:0.9645669291338582in" />
 
 Another way to restore factory settings.
 
@@ -1026,7 +1026,7 @@ Power supply is connected to the communicator. Press and hold the “RESET” bu
 
 2.  In the “**Remote access”** section enter the communicator’s “**IMEI/Unique ID”** number. This number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.8346456692913384in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.8346456692913384in" />
 
 3. (Optional) in the “**System name”** field, enter the desired name for the communicator with this Unique ID.
 
@@ -1073,7 +1073,7 @@ The communicator’s firmware can also be updated or changed manually. After an 
 
 3.  Select the menu branch “**Firmware”**.
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 4. Press “**Open firmware”** and select the required firmware file.
 
@@ -1091,7 +1091,7 @@ Disconnect the power supply before making any electrical connections.
 
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 ## Annex
 

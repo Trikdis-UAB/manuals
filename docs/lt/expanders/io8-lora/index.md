@@ -1,7 +1,7 @@
 # iO8-LoRa Belaidis plėtiklis
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Aprašymas 
@@ -75,7 +75,7 @@ Ryšys:
 
 ### Maitinimo šaltinio prijungimo schema 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Įėjimų prijungimo schemos 
 
@@ -83,48 +83,48 @@ iO-8-LORA plokštėje yra 8 kontaktai IO1–IO8 (įėjimai) jutiklių grandinėm
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Relės prijungimo schema 
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. *iO-8-LORA* plėtiklio universaliam įėjimo/išėjimo (I/O) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas "Nuotolinis valdymas".
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### iO-8-LORA plėtimo modulių prijungimo schema 
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
@@ -148,15 +148,15 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
 
 8.  Lauke "**Serijos Nr.**" įrašykite iO-8-LORA serijos numerį.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms**.**
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams**.**
 
-<img alt="" src="./image18.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -174,4 +174,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.png" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

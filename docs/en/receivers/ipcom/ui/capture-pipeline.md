@@ -25,7 +25,7 @@ Artifacts live in `artifacts/ui/ipcom5control-web/`:
 - `screens/<screen-id>/accessibility-tree.json`
 - `screens/<screen-id>/controls.json`
 - `screens/<screen-id>/meta.json`
-- `screens/<screen-id>/screenshot.png`
+- `screens/<screen-id>/screenshot.webp`
 
 Screens and screenshots are copied into:
 

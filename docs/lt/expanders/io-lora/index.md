@@ -1,7 +1,7 @@
 # iO-LORA Belaidis plėtiklis
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="200">
+  <img src="./image3.webp" alt="" width="200">
 </div>
 
 ## Aprašymas 
@@ -51,7 +51,7 @@ Prijungimas:
 
 ### Plėtiklio elementai 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 ### Išorinių kontaktų paskirtis
 
@@ -87,7 +87,7 @@ Prijungimas:
 
 1.  Nuimkite viršutinį dangtelį.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Išimkite plokštę iš korpuso pagrindo.
 
@@ -97,11 +97,11 @@ Prijungimas:
 
 5.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Maitinimo šaltinio prijungimo schema 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Įėjimo prijungimo schemos 
 
@@ -109,10 +109,10 @@ iO-LORA turi 1 įėjimo gnybtą. Prie įėjimo gnybto galima prijungti NC, NO ti
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -120,7 +120,7 @@ iO-LORA turi 1 įėjimo gnybtą. Prie įėjimo gnybto galima prijungti NC, NO ti
 
 Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie *iO- LORA* plėtiklio galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (1 vnt.). / Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). / Plokštės gnybtas „+5V“ skirtas prie "1-Wire" magistralės prijungtiems įrenginiams maitinti 5 V nuolatine įtampa.
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Viršijus leistiną srovę, maitinimas automatiškai atjungiamas. Centralė "FLEXi" SP3 prijungtus įrenginius automatiškai atpažįsta ir registruoja.
 
@@ -128,11 +128,11 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 **CZ-Dallas iButton** raktų skaitytuvas prie iO-LORA jungiamas prie "**1 Wire**" magistralės. Magistralės laidų ilgis gali būti iki 30 m.
 
-<img alt="" src="./image11.png" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### iO-LORA plėtimo modulių prijungimo schema 
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
@@ -159,19 +159,19 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 8.  Lauke "**Serijos Nr.**" įrašykite iO-LORA serijos numerį.
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonai**.**
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimui**.**
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. "**Jutikliai**" sąraše bus įtrauktas temperatūros jutiklis, jei plėtiklyje iO-LORA yra prijungtas temperatūros jutiklis.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -189,4 +189,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.png" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

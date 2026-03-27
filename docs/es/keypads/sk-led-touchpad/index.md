@@ -4,7 +4,7 @@
 ## Vista General del Teclado
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -69,7 +69,7 @@ El indicador de SLEEP se iluminará cuando se encuentre en modo SLEEP.
 El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 > [!NOTE]
-> Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón <img src="./image2.png" alt="" style="width:0.3500in;" />.
+> Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón <img src="./image2.webp" alt="" style="width:0.3500in;" />.
 ## Botones de Emergencia
 
 **<u>Para enviar un mensaje de emergencia a su servicio de seguridad</u>**
@@ -99,7 +99,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 ### Para ingresar un Nuevo código o cambiar uno existente
 
-1. Presione el botón <img src="./image3.png" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
+1. Presione el botón <img src="./image3.webp" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
 
 2. Ingrese código *Maestro*, código por defecto – 1234. Los indicadores de zona, mostrando la secuencia numérica de esos Usuarios, cuyos códigos hayan sido ingresados, se iluminarán.
 
@@ -111,13 +111,13 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 5. Presione los números secuenciales de las áreas que deberán ser controladas por el usuario.
 
-6. Presione el botón <img src="./image4.jpg" style="width:0.3500in;" />. Para salir, presione el botón **C** dos veces.
+6. Presione el botón <img src="./image4.webp" style="width:0.3500in;" />. Para salir, presione el botón **C** dos veces.
 
 ## Restablecimiento del Detector de Incendios (Humo) de Dos Cables
 
 ### Para reestablecer el Detector de Incendios (Humo) de dos cables
 
-- Mantenga presionado el botón <img src="./image3.png" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" /> por 3 segundos.
+- Mantenga presionado el botón <img src="./image3.webp" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" /> por 3 segundos.
 > [!NOTE]
 > Los detectores de incendio de dos cables no se reinician automáticamente después de la detección de emergencia por incendio. Solo se pueden reiniciar manualmente.
 
@@ -131,7 +131,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 3. Ingrese un número secuencial de dos dígitos de una zona en particular para deshabilitar su monitoreo. Para deshabilitar el monitoreo de varias zonas, ingrese números de dos dígitos de tales zonas.
 
-4. Presione el botón <img src="./image4.jpg" style="width:0.3500in;" />. El indicador **BYP** se empieza a iluminar.
+4. Presione el botón <img src="./image4.webp" style="width:0.3500in;" />. El indicador **BYP** se empieza a iluminar.
 
 **<u>Desactivar la función BYPASS:</u>**
 
@@ -141,7 +141,7 @@ Ingrese un número de secuencia de dos dígitos de una zona en particular para d
 
 ### Para eliminar el código de usuario
 
-1. Presione el botón <img src="./image3.png" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
+1. Presione el botón <img src="./image3.webp" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
 
 2. Ingrese código *Maestro*. Los indicadores de zona, mostrando la secuencia numérica de esos Usuarios, cuyos códigos hayan sido ingresados, se iluminarán.
 
@@ -149,4 +149,4 @@ Ingrese un número de secuencia de dos dígitos de una zona en particular para d
 
 4. Presione el botón **SLEEP** del teclado. Una señal Sonora se escuchará y el botón, indicando la secuencia numérica del usuario, cuyo código fue borrado de memoria, se extinguirá.
 
-5. Presione el botón <img src="./image4.jpg" style="width:0.3500in;" /> dos veces.
+5. Presione el botón <img src="./image4.webp" style="width:0.3500in;" /> dos veces.

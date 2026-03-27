@@ -1,7 +1,7 @@
 # Ethernet komunikatorius E16
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Aprašymas
@@ -115,7 +115,7 @@ Veikia su Protegus2 programėle:
 
 5.  RJ45 lizdas LAN kabeliui prijungti.
 
-<img alt="" src="./image4.png" style="width:4.750009842519685in;height:2.853338801399825in" />
+<img alt="" src="./image4.webp" style="width:4.750009842519685in;height:2.853338801399825in" />
 
 ### Išorinių kontaktų paskirtis
 
@@ -155,7 +155,7 @@ Veikia su Protegus2 programėle:
 
 ### „Ethernet“ komunikatoriaus E16 panaudojimo struktūrinė schema
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.9138888888888888in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9138888888888888in" />
 
 !!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
@@ -179,7 +179,7 @@ Veikia su Protegus2 programėle:
 
 2.  Plokščiu atsuktuvu nuimkite E16 dangtelį kaip parodyta žemiau:
 
-    <img alt="" src="./image6.png" style="width:6.876680883639545in;height:1.850003280839895in" />
+    <img alt="" src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
 
 3.  Su USB Mini-B kabeliu sujunkite E16 su kompiuteriu.
 
@@ -193,7 +193,7 @@ Veikia su Protegus2 programėle:
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image7.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
@@ -208,7 +208,7 @@ Veikia su Protegus2 programėle:
     centralės PC download/UDL slaptažodį.
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 4. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -223,7 +223,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image9.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Įrašykite **Objekto numerį (Nenaudoti FFFE, FFFF objekto numerių**.**)**.
 
@@ -231,7 +231,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:3.559055118110236in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:3.559055118110236in" />
 
 3. **Ryšio būdas** – pasirinkite **IP** ryšio būdą .
 
@@ -264,15 +264,15 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image11.png" style="width:7.0875in;height:2.8194444444444446in" />
+<img alt="" src="./image11.webp" style="width:7.0875in;height:2.8194444444444446in" />
 
-<img alt="" src="./image12.png" style="width:7.0875in;height:2.839583333333333in" />
+<img alt="" src="./image12.webp" style="width:7.0875in;height:2.839583333333333in" />
 
-<img alt="" src="./image13.png" style="width:7.0875in;height:2.7506944444444446in" />
+<img alt="" src="./image13.webp" style="width:7.0875in;height:2.7506944444444446in" />
 
-<img alt="" src="./image14.png" style="width:7.0875in;height:2.964583333333333in" />
+<img alt="" src="./image14.webp" style="width:7.0875in;height:2.964583333333333in" />
 
-<img alt="" src="./image15.png" style="width:3.28500656167979in;height:2.7475054680664917in" />
+<img alt="" src="./image15.webp" style="width:3.28500656167979in;height:2.7475054680664917in" />
 
 ### E16 prijungimo prie centralės jungiklio (angl. keyswitch) zonos schema
 
@@ -287,7 +287,7 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su E16 PGM išėji
     Protegus2 reikia padaryti nustatymus, kurie aprašyti
     p. 5.2 „Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio
     zoną".
-<img alt="" src="./image16.png" style="width:3.22250656167979in;height:2.5975054680664917in" />
+<img alt="" src="./image16.webp" style="width:3.22250656167979in;height:2.5975054680664917in" />
 
 ### Įėjimo prijungimo schemos
 
@@ -295,9 +295,9 @@ Komunikatorius turi 3 universalius įėjimo/išėjimo gnybtus, kuriems galima nu
 
 NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image17.png" style="width:4.921259842519685in;height:1.5590551181102361in" />
+<img alt="" src="./image17.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
 
-<img alt="" src="./image18.png" style="width:4.921259842519685in;height:1.905511811023622in" />
+<img alt="" src="./image18.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
@@ -305,19 +305,19 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
     arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
 ### LAN kabelio prijungimas
 
-<img alt="" src="./image19.png" style="width:2.8250054680664918in;height:2.282504374453193in" />
+<img alt="" src="./image19.webp" style="width:2.8250054680664918in;height:2.282504374453193in" />
 
 ### Relės prijungimo schema
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
-<img alt="" src="./image20.png" style="width:2.552505468066492in;height:0.9575021872265966in" />
+<img alt="" src="./image20.webp" style="width:2.552505468066492in;height:0.9575021872265966in" />
 
 ### iO serijos plėtimo modulių prijungimo schemos
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. E16 konfigūravimas su plėtimo moduliais aprašytas p. 6.7. „Langas „RS485 moduliai“.
 
-<img alt="" src="./image21.png" style="width:7.0875in;height:3.4375in" />
+<img alt="" src="./image21.webp" style="width:7.0875in;height:3.4375in" />
 
 ### Komunikatoriaus paleidimas veikti
 
@@ -404,7 +404,7 @@ Centralę turi būti prijungta prie interneto. Prisijunkite prie **Innerrange I
 
 Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupėje **3rd Party Device Reporting** reikia nustatyti:
 
-<img alt="" src="./image22.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image22.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – pažymėti šį lauką.
 
@@ -444,13 +444,13 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -469,7 +469,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 4. Paspauskite “Pridėti sistemą” ir įveskite *E16* MAC adresą. MAC adresą rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
 1.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau".
 
-<img alt="" src="./image29.png" style="width:3.0in;height:3.673228346456693in" />
+<img alt="" src="./image29.webp" style="width:3.0in;height:3.673228346456693in" />
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
@@ -480,27 +480,27 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjim
 
 1.  Paspauskite „**Tęsti**“.
 
-<img alt="" src="./image30.png" style="width:2.220472440944882in;height:3.559055118110236in" />
+<img alt="" src="./image30.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
 2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
 3. Paspauskite „**Išsaugoti**“.
 
-<img alt="" src="./image31.png" style="width:2.220472440944882in;height:3.4960629921259843in" />
+<img alt="" src="./image31.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
 
 4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
 2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-<img alt="" src="./image32.png" style="width:2.220472440944882in;height:2.031496062992126in" />
+<img alt="" src="./image32.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-<img alt="" src="./image33.png" style="width:2.220472440944882in;height:2.688976377952756in" />
+<img alt="" src="./image33.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
 
 ## TrikdisConfig langų aprašymas
 
@@ -508,7 +508,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjim
 
 Prijungus E16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image34.png" style="width:7.070866141732283in;height:0.6062992125984252in" />
+<img alt="" src="./image34.webp" style="width:7.070866141732283in;height:0.6062992125984252in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -526,7 +526,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“
 
-<img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.090551181102362in" />
+<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.090551181102362in" />
 
 Parinkčių grupė „Pagrindinės“
 
@@ -556,7 +556,7 @@ Parinkčių grupė „Prisijungimas“
 
 **Skirtukas „CSP parametrai“**
 
-<img alt="" src="./image36.png" style="width:7.082677165354331in;height:4.047244094488189in" />
+<img alt="" src="./image36.webp" style="width:7.082677165354331in;height:4.047244094488189in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per laidinį internetą (IP).
 
@@ -590,7 +590,7 @@ Parinkčių grupės „Atsarginio kanalo režimas”
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image37.png" style="width:7.078740157480315in;height:2.3818897637795278in" />
+<img alt="" src="./image37.webp" style="width:7.078740157480315in;height:2.3818897637795278in" />
 
 Parinkčių grupė „Parametrai“
 
@@ -621,7 +621,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image38.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image38.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -633,7 +633,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 ### Langas “Ethernet parinktys”
 
-<img alt="" src="./image39.png" style="width:7.082677165354331in;height:2.2401574803149606in" />
+<img alt="" src="./image39.webp" style="width:7.082677165354331in;height:2.2401574803149606in" />
 
 **Parinkčių grupė „Ethernet parinktys“**
 
@@ -648,7 +648,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 ### Langas „IN/OUT“
 
-<img alt="" src="./image40.png" style="width:7.086614173228346in;height:2.47244094488189in" />
+<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 Komunikatorius turi 3 universalius (įėjimo/išėjimo) gnybtus. Lentelėje galima nustatyti gnybtui veikimo režimą (Išjungta, IN, OUT). Įėjimui reikia nurodyti prijungiamos grandinės tipą NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL.
 
@@ -668,7 +668,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Prie komunikatoriaus galima prijungti iO serijos plėtiklius, kuriais pridėsite papildomus įėjimus, valdomus išėjimus ir magistralę temperatūros jutikliams. Prijungti plėtikliai turi būti įtraukti į **Modulių sąrašo** lentelę.
 
-<img alt="" src="./image41.png" style="width:7.078740157480315in;height:2.141732283464567in" />
+<img alt="" src="./image41.webp" style="width:7.078740157480315in;height:2.141732283464567in" />
 
 Parinkčių grupė „Modulių sąrašas“
 
@@ -686,7 +686,7 @@ Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 mod
 
 **iO-8 plėtiklio nustatymų langas**
 
-<img alt="" src="./image42.png" style="width:7.082677165354331in;height:2.543307086614173in" />
+<img alt="" src="./image42.webp" style="width:7.082677165354331in;height:2.543307086614173in" />
 
 Plėtiklis iO-8 turi 8 universalius (įėjimo/išėjimo) gnybtus. Galima prijungti keturis iO-8 plėtiklius.
 
@@ -724,7 +724,7 @@ Lentelėje įėjimams (INPUT) galima priskirti Contact ID įvykių ir atsistaty
 
 **iO plėtiklio nustatymų langas**
 
-<img alt="" src="./image43.png" style="width:7.082677165354331in;height:3.2401574803149606in" />
+<img alt="" src="./image43.webp" style="width:7.082677165354331in;height:3.2401574803149606in" />
 
 Plėtiklis iO turi: 1 įėjimo, 1 išėjimo (relės kontaktai) gnybtus ir 1-Wire magistralę temperatūros jutiklio prijungimui.
 
@@ -744,7 +744,7 @@ Lentelėje įvykiams galima priskirti Contact ID, SIA, 4+2 įvykių ir atsistaty
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
-<img alt="" src="./image44.png" style="width:7.090551181102362in;height:2.15748031496063in" />
+<img alt="" src="./image44.webp" style="width:7.090551181102362in;height:2.15748031496063in" />
 
 - **COMMUNICATION** – pranešimas apie ryšio sutrikimą tarp centralės ir E16.
 
@@ -770,7 +770,7 @@ Galite pakeisti kiekvieno įvykio Contact ID kodą, taip pat su pranešimu nurod
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image45.png" style="width:7.082677165354331in;height:1.0275590551181102in" />
+<img alt="" src="./image45.webp" style="width:7.082677165354331in;height:1.0275590551181102in" />
 
 1.  <span id="_Toc169871370"></span>**Nuotolinis veikimo parametrų nustatymas**
 
@@ -787,7 +787,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 2.  Lauke **Nuotolinė prieiga** įveskite komunikatoriaus *MAC adresą*. Šį adresą rasite ant įrenginio pakuotės ir nugarėlės lipdukų.
 
-<img alt="" src="./image46.png" style="width:6.5984251968503935in;height:1.015748031496063in" />
+<img alt="" src="./image46.webp" style="width:6.5984251968503935in;height:1.015748031496063in" />
 
 3. (Nebūtina) Langelyje **Sistemos pavadinimas** įveskite norimą komunikatoriaus pavadinimą.
 
@@ -838,7 +838,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu **Programos naujinimas**.
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.177165354330709in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.177165354330709in" />
 
 4. Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
 
@@ -858,7 +858,7 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
 ## Priedas
 

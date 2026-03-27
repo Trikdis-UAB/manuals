@@ -5,7 +5,7 @@ pdf: rt2-original.pdf
 # ПРИЁМНЫЙ МОДУЛЬ RT2
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 
@@ -19,7 +19,7 @@ pdf: rt2-original.pdf
 
 • pulse 3/1, 4/1, 4/2.
 
-<img alt="" src="./image2.jpeg" style="width:6.375in;height:3.7708333333333335in" />
+<img alt="" src="./image2.webp" style="width:6.375in;height:3.7708333333333335in" />
 
 1 – жёлтый световой индикатор контроля телефонной линии;
 
@@ -228,25 +228,25 @@ MODULE RESET – служебное сообщение;
 >
 > Установка эксплуатационных параметров производится программатором SPROG-1 и программой GProg Соедините порт программирования модуля с программатором и включите программу установки параметров GProg.
 >
-> <img alt="" src="./image4.png" style="width:6.416666666666667in;height:4.8125in" />
+> <img alt="" src="./image4.webp" style="width:6.416666666666667in;height:4.8125in" />
 >
 > Выберите команду Setup→Serial port и установите номер порта компьютера, к которому подключён программатор.
 >
-> <img alt="" src="./image5.png" style="width:3.5833333333333335in;height:2.6770833333333335in" />
+> <img alt="" src="./image5.webp" style="width:3.5833333333333335in;height:2.6770833333333335in" />
 >
 > Выберите команду Devices→RI4010 и установите тип модуля RT2. Кнопкой
 >
 > [Read] считайте ранее установленные параметры.
 >
-> <img alt="" src="./image6.png" style="width:4.0in;height:3.0in" />
+> <img alt="" src="./image6.webp" style="width:4.0in;height:3.0in" />
 >
 > При работе в составе многоканального приёмника должен быть установлен выходной формат Surgard.
 >
 > Другие параметры, при необходимости, можно изменить. Новые параметры запишите в память модуля нажатием кнопки [Write].
 >
-> <img alt="" src="./image7.png" style="width:4.083333333333333in;height:3.0625in" />
+> <img alt="" src="./image7.webp" style="width:4.083333333333333in;height:3.0625in" />
 >
-> <img alt="" src="./image8.png" style="width:4.083333333333333in;height:3.0625in" />
+> <img alt="" src="./image8.webp" style="width:4.083333333333333in;height:3.0625in" />
 >
 > Приложение 1
 

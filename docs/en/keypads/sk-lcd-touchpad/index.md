@@ -3,7 +3,7 @@
 ## Keypad overview
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -89,7 +89,7 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 **<u>To reset two-wire fire (smoke) detectors:</u>**
 
-- Hold button <img src="./image2.png" style="width:0.3000in;" /> pressed for 3 seconds.
+- Hold button <img src="./image2.webp" style="width:0.3000in;" /> pressed for 3 seconds.
 
 > [!NOTE]
 > Two-wire fire detectors do not reset automatically after fire emergency detection. They can be reset only manually.

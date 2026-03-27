@@ -22,11 +22,11 @@ Siga el esquema de abajo para conectar el comunicador al panel:
 | DATA                    | DATA                 | KeyBus                  |
 
 
-<img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
+<img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.webp" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
 
 
 
-<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
+<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.webp" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
 
 
 ## Programación del panel de alarma Interlogix NX-4V2, Interlogix NX-6V2 mediante el teclado LCD
@@ -80,85 +80,85 @@ Usando el teclado del panel, entre en estas secciones y configúrelas como se in
 <div class="steps-grid">
   <div class="step-card">
         <strong>Paso 1.</strong> Pulse <strong>Agregar nuevo sistema</strong>.
-        <img src="../GT+ interlogix nx 4v2 1 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 1 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
   
  
   <div class="step-card">
         <strong>Paso 2.</strong> Introduzca el <strong>IMEI</strong> del comunicador, pulse <strong>Siguiente</strong>.
-        <img src="../GT+ interlogix nx 4v2 2 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 2 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 3.</strong> Seleccione la empresa de seguridad.
-        <img src="../GT+ interlogix nx 4v2 3 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 3 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 4.</strong> Elija <strong>Interlogix</strong>.
-        <img src="../GT+ interlogix nx 4v2 4 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 4 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
   
 
   <div class="step-card">
         <strong>Paso 5.</strong> Elija <strong>NX-4</strong> (<strong>NX-6</strong>).
-        <img src="../GT+ interlogix nx 4v2 5 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 5 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 6.</strong> Introduzca <strong>Object ID</strong> y <strong>Module ID</strong>, pulse <strong>Siguiente</strong>.
-        <img src="../GT+ interlogix nx 4v2 6 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 6 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 7.</strong> Espere mientras se escriben los datos.
-        <img src="../GT+ interlogix nx 4v2 7 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 7 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 8.</strong> Pulse <strong>Agregar a Protegus2</strong>.
-        <img src="../GT+ interlogix nx 4v2 8 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 8 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 9.</strong> Introduzca el <strong>Nombre</strong> del sistema, pulse <strong>Siguiente</strong>.
-        <img src="../GT+ interlogix nx 4v2 9 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 9 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 10.</strong> Pulse <strong>Saltar</strong>.
-        <img src="../GT+ interlogix nx 4v2 10 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 10 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 11.</strong> Pulse sobre el sistema.
-        <img src="../GT+ interlogix nx 4v2 11 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 11 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 12.</strong> Espere 1 minuto para completar y pulse <strong>Transferir</strong>.
-        <img src="../GT+ interlogix nx 4v2 12 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 12 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 13.</strong> Introduzca el correo electrónico del usuario al que el instalador transferirá el sistema. Pulse <strong>Transferir</strong>.
-        <img src="../GT+ interlogix nx 4v2 13 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 13 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 
   <div class="step-card">
         <strong>Paso 14.</strong> El sistema aparecerá en Protegus en el teléfono del usuario.
-        <img src="../GT+ interlogix nx 4v2 14 ENG 2025 12 31.png" alt="Agregar nuevo sistema">
+        <img src="../GT+ interlogix nx 4v2 14 ENG 2025 12 31.webp" alt="Agregar nuevo sistema">
   </div>
 
 

@@ -1,7 +1,7 @@
 # El controlador GATOR WiFi está diseñado para el control remoto de puertas automáticas (u otros equipos eléctricos)
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ##  Descripción 
@@ -84,7 +84,7 @@ Entradas y salidas
 
 5.  Botón para ingresar al modo de configuración de Wi-Fi.
 
-<img alt="" src="./image4.png" style="width:4.853343175853018in;height:2.8366721347331585in" />
+<img alt="" src="./image4.webp" style="width:4.853343175853018in;height:2.8366721347331585in" />
 
 ### Descripción del Bloque de Terminales 
 
@@ -157,13 +157,13 @@ Si el indicador LED no está funcionando, compruebe la alimentación y las conex
 
 5.  Cierre la tapa superior.
 
-<img alt="" src="./image5.png" style="width:3.937007874015748in;height:2.0551181102362204in" />
+<img alt="" src="./image5.webp" style="width:3.937007874015748in;height:2.0551181102362204in" />
 
 ### Esquema para la conexión de la fuente de alimentación 
 
 Usando cables, conectar el controlador GATOR WiFi de acuerdo con el esquema mostrado a continuación.
 
-<img alt="" src="./image6.png" style="width:3.36500656167979in;height:2.657505468066492in" />
+<img alt="" src="./image6.webp" style="width:3.36500656167979in;height:2.657505468066492in" />
 
 ### Esquema para la conexión del lector RFID (Wiegand 26/34) 
 
@@ -171,11 +171,11 @@ La configuración del controlador con un lector RFID se describe en el capítulo
 
 Esquema para conectar lector RFID al controlador GATOR WiFi.
 
-<img alt="" src="./image7.png" style="width:4.430008748906387in;height:3.9475076552930886in" />
+<img alt="" src="./image7.webp" style="width:4.430008748906387in;height:3.9475076552930886in" />
 
 En el programa TrikdisConfig, marque el campo del “**Modo lector Wiegand’**. Cuando presiona el botón "**Salir**", la salida 5OUT del controlador se activará durante la duración del pulso establecida.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.3897637795275593in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.3897637795275593in" />
 
 ### Esquema para la conexión del módulo expansor iO-LORA 
 
@@ -183,19 +183,19 @@ Versión del programa operativo del controlador a partir de la 1.21.
 
 Conecte el transceptor RF-LORA al GATOR WiFi. Después de esto, puedes utilizar el extensor iO-LORA con un lector RFID (Wiegand 26/34) conectado al controlador. El lector RFID controla la salida PGM de iO-LORA a la que está conectado. GATOR WiFi y 8 módulos iO-LORA conectados al controlador pueden controlar nueve puertas diferentes.
 
-<img alt="" src="./image9.png" style="width:7.086805555555555in;height:6.425in" />
+<img alt="" src="./image9.webp" style="width:7.086805555555555in;height:6.425in" />
 
 Ejecute TrikdisConfig. Conecte GATOR WiFi a su computadora mediante un cable USB Mini-B o de forma remota. Haga clic en el botón **Leer [F4]** en el programa TrikdisConfig para mostrar los valores actuales de los parámetros operativos del controlador. Si se le solicita, ingrese el código de administrador o instalador en el cuadro emergente. En la lista "**Módulo**", seleccione "**iO- LORA controlador**". Introduzca el número de serie del producto en el campo "**Núm. de serie**".
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.3661417322834646in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.3661417322834646in" />
 
 En la lista “**IN/OUT**”, configure “**6IN**” en “**Botón de salir**”. Cuando se presiona el botón "**Salir**", la salida "**OUT7**" de iO-LORA se activará durante la duración del pulso establecida.
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.65748031496063in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.65748031496063in" />
 
 En la lista "**Usuarios**", ingrese el número de tarjeta RFID, el nombre de usuario, habilite el permiso para controlar la PGM, especifique la PGM controlada y el código. Después de realizar los cambios, presione **Escribir [F5]**. Espere a que se completen las actualizaciones. Haga clic en "**Desconectar**" y desconecte el cable USB.
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 Activar la salida PGM con una tarjeta/código RFID. Presione el botón de salir (se debe activar la salida PGM).
 
@@ -203,19 +203,19 @@ Activar la salida PGM con una tarjeta/código RFID. Presione el botón de salir 
 
 El controlador GATOR WiFi tiene cuatro terminales de **I/O** universales (que se pueden configurar como entrada o salida) a los que se pueden conectar detectores de alarma. Se puede establecer el tipo de entrada: NC, NO, EOL. A continuación se muestran los esquemas de conexión de las entradas (NC, NO, EOL):
 
-<img alt="" src="./image13.png" style="width:6.316679790026247in;height:1.700003280839895in" />
+<img alt="" src="./image13.webp" style="width:6.316679790026247in;height:1.700003280839895in" />
 
 ### Esquema para la conexión del relé 
 
 Usando los terminales del relé, es posible controlar (encender/apagar) de forma remota varios dispositivos eléctricos. El terminal de I/O del controlador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image14.png" style="width:2.5400054680664916in;height:0.8875021872265967in" />
+<img alt="" src="./image14.webp" style="width:2.5400054680664916in;height:0.8875021872265967in" />
 
 ### Esquema para la conexión del LED 
 
 El terminal de I/O del controlador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image15.png" style="width:2.097504374453193in;height:0.7475010936132983in" />
+<img alt="" src="./image15.webp" style="width:2.097504374453193in;height:0.7475010936132983in" />
 
 ## Control vía aplicación Protegus2 
 
@@ -225,13 +225,13 @@ Con la aplicación Protegus2 usuarios podrán controlar de forma remota controla
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -247,55 +247,55 @@ Con la aplicación Protegus2 usuarios podrán controlar de forma remota controla
         verde sólido y parpadear en amarillo).
 Elija “**Añadir nuevo sistema**.
 
-<img alt="" src="./image22.png" style="width:2.7559055118110236in;height:2.7086614173228347in" />
+<img alt="" src="./image22.webp" style="width:2.7559055118110236in;height:2.7086614173228347in" />
 
 Introduzca el número de **ID único** (MAC) de controlador que se encuentra en el producto o en la etiqueta de los envases. Haga clic en "**Siguiente**".
 
-<img alt="" src="./image23.png" style="width:2.7559055118110236in;height:4.822834645669292in" />
+<img alt="" src="./image23.webp" style="width:2.7559055118110236in;height:4.822834645669292in" />
 
 Haga clic en "**Iniciar configuración WiFi WP17**".
 
-<img alt="" src="./image24.png" style="width:2.7559055118110236in;height:4.405511811023622in" />
+<img alt="" src="./image24.webp" style="width:2.7559055118110236in;height:4.405511811023622in" />
 
 Utilice un destornillador de punta plana para quitar la cubierta del GATOR WiFi. Mantenga presionado el botón “**PAIR**” durante 3 segundos. El indicador “**NETWORK**” comenzará a parpadear rápidamente en verde y amarillo. Suelte el botón. El controlador GATOR WiFi ha entrado en el modo de registro en la red WiFi.
 
-<img alt="" src="./image25.png" style="width:2.7559055118110236in;height:4.094488188976378in" />
+<img alt="" src="./image25.webp" style="width:2.7559055118110236in;height:4.094488188976378in" />
 
 Espere hasta que se encuentre el controlador GATOR WiFi (WP17). Haga clic en "**OK**".
 
-<img alt="" src="./image26.png" style="width:2.7559055118110236in;height:2.468503937007874in" />
+<img alt="" src="./image26.webp" style="width:2.7559055118110236in;height:2.468503937007874in" />
 
 Seleccione la red WiFi a la que se conectará el controlador GATOR WiFi.
 
-<img alt="" src="./image27.png" style="width:2.7559055118110236in;height:2.0078740157480315in" />
+<img alt="" src="./image27.webp" style="width:2.7559055118110236in;height:2.0078740157480315in" />
 
 Introduzca la contraseña de la red WiFi. Haga clic en "**OK**".
 
-<img alt="" src="./image28.png" style="width:2.7559055118110236in;height:2.468503937007874in" />
+<img alt="" src="./image28.webp" style="width:2.7559055118110236in;height:2.468503937007874in" />
 
 Haga clic en "**Conectar**".
 
-<img alt="" src="./image29.png" style="width:2.7559055118110236in;height:3.704724409448819in" />
+<img alt="" src="./image29.webp" style="width:2.7559055118110236in;height:3.704724409448819in" />
 
 Espere a que el controlador se conecte.
 
-<img alt="" src="./image30.png" style="width:2.7559055118110236in;height:2.405511811023622in" />
+<img alt="" src="./image30.webp" style="width:2.7559055118110236in;height:2.405511811023622in" />
 
 Introduzca el "**Nombre**" del sistema. Haga clic en "**Siguiente**".
 
-<img alt="" src="./image31.png" style="width:2.7559055118110236in;height:2.661417322834646in" />
+<img alt="" src="./image31.webp" style="width:2.7559055118110236in;height:2.661417322834646in" />
 
 Haga clic en "**Saltar**".
 
-<img alt="" src="./image32.png" style="width:2.7559055118110236in;height:3.921259842519685in" />
+<img alt="" src="./image32.webp" style="width:2.7559055118110236in;height:3.921259842519685in" />
 
 Espere 1 minuto. El controlador GATOR WiFi saldrá del modo de emparejamiento por sí solo después de unos minutos (o mantenga presionado el botón “**PAIR**” durante 3 segundos hasta que el indicador “**NETWORK**” deje de parpadear rápidamente en verde y amarillo).
 
-<img alt="" src="./image33.png" style="width:2.7559055118110236in;height:2.405511811023622in" />
+<img alt="" src="./image33.webp" style="width:2.7559055118110236in;height:2.405511811023622in" />
 
 Active la salida PGM haciendo clic en el icono “**Output5**”.
 
-<img alt="" src="./image34.png" style="width:2.7559055118110236in;height:1.9251968503937007in" />
+<img alt="" src="./image34.webp" style="width:2.7559055118110236in;height:1.9251968503937007in" />
 
 ## Agregar un Widget en su teléfono 
 
@@ -305,39 +305,39 @@ Coloque el dedo sobre la pantalla y manténgalo presionado. Aparecerá la barra 
 
 1.  Haga clic en “**Widgets**”.
 
-<img alt="" src="./image35.png" style="width:2.7559055118110236in;height:3.015748031496063in" />
+<img alt="" src="./image35.webp" style="width:2.7559055118110236in;height:3.015748031496063in" />
 
 Encuentra Protegus2 en la barra de opciones.
 
 2. Haga clic en Protegus2.
 
-<img alt="" src="./image36.png" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="" src="./image36.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 3. Haga clic en „**Switch Protegus2**“.
 
-<img alt="" src="./image37.png" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="" src="./image37.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 4. Elija controlador „**Gator WiFi Output5**“**.**
 
 2.  Haga clic en „ **AGREGAR WIDGET**“.
 
-<img alt="" src="./image38.png" style="width:2.7559055118110236in;height:1.9960629921259843in" />
+<img alt="" src="./image38.webp" style="width:2.7559055118110236in;height:1.9960629921259843in" />
 
 3. Aparecerá un icono en la pantalla del teléfono.
 
-<img alt="" src="./image39.png" style="width:2.7559055118110236in;height:3.1141732283464565in" />
+<img alt="" src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
 4. Regresa a la pantalla de inicio. Presiona el ícono.
 
-<img alt="" src="./image40.png" style="width:2.7559055118110236in;height:1.6456692913385826in" />
+<img alt="" src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
 Aparecerá en la pantalla un círculo que indica cuándo se activa el PGM.
 
-<img alt="" src="./image41.png" style="width:2.7559055118110236in;height:2.8818897637795278in" />
+<img alt="" src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
 5. Cuando el controlador está conectado al portón automático con indicación de estado de portón, el icono mostrará el estado de las puertas abiertas/cerradas.
 
-<img alt="" src="./image42.png" style="width:2.7559055118110236in;height:1.5393700787401574in" />
+<img alt="" src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
 ## Definición de los parámetros utilizando el software TrikdisConfig 
 
@@ -347,7 +347,7 @@ Con TrikdisConfig puede cambiar la configuración del controlador GATOR WiFi (si
 
 2.  Usando un destornillador de cabeza plana, retire la tapa de la controlador como se muestra a continuación:
 
-<img alt="" src="./image43.png" style="width:6.881889763779528in;height:1.8503937007874016in" />
+<img alt="" src="./image43.webp" style="width:6.881889763779528in;height:1.8503937007874016in" />
 
 1.  Conectar el controlador a un ordenador mediante un cable USB Mini-B.
 
@@ -371,7 +371,7 @@ Con TrikdisConfig puede cambiar la configuración del controlador GATOR WiFi (si
 
 Después de conectar el controlador GATOR WiFi al software TrikdisConfig, el software mostrará la información sobre el dispositivo conectado en la barra de estado:
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:0.5275590551181102in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.5275590551181102in" />
 
 | Nombre         | Descripción                                          |
 |----------------|------------------------------------------------------|
@@ -388,7 +388,7 @@ Cuando se hace clic en el botón **Leer [F4**], el programa leerá y mostrará l
 
 ### Ventana “Opciones de Sistema” 
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Grupo de ajustes “General”**
 
@@ -433,7 +433,7 @@ Cuando se hace clic en el botón **Leer [F4**], el programa leerá y mostrará l
 
 **Pestaña “IN/OUT”**
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.9448818897637796in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.9448818897637796in" />
 
 Ventana de configuración de entrada / salida.
 
@@ -476,7 +476,7 @@ Ventana de configuración de entrada / salida.
 
 **Pestaña “Agendario”**
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:2.0039370078740157in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:2.0039370078740157in" />
 
 Las salidas (OUT) se pueden controlar automáticamente de acuerdo con un programa establecido. Es necesario especificar la hora y los días de la semana, habilitar el horario y asignar un horario para la salida.
 
@@ -502,7 +502,7 @@ Las salidas (OUT) se pueden controlar automáticamente de acuerdo con un program
 
   Ingrese los días festivos durante los cuales será posible configurar la activación adicional de la salida (OUT) proporcionada en la tabla del “**Agendario**”.
 
-  <img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.7716535433070866in" />
+  <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.7716535433070866in" />
 - **En** – marque la casilla para incluir un intervalo de vacaciones específico.
 
 - **Fecta de inicio** – especificar la fecha de inicio de las vacaciones.
@@ -519,7 +519,7 @@ Los módulos iO-LORA se pueden conectar al controlador GATOR WiFi.
 
 Al conectar un transceptor RF-LORA, se pueden conectar hasta 8 expansores inalámbricos iO-LORA al controlador GATOR WiFi. Los lectores RFID conectados a los módulos expansores iO - LORA inalámbricos pueden controlar hasta 8 puertas más (programa operativo del controlador de puerta GATOR WiFi versión 1.21 o posterior). Un expansor iO-LORA con un lector RFID controla solo una puerta.
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 - **Módulo** - seleccione el módulo que está conectado al controlador.
 
@@ -527,7 +527,7 @@ Al conectar un transceptor RF-LORA, se pueden conectar hasta 8 expansores inalá
 
 ### Ventana “Reporte de IP” 
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:3.2244094488188977in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.2244094488188977in" />
 
 **Grupo de ajustes “Canal principal”**
 
@@ -565,7 +565,7 @@ Las configuraciones son idénticas a las del canal de comunicación principal.
 
 **Pestaña “Usuarios”**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 - **Correo electrónico** – introduzca la dirección de correo electrónico del usuario.
 
@@ -596,7 +596,7 @@ Las configuraciones son idénticas a las del canal de comunicación principal.
 
 - Asignar Agendario – al usuario se le asigna el número del horario (el número del horario y su configuración se establece en la pestaña "Agendario"), cuando el usuario puede controlar las salidas OUT.
 
-<img alt="" src="./image52.png" style="width:4.366141732283465in;height:3.484251968503937in" />
+<img alt="" src="./image52.webp" style="width:4.366141732283465in;height:3.484251968503937in" />
 
 - **Válido desde** – especificar la fecha y hora desde que el usuario puede controlar el controlador.
 
@@ -616,31 +616,31 @@ Las configuraciones son idénticas a las del canal de comunicación principal.
 
 Conecte el lector RFID al controlador (consulte la p.2.3 "Esquema para la conexión del lector RFID (Wiegand 26/34)"). Encienda el controlador. Conecte el cable USB Mini-B al controlador. En el programa TrikdisConfig, en la ventana "IN / OUT", marque el campo del “**Modo lector Wiegand”**.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.3897637795275593in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.3897637795275593in" />
 
 Haga clic en “**Registrar RFID”** en la ventana "Lista de usuarios".
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 Se abrirá la ventana de registro de colgantes RFID (tarjetas).
 
-<img alt="" src="./image54.png" style="width:2.7559055118110236in;height:2.0393700787401574in" />
+<img alt="" src="./image54.webp" style="width:2.7559055118110236in;height:2.0393700787401574in" />
 
 Conecte el colgante RFID (tarjeta) al lector RFID. Se abrirá una nueva ventana cuando el lector escanee el colgante (tarjeta). En él, ingrese el nombre de usuario y seleccione que “**El usuario puede controlar la salida PGM 5”**. Presione el botón “**AÑADIR”**. / Repita los pasos anteriores para agregar más tarjeta colgante RFID (tarjetas).
 
-<img alt="" src="./image55.png" style="width:2.7559055118110236in;height:2.468503937007874in" />
+<img alt="" src="./image55.webp" style="width:2.7559055118110236in;height:2.468503937007874in" />
 
 Cuando se complete el registro de todos los colgantes (tarjetas) RFID, presione el botón “**STOP el registro”**. / Presione el botón **Escribir [F5]** para guardar la lista pendiente de RFID en el controlador.
 
-<img alt="" src="./image56.png" style="width:2.7559055118110236in;height:2.2755905511811023in" />
+<img alt="" src="./image56.webp" style="width:2.7559055118110236in;height:2.2755905511811023in" />
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:2.0236220472440944in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.0236220472440944in" />
 
 Los colgantes RFID (tarjetas) se pueden registrar en TrikdisConfig ingresando sus números de identificación en el campo “**RFID código”**. Dé un “**Nombre”** al usuario, marque el campo “**En**.” y un campo de “**Salidas”** gestionadas. Presione el botón **Escribir [F5]** para guardar la lista de colgantes (tarjetas) RFID en el controlador.
 
 **Pestaña “Agendario”**
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.0196850393700787in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.0196850393700787in" />
 
 El usuario puede controlar las salidas de acuerdo con el “**Agendario”** establecido. El “**Agendario”** debe asignarse al usuario.
 
@@ -654,7 +654,7 @@ El usuario puede controlar las salidas de acuerdo con el “**Agendario”** est
 
 **Pestaña “Lista negra”**
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 La “**Lista negra”** contiene direcciones de correos electrónicos, números de ID del RFID colgante (tarjeta), que están excluidos de controlar el controlador.
 
@@ -662,7 +662,7 @@ Hay una manera fácil de agregar nuevos elementos a la lista negra directamente 
 
 ### Ventana “Registro de eventos” 
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:1.9645669291338583in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.9645669291338583in" />
 
 Haga clic en el botón “**Leer Registro”.** El registro de eventos se leerá desde la memoria del controlador. El registro de eventos proporciona información sobre las acciones del controlador y sus eventos internos.
 
@@ -670,7 +670,7 @@ Haga clic en el botón “**Leer Registro”.** El registro de eventos se leerá
 
 Conecte GATOR WiFi a su computadora mediante un cable USB Mini-B. Para restaurar la configuración a fábrica del controlador se necesita hacer clic en el botón “**Restaurar”** en la ventana del programa TrikdisConfig.
 
-<img alt="" src="./image61.png" style="width:7.086614173228346in;height:0.8818897637795275in" />
+<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:0.8818897637795275in" />
 
 ## Configuración de los parámetros de forma remota 
 
@@ -688,7 +688,7 @@ Conecte GATOR WiFi a su computadora mediante un cable USB Mini-B. Para restaurar
 
 3.  Poner en marcha el programa de configuración TrikdisConfig y en el campo “**ID único”** de la sección de acceso remoto introduzca el número MAC de su controlador (el número MAC se da en las etiquetas que se pueden encontrar en la parte inferior de la carcasa del dispositivo y en el embalaje).
 
-<img alt="" src="./image62.png" style="width:7.086614173228346in;height:2.074803149606299in" />
+<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:2.074803149606299in" />
 
 4. En el campo “**Nombre del sistema”** puede dar cualquier nombre a este controlador. Haga clic en “**Configuración”.**
 
@@ -727,7 +727,7 @@ El firmware del controlador GATOR WiFi también se puede actualizar y modificar 
 
 4.  Haga clic en el botón “**Abrir firmware”** y seleccione el archivo de firmware requerido;
 
-    <img alt="" src="./image63.png" style="width:7.086614173228346in;height:2.47244094488189in" />
+    <img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 5.  Haga clic en el botón **Actualizar [F12];**
 
@@ -743,4 +743,4 @@ Siempre desconecte la fuente de alimentación antes de realizar las conexiones e
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

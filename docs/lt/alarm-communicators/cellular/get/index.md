@@ -1,7 +1,7 @@
 # GSM/Ethernet komunikatorius GET
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Aprašymas
@@ -129,7 +129,7 @@ Veikia su Protegus2 programėle:
 
 9.  Lizdas RJ45 LAN kabelio prijungimui.
 
-<img alt="" src="./image4.png" style="width:4.926676509186351in;height:3.24000656167979in" />
+<img alt="" src="./image4.webp" style="width:4.926676509186351in;height:3.24000656167979in" />
 
 ### Išorinių kontaktų paskirtis
 
@@ -172,7 +172,7 @@ Veikia su Protegus2 programėle:
 
 ### Komunikatoriaus GET panaudojimo struktūrinė schema
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9in" />
 
 !!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
@@ -200,7 +200,7 @@ Veikia su Protegus2 programėle:
 
 2.  Plokščiu atsuktuvu nuimkite komunikatoriui dangtelį kaip parodyta žemiau:
 
-    <img alt="" src="./image6.png" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Su USB-C kabeliu sujunkite komunikatorių GET su kompiuteriu.
 
@@ -214,11 +214,11 @@ Veikia su Protegus2 programėle:
 
 **Lange „Centralės sąsaja“:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.6181102362204725in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.6181102362204725in" />
 
 1.  Jei komunikatorius prijungtas prie centralės TIP/RING gnybtų, tuomet reikia nustatyti „**AUTO**“.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0236220472440944in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0236220472440944in" />
 
 Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės.
 
@@ -237,7 +237,7 @@ Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba
     slaptažodį**".
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 4. Pažymėkite varnele „**Leisti prisijungti“** prie Protegus serviso.
 
@@ -245,13 +245,13 @@ Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba
 
 **Lange „Tinklo nustatymai“:**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.7834645669291338in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.7834645669291338in" />
 
 Šiuos nustatymus reikia atlikti, jei komunikatorius prijungtas prie LAN tinklo.
 
 3. Pažymėkite varnele **„Naudoti DHCP“** režimą, kad komunikatorius automatiškai nuskaitytų kompiuterinio tinklo nustatymus (potinklio kaukę, šliuzą) ir jam būtų priskirtas IP adresas.
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikti šiuos nustatymus.
 
@@ -265,7 +265,7 @@ Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikt
 
 **Lange „Pranešimai į CSP“:**
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.968503937007874in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.968503937007874in" />
 
 12. Parinkčių grupėje „**Siuntimo tvarka**“ nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP ir į Protegus2. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į CSP, tai grįžimą į pagrindinį ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
 
@@ -278,23 +278,23 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.4251968503937007in" />
+<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.4251968503937007in" />
 
 1.  Įrašykite „**Objekto numerį“ (Nenaudokite FFFE, FFFF objekto numerių**.**)**.
 
 **Lange „Centralės sąsaja“:**
 
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
+<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
 2. Jei komunikatorius prijungtas prie centralės TIP/RING gnybtų, tuomet reikia nustatyti „**AUTO**“.
 
-<img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.9606299212598426in" />
+<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
 
 3. Jei komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės. Pasirinkite „**Centralės modelį**“, kuris bus prijungtas prie komunikatoriaus.
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.354330708661417in" />
+<img alt="" src="./image16.webp" style="width:7.086614173228346in;height:3.354330708661417in" />
 
 4. **Ryšio būdas** – pasirinkite **IP** ryšio būdą.
 
@@ -310,19 +310,19 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 7.  (Rekomenduojama) Sukonfigūruokite „**Atsarginio kanalo režimo“** nustatymus.
 
-    <img alt="" src="./image17.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+    <img alt="" src="./image17.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 8.  Parinkčių grupėje „**Siuntimo tvarka**“ nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP ir į Protegus2. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į CSP, tai grįžimą į pagrindinį ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
 
 **Lange „Tinklo nustatymai“:**
 
-<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.7874015748031495in" />
+<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
 
 Šiuos nustatymus reikia atlikti, jei komunikatorius prijungtas prie LAN tinklo.
 
 12. Pažymėkite varnele **„Naudoti DHCP“** režimą, kad komunikatorius automatiškai nuskaitytų kompiuterinio tinklo nustatymus (potinklio kaukę, šliuzą) ir jam būtų priskirtas IP adresas.
 
-<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.87007874015748in" />
+<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.87007874015748in" />
 
 Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikti šiuos nustatymus.
 
@@ -359,9 +359,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 8.  Jei LAN tinklas bus naudojamas įvykiams perduoti į CSP, tai turi būti prijungtas LAN kabelis prie komunikatoriaus.
 
-<img alt="" src="./image20.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
+<img alt="" src="./image21.webp" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
 !!! note "Pastaba"
     Į komunikatorių galima įstatyti viena arba dvi SIM
@@ -374,17 +374,17 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
+<img alt="" src="./image22.webp" style="width:6.743347550306212in;height:2.8466721347331583in" />
 
-<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
+<img alt="" src="./image23.webp" style="width:6.803347550306212in;height:2.9000054680664915in" />
 
-<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
+<img alt="" src="./image24.webp" style="width:6.996680883639545in;height:2.8066721347331582in" />
 
-<img alt="" src="./image25.png" style="width:6.70001312335958in;height:3.0466732283464566in" />
+<img alt="" src="./image25.webp" style="width:6.70001312335958in;height:3.0466732283464566in" />
 
 ### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų)
 
-<img alt="" src="./image26.png" style="width:3.4033398950131235in;height:3.0466732283464566in" />
+<img alt="" src="./image26.webp" style="width:3.4033398950131235in;height:3.0466732283464566in" />
 
 Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/RING gnybtų, tuomet GET reikia nustatyti:
 
@@ -396,7 +396,7 @@ Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/R
 
 4.  Norėdami tiesiogiai valdyti centralę, įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, įvestu centralėje.
 
-<img alt="" src="./image27.png" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pultui ir nuotoliniam valdymui iš Protegus2.
 
@@ -420,11 +420,11 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su komunikatoriaus
     sistemos įjungimui/išjungimui su jungiklio zoną".
 Komunikatorius prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės. / Apsaugos įjungimas/išjungimas per jungiklio zoną
 
-<img alt="" src="./image28.png" style="width:3.16000656167979in;height:2.773338801399825in" />
+<img alt="" src="./image28.webp" style="width:3.16000656167979in;height:2.773338801399825in" />
 
 Komunikatorius yra prijungtas prie centralės telefono komunikatoriaus (TIP/RING gnybtų). / Apsaugos įjungimas / išjungimas per jungiklio zoną.
 
-<img alt="" src="./image29.png" style="width:3.48000656167979in;height:2.653338801399825in" />
+<img alt="" src="./image29.webp" style="width:3.48000656167979in;height:2.653338801399825in" />
 
 ### Įėjimo prijungimo schemos
 
@@ -432,15 +432,15 @@ Komunikatorius turi 2 universalius įėjimo/išėjimo gnybtus, kuriems galima nu
 
 NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image30.png" style="width:4.921259842519685in;height:1.5590551181102361in" />
+<img alt="" src="./image30.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
 
-<img alt="" src="./image31.png" style="width:4.921259842519685in;height:1.905511811023622in" />
+<img alt="" src="./image31.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
 
 ### Relės prijungimo schema
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
-<img alt="" src="./image32.png" style="width:2.1133377077865267in;height:0.92333552055993in" />
+<img alt="" src="./image32.webp" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
 ### Komunikatoriaus paleidimas veikti
 
@@ -534,7 +534,7 @@ Centralę turi būti prijungta prie interneto. Prisijunkite prie **Innerrange In
 
 Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupėje **3rd Party Device Reporting** reikia nustatyti:
 
-<img alt="" src="./image33.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image33.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – pažymėti šį lauką.
 
@@ -652,13 +652,13 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -678,27 +678,27 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GET PGM išėjim
 
 1.  Paspauskite „**Tęsti**“.
 
-<img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.559055118110236in" />
+<img alt="" src="./image42.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programėlę.
 
 2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
 3. Paspauskite „**Išsaugoti**“.
 
-<img alt="" src="./image43.png" style="width:2.220472440944882in;height:3.4960629921259843in" />
+<img alt="" src="./image43.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
 
 4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
 2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-<img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.031496062992126in" />
+<img alt="" src="./image44.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-<img alt="" src="./image45.png" style="width:2.220472440944882in;height:2.7125984251968505in" />
+<img alt="" src="./image45.webp" style="width:2.220472440944882in;height:2.7125984251968505in" />
 
 ## TrikdisConfig langų aprašymas
 
@@ -706,7 +706,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GET PGM išėjim
 
 Prijungus GET TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -724,7 +724,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:2.7992125984251968in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:2.7992125984251968in" />
 
 **Parinkčių grupė „Pagrindinės“**
 
@@ -748,7 +748,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas “Centralės sąsaja”
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:4.062992125984252in" />
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:4.062992125984252in" />
 
 **Parinkčių grupė „Tip/Ring sąsaja“**
 
@@ -764,7 +764,7 @@ Komunikatorius yra prijungtas prie centralės telefoninio komunikatoriaus gnybt�
 
 - **Dial tone dažnis -** dažnis, kuriuo komunikatorius palaiko ryšį su centrale per telefoninį komunikatorių.
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:1.9488188976377954in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
 
 **Parinkčių grupė „Data/CLK sąsaja“**
 
@@ -784,7 +784,7 @@ Komunikatorius prie centralės yra prijungtas per nuosekliąją sąsają.
 
 **Skirtukas „CSP nustatymai“**
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:3.3661417322834644in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
 
 Pranešimai gali būti siunčiami keliais ryšio kanalais. Pirmas ir antras ryšio kanalai gali veikti lygiagrečiai, taip komunikatorius gali siųsti įvykius tuo pačiu metu į du imtuvus. Tiek pirmam, tiek ir antram kanalui galima priskirti atsarginį ryšio kanalą, kuris bus naudojamas nutrūkus ryšiui pirminiu kanalu.
 
@@ -816,7 +816,7 @@ Pranešimai į stebėjimo pultą perduodami užkoduoti ir apsaugoti slaptažodž
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:2.5866141732283463in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.5866141732283463in" />
 
 **Parinkčių grupė „Parametrai“**
 
@@ -852,7 +852,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP ir į Protegu
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:1.9881889763779528in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -867,7 +867,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 **Skirtukas „LAN“**
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.322834645669291in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
 
 Šiuos nustatymus reikia atlikti jei komunikatorius yra prijungtas prie LAN tinklo.
 
@@ -888,7 +888,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 !!! note "Pastaba"
     1\. Prieš naudodami SIM kortelę, įsitikinkite, ar ji aktyvuota. / 2.
     Patikrinkite, ar įjungta mobiliųjų duomenų perdavimo paslauga.
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Šiuos nustatymus reikia atlikti jei į komunikatoriaus SIM1 lizdą yra įstatyta SIM kortelė.
 
@@ -908,7 +908,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 **Skirtukas „SIM2“**
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.874015748031496in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
 
 Šiuos nustatymus reikia atlikti jei į komunikatoriaus SIM2 lizdą yra įstatyta SIM kortelė.
 
@@ -928,7 +928,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 ### Langas „IN/OUT“
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.456692913385827in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.456692913385827in" />
 
 Komunikatorius turi 2 universalius (įėjimo/išėjimo) gnybtus. Lentelėje galima nustatyti gnybtui veikimo režimą (Išjungta, IN, OUT). Įėjimui reikia nurodyti prijungiamos grandinės tipą NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL.
 
@@ -950,7 +950,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:2.12992125984252in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.12992125984252in" />
 
 - **COMMUNICATION** – pranešimas apie ryšio sutrikimą tarp centralės ir GET.
 
@@ -980,7 +980,7 @@ Galite pakeisti kiekvieno įvykio Contact ID (SIA) kodą, taip pat su pranešimu
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:0.968503937007874in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:0.968503937007874in" />
 
 Kitas būdas atkurti gamyklinius nustatymus.
 
@@ -1006,7 +1006,7 @@ Maitinimas prijungtas prie komunikatoriaus. Paspauskite ir palaikykite mygtuką 
 
 2.  Lauke „**Nuotolinė prieiga“** įveskite komunikatoriaus *IMEI/Unikalus ID* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipduko.
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.8622047244094486in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
 
 3. (Nebūtina) Langelyje „**Sistemos pavadinimas“** įveskite norimą komunikatoriaus pavadinimą.
 
@@ -1053,7 +1053,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu „**Programos atnaujinimas“**.
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:2.5354330708661417in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:2.5354330708661417in" />
 
 4. Paspauskite mygtuką „**Atverti failą“** ir parinkite reikiamą programinės įrangos bylą.
 
@@ -1071,7 +1071,7 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
 ## Priedas
 

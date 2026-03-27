@@ -1,7 +1,7 @@
 # GSM komunikatorius G16
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Aprašymas
@@ -138,7 +138,7 @@ Veikia su Protegus programėle:
 
 6.  SIM kortelės laikiklis.
 
-<img alt="" src="./image4.png" style="width:4.7933431758530185in;height:3.19000656167979in" />
+<img alt="" src="./image4.webp" style="width:4.7933431758530185in;height:3.19000656167979in" />
 
 ### Išorinių kontaktų paskirtis
 
@@ -181,7 +181,7 @@ Veikia su Protegus programėle:
 
 ### GSM komunikatoriaus G16 panaudojimo struktūrinė schema
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:3.022222222222222in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:3.022222222222222in" />
 
 !!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
@@ -209,7 +209,7 @@ Veikia su Protegus programėle:
 
 2.  Plokščiu atsuktuvu nuimkite G16 dangtelį kaip parodyta žemiau:
 
-    <img alt="" src="./image6.png" style="width:6.7204724409448815in;height:1.779527559055118in" />
+    <img alt="" src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
 
 3.  Su USB Mini-B kabeliu sujunkite G16 su kompiuteriu.
 
@@ -223,7 +223,7 @@ Veikia su Protegus programėle:
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image7.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
@@ -238,7 +238,7 @@ Veikia su Protegus programėle:
     download/UDL slaptažodį.
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
 
 4. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -246,7 +246,7 @@ Veikia su Protegus programėle:
 
 **Lange „SIM kortelė“:**
 
-<img alt="" src="./image9.png" style="width:7.090551181102362in;height:2.1496062992125986in" />
+<img alt="" src="./image9.webp" style="width:7.090551181102362in;height:2.1496062992125986in" />
 
 3. Įveskite **SIM kortelės PIN kodą**.
 
@@ -261,7 +261,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Įrašykite **Objekto numerį (Nenaudokite FFFE, FFFF objekto numerių**.**)**.
 
@@ -269,7 +269,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Lange „Siuntimas į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image11.png" style="width:7.082677165354331in;height:3.8307086614173227in" />
+<img alt="" src="./image11.webp" style="width:7.082677165354331in;height:3.8307086614173227in" />
 
 3. **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminio kanalo).
 
@@ -296,7 +296,7 @@ Lange „Siuntimas į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“
 
 **Lange „SIM kortelė“:**
 
-<img alt="" src="./image12.png" style="width:7.090551181102362in;height:2.1377952755905514in" />
+<img alt="" src="./image12.webp" style="width:7.090551181102362in;height:2.1377952755905514in" />
 
 11. Įveskite **SIM kortelės PIN** kodą.
 
@@ -325,9 +325,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image13.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image13.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image14.png" style="width:2.748031496062992in;height:1.1811023622047243in" />
+<img alt="" src="./image14.webp" style="width:2.748031496062992in;height:1.1811023622047243in" />
 
 !!! note "Pastaba"
     Įsitikinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
@@ -339,15 +339,15 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image15.png" style="width:7.085014216972878in;height:2.8525054680664916in" />
+<img alt="" src="./image15.webp" style="width:7.085014216972878in;height:2.8525054680664916in" />
 
-<img alt="" src="./image16.png" style="width:7.085014216972878in;height:2.8925054680664917in" />
+<img alt="" src="./image16.webp" style="width:7.085014216972878in;height:2.8925054680664917in" />
 
-<img alt="" src="./image17.png" style="width:7.085014216972878in;height:2.6825054680664917in" />
+<img alt="" src="./image17.webp" style="width:7.085014216972878in;height:2.6825054680664917in" />
 
-<img alt="" src="./image18.png" style="width:7.085014216972878in;height:2.8675054680664918in" />
+<img alt="" src="./image18.webp" style="width:7.085014216972878in;height:2.8675054680664918in" />
 
-<img alt="" src="./image19.png" style="width:3.25500656167979in;height:2.6825054680664917in" />
+<img alt="" src="./image19.webp" style="width:3.25500656167979in;height:2.6825054680664917in" />
 
 ### G16 prijungimo schema prie centralės jungiklio (angl. keyswitch) zonos
 
@@ -361,7 +361,7 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su G16 PGM išėji
     Protegus reikia padaryti nustatymus, kurie aprašyti
     p. 5.2 „Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio
     zoną".
-<img alt="" src="./image20.png" style="width:3.56500656167979in;height:2.2400043744531932in" />
+<img alt="" src="./image20.webp" style="width:3.56500656167979in;height:2.2400043744531932in" />
 
 ### Įėjimo prijungimo schemos
 
@@ -369,9 +369,9 @@ Komunikatorius turi vieną įėjimo gnybtą (IN1) prijungti NC, NO, NO/EOL, NC/E
 
 NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image21.png" style="width:4.921259842519685in;height:1.5590551181102361in" />
+<img alt="" src="./image21.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
 
-<img alt="" src="./image22.png" style="width:4.921259842519685in;height:1.905511811023622in" />
+<img alt="" src="./image22.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
@@ -381,25 +381,25 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus.
 
-<img alt="" src="./image23.png" style="width:2.552505468066492in;height:0.9575021872265966in" />
+<img alt="" src="./image23.webp" style="width:2.552505468066492in;height:0.9575021872265966in" />
 
 ### iO serijos plėtimo modulių prijungimo schemos
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. G16 konfigūravimas su plėtimo moduliais aprašytas p. 6.6. „Langas „RS485 moduliai“.
 
-<img alt="" src="./image24.png" style="width:7.0875in;height:3.4375in" />
+<img alt="" src="./image24.webp" style="width:7.0875in;height:3.4375in" />
 
 ### WiFi modulio W485 prijungimo schema
 
 Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *G16* pranešimai į CSP ir į *Protegus* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *G16* pradeda toliau siusti pranešimus per *W485*. / *G16* konfigūravimas su WiFi moduliu *W485* aprašytas p. 6.6. „Langas „RS485 moduliai“. / Komunikatoriuje *G16* turi būti įstatyta SIM kortelė, kad veiktu *W485*.
 
-<img alt="" src="./image25.png" style="width:3.24250656167979in;height:2.3200043744531933in" />
+<img alt="" src="./image25.webp" style="width:3.24250656167979in;height:2.3200043744531933in" />
 
 ### „Ethernet“ modulio E485 prijungimo schema
 
 Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *G16* pranešimai į CSP ir į *Protegus* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *G16* pradeda toliau siusti pranešimus per *E485*. / *G16* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 6.6. „Langas „RS485 moduliai“. / Komunikatoriuje *G16* turi būti įstatyta SIM kortelė, kad veiktu *E485.*
 
-<img alt="" src="./image26.png" style="width:3.22500656167979in;height:2.325004374453193in" />
+<img alt="" src="./image26.webp" style="width:3.22500656167979in;height:2.325004374453193in" />
 
 ### Komunikatoriaus paleidimas veikti
 
@@ -492,7 +492,7 @@ Centralę turi būti prijungta prie interneto. Prisijunkite prie **Innerrange In
 
 Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupėje **3rd Party Device Reporting** reikia nustatyti:
 
-<img alt="" src="./image27.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image27.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – pažymėti šį lauką.
 
@@ -532,13 +532,13 @@ Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. J
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -558,7 +558,7 @@ Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. J
         geltonai).
 3. Paspauskite **Pridėti sistemą** ir įveskite G16 „*IMEI/Unikalus ID*“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
-    <img alt="" src="./image34.png" style="width:6.326771653543307in;height:1.9015748031496063in" />
+    <img alt="" src="./image34.webp" style="width:6.326771653543307in;height:1.9015748031496063in" />
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
@@ -569,15 +569,15 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16 PGM išėjim
 
 1.  Naujame lange šoniniame meniu spustelėkite „**Sritys**“. Atsidariusiame lange nurodykite, kiek signalizacijos sričių (1 arba 2) yra sistemoje ir paspauskite „**Toliau**“.
 
-    <img alt="" src="./image35.png" style="width:7.086614173228346in;height:2.354330708661417in" />
+    <img alt="" src="./image35.webp" style="width:7.086614173228346in;height:2.354330708661417in" />
 
 2.  Naujame lange nurodykite, koks yra kiekvienos iš nurodytų sričių numeris sistemoje ir spustelėkite „**Išsaugoti**“.
 
-<img alt="" src="./image36.png" style="width:7.086614173228346in;height:2.7086614173228347in" />
+<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.7086614173228347in" />
 
 3. Šoniniame meniu paspauskite „Nustatymai“ ir atsidariusiame lange paspauskite „Nustatymai“. Pažymėkite varnele „**Naudoti PGM sistemos Įjungimui/išjungimui**“ ir nurodykite, kurią sritį valdys išėjimas. Vienas G16 PGM išėjimas gali būti skirtas vienos srities valdymui (1 PGM - 1 sritis; 2 PGM - 2 sritis).
 
-<img alt="" src="./image37.png" style="width:7.1141732283464565in;height:3.574803149606299in" />
+<img alt="" src="./image37.webp" style="width:7.1141732283464565in;height:3.574803149606299in" />
 
 4. Pasirinkite **Lygis** arba **Impulsas**, priklausomai nuo to, koks centralės jungiklio zonos (angl. keyswitch) tipas. Taip pat galite pakeisti impulso intervalo trukmę, jei tai reikalinga prijungiamai centralei.
 
@@ -591,7 +591,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16 PGM išėjim
 
 3.  Paprašius, įveskite vartotojo kodą arba Protegus slaptažodį.
 
-<img alt="" src="./image38.png" style="width:7.1141732283464565in;height:3.751968503937008in" />
+<img alt="" src="./image38.webp" style="width:7.1141732283464565in;height:3.751968503937008in" />
 
 ### Konfigūravimas ir valdymas SMS žinutėmis
 
@@ -628,7 +628,7 @@ Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys pr
 
 Prijungus G16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image39.png" style="width:7.070866141732283in;height:0.5905511811023622in" />
+<img alt="" src="./image39.webp" style="width:7.070866141732283in;height:0.5905511811023622in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -646,7 +646,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“
 
-<img alt="" src="./image40.png" style="width:7.082677165354331in;height:3.0551181102362204in" />
+<img alt="" src="./image40.webp" style="width:7.082677165354331in;height:3.0551181102362204in" />
 
 Parinkčių grupė „Pagrindinės“
 
@@ -680,7 +680,7 @@ Parinkčių grupė „Prisijungimas“
 
 **Skirtukas „CSP parametrai“**
 
-<img alt="" src="./image41.png" style="width:7.082677165354331in;height:4.047244094488189in" />
+<img alt="" src="./image41.webp" style="width:7.082677165354331in;height:4.047244094488189in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per internetą (IP) arba SMS pranešimais.
 
@@ -730,7 +730,7 @@ SMS pranešimai bus siunčiami į stebėjimo pulto SMS imtuvą: 1) iš karto, pr
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image42.png" style="width:7.090551181102362in;height:2.877952755905512in" />
+<img alt="" src="./image42.webp" style="width:7.090551181102362in;height:2.877952755905512in" />
 
 Parinkčių grupė „Parametrai“
 
@@ -763,7 +763,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image43.png" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="" src="./image43.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -775,7 +775,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 **Skirtukas “SMS ir skambučiai”**
 
-<img alt="" src="./image44.png" style="width:7.082677165354331in;height:3.854330708661417in" />
+<img alt="" src="./image44.webp" style="width:7.082677165354331in;height:3.854330708661417in" />
 
 Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešimais arba skambučiu.
 
@@ -793,7 +793,7 @@ Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešim
 
 **Skirtukas “Valdymas SMS žinutėmis”**
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba pakeis nustatymus. Valdymo SMS komandas rasite skyriuje **5.4 „Konfigūravimas ir valdymas SMS žinutėmis“**.
 
@@ -813,7 +813,7 @@ Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba p
     bus naudojamas mobilusis interneto ryšys pranešimams perduoti IP kanalu
     į saugos tarnybos imtuvą arba į Protegus, patikrinkite, ar įjungta
     mobiliųjų duomenų perdavimo paslauga.
-<img alt="" src="./image46.png" style="width:7.082677165354331in;height:2.3070866141732282in" />
+<img alt="" src="./image46.webp" style="width:7.082677165354331in;height:2.3070866141732282in" />
 
 Parinkčių grupė „SIM kortelė“
 
@@ -828,7 +828,7 @@ Parinkčių grupė „SIM kortelė“
 
 Prie komunikatoriaus galima prijungti **iO** serijos plėtiklius, kuriais pridėsite papildomus įėjimus, valdomus išėjimus ir magistralę temperatūros jutikliams. Prijungti plėtikliai turi būti įtraukti į **Modulių sąrašo** lentelę.
 
-<img alt="" src="./image47.png" style="width:7.090551181102362in;height:2.377952755905512in" />
+<img alt="" src="./image47.webp" style="width:7.090551181102362in;height:2.377952755905512in" />
 
 Parinkčių grupė „RS485 moduliai“
 
@@ -846,7 +846,7 @@ Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 mod
 
 **iO-8 plėtiklio nustatymų langas**
 
-<img alt="" src="./image48.png" style="width:7.082677165354331in;height:2.5236220472440944in" />
+<img alt="" src="./image48.webp" style="width:7.082677165354331in;height:2.5236220472440944in" />
 
 Plėtiklis iO-8 turi 8 universalius (įėjimo/išėjimo) gnybtus. Galima prijungti keturis iO-8 plėtiklius.
 
@@ -888,7 +888,7 @@ Kad vartotojams apie įėjimų suveikimus būtų siunčiami SMS pranešimai arba
 
 **iO plėtiklio nustatymų langas**
 
-<img alt="" src="./image49.png" style="width:7.082677165354331in;height:3.295275590551181in" />
+<img alt="" src="./image49.webp" style="width:7.082677165354331in;height:3.295275590551181in" />
 
 Plėtiklis iO turi: 1 įėjimo, 1 išėjimo (relės kontaktai) gnybtus ir 1-Wire magistralę temperatūros jutiklių prijungimui.
 
@@ -902,7 +902,7 @@ Lentelėje įvykiams galima priskirti Contact ID įvykių ir atsistatymo kodus. 
 
 #### WiFi modulio W485 nustatymų langas
 
-<img alt="" src="./image50.png" style="width:7.078740157480315in;height:3.125984251968504in" />
+<img alt="" src="./image50.webp" style="width:7.078740157480315in;height:3.125984251968504in" />
 
 - **DHCP režimas** – WiFi modulio registracijos tinkle rėžimas (rankinis (Statinis) arba automatinis (DHCP)).
 
@@ -925,7 +925,7 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
     *G16* turi būti įstatyta SIM kortelė, kad veiktu *W485.***
 #### „Ethernet“ modulio E485 nustatymų langas
 
-<img alt="" src="./image51.png" style="width:7.078740157480315in;height:3.12992125984252in" />
+<img alt="" src="./image51.webp" style="width:7.078740157480315in;height:3.12992125984252in" />
 
 - **DHCP režimas** – „Ethernet“ modulio registracijos tinkle rėžimas (rankinis (Statinis) arba automatinis (DHCP)).
 
@@ -946,7 +946,7 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
-<img alt="" src="./image52.png" style="width:7.082677165354331in;height:2.2874015748031495in" />
+<img alt="" src="./image52.webp" style="width:7.082677165354331in;height:2.2874015748031495in" />
 
 - **COMMUNICATION** – pranešimas apie ryšio sutrikimą tarp centralės ir G16.
 
@@ -978,7 +978,7 @@ Galite pakeisti kiekvieno įvykio Contact ID kodą, taip pat su pranešimu nurod
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:0.9881889763779528in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:0.9881889763779528in" />
 
 1.  <span id="_Toc69722055"></span>**Nuotolinis veikimo parametrų nustatymas**
 
@@ -998,7 +998,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 2.  Lauke **Nuotolinė prieiga** įveskite komunikatoriaus *IMEI/Unikalus ID* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipdukų.
 
-<img alt="" src="./image54.png" style="width:6.5984251968503935in;height:1.015748031496063in" />
+<img alt="" src="./image54.webp" style="width:6.5984251968503935in;height:1.015748031496063in" />
 
 3. (Nebūtina) Langelyje **Sistemos pavadinimas** įveskite norimą komunikatoriaus pavadinimą.
 
@@ -1044,7 +1044,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu **Programos naujinimas**.
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:3.1811023622047245in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:3.1811023622047245in" />
 
 4. Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
 
@@ -1064,7 +1064,7 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
 ## Priedas
 

@@ -1,7 +1,7 @@
 # iO-LORA Expansor inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="200">
+  <img src="./image3.webp" alt="" width="200">
 </div>
 
 ## Descripción 
@@ -51,7 +51,7 @@ Entradas y salidas:
 
 ### Elementos expansores 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 ### Descripción del Bloque de Terminales 
 
@@ -87,7 +87,7 @@ Entradas y salidas:
 
 1.  Retire la tapa superior.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Retire la placa PCB.
 
@@ -97,11 +97,11 @@ Entradas y salidas:
 
 5.  Cierre la tapa superior.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Esquema para la conexión de la fuente de alimentación 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Esquema para la entrada de conexión 
 
@@ -109,10 +109,10 @@ iO-LORA tiene una entrada. El tipo de entrada se puede configurar: NC, NO.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -120,7 +120,7 @@ iO-LORA tiene una entrada. El tipo de entrada se puede configurar: NC, NO.
 
 Los sensores de temperatura deben conectarse de acuerdo con el diagrama provisto. Los sensor de temperatura Max®/Dallas® DS18S20, DS18B20 (1 und.) se pueden conectar al expansor *iO- LORA*. Si se utiliza un cable mayor a 0.5 metros para conectar un sensor de temperatura, recomendamos utilizar un cable de par trenzado (UTP4x2x0.5 o STP4x2x0.5). / La terminal „+5V” en la placa sirve para alimentar dispositivos conectados al bus de datos "1-Wire" con voltaje de 5 V DC.
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 La corriente de salida máxima es de 0.2 A. La salida está protegida de sobrecargas. Si se excede la corriente máxima permitida, la alimentación se apagará automáticamente. El panel de control "FLEXi" SP3 reconoce y registra automáticamente el sensor de temperatura conectado.
 
@@ -128,11 +128,11 @@ La corriente de salida máxima es de 0.2 A. La salida está protegida de sobreca
 
 El lector iButton **CZ-Dallas** se conecta al iO-LORA utilizando el bus de datos "**1 Wire**". La longitud de los cables que se conectan al bus de datos puede ser de hasta 30 m.
 
-<img alt="" src="./image11.png" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### Esquema de conexión de los módulos iO-LORA 
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Se debe conectar un transceptor RF-LORA al panel de control
@@ -159,19 +159,19 @@ El lector iButton **CZ-Dallas** se conecta al iO-LORA utilizando el bus de datos
 
 8.  En el campo "**Núm. de Serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  En la pestaña "**Zonas**", configure la entrada del expansor.
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. En la pestaña "**PGM**", realice los ajustes para la salida PGM del expansor.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Los sensores de temperatura se incluirán en la lista de "**Sensores**" si se conecta un sensor de temperatura al expansor iO-LORA.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Una vez que se finalice la configuración, haz clic en el botón **Escribir [F5]**.
 
@@ -187,6 +187,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.png" style="display: inline; height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

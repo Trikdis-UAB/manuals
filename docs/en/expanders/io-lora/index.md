@@ -1,7 +1,7 @@
 # iO-LORA Wireless Expander
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="200">
+  <img src="./image3.webp" alt="" width="200">
 </div>
 
 ## Description 
@@ -51,7 +51,7 @@ Connection:
 
 ### Expander elements 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 ### Purpose of terminals 
 
@@ -87,7 +87,7 @@ Connection:
 
 1.  Remove the top lid.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Remove the PCB board.
 
@@ -97,11 +97,11 @@ Connection:
 
 5.  Close the top lid.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Schematic for connecting the power supply 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Schematic for connecting input 
 
@@ -109,10 +109,10 @@ iO-LORA has one input. Input type can be set: NC, NO.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -120,7 +120,7 @@ iO-LORA has one input. Input type can be set: NC, NO.
 
 Temperature sensors should be connected according to the given schematic. Maxim®/Dallas® DS18S20, DS18B20 temperature sensor (1 pcs.) can be connected to the *iO-LORA* wireless expander. / If a wire longer than 0,5 meters is used to connect a temperature sensor, we recommend using twisted pair cable (UTP4x2x0,5 or STP4x2x0,5). / The „+5V” terminal on the board is for supplying devices connected to the "1-Wire" data bus with 5 V DC voltage.
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 The maximum output current is 0,2 A. The output is protected from overload. If the maximum allowed current is exceeded, the power will automatically be switched off. The "FLEXi" SP3 control panel automatically recognizes and links connected temperature sensor.
 
@@ -128,11 +128,11 @@ The maximum output current is 0,2 A. The output is protected from overload. If t
 
 The **CZ-Dallas** iButton key reader connects to the iO-LORA using the "**1 Wire**" data bus. The length of the wires connecting to the data bus can be up to 30 m.
 
-<img alt="" src="./image11.png" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### Schematics for connecting iO-LORA modules 
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     An RF-LORA transceiver must be connected to the "FLEXi"
@@ -159,19 +159,19 @@ The **CZ-Dallas** iButton key reader connects to the iO-LORA using the "**1 Wire
 
 8.  In the "**Serial No.**" field, enter the serial number of the module iO-LORA.
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  In the "**Zones**" tab, make settings for the expander's input.
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. In the "**PGM**" tab, configure the expander's PGM output.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Temperature sensors will be included in the "**Sensors**" list if a temperature sensor is connected to the iO-LORA expander.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Once configuration is complete, click the **Write [F5]** button.
 
@@ -189,4 +189,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.png" style="display: inline; height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.

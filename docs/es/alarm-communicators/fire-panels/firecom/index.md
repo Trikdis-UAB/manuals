@@ -1,7 +1,7 @@
 # Comunicador FIRECOM para paneles de alarma contra incendios
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción 
@@ -119,7 +119,7 @@ Envía eventos al receptor en una CRA
 
 ### Elementos del comunicador FIRECOM 
 
-<img src="./image4.png" alt="Elementos del comunicador FIRECOM" style="width: 100%; height: auto;" />
+<img src="./image4.webp" alt="Elementos del comunicador FIRECOM" style="width: 100%; height: auto;" />
 
 1. Indicadores luminosos
 2. Botón
@@ -231,11 +231,11 @@ Si ocurriesen problemas con la alimentación del sistema desde la fuente de alim
 
 La figura muestra las dimensiones de la placa y sus orificios de montaje. Las dimensiones están en milímetros.
 
-<img alt="" src="./image5.png" style="width:6.080012029746282in;height:4.020007655293089in" />
+<img alt="" src="./image5.webp" style="width:6.080012029746282in;height:4.020007655293089in" />
 
 ### Orden de conexión de dispositivos 
 
-<img alt="" src="./image6.png" style="width:7.086805555555555in;height:3.709722222222222in" />
+<img alt="" src="./image6.webp" style="width:7.086805555555555in;height:3.709722222222222in" />
 
 1.  Si está utilizando una tarjeta SIM, inserta una tarjeta SIM activada en el soporte de la tarjeta SIM.
 
@@ -259,34 +259,34 @@ La placa del comunicador tiene 10 terminales IO1-IO10 (zonas) para conectar sens
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
-  </figure>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-  <figure style="margin: 0;">
-    <img src="./image10.png" alt="" style="width: 100%; height: auto;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+  </figure>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -296,17 +296,17 @@ Diagramas de cableado para detectores de incendios de dos cables.
 
 Conexión de detectores de incendio de dos hilos a salida "**FLOOP**". Si se utiliza este esquema de conexión, es necesario especificar la entrada "**2-Wire loop (FLOOP)**" en la ventana "Zonas" para la entrada (IOx). La corriente de activación del detector de incendios debe ser superior a 10 mA. Se pueden conectar hasta 8 detectores de incendios a la salida “**FLOOP**“.
 
-<img alt="" src="./image15.png" style="width:5.006676509186351in;height:1.2766688538932633in" />
+<img alt="" src="./image15.webp" style="width:5.006676509186351in;height:1.2766688538932633in" />
 
 Diagrama de cableado para detectores de incendios de dos hilos con módulo de relé SM1. Para conectar el circuito del detector de humo a la entrada seleccionada, es necesario activar la entrada (IOx) y configurar el tipo de circuito (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (ver párrafo 6.6 “Ventana "Zonas"”). La salida (IO10) debe configurarse en el modo de funcionamiento "**Sensor de fuego reiniciado**" (consulte la sección 6.7 "Ventana "PGM"").
 
 \* El relé (K1) se utiliza para detectar un cable roto y retirar el detector de incendios. Si no se utiliza un relé (K1), se debe cortocircuitar el contacto K1.
 
-<img alt="" src="./image16.png" style="width:5.880012029746282in;height:2.08667104111986in" />
+<img alt="" src="./image16.webp" style="width:5.880012029746282in;height:2.08667104111986in" />
 
 o
 
-<img alt="" src="./image17.png" style="width:5.880012029746282in;height:2.29667104111986in" />
+<img alt="" src="./image17.webp" style="width:5.880012029746282in;height:2.29667104111986in" />
 
 Conexión de detectores de incendios de cuatro hilos.
 
@@ -314,16 +314,16 @@ Para conectar un circuito de detector de humo a la entrada seleccionada, debe ac
 
 \* El relé (K1) se utiliza para detectar un cable roto y retirar el detector de incendios. Si no se utiliza un relé (K1), se debe cortocircuitar el contacto K1.
 
-<img alt="" src="./image18.png" style="width:5.943345363079615in;height:1.440003280839895in" />
+<img alt="" src="./image18.webp" style="width:5.943345363079615in;height:1.440003280839895in" />
 
 ### Diagrama para conectar el comunicador a un panel de control de incendios 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image19.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image20.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -333,10 +333,10 @@ Si desea monitorear el estado del panel de alarma contra incendios, conecte sus 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -348,19 +348,19 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 3.  El comunicador FIRECOM y el panel de control de incendios deben tener la misma configuración de transmisión de datos.
 
-<img alt="" src="./image23.png" style="width:7.086614173228346in;height:3.7559055118110236in" />
+<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7559055118110236in" />
 
 4. Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
 
-<img alt="" src="./image24.png" style="width:7.086614173228346in;height:1.547244094488189in" />
+<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.547244094488189in" />
 
 5. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image25.png" style="width:7.086614173228346in;height:3.8307086614173227in" />
+<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.8307086614173227in" />
 
 6. Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. Los mensajes de eventos se transmiten utilizando el protocolo SIA DC-09.
 
-<img alt="" src="./image26.png" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
@@ -368,10 +368,10 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image27.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image28.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -381,19 +381,19 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 2.  La “**NSC slavе address**” no debe coincidir con la dirección de los módulos del panel de control de incendios conectados.
 
-<img alt="" src="./image29.png" style="width:7.086614173228346in;height:3.0866141732283463in" />
+<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
 
 3. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
 
-<img alt="" src="./image30.png" style="width:7.086614173228346in;height:1.5433070866141732in" />
+<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
 4. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image31.png" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
 
 5. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image32.png" style="width:7.086614173228346in;height:1.8700787401574803in" />
+<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
 
 Después de configurar el comunicador FIRECOM, encienda la alimentación del panel de control de incendios. Espere a que se cargue el software del panel de control de incendios. Es necesario escanear los módulos conectados al bus RS485 en el panel de control de incendios. En el panel de control de incendios, presione: **PROG.>INSTALLER>(Ingrese el código de instalador) 00000 OK>(Seleccione) SETTINGS>ENTER>(Seleccione) SCAN RS485>ENTER**. Espere a que se complete el escaneo. Regrese a la pantalla principal presionando “**CANCEL**” dos veces.
 
@@ -403,16 +403,16 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image33.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image34.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se conecta al comunicador FIRECOM a través del bus RS485.
 
-<img alt="" src="./image35.png" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note "Nota"
     No puede conectar el FIRECOM usando el bus RS485 si los
@@ -423,19 +423,19 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 1.  Seleccione el panel de alarma contra incendios **INIM Smartline**.
 
-<img alt="" src="./image36.png" style="width:7.086614173228346in;height:2.858267716535433in" />
+<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.858267716535433in" />
 
 2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
 
-<img alt="" src="./image37.png" style="width:7.086614173228346in;height:1.5393700787401574in" />
+<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5393700787401574in" />
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image38.png" style="width:7.086614173228346in;height:2.2716535433070866in" />
+<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:2.2716535433070866in" />
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image39.png" style="width:7.086614173228346in;height:1.8700787401574803in" />
+<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
@@ -443,10 +443,10 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -454,49 +454,49 @@ Configuración del comunicador **FIRECOM** con TrikdisConfig al conectar el pane
 
 1.  Seleccione el panel de control de alarma contra incendios **C-TEC Cast ZFP**.
 
-<img alt="" src="./image42.png" style="width:7.086614173228346in;height:2.84251968503937in" />
+<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.84251968503937in" />
 
 2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:1.5354330708661417in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.5354330708661417in" />
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de “**Texto SMS**” junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:1.8661417322834646in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.8661417322834646in" />
 
 Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtools**. Encienda la alimentación de la central de incendios. Espere mientras se carga el software de la central de incendios. Conecte el cable USB2.0 A-B entre la central de incendios y el ordenador.
 
 5. Abra la pestaña „**Node View**“.
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
 6. Lea la configuración del panel de incendios en la computadora.
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
 7. Ingrese el código (el código de fábrica es 4444).
 
 2.  Haga clic en „ОК“.
 
-<img alt="" src="./image48.png" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="" src="./image48.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
 3. Seleccione „BMS Interface“.
 
 2.  Haga clic en el icono gratuito.
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
 11. Haga clic en „**Edit Devices**“.
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 12. En la pestaña " **Device** ", ingrese el nombre del sistema.
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
 13. En la pestaña "**Properties**", ingrese el nombre del sistema.
 
@@ -506,13 +506,13 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 16. Escriba la configuración en la central de incendios.
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
 17. Ingrese el código (el código de fábrica es 4444).
 
 18. Haga clic en „ОК“.
 
-<img alt="" src="./image53.png" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="" src="./image53.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 La central de incendios está programada. Desconecte el cable USB2.0 A-B de la central de incendios.
 
@@ -520,25 +520,25 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 ### Diagrama para conectar un sensor de temperatura 
 
-<img alt="" src="./image54.png" style="width:3.4233398950131235in;height:1.1900021872265967in" /> / <img alt="" src="./image55.png" style="width:3.4233398950131235in;height:1.3200021872265966in" />
+<img alt="" src="./image54.webp" style="width:3.4233398950131235in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.4233398950131235in;height:1.3200021872265966in" />
 
-<img alt="" src="./image54.png" style="width:3.4233398950131235in;height:1.1900021872265967in" />
+<img alt="" src="./image54.webp" style="width:3.4233398950131235in;height:1.1900021872265967in" />
 
-<img alt="" src="./image55.png" style="width:3.4233398950131235in;height:1.3200021872265966in" />
+<img alt="" src="./image55.webp" style="width:3.4233398950131235in;height:1.3200021872265966in" />
 
 ### Diagramas para conectar un relé y un indicador LED 
 
-<img alt="" src="./image56.png" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.png" style="width:2.09667104111986in;height:0.9066688538932633in" />
+<img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
-<img alt="" src="./image56.png" style="width:2.686672134733158in;height:0.93333552055993in" />
+<img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" />
 
-<img alt="" src="./image57.png" style="width:2.09667104111986in;height:0.9066688538932633in" />
+<img alt="" src="./image57.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
 ### Diagrama para conectar las entradas del panel de incendio al comunicador 
 
 Según la norma EN54, el panel de incendio desde el comunicador debe recibir información sobre la falla de comunicación con la Central de Monitoreo, así como sobre el envío exitoso de mensajes a la CRA. Conecte las salidas PGM (por ejemplo: “Relay1” y “Relay2”) del comunicador a las entradas especiales del panel de incendio. La salida PGM del “Relay1” debe establecerse en "Falla CMS". La salida PGM del “Relay2” debe establecerse en "ACK recibido". La salida del “Relay1” se activa en caso de violación del canal de comunicación con la CRA. La salida del “Relay2” se activa durante 5 seg. al enviar con éxito un mensaje a la CRA.
 
-<img alt="" src="./image58.png" style="width:3.550007655293088in;height:1.6733366141732284in" />
+<img alt="" src="./image58.webp" style="width:3.550007655293088in;height:1.6733366141732284in" />
 
 ### Diagramas para conectar los módulos expansores de la serie iO 
 
@@ -546,16 +546,16 @@ Para aumentar el número de zonas (IN) y salidas (OUT) al comunicador, conecte u
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image59.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image59.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image60.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image60.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 Diagrama de conexión para los módulos expansores LORA.
 
-<img alt="" src="./image61.png" style="width:5.57667760279965in;height:6.636679790026247in" />
+<img alt="" src="./image61.webp" style="width:5.57667760279965in;height:6.636679790026247in" />
 
 ### Iniciando el comunicador 
 
@@ -591,7 +591,7 @@ A continuación, describiremos las configuraciones que deben cambiarse para que 
 
 **En la ventana " Opciones de sistema ":**
 
-<img alt="" src="./image62.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 1.  Introduzca el código “**PIN de la tarjeta SIM”**.
 
@@ -599,7 +599,7 @@ A continuación, describiremos las configuraciones que deben cambiarse para que 
 
 **En la ventana " Usuarios y Reportes":**
 
-<img alt="" src="./image63.png" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 3. Seleccione la casilla **“Activar conexión”** a la nube de PROTEGUS.
 
@@ -607,7 +607,7 @@ A continuación, describiremos las configuraciones que deben cambiarse para que 
 
 **En la ventana “Informes a CRA”:**
 
-<img alt="" src="./image64.png" style="width:7.086614173228346in;height:3.5669291338582676in" />
+<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:3.5669291338582676in" />
 
 3. Si se conecta un cable LAN al comunicador, marque la casilla “**DHCP**” (modo de registro automático) para que el comunicador FIRECOM lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP.
 
@@ -615,19 +615,19 @@ A continuación, describiremos las configuraciones que deben cambiarse para que 
 
 **En la ventana “Zonas”:**
 
-<img alt="" src="./image65.png" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 3. Marque las casillas si desea que los usuarios reciban notificaciones de Protegus2 sobre los cambios en los estados de las zonas.
 
 **En la ventana “PGM”:**
 
-<img alt="" src="./image66.png" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
 4. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre los cambios en los estados de salida de PGM.
 
 **En la ventana "Eventos de sistema":**
 
-<img alt="" src="./image67.png" style="width:7.086614173228346in;height:2.267716535433071in" />
+<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.267716535433071in" />
 
 5. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre cambios en los estados de eventos internos del comunicador.
 
@@ -641,7 +641,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana de “Opciones de systema”:**
 
-<img alt="" src="./image68.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 1.  Introduzca **Objeto ID** proporcionado por la Central Receptora de Alarmas (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF**.).
 
@@ -651,7 +651,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana "Informes a CRA":**
 
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:3.531496062992126in" />
+<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:3.531496062992126in" />
 
 4. Si se conecta un cable LAN al comunicador, marque la casilla (modo de registro automático) para que el comunicador FIRECOM lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP.
 
@@ -659,7 +659,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana "Informes a CRA":**
 
-<img alt="" src="./image70.png" style="width:7.086614173228346in;height:3.188976377952756in" />
+<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
 
 3. **Tipo de comunicación** – seleccionar el método de conexión **IP**.
 
@@ -695,13 +695,13 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -725,7 +725,7 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
         verde cuando está conectado a la red LAN).
 3. Haga clic en Agregar nuevo sistema e ingrese el número de "IMEI/Unique ID" del *FIRECOM*. Se puede encontrar en el dispositivo y en la etiqueta del empaque. Después de ingresar la ID única, haga clic en el botón “Siguiente”.
 
-<img alt="" src="./image74.png" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="" src="./image74.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 ### Configuración y control a través de mensajes SMS 
 
@@ -810,7 +810,7 @@ Realice estas acciones si desea controlar una salida PGM de forma remota:
 
 Después de conectar FIRECOM y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image75.png" style="width:7.086614173228346in;height:0.5866141732283464in" />
+<img alt="" src="./image75.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
 
 | Nombre | Descripción |
 |----|----|
@@ -830,7 +830,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 **Pestaña “Sistema General”**
 
-<img alt="" src="./image76.png" style="width:7.086614173228346in;height:4.047244094488189in" />
+<img alt="" src="./image76.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
 
 **Grupo de configuraciones "General"**
 
@@ -879,13 +879,13 @@ Puedes configurar la hora haciendo clic en el botón “**Establecer hora de PC�
 
 **Pestaña “Groups”**
 
-<img alt="" src="./image77.png" style="width:7.086614173228346in;height:1.3661417322834646in" />
+<img alt="" src="./image77.webp" style="width:7.086614173228346in;height:1.3661417322834646in" />
 
 Las zonas se pueden combinar en grupos. El nombre de cada grupo se puede cambiar.
 
 **Pestaña “Acceso”**
 
-<img alt="" src="./image78.png" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="" src="./image78.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 **Grupo de configuraciones “Códigos de acceso”**
 
@@ -908,7 +908,7 @@ El administrador puede establecer qué parámetros puede cambiar el instalador.
 
 **Pestaña “Informes”**
 
-<img alt="" src="./image79.png" style="width:7.086614173228346in;height:3.188976377952756in" />
+<img alt="" src="./image79.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
 
 El comunicador envía mensajes a la CRA a través de Internet móvil (y/o LAN).
 
@@ -934,7 +934,7 @@ Habilite el modo de canal de respaldo para permitir que se envíen mensajes a tr
 
 **Pestaña “Ajustes”**
 
-<img alt="" src="./image80.png" style="width:7.086614173228346in;height:3.8464566929133857in" />
+<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:3.8464566929133857in" />
 
 **Grupo de configuraciones “Configuraciones”**
 
@@ -992,7 +992,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña “Usuarios”**
 
-<img alt="" src="./image81.png" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 **Grupo de configuración “Usuarios y reportes al usuario”**
 
@@ -1012,7 +1012,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña “Protegus”**
 
-<img alt="" src="./image82.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 **Grupo de configuración “Aplicación en la Nube”**
 
@@ -1024,7 +1024,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña “SMS textos de respuesta”**
 
-<img alt="" src="./image83.png" style="width:7.086614173228346in;height:2.4488188976377954in" />
+<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
 
 **Grupo de configuración “Texto de respuesta SMS”**
 
@@ -1034,7 +1034,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña „RS485 módulos“**
 
-<img alt="" src="./image84.png" style="width:7.086614173228346in;height:2.921259842519685in" />
+<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.921259842519685in" />
 
 **Grupo de configuración “Módulos RS485”**
 
@@ -1048,7 +1048,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 - **Versión de firmware** – la versión del firmware se mostrará cuando el FIRECOM encuentre el módulo conectado.
 
-<img alt="" src="./image85.png" style="width:7.086614173228346in;height:3.562992125984252in" />
+<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:3.562992125984252in" />
 
 **Grupo de configuración “Interfaz RS485 2”**
 
@@ -1058,7 +1058,7 @@ Las centrales de incendios (con protocolo **ESPA4.4.4**, **NSC solución**, **IN
 
 **Pestaña “Configuraciones de zonas”**
 
-<img alt="" src="./image86.png" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 - **Zona** – el número de la zona en la lista.
 
@@ -1078,7 +1078,7 @@ Las centrales de incendios (con protocolo **ESPA4.4.4**, **NSC solución**, **IN
 
 **Pestaña “SMS y llamadas”**
 
-<img alt="" src="./image87.png" style="width:7.086614173228346in;height:2.452755905511811in" />
+<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes". Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
@@ -1088,7 +1088,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña “Códigos de zona”**
 
-<img alt="" src="./image88.png" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la entrada se le asigna un CID (SIA), que se enviará a la estación de monitoreo (CRA) y a Protegus2.
 
@@ -1110,7 +1110,7 @@ Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la en
 
 **Pestaña “Salidas”**
 
-<img alt="" src="./image89.png" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
 - **PGM Núm.** – especifica el número de salida de PGM en la lista.
 
@@ -1128,7 +1128,7 @@ Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la en
 
 **Pestaña “Establecer acción”**
 
-<img alt="" src="./image90.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 - **Núm.** – número de salida en la lista.
 - **Habilitar** – activa el algoritmo de operación PGM.
@@ -1163,7 +1163,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña “Horario”**
 
-<img alt="" src="./image91.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 - **Núm.** – número de horario en la lista.
 
@@ -1176,7 +1176,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña “SMS y llamadas”**
 
-<img alt="" src="./image92.png" style="width:7.086614173228346in;height:2.279527559055118in" />
+<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.279527559055118in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes". Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
@@ -1186,7 +1186,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana "Sensores" 
 
-<img alt="" src="./image93.png" style="width:7.086614173228346in;height:2.838582677165354in" />
+<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.838582677165354in" />
 
 - **ID** – número del sensor de temperatura en la lista.
 
@@ -1208,7 +1208,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña “Eventos”**
 
-<img alt="" src="./image94.png" style="width:7.086614173228346in;height:2.279527559055118in" />
+<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:2.279527559055118in" />
 
 - **ID** – número de evento en la lista.
 
@@ -1228,7 +1228,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña “SMS y llamadas”**
 
-<img alt="" src="./image95.png" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes". Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
@@ -1240,7 +1240,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana “Registro de eventos” 
 
-<img alt="" src="./image96.png" style="width:7.086614173228346in;height:2.5196850393700787in" />
+<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.5196850393700787in" />
 
 - Botón **“Leer Registro”** – comando para leer el registro de eventos desde la memoria del dispositivo.
 
@@ -1252,7 +1252,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 Para restablecer la configuración predeterminada del comunicador, haz clic en el botón “**Restaurar”** en TrikdisConfig.
 
-<img alt="" src="./image97.png" style="width:7.086614173228346in;height:1.0905511811023623in" />
+<img alt="" src="./image97.webp" style="width:7.086614173228346in;height:1.0905511811023623in" />
 
 ## Configuración Remota 
 
@@ -1280,7 +1280,7 @@ Para restablecer la configuración predeterminada del comunicador, haz clic en e
 
 2.  En la sección de acceso remoto ingrese el IMEI/número único de ID. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image98.png" style="width:7.086614173228346in;height:2.3503937007874014in" />
+<img alt="" src="./image98.webp" style="width:7.086614173228346in;height:2.3503937007874014in" />
 
 3. (Opcional) en el espacio del nombre de Sistema ingrese el nombre deseado para el comunicador.
 
@@ -1317,7 +1317,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de “**Firmware”** del menú.
 
-<img alt="" src="./image99.png" style="width:7.086614173228346in;height:2.9488188976377954in" />
+<img alt="" src="./image99.webp" style="width:7.086614173228346in;height:2.9488188976377954in" />
 
 4. Presione “Abrir firmware” y seleccione el archivo de firmware requerido.
 
@@ -1335,4 +1335,4 @@ Siempre que desconecte la fuente de alimentación antes de realizar las conexion
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-<img alt="" src="./image2.png" style="width:0.39375in;height:0.44513888888888886in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="" src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

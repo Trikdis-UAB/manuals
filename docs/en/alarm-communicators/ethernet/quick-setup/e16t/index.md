@@ -18,7 +18,7 @@ Short steps to connect the E16T communicator to a control panel telephone dialer
 1. Download **TrikdisConfig** from [www.trikdis.com](http://www.trikdis.com) and install it.
 2. Open the E16T casing with a flat-head screwdriver.
 
-![Open the E16T casing](../../../e16t/image5.png)
+![Open the E16T casing](../../../e16t/image5.webp)
 
 3. Connect E16T to the computer with a USB Mini-B cable.
 4. Run **TrikdisConfig**. The software will recognize the communicator and open the configuration window.
@@ -34,13 +34,13 @@ Complete the subsection that matches the installation:
 
 **In "System settings" window:**
 
-![E16T system settings](../../../e16t/image6.png)
+![E16T system settings](../../../e16t/image6.webp)
 
 1. Select the **Security panel model** that will be connected to the communicator.
 
 **In "Reporting" window, "Protegus Service" tab:**
 
-![E16T Protegus settings](../../../e16t/image7.png)
+![E16T Protegus settings](../../../e16t/image7.webp)
 
 2. Tick **Enable connection** in the Protegus service settings.
 3. Change the **Service code** if users should be asked to enter it when adding the system to Protegus.
@@ -51,14 +51,14 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 **In "System settings" window:**
 
-![E16T CMS system settings](../../../e16t/image8.png)
+![E16T CMS system settings](../../../e16t/image8.webp)
 
 1. Enter the **Account number** provided by the Central Monitoring Station.
 2. Select the **Security panel model** that will be connected to the communicator.
 
 **In "Reporting" window settings for "Primary" channel:**
 
-![E16T CMS reporting settings](../../../e16t/image9.png)
+![E16T CMS reporting settings](../../../e16t/image9.webp)
 
 3. Enable the primary communication channel.
 4. Enter the receiver **Remote Host** and **Remote Port**.
@@ -70,7 +70,7 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 **In "Reporting" window, "Protegus Service" tab:**
 
-![E16T Protegus service settings](../../../e16t/image10.png)
+![E16T Protegus service settings](../../../e16t/image10.webp)
 
 10. Tick **Enable connection** to Protegus if users will use the app.
 11. Change the **Service code** if users should be asked to enter it when adding the system to Protegus.
@@ -84,7 +84,7 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 Connect E16T to panel power, `TIP` / `RING`, and LAN as shown below:
 
-![E16T panel connection diagram](../../../e16t/image11.png)
+![E16T panel connection diagram](../../../e16t/image11.webp)
 
 If the panel will be armed or disarmed by keyswitch output control, wire the panel keyswitch zone to `OUT` as shown in the same diagram.
 
@@ -124,7 +124,7 @@ Exit programming mode with `*99`.
 4. If you wired `OUT` to a keyswitch zone, open **Settings** in Protegus and enable **Arm/Disarm with PGM Output 1**.
 5. Select **Pulse** or **Level** mode to match the panel keyswitch zone type.
 
-![Protegus add system screen](../../../cellular/quick-setup/paradox/protegus-enter-imei.png)
+![Protegus add system screen](../../../cellular/quick-setup/paradox/protegus-enter-imei.webp)
 
 ## System check
 

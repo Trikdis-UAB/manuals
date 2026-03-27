@@ -5,7 +5,7 @@
 <div>
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="600">
+  <img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -76,7 +76,7 @@ Kai signalizacija išjungta, turi šviesti indikatorius OFF, o saugojimo režim�
 
 <div>
 
-Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. / Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką [<img alt="" src="./image2.png" style="width:0.118028in;height:0.135963in" />].
+Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. / Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką [<img alt="" src="./image2.webp" style="width:0.118028in;height:0.135963in" />].
 
 </div>
 
@@ -97,7 +97,7 @@ Dvilaidžių gaisro (dūmų) jutiklių paleidimas veikti iš naujo
 
 - 3 sekundes palaikykite paspaudę mygtuką
 
-[<img alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" src="./image3.png" style="width:0.074998in;height:0.175344in" />].
+[<img alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" src="./image3.webp" style="width:0.074998in;height:0.175344in" />].
 
 **<u>Pastaba.</u>** Užfiksavę gaisro pavojų, dvilaidžiai gaisro jutikliai automatiškai veikti iš naujo nepasileidžia. Jie paleidžiami veikti tik rankiniu būdu.
 

@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.png" alt="" width="400">
+<img src="./image1.webp" alt="" width="400">
 
 </div>
 
@@ -199,23 +199,23 @@ Siųstuvų ***T16V**, **T16U**, **T16U5*** zonas (įėjimus IN) galima tiesiogia
 
 **Duomenų kabelis**. Duomenų kabelis sujungiantis radijo siųstuvą ir apsaugos centralę turi būti ne ilgesnis nei 50 cm. Jei duomenų kabelis ilgesnis reikia naudoti ekranuota kabelį. Duomenų kabelis jungiamas centralėje prie klaviatūros magistralės, nuosekliosios jungties arba centralės telefoninio komunikatoriaus. Venkite kabelio montavimo lygiagrečiai su kintamos srovės jėgos kabeliais, antenos kabeliu ar kitais stipriais elektromagnetinio lauko šaltiniais.
 
-<img alt="" src="./image7.png" style="width:7.0875in;height:2.566666666666667in" />
+<img alt="" src="./image7.webp" style="width:7.0875in;height:2.566666666666667in" />
 
-<img alt="" src="./image8.png" style="width:7.0875in;height:2.546527777777778in" />
+<img alt="" src="./image8.webp" style="width:7.0875in;height:2.546527777777778in" />
 
-<img alt="" src="./image9.png" style="width:7.0875in;height:2.588888888888889in" />
+<img alt="" src="./image9.webp" style="width:7.0875in;height:2.588888888888889in" />
 
-<img alt="" src="./image10.png" style="width:7.0875in;height:1.7743055555555556in" />
+<img alt="" src="./image10.webp" style="width:7.0875in;height:1.7743055555555556in" />
 
-<img alt="" src="./image11.png" style="width:7.0875in;height:2.91875in" />
+<img alt="" src="./image11.webp" style="width:7.0875in;height:2.91875in" />
 
-<img alt="" src="./image12.png" style="width:7.0875in;height:1.66875in" />
+<img alt="" src="./image12.webp" style="width:7.0875in;height:1.66875in" />
 
-<img alt="" src="./image13.png" style="width:3.36750656167979in;height:1.792503280839895in" />
+<img alt="" src="./image13.webp" style="width:3.36750656167979in;height:1.792503280839895in" />
 
 ### Apsaugos centralės telefoninio komunikatoriaus prijungimo schema
 
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:2.2874015748031495in" />
+<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
 !!! note "Pastaba"
     T16 negalima jungti prie veikiančios telefoninės linijos.
@@ -241,11 +241,11 @@ Siųstuvas turi 6 (arba 5) įėjimo gnybtus (IN1, IN2, IN3, IN4, IN5, IN6) NO, N
 
 NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image15.png" style="width:5.874015748031496in;height:2.0196850393700787in" />
+<img alt="" src="./image15.webp" style="width:5.874015748031496in;height:2.0196850393700787in" />
 
 ### Centralės PGM-ų prijungimo schema 
 
-<img alt="" src="./image16.png" style="width:3.24250656167979in;height:2.387504374453193in" />
+<img alt="" src="./image16.webp" style="width:3.24250656167979in;height:2.387504374453193in" />
 
 Siųstuvo įėjimų (IN) nustatymo tipas NO arba NC.
 
@@ -253,13 +253,13 @@ Siųstuvo įėjimų (IN) nustatymo tipas NO arba NC.
 
 Sirena jungiama, kai prie siųstuvo yra prijungtas skaitytuvais *TM17*. Sireną, naudojančią iki 1 A srovę, galima prijungti prie siųstuvo *T16* OUT1 (arba OUT2) išėjimo. Jį aktyvuojama jei saugojimo režime siųstuve suveikia vienas iš įėjimų (IN). Sirena išjungiama po 3 minučių arba naudojant kontaktinį raktą (iButton).
 
-<img alt="" src="./image17.png" style="width:3.437007874015748in;height:1.2440944881889764in" />
+<img alt="" src="./image17.webp" style="width:3.437007874015748in;height:1.2440944881889764in" />
 
 ### RS485 modulių prijungimo schemos 
 
-<img alt="" src="./image18.png" style="width:6.8075131233595805in;height:3.04250656167979in" />
+<img alt="" src="./image18.webp" style="width:6.8075131233595805in;height:3.04250656167979in" />
 
-<img alt="" src="./image19.png" style="width:3.40250656167979in;height:2.6075054680664915in" />
+<img alt="" src="./image19.webp" style="width:3.40250656167979in;height:2.6075054680664915in" />
 
 Kai RS485 magistralės ilgis yra didesnis nei 1 m, naudokite vytos poros kabelį (STP 4x2x0,5). Venkite kabelio montavimo lygiagrečiai su kintamos srovės jėgos kabeliais, antenos kabeliu ir kitais stipriais elektromagnetinio lauko šaltiniais.
 
@@ -273,7 +273,7 @@ Wi-Fi modulis W485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užpr
 
 2.  Plokščiu atsuktuvu nuimkite T16 dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image20.png" style="width:6.208661417322834in;height:1.6456692913385826in" />
+<img alt="" src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
 
 1.  Su USB Mini-B kabeliu prijunkite T16 prie kompiuterio.
 
@@ -283,7 +283,7 @@ Wi-Fi modulis W485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užpr
 
 Prijungus T16 prie programos TrikdisConfig ir nuspaudus mygtuką **Skaityti [F4]**, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image21.png" style="width:7.086614173228346in;height:0.7519685039370079in" />
+<img alt="" src="./image21.webp" style="width:7.086614173228346in;height:0.7519685039370079in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -315,7 +315,7 @@ Naujai programuojant T16, pirmiausia reikia nuskaityti jo konfigūraciją (gamyk
 
 **Skirtukas „Nustatymai“**
 
-<img alt="" src="./image22.png" style="width:7.086614173228346in;height:4.165354330708661in" />
+<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:4.165354330708661in" />
 
 **Parinkčių grupė „Pagrindiniai nustatymai“**
 
@@ -353,7 +353,7 @@ Nustatymai analogiški kaip ir **Radijo dažnis 1**.
 
 **Skirtukas „Prieiga“**
 
-<img alt="" src="./image23.png" style="width:7.086614173228346in;height:4.165354330708661in" />
+<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:4.165354330708661in" />
 
 **Parinkčių grupė „Prieiga“**
 
@@ -369,7 +369,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Įėjimai“**
 
-<img alt="" src="./image24.png" style="width:7.086614173228346in;height:3.440944881889764in" />
+<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.440944881889764in" />
 
 - **Įjungta** – pažymėkite langelį, kad įjungti įvykio siuntimą, kai suveikia įėjimas.
 
@@ -389,7 +389,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Įvykiai“**
 
-<img alt="" src="./image25.png" style="width:7.086614173228346in;height:3.393700787401575in" />
+<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.393700787401575in" />
 
 - **Įgalinta** – pažymėkite langelį, kad įjungti vidiniu įvykiu pranešimu siuntimą:
 - **Žema baterijos įtampa** – maitinimo įtampa žemesnė 11,5 V.
@@ -416,7 +416,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Ryšio kontrolė“**
 
-<img alt="" src="./image26.png" style="width:7.086614173228346in;height:2.3976377952755907in" />
+<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
 
 - **Testo periodas** – nurodykite laiko tarpą tarp testo pranešimo siuntimu 1 ir 2 ryšio kanalais. Periodinių bandymų pranešimų tikslas yra radijo sistemų periodiško funkcionalumo bandymas. Tipinis bandymo laikotarpis yra 24 val.. Tačiau jis gali būti sutrumpintas iki 1 valandos. Testo pranešimą automatiškai stebi CSP stebėjimo programinė įranga. Jei iš objekto nėra Testo pranešimų generuojamas įspėjimas.
 - **Primas testas po** – nurodykite uždelsimo laiką pirmo Testo pranešimo siuntimui po maitinimo įjungimo. Tikslas - turėti galimybę siusti pranešimus išskirstytus per dieną (24 valandas), kad radijo tinkle išvengti tinklo perkrovų. Nurodomi laikai 1 ir 2 ryšio kanalams.
@@ -431,7 +431,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Modulių sąrašas“**
 
-<img alt="" src="./image27.png" style="width:7.086614173228346in;height:3.8622047244094486in" />
+<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:3.8622047244094486in" />
 
 - **Automatiškai aptikti išorinį RS485 įrenginį** – pažymėkite langelį varnele ir bus įjungtas prijungtu moduliu prie RS485 magistralės automatinis atpažinimas.
 
@@ -446,7 +446,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
     W485(arba E485) modulius.
 **Skirtukas „ТМ17“**
 
-<img alt="" src="./image28.png" style="width:7.086614173228346in;height:2.677165354330709in" />
+<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:2.677165354330709in" />
 
 Prie siųstuvo T16 yra galimybė prijungti skaitytuvą TM17. Prijungus skaitytuvą TM17, siųstuvą galima naudoti kaip apsaugos centralę. Skaitytuvui galima priskirti 9 kontaktinius (iButton) raktus (vienas iš kurių „Pagrindinis raktas“), kuriais bus valdoma saugos būsena (įjungti/išjungti).
 
@@ -499,7 +499,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 **Skirtukas „W485“**
 
-<img alt="" src="./image29.png" style="width:7.086614173228346in;height:3.6692913385826773in" />
+<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.6692913385826773in" />
 
 **Parinkčių grupė „Pagrindinis“**
 
@@ -536,7 +536,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 **Skirtukas „E485“**
 
-<img alt="" src="./image30.png" style="width:7.086614173228346in;height:3.6811023622047245in" />
+<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.6811023622047245in" />
 
 **Parinkčių grupė „Pagrindinis“**
 
@@ -570,7 +570,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 ### Langas “Parinktys” 
 
-<img alt="" src="./image31.png" style="width:7.086614173228346in;height:3.574803149606299in" />
+<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:3.574803149606299in" />
 
 **Parinkčių grupė „Galimi radijo dažniai“**
 
@@ -578,7 +578,7 @@ Galima Pridėti/Pašalinti radijo dažnius prie sąrašo, kuriuose gali dirbti s
 
 ### Langas „Iš CID į UNI lentelė” 
 
-<img alt="" src="./image32.png" style="width:7.086614173228346in;height:3.2125984251968505in" />
+<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:3.2125984251968505in" />
 
 Contact ID kodai, gauti iš signalizacijos centralės, konvertuojami į radijo sistemos (RAS2M, LARS) kodus. Tik Contact ID pranešimai, aprašyti lentelėje (CID stulpelis), yra konvertuojami į radijo sistemos kodus ir perduodami CSP. Simbolis "?" reiškia bet kurį skaičių pozicijoje. Simbolis "z" reiškia, kad numeris pozicijoje pridedamas prie pagrindinio radijo sistemos kodo. <u>Lentelė redaguojama, tačiau prašome padaryti tai atsakingai ir tik tuo atveju, jei tai tikrai būtina, nes jei lentelėje atsiras klaidų, sistema gali netinkamai veikti.</u>
 
@@ -589,7 +589,7 @@ Contact ID kodai, gauti iš signalizacijos centralės, konvertuojami į radijo 
 
 Norint atkurti siųstuvo gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image33.png" style="width:7.086614173228346in;height:1.188976377952756in" />
+<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.188976377952756in" />
 
 ## Radijo siųstuvo T16 testavimas 
 
@@ -618,7 +618,7 @@ T16 veikimo programą galima atnaujinti ar pakeisti rankiniu būdu. Po atnaujini
 
 3.  Parinkite gamyklinės programinės įrangos submeniu **Programos naujinimas**.
 
-    <img alt="" src="./image34.png" style="width:7.086614173228346in;height:3.0866141732283463in" />
+    <img alt="" src="./image34.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
 
 4.  Paspauskite gamyklinės programinės įrangos atidarymo langelį **Atverti failą** ir parinkite reikiamą gamyklinės programinės įrangos bylą. Jei neturite bylos, naujausią gamyklinės programinės įrangos bylą galite parsisiųsti <u>kaip registruotas vartotojas</u> iš [www.trikdis.com](http://www.trikdis.com) , pagal T16 parsisiuntimo sekciją.
 

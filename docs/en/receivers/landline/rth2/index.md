@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Telephone Line Receiver
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="RTH2 Telephone Line Receiver" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="RTH2 Telephone Line Receiver" style="width: 100%; max-width: 600px;">
 </div>
 
 ## About Telephone Line Receiver
@@ -56,7 +56,7 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 ### Front view
 
-<img alt="RTH2 front view" src="./rth2-front.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 front view" src="./rth2-front.webp" style="width: 100%; max-width: 700px;">
 
 | No. | Element |
 |-----|---------|
@@ -67,7 +67,7 @@ The receiver is powered with the alternating current (AC) source. To ensure an u
 
 ### Rear view
 
-<img alt="RTH2 rear view" src="./rth2-rear.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 rear view" src="./rth2-rear.webp" style="width: 100%; max-width: 700px;">
 
 | No. | Element |
 |-----|---------|
@@ -150,42 +150,42 @@ USB drivers must be installed on the computer. When the module connects to a com
 
 #### Starting GProg2
 
-8. Start program by clicking the GProg2 icon <img alt="GProg2" src="./icon-gprog2.png" style="height:22px; vertical-align:middle;">, then in the Settings window specify the serial port (e.g.: COM3).
+8. Start program by clicking the GProg2 icon <img alt="GProg2" src="./icon-gprog2.webp" style="height:22px; vertical-align:middle;">, then in the Settings window specify the serial port (e.g.: COM3).
 9. In menu bar choose command [*Devices*] and select RT2.
-10. Press the <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> icon in toolbar to connect receiver.
-11. To read the operational parameters stored in the internal memory of device, press the <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> button.
+10. Press the <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> icon in toolbar to connect receiver.
+11. To read the operational parameters stored in the internal memory of device, press the <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> button.
 12. When data download has finished a window *Configuration is received* will appear.
 
-<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.webp" style="width: 100%; max-width: 600px;">
 
 #### Toolbar Icons Description
 
 | Icon | Function |
 |------|----------|
-| <img alt="Open" src="./icon-open.png" style="height:22px; vertical-align:middle;"> **[Open]** | Open saved file with extension ".tcfg" |
-| <img alt="Save" src="./icon-save.png" style="height:22px; vertical-align:middle;"> **[Save]** | Save established parameters file with extension ".tcfg" |
-| <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> **[Connect]** | Connect to serial port |
-| <img alt="Disconnect" src="./icon-disconnect.png" style="height:22px; vertical-align:middle;"> **[Disconnect]** | Disconnect from serial port |
-| <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> **[Receive config]** | Read parameters of the device |
-| <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> **[Send config]** | Write the new parameters into device memory |
-| <img alt="Generate report" src="./icon-report.png" style="height:22px; vertical-align:middle;"> **[Generate configuration report]** | Print established parameters report |
+| <img alt="Open" src="./icon-open.webp" style="height:22px; vertical-align:middle;"> **[Open]** | Open saved file with extension ".tcfg" |
+| <img alt="Save" src="./icon-save.webp" style="height:22px; vertical-align:middle;"> **[Save]** | Save established parameters file with extension ".tcfg" |
+| <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> **[Connect]** | Connect to serial port |
+| <img alt="Disconnect" src="./icon-disconnect.webp" style="height:22px; vertical-align:middle;"> **[Disconnect]** | Disconnect from serial port |
+| <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> **[Receive config]** | Read parameters of the device |
+| <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> **[Send config]** | Write the new parameters into device memory |
+| <img alt="Generate report" src="./icon-report.webp" style="height:22px; vertical-align:middle;"> **[Generate configuration report]** | Print established parameters report |
 
 #### Setting Parameters
 
-<img alt="GProg2 Main window" src="./gprog2-main-window.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Main window" src="./gprog2-main-window.webp" style="width: 100%; max-width: 600px;">
 
-<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.webp" style="width: 100%; max-width: 600px;">
 
 13. In branch *Main window* set Surgard protocol.
 14. If necessary, you can change parameters in branch *Communication settings* — the recommended values are shown in **Exploitation Parameters of the Receiver** above.
-15. To save parameters go to [*File/Write device*] in menu bar or press the <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> icon.
+15. To save parameters go to [*File/Write device*] in menu bar or press the <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> icon.
 16. To save set parameters in your computer, go to [*File/Save as*]. File name, place to save may be selected freely. It can be used later as a template to configure other modules.
 
 ## Annex A — Service Messages
 
 Service messages of telephonic communication receiver:
 
-<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.webp" style="width: 100%; max-width: 600px;">
 
 | Message | Code | Description |
 |---------|------|-------------|

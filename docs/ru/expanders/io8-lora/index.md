@@ -1,7 +1,7 @@
 # iO8-LoRa Беспроводной расширитель
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Требование безопасности
@@ -15,7 +15,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-<img alt="" src="./image2.png" style="display: inline; height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -88,7 +88,7 @@
 
 ### Подключение питания 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Схемы подключения входов 
 
@@ -96,48 +96,48 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Схема подключения реле 
 
 Различные электрические устройства могут управляться (вкл/выкл) удаленно с помощью контактов реле. Универсальная IO (вход/выход) клемма беспроводного расширителя *iO-8-LORA* должна быть установлена в режим работы „Выход“ (OUT) и назначен тип "Удаленное управление".
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Схема подключения расширителя iO-8-LORA к охранной панели "FLEXi" SP3 
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     К охранной панели "FLEXi" SP3 должен быть подключен
@@ -161,15 +161,15 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входам расширителя**.**
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя**.**
 
-<img alt="" src="./image18.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

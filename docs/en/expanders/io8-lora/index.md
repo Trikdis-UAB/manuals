@@ -1,7 +1,7 @@
 # iO8-LoRa Wireless Expander
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Description 
@@ -75,7 +75,7 @@ Inputs and outputs:
 
 ### Schematic for connecting the power supply 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Schematics for connecting inputs 
 
@@ -83,48 +83,48 @@ There are 8 terminals IO1–IO8 (inputs) on the iO-8-LORA expander board for con
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Schematic for connecting a relay 
 
 Using the relay terminals, it is possible to remotely control (turn on/off) various electrical devices. The *iO-8-LORA* wireless expander universal I/O terminal must be configured as an output (OUT) and must have the definition "Remote control" assigned.
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Schematic for connecting iO-8-LORA expanders to the control panel "FLEXi" SP3 
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     An RF-LORA transceiver must be connected to the "FLEXi"
@@ -148,15 +148,15 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
 
 8.  In the "**Serial No.**" field, enter the serial number of the module iO-8-LORA.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  In the "**Zones**" tab, make settings for the expander's inputs**.**
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. In the "**PGM**" tab, configure the expander's PGM outputs**.**
 
-<img alt="" src="./image18.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Once configuration is complete, click the **Write [F5]** button.
 
@@ -174,4 +174,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.png" style="display: inline; height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.

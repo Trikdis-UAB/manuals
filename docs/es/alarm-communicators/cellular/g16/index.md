@@ -1,7 +1,7 @@
 # Comunicador celular G16
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción
@@ -133,7 +133,7 @@ Este manual aplica para estos modelos G16:
 
 6.  Ranura Tarjeta SIM.
 
-<img alt="" src="./image4.png" style="width:3.984027777777778in;height:2.651388888888889in" />
+<img alt="" src="./image4.webp" style="width:3.984027777777778in;height:2.651388888888889in" />
 
 ### Propósito de las terminales
 
@@ -176,7 +176,7 @@ Este manual aplica para estos modelos G16:
 
 ### Esquema estructural del uso del dispositivo G16
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.995138888888889in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.995138888888889in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
@@ -206,7 +206,7 @@ Este manual aplica para estos modelos G16:
 
 2.  Abra la cubierta del G16 con el desatornillador de cabeza plana como se muestra a continuación:
 
-    <img alt="" src="./image6.png" style="width:6.7204724409448815in;height:1.779527559055118in" />
+    <img alt="" src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
 
 3.  Usando el cable USB mini-B conecte el G16 a la computadora.
 
@@ -220,7 +220,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **“En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image7.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1\. Seleccione el tipo de panel de control que será conectado al comunicador.
 
@@ -236,7 +236,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     la contraseña de la descarga de la computadora/UDL.
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 1.  Habilitar la conexión a la Servicio Protegus.
 
@@ -244,7 +244,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de la “Tarjeta SIM”**
 
-<img alt="" src="./image9.png" style="width:7.078740157480315in;height:2.3307086614173227in" />
+<img alt="" src="./image9.webp" style="width:7.078740157480315in;height:2.3307086614173227in" />
 
 3. Ingrese el número de ID del Objeto
 
@@ -259,7 +259,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Ajustes del sistema:**
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF**.).
 
@@ -267,7 +267,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 En la ventana de opciones de “Ajustes CRA” para el “Canal de cimunicacion principal”:
 
-<img alt="" src="./image11.png" style="width:7.082677165354331in;height:4.062992125984252in" />
+<img alt="" src="./image11.webp" style="width:7.082677165354331in;height:4.062992125984252in" />
 
 3. **Modo** – seleccione el método de conexión IP (No recomendamos SMS como el canal primario).
 
@@ -295,7 +295,7 @@ En la ventana de opciones de “Ajustes CRA” para el “Canal de cimunicacion 
 
 **En la ventana de “Tarjeta SIM”:**
 
-<img alt="" src="./image12.png" style="width:7.082677165354331in;height:2.322834645669291in" />
+<img alt="" src="./image12.webp" style="width:7.082677165354331in;height:2.322834645669291in" />
 
 11. Ingrese el código PIN para la tarjeta SIM.
 
@@ -316,9 +316,9 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 4.  Atornille la antena GSM.
 
-<img alt="" src="./image13.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image13.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image14.png" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="" src="./image14.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Nota"
     Cheque si la tarjeta SIM ha sido activada. / Asegúrese que el servicio
@@ -332,15 +332,15 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 1.  Diagrama para conectarse a los paneles de control
 
-<img alt="" src="./image15.png" style="width:7.083347550306212in;height:2.8300054680664917in" />
+<img alt="" src="./image15.webp" style="width:7.083347550306212in;height:2.8300054680664917in" />
 
-<img alt="" src="./image16.png" style="width:7.083347550306212in;height:2.8900054680664917in" />
+<img alt="" src="./image16.webp" style="width:7.083347550306212in;height:2.8900054680664917in" />
 
-<img alt="" src="./image17.png" style="width:7.083347550306212in;height:2.653338801399825in" />
+<img alt="" src="./image17.webp" style="width:7.083347550306212in;height:2.653338801399825in" />
 
-<img alt="" src="./image18.png" style="width:7.083347550306212in;height:2.8866721347331583in" />
+<img alt="" src="./image18.webp" style="width:7.083347550306212in;height:2.8866721347331583in" />
 
-<img alt="" src="./image19.png" style="width:3.2466732283464568in;height:2.653338801399825in" />
+<img alt="" src="./image19.webp" style="width:3.2466732283464568in;height:2.653338801399825in" />
 
 2. Diagramas de conexión para control el panel de control a través de la zona de keyswitch:
 
@@ -348,7 +348,7 @@ Siga este esquema si el panel de seguridad será controlado, pero no de forma di
 
 El comunicador G16 tiene dos salidas OUT (PGM) programables que pueden controlar dos áreas del sistema de seguridad. Si usted quiere controlar el sistema de esta forma, no seleccione la casilla de Armado/Desarmado remoto en la ventana de “configuración del sistema” de TrikdisConfig.
 
-<img alt="" src="./image20.png" style="width:3.8833409886264216in;height:2.6666721347331586in" />
+<img alt="" src="./image20.webp" style="width:3.8833409886264216in;height:2.6666721347331586in" />
 
 ### Diagramas para la conexión de entrada
 
@@ -356,9 +356,9 @@ El comunicador tiene una terminal de entrada (IN1) para conectar sensores, los c
 
 Conecte la entrada de acuerdo al tipo de entrada seleccionada (NO, NC, EOL o DEOL), como se muestra en los esquemas de abajo:
 
-<img alt="" src="./image21.png" style="width:5.228346456692913in;height:1.720472440944882in" />
+<img alt="" src="./image21.webp" style="width:5.228346456692913in;height:1.720472440944882in" />
 
-<img alt="" src="./image22.png" style="width:5.232283464566929in;height:2.437007874015748in" />
+<img alt="" src="./image22.webp" style="width:5.232283464566929in;height:2.437007874015748in" />
 
 !!! note "Nota"
     Si más entradas o salidas necesitan ser conectadas al comunicador,
@@ -368,25 +368,25 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NO, NC, EOL o DEO
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos electrónicos.
 
-<img alt="" src="./image23.png" style="width:2.6377952755905514in;height:0.9488188976377953in" />
+<img alt="" src="./image23.webp" style="width:2.6377952755905514in;height:0.9488188976377953in" />
 
 ### Esquemas para la conexión de módulos de expansión de la serie de iO
 
 Si es necesario conectar más entradas o salidas al comunicador, o si desea conectar un sensor de temperatura, conecte el expansor de salida inalámbrico o por cable de la serie TRIKDIS iO. Configuración de los módulos expansores conectados al G16 se describe en el capítulo 7.5. “Ventana “RS485 modules”.
 
-<img alt="" src="./image24.png" style="width:7.0875in;height:3.602777777777778in" />
+<img alt="" src="./image24.webp" style="width:7.0875in;height:3.602777777777778in" />
 
 ### Esquema para conectar el módulo WiFi W485
 
 El módulo *W485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a Protegus utilizando un enrutador de Internet WiFi. Cuando la conectividad WiFi está disponible, el *G16* envía mensajes de evento a través del módulo *W485*. Cuando se interrumpe la conectividad WiFi, el *G16* envía mensajes a través de GPRS. Cuando se restablece la conectividad WiFi, el *G16* vuelve a enviar mensajes a través de *W485*. / La configuración *W485* (credenciales de red Wi-Fi) se establece en la configuración *G16* en la ventana TrikdisConfig ”RS485 modules” del capítulo 7.5. / Inserte la tarjeta SIM en el comunicador G16 para que funcione el *W485*.
 
-<img alt="" src="./image25.png" style="width:2.9525054680664917in;height:2.3000043744531933in" />
+<img alt="" src="./image25.webp" style="width:2.9525054680664917in;height:2.3000043744531933in" />
 
 ### Esquema para conectar el módulo E485 “Ethernet”
 
 El módulo *E485* envía mensajes al CRA y a *Protegus* por medio de una conexión a internet por cable. Usando el *E485* con *G16*, los mensajes de CRA y *Protegus* se envían a través de internet por cable y no se usa internet móvil. Si se interrumpe una conectividad a internet por cable, el *G16* envía mensajes a través de Internet móvil. Cuando se restablece la conectividad a Internet por cable, el *G16* comienza a enviar mensajes a través de *E485*. / La configuración del módulo *E485* para funcionar con el G16 se describe en la Ventana del capítulo 7.5. „RS485 modules”. / Inserte la tarjeta SIM en el comunicador *G16* para que funcione el *E485*.
 
-<img alt="" src="./image26.png" style="width:2.990005468066492in;height:2.2975043744531933in" />
+<img alt="" src="./image26.webp" style="width:2.990005468066492in;height:2.2975043744531933in" />
 
 ### Cambiando en la fuente de alimentación para el panel de control
 
@@ -479,7 +479,7 @@ El panel de control debe estar conectado al internet. Conéctese con Innerrange 
 
 Abra la ventana de Configuración > General > Reporte de Alarmas. En la configuración de Reporte de Dispositivos de Terceras partes usted necesita ingresar:
 
-<img alt="" src="./image27.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image27.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  Habilitar Reporte de Dispositivos de Terceras partes – seleccione esta casilla.
 
@@ -517,13 +517,13 @@ Con Protegus, los usuarios podrán controlar su sistema de alamas de forma remot
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -531,7 +531,7 @@ Con Protegus, los usuarios podrán controlar su sistema de alamas de forma remot
 
 3.  De clic en agregar un nuevo sistema e ingrese el número de G16 “IMEI/Unique ID”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-    <img alt="" src="./image31.png" style="width:6.0236220472440944in;height:2.0039370078740157in" />
+    <img alt="" src="./image31.webp" style="width:6.0236220472440944in;height:2.0039370078740157in" />
 
 !!! note "Nota"
     Al agregar G16 a Protegus, revise si:
@@ -562,17 +562,17 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  De clic en “Next” después de ingresar el número “IMEI/Unique ID”. En la nueva ventana de clic en “Areas”. En la siguiente ventana especifique cuantas áreas de sistema de alarma (1 o 2) están en el sistema y presione “Siguente”.
 
-    <img alt="" src="./image32.png" style="width:6.791338582677166in;height:2.5118110236220472in" />
+    <img alt="" src="./image32.webp" style="width:6.791338582677166in;height:2.5118110236220472in" />
 
 2.  En la nueva ventana, identifique cuál es el número para cada una de las áreas especificadas en el sistema y presione “Guardar”.
 
-<img alt="" src="./image33.png" style="width:6.783464566929134in;height:2.968503937007874in" />
+<img alt="" src="./image33.webp" style="width:6.783464566929134in;height:2.968503937007874in" />
 
 3. En el menú lateral, presione “Configuración” y en la nueva ventana presione “Configuración”. Seleccione la casilla de “Armado/Desarmado con PGM” y especifique que área de salir será controlada. Una salida PGM puede controlar sólo un área (PGM 1 – Área 1, PGM 2 – Área 2).
 
 2.  Seleccione el Nivel o Pulso, dependiendo del tipo de la zona keyswitch del panel de control. También puede cambiar la duración o intervalo de pulso si es requerido para el panel de control conectado.
 
-    <img alt="" src="./image34.png" style="width:6.75984251968504in;height:2.9803149606299213in" />
+    <img alt="" src="./image34.webp" style="width:6.75984251968504in;height:2.9803149606299213in" />
 
 ### Control del sistema con Protegus
 
@@ -582,7 +582,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Si es solicitado, ingrese el código de usuario o la contraseña de Protegus.
 
-    <img alt="" src="./image35.png" style="width:6.850393700787402in;height:3.062992125984252in" />
+    <img alt="" src="./image35.webp" style="width:6.850393700787402in;height:3.062992125984252in" />
 
 ## Configuración Remota
 
@@ -621,7 +621,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 Cuando el G16 está conectado, TrikdisConfig mostrará información en la barra de estado sobre el dispositivo conectado.
 
-<img alt="" src="./image37.png" style="width:7.066929133858268in;height:0.610236220472441in" />
+<img alt="" src="./image37.webp" style="width:7.066929133858268in;height:0.610236220472441in" />
 
 | Nombre | Descripción |
 |----|----|
@@ -639,7 +639,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 ### Ventana de “Ajustes del sistema”
 
-<img alt="" src="./image40.png" style="width:7.082677165354331in;height:3.062992125984252in" />
+<img alt="" src="./image40.webp" style="width:7.082677165354331in;height:3.062992125984252in" />
 
 **Grupo de opciones “General”**
 
@@ -674,7 +674,7 @@ Al configurar el comunicador G16 hay dos niveles de acceso para el administrador
     dígitos o caracteres en latín.
 ### Ventana de “Informes CRA”
 
-<img alt="" src="./image41.png" style="width:7.082677165354331in;height:4.062992125984252in" />
+<img alt="" src="./image41.webp" style="width:7.082677165354331in;height:4.062992125984252in" />
 
 **Pestaña de parámetros “CRA”**
 
@@ -724,7 +724,7 @@ Las notificaciones SMS serán enviadas al CRA del receptor SMS: 1) Inmediatament
 
 **Pestaña de “Ajustes”**
 
-<img alt="" src="./image42.png" style="width:7.090551181102362in;height:2.877952755905512in" />
+<img alt="" src="./image42.webp" style="width:7.090551181102362in;height:2.877952755905512in" />
 
 **Grupo “Ajustes”**
 
@@ -756,7 +756,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 **“Pestaña de la “Servicio Protegus”**
 
-<img alt="" src="./image43.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image43.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 - **Activar conexión** – permita que el comunicador se conecte a la nube de Protegus.
 
@@ -764,7 +764,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 **Grupo de “Informes por SMS y llamadas”**
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:3.8818897637795278in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
 
 Las notificaciones sobre los eventos del sistema pueden ser transmitidas a los celulares de los usuarios a través de mensajes SMS o llamadas telefónicas.
 
@@ -782,7 +782,7 @@ Puede cambiar los textos por mensajes SMS de eventos base, cambiar el código de
 
 **Pestaña de “Control por SMS”**
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 Puede enviar comando SMS al comunicador que controlará las funciones básicas del dispositivo.
 
@@ -827,7 +827,7 @@ Si se usará internet móvil para enviar notificaciones a través del canal IP o
     2.  Si se usará internet móvil para enviar notificaciones a través del
         canal IP o a Protegus, asegúrese de que el servicio de datos móviles
         esté habilitado.
-<img alt="" src="./image46.png" style="width:7.078740157480315in;height:2.3188976377952755in" />
+<img alt="" src="./image46.webp" style="width:7.078740157480315in;height:2.3188976377952755in" />
 
 **Grupo de opciones de la “tarjeta SIM”**
 
@@ -843,7 +843,7 @@ Si se usará internet móvil para enviar notificaciones a través del canal IP o
 
 ### Ventana de “RS485 modules”
 
-<img alt="" src="./image47.png" style="width:7.090551181102362in;height:2.409448818897638in" />
+<img alt="" src="./image47.webp" style="width:7.090551181102362in;height:2.409448818897638in" />
 
 Grupo de opciones de “Modules list”
 
@@ -861,7 +861,7 @@ Después de añadir el expansor al comunicador como se ha descrito en el párraf
 
 #### Ventana de ajustes del expansor iO-8
 
-<img alt="" src="./image48.png" style="width:7.082677165354331in;height:2.5551181102362204in" />
+<img alt="" src="./image48.webp" style="width:7.082677165354331in;height:2.5551181102362204in" />
 
 El expansor iO-8 tiene 8 contactos de terminal universales (entrada/salida). Se pueden conectar hasta cuatro expansores iO-8.
 
@@ -903,7 +903,7 @@ Para que los clientes reciban mensajes SMS o llamadas anunciando los activadores
 
 #### Ventana de ajustes del expansor iO
 
-<img alt="" src="./image49.png" style="width:7.082677165354331in;height:3.236220472440945in" />
+<img alt="" src="./image49.webp" style="width:7.082677165354331in;height:3.236220472440945in" />
 
 El expansor iO dispone de: terminales para 1 entrada, 1 salida (contactos de relé) y bus serie 1-Wire para la conexión de sensores de temperatura.
 
@@ -917,7 +917,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID y códigos de r
 
 **Ventana de configuración del módulo WiFi *W485***
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:3.141732283464567in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.141732283464567in" />
 
 - **DHCP Modo** - modo del módulo WiFi para registrarse en la red (manual (Estática) o automático (DHCP)).
 
@@ -940,7 +940,7 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
     SIM en el comunicador *G16* para que funcione el *W485*.**
 #### Ventana de configuración del módulo ethernet *E485*
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:3.1377952755905514in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
 
 - **DHCP Modo** - modo del módulo ethernet para registrarse en la red (manual (Estática) o automático (DHCP)).
 
@@ -961,13 +961,13 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
 
 Esta ventana le permitirá prender, apagar y modificar los mensajes internos enviados por su dispositivo. Deshabilitar el mensaje interno en esta ventana prevendrá que sea enviado a pesar de otras opciones.
 
-<img alt="" src="./image52.png" style="width:7.082677165354331in;height:2.295275590551181in" />
+<img alt="" src="./image52.webp" style="width:7.082677165354331in;height:2.295275590551181in" />
 
 ### Restablecer la configuración predeterminada 
 
 Para restablecer la configuración predeterminada del G16, haz clic en el botón **Restaurar** en TrikdisConfig.
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:1.0039370078740157in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:1.0039370078740157in" />
 
 ### Desempeño de la Prueba del Comunicador 
 
@@ -1004,7 +1004,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de Firmware del menú.
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:3.1811023622047245in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:3.1811023622047245in" />
 
 4. Presione Abrir firmware y seleccione el archivo de firmware requerido.
 
@@ -1026,7 +1026,7 @@ Antes de la instalación, por favor lea con cuidado este manual, para poder evit
 
 Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
+<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
 

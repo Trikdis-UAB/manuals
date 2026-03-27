@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.png" alt="" width="400">
+<img src="./image1.webp" alt="" width="400">
 
 </div>
 
@@ -198,23 +198,23 @@ Las zonas (entradas IN) de los tranmisores T16V, T16U, T16U5 se pueden conectar 
 
 **Cable de datos**. El cable de datos que conecta el transmisor T16 y el panel de control no debe superar los 50 cm. Si el cable de datos es más largo, debe usarse un cable blindado. El cable de datos se conecta en la central al bus del teclado, conexión serie o comunicador telefónico de la central. Evite montar el cable en paralelo con los cables de alimentación de aire acondicionado, el cable de la antena u otras fuentes de campo electromagnético.
 
-<img alt="" src="./image7.png" style="width:7.025014216972878in;height:2.4925054680664918in" />
+<img alt="" src="./image7.webp" style="width:7.025014216972878in;height:2.4925054680664918in" />
 
-<img alt="" src="./image8.png" style="width:7.025014216972878in;height:2.5125054680664918in" />
+<img alt="" src="./image8.webp" style="width:7.025014216972878in;height:2.5125054680664918in" />
 
-<img alt="" src="./image9.png" style="width:7.025014216972878in;height:2.5575054680664917in" />
+<img alt="" src="./image9.webp" style="width:7.025014216972878in;height:2.5575054680664917in" />
 
-<img alt="" src="./image10.png" style="width:7.025014216972878in;height:1.755003280839895in" />
+<img alt="" src="./image10.webp" style="width:7.025014216972878in;height:1.755003280839895in" />
 
-<img alt="" src="./image11.png" style="width:7.025014216972878in;height:2.8925054680664917in" />
+<img alt="" src="./image11.webp" style="width:7.025014216972878in;height:2.8925054680664917in" />
 
-<img alt="" src="./image12.png" style="width:7.025014216972878in;height:1.637503280839895in" />
+<img alt="" src="./image12.webp" style="width:7.025014216972878in;height:1.637503280839895in" />
 
-<img alt="" src="./image13.png" style="width:3.31250656167979in;height:1.837503280839895in" />
+<img alt="" src="./image13.webp" style="width:3.31250656167979in;height:1.837503280839895in" />
 
 ### Esquema para conectar el marcador de línea fija del panel de control
 
-<img alt="" src="./image14.png" style="width:7.0875in;height:2.5708333333333333in" />
+<img alt="" src="./image14.webp" style="width:7.0875in;height:2.5708333333333333in" />
 
 !!! note "Nota"
     El *T16* no puede ser conectado a una línea telefónica fija. Refiriéndose a las instrucciones de programación del panel de control, configure los siguientes parámetros para el marcador de línea fija del panel de control:
@@ -239,25 +239,25 @@ El transmisor tiene 6 (o 5) terminales de entrada (IN1, IN2, IN3, IN4, IN5, IN6)
 
 Esquemas para la conexión de circuitos tipo NO, NC, EOL:
 
-<img alt="" src="./image15.png" style="width:5.618110236220472in;height:1.779527559055118in" />
+<img alt="" src="./image15.webp" style="width:5.618110236220472in;height:1.779527559055118in" />
 
 ### Esquema para conectar PGM del panel de control
 
 Las entradas del transmisor (IN) deben configurarse en NO o NC.
 
-<img alt="" src="./image16.png" style="width:3.7874015748031495in;height:2.1850393700787403in" />
+<img alt="" src="./image16.webp" style="width:3.7874015748031495in;height:2.1850393700787403in" />
 
 ### Esquema para conectar una sirena
 
 La sirena debe estar conectada cuando el *TM17* esté conectado al transmisor. Una sirena que consume hasta 1 A se puede conectar a la corriente de salida del transmisor OUT1 (o OUT2) *T16*. Se activa si una de las entradas del transmisor (IN) se activa en modo armado. La sirena se apaga después de 3 minutos o después de usar una tecla de contacto.
 
-<img alt="" src="./image17.png" style="width:3.3818897637795278in;height:1.421259842519685in" />
+<img alt="" src="./image17.webp" style="width:3.3818897637795278in;height:1.421259842519685in" />
 
 ### Esquemas de conexión del módulo RS485
 
-<img alt="" src="./image18.png" style="width:6.988188976377953in;height:2.822834645669291in" />
+<img alt="" src="./image18.webp" style="width:6.988188976377953in;height:2.822834645669291in" />
 
-<img alt="" src="./image19.png" style="width:3.7283464566929134in;height:2.838582677165354in" />
+<img alt="" src="./image19.webp" style="width:3.7283464566929134in;height:2.838582677165354in" />
 
 Cuando el bus de datos RS485 es más largo a 1m, use un cable de par trenzado (STP 4x2x0,5). Evite montar el cable en paralelo con los cables de electricidad de aires acondicionados, el cable de la antena u otras fuentes de campo electromagnético.
 
@@ -271,7 +271,7 @@ El módulo E485 es compatible con el transmisor de radio T16. El *E485* envía m
 
 2.  Retire la tapa frontal del T16 usando un destornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image20.png" style="width:6.208661417322834in;height:1.6456692913385826in" />
+<img alt="" src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
 
 1.  Conecte el T16 a una computadora usando un cable USB Mini-B.
 
@@ -281,7 +281,7 @@ El módulo E485 es compatible con el transmisor de radio T16. El *E485* envía m
 
 Una vez el T16 esté conectado al software TrikdisConfig, el programa mostrará información sobre el dispositivo conectado en la barra de estado:
 
-<img alt="" src="./image21.png" style="width:7.086614173228346in;height:0.7283464566929134in" />
+<img alt="" src="./image21.webp" style="width:7.086614173228346in;height:0.7283464566929134in" />
 
 | Nombre | Descripción |
 |:---|:---|
@@ -302,7 +302,7 @@ Una vez el T16 esté conectado al software TrikdisConfig, el programa mostrará 
 
 **Pestaña “Ajustes”**
 
-<img alt="" src="./image22.png" style="width:7.086614173228346in;height:4.248031496062992in" />
+<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:4.248031496062992in" />
 
 **Grupo de configuración “Ajustes principales”**
 
@@ -340,7 +340,7 @@ Los ajustes son idénticos a **Radiofrecuencia** **1**.
 
 **Pestaña “Accesso”**
 
-<img alt="" src="./image23.png" style="width:7.086614173228346in;height:3.7874015748031495in" />
+<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7874015748031495in" />
 
 **Grupo de configuraciones “Accesso”**
 
@@ -358,7 +358,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Entradas”**
 
-<img alt="" src="./image24.png" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 - **Habilitado -** marque la casilla para enviar eventos cuando la entrada se dispara.
 
@@ -378,7 +378,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Eventos”**
 
-<img alt="" src="./image25.png" style="width:7.086614173228346in;height:3.4960629921259843in" />
+<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.4960629921259843in" />
 
 - **Habilitado -** marque la casilla para activar el envío de eventos internos:
 
@@ -408,7 +408,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Supervisión”**
 
-<img alt="" src="./image26.png" style="width:7.086614173228346in;height:2.4291338582677167in" />
+<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:2.4291338582677167in" />
 
 - **Período de prueba -** especifique el intervalo de tiempo entre dos mensajes de prueba utilizando los canales 1 y 2. El propósito de las pruebas periódicas es inspeccionar periódicamente la funcionalidad de los sistemas de radio. Un periodo de prueba típico es de 24 h. Se puede acortar hasta 1 hora. El software de monitoreo CRA rastrea automáticamente el mensaje de prueba. Se genera una advertencia si no hay mensajes de prueba del objeto.
 
@@ -424,7 +424,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Lista de módulos”**
 
-<img alt="" src="./image27.png" style="width:7.086614173228346in;height:4.251968503937008in" />
+<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:4.251968503937008in" />
 
 - **Detectar** **dispositivo** **externo** **RS485 automáticamente -** marque la casilla para habilitar la identificación automática de los módulos conectados al bus RS485.
 
@@ -435,7 +435,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 !!! note "Nota"
     Solo puedes conectar uno de cada uno TM17 y Módulos W485(o E485) al transmisor T16. **Pestaña “Módulo 1”**
 
-<img alt="" src="./image28.png" style="width:7.086614173228346in;height:2.7283464566929134in" />
+<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:2.7283464566929134in" />
 
 Es posible conectar un lector TM17 al transmisor T16. Después de conectar el lector TM17, el transmisor se puede utilizar como panel de control. Se pueden asignar hasta 9 teclas de contacto (iButton) al lector (una de las cuales es la “clave maestra”) para controlar el estado del sistema de seguridad (armado/desarmado).
 
@@ -486,7 +486,7 @@ Los indicadores LED parpadeantes en el TM17 informan sobre las entradas activada
 
 **Pestaña “W485”**
 
-<img alt="" src="./image29.png" style="width:7.086614173228346in;height:3.7874015748031495in" />
+<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.7874015748031495in" />
 
 **Grupo de opciones de “Primario”**
 
@@ -524,7 +524,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 **Pestaña “E485”**
 
-<img alt="" src="./image30.png" style="width:7.086614173228346in;height:3.7598425196850394in" />
+<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.7598425196850394in" />
 
 **Grupo de opciones de “Primario”**
 
@@ -558,7 +558,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 ### Ventana de “Opciones”
 
-<img alt="" src="./image31.png" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 **Grupo de ajustes “Radiofrecuencias disponibles”**
 
@@ -566,7 +566,7 @@ Puede Añadir/Eliminar frecuencias de radio que el transmisor T16 puede usar par
 
 ### Ventana “CID a UNI tabla”
 
-<img alt="" src="./image32.png" style="width:7.086614173228346in;height:3.267716535433071in" />
+<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:3.267716535433071in" />
 
 Los códigos de Contact ID recibidos desde el panel de control se convierten en códigos del sistema de radio (RAS2M, LARS). Solamente los mensajes de Contact ID descritos en la tabla (columna CID) se convierten a los códigos del sistema de radio y enviado al CRA. El símbolo “?” indica cualquier número en esta posición. El símbolo “z” significa que el número en la posición se agrega al código del sistema de radio principal. La tabla es editable, pero cámbiela de forma responsable y solo si es obligatorio hacerlo, porque si hay errores en la tabla, es posible que el sistema no funcione correctamente.
 
@@ -577,7 +577,7 @@ Los códigos de Contact ID recibidos desde el panel de control se convierten en 
 
 Para restaurar la configuración de fábrica del **transmisor**, haga clic en el botón **Restaurar** en el programa TrikdisConfig.
 
-<img alt="" src="./image33.png" style="width:7.086614173228346in;height:1.2086614173228347in" />
+<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.2086614173228347in" />
 
 ### Prueba del transmisor RF T16
 
@@ -600,7 +600,7 @@ Cuando la configuración y la instalación hayan finalizado, realice una comprob
 
 3.  Escoger **Firmware.**
 
-<img alt="" src="./image34.png" style="width:7.086614173228346in;height:3.177165354330709in" />
+<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:3.177165354330709in" />
 
 4.  Haga clic en el botón **Abrir firmware** y seleccione el archivo de firmware requerido. Si no tiene el archivo, los <u>usuarios registrados</u> pueden descargar el archivo de firmware más reciente desde www.trikdis.com, en la sección de descarga T16.
 

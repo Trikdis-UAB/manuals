@@ -5,7 +5,7 @@ pdf: r11-original.pdf
 # Receptores de Radio R11 / R11U
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 Los receptores de radio R11 y R11U se utilizan como componentes del sistema de protección por radio RAS-3 y están diseñados para la recepción y decodificación de mensajes codificados enviados por canal de radiocomunicación en la banda VHF (R11) o UHF (R11U). Las señales enviadas mediante el sistema de codificación RAS-3 son recibidas y decodificadas por los receptores.
@@ -72,7 +72,7 @@ El receptor incluye el puerto serie RS232 a través del cual la información rec
 
 ## Vista general y esquema de conexión
 
-![](./image4.jpeg)
+![](./image4.webp)
 
 | Elemento | Descripción |
 |---------|-------------|
@@ -81,7 +81,7 @@ El receptor incluye el puerto serie RS232 a través del cual la información rec
 | Puerto de salida RS232 | Salida de datos serie |
 | Bus MCI | Conector del bus MCI |
 
-![](./image6.jpeg)
+![](./image6.webp)
 
 El puerto USB y el botón RESET se encuentran en el panel trasero. \* La designación de los terminales de contacto del bus MCI se indica en la Tabla 3.
 
@@ -102,7 +102,7 @@ El puerto USB y el botón RESET se encuentran en el panel trasero. \* La designa
 
 El funcionamiento del receptor se indica mediante señalización luminosa. El funcionamiento de los indicadores luminosos se especifica en la Tabla 4.
 
-![](./image7.jpeg)
+![](./image7.webp)
 
 **Tabla 4.**
 
@@ -130,19 +130,19 @@ Secuencia de preparación:
 
 La configuración de los parámetros de funcionamiento se realiza mediante el software de parametrización R11config v130226, conectando el ordenador y el receptor mediante un cable USB. El uso del software y el cambio de ajustes están disponibles tanto con la alimentación externa activada como con alimentación a través del puerto USB.
 
-<img alt="" src="./image8.png" style="width:1.6145833333333333in;height:1.2604166666666667in" />
+<img alt="" src="./image8.webp" style="width:1.6145833333333333in;height:1.2604166666666667in" />
 
 Ejecute el software R11config y se abrirá la ventana donde:
 
 1. Introduzca la contraseña de administrador 1234 mediante el teclado del ordenador y pulse [Enter]
 
-    ![](./image10.png)
+    ![](./image10.webp)
 
     En la parte inferior de la ventana se muestra: tipo de equipo **Device**, número de serie **SN**, versión del cargador de arranque **BL ver.**, versión del firmware **FW ver.**
 
     Si se desconoce la contraseña, la información sobre el tipo de receptor y las versiones de software/firmware se mostrará tras hacer clic en [Device info].
 
-    <img alt="" src="./image11.png" style="width:1.2631944444444445in;height:1.301388888888889in" /> <img alt="" src="./image12.png" style="width:3.3020833333333335in;height:2.2395833333333335in" />
+    <img alt="" src="./image11.webp" style="width:1.2631944444444445in;height:1.301388888888889in" /> <img alt="" src="./image12.webp" style="width:3.3020833333333335in;height:2.2395833333333335in" />
 
     Ajustes del puerto USB en la columna **Settings**.
 
@@ -150,11 +150,11 @@ Ejecute el software R11config y se abrirá la ventana donde:
 
 3. Configure (Repeater mode), (Frequency) y (Transmitter ID) en la rama del programa **Main**. Al seleccionar Account ID, los mensajes se asignarán por número de objeto del transmisor; al seleccionar Transmitter SN, por número de serie del transmisor; al seleccionar Transmitter SN+ Account ID, por ambos números.
 
-    <img alt="" src="./image13.png" style="width:5.145833333333333in;height:3.4791666666666665in" />
+    <img alt="" src="./image13.webp" style="width:5.145833333333333in;height:3.4791666666666665in" />
 
 4. Configure los parámetros de filtro requeridos en la rama del programa **Filters**.
 
-    <img alt="" src="./image14.png" style="width:5.239583333333333in;height:3.5520833333333335in" />
+    <img alt="" src="./image14.webp" style="width:5.239583333333333in;height:3.5520833333333335in" />
 
     - **Time filter** — tiempo de tolerancia para el mismo mensaje;
     - **RF code** — marque la casilla de verificación para la recepción de mensajes del sistema de codificación RAS-3;
@@ -166,23 +166,23 @@ Ejecute el software R11config y se abrirá la ventana donde:
 
     a) Cuando los mensajes se transmiten al software de monitorización Monas MS:
 
-    <img alt="" src="./image15.png" style="width:5.34375in;height:3.6145833333333335in" />
+    <img alt="" src="./image15.webp" style="width:5.34375in;height:3.6145833333333335in" />
 
     Configure el protocolo de salida (Out Protocol), el número de receptor (Receiver Number), el número de línea (Line number), el tiempo HB y la velocidad en baudios (Baud Rate) para RS232.
 
     b) Configure los mensajes de servicio que se enviarán. Márquelos en la casilla de verificación **Active**. Introduzca el número de abonado requerido del número de receptor y los códigos de evento. Los códigos de evento recomendados se especifican en el Anexo B.
 
-    <img alt="" src="./image16.png" style="width:3.3125in;height:0.9479166666666666in" />
+    <img alt="" src="./image16.webp" style="width:3.3125in;height:0.9479166666666666in" />
 
     c) Cuando los mensajes se transmiten a los módulos de transmisión (Repeater Mode):
 
-    <img alt="" src="./image17.png" style="width:5.458333333333333in;height:3.6979166666666665in" />
+    <img alt="" src="./image17.webp" style="width:5.458333333333333in;height:3.6979166666666665in" />
 
     Configure el protocolo de salida (Out Protocol), el número de receptor (Receiver Number) y el número de línea (Line Number), marque la casilla de verificación **Active** para habilitar el bus MCI y configure la velocidad en baudios (Baud Rate). Especifique la dirección propia (Self Address) cuyo valor numérico debe ser inferior al de los módulos de transmisión conectados.
 
     d) Especifique la secuencia de módulos de transmisión, las direcciones, el tiempo de espera de confirmación **Ack TO**, el retardo de envío (si procede) **Tx TO** y la ignoración de mensajes retransmitidos **No Dupl**.
 
-    <img alt="" src="./image18.png" style="width:3.375in;height:1.3958333333333333in" />
+    <img alt="" src="./image18.webp" style="width:3.375in;height:1.3958333333333333in" />
 
     El retardo de envío Tx TO se aplica para retrasar la señal enviada en el sistema de radio. El valor numérico es múltiplo de 250 ms.
 
@@ -190,18 +190,18 @@ Ejecute el software R11config y se abrirá la ventana donde:
 
 6. Configure los parámetros de funcionamiento de entradas y los códigos de evento en la rama del programa **Inputs/Outputs**.
 
-    <img alt="" src="./image19.png" style="width:5.354166666666667in;height:1.21875in" />
+    <img alt="" src="./image19.webp" style="width:5.354166666666667in;height:1.21875in" />
 
     - **Input Type** — especifique el tipo de entrada;
     - **Delay** — especifique el tiempo de respuesta de la entrada;
     - **Event Code** — código de evento y número de objeto de envío tras la actuación de la entrada;
     - **Restore Code** — código de evento y número de objeto de envío tras la restauración de la entrada.
 
-    <img alt="" src="./image20.png" style="width:3.3125in;height:1.59375in" />
+    <img alt="" src="./image20.webp" style="width:3.3125in;height:1.59375in" />
 
 7. En la rama del programa **Settings** se pueden introducir nuevas frecuencias o eliminar las existentes.
 
-    <img alt="" src="./image21.png" style="width:5.4375in;height:1.4479166666666667in" />
+    <img alt="" src="./image21.webp" style="width:5.4375in;height:1.4479166666666667in" />
 
     Los ajustes del receptor, con su ubicación de almacenamiento indicada en la memoria del ordenador, pueden guardarse haciendo clic en el botón [Save], y posteriormente utilizarse para la parametrización de otros receptores. Los ajustes guardados pueden recuperarse haciendo clic en [Open] e indicando la ubicación de almacenamiento de los datos.
 

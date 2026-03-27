@@ -5,7 +5,7 @@
 <div>
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="600">
+  <img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -76,7 +76,7 @@ The STAY indicator will illuminate when STAY mode is on.
 
 <div>
 
-For area status changing into the opposite one it is sufficient to enter User code and select the preferred area. To delete symbols or command entered, press button [<img alt="" src="./image2.png" style="width:0.118028in;height:0.135963in" />].
+For area status changing into the opposite one it is sufficient to enter User code and select the preferred area. To delete symbols or command entered, press button [<img alt="" src="./image2.webp" style="width:0.118028in;height:0.135963in" />].
 
 </div>
 
@@ -94,7 +94,7 @@ For area status changing into the opposite one it is sufficient to enter User co
 
 **<u>To reset two-wire fire (smoke) detectors:</u>**
 
-- Hold button [<img alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" src="./image3.png" style="width:0.074998in;height:0.175344in" />] pressed for 3 seconds.
+- Hold button [<img alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" src="./image3.webp" style="width:0.074998in;height:0.175344in" />] pressed for 3 seconds.
 
 **<u>Note.</u>** Two-wire fire detectors do not reset automatically after fire emergency detection. They can be reset only manually.
 

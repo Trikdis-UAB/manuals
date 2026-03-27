@@ -1,7 +1,7 @@
 # PB-LoRa Botón de pánico inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="200">
+  <img src="./image3.webp" alt="" width="200">
 </div>
 
 ## Description
@@ -38,7 +38,7 @@ Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel d
 
 ### Elementos del botón de pánico 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 > **Nota:** consulte la etiqueta del producto para la ubicación de cada elemento.
 
@@ -64,7 +64,7 @@ NOTA: Después de insertar la batería, se recomienda esperar al menos 10 segund
 
 1.  Retire la tapa superior.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Retire la placa PCB.
 
@@ -76,11 +76,11 @@ NOTA: Después de insertar la batería, se recomienda esperar al menos 10 segund
 
 6.  Cierre la tapa superior.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Esquema de conexión del botón de pánico inalámbrico PB-LORA 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     El transceptor RF-LORA debe estar conectado al panel de control
@@ -110,11 +110,11 @@ El panel de control "FLEXi" SP3 debe tener instalada la versión de firmware 1.1
 
 8.  En el campo "**Núm. de Serie**" introduzca el número de serie del módulo PB-LORA.
 
-<img alt="" src="./image8.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  En la lista **"Zonas",** configure el botón de pánico.
 
-<img alt="" src="./image9.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Presione **Escribir [F5]** después de realizar los cambios.
 
@@ -130,7 +130,7 @@ El panel de control "FLEXi" SP3 debe tener instalada la versión de firmware 1.1
 
 16. En la lista de "**Módulos**", la línea " **PB-LORA Botón de pánico**" indicará la versión de Firmware.
 
-<img alt="" src="./image10.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Haga clic en "**Desconectar**" y desconecte el cable USB.
 
@@ -179,7 +179,7 @@ En el panel de control "FLEXi" SP3, se debe instalar la 2ª revisión de firmwar
         amarillo).
 6.  En el campo "**Acceso remoto**" de TrikdisConfig, ingrese el número de "**ID único**" del panel de control "FLEXi" SP3. Encontrará este número en el embalaje del dispositivo y en el panel de control.
 
-<img alt="" src="./image11.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Pulse "**Configuración**".
 
@@ -193,7 +193,7 @@ En el panel de control "FLEXi" SP3, se debe instalar la 2ª revisión de firmwar
 
 12. Espere a que se completen las actualizaciones.
 
-<img alt="" src="./image12.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Espere 1 minuto.
 
@@ -201,13 +201,13 @@ En el panel de control "FLEXi" SP3, se debe instalar la 2ª revisión de firmwar
 
 15. En la lista "**Módulos**", la línea "**RF-LORA transceiver**" indicará la versión de firmware.
 
-<img alt="" src="./image13.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Vaya a la ventana "**Sensores inalámbricos**".
 
 17. Pulse "**Emparejamiento de sensores**".
 
-<img alt="" src="./image14.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 El registro de los botones de pánico inalámbricos se puede hacer para todos a la vez.
 
@@ -221,7 +221,7 @@ Al registrar botones de pánico PB-LORA, el módulo RF-LORA debe estar al menos 
 
 21. En el módulo RF-LORA, el indicador "**DATA/TROUBLE**" se iluminará en verde durante unos segundos. Después de eso, el LED "**DATA/TROUBLE**" en el módulo RF-LORA comenzará a parpadear en rojo/verde.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. Después de unos segundos, el botón de pánico PB-LORA se agregará a la lista de sensores.
 
@@ -231,17 +231,17 @@ Al registrar botones de pánico PB-LORA, el módulo RF-LORA debe estar al menos 
 
 25. Si la carga de los sensores ha terminado, presione " **Dejar de emparejamiento**".
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Presiona "**Sí**" en la ventana que se abre. Los registrados botones de pánico PB-LORA se almacenarán en la memoria del panel de control "FLEXi" SP3.
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Espera unos minutos. Pulse el botón **Leer [F4].**
 
 En TrikdisConfig, la ventana "**Sensores inalámbricos**" contendrá una lista de botones de pánico PB-LORA registrados. El campo "**Núm. de Serie**" contendrá los números de serie de 6 dígitos de los botones de pánico, que deben coincidir con los números de serie de PB-LORA impresos en la parte posterior de la caja.
 
-<img alt="" src="./image18.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Eliminación de botones de pánico PB-LORA de la memoria del
@@ -265,6 +265,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.png" style="width:24px;height:auto;vertical-align:middle" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

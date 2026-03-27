@@ -22,7 +22,7 @@
 | CLK/DATA              | 7/8                  | KeyBus                   |
 
 
-<img src="../GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.png" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
+<img src="../GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05.webp" alt="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05" class="GT+ honeywell vista 48 prijungimo schema ENG 2026 01 05">
 
 ## Программирование панели сигнализации Honeywell Ademco Vista-48 (Vista-20, Vista-15) через клавиатуру
 
@@ -62,85 +62,85 @@
 <div class="steps-grid">
   <div class="step-card">
         <strong>Шаг 1.</strong> Нажмите <strong>Add new system</strong>.
-        <img src="../GT+ honeywell vista 48 1 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 1 ENG 2026 01 05.webp" alt="Add new system">
   </div>
   
  
   <div class="step-card">
         <strong>Шаг 2.</strong> Введите <strong>IMEI</strong> коммуникатора, нажмите <strong>Next</strong>.
-        <img src="../GT+ honeywell vista 48 2 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 2 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 3.</strong> Выберите охранную компанию.
-        <img src="../GT+ honeywell vista 48 3 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 3 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 4.</strong> Выберите <strong>Honeywell</strong>.
-        <img src="../GT+ honeywell vista 48 4 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 4 ENG 2026 01 05.webp" alt="Add new system">
   </div>
   
 
   <div class="step-card">
         <strong>Шаг 5.</strong> Выберите <strong>Vista 48 (Vista 20, Vista 15)</strong>.
-        <img src="../GT+ honeywell vista 48 5 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 5 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 6.</strong> Введите <strong>Object ID</strong> и <strong>Module ID</strong>, нажмите <strong>Next</strong>.
-        <img src="../GT+ honeywell vista 48 6 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 6 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 7.</strong> Подождите, пока записываются данные.
-        <img src="../GT+ honeywell vista 48 7 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 7 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 8.</strong> Нажмите <strong>Add to Protegus2</strong>.
-        <img src="../GT+ honeywell vista 48 8 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 8 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 9.</strong> Введите <strong>Name</strong> системы, нажмите <strong>Next</strong>.
-        <img src="../GT+ honeywell vista 48 9 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 9 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 10.</strong> Нажмите <strong>Skip</strong>.
-        <img src="../GT+ honeywell vista 48 10 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 10 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 11.</strong> Нажмите на систему.
-        <img src="../GT+ honeywell vista 48 11 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 11 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 12.</strong> Подождите 1 минуту для завершения и нажмите <strong>Transfer</strong>.
-        <img src="../GT+ honeywell vista 48 12 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 12 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 13.</strong> Введите e-mail пользователя, которому установщик передаст систему. Нажмите <strong>Transfer</strong>.
-        <img src="../GT+ honeywell vista 48 13 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 13 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 
   <div class="step-card">
         <strong>Шаг 14.</strong> Система появится в Protegus на телефоне пользователя.
-        <img src="../GT+ honeywell vista 48 14 ENG 2026 01 05.png" alt="Add new system">
+        <img src="../GT+ honeywell vista 48 14 ENG 2026 01 05.webp" alt="Add new system">
   </div>
 
 

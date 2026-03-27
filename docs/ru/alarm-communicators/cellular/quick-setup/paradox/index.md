@@ -72,59 +72,59 @@
 <div class="steps-grid">
   <div class="step-card">
     <strong>Шаг 1.</strong> Нажмите <strong>Add new system</strong>.
-    <img src="./protegus-add-new-system.png" alt="Add new system">
+    <img src="./protegus-add-new-system.webp" alt="Add new system">
   </div>
   <div class="step-card">
     <strong>Шаг 2.</strong> Введите <strong>IMEI</strong> коммуникатора, нажмите <strong>Next</strong>.
-    <img src="./protegus-enter-imei.png" alt="Enter IMEI">
+    <img src="./protegus-enter-imei.webp" alt="Enter IMEI">
   </div>
   <div class="step-card">
     <strong>Шаг 3.</strong> Выберите <strong>TIP RING</strong>, нажмите <strong>Next</strong>.
-    <img src="./protegus-select-tip-ring.png" alt="Select TIP RING">
+    <img src="./protegus-select-tip-ring.webp" alt="Select TIP RING">
   </div>
   <div class="step-card">
     <strong>Шаг 4.</strong> Нажмите <strong>Back</strong>.
-    <img src="./protegus-back.png" alt="Back">
+    <img src="./protegus-back.webp" alt="Back">
   </div>
   <div class="step-card">
     <strong>Шаг 5.</strong> Выберите <strong>Serial BUS</strong>, нажмите <strong>Next</strong>.
-    <img src="./protegus-select-serial-bus.png" alt="Select Serial BUS">
+    <img src="./protegus-select-serial-bus.webp" alt="Select Serial BUS">
   </div>
   <div class="step-card">
     <strong>Шаг 6.</strong> Выберите <strong>PARADOX</strong>.
-    <img src="./protegus-select-paradox.png" alt="Select Paradox">
+    <img src="./protegus-select-paradox.webp" alt="Select Paradox">
   </div>
   <div class="step-card">
     <strong>Шаг 7.</strong> Выберите <strong>PARADOX SP+/MG+ series KeyBus</strong>.
-    <img src="./protegus-select-paradox-keybus.png" alt="Select Paradox KeyBus">
+    <img src="./protegus-select-paradox-keybus.webp" alt="Select Paradox KeyBus">
   </div>
   <div class="step-card">
     <strong>Шаг 8.</strong> Введите <strong>Primary Object ID</strong>, нажмите <strong>Next</strong>.
-    <img src="./protegus-primary-object-id.png" alt="Enter Primary Object ID">
+    <img src="./protegus-primary-object-id.webp" alt="Enter Primary Object ID">
   </div>
   <div class="step-card">
     <strong>Шаг 9.</strong> Подождите, пока записываются данные.
-    <img src="./protegus-writing-data.png" alt="Writing data">
+    <img src="./protegus-writing-data.webp" alt="Writing data">
   </div>
   <div class="step-card">
     <strong>Шаг 10.</strong> Нажмите <strong>Next</strong>.
-    <img src="./protegus-press-next.png" alt="Press Next">
+    <img src="./protegus-press-next.webp" alt="Press Next">
   </div>
   <div class="step-card">
     <strong>Шаг 11.</strong> Введите <strong>Name</strong> системы, нажмите <strong>Next</strong>.
-    <img src="./protegus-enter-name.png" alt="Enter name">
+    <img src="./protegus-enter-name.webp" alt="Enter name">
   </div>
   <div class="step-card">
     <strong>Шаг 12.</strong> Нажмите <strong>Skip</strong> (если не добавляете пользователей сейчас).
-    <img src="./protegus-skip.png" alt="Skip">
+    <img src="./protegus-skip.webp" alt="Skip">
   </div>
   <div class="step-card">
     <strong>Шаг 13.</strong> Подождите ~1 минуту для завершения.
-    <img src="./protegus-wait.png" alt="Wait">
+    <img src="./protegus-wait.webp" alt="Wait">
   </div>
   <div class="step-card">
     <strong>Шаг 14.</strong> Настройка завершена.
-    <img src="./protegus-finished.png" alt="Finished">
+    <img src="./protegus-finished.webp" alt="Finished">
   </div>
 </div>
 

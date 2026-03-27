@@ -1,7 +1,7 @@
 # Ethernet communicator E16
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="Product Image" width="400">
+  <img src="./image1.webp" alt="Product Image" width="400">
 </div>
 
 
@@ -115,7 +115,7 @@ Sends events to monitoring station receiver:
 
 5.  Ethernet connection RJ45 socket.
 
-<img alt="" src="./image4.png" style="width:4.750009842519685in;height:2.853338801399825in" />
+<img alt="" src="./image4.webp" style="width:4.750009842519685in;height:2.853338801399825in" />
 
 ### Purpose of terminals
 
@@ -156,7 +156,7 @@ Sends events to monitoring station receiver:
 
 ### Structural schematic with *E16* usage
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.975in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.975in" />
 
 !!! note
     Before you begin, make sure that you have the necessary:
@@ -178,7 +178,7 @@ Sends events to monitoring station receiver:
 
 2.  Open the casing of the E16 with a flat-head screwdriver as shown below:
 
-    <img alt="" src="./image6.png" style="width:6.876680883639545in;height:1.850003280839895in" />
+    <img alt="" src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
 
 3.  Using a USB Mini-B cable connect the E16 to the computer.
 
@@ -192,7 +192,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “System settings” window:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.763779527559055in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.763779527559055in" />
 
 1.  Select **Security panel model** that will be connected to the communicator.
 
@@ -207,7 +207,7 @@ Below we describe what settings need to be set for the communicator to begin sen
     change the **Security panel PC download/UDL password**.
 **In “User reporting” window, “PROTEGUS Cloud” tab:**
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 4. Tick the checkbox **Enable connection** to the Protegus Cloud.
 
@@ -223,7 +223,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System settings” window:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.763779527559055in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.763779527559055in" />
 
 1.  Enter **Object ID** (account) number provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**).
 
@@ -231,7 +231,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:3.5393700787401574in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:3.5393700787401574in" />
 
 3. **Communication type** - select the **IP** connection method.
 
@@ -265,15 +265,15 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="" src="./image11.png" style="width:7.0875in;height:2.8256944444444443in" />
+<img alt="" src="./image11.webp" style="width:7.0875in;height:2.8256944444444443in" />
 
-<img alt="" src="./image12.png" style="width:7.0875in;height:2.8472222222222223in" />
+<img alt="" src="./image12.webp" style="width:7.0875in;height:2.8472222222222223in" />
 
-<img alt="" src="./image13.png" style="width:7.0875in;height:2.714583333333333in" />
+<img alt="" src="./image13.webp" style="width:7.0875in;height:2.714583333333333in" />
 
-<img alt="" src="./image14.png" style="width:7.0875in;height:2.936111111111111in" />
+<img alt="" src="./image14.webp" style="width:7.0875in;height:2.936111111111111in" />
 
-<img alt="" src="./image15.png" style="width:3.23750656167979in;height:2.717505468066492in" />
+<img alt="" src="./image15.webp" style="width:3.23750656167979in;height:2.717505468066492in" />
 
 ### Schematic for connecting to panel keyswitch zone 
 
@@ -288,7 +288,7 @@ Follow this schematic if the control panel will be armed/disarmed with a E16 PGM
     configured with the settings described in chapter 5.2 "Additional
     settings to arm/disarm the system using the control panel's keyswitch
     zone".
-<img alt="" src="./image16.png" style="width:3.22250656167979in;height:2.720005468066492in" />
+<img alt="" src="./image16.webp" style="width:3.22250656167979in;height:2.720005468066492in" />
 
 ### Schematics for input connection 
 
@@ -296,7 +296,7 @@ The communicator has 3 universal input / output terminals that can be set to inp
 
 Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="" src="./image17.png" style="width:5.169291338582677in;height:4.003937007874016in" />
+<img alt="" src="./image17.webp" style="width:5.169291338582677in;height:4.003937007874016in" />
 
 !!! note
     If more inputs or outputs need to be connected to the communicator,
@@ -305,19 +305,19 @@ Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, 
     chapter **3.6 "Schematics for connecting iO series expansion modules"**.
 ### Connect LAN cable
 
-<img alt="" src="./image18.png" style="width:2.7975054680664915in;height:2.2525043744531934in" />
+<img alt="" src="./image18.webp" style="width:2.7975054680664915in;height:2.2525043744531934in" />
 
 ### Schematics for wiring a relay 
 
 With relay contacts you can control (turn on/off) various electronic appliances. The I/O terminal of the communicator must be set to an output (OUT) mode.
 
-<img alt="" src="./image19.png" style="width:2.552505468066492in;height:0.9575021872265966in" />
+<img alt="" src="./image19.webp" style="width:2.552505468066492in;height:0.9575021872265966in" />
 
 ### Schematics for connecting iO series expansion modules
 
 If more inputs or outputs need to be connected to the communicator, or if you want to connect a temperature sensor, connect the TRIKDIS iO series wired or wireless output expander. Configuration of expander modules connected to the E16 is described in chapter 6.6 ““RS485 modules” window”.
 
-<img alt="" src="./image20.png" style="width:7.0875in;height:3.4944444444444445in" />
+<img alt="" src="./image20.webp" style="width:7.0875in;height:3.4944444444444445in" />
 
 ### Turn on the communicator 
 
@@ -405,7 +405,7 @@ The control panel must be connected to the internet. Connect to **Innerrange In
 
 Open **Configuration > General > Alarm Reporting**. In the **3rd Party Device Configuration** settings group you need to enter:
 
-<img alt="" src="./image21.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image21.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** - select this checkbox.
 
@@ -445,13 +445,13 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -470,7 +470,7 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 2.  Enter the system „Name”. Click "Next".
 
-<img alt="" src="./image28.png" style="width:2.858267716535433in;height:3.704724409448819in" />
+<img alt="" src="./image28.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
@@ -481,20 +481,20 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  Click „**Continue**“.
 
-<img alt="" src="./image29.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image29.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
-<img alt="" src="./image30.png" style="width:2.220472440944882in;height:3.5118110236220472in" />
+<img alt="" src="./image30.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
 3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 2.  After completing the settings, click the “**Skip**” button.
 
-<img alt="" src="./image31.png" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+<img alt="" src="./image31.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Arming/disarming the alarm system with Protegus2
 
@@ -502,7 +502,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="" src="./image32.png" style="width:2.220472440944882in;height:2.65748031496063in" />
+<img alt="" src="./image32.webp" style="width:2.220472440944882in;height:2.65748031496063in" />
 
 ## TrikdisConfig window description
 
@@ -510,7 +510,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 After connecting the E16 and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image33.png" style="width:7.070866141732283in;height:0.5905511811023622in" />
+<img alt="" src="./image33.webp" style="width:7.070866141732283in;height:0.5905511811023622in" />
 
 | Object        | Description                                        |
 |---------------|----------------------------------------------------|
@@ -528,7 +528,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 ### “System settings” window
 
-<img alt="" src="./image34.png" style="width:7.082677165354331in;height:3.062992125984252in" />
+<img alt="" src="./image34.webp" style="width:7.082677165354331in;height:3.062992125984252in" />
 
 **“General” settings group**
 
@@ -558,7 +558,7 @@ When setting up the communicator E16 there are two levels of access for, the adm
 
 **“CMS settings” tab**
 
-<img alt="" src="./image35.png" style="width:7.082677165354331in;height:4.019685039370079in" />
+<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:4.019685039370079in" />
 
 The communicator sends events to the monitoring station via a wired internet (IP) connection.
 
@@ -590,7 +590,7 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 Events are transmitted in parallel with the first channel through this channel. When the second channel is enabled, events can be sent simultaneously to two receivers (e.g., local and centralized monitoring stations). Parallel channel settings are the same as described above.
 
-<img alt="" src="./image36.png" style="width:7.078740157480315in;height:2.3661417322834644in" />
+<img alt="" src="./image36.webp" style="width:7.078740157480315in;height:2.3661417322834644in" />
 
 ****“Settings” tab** “Settings” settings group**
 
@@ -620,7 +620,7 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 **“PROTEGUS Cloud” tab**
 
-<img alt="" src="./image37.png" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="" src="./image37.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 Protegus service allows users to remotely monitor and control the communicator. For more information about Protegus service, visit [www.protegus.app](https://www.protegus.app).
 
@@ -632,7 +632,7 @@ Protegus service allows users to remotely monitor and control the communicator. 
 
 ### “Ethernet settings” window
 
-<img alt="" src="./image38.png" style="width:7.086614173228346in;height:2.2283464566929134in" />
+<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:2.2283464566929134in" />
 
 **“Ethernet settings” settings group**
 
@@ -646,7 +646,7 @@ Protegus service allows users to remotely monitor and control the communicator. 
 
 ### “IN/OUT” windows
 
-<img alt="" src="./image39.png" style="width:7.086614173228346in;height:2.452755905511811in" />
+<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
 
 The communicator has 3 universal (input / output) terminals. The table can set the terminal operating mode (Off, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -668,7 +668,7 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 
 iO series expanders can be connected to the communicator to add additional inputs, outputs and serial buses for temperature sensors. Connected expanders must be added to the **Modules list** table.
 
-<img alt="" src="./image40.png" style="width:7.078740157480315in;height:2.141732283464567in" />
+<img alt="" src="./image40.webp" style="width:7.078740157480315in;height:2.141732283464567in" />
 
 - **Module type** – select the module that is connected to the communicator via RS485 from the list.
 
@@ -682,7 +682,7 @@ After adding the expander to the communicator as described above, in the **RS485
 
 **iO-8 expander settings window**
 
-<img alt="" src="./image41.png" style="width:7.082677165354331in;height:2.52755905511811in" />
+<img alt="" src="./image41.webp" style="width:7.082677165354331in;height:2.52755905511811in" />
 
 Expander iO-8 has 8 universal (input/output) terminal contacts. Up to four iO-8 expanders can be connected.
 
@@ -720,7 +720,7 @@ In the table inputs can be assigned Contact ID event and restore codes. After in
 
 **iO expander settings window**
 
-<img alt="" src="./image42.png" style="width:7.086614173228346in;height:3.2283464566929134in" />
+<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.2283464566929134in" />
 
 Expander iO has: terminals for 1 input, 1 output (relay contacts) and 1-Wire serial bus for connecting temperature sensors.
 
@@ -740,7 +740,7 @@ In the table inputs can be assigned Contact ID event and restore codes. After an
 
 This window allows you to turn on, off, and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
 
-<img alt="" src="./image43.png" style="width:7.090551181102362in;height:1.9448818897637796in" />
+<img alt="" src="./image43.webp" style="width:7.090551181102362in;height:1.9448818897637796in" />
 
 - **COMMUNICATION** – message about connection error between the control panel and E16.
 
@@ -765,7 +765,7 @@ You can change the Contact ID code for each event, and also the zone and partiti
 
 To restore the communicator's factory settings, you need to click the **Restore** button in the TrikdisConfig window.
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:0.9803149606299213in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.9803149606299213in" />
 
 ## Remote configuration
 
@@ -782,7 +782,7 @@ To restore the communicator's factory settings, you need to click the **Restore*
 
 2.  In the **Remote access** section enter the communicator’s **MAC** number. This number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image45.png" style="width:7.0078740157480315in;height:1.0393700787401574in" />
+<img alt="" src="./image45.webp" style="width:7.0078740157480315in;height:1.0393700787401574in" />
 
 3. (Optional) in the **System name** field, enter the desired name for the E16 with this Unique ID.
 
@@ -829,7 +829,7 @@ The communicator’s firmware can also be updated or changed manually. After an 
 
 3.  Select the menu branch **Firmware**.
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:3.1653543307086616in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.1653543307086616in" />
 
 4. Press **Open firmware** and select the required firmware file. If you do not have the file, the newest firmware file can be downloaded by <u>registered users</u> from [www.trikdis.com](http://www.trikdis.com) , under the download section of the E16 communicator.
 
@@ -847,10 +847,10 @@ Disconnect the power supply before making any electrical connections.
 
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Annex

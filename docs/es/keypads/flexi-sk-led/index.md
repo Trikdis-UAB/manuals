@@ -5,7 +5,7 @@
 <div>
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="600">
+  <img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -76,7 +76,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 <div>
 
-Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón [<img alt="" src="./image2.png" style="width:0.118028in;height:0.135963in" />].
+Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón [<img alt="" src="./image2.webp" style="width:0.118028in;height:0.135963in" />].
 
 </div>
 
@@ -94,7 +94,7 @@ Para cambiar el estado del área a la opuesta, basta con ingresar el código de 
 
 **<u>Para reestablecer el Detector de Incendios (Humo) de dos cables:</u>**
 
-- Mantenga presionado el botón [<img alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" src="./image3.png" style="width:0.074998in;height:0.175344in" />] por 3 segundos.
+- Mantenga presionado el botón [<img alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" src="./image3.webp" style="width:0.074998in;height:0.175344in" />] por 3 segundos.
 
 **<u>Nota.</u>** Los detectores de incendio de dos cables no se reinician automáticamente después de la detección de emergencia por incendio. Solo se pueden reiniciar manualmente.
 

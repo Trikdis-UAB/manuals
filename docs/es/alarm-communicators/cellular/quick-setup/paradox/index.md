@@ -72,59 +72,59 @@ Consulte el manual completo de Paradox si los códigos del teclado son diferente
 <div class="steps-grid">
   <div class="step-card">
     <strong>Paso 1.</strong> Pulse <strong>Agregar nuevo sistema</strong>.
-    <img src="./protegus-add-new-system.png" alt="Agregar nuevo sistema">
+    <img src="./protegus-add-new-system.webp" alt="Agregar nuevo sistema">
   </div>
   <div class="step-card">
     <strong>Paso 2.</strong> Introduzca el <strong>IMEI</strong> del comunicador, pulse <strong>Siguiente</strong>.
-    <img src="./protegus-enter-imei.png" alt="Introducir IMEI">
+    <img src="./protegus-enter-imei.webp" alt="Introducir IMEI">
   </div>
   <div class="step-card">
     <strong>Paso 3.</strong> Seleccione <strong>TIP RING</strong>, pulse <strong>Siguiente</strong>.
-    <img src="./protegus-select-tip-ring.png" alt="Seleccionar TIP RING">
+    <img src="./protegus-select-tip-ring.webp" alt="Seleccionar TIP RING">
   </div>
   <div class="step-card">
     <strong>Paso 4.</strong> Pulse <strong>Atrás</strong>.
-    <img src="./protegus-back.png" alt="Atrás">
+    <img src="./protegus-back.webp" alt="Atrás">
   </div>
   <div class="step-card">
     <strong>Paso 5.</strong> Seleccione <strong>Serial BUS</strong>, pulse <strong>Siguiente</strong>.
-    <img src="./protegus-select-serial-bus.png" alt="Seleccionar Serial BUS">
+    <img src="./protegus-select-serial-bus.webp" alt="Seleccionar Serial BUS">
   </div>
   <div class="step-card">
     <strong>Paso 6.</strong> Seleccione <strong>PARADOX</strong>.
-    <img src="./protegus-select-paradox.png" alt="Seleccionar Paradox">
+    <img src="./protegus-select-paradox.webp" alt="Seleccionar Paradox">
   </div>
   <div class="step-card">
     <strong>Paso 7.</strong> Seleccione <strong>PARADOX SP+/MG+ series KeyBus</strong>.
-    <img src="./protegus-select-paradox-keybus.png" alt="Seleccionar Paradox KeyBus">
+    <img src="./protegus-select-paradox-keybus.webp" alt="Seleccionar Paradox KeyBus">
   </div>
   <div class="step-card">
     <strong>Paso 8.</strong> Introduzca <strong>Primary Object ID</strong>, pulse <strong>Siguiente</strong>.
-    <img src="./protegus-primary-object-id.png" alt="Introducir Primary Object ID">
+    <img src="./protegus-primary-object-id.webp" alt="Introducir Primary Object ID">
   </div>
   <div class="step-card">
     <strong>Paso 9.</strong> Espere mientras se escriben los datos.
-    <img src="./protegus-writing-data.png" alt="Escritura de datos">
+    <img src="./protegus-writing-data.webp" alt="Escritura de datos">
   </div>
   <div class="step-card">
     <strong>Paso 10.</strong> Pulse <strong>Siguiente</strong>.
-    <img src="./protegus-press-next.png" alt="Siguiente">
+    <img src="./protegus-press-next.webp" alt="Siguiente">
   </div>
   <div class="step-card">
     <strong>Paso 11.</strong> Introduzca el <strong>Nombre</strong> del sistema, pulse <strong>Siguiente</strong>.
-    <img src="./protegus-enter-name.png" alt="Introducir nombre">
+    <img src="./protegus-enter-name.webp" alt="Introducir nombre">
   </div>
   <div class="step-card">
     <strong>Paso 12.</strong> Pulse <strong>Saltar</strong> (si no añade usuarios ahora).
-    <img src="./protegus-skip.png" alt="Saltar">
+    <img src="./protegus-skip.webp" alt="Saltar">
   </div>
   <div class="step-card">
     <strong>Paso 13.</strong> Espere ~1 minuto para completar.
-    <img src="./protegus-wait.png" alt="Espere">
+    <img src="./protegus-wait.webp" alt="Espere">
   </div>
   <div class="step-card">
     <strong>Paso 14.</strong> Configuración finalizada.
-    <img src="./protegus-finished.png" alt="Finalizado">
+    <img src="./protegus-finished.webp" alt="Finalizado">
   </div>
 </div>
 

@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Repeater R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Purpose of the Product
@@ -34,7 +34,7 @@ Transmission to the monitoring station is performed by single or several transmi
 
 Repeater R-IP12 structural diagram is provided in Figure 1.
 
-<img alt="Repeater R-IP12 structural diagram" src="./image3.jpg" style="width: 100%; max-width: 700px;">
+<img alt="Repeater R-IP12 structural diagram" src="./image3.webp" style="width: 100%; max-width: 700px;">
 
 *Fig. 1. Repeater R-IP12 structural diagram*
 

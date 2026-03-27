@@ -1,7 +1,7 @@
 # PB-LoRa Беспроводная кнопка тревоги
 
 <div style="text-align: center;">
-  <img src="./image3.png" alt="" width="200">
+  <img src="./image3.webp" alt="" width="200">
 </div>
 
 ## Требование безопасности
@@ -14,7 +14,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-<img alt="" src="./image2.png" style="width:24px;height:auto;vertical-align:middle" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -50,7 +50,7 @@
 
 ### Элементы кнопки тревоги 
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 > **Примечание:** расположение каждого элемента указано на этикетке изделия.
 
@@ -76,7 +76,7 @@
 
 1.  Снимите верхнюю крышку.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Удалите плату.
 
@@ -88,11 +88,11 @@
 
 6.  Закройте верхнюю крышку.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Подсоединение беспроводной кнопки тревоги PB-LORA 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     Трансивер RF-LORA должен быть подключен к охранной панели
@@ -121,11 +121,11 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля PB-LORA.
 
-<img alt="" src="./image8.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки кнопке тревоги.
 
-<img alt="" src="./image9.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 
@@ -141,7 +141,7 @@
 
 16. В списке "**Модули**" в строке "**PB-LORA кнопка тревоги**" будет указана версия прошивки.
 
-<img alt="" src="./image10.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Нажмите кнопку "**Отсоединить**" и отсоедините USB кабель.
 
@@ -189,7 +189,7 @@
         желтым).
 6.  В поле **„Уникальный №"** введите IMEI номер охранной панели „FLEXi“ SP3, который указан на упаковке или на изделии.
 
-<img alt="" src="./image11.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Нажмите кнопку **„Конфигурировать“**.
 
@@ -203,7 +203,7 @@
 
 12. Подождите, пока произойдет обновление.
 
-<img alt="" src="./image12.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Подождите 1 минуту.
 
@@ -211,13 +211,13 @@
 
 15. В окне **„Модули“** в поле **„Версия прошивки“** будет указана версия программного обеспечения модуля RF-LORA.
 
-<img alt="" src="./image13.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Перейдите к окну **„Беспроводные датчики“**.
 
 17. Нажмите кнопку **„Привязка датчиков“**.
 
-<img alt="" src="./image14.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 Регистрация беспроводных кнопок тревоги может производиться для всех сразу.
 
@@ -231,7 +231,7 @@
 
 21. Индикатор **„DATA/TROUBLE“** на модуле RF-LORA загорится зеленым цветом на несколько секунд. После этого светодиод **„DATA/TROUBLE“** на модуле RF-LORA снова начнет мигать красным/зеленым цветом.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. Через несколько секунд беспроводная кнопка тревоги PB-LORA добавится в список датчиков.
 
@@ -241,17 +241,17 @@
 
 25. Нажмите **„Остановить привязку“**, чтобы завершить регистрацию беспроводных кнопок тревоги.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Нажмите ***„*Да*“ в открывшемся окне. Зарегистрированные беспроводные кнопки тревоги PB-LORA будут сохранены в памяти охранной панели „FLEXi“ SP3.***
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Подождите несколько минут. Нажмите кнопку **Считать [F4]**.
 
 В TrikdisConfig программном окне **„Беспроводные датчики“** будет содержаться список зарегистрированных беспроводных кнопок тревоги PB-LORA. В поле **„Серийный №“** будут написаны 6-значные серийные номера кнопок тревоги, которые должны совпадать с серийными номерами PB-LORA, написанными на задней стороне корпуса.
 
-<img alt="" src="./image18.png" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Удаление PB-LORA беспроводных кнопок тревоги из памяти

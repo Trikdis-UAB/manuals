@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Retransliatorius R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 
@@ -39,7 +39,7 @@ Perdavimas į stebėjimo pultą vykdomas vienu arba keliais perdavimo moduliais,
 
 Retransliatoriaus R-IP12 struktūrinė schema pateikta 1 paveiksle.
 
-<img alt="" src="./image3.jpg" style="width:6.166666666666667in;height:3.375in" />
+<img alt="" src="./image3.webp" style="width:6.166666666666667in;height:3.375in" />
 
 1 pav. Struktūrinė retransliatoriaus R-IP12 schema
 

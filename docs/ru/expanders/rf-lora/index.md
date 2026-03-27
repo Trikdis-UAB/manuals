@@ -1,7 +1,7 @@
 # RF-LoRa Беспроводной расширитель
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="200">
+  <img src="./image1.webp" alt="" width="200">
 </div>
 
 ## Требование безопасности 
@@ -15,7 +15,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-<img alt="" src="./image2.png" style="height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -54,7 +54,7 @@
 
 ### Элементы расширителя
 
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 > **Примечание:**
 
@@ -87,7 +87,7 @@
 
 1.  Снимите верхнюю крышку.
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Удалите плату.
 
@@ -97,15 +97,15 @@
 
 5.  Закройте верхнюю крышку.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Подключение трансивера RF-LORA к охранной панели "FLEXi" SP3 
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Схема подключения расширителей LORA 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Конфигурация с TrikdisConfig
 
@@ -125,15 +125,15 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image8.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входам расширителя**.**
 
-<img alt="" src="./image9.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя**.**
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

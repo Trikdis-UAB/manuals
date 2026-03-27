@@ -1,7 +1,7 @@
 # GSM apsaugos centralė CG17
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Aprašymas
@@ -157,7 +157,7 @@ Dirba su „Protegus2“ programėle:
 
 6.  „Nano“ dydžio SIM kortelės laikiklis.
 
-<img alt="" src="./image4.png" style="width:3.937007874015748in;height:2.4921259842519685in" />
+<img alt="" src="./image4.webp" style="width:3.937007874015748in;height:2.4921259842519685in" />
 
 | Kontaktas | Aprašymas |
 |----|----|
@@ -202,7 +202,7 @@ Dirba su „Protegus2“ programėle:
 
 ### Medžiagos, reikalingos montavimo darbams
 
-<img alt="" src="./image5.png" style="width:5.511811023622047in;height:0.531496062992126in" />Prieš pradėdami montavimą įsitikinkite, kad turite reikiamas medžiagas, kurias galite užsisakyti iš vietinio platintojo.
+<img alt="" src="./image5.webp" style="width:5.511811023622047in;height:0.531496062992126in" />Prieš pradėdami montavimą įsitikinkite, kad turite reikiamas medžiagas, kurias galite užsisakyti iš vietinio platintojo.
 
 ## Greitas konfigūravimas su programa *TrikdisConfig*
 
@@ -210,7 +210,7 @@ Dirba su „Protegus2“ programėle:
 
 2.  Plokščiu atsuktuvu nuimkite CG17 dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image6.png" style="width:6.0236220472440944in;height:1.594488188976378in" />
+<img alt="" src="./image6.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
 
 1.  Su USB Mini-B kabeliu sujunkite CG17 su kompiuteriu.
 
@@ -224,7 +224,7 @@ Dirba su „Protegus2“ programėle:
 
 **Lango „Sistemos parinktys“ kortelėje „SIM“:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 1.  Įveskite „**SIM kortelės PIN kodą“**.
 
@@ -232,7 +232,7 @@ Dirba su „Protegus2“ programėle:
 
 **Lango „Vartotojai ir pranešimai“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:3.5708661417322833in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:3.5708661417322833in" />
 
 3. Pažymėkite varnele „**Įgalinti jungimąsi“** prie Protegus serviso.
 
@@ -247,7 +247,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 1.  Įrašykite „**Objekto numerį“ (Nenaudokite FFFE, FFFF objekto numerių)**.
 
@@ -257,7 +257,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Lange „Pranešimai į ST pultą“, parinkčių grupėje „Pagrindinis kanalas“:
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.543307086614173in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
 
 4. **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminį kanalą).
 
@@ -304,9 +304,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Įstatykite nano-SIM kortelę. SIM kortelė turi būti jau priregistruota GSM tinkle su jau įjungtomis ir veikiančiomis reikiamomis paslaugomis, pvz., gali paskambinti, išsiųsti ir priimti SMS žinutes, veikia mobilusis internetas. <u>Apie tai, kaip įjungti pageidaujamas paslaugas, teiraukitės SIM kortelės mobiliojo ryšio operatoriaus.</u>
 
-<img alt="" src="./image11.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image11.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image12.png" style="width:2.213337707786527in;height:1.3566699475065618in" />
+<img alt="" src="./image12.webp" style="width:2.213337707786527in;height:1.3566699475065618in" />
 
 !!! note "Pastaba"
     \*\*
@@ -341,7 +341,7 @@ Zonų nustatymų keitimas, sričių priskyrimas aprašyti skyriuje 4.7 „Langas
 
 Galimos sujungimų schemos:
 
-<img alt="" src="./image13.png" style="width:6.39001312335958in;height:1.430003280839895in" />
+<img alt="" src="./image13.webp" style="width:6.39001312335958in;height:1.430003280839895in" />
 
 ### Dūmų jutiklio prijungimo schemos
 
@@ -349,17 +349,17 @@ Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti 
 
 - **Keturių laidų dūmų jutiklio prijungimas**
 
-<img alt="" src="./image14.png" style="width:5.0833431758530185in;height:1.5333366141732283in" />
+<img alt="" src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
 
 - **Dviejų laidų dūmų jutiklio prijungimas**
 
 1.  naudojant EOL zoną (arba NC, be rezistoriaus).
 
-<img alt="" src="./image15.png" style="width:5.273344269466317in;height:1.8166699475065617in" />
+<img alt="" src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
 
 2. naudojant EOL zoną (arba NO, be rezistoriaus).
 
-<img alt="" src="./image16.png" style="width:5.273344269466317in;height:1.710003280839895in" />
+<img alt="" src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
 
 \*SM1 – Trikdžio pagamintas suderinimo modulis, leidžiantis nuotoliniu būdu 2 laidų dūmų jutiklį po suveikimo paleisti veikti iš naujo.
 
@@ -369,7 +369,7 @@ Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti 
 
 - Jungiant temperatūros daviklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5).
 
-<img alt="" src="./image17.png" style="width:3.0in;height:0.9625in" />
+<img alt="" src="./image17.webp" style="width:3.0in;height:0.9625in" />
 
 Laidų spalvos:
 
@@ -381,17 +381,17 @@ Laidų spalvos:
 
 ### Relės ir LED prijungimo schemos
 
-<img alt="" src="./image18.png" style="width:4.4175087489063865in;height:0.8850021872265966in" />
+<img alt="" src="./image18.webp" style="width:4.4175087489063865in;height:0.8850021872265966in" />
 
 ### Kontaktinių raktų skaitytuvų prijungimo schemos
 
 **TM17** skaitytuvas prie CG17 jungiamas per *RS485* duomenų jungtį. *RS485* duomenų jungties laidų ilgis gali būti iki 100 m. Prie CG17 galima prijungti iki 8 skaitytuvų TM17.
 
-<img alt="" src="./image19.png" style="width:4.335008748906387in;height:2.0400043744531935in" />
+<img alt="" src="./image19.webp" style="width:4.335008748906387in;height:2.0400043744531935in" />
 
 **iButton raktų skaitytuvas** prie CG17 jungiamas per “*1 Wire“* jungtį. Jungties laidų ilgis gali būti iki 30 m:
 
-<img alt="" src="./image20.png" style="width:5.030009842519685in;height:2.5975054680664917in" />
+<img alt="" src="./image20.webp" style="width:5.030009842519685in;height:2.5975054680664917in" />
 
 !!! note "Pastaba"
     Raktų priregistravimas prie CG17 aprašytas p. 4.4.1 „Kontaktinių
@@ -400,7 +400,7 @@ Laidų spalvos:
 
 Belaidžių jutiklių imtuvas *RF-SH* skirtas dirbti su *Crow* firmos belaidžiais gaminiais (judesio jutikliai, magnetiniai kontaktai, sirenos, nuotolinio valdymo pulteliai ir t.t.). Prie *CG17* galima prijungti vieną *RF-SH* imtuvą.
 
-<img alt="" src="./image21.png" style="width:2.60625in;height:1.175in" />
+<img alt="" src="./image21.webp" style="width:2.60625in;height:1.175in" />
 
 ### iO serijos išplėtimo modulių prijungimo schemos
 
@@ -408,10 +408,10 @@ Jei reikia, kad apsaugos centralė CG17 turėtų daugiau įėjimų IN arba išė
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image22.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image23.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image23.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -419,7 +419,7 @@ Jei reikia, kad apsaugos centralė CG17 turėtų daugiau įėjimų IN arba išė
 
 Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner arba Crow CR-16 PowerWave). Programoje *TrikdisConfig* reikia pažymėti, kad bus naudojama Crow klaviatūra (žr. p. 4.2 „Langas „Sistemos parinktys““).
 
-<img alt="" src="./image24.png" style="width:3.35000656167979in;height:1.490003280839895in" />
+<img alt="" src="./image24.webp" style="width:3.35000656167979in;height:1.490003280839895in" />
 
 ### Sirenos prijungimo schema
 
@@ -429,11 +429,11 @@ Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Run
 
 - Išėjimui OUT turi būti priskirta funkcija „Sirena“ ir nurodyta apsaugos signalizacijos sritis.
 
-<img alt="" src="./image25.png" style="width:2.803472222222222in;height:1.1534722222222222in" />
+<img alt="" src="./image25.webp" style="width:2.803472222222222in;height:1.1534722222222222in" />
 
 ### iO serijos plėtimo modulių prijungimo schemos
 
-<img alt="" src="./image26.png" style="width:7.0875in;height:4.688194444444444in" />
+<img alt="" src="./image26.webp" style="width:7.0875in;height:4.688194444444444in" />
 
 !!! note "Pastaba"
     Jungiant temperatūros daviklį laidu, ilgesniu nei 0,5 m, rekomenduojama
@@ -449,7 +449,7 @@ Prie *CG17* galima prijungti iki 8 klaviatūrų (Crow CR-16 Runner, Crow LCD Run
     prie *1-Wire* gnybto.
 ### Kuro lygio jutiklio Strela RS485 prijungimo schema
 
-<img alt="" src="./image27.png" style="width:3.7025076552930885in;height:1.2375021872265968in" />
+<img alt="" src="./image27.webp" style="width:3.7025076552930885in;height:1.2375021872265968in" />
 
 Prie CG17 galima prijungti vieną kuro jutiklį „STRELA S485“. Kai prijungtas kuro jutiklis kiti moduliai (iO-8, iO, iO-WL, RF-SH, TM17, E485, W485, iO-LORA, iO8-LORA, PB-LORA, REL-LORA) nesijungia prie CG17.
 
@@ -461,17 +461,17 @@ Kuro jutiklį „STRELA S485“ (http://strela-fls.com/products/fuel_level_sens
 
 2.  Paleiskite programą DUTConfig. Pasirinkite „**Interface sensor**“.
 
-<img alt="" src="./image28.png" style="width:3.4763779527559056in;height:1.641732283464567in" />
+<img alt="" src="./image28.webp" style="width:3.4763779527559056in;height:1.641732283464567in" />
 
 3. „**View**“ režimas „**Standart“**.
 
 2.  Paspauskite „**Connect**“ ir palaukite.
 
-<img alt="" src="./image29.png" style="width:5.917322834645669in;height:2.4015748031496065in" />
+<img alt="" src="./image29.webp" style="width:5.917322834645669in;height:2.4015748031496065in" />
 
 3. Kai kuro jutiklis prisijungia prie DUTConfig atsiranda langas **Connection: ON**.
 
-    <img alt="" src="./image30.png" style="width:6.244094488188976in;height:2.4015748031496065in" />
+    <img alt="" src="./image30.webp" style="width:6.244094488188976in;height:2.4015748031496065in" />
 
 2.  Paspauskite mygtuką „**Edit**“ ir kalibruokite jutiklį su pilno ir tuščio kuro bako parinktimis.
 
@@ -479,17 +479,17 @@ Kuro jutiklį „STRELA S485“ (http://strela-fls.com/products/fuel_level_sens
 
 4.  Paspauskite „**OK**“ mygtuką, kad reikšmės būtų įrašytos.
 
-    <img alt="" src="./image31.png" style="width:5.925196850393701in;height:2.4015748031496065in" />
+    <img alt="" src="./image31.webp" style="width:5.925196850393701in;height:2.4015748031496065in" />
 
 5.  Perjungti „**View**“ režimą į „**Extended**“.
 
-<img alt="" src="./image32.png" style="width:5.917322834645669in;height:2.393700787401575in" />
+<img alt="" src="./image32.webp" style="width:5.917322834645669in;height:2.393700787401575in" />
 
 10. Užpildykite šią lentelę pagal degalų bako formą. Paprastas būdas tiesiog nustatykite, kad 0% panardinimas yra 0 litrų, o 100% panardinimas yra jūsų kuro bako talpa. (pavyzdyje nurodytas 200 l pilnas degalų bakas).
 
 11. Užpildę šią lentelę paspauskite „**OK“**.
 
-<img alt="" src="./image33.png" style="width:5.744094488188976in;height:4.551181102362205in" />
+<img alt="" src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
 
 12. Nuspauskite mygtuką „**Disconnect**“.
 
@@ -515,19 +515,19 @@ Prie CG17 gali būti prijungtas 12 V akumuliatorius. Nutrūkus maitinimui iš k
 
 - Patikrinkite ar *CG17* krovimo srovė užtikrina akumuliatoriaus krovimą.
 
-<img alt="" src="./image34.png" style="width:1.98667104111986in;height:1.360003280839895in" />
+<img alt="" src="./image34.webp" style="width:1.98667104111986in;height:1.360003280839895in" />
 
 ### CG17 prijungimo prie apsaugos centralės schema
 
 *CG17*, dirbant komunikatoriaus režime, įėjimams IN (I/O) turi būti priskirta „24 valandų“ funkcija ir nurodytas grandinės tipas „NO“ arba „NC“. / *CG17* įėjimų suveikimui/atsistatymui galima įrašyti SMS įvykių pranešimų tekstus, kuriuos gaus vartotojas. / Apsaugos centralės PGM išėjimams turi būti priskirti įvykiai.
 
-<img alt="" src="./image35.png" style="width:2.60625in;height:1.4791666666666667in" />
+<img alt="" src="./image35.webp" style="width:2.60625in;height:1.4791666666666667in" />
 
 ### Įtampos matavimas su CG17
 
 Su *CG17* galima atlikti nuolatinės įtampos matavimą. Įtampai matuoti galima pasirinkti keturis *CG17* įėjimus 1IN, 2IN, 3IN, 4IN. Matuojama įtampa nuo 0 V iki 30 V (viršijus 30 V apsaugos centralė *CG17* bus sugadinta). Prie „1IN“ ir „COM“ gnybtų reikia prijungti matuojamą įtampą. „1IN“ - teigiamas gnybtas. „COM“ – neigiamas gnybtas.
 
-<img alt="" src="./image36.png" style="width:3.8033409886264216in;height:0.8800021872265966in" />
+<img alt="" src="./image36.webp" style="width:3.8033409886264216in;height:0.8800021872265966in" />
 
 Prijunkite CG17 prie kompiuterio su USB Mini-B kabeliu. Paleiskite programą TrikdisConfig. Programa automatiškai atpažins prijungtą gaminį ir atidarys CG17 konfigūravimo langą. „**Jutiklių**“ lange nurodykite „**IN1 įtampą**“ ir taip pat nurodykite įtampos dydį, kurį viršijus (sumažėjus) bus formuojamas pranešimas.
 
@@ -535,15 +535,15 @@ Prijunkite CG17 prie kompiuterio su USB Mini-B kabeliu. Paleiskite programą Tri
 
 - **Min.** – mažiausia ribinė įtampos reikšmė, žemiau kurios nukritus, bus formuojamas pranešimas apie įvykį. Kad būtų formuojamas pranešimas, turi būti uždėta varnelė **Min** stulpelyje. **Įtampos reikšmė nurodoma voltais**.
 
-<img alt="" src="./image37.png" style="width:7.086614173228346in;height:2.0669291338582676in" />
+<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.0669291338582676in" />
 
 PGM išėjimas gali būti valdomas kai matuojama įtampa viršija nustatytą reikšmę arba yra žemesnė nustatytos reikšmės. TrikdisConfig programoje reikia pasirinkti „**PGM**“ išėjimą ir nustatyti jam „**Nuotolinis valdymas**“ veikimo režimą.
 
-<img alt="" src="./image38.png" style="width:7.086614173228346in;height:1.9094488188976377in" />
+<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
 
 Pereikite prie skirtuko **Nustatyti veikimą**.
 
-<img alt="" src="./image39.png" style="width:7.086614173228346in;height:1.8976377952755905in" />
+<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.8976377952755905in" />
 
 - **Įgalinti** – pažymėkite lauką varnele, kad įgalinti PGM veikti.
 
@@ -570,13 +570,13 @@ Pereikite prie skirtuko **Nustatyti veikimą**.
 
 Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *CG17* (programinės įrangos versija nuo Ver.1.13) pranešimai į CSP ir į *Protegus2* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *CG17* pradeda toliau siusti pranešimus per *W485*. / *CG17* konfigūravimas su WiFi moduliu *W485* aprašytas p. 4.5. „Langas „Moduliai“. / Naudojant modulį *W485* kartu su apsaugos centrale *CG17* SIM kortelė nebūtina. / Prie *CG17* galima prijungti vieną *W485* modulį.
 
-<img alt="" src="./image40.png" style="width:3.22750656167979in;height:2.4225043744531933in" />
+<img alt="" src="./image40.webp" style="width:3.22750656167979in;height:2.4225043744531933in" />
 
 ### „Ethernet“ modulio E485 prijungimo schema
 
 Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *CG17* (programinės įrangos versija nuo Ver.1.13) pranešimai į CSP ir į *Protegus2* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *CG17* pradeda toliau siusti pranešimus per *E485*. / *CG17* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 4.5. „Langas „Moduliai“. / Naudojant modulį *E485* kartu su apsaugos centrale *CG17* SIM kortelė nebūtina. / Prie *CG17* galima prijungti vieną *E485* modulį.
 
-<img alt="" src="./image41.png" style="width:3.22750656167979in;height:2.4225043744531933in" />
+<img alt="" src="./image41.webp" style="width:3.22750656167979in;height:2.4225043744531933in" />
 
 ### iO-LORA plėtimo modulių prijungimo schema
 
@@ -584,11 +584,11 @@ Valdiklio veikimo programos versija nuo 1.18 arba aukštesnė.
 
 Prijunkite RF-LORA transiverį prie CG17. Po to galite naudoti iO-LORA, iO8-LORA, PB-LORA, REL-LORA modulius. Prie CG17 galima prijungti vieną RF-LORA transiverį.
 
-<img alt="" src="./image42.png" style="width:6.78501312335958in;height:5.880012029746282in" />
+<img alt="" src="./image42.webp" style="width:6.78501312335958in;height:5.880012029746282in" />
 
 Paleiskite TrikdisConfig. Prijunkite CG17 per USB Mini-B kabelį prie kompiuterio arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite modulį LORA, kurį naudojate. Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:1.547244094488189in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.547244094488189in" />
 
 Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai. Nuspauskite "**Atsijungti**" ir atjunkite USB kabelį.
 
@@ -598,7 +598,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 2.  Plokščiu atsuktuvu nuimkite CG17 dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image6.png" style="width:6.0236220472440944in;height:1.594488188976378in" />
+<img alt="" src="./image6.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
 
 1.  Su USB Mini-B kabeliu prijunkite CG17 prie kompiuterio.
 
@@ -610,7 +610,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 Prijungus CG17 prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:0.5590551181102362in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.5590551181102362in" />
 
 #### Būsenų juosta
 
@@ -644,7 +644,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Pagrindiniai“**
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -701,7 +701,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 **Skirtukas „Prisijungimas“**
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:3.090551181102362in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 **Parinkčių grupė „Prieigos kodai“**
 
@@ -721,7 +721,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 ### Langas „Pranešimai į ST pultą“
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.547244094488189in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.547244094488189in" />
 
 **Parinkčių grupės „Pagrindinis kanalas“ ir „Atsarginis kanalas“**
 
@@ -763,7 +763,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:3.826771653543307in" />
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:3.826771653543307in" />
 
 **Parinkčių grupė „Vartotojai ir pranešimai vartotojams“**
 
@@ -846,13 +846,13 @@ Kontaktinių raktų registravimas su skaitytuvu TM17.
 
 Yra naudojama apsaugos centralė CG17 su iO-LORA moduliu, prie kurio prijungtas RFID skaitytuvas su klaviatūra. RFID kortelės ID numeris įvedamas programoje TrikdisConfig į „iButton kodas“ langelį.
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai.
 
 **Skirtukas „SMS atsakymo tekstai“**
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 **Parinkčių grupė „Atsakymas SMS žinute“**
 
@@ -862,7 +862,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 **Skirtukas „RS485 moduliai“**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:3.2086614173228347in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.2086614173228347in" />
 
 **Parinkčių grupė „RS485 moduliai“**
 
@@ -879,7 +879,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 **WiFi modulio W485 nustatymų langas**
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.6850393700787403in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.6850393700787403in" />
 
 **Parinkčių grupė „Komunikatoriaus tinklo nustatymai“**
 
@@ -912,7 +912,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
     nebūtina***.***
 **„Ethernet“ modulio E485 nustatymų langas**
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.078740157480315in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.078740157480315in" />
 
 **Parinkčių grupė „Komunikatoriaus tinklo nustatymai“**
 
@@ -941,7 +941,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
     nebūtina***.***
 **Skirtukas „Integruojami moduliai“**
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.641732283464567in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.641732283464567in" />
 
 **Parinkčių grupė „Integruojami moduliai“**
 
@@ -977,15 +977,15 @@ Pranešimas su koordinatėmis siunčiamas į stebėjimo programą Monas MS.
 
 - **Modulis** – pasirinkite modulį „**FLS kuro lygio sensorius**“.
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:1.5433070866141732in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
 Nuspauskite **Įrašyti [F5]**. Sulaukite kol duomenys bus įrašyti. Ištraukite USB kabelį iš CG17. Palaukite apie 1 minutę. Prijunkite USB kabelį prie CG17. Nuspauskite **Skaityti [F4]**. Programa nuskaitys ir parodys nustatymus, kurie yra įrašyti CG17. Programos lange „**Moduliai**“ bus nurodytas kuro lygio jutiklio „**Strela S485**“ „**Serijos numeris**“ ir „**Mikroprogramos versija**“.
 
-<img alt="" src="./image56.png" style="width:7.18503937007874in;height:1.468503937007874in" />
+<img alt="" src="./image56.webp" style="width:7.18503937007874in;height:1.468503937007874in" />
 
 Pereikite prie lango „**Jutikliai**“.
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:3.204724409448819in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.204724409448819in" />
 
 - **Įrenginys** – pasirinkite „**Kuro lygio jutiklį**“.
 
@@ -1007,7 +1007,7 @@ Pereikite prie lango „**Jutikliai**“.
 
 Apie staigius kuro lygio pokyčius vartotojas bus informuotas SMS žinute. SMS žinutės tekstą vartotojas gali redaguoti.
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:3.062992125984252in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.062992125984252in" />
 
 **Kuro lygio jutiklio veikimo aprašymas.**
 
@@ -1023,7 +1023,7 @@ Darbo metu kuro lygio jutiklis kiekvieną laiko intervalą matuoja kuro lygį ir
 
 ### Langas „Bevieliai jutikliai“
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 CG17 gali dirbti su firmos Crow belaidžiais „FW2“ ir „Shepherd“ serijos jutikliais, sirenomis, valdymo pulteliais naudojant RF-SH modulį.
 
@@ -1116,7 +1116,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 8.  Atleiskite mygtukus 3 ir 4. Valdymo pultelis prisiregistravo.
 
-<img alt="" src="./image60.png" style="width:1.5354330708661417in;height:1.8818897637795275in" />
+<img alt="" src="./image60.webp" style="width:1.5354330708661417in;height:1.8818897637795275in" />
 
 9. Nuspauskite ir palaikykite imtuvo RF-SH mygtuką „**LEARN**“, kol LED indikatorius „**LEARN**“ nustos mirksėti žaliai. Imtuvas RF-SH išėjo iš registravimo režimo.
 
@@ -1257,7 +1257,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 6.  Mirksintis žaliai LED indikatorius „**LEARN**“ parodo, kad RF-SH yra belaidės įrangos registravimo režime.
 
-7.  Įdėkite į klaviatūrą baterijas ir sulaukite, kol nustos mirksėti klaviatūros žalias raudonas LED indikatorius <img alt="" src="./image61.png" style="width:0.25in;height:0.28000109361329834in" />. Kai registravimo procesas bus baigtas, klaviatūroje 3 sekundėms užsidegs <img alt="" src="./image61.png" style="width:0.25in;height:0.28000109361329834in" /> žalias LED indikatorius ir užges.
+7.  Įdėkite į klaviatūrą baterijas ir sulaukite, kol nustos mirksėti klaviatūros žalias raudonas LED indikatorius <img alt="" src="./image61.webp" style="width:0.25in;height:0.28000109361329834in" />. Kai registravimo procesas bus baigtas, klaviatūroje 3 sekundėms užsidegs <img alt="" src="./image61.webp" style="width:0.25in;height:0.28000109361329834in" /> žalias LED indikatorius ir užges.
 
 8.  Nuspauskite ir palaikykite imtuvo RF-SH mygtuką „**LEARN**“, kol LED indikatorius „**LEARN**“ nustos mirksėti žaliai. Imtuvas RF-SH išėjo iš registravimo režimo.
 
@@ -1288,7 +1288,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
         atminties.
 ### Langas „Zonų įėjimai“
 
-<img alt="" src="./image62.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 **Skirtukas „Zonų nustatymai“**
 
@@ -1340,7 +1340,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image63.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#langas-vartotojai-ir-pranešimai)*.*
 
@@ -1354,7 +1354,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 **Skirtukas „Išėjimai“**
 
-<img alt="" src="./image64.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **PGM Nr**– nurodo PGM išėjimo eilės numerį.
 
@@ -1382,7 +1382,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 **Skirtukas „Nustatyti veikimą“**
 
-<img alt="" src="./image65.png" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 - **Nr** – išėjimo eilės numeris.
 - **Įgalinti** – įgalina PGM veikti.
@@ -1417,7 +1417,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Grafikas“**
 
-<img alt="" src="./image66.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 - **Nr.** – grafiko eilės numeris.
 
@@ -1430,7 +1430,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Termostatas“**
 
-<img alt="" src="./image67.png" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 - **Nr.** – termostato eilės numeris.
 
@@ -1446,7 +1446,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image68.png" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#langas-vartotojai-ir-pranešimai).
 
@@ -1458,7 +1458,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Jutikliai“
 
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - **Nr** – temperatūros daviklio eilės numeris.
 
@@ -1476,7 +1476,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Įvykiai“**
 
-<img alt="" src="./image70.png" style="width:7.086614173228346in;height:2.263779527559055in" />
+<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
 
 - **Nr** – įvykio numeris pagal sąrašą.
 
@@ -1494,7 +1494,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image71.png" style="width:7.086614173228346in;height:2.263779527559055in" />
+<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
 
 Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#langas-vartotojai-ir-pranešimai)*.*
 
@@ -1506,7 +1506,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Įvykių žurnalas“
 
-<img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.6181102362204722in" />
+<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.6181102362204722in" />
 
 - Mygtukas **Nuskaityti** – komanda, kuria galima nuskaityti įvykių žurnalą iš įrenginio atminties.
 
@@ -1518,7 +1518,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 Norint atkurti centralės gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image73.png" style="width:7.086614173228346in;height:1.0748031496062993in" />
+<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
 
 ## Nuotolinis valdymas
 
@@ -1530,20 +1530,20 @@ Su Protegus2 vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 2. Prisijunkite savo vartotojo vardu ir slaptažodžiu arba registruokitės ir susikurkite naują paskyrą.
 
 2.  Paspauskite „Pridėti sistemą“ ir įveskite *CG17* „Unikalus ID“ numerį. Šį numerį rasite ant gaminio arba pakuotės lipduko.
 
-<img alt="" src="./image80.png" style="width:2.9803149606299213in;height:3.8858267716535435in" />
+<img alt="" src="./image80.webp" style="width:2.9803149606299213in;height:3.8858267716535435in" />
 
 !!! note "Pastaba"
     Pridėjimo prie Protegus2 metu CG17 turi būti:
@@ -1567,7 +1567,7 @@ Su Protegus2 vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie
 
 2.  Įveskite vartotojo kodą.
 
-<img alt="" src="./image81.png" style="width:2.7559055118110236in;height:2.3976377952755907in" />
+<img alt="" src="./image81.webp" style="width:2.7559055118110236in;height:2.3976377952755907in" />
 
 #### Kitų naudotojų pridėjimas į Protegus2 
 
@@ -1575,19 +1575,19 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 1.  Nuspauskite „**Nustatymai**“**.**
 
-<img alt="" src="./image82.png" style="width:2.7559055118110236in;height:2.421259842519685in" />
+<img alt="" src="./image82.webp" style="width:2.7559055118110236in;height:2.421259842519685in" />
 
 1.  Nuspauskite „Sistemos konfigūracija“.
 
-<img alt="" src="./image83.png" style="width:2.7559055118110236in;height:2.421259842519685in" />
+<img alt="" src="./image83.webp" style="width:2.7559055118110236in;height:2.421259842519685in" />
 
 2. Nuspauskite „**Vartotojai**“.
 
-<img alt="" src="./image84.png" style="width:2.7559055118110236in;height:4.618110236220472in" />
+<img alt="" src="./image84.webp" style="width:2.7559055118110236in;height:4.618110236220472in" />
 
 3. Nuspauskite „**Pridėti naują vartotoją**“.
 
-<img alt="" src="./image85.png" style="width:2.7559055118110236in;height:3.2440944881889764in" />
+<img alt="" src="./image85.webp" style="width:2.7559055118110236in;height:3.2440944881889764in" />
 
 4. Įveskite vartotojo el. pašto adresą arba vartotojo vardą.
 
@@ -1601,13 +1601,13 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 6.  Nuspauskite „**Pridėti vartotoją**“.
 
-<img alt="" src="./image86.png" style="width:2.7559055118110236in;height:5.122047244094488in" />
+<img alt="" src="./image86.webp" style="width:2.7559055118110236in;height:5.122047244094488in" />
 
 11. Vartotojų sąraše atsiras naujas vartotojas.
 
 12. Nuspauskite „**Atgal**“, kad sugrįžti į pagrindinį langą.
 
-<img alt="" src="./image87.png" style="width:2.7559055118110236in;height:3.6181102362204722in" />
+<img alt="" src="./image87.webp" style="width:2.7559055118110236in;height:3.6181102362204722in" />
 
 ### Valdymas SMS komandomis
 
@@ -1742,7 +1742,7 @@ Išėjimų OUT ir signalizacijos sričių valdymas skambučiu:
 
 3.  Paleiskite konfigūravimo programą TrikdisConfig ir skyriaus „**Nuotolinė prieiga**“ laukelyje „**Unikalus ID**“ įrašykite turimo CG17 IMEI numerį (IMEI numeris nurodytas ant lipdukų, užklijuotų ant gaminio korpuso apatinės dalies ir pakuotės).
 
-    <img alt="" src="./image88.png" style="width:7.086614173228346in;height:2.4173228346456694in" />
+    <img alt="" src="./image88.webp" style="width:7.086614173228346in;height:2.4173228346456694in" />
 
 4.  Laukelyje „**Sistemos pavadinimas**“ norimu vardu pavadinkite CG17 su šiuo IMEI. Spauskite „**Konfigūravimas**“.
 
@@ -1758,31 +1758,31 @@ Išėjimų OUT ir signalizacijos sričių valdymas skambučiu:
 
 3.  Paleiskite konfigūravimo programą TrikdisConfig ir skyriaus „**Nuotolinė prieiga**“ laukelyje „**Unikalus ID**“ įrašykite turimo CG17 IMEI numerį (IMEI numeris nurodytas ant lipdukų, užklijuotų ant gaminio korpuso apatinės dalies ir pakuotės).
 
-<img alt="" src="./image89.png" style="width:7.086614173228346in;height:2.3897637795275593in" />
+<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:2.3897637795275593in" />
 
 1.  Spauskite „**Valdymas**“.
 
 2.  Įveskite savitarnos kodą (gamyklinis – 123456) ir nuspauskite mygtuką „**Gerai**“.
 
-<img alt="" src="./image90.png" style="width:7.086614173228346in;height:2.3897637795275593in" />
+<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.3897637795275593in" />
 
 3. Atsivers nuotolinio valdymo langas, kuriame galima valdyti apsaugos centralės „**Sritis**“, stebėti „**Zonų“** būsenas, valdyti „**PGM išėjimus**“, stebėti „**Temperatūrą**“.
 
 2.  Skirtukas „**Sritys**“**.** Nuspauskite mygtuką „**Saugoti**“ (arba „**Nesaugoti**“) ir įveskite vartotojo kodą ir apsaugos centralės sritis bus užrakinta (arba atrakinta).
 
-<img alt="" src="./image91.png" style="width:7.086614173228346in;height:3.7283464566929134in" />
+<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:3.7283464566929134in" />
 
 3. Skirtukas „**Zonos**“. Šiame lange matomos zonų būsenos. Galima įjungti zonos apėjimą (Bypass).
 
-<img alt="" src="./image92.png" style="width:7.086614173228346in;height:3.925196850393701in" />
+<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:3.925196850393701in" />
 
 4. Skirtukas „**PGM išėjimai**“. Šiame lange galima valdyti PGM išėjimus, kuriems nustatytas režimas „**Nuotolinis valdymas**“**.**
 
-<img alt="" src="./image93.png" style="width:7.086614173228346in;height:3.47244094488189in" />
+<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:3.47244094488189in" />
 
 10. Skirtukas „**Temperatūros**“. Šiame lange bus galima stebėti temperatūros jutiklių rodmenis.
 
-<img alt="" src="./image94.png" style="width:7.086614173228346in;height:3.15748031496063in" />
+<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:3.15748031496063in" />
 
 ## GSM apsaugos centralės CG17 testavimas
 
@@ -1817,7 +1817,7 @@ Atlikite šiuos žingsnius:
 
 3.  Parinkite gamyklinės programinės įrangos submeniu „**Programos atnaujinimas**“.
 
-<img alt="" src="./image95.png" style="width:7.086614173228346in;height:2.9291338582677167in" />
+<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.9291338582677167in" />
 
 4. Paspauskite gamyklinės programinės įrangos atidarymo langelį „**Atverti failą**“ ir parinkite reikiamą gamyklinės programinės įrangos bylą.
 
@@ -1835,6 +1835,6 @@ Prieš įrengdami, atidžiai perskaitykite šį vadovą, kad išvengtumėte klai
 
 Prieš prijungdami prie elektros tinklo, visada išjunkite el. energijos tiekimą.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Ne gamintojo atlikti gaminio pakeitimai, modifikacijos ar remontai panaikina gamintojo suteiktą garantiją.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Ne gamintojo atlikti gaminio pakeitimai, modifikacijos ar remontai panaikina gamintojo suteiktą garantiją.
 
 Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.

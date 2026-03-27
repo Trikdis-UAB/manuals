@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Repetidor R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Finalidad del producto
@@ -34,7 +34,7 @@ La transmisión a la central receptora se realiza mediante uno o varios módulos
 
 El diagrama estructural del repetidor R-IP12 se muestra en la Figura 1.
 
-<img alt="Diagrama estructural del repetidor R-IP12" src="./image3.jpg" style="width: 100%; max-width: 700px;">
+<img alt="Diagrama estructural del repetidor R-IP12" src="./image3.webp" style="width: 100%; max-width: 700px;">
 
 *Fig. 1. Diagrama estructural del repetidor R-IP12*
 

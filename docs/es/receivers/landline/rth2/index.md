@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Receptor de Línea Telefónica
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Sobre el receptor de línea telefónica
@@ -56,7 +56,7 @@ El receptor se alimenta con fuente de corriente alterna (CA). Para asegurar un f
 
 ### Vista frontal
 
-<img alt="RTH2 front view" src="./rth2-front.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 front view" src="./rth2-front.webp" style="width: 100%; max-width: 700px;">
 
 | No. | Elemento |
 |-----|----------|
@@ -67,7 +67,7 @@ El receptor se alimenta con fuente de corriente alterna (CA). Para asegurar un f
 
 ### Vista trasera
 
-<img alt="RTH2 rear view" src="./rth2-rear.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 rear view" src="./rth2-rear.webp" style="width: 100%; max-width: 700px;">
 
 | No. | Elemento |
 |-----|----------|
@@ -150,35 +150,35 @@ Los controladores USB deben estar instalados en el ordenador. Cuando el módulo 
 
 #### Inicio de GProg2
 
-8. Inicie el programa haciendo clic en el icono GProg2 <img alt="GProg2" src="./icon-gprog2.png" style="height:22px; vertical-align:middle;">, a continuación, en la ventana Configuración, especifique el puerto serie (por ejemplo: COM3).
+8. Inicie el programa haciendo clic en el icono GProg2 <img alt="GProg2" src="./icon-gprog2.webp" style="height:22px; vertical-align:middle;">, a continuación, en la ventana Configuración, especifique el puerto serie (por ejemplo: COM3).
 9. En la barra de menús, seleccione el comando [*Dispositivos*] y seleccione RT2.
-10. Pulse el <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> icono en la barra de herramientas para conectar el receptor.
-11. Para leer los parámetros de funcionamiento almacenados en la memoria interna del dispositivo, pulse el <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> botón. Cuando haya finalizado la descarga de datos, aparecerá la ventana *Configuración recibida*.
+10. Pulse el <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> icono en la barra de herramientas para conectar el receptor.
+11. Para leer los parámetros de funcionamiento almacenados en la memoria interna del dispositivo, pulse el <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> botón. Cuando haya finalizado la descarga de datos, aparecerá la ventana *Configuración recibida*.
 12. Aparecerá la ventana *Configuración recibida*.
 
-<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.webp" style="width: 100%; max-width: 600px;">
 
 #### Descripción de los iconos de la barra de herramientas
 
 | Icono | Función |
 |-------|---------|
-| <img alt="Open" src="./icon-open.png" style="height:22px; vertical-align:middle;"> **[Abrir]** | Abrir el archivo guardado con la extensión ".tcfg" |
-| <img alt="Save" src="./icon-save.png" style="height:22px; vertical-align:middle;"> **[Guardar]** | Guardar el archivo con los parámetros establecidos con la extensión ".tcfg" |
-| <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> **[Conectar]** | Conectar al puerto serie |
-| <img alt="Disconnect" src="./icon-disconnect.png" style="height:22px; vertical-align:middle;"> **[Desconectar]** | Desconectar del puerto serie |
-| <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> **[Config de recepción]** | Leer los parámetros del dispositivo |
-| <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> **[Config de envío]** | Escribir los nuevos parámetros en la memoria del dispositivo |
-| <img alt="Generate report" src="./icon-report.png" style="height:22px; vertical-align:middle;"> **[Generar informe de configuración]** | Imprimir el informe de los parámetros establecidos |
+| <img alt="Open" src="./icon-open.webp" style="height:22px; vertical-align:middle;"> **[Abrir]** | Abrir el archivo guardado con la extensión ".tcfg" |
+| <img alt="Save" src="./icon-save.webp" style="height:22px; vertical-align:middle;"> **[Guardar]** | Guardar el archivo con los parámetros establecidos con la extensión ".tcfg" |
+| <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> **[Conectar]** | Conectar al puerto serie |
+| <img alt="Disconnect" src="./icon-disconnect.webp" style="height:22px; vertical-align:middle;"> **[Desconectar]** | Desconectar del puerto serie |
+| <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> **[Config de recepción]** | Leer los parámetros del dispositivo |
+| <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> **[Config de envío]** | Escribir los nuevos parámetros en la memoria del dispositivo |
+| <img alt="Generate report" src="./icon-report.webp" style="height:22px; vertical-align:middle;"> **[Generar informe de configuración]** | Imprimir el informe de los parámetros establecidos |
 
 #### Ajuste de los parámetros
 
-<img alt="GProg2 Main window" src="./gprog2-main-window.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Main window" src="./gprog2-main-window.webp" style="width: 100%; max-width: 600px;">
 
-<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.webp" style="width: 100%; max-width: 600px;">
 
 13. En la sección *Ventana principal*, establezca el protocolo Surgard.
 14. Si es necesario, puede cambiar los parámetros en la sección *Configuración de comunicación*; los valores recomendados se muestran en **Parámetros de uso del receptor** arriba.
-15. Para guardar los parámetros, vaya a [*File/Write device*] en la barra de menús o presione el <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> icono.
+15. Para guardar los parámetros, vaya a [*File/Write device*] en la barra de menús o presione el <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> icono.
 16. Para guardar los parámetros en su ordenador, vaya a [*File/Save as*]. El nombre del archivo y la ubicación se pueden elegir libremente. Se puede utilizar más tarde como plantilla para configurar otros módulos.
 
 
@@ -186,7 +186,7 @@ Los controladores USB deben estar instalados en el ordenador. Cuando el módulo 
 
 Mensajes de servicio del receptor de comunicación telefónica:
 
-<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.webp" style="width: 100%; max-width: 600px;">
 
 | Mensaje | Código | Descripción |
 |---------|--------|-------------|

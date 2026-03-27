@@ -1,7 +1,7 @@
 # Comunicador Ethernet E16T
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción 
@@ -94,7 +94,7 @@ Funciona con la aplicación Protegus:
 
 5.  Conexión Ethernet zócalo RJ45.
 
-<img alt="" src="./image4.png" style="width:4.724409448818897in;height:2.838582677165354in" />
+<img alt="" src="./image4.webp" style="width:4.724409448818897in;height:2.838582677165354in" />
 
 ### Propósito de las terminales 
 
@@ -126,7 +126,7 @@ Funciona con la aplicación Protegus:
 
 ### Esquema estructural del uso del dispositivo E16T 
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.6942683727034122in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.6942683727034122in" />
 
 !!! note "Nota"
     Antes de comenzar, asegúrese de tener lo necesario:
@@ -153,7 +153,7 @@ Funciona con la aplicación Protegus:
 
 2.  Abra la cubierta del E16T con el desatornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image6.png" style="width:5.503937007874016in;height:1.4803149606299213in" />
+<img alt="" src="./image6.webp" style="width:5.503937007874016in;height:1.4803149606299213in" />
 
 1.  Usando el cable USB mini-B conecte el E16T a la computadora.
 
@@ -167,13 +167,13 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.8700787401574803in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
 
 1.  Seleccione el tipo de panel que será conectado al comunicador.
 
 **Ventana de “Informes”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:1.7874015748031495in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
 
 2. Habilitar la conexión al Servicio Protegus.
 
@@ -183,7 +183,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.8818897637795275in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.8818897637795275in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF.**).
 
@@ -191,7 +191,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de opciones de “Informes” para el “Primario”:**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:4.051181102362205in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
 
 3.  **Habilitar** — habilitar canal de comunicación principal
 
@@ -223,7 +223,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     los números de objeto, línea y receptor.
 **Ventana de “Informes”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.7755905511811023in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.7755905511811023in" />
 
 15. Habilitar la conexión al Servicio Protegus.
 
@@ -238,23 +238,23 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 ### Conectar el comunicador al panel de control utilizando el diagrama de cableado abajo. 
 
-<img alt="" src="./image12.png" style="width:4.0236220472440944in;height:2.5669291338582676in" />
+<img alt="" src="./image12.webp" style="width:4.0236220472440944in;height:2.5669291338582676in" />
 
-<img alt="" src="./image13.png" style="width:3.877952755905512in;height:2.338582677165354in" />
+<img alt="" src="./image13.webp" style="width:3.877952755905512in;height:2.338582677165354in" />
 
 ### Conectar sensores (Opcional) 
 
 El comunicador contiene dos terminales de entrada de tipo seleccionable (IN1, IN2) para la conexión de sensores, pueden ser NC, NO o EOL.
 
-<img alt="" src="./image14.png" style="width:5.2204724409448815in;height:1.7755905511811023in" />
+<img alt="" src="./image14.webp" style="width:5.2204724409448815in;height:1.7755905511811023in" />
 
 ### Conectar el cable LAN 
 
-<img alt="" src="./image15.png" style="width:2.716535433070866in;height:2.3622047244094486in" />
+<img alt="" src="./image15.webp" style="width:2.716535433070866in;height:2.3622047244094486in" />
 
 ### Esquemas de cableado de un relé 
 
-<img alt="" src="./image16.png" style="width:2.295275590551181in;height:0.8188976377952756in" />
+<img alt="" src="./image16.webp" style="width:2.295275590551181in;height:0.8188976377952756in" />
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos electrónicos.
 
@@ -320,13 +320,13 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -344,7 +344,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
     3.  Registrado en la red ( el LED de "NETWORK" se ilumina en verde).
 3. Haga clic en **Añadir sistema** e introduzca el número “IMEI/ID Único ” de E16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
 
-<img alt="" src="./image20.png" style="width:6.5984251968503935in;height:2.405511811023622in" />
+<img alt="" src="./image20.webp" style="width:6.5984251968503935in;height:2.405511811023622in" />
 
 ### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
 
@@ -355,15 +355,15 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 1.  En la nueva ventana, haga clic en **Áreas** en el menú lateral. En la siguiente ventana, especifique cuántas áreas del sistema de alarma hay en el sistema y presione **Siguiente.**
 
-<img alt="" src="./image21.png" style="width:7.078740157480315in;height:2.594488188976378in" />
+<img alt="" src="./image21.webp" style="width:7.078740157480315in;height:2.594488188976378in" />
 
 2. En la nueva ventana, identifique cuál es el número para cada una de las áreas especificadas en el sistema de seguridad y pulse **Guardar.**
 
-<img alt="" src="./image25.png" style="width:7.078740157480315in;height:2.5984251968503935in" />
+<img alt="" src="./image25.webp" style="width:7.078740157480315in;height:2.5984251968503935in" />
 
 3. En el menú lateral, presione en la ventana **Configuración**, en la ventana que se abrió recientemente también presione **Configuración**. Seleccione la casilla de **Armar/ Desarmar con PGM 1** y especifique el área donde se controlará la salida. Uno de cada salida se puede controlar una sola área.
 
-<img alt="" src="./image26.png" style="width:7.086614173228346in;height:3.456692913385827in" />
+<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:3.456692913385827in" />
 
 4. Seleccione **Nivel** o **Pulso,** dependiendo del tipo de llave de zona keyswitch del panel de control. También puede cambiar la duración del intervalo de impulso si es necesario para el panel de control conectado.
 
@@ -377,7 +377,7 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 3.  Si es solicitado, ingrese el código de usuario o la contraseña de Protegus.
 
-<img alt="" src="./image27.png" style="width:7.082677165354331in;height:3.5118110236220472in" />
+<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.5118110236220472in" />
 
 ## Configuración remota 
 
@@ -400,7 +400,7 @@ El Communicator E16T puede controlarse de forma remota utilizando el software Tr
 
 3.  (Opcional) En el campo **Nombre del sistema**, ingrese el nombre deseado para el módulo.
 
-<img alt="" src="./image28.png" style="width:7.070866141732283in;height:1.062992125984252in" />
+<img alt="" src="./image28.webp" style="width:7.070866141732283in;height:1.062992125984252in" />
 
 4. Pulse Configurar.
 
@@ -414,7 +414,7 @@ El Communicator E16T puede controlarse de forma remota utilizando el software Tr
 
 Después de conectar E16T y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image29.png" style="width:7.086614173228346in;height:0.7204724409448819in" />
+<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:0.7204724409448819in" />
 
 **Barra de Estado**
 
@@ -434,7 +434,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 ### Ventana de “Ajustes de sistema” 
 
-<img alt="" src="./image30.png" style="width:7.086614173228346in;height:4.066929133858268in" />
+<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:4.066929133858268in" />
 
 **Configuraciones → General:**
 
@@ -484,7 +484,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 **Pestaña “Informes de CRA”**
 
-<img alt="" src="./image31.png" style="width:7.086614173228346in;height:4.078740157480315in" />
+<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:4.078740157480315in" />
 
 **Informes → Primario y de respaldo (Backup)**
 
@@ -528,13 +528,13 @@ Para obtener más información sobre el servicio PROTEGUS, visite [www.protegus.
 
 - Habilite el servicio en la nube en **Informes →** pestaña **Servicio PROTEGUS.**
 
-<img alt="" src="./image32.png" style="width:7.086614173228346in;height:1.7913385826771653in" />
+<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
 
 - Ingrese el **Código de servicio** (código predeterminado: 123456), para mayor seguridad cámbielo a <u>código de autenticación de 6 símbolos</u>. Este código es utilizado cuando se agrega un nuevo sistema a la aplicación y se controla de forma remota a través del software TrikdisConfig (para más detalles, consulte [5 „Control remoto”](#configuración-remota) ).
 
 ### Ventana „Resumen de los eventos“ 
 
-<img alt="" src="./image33.png" style="width:7.086614173228346in;height:3.405511811023622in" />
+<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:3.405511811023622in" />
 
 **Resumen de los Eventos → Descripción de Entradas**
 
@@ -570,7 +570,7 @@ Desconectar el dispositivo:
 
 Para **Restaurar** la configuración de fábrica del comunicador, es necesario hacer clic en el botón Restaurar en la ventana TrikdisConfig.
 
-<img alt="" src="./image34.png" style="width:7.086614173228346in;height:1.0984251968503937in" />
+<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:1.0984251968503937in" />
 
 ## Realizar prueba del sistema 
 
@@ -613,7 +613,7 @@ El firmware E16T se puede actualizar o cambiar también de forma manual. Despué
 
 3.  Pulse **Actualizar [F12].**
 
-<img alt="" src="./image35.png" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="" src="./image35.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 4. Espere a que el indicador de actualización se haya completado.
 
@@ -625,6 +625,6 @@ Antes de la instalación, lea cuidadosamente este manual para evitar errores que
 
 Desconecte la energía antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" /> Los cambios, modificaciones o reparaciones no autorizadas por el fabricante anularán sus derechos en virtud de la garantía.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" /> Los cambios, modificaciones o reparaciones no autorizadas por el fabricante anularán sus derechos en virtud de la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

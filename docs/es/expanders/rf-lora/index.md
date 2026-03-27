@@ -1,7 +1,7 @@
 # RF-LoRa Expansor Inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="200">
+  <img src="./image1.webp" alt="" width="200">
 </div>
 
 ## Descripción
@@ -41,7 +41,7 @@ Conexión:
 
 ### Elementos expansores
 
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 > **Nota:**
 
@@ -74,7 +74,7 @@ Conexión:
 
 1.  Retire la tapa superior.
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Retire la placa PCB.
 
@@ -84,15 +84,15 @@ Conexión:
 
 5.  Cierre la tapa superior.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Conexión del transceptor RF-LORA al panel de control "FLEXi" SP3 
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Esquema de cableado para expansores LORA 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Configuración con TrikdisConfig
 
@@ -112,15 +112,15 @@ Conexión:
 
 8.  En el campo "**Núm. de Serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image8.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  En la pestaña "**Zonas**", configure la entradas del expansor.
 
-<img alt="" src="./image9.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. En la pestaña "**PGM**", realice los ajustes para la salidas PGM del expansor**.**
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Una vez que se finalice la configuración, haz clic en el botón **Escribir [F5]**.
 
@@ -138,6 +138,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.png" style="height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

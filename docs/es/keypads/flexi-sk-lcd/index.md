@@ -3,7 +3,7 @@
 ## Descripción general del teclado
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -89,7 +89,7 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 <u>Para restablecer los detectores de incendios (humo) de dos cables</u>:
 
-- Mantenga pulsado el botón <img src="./image2.png" style="width:0.3000in;" /> durante 3 segundos.
+- Mantenga pulsado el botón <img src="./image2.webp" style="width:0.3000in;" /> durante 3 segundos.
 
 > [!NOTE]
 > Los detectores de incendios de dos cables no se reinician automáticamente después de la detección de emergencia por incendio. Solo se pueden restablecer manualmente.

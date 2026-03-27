@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Ретранслятор R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Назначение изделия
@@ -34,7 +34,7 @@ pdf: rr-ip12-original.pdf
 
 Структурная схема ретранслятора R-IP12 приведена на рисунке 1.
 
-<img alt="Структурная схема ретранслятора R-IP12" src="./image3.jpg" style="width: 100%; max-width: 700px;">
+<img alt="Структурная схема ретранслятора R-IP12" src="./image3.webp" style="width: 100%; max-width: 700px;">
 
 *Рис. 1. Структурная схема ретранслятора R-IP12*
 

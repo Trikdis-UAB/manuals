@@ -3,7 +3,7 @@
 ## Klaviatūros apžvalga
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -70,7 +70,7 @@ Surinkus kodą, per laiko atskaitą mirksės indikatorius ARM.
 Kai signalizacija išjungta, turi šviesti indikatorius OFF, o saugojimo režimų indikatoriai turi nešviesti.
 
 > [!NOTE]
-> Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką <img src="./image2.png" alt="" style="width:0.3500in;" />.
+> Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką <img src="./image2.webp" alt="" style="width:0.3500in;" />.
 
 
 
@@ -98,13 +98,13 @@ mygtuką **4**.
 
 5. Pasirinkite klaviatūros LED indikacijos pašvietimo įjungimą/išjungimą budėjimo režime mygtuku **0**. Paspauskite **0**, jei dega kas antras zonų LED indikatorius – klaviatūros pašvietimas budėjimo režime išjungtas, jei dega visi zonų LED indikatoriai – klaviatūros pašvietimas budėjimo režime įjungtas.
 
-6. Norint išsaugoti nustatymus, dar kartą paspauskite mygtuką <img src="./image2.png" alt="" style="width:0.3500in;" />.
+6. Norint išsaugoti nustatymus, dar kartą paspauskite mygtuką <img src="./image2.webp" alt="" style="width:0.3500in;" />.
 
 ## Vartotojo (User) arba Administratoriaus (Master) kodų įvedimas arba pakeitimas
 
 ### Norėdami įvesti naują arba pakeisti esamą vartotojo kodą
 
-1. Paspauskite mygtuką <img src="./image3.png" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
+1. Paspauskite mygtuką <img src="./image3.webp" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
 
 2. Surinkite *Master* kodą, numatytasis – 1234. Pradės šviesti zonų indikatoriai, rodantys eilės numerius tų vartotojų, kurių kodai jau įvesti.
 
@@ -116,7 +116,7 @@ mygtuką **4**.
 
 5. Paspauskite eilės numerius sričių, kurias vartotojas galės valdyti.
 
-6. Paspauskite mygtuką <img src="./image4.jpg" style="width:0.3500in;" />. Išėjimui du kartus paspauskite mygtuką **C**.
+6. Paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />. Išėjimui du kartus paspauskite mygtuką **C**.
 
 ## Dvilaidžių gaisro (dūmų) jutiklių atstatymas
 
@@ -124,7 +124,7 @@ mygtuką **4**.
 
 - 3 sekundes palaikykite paspaudę mygtuką
 
-<img src="./image3.png" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
+<img src="./image3.webp" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
 > [!NOTE]
 > Užfiksavę gaisro pavojų, dvilaidžiai gaisro jutikliai automatiškai veikti iš naujo nepasileidžia. Jie paleidžiami veikti tik rankiniu būdu.
 
@@ -138,7 +138,7 @@ mygtuką **4**.
 
 3. Surinkite dviženklį zonos, kurios stebėjimą norite išjungti, eilės numerį. Galite suvesti kelių zonų dviženklius numerius, jeigu norite išjungti kelių zonų stebėjimą.
 
-4. Paspauskite mygtuką <img src="./image4.jpg" style="width:0.3500in;" />. Indikatorius **BYP** pradės šviesti.
+4. Paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />. Indikatorius **BYP** pradės šviesti.
 **<u>BYPASS funkcijos išjungimas:</u>**
 Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėjimą.
 
@@ -146,7 +146,7 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 ### Norėdami ištrinti vartotojo kodą
 
-1. Paspauskite mygtuką <img src="./image3.png" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
+1. Paspauskite mygtuką <img src="./image3.webp" style="height:0.1169in" alt="Mac HD:Users:Andriaus:Documents:Google Drive:Darbas:Gaminių aprašymai:Klaviatūros:Zaibas.tiff" />.
 
 2. Surinkite *Master* kodą. Pradės šviesti zonų indikatoriai, rodantys eilės numerius tų vartotojų, kurių kodai jau įvesti.
 
@@ -154,4 +154,4 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 4. Paspauskite klaviatūros mygtuką **SLEEP**. Pasigirs garso signalas ir užges mygtukas, rodantis to vartotojo kodo eilės numerį, kurio kodą ištrynėte iš atminties.
 
-5. Du kartus paspauskite mygtuką <img src="./image4.jpg" style="width:0.3500in;" />.
+5. Du kartus paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />.

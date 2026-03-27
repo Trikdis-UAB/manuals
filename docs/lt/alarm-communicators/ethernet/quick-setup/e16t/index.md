@@ -18,7 +18,7 @@ Trumpi žingsniai, skirti prijungti E16T komunikatorių prie apsaugos centralės
 1. Parsisiųskite **TrikdisConfig** iš [www.trikdis.com](http://www.trikdis.com) ir ją įdiekite.
 2. Plokščiu atsuktuvu atidarykite E16T korpusą.
 
-![Atidarykite E16T korpusą](../../../e16t/image5.png)
+![Atidarykite E16T korpusą](../../../e16t/image5.webp)
 
 3. Su USB Mini-B kabeliu prijunkite E16T prie kompiuterio.
 4. Paleiskite **TrikdisConfig**. Programa atpažins komunikatorių ir atidarys konfigūravimo langą.
@@ -34,13 +34,13 @@ Atlikite tą poskyrį, kuris atitinka diegimą:
 
 **Lange "Sistemos parametrai":**
 
-![E16T sistemos parametrai](../../../e16t/image6.png)
+![E16T sistemos parametrai](../../../e16t/image6.webp)
 
 1. Pasirinkite **Centralės modelį**, kuris bus prijungtas prie komunikatoriaus.
 
 **Lange "Pranešimai", kortelėje "Protegus servisas":**
 
-![E16T Protegus nustatymai](../../../e16t/image7.png)
+![E16T Protegus nustatymai](../../../e16t/image7.webp)
 
 2. Pažymėkite **Leisti prisijungti** Protegus serviso nustatymuose.
 3. Pakeiskite **Serviso kodą**, jei norite, kad vartotojai jį įvestų pridėdami sistemą į Protegus.
@@ -51,14 +51,14 @@ Baigę konfigūravimą paspauskite **Įrašyti [F5]** ir atjunkite USB kabelį.
 
 **Lange "Sistemos parametrai":**
 
-![E16T CSP sistemos parametrai](../../../e16t/image8.png)
+![E16T CSP sistemos parametrai](../../../e16t/image8.webp)
 
 1. Įveskite **Objekto numerį**, kurį suteikė stebėjimo pultas.
 2. Pasirinkite **Centralės modelį**, kuris bus prijungtas prie komunikatoriaus.
 
 **Lange "Pranešimai", parinkčių grupėje "Pagrindinis" ryšio kanalas:**
 
-![E16T CSP pranešimų nustatymai](../../../e16t/image9.png)
+![E16T CSP pranešimų nustatymai](../../../e16t/image9.webp)
 
 3. Įjunkite pagrindinį ryšio kanalą.
 4. Įveskite imtuvo **Nuotolinį IP / domeną** ir **Nuotolinį prievadą**.
@@ -70,7 +70,7 @@ Baigę konfigūravimą paspauskite **Įrašyti [F5]** ir atjunkite USB kabelį.
 
 **Lange "Pranešimai", kortelėje "Protegus servisas":**
 
-![E16T Protegus serviso nustatymai](../../../e16t/image10.png)
+![E16T Protegus serviso nustatymai](../../../e16t/image10.webp)
 
 10. Pažymėkite **Leisti prisijungti** prie Protegus, jei vartotojai naudos programėlę.
 11. Pakeiskite **Serviso kodą**, jei norite, kad vartotojai jį įvestų pridėdami sistemą į Protegus.
@@ -84,7 +84,7 @@ Baigę konfigūravimą paspauskite **Įrašyti [F5]** ir atjunkite USB kabelį.
 
 Prijunkite E16T prie centralės maitinimo, `TIP` / `RING` ir LAN, kaip parodyta žemiau:
 
-![E16T centralės prijungimo schema](../../../e16t/image11.png)
+![E16T centralės prijungimo schema](../../../e16t/image11.webp)
 
 Jei centralė bus įjungiama ar išjungiama per raktinės zonos išėjimą, tame pačiame brėžinyje parodytu būdu prijunkite centralės raktinę zoną prie `OUT`.
 
@@ -124,7 +124,7 @@ Išeikite iš programavimo režimo komanda `*99`.
 1. Jei `OUT` prijungėte prie raktinės zonos, Protegus lange **Settings** įjunkite **Arm/Disarm with PGM Output 1**.
 1. Pasirinkite **Pulse** arba **Level** režimą, kad jis atitiktų centralės raktinės zonos tipą.
 
-![Ekranas sistemos pridėjimui į Protegus](../../../cellular/quick-setup/paradox/protegus-enter-imei.png)
+![Ekranas sistemos pridėjimui į Protegus](../../../cellular/quick-setup/paradox/protegus-enter-imei.webp)
 
 ## Sistemos tikrinimas
 

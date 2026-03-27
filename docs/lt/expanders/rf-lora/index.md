@@ -1,7 +1,7 @@
 # RF-LoRa Belaidis Plėtiklis
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="200">
+  <img src="./image1.webp" alt="" width="200">
 </div>
 
 ## Aprašymas
@@ -41,7 +41,7 @@ Prijungimas:
 
 ### Transiverio elementai
 
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 > **Pastaba:**
 
@@ -74,7 +74,7 @@ Prijungimas:
 
 1.  Nuimkite viršutinį dangtelį.
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Išimkite plokštę iš korpuso pagrindo.
 
@@ -84,15 +84,15 @@ Prijungimas:
 
 5.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Transiverio RF-LORA prijungimas prie apsaugos centralės "FLEXi" SP3 
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### LORA plėtimo modulių prijungimo schema 
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Konfigūracija naudojant TrikdisConfig
 
@@ -112,15 +112,15 @@ Prijungimas:
 
 8.  Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image8.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms**.**
 
-<img alt="" src="./image9.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams**.**
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. "Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -140,4 +140,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.png" style="height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

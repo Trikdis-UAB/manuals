@@ -5,7 +5,7 @@ pdf: rl14-original.pdf
 # RL14 IP/SMS Receiver
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 700px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 700px;">
 </div>
 
 ## Safety requirements
@@ -80,7 +80,7 @@ There are multiple channels set for receiving messages and multiple ports for tr
 
 ### Front view and light indication
 
-![](./image5.png)
+![](./image5.webp)
 
 **Light indication**
 
@@ -92,7 +92,7 @@ There are multiple channels set for receiving messages and multiple ports for tr
 
 ### Rear view and rear panel elements
 
-![](./image6.png)
+![](./image6.webp)
 
 | Element | Description |
 |---------|-------------|
@@ -104,7 +104,7 @@ There are multiple channels set for receiving messages and multiple ports for tr
 | Antenna | SMA-type female connector for Cellular antenna of integrated SMS receiver. |
 | HDMI | HDMI connector for monitor. |
 | USB | USB connection. |
-| <img alt="" src="./image7.png" style="width:0.19791666666666666in;height:0.17708333333333334in" /> | Connector for receiver grounding circuit. |
+| <img alt="" src="./image7.webp" style="width:0.19791666666666666in;height:0.17708333333333334in" /> | Connector for receiver grounding circuit. |
 | \- BAT + | Dismountable connector for backup power supply battery (at least 18 Ah 12 V). Battery status may be controlled if there are no power supply problems. Battery charging current - 900 mA. |
 | 100-240VAC | Power supply cable connector and switch O/​I. |
 
@@ -127,7 +127,7 @@ There are multiple channels set for receiving messages and multiple ports for tr
 
 6. Prepare a LAN according to a principal scheme below:
 
-    ![](./image9.png)
+    ![](./image9.webp)
 
 7. Install software *IPcomControl v4* (see *Configuring the receiver*) on the computer that will be used to configure receiver RL14.
 
@@ -173,7 +173,7 @@ In order to restore default settings refer to chapter *Resetting default paramet
 
 1. Computer and receiver must operate in the same network in order to configure the receiver. Change the network adapter card addresses of the computer that will be used to configure the receiver to match those indicated in the tab.
 
-    ![](./image10.png)
+    ![](./image10.webp)
 
 2. Use LAN cable to connect the receiver and the computer that will be used to configure the receiver.
 
@@ -181,15 +181,15 @@ In order to restore default settings refer to chapter *Resetting default paramet
 
 4. Run IPcomControl v4. Enter the default IP address of the receiver network adapter card and click OK.
 
-    ![](./image11.png)
+    ![](./image11.webp)
 
 5. Enter the User name (*administrator*) and password (*admin*) when prompted. Click Login.
 
-    ![](./image12.png)
+    ![](./image12.webp)
 
 6. Select IPcomControl v4 tab **Configure**. Click **Get**. Enter LAN values into boxes *Primary* IP, Subnet and Gateway in order to connect the receiver to the network. Click **Set**.
 
-    ![](./image18.png)
+    ![](./image18.webp)
 
 7. Receiver should automatically reboot and restart. Software IPcomControl v4 will close automatically. Receiver is prepared for operation in LAN.
 
@@ -203,15 +203,15 @@ Receiver operating in LAN is configured using software IPcomControl v4 on a 32/6
 
 1. Run software IPcomControl v4. Enter the IP address of the LAN receiver network adapter card, e.g., 195.15.184.138, when prompted and click OK.
 
-    ![](./image11.png)
+    ![](./image11.webp)
 
 2. Enter the User name (*administrator*) and password (*admin*) when prompted. Click Login.
 
-    ![](./image12.png)
+    ![](./image12.webp)
 
-3. Click Read <img alt="Read" src="./image14.png" style="width:0.3020833333333333in;height:0.28125in" /> in an open window of software IPcomControl v4.
+3. Click Read <img alt="Read" src="./image14.webp" style="width:0.3020833333333333in;height:0.28125in" /> in an open window of software IPcomControl v4.
 
-    ![](./image16.png)
+    ![](./image16.webp)
 
     | UI element | Description |
     |------------|-------------|
@@ -224,13 +224,13 @@ Receiver operating in LAN is configured using software IPcomControl v4 on a 32/6
 
 ### Configure tab — Remote server, sound signals and clock
 
-![](./image18.png)
+![](./image18.webp)
 
 Configures remote server IP address for communication channel testing, receiver sound signals and clock.
 
 ### Events tab — Receiver event list
 
-![](./image20.png)
+![](./image20.webp)
 
 Upon occurrence of an event listed in the window, a message will be formed and sent to the monitoring software. Reporting of unwanted events can be turned off by ticking off the check box.
 
@@ -238,11 +238,11 @@ Configuration of a receiver allows to change: Event code, Partition's number and
 
 ### General tab — GPRS and GSM communication control
 
-![](./image22.png)
+![](./image22.webp)
 
 ### COM settings tab — COM port operation mode
 
-![](./image24.png)
+![](./image24.webp)
 
 Port name:
 
@@ -252,13 +252,13 @@ Port name:
 
 ### SMPP settings tab — SMS via TCP/IP
 
-![](./image26.png)
+![](./image26.webp)
 
 SMPP – protocol for SMS message transmission using TCP/IP communication, i.e. it allows receiving SMS messages sent by Trikdis message transmission modules via LAN instead of integrated SMS modem.
 
 ### Receivers tab — Adding and configuring receivers
 
-![](./image28.png)
+![](./image28.webp)
 
 All the events listed in the "Events" tab are received from chosen IPcom channel and redirected to chosen output port. In order to receive messages sent from secured object via TCP/UDP protocols a separate receiving channel must be created. Data stream received from this channel are redirected to the chosen output port.
 
@@ -274,7 +274,7 @@ Data stream redirection parameters:
 
 ### Outputs tab — Directing messages to monitoring software
 
-![](./image30.png)
+![](./image30.webp)
 
 Output parameters for sending messages to the monitoring software:
 
@@ -291,7 +291,7 @@ Output parameters for sending messages to the monitoring software:
 
 ### Filter tab — Message filtering
 
-![](./image31.png)
+![](./image31.webp)
 
 IP address to which all received messages are additionally directed may be set in tab *Filter*.
 
@@ -313,7 +313,7 @@ Messages are transmitted to message monitoring software using receiver and line 
 
 ### Users tab — User permissions
 
-![](./image33.png)
+![](./image33.webp)
 
 User permissions parameters:
 
@@ -335,13 +335,13 @@ User permission options: **Enable** / **Disable** / **Read only**.
 
 Received messages can be seen in the tab Data. Click **Clear** to delete all entries.
 
-![](./image37.png)
+![](./image37.webp)
 
 ### Object tab — Registered object list
 
 Registered object list is displayed in tab Object. It contains:
 
-![](./image35.png)
+![](./image35.webp)
 
 - **ID** – object's number;
 - **Status** – connection status;
@@ -410,6 +410,6 @@ Receiver generates and sends a message to the monitoring software in case of any
 
 Parameters of the initial license can be changed (upgraded) by installing a new license. Go to *Options → Activate product*, browse and select license file in `.lic` format.
 
-![](./image38.png)
+![](./image38.webp)
 
 To install new license press the **Apply** button.

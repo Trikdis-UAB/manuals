@@ -1,7 +1,7 @@
 # Comunicador LTE G17F para paneles de alarma contra incendios
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción 
@@ -111,7 +111,7 @@ Mensajes a los usuarios
 
 6.  Ranura para tarjetas SIM.
 
-<img alt="" src="./image4.png" style="width:4.575in;height:2.8722222222222222in" />
+<img alt="" src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
 
 ### Purpose of terminals
 
@@ -174,7 +174,7 @@ Ordene los componentes necesarios por separado en su distribuidor local.
 
 2.  Abra la carcasa del G17F con el destornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image5.png" style="width:6.720138888888889in;height:1.7798611111111111in" />
+<img alt="" src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
 
 3\. Utilizando el cable USB Mini-B G17F conecte al ordenador.
 
@@ -188,7 +188,7 @@ A continuación, se describe qué ajustes deben establecerse para que el comunic
 
 En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS":
 
-<img alt="" src="./image6.png" style="width:7.086614173228346in;height:3.574803149606299in" />
+<img alt="" src="./image6.webp" style="width:7.086614173228346in;height:3.574803149606299in" />
 
 1.  Seleccione la casilla **“Activar conexión”** a la nube de Protegus.
 
@@ -196,7 +196,7 @@ En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS"
 
 **En la ventana "Opciones de sistema", grupo de configuración "SIM":**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 3. Introduzca el código **PIN de la tarjeta SIM**.
 
@@ -204,19 +204,19 @@ En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS"
 
 **En la ventana “Zonas”:**
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.106299212598425in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
 
 3. Marque las casillas si desea que los usuarios reciban notificaciones de Protegus2 sobre los cambios en los estados de las zonas.
 
 **En la ventana “PGM”:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 4. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre los cambios en los estados de salida de PGM.
 
 **En la ventana "Eventos de sistema":**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 5. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre cambios en los estados de eventos internos del comunicador.
 
@@ -230,7 +230,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana de “Opciones de systema”:**
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 1.  Introduzca **Objeto ID** proporcionado por la Central Receptora de Alarmas (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF**.).
 
@@ -240,7 +240,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana "Informar a CRA":**
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 4. **Tipo de comunicación** – seleccionar el método de conexión **IP** (no recomendamos SMS como canal primario).
 
@@ -288,9 +288,9 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 7.  Inserte la tarjeta nano-SIM. La tarjeta SIM debe estar registrada en una red GSM y los servicios deben estar habilitados y en funcionamiento, es decir, la tarjeta debe poder llamar, enviar y recibir mensajes SMS, tener habilitados los datos móviles. <u>Pregúntele al operador de red móvil de su tarjeta SIM cómo habilitar los servicios deseados.</u>
 
-<img alt="" src="./image13.png" style="width:3.9368055555555554in;height:2.015972222222222in" />
+<img alt="" src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
 
-<img alt="" src="./image14.png" style="width:2.2868055555555555in;height:0.9833333333333333in" />
+<img alt="" src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
 !!! note "Nota"
     Asegúrese de que la tarjeta SIM esté activada. / Asegúrese de que el
@@ -309,11 +309,11 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 Si desea monitorear el estado del panel de alarma contra incendios, conecte sus salidas correspondientes a las entradas *G17F*. Las salidas (PGM1, PGM2, PGM3) del panel de incendios deben configurarse como salidas de estado del panel (Alarma, Problema, etc.)
 
-<img alt="" src="./image15.png" style="width:3.2992125984251968in;height:2.8661417322834644in" />
+<img alt="" src="./image15.webp" style="width:3.2992125984251968in;height:2.8661417322834644in" />
 
 ### Diagrama de conexión del comunicador a la central de incendios ESPA4.4.4 
 
-<img alt="" src="./image16.png" style="width:2.673338801399825in;height:1.350003280839895in" />
+<img alt="" src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
 
 Configuración del comunicador G17F con TrikdisConfig al conectar el panel de control de alarma contra incendios con el protocolo **ESPA4.4.4**.
 
@@ -323,25 +323,25 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 3.  El comunicador G17F y el panel de control de incendios deben tener la misma configuración de transmisión de datos.
 
-<img alt="" src="./image17.png" style="width:7.086614173228346in;height:3.4803149606299213in" />
+<img alt="" src="./image17.webp" style="width:7.086614173228346in;height:3.4803149606299213in" />
 
 4. Ingrese números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 5. Si desea que el usuario reciba mensajes (y llamadas) sobre eventos, marque la casilla SMS (y Llamada).
 
-<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.5826771653543306in" />
+<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.5826771653543306in" />
 
 6. Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. Los mensajes de eventos se transmiten utilizando el protocolo SIA DC-09.
 
-<img alt="" src="./image20.png" style="width:7.086614173228346in;height:2.0078740157480315in" />
+<img alt="" src="./image20.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes G17F se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
 ### Diagrama de conexión del comunicador a la central de incendios NSC Solution 
 
-<img alt="" src="./image21.png" style="width:2.9466721347331584in;height:1.3566699475065618in" />
+<img alt="" src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
 Configuración del comunicador G17F con TrikdisConfig al conectar el panel de control de alarma contra incendios **NSC Solution**.
 
@@ -349,19 +349,19 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 2.  La “**NSC slavе address**” no debe coincidir con la dirección de los módulos del panel de control de incendios conectados.
 
-<img alt="" src="./image22.png" style="width:7.086614173228346in;height:3.078740157480315in" />
+<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:3.078740157480315in" />
 
 3. Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image23.png" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 4. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image24.png" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 5. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image25.png" style="width:7.086614173228346in;height:1.9960629921259843in" />
+<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
 
 Después de configurar el comunicador G17F, encienda la alimentación del panel de control de incendios. Espere a que se cargue el software del panel de control de incendios. Es necesario escanear los módulos conectados al bus RS485 en el panel de control de incendios. En el panel de control de incendios, presione: **PROG.>INSTALLER>(Ingrese el código de instalador) 00000 OK>(Seleccione) SETTINGS>ENTER>(Seleccione) SCAN RS485>ENTER**. Espere a que se complete el escaneo. Regrese a la pantalla principal presionando “**CANCEL**” dos veces.
 
@@ -369,11 +369,11 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 ### Diagrama de conexión del comunicador a la central de incendios INIM Smartline 
 
-<img alt="" src="./image26.png" style="width:3.643340988626422in;height:1.1800021872265967in" />
+<img alt="" src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
 
 El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se conecta al comunicador G17F a través del bus RS485.
 
-<img alt="" src="./image27.png" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note "Nota"
     No puede conectar el G17F usando el bus RS485 si los repetidores
@@ -384,73 +384,73 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 1.  Seleccione el panel de alarma contra incendios **INIM Smartline**.
 
-<img alt="" src="./image28.png" style="width:7.086614173228346in;height:1.5669291338582678in" />
+<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
 
 2. Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image29.png" style="width:7.086614173228346in;height:1.5708661417322836in" />
+<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:1.5708661417322836in" />
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image30.png" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image31.png" style="width:7.086614173228346in;height:2.0in" />
+<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.0in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes G17F se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
 ### Diagrama de conexión del comunicador a la central de incendios C-TEC Cast ZFP 
 
-<img alt="" src="./image32.png" style="width:3.2266732283464568in;height:1.3566699475065618in" />
+<img alt="" src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
 Configuración del comunicador G17F con TrikdisConfig al conectar el panel de alarma contra incendios **C-TEC Cast ZFP.**
 
 1.  Seleccione el panel de control de alarma contra incendios **C-TEC Cast ZFP**.
 
-<img alt="" src="./image33.png" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 1.  Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image34.png" style="width:7.086614173228346in;height:1.5551181102362204in" />
+<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
 
 2. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de “**Texto SMS**” junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image35.png" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="" src="./image35.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 3. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image36.png" style="width:7.086614173228346in;height:1.9921259842519685in" />
+<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
 
 Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtools**. Encienda la alimentación de la central de incendios. Espere mientras se carga el software de la central de incendios. Conecte el cable USB2.0 A-B entre la central de incendios y el ordenador.
 
 4. Abra la pestaña „**Node View**“.
 
-<img alt="" src="./image37.png" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
 5. Lea la configuración del panel de incendios en la computadora.
 
-<img alt="" src="./image38.png" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
 6. Ingrese el código (el código de fábrica es 4444).
 
 2.  Haga clic en „ОК“.
 
-<img alt="" src="./image39.png" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="" src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
 3. Seleccione „BMS Interface“.
 
 2.  Haga clic en el icono gratuito.
 
-<img alt="" src="./image40.png" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
 11. Haga clic en „**Edit Devices**“.
 
-<img alt="" src="./image41.png" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 12. En la pestaña " **Device** ", ingrese el nombre del sistema.
 
-<img alt="" src="./image42.png" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
 13. En la pestaña "**Properties**", ingrese el nombre del sistema.
 
@@ -460,13 +460,13 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 16. Escriba la configuración en la central de incendios.
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
 17. Ingrese el código (el código de fábrica es 4444).
 
 18. Haga clic en „ОК“.
 
-<img alt="" src="./image44.png" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="" src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 La central de incendios está programada. Desconecte el cable USB2.0 A-B de la central de incendios.
 
@@ -478,37 +478,37 @@ El comunicador tiene seis terminales de entrada (1 IN - 6 IN) (tres terminales s
 
 Esquemas de circuitos tipo NO, NC, EOL:
 
-<img alt="" src="./image45.png" style="width:5.807086614173229in;height:1.7007874015748032in" />
+<img alt="" src="./image45.webp" style="width:5.807086614173229in;height:1.7007874015748032in" />
 
 ### Esquema para conectar los módulos expansores de la serie iO 
 
 Si el comunicador necesita más entradas IN o salidas OUT, conecte un expansor de entrada y salida de la serie TRIKDIS iO cableado o inalámbrico.
 
-<img alt="" src="./image46.png" style="width:7.086805555555555in;height:4.6375in" />
+<img alt="" src="./image46.webp" style="width:7.086805555555555in;height:4.6375in" />
 
 ### Esquema para conectar un módulo expansor iO-8 
 
 Si necesita que el comunicador tenga más entradas IN o salidas OUT, conecte el expansor cableado *iO-8*.
 
-<img alt="" src="./image47.png" style="width:2.2401574803149606in;height:1.2086614173228347in" />
+<img alt="" src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
 
 ### Esquema para conectar los módulos expansores de la serie LORA 
 
 Diagrama de conexión para los módulos expansores LORA.
 
-<img alt="" src="./image48.png" style="width:5.270010936132984in;height:6.646679790026247in" />
+<img alt="" src="./image48.webp" style="width:5.270010936132984in;height:6.646679790026247in" />
 
 ### Esquema para conectar el módulo WiFi W485 
 
 Versión de firmware del *G17F* desde 1.08*.* / El módulo *W485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a *Protegus2* utilizando un enrutador de internet Wi-Fi. Cuando la conectividad Wi-Fi está disponible, el *G17F* envía mensajes de eventos a través del módulo *W485*. Cuando se interrumpe la conectividad Wi-Fi, el *G17F* envía mensajes a través de GPRS. Cuando se restablece la conectividad Wi-Fi, el *G17F* procede a enviar mensajes a través del *W485*. / La configuración del módulo Wi-Fi *W485* para que funcione con el *G17F* se describe en el capítulo 5.5. “Módulos”. / No necesita una tarjeta SIM cuando usa el *W485* con el *G17F*.
 
-<img alt="" src="./image49.png" style="width:2.826771653543307in;height:2.141732283464567in" />
+<img alt="" src="./image49.webp" style="width:2.826771653543307in;height:2.141732283464567in" />
 
 ### Esquema para conectar el módulo E485 “Ethernet” 
 
 Versión de firmware del *G17F* desde 1.08*.* / El *E485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a *Protegus2* usando una conexión a internet por cable. Al utilizar el *E485* con el *GV17*, los mensajes al CRA y *Protegus2* se envían a través de Internet por cable y no se usa el internet móvil. Si se interrumpe una conectividad a internet por cable, el *GV17* envía mensajes a través de internet móvil. Al restablecerse la conectividad a internet por cable, el *G17F* comienza a enviar mensajes a través de *E485*. / La configuración del módulo *E485* para funcionar con el *G17F* se describe en el capítulo 5.5. “Módulos”. / No necesita una tarjeta SIM cuando usa el *E485* con el *G17F*.
 
-<img alt="" src="./image50.png" style="width:2.826771653543307in;height:2.141732283464567in" />
+<img alt="" src="./image50.webp" style="width:2.826771653543307in;height:2.141732283464567in" />
 
 ### Encendido del comunicador 
 
@@ -539,13 +539,13 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -566,7 +566,7 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
         y parpadear en amarillo).
 3. Haga clic en Agregar nuevo sistema e ingrese el número de "IMEI/Unique ID" del *G17F*. Se puede encontrar en el dispositivo y en la etiqueta del empaque. Después de ingresar la ID única, haga clic en el botón „Siguiente”.
 
-<img alt="" src="./image54.png" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="" src="./image54.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 ### Configuración y control a través de mensajes SMS 
 
@@ -658,7 +658,7 @@ Realice estas acciones si desea controlar una salida PGM de forma remota:
 
 Después de conectar G17F y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:0.5787401574803149in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
 
 | **Nombre** | **Descripción** |
 |----|----|
@@ -678,7 +678,7 @@ Después de pulsar **Leer [F4]**, el programa leerá y mostrará los ajustes, qu
 
 **Pestaña de la “Sistema General”**
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:3.1377952755905514in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
 
 **Grupo de opciones de la "General"**
 
@@ -717,7 +717,7 @@ Después de pulsar **Leer [F4]**, el programa leerá y mostrará los ajustes, qu
 
 **Pestaña de la “Acceso”**
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 **Grupo de opciones de la “Códigos de acceso”**
 
@@ -733,7 +733,7 @@ El administrador puede establecer qué parámetros puede cambiar el instalador.
 
 ### Ventana de "Informar a CRA" 
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:3.5354330708661417in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.5354330708661417in" />
 
 El comunicador envía mensajes a la Estación Central de Monitoreo usando Internet (IP) o mensajes SMS.
 
@@ -796,7 +796,7 @@ Los siguientes ajustes solo se muestran cuando se elige el protocolo DC-09_2007 
 
 **Pestaña de la “Usuarios”**
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:4.039370078740157in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:4.039370078740157in" />
 
 **Grupo de opciones de la “Usuarios y reportes al usuario”**
 
@@ -822,7 +822,7 @@ Los siguientes ajustes solo se muestran cuando se elige el protocolo DC-09_2007 
 
 **Pestaña de la “SMS textos de respuesta”**
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 **Grupo de opciones de la “Texto de respuesta SMS”**
 
@@ -830,7 +830,7 @@ Los siguientes ajustes solo se muestran cuando se elige el protocolo DC-09_2007 
 
 **Pestaña de la “SMS para eventos del panel”**
 
-<img alt="" src="./image61.png" style="width:7.086614173228346in;height:3.645669291338583in" />
+<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes".
 
@@ -846,7 +846,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la „RS485 módulos“**
 
-<img alt="" src="./image62.png" style="width:7.086614173228346in;height:3.3464566929133857in" />
+<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.3464566929133857in" />
 
 **Grupo de opciones de la “RS485 módulos”**
 
@@ -864,7 +864,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Ventana de configuración del módulo WiFi W485 (W17u)**
 
-<img alt="" src="./image63.png" style="width:7.086614173228346in;height:2.673228346456693in" />
+<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.673228346456693in" />
 
 **Grupo de opciones de la „Parámetros de la red WiFi“**
 
@@ -892,7 +892,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Ventana de configuración del módulo "Ethernet" E485**
 
-<img alt="" src="./image64.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 **Grupo de opciones de la „ Parámetros de la red LAN“**
 
@@ -916,7 +916,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “Configuraciones de zonas”**
 
-<img alt="" src="./image65.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - **Zona Núm.** – el número de la zona en la lista.
 
@@ -942,7 +942,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “SMS y llamadas”**
 
-<img alt="" src="./image66.png" style="width:7.086614173228346in;height:2.3818897637795278in" />
+<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:2.3818897637795278in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes"*.*
 
@@ -956,7 +956,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “Salidas”**
 
-<img alt="" src="./image67.png" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 - **PGM Núm.** – especifica el número de salida de PGM en la lista.
 
@@ -976,7 +976,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “SMS y llamadas”**
 
-<img alt="" src="./image68.png" style="width:7.086614173228346in;height:1.720472440944882in" />
+<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.720472440944882in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes".
 
@@ -990,7 +990,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “Eventos”**
 
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:1.8976377952755905in" />
+<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.8976377952755905in" />
 
 - **ID** – número de evento en la lista.
 
@@ -1016,7 +1016,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “SMS y llamadas”**
 
-<img alt="" src="./image70.png" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes".
 
@@ -1028,7 +1028,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana de “Registro de eventos” 
 
-<img alt="" src="./image71.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - Botón **Leer Registro** – comando para leer el registro de eventos desde la memoria del dispositivo.
 
@@ -1040,7 +1040,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón **Restaurar** en ***TrikdisConfig*.**
 
-<img alt="" src="./image72.png" style="width:7.086614173228346in;height:1.0669291338582678in" />
+<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:1.0669291338582678in" />
 
 ## Configuración Remota 
 
@@ -1066,7 +1066,7 @@ Para restablecer el comunicador a la configuración de fábrica, presione el bot
 
 2.  En la sección de acceso remoto ingrese el IMEI/número único de ID. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image73.png" style="width:7.086614173228346in;height:2.161417322834646in" />
+<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:2.161417322834646in" />
 
 3. (Opcional) en el espacio del nombre de Sistema ingrese el nombre deseado para el comunicador.
 
@@ -1105,7 +1105,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de **Firmware** del menú.
 
-<img alt="" src="./image74.png" style="width:7.086614173228346in;height:2.909448818897638in" />
+<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:2.909448818897638in" />
 
 4. Presione Abrir firmware y seleccione el archivo de firmware requerido.
 
@@ -1123,4 +1123,4 @@ Siempre que desconecte la fuente de alimentación antes de realizar las conexion
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-<img alt="" src="./image2.png" style="width:0.39375in;height:0.44513888888888886in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="" src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

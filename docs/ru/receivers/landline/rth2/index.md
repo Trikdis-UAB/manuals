@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Телефонный Линейный Приёмник
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## О телефонном линейном приемном устройстве
@@ -56,7 +56,7 @@ pdf: rth2-original.pdf
 
 ### Вид спереди
 
-<img alt="RTH2 front view" src="./rth2-front.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 front view" src="./rth2-front.webp" style="width: 100%; max-width: 700px;">
 
 | No. | Элемент |
 |-----|---------|
@@ -67,7 +67,7 @@ pdf: rth2-original.pdf
 
 ### Вид сзади
 
-<img alt="RTH2 rear view" src="./rth2-rear.jpg" style="width: 100%; max-width: 700px;">
+<img alt="RTH2 rear view" src="./rth2-rear.webp" style="width: 100%; max-width: 700px;">
 
 | No. | Элемент |
 |-----|---------|
@@ -150,42 +150,42 @@ pdf: rth2-original.pdf
 
 #### Запуск GProg2
 
-8. Запустите программу, щелкнув значок GProg2 <img alt="GProg2" src="./icon-gprog2.png" style="height:22px; vertical-align:middle;">, затем в окне настроек укажите последовательный порт (например, COM3).
+8. Запустите программу, щелкнув значок GProg2 <img alt="GProg2" src="./icon-gprog2.webp" style="height:22px; vertical-align:middle;">, затем в окне настроек укажите последовательный порт (например, COM3).
 9. В строке меню выберите команду [*Devices*] и выберите RT2.
-10. Нажмите <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> значок на панели инструментов для подключения приемного устройства.
-11. Чтобы прочесть рабочие параметры, сохраненные во внутренней памяти устройства, нажмите <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> кнопку. По окончании загрузки данных появится окно *Configuration is received*.
+10. Нажмите <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> значок на панели инструментов для подключения приемного устройства.
+11. Чтобы прочесть рабочие параметры, сохраненные во внутренней памяти устройства, нажмите <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> кнопку. По окончании загрузки данных появится окно *Configuration is received*.
 12. Появится окно *Configuration is received*.
 
-<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 main window with Settings dialog" src="./gprog2-settings.webp" style="width: 100%; max-width: 600px;">
 
 #### Описание значков панели инструментов
 
 | Значок | Функция |
 |--------|---------|
-| <img alt="Open" src="./icon-open.png" style="height:22px; vertical-align:middle;"> **[Открыть]** | Открыть сохраненный файл с расширением ".tcfg" |
-| <img alt="Save" src="./icon-save.png" style="height:22px; vertical-align:middle;"> **[Сохранить]** | Сохранить файл с установленными параметрами с расширением ".tcfg" |
-| <img alt="Connect" src="./icon-connect.png" style="height:22px; vertical-align:middle;"> **[Соединение]** | Подключиться к последовательному порту |
-| <img alt="Disconnect" src="./icon-disconnect.png" style="height:22px; vertical-align:middle;"> **[Разъединение]** | Отключиться от последовательного порта |
-| <img alt="Receive config" src="./icon-receive.png" style="height:22px; vertical-align:middle;"> **[Получение параметров]** | Считать параметры устройства |
-| <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> **[Отправить параметры]** | Записать новые параметры в память устройства |
-| <img alt="Generate report" src="./icon-report.png" style="height:22px; vertical-align:middle;"> **[Генерировать отчет]** | Печать отчета об установленных параметрах |
+| <img alt="Open" src="./icon-open.webp" style="height:22px; vertical-align:middle;"> **[Открыть]** | Открыть сохраненный файл с расширением ".tcfg" |
+| <img alt="Save" src="./icon-save.webp" style="height:22px; vertical-align:middle;"> **[Сохранить]** | Сохранить файл с установленными параметрами с расширением ".tcfg" |
+| <img alt="Connect" src="./icon-connect.webp" style="height:22px; vertical-align:middle;"> **[Соединение]** | Подключиться к последовательному порту |
+| <img alt="Disconnect" src="./icon-disconnect.webp" style="height:22px; vertical-align:middle;"> **[Разъединение]** | Отключиться от последовательного порта |
+| <img alt="Receive config" src="./icon-receive.webp" style="height:22px; vertical-align:middle;"> **[Получение параметров]** | Считать параметры устройства |
+| <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> **[Отправить параметры]** | Записать новые параметры в память устройства |
+| <img alt="Generate report" src="./icon-report.webp" style="height:22px; vertical-align:middle;"> **[Генерировать отчет]** | Печать отчета об установленных параметрах |
 
 #### Установка параметров
 
-<img alt="GProg2 Main window" src="./gprog2-main-window.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Main window" src="./gprog2-main-window.webp" style="width: 100%; max-width: 600px;">
 
-<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Communication settings" src="./gprog2-comm-settings.webp" style="width: 100%; max-width: 600px;">
 
 13. В *Главном окне* ветки установите протокол Surgard.
 14. При необходимости можно изменить параметры в ветке *Параметры связи*; рекомендуемые значения приведены в п. **Рабочие параметры приемного устройства** выше.
-15. Для сохранения параметров следуйте в [*File/Write device*] в строке меню или нажмите <img alt="Send config" src="./icon-send.png" style="height:22px; vertical-align:middle;"> значок.
+15. Для сохранения параметров следуйте в [*File/Write device*] в строке меню или нажмите <img alt="Send config" src="./icon-send.webp" style="height:22px; vertical-align:middle;"> значок.
 16. Чтобы сохранить установленные параметры в компьютере, следуйте в [*File/Save as*]. Имя файла и место сохранения могут быть произвольные. Он может быть позже использован в качестве шаблона для настройки других модулей.
 
 ## Приложение А — Сервисные сообщения
 
 Сервисные сообщения телефонного связного приемного устройства:
 
-<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.png" style="width: 100%; max-width: 600px;">
+<img alt="GProg2 Status Event Summary" src="./gprog2-status-events.webp" style="width: 100%; max-width: 600px;">
 
 | Сообщение | Код | Описание |
 |-----------|-----|----------|

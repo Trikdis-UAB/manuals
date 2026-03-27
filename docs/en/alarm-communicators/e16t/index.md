@@ -1,7 +1,7 @@
 # Ethernet communicator E16T
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="Product Image" width="400">
+  <img src="./image1.webp" alt="Product Image" width="400">
 </div>
 
 
@@ -35,7 +35,7 @@ Sends events to monitoring station receiver:
 
 - When Protegus service is enabled, events are first delivered to CMS, and only then are sent to app users.
 
-<img alt="" src="./image1.png" style="width:2.3622047244094486in;height:3.232283464566929in" />
+<img alt="" src="./image1.webp" style="width:2.3622047244094486in;height:3.232283464566929in" />
 
 **Works with Protegus app:**
 
@@ -126,7 +126,7 @@ Sends events to monitoring station receiver:
 
 ### Structural schematic with E16T usage 
 
-<img alt="" src="./image4.png" style="width:7.086805555555555in;height:2.975in" />
+<img alt="" src="./image4.webp" style="width:7.086805555555555in;height:2.975in" />
 
 !!! note
     Before configuration, make sure you have all the necessary components:
@@ -150,7 +150,7 @@ Sends events to monitoring station receiver:
 
 2.  Open the casing of the E16T with a flat-head screwdriver as shown below:
 
-<img alt="" src="./image5.png" style="width:5.503937007874016in;height:1.4803149606299213in" />
+<img alt="" src="./image5.webp" style="width:5.503937007874016in;height:1.4803149606299213in" />
 
 1.  Using a USB Mini-B cable connect the E16T to the computer.
 
@@ -164,13 +164,13 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In the *“System Settings*” window:**
 
-<img alt="" src="./image6.png" style="width:7.090551181102362in;height:1.8937007874015748in" />
+<img alt="" src="./image6.webp" style="width:7.090551181102362in;height:1.8937007874015748in" />
 
 1.  Select **Security panel model** that will be connected to the communicator.
 
 **In “Reporting” window “Protegus Service” tab:**
 
-<img alt="" src="./image7.png" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 2. Check **Enable connection** in Protegus service checkbox.
 
@@ -185,7 +185,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System settings” window:**
 
-<img alt="" src="./image8.png" style="width:7.078740157480315in;height:1.8818897637795275in" />
+<img alt="" src="./image8.webp" style="width:7.078740157480315in;height:1.8818897637795275in" />
 
 1.  Enter **Account number** provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**).
 
@@ -193,7 +193,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “Reporting” window settings for „Primary“ channel:**
 
-<img alt="" src="./image9.png" style="width:7.082677165354331in;height:4.059055118110236in" />
+<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:4.059055118110236in" />
 
 3.  **Enable** – enable primary communication channel.
 
@@ -225,7 +225,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
     and receiver numbers.
 **In “Reporting” window “Protegus Service” tab:**
 
-<img alt="" src="./image10.png" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 15. Select checkbox **Enable connection** to the PROTEGUS Cloud.
 
@@ -242,9 +242,9 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 Following the provided schematics connect the communicator to the control panel.
 
-<img alt="" src="./image11.png" style="width:4.409448818897638in;height:2.547244094488189in" />
+<img alt="" src="./image11.webp" style="width:4.409448818897638in;height:2.547244094488189in" />
 
-<img alt="" src="./image12.png" style="width:4.283464566929134in;height:2.5551181102362204in" />
+<img alt="" src="./image12.webp" style="width:4.283464566929134in;height:2.5551181102362204in" />
 
 ### Schematics for wiring inputs 
 
@@ -252,15 +252,15 @@ The communicator has two input terminals (IN1, IN2) for connecting NO, NC, EOL t
 
 Connect the input according to the selected input type (NO, NC, EOL), as shown in the schemes below:
 
-<img alt="" src="./image13.png" style="width:5.68503937007874in;height:1.625984251968504in" />
+<img alt="" src="./image13.webp" style="width:5.68503937007874in;height:1.625984251968504in" />
 
 ### Connect LAN cable 
 
-<img alt="" src="./image14.png" style="width:2.8346456692913384in;height:2.3622047244094486in" />
+<img alt="" src="./image14.webp" style="width:2.8346456692913384in;height:2.3622047244094486in" />
 
 ### Schematic for wiring a relay and LED 
 
-<img alt="" src="./image15.png" style="width:4.437007874015748in;height:0.9133858267716536in" />
+<img alt="" src="./image15.webp" style="width:4.437007874015748in;height:0.9133858267716536in" />
 
 ## Programming the control panel 
 
@@ -324,13 +324,13 @@ With Protegus users will be able to control their alarm system remotely. They wi
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -348,7 +348,7 @@ With Protegus users will be able to control their alarm system remotely. They wi
         "NETWORK" indicator lights up green when there is a connection.
 3. Click **Add new system** and enter the E16T’s „*MAC*” number. This number can be found on the device and the packaging sticker. After entering press **Next**.
 
-    <img alt="" src="./image19.png" style="width:5.818897637795276in;height:2.0196850393700787in" />
+    <img alt="" src="./image19.webp" style="width:5.818897637795276in;height:2.0196850393700787in" />
 
 ### Additional settings to arm/disarm the alarm system using control panel’s keyswitch zone 
 
@@ -359,11 +359,11 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  In the new window, click "Areas" in the side menu. In the window that opens, specify the area of the alarm system 1 (communicator has one OUT output) and press "Next.
 
-    <img alt="" src="./image23.png" style="width:6.446679790026247in;height:2.2500043744531935in" />
+    <img alt="" src="./image23.webp" style="width:6.446679790026247in;height:2.2500043744531935in" />
 
 2.  In the new window, identify what is the number for each of the specified areas in the security system and press **Save**.
 
-    <img alt="" src="./image24.png" style="width:6.446679790026247in;height:2.2600043744531932in" />
+    <img alt="" src="./image24.webp" style="width:6.446679790026247in;height:2.2600043744531932in" />
 
 3.  In the side menu press **Settings** and in the newly opened window press **Settings**. Select the box **Arm/Disarm** **with** **PGM** and specify which area the output will control. One output OUT can control only one area.
 
@@ -371,7 +371,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 5.  For additional security, you can select **Use Application password for ARM/DISARM**. Then after pressing the button to arm/disarm the alarm system, a window for entering the app password will open.
 
-    <img alt="" src="./image25.png" style="width:6.353346456692913in;height:2.853338801399825in" />
+    <img alt="" src="./image25.webp" style="width:6.353346456692913in;height:2.853338801399825in" />
 
 ### Arming/disarming the alarm system with Protegus 
 
@@ -381,7 +381,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 3.  If asked, enter the user code or Protegus password.
 
-    <img alt="" src="./image26.png" style="width:6.353346456692913in;height:3.5200076552930883in" />
+    <img alt="" src="./image26.webp" style="width:6.353346456692913in;height:3.5200076552930883in" />
 
 ## Remote configuration 
 
@@ -401,7 +401,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 3.  Start the configuration program TrikdisConfig and the section **Remote Access** in the **Unique ID** field, enter the existing E16T MAC address (the MAC address is indicated on the stickers affixed to the underside of the communicator and the package).
 
-<img alt="" src="./image27.png" style="width:6.917322834645669in;height:0.952755905511811in" />
+<img alt="" src="./image27.webp" style="width:6.917322834645669in;height:0.952755905511811in" />
 
 4. (Optional) In the **System name** field, enter the desired name for the E16T with this Unique ID. Press **Configure.**
 
@@ -415,7 +415,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 After connecting the E16T and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image28.png" style="width:6.925196850393701in;height:0.6220472440944882in" />
+<img alt="" src="./image28.webp" style="width:6.925196850393701in;height:0.6220472440944882in" />
 
 | Object    | Description                                        |
 |-----------|----------------------------------------------------|
@@ -433,7 +433,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 ### “System settings” window 
 
-<img alt="" src="./image29.png" style="width:6.937007874015748in;height:4.05511811023622in" />
+<img alt="" src="./image29.webp" style="width:6.937007874015748in;height:4.05511811023622in" />
 
 **“General” settings group**
 
@@ -491,7 +491,7 @@ There are two access levels (administrator and installer) when configuring the E
 
 **„CMS Reporting“ tab**
 
-<img alt="" src="./image30.png" style="width:6.940944881889764in;height:4.051181102362205in" />
+<img alt="" src="./image30.webp" style="width:6.940944881889764in;height:4.051181102362205in" />
 
 The communicator sends messages to the monitoring station via a wired internet (IP) connection.
 
@@ -537,7 +537,7 @@ Settings can be changed, when the DC-09_2007 or DC-09_2012 encoding for universa
 
 - **Use time stamp –** the time will be included in the message if the field is checked.
 
-<img alt="" src="./image31.png" style="width:6.940944881889764in;height:1.7716535433070866in" />
+<img alt="" src="./image31.webp" style="width:6.940944881889764in;height:1.7716535433070866in" />
 
 **„Protegus service“ tab** **“Protegus service” settings group**
 
@@ -547,7 +547,7 @@ Settings can be changed, when the DC-09_2007 or DC-09_2012 encoding for universa
 
 ### „Event Summary“ windows 
 
-<img alt="" src="./image32.png" style="width:6.940944881889764in;height:4.051181102362205in" />
+<img alt="" src="./image32.webp" style="width:6.940944881889764in;height:4.051181102362205in" />
 
 This window allows you to enable, disable, and change internal messages and input messages from the device. Turning off the internal message in this window will not send it regardless of other settings.
 
@@ -585,7 +585,7 @@ The event Contact ID codes that will be sent to the CMS and to the Protegus, whe
 
 To restore the communicator’s factory defaults, you need to click the **Restore** button in the TrikgisConfig window.
 
-<img alt="" src="./image33.png" style="width:6.937007874015748in;height:1.062992125984252in" />
+<img alt="" src="./image33.webp" style="width:6.937007874015748in;height:1.062992125984252in" />
 
 ## Test communicator performance 
 
@@ -629,7 +629,7 @@ E16T firmware can also be updated or changed manually. After an update, all prev
 
 2.  Press **Open firmware** and select the required firmware file. If you do not have the file, the newest firmware file can be downloaded by <u>registered users</u> from [www.trikdis.com](http://www.trikdis.com) , under the download section of the E16T communicator.
 
-    <img alt="" src="./image34.png" style="width:6.937007874015748in;height:3.0866141732283463in" />
+    <img alt="" src="./image34.webp" style="width:6.937007874015748in;height:3.0866141732283463in" />
 
 3.  Press **Update [F12]**.
 
@@ -645,4 +645,4 @@ Disconnect the power supply before making any electrical connections.
 
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.

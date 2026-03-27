@@ -1,7 +1,7 @@
 # Wi-Fi valdiklis GATOR WiFi skirtas automatinių durų (arba kitai elektros įrangai) valdymui nuotoliniu būdu
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ##  Aprašymas
@@ -82,7 +82,7 @@ Pranešimai saugos tarnybai
 
 5.  Mygtukas įjungiantis modulio Wi-Fi konfigūravimo režimą.
 
-<img alt="" src="./image4.png" style="width:4.853343175853018in;height:2.8366721347331585in" />
+<img alt="" src="./image4.webp" style="width:4.853343175853018in;height:2.8366721347331585in" />
 
 ### Išorinių kontaktų paskirtis 
 
@@ -156,13 +156,13 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 
 5.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image5.png" style="width:3.937007874015748in;height:2.0551181102362204in" />
+<img alt="" src="./image5.webp" style="width:3.937007874015748in;height:2.0551181102362204in" />
 
 ### Maitinimo prijungimo schema 
 
 Laidais sujunkite valdiklį GATOR WiFi pagal pateiktą sujungimų schemą.
 
-<img alt="" src="./image6.png" style="width:3.6900076552930883in;height:2.652505468066492in" />
+<img alt="" src="./image6.webp" style="width:3.6900076552930883in;height:2.652505468066492in" />
 
 ### RFID skaitytuvo (Wiegand 26/34) prijungimo schema 
 
@@ -170,11 +170,11 @@ Valdiklio GATOR WiFi konfigūravimas su RFID skaitytuvų aprašytas p.5.3 „Lan
 
 RFID skaitytuvo prijungimo schema prie valdiklio GATOR WiFi.
 
-<img alt="" src="./image7.png" style="width:4.850009842519685in;height:3.9275076552930885in" />
+<img alt="" src="./image7.webp" style="width:4.850009842519685in;height:3.9275076552930885in" />
 
 Programoje TrikdisConfig būtina pažymėti lauką **„Wiegand“ skaitytuvo režimas.** Paspaudus „Išėjimo“ mygtuką, valdiklio išėjimas 5OUT suveiks nustatytai impulso trukmei.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.437007874015748in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.437007874015748in" />
 
 ### iO-LORA plėtimo modulių prijungimo schema 
 
@@ -182,19 +182,19 @@ Vartų valdiklio veikimo programos versija nuo 1.21.
 
 Prijunkite RF-LORA transiverį prie GATOR WiFi. Po to galite naudoti iO-LORA plėtiklį, prie kurio prijungtas RFID skaitytuvas (Wiegand 26/34). RFID skaitytuvas valdo iO-LORA PGM išėjimą, prie kurio jis prijungtas. GATOR WiFi ir aštuoni prie jo prijungti iO-LORA moduliai gali valdyti devynias skirtingas duris.
 
-<img alt="" src="./image9.png" style="width:7.086805555555555in;height:6.590972222222222in" />
+<img alt="" src="./image9.webp" style="width:7.086805555555555in;height:6.590972222222222in" />
 
 Paleiskite TrikdisConfig. Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite "**iO-LORA valdiklis**". Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.4173228346456692in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
 "**IN/OUT**" sąraše „**6IN**“ nustatykite „**Išėjimo mygtukas**“. Paspaudus „**Išėjimo**“ mygtuką, iO-LORA išėjimas „**OUT7**“ suveiks nustatytai impulso trukmei.
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
 Sąraše "**Vartotojai**" įrašykite RFID kortelės numerį, vartotojo vardą, įjunkite leidimą valdyti PGMą, nurodykite valdoma PGMą, kodą. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai. Nuspauskite "**Atsijungti**" ir atjunkite USB kabelį.
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuką (turi suveikti PGM išėjimas).
 
@@ -202,19 +202,19 @@ Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuk�
 
 GATOR WiFi turi keturis universalius **I/O** (įėjimas/išėjimas) gnybtus, kurie gali veikti kaip įėjimai arba išėjimai. Įėjimai gali veikti NC, NO, EOL režimais. Prijunkite įėjimus pagal nustatytą įėjimo tipą (NC, NO, EOL), kaip tai pavaizduota žemiau pateiktose schemose:
 
-<img alt="" src="./image13.png" style="width:6.463346456692913in;height:1.560003280839895in" />
+<img alt="" src="./image13.webp" style="width:6.463346456692913in;height:1.560003280839895in" />
 
 ### Relės prijungimo schema
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. xI/O gnybtui turi būti nustatytas Išėjimo veikimo režimas.
 
-<img alt="" src="./image14.png" style="width:2.6850054680664917in;height:0.8875021872265967in" />
+<img alt="" src="./image14.webp" style="width:2.6850054680664917in;height:0.8875021872265967in" />
 
 ### LED prijungimo schema
 
 xI/O gnybtui turi būti nustatytas Išėjimo veikimo režimas.
 
-<img alt="" src="./image15.png" style="width:2.242504374453193in;height:0.7475010936132983in" />
+<img alt="" src="./image15.webp" style="width:2.242504374453193in;height:0.7475010936132983in" />
 
 ## Valdymas su *Protegus2* programėle 
 
@@ -224,13 +224,13 @@ Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pa
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -245,55 +245,55 @@ Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pa
         mirksi geltonai).
 Paspauskite “**Pridėti sistemą**”.
 
-<img alt="" src="./image22.png" style="width:2.7559055118110236in;height:2.5393700787401574in" />
+<img alt="" src="./image22.webp" style="width:2.7559055118110236in;height:2.5393700787401574in" />
 
 Įveskite „**Unikalus ID**“ (MAC) numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
-<img alt="" src="./image23.png" style="width:2.7559055118110236in;height:5.405511811023622in" />
+<img alt="" src="./image23.webp" style="width:2.7559055118110236in;height:5.405511811023622in" />
 
 Spustelėkite „**Pradėkite „WiFi“ konfigūravimą WP17**“.
 
-<img alt="" src="./image24.png" style="width:2.7559055118110236in;height:4.539370078740157in" />
+<img alt="" src="./image24.webp" style="width:2.7559055118110236in;height:4.539370078740157in" />
 
 Plokščiu atsuktuvu nuimkite GATOR WiFi dangtelį. Nuspauskite ir palaikykite mygtuką „PAIR“ 3 sekundes. Indikatorius „**NETWORK**“ pradės greitai mirksėti žaliai geltonai. Atleiskite mygtuką. GATOR WiFi valdiklyje įsijungė registravimo režimas prie Wi-Fi tinklo.
 
-<img alt="" src="./image25.png" style="width:2.7559055118110236in;height:4.208661417322834in" />
+<img alt="" src="./image25.webp" style="width:2.7559055118110236in;height:4.208661417322834in" />
 
 Palaukite kol bus surastas GATOR WiFi (WP17) valdiklis. Spustelėkite „**Gerai**“.
 
-<img alt="" src="./image26.png" style="width:2.7559055118110236in;height:2.7716535433070866in" />
+<img alt="" src="./image26.webp" style="width:2.7559055118110236in;height:2.7716535433070866in" />
 
 Pasirinkite WiFi tinklą, prie kurio bus prijungtas valdiklis ***GATOR WiFi*.**
 
-<img alt="" src="./image27.png" style="width:2.7559055118110236in;height:2.204724409448819in" />
+<img alt="" src="./image27.webp" style="width:2.7559055118110236in;height:2.204724409448819in" />
 
 Įrašykite WiFi tinklo slaptažodį. Spustelėkite „**Gerai**“.
 
-<img alt="" src="./image28.png" style="width:2.7559055118110236in;height:2.9448818897637796in" />
+<img alt="" src="./image28.webp" style="width:2.7559055118110236in;height:2.9448818897637796in" />
 
 Spustelėkite „**Jungtis**“.
 
-<img alt="" src="./image29.png" style="width:2.7559055118110236in;height:3.8976377952755907in" />
+<img alt="" src="./image29.webp" style="width:2.7559055118110236in;height:3.8976377952755907in" />
 
 Palaukite kol valdiklis prisijungs.
 
-<img alt="" src="./image30.png" style="width:2.7559055118110236in;height:2.578740157480315in" />
+<img alt="" src="./image30.webp" style="width:2.7559055118110236in;height:2.578740157480315in" />
 
 Įveskite sistemos „**Pavadinimą**“. Spustelėkite „**Toliau**".
 
-<img alt="" src="./image31.png" style="width:2.7559055118110236in;height:2.8622047244094486in" />
+<img alt="" src="./image31.webp" style="width:2.7559055118110236in;height:2.8622047244094486in" />
 
 Spustelėkite „**Praleisti**".
 
-<img alt="" src="./image32.png" style="width:2.7559055118110236in;height:4.082677165354331in" />
+<img alt="" src="./image32.webp" style="width:2.7559055118110236in;height:4.082677165354331in" />
 
 Palaukite 1 minute. Valdiklis GATOR WiFi po kelių minučių pats išeis iš primokymo režimo (arba nuspauskite ir palaikykite „**PAIR**“ mygtuką 3 sekundes, kol indikatorius „**NETWORK**“ nustos greitai mirksėti žaliai geltonai).
 
-<img alt="" src="./image33.png" style="width:2.7559055118110236in;height:2.405511811023622in" />
+<img alt="" src="./image33.webp" style="width:2.7559055118110236in;height:2.405511811023622in" />
 
 Suvaldykite PGM išėjimą paspausdami ikoną „**Output5**“.
 
-<img alt="" src="./image34.png" style="width:2.7559055118110236in;height:1.9645669291338583in" />
+<img alt="" src="./image34.webp" style="width:2.7559055118110236in;height:1.9645669291338583in" />
 
 ## Widget pridėjimas telefone 
 
@@ -303,39 +303,39 @@ Pridėkite pirštą prie ekrano ir palaikykite. Atsiras parinkčių juosta.
 
 1.  Nuspauskite „**Widgets**“.
 
-<img alt="" src="./image35.png" style="width:2.7559055118110236in;height:3.02755905511811in" />
+<img alt="" src="./image35.webp" style="width:2.7559055118110236in;height:3.02755905511811in" />
 
 Suraskite parinkčių juostoje Protegus2.
 
 2. Nuspauskite Protegus2.
 
-<img alt="" src="./image36.png" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="" src="./image36.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 3. Nuspauskite „**Switch Protegus2**“.
 
-<img alt="" src="./image37.png" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="" src="./image37.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 4. Pasirinkite valdiklio „**WP17 Output5**“**.**
 
 2.  Nuspauskite „**Pridėti valdiklį**“.
 
-<img alt="" src="./image38.png" style="width:2.7559055118110236in;height:2.232283464566929in" />
+<img alt="" src="./image38.webp" style="width:2.7559055118110236in;height:2.232283464566929in" />
 
 3. Telefono ekrane atsiras ikona.
 
-<img alt="" src="./image39.png" style="width:2.7559055118110236in;height:3.1141732283464565in" />
+<img alt="" src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
 4. Pereikite prie normalaus ekrano. Spustelkite ikoną.
 
-<img alt="" src="./image40.png" style="width:2.7559055118110236in;height:1.6456692913385826in" />
+<img alt="" src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
 Ekrane atsiras apskritimas, kuriame bus atvaizduotas PGM suveikimas.
 
-<img alt="" src="./image41.png" style="width:2.7559055118110236in;height:2.8818897637795278in" />
+<img alt="" src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
 5. Kai valdiklis prijungtas prie vartų automatikos su vartų būsenos indikacija, tai ikona atvaizduos atvirų/uždarų vartų būseną.
 
-<img alt="" src="./image42.png" style="width:2.7559055118110236in;height:1.5393700787401574in" />
+<img alt="" src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
 ## Veikimo parametrų nustatymas programa *TrikdisConfig* 
 
@@ -345,7 +345,7 @@ Su TrikdisConfig galite pakeisti valdiklio GATOR WiFi nustatymus (jei gamyklini�
 
 2.  Plokščiu atsuktuvu nuimkite GATOR WiFi dangtelį, kaip parodyta žemiau:
 
-<img alt="" src="./image43.png" style="width:6.881889763779528in;height:1.8503937007874016in" />
+<img alt="" src="./image43.webp" style="width:6.881889763779528in;height:1.8503937007874016in" />
 
 1.  Su USB Mini-B kabeliu prijunkite GATOR WiFi prie kompiuterio.
 
@@ -368,7 +368,7 @@ Su TrikdisConfig galite pakeisti valdiklio GATOR WiFi nustatymus (jei gamyklini�
 
 Prijungus GATOR WiFi prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image44.png" style="width:7.086614173228346in;height:0.5393700787401575in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.5393700787401575in" />
 
 | Pavadinimas      | Aprašymas                                             |
 |------------------|-------------------------------------------------------|
@@ -385,7 +385,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“ 
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:4.05511811023622in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:4.05511811023622in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -430,7 +430,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „IN/OUT“**
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.952755905511811in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.952755905511811in" />
 
 Įėjimų/Išėjimų nustatymų langas.
 
@@ -473,7 +473,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Grafikas“**
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:2.0in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:2.0in" />
 
 OUT išėjimas gali būti aktyvuotas pagal nustatyta grafiką. Būtina nurodyti laiką ir savaitės dienas, įgalinti grafiką ir priskirti grafiką Išėjimui.
 
@@ -499,7 +499,7 @@ OUT išėjimas gali būti aktyvuotas pagal nustatyta grafiką. Būtina nurodyti 
 
   Įveskite kalendorines šventines dienas, kuriu laikotarpyje bus galima nustatyti papildomą automatinį Išėjimų (OUT) veikimą numatytą **Grafikų** lentelėje.
 
-  <img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.9330708661417322in" />
+  <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
 - **Įj.** – pažymėkite lauką, kad būtu įjungtas švenčių tvarkaraštis.
 
 - **Data nuo** – nurodykite šventinių dienų pradžią.
@@ -516,7 +516,7 @@ Prie GATOR WiFi valdiklio galima prijungti iO-LORA modulius.
 
 Prijungus RF-LORA transiverį, prie valdiklio GATOR WiFi galima prijungti iki 8 vnt. belaidžių iO-LORA plėtiklių. RFID skaitytuvai prijungti prie belaidžių iO – LORA plėtimo modulių gali valdyti dar iki 8 durų (GATOR WiFi vartų valdiklio veikimo programos versija nuo 1.21). Vienas iO-LORA plėtiklis su vienų RFID skaitytuvu valdo tik vienas duris.
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:2.5511811023622046in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
 - **Modulis** - iš sąrašo išrinkite prie valdiklio prijungtą iO-LORA modulį.
 
@@ -524,7 +524,7 @@ Prijungus RF-LORA transiverį, prie valdiklio GATOR WiFi galima prijungti iki 8 
 
 ### Langas „IP pranešimai“ 
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:3.251968503937008in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.251968503937008in" />
 
 **Parinkčių grupė „Pagrindinis kanalas“**
 
@@ -562,7 +562,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:2.0039370078740157in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.0039370078740157in" />
 
 - **El. pašto adresas** – įrašykite vartotojo el.pašto adresą.
 
@@ -593,7 +593,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 - Priskirtas tvarkaraštis – vartotojui priskiriamas laiko grafikas (nurodomas laiko grafiko numeris), kada jis gali valdyti išėjimus OUT.
 
-<img alt="" src="./image52.png" style="width:4.366141732283465in;height:3.4645669291338583in" />
+<img alt="" src="./image52.webp" style="width:4.366141732283465in;height:3.4645669291338583in" />
 
 - **Aktyvus nuo** – nurodoma data ir laikas, kada vartotojui leista valdyti valdiklį.
 
@@ -613,31 +613,31 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 Prie valdiklio prijunkite RFID skaitytuvą (žr. p.2.3 „RFID skaitytuvo (Wiegand 26/34) prijungimo schema“). Įjunkite maitinimą valdikliui. Prijunkite USB Mini-B kabelį prie valdiklio. Programos TrikdisConfig lange „IN/OUT**“** pažymėkite „**„Wiegand“ skaitytuvo režimo“** lauką.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.437007874015748in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.437007874015748in" />
 
 Programos lange „**Vartotojai**“ nuspauskite „**Registruokite RFID“**.
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.0196850393700787in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.0196850393700787in" />
 
 Atsivers RFID pakabukų (kortelių) registravimo langas.
 
-<img alt="" src="./image54.png" style="width:2.838582677165354in;height:2.3149606299212597in" />
+<img alt="" src="./image54.webp" style="width:2.838582677165354in;height:2.3149606299212597in" />
 
 Pridėkite RFID pakabuką (kortelę) prie RFID skaitytuvo. Kai skaitytuvas nuskaitys pakabuką (kortelę) atsivers naujas langas. Jame „**Įveskite vartotojo vardą“** ir pažymėkite lauką „**Vartotojas gali valdyti PGM išėjimą 5“**. Nuspauskite mygtuką „**PRIDĖTI“**. / Jei norite pridėti dar RFID pakabukų (kortelių), pakartokite aukščiau aprašytus veiksmus.
 
-<img alt="" src="./image55.png" style="width:2.84251968503937in;height:2.3976377952755907in" />
+<img alt="" src="./image55.webp" style="width:2.84251968503937in;height:2.3976377952755907in" />
 
 Kai registracija visų RFID pakabukų (kortelių) bus baigta nuspauskite mygtuką „**SUSTABDYTI registracija“**. / Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų sąrašas būtų įrašytas į valdiklį.
 
-<img alt="" src="./image56.png" style="width:2.838582677165354in;height:2.377952755905512in" />
+<img alt="" src="./image56.webp" style="width:2.838582677165354in;height:2.377952755905512in" />
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:2.0354330708661417in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.0354330708661417in" />
 
 RFID pakabukų (kortelių) registravimą galima atlikti programoje TrikdisConfig įvedant jų ID numerius į lauką „**RFID kodas“**. Suteikite vartotojui „**Vardą“**, pažymėkite lauką „**Įj.**“ ir valdomo „**Išėjimo“** lauką. Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų (kortelių) sąrašas būtų įrašytas į valdiklį.
 
 **Skirtukas „Grafikas“**
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.0039370078740157in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.0039370078740157in" />
 
 Vartotojui galima sudaryti tvarkarašti, nurodant laiką ir savaitės dienas kada jis galės valdyti išėjimą.
 
@@ -651,7 +651,7 @@ Vartotojui galima sudaryti tvarkarašti, nurodant laiką ir savaitės dienas kad
 
 **Skirtukas „Juodasis sąrašas“**
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 Į „**Juodąjį sąrašą“** įtraukiami vartotojų elektroninio pašto adresai, kuriems bus uždrausta valdyti GATOR WiFi.
 
@@ -659,7 +659,7 @@ Patogu į juodąjį sąrašą pridėti vartotojus tiesiai iš „**Įvykių žur
 
 ### Langas „Įvykių žurnalas“ 
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 Nuspauskite mygtuką „**Nuskaityti**. **Įvykių žurnalas“** bus nuskaitytas iš valdiklio atminties. „**Įvykių žurnalas“** suteikia informaciją apie valdiklio atliktus veiksmus ir jo vidinius įvykius.
 
@@ -667,7 +667,7 @@ Nuspauskite mygtuką „**Nuskaityti**. **Įvykių žurnalas“** bus nuskaityta
 
 Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį. Valdiklio GATOR WiFi gamykliniams nustatymams atstatyti reikia programos TrikdisConfig lange nuspausti mygtuką „**Atkurti“**.
 
-<img alt="" src="./image61.png" style="width:7.086614173228346in;height:0.8582677165354331in" />
+<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:0.8582677165354331in" />
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
@@ -685,7 +685,7 @@ Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį. Valdiklio 
 
 3.  Paleiskite konfigūravimo programą TrikdisConfig ir skyriaus „**Nuotolinė prieiga“** laukelyje „**Unikalus ID“** įrašykite turimo valdiklio MAC numerį (MAC numeris nurodytas ant lipdukų, užklijuotų ant gaminio korpuso apatinės dalies ir pakuotės).
 
-<img alt="" src="./image62.png" style="width:7.086614173228346in;height:2.358267716535433in" />
+<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:2.358267716535433in" />
 
 4. Laukelyje „**Sistemos pavadinimas“** norimu vardu pavadinkite valdiklį. Spauskite „**Konfigūravimas“**.
 
@@ -724,7 +724,7 @@ GATOR WiFi veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po
 
 4.  Paspauskite gamyklinės programinės įrangos atidarymo langelį **Atverti failą** ir parinkite reikiamą gamyklinės programinės įrangos bylą.
 
-    <img alt="" src="./image63.png" style="width:7.086614173228346in;height:2.4763779527559056in" />
+    <img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.4763779527559056in" />
 
 5.  Paspauskite atnaujinimo mygtuką **Naujinti [F12]**.
 
@@ -742,4 +742,4 @@ Visada išjunkite el. energijos tiekimą prieš atliekant prietaiso pajungimą.
 
 Ne gamintojo atlikti gaminio pakeitimai, modifikacijos ar remontai panaikina gamintojo suteiktą garantiją.
 
-<img alt="" src="./image2.png" style="width:0.3937007874015748in;height:0.4448818897637795in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.
+<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.

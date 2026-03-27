@@ -5,7 +5,7 @@ pdf: r11-original.pdf
 # R11 Radijo Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 Radijo imtuvai R11 ir RF11 skirti koduotų pranešimų, siunčiamų radijo ryšio kanalu VHF ar UHF dažnių diapazonuose, priėmimui ir dekodavimui ir naudojami kaip sudėtinė radijo apsauginės sistemos RAS3 dalis.
@@ -82,9 +82,9 @@ Imtuvas turi nuoseklias RS232 ir MCI sąsajas. RS232 sąsaja naudojama kaip iš�
 
 ### **Bendras imtuvo vaizdas bei jungčių išdėstymas**
 
-<img alt="R11_01" src="./image4.png" style="width:3.134027777777778in;height:1.4701388888888889in" />
+<img alt="R11_01" src="./image4.webp" style="width:3.134027777777778in;height:1.4701388888888889in" />
 
-<img alt="R11_13" src="./image5.png" style="width:2.908333333333333in;height:1.275in" />
+<img alt="R11_13" src="./image5.webp" style="width:2.908333333333333in;height:1.275in" />
 
 Maitinimo ir signalų jungtis
 
@@ -115,7 +115,7 @@ Lentelė 1. Maitinimo ir signalų jungtis
 
 Imtuvo veikimą rodo šviesinė indikacija. Šviesos indikatorių veikimas pateiktas [Lentelė 2. Šviesos indikacija](#_Ref371325959).
 
-<img alt="R11_11" src="./image6.png" style="width:1.9159722222222222in;height:1.2520833333333334in" />
+<img alt="R11_11" src="./image6.webp" style="width:1.9159722222222222in;height:1.2520833333333334in" />
 
 <span id="_Ref371325959"></span>Lentelė 2. Šviesos indikacija
 
@@ -147,13 +147,13 @@ Paruošimo darbui eiga:
 
 Veikimo parametrų nustatymas atliekamas parametrų nustatymo programa “R11config”, sujungus kompiuterį ir imtuvą USB kabeliu. Naudoti programą ir keisti nustatymus galima tiek esant įjungtam išoriniam maitinimui, tiek maitinant per USB jungtį. Įjungus programą R11config atsiveria pradinis langas:
 
-<img alt="" src="./image7.png" style="width:4.885416666666667in;height:3.3131944444444446in" />
+<img alt="" src="./image7.webp" style="width:4.885416666666667in;height:3.3131944444444446in" />
 
 Gamyklinisprisijungimo slaptažodis yra “1234”. Jį įvedus ir paspaudus klaviatūros “Enter” klavišą, atsivers “Main” langas.
 
 Skiltyje “Settings” nurodykite kompiuterio USB prievado numerį ir mainų parametrus:
 
-<img alt="" src="./image8.png" style="width:1.8625in;height:1.8701388888888888in" />
+<img alt="" src="./image8.webp" style="width:1.8625in;height:1.8701388888888888in" />
 
 R11config programos mygtukai:
 
@@ -166,7 +166,7 @@ R11config programos mygtukai:
 
 **Main** langas.
 
-<img alt="" src="./image9.png" style="width:5.045833333333333in;height:3.404861111111111in" />
+<img alt="" src="./image9.webp" style="width:5.045833333333333in;height:3.404861111111111in" />
 
 - **Repeater mode**. Retransliatoriaus režimas. Kai imtuvas numatytas būti retransliatoriaus imtuvu, šis požymis turi būti įjungtas, o kai centrinio pulto imtuvu – išjungtas.
 
@@ -198,7 +198,7 @@ R11config programos mygtukai:
 
 **Filters** langas.
 
-<img alt="" src="./image10.png" style="width:5.045833333333333in;height:3.404861111111111in" />
+<img alt="" src="./image10.webp" style="width:5.045833333333333in;height:3.404861111111111in" />
 
 - **Time Filter**. Nurodo, kiek laiko imtuvas nepriima pasikartojančio pranešimo iš to paties objekto. Rekomenduojamas 90 sekundžių laikas.
 
@@ -212,7 +212,7 @@ R11config programos mygtukai:
 
 **Reports** langas.
 
-<img alt="" src="./image11.png" style="width:5.022916666666666in;height:3.3895833333333334in" />
+<img alt="" src="./image11.webp" style="width:5.022916666666666in;height:3.3895833333333334in" />
 
 - **Output Protocol**. Nurodomas imtuvo duomenų išėjimo protokolas. Jei R11 imtuvas numatytas būti retransliatoriaus R-IP12 imtuvu, protokolas turi būti „Monas3D“.
 
@@ -301,7 +301,7 @@ Sąsajos duomenų perdavimo greitis „Boud Rate“ turi sutapti su siunčianči
 
 **Inputs/Outputs** langas.
 
-<img alt="" src="./image12.png" style="width:5.045833333333333in;height:3.4125in" />
+<img alt="" src="./image12.webp" style="width:5.045833333333333in;height:3.4125in" />
 
 **Inputs**.
 
@@ -321,7 +321,7 @@ Lentelėje „Inputs“ yra penki stulpeliai:
 
 **Settings** langas.
 
-<img alt="" src="./image13.png" style="width:5.0152777777777775in;height:3.3819444444444446in" />
+<img alt="" src="./image13.webp" style="width:5.0152777777777775in;height:3.3819444444444446in" />
 
 - **Radio Frequencies** lentelėje galima aprašyti naudojamus dažnius suteikiant jiems sąlyginius pavadinimus, kuriuos galima bus išsirinkti nustatant R11 dažni „Main“ lange.
 
@@ -329,7 +329,7 @@ Lentelėje „Inputs“ yra penki stulpeliai:
 
 Norint atnaujinti imtuvo programą, reikia jį USB kabeliu sujungti su kompiuteriu. Tada paspaudus mygtuką SW1 ir jį palaikius daugiau 3 sekundes (kai ims šviesti visi šviesos indikatoriai), atsidarys langas RF11 (arba atsiranda atminties įrenginys RF11).
 
-<img alt="" src="./image14.png" style="width:4.923611111111111in;height:3.7020833333333334in" />
+<img alt="" src="./image14.webp" style="width:4.923611111111111in;height:3.7020833333333334in" />
 
 Jame esantį failą „rf11.fw“ reikia ištrinti ir į jo vietą įrašyti naują imtuvo veikimo programą. Jei įrašymas sėkmingas, po 1-2 sekundžių langas turi savaime užsidaryti. Po veikimo programos įrašymo, rekomenduojama pasitikslinti imtuvo programos versiją programa „R11config“.
 

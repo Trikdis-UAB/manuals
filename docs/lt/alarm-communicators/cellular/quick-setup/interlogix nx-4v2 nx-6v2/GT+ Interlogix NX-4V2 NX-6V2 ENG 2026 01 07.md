@@ -22,11 +22,11 @@ Vadovaukitės schema žemiau ir prijunkite komunikatorių prie centralės:
 | DATA                   | DATA                    | KeyBus                 |
 
 
-<img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
+<img src="../GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31.webp" alt="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-4V2 prijungimo schema ENG 2025 12 31">
 
 
 
-<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.png" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
+<img src="../GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31.webp" alt="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31" class="GT+ Interlogix NX-6V2 prijungimo schema ENG 2025 12 31">
 
 
 ## Interlogix NX-4V2, Interlogix NX-6V2 signalizacijos centralės programavimas LCD klaviatūra
@@ -80,85 +80,85 @@ Naudodami centralės klaviatūrą įveskite šias sekcijas ir nustatykite kaip n
 <div class="steps-grid">
   <div class="step-card">
         <strong>Žingsnis 1.</strong> Paspauskite <strong>Pridėti naują sistemą</strong>.
-        <img src="../GT+ interlogix nx 4v2 1 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 1 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
   
  
   <div class="step-card">
         <strong>Žingsnis 2.</strong> Įveskite komunikatoriaus <strong>IMEI</strong>, paspauskite <strong>Toliau</strong>.
-        <img src="../GT+ interlogix nx 4v2 2 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 2 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 3.</strong> Pasirinkite apsaugos įmonę.
-        <img src="../GT+ interlogix nx 4v2 3 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 3 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 4.</strong> Pasirinkite <strong>Interlogix</strong>.
-        <img src="../GT+ interlogix nx 4v2 4 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 4 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
   
 
   <div class="step-card">
         <strong>Žingsnis 5.</strong> Pasirinkite <strong>NX-4</strong> (<strong>NX-6</strong>).
-        <img src="../GT+ interlogix nx 4v2 5 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 5 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 6.</strong> Įveskite <strong>Object ID</strong> ir <strong>Module ID</strong>, paspauskite <strong>Toliau</strong>.
-        <img src="../GT+ interlogix nx 4v2 6 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 6 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 7.</strong> Palaukite, kol įrašomi duomenys.
-        <img src="../GT+ interlogix nx 4v2 7 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 7 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 8.</strong> Paspauskite <strong>Pridėti į Protegus2</strong>.
-        <img src="../GT+ interlogix nx 4v2 8 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 8 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 9.</strong> Įveskite sistemos <strong>Pavadinimą</strong>, paspauskite <strong>Toliau</strong>.
-        <img src="../GT+ interlogix nx 4v2 9 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 9 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 10.</strong> Paspauskite <strong>Praleisti</strong>.
-        <img src="../GT+ interlogix nx 4v2 10 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 10 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 11.</strong> Paspauskite ant sistemos.
-        <img src="../GT+ interlogix nx 4v2 11 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 11 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 12.</strong> Palaukite 1 minutę, kol užbaigiama, ir paspauskite <strong>Perduoti</strong>.
-        <img src="../GT+ interlogix nx 4v2 12 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 12 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 13.</strong> Įveskite naudotojo el. paštą, kuriam montuotojas perduos sistemą. Paspauskite <strong>Perduoti</strong>.
-        <img src="../GT+ interlogix nx 4v2 13 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 13 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 
   <div class="step-card">
         <strong>Žingsnis 14.</strong> Sistema atsiras Protegus naudotojo telefone.
-        <img src="../GT+ interlogix nx 4v2 14 ENG 2025 12 31.png" alt="Pridėti naują sistemą">
+        <img src="../GT+ interlogix nx 4v2 14 ENG 2025 12 31.webp" alt="Pridėti naują sistemą">
   </div>
 
 

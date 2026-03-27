@@ -1,7 +1,7 @@
 # Celular panel de control CG17
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción 
@@ -156,7 +156,7 @@ Este manual se aplica a estos modelos CG17:
 
 6.  Ranura Tarjeta SIM.
 
-<img alt="" src="./image4.png" style="width:3.937007874015748in;height:2.4921259842519685in" />
+<img alt="" src="./image4.webp" style="width:3.937007874015748in;height:2.4921259842519685in" />
 
 ### Propósito de las terminales 
 
@@ -210,7 +210,7 @@ Antes de comenzar la instalación, asegúrese de tener los componentes necesario
 
 2.  Abra la cubierta del CG17 con el desatornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image6.png" style="width:5.889763779527559in;height:1.5590551181102361in" />
+<img alt="" src="./image6.webp" style="width:5.889763779527559in;height:1.5590551181102361in" />
 
 1.  Usando el cable USB mini-B conecte el CG17 a la computadora.
 
@@ -224,7 +224,7 @@ A continuación, describimos qué configuraciones deben establecerse para que el
 
 **En la ventana "Opción del sistema", pestaña "SIM":**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 1.  Ingrese el código “**PIN de la tarjeta SIM**”.
 
@@ -232,7 +232,7 @@ A continuación, describimos qué configuraciones deben establecerse para que el
 
 **En la ventana "Usuarios y Reportes", pestaña "Servicio PROTEGUS":**
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:3.5708661417322833in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:3.5708661417322833in" />
 
 3. Habilitar la conexión a la Servicio Protegus.
 
@@ -248,7 +248,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Opciones de sistema”:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 1.  Ingrese el número de ID de objeto provisto por la CRA (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF.**).
 
@@ -258,7 +258,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la configuración de la ventana "Informar a CRA" para "Canal principal":**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:3.559055118110236in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.559055118110236in" />
 
 4. **Tipo de comunicación** - seleccione el método de conexión IP (No recomendamos SMS como el canal primario).
 
@@ -306,9 +306,9 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 7.  Inserte la tarjeta nano-SIM. La tarjeta SIM ya debe estar activada en la red GSM y todos los servicios requeridos deben estar habilitados, es decir, la tarjeta debe poder llamar, enviar y recibir mensajes SMS, usar Internet móvil. Pregunte al operador de red móvil de su tarjeta SIM cómo habilitar los servicios requeridos.
 
-<img alt="" src="./image11.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image11.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image12.png" style="width:2.213337707786527in;height:1.3566699475065618in" />
+<img alt="" src="./image12.webp" style="width:2.213337707786527in;height:1.3566699475065618in" />
 
 !!! note "Nota"
     Cheque si la tarjeta SIM ha sido activada. / Asegúrese de que el
@@ -339,7 +339,7 @@ El cambio de configuración de zonas, la asignación de particiones se describen
 
 Posibles esquemas de conexión:
 
-<img alt="" src="./image13.png" style="width:6.423346456692913in;height:1.4566699475065616in" />
+<img alt="" src="./image13.webp" style="width:6.423346456692913in;height:1.4566699475065616in" />
 
 ### Esquemas para conectar un detector de humo
 
@@ -347,17 +347,17 @@ Asigne una salida PGM a la función “**Sensor de fueg reiniciado**” (consult
 
 - **Conexión de un detector de humo de cuatro cables**
 
-<img alt="" src="./image14.png" style="width:5.0833431758530185in;height:1.5333366141732283in" />
+<img alt="" src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
 
 - **Conexión de un detector de humo de dos cables**
 
 1)  usando una zona EOL (o NC, sin resistencia).
 
-<img alt="" src="./image15.png" style="width:5.273344269466317in;height:1.8166699475065617in" />
+<img alt="" src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
 
 1)  usando una zona EOL (o NO, sin resistencia).
 
-<img alt="" src="./image16.png" style="width:5.273344269466317in;height:1.710003280839895in" />
+<img alt="" src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
 
 \* SM1: un módulo de compatibilidad creado por Trikdis que permite reiniciar de forma remota un detector de humo de dos cables después de una alarma activada.
 
@@ -367,7 +367,7 @@ Asigne una salida PGM a la función “**Sensor de fueg reiniciado**” (consult
 
 - Si el cable que conecta el sensor de temperatura es superior a 0,5 m, recomendamos utilizar un cable de par trenzado (UTP4x2x0,5 o STP4x2x0,5).
 
-<img alt="" src="./image17.png" style="width:3.0in;height:0.9604166666666667in" />
+<img alt="" src="./image17.webp" style="width:3.0in;height:0.9604166666666667in" />
 
 Color de cable:
 
@@ -379,17 +379,17 @@ Color de cable:
 
 ### Esquemas para conectar un relé y un LED 
 
-<img alt="" src="./image18.png" style="width:4.4175087489063865in;height:0.8850021872265966in" />
+<img alt="" src="./image18.webp" style="width:4.4175087489063865in;height:0.8850021872265966in" />
 
 ### Esquemas para conectar lectores de clave de contacto 
 
 El lector TM17 debe estar conectado al CG17 utilizando un bus de datos RS485. La longitud del cable de un bus de datos RS485 puede ser de hasta 100 m. Se pueden conectar hasta ocho lectores TM17 al CG17.
 
-<img alt="" src="./image19.png" style="width:3.8025076552930885in;height:2.0450043744531934in" />
+<img alt="" src="./image19.webp" style="width:3.8025076552930885in;height:2.0450043744531934in" />
 
 El lector de llaves **iButton** debe estar conectado al CG17 utilizando el puerto "1-Wire". La longitud del cable puede ser de hasta 30 m.
 
-<img alt="" src="./image20.png" style="width:4.655008748906386in;height:2.5400054680664916in" />
+<img alt="" src="./image20.webp" style="width:4.655008748906386in;height:2.5400054680664916in" />
 
 !!! note "Nota"
     La vinculación de la llave electrónica al CG17 se describe en el
@@ -398,7 +398,7 @@ El lector de llaves **iButton** debe estar conectado al CG17 utilizando el puert
 
 El transceptor *RF-SH* con sensor inalámbrico está diseñado para trabajar con dispositivos inalámbricos (sensores de movimiento, contactos magnéticos, sirena, controles remotos, etc.). Se puede conectar un receptor *RF-SH* al *CG17*.
 
-<img alt="" src="./image21.png" style="width:2.697505468066492in;height:1.2200021872265967in" />
+<img alt="" src="./image21.webp" style="width:2.697505468066492in;height:1.2200021872265967in" />
 
 ### Esquemas para conectar módulos expansores de la serie iO 
 
@@ -406,10 +406,10 @@ Si el panel de control CG17 necesita tener más entradas IN o salidas OUT, conec
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image22.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image23.png" alt="" style="width: 100%; height: auto;" />
+    <img src="./image23.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -417,7 +417,7 @@ Si el panel de control CG17 necesita tener más entradas IN o salidas OUT, conec
 
 Se pueden conectar hasta 8 teclados (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner o Crow CR-16 PowerWave) al *CG17*. En *TrikdisConfig*, cabe señalar que se utilizará el teclado Crow (consulte el capítulo 4.2 "Ventana de" Opciones de sistema ").
 
-<img alt="" src="./image24.png" style="width:3.38000656167979in;height:1.20333552055993in" />
+<img alt="" src="./image24.webp" style="width:3.38000656167979in;height:1.20333552055993in" />
 
 ### Esquemas para conectar una sirena 
 
@@ -427,11 +427,11 @@ Se pueden conectar hasta 8 teclados (Crow CR-16 Runner, Crow LCD Runner, Crow To
 
 - La salida OUT debe tener asignada la función "Sirena" y debe tener un área de sistema de seguridad establecida.
 
-<img alt="" src="./image25.png" style="width:2.7366721347331584in;height:1.1600021872265966in" />
+<img alt="" src="./image25.webp" style="width:2.7366721347331584in;height:1.1600021872265966in" />
 
 ### Esquemas para conectar módulos de extensión de la serie iO 
 
-<img alt="" src="./image26.png" style="width:7.0875in;height:4.429861111111111in" />
+<img alt="" src="./image26.webp" style="width:7.0875in;height:4.429861111111111in" />
 
 **Nota:**
 
@@ -447,7 +447,7 @@ Se pueden conectar hasta 8 teclados (Crow CR-16 Runner, Crow LCD Runner, Crow To
 
 ### Esquemas para la conexión del sensor de nivel de combustible Strela RS485 
 
-<img alt="" src="./image27.png" style="width:3.6200076552930884in;height:1.2375021872265968in" />
+<img alt="" src="./image27.webp" style="width:3.6200076552930884in;height:1.2375021872265968in" />
 
 Se puede conectar un sensor de combustible „STRELA S485” al CG17. Cuando el sensor de combustible está conectado, los otros módulos de expansión (iO-8, iO, iO-WL, RF-SH, TM17, E485, W485, iO-LORA, iO8-LORA, PB-LORA, REL-LORA) no se conectan al CG17.
 
@@ -459,17 +459,17 @@ Es obligatorio calibrar el sensor de nivel de combustible "STRELA S485" (<http:/
 
 2.  Inicie el programa “**DUTConfig**”. Elija “**Interface sensor**”.
 
-<img alt="" src="./image28.png" style="width:3.4763779527559056in;height:1.641732283464567in" />
+<img alt="" src="./image28.webp" style="width:3.4763779527559056in;height:1.641732283464567in" />
 
 3. Establezca el modo "**View**" "**Standart**".
 
 2.  Haga clic en "**Connect**" y espere.
 
-    <img alt="" src="./image29.png" style="width:5.917322834645669in;height:2.4015748031496065in" />
+    <img alt="" src="./image29.webp" style="width:5.917322834645669in;height:2.4015748031496065in" />
 
 3.  Cuando el sensor está conectado a “DUTConfig”, aparece un cuadro "**Connection: on**".
 
-    <img alt="" src="./image30.png" style="width:6.244094488188976in;height:2.4015748031496065in" />
+    <img alt="" src="./image30.webp" style="width:6.244094488188976in;height:2.4015748031496065in" />
 
 4.  Haga clic en el botón "**Edit**" y calibre el sensor en los modos de tanque lleno y vacío.
 
@@ -477,17 +477,17 @@ Es obligatorio calibrar el sensor de nivel de combustible "STRELA S485" (<http:/
 
 6.  Haga clic en el botón "**OK**" para guardar los valores.
 
-    <img alt="" src="./image31.png" style="width:5.925196850393701in;height:2.4015748031496065in" />
+    <img alt="" src="./image31.webp" style="width:5.925196850393701in;height:2.4015748031496065in" />
 
 7.  Cambia el modo "**View**" a "**Extended**".
 
-<img alt="" src="./image32.png" style="width:5.917322834645669in;height:2.393700787401575in" />
+<img alt="" src="./image32.webp" style="width:5.917322834645669in;height:2.393700787401575in" />
 
 10. Complete la tabla de acuerdo con la forma del tanque de combustible. Método simple: simplemente configure 0% de inmersión como 0 litros y 100% de inmersión como la capacidad de su tanque de combustible (el tanque de combustible en el ejemplo tiene una capacidad de 200 l).
 
 11. Una vez que haya terminado de completar la tabla, haga clic en "**OK**".
 
-<img alt="" src="./image33.png" style="width:5.744094488188976in;height:4.551181102362205in" />
+<img alt="" src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
 
 12. Haz clic en el botón “**Disconnect**”.
 
@@ -513,19 +513,19 @@ Se puede conectar una batería de 12 V al CG17. Si se pierde la alimentación de
 
 - Verifique que la corriente de carga del *CG17* sea suficiente para cargar la batería.
 
-<img alt="" src="./image34.png" style="width:1.89667104111986in;height:1.3366688538932634in" />
+<img alt="" src="./image34.webp" style="width:1.89667104111986in;height:1.3366688538932634in" />
 
 ### Esquema para conectar el CG17 a un panel de control de seguridad 
 
 *CG17* funciona en modo comunicador. El tipo de entrada de *CG17* debe establecerse en NO ir NC y la definición "24\_ horas". / Las entradas *CG17* podrían describirse con mensajes de texto SMS que el usuario recibirá cuando las entradas sean de evento / restauración. / Las salidas PGM del panel de control deben asignarse a eventos específicos.
 
-<img alt="" src="./image35.png" style="width:2.60625in;height:1.461111111111111in" />
+<img alt="" src="./image35.webp" style="width:2.60625in;height:1.461111111111111in" />
 
 ### Medida de tensión con CG17 
 
 El *CG17* se puede utilizar para medir voltaje DC. Se pueden seleccionar cuatro entradas de CG17 1IN, 2IN, 3IN, 4IN para medición de voltaje. Se mide el voltaje de 0 V a 30 V (exceder los 30 V causará daños al panel de control *CG17*). La tensión medida debe conectarse a los terminales “1IN” y “COM”. “1IN” - terminal positivo. “COM’’ - terminal negativo.
 
-<img alt="" src="./image36.png" style="width:3.5133409886264215in;height:0.8466688538932633in" />
+<img alt="" src="./image36.webp" style="width:3.5133409886264215in;height:0.8466688538932633in" />
 
 Conecte el CG17 a una computadora con un cable USB Mini-B. Ejecute TrikdisConfig. El software reconocerá automáticamente el CG17 conectado y abrirá una ventana para la configuración. En la ventana “**Sensor**”, especifique el “**In1 Voltaje**” y también especifique la cantidad de voltaje por encima de la cual se generará un mensaje.
 
@@ -533,15 +533,15 @@ Conecte el CG17 a una computadora con un cable USB Mini-B. Ejecute TrikdisConfig
 
 - **Mínimo** - cuando el voltaje es menor que este ajuste, se generará un mensaje de evento. Para que se genere un mensaje de evento, la casilla “**Baja**” debe estar marcada.
 
-<img alt="" src="./image37.png" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 La salida PGM se puede controlar cuando se mide un voltaje por encima de un valor establecido o por debajo de un valor establecido. En TrikdisConfig, debe seleccionar la salida PGM y configurarla en el modo de funcionamiento del “**Control remoto**”.
 
-<img alt="" src="./image38.png" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 Vaya a la pestaña “**Establecer acción**”.
 
-<img alt="" src="./image39.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **Habilitar** – habilita la PGM.
 
@@ -567,13 +567,13 @@ Vaya a la pestaña “**Establecer acción**”.
 
 El módulo *W485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a *Protegus2* utilizando un enrutador de Internet WiFi. Cuando la conectividad WiFi está disponible, el *CG17* envía mensajes de evento a través del módulo *W485*. Cuando se interrumpe la conectividad WiFi, el *CG17* envía mensajes a través de GPRS. Cuando se restablece la conectividad WiFi, el *CG17* vuelve a enviar mensajes a través de *W485*. / La configuración *W485* (credenciales de red Wi-Fi) se establece en la configuración *CG17* en la ventana TrikdisConfig ”Módulos” del capítulo 4.5. / No necesita una tarjeta SIM cuando utiliza el *W485* con el panel de seguridad *CG17*. / Se puede conectar un módulo *W485* al *CG17*.
 
-<img alt="" src="./image40.png" style="width:3.09500656167979in;height:2.4225043744531933in" />
+<img alt="" src="./image40.webp" style="width:3.09500656167979in;height:2.4225043744531933in" />
 
 ### Esquema para conectar el módulo Ethernet E485
 
 El módulo *E485* envía mensajes al CRA y a *Protegus* por medio de una conexión a internet por cable. Usando el *E485* con *CG17*, los mensajes de CRA y *Protegus2* se envían a través de internet por cable y no se usa internet móvil. Si se interrumpe una conectividad a internet por cable, el *CG17* envía mensajes a través de Internet móvil. Cuando se restablece la conectividad a Internet por cable, el *CG17* comienza a enviar mensajes a través de *E485*. / La configuración del módulo *E485* para funcionar con el *CG17* se describe en la Ventana del capítulo 4.5. „Módulos”. / No necesita una tarjeta SIM cuando utiliza el *E485* con el panel de seguridad *CG17*. / Se puede conectar un módulo *Е485* al *CG17*.
 
-<img alt="" src="./image41.png" style="width:3.09000656167979in;height:2.4225043744531933in" />
+<img alt="" src="./image41.webp" style="width:3.09000656167979in;height:2.4225043744531933in" />
 
 ### Esquema para conectar de los módulos de expansión iO-LORA 
 
@@ -581,11 +581,11 @@ La versión de firmware del controlador CG17 es 1.18 y superior.
 
 Conecte el transceptor RF-LORA a CG17. Después de esto, podrá utilizar los módulos iO-LORA, iO8-LORA, PB-LORA, REL-LORA. Se puede conectar un transceptor RF-LORA al CG17.
 
-<img alt="" src="./image42.png" style="width:6.76251312335958in;height:5.862512029746282in" />
+<img alt="" src="./image42.webp" style="width:6.76251312335958in;height:5.862512029746282in" />
 
 Ejecute TrikdisConfig. Conecte el CG17 mediante un cable USB Mini-B a su computadora o de forma remota. Presione el botón **Leer [F4]** en el programa TrikdisConfig para mostrar los valores actuales de los parámetros operativos del controlador. Cuando se le solicite, ingrese el código de administrador o instalador en la ventana emergente. En la lista "**Módulos**", seleccione el módulo LORA que está utilizando. En el campo "**Núm. de serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image43.png" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 Haga clic en **Escribir [F5]** después de realizar cambios. Espere a que se complete la actualización. Haga clic en "**Desconectar**" y desconecte el cable USB.
 
@@ -595,7 +595,7 @@ Haga clic en **Escribir [F5]** después de realizar cambios. Espere a que se com
 
 2.  Retire la tapa del CG17 con un destornillador de punta plana como se muestra a continuación:
 
-<img alt="" src="./image44.png" style="width:6.0236220472440944in;height:1.594488188976378in" />
+<img alt="" src="./image44.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
 
 1.  Conecte el CG17 a una computadora con un cable USB Mini-B.
 
@@ -607,7 +607,7 @@ Haga clic en **Escribir [F5]** después de realizar cambios. Espere a que se com
 
 Una vez que el CG17 está conectado al software TrikdisConfig, el programa mostrará información sobre el dispositivo conectado en la barra de estado:
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:0.5866141732283464in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
 
 #### Barra de Estado
 
@@ -642,7 +642,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará 
 
 **Pestaña de parámetros „Sistema general”**
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:4.035433070866142in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:4.035433070866142in" />
 
 **Grupo de opciones “General”**
 
@@ -699,7 +699,7 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 **Pestaña de parámetros “Acceso”**
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:3.106299212598425in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.106299212598425in" />
 
 **Grupo de opciones de “Códigos de acceso”**
 
@@ -720,7 +720,7 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 ### Ventana “Informar a CRA” 
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:3.531496062992126in" />
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:3.531496062992126in" />
 
 **Grupo de opciones de “Canal principal” y “Canal de respaldo”**
 
@@ -762,7 +762,7 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 **Pestaña de parámetros “Usuarios”**
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:3.751968503937008in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.751968503937008in" />
 
 **Grupo de opciones de “Usuarios y reportes al usuario”**
 
@@ -833,13 +833,13 @@ Si la sirena está conectada y una salida OUT (debe asignarse a un área) se con
 
 Se utiliza un panel de control CG17 con módulo iO-LORA al que se conecta un lector RFID con teclado. En el campo “iButton llave”, ingrese el número de identificación de la tarjeta RFID.
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 Haga clic en Escribir [F5] después de realizar cambios. Espere a que se complete la actualización.
 
 **Pestaña de parámetros “SMS textos de respuesta”**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
 **Grupo de opciones de “Texto de respuesta SMS”**
 
@@ -849,7 +849,7 @@ Haga clic en Escribir [F5] después de realizar cambios. Espere a que se complet
 
 **Pestaña de parámetros “RS485 módulos”**
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:3.2125984251968505in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.2125984251968505in" />
 
 - **ID** – número del módulo en la lista.
 
@@ -864,7 +864,7 @@ Haga clic en Escribir [F5] después de realizar cambios. Espere a que se complet
 
 **Ventana de configuración del módulo WiFi *W485***
 
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
 **Grupo de opciones de “Configuración de la red del comunicador”**
 
@@ -898,7 +898,7 @@ En la tabla, puede asignar eventos de Contacto ID y códigos de restauración al
     con el panel de seguridad *CG17* (firmware de Ver.1.13).**
 #### Ventana de configuración del módulo ethernet *E485*
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.1023622047244093in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.1023622047244093in" />
 
 **Grupo de opciones de “Configuración de la red del comunicador”**
 
@@ -928,7 +928,7 @@ En la tabla, puede asignar eventos de Contacto ID y códigos de restauración al
     con el panel de seguridad *CG17* (firmware de Ver.1.13).**
 **Pestaña de parámetros “Internos módulos”**
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.6181102362204722in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.6181102362204722in" />
 
 **Grupo de opciones de “Módulos internos”**
 
@@ -965,15 +965,15 @@ Los mensajes con las coordenadas se envían al programa de monitoreo Monas MS.
 
 - **Módulo** – seleccione el módulo “**Sensor de combustible FLS**”.
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
 
 Haga clic en **Escribir [F5]**. Espere hasta que se guarden los datos. Retire el cable USB del CG17. Espere aproximadamente 1 minuto. Conecte el cable USB al CG17. Haga clic en **Leer [F4]**. El programa leerá y mostrará la configuración actualmente guardada en el CG17. El número de serie y la “**Versión de firmware**” del sensor de nivel de combustible “**Strela S485**” aparecerá en la ventana del programa “**Módulos**”.
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 Abra la ventana de “**Sensores**”**.**
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:3.2283464566929134in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.2283464566929134in" />
 
 - **Tipo de módulo** - elija “**Sensor de nivel de combustible**”.
 
@@ -995,7 +995,7 @@ Abra la ventana de “**Sensores**”**.**
 
 El usuario será informado sobre los cambios repentinos de nivel de combustible con un mensaje SMS. El usuario puede editar el texto del mensaje SMS.
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:3.0866141732283463in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
 
 Descripción del funcionamiento del sensor de nivel de combustible. El sensor de nivel de combustible “**Strela RS485**” está conectado al CG17 (consulte 3.10 "Esquemas para la conexión del sensor de nivel de combustible “Strela RS485”"). Los parámetros de medición se establecen para el CG17. El sensor de nivel de combustible inicia las mediciones:
 
@@ -1009,7 +1009,7 @@ Durante el funcionamiento, el sensor de nivel de combustible mide el nivel de co
 
 ### Ventana “Sensores Inalámbricos” 
 
-<img alt="" src="./image60.png" style="width:7.086614173228346in;height:1.5433070866141732in" />
+<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
 CG17 puede funcionar con sensores inalámbricos, sirenas y controles remotos Shepherd de la marca Crow utilizando el módulo RF-SH.
 
@@ -1109,7 +1109,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 7.  En el control remoto, mantenga presionados simultáneamente los botones 3 y 4. El indicador parpadeará en ámbar. Después de unos segundos, se apagará y el indicador verde se iluminará por un corto tiempo.
 
-<img alt="" src="./image61.png" style="width:1.5354330708661417in;height:1.8818897637795275in" />
+<img alt="" src="./image61.webp" style="width:1.5354330708661417in;height:1.8818897637795275in" />
 
 8. Suelte los botones 3 y 4. El llavero está registrado en CG17.
 
@@ -1250,7 +1250,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 6.  Un indicador verde de “**LEARN**” parpadeante indica que el **RF-SH** está en modo de registro de sensor inalámbrico.
 
-7.  Inserte la batería en el teclado y espere hasta que la luz roja verde <img alt="" src="./image62.png" style="width:0.25in;height:0.28000109361329834in" /> en el teclado deje de parpadear. Cuando se complete el proceso de registro, el indicador verde <img alt="" src="./image62.png" style="width:0.25in;height:0.28000109361329834in" />se iluminará durante 3 segundos en el teclado y se apagará
+7.  Inserte la batería en el teclado y espere hasta que la luz roja verde <img alt="" src="./image62.webp" style="width:0.25in;height:0.28000109361329834in" /> en el teclado deje de parpadear. Cuando se complete el proceso de registro, el indicador verde <img alt="" src="./image62.webp" style="width:0.25in;height:0.28000109361329834in" />se iluminará durante 3 segundos en el teclado y se apagará
 
 8.  Mantenga presionado el botón “**LEARN**” en el receptor **RF-SH** hasta que el LED “**LEARN**” deje de parpadear en verde. Modo de registro salido del receptor **RF-SH.**.
 
@@ -1282,7 +1282,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 **Pestaña de parámetros “Configuraciones de zonas”**
 
-<img alt="" src="./image63.png" style="width:7.086614173228346in;height:1.9094488188976377in" />
+<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
 
 - **Zona Núm.** – el número de la zona en la lista.
 
@@ -1331,7 +1331,7 @@ Si la alarma está armada y la primera zona que se violará es la zona "*Entrada
 
 **Pestaña de parámetros “SMS y llamadas“**
 
-<img alt="" src="./image64.png" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono de usuario a la ventana " Usuarios y Reportes".
 
@@ -1345,7 +1345,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 **Pestaña de parámetros “Salidas”**
 
-<img alt="" src="./image65.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **PGM Núm.**– el número de PGM en la lista.
 
@@ -1373,7 +1373,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 **Pestaña de parámetros “Establecer acción”**
 
-<img alt="" src="./image66.png" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **Núm.** – número de salida en la lista.
 - **Habilitar** – habilita la PGM.
@@ -1407,7 +1407,7 @@ Las letras mayúsculas y minúsculas son importantes en los mensajes SMS.
 
 **Pestaña de parámetros “Horario”**
 
-<img alt="" src="./image67.png" style="width:7.086614173228346in;height:1.9094488188976377in" />
+<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
 
 - **Núm.** – número de horario en la lista.
 
@@ -1420,7 +1420,7 @@ Las letras mayúsculas y minúsculas son importantes en los mensajes SMS.
 
 **Pestaña de parámetros “Termostato”**
 
-<img alt="" src="./image68.png" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 - **Núm.** – número del termostato en la lista.
 
@@ -1436,7 +1436,7 @@ Las letras mayúsculas y minúsculas son importantes en los mensajes SMS.
 
 **Pestaña de parámetros “SMS y llamadas”**
 
-<img alt="" src="./image69.png" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono de usuario a la ventana " Usuarios y Reportes".
 
@@ -1448,7 +1448,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 ### Ventana “Sensores” 
 
-<img alt="" src="./image70.png" style="width:7.086614173228346in;height:2.0866141732283463in" />
+<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.0866141732283463in" />
 
 - **ID** – número del sensor en la lista.
 
@@ -1466,7 +1466,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 **Pestaña de parámetros “Eventos”**
 
-<img alt="" src="./image71.png" style="width:7.086614173228346in;height:2.267716535433071in" />
+<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.267716535433071in" />
 
 - **ID** – número de evento en la lista.
 
@@ -1484,7 +1484,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 **Pestaña de parámetros “SMS y llamadas”**
 
-<img alt="" src="./image72.png" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
 
 Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono de usuario a la ventana " Usuarios y Reportes".
 
@@ -1496,7 +1496,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 ### Ventana “Registro de Eventos” 
 
-<img alt="" src="./image73.png" style="width:7.086614173228346in;height:2.437007874015748in" />
+<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:2.437007874015748in" />
 
 - **Leer Registro** botón – para leer las entradas del diario de eventos desde la memoria del dispositivo.
 
@@ -1508,7 +1508,7 @@ Esta ventana solo aparecerá si se ha agregado al menos un número de teléfono 
 
 Para “**Restaurar**” la configuración de fábrica, es necesario hacer clic en el botón Restaurar en la ventana TrikdisConfig.
 
-<img alt="" src="./image74.png" style="width:7.086614173228346in;height:1.094488188976378in" />
+<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:1.094488188976378in" />
 
 ## Control remote 
 
@@ -1520,20 +1520,20 @@ Los usuarios de Protegus2 pueden controlar su sistema de seguridad de forma remo
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 2. Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
 2.  De clic en agregar un nuevo sistema e ingrese el número de *CG17* “ID únique/IMEI”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image81.png" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="" src="./image81.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 !!! note "Nota"
     Al agregar el CG17 a Protegus2:
@@ -1563,7 +1563,7 @@ Los usuarios de Protegus2 pueden controlar su sistema de seguridad de forma remo
 
 3.  Cuando el sistema cambia el modo, el icono de "ARM" también cambiará.
 
-<img alt="" src="./image82.png" style="width:2.7559055118110236in;height:2.3897637795275593in" />
+<img alt="" src="./image82.webp" style="width:2.7559055118110236in;height:2.3897637795275593in" />
 
 #### Agregar otros usuarios a Protegus2 
 
@@ -1707,7 +1707,7 @@ Control de salidas OUT utilizando llamadas telefónicas:
     
     4.  Está conectado a la red (el LED "NETWORK" es verde fijo y parpadea
         en amarillo).
-<img alt="" src="./image89.png" style="width:7.086614173228346in;height:2.409448818897638in" />
+<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:2.409448818897638in" />
 
 1.  Descargue el software TrikdisConfig de www.trikdis.com .
 
@@ -1731,31 +1731,31 @@ Control de salidas OUT utilizando llamadas telefónicas:
 
 3.  Inicie el software de configuración TrikdisConfig y en el campo “**ID único**” del grupo de acceso remoto ingrese el número IMEI de su CG17 (el número IMEI se puede encontrar en las etiquetas en la parte posterior del dispositivo y en el paquete).
 
-<img alt="" src="./image90.png" style="width:7.086614173228346in;height:2.4015748031496065in" />
+<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.4015748031496065in" />
 
 1.  Presione “**Control**”**.**
 
 2.  Ingrese el “**Código de autoservicio**” (código predeterminado - 123456) y presione el botón “**OK**”.
 
-<img alt="" src="./image91.png" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
 3. Se abre la ventana "**Control remoto**", donde puede controlar las “**Particiones**” del panel de control, controlar los estados de la “**Zona**”, controlar las “**Salidas PGM**” y controlar la “**Temperatura**”.
 
 2.  Pestaña “**Particiones**”. Presione el botón “**DESARMAR**” (o “**ARMAR**”) e ingrese el código de usuario y el área del panel de control de seguridad será “**DESARMAR**” (o “**ARMAR**”).
 
-<img alt="" src="./image92.png" style="width:7.086614173228346in;height:2.84251968503937in" />
+<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.84251968503937in" />
 
 3. Pestaña “**Zonas**”. Esta ventana muestra el estado de las zonas. El “**Bypass**” de zona se puede activar.
 
-<img alt="" src="./image93.png" style="width:7.086614173228346in;height:3.3346456692913384in" />
+<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:3.3346456692913384in" />
 
 4. Pestaña de “**Salidas PGM**”. En esta ventana, puede controlar las “**Salidas PGM**” que están configuradas en “**Control remoto**”.
 
-<img alt="" src="./image94.png" style="width:7.086614173228346in;height:2.6535433070866143in" />
+<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:2.6535433070866143in" />
 
 10. Pestaña de “**Temperatura**”. En esta ventana, puede controlar las lecturas de los sensores de temperatura.
 
-<img alt="" src="./image95.png" style="width:7.086614173228346in;height:3.2401574803149606in" />
+<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:3.2401574803149606in" />
 
 ## Desempeño de la Prueba 
 
@@ -1788,7 +1788,7 @@ El firmware del CG17 puede ser actualizado o cambiado de forma manual. Después 
 
 3.  Seleccione la parte de “**Firmware**” del menú.
 
-    <img alt="" src="./image96.png" style="width:7.086614173228346in;height:2.937007874015748in" />
+    <img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.937007874015748in" />
 
 4.  Presione “Abrir firmware” y seleccione el archivo de firmware requerido. Si no tiene el archivo, el archivo de la versión más nueva del firmware puede ser descargado por usuario registrado desde [www.trikdis.com](http://www.trikdis.com), bajo la sección de descargar del CG17.
 
@@ -1808,4 +1808,4 @@ Desconecte siempre el dispositivo de la fuente de alimentación antes de conecta
 
 Cualquier cambio, modificación o reparación del producto realizada por alguien que no sea el fabricante anulará la garantía del fabricante.
 
-<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Siga las reglas de clasificación de residuos y no deseche los componentes del equipo no utilizados junto con otros residuos domésticos.
+<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Siga las reglas de clasificación de residuos y no deseche los componentes del equipo no utilizados junto con otros residuos domésticos.

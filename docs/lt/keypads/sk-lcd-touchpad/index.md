@@ -3,7 +3,7 @@
 ## Klaviatūros apžvalga
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -89,7 +89,7 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 **<u>Norėdami dvilaidžius gaisro (dūmų) jutiklius paleisti veikti iš naujo</u>**
 
-- 3 sekundes palaikykite paspaudę mygtuką <img src="./image2.png" style="height:0.14119in" alt="" />.
+- 3 sekundes palaikykite paspaudę mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
 
 > [!NOTE]
 > Užfiksavę gaisro pavojų, dvilaidžiai gaisro jutikliai automatiškai veikti iš naujo nepasileidžia. Jie paleidžiami veikti tik rankiniu būdu.

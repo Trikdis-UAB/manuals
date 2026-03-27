@@ -1,7 +1,7 @@
 # iO-8 Įėjimų ir išėjimų plėtiklis
 
 <div style="text-align: center;">
-  <img src="./cover.png" alt="" width="400">
+  <img src="./cover.webp" alt="" width="400">
 </div>
 
 Su plėtikliu iO-8 jus galite padidinti įėjimų ir išėjimu skaičių suderinamuose **TRIKDIS** įrenginiuose.
@@ -16,29 +16,29 @@ Suderinamas su [SP3](../../control-panels/sp3/index.md), [CG17](../../control-pa
 
 1.  Prijunkite iO-8 prie suderinamo **TRIKDIS** įrenginio, kaip parodyta:
 
-<img alt="" src="./image1.png" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
+<img alt="" src="./image1.webp" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
 
 2.  Sujunkite įėjimus, kaip parodyta:
 
-<img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 Įėjimų jungimo schemas ir rezistorių dydžius nustato pagrindinis įrenginys, prie kurio prijungtas iO-8 modulis.
 
 3.  Sujunkite išėjimus, kaip parodyta:
 
-<img alt="" src="./image3.png" style="display: block; margin: 1rem auto; max-width: 530px; height: auto;" />
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 530px; height: auto;" />
 
 4.  Prijunkite USB kabelį prie pagrindinio **TRIKDIS** įrenginio ir atidarykite programą TrikdisConfig. Paspauskite **Skaityti [F4]**.
 
 5.  Eikite į **Modulių** langą ir spustelėkite laisvą eilutę **RS485 modulių** srityje. Išskleidžiamajame sąraše pasirinkite **iO-8 plėtiklis**, kaip parodyta:
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 6.  Laukelyje dešinėje įveskite iO-8 serijos numerį (tik skaičius). Šį numerį rasite ant iO-8 lipduko.
 
 7.  Išplečiamojo meniu languose **Zonų įėjimai** ir **PGM išėjimai** dabar matysite iO-8 įėjimus ir išėjimus, kuriuos galite įjungti:
 
-    <img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+    <img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Sąranka gali skirtis priklausomai nuo pagrindinio **TRIKDIS** prietaiso. Konfigūruokite **Zonų** ir **PGM išėjimų** nustatymus pagal pagrindinio įrenginio instrukciją.
 

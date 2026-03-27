@@ -1,7 +1,7 @@
 # RF-S8 Wireless Transceiver
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="200">
+  <img src="./image1.webp" alt="" width="200">
 </div>
 
 ## Description 
@@ -50,7 +50,7 @@ Compatible with the [SP3](../../control-panels/sp3/index.md) security control pa
 
 6.  Learning mode on/off button.
 
-<img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
+<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
 
 ### Purpose of terminals 
 
@@ -88,7 +88,7 @@ Follow the steps below to replace the firmware:
 
 5.  Open the TrikdisConfig window “**Firmware**”.
 
-<img alt="" src="./image4.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 6.  Click the “**Open Firmware**” button and select the **SP3_xxx4\_0122.fw** firmware file.
 
@@ -104,17 +104,17 @@ Follow the steps below to replace the firmware:
 
 12. The TrikdisConfig status bar must contain the number 4 in the control panel name.
 
-<img alt="" src="./image5.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 13. The list of modules should show "**RF-S8 transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-S8 transceiver, you can skip steps 14-22.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 14. If the list does not indicate "**RF-S8 transceiver**", then you must select "**RF-S8 transceiver**" from the list.
 
 15. In the “**Serial No.**” field, enter the serial number of the RF-S8 module. This serial number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image7.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Click **Write [F5]**.
 
@@ -128,7 +128,7 @@ Follow the steps below to replace the firmware:
 
 21. The firmware version of the RF-S8 will appear in the “**Modules**” window.
 
-<img alt="" src="./image6.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 22. The RF-S8 module is now linked to the “FLEXi” SP3.
 
@@ -136,7 +136,7 @@ Follow the steps below to replace the firmware:
 
 24. Click “**Disconnect**”.
 
-<img alt="" src="./image8.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 25. Wait 1 minute.
 
@@ -175,7 +175,7 @@ Using TrikdisConfig, remotely connect to the “FLEXi” SP3 control panel.
     NOT WORK WITH THE SECURITY CONTROL PANEL.**
 In the “**Remote access**” section enter the control panel “**IMEI/Unique ID**” number. This number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image9.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Click “**Configure**”.
 
@@ -185,7 +185,7 @@ Go to the “**Wireless sensors**” window.
 
 Click the “**Learn sensors**” button.
 
-<img alt="" src="./image10.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 All wireless sensors can be linked simultaneously. Insert batteries into the wireless sensors (PIR, magnetic contact, flood detector, smoke detector, siren).
 
@@ -195,11 +195,11 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 2.  RF-S8 module - switches to learning mode. TrikdisConfig will open the sensor binding window.
 
-<img alt="" src="./image11.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 3.  Press and hold the learning button for 5 seconds. Release the button when the indicator flashes green four times.
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 4.  On the RF-S8 module, the “**NETWORK**” LED will briefly turn green (this indicates that the sensor is enrolled). After a few seconds, the “**NETWORK**” indicator will start flashing green/red again.
 
@@ -207,7 +207,7 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 6.  Click “**Save**”.
 
-<img alt="" src="./image13.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 7.  Wireless sensor is included in the list of sensors.
 
@@ -215,21 +215,21 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 9.  Click “**Stop learning**” to complete the registration of wireless sensors.
 
-<img alt="" src="./image14.png" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 10. Click “**Yes**” for the sensors to be written to the “FLEXi” SP3 control panel or "**No**" if you want to adjust the parameters additionally.
 
-<img alt="" src="./image15.png" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Wait a few minutes. Click **Read [F4].**
 
 TrikdisConfig will display a list of registered wireless sensors in the “**Wireless sensors**” window. The “**Serial No.**” field will list the serial number.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Check that the sensors are correctly assigned to the “**Zones”** and “**Areas**” of the control panel (“**Zones**” window).
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 If you set zone **“Type”** EOL-T, then the sensor tamper monitoring mode will be enabled.
 
@@ -266,7 +266,7 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 6.  The flashing "**NETWORK**" indicator indicates that the RF-S8 is in the wireless device registration mode.
 7.  Press and hold the learning button for 5 seconds. Release the button when the indicator flashes green four times.
 
-<img alt="" src="./image12.png" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 8.  On the RF-S8 module, the “**NETWORK**” LED will briefly turn green (this indicates that the sensor is enrolled).
 
@@ -282,11 +282,11 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 14. TrikdisConfig window "**Wireless sensors**" will contain a list of registered wireless devices. In the field "**Serial No.**" will contain the serial numbers of the sensors.
 
-<img alt="" src="./image16.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 15. Check that the sensors are correctly assigned to the “**Zones”** and “**Areas**” of the control panel (“**Zones**” window).
 
-<img alt="" src="./image17.png" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. After making changes, press **Write [F5]**.
 

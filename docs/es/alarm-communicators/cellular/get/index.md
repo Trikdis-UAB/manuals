@@ -1,7 +1,7 @@
 # Comunicador GET
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.webp" alt="" width="400">
 </div>
 
 ## Descripción 
@@ -127,7 +127,7 @@ Este manual es para comunicadores LTE.
 
 9.  Conexión Ethernet zócalo RJ45.
 
-<img alt="" src="./image4.png" style="width:4.926676509186351in;height:3.24000656167979in" />
+<img alt="" src="./image4.webp" style="width:4.926676509186351in;height:3.24000656167979in" />
 
 ### Propósito de las terminales 
 
@@ -170,7 +170,7 @@ Este manual es para comunicadores LTE.
 
 ### Esquema estructural del uso del dispositivo GET 
 
-<img alt="" src="./image5.png" style="width:7.0875in;height:2.9in" />
+<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
@@ -200,7 +200,7 @@ Este manual es para comunicadores LTE.
 
 2.  Abra la cubierta del GET con el desatornillador de cabeza plana como se muestra a continuación:
 
-    <img alt="" src="./image6.png" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Usando el cable USB-С conecte el GET a la computadora.
 
@@ -214,11 +214,11 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Configuración del panel”:**
 
-<img alt="" src="./image7.png" style="width:7.086614173228346in;height:1.6023622047244095in" />
+<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**AUTO**”.
 
-<img alt="" src="./image8.png" style="width:7.086614173228346in;height:2.0354330708661417in" />
+<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0354330708661417in" />
 
 1.  Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
@@ -233,7 +233,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     información de cómo cambiar la "**Contraseña de descarga de PC**".
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image9.png" style="width:7.086614173228346in;height:1.9724409448818898in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
 4. Habilitar la conexión a la “**Servicio *Protegus”***.
 
@@ -241,13 +241,13 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de la “Configuración de la red”**
 
-<img alt="" src="./image10.png" style="width:7.086614173228346in;height:1.7874015748031495in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
 
 Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.
 
 3. Marque la casilla "**Usar DHCP**" para que el comunicador lea automáticamente la configuración de red de la computadora (máscara de subred, puerta de enlace) y asigne una dirección IP.
 
-<img alt="" src="./image11.png" style="width:7.086614173228346in;height:2.8818897637795278in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.8818897637795278in" />
 
 Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe realizar las siguientes configuraciones:
 
@@ -261,7 +261,7 @@ Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe 
 
 **En la ventana de la “CRA informes”**
 
-<img alt="" src="./image12.png" style="width:7.086614173228346in;height:1.9803149606299213in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
 
 12. Se establece el orden preferido para el envío de mensajes a través de los canales de comunicación a la CRA y a Protegus2. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación "**Primario**", se realiza una transición al canal de comunicación "**Respaldo**", etc. Si fue posible enviar un mensaje a través del canal de comunicación "**Respaldo**", luego de un intervalo de tiempo específico, se intentará volver al canal de comunicación "**Primario**".
 
@@ -275,23 +275,23 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Ajustes del sistema”**
 
-<img alt="" src="./image13.png" style="width:7.086614173228346in;height:1.4173228346456692in" />
+<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF**.).
 
 **En la ventana de “Configuración del panel”**
 
-<img alt="" src="./image14.png" style="width:7.086614173228346in;height:1.594488188976378in" />
+<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:1.594488188976378in" />
 
 2. Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**AUTO**”.
 
-<img alt="" src="./image15.png" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 3. Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
 **En la ventana de “CRA informes”**
 
-<img alt="" src="./image16.png" style="width:7.086614173228346in;height:3.358267716535433in" />
+<img alt="" src="./image16.webp" style="width:7.086614173228346in;height:3.358267716535433in" />
 
 4. **Modo** – seleccione el modo de conexión IP.
 
@@ -307,19 +307,19 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 7.  (Recomendado) Configure los ajustes para el “**Modo del canal de reserva**”.
 
-    <img alt="" src="./image17.png" style="width:7.086614173228346in;height:1.9724409448818898in" />
+    <img alt="" src="./image17.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
 8.  Se establece el orden preferido para enviar mensajes a través de los canales de comunicación a la CRA y a Protegus2. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación "**Principal**", se realiza una transición al canal de comunicación "**Reserva**", etc. Si fue posible enviar un mensaje a través del canal de comunicación "**Reserva**", luego de un intervalo de tiempo específico, se intentará volver al canal de comunicación "**Principal**".
 
 **En la ventana de “Configuración de la red”**
 
-<img alt="" src="./image18.png" style="width:7.086614173228346in;height:1.7992125984251968in" />
+<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.7992125984251968in" />
 
 Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.
 
 12. Marque la casilla "**Usar DHCP**" para que el comunicador lea automáticamente la configuración de red de la computadora (máscara de subred, puerta de enlace) y asigne una dirección IP.
 
-<img alt="" src="./image19.png" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe realizar las siguientes configuraciones.
 
@@ -357,9 +357,9 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 8.  Si se utilizará una red LAN para transmitir eventos a la CRA, se debe conectar un cable LAN al comunicador.
 
-<img alt="" src="./image20.png" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image21.png" style="width:2.5366721347331582in;height:1.4066699475065616in" />
+<img alt="" src="./image21.webp" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
 !!! note "Nota"
     Puede instalar una o dos tarjetas SIM en el comunicador. / Asegúrese de
@@ -373,17 +373,17 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicador con el panel de control.
 
-<img alt="" src="./image22.png" style="width:6.743347550306212in;height:2.8466721347331583in" />
+<img alt="" src="./image22.webp" style="width:6.743347550306212in;height:2.8466721347331583in" />
 
-<img alt="" src="./image23.png" style="width:6.803347550306212in;height:2.9000054680664915in" />
+<img alt="" src="./image23.webp" style="width:6.803347550306212in;height:2.9000054680664915in" />
 
-<img alt="" src="./image24.png" style="width:6.996680883639545in;height:2.8066721347331582in" />
+<img alt="" src="./image24.webp" style="width:6.996680883639545in;height:2.8066721347331582in" />
 
-<img alt="" src="./image25.png" style="width:6.820014216972878in;height:2.8500054680664917in" />
+<img alt="" src="./image25.webp" style="width:6.820014216972878in;height:2.8500054680664917in" />
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
 
-<img alt="" src="./image26.png" style="width:3.39000656167979in;height:3.016673228346457in" />
+<img alt="" src="./image26.webp" style="width:3.39000656167979in;height:3.016673228346457in" />
 
 Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GET:
 
@@ -395,7 +395,7 @@ Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del pa
 
 4.  Para controlar directamente el panel de seguridad, ingrese la “**Contraseña de descarga de PC**”. Debe coincidir con la contraseña ingresada en el panel de seguridad.
 
-<img alt="" src="./image27.png" style="width:7.086614173228346in;height:2.0118110236220472in" />
+<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
 
 El panel de control Paradox debe programarse para transmitir eventos al CMS y para control remoto desde la aplicación Protegus2.
 
@@ -421,11 +421,11 @@ Siga este esquema si el panel de control será controlado, pero no de forma dire
     armar/desarmar el sistema con la zona keyswitch".
 El comunicador está conectado al bus del teclado o al bus serie del panel de control. / El Armado/Desarmado del panel de control se realiza a través de la zona del interruptor (keyswitch).
 
-<img alt="" src="./image28.png" style="width:3.39000656167979in;height:2.4466721347331584in" />
+<img alt="" src="./image28.webp" style="width:3.39000656167979in;height:2.4466721347331584in" />
 
 El comunicador está conectado a los terminales TIP/RING del panel de control. / El Armado/Desarmado del panel de control se realiza a través de la zona del interruptor (keyswitch).
 
-<img alt="" src="./image29.png" style="width:3.6000076552930884in;height:2.9100054680664917in" />
+<img alt="" src="./image29.webp" style="width:3.6000076552930884in;height:2.9100054680664917in" />
 
 ### Diagramas para la conexión de entrada 
 
@@ -433,15 +433,15 @@ El comunicador tiene dos terminales de E/S universales que se pueden configurar 
 
 Diagramas de tipo de circuito de entrada NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL:
 
-<img alt="" src="./image30.png" style="width:4.389763779527559in;height:1.4448818897637796in" />
+<img alt="" src="./image30.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
 
-<img alt="" src="./image31.png" style="width:4.397637795275591in;height:2.047244094488189in" />
+<img alt="" src="./image31.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
 
 ### Esquema de cableado de un relé 
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos eléctricos. El terminal de I/O del comunicador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image32.png" style="width:2.1133377077865267in;height:0.92333552055993in" />
+<img alt="" src="./image32.webp" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
 ### Encendido del comunicador 
 
@@ -536,7 +536,7 @@ El panel de control debe estar conectado al internet. Conéctese con **Innerrang
 
 Abra la ventana de **Configuration>General>Alarm Reporting**. En el grupo "**3rd Party Device Reporting** ", debe instalar:
 
-<img alt="" src="./image33.png" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image33.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – seleccione esta casilla.
 
@@ -651,13 +651,13 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
     <div style="margin: 20px 0; text-align: left;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.png" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.png" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.png" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
       </a>
     </div>
 
@@ -680,11 +680,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
         amarillo).
 3. De clic en "**Añadir nuevo sistema**" e ingrese el número de GET “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
-<img alt="" src="./image37.png" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+<img alt="" src="./image37.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
 4. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
-<img alt="" src="./image40.png" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
@@ -695,7 +695,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="" src="./image41.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
@@ -703,13 +703,13 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image42.png" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="" src="./image42.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="" src="./image43.png" style="width:2.216535433070866in;height:1.9921259842519685in" />
+<img alt="" src="./image43.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
 
 ### Control del sistema con Protegus2 
 
@@ -717,7 +717,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="" src="./image44.png" style="width:2.220472440944882in;height:2.6968503937007875in" />
+<img alt="" src="./image44.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
 
 ## Configuración con el programa TrikdisConfig 
 
@@ -725,7 +725,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 Después de conectar el comunicador GET y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image45.png" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 **Barra de Estado**
 
@@ -745,7 +745,7 @@ Al presionar el botón **Leer [F4]**, el programa TrikdisConfig leerá y mostrar
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image46.png" style="width:7.086614173228346in;height:2.779527559055118in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.779527559055118in" />
 
 **Grupo de opciones “General”**
 
@@ -774,7 +774,7 @@ Nota: Si el campo " **Sólo un administrador puede restaurar** " está marcado y
     dígitos o caracteres en latín.
 ### Ventana de “Configuración del panel” 
 
-<img alt="" src="./image47.png" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Grupo de opciones “TLF”**
 
@@ -790,7 +790,7 @@ El comunicador se conecta a los terminales TIP RING de la línea telefónica del
 
 - **Frecuencia del tono de marcado** - la frecuencia con la que el comunicador GET se comunica con el comunicador telefónico del panel de control.
 
-<img alt="" src="./image48.png" style="width:7.086614173228346in;height:1.968503937007874in" />
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.968503937007874in" />
 
 **Grupo de opciones “Bus de Data”**
 
@@ -810,7 +810,7 @@ El comunicador está conectado al bus del teclado o al bus serie del panel de co
 
 **Pestaña de parámetros “CRA ajustes”**
 
-<img alt="" src="./image49.png" style="width:7.086614173228346in;height:3.37007874015748in" />
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
 
 Los eventos pueden ser enviados a través de varios canales de comunicación. Los primeros y segundos canales de comunicación pueden ser operados de forma simultánea y el comunicador puede enviar eventos a dos receptores al mismo tiempo. El canal de respaldo puede ser asignado para los primeros y segundos canales, los cuales serán usados cuando la conexión al canal primario es interrumpida.
 
@@ -842,7 +842,7 @@ Los eventos de este canal son transmitidos en paralelo con el primer canal. Cuan
 
 **Pestaña de “Ajustes”**
 
-<img alt="" src="./image50.png" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 **Grupo de opciones “Ajustes”**
 
@@ -877,7 +877,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña de la “Servicio Protegus”**
 
-<img alt="" src="./image51.png" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.eu](http://www.protegus.eu).
 
@@ -891,7 +891,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar remotamente e
 
 **Pestaña de la “LAN”**
 
-<img alt="" src="./image52.png" style="width:7.086614173228346in;height:2.322834645669291in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
 
 **Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.**
 
@@ -913,7 +913,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar remotamente e
     
     2.  Asegúrese de que el servicio de Internet móvil de la tarjeta SIM
         esté activado.
-<img alt="" src="./image53.png" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM1 del comunicador.
 
@@ -933,7 +933,7 @@ Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM1 d
 
 **Pestaña de la “SIM2”**
 
-<img alt="" src="./image54.png" style="width:7.086614173228346in;height:2.8818897637795278in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.8818897637795278in" />
 
 Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM2 del comunicador.
 
@@ -953,7 +953,7 @@ Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM2 d
 
 ### Ventana de “IN/OUT“ 
 
-<img alt="" src="./image55.png" style="width:7.086614173228346in;height:2.47244094488189in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 El comunicador tiene 2 terminales universales (entrada/salida). La tabla puede configurar el modo de funcionamiento del terminal (Apagado, IN, OUT). La entrada debe especificar el tipo de circuito a conectar NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -975,7 +975,7 @@ Se pueden conectar sensores adicionales a las entradas del comunicador. Cuando s
 
 Esta ventana le permitirá prender, apagar y modificar los mensajes internos enviados por su dispositivo. Deshabilitar el mensaje interno en esta ventana prevendrá que sea enviado a pesar de otras opciones.
 
-<img alt="" src="./image56.png" style="width:7.086614173228346in;height:2.15748031496063in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.15748031496063in" />
 
 - **COMMUNICATION** – mensaje de falla de comunicación entre el panel de control y comunicador GET.
 
@@ -1004,7 +1004,7 @@ Puede cambiar el código Contact ID (SIA) de cualquier evento, cambiar el númer
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón „**Restaurar”** en ***TrikdisConfig*.**
 
-<img alt="" src="./image57.png" style="width:7.086614173228346in;height:1.0in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:1.0in" />
 
 Otra forma de restaurar la configuración de fábrica.
 
@@ -1033,7 +1033,7 @@ La fuente de alimentación está conectada al comunicador. Mantenga presionado e
 
 2.  En el campo "**ID único**", ingrese el número IMEI del comunicador GET. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image58.png" style="width:7.086614173228346in;height:2.8346456692913384in" />
+<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.8346456692913384in" />
 
 3. En el campo "**Nombre del sistema**", escriba el nombre del comunicador.
 
@@ -1080,7 +1080,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de „**Firmware**” del menú.
 
-<img alt="" src="./image59.png" style="width:7.086614173228346in;height:2.5118110236220472in" />
+<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.5118110236220472in" />
 
 4. Presione “Abrir firmware” y seleccione el archivo de firmware requerido.
 
@@ -1096,7 +1096,7 @@ Antes de la instalación, por favor lea con cuidado este manual, para poder evit
 
 Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.png" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
+<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
 

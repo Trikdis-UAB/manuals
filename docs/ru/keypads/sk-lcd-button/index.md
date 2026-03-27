@@ -3,7 +3,7 @@
 ## Обзор клавиатуры
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="600">
+<img src="./image1.webp" alt="" width="600">
 </div>
 
 > [!NOTE]
@@ -16,17 +16,17 @@
 
 1. Убедитесь, что нет активных зон.
 
-2. Нажмите <img src="./image2.png" alt="" style="width:0.3500in;" /> на клавиатуре.
+2. Нажмите <img src="./image2.webp" alt="" style="width:0.3500in;" /> на клавиатуре.
 
 3. Введите код пользователя.
 
 4. Нажмите номера разделов, которыми вы хотите управлять.
 
-5. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />.
+5. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />.
 
 6. Выйдите из помещения во время „**Exit delay“** задержки на выход.
 
-Когда система поставлена на охрану, загорится икона <img src="./image4.jpeg" style="width:0.3500in;" /> .
+Когда система поставлена на охрану, загорится икона <img src="./image4.webp" style="width:0.3500in;" /> .
 
 ### Снятие с охраны (Disarm)
 
@@ -34,44 +34,44 @@
 
 2. Нажмите кнопки с номерами разделов, которыми вы хотите управлять.
 
-3. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />.
+3. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />.
 
-После снятия сигнализации с охраны, должна загореться икона <img src="./image5.jpeg" style="width:0.3500in;" />.
+После снятия сигнализации с охраны, должна загореться икона <img src="./image5.webp" style="width:0.3500in;" />.
 
 ### Включение режима SLEEP
 
 (Охраняется периметр помещения. Внутри разрешено движение. Если открыть входную дверь, тревога сработает немедленно):
 
-1. Нажмите кнопку <img src="./image5.png" style="width:0.3500in;" />.
+1. Нажмите кнопку <img src="./image5.webp" style="width:0.3500in;" />.
 
 2. Введите код пользователя.
 
 3. Нажмите кнопку раздела для включения.
 
-4. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />.
+4. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />.
 
 5. Режим SLEEP включится сразу, без задержки выхода.
 
-Индикатор <img src="./image6.jpeg" style="width:0.3500in;" /> загорится, когда режим SLEEP включен.
+Индикатор <img src="./image6.webp" style="width:0.3500in;" /> загорится, когда режим SLEEP включен.
 
 ### Включение режима STAY
 
 (Охраняется периметр помещения. Внутри разрешено движение. Открытие входной двери включает задержку, в течение которой нужно снять систему с охраны):
 
-1. Нажмите кнопку <img src="./image10.png" style="width:0.3500in;" />.
+1. Нажмите кнопку <img src="./image10.webp" style="width:0.3500in;" />.
 
 2. Введите код пользователя.
 
 3. Нажмите кнопку раздела для включения.
 
-4. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />.
+4. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />.
 
 5. Режим STAY включится сразу, без задержки выхода.
 
-Индикатор <img src="./image9.jpg" style="width:0.3500in;" /> загорится, когда режим STAY включен.
+Индикатор <img src="./image9.webp" style="width:0.3500in;" /> загорится, когда режим STAY включен.
 
 > [!NOTE]
-> Для изменения статуса раздела охранной сигнализации на противоположный, просто введите код пользователя и выберите желаемый раздел. Для удаления введенных символов или команд, нажмите <img src="./image10.png" alt="" style="width:0.3500in;" />.
+> Для изменения статуса раздела охранной сигнализации на противоположный, просто введите код пользователя и выберите желаемый раздел. Для удаления введенных символов или команд, нажмите <img src="./image10.webp" alt="" style="width:0.3500in;" />.
 
 ## Кнопки помощи
 
@@ -86,35 +86,35 @@
 
 ### Регулировка яркости подсветки кнопок клавиатуры
 
-1. Нажмите кнопку <img src="./image11.png" style="width:0.3500in;" />, затем **5** **3**.
+1. Нажмите кнопку <img src="./image11.webp" style="width:0.3500in;" />, затем **5** **3**.
 
 2. Выберите желаемую яркость подсветки кнопок клавиатуры с помощью кнопок **2** и **8**.
 
-3. Нажмите <img src="./image3.png" style="width:0.3500in;" />, чтобы сохранить новое значение.
+3. Нажмите <img src="./image3.webp" style="width:0.3500in;" />, чтобы сохранить новое значение.
 
 **<u>Регулировка яркости ЖК-экрана:</u>**
 
-4. Нажмите кнопку <img src="./image11.png" style="width:0.3500in;" />, затем **5** **2**.
+4. Нажмите кнопку <img src="./image11.webp" style="width:0.3500in;" />, затем **5** **2**.
 
 5. С помощью кнопок **2** и **8** выберите желаемую яркость подсветки ЖК-экрана.
 
-6. Нажмите <img src="./image3.png" style="width:0.3500in;" />, чтобы сохранить новое значение.
+6. Нажмите <img src="./image3.webp" style="width:0.3500in;" />, чтобы сохранить новое значение.
 
 **<u>Регулировка громкости нажатия клавиш клавиатуры:</u>**
 
-7. Нажмите кнопку <img src="./image11.png" style="width:0.3500in;" />, затем **5** **1**.
+7. Нажмите кнопку <img src="./image11.webp" style="width:0.3500in;" />, затем **5** **1**.
 
 8. Выберите предпочтительный уровень звуковой индикации с помощью кнопок **2** и **8**.
 
-9. Нажмите <img src="./image3.png" style="width:0.3500in;" />, чтобы сохранить новое значение.
+9. Нажмите <img src="./image3.webp" style="width:0.3500in;" />, чтобы сохранить новое значение.
 > [!NOTE]
-> Отключение подсветки клавиатуры в режиме ожидания. Нажмите <img src="./image11.png" style="width:0.3500in;" /> с последующим нажатием **5** **4**. Переключите состояние подсветки клавиатуры в режиме ожидания, нажав **1** (подсветка включена) или **2** (подсветка выключена). Нажмите <img src="./image3.png" style="width:0.3500in;" />, чтобы сохранить новое значение.
+> Отключение подсветки клавиатуры в режиме ожидания. Нажмите <img src="./image11.webp" style="width:0.3500in;" /> с последующим нажатием **5** **4**. Переключите состояние подсветки клавиатуры в режиме ожидания, нажав **1** (подсветка включена) или **2** (подсветка выключена). Нажмите <img src="./image3.webp" style="width:0.3500in;" />, чтобы сохранить новое значение.
 
 ## Ввод или изменение кодов пользователей или мастер-кода
 
 ### Ввод или изменение кодов пользователей
 
-1. Нажмите кнопку <img src="./image11.png" style="width:0.3500in;" />, затем **0**.
+1. Нажмите кнопку <img src="./image11.webp" style="width:0.3500in;" />, затем **0**.
 
 2. Введите **Мастер** код (заводской код: 1234).
 
@@ -126,13 +126,13 @@
 
 5. Введите номера разделов охранной сигнализации, которыми будет управлять пользователь.
 
-6. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />. Нажмите кнопку <img src="./image10.png" style="width:0.3500in;" /> для выхода.
+6. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />. Нажмите кнопку <img src="./image10.webp" style="width:0.3500in;" /> для выхода.
 
 ## Перезапуск пожарных (дымовых) извещателей
 
 ### Для перезапуска пожарных (дымовых) извещателей необходимо
 
-- Нажмите и удерживайте кнопку ****<img src="./image10.png" style="width:0.3500in;" />**** в течение 3 сек.
+- Нажмите и удерживайте кнопку ****<img src="./image10.webp" style="width:0.3500in;" />**** в течение 3 сек.
 > [!NOTE]
 > После активации пожарного извещателя, он автоматически не перезапускается. Пожарный извещатель перезапускается только вручную.
 
@@ -140,13 +140,13 @@
 
 ### Включение функции BYPASS
 
-1. Нажмите кнопку <img src="./image11.png" style="width:0.3500in;" />, затем **6**.
+1. Нажмите кнопку <img src="./image11.webp" style="width:0.3500in;" />, затем **6**.
 
 2. Введите код пользователя.
 
 3. Введите двухзначные номера зон, которые хотите отключить.
 
-4. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />. На ЖК-экране появится икона [ <img src="./image12.jpg" style="width:0.3500in;" />].
+4. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />. На ЖК-экране появится икона [ <img src="./image12.webp" style="width:0.3500in;" />].
 
 **<u>Отключение функции BYPASS:</u>**
 
@@ -156,41 +156,41 @@
 
 ### Удаление кода пользователя
 
-1. Нажмите кнопку <img src="./image11.png" style="width:0.3500in;" />, затем **0**.
+1. Нажмите кнопку <img src="./image11.webp" style="width:0.3500in;" />, затем **0**.
 
 2. Введите **Мастер** код.
 
 3. Введите требуемый двузначный порядковый номер пользователя, например, **02**.
 
-4. Нажмите кнопку ****<img src="./image6.png" style="width:0.3500in;" />****. Раздастся звуковой сигнал.
+4. Нажмите кнопку ****<img src="./image6.webp" style="width:0.3500in;" />****. Раздастся звуковой сигнал.
 
-5. Нажмите кнопку <img src="./image3.png" style="width:0.3500in;" />.
+5. Нажмите кнопку <img src="./image3.webp" style="width:0.3500in;" />.
 
 ## Графические обозначения
 
 | Символ | Описание | Символ | Описание |
 |---|---|---|---|
-| <img alt="" src="./image13.jpeg" style="width:1.1250in;" /> | Центральный блок не подключен | <img alt="" src="./image14.jpeg" style="width:0.7812in;" /> | Неисправность пожарного шлейфа |
-| <img alt="" src="./image15.jpeg" style="width:0.7188in;" /> | Раздел 1 под охраной | <img alt="" src="./image16.jpeg" style="width:0.8125in;" /> | Список сетевых неисправностей |
-| <img alt="" src="./image17.jpeg" style="width:0.7254in;" /> | Раздел 4 снят с охраны | <img alt="" src="./image18.jpeg" style="width:0.9375in;" /> | Неисправность CMS 1 (2) |
-| <img alt="" src="./image19.jpeg" style="width:0.6250in;" /> | Раздел 2 STAY | <img alt="" src="./image20.jpeg" style="width:0.7188in;" /> | Неисправность облака |
-| <img alt="" src="./image21.jpeg" style="width:0.7500in;" /> | Раздел 3 SLEEP | <img alt="" src="./image22.jpeg" style="width:0.8438in;" /> | Неисправность SIM-карты |
-| <img alt="" src="./image23.jpeg" style="width:0.9375in;" /> | Кнопка MENU | <img alt="" src="./image24.jpeg" style="width:1.1118in;" /> | Ошибка пароля SIM-карты |
-| <img alt="" src="./image25.jpeg" style="width:0.8125in;" /> | Кнопка ENTER | <img alt="" src="./image26.jpeg" style="width:0.9062in;" /> | Неисправность сети SIM-карты |
-| <img alt="" src="./image27.jpeg" style="width:1.0000in;" /> | Раздел | <img alt="" src="./image28.jpeg" style="width:0.9375in;" /> | Неисправность WiFi |
-| <img alt="" src="./image29.jpeg" style="width:0.9375in;" /> | Тревога | <img alt="" src="./image30.jpeg" style="width:0.7812in;" /> | Неисправность интерфейса RS485 |
-| <img alt="" src="./image31.jpeg" style="width:0.6003in;" /> | Пожар | <img alt="" src="./image32.jpeg" style="width:1.0000in;" /> | Неисправность SIM-карты 2 |
-| <img alt="" src="./image33.jpeg" style="width:0.8579in;" /> | Код пользователя | <img alt="" src="./image34.jpeg" style="width:0.7812in;" /> | Неисправность LAN |
-| <img alt="" src="./image35.jpeg" style="width:0.6171in;" /> | Пользователь | <img alt="" src="./image36.jpeg" style="width:1.0312in;" /> | Низкий заряд беспроводного устройства |
-| <img alt="" src="./image37.jpeg" style="width:0.7250in;" /> | Вход/Выход | <img alt="" src="./image38.jpeg" style="width:0.7500in;" /> | Неисправность питания |
-| <img alt="" src="./image39.jpeg" style="width:0.6151in;" /> | Зона открыта | <img alt="" src="./image40.jpeg" style="width:0.9375in;" /> | Неисправность сирены |
-| <img alt="" src="./image41.jpeg" style="width:0.8562in;" /> | Обход | <img alt="" src="./image42.jpeg" style="width:0.7188in;" /> | Неисправность вскрытия |
-| <img alt="" src="./image43.jpeg" style="width:0.7250in;" /> | Память | <img alt="" src="./image44.jpeg" style="width:1.0938in;" /> | Неисправность антимаскирования |
-| <img alt="" src="./image45.jpeg" style="width:0.8562in;" /> | Неисправность | <img alt="" src="./image46.jpeg" style="width:0.9865in;" /> | Неисправность беспроводной связи |
-| <img alt="" src="./image47.jpeg" style="width:1.0045in;" /> | Список системных неисправностей | <img alt="" src="./image48.jpeg" style="width:0.8125in;" /> | Неисправность модуля расширения |
-| <img alt="" src="./image49.jpeg" style="width:0.8750in;" /> | Неисправность питания AC | <img alt="" src="./image50.jpeg" style="width:0.7500in;" /> | Настройки |
-| <img alt="" src="./image51.jpeg" style="width:0.9062in;" /> | Неисправность батареи | <img alt="" src="./image52.jpeg" style="width:0.9062in;" /> | Громкость |
-| <img alt="" src="./image53.jpeg" style="width:1.0000in;" /> | Перегрузка AUX | <img alt="" src="./image54.jpeg" style="width:1.0938in;" /> | Яркость LCD |
-| <img alt="" src="./image55.jpeg" style="width:0.8438in;" /> | Время не установлено | <img alt="" src="./image56.jpeg" style="width:1.0625in;" /> | Яркость клавиатуры |
-| <img alt="" src="./image57.jpeg" style="width:0.8750in;" /> | Перегрузка сирены | <img alt="" src="./image58.jpeg" style="width:0.9688in;" /> | Дежурная подсветка O-Вкл / I-Выкл |
-| <img alt="" src="./image59.jpeg" style="width:0.8438in;" /> | Сирена отсутствует | <img alt="" src="./image60.jpeg" style="width:0.7188in;" /> | Информация |
+| <img alt="" src="./image13.webp" style="width:1.1250in;" /> | Центральный блок не подключен | <img alt="" src="./image14.webp" style="width:0.7812in;" /> | Неисправность пожарного шлейфа |
+| <img alt="" src="./image15.webp" style="width:0.7188in;" /> | Раздел 1 под охраной | <img alt="" src="./image16.webp" style="width:0.8125in;" /> | Список сетевых неисправностей |
+| <img alt="" src="./image17.webp" style="width:0.7254in;" /> | Раздел 4 снят с охраны | <img alt="" src="./image18.webp" style="width:0.9375in;" /> | Неисправность CMS 1 (2) |
+| <img alt="" src="./image19.webp" style="width:0.6250in;" /> | Раздел 2 STAY | <img alt="" src="./image20.webp" style="width:0.7188in;" /> | Неисправность облака |
+| <img alt="" src="./image21.webp" style="width:0.7500in;" /> | Раздел 3 SLEEP | <img alt="" src="./image22.webp" style="width:0.8438in;" /> | Неисправность SIM-карты |
+| <img alt="" src="./image23.webp" style="width:0.9375in;" /> | Кнопка MENU | <img alt="" src="./image24.webp" style="width:1.1118in;" /> | Ошибка пароля SIM-карты |
+| <img alt="" src="./image25.webp" style="width:0.8125in;" /> | Кнопка ENTER | <img alt="" src="./image26.webp" style="width:0.9062in;" /> | Неисправность сети SIM-карты |
+| <img alt="" src="./image27.webp" style="width:1.0000in;" /> | Раздел | <img alt="" src="./image28.webp" style="width:0.9375in;" /> | Неисправность WiFi |
+| <img alt="" src="./image29.webp" style="width:0.9375in;" /> | Тревога | <img alt="" src="./image30.webp" style="width:0.7812in;" /> | Неисправность интерфейса RS485 |
+| <img alt="" src="./image31.webp" style="width:0.6003in;" /> | Пожар | <img alt="" src="./image32.webp" style="width:1.0000in;" /> | Неисправность SIM-карты 2 |
+| <img alt="" src="./image33.webp" style="width:0.8579in;" /> | Код пользователя | <img alt="" src="./image34.webp" style="width:0.7812in;" /> | Неисправность LAN |
+| <img alt="" src="./image35.webp" style="width:0.6171in;" /> | Пользователь | <img alt="" src="./image36.webp" style="width:1.0312in;" /> | Низкий заряд беспроводного устройства |
+| <img alt="" src="./image37.webp" style="width:0.7250in;" /> | Вход/Выход | <img alt="" src="./image38.webp" style="width:0.7500in;" /> | Неисправность питания |
+| <img alt="" src="./image39.webp" style="width:0.6151in;" /> | Зона открыта | <img alt="" src="./image40.webp" style="width:0.9375in;" /> | Неисправность сирены |
+| <img alt="" src="./image41.webp" style="width:0.8562in;" /> | Обход | <img alt="" src="./image42.webp" style="width:0.7188in;" /> | Неисправность вскрытия |
+| <img alt="" src="./image43.webp" style="width:0.7250in;" /> | Память | <img alt="" src="./image44.webp" style="width:1.0938in;" /> | Неисправность антимаскирования |
+| <img alt="" src="./image45.webp" style="width:0.8562in;" /> | Неисправность | <img alt="" src="./image46.webp" style="width:0.9865in;" /> | Неисправность беспроводной связи |
+| <img alt="" src="./image47.webp" style="width:1.0045in;" /> | Список системных неисправностей | <img alt="" src="./image48.webp" style="width:0.8125in;" /> | Неисправность модуля расширения |
+| <img alt="" src="./image49.webp" style="width:0.8750in;" /> | Неисправность питания AC | <img alt="" src="./image50.webp" style="width:0.7500in;" /> | Настройки |
+| <img alt="" src="./image51.webp" style="width:0.9062in;" /> | Неисправность батареи | <img alt="" src="./image52.webp" style="width:0.9062in;" /> | Громкость |
+| <img alt="" src="./image53.webp" style="width:1.0000in;" /> | Перегрузка AUX | <img alt="" src="./image54.webp" style="width:1.0938in;" /> | Яркость LCD |
+| <img alt="" src="./image55.webp" style="width:0.8438in;" /> | Время не установлено | <img alt="" src="./image56.webp" style="width:1.0625in;" /> | Яркость клавиатуры |
+| <img alt="" src="./image57.webp" style="width:0.8750in;" /> | Перегрузка сирены | <img alt="" src="./image58.webp" style="width:0.9688in;" /> | Дежурная подсветка O-Вкл / I-Выкл |
+| <img alt="" src="./image59.webp" style="width:0.8438in;" /> | Сирена отсутствует | <img alt="" src="./image60.webp" style="width:0.7188in;" /> | Информация |

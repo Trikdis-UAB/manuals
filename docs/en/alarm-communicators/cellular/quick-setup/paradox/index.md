@@ -72,51 +72,51 @@ Refer to the full Paradox manual if your keypad codes differ.
 <div class="steps-grid">
   <div class="step-card">
     <strong>Step 1.</strong> Tap <strong>Add new system</strong>.
-    <img src="./protegus-add-new-system.png" alt="Add new system">
+    <img src="./protegus-add-new-system.webp" alt="Add new system">
   </div>
   <div class="step-card">
     <strong>Step 2.</strong> Enter the communicator <strong>IMEI</strong>, tap <strong>Next</strong>.
-    <img src="./protegus-enter-imei.png" alt="Enter IMEI">
+    <img src="./protegus-enter-imei.webp" alt="Enter IMEI">
   </div>
    <div class="step-card">
     <strong>Step 3.</strong> Select <strong>Serial BUS</strong>, tap <strong>Next</strong>.
-    <img src="./protegus-select-serial-bus.png" alt="Select Serial BUS">
+    <img src="./protegus-select-serial-bus.webp" alt="Select Serial BUS">
   </div>
   <div class="step-card">
     <strong>Step 4.</strong> Choose <strong>PARADOX</strong>.
-    <img src="./protegus-select-paradox.png" alt="Select Paradox">
+    <img src="./protegus-select-paradox.webp" alt="Select Paradox">
   </div>
   <div class="step-card">
     <strong>Step 5.</strong> Choose <strong>PARADOX SP+/MG+ series KeyBus</strong>.
-    <img src="./protegus-select-paradox-keybus.png" alt="Select Paradox KeyBus">
+    <img src="./protegus-select-paradox-keybus.webp" alt="Select Paradox KeyBus">
   </div>
   <div class="step-card">
     <strong>Step 6.</strong> Enter <strong>Primary Object ID</strong>, tap <strong>Next</strong>.
-    <img src="./protegus-primary-object-id.png" alt="Enter Primary Object ID">
+    <img src="./protegus-primary-object-id.webp" alt="Enter Primary Object ID">
   </div>
   <div class="step-card">
     <strong>Step 7.</strong> Wait while data is written.
-    <img src="./protegus-writing-data.png" alt="Writing data">
+    <img src="./protegus-writing-data.webp" alt="Writing data">
   </div>
   <div class="step-card">
     <strong>Step 8.</strong> Tap <strong>Next</strong>.
-    <img src="./protegus-press-next.png" alt="Press Next">
+    <img src="./protegus-press-next.webp" alt="Press Next">
   </div>
   <div class="step-card">
     <strong>Step 9.</strong> Enter system <strong>Name</strong>, tap <strong>Next</strong>.
-    <img src="./protegus-enter-name.png" alt="Enter name">
+    <img src="./protegus-enter-name.webp" alt="Enter name">
   </div>
   <div class="step-card">
     <strong>Step 10.</strong> Tap <strong>Skip</strong> (if you do not add users now).
-    <img src="./protegus-skip.png" alt="Skip">
+    <img src="./protegus-skip.webp" alt="Skip">
   </div>
   <div class="step-card">
     <strong>Step 11.</strong> Wait ~1 minute for completion.
-    <img src="./protegus-wait.png" alt="Wait">
+    <img src="./protegus-wait.webp" alt="Wait">
   </div>
   <div class="step-card">
     <strong>Step 12.</strong> Setup finished.
-    <img src="./protegus-finished.png" alt="Finished">
+    <img src="./protegus-finished.webp" alt="Finished">
   </div>
 </div>
 
