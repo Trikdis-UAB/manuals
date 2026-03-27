@@ -1,7 +1,7 @@
 # RTH2 Telephone Line Receiver
 
 <div style="text-align: center;">
-  <img src="./image1.png" alt="" width="400">
+  <img src="./image1.png" alt="" style="width: 100%; max-width: 600px;">
 </div>
 
 ## Content
