@@ -10,7 +10,7 @@ iO-8 имеет 8 клемм вход/выход, которые могут бы
 
 Посетите страницу iO-8 на trikdis.com для получения информации о технических характеристиках устройства и обновленного списка совместимых устройств **Trikdis**.
 
-Совместим с охранной панелью [SP3](../../control-panels/sp3/index.md), контроллерами доступа [GATOR Cellular](../../gate-controllers/gator/index.md) и [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Совместим с [SP3](../../control-panels/sp3/index.md), [CG17](../../control-panels/cg17/index.md), [GT+](../../alarm-communicators/cellular/gt-plus/index.md), [GT](../../alarm-communicators/cellular/gt/index.md), [G16](../../alarm-communicators/cellular/g16/index.md), [G16T](../../alarm-communicators/cellular/g16t/index.md), [G17F](../../alarm-communicators/fire-panels/g17f/index.md), [E16](../../alarm-communicators/e16/index.md), [E16T](../../alarm-communicators/e16t/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) и [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 **Выполните следующие шаги для настройки iO-8:**
 
@@ -22,7 +22,7 @@ iO-8 имеет 8 клемм вход/выход, которые могут бы
 
 <img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
-Схемы подключения и номинал резистора устанавливает основной модуль (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F), к которому подключен модуль расширения iO-8.
+Схемы подключения и номинал резистора устанавливает основной модуль, к которому подключен модуль расширения iO-8.
 
 3.  Подсоедините выходы, как показано:
 

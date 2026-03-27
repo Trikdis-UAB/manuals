@@ -10,7 +10,7 @@ iO-8 has 8 contacts, which can be set to either input or output mode.
 
 Visit [iO-8 page on *trikdis.com*](http://www.trikdis.com/) for device specifications and an up-to-date list of compatible TRIKDIS devices.
 
-Compatible with the [SP3](../../control-panels/sp3/index.md) security control panel, [GATOR Cellular](../../gate-controllers/gator/index.md) and [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) gate & door access controllers.
+Compatible with [SP3](../../control-panels/sp3/index.md), [CG17](../../control-panels/cg17/index.md), [GT+](../../alarm-communicators/cellular/gt-plus/index.md), [GT](../../alarm-communicators/cellular/gt/index.md), [G16](../../alarm-communicators/cellular/g16/index.md), [G16T](../../alarm-communicators/cellular/g16t/index.md), [G17F](../../alarm-communicators/fire-panels/g17f/index.md), [E16](../../alarm-communicators/e16/index.md), [E16T](../../alarm-communicators/e16t/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) and [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 **Follow these steps to set up iO-8:**
 
@@ -22,7 +22,7 @@ Compatible with the [SP3](../../control-panels/sp3/index.md) security control pa
 
 <img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
-The input wiring diagrams and resistor values are determined by the main unit (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F) to which the iO-8 module is connected.
+The input wiring diagrams and resistor values are determined by the main unit to which the iO-8 module is connected.
 
 3.  Wire outputs as shown:
 

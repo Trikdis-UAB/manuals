@@ -10,7 +10,7 @@ iO-8 turi 8 įėjimo/išėjimo gnybtus, kuriuos galima nustatyti kaip įėjimo a
 
 Apsilankykite iO-8 tinklalapyje trikdis.com, kur rasite prietaiso specifikaciją ir naujausią suderintų **TRIKDIS** įrenginių sąrašą.
 
-Suderinamas su apsaugos centralize [SP3](../../control-panels/sp3/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) ir [GATOR WiFi](../../gate-controllers/gator-wifi/index.md) vartų ir durų prieigos valdikliais.
+Suderinamas su [SP3](../../control-panels/sp3/index.md), [CG17](../../control-panels/cg17/index.md), [GT+](../../alarm-communicators/cellular/gt-plus/index.md), [GT](../../alarm-communicators/cellular/gt/index.md), [G16](../../alarm-communicators/cellular/g16/index.md), [G16T](../../alarm-communicators/cellular/g16t/index.md), [G17F](../../alarm-communicators/fire-panels/g17f/index.md), [E16](../../alarm-communicators/e16/index.md), [E16T](../../alarm-communicators/e16t/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) ir [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 **Atlikite sekančius žingsnius su iO-8, kad jį parengti darbui:**
 
@@ -22,7 +22,7 @@ Suderinamas su apsaugos centralize [SP3](../../control-panels/sp3/index.md), [GA
 
 <img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
-Įėjimų jungimo schemas ir rezistorių dydžius nustato pagrindinis įrenginys (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F), prie kurio prijungtas iO-8 modulis.
+Įėjimų jungimo schemas ir rezistorių dydžius nustato pagrindinis įrenginys, prie kurio prijungtas iO-8 modulis.
 
 3.  Sujunkite išėjimus, kaip parodyta:
 

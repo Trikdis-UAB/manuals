@@ -10,7 +10,7 @@ iO-8 tiene 8 contactos, que se pueden configurar en modo de entrada o salida.
 
 Visite la página iO-8 en www.trikdis.com para obtener las especificaciones del dispositivo y una lista actualizada de dispositivos TRIKDIS compatibles.
 
-Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/index.md) y los controladores de acceso [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Compatible con [SP3](../../control-panels/sp3/index.md), [CG17](../../control-panels/cg17/index.md), [GT+](../../alarm-communicators/cellular/gt-plus/index.md), [GT](../../alarm-communicators/cellular/gt/index.md), [G16](../../alarm-communicators/cellular/g16/index.md), [G16T](../../alarm-communicators/cellular/g16t/index.md), [G17F](../../alarm-communicators/fire-panels/g17f/index.md), [E16](../../alarm-communicators/e16/index.md), [E16T](../../alarm-communicators/e16t/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) y [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 **Siga estos pasos para configurar iO-8:**
 
@@ -22,7 +22,7 @@ Compatible con el panel de control de seguridad [SP3](../../control-panels/sp3/i
 
 <img alt="" src="./image2.png" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
-El módulo principal (SP3, GT+, GT, GATOR, G16, G16T, CG17, E16, E16T, G17F) establece los diagramas de cableado y la resistencia nominal, al que está conectado el módulo de expansión iO-8.
+El módulo principal establece los diagramas de cableado y la resistencia nominal, al que está conectado el módulo de expansión iO-8.
 
 3.  Conecte las SALIDAS como se muestra:
 
