@@ -224,9 +224,11 @@ plugins:
           - RL14: receivers/ip-network/rl14/index.md
         - Radijo:
           - R11: receivers/radio/r11/index.md
+          - RFH11: receivers/radio/rfh11/index.md
           - RR-IP12: receivers/radio/rr-ip12/index.md
         - Telefoninis:
           - RT2: receivers/landline/rt2/index.md
+          - RTH2: receivers/landline/rth2/index.md
       - Plėtikliai:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
@@ -293,8 +295,11 @@ plugins:
         - Red IP:
           - RL14: receivers/ip-network/rl14/index.md
         - Radio:
+          - R11: receivers/radio/r11/index.md
           - RFH11: receivers/radio/rfh11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
         - Línea telefónica:
+          - RT2: receivers/landline/rt2/index.md
           - RTH2: receivers/landline/rth2/index.md
       - Expansores:
         - iO-8: expanders/io-8/index.md
@@ -360,7 +365,9 @@ plugins:
         - IP-сеть:
           - RL14: receivers/ip-network/rl14/index.md
         - Радио:
+          - R11: receivers/radio/r11/index.md
           - RFH11: receivers/radio/rfh11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
         - Телефонная линия:
           - RTH2: receivers/landline/rth2/index.md
           - RT2: receivers/landline/rt2/index.md
