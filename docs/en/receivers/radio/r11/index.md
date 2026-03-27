@@ -1,3 +1,7 @@
+---
+pdf: r11-original.pdf
+---
+
 # R11 / R11U Radio Receivers
 
 <div style="text-align: center;">
