@@ -219,6 +219,14 @@ plugins:
         - SK-LED TouchPad klaviatūra: keypads/sk-led-touchpad/index.md
         - Klaviatūra FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Klaviatūra FLEXi SK LED: keypads/flexi-sk-led/index.md
+      - Imtuvai:
+        - IP tinklai:
+          - RL14: receivers/ip-network/rl14/index.md
+        - Radijo:
+          - R11: receivers/radio/r11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
+        - Telefoninis:
+          - RT2: receivers/landline/rt2/index.md
       - Plėtikliai:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
@@ -281,6 +289,13 @@ plugins:
         - Teclado SK-LED TouchPad: keypads/sk-led-touchpad/index.md
         - Teclado FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
         - Teclado FLEXi SK LED: keypads/flexi-sk-led/index.md
+      - Receptores:
+        - Red IP:
+          - RL14: receivers/ip-network/rl14/index.md
+        - Radio:
+          - RFH11: receivers/radio/rfh11/index.md
+        - Línea telefónica:
+          - RTH2: receivers/landline/rth2/index.md
       - Expansores:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
@@ -341,6 +356,14 @@ plugins:
         - Клавиатура SK-LED Button: keypads/sk-led-button/index.md
         - Клавиатура SK-LCD TouchPad: keypads/sk-lcd-touchpad/index.md
         - Клавиатура FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
+      - Приёмники:
+        - IP-сеть:
+          - RL14: receivers/ip-network/rl14/index.md
+        - Радио:
+          - RFH11: receivers/radio/rfh11/index.md
+        - Телефонная линия:
+          - RTH2: receivers/landline/rth2/index.md
+          - RT2: receivers/landline/rt2/index.md
       - Расширители:
         - iO-8: expanders/io-8/index.md
         - iO-LORA: expanders/io-lora/index.md
