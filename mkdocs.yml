@@ -33,6 +33,9 @@ exclude_docs: |
   en/receivers/ipcom/ui/ha-cluster-backup.md
 
 extra:
+  analytics:
+    provider: google
+    property: G-876TN6LZ65
   search_synonyms_enabled: true
   alternate:
   - name: English
