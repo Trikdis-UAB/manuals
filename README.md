@@ -175,6 +175,11 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 - The stamped header/footer uses vendored `Noto Sans` font files under `Scripts/fonts/` so the running title renders correctly for `en`, `lt`, `es`, and `ru`.
 - Any rendered `*/receivers/ipcom/**` route is excluded from v1 PDF generation.
 
+## Reusable TRIKDIS Letterhead Template
+- A reusable company-branded PDF stamper lives under [tools/trikdis-letterhead-template](/Users/andriaus/Projects/TRIKDIS/manuals/tools/trikdis-letterhead-template).
+- Use it when another project already has a generated PDF and only needs the TRIKDIS header/footer letterhead treatment.
+- The package includes its own README, fonts, and image assets, so it can be copied or referenced independently from the manuals pipeline.
+
 ## Troubleshooting
 - **Images missing**: ensure links look like `![](./image3.png)`; the conversion pipeline adds this automatically. MkDocs copies the files from `docs/manual/` into the published `manual/` folder.
 - **New manual not visible**: verify it is referenced in `mkdocs.yml` and that the Netlify deploy succeeded.
