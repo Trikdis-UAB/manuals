@@ -1,0 +1,114 @@
+# TRIKDIS Installation Manuals
+> Installation manuals, quick setup guides, and software reference for TRIKDIS security products.
+> Available in: English (/en/), Lietuvių (/lt/), Español (/es/), Русский (/ru/). English is most complete.
+> For the full product catalogue with product page links: https://trikdis.com/llms.txt
+
+## Communicators — Cellular
+
+- [GT Installation Manual](https://docs.trikdis.com/en/alarm-communicators/cellular/gt/): Wiring, DIP switches, TrikdisConfig setup, IP/SMS reporting, event codes, LED status indicators, troubleshooting (legacy model, superseded by GT+)
+- [GT+ Installation Manual](https://docs.trikdis.com/en/alarm-communicators/cellular/gt-plus/): Wiring, DIP switches, TrikdisConfig setup, 4G LTE IP reporting to CMS, SIA/CID event codes, Serial BUS and TIP RING connections, troubleshooting
+- [GET Installation Manual](https://docs.trikdis.com/en/alarm-communicators/cellular/get/): Wiring, DIP switches, TrikdisConfig setup, 4G LTE + Ethernet dual-path IP reporting, Serial BUS and TIP RING connections, troubleshooting
+- [G16 Installation Manual](https://docs.trikdis.com/en/alarm-communicators/cellular/g16/): Wiring, configuration, cellular reporting setup, event codes, troubleshooting
+- [G16T Installation Manual](https://docs.trikdis.com/en/alarm-communicators/cellular/g16t/): Wiring, configuration, 4G LTE reporting setup, event codes, troubleshooting
+
+## Communicators — Fire Panels
+
+- [FireCom Installation Manual](https://docs.trikdis.com/en/alarm-communicators/fire-panels/firecom/): Wiring to fire alarm panels, cellular reporting, configuration, event codes
+- [G17F Installation Manual](https://docs.trikdis.com/en/alarm-communicators/fire-panels/g17f/): Wiring to fire alarm panels, cellular reporting, configuration, event codes
+
+## Communicators — Ethernet
+
+- [E16 Installation Manual](https://docs.trikdis.com/en/alarm-communicators/e16/): Wiring, Ethernet IP reporting to CMS, configuration, event codes, troubleshooting
+- [E16T Installation Manual](https://docs.trikdis.com/en/alarm-communicators/e16t/): Wiring, Ethernet IP reporting, configuration, event codes, troubleshooting
+
+## Communicators — Radio
+
+- [T16 Installation Manual](https://docs.trikdis.com/en/alarm-communicators/t16/): Wiring, VHF/UHF radio reporting, configuration, event codes, troubleshooting
+
+## Quick Setup Guides — Cellular (GT+/GET)
+> Step-by-step wiring and configuration for connecting GT+ or GET communicators to specific third-party alarm panels.
+
+- [GT+/GET + Paradox SP(+)/MG(+)](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/paradox/): Zone wiring, serial bus connection, TrikdisConfig reporting setup
+- [GT+/GET + DSC PowerSeries Neo](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007/): Wiring, integration module setup, IP reporting configuration
+- [GT+/GET + DSC PowerSeries](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006/): Wiring, PC585/PC1616/PC1832 connection, reporting setup
+- [GT+/GET + Honeywell Vista](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/honeywell%20vista/GT+%20Honeywell%20vista%2048%20ENG%202026%2001%2007/): Wiring, Vista 48 keybus connection, reporting setup
+- [GT+/GET + Interlogix NX-4v2 / NX-6v2](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/interlogix%20nx-4v2%20nx-6v2/GT+%20Interlogix%20NX-4V2%20NX-6V2%20ENG%202026%2001%2007/): Wiring, serial bus connection, reporting setup
+- [GT+/GET + Interlogix NX-8v2](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/interlogix%20nx-8v2/GT+%20Interlogix%20NX-8V2%202026%2001%2007/): Wiring, serial bus connection, reporting setup
+- [GT+/GET + Texecom](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/texecom/GT+%20Texecom%20ENG%202026%2003%2024/): Wiring, Premier Elite/Veritas connection, Com-IP configuration
+- [GT+/GET + Innerrange Inception](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/innerrange%20inception/GT+%20Innerrange%20Inception%20ENG%202026%2003%2024/): Wiring, Inception controller connection, IP reporting
+- [GT+/GET + Innerrange Integriti](https://docs.trikdis.com/en/alarm-communicators/cellular/quick-setup/innerrange%20integriti/GT+%20Innerrange%20Integriti%20ENG%202026%2003%2024/): Wiring, Integriti controller connection, IP reporting
+
+## Quick Setup Guides — Ethernet (E16)
+> Step-by-step wiring and configuration for connecting E16 Ethernet communicator to specific third-party alarm panels.
+
+- [E16 + DSC PowerSeries](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/dsc-pc585/): Ethernet wiring, PC585 connection, IP reporting configuration
+- [E16 + Paradox SP(+)/MG(+)](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/paradox/): Ethernet wiring, Paradox bus connection, IP reporting
+- [E16 + Honeywell Vista](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/): Ethernet wiring, Vista keybus connection, IP reporting
+- [E16 + Interlogix NX-4v2 / NX-6v2](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/): Ethernet wiring, serial bus connection, IP reporting
+- [E16 + Interlogix NX-8v2](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/): Ethernet wiring, serial bus connection, IP reporting
+- [E16 + Texecom](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/texecom/): Ethernet wiring, Premier Elite/Veritas connection, IP reporting
+- [E16 + Innerrange Inception](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/innerrange-inception/): Ethernet wiring, Inception controller connection, IP reporting
+- [E16 + Innerrange Integriti](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16/innerrange-integriti/): Ethernet wiring, Integriti controller connection, IP reporting
+- [E16T Quick Setup](https://docs.trikdis.com/en/alarm-communicators/ethernet/quick-setup/e16t/): E16T Ethernet communicator quick configuration guide
+
+## Control Panels
+
+- [FLEXi SP3 Installation Manual](https://docs.trikdis.com/en/control-panels/sp3/): Wiring, zone configuration, communicator setup, user programming, event codes, troubleshooting
+- [CG17 Installation Manual](https://docs.trikdis.com/en/control-panels/cg17/): Wiring, small-object panel setup, zone programming, reporting, troubleshooting
+
+## Gate Controllers
+
+- [GATOR Installation Manual](https://docs.trikdis.com/en/gate-controllers/gator/): Wiring, 4G LTE gate controller setup, TrikdisConfig, relay outputs, IP reporting, user management
+- [GATOR WiFi Installation Manual](https://docs.trikdis.com/en/gate-controllers/gator-wifi/): Wiring, Wi-Fi gate controller setup, TrikdisConfig, relay outputs, user management
+
+## Keypads
+
+- [SK-LCD Button Installation Manual](https://docs.trikdis.com/en/keypads/sk-lcd-button/): LCD keypad wiring, button layout, user operation, programming
+- [SK-LED Button Installation Manual](https://docs.trikdis.com/en/keypads/sk-led-button/): LED keypad wiring, button layout, user operation, programming
+- [SK-LCD TouchPad Installation Manual](https://docs.trikdis.com/en/keypads/sk-lcd-touchpad/): LCD touch keypad wiring, touch interface, user operation, programming
+- [SK-LED TouchPad Installation Manual](https://docs.trikdis.com/en/keypads/sk-led-touchpad/): LED touch keypad wiring, touch interface, user operation, programming
+- [FLEXi SK LCD Installation Manual](https://docs.trikdis.com/en/keypads/flexi-sk-lcd/): LCD keypad for FLEXi SP3 panel, wiring, operation, programming
+- [FLEXi SK LED Installation Manual](https://docs.trikdis.com/en/keypads/flexi-sk-led/): LED keypad for FLEXi SP3 panel, wiring, operation, programming
+
+## Expanders
+
+- [iO-8 Installation Manual](https://docs.trikdis.com/en/expanders/io-8/): 433/868 MHz wired zone expander — wiring, zone configuration, pairing with control panel
+- [iO-LORA Installation Manual](https://docs.trikdis.com/en/expanders/io-lora/): LoRa wireless expander hub — wiring, LoRa network setup, zone configuration
+- [iO8-LoRa Installation Manual](https://docs.trikdis.com/en/expanders/io8-lora/): LoRa zone expander — wiring, LoRa pairing, zone configuration
+- [PB-LoRa Installation Manual](https://docs.trikdis.com/en/expanders/pb-lora/): LoRa wireless panic button — pairing, LED indicators, battery replacement
+
+### Transceivers
+
+- [RF-LoRa Installation Manual](https://docs.trikdis.com/en/expanders/rf-lora/): 433/868 MHz LoRa transceiver — wiring, LoRa network bridge, configuration
+- [RF-S8 Installation Manual](https://docs.trikdis.com/en/expanders/rf-s8/): 868 MHz wireless receiver/expander — wiring, sensor pairing, zone mapping
+
+## Receivers — IPcom Software
+> IPcom is a software receiver application for central monitoring stations. Each page below covers a specific part of the interface.
+
+- [IPcom v5 Overview](https://docs.trikdis.com/en/receivers/ipcom/): System requirements, deployment, capabilities, architecture overview
+- [Access and Login](https://docs.trikdis.com/en/receivers/ipcom/ui/access-and-login/): First-time setup, authentication, user roles, session management
+- [Status screen](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/status/): Dashboard — system health, connected receivers, active alarms
+- [Logs screen](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/logs/): Event log viewing, filtering, export
+- [General settings](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/general/): System-wide configuration — server name, time zone, email, backup
+- [Internal events](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/internal-events/): System-generated events — connection drops, license warnings, errors
+- [Receivers tab](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/receivers/): Configure TCP/UDP/COM/Modem receiver endpoints, protocol settings
+- [Outputs tab](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/outputs/): Configure event forwarding — SIA-IP, Surgard, email, webhook
+- [Users tab](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/users/): User accounts, permissions, API tokens
+- [Incoming events](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/incoming-events/): Real-time event stream, event detail view, acknowledgement
+- [Objects screen](https://docs.trikdis.com/en/receivers/ipcom/ui/screens/objects/): Monitored site/object configuration, account mapping
+- [Glossary](https://docs.trikdis.com/en/receivers/ipcom/ui/glossary/): Protocol abbreviations, SIA codes, CID codes, terminology reference
+- [Networking and Firewall](https://docs.trikdis.com/en/receivers/ipcom/ui/networking-firewall/): Required ports, firewall rules, NAT configuration, network topology
+
+## Receivers — IP Network
+
+- [RL14 Installation Manual](https://docs.trikdis.com/en/receivers/ip-network/rl14/): IP & SMS rack-mount receiver for CMS — wiring, network setup, protocol configuration
+
+## Receivers — Radio
+
+- [RFH11 Installation Manual](https://docs.trikdis.com/en/receivers/radio/rfh11/): VHF/UHF multi-format receiver — wiring, RS232 connection, frequency programming, protocol setup
+- [R11 Installation Manual](https://docs.trikdis.com/en/receivers/radio/r11/): FM/FSK VHF radio receiver — wiring, antenna connection, multi-protocol configuration
+- [RR-IP12 Installation Manual](https://docs.trikdis.com/en/receivers/radio/rr-ip12/): GPRS/IP + VHF/UHF repeater receiver — wiring, radio-to-IP bridge configuration, modular setup
+
+## Receivers — Landline
+
+- [RTH2 Installation Manual](https://docs.trikdis.com/en/receivers/landline/rth2/): PSTN standalone multi-format decoder — wiring, phone line connection, Surgard/SIA decoding
