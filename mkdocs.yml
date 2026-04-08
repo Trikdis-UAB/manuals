@@ -79,6 +79,7 @@ extra_javascript:
 - javascripts/toc-active.js
 - javascripts/lazy-images.js
 - javascripts/communicators-toggle.js
+- javascripts/crisp-chat.js
 plugins:
 - i18n:
     docs_structure: folder

@@ -15,6 +15,9 @@ fi
 
 export MKDOCS_PAGEFIND_AUTOINDEX="${MKDOCS_PAGEFIND_AUTOINDEX:-0}"
 export TRIKDOCS_PDF_CONCURRENCY="${TRIKDOCS_PDF_CONCURRENCY:-2}"
+export TRIKDOCS_CRISP_ENABLED="${TRIKDOCS_CRISP_ENABLED:-1}"
+export TRIKDOCS_CRISP_PREVIEW_ONLY="${TRIKDOCS_CRISP_PREVIEW_ONLY:-1}"
+export TRIKDOCS_CRISP_PREVIEW_QUERY="${TRIKDOCS_CRISP_PREVIEW_QUERY:-chat_preview}"
 
 PYTHON_BIN="${PYTHON_BIN:-}"
 if [[ -z "${PYTHON_BIN}" ]]; then
@@ -52,6 +55,7 @@ echo "Building docs for context='${CONTEXT_VALUE}' with PDFs='${TRIKDOCS_PDF_DOW
 npx -y pagefind --site site
 "${PYTHON_BIN}" Scripts/check_search_scopes.py --site-dir site
 node Scripts/check_pagefind_smoke.mjs --site site
+node Scripts/check_ai_readiness.mjs --site site
 
 if [[ "${TRIKDOCS_PDF_DOWNLOADS}" == "1" ]]; then
   [[ -x "node_modules/.bin/playwright" ]] || {

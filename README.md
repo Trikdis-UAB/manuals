@@ -37,6 +37,10 @@ After the first dependency install, faster reruns can use:
 ```bash
 CONTEXT=production Scripts/build_docs.sh
 ```
+To exercise the Crisp rollout locally, provide a temporary website id during the build:
+```bash
+TRIKDOCS_CRISP_WEBSITE_ID=test-website-id npm run build:docs
+```
 
 For browser-level modal behavior checks (manual scope + immediate language fallback UI and no Lunr runtime request), run:
 ```bash
@@ -47,6 +51,11 @@ This expects a running docs server. For a one-shot serve + UI verification flow:
 ```bash
 npm install
 Scripts/check_pagefind_serve.sh 8011
+```
+For the Crisp preview gate and launcher visibility checks:
+```bash
+TRIKDOCS_CRISP_WEBSITE_ID=test-website-id npm run build:docs
+Scripts/check_crisp_chat_site.sh 8013
 ```
 
 ## Repository Layout
@@ -166,6 +175,28 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
 - The MkDocs `search` plugin remains enabled temporarily for theme compatibility; runtime search results are sourced from Pagefind.
 
 Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTOINDEX=0` and run `pagefind` explicitly once in `Scripts/build_docs.sh`, after `mkdocs build` and before PDF generation.
+
+## Crisp Chat Rollout
+- Crisp configuration is injected at build time from `mkdocs_hooks.py` into each page and loaded by `docs/javascripts/crisp-chat.js`.
+- Default rollout behavior:
+  - only boot on `docs.trikdis.com`
+  - preview-only gate enabled by default
+  - session gate query parameter: `?chat_preview=1`
+  - clear the session gate with `?chat_preview=0`
+- Build/deploy env vars:
+  - `TRIKDOCS_CRISP_WEBSITE_ID` is required for the widget to boot
+  - `TRIKDOCS_CRISP_ENABLED` defaults to `1`
+  - `TRIKDOCS_CRISP_PREVIEW_ONLY` defaults to `1`
+  - `TRIKDOCS_CRISP_PREVIEW_QUERY` defaults to `chat_preview`
+- Crisp API helpers:
+  - `npm run crisp:audit` reads website settings/helpdesk state
+  - `npm run crisp:apply-settings` applies the baseline docs widget settings
+  - both expect `CRISP_WEBSITE_ID`, `CRISP_IDENTIFIER`, and `CRISP_KEY`; set `CRISP_TIER=plugin` if you are using plugin-tier credentials
+
+## AI Readiness
+- `docs/robots.txt` is published at the site root and points crawlers to `https://docs.trikdis.com/sitemap.xml`.
+- `docs/llms.txt` is expected to publish at `https://docs.trikdis.com/llms.txt`.
+- `Scripts/check_ai_readiness.mjs` runs inside `Scripts/build_docs.sh` and fails the build if either asset is missing or rendered incorrectly.
 
 ## Manual PDF Downloads
 - Production builds emit `site/pdf-manifest.json` with `src_path`, `url`, and site-relative `output` for each eligible Markdown manual page.

@@ -15,7 +15,7 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path, PurePosixPath
 from typing import Dict, Iterable, List, Optional, Set, Tuple
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 from mkdocs import plugins as mkdocs_plugins
 from mkdocs_add_number_plugin.plugin import AddNumberPlugin
@@ -24,6 +24,9 @@ CALLOUT_RE = re.compile(r"^(?P<indent>\s*)>\s*\[!(?P<kind>[A-Z]+)\]\s*(?P<rest>.
 NUMBERED_H2_RE = re.compile(r"^##\s+\d+\.")
 LOGGER = logging.getLogger("mkdocs.hooks.manuals")
 PDF_DOWNLOAD_ENABLED_VALUES = {"1", "true", "yes", "on"}
+CRISP_ENABLED_VALUES = {"1", "true", "yes", "on"}
+CRISP_CONFIG_SCRIPT_ID = "trikdocs-crisp-config"
+DEFAULT_CRISP_PREVIEW_QUERY = "chat_preview"
 PDF_DOWNLOAD_LABELS = {
     "en": "Download PDF",
     "lt": "Atsisiųsti PDF",
@@ -293,6 +296,38 @@ def _build_scope_marker(scopes: Dict[str, str]) -> str:
 
 def _pdf_downloads_enabled() -> bool:
     return os.environ.get("TRIKDOCS_PDF_DOWNLOADS", "0").strip().lower() in PDF_DOWNLOAD_ENABLED_VALUES
+
+
+def _crisp_flag(name: str, default: str) -> bool:
+    return os.environ.get(name, default).strip().lower() in CRISP_ENABLED_VALUES
+
+
+def _crisp_config_payload(config) -> Dict[str, object]:
+    website_id = os.environ.get("TRIKDOCS_CRISP_WEBSITE_ID", "").strip()
+    preview_query = os.environ.get("TRIKDOCS_CRISP_PREVIEW_QUERY", DEFAULT_CRISP_PREVIEW_QUERY).strip()
+    site_url = (config.get("site_url") or "").strip()
+    host = urlparse(site_url).hostname or "docs.trikdis.com"
+    locales = [locale for locale in _language_locales(config) if locale and locale != "xx"]
+
+    return {
+        "enabled": _crisp_flag("TRIKDOCS_CRISP_ENABLED", "1") and bool(website_id),
+        "websiteId": website_id,
+        "previewOnly": _crisp_flag("TRIKDOCS_CRISP_PREVIEW_ONLY", "1"),
+        "previewQuery": preview_query or DEFAULT_CRISP_PREVIEW_QUERY,
+        "host": host,
+        "locales": locales,
+    }
+
+
+def _build_crisp_config_script(config) -> str:
+    payload = json.dumps(_crisp_config_payload(config), ensure_ascii=False)
+    return f'<script id="{CRISP_CONFIG_SCRIPT_ID}" type="application/json">{payload}</script>'
+
+
+def _inject_crisp_config(html_content: str, config) -> str:
+    if CRISP_CONFIG_SCRIPT_ID in html_content:
+        return html_content
+    return html_content + _build_crisp_config_script(config)
 
 
 def _page_original_pdf(page) -> Optional[str]:
@@ -593,7 +628,7 @@ def on_page_content(html_content: str, page, config, files):
             _build_quick_setup_product_block(page),
         )
 
-    return html_content
+    return _inject_crisp_config(html_content, config)
 
 
 def _run_pagefind_index(site_dir: Path) -> bool:
