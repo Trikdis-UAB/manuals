@@ -37,7 +37,7 @@ After the first dependency install, faster reruns can use:
 ```bash
 CONTEXT=production Scripts/build_docs.sh
 ```
-To exercise the Crisp rollout locally, provide a temporary website id during the build:
+To exercise the Crisp rollout locally with a temporary website id override:
 ```bash
 TRIKDOCS_CRISP_WEBSITE_ID=test-website-id npm run build:docs
 ```
@@ -184,7 +184,7 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
   - session gate query parameter: `?chat_preview=1`
   - clear the session gate with `?chat_preview=0`
 - Build/deploy env vars:
-  - `TRIKDOCS_CRISP_WEBSITE_ID` is required for the widget to boot
+  - `TRIKDOCS_CRISP_WEBSITE_ID` defaults to the current production TRIKDIS workspace id and can be overridden per build
   - `TRIKDOCS_CRISP_ENABLED` defaults to `1`
   - `TRIKDOCS_CRISP_PREVIEW_ONLY` defaults to `1`
   - `TRIKDOCS_CRISP_PREVIEW_QUERY` defaults to `chat_preview`

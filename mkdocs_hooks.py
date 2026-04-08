@@ -26,6 +26,7 @@ LOGGER = logging.getLogger("mkdocs.hooks.manuals")
 PDF_DOWNLOAD_ENABLED_VALUES = {"1", "true", "yes", "on"}
 CRISP_ENABLED_VALUES = {"1", "true", "yes", "on"}
 CRISP_CONFIG_SCRIPT_ID = "trikdocs-crisp-config"
+DEFAULT_CRISP_WEBSITE_ID = "dbcf7c35-45bf-4a74-be56-7113429a5cb1"
 DEFAULT_CRISP_PREVIEW_QUERY = "chat_preview"
 PDF_DOWNLOAD_LABELS = {
     "en": "Download PDF",
@@ -303,7 +304,7 @@ def _crisp_flag(name: str, default: str) -> bool:
 
 
 def _crisp_config_payload(config) -> Dict[str, object]:
-    website_id = os.environ.get("TRIKDOCS_CRISP_WEBSITE_ID", "").strip()
+    website_id = os.environ.get("TRIKDOCS_CRISP_WEBSITE_ID", DEFAULT_CRISP_WEBSITE_ID).strip()
     preview_query = os.environ.get("TRIKDOCS_CRISP_PREVIEW_QUERY", DEFAULT_CRISP_PREVIEW_QUERY).strip()
     site_url = (config.get("site_url") or "").strip()
     host = urlparse(site_url).hostname or "docs.trikdis.com"
