@@ -138,6 +138,36 @@ Editor entry points (start here when editing):
   - [Teclado SK-LED TouchPad](es/keypads/sk-led-touchpad/index.md)
   - [Teclado FLEXi SK LCD](es/keypads/flexi-sk-lcd/index.md)
   - [Teclado FLEXi SK LED](es/keypads/flexi-sk-led/index.md)
+- Expansores
+  - [iO-8](es/expanders/io-8/index.md)
+  - [iO-LORA](es/expanders/io-lora/index.md)
+  - [iO8-LoRa](es/expanders/io8-lora/index.md)
+  - [PB-LoRa](es/expanders/pb-lora/index.md)
+  - Transceptores
+    - [RF-LoRa](es/expanders/rf-lora/index.md)
+    - [RF-S8](es/expanders/rf-s8/index.md)
+- Receptores
+  - IPcom
+    - [Visión general](es/receivers/ipcom/index.md)
+    - [Acceso e inicio de sesión](es/receivers/ipcom/ui/access-and-login.md)
+    - Interfaz de usuario
+      - [Estado](es/receivers/ipcom/ui/screens/status.md)
+      - [Registros](es/receivers/ipcom/ui/screens/logs.md)
+      - [General](es/receivers/ipcom/ui/screens/general.md)
+      - [Eventos internos](es/receivers/ipcom/ui/screens/internal-events.md)
+      - [Receptores](es/receivers/ipcom/ui/screens/receivers.md)
+      - [Salidas](es/receivers/ipcom/ui/screens/outputs.md)
+      - [Usuarios](es/receivers/ipcom/ui/screens/users.md)
+      - [Eventos entrantes](es/receivers/ipcom/ui/screens/incoming-events.md)
+      - [Objetos](es/receivers/ipcom/ui/screens/objects.md)
+    - [Glosario](es/receivers/ipcom/ui/glossary.md)
+    - [Red y firewall](es/receivers/ipcom/ui/networking-firewall.md)
+  - [IP anterior - RL14](es/receivers/ip-network/rl14/index.md)
+  - Radio
+    - [R11](es/receivers/radio/r11/index.md)
+    - [RFH11](es/receivers/radio/rfh11/index.md)
+    - [RR-IP12](es/receivers/radio/rr-ip12/index.md)
+  - [Línea telefónica RTH2](es/receivers/landline/rth2/index.md)
 
 ## Russian
 
