@@ -79,6 +79,7 @@ extra_javascript:
 - javascripts/toc-active.js
 - javascripts/lazy-images.js
 - javascripts/communicators-toggle.js
+- javascripts/crisp-chat.js
 plugins:
 - i18n:
     docs_structure: folder
@@ -306,6 +307,21 @@ plugins:
           - RF-LoRa: expanders/rf-lora/index.md
           - RF-S8: expanders/rf-s8/index.md
       - Receptores:
+        - IPcom:
+          - Visión general: receivers/ipcom/index.md
+          - Acceso e inicio de sesión: receivers/ipcom/ui/access-and-login.md
+          - Interfaz de usuario:
+            - Estado: receivers/ipcom/ui/screens/status.md
+            - Registros: receivers/ipcom/ui/screens/logs.md
+            - General: receivers/ipcom/ui/screens/general.md
+            - Eventos internos: receivers/ipcom/ui/screens/internal-events.md
+            - Receptores: receivers/ipcom/ui/screens/receivers.md
+            - Salidas: receivers/ipcom/ui/screens/outputs.md
+            - Usuarios: receivers/ipcom/ui/screens/users.md
+            - Eventos entrantes: receivers/ipcom/ui/screens/incoming-events.md
+            - Objetos: receivers/ipcom/ui/screens/objects.md
+          - Glosario: receivers/ipcom/ui/glossary.md
+          - Red y firewall: receivers/ipcom/ui/networking-firewall.md
         - IP anterior - RL14: receivers/ip-network/rl14/index.md
         - Radio:
           - R11: receivers/radio/r11/index.md

@@ -14,7 +14,7 @@ This table compares every product listed on **trikdis.com** against the document
 | 🔅 | De-emphasised — product is visible on scroll in the "All" view and accessible via a specific filter, but does not appear in the initial above-the-fold product grid |
 | ⚠️ | Docs-only — page exists on docs.trikdis.com but product is no longer listed on trikdis.com |
 
-> **Language note:** docs.trikdis.com serves EN, LT, ES, and RU. This analysis tracks whether a manual exists at all (any language). EN is most complete; LT/ES/RU mirror the same product set but still lack some EN-only content in specific sections (notably IPcom pages, and in RU two keypad pages).
+> **Language note:** docs.trikdis.com serves EN, LT, ES, and RU. This analysis tracks whether a manual exists at all (any language). EN is most complete; LT/ES/RU mirror the same product set but still lack some EN-only content in specific sections (in RU, two keypad pages remain missing).
 
 ---
 
@@ -78,7 +78,7 @@ _The initial above-the-fold grid on trikdis.com shows: GT+, GET, FireCom, G17F, 
 
 | Product | On trikdis.com | Tags | docs.trikdis.com | Notes |
 |---------|---------------|------|-----------------|-------|
-| IPcom | ⚠️ | Software/server | ✅ | No product page — documented in docs as a receiver UI guide (EN only) |
+| IPcom | ⚠️ | Software/server | ✅ | No product page — documented in docs as a receiver UI guide (EN and ES) |
 | **RL14** | ✅ | CMS Equipment, IP & SMS, Rack Mount | ❌ | Hardware receiver |
 | **RFH11** | ✅ | Multi-format Decoding, RS232, VHF/UHF | ❌ | Hardware receiver |
 | **R11** | ✅ | FM/FSK, Multi-Protocol, VHF Radio | ❌ | Hardware receiver |
