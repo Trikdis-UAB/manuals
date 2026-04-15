@@ -78,7 +78,7 @@ _The initial above-the-fold grid on trikdis.com shows: GT+, GET, FireCom, G17F, 
 
 | Product | On trikdis.com | Tags | docs.trikdis.com | Notes |
 |---------|---------------|------|-----------------|-------|
-| IPcom | ⚠️ | Software/server | ✅ | No product page — documented in docs as a receiver UI guide (EN and ES) |
+| IPcom | ⚠️ | Software/server | ✅ | No product page — documented in docs as a receiver UI guide (EN, ES, and LT) |
 | **RL14** | ✅ | CMS Equipment, IP & SMS, Rack Mount | ❌ | Hardware receiver |
 | **RFH11** | ✅ | Multi-format Decoding, RS232, VHF/UHF | ❌ | Hardware receiver |
 | **R11** | ✅ | FM/FSK, Multi-Protocol, VHF Radio | ❌ | Hardware receiver |

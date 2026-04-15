@@ -99,6 +99,36 @@ Editor entry points (start here when editing):
   - [SK-LED TouchPad klaviatūra](lt/keypads/sk-led-touchpad/index.md)
   - [Klaviatūra FLEXi SK LCD](lt/keypads/flexi-sk-lcd/index.md)
   - [Klaviatūra FLEXi SK LED](lt/keypads/flexi-sk-led/index.md)
+- Plėtikliai
+  - [iO-8](lt/expanders/io-8/index.md)
+  - [iO-LORA](lt/expanders/io-lora/index.md)
+  - [iO8-LoRa](lt/expanders/io8-lora/index.md)
+  - [PB-LoRa](lt/expanders/pb-lora/index.md)
+  - Transiveriai
+    - [RF-LoRa](lt/expanders/rf-lora/index.md)
+    - [RF-S8](lt/expanders/rf-s8/index.md)
+- Imtuvai
+  - IPcom
+    - [Apžvalga](lt/receivers/ipcom/index.md)
+    - [Prieiga ir prisijungimas](lt/receivers/ipcom/ui/access-and-login.md)
+    - Naudotojo sąsaja
+      - [Būsena](lt/receivers/ipcom/ui/screens/status.md)
+      - [Žurnalai](lt/receivers/ipcom/ui/screens/logs.md)
+      - [Bendrieji nustatymai](lt/receivers/ipcom/ui/screens/general.md)
+      - [Vidiniai įvykiai](lt/receivers/ipcom/ui/screens/internal-events.md)
+      - [Imtuvai](lt/receivers/ipcom/ui/screens/receivers.md)
+      - [Išėjimai](lt/receivers/ipcom/ui/screens/outputs.md)
+      - [Naudotojai](lt/receivers/ipcom/ui/screens/users.md)
+      - [Gaunami įvykiai](lt/receivers/ipcom/ui/screens/incoming-events.md)
+      - [Objektai](lt/receivers/ipcom/ui/screens/objects.md)
+    - [Žodynėlis](lt/receivers/ipcom/ui/glossary.md)
+    - [Tinklo ir ugniasienės gairės](lt/receivers/ipcom/ui/networking-firewall.md)
+  - [Senasis IP - RL14](lt/receivers/ip-network/rl14/index.md)
+  - Radijo
+    - [R11](lt/receivers/radio/r11/index.md)
+    - [RFH11](lt/receivers/radio/rfh11/index.md)
+    - [RR-IP12](lt/receivers/radio/rr-ip12/index.md)
+  - [Telefoninis RTH2](lt/receivers/landline/rth2/index.md)
 
 ## Spanish
 
