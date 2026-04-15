@@ -238,6 +238,21 @@ plugins:
           - RF-LoRa: expanders/rf-lora/index.md
           - RF-S8: expanders/rf-s8/index.md
       - Imtuvai:
+        - IPcom:
+          - Apžvalga: receivers/ipcom/index.md
+          - Prieiga ir prisijungimas: receivers/ipcom/ui/access-and-login.md
+          - Naudotojo sąsaja:
+            - Būsena: receivers/ipcom/ui/screens/status.md
+            - Žurnalai: receivers/ipcom/ui/screens/logs.md
+            - Bendrieji nustatymai: receivers/ipcom/ui/screens/general.md
+            - Vidiniai įvykiai: receivers/ipcom/ui/screens/internal-events.md
+            - Imtuvai: receivers/ipcom/ui/screens/receivers.md
+            - Išėjimai: receivers/ipcom/ui/screens/outputs.md
+            - Naudotojai: receivers/ipcom/ui/screens/users.md
+            - Gaunami įvykiai: receivers/ipcom/ui/screens/incoming-events.md
+            - Objektai: receivers/ipcom/ui/screens/objects.md
+          - Žodynėlis: receivers/ipcom/ui/glossary.md
+          - Tinklas ir ugniasienė: receivers/ipcom/ui/networking-firewall.md
         - Senasis IP - RL14: receivers/ip-network/rl14/index.md
         - Radijo:
           - R11: receivers/radio/r11/index.md
