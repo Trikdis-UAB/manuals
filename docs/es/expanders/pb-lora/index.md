@@ -46,7 +46,7 @@ Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel d
 4. Botón "TAMP" para emparejamiento del dispositivo y prueba de conexión.
 5. Interruptor DIP "SW".
 
-!!! note "Configuración del interruptor DIP \"SW\""
+!!! note "Configuración del interruptor DIP 'SW'"
     1. Radiofrecuencia ("OFF" - RF1; "ON" - RF2). Diseñado para cambiar el canal de radio si el canal actual está muy cargado.
     2. Tipo de modulación (“OFF” – rápido; “ON” – lento). La posición "ON" le permite aumentar el rango de comunicación aproximadamente 2 veces (dependiendo de las condiciones ambientales). Pero si se asegura una buena conexión usando la posición “OFF”, entonces se recomienda usarla. En la posición “ON”, el consumo de batería aumenta y la velocidad de funcionamiento del sistema disminuye.
 

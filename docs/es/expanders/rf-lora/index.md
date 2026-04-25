@@ -51,7 +51,7 @@ Conexión:
 6. Interruptor DIP "SW".
 7. Botón "DJ1" para activar/desactivar el modo de emparejamiento de los módulos LORA.
 
-!!! note "Configuración del interruptor DIP \"SW\""
+!!! note "Configuración del interruptor DIP 'SW'"
     1. Radiofrecuencia ("OFF" - RF1; "ON" - RF2). Diseñado para cambiar el canal de radio si el canal actual está muy cargado.
     2. Tipo de modulación (“OFF” – rápido; “ON” – lento). La posición "ON" le permite aumentar el rango de comunicación aproximadamente 2 veces (dependiendo de las condiciones ambientales). Pero si se asegura una buena conexión usando la posición “OFF”, entonces se recomienda usarla.
 

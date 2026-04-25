@@ -46,7 +46,7 @@ Compatible with the [SP3](../../control-panels/sp3/index.md) security control pa
 4. "TAMP" button for linking the device and checking the connection.
 5. DIP switch "SW".
 
-!!! note "DIP switch \"SW\" settings"
+!!! note "DIP switch 'SW' settings"
     1. Radio frequency ("OFF" - RF1; "ON" - RF2). Intended for changing the radio channel if the current channel is heavily loaded.
     2. Modulation type ("OFF" - fast; "ON" - slow). The "ON" position allows you to increase the communication distance by about 2 times (depending on the environmental conditions). But if a quality connection is ensured using the "Off" position, it is recommended to use it. In the "On" position, battery consumption increases and system performance decreases.
 

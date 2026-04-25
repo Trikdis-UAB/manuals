@@ -51,7 +51,7 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 6. DIP switch "SW".
 7. "DJ1" button to enable/disable LORA module learning mode.
 
-!!! note "DIP switch \"SW\" settings"
+!!! note "DIP switch 'SW' settings"
     1. Radio frequency ("OFF" - RF1; "ON" - RF2). Intended for changing the radio channel if the current channel is heavily loaded.
     2. Modulation type ("OFF" - fast; "ON" - slow). The "ON" position allows you to increase the communication distance by about 2 times (depending on the environmental conditions). But if a quality connection is ensured using the "Off" position, it is recommended to use it.
 
