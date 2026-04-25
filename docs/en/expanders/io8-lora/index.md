@@ -27,7 +27,7 @@ Inputs and outputs:
 
 **Connection:**
 
-- The iO-8-LORA wireless expander is connected to the "FLEXi" SP3 control panel via the RF-LORA transceiver***.***
+- The iO-8-LORA wireless expander is connected to the "FLEXi" SP3 control panel via the RF-LORA transceiver.
 
 ### Specifications 
 
@@ -46,6 +46,8 @@ Inputs and outputs:
 
 ### Expander elements 
 
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+
 !!! note "DIP switch 'SW2' settings"
     For product HW iO8_x5xx_7_230419 version:
 
@@ -59,7 +61,7 @@ Inputs and outputs:
 | Terminal | Description                           |
 |----------|---------------------------------------|
 | +DC      | Power terminal (10-26 V DC positive)  |
-| -DC      | Power terminal (109-26 V DC negative) |
+| -DC      | Power terminal (10-26 V DC negative)  |
 | A        | Terminal A of *RS485* data bus        |
 | B        | Terminal B of *RS485* data bus        |
 | 1- 8     | Input/​output terminals                |
@@ -133,7 +135,8 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
 !!! note
     An RF-LORA transceiver must be connected to the "FLEXi"
     SP3 security panel and then up to 8 pcs. can be connected
-    iO-8-LORA wireless expanders**.**
+    iO-8-LORA wireless expanders.
+
 ## Security control panel “FLEXi” SP3
 
 1.  An RF-LORA transceiver must be connected to the "FLEXi" SP3 control panel.
@@ -154,11 +157,11 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
 
 <img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-9.  In the "**Zones**" tab, make settings for the expander's inputs**.**
+9.  In the "**Zones**" tab, make settings for the expander's inputs.
 
 <img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-10. In the "**PGM**" tab, configure the expander's PGM outputs**.**
+10. In the "**PGM**" tab, configure the expander's PGM outputs.
 
 <img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 

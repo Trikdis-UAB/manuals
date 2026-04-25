@@ -46,6 +46,8 @@ Ryšys:
 
 ### Plėtiklio elementai 
 
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+
 !!! note "DIP jungiklio „SW2“ nustatymai"
     Nuo HW iO8_x5xx_7_230419 versijos:
 
@@ -134,6 +136,7 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
     transiveris RF-LORA ir gali būti prijungti iki 8 vnt.
     iO-8-LORA bevielių plėtiklių.
+
 ## Apsaugos centralė “FLEXi” SP3
 
 1.  Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas transiveris RF-LORA.
@@ -148,17 +151,17 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
 
 6.  Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas "FLEXi" SP3 veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą.
 
-7.  "**Modulių**" sąraše išsirinkite "**iO-8-LORA plėtiklis**"**.**
+7.  "**Modulių**" sąraše išsirinkite "**iO-8-LORA plėtiklis**".
 
 8.  Lauke "**Serijos Nr.**" įrašykite iO-8-LORA serijos numerį.
 
 <img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms**.**
+9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms.
 
 <img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams**.**
+10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams.
 
 <img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 

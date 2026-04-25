@@ -126,7 +126,7 @@ iO-LORA turi 1 įėjimo gnybtą. Prie įėjimo gnybto galima prijungti NC, NO ti
 
 ### Temperatūros jutiklio prijungimo schema 
 
-Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie *iO- LORA* plėtiklio galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (1 vnt.). / Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). / Plokštės gnybtas „+5V“ skirtas prie "1-Wire" magistralės prijungtiems įrenginiams maitinti 5 V nuolatine įtampa.
+Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie *iO- LORA* plėtiklio galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (1 vnt.). Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). Plokštės gnybtas „+5V“ skirtas prie "1-Wire" magistralės prijungtiems įrenginiams maitinti 5 V nuolatine įtampa.
 
 <img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
@@ -145,15 +145,16 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 !!! note
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
     transiveris RF-LORA ir gali būti prijungti iki 8 vnt.
-    iO- LORA bevielių plėtiklių. / Jungiant temperatūros jutiklį
+    iO- LORA bevielių plėtiklių. Jungiant temperatūros jutiklį
     laidu, ilgesniu nei 0,5 m, rekomenduojama naudoti vytos poros kabelį
-    (UTP4x2x0,5 arba STP4x2x0,5). / iButton raktų skaitytuvai ir
+    (UTP4x2x0,5 arba STP4x2x0,5). iButton raktų skaitytuvai ir
     temperatūros jutiklis jungiami prie "**1-Wire**" gnybto.
+
 ## Apsaugos centralė “FLEXi” SP3
 
 1.  Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas transiveris RF-LORA.
 
-2.  Įjunkite centralės "FLEXi" SP3 maitinimą***.***
+2.  Įjunkite centralės "FLEXi" SP3 maitinimą.
 
 3.  Įjunkite maitinimą belaidžiui plėtikiui iO-LORA.
 
@@ -163,17 +164,17 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 6.  Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas "FLEXi" SP3 veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą.
 
-7.  "**Modulių**" sąraše išsirinkite "**iO-LORA plėtiklis**"**.**
+7.  "**Modulių**" sąraše išsirinkite "**iO-LORA plėtiklis**".
 
 8.  Lauke "**Serijos Nr.**" įrašykite iO-LORA serijos numerį.
 
 <img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonai**.**
+9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonai.
 
 <img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimui**.**
+10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimui.
 
 <img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 

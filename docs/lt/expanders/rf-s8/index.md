@@ -106,7 +106,7 @@ Programinės įrangos atnaujinimas:
 
 <img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-13. **„Modulių“** sąraše turi atsirasti **„RF-S8 imtuvas“** ir rodomas RF-S8 serijos numeris ir mikroprogramos versija**.** Jei matote RF-S8 siųstuvo-imtuvo programinės įrangos versiją, galite praleisti 14–22 veiksmus.
+13. **„Modulių“** sąraše turi atsirasti **„RF-S8 imtuvas“** ir rodomas RF-S8 serijos numeris ir mikroprogramos versija. Jei matote RF-S8 siųstuvo-imtuvo programinės įrangos versiją, galite praleisti 14–22 veiksmus.
 
 <img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
@@ -146,7 +146,7 @@ Programinės įrangos atnaujinimas:
 
 Dabar atliksime nuotolinį prisijungimą su TrikdisConfig prie centralės „FLEXi“ SP3.
 
-!!! note
+!!! warning "Svarbu"
     Nuotolinis konfigūravimas veiks tik tuomet, kai „FLEXi" SP3:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
@@ -159,7 +159,8 @@ Dabar atliksime nuotolinį prisijungimą su TrikdisConfig prie centralės „FLE
     
     5.  Prisiregistravęs prie tinklo („**NET**" LED šviečia žaliai ir mirksi
         geltonai).
-!!! note
+
+!!! warning "Svarbu"
     **Belaidžius jutiklius galima primokyti prie centralės ir juos taip
     pat galima atmokyti nuo centralės. <u>Kai atliekamas belaidžių jutiklių
     atsiejimas nuo centralės, centralė neturi būti primokymo
@@ -170,6 +171,7 @@ Dabar atliksime nuotolinį prisijungimą su TrikdisConfig prie centralės „FLE
     nuo centralės. Šią procedūrą rekomenduojama atlikti su visais
     belaidžiais jutikliais prieš juos primokant. SVARBU: ATSITIKTINAI
     ATLIKUS ATMOKYMĄ BEVIELIS JUTIKLIS SU CENTRALE NEBEVEIKS.**
+
 TrikdisConfig lauke **„Nuotolinė prieiga“** įveskite centralės „FLEXi“ SP3 „**Unikalus ID“** numerį. Šį numerį rasite ant įrenginio pakuotės ir centralės plokštės.
 
 <img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />

@@ -146,7 +146,7 @@ Siga los pasos a continuación para reemplazar el firmware:
 
 Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLEXi” SP3***.
 
-!!! note
+!!! warning "Importante"
     La configuración remota solo funcionará cuando **„*FLEXi" SP3***:
     
     1.  Se debe insertar una tarjeta SIM activada y se debe ingresar o
@@ -161,7 +161,8 @@ Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLE
     
     5.  Debe estar conectado a la red (el LED **„NET"** debe estar verde
         fijo y amarillo parpadeando).
-!!! note
+
+!!! warning "Importante"
     **Los sensores inalámbricos se pueden registrar y cancelar en el panel
     de control. <u>Al desvincular los sensores inalámbricos del panel de
     control, el panel de control no debe estar en el modo de registro de
@@ -173,6 +174,7 @@ Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLE
     sensores inalámbricos antes de registrarlos. IMPORTANTE: SI EL SENSOR
     INALÁMBRICO SE DESVINCULAR ACCIDENTALMENTE, NO FUNCIONARÁ CON EL PANEL
     DE CONTROL.**
+
 En la sección **„Acceso remoto”** ingrese el número **„ID único”** del panel de control. Este número se puede encontrar en el dispositivo y en la etiqueta del empaque.
 
 <img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />

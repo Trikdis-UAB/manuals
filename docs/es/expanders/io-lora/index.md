@@ -126,7 +126,7 @@ iO-LORA tiene una entrada. El tipo de entrada se puede configurar: NC, NO.
 
 ### Esquema para conectar un sensor de temperatura 
 
-Los sensores de temperatura deben conectarse de acuerdo con el diagrama provisto. Los sensor de temperatura Max®/Dallas® DS18S20, DS18B20 (1 und.) se pueden conectar al expansor *iO- LORA*. Si se utiliza un cable mayor a 0.5 metros para conectar un sensor de temperatura, recomendamos utilizar un cable de par trenzado (UTP4x2x0.5 o STP4x2x0.5). / La terminal „+5V” en la placa sirve para alimentar dispositivos conectados al bus de datos "1-Wire" con voltaje de 5 V DC.
+Los sensores de temperatura deben conectarse de acuerdo con el diagrama provisto. Los sensor de temperatura Max®/Dallas® DS18S20, DS18B20 (1 und.) se pueden conectar al expansor *iO- LORA*. Si se utiliza un cable mayor a 0.5 metros para conectar un sensor de temperatura, recomendamos utilizar un cable de par trenzado (UTP4x2x0.5 o STP4x2x0.5). La terminal „+5V” en la placa sirve para alimentar dispositivos conectados al bus de datos "1-Wire" con voltaje de 5 V DC.
 
 <img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
@@ -145,10 +145,11 @@ El lector iButton **CZ-Dallas** se conecta al iO-LORA utilizando el bus de datos
 !!! note
     Se debe conectar un transceptor RF-LORA al panel de control
     "FLEXi" SP3 y se pueden conectar hasta 8 expansores
-    inalámbricos iO-LORA. / Se recomienda utilizar un cable de par
+    inalámbricos iO-LORA. Se recomienda utilizar un cable de par
     trenzado (UTP4x2x0,5 o STP4x2x0,5) para conectar el sensor de
-    temperatura. / Lectores de llaves **CZ-Dallas** iButton y sensor de
-    temperatura conectados al bus "**1-Wire**"**.**
+    temperatura. Lectores de llaves **CZ-Dallas** iButton y sensor de
+    temperatura conectados al bus "**1-Wire**".
+
 ## Panel de control de seguridad “FLEXi” SP3
 
 1.  Se debe conectar un transceptor RF-LORA al panel de control "FLEXi" SP3.

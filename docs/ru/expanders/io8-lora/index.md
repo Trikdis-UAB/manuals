@@ -59,6 +59,8 @@
 
 ### Элементы расширителя 
 
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+
 !!! note "Настройки DIP-выключателя „SW2“"
     Для изделий версии HW iO8_x5xx_7_230419:
 
@@ -147,6 +149,7 @@
     К охранной панели "FLEXi" SP3 должен быть подключен
     трансивер RF-LORA и может быть подключено до 8 шт. беспроводных
     расширителей iO-8-LORA.
+
 ## Охранная панель „FLEXI” SP3
 
 1.  К охранной панели "FLEXi" SP3 должен быть подсоединен трансивер RF-LORA.
@@ -167,11 +170,11 @@
 
 <img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-9.  В закладке "**Зоны**" сделайте настройки входам расширителя**.**
+9.  В закладке "**Зоны**" сделайте настройки входам расширителя.
 
 <img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя**.**
+10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя.
 
 <img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 

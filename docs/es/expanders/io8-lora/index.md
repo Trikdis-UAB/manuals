@@ -46,6 +46,8 @@ Entradas y salidas:
 
 ### Elementos expansores 
 
+<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+
 !!! note "Configuración del interruptor DIP 'SW2'"
     Para la versión HW iO8_x5xx_7_230419:
 
@@ -134,6 +136,7 @@ Usando las terminales de relé es posible controlar (encender/apagar) de forma r
     Se debe conectar un transceptor RF-LORA al panel de control
     "FLEXi" SP3 y se pueden conectar hasta 8 expansores
     inalámbricos iO-8-LORA.
+
 ## Panel de control de seguridad “FLEXi” SP3
 
 1.  Se debe conectar un transceptor RF-LORA al panel de control "FLEXi" SP3.
@@ -158,7 +161,7 @@ Usando las terminales de relé es posible controlar (encender/apagar) de forma r
 
 <img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
-10. En la pestaña "**PGM**", realice los ajustes para la salidas PGM del expansor**.**
+10. En la pestaña "**PGM**", realice los ajustes para la salidas PGM del expansor.
 
 <img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 

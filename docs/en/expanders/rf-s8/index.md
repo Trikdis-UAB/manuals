@@ -161,6 +161,7 @@ Using TrikdisConfig, remotely connect to the “FLEXi” SP3 control panel.
 
     5.  Must be connected to network ("**NET**" LED must be green solid and
         yellow blinking).
+
 !!! warning "Important"
     **Wireless sensors can be enrolled to the control panel and can also
     be unenrolled from the control panel. <u>When unlinking wireless sensors
@@ -173,6 +174,7 @@ Using TrikdisConfig, remotely connect to the “FLEXi” SP3 control panel.
     this procedure for all wireless sensors before registering them.
     IMPORTANT: IF THE WIRELESS SENSOR IS ACCIDENTALLY UNPAIRED, IT WILL
     NOT WORK WITH THE SECURITY CONTROL PANEL.**
+
 In the “**Remote access**” section enter the control panel “**IMEI/Unique ID**” number. This number can be found on the device and the packaging sticker.
 
 <img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />

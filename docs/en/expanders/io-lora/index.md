@@ -126,7 +126,7 @@ iO-LORA has one input. Input type can be set: NC, NO.
 
 ### Schematic for connecting a temperature sensor 
 
-Temperature sensors should be connected according to the given schematic. Maxim®/Dallas® DS18S20, DS18B20 temperature sensor (1 pcs.) can be connected to the *iO-LORA* wireless expander. / If a wire longer than 0,5 meters is used to connect a temperature sensor, we recommend using twisted pair cable (UTP4x2x0,5 or STP4x2x0,5). / The „+5V” terminal on the board is for supplying devices connected to the "1-Wire" data bus with 5 V DC voltage.
+Temperature sensors should be connected according to the given schematic. Maxim®/Dallas® DS18S20, DS18B20 temperature sensor (1 pcs.) can be connected to the *iO-LORA* wireless expander. If a wire longer than 0,5 meters is used to connect a temperature sensor, we recommend using twisted pair cable (UTP4x2x0,5 or STP4x2x0,5). The „+5V” terminal on the board is for supplying devices connected to the "1-Wire" data bus with 5 V DC voltage.
 
 <img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
@@ -145,10 +145,11 @@ The **CZ-Dallas** iButton key reader connects to the iO-LORA using the "**1 Wire
 !!! note
     An RF-LORA transceiver must be connected to the "FLEXi"
     SP3 control panel and then up to 8 pcs. can be connected
-    iO-LORA wireless expanders. / It is recommended to use a twisted
+    iO-LORA wireless expanders. It is recommended to use a twisted
     pair cable (UTP4x2x0.5 or STP4x2x0.5) to connect the temperature
-    sensor. / **CZ-Dallas** iButton key readers and temperature sensor must
-    be connected to "**1-Wire**" bus**.**
+    sensor. **CZ-Dallas** iButton key readers and temperature sensor must
+    be connected to the "**1-Wire**" bus.
+
 ## Security control panel “FLEXi” SP3
 
 1.  An RF-LORA transceiver must be connected to the "FLEXi" SP3 control panel.
