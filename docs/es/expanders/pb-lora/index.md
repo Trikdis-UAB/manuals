@@ -40,7 +40,17 @@ Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel d
 
 <img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
-> **Nota:** consulte la etiqueta del producto para la ubicación de cada elemento.
+1. Indicador luminoso.
+2. Ranura de apertura de la cubierta frontal.
+3. Batería 3V (CR123A).
+4. Botón "TAMP" para emparejamiento del dispositivo y prueba de conexión.
+5. Interruptor DIP "SW".
+
+!!! note "Configuración del interruptor DIP \"SW\""
+    1. Radiofrecuencia ("OFF" - RF1; "ON" - RF2). Diseñado para cambiar el canal de radio si el canal actual está muy cargado.
+    2. Tipo de modulación (“OFF” – rápido; “ON” – lento). La posición "ON" le permite aumentar el rango de comunicación aproximadamente 2 veces (dependiendo de las condiciones ambientales). Pero si se asegura una buena conexión usando la posición “OFF”, entonces se recomienda usarla. En la posición “ON”, el consumo de batería aumenta y la velocidad de funcionamiento del sistema disminuye.
+
+    **NOTA:** ¡En los dispositivos PB-LORA y RF-LORA, las posiciones del interruptor "SW" deben coincidir! De lo contrario, la comunicación por radio no funcionará.
 
 ### Indicación LED de funcionamiento
 

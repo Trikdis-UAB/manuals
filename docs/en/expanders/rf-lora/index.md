@@ -43,7 +43,19 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 
 <img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
-> **Note:**
+1. SMA connector for RF antenna.
+2. Light indicators.
+3. Frontal case opening slot.
+4. Terminal for external connections.
+5. USB Mini-B connector is for firmware update.
+6. DIP switch "SW".
+7. "DJ1" button to enable/disable LORA module learning mode.
+
+!!! note "DIP switch \"SW\" settings"
+    1. Radio frequency ("OFF" - RF1; "ON" - RF2). Intended for changing the radio channel if the current channel is heavily loaded.
+    2. Modulation type ("OFF" - fast; "ON" - slow). The "ON" position allows you to increase the communication distance by about 2 times (depending on the environmental conditions). But if a quality connection is ensured using the "Off" position, it is recommended to use it.
+
+    **NOTE:** In RF-LORA and other LORA modules, switch positions "SW" must match! Otherwise, the radio communication will not work!
 
 ### Purpose of terminals 
 

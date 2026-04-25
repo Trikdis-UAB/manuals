@@ -43,7 +43,19 @@ Prijungimas:
 
 <img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
-> **Pastaba:**
+1. RF antenos SMA jungtis.
+2. Šviesos indikatoriai.
+3. Dangtelio nuėmimo anga.
+4. Gnybtai laidų prijungimui.
+5. USB Mini-B jungtis skirta programinės įrangos atnaujinimui.
+6. DIP jungiklis „SW“.
+7. Mygtukas „DJ1“ LORA modulių primokymo režimui įjungti/išjungti.
+
+!!! note "DIP jungiklio „SW“ nustatymai"
+    1. Radijo dažnis ("OFF" - RF1; "ON" - RF2). Skirtas radijo kanalo pakeitimui, jei esamas kanalas yra labai apkrautas.
+    2. Moduliacijos pobūdis (“Off” – greita; “On” – lėta). “On” padėtis leidžia padidinti ryšio atstumą apie 2 kartus (priklauso nuo aplinkos sąlygų). Bet jei kokybiškas ryšys yra užtikrinamas naudojant “Off” padėtį, rekomenduojama ją ir naudoti.
+
+    **PASTABA:** RF-LORA ir kitų LORA įrenginiuose „SW“ jungiklio padėtys būtinai turi sutapti! Priešingu atveju radijo ryšys neveiks!
 
 ### Išorinių kontaktų paskirtis 
 

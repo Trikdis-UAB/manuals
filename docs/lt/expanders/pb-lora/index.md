@@ -40,7 +40,17 @@ Prijungimas:
 
 <img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
-> **Pastaba:** elemento vieta nurodyta ant gaminio etiketės.
+1. Šviesos indikatorius.
+2. Priekinio dangtelio atidarymo plyšys.
+3. Baterija 3 V (CR123A).
+4. Įrenginio primokymo bei ryšio tikrinimo mygtukas „TAMP“.
+5. DIP jungiklis „SW“.
+
+!!! note "DIP jungiklio „SW“ nustatymai"
+    1. Radijo dažnis ("OFF" - RF1; "ON" - RF2). Skirtas radijo kanalo pakeitimui, jei esamas kanalas yra labai apkrautas.
+    2. Moduliacijos pobūdis (“Off” – greita; “On” – lėta). “On” padėtis leidžia padidinti ryšio atstumą apie 2 kartus (priklauso nuo aplinkos sąlygų). Bet jei kokybiškas ryšys yra užtikrinamas naudojant “Off” padėtį, rekomenduojama ją ir naudoti. “On” padėtyje auga baterijos eikvojimas bei mažėja sistemos veikimo greitis.
+
+    **PASTABA:** PB-LORA ir RF-LORA įrenginiuose „SW“ jungiklio padėtys būtinai turi sutapti! Priešingu atveju radijo ryšys neveiks!
 
 ### Šviesinė veikimo indikacija
 
