@@ -124,11 +124,16 @@ Pranešimai saugos tarnybai
 
 1. Ryšio ir veikimo šviesinė indikacija
 2. Mygtukas
-3. Nenaudojamas
-4. Rezervinio maitinimo kontaktų kaladėlė
-5. Pagrindinio maitinimo kontaktų kaladėlė
-6. „RESET“ mygtukas
-7. Išorinių kontaktų kaladėlė
+3. Rezervinio maitinimo kontaktų kaladėlė
+4. Pagrindinio maitinimo kontaktų kaladėlė
+5. „RESET“ mygtukas
+6. Išorinių kontaktų kaladėlė
+7. „1-Wire“ kontaktų kaladėlė
+8. LAN jungtis
+9. Relinių išėjimų kontaktų kaladėlė
+10. SIM kortelių laikikliai
+11. GSM antenos jungtis
+12. USB Type-C jungtis
 
 
 ### Išorinių kontaktų paskirtis 

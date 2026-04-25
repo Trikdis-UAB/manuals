@@ -126,11 +126,16 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 1. Connectivity and operation indicator lights
 2. Button
-3. Not used
-4. Backup power supply terminal block
-5. Main power supply terminal block
-6. RESET button
-7. External terminal block
+3. Backup power supply terminal block
+4. Main power supply terminal block
+5. RESET button
+6. External terminal block
+7. 1-Wire terminal block
+8. LAN connector
+9. Relay output terminal block
+10. SIM card holders
+11. GSM antenna connector
+12. USB Type-C connector
 
 
 ### Purpose of terminals

@@ -121,13 +121,18 @@ Envía eventos al receptor en una CRA
 
 <img src="./image4.webp" alt="Elementos del comunicador FIRECOM" style="width: 100%; height: auto;" />
 
-1. Indicadores luminosos
+1. Indicadores luminosos de conexión y funcionamiento
 2. Botón
-3. No está activo
-4. Bloque de terminales de la fuente de alimentación de respaldo
-5. Bloque de terminales de la fuente de alimentación principal
-6. Botón “RESET”
-7. Terminales para conectar dispositivos externos
+3. Bloque de terminales de la fuente de alimentación de respaldo
+4. Bloque de terminales de la fuente de alimentación principal
+5. Botón “RESET”
+6. Terminales para conectar dispositivos externos
+7. Bloque de terminales 1-Wire
+8. Conector LAN
+9. Bloque de terminales de salidas de relé
+10. Ranuras para tarjetas SIM
+11. Conector de antena GSM
+12. Conector USB Type-C
 
 
 ### Propósito de los terminales 
