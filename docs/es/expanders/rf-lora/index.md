@@ -43,7 +43,19 @@ Conexión:
 
 <img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
-> **Nota:**
+1. Antena RF conector SMA.
+2. Indicadores de LED.
+3. Ranura de apertura de la tapa frontal.
+4. Terminales para cableado.
+5. El conector USB Mini-B es para actualizaciones de software.
+6. Interruptor DIP "SW".
+7. Botón "DJ1" para activar/desactivar el modo de emparejamiento de los módulos LORA.
+
+!!! note "Configuración del interruptor DIP \"SW\""
+    1. Radiofrecuencia ("OFF" - RF1; "ON" - RF2). Diseñado para cambiar el canal de radio si el canal actual está muy cargado.
+    2. Tipo de modulación (“OFF” – rápido; “ON” – lento). La posición "ON" le permite aumentar el rango de comunicación aproximadamente 2 veces (dependiendo de las condiciones ambientales). Pero si se asegura una buena conexión usando la posición “OFF”, entonces se recomienda usarla.
+
+    **NOTA:** ¡En RF-LORA y otros módulos LORA, las posiciones del interruptor "SW" deben coincidir! De lo contrario, la comunicación por radio no funcionará.
 
 ### Descripción del Bloque de Terminales 
 

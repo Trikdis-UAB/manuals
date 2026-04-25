@@ -40,7 +40,17 @@ Compatible with the [SP3](../../control-panels/sp3/index.md) security control pa
 
 <img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
-> **Note:** see the product label for the location of each element.
+1. Light indicator.
+2. Frontal case opening slot.
+3. Battery 3 V (CR123A).
+4. "TAMP" button for linking the device and checking the connection.
+5. DIP switch "SW".
+
+!!! note "DIP switch \"SW\" settings"
+    1. Radio frequency ("OFF" - RF1; "ON" - RF2). Intended for changing the radio channel if the current channel is heavily loaded.
+    2. Modulation type ("OFF" - fast; "ON" - slow). The "ON" position allows you to increase the communication distance by about 2 times (depending on the environmental conditions). But if a quality connection is ensured using the "Off" position, it is recommended to use it. In the "On" position, battery consumption increases and system performance decreases.
+
+    **NOTE:** In PB-LORA and RF-LORA devices, the positions of the "SW" switch must match! Otherwise, the radio communication will not work!
 
 ### LED indication of operation 
 
