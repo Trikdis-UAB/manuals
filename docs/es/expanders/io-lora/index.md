@@ -53,6 +53,14 @@ Entradas y salidas:
 
 <img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
+!!! note "Configuración del interruptor DIP 'SW1'"
+    Para la versión HW iO-LO_x30x_7_230418:
+
+    1. Frecuencia de radio (`OFF` - RF1; `ON` - RF2). Diseñado para cambiar el canal de radio si el canal actual está muy cargado.
+    2. Tipo de modulación (`OFF` - rápido; `ON` - lento). La posición `ON` permite aumentar la distancia de comunicación aproximadamente 2 veces (dependiendo de las condiciones ambientales). Pero si se garantiza una conexión de calidad usando la posición `OFF`, se recomienda usarla. En la posición `ON`, disminuye el rendimiento del sistema.
+
+    **NOTA:** ¡En los dispositivos iO-LORA y RF-LORA, las posiciones del interruptor `SW1` deben coincidir! De lo contrario, la comunicación por radio no funcionará.
+
 ### Descripción del Bloque de Terminales 
 
 | Terminal | Descripción |

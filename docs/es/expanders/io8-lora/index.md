@@ -46,9 +46,13 @@ Entradas y salidas:
 
 ### Elementos expansores 
 
-|  |
-|--|
-| Nota: |
+!!! note "Configuración del interruptor DIP 'SW2'"
+    Para la versión HW iO8_x5xx_7_230419:
+
+    1. Frecuencia de radio (`OFF` - RF1; `ON` - RF2). Diseñado para cambiar el canal de radio si el canal actual está muy cargado.
+    2. Tipo de modulación (`OFF` - rápido; `ON` - lento). La posición `ON` permite aumentar la distancia de comunicación aproximadamente 2 veces (dependiendo de las condiciones ambientales). Pero si se garantiza una conexión de calidad usando la posición `OFF`, se recomienda usarla. En la posición `ON`, disminuye el rendimiento del sistema.
+
+    **NOTA:** ¡En los dispositivos iO8-LORA y RF-LORA, las posiciones del interruptor `SW` deben coincidir! De lo contrario, la comunicación por radio no funcionará.
 
 ### Descripción del Bloque de Terminales 
 

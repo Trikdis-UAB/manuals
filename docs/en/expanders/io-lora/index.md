@@ -53,6 +53,14 @@ Connection:
 
 <img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
+!!! note "DIP switch 'SW1' settings"
+    For product HW iO-LO_x30x_7_230418 version:
+
+    1. Radio frequency (`OFF` - RF1; `ON` - RF2). Intended for changing the radio channel if the current channel is heavily loaded.
+    2. Modulation type (`OFF` - fast; `ON` - slow). The `ON` position allows you to increase the communication distance by about 2 times (depending on the environmental conditions). But if a quality connection is ensured using the `OFF` position, it is recommended to use it. In the `ON` position, system performance decreases.
+
+    **NOTE:** In iO-LORA and RF-LORA devices, the positions of the `SW1` switch must match! Otherwise, the radio communication will not work!
+
 ### Purpose of terminals 
 
 | Terminal        | Description                                               |

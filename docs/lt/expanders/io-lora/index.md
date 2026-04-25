@@ -53,6 +53,14 @@ Prijungimas:
 
 <img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
+!!! note "DIP jungiklio „SW1“ nustatymai"
+    Nuo HW iO-LO_x30x_7_230418 versijos:
+
+    1. Radijo dažnis (`OFF` - RF1; `ON` - RF2). Skirtas pakeisti radijo ryšio kanalą, jei esamas kanalas yra stipriai apkrautas.
+    2. Moduliacijos pobūdis (`Off` - greita; `On` - lėta). `On` padėtis leidžia padidinti komunikacijos atstumą apie 2 kartus (priklausomai nuo aplinkos sąlygų). Bet jei kokybiškas ryšys užtikrinamas naudojant `Off` padėtį, rekomenduojama ją ir naudoti. `On` padėtyje mažėja sistemos veikimo greitis.
+
+    **PASTABA:** iO-LORA ir RF-LORA įrenginiuose `SW1` jungiklio padėtys būtinai turi sutapti! Priešingu atveju radijo ryšys neveiks!
+
 ### Išorinių kontaktų paskirtis
 
 | Gnybtas | Aprašymas |
