@@ -37,6 +37,7 @@ Editor entry points (start here when editing):
 - Gate Controllers
   - [GATOR](en/gate-controllers/gator/index.md)
   - [GATOR WiFi](en/gate-controllers/gator-wifi/index.md)
+  - [GATOR LTE / GATOR WiFi with iO4R](en/gate-controllers/gator-io4r/index.md)
 - Receivers
   - IPcom
     - [Overview](en/receivers/ipcom/index.md)

@@ -138,6 +138,7 @@ plugins:
       - Gate Controllers:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md
+        - GATOR LTE / GATOR WiFi with iO4R: gate-controllers/gator-io4r/index.md
       - Keypads:
         - Keypad SK-LCD Button: keypads/sk-lcd-button/index.md
         - Keypad SK-LED Button: keypads/sk-led-button/index.md
