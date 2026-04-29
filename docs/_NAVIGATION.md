@@ -93,6 +93,7 @@ Editor entry points (start here when editing):
 - Valdikliai
   - [Gator](lt/gate-controllers/gator/index.md)
   - [Gator Wifi](lt/gate-controllers/gator-wifi/index.md)
+  - [GATOR LTE / GATOR WiFi su iO4R](lt/gate-controllers/gator-io4r/index.md)
 - Klaviatūros
   - [SK-LCD mygtukinė klaviatūra](lt/keypads/sk-lcd-button/index.md)
   - [SK-LED Button klaviatūra](lt/keypads/sk-led-button/index.md)
@@ -162,6 +163,7 @@ Editor entry points (start here when editing):
 - Controladores
   - [Gator](es/gate-controllers/gator/index.md)
   - [Gator Wifi](es/gate-controllers/gator-wifi/index.md)
+  - [GATOR LTE / GATOR WiFi con iO4R](es/gate-controllers/gator-io4r/index.md)
 - Teclados
   - [Teclado SK-LCD Button](es/keypads/sk-lcd-button/index.md)
   - [Teclado SK-LED Button](es/keypads/sk-led-button/index.md)
@@ -231,6 +233,7 @@ Editor entry points (start here when editing):
 - Контроллеры
   - [GATOR](ru/gate-controllers/gator/index.md)
   - [GATOR WiFi](ru/gate-controllers/gator-wifi/index.md)
+  - [GATOR LTE / GATOR WiFi с iO4R](ru/gate-controllers/gator-io4r/index.md)
 - Клавиатуры
   - [Клавиатура SK-LCD Button](ru/keypads/sk-lcd-button/index.md)
   - [Клавиатура SK-LED Button](ru/keypads/sk-led-button/index.md)

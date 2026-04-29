@@ -223,6 +223,7 @@ plugins:
       - Valdikliai:
         - Gator: gate-controllers/gator/index.md
         - Gator Wifi: gate-controllers/gator-wifi/index.md
+        - GATOR LTE / GATOR WiFi su iO4R: gate-controllers/gator-io4r/index.md
       - Klaviatūros:
         - SK-LCD mygtukinė klaviatūra: keypads/sk-lcd-button/index.md
         - SK-LED Button klaviatūra: keypads/sk-led-button/index.md
@@ -307,6 +308,7 @@ plugins:
       - Controladores:
         - Gator: gate-controllers/gator/index.md
         - Gator Wifi: gate-controllers/gator-wifi/index.md
+        - GATOR LTE / GATOR WiFi con iO4R: gate-controllers/gator-io4r/index.md
       - Teclados:
         - Teclado SK-LCD Button: keypads/sk-lcd-button/index.md
         - Teclado SK-LED Button: keypads/sk-led-button/index.md
@@ -391,6 +393,7 @@ plugins:
       - Контроллеры:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md
+        - GATOR LTE / GATOR WiFi с iO4R: gate-controllers/gator-io4r/index.md
       - Клавиатуры:
         - Клавиатура SK-LCD Button: keypads/sk-lcd-button/index.md
         - Клавиатура SK-LED Button: keypads/sk-led-button/index.md
