@@ -1,5 +1,9 @@
 # Configuración rápida de GATOR LTE y GATOR WiFi con iO4R
 
+<div style="text-align: center;">
+  <img src="./io4r-cover.webp" alt="Expansor iO4R" style="width: 100%; max-width: 420px;">
+</div>
+
 Pasos breves de cableado y programación en Protegus2 para conectar un expansor iO4R a un controlador de puerta GATOR LTE o GATOR WiFi. Use esta guía junto con los manuales completos de [GATOR](../gator/index.md) y [GATOR WiFi](../gator-wifi/index.md) para los demás ajustes de instalación y configuración.
 
 El iO4R se utiliza para la monitorización avanzada de puertas. Añade entradas Guard monitorizadas para sensores de seguridad de la puerta y permite una anulación temporal autorizada cuando se debe aislar un fallo del sensor hasta que se pueda realizar el servicio. Protegus2 también cuenta los ciclos completos de apertura y cierre de la puerta y avisa cuando corresponde el mantenimiento, ayudando a convertir llamadas no planificadas en visitas de servicio programadas y contratos de mantenimiento recurrentes.

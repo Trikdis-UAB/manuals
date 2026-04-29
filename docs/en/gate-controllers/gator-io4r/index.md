@@ -1,5 +1,9 @@
 # GATOR LTE and GATOR WiFi with iO4R quick setup
 
+<div style="text-align: center;">
+  <img src="./io4r-cover.webp" alt="iO4R expander" style="width: 100%; max-width: 420px;">
+</div>
+
 Short wiring and Protegus2 programming steps to connect an iO4R expander to a GATOR LTE or GATOR WiFi gate controller. Use this alongside the full [GATOR](../gator/index.md) and [GATOR WiFi](../gator-wifi/index.md) manuals for all other installation and configuration settings.
 
 The iO4R is used for advanced gate monitoring. It adds monitored guard inputs for gate safety sensors and allows an authorized temporary bypass when a sensor fault must be isolated until service can be performed. Protegus2 also counts full gate open/close cycles and alerts when maintenance is due, helping installers replace unplanned call-outs with scheduled service visits and recurring maintenance contracts.
