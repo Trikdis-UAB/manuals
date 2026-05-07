@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" role="img" aria-labelledby="title desc">
+  <title id="title">Generic TIP/RING and keyswitch wiring diagram</title>
+  <desc id="desc">TRIKDIS GT, GT+ or GET communicator connected to an alarm panel using power, TIP/RING dial capture, and an output wired to a keyswitch zone.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5c6f82" />
+    </marker>
+  </defs>
+  <rect width="1040" height="520" fill="#ffffff" />
+  <rect x="52" y="62" width="342" height="396" rx="18" fill="#f7f9fb" stroke="#c9d3dc" stroke-width="3" />
+  <rect x="646" y="62" width="342" height="396" rx="18" fill="#f7f9fb" stroke="#c9d3dc" stroke-width="3" />
+  <text x="223" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#25313b">GT / GT+ / GET</text>
+  <text x="223" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#536271">communicator</text>
+  <text x="817" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#25313b">Intrusion alarm panel</text>
+  <text x="817" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#536271">generic dialer connection</text>
+
+  <g font-family="Arial, sans-serif" font-size="19" fill="#25313b">
+    <rect x="110" y="180" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="224" y="209" text-anchor="middle">+12V / GND</text>
+    <rect x="110" y="246" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="224" y="275" text-anchor="middle">TIP / RING</text>
+    <rect x="110" y="312" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="224" y="341" text-anchor="middle">OUT / I/O (PGM)</text>
+    <rect x="110" y="378" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="224" y="407" text-anchor="middle">GND / COM</text>
+
+    <rect x="702" y="180" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="816" y="209" text-anchor="middle">AUX+ / AUX-</text>
+    <rect x="702" y="246" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="816" y="275" text-anchor="middle">TIP / RING</text>
+    <rect x="702" y="312" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="816" y="341" text-anchor="middle">Keyswitch zone</text>
+    <rect x="702" y="378" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
+    <text x="816" y="407" text-anchor="middle">Zone COM</text>
+  </g>
+
+  <g fill="none" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M 338 202 C 455 202, 570 202, 702 202" stroke="#d04437" />
+    <path d="M 338 268 C 455 268, 570 268, 702 268" stroke="#1f78b4" />
+    <path d="M 338 334 C 455 334, 570 334, 702 334" stroke="#2f855a" />
+    <path d="M 338 400 C 455 400, 570 400, 702 400" stroke="#5c6f82" stroke-dasharray="12 10" />
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="17" fill="#536271">
+    <text x="520" y="190" text-anchor="middle">Power</text>
+    <text x="520" y="256" text-anchor="middle">Contact ID dial capture</text>
+    <text x="520" y="322" text-anchor="middle">Remote arm/disarm command</text>
+    <text x="520" y="388" text-anchor="middle">Common reference if required</text>
+  </g>
+
+  <text x="520" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#536271">
+    Program the panel dialer and keyswitch zone according to the panel installation manual.
+  </text>
+</svg>

@@ -12,6 +12,7 @@ Editor entry points (start here when editing):
   - Cellular
     - GT/GT+/GET
       - Quick setup
+        - [Generic dial capture](en/alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md)
         - [Paradox SP(+)/MG(+)](en/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](en/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](en/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
@@ -68,6 +69,7 @@ Editor entry points (start here when editing):
   - Mobilaus ryšio
     - GT/GT+/GET
       - Greitas paruošimas
+        - [Universalus TIP/RING](lt/alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md)
         - [Paradox SP(+)/MG(+)](lt/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](lt/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](lt/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
@@ -138,6 +140,7 @@ Editor entry points (start here when editing):
   - Celular
     - GT/GT+/GET
       - Configuración rápida
+        - [Captura TIP/RING genérica](es/alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md)
         - [Paradox SP(+)/MG(+)](es/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](es/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](es/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)
@@ -208,6 +211,7 @@ Editor entry points (start here when editing):
   - GSM/GPRS
     - GT/GT+/GET
       - Быстрая настройка
+        - [Универсальный TIP/RING](ru/alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md)
         - [Paradox SP(+)/MG(+)](ru/alarm-communicators/cellular/quick-setup/paradox/index.md)
         - [DSC NEO HS2016](ru/alarm-communicators/cellular/quick-setup/dsc%20neo%20hs/GT+%20NEO%20HS2016%202026%2001%2007.md)
         - [DSC PC585](ru/alarm-communicators/cellular/quick-setup/dsc%20pc/GT+%20DSC%20PC585%202026%2001%2006.md)

@@ -11,6 +11,7 @@ DOCS = ROOT / "docs"
 GLOSSARY = json.loads((ROOT / "Scripts/quick_setup_glossary.json").read_text(encoding="utf-8"))
 
 GT_EN_FILES = [
+    "alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md",
     "alarm-communicators/cellular/quick-setup/paradox/index.md",
     "alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md",
     "alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md",
@@ -33,14 +34,14 @@ ETHERNET_E16_FILES = {
 ETHERNET_E16T_FILE = "alarm-communicators/ethernet/quick-setup/e16t/index.md"
 
 E16_IMAGES = {
-    "dsc-pc585": "dsc.png",
-    "paradox": "paradox.png",
-    "honeywell-vista": "honeywell.png",
-    "interlogix-nx-4v2-nx-6v2": "caddx.png",
-    "interlogix-nx-8v2": "caddx.png",
-    "texecom": "texecom.png",
-    "innerrange-inception": "innerrange-inception.png",
-    "innerrange-integriti": "innerrange-integriti.png",
+    "dsc-pc585": "dsc.webp",
+    "paradox": "paradox.webp",
+    "honeywell-vista": "honeywell.webp",
+    "interlogix-nx-4v2-nx-6v2": "caddx.webp",
+    "interlogix-nx-8v2": "caddx.webp",
+    "texecom": "texecom.webp",
+    "innerrange-inception": "innerrange-inception.webp",
+    "innerrange-integriti": "innerrange-integriti.webp",
 }
 
 LANG_RULES = {
@@ -143,7 +144,7 @@ def check_e16t(lang: str) -> None:
     forbid(content, "## Wiring", path)
     forbid(content, "## Panel programming", path)
     forbid(content, "## Quick configuration with *TrikdisConfig* software", path)
-    ensure(content, "../../../cellular/quick-setup/paradox/protegus-enter-imei.png", path)
+    ensure(content, "../../../cellular/quick-setup/paradox/protegus-enter-imei.webp", path)
     ensure(content, "Protegus", path)
     ensure(content, "MAC / Unique ID", path)
 

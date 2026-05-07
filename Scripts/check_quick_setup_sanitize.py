@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path("docs/en/alarm-communicators/cellular/quick-setup")
 TARGET_DIRS = [
+    ROOT / "generic-dial-capture",
     ROOT / "dsc neo hs",
     ROOT / "dsc pc",
     ROOT / "honeywell vista",
