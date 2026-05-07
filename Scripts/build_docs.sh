@@ -52,6 +52,11 @@ echo "Building docs for context='${CONTEXT_VALUE}' with PDFs='${TRIKDOCS_PDF_DOW
 
 "${PYTHON_BIN}" generate_homepage.py
 "${PYTHON_BIN}" -m mkdocs build --strict
+quick_setup_product_args=(--site-dir site)
+if [[ "${TRIKDOCS_PDF_DOWNLOADS}" == "1" ]]; then
+  quick_setup_product_args+=(--require-blocks)
+fi
+"${PYTHON_BIN}" Scripts/check_quick_setup_product_images.py "${quick_setup_product_args[@]}"
 npx -y pagefind --site site
 "${PYTHON_BIN}" Scripts/check_search_scopes.py --site-dir site
 node Scripts/check_pagefind_smoke.mjs --site site

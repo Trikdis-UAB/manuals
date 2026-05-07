@@ -65,7 +65,7 @@ docs/
   index.md                 # Landing page content
   manual/                  # Generated manuals live here (one folder per manual)
     index.md               # Manual content in Markdown (images in the same folder)
-    image*.png             # Referenced illustrations (relative links e.g. ./image1.png)
+    image*.webp            # Referenced illustrations (relative links e.g. ./image1.webp)
   stylesheets/base.user.css# Shared styling used by MkDocs and Typora
 ```
 All Markdown files live under `docs/`. MkDocs treats that directory as the site root when building.
@@ -74,7 +74,7 @@ All Markdown files live under `docs/`. MkDocs treats that directory as the site 
 Manuals originate from DOCX files and are converted with the companion project `knowledgebase-conversion-pipeline`. The conversion scripts handle:
 - extracting text/images into `docs/manuals/<manual-name>/`
 - normalising headings and callouts
-- ensuring image links use `./image.png` for safe relative paths
+- ensuring image links use safe relative paths such as `./image1.webp`
 
 Typical flow for a new or updated manual:
 1. From the pipeline project run `./convert-single.sh "docx manuals/<file>.docx"`.
@@ -201,7 +201,7 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 ## Manual PDF Downloads
 - Production builds emit `site/pdf-manifest.json` with `src_path`, `url`, and site-relative `output` for each eligible Markdown manual page.
 - Eligible pages get a language-aware “Download PDF” button injected immediately after the article `h1`. The button links to a sibling PDF file with a descriptive slug and downloads it using a human-readable `TRIKDIS ... .pdf` filename.
-- Quick-setup manuals also get a shared product-image block injected immediately after the PDF button: single-product images for `E16` / `E16T`, and a compact `GT` / `GT+` / `GET` family strip for cellular quick-setup pages.
+- Quick-setup manuals also get a shared WebP product-image block injected immediately after the PDF button: single-product images for `E16` / `E16T`, and a compact `GT` / `GT+` / `GET` family strip for cellular quick-setup pages.
 - PDF generation is handled by `Scripts/export_manual_pdfs.mjs`, which uses Playwright for the single-pass content export and `Scripts/stamp_manual_pdf.py` (`pikepdf`) to add the branded footer on all pages plus the running header from page 2 onward without reflowing the document.
 - The stamped header/footer uses vendored `Noto Sans` font files under `Scripts/fonts/` so the running title renders correctly for `en`, `lt`, `es`, and `ru`.
 - Any rendered `*/receivers/ipcom/**` route is excluded from v1 PDF generation.
@@ -212,7 +212,7 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 - The package includes its own README, fonts, and image assets, so it can be copied or referenced independently from the manuals pipeline.
 
 ## Troubleshooting
-- **Images missing**: ensure links look like `![](./image3.png)`; the conversion pipeline adds this automatically. MkDocs copies the files from `docs/manual/` into the published `manual/` folder.
+- **Images missing**: ensure links look like `![](./image3.webp)`; the conversion pipeline adds this automatically. MkDocs copies the files from `docs/manual/` into the published `manual/` folder.
 - **New manual not visible**: verify it is referenced in `mkdocs.yml` and that the Netlify deploy succeeded.
 - **Local build errors**: run `pipx run --spec mkdocs-material mkdocs build` to get strict error messages before pushing.
 - **Manual PDF missing**: run `CONTEXT=production Scripts/build_docs.sh` and inspect `site/pdf-manifest.json`, `Scripts/check_manual_pdfs.py`, and `Scripts/check_manual_pdf_ui.spec.cjs` failures.

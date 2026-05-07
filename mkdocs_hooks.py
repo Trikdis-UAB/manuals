@@ -518,7 +518,7 @@ def _build_quick_setup_product_block(page) -> str:
     language = _page_language(page)
 
     if content_path.startswith("alarm-communicators/ethernet/quick-setup/e16/"):
-        image_src = html.escape(f"/{language}/alarm-communicators/e16/image1.png", quote=True)
+        image_src = html.escape(f"/{language}/alarm-communicators/e16/image1.webp", quote=True)
         return (
             '<div class="trik-quick-setup-product trik-quick-setup-product--single" '
             'data-quick-setup-product="e16">'
@@ -527,7 +527,7 @@ def _build_quick_setup_product_block(page) -> str:
         )
 
     if content_path.startswith("alarm-communicators/ethernet/quick-setup/e16t/"):
-        image_src = html.escape(f"/{language}/alarm-communicators/e16t/image1.png", quote=True)
+        image_src = html.escape(f"/{language}/alarm-communicators/e16t/image1.webp", quote=True)
         return (
             '<div class="trik-quick-setup-product trik-quick-setup-product--single" '
             'data-quick-setup-product="e16t">'
@@ -537,9 +537,9 @@ def _build_quick_setup_product_block(page) -> str:
 
     if content_path.startswith("alarm-communicators/cellular/quick-setup/"):
         family_images = [
-            ("GT", f"/{language}/alarm-communicators/cellular/gt/image1.png"),
-            ("GT+", f"/{language}/alarm-communicators/cellular/gt-plus/image1.png"),
-            ("GET", f"/{language}/alarm-communicators/cellular/get/image1.png"),
+            ("GT", f"/{language}/alarm-communicators/cellular/gt/image1.webp"),
+            ("GT+", f"/{language}/alarm-communicators/cellular/gt-plus/image1.webp"),
+            ("GET", f"/{language}/alarm-communicators/cellular/get/image1.webp"),
         ]
         items_html = "".join(
             (
