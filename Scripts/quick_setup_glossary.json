@@ -26,7 +26,19 @@
     "save": "Save",
     "done": "Done",
     "finish": "Finish",
-    "transfer": "Transfer"
+    "transfer": "Transfer",
+    "generic_intrusion_panel": "Generic intrusion alarm panel",
+    "pstn_dialer": "PSTN landline dialer",
+    "dial_capture": "dial capture",
+    "keyswitch_zone": "keyswitch zone",
+    "remote_arm_disarm": "remote arm/disarm",
+    "account_id": "account ID",
+    "monitoring_station": "monitoring station",
+    "pulse": "Pulse",
+    "level": "Level",
+    "next": "Next",
+    "add_new_system": "Add new system",
+    "control_with_protegus2": "Control with Protegus2"
   },
   "lt": {
     "quick_setup_suffix_gt": "su GT/GT+/GET greitas paruošimas",
@@ -55,7 +67,19 @@
     "save": "Išsaugoti",
     "done": "Baigta",
     "finish": "Užbaigti",
-    "transfer": "Perduoti"
+    "transfer": "Perduoti",
+    "generic_intrusion_panel": "Universali apsaugos centralė",
+    "pstn_dialer": "PSTN telefoninis komunikatorius",
+    "dial_capture": "TIP/RING signalų priėmimas",
+    "keyswitch_zone": "jungiklio (keyswitch) zona",
+    "remote_arm_disarm": "nuotolinis įjungimas / išjungimas",
+    "account_id": "objekto numeris",
+    "monitoring_station": "stebėjimo pultas",
+    "pulse": "Impulsas",
+    "level": "Lygis",
+    "next": "Toliau",
+    "add_new_system": "Pridėti naują sistemą",
+    "control_with_protegus2": "Control with Protegus2"
   },
   "es": {
     "quick_setup_suffix_gt": "con GT/GT+/GET configuración rápida",
@@ -84,7 +108,19 @@
     "save": "Guardar",
     "done": "Hecho",
     "finish": "Finalizar",
-    "transfer": "Transferir"
+    "transfer": "Transferir",
+    "generic_intrusion_panel": "Panel de alarma genérico",
+    "pstn_dialer": "marcador telefónico PSTN",
+    "dial_capture": "captura TIP/RING",
+    "keyswitch_zone": "zona de interruptor de llave",
+    "remote_arm_disarm": "armado/desarmado remoto",
+    "account_id": "ID de cuenta",
+    "monitoring_station": "central receptora",
+    "pulse": "Pulso",
+    "level": "Nivel",
+    "next": "Siguiente",
+    "add_new_system": "Agregar nuevo sistema",
+    "control_with_protegus2": "Control with Protegus2"
   },
   "ru": {
     "quick_setup_suffix_gt": "с GT/GT+/GET быстрая настройка",
@@ -113,6 +149,18 @@
     "save": "Сохранить",
     "done": "Готово",
     "finish": "Завершить",
-    "transfer": "Передать"
+    "transfer": "Передать",
+    "generic_intrusion_panel": "Универсальная охранная панель",
+    "pstn_dialer": "телефонный коммуникатор PSTN",
+    "dial_capture": "прием сигналов TIP/RING",
+    "keyswitch_zone": "зона выключателя (keyswitch)",
+    "remote_arm_disarm": "удаленная постановка/снятие",
+    "account_id": "объектовый номер",
+    "monitoring_station": "ПЦН",
+    "pulse": "Импульс",
+    "level": "Сигнал",
+    "next": "Next",
+    "add_new_system": "Add new system",
+    "control_with_protegus2": "Control with Protegus2"
   }
 }

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 
@@ -10,6 +11,7 @@ REL_PAGE = "alarm-communicators/cellular/quick-setup/generic-dial-capture/index.
 LANGS = ("en", "lt", "es", "ru")
 SHARED_DIAGRAM = ROOT / "docs/images/quick-setup/generic-dial-capture.svg"
 NAV_PATH = "alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md"
+GLOSSARY = json.loads((ROOT / "Scripts/quick_setup_glossary.json").read_text(encoding="utf-8"))
 
 
 REQUIRED_EN = (
@@ -38,6 +40,21 @@ FORBIDDEN_PANEL_CODES = (
     "*42",
 )
 
+GENERIC_TERM_KEYS = (
+    "generic_intrusion_panel",
+    "pstn_dialer",
+    "dial_capture",
+    "keyswitch_zone",
+    "remote_arm_disarm",
+    "account_id",
+    "monitoring_station",
+    "pulse",
+    "level",
+    "next",
+    "add_new_system",
+    "control_with_protegus2",
+)
+
 
 def require(text: str, needle: str, path: Path) -> None:
     if needle not in text:
@@ -64,6 +81,9 @@ def check_page(lang: str) -> None:
     require(text, "Object ID", path)
     require(text, "Protegus2", path)
     require(text, "- [ ]", path)
+
+    for key in GENERIC_TERM_KEYS:
+        require(text, GLOSSARY[lang][key], path)
 
     if lang == "en":
         for needle in REQUIRED_EN:
