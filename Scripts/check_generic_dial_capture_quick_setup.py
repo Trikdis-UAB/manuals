@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -41,7 +42,7 @@ FORBIDDEN_PANEL_CODES = (
 )
 
 GENERIC_TERM_KEYS = (
-    "generic_intrusion_panel",
+    "generic_tipring_title",
     "pstn_dialer",
     "dial_capture",
     "keyswitch_zone",
@@ -53,6 +54,15 @@ GENERIC_TERM_KEYS = (
     "next",
     "add_new_system",
     "control_with_protegus2",
+)
+
+REQUIRED_DIAGRAM_TEXT = (
+    "Panel auxiliary power and Contact ID TIP/RING signals go to the communicator.",
+    "The communicator output controls a panel keyswitch zone.",
+    "panel AUX power to communicator",
+    "Contact ID from panel dialer to communicator",
+    "arm/disarm command to panel zone",
+    "common reference, if required",
 )
 
 
@@ -72,6 +82,10 @@ def check_page(lang: str) -> None:
         raise AssertionError(f"Missing page {path.relative_to(ROOT)}")
 
     text = path.read_text(encoding="utf-8")
+    first = text.splitlines()[0].strip() if text.splitlines() else ""
+    if first != f"# {GLOSSARY[lang]['generic_tipring_title']}":
+        raise AssertionError(f"Unexpected H1 in {path.relative_to(ROOT)}: {first!r}")
+
     require(text, "../../../../../images/quick-setup/generic-dial-capture.svg", path)
     require(text, "../dsc neo hs/GT+ neo hs2016 4 ENG 2026 01 02.webp", path)
     require(text, "../dsc neo hs/GT+ neo hs2016 14 ENG 2026 01 02.webp", path)
@@ -96,18 +110,27 @@ def main() -> int:
     if not SHARED_DIAGRAM.is_file():
         raise AssertionError(f"Missing shared diagram {SHARED_DIAGRAM.relative_to(ROOT)}")
 
+    ET.parse(SHARED_DIAGRAM)
+    diagram_text = SHARED_DIAGRAM.read_text(encoding="utf-8")
+    for needle in REQUIRED_DIAGRAM_TEXT:
+        require(diagram_text, needle, SHARED_DIAGRAM)
+
     for lang in LANGS:
         check_page(lang)
 
     mkdocs_text = (ROOT / "mkdocs.yml").read_text(encoding="utf-8")
     if mkdocs_text.count(NAV_PATH) != len(LANGS):
         raise AssertionError(f"Expected {NAV_PATH!r} once per locale in mkdocs.yml")
+    for lang in LANGS:
+        require(mkdocs_text, GLOSSARY[lang]["generic_tipring_nav"], ROOT / "mkdocs.yml")
     require(mkdocs_text, "pymdownx.tasklist", ROOT / "mkdocs.yml")
     require(mkdocs_text, "clickable_checkbox: true", ROOT / "mkdocs.yml")
 
     nav_text = (ROOT / "docs/_NAVIGATION.md").read_text(encoding="utf-8")
     if nav_text.count("generic-dial-capture/index.md") != len(LANGS):
         raise AssertionError("Expected generic-dial-capture links once per locale in docs/_NAVIGATION.md")
+    for lang in LANGS:
+        require(nav_text, GLOSSARY[lang]["generic_tipring_nav"], ROOT / "docs/_NAVIGATION.md")
 
     print("Generic dial-capture quick-setup page looks correct.")
     return 0

@@ -1,6 +1,6 @@
-# Universali apsaugos centralė su GT/GT+/GET greitas paruošimas
+# GT/GT+/GET universalus TIP/RING prijungimas prie apsaugos centralės
 
-Trumpi žingsniai, kaip prijungti GT/GT+/GET komunikatorių prie apsaugos centralės, kurios PSTN telefoninis komunikatorius perduoda Contact ID pranešimus DTMF tonais, priimti įvykius per `TIP` / `RING` ir valdyti nuotolinį įjungimą / išjungimą iš Protegus2 per centralės jungiklio (keyswitch) zoną. Naudokite kartu su pilnu komunikatoriaus vadovu ir apsaugos centralės programavimo vadovu.
+Naudokite šį vadovą, kai apsaugos centralė įvykius perduoda per PSTN telefoninį komunikatorių. GT/GT+/GET komunikatorius jungiamas prie centralės `TIP` / `RING` gnybtų, automatiškai priima Contact ID įvykius ir, jei reikia, gali nuotoliniu būdu įjungti / išjungti sistemą per Protegus2 valdomą jungiklio (keyswitch) zoną. Naudokite kartu su pilnu komunikatoriaus vadovu ir apsaugos centralės programavimo vadovu.
 
 !!! caution "Atsargiai"
     Montavimą ir aptarnavimą gali atlikti tik kvalifikuoti specialistai. Prieš jungdami laidus atjunkite maitinimą. Neautorizuoti pakeitimai panaikina garantiją.

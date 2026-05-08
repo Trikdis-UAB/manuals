@@ -1,54 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" role="img" aria-labelledby="title desc">
-  <title id="title">Generic TIP/RING and keyswitch wiring diagram</title>
-  <desc id="desc">TRIKDIS GT, GT+ or GET communicator connected to an alarm panel using power, TIP/RING dial capture, and an output wired to a keyswitch zone.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 590" role="img" aria-labelledby="title desc">
+  <title id="title">Generic TIP/RING connection and keyswitch control wiring diagram</title>
+  <desc id="desc">TRIKDIS GT, GT+ or GET communicator connected to a generic intrusion alarm panel. Panel auxiliary power and Contact ID TIP/RING signals go to the communicator. The communicator output controls a panel keyswitch zone. Zone common is shown as a reference connection.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5c6f82" />
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d82323" />
     </marker>
+    <marker id="arrow-black" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#242424" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1759d1" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f28c18" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#20a15a" />
+    </marker>
+    <style>
+      .panel { fill: #f7f9fb; stroke: #c9d3dc; stroke-width: 3; }
+      .term { fill: #ffffff; stroke: #d5dde5; stroke-width: 1.4; }
+      .title { font-family: Arial, sans-serif; font-size: 26px; font-weight: 700; fill: #25313b; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; fill: #536271; }
+      .label { font-family: Arial, sans-serif; font-size: 18px; fill: #25313b; }
+      .small { font-family: Arial, sans-serif; font-size: 15px; fill: #536271; }
+      .wire { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
   </defs>
-  <rect width="1040" height="520" fill="#ffffff" />
-  <rect x="52" y="62" width="342" height="396" rx="18" fill="#f7f9fb" stroke="#c9d3dc" stroke-width="3" />
-  <rect x="646" y="62" width="342" height="396" rx="18" fill="#f7f9fb" stroke="#c9d3dc" stroke-width="3" />
-  <text x="223" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#25313b">GT / GT+ / GET</text>
-  <text x="223" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#536271">communicator</text>
-  <text x="817" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#25313b">Intrusion alarm panel</text>
-  <text x="817" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#536271">generic dialer connection</text>
 
-  <g font-family="Arial, sans-serif" font-size="19" fill="#25313b">
-    <rect x="110" y="180" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="224" y="209" text-anchor="middle">+12V / GND</text>
-    <rect x="110" y="246" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="224" y="275" text-anchor="middle">TIP / RING</text>
-    <rect x="110" y="312" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="224" y="341" text-anchor="middle">OUT / I/O (PGM)</text>
-    <rect x="110" y="378" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="224" y="407" text-anchor="middle">GND / COM</text>
+  <rect width="1180" height="590" fill="#ffffff" />
 
-    <rect x="702" y="180" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="816" y="209" text-anchor="middle">AUX+ / AUX-</text>
-    <rect x="702" y="246" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="816" y="275" text-anchor="middle">TIP / RING</text>
-    <rect x="702" y="312" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="816" y="341" text-anchor="middle">Keyswitch zone</text>
-    <rect x="702" y="378" width="228" height="44" rx="8" fill="#ffffff" stroke="#d5dde5" />
-    <text x="816" y="407" text-anchor="middle">Zone COM</text>
+  <rect class="panel" x="62" y="64" width="372" height="500" rx="18" />
+  <rect class="panel" x="746" y="64" width="372" height="500" rx="18" />
+
+  <text class="title" x="248" y="108" text-anchor="middle">GT / GT+ / GET</text>
+  <text class="subtitle" x="248" y="139" text-anchor="middle">communicator</text>
+
+  <text class="title" x="932" y="108" text-anchor="middle">Intrusion alarm panel</text>
+  <text class="subtitle" x="932" y="139" text-anchor="middle">generic PSTN dialer</text>
+
+  <g class="label">
+    <rect class="term" x="118" y="188" width="260" height="38" rx="7" />
+    <text x="248" y="213" text-anchor="middle">+12V</text>
+    <rect class="term" x="118" y="238" width="260" height="38" rx="7" />
+    <text x="248" y="263" text-anchor="middle">GND</text>
+    <rect class="term" x="118" y="300" width="260" height="38" rx="7" />
+    <text x="248" y="325" text-anchor="middle">TIP</text>
+    <rect class="term" x="118" y="350" width="260" height="38" rx="7" />
+    <text x="248" y="375" text-anchor="middle">RING</text>
+    <rect class="term" x="118" y="424" width="260" height="38" rx="7" />
+    <text x="248" y="449" text-anchor="middle">OUT / I/O (PGM)</text>
+    <rect class="term" x="118" y="488" width="260" height="38" rx="7" />
+    <text x="248" y="513" text-anchor="middle">GND / COM</text>
+
+    <rect class="term" x="802" y="188" width="260" height="38" rx="7" />
+    <text x="932" y="213" text-anchor="middle">AUX+</text>
+    <rect class="term" x="802" y="238" width="260" height="38" rx="7" />
+    <text x="932" y="263" text-anchor="middle">AUX-</text>
+    <rect class="term" x="802" y="300" width="260" height="38" rx="7" />
+    <text x="932" y="325" text-anchor="middle">TIP</text>
+    <rect class="term" x="802" y="350" width="260" height="38" rx="7" />
+    <text x="932" y="375" text-anchor="middle">RING</text>
+    <rect class="term" x="802" y="424" width="260" height="38" rx="7" />
+    <text x="932" y="449" text-anchor="middle">Keyswitch zone</text>
+    <rect class="term" x="802" y="488" width="260" height="38" rx="7" />
+    <text x="932" y="513" text-anchor="middle">Zone COM</text>
   </g>
 
-  <g fill="none" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)">
-    <path d="M 338 202 C 455 202, 570 202, 702 202" stroke="#d04437" />
-    <path d="M 338 268 C 455 268, 570 268, 702 268" stroke="#1f78b4" />
-    <path d="M 338 334 C 455 334, 570 334, 702 334" stroke="#2f855a" />
-    <path d="M 338 400 C 455 400, 570 400, 702 400" stroke="#5c6f82" stroke-dasharray="12 10" />
+  <g class="wire">
+    <path d="M 802 207 H 650 C 595 207 595 207 540 207 H 378" stroke="#d82323" marker-end="url(#arrow-red)" />
+    <path d="M 802 257 H 650 C 595 257 595 257 540 257 H 378" stroke="#242424" marker-end="url(#arrow-black)" />
+    <path d="M 802 319 H 650 C 595 319 595 319 540 319 H 378" stroke="#1759d1" marker-end="url(#arrow-blue)" />
+    <path d="M 802 369 H 650 C 595 369 595 369 540 369 H 378" stroke="#f28c18" marker-end="url(#arrow-orange)" />
+    <path d="M 378 443 H 802" stroke="#20a15a" marker-end="url(#arrow-green)" />
+    <path d="M 378 507 H 802" stroke="#6d7782" stroke-dasharray="11 10" />
   </g>
 
-  <g font-family="Arial, sans-serif" font-size="17" fill="#536271">
-    <text x="520" y="190" text-anchor="middle">Power</text>
-    <text x="520" y="256" text-anchor="middle">Contact ID dial capture</text>
-    <text x="520" y="322" text-anchor="middle">Remote arm/disarm command</text>
-    <text x="520" y="388" text-anchor="middle">Common reference if required</text>
+  <g class="small">
+    <text x="590" y="194" text-anchor="middle">panel AUX power to communicator</text>
+    <text x="590" y="306" text-anchor="middle">Contact ID from panel dialer to communicator</text>
+    <text x="590" y="430" text-anchor="middle">arm/disarm command to panel zone</text>
+    <text x="590" y="494" text-anchor="middle">common reference, if required</text>
   </g>
 
-  <text x="520" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#536271">
-    Program the panel dialer and keyswitch zone according to the panel installation manual.
-  </text>
+  <g>
+    <rect x="716" y="456" width="54" height="82" rx="7" fill="#ffffff" stroke="#25313b" stroke-width="3" />
+    <path d="M 744 466 v12 m0 0 l-12 8 24 12 -24 12 24 12 -12 8 v8" fill="none" stroke="#25313b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text class="small" x="743" y="552" text-anchor="middle">EOL if required</text>
+  </g>
 </svg>

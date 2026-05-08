@@ -1,6 +1,6 @@
-# Generic intrusion alarm panel with GT/GT+/GET quick setup
+# GT/GT+/GET universal TIP/RING connection to an intrusion alarm panel
 
-Short steps to connect the GT/GT+/GET communicator to an intrusion alarm panel that reports through a PSTN landline dialer, capture Contact ID events through `TIP` / `RING`, and control arm/disarm from Protegus2 through a panel keyswitch zone. Use this alongside the full communicator manual and the alarm panel programming manual.
+Use this guide when an intrusion alarm panel reports events through its PSTN landline dialer. The GT/GT+/GET communicator connects to the panel `TIP` / `RING` terminals, automatically captures Contact ID events, and can optionally arm/disarm the system from Protegus2 through a panel keyswitch zone. Use this alongside the full communicator manual and the alarm panel programming manual.
 
 !!! caution
     Install and service only by qualified personnel. Disconnect power before wiring. Unauthorized changes void warranty.

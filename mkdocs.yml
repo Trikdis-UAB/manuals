@@ -100,7 +100,7 @@ plugins:
         - Cellular:
           - GT/GT+/GET:
             - Quick setup:
-              - Generic dial capture: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
+              - Universal TIP/RING connection: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
@@ -186,7 +186,7 @@ plugins:
         - Mobilaus ryšio:
           - GT/GT+/GET:
             - Greitas paruošimas:
-              - Universalus TIP/RING: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
+              - Universalus TIP/RING prijungimas: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
@@ -272,7 +272,7 @@ plugins:
         - Celular:
           - GT/GT+/GET:
             - Configuración rápida:
-              - Captura TIP/RING genérica: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
+              - Conexión TIP/RING universal: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
@@ -358,7 +358,7 @@ plugins:
         - GSM/GPRS:
           - GT/GT+/GET:
             - Быстрая настройка:
-              - Универсальный TIP/RING: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
+              - Универсальное подключение TIP/RING: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
               - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
               - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
               - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md

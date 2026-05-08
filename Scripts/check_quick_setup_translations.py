@@ -10,8 +10,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 GLOSSARY = json.loads((ROOT / "Scripts/quick_setup_glossary.json").read_text(encoding="utf-8"))
 
+GENERIC_GT_FILE = "alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md"
+
 GT_EN_FILES = [
-    "alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md",
+    GENERIC_GT_FILE,
     "alarm-communicators/cellular/quick-setup/paradox/index.md",
     "alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md",
     "alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md",
@@ -84,9 +86,13 @@ def check_gt(lang: str) -> None:
     for rel_path in GT_EN_FILES:
         path, content = read(rel_path, lang)
         title = first_line(content, path)
-        if "quick setup" in title.lower():
-            fail(f"Untranslated title in {path}")
-        ensure(title, glossary["quick_setup_suffix_gt"], path)
+        if rel_path == GENERIC_GT_FILE:
+            if title != f"# {glossary['generic_tipring_title']}":
+                fail(f"Unexpected generic TIP/RING title in {path}: {title}")
+        else:
+            if "quick setup" in title.lower():
+                fail(f"Untranslated title in {path}")
+            ensure(title, glossary["quick_setup_suffix_gt"], path)
         ensure(content, f"## {glossary['prerequisites']}", path)
         forbid(content, "## Prerequisites", path)
         forbid(content, "Short wiring and programming steps", path)

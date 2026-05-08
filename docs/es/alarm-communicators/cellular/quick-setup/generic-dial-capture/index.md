@@ -1,6 +1,6 @@
-# Panel de alarma genérico con GT/GT+/GET configuración rápida
+# Conexión TIP/RING universal de GT/GT+/GET a un panel de alarma
 
-Pasos breves para conectar el comunicador GT/GT+/GET a un panel de alarma que reporta mediante marcador telefónico PSTN, capturar eventos Contact ID por `TIP` / `RING` y controlar el armado/desarmado remoto desde Protegus2 mediante una zona de interruptor de llave del panel. Use esta guía junto con el manual completo del comunicador y el manual de programación del panel.
+Use esta guía cuando un panel de alarma reporte eventos mediante su marcador telefónico PSTN. El comunicador GT/GT+/GET se conecta a los terminales `TIP` / `RING` del panel, captura automáticamente los eventos Contact ID y, si se requiere, permite armado/desarmado remoto desde Protegus2 mediante una zona de interruptor de llave. Use esta guía junto con el manual completo del comunicador y el manual de programación del panel.
 
 !!! caution "Precaución"
     La instalación y el servicio deben ser realizados solo por personal cualificado. Desconecte la alimentación antes de cablear. Los cambios no autorizados anulan la garantía.
