@@ -7,6 +7,7 @@
   var TOKEN_EXPANSION_PAGE_THRESHOLD = 3;
   var LANGUAGE_SCOPE_MAX_SUBRESULTS_PER_PAGE = 4;
   var EXACT_MATCH_BONUS = 0.08;
+  var PENDING_RESULT_NAVIGATION_KEY = "__pagefindPendingResultNavigation";
   var VARIANT_WEIGHTS = {
     exact: 1.0,
     phrase: 0.93,
@@ -104,6 +105,7 @@
       keypads: "Keypads",
       cellular: "Cellular",
       "fire-panels": "For Fire Panels",
+      "quick-setup": "Quick Setup",
       ethernet: "Ethernet",
       radio: "Radio"
     },
@@ -115,6 +117,7 @@
       keypads: "Klaviatūros",
       cellular: "Mobilaus ryšio",
       "fire-panels": "Priešgaisrinėms centralėms",
+      "quick-setup": "Greitas diegimas",
       ethernet: "Ethernet",
       radio: "UHF radijo bangomis"
     },
@@ -126,6 +129,7 @@
       keypads: "Teclados",
       cellular: "Celular",
       "fire-panels": "Celular para Incendio",
+      "quick-setup": "Instalación rápida",
       ethernet: "Ethernet",
       radio: "Banda de radio UHF"
     },
@@ -137,6 +141,7 @@
       keypads: "Клавиатуры",
       cellular: "GSM/GPRS",
       "fire-panels": "Для противопожарной охранной панели",
+      "quick-setup": "Быстрая настройка",
       ethernet: "Ethernet",
       radio: "UHF модули"
     }
@@ -163,7 +168,8 @@
     "sk-lcd-touchpad": "SK-LCD TouchPad",
     "sk-led-touchpad": "SK-LED TouchPad",
     "flexi-sk-lcd": "FLEXi SK LCD",
-    "flexi-sk-led": "FLEXi SK LED"
+    "flexi-sk-led": "FLEXi SK LED",
+    "gt-family": "GT/GT+/GET"
   };
 
   function getConfigBase() {
@@ -339,6 +345,128 @@
     return String(value || "").replace(/¶/g, "").replace(/\s+/g, " ").trim();
   }
 
+  function normalizeStructuredQuery(value) {
+    return String(value || "")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]+/g, "");
+  }
+
+  function isStructuredAliasQuery(query) {
+    var raw = String(query || "").trim();
+    if (!raw) {
+      return false;
+    }
+    return /^[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)+$/.test(raw);
+  }
+
+  function parseSearchAliases(meta) {
+    if (!meta) {
+      return [];
+    }
+    var raw = meta.search_aliases || meta.searchAliases || meta["search_aliases"] || "";
+    if (Array.isArray(raw)) {
+      return raw.map(cleanTitle).filter(Boolean);
+    }
+    return String(raw)
+      .split(/\s*\|\s*/)
+      .map(cleanTitle)
+      .filter(Boolean);
+  }
+
+  function matchesStructuredAliasQuery(query, aliases) {
+    if (!isStructuredAliasQuery(query) || !aliases.length) {
+      return false;
+    }
+    var normalizedQuery = normalizeStructuredQuery(query);
+    if (!normalizedQuery) {
+      return false;
+    }
+
+    for (var index = 0; index < aliases.length; index += 1) {
+      var normalizedAlias = normalizeStructuredQuery(aliases[index]);
+      if (!normalizedAlias) {
+        continue;
+      }
+      if (
+        normalizedAlias === normalizedQuery ||
+        normalizedAlias.endsWith(normalizedQuery) ||
+        normalizedQuery.endsWith(normalizedAlias)
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function isAliasNoiseText(text, aliases) {
+    var plain = cleanTitle(stripHtml(text));
+    if (!plain) {
+      return false;
+    }
+
+    var matchedAliases = 0;
+    for (var index = 0; index < aliases.length; index += 1) {
+      var alias = cleanTitle(aliases[index]);
+      if (!alias || alias.length < 5) {
+        continue;
+      }
+      if (plain.indexOf(alias) !== -1) {
+        matchedAliases += 1;
+        if (matchedAliases >= 2) {
+          return true;
+        }
+      }
+    }
+
+    return /TX-[A-Z0-9_]+/i.test(plain) && /FLEXi SP3/i.test(plain);
+  }
+
+  function pickCleanExcerptText(candidates, aliases) {
+    if (!Array.isArray(candidates)) {
+      return "";
+    }
+
+    var fallback = "";
+    for (var index = 0; index < candidates.length; index += 1) {
+      var plain = cleanTitle(stripHtml(candidates[index]));
+      if (!plain) {
+        continue;
+      }
+      if (!fallback) {
+        fallback = plain;
+      }
+      if (!isAliasNoiseText(plain, aliases)) {
+        return plain;
+      }
+    }
+    return isAliasNoiseText(fallback, aliases) ? "" : fallback;
+  }
+
+  function findRepresentativePageExcerpt(data, pageTitle, aliases) {
+    var subResults = Array.isArray(data && data.sub_results) ? data.sub_results : [];
+    for (var index = 0; index < subResults.length; index += 1) {
+      var sub = subResults[index] || {};
+      var subTitle = cleanTitle(sub.title || "");
+      var excerpt = pickCleanExcerptText([sub.excerpt], aliases);
+      if (!excerpt) {
+        continue;
+      }
+      if (subTitle && subTitle !== pageTitle) {
+        return excerpt;
+      }
+    }
+
+    return pickCleanExcerptText([data && data.excerpt ? data.excerpt : ""], aliases);
+  }
+
+  function buildExcerptHtml(excerptText, query) {
+    var plain = cleanTitle(excerptText);
+    if (!plain) {
+      return "";
+    }
+    return highlightText(plain, query);
+  }
+
   function formatCount(template, count) {
     return String(template || "").replace("#", String(count));
   }
@@ -388,14 +516,29 @@
     if (token === "wifi") {
       return "WiFi";
     }
+    if (token === "lte") {
+      return "LTE";
+    }
     if (token.length <= 3 || /[0-9]/.test(token)) {
       return token.toUpperCase();
     }
     return token.charAt(0).toUpperCase() + token.slice(1);
   }
 
+  function decodePathSegment(segment) {
+    var raw = String(segment || "").trim();
+    if (!raw) {
+      return "";
+    }
+    try {
+      return decodeURIComponent(raw);
+    } catch (error) {
+      return raw;
+    }
+  }
+
   function humanizeSegment(segment, lang) {
-    var normalized = String(segment || "").trim().toLowerCase();
+    var normalized = decodePathSegment(segment).toLowerCase();
     if (!normalized) {
       return "";
     }
@@ -409,14 +552,39 @@
     }
 
     return normalized
-      .split("-")
+      .split(/[\s_-]+/)
       .filter(Boolean)
       .map(humanizeSegmentToken)
       .join(" ");
   }
 
+  function normalizeQuickSetupOriginSegments(segments) {
+    var quickSetupIndex = segments.indexOf("quick-setup");
+    if (quickSetupIndex === -1) {
+      return segments;
+    }
+
+    var trimmed = segments.slice(0, quickSetupIndex + 1);
+    var communicator = segments[quickSetupIndex + 1] || "";
+    if (communicator === "e16" || communicator === "e16t") {
+      trimmed.push(communicator);
+      return trimmed;
+    }
+    if (segments[1] === "cellular") {
+      trimmed.push("gt-family");
+      return trimmed;
+    }
+    return trimmed;
+  }
+
   function formatOriginFromManualScope(manualScope, lang) {
-    var segments = getScopeSegments(manualScope, lang);
+    var segments = normalizeQuickSetupOriginSegments(
+      getScopeSegments(manualScope, lang)
+        .map(function (segment) {
+          return decodePathSegment(segment).toLowerCase();
+        })
+        .filter(Boolean)
+    );
     if (!segments.length) {
       return "";
     }
@@ -926,6 +1094,215 @@
     }
   }
 
+  function readPendingResultNavigation() {
+    try {
+      var raw = window.sessionStorage.getItem(PENDING_RESULT_NAVIGATION_KEY);
+      if (!raw) {
+        return null;
+      }
+      var parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object") {
+        return null;
+      }
+      return parsed;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function clearPendingResultNavigation() {
+    try {
+      window.sessionStorage.removeItem(PENDING_RESULT_NAVIGATION_KEY);
+    } catch (error) {
+      // Ignore session storage failures.
+    }
+  }
+
+  function writePendingResultNavigation(parsedUrl) {
+    if (!parsedUrl || !parsedUrl.hash) {
+      clearPendingResultNavigation();
+      return;
+    }
+    try {
+      window.sessionStorage.setItem(
+        PENDING_RESULT_NAVIGATION_KEY,
+        JSON.stringify({
+          pathname: normalizeResultPath(parsedUrl.pathname),
+          search: parsedUrl.search || "",
+          hash: parsedUrl.hash || ""
+        })
+      );
+    } catch (error) {
+      // Ignore session storage failures.
+    }
+  }
+
+  function pendingResultMatchesCurrentDocument(pending) {
+    if (!pending) {
+      return false;
+    }
+    return (
+      normalizeResultPath(pending.pathname || "/") === normalizeResultPath(window.location.pathname || "/") &&
+      (pending.search || "") === (window.location.search || "")
+    );
+  }
+
+  function parseResultUrl(urlValue) {
+    var raw = String(urlValue || "").trim();
+    if (!raw) {
+      return null;
+    }
+    try {
+      return new URL(raw, window.location.origin);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function normalizeResultPath(pathname) {
+    var value = String(pathname || "/").trim();
+    if (!value.startsWith("/")) {
+      value = "/" + value;
+    }
+    return value.endsWith("/") ? value : value + "/";
+  }
+
+  function isSameDocumentResult(parsedUrl) {
+    if (!parsedUrl || parsedUrl.origin !== window.location.origin) {
+      return false;
+    }
+    return (
+      normalizeResultPath(parsedUrl.pathname) === normalizeResultPath(window.location.pathname || "/") &&
+      (parsedUrl.search || "") === (window.location.search || "")
+    );
+  }
+
+  function getSearchScrollOffset() {
+    var header = document.querySelector(".md-header");
+    var headerHeight = header ? header.getBoundingClientRect().height : 0;
+    return Math.max(0, Math.ceil(headerHeight + 12));
+  }
+
+  function scrollToResultHash(hashValue, behavior) {
+    var hash = String(hashValue || "");
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: behavior || "auto" });
+      return true;
+    }
+
+    var targetId = hash.charAt(0) === "#" ? hash.slice(1) : hash;
+    if (!targetId) {
+      return false;
+    }
+    try {
+      targetId = decodeURIComponent(targetId);
+    } catch (error) {
+      // Keep the original hash when decoding fails.
+    }
+
+    var target = document.getElementById(targetId);
+    if (!target) {
+      return false;
+    }
+
+    var top = window.scrollY + target.getBoundingClientRect().top - getSearchScrollOffset();
+    window.scrollTo({ top: Math.max(0, top), behavior: behavior || "auto" });
+    return true;
+  }
+
+  function scheduleHashScroll(hashValue, attempt, onComplete) {
+    if (scrollToResultHash(hashValue, "auto")) {
+      if (typeof onComplete === "function") {
+        onComplete(true);
+      }
+      return;
+    }
+    if ((attempt || 0) >= 8) {
+      if (typeof onComplete === "function") {
+        onComplete(false);
+      }
+      return;
+    }
+    requestAnimationFrame(function () {
+      scheduleHashScroll(hashValue, (attempt || 0) + 1, onComplete);
+    });
+  }
+
+  function stabilizeHashScroll(hashValue, onComplete) {
+    var delays = [0, 80, 180, 360];
+    var completionCalled = false;
+
+    delays.forEach(function (delay) {
+      window.setTimeout(function () {
+        scheduleHashScroll(hashValue, 0, function (success) {
+          if (success && !completionCalled && typeof onComplete === "function") {
+            completionCalled = true;
+            onComplete(true);
+          }
+        });
+      }, delay);
+    });
+  }
+
+  function applyPendingResultNavigation() {
+    var pending = readPendingResultNavigation();
+    if (!pending || !pendingResultMatchesCurrentDocument(pending) || !pending.hash) {
+      return;
+    }
+    stabilizeHashScroll(pending.hash, function () {
+      clearPendingResultNavigation();
+    });
+  }
+
+  function applyCurrentHashScrollOffset() {
+    if (!window.location.hash) {
+      return;
+    }
+    stabilizeHashScroll(window.location.hash);
+  }
+
+  function navigateToResult(urlValue) {
+    var parsedUrl = parseResultUrl(urlValue);
+    if (!parsedUrl) {
+      return;
+    }
+
+    if (isSameDocumentResult(parsedUrl)) {
+      state.searchToken += 1;
+      clearPendingResultNavigation();
+      closeSearchModal();
+
+      var nextUrl = parsedUrl.pathname + parsedUrl.search;
+      var currentUrl = window.location.pathname + window.location.search;
+      if (nextUrl !== currentUrl) {
+        window.history.pushState(null, "", nextUrl);
+      }
+
+      if (parsedUrl.hash && window.location.hash !== parsedUrl.hash) {
+        window.location.hash = parsedUrl.hash;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          if (!parsedUrl.hash) {
+            window.scrollTo({ top: 0, behavior: "auto" });
+            return;
+          }
+          stabilizeHashScroll(parsedUrl.hash, function (success) {
+            if (!success) {
+              window.location.assign(parsedUrl.toString());
+            }
+          });
+        });
+      });
+      return;
+    }
+
+    closeSearchModal();
+    writePendingResultNavigation(parsedUrl);
+    window.location.assign(parsedUrl.toString());
+  }
+
   function loadPagefind() {
     if (state.pagefindApi) {
       return Promise.resolve(state.pagefindApi);
@@ -994,6 +1371,13 @@
     title.textContent = entry.title;
     article.appendChild(title);
 
+    if (entry.manualTitle && cleanTitle(entry.manualTitle) !== cleanTitle(entry.title)) {
+      var manual = document.createElement("p");
+      manual.className = "md-search-result__manual";
+      manual.textContent = entry.manualTitle;
+      article.appendChild(manual);
+    }
+
     if (entry.originLabel) {
       var origin = document.createElement("p");
       origin.className = "md-search-result__origin";
@@ -1030,6 +1414,7 @@
     if (options && typeof options.maxSubResultsPerPage === "number" && options.maxSubResultsPerPage > 0) {
       maxSubResultsPerPage = options.maxSubResultsPerPage;
     }
+    var searchQuery = options && options.searchQuery ? options.searchQuery : query;
     var items = [];
     for (var index = 0; index < rawResults.length; index += 1) {
       if (items.length >= MAX_RESULTS) {
@@ -1044,10 +1429,30 @@
         var score = typeof raw.score === "number" ? raw.score : 1;
         var pageTitle = cleanTitle(data.meta && data.meta.title ? data.meta.title : data.url);
         var subResults = Array.isArray(data.sub_results) ? data.sub_results : [];
+        var searchAliases = parseSearchAliases(data.meta);
+        var structuredAliasMatch = matchesStructuredAliasQuery(searchQuery, searchAliases);
         var activeLang = state.scopes && state.scopes.lang ? state.scopes.lang : detectLanguage();
         var originManualScope = getManualScopeFromResultData(data, activeLang);
         var originPathSegments = getScopeSegments(originManualScope, activeLang);
         var originLabel = formatOriginFromManualScope(originManualScope, activeLang);
+        var pageKey = toResultPageKey(data.url);
+
+        if (structuredAliasMatch) {
+          items.push({
+            url: data.url,
+            title: cleanTitle(pageTitle || data.url),
+            manualTitle: cleanTitle(pageTitle || data.url),
+            excerptHtml: buildExcerptHtml(findRepresentativePageExcerpt(data, pageTitle, searchAliases), query),
+            score: score,
+            originLabel: originLabel,
+            originManualScope: originManualScope,
+            originPathSegments: originPathSegments.slice(),
+            aliasMatched: true,
+            aliasCollapsed: true,
+            pageKey: pageKey
+          });
+          continue;
+        }
 
         if (subResults.length) {
           var subresultCountForPage = 0;
@@ -1062,11 +1467,27 @@
             items.push({
               url: sub.url || data.url,
               title: cleanTitle(sub.title || pageTitle || data.url),
-              excerptHtml: highlightText(sub.excerpt || data.excerpt || "", query),
+              manualTitle: cleanTitle(pageTitle || data.url),
+              excerptHtml: buildExcerptHtml(
+                pickCleanExcerptText(
+                  [
+                    sub.excerpt,
+                    cleanTitle(sub.title || "") === pageTitle
+                      ? findRepresentativePageExcerpt(data, pageTitle, searchAliases)
+                      : "",
+                    data.excerpt
+                  ],
+                  searchAliases
+                ),
+                query
+              ),
               score: score,
               originLabel: originLabel,
               originManualScope: originManualScope,
-              originPathSegments: originPathSegments.slice()
+              originPathSegments: originPathSegments.slice(),
+              aliasMatched: false,
+              aliasCollapsed: false,
+              pageKey: pageKey
             });
             subresultCountForPage += 1;
           }
@@ -1076,11 +1497,15 @@
         items.push({
           url: data.url,
           title: cleanTitle(pageTitle || data.url),
-          excerptHtml: highlightText(data.excerpt || "", query),
+          manualTitle: cleanTitle(pageTitle || data.url),
+          excerptHtml: buildExcerptHtml(pickCleanExcerptText([data.excerpt], searchAliases), query),
           score: score,
           originLabel: originLabel,
           originManualScope: originManualScope,
-          originPathSegments: originPathSegments.slice()
+          originPathSegments: originPathSegments.slice(),
+          aliasMatched: false,
+          aliasCollapsed: false,
+          pageKey: pageKey
         });
       } catch (error) {
         // Skip malformed result entries but continue rendering valid ones.
@@ -1134,6 +1559,39 @@
           return orderDelta;
         }
         return (right.rawScore || 0) - (left.rawScore || 0);
+      })
+      .slice(0, MAX_RESULTS);
+  }
+
+  function filterStructuredAliasEntries(query, entries) {
+    if (!isStructuredAliasQuery(query)) {
+      return entries;
+    }
+
+    var aliasMatched = entries.filter(function (entry) {
+      return !!entry.aliasMatched;
+    });
+    if (!aliasMatched.length) {
+      return entries;
+    }
+
+    var byPage = new Map();
+    for (var index = 0; index < aliasMatched.length; index += 1) {
+      var entry = aliasMatched[index];
+      var pageKey = entry.pageKey || toResultPageKey(entry.url);
+      var existing = byPage.get(pageKey);
+      if (
+        !existing ||
+        (!!entry.aliasCollapsed && !existing.aliasCollapsed) ||
+        ((entry.effectiveScore || 0) > (existing.effectiveScore || 0) && !!entry.aliasCollapsed === !!existing.aliasCollapsed)
+      ) {
+        byPage.set(pageKey, entry);
+      }
+    }
+
+    return Array.from(byPage.values())
+      .sort(function (left, right) {
+        return (right.effectiveScore || 0) - (left.effectiveScore || 0);
       })
       .slice(0, MAX_RESULTS);
   }
@@ -1206,7 +1664,8 @@
       response && response.results ? response.results : [],
       highlightQuery,
       {
-        maxSubResultsPerPage: isLanguageScope ? LANGUAGE_SCOPE_MAX_SUBRESULTS_PER_PAGE : MAX_RESULTS
+        maxSubResultsPerPage: isLanguageScope ? LANGUAGE_SCOPE_MAX_SUBRESULTS_PER_PAGE : MAX_RESULTS,
+        searchQuery: query
       }
     );
     var entries = [];
@@ -1216,12 +1675,16 @@
       entries.push({
         url: item.url,
         title: item.title,
+        manualTitle: item.manualTitle || "",
         excerptHtml: item.excerptHtml,
         rawScore: item.score,
         score: item.score,
         originLabel: item.originLabel || "",
         originManualScope: item.originManualScope || "",
         originPathSegments: Array.isArray(item.originPathSegments) ? item.originPathSegments.slice() : [],
+        aliasMatched: !!item.aliasMatched,
+        aliasCollapsed: !!item.aliasCollapsed,
+        pageKey: item.pageKey || toResultPageKey(item.url),
         variantReason: variant.reason,
         variantWeight: variant.weight,
         variantQuery: variant.query,
@@ -1244,7 +1707,7 @@
     var expansionTermsInResults = [];
     if (!state.synonymsEnabled) {
       return {
-        entries: mergeAndRankResults(combined),
+        entries: filterStructuredAliasEntries(query, mergeAndRankResults(combined)),
         expansionTerms: expansionTermsInResults
       };
     }
@@ -1256,7 +1719,7 @@
 
     if (!variants.length) {
       return {
-        entries: mergeAndRankResults(combined),
+        entries: filterStructuredAliasEntries(query, mergeAndRankResults(combined)),
         expansionTerms: expansionTermsInResults
       };
     }
@@ -1269,7 +1732,7 @@
       combined = combined.concat(expandedBatches[index]);
     }
 
-    var ranked = mergeAndRankResults(combined);
+    var ranked = filterStructuredAliasEntries(query, mergeAndRankResults(combined));
     var seenTerms = new Set();
     for (var rankedIndex = 0; rankedIndex < ranked.length; rankedIndex += 1) {
       var rankedItem = ranked[rankedIndex];
@@ -1437,7 +1900,7 @@
         var firstLink = state.list ? state.list.querySelector("a.md-search-result__link") : null;
         if (firstLink) {
           event.preventDefault();
-          firstLink.click();
+          navigateToResult(firstLink.getAttribute("href"));
         }
       }
     });
@@ -1451,8 +1914,13 @@
 
     state.root.addEventListener("click", function (event) {
       var target = event.target;
-      if (target instanceof Element && target.closest("a.md-search-result__link")) {
-        closeSearchModal();
+      if (!(target instanceof Element)) {
+        return;
+      }
+      var resultLink = target.closest("a.md-search-result__link");
+      if (resultLink) {
+        event.preventDefault();
+        navigateToResult(resultLink.getAttribute("href"));
       }
     });
 
@@ -1524,10 +1992,25 @@
     updateListRole();
   }
 
-  document.addEventListener("DOMContentLoaded", applyPagefindModalSearch);
+  if (document && typeof document.addEventListener === "function") {
+    document.addEventListener("DOMContentLoaded", function () {
+      applyCurrentHashScrollOffset();
+      applyPendingResultNavigation();
+      applyPagefindModalSearch();
+    });
+  }
   if (typeof document$ !== "undefined" && document$.subscribe) {
     document$.subscribe(function () {
-      requestAnimationFrame(applyPagefindModalSearch);
+      requestAnimationFrame(function () {
+        applyCurrentHashScrollOffset();
+        applyPendingResultNavigation();
+        applyPagefindModalSearch();
+      });
+    });
+  }
+  if (window && typeof window.addEventListener === "function") {
+    window.addEventListener("hashchange", function () {
+      requestAnimationFrame(applyCurrentHashScrollOffset);
     });
   }
 

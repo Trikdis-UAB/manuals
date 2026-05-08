@@ -954,6 +954,14 @@ body[data-md-color-scheme="slate"] .ipcom-steps li::before {
   color: var(--md-default-fg-color--lighter);
 }
 
+.md-search-result__manual {
+  margin: 0.12rem 0 0.2rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--md-default-fg-color--light);
+}
+
 .md-search-result__origin {
   margin: 0.1rem 0 0.35rem;
   font-size: 0.7rem;
@@ -982,6 +990,10 @@ body[data-md-color-scheme="slate"] .md-search-result__teaser mark.md-search__ter
 
 body[data-md-color-scheme="slate"] .md-search-result__expanded-hint {
   color: var(--md-default-fg-color--light);
+}
+
+body[data-md-color-scheme="slate"] .md-search-result__manual {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 body[data-md-color-scheme="slate"] .md-search-result__origin {

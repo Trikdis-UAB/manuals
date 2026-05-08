@@ -10,6 +10,13 @@ function ensureArtifactsDir() {
 }
 
 async function ensureModalOpen(page) {
+  await page.evaluate(() => {
+    const consent = document.querySelector("[data-md-component='consent']");
+    if (consent) {
+      consent.remove();
+    }
+    document.querySelectorAll(".md-consent__overlay").forEach((node) => node.remove());
+  });
   const input = page.locator(".md-search input[name='query']");
   const toggle = page.locator("#__search");
   await expect(toggle).toHaveCount(1);
@@ -32,23 +39,35 @@ async function ensureModalOpen(page) {
 
 async function readSearchState(page) {
   return page.evaluate(() => {
+    const queryValue = document.querySelector(".md-search input[name='query']")?.value || "";
     const meta = document.querySelector(".md-search-result__meta")?.textContent?.trim() || "";
     const fallbackTitle = document.querySelector(".md-search-result__fallback-title")?.textContent?.trim() || "";
     const fallbackEmpty = document.querySelector(".md-search-result__fallback-empty")?.textContent?.trim() || "";
     const expandedHint = document.querySelector(".md-search-result__expanded-hint")?.textContent?.trim() || "";
-    const origins = Array.from(document.querySelectorAll(".md-search-result__origin"))
-      .map((node) => node.textContent?.trim() || "")
-      .filter((value) => value.length > 0);
     const firstTeaserHtml = document.querySelector(".md-search-result__teaser")?.innerHTML || "";
     const highlightCount = document.querySelectorAll(".md-search-result__teaser mark.md-search__term").length;
-    const links = Array.from(document.querySelectorAll(".md-search-result__list a.md-search-result__link"))
-      .map((link) => link.getAttribute("href"))
-      .filter((href) => typeof href === "string" && href.length > 0);
+    const entries = Array.from(document.querySelectorAll(".md-search-result__list a.md-search-result__link"))
+      .map((link) => ({
+        href: link.getAttribute("href") || "",
+        title: link.querySelector("h2")?.textContent?.trim() || "",
+        manual: link.querySelector(".md-search-result__manual")?.textContent?.trim() || "",
+        origin: link.querySelector(".md-search-result__origin")?.textContent?.trim() || "",
+        teaser: link.querySelector(".md-search-result__teaser")?.textContent?.trim() || "",
+      }))
+      .filter((entry) => entry.href.length > 0);
+    const links = entries.map((entry) => entry.href);
+    const titles = entries.map((entry) => entry.title).filter((value) => value.length > 0);
+    const manuals = entries.map((entry) => entry.manual).filter((value) => value.length > 0);
+    const origins = entries.map((entry) => entry.origin).filter((value) => value.length > 0);
     return {
       meta,
+      queryValue,
       fallbackTitle,
       fallbackEmpty,
       expandedHint,
+      entries,
+      titles,
+      manuals,
       origins,
       uniqueOriginCount: new Set(origins).size,
       firstTeaserHtml,
@@ -59,7 +78,17 @@ async function readSearchState(page) {
 }
 
 function stateSignature(state) {
-  return `${state.meta}||${state.fallbackTitle}||${state.fallbackEmpty}||${state.expandedHint}||${state.origins.join("||")}||${state.links.join("||")}`;
+  return [
+    state.queryValue,
+    state.meta,
+    state.fallbackTitle,
+    state.fallbackEmpty,
+    state.expandedHint,
+    state.titles.join("||"),
+    state.manuals.join("||"),
+    state.origins.join("||"),
+    state.links.join("||"),
+  ].join("||");
 }
 
 function isSettledState(state) {
@@ -74,12 +103,16 @@ function isSettledState(state) {
     meta.includes("inicijuojama") ||
     meta.includes("inicializando") ||
     meta.includes("инициализация");
-  return (
-    state.links.length > 0 ||
-    state.fallbackEmpty.length > 0 ||
-    state.fallbackTitle.length > 0 ||
-    (!!state.meta && !isPlaceholder && !isInitializing)
-  );
+  if (state.links.length > 0) {
+    return true;
+  }
+  if (state.fallbackEmpty.length > 0) {
+    return true;
+  }
+  if (state.fallbackTitle.length > 0) {
+    return false;
+  }
+  return !!state.meta && !isPlaceholder && !isInitializing;
 }
 
 async function waitForStateChange(page, previousState, timeoutMs = 5000) {
@@ -96,17 +129,61 @@ async function waitForStateChange(page, previousState, timeoutMs = 5000) {
   return readSearchState(page);
 }
 
-async function query(page, value) {
+async function query(page, value, timeoutMs = 5000) {
   await ensureModalOpen(page);
   const previousState = await readSearchState(page);
   const input = page.locator(".md-search input[name='query']");
   await input.fill("");
   await input.fill(value);
-  return waitForStateChange(page, previousState);
+  await page.waitForTimeout(300);
+  return waitForStateChange(page, previousState, timeoutMs);
 }
 
 function includesPath(links, prefix) {
   return links.some((href) => href.startsWith(prefix));
+}
+
+function resolveResultUrl(href) {
+  return new URL(href, `${BASE_URL}/`);
+}
+
+function findEntryIndex(entries, predicate) {
+  return entries.findIndex((entry) => {
+    try {
+      return predicate(entry, resolveResultUrl(entry.href));
+    } catch (error) {
+      return false;
+    }
+  });
+}
+
+async function expectHashTargetNearViewportTop(page, hash) {
+  await expect
+    .poll(
+      async () =>
+        page.evaluate((hashValue) => {
+          const raw = String(hashValue || "");
+          if (!raw) {
+            return false;
+          }
+          let targetId = raw.startsWith("#") ? raw.slice(1) : raw;
+          try {
+            targetId = decodeURIComponent(targetId);
+          } catch (error) {
+            // Keep the original id if decoding fails.
+          }
+          const target = document.getElementById(targetId);
+          if (!target) {
+            return false;
+          }
+          const rect = target.getBoundingClientRect();
+          const header = document.querySelector(".md-header");
+          const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+          return rect.top >= headerBottom - 8 && rect.top <= headerBottom + 180;
+        }, hash),
+      { timeout: 2500 },
+    )
+    .toBeTruthy();
 }
 
 test.describe("Pagefind modal scoped search", () => {
@@ -155,12 +232,14 @@ test.describe("Pagefind modal scoped search", () => {
 
     const homeSmsCommands = await query(page, "sms command list");
     expect(homeSmsCommands.links.length).toBeGreaterThan(0);
+    expect(homeSmsCommands.manuals.length).toBeGreaterThan(0);
     expect(homeSmsCommands.origins.length).toBe(homeSmsCommands.links.length);
     expect(homeSmsCommands.uniqueOriginCount).toBeGreaterThan(1);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "home-sms-origin-cross-manual.png"), fullPage: false });
 
     const homeControlViaText = await query(page, "control via text messages");
     expect(homeControlViaText.links.length).toBeGreaterThan(0);
+    expect(homeControlViaText.manuals.length).toBeGreaterThan(0);
     expect(homeControlViaText.origins.length).toBe(homeControlViaText.links.length);
     expect(homeControlViaText.uniqueOriginCount).toBeGreaterThan(1);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "home-control-via-text-origin-cross-manual.png"), fullPage: false });
@@ -176,13 +255,18 @@ test.describe("Pagefind modal scoped search", () => {
     const ipcom = await query(page, "sqlport");
     expect(ipcom.links.length).toBeGreaterThan(0);
     expect(ipcom.links.every((href) => href.startsWith("/en/receivers/ipcom/"))).toBeTruthy();
+    expect(ipcom.manuals.length).toBeGreaterThan(0);
     expect(ipcom.origins.length).toBe(ipcom.links.length);
     expect(ipcom.origins[0]).toContain("Receivers");
     expect(ipcom.origins[0]).toContain("IPcom");
     expect(ipcom.fallbackTitle).toBe("");
-    const expectedTopResult = new URL(ipcom.links[0], BASE_URL).pathname;
+    const expectedTopResult = resolveResultUrl(ipcom.links[0]);
     await page.locator(".md-search input[name='query']").press("Enter");
-    await page.waitForFunction((expected) => window.location.pathname === expected, expectedTopResult);
+    await page.waitForFunction(
+      ({ pathname, hash }) => window.location.pathname === pathname && window.location.hash === hash,
+      { pathname: expectedTopResult.pathname, hash: expectedTopResult.hash },
+    );
+    await expectHashTargetNearViewportTop(page, expectedTopResult.hash);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "ipcom-enter-navigation.png"), fullPage: false });
 
     await page.goto(`${BASE_URL}/en/control-panels/sp3/`, { waitUntil: "domcontentloaded" });
@@ -192,6 +276,7 @@ test.describe("Pagefind modal scoped search", () => {
     expect(sp3G16.links.length).toBeGreaterThan(0);
     expect(sp3G16.links.every((href) => href.startsWith("/en/"))).toBeTruthy();
     expect(includesPath(sp3G16.links, "/en/alarm-communicators/cellular/g16/")).toBeTruthy();
+    expect(sp3G16.manuals.length).toBeGreaterThan(0);
     expect(sp3G16.origins.length).toBe(sp3G16.links.length);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "sp3-g16-language-results.png"), fullPage: false });
 
@@ -264,6 +349,7 @@ test.describe("Pagefind modal scoped search", () => {
     expect(pagefindStatuses.some((status) => status >= 200 && status < 300)).toBeTruthy();
     expect(requestUrls.some((url) => url.includes("/search/search_index.json"))).toBeFalsy();
     expect(mobileState.links.every((href) => href.startsWith("/es/"))).toBeTruthy();
+    expect(mobileState.manuals.length).toBeGreaterThan(0);
     expect(mobileState.origins.length).toBe(mobileState.links.length);
     expect(consoleErrors).toEqual([]);
 
@@ -285,6 +371,7 @@ test.describe("Pagefind modal scoped search", () => {
     const stableOn = await query(page, "sms command list");
     expect(stableOn.links.length).toBeGreaterThan(0);
     expect(stableOn.links[0]).toBe(stableOff.links[0]);
+    expect(stableOn.manuals.length).toBeGreaterThan(0);
     expect(stableOn.origins.length).toBe(stableOn.links.length);
     expect(stableOn.uniqueOriginCount).toBeGreaterThan(1);
     expect(stableOn.expandedHint).toBe("");
@@ -298,11 +385,137 @@ test.describe("Pagefind modal scoped search", () => {
     expect(paraphrase.links.every((href) => href.startsWith("/en/"))).toBeTruthy();
     expect(paraphrase.expandedHint).toContain("Expanded with synonyms:");
     expect(paraphrase.expandedHint).toMatch(/sms/i);
+    expect(paraphrase.manuals.length).toBeGreaterThan(0);
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "synonyms-en-paraphrase.png"), fullPage: false });
 
     const exactOnly = await query(page, "sqlport");
     expect(exactOnly.links.length).toBeGreaterThan(0);
     expect(exactOnly.expandedHint).toBe("");
     await page.screenshot({ path: path.join(ARTIFACT_DIR, "synonyms-en-exact-no-hint.png"), fullPage: false });
+  });
+
+  test("same-page mobile result navigation lands on the matched SP3 section", async ({ browser, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    const context = await browser.newContext({
+      ...devices["Galaxy S9+"],
+    });
+    const page = await context.newPage();
+
+    await page.goto(`${BASE_URL}/en/control-panels/sp3/`, { waitUntil: "domcontentloaded" });
+    const state = await query(page, "firmware versions");
+    const targetIndex = findEntryIndex(
+      state.entries,
+      (entry, url) => url.pathname === "/en/control-panels/sp3/" && !!url.hash,
+    );
+    expect(targetIndex).toBeGreaterThanOrEqual(0);
+
+    const targetUrl = resolveResultUrl(state.entries[targetIndex].href);
+    await page.locator(".md-search-result__link").nth(targetIndex).click();
+    await page.waitForFunction(
+      ({ pathname, hash }) => window.location.pathname === pathname && window.location.hash === hash,
+      { pathname: targetUrl.pathname, hash: targetUrl.hash },
+    );
+    await expectHashTargetNearViewportTop(page, targetUrl.hash);
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "mobile-sp3-same-page-anchor.png"), fullPage: false });
+
+    await context.close();
+  });
+
+  test("cross-page deep links keep the hash target visible", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: "domcontentloaded" });
+    const state = await query(page, "sqlport");
+    const targetIndex = findEntryIndex(
+      state.entries,
+      (entry, url) => url.pathname.startsWith("/en/receivers/ipcom/") && !!url.hash,
+    );
+    expect(targetIndex).toBeGreaterThanOrEqual(0);
+
+    const targetUrl = resolveResultUrl(state.entries[targetIndex].href);
+    await page.locator(".md-search-result__link").nth(targetIndex).click();
+    await page.waitForFunction(
+      ({ pathname, hash }) => window.location.pathname === pathname && window.location.hash === hash,
+      { pathname: targetUrl.pathname, hash: targetUrl.hash },
+    );
+    await expectHashTargetNearViewportTop(page, targetUrl.hash);
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "cross-page-anchor-navigation.png"), fullPage: false });
+  });
+
+  test("SP3 SKU aliases resolve to the single SP3 manual", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: "domcontentloaded" });
+    await ensureModalOpen(page);
+
+    for (const queryValue of ["TX-SP3_3E", "TX-SP3_200", "TX-SP3_44E", "TX-SP3_24E", "SP3_44E"]) {
+      const state = await query(page, queryValue, 10000);
+      expect(includesPath(state.links, "/en/control-panels/sp3/")).toBeTruthy();
+      const sp3Entries = state.entries.filter((entry) => resolveResultUrl(entry.href).pathname === "/en/control-panels/sp3/");
+      expect(sp3Entries.length).toBeGreaterThan(0);
+      expect(state.entries.every((entry) => resolveResultUrl(entry.href).pathname === "/en/control-panels/sp3/")).toBeTruthy();
+      expect(sp3Entries.some((entry) => entry.manual.includes("FLEXi") || entry.title.includes("FLEXi"))).toBeTruthy();
+      expect(sp3Entries.some((entry) => entry.origin === "Control Panels > SP3")).toBeTruthy();
+      expect(sp3Entries.every((entry) => !/TX-SP3_3E|TX-SP3_200|TX-SP3_24E|TX-SP3_44E/.test(entry.teaser))).toBeTruthy();
+    }
+
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "sp3-sku-discoverability.png"), fullPage: false });
+  });
+
+  test("Ethernet quick setup queries return panel-specific E16 manuals", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: "domcontentloaded" });
+    await ensureModalOpen(page);
+
+    const paradox = await query(page, "paradox e16");
+    expect(includesPath(paradox.links, "/en/alarm-communicators/ethernet/quick-setup/e16/paradox/")).toBeTruthy();
+    expect(
+      paradox.entries.some(
+        (entry) =>
+          resolveResultUrl(entry.href).pathname === "/en/alarm-communicators/ethernet/quick-setup/e16/paradox/" &&
+          /quick setup/i.test(entry.manual),
+      ),
+    ).toBeTruthy();
+
+    const honeywell = await query(page, "honeywell e16");
+    expect(includesPath(honeywell.links, "/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/")).toBeTruthy();
+    expect(
+      honeywell.entries.some(
+        (entry) =>
+          resolveResultUrl(entry.href).pathname === "/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/" &&
+          /Honeywell Vista/i.test(entry.manual),
+      ),
+    ).toBeTruthy();
+
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "ethernet-quick-setup-discoverability.png"), fullPage: false });
+  });
+
+  test("result cards show readable section, manual, and origin labels", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    ensureArtifactsDir();
+
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: "domcontentloaded" });
+    const state = await query(page, "object id paradox e16");
+
+    expect(state.entries.length).toBeGreaterThan(0);
+    const firstQuickSetup = state.entries.find(
+      (entry) =>
+        resolveResultUrl(entry.href).pathname === "/en/alarm-communicators/ethernet/quick-setup/e16/paradox/" &&
+        entry.manual.length > 0,
+    );
+    expect(firstQuickSetup).toBeTruthy();
+    expect(firstQuickSetup.title.length).toBeGreaterThan(0);
+    expect(firstQuickSetup.manual).toContain("quick setup");
+    expect(firstQuickSetup.origin).toBe("Communicators > Ethernet > Quick Setup > E16");
+    expect(firstQuickSetup.manual).not.toContain("%");
+    expect(firstQuickSetup.origin).not.toContain("%");
+
+    await page.screenshot({ path: path.join(ARTIFACT_DIR, "result-identity-labels.png"), fullPage: false });
   });
 });

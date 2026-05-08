@@ -48,6 +48,32 @@ PDF_ACTION_RE = re.compile(
     r'(<div class="trik-pdf-download" data-manual-pdf-download>.*?</div>)',
     re.IGNORECASE | re.DOTALL,
 )
+PAGEFIND_SEARCH_CONTEXT_RE = re.compile(
+    r'(<div class="trik-pagefind-search-context" data-pagefind-search-context="true".*?</div>)',
+    re.IGNORECASE | re.DOTALL,
+)
+ETHERNET_QUICK_SETUP_RE = re.compile(
+    r"^alarm-communicators/ethernet/quick-setup/(?P<communicator>e16t?)(?:/(?P<leaf>[^/]+))?/index\.md$",
+    re.IGNORECASE,
+)
+PAGEFIND_SEARCH_CONTEXT_STYLE = (
+    "position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;white-space:normal;"
+)
+PAGEFIND_SEARCH_CONTEXT_WEIGHT = "8"
+SP3_VARIANT_ALIASES = (
+    "TX-SP3_3E",
+    "TX-SP3_200",
+    "TX-SP3_44E",
+    "TX-SP3_24E",
+    "SP3_3E",
+    "SP3_200",
+    "SP3_44E",
+    "SP3_24E",
+    "FLEXi SP3 Ethernet",
+    "FLEXi SP3 WiFi",
+    "FLEXi SP3 Ethernet 4G LTE",
+    "FLEXi SP3 WiFi 4G LTE",
+)
 _PDF_MANIFEST_ENTRIES: List[Dict[str, str]] = []
 _PDF_MANIFEST_KEYS: Set[Tuple[str, str]] = set()
 
@@ -513,6 +539,128 @@ def _quick_setup_content_path(page) -> str:
     return src_path
 
 
+def _normalize_search_term(value: str) -> str:
+    return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def _dedupe_search_terms(values: Iterable[str]) -> List[str]:
+    terms: List[str] = []
+    seen: Set[str] = set()
+    for value in values:
+        normalized = _normalize_search_term(value)
+        if not normalized:
+            continue
+        key = normalized.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        terms.append(normalized)
+    return terms
+
+
+def _humanize_search_slug(value: str) -> str:
+    tokens = [token for token in re.split(r"[-_\s]+", str(value or "").strip()) if token]
+    labels: List[str] = []
+    for token in tokens:
+        lowered = token.lower()
+        if lowered == "wifi":
+            labels.append("WiFi")
+            continue
+        if lowered == "lte":
+            labels.append("LTE")
+            continue
+        if token.isupper() or any(character.isdigit() for character in token) or len(token) <= 3:
+            labels.append(token.upper())
+            continue
+        labels.append(token.capitalize())
+    return " ".join(labels)
+
+
+def _quick_setup_panel_title(document_title: str, communicator: str) -> str:
+    normalized_title = _normalize_search_term(document_title)
+    if not normalized_title:
+        return ""
+    pattern = re.compile(
+        rf"^(?P<label>.+?)\s+with\s+{re.escape(communicator.upper())}\s+quick setup$",
+        re.IGNORECASE,
+    )
+    match = pattern.match(normalized_title)
+    if not match:
+        return ""
+    return _normalize_search_term(match.group("label"))
+
+
+def _build_sp3_search_context_terms(content_path: str, document_title: str) -> List[str]:
+    if content_path != "control-panels/sp3/index.md":
+        return []
+    return _dedupe_search_terms([document_title, "FLEXi SP3", *SP3_VARIANT_ALIASES])
+
+
+def _build_ethernet_quick_setup_search_context_terms(content_path: str, document_title: str) -> List[str]:
+    match = ETHERNET_QUICK_SETUP_RE.match(content_path)
+    if not match:
+        return []
+
+    communicator = (match.group("communicator") or "").upper()
+    leaf = match.group("leaf") or ""
+    panel_label = _humanize_search_slug(leaf)
+    panel_title = _quick_setup_panel_title(document_title, communicator)
+
+    aliases: List[str] = [
+        document_title,
+        communicator,
+        f"{communicator} communicator",
+        f"{communicator} quick setup",
+        f"Ethernet communicator {communicator}",
+        f"Ethernet {communicator} quick setup",
+    ]
+
+    panel_candidates = _dedupe_search_terms([panel_title, panel_label])
+    for panel_candidate in panel_candidates:
+        aliases.extend(
+            [
+                panel_candidate,
+                f"{panel_candidate} {communicator}",
+                f"{communicator} {panel_candidate}",
+                f"{panel_candidate} {communicator} quick setup",
+                f"{communicator} quick setup {panel_candidate}",
+            ]
+        )
+
+    return _dedupe_search_terms(aliases)
+
+
+def _build_pagefind_search_context_terms(page, document_title: str) -> List[str]:
+    content_path = _quick_setup_content_path(page)
+    sp3_terms = _build_sp3_search_context_terms(content_path, document_title)
+    if sp3_terms:
+        return sp3_terms
+
+    ethernet_terms = _build_ethernet_quick_setup_search_context_terms(content_path, document_title)
+    if ethernet_terms:
+        return ethernet_terms
+
+    return []
+
+
+def _build_pagefind_search_context_block(page, document_title: str) -> str:
+    terms = _build_pagefind_search_context_terms(page, document_title)
+    if not terms:
+        return ""
+
+    items_html = "".join(f"<p>{html.escape(term)}</p>" for term in terms)
+    aliases_attr = html.escape(" | ".join(terms), quote=True)
+    return (
+        '<div class="trik-pagefind-search-context" data-pagefind-search-context="true" '
+        f'data-pagefind-meta="search_aliases[data-search-aliases], search_context_kind:manual-aliases" '
+        f'data-search-aliases="{aliases_attr}" '
+        f'aria-hidden="true" data-pagefind-weight="{PAGEFIND_SEARCH_CONTEXT_WEIGHT}" '
+        f'style="{PAGEFIND_SEARCH_CONTEXT_STYLE}">'
+        f"{items_html}"
+        "</div>"
+    )
+
+
 def _build_quick_setup_product_block(page) -> str:
     content_path = _quick_setup_content_path(page)
     language = _page_language(page)
@@ -574,6 +722,19 @@ def _inject_quick_setup_product_block(html_content: str, block_html: str) -> str
     return block_html + html_content
 
 
+def _inject_pagefind_search_context_block(html_content: str, block_html: str) -> str:
+    if not block_html or PAGEFIND_SEARCH_CONTEXT_RE.search(html_content):
+        return html_content
+
+    if PDF_ACTION_RE.search(html_content):
+        return PDF_ACTION_RE.sub(lambda match: f"{match.group(1)}{block_html}", html_content, count=1)
+
+    if H1_RE.search(html_content):
+        return H1_RE.sub(lambda match: f"{match.group(0)}{block_html}", html_content, count=1)
+
+    return block_html + html_content
+
+
 def _build_pdf_manifest_entry(page, document_title: str = "") -> Dict[str, str]:
     dest_path = PurePosixPath(page.file.dest_path)
     output_filename = _pdf_output_filename(page, document_title)
@@ -615,8 +776,9 @@ def on_page_content(html_content: str, page, config, files):
     if scopes and "pagefind-scope-marker" not in html_content:
         html_content += _build_scope_marker(scopes)
 
+    document_title = _pdf_document_title(page, html_content)
+
     if _is_pdf_eligible(page, config):
-        document_title = _pdf_document_title(page, html_content)
         # Only register in the generation manifest when there is no bundled original PDF.
         if _pdf_downloads_enabled() and not _page_original_pdf(page):
             _register_pdf_manifest_entry(page, document_title)
@@ -628,6 +790,11 @@ def on_page_content(html_content: str, page, config, files):
             html_content,
             _build_quick_setup_product_block(page),
         )
+
+    html_content = _inject_pagefind_search_context_block(
+        html_content,
+        _build_pagefind_search_context_block(page, document_title),
+    )
 
     return _inject_crisp_config(html_content, config)
 
