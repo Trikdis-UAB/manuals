@@ -373,6 +373,17 @@
       .filter(Boolean);
   }
 
+  function getSearchContextKind(meta) {
+    if (!meta) {
+      return "";
+    }
+    return cleanTitle(meta.search_context_kind || meta.searchContextKind || meta["search_context_kind"] || "").toLowerCase();
+  }
+
+  function isManualAliasSearchContext(meta) {
+    return getSearchContextKind(meta) === "manual-aliases";
+  }
+
   function matchesStructuredAliasQuery(query, aliases) {
     if (!isStructuredAliasQuery(query) || !aliases.length) {
       return false;
@@ -447,13 +458,14 @@
     for (var index = 0; index < subResults.length; index += 1) {
       var sub = subResults[index] || {};
       var subTitle = cleanTitle(sub.title || "");
+      if (!subTitle || subTitle === pageTitle) {
+        continue;
+      }
       var excerpt = pickCleanExcerptText([sub.excerpt], aliases);
       if (!excerpt) {
         continue;
       }
-      if (subTitle && subTitle !== pageTitle) {
-        return excerpt;
-      }
+      return excerpt;
     }
 
     return pickCleanExcerptText([data && data.excerpt ? data.excerpt : ""], aliases);
@@ -1430,6 +1442,7 @@
         var pageTitle = cleanTitle(data.meta && data.meta.title ? data.meta.title : data.url);
         var subResults = Array.isArray(data.sub_results) ? data.sub_results : [];
         var searchAliases = parseSearchAliases(data.meta);
+        var manualAliasContext = isManualAliasSearchContext(data.meta);
         var structuredAliasMatch = matchesStructuredAliasQuery(searchQuery, searchAliases);
         var activeLang = state.scopes && state.scopes.lang ? state.scopes.lang : detectLanguage();
         var originManualScope = getManualScopeFromResultData(data, activeLang);
@@ -1464,21 +1477,21 @@
               break;
             }
             var sub = subResults[subIndex] || {};
+            var subTitle = cleanTitle(sub.title || pageTitle || data.url);
+            var isPageHeadingSubresult = subTitle === pageTitle;
+            var excerptCandidates = manualAliasContext && isPageHeadingSubresult
+              ? [findRepresentativePageExcerpt(data, pageTitle, searchAliases), data.excerpt]
+              : [
+                  sub.excerpt,
+                  isPageHeadingSubresult ? findRepresentativePageExcerpt(data, pageTitle, searchAliases) : "",
+                  data.excerpt
+                ];
             items.push({
               url: sub.url || data.url,
-              title: cleanTitle(sub.title || pageTitle || data.url),
+              title: subTitle,
               manualTitle: cleanTitle(pageTitle || data.url),
               excerptHtml: buildExcerptHtml(
-                pickCleanExcerptText(
-                  [
-                    sub.excerpt,
-                    cleanTitle(sub.title || "") === pageTitle
-                      ? findRepresentativePageExcerpt(data, pageTitle, searchAliases)
-                      : "",
-                    data.excerpt
-                  ],
-                  searchAliases
-                ),
+                pickCleanExcerptText(excerptCandidates, searchAliases),
                 query
               ),
               score: score,
@@ -1498,7 +1511,12 @@
           url: data.url,
           title: cleanTitle(pageTitle || data.url),
           manualTitle: cleanTitle(pageTitle || data.url),
-          excerptHtml: buildExcerptHtml(pickCleanExcerptText([data.excerpt], searchAliases), query),
+          excerptHtml: buildExcerptHtml(
+            manualAliasContext
+              ? findRepresentativePageExcerpt(data, pageTitle, searchAliases)
+              : pickCleanExcerptText([data.excerpt], searchAliases),
+            query
+          ),
           score: score,
           originLabel: originLabel,
           originManualScope: originManualScope,

@@ -475,6 +475,14 @@ test.describe("Pagefind modal scoped search", () => {
 
     const paradox = await query(page, "paradox e16");
     expect(includesPath(paradox.links, "/en/alarm-communicators/ethernet/quick-setup/e16/paradox/")).toBeTruthy();
+    const paradoxPageEntry = paradox.entries.find(
+      (entry) =>
+        resolveResultUrl(entry.href).pathname === "/en/alarm-communicators/ethernet/quick-setup/e16/paradox/" &&
+        entry.title.includes("Paradox SP(+)/MG(+) with E16 quick setup"),
+    );
+    expect(paradoxPageEntry).toBeTruthy();
+    expect(paradoxPageEntry.teaser).toMatch(/USB Mini-B|keypad access|TrikdisConfig/i);
+    expect(paradoxPageEntry.teaser).not.toMatch(/Ethernet communicator E16|E16 quick setup\\.[\\s\\S]*Paradox E16/i);
     expect(
       paradox.entries.some(
         (entry) =>
@@ -485,6 +493,14 @@ test.describe("Pagefind modal scoped search", () => {
 
     const honeywell = await query(page, "honeywell e16");
     expect(includesPath(honeywell.links, "/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/")).toBeTruthy();
+    const honeywellPageEntry = honeywell.entries.find(
+      (entry) =>
+        resolveResultUrl(entry.href).pathname === "/en/alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/" &&
+        entry.title.includes("Honeywell Vista with E16 quick setup"),
+    );
+    expect(honeywellPageEntry).toBeTruthy();
+    expect(honeywellPageEntry.teaser).toMatch(/USB Mini-B|keypad access|TrikdisConfig/i);
+    expect(honeywellPageEntry.teaser).not.toMatch(/Ethernet communicator E16|E16 quick setup\\.[\\s\\S]*Honeywell Vista E16/i);
     expect(
       honeywell.entries.some(
         (entry) =>
