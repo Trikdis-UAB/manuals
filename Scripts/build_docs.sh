@@ -102,7 +102,36 @@ if [[ "${TRIKDOCS_PDF_DOWNLOADS}" == "1" ]]; then
     exit 1
   }
   npx playwright install chromium
-  node Scripts/export_manual_pdfs.mjs --site site --manifest site/pdf-manifest.json
+
+  _PDF_ACTIVE_MANIFEST="site/pdf-manifest.json"
+
+  if [[ -n "${NETLIFY_CACHE_DIR:-}" ]]; then
+    _PDF_CACHE="${NETLIFY_CACHE_DIR}/pdf-cache"
+    mkdir -p "${_PDF_CACHE}"
+    "${PYTHON_BIN}" Scripts/pdf_cache.py restore \
+      --site site \
+      --manifest site/pdf-manifest.json \
+      --cache-dir "${_PDF_CACHE}" \
+      --pending site/pdf-manifest-pending.json
+    _PDF_ACTIVE_MANIFEST="site/pdf-manifest-pending.json"
+  fi
+
+  _PDF_PENDING=$("${PYTHON_BIN}" -c \
+    "import json; print(len(json.load(open('${_PDF_ACTIVE_MANIFEST}'))))" 2>/dev/null || echo "0")
+
+  if [[ "${_PDF_PENDING}" -gt 0 ]]; then
+    echo "Generating ${_PDF_PENDING} PDF(s)..."
+    node Scripts/export_manual_pdfs.mjs --site site --manifest "${_PDF_ACTIVE_MANIFEST}"
+    if [[ -n "${NETLIFY_CACHE_DIR:-}" ]]; then
+      "${PYTHON_BIN}" Scripts/pdf_cache.py save \
+        --site site \
+        --manifest "${_PDF_ACTIVE_MANIFEST}" \
+        --cache-dir "${_PDF_CACHE}"
+    fi
+  else
+    echo "All PDFs up-to-date — skipping PDF generation."
+  fi
+
   "${PYTHON_BIN}" Scripts/check_manual_pdfs.py --site site --manifest site/pdf-manifest.json
   Scripts/check_manual_pdf_site.sh 8012 site
 fi
