@@ -1130,3 +1130,90 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
     display: none !important;
   }
 }
+
+/* =====================================================
+   Tab method selector — pill-style segmented control
+   ===================================================== */
+/* Tab method selector — pill-style segmented control */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 4px;
+  padding: 4px;
+  background: #ebebeb;
+  border-radius: 999px;
+  border: 1px solid #d6d6d6;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar {
+  display: none;
+}
+
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label {
+  flex: 1;
+  text-align: center;
+  border-bottom: none !important;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #555 !important;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+/* Kill Material's ::after underline indicator */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label::after {
+  display: none !important;
+}
+
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #222 !important;
+}
+
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label.tabbed-label--active {
+  background: #fff;
+  color: #1f1f1f !important;
+  border-bottom: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+}
+
+/* Dark mode */
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels {
+  background: var(--trik-surface-3);
+  border-color: var(--trik-border);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label {
+  color: var(--trik-text-muted) !important;
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--trik-text) !important;
+}
+
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label.tabbed-label--active {
+  background: var(--trik-surface-1);
+  color: var(--trik-text) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* =====================================================
+   Mobile app screenshots — constrain width on desktop
+   ===================================================== */
+.md-typeset img.trik-mob-img {
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0.75rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
