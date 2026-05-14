@@ -42,10 +42,44 @@ fi
 
 export TRIKDOCS_PYTHON_BIN="${PYTHON_BIN}"
 
+# On Netlify: wire pip and Playwright into the persistent cache directory.
+# NETLIFY_CACHE_DIR survives across builds; nothing else in the build VM does.
+if [[ -n "${NETLIFY_CACHE_DIR:-}" ]]; then
+  export PIP_CACHE_DIR="${NETLIFY_CACHE_DIR}/pip"
+  export PLAYWRIGHT_BROWSERS_PATH="${NETLIFY_CACHE_DIR}/playwright-browsers"
+  echo "Netlify cache dir: ${NETLIFY_CACHE_DIR}"
+fi
+
 if [[ "${TRIKDOCS_INSTALL_DEPS:-0}" == "1" ]]; then
   "${PYTHON_BIN}" -m pip install --upgrade pip
   "${PYTHON_BIN}" -m pip install -r requirements.txt
-  npm ci
+
+  # Cache node_modules between Netlify builds keyed on package-lock.json hash.
+  # Falls back to plain npm ci when not on Netlify or cache is stale.
+  _NM_RESTORED=0
+  if [[ -n "${NETLIFY_CACHE_DIR:-}" ]]; then
+    _NM_CACHE="${NETLIFY_CACHE_DIR}/node_modules_cache"
+    _LOCK_HASH=$("${PYTHON_BIN}" -c \
+      "import hashlib; print(hashlib.md5(open('package-lock.json','rb').read()).hexdigest()[:16])" \
+      2>/dev/null || echo "none")
+    _CACHED_HASH=$(cat "${_NM_CACHE}/.lock_hash" 2>/dev/null || echo "")
+    if [[ "${_LOCK_HASH}" == "${_CACHED_HASH}" && -d "${_NM_CACHE}/node_modules" ]]; then
+      echo "Restoring node_modules from Netlify cache (lock hash: ${_LOCK_HASH})..."
+      cp -a "${_NM_CACHE}/node_modules" node_modules
+      _NM_RESTORED=1
+    fi
+  fi
+
+  if [[ "${_NM_RESTORED}" == "0" ]]; then
+    npm ci
+    if [[ -n "${NETLIFY_CACHE_DIR:-}" ]]; then
+      echo "Saving node_modules to Netlify cache..."
+      rm -rf "${_NM_CACHE}"
+      mkdir -p "${_NM_CACHE}"
+      cp -a node_modules "${_NM_CACHE}/node_modules"
+      echo "${_LOCK_HASH}" > "${_NM_CACHE}/.lock_hash"
+    fi
+  fi
 fi
 
 echo "Building docs for context='${CONTEXT_VALUE}' with PDFs='${TRIKDOCS_PDF_DOWNLOADS}'."

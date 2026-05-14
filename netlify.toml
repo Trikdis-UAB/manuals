@@ -16,6 +16,7 @@ TRIKDOCS_INSTALL_DEPS = "1"
 
 [context.production.environment]
 TRIKDOCS_PDF_DOWNLOADS = "1"
+TRIKDOCS_PDF_CONCURRENCY = "4"
 
 [context.deploy-preview.environment]
 TRIKDOCS_PDF_DOWNLOADS = "0"
