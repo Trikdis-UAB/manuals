@@ -1134,7 +1134,6 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
 /* =====================================================
    Tab method selector — pill-style segmented control
    ===================================================== */
-/* Tab method selector — pill-style segmented control */
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels {
   display: flex;
   flex-wrap: nowrap;
@@ -1145,11 +1144,18 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   background: #ebebeb;
   border-radius: 999px;
   border: 1px solid #d6d6d6;
+  box-shadow: none;
   margin-bottom: 1.5rem;
 }
 
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar {
   display: none;
+}
+
+/* Kill Material's JS-driven sliding indicator (::before on the labels container) */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels::before {
+  display: none !important;
+  content: none !important;
 }
 
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label {
@@ -1161,34 +1167,43 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   font-size: 0.82rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #555 !important;
+  color: #666 !important;
   cursor: pointer;
   background: transparent;
   transition: background 0.15s, color 0.15s, box-shadow 0.15s;
   white-space: nowrap;
 }
 
-/* Kill Material's ::after underline indicator */
-.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label::after {
+/* Kill label ::after as well (belt and braces) */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label::after,
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label::before {
   display: none !important;
+  content: none !important;
 }
 
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label:hover {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.65);
   color: #222 !important;
 }
 
+/* Active label — via input:checked sibling (Material uses this, not a JS-added class) */
+.md-typeset .tabbed-set.tabbed-alternate > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
+.md-typeset .tabbed-set.tabbed-alternate > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
+.md-typeset .tabbed-set.tabbed-alternate > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
+.md-typeset .tabbed-set.tabbed-alternate > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4),
+.md-typeset .tabbed-set.tabbed-alternate > input:nth-child(5):checked ~ .tabbed-labels > label:nth-child(5),
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label.tabbed-label--active {
-  background: #fff;
-  color: #1f1f1f !important;
+  background: #fff !important;
+  color: #1a1a1a !important;
   border-bottom: none !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark mode */
 body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels {
   background: var(--trik-surface-3);
   border-color: var(--trik-border);
+  box-shadow: none;
 }
 
 body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label {
@@ -1200,10 +1215,29 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
   color: var(--trik-text) !important;
 }
 
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4),
+body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(5):checked ~ .tabbed-labels > label:nth-child(5),
 body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label.tabbed-label--active {
-  background: var(--trik-surface-1);
+  background: var(--trik-surface-1) !important;
   color: var(--trik-text) !important;
+  border-bottom: none !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide Material's scroll arrow controls — incompatible with pill design */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-control {
+  display: none !important;
+}
+
+/* Responsive: shrink label text/padding on narrow screens so all 3 fit */
+@media (max-width: 600px) {
+  .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label {
+    font-size: 0.74rem;
+    padding: 0.4rem 0.65rem;
+  }
 }
 
 /* =====================================================
