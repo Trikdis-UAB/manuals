@@ -1232,11 +1232,18 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
   display: none !important;
 }
 
-/* Responsive: shrink label text/padding on narrow screens so all 3 fit */
+/* Mobile: prevent Material JS from scrolling the pill (clip, not auto/hidden),
+   and shrink labels so all 3 fit in ~360px without any overflow */
 @media (max-width: 600px) {
+  .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels {
+    overflow-x: clip !important;
+  }
   .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label {
-    font-size: 0.74rem;
-    padding: 0.4rem 0.65rem;
+    font-size: 0.72rem;
+    padding: 0.42rem 0.4rem;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
