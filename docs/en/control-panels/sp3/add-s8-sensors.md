@@ -1,5 +1,7 @@
 # Adding S8/S9 wireless sensors to FLEXi SP3
 
+![FLEXi SP3 control panel, RF-S8 transceiver and S8 sensors paired via Protegus](./sp3-s8-hero.jpg){ .trik-hero-img }
+
 Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, sirens, remote controls) with the FLEXi SP3 control panel. Choose your configuration method.
 
 > [!IMPORTANT]

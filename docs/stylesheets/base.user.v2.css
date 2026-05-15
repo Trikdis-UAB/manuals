@@ -1246,6 +1246,17 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
 }
 
 /* =====================================================
+   Hero / banner image — full content width, tight margins
+   ===================================================== */
+.md-typeset img.trik-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 1.25rem;
+  border-radius: 8px;
+}
+
+/* =====================================================
    Mobile app screenshots — constrain width on desktop
    ===================================================== */
 .md-typeset img.trik-mob-img {
