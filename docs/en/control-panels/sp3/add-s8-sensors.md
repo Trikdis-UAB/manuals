@@ -19,90 +19,129 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
 
     Open [web.protegus.app](https://web.protegus.app) in a desktop browser. The SP3 system must already be added to your account.
 
-    1. Select the SP3 system from the left panel, then click **Devices** in the system menu. Click the **+** button in the top-right corner of the Devices panel.
+    1. Select the SP3 system from the left panel, then click **Devices** in the system menu.
 
-        ![Protegus web app — system settings menu with Devices selected; empty Devices panel with Add button](./web-01-devices-menu.png)
+        ![Protegus web app — SP3 kit selected in left panel; Devices menu item highlighted](./web-01-sp3-devices.png)
 
-    2. The **Add wireless sensor** panel opens with all supported sensor types.
+    2. Click the **+** button to add a new wireless sensor.
 
-        ![Protegus web app — Add wireless sensor panel listing available sensor categories: PIR detectors, vibration detector, magnets, smoke detector](./web-02-add-sensor-categories.png)
+        ![Protegus web app — Devices page with + button highlighted in bottom-right corner](./web-02-add-sensor-btn.png)
 
-    3. Click the sensor type you want to pair (e.g. **Smart Door/Window sensor**).
+    3. The **Add wireless sensor** panel opens with all supported sensor types. Click the sensor type you want to pair (e.g. **Smart PET PIR detector**).
 
-        The app switches to **Learning** mode and shows the sensor with a diagram indicating the learn button location.
+        ![Protegus web app — Add wireless sensor panel with Smart PET PIR detector highlighted](./web-03-sensor-categories.png)
 
-        ![Protegus web app — pairing mode active for Smart Door/Window sensor; diagram shows learn button location with pairing instruction](./web-03-learning-door-sensor.png)
+    4. The app switches to **Learning** mode and shows the sensor with a diagram indicating the learn button location.
 
-    4. On the physical sensor, **press and hold the learn button** until the green indicator stays lit for 2 seconds (hold for approximately 4–5 seconds).
+        **Press and hold the learn button** until the green indicator stays lit for 2 seconds (approximately 4–5 seconds).
 
-        When the panel detects the sensor, a confirmation appears:
+        ![Protegus web app — pairing mode active for Smart PET PIR detector; red arrow highlights the learn button location](./web-04-learning-mode.png)
 
-        ![Protegus web app — Smart Door/Window sensor successfully detected; serial number 3633866376 confirmed](./web-04-door-sensor-found.png)
+    5. When the panel detects the sensor, a confirmation appears with its serial number. Click **OK**.
 
-    5. Click **OK**. The sensor appears in the list with a **NEW** badge.
+        ![Protegus web app — Smart PET PIR detector successfully detected; serial number confirmed; OK button highlighted](./web-05-sensor-found.png)
 
-        ![Protegus web app — paired Smart Door/Window sensor in list with NEW badge; + button to add more](./web-05-sensor-in-list.png)
+    6. The sensor appears in the list with a **NEW** badge. To add another sensor, click **+** and repeat steps 3–5. When all sensors are paired, click **Next**.
 
-    6. To add another sensor, click **+** and repeat steps 3–5. Each sensor type shows its own diagram — for example, the Smart Curtain PIR detector shows the internal board with an arrow to the learn button:
+        ![Protegus web app — paired sensor in list with NEW badge; Next button highlighted](./web-06-sensor-in-list.png)
 
-        ![Protegus web app — pairing mode for Smart Curtain PIR detector; red arrow highlights the learn button on the circuit board](./web-06-learning-curtain-pir.png)
+    7. A success dialog confirms the pairing. Click **Close**.
 
-        ![Protegus web app — Smart Curtain PIR detector successfully detected; serial number 1957335796 confirmed](./web-07-curtain-pir-found.png)
+        ![Protegus web app — "Wireless devices added successfully" dialog; Close button highlighted](./web-07-success.png)
 
-    7. When all sensors are paired, click **Next**. A success dialog confirms the pairing.
+    **Configure zone settings:**
 
-        ![Protegus web app — pairing success dialog: 'Wireless devices added successfully' with both paired sensors in the list](./web-08-pairing-complete.png)
+    8. In the **Devices** list, click a paired sensor to open its settings. Click **Zone settings** to expand the section.
 
-    8. Click **Close**.
+        ![Protegus web app — sensor detail page; Zone settings section highlighted](./web-08-zone-settings.png)
 
-    **Next:** Go to **Zones** in the system menu to rename zones and set zone types (Instant, Delay, etc.).
+    9. Set the **Definition** (e.g. Instant) and **Type** (e.g. NO) for the zone.
+
+        ![Protegus web app — Zone settings expanded showing Definition and Type fields highlighted](./web-09-zone-def-type.png)
+
+    **Verify zone status:**
+
+    10. From the home screen, click the **Area 1** tile.
+
+        ![Protegus web app — home screen with Area 1 tile highlighted](./web-10-zone-status1.png)
+
+    11. Click **Zone statuses**.
+
+        ![Protegus web app — Area 1 panel with Zone statuses button highlighted](./web-11-zone-status2.png)
+
+    12. The **Zone status / bypass** panel lists all zones. A red alert icon on a zone means the sensor is currently open or triggered. Bypass toggles let you temporarily disable individual zones.
+
+        ![Protegus web app — Zone status/bypass panel; Zone 9 highlighted with alert icon indicating open state](./web-12-zone-status3.png)
 
 === "Protegus mobile"
 
     The Protegus app must be installed on your phone and the SP3 system already added to your account.
 
-    1. Open the Protegus app and select the **SP3 kit** system.
+    1. Open the Protegus app and select the **SP3 kit** system. Tap **⋮** in the top-right corner.
 
-        ![Protegus mobile app — SP3 kit home screen showing Online status, zone alarm events, and Area 1 arm/disarm controls](./mob-01-system-home.png){ .trik-mob-img }
+        ![Protegus mobile app — SP3 kit home screen; three-dot menu button highlighted in top-right](./mob-01-home.png){ .trik-mob-img }
 
-    2. Tap **⋮** (top-right) and select **Configure SP3 kit**.
+    2. Tap **System configuration**.
 
-        ![Protegus mobile app — Configure SP3 kit settings menu](./mob-02-settings-menu.png){ .trik-mob-img }
+        ![Protegus mobile app — dropdown menu with System configuration highlighted](./mob-02-system-config.png){ .trik-mob-img }
 
-    3. Tap **Devices**, then tap **+**.
+    3. Tap **Devices**.
 
-        ![Protegus mobile app — Devices list with paired sensors and zone assignments; + button to add more](./mob-04-devices-list.png){ .trik-mob-img }
+        ![Protegus mobile app — Configure SP3 kit menu with Devices highlighted](./mob-03-config-menu.png){ .trik-mob-img }
 
-    4. Select the sensor type you want to pair. The app shows a diagram of the learn button location. **Press and hold the learn button** until the green indicator stays lit for 2 seconds.
+    4. Tap the **+** button to add a new sensor.
 
-        ![Protegus mobile app — pairing mode for Smart PET PIR detector; red circle highlights the learn button on the circuit board](./mob-05-learning-pet-pir.png){ .trik-mob-img }
+        ![Protegus mobile app — empty Devices page; + button highlighted in bottom-right corner](./mob-04-add-btn.png){ .trik-mob-img }
 
-    5. When the sensor is detected, a confirmation appears with its serial number. Tap **OK**.
+    5. Select the sensor type you want to pair (e.g. **Smart PET PIR detector**).
 
-        ![Protegus mobile app — Smart PET PIR detector successfully detected; serial number 3722542041 confirmed](./mob-06-pet-pir-found.png){ .trik-mob-img }
+        ![Protegus mobile app — Add wireless sensor type list with Smart PET PIR detector highlighted](./mob-05-sensor-categories.png){ .trik-mob-img }
 
-    6. Repeat steps 4–5 for each additional sensor.
+    6. The app shows the sensor in **Learning** mode with a diagram of the learn button. **Press and hold the learn button** until the green indicator stays lit for 2 seconds.
 
-    **Review sensor details:**
+        ![Protegus mobile app — Learning mode for Smart PET PIR detector; red arrow highlights the learn button on the circuit board](./mob-06-learning.png){ .trik-mob-img }
 
-    7. Tap any sensor in the Devices list to view its settings: signal strength (RSSI), battery voltage, zone name, zone type, and area assignment.
+    7. When the sensor is detected, a confirmation appears with its serial number. Tap **OK**.
 
-        ![Protegus mobile app — Smart Door/Window sensor settings: RSSI 90%, battery 2.90V, serial number 3633866376, Zone 10 assigned](./mob-03-sensor-detail.png){ .trik-mob-img }
+        ![Protegus mobile app — Smart PET PIR detector successfully detected; OK button highlighted](./mob-07-sensor-found.png){ .trik-mob-img }
 
-        A good RSSI is 60% or above. Below 20% means the sensor is too far from the RF-S8 transceiver or obstructed — reposition and tap **Refresh** to re-check.
+    8. The sensor appears in the list with a **NEW** badge.
+
+        ![Protegus mobile app — paired Smart PET PIR detector in list with NEW badge highlighted](./mob-08-sensor-in-list.png){ .trik-mob-img }
+
+    **Configure zone settings:**
+
+    9. Tap the sensor to open its settings. Tap **Zone settings** to expand the section.
+
+        ![Protegus mobile app — Sensor settings page showing Zone settings section highlighted](./mob-09-zone-settings.png){ .trik-mob-img }
+
+    10. Set the **Definition** (e.g. 24 hours) and **Type** (e.g. NO), then tap **Confirm**.
+
+        ![Protegus mobile app — Zone settings expanded; Definition and Type fields highlighted; Confirm button highlighted](./mob-10-zone-def-type.png){ .trik-mob-img }
+
+    11. To add another sensor, tap **+** and repeat steps 5–10. When all sensors are paired, tap **Next**.
+
+        ![Protegus mobile app — sensor in list; Next button highlighted](./mob-11-sensor-list-next.png){ .trik-mob-img }
+
+    12. A success dialog confirms the pairing. Tap **Close**.
+
+        ![Protegus mobile app — "Wireless devices added successfully" dialog; Close button highlighted](./mob-12-success.png){ .trik-mob-img }
 
     **Verify zone status:**
 
-    8. From the system home screen, tap the area tile → **Zone statuses**. Each paired sensor shows its current open/closed state.
+    13. From the system home screen, tap the **Area 1** tile.
 
-        ![Protegus mobile app — Zone status and bypass screen; Zone 10 shows a red alert icon (open state); bypass toggles allow disabling individual zones](./mob-07-zone-status.png){ .trik-mob-img }
+        ![Protegus mobile app — SP3 kit home screen; Area 1 tile highlighted](./mob-13-zone-status1.png){ .trik-mob-img }
 
-        A red alert icon on a zone means the sensor is currently open or in alarm. Bypass toggles let you temporarily disable individual zones.
+    14. Tap **Zone statuses**.
+
+        ![Protegus mobile app — Area 1 page with Zone statuses button highlighted](./mob-14-zone-status2.png){ .trik-mob-img }
+
+    15. The **Zone status / bypass** screen lists all zones. A red alert icon means the sensor is currently open or triggered. Bypass toggles let you temporarily disable individual zones.
+
+        ![Protegus mobile app — Zone status/bypass list; Zone 2 with alert icon highlighted](./mob-15-zone-status3.png){ .trik-mob-img }
 
 === "TrikdisConfig"
-
-    > [!NOTE]
-    > TrikdisConfig is the legacy configuration method and will be discontinued in a future release. Use Protegus web or mobile where possible.
 
     Two sub-methods: **remote** (over network) or **local** (USB, no network needed).
 
@@ -113,49 +152,47 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
     > [!WARNING]
     > Never enroll or unenroll sensors while the panel is in learning mode for a different operation. Before pairing, unenroll each sensor first: hold learn button 5 s → three green flashes. **If a sensor is accidentally unpaired it stops working until re-paired.**
 
-    1. Open TrikdisConfig. In **Remote access**, enter the panel's **IMEI/Unique ID** (on the device label).
+    1. Open TrikdisConfig. In the **Remote access** section, enter the panel's **Unique ID** (printed on the device label), then click **Configure**.
 
-        ![TrikdisConfig — Remote access section with IMEI/Unique ID field](./tc-image10.png)
+        ![TrikdisConfig — Remote access section; Unique ID field and Configure button highlighted](./tc-01-remote-access.png)
 
-    2. Click **Configure** → **Read [F4]**. Enter admin or installer code if prompted.
+    2. Click **Read [F4]**. Enter admin or installer code if prompted.
 
-    3. Go to **Wireless sensors** → click **Learn sensors**.
+    3. Go to **Wireless sensors** and click **Learn sensors**.
 
-        The RF-S8 **NETWORK** LED flashes green/red (learning mode active). The sensor binding window opens.
+        ![TrikdisConfig — Wireless sensors tab with Learn sensors button highlighted](./tc-02-learn-sensors.png)
 
-        ![TrikdisConfig — sensor binding window open during learning mode](./tc-image11.png)
+    4. The **Learning mode** dialog opens. For each sensor, press and hold the learn button for 5 seconds until it flashes **green four times**.
 
-    4. For each sensor:
+        ![Diagram showing sensor with arrow pointing to learn button: "Press and hold the learning button for 5 seconds"](./tc-03-sensor-learn-diagram.png)
 
-        a. Hold the sensor's **learn button for 5 seconds** → release when it flashes **green four times**.
+        ![TrikdisConfig — Learning mode dialog: "Learning mode started. Insert the batteries into the new sensor and wait for it to complete initialization"; Stop learning button](./tc-04-learning-mode.png)
 
-        ![Sensor learn button — four green flashes confirms enrollment](./tc-image12.png)
+    5. When a sensor is detected, the **New device was found** dialog opens. Set the **Zone number** and **Zone definition** (e.g. Instant), then click **Save**.
 
-        b. The RF-S8 NETWORK LED briefly turns solid green, then resumes flashing.
+        ![TrikdisConfig — New device was found dialog; Zone number and Zone definition fields highlighted; Save button highlighted](./tc-05-new-device-dialog.png)
 
-        c. Assign a **Zone Number** and **Zone Definition** (Instant / Delay).
+    6. The Learning mode status line confirms the device was registered. Repeat steps 4–5 for each additional sensor.
 
-        ![TrikdisConfig — assign zone number and zone definition](./tc-image13.png)
+        ![TrikdisConfig — Learning mode showing "New device was found: ID:1 S8 Door/Window Sensor, UID: …"; Stop learning button highlighted](./tc-06-device-detected.png)
 
-        d. Click **Save**. Repeat for each additional sensor.
+    7. Click **Stop learning**. When prompted to save the new parameters, click **Yes**.
 
-    5. Click **Stop learning**.
+        ![TrikdisConfig — "Save configuration" dialog asking to save new parameters; Yes button highlighted](./tc-07-save-config.png)
 
-        ![TrikdisConfig — Stop learning button](./tc-image14.png)
+    8. Click **Read [F4]**. The **Wireless sensors** tab now lists all registered sensors with their serial numbers.
 
-    6. Click **Yes** to write sensors to the SP3.
+        ![TrikdisConfig — Wireless sensors tab showing S8 Door/Window Sensor registered with serial number](./tc-09-wireless-sensors.png)
 
-        ![TrikdisConfig — write sensors confirmation dialog](./tc-image15.png)
+    9. Open the **Zones** tab. Confirm zone and area assignments. Set **Type** to `EOL-T` to enable tamper monitoring. Click **Write [F5]**.
 
-    7. Wait a few minutes → click **Read [F4]**. The Wireless sensors window lists all registered sensors with serial numbers.
-
-        ![TrikdisConfig — Wireless sensors window with registered sensors and serial numbers](./tc-image16.png)
-
-    8. Open the **Zones** window. Confirm zone and area assignments. Set **Type** to `EOL-T` to enable tamper monitoring. Click **Write [F5]**.
-
-        ![TrikdisConfig — Zones window with zone and area assignment](./tc-image17.png)
+        ![TrikdisConfig — Zones settings table with zone assignments and area configuration](./tc-10-zones.png)
 
     #### Local pairing (no network)
+
+    The RF-S8 transceiver has a **LEARN** button on its circuit board — use it to enter and exit learning mode without a PC connection.
+
+    ![RF-S8 transceiver PCB with Learn button labelled](./tc-11-rfs8-photo.png)
 
     1. Confirm the RF-S8 is registered with the SP3 (visible in Modules list after firmware setup).
     2. Power on the SP3.
@@ -164,8 +201,8 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
     5. Pair each sensor: hold learn button 5 s → four green flashes. NETWORK LED turns solid green briefly after each success.
     6. When done, hold the RF-S8 **LEARN** button until NETWORK LED stops flashing. Release — transceiver exits learning mode.
     7. Connect USB Mini-B to SP3. Open TrikdisConfig → **Read [F4]**.
-    8. Confirm serial numbers in **Wireless sensors** window.
-    9. Assign zones and areas in the **Zones** window → **Write [F5]**.
+    8. Confirm serial numbers in **Wireless sensors** tab.
+    9. Assign zones and areas in the **Zones** tab → **Write [F5]**.
 
     #### Remove a wireless sensor
 
