@@ -18,64 +18,6 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
 
 ---
 
-=== "Protegus web"
-
-    Open [web.protegus.app](https://web.protegus.app) in a desktop browser. The SP3 system must already be added to your account.
-
-    1. Select the SP3 system from the left panel, then click **Devices** in the system menu.
-
-        ![Protegus web app — SP3 kit selected in left panel; Devices menu item highlighted](./web-01-sp3-devices.png)
-
-    2. Click the **+** button to add a new wireless sensor.
-
-        ![Protegus web app — Devices page with + button highlighted in bottom-right corner](./web-02-add-sensor-btn.png)
-
-    3. The **Add wireless sensor** panel opens with all supported sensor types. Click the sensor type you want to pair (e.g. **Smart PET PIR detector**).
-
-        ![Protegus web app — Add wireless sensor panel with Smart PET PIR detector highlighted](./web-03-sensor-categories.png)
-
-    4. The app switches to **Learning** mode and shows the sensor with a diagram indicating the learn button location.
-
-        **Press and hold the learn button** until the green indicator stays lit for 2 seconds (approximately 4–5 seconds).
-
-        ![Protegus web app — pairing mode active for Smart PET PIR detector; red arrow highlights the learn button location](./web-04-learning-mode.png)
-
-    5. When the panel detects the sensor, a confirmation appears with its serial number. Click **OK**.
-
-        ![Protegus web app — Smart PET PIR detector successfully detected; serial number confirmed; OK button highlighted](./web-05-sensor-found.png)
-
-    6. The sensor appears in the list with a **NEW** badge. To add another sensor, click **+** and repeat steps 3–5. When all sensors are paired, click **Next**.
-
-        ![Protegus web app — paired sensor in list with NEW badge; Next button highlighted](./web-06-sensor-in-list.png)
-
-    7. A success dialog confirms the pairing. Click **Close**.
-
-        ![Protegus web app — "Wireless devices added successfully" dialog; Close button highlighted](./web-07-success.png)
-
-    **Configure zone settings:**
-
-    8. In the **Devices** list, click a paired sensor to open its settings. Click **Zone settings** to expand the section.
-
-        ![Protegus web app — sensor detail page; Zone settings section highlighted](./web-08-zone-settings.png)
-
-    9. Set the **Definition** (e.g. Instant) and **Type** (e.g. NO) for the zone.
-
-        ![Protegus web app — Zone settings expanded showing Definition and Type fields highlighted](./web-09-zone-def-type.png)
-
-    **Verify zone status:**
-
-    10. From the home screen, click the **Area 1** tile.
-
-        ![Protegus web app — home screen with Area 1 tile highlighted](./web-10-zone-status1.png)
-
-    11. Click **Zone statuses**.
-
-        ![Protegus web app — Area 1 panel with Zone statuses button highlighted](./web-11-zone-status2.png)
-
-    12. The **Zone status / bypass** panel lists all zones. A red alert icon on a zone means the sensor is currently open or triggered. Bypass toggles let you temporarily disable individual zones.
-
-        ![Protegus web app — Zone status/bypass panel; Zone 9 highlighted with alert icon indicating open state](./web-12-zone-status3.png)
-
 === "Protegus mobile"
 
     The Protegus app must be installed on your phone and the SP3 system already added to your account.
@@ -143,6 +85,64 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
     15. The **Zone status / bypass** screen lists all zones. A red alert icon means the sensor is currently open or triggered. Bypass toggles let you temporarily disable individual zones.
 
         ![Protegus mobile app — Zone status/bypass list; Zone 2 with alert icon highlighted](./mob-15-zone-status3.png){ .trik-mob-img }
+
+=== "Protegus web"
+
+    Open [web.protegus.app](https://web.protegus.app) in a desktop browser. The SP3 system must already be added to your account.
+
+    1. Select the SP3 system from the left panel, then click **Devices** in the system menu.
+
+        ![Protegus web app — SP3 kit selected in left panel; Devices menu item highlighted](./web-01-sp3-devices.png)
+
+    2. Click the **+** button to add a new wireless sensor.
+
+        ![Protegus web app — Devices page with + button highlighted in bottom-right corner](./web-02-add-sensor-btn.png)
+
+    3. The **Add wireless sensor** panel opens with all supported sensor types. Click the sensor type you want to pair (e.g. **Smart PET PIR detector**).
+
+        ![Protegus web app — Add wireless sensor panel with Smart PET PIR detector highlighted](./web-03-sensor-categories.png)
+
+    4. The app switches to **Learning** mode and shows the sensor with a diagram indicating the learn button location.
+
+        **Press and hold the learn button** until the green indicator stays lit for 2 seconds (approximately 4–5 seconds).
+
+        ![Protegus web app — pairing mode active for Smart PET PIR detector; red arrow highlights the learn button location](./web-04-learning-mode.png)
+
+    5. When the panel detects the sensor, a confirmation appears with its serial number. Click **OK**.
+
+        ![Protegus web app — Smart PET PIR detector successfully detected; serial number confirmed; OK button highlighted](./web-05-sensor-found.png)
+
+    6. The sensor appears in the list with a **NEW** badge. To add another sensor, click **+** and repeat steps 3–5. When all sensors are paired, click **Next**.
+
+        ![Protegus web app — paired sensor in list with NEW badge; Next button highlighted](./web-06-sensor-in-list.png)
+
+    7. A success dialog confirms the pairing. Click **Close**.
+
+        ![Protegus web app — "Wireless devices added successfully" dialog; Close button highlighted](./web-07-success.png)
+
+    **Configure zone settings:**
+
+    8. In the **Devices** list, click a paired sensor to open its settings. Click **Zone settings** to expand the section.
+
+        ![Protegus web app — sensor detail page; Zone settings section highlighted](./web-08-zone-settings.png)
+
+    9. Set the **Definition** (e.g. Instant) and **Type** (e.g. NO) for the zone.
+
+        ![Protegus web app — Zone settings expanded showing Definition and Type fields highlighted](./web-09-zone-def-type.png)
+
+    **Verify zone status:**
+
+    10. From the home screen, click the **Area 1** tile.
+
+        ![Protegus web app — home screen with Area 1 tile highlighted](./web-10-zone-status1.png)
+
+    11. Click **Zone statuses**.
+
+        ![Protegus web app — Area 1 panel with Zone statuses button highlighted](./web-11-zone-status2.png)
+
+    12. The **Zone status / bypass** panel lists all zones. A red alert icon on a zone means the sensor is currently open or triggered. Bypass toggles let you temporarily disable individual zones.
+
+        ![Protegus web app — Zone status/bypass panel; Zone 9 highlighted with alert icon indicating open state](./web-12-zone-status3.png)
 
 === "TrikdisConfig"
 
