@@ -7,6 +7,9 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
 > [!IMPORTANT]
 > **Firmware requirement:** The FLEXi SP3 must run firmware revision 4 (`SP3_xxx4_0122.fw`, version 1.22 or later) to support S8 wireless sensors.
 
+> [!NOTE]
+> **Hardware prerequisite:** Before pairing sensors, the RF-S8 transceiver must be wired to the SP3's RS485 bus — see [3.13 Schematic for connecting RF-S8](https://docs.trikdis.com/en/control-panels/sp3/#313-schematic-for-connecting-rf-s8) — and registered in TrikdisConfig under the Modules tab — see [5.5 "Modules" window](https://docs.trikdis.com/en/control-panels/sp3/#55-modules-window).
+
 **Before you start — prepare the sensors** (applies to all methods):
 
 - If a sensor was previously paired with any panel, unenroll it first: hold the sensor's **learn button for 5 seconds**, release when the indicator flashes **green three times**.
