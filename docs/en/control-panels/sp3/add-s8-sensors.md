@@ -50,13 +50,13 @@ Pair S8 wireless sensors (PIR detectors, door/window magnets, smoke detectors, s
 
         ![Protegus mobile app — Smart PET PIR detector successfully detected; OK button highlighted](./mob-07-sensor-found.png){ .trik-mob-img }
 
-    8. The sensor appears in the list with a **NEW** badge.
+    8. The sensor appears in the list with a **NEW** badge. Tap the sensor to open its settings. 
 
         ![Protegus mobile app — paired Smart PET PIR detector in list with NEW badge highlighted](./mob-08-sensor-in-list.png){ .trik-mob-img }
 
     **Configure zone settings:**
 
-    9. Tap the sensor to open its settings. Tap **Zone settings** to expand the section.
+    9. Tap **Zone settings** to expand the section.
 
         ![Protegus mobile app — Sensor settings page showing Zone settings section highlighted](./mob-09-zone-settings.png){ .trik-mob-img }
 
