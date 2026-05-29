@@ -30,10 +30,10 @@ Connect the iO4R expander to the controller RS485 bus and power terminals as sho
 
 The iO4R module is applied to bypass faulty gate automation safety sensors. When bypassing defective sensors and activating the gate mechanism, always ensure that no obstructions are present within the gate’s operating range. 
 Gate safety sensors are interfaced with the gate automation controller through the iO4R module. The module provides four independent input/output channels. Each input channel is associated with its corresponding relay output contacts as follows:
-- Input 1 → Output 1 (1 NO / 1 C / 1 NC) 
-- Input 2 → Output 2 (2 NO / 2 C / 2 NC) 
-- Input 3 → Output 3 (3 NO / 3 C / 3 NC) 
-- Input 4 → Output 4 (4 NO / 4 C / 4 NC) 
+- Input 1 → Output 1 (1 NO / 1 C / 1 NC).
+- Input 2 → Output 2 (2 NO / 2 C / 2 NC).
+- Input 3 → Output 3 (3 NO / 3 C / 3 NC).
+- Input 4 → Output 4 (4 NO / 4 C / 4 NC).
 
 Use `3 I/O` as the gate position input for cycle counting. A cycle is counted only after the gate fully opens and fully closes.
 
