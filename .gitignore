@@ -14,3 +14,9 @@ tmp_*.png
 artifacts/ui/ipcom5control-web/
 Scripts/ipcom5control-web/node_modules/
 Scripts/ipcom5control-web/.env
+
+# Local Netlify folder
+.netlify
+
+# Local credentials (never commit)
+.claude/credentials.local.md

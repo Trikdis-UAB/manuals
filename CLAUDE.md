@@ -3,6 +3,10 @@
 
 **Nav hiding mechanism** (why WIP sections are invisible until directly navigated to): see `NAV_VISIBILITY.md`.
 
+## Credentials & API access
+
+See `.claude/credentials.local.md` (gitignored, not committed).
+
 # TRIKDIS Documentation Project
 
 **Location:** `/Users/local/projects/trikdis-docs/`
