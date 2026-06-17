@@ -97,7 +97,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | Event codes | Contact ID, SIA codes. |
 | LAN module | Yes, built-in |
 | LAN network configuration type | DHCP or manual |
-| SIM card | 1, NANO size |
+| SIM card | 2, NANO size |
 | Report transmission directions | To main and backup receivers of 2 different security companies;​ To Protegus2 cloud, to iOS/​Android Protegus2 mobile apps;​ To 8 mobile phones via SMS messages. Calls 8 mobile phones. |
 | Event reporting transmission channels | 4G, Ethernet (LAN), SMS, call |
 | Message encryption | Yes |
