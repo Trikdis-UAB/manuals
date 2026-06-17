@@ -94,7 +94,7 @@ Envía eventos al receptor en una CRA
 | Codificación de eventos | Contact ID, SIA |
 | Módulo LAN | Sí, incorporado |
 | Tipo de configuración de red LAN | DHCP o manual |
-| Tarjeta SIM | 1, tamaño NANO |
+| Tarjeta SIM | 2, tamaño NANO |
 | Direcciones de transmisión de informes | A receptores principales y de respaldo de 2 compañías de seguridad diferentes;​ Al servidor en la nube de Protegus2, a aplicación móvil Protegus2 en iOS/​Android;​ A 8 teléfonos móviles a través de mensajes SMS. Llama a 8 teléfonos móviles. |
 | Canales de transmisión de informes de eventos | 4G, Ethernet (LAN), SMS, Llamadas |
 | Cifrado de Informe | Si |
