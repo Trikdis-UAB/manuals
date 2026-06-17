@@ -572,17 +572,9 @@ Test the system. Activate the fire alarm and check that FIRECOM messages are sen
 
 <img alt="" src="./image52.webp" style="width:3.616674321959755in;height:1.1900021872265967in" /> / <img alt="" src="./image53.webp" style="width:3.616674321959755in;height:1.3200021872265966in" />
 
-<img alt="" src="./image52.webp" style="width:3.616674321959755in;height:1.1900021872265967in" />
-
-<img alt="" src="./image53.webp" style="width:3.616674321959755in;height:1.3200021872265966in" />
-
 ### Schematics for connecting a relay and an LED indicator
 
 <img alt="" src="./image54.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image55.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
-
-<img alt="" src="./image54.webp" style="width:2.686672134733158in;height:0.93333552055993in" />
-
-<img alt="" src="./image55.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
 ### Schematics of connecting the inputs of the fire panel to the communicator
 
