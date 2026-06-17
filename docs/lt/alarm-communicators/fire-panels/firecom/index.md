@@ -529,17 +529,9 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar FIR
 
 <img alt="" src="./image54.webp" style="width:3.5400076552930884in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.5400076552930884in;height:1.3200021872265966in" />
 
-<img alt="" src="./image54.webp" style="width:3.5400076552930884in;height:1.1900021872265967in" />
-
-<img alt="" src="./image55.webp" style="width:3.5400076552930884in;height:1.3200021872265966in" />
-
 ### Relės, LED indikatoriaus prijungimo schemos 
 
 <img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
-
-<img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" />
-
-<img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
 
 ### Priešgaisrinės centralės įėjimų ir komunikatoriaus jungimo schema 
 
