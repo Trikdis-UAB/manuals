@@ -95,7 +95,7 @@
 | Кодирование сообщений | Contact ID, SIA |
 | LAN модуль | Есть, интегрирован |
 | Тип конфигурации LAN сети | DHCP или ручной |
-| SIM карта | 1 шт., NANO размер |
+| SIM карта | 2 шт., NANO размер |
 | Варианты сообщений | До 2 IP и Port адресов;​ В iOS/​Android мобильные приложения Protegus2;​ SMS сообщения (до восьми номеров);​ Звонки (до восьми номеров). |
 | Каналы передачи сообщений | 4G, Ethernet (LAN), SMS, звонок |
 | Шифрование сообщений | Есть |
@@ -530,17 +530,9 @@
 
 <img alt="" src="./image54.webp" style="width:3.4166732283464567in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.4166732283464567in;height:1.3200021872265966in" />
 
-<img alt="" src="./image54.webp" style="width:3.4166732283464567in;height:1.1900021872265967in" />
-
-<img alt="" src="./image55.webp" style="width:3.4166732283464567in;height:1.3200021872265966in" />
-
 ### Схема подключения реле и LED индикатора 
 
 <img alt="" src="./image56.webp" style="width:2.7100054680664916in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
-
-<img alt="" src="./image56.webp" style="width:2.7100054680664916in;height:0.93333552055993in" />
-
-<img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
 
 ### Схема подключения входов пожарной панели к коммуникатору 
 
