@@ -527,17 +527,9 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <img alt="" src="./image54.webp" style="width:3.4233398950131235in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.4233398950131235in;height:1.3200021872265966in" />
 
-<img alt="" src="./image54.webp" style="width:3.4233398950131235in;height:1.1900021872265967in" />
-
-<img alt="" src="./image55.webp" style="width:3.4233398950131235in;height:1.3200021872265966in" />
-
 ### Diagramas para conectar un relé y un indicador LED 
 
 <img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
-
-<img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" />
-
-<img alt="" src="./image57.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
 ### Diagrama para conectar las entradas del panel de incendio al comunicador 
 
