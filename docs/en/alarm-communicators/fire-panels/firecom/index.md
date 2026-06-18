@@ -265,7 +265,7 @@ The picture below shows the dimensions of the board and its mounting holes (in m
 
 There are 10 terminals IO1–IO10 (inputs) on the communicator board for connecting sensor circuits. The number of inputs can be expanded to 32 using input expanders (***iO-8, iO-MO, iO-LORA, iO8-LORA**)*. Any terminal can be set as an input and assigned zone attributes: circuit type (NO, NC, EOL, EOL_T, ATZ, ATZ_T); sensitivity to temporary circuit events; see chapter 6.6 ““Zones” window”.
 
-#### Schematics for connecting sensors.
+**Schematics for connecting sensors.**
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -719,27 +719,27 @@ Below we describe the settings you need to edit to make the controller send even
 
 <img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.5669291338582676in" />
 
-3.  If a LAN cable is connected to the communicator, check the box „**DHCP**“ (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
+5.  If a LAN cable is connected to the communicator, check the box „**DHCP**“ (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
 
-4.  The parameters for how the communicator will send messages to ***Protegus2*** are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to ***Protegus2***, then the “Return to Primary” connection type will be attempted after a set time interval.
+6.  The parameters for how the communicator will send messages to ***Protegus2*** are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to ***Protegus2***, then the “Return to Primary” connection type will be attempted after a set time interval.
 
 **In the “Zones” window, “Zones settings” tab:**
 
 <img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
-3.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in zone states.
+7.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in zone states.
 
 **In the “PGM” window, “Outputs” tab:**
 
 <img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.968503937007874in" />
 
-4.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in PGM output states.
+8.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in PGM output states.
 
 **In the “System events” window, “Events” tab:**
 
 <img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
-5.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in the communicator’s internal event states.
+9.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in the communicator’s internal event states.
 
 After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
 
@@ -770,18 +770,20 @@ After finishing configuration, click the **Write \[F5\]** button and disconnect 
 
 <img alt="" src="./image68.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
 
-3.  **Communication type** – choose a communication type (TCP or UDP).
+6.  **Communication type** – choose a communication type (TCP or UDP).
 
-4.  **Domain or IP** – enter the receiver’s domain or IP address.
+7.  **Domain or IP** – enter the receiver’s domain or IP address.
 
-5.  **Port** – enter the receiver’s network port number.
+8.  **Port** – enter the receiver’s network port number.
 
-6.  **Protocol** – choose which transmission protocol should be used for sending messages: **TRK** (to TRIKDIS receivers), **DC- 09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GARD receivers).
+9.  **Protocol** – choose which transmission protocol should be used for sending messages: **TRK** (to TRIKDIS receivers), **DC- 09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GARD receivers).
 
-7.  **Encryption Key** – enter the receiver’s encryption key.
+10.  **Encryption Key** – enter the receiver’s encryption key.
 
 !!! note
     If you chose **DC-09** as the transmission protocol, additionally enter the object, line and receiver numbers in the “**Settings”** setting group of the **“Reporting to CMS”** window. 11. (Recommended) Configure the “**Backup channel”** settings.
+
+11. (Recommended) Configure the “Backup channel” settings. 
 
 12. Configure „**Parallel channel**” if messages will be sent to the second receiver of the CMS.
 
@@ -821,13 +823,13 @@ Using ***Protegus2***, users can see the system’s state and receive notificati
         blink yellow; or/and "**ETH**" LED is green when connected to LAN
         network).
 
-3.  Click “**Add new system**” and enter the ****FIRECOM****’s “**Unique ID**” number. It can be found on the device and packaging sticker. After entering the “**Unique ID**”, click the “**Next**” button.
+3.  Click “**Add new system**” and enter the ***FIRECOM***’s “**Unique ID**” number. It can be found on the device and packaging sticker. After entering the “**Unique ID**”, click the “**Next**” button.
 
 <img alt="" src="./image72.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
 ### Configuration and control via SMS messages
 
-1.  **Change the administrator password**
+**1.  Change the administrator password**
 
 To ensure safety, change the default administrator SMS password. Send an SMS message of the following format:
 
@@ -837,7 +839,7 @@ To ensure safety, change the default administrator SMS password. Send an SMS mes
 |----|----|----|
 | **xxxxxx** | New 6-symbol administrator password |
 
-1.  **Allow other users to control**
+**2.  Allow other users to control**
 
 Only phone numbers on the user list can control the system using SMS messages or phone calls. From an administrator phone, send SMS messages with other people’s phone numbers and names to allow them to control the system:
 
