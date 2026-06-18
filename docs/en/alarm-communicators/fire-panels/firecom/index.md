@@ -568,14 +568,14 @@ The fire panel is programmed. Disconnect the cable from USB2.0 A-B of the fire p
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
-### 3.9	Schematic for connecting the fire panel POLON-ALFA 3000
+### Schematic for connecting the fire panel Polon-Alfa 3000
 
-**The ***FIRECOM*** communicator is wired to the POLON-ALFA 3000 via the RS485 bus**
+**The ***FIRECOM*** communicator is wired to the Polon-Alfa 3000 via the RS485 bus**
 
 
 
 Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***. 
-1.	Choose the **POLON-ALFA 3000**. 
+1.	Choose the **Polon-Alfa 3000**. 
 2.	Select connection type **RS485**. 
 
 
@@ -596,26 +596,38 @@ The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be confi
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***. 
 
-***FIRECOM*** **communicator and the POLON-ALFA 3000 fire alarm panel are wired to the same LAN**
+***FIRECOM*** **communicator and the Polon-Alfa 3000 fire alarm panel are wired to the same LAN**
 
 
 
 Configuring the ***FIRECOM*** communicator using TrikdisConfig. 
-1.	Choose the **POLON-ALFA 3000**. 
+1.	Choose the **Polon-Alfa 3000**. 
 2.	Select connection type **TCP**. 
-3.	Enter the IP address of the **POLON-AlfA 3000** fire control panel.
+3.	Enter the IP address of the **Polon-AlfA 3000** fire control panel.
+
 
 
 4.	Check the box “**DHCP**” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it. 
 
 
+
 5.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
+
 
 
 6.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
 
 
 
+7.	Configure the communication channel if messages should be sent to the CMS receiver. 
+
+
+
+The **Polon-Alfa 3000** fire alarm panel with the **MK-30** module must be configured using the **Polon Studio** application to operate via the LAN. The LAN IP addresses must be entered according to your network settings. 
+
+
+
+Test the system. Activate the fire alarm and check that **_FIRECOM_** messages are sent to the CMS (central monitoring station) and to **_Protegus2_**. 
 
 ### Schematic for connecting a temperature sensor
 
