@@ -125,7 +125,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 <img src="./image4.webp" alt="FIRECOM communicator elements" style="width: 100%; height: auto;" />
 
 1. Connectivity and operation indicator lights
-2. Button
+2. Button. Not used
 3. Backup power supply terminal block
 4. Main power supply terminal block
 5. RESET button
@@ -323,7 +323,7 @@ There are 10 terminals IO1–IO10 (inputs) on the communicator board for connect
 
 Schematic for connecting two-wire smoke detectors.
 
-Schematic for connecting two-wire smoke detectors to “FLOOP” output. When this circuit diagram is used, the “Input” type “FC Fire sensor (FLOOP input)” must be specified in the “Zones” window. The alarm current of the fire detector must be more than 10mA. Up to 8 fire detectors can be connected to the “FLOOP” output.
+Schematic for connecting two-wire smoke detectors to “**FLOOP**” output. When this circuit diagram is used, the “**Input**” type “**FC Fire sensor (FLOOP input)**” must be specified in the “Zones” window. The alarm current of the fire detector must be more than 10mA. Up to 8 fire detectors can be connected to the “**FLOOP**” output.
 
 <img alt="" src="./image15.webp" style="width:5.006676509186351in;height:1.2766688538932633in" />
 
@@ -578,7 +578,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 ### Schematics of connecting the inputs of the fire panel to the communicator
 
-According to the EN54 standard, the fire panel from the communicator must receive information about the failure of communication with the monitoring station, as well as about the successful received of messages to the monitoring station. It is necessary to connect the PGM outputs (for example: “Relay1” and “Relay2”) of the communicator to the special inputs of the fire panel. The PGM output of “Relay1” must be set to “CMS fail”. The PGM output of “Relay2” must be set to “ACK received”. “Relay1” output is activated in case of violation of the communication channel with the CMS. “Relay2” output is activated for 5 sec. upon successful sending of a message to the CMS.
+According to the EN54 standard, the fire panel from the communicator must receive information about the failure of communication with the monitoring station, as well as about the successful received of messages to the monitoring station. It is necessary to connect the PGM outputs (for example: “**Relay1**” and “**Relay2**”) of the communicator to the special inputs of the fire panel. The PGM output of “**Relay1**” must be set to “**CMS fail**”. The PGM output of “**Relay2**” must be set to “**ACK received**”. “**Relay1**” output is activated in case of violation of the communication channel with the CMS. “**Relay2**” output is activated for 5 sec. upon successful sending of a message to the CMS.
 
 <img alt="" src="./image56.webp" style="width:3.42000656167979in;height:1.6966699475065616in" />
 
@@ -600,7 +600,7 @@ If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, c
 
 </div>
 
-Schematics for connecting LORA modules.
+Schematics for connecting **LORA** modules.
 
 <img alt="" src="./image59.webp" style="width:5.57667760279965in;height:6.636679790026247in" />
 
@@ -635,7 +635,7 @@ Below we describe the settings you need to edit to make the controller send even
 
 1.  Enter the “**SIM card PIN”** code.
 
-2.  Change the “**APN”**. You will find the “**APN”** on the SIM operator’s website. “Internet” is universal and works in the networks of most operators.
+2.  Change the “**APN”**. You will find the “**APN”** on the SIM operator’s website. “**Internet**” is universal and works in the networks of most operators.
 
 **In the “Users & Reporting” window, “Cloud application” settings group:**
 
@@ -751,7 +751,7 @@ Using ***Protegus2***, users can see the system’s state and receive notificati
         blink yellow; or/and "**ETH**" LED is green when connected to LAN
         network).
 
-3.  Click “Add new system” and enter the ****FIRECOM****’s “*Unique ID*” number. It can be found on the device and packaging sticker. After entering the “*Unique ID”*, click the “Next” button.
+3.  Click “**Add new system**” and enter the ****FIRECOM****’s “**Unique ID**” number. It can be found on the device and packaging sticker. After entering the “**Unique ID**”, click the “**Next**” button.
 
 <img alt="" src="./image72.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
@@ -859,7 +859,7 @@ When the **Read \[F4\]** button is clicked, the program will read and show setti
 
 - **Object name** – the name given to the object that will be used in SMS messages sent to the user.
 
-- **Test period** - when the box is ticked, “Test” messages will be sent every set period.
+- **Test period** - when the box is ticked, “**Test**” messages will be sent every set period.
 
 - **Start test at** - tick the box and specify a time when test reports should be sent.
 
@@ -873,7 +873,7 @@ When the **Read \[F4\]** button is clicked, the program will read and show setti
 
 - **Call –** when an event occurs, the ***FIRECOM*** will call user(-s) as many times as is set. If the call is declined or answered, the ***FIRECOM*** will stop calling. Duration of a call is 20 seconds.
 
-- **EOL Type** - specify the nominals of the resistors connected to the sensors (EOL – End Of Line. RT + R1 + R2. Resistor RT - tamper; resistor R1 - sensor No 1; resistor R2 - sensor No 2).
+- **EOL Type** - specify the nominals of the resistors connected to the sensors (EOL – End Of Line. **RT + R1 + R2**. Resistor **RT** - tamper; resistor **R1** - sensor No 1; resistor **R2** - sensor No 2).
 
 - **Communication path test** - specify the time interval after which the communicator will check the Backup communication channels by sending messages to the CMS. After sending the messages on the Backup communication channels, the communicator will return to the Primary communication channel.
 
@@ -962,10 +962,10 @@ Enable backup channel mode to allow messages to be sent using the backup channel
 
 **Settings group “Settings”**
 
-- **Return to Primary after** – time period after which the ***FIRECOM*** will attempt to regain connection with the “Primary channel”.
+- **Return to Primary after** – time period after which the ***FIRECOM*** will attempt to regain connection with the “**Primary channel**”.
 - **IP PING period** – sending period of internal PING signals for checking connectivity. These messages are sent only via IP channel. The receiver does not forward these signals to the monitoring software and thus does not overload the software. The monitoring software is only notified when the receiver does not receive a PING message from the device for a preset period of time.
 
-By default, the receiver will send a “*Connection lost*” message to the monitoring software after a time period that is three times longer than the communicator’s PING sending period. E.g. if the IP PING period is 3 minutes, the receiver will send a lost connection message if it does not receive a PING for 9 minutes.
+By default, the receiver will send a “**Connection lost**” message to the monitoring software after a time period that is three times longer than the communicator’s PING sending period. E.g. if the IP PING period is 3 minutes, the receiver will send a lost connection message if it does not receive a PING for 9 minutes.
 
 PING messages also keep an active connection session between the device and the receiver. An active session is required to configure and control the communicator remotely. We recommend setting the PING period to be no longer than 5 minutes.
 
@@ -1057,7 +1057,7 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **Settings group “SMS answer texts”**
 
-The text for answers to commands sent using SMS messages can be customized in the column “**SMS text”**. Also here are the texts of SMS messages that are used when activating inputs or outputs.
+The text for answers to commands sent using SMS messages can be customized in the column “**SMS text**”. Also here are the texts of SMS messages that are used when activating inputs or outputs.
 
 ### “Modules” window
 
@@ -1069,7 +1069,7 @@ The text for answers to commands sent using SMS messages can be customized in th
 
 - **ID** – module’s number on the list.
 
-- **Module** – choose the module being used (modules iO-8, iO-MO, iO-LORA, iO8-LORA, PB-LORA, REL-LORA) from the module list.
+- **Module** – choose the module being used (modules ***iO-8***, ***iO-MO***, ***iO-LORA***, ***iO8-LORA***, ***PB-LORA***, ***REL-LORA***) from the module list.
 
 - **Serial No**. – mandatory 6-digit number that can be found on the module’s casing and its packaging.
 
@@ -1111,7 +1111,7 @@ Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, 
 
 This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window.
 
-- **Zn** – zone number with an event identification word. Can be “*Event*” or “*Restore*”.
+- **Zn** – zone number with an event identification word. Can be “**Event**” or “**Restore**”.
 
 - **User SMS/Call** – choose how to inform users about every zone event – via SMS message and/or call.
 
@@ -1161,23 +1161,23 @@ When the zone is triggered, the communicator will send an event message. The inp
 
 - **Enable** – enables the PGM operation algorithm.
 
-- **PGM No.** – select the desired PGM output OUT that will be controlled after the event described in columns “**Factor”**, “**Factor No.”**, “**Start when”**, “**Set value”** occurs.
+- **PGM No.** – select the desired PGM output OUT that will be controlled after the event described in columns “**Factor**”, “**Factor No.**”, “**Start when**”, “**Set value**” occurs.
 
 - **Action**:
 
-- **PGM OFF** – state of output OUT – “Off”.
+- **PGM OFF** – state of output OUT – “**Off**”.
 
-- **PGM ON** – state of output OUT – “On”.
+- **PGM ON** – state of output OUT – “**On**”.
 
-- **Pulse OFF** – initial state of output OUT – “On”. After the command the OUT state will become “Off” for the duration of the “**Pulse time”**, and later it will automatically return to the initial “On” state**.**
+- **Pulse OFF** – initial state of output OUT – “**On**”. After the command the OUT state will become “**Off**” for the duration of the “**Pulse time”**, and later it will automatically return to the initial “**On**” state.
 
-- **Pulse ON** – initial state of output OUT – “Off”. After the command the OUT state will become “On” for the duration of the “**Pulse time”**, and later it will automatically return to the initial “Off” state**.**
+- **Pulse ON** – initial state of output OUT – “**Off**”. After the command the OUT state will become “**On**” for the duration of the “**Pulse time”**, and later it will automatically return to the initial “**Off**” state.
 
 - **Pulse time, s** – you can set the pulse time anywhere from 0 to 9999 seconds.
 
-- **Factor/Factor No.** – choose what event (Z*one, SMS received, Zone tamper*) will turn on the output OUT.
+- **Factor/Factor No.** – choose what event (Zone, SMS received, Zone tamper) will turn on the output OUT.
 
-- **Start when** – you can set an additional condition when to turn on the output OUT depending on the “**Factor”** event.
+- **Start when** – you can set an additional condition when to turn on the output OUT depending on the “**Factor**” event.
 
 - **Set value** – depending on the condition chosen in the “**Factor”** column a value (text of received SMS message) can be specified. If this value is identified, the action (chosen in the “**Action”** column) will be performed. The text of the SMS message can be separated by using % symbols. % symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
 
@@ -1209,7 +1209,7 @@ The SMS message text is case-sensitive.
 
 This tab will only be displayed if there is at least one user phone number in the “Users & Reporting” window. These settings can only be made for the first 8 users.
 
-- **PGM** – the number of output OUT and turn on/off event type (“Event” – output OUT turn on event and “Restore” – OUT turn off event).
+- **PGM** – the number of output OUT and turn on/off event type (“**Event**” – output OUT turn on event and “**Restore**” – OUT turn off event).
 
 - **User SMS/Call** – choose which users to inform via SMS message and/or call when an output OUT is turned on/off.
 
@@ -1225,13 +1225,13 @@ This tab will only be displayed if there is at least one user phone number in th
 
 - **Sensor name** – give the temperature sensor a name.
 
-- **Max** – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the “**High”** box must be ticked.
+- **Max** – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the “**High**” box must be ticked.
 
-- **Min** – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the “**Low”** box must be ticked.
+- **Min** – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the “**Low**” box must be ticked.
 
 - **Delay** - an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
 
-- **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in the “**Module type”** column).
+- **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in the “**Module type**” column).
 
 ### “System events” window
 
@@ -1261,7 +1261,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 This tab will only be displayed if there is at least one user phone number in the “Users & Reporting” window
 
-- **ID** – number and identification word (*Event*, *Restore*) of the event.
+- **ID** – number and identification word (**Event**, **Restore**) of the event.
 
 - **Event SMS text** – text that will be used in event SMS messages.
 
@@ -1279,7 +1279,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 ### Restore default settings
 
-To restore the communicator’s default settings, click the ***TrikdisConfig*** button “**Restore”.**
+To restore the communicator’s default settings, click the ***TrikdisConfig*** button “**Restore**”.
 
 <img alt="" src="./image95.webp" style="width:7.086614173228346in;height:1.0905511811023623in" />
 
@@ -1305,17 +1305,17 @@ To restore the communicator’s default settings, click the ***TrikdisConfig*** 
 
 1.  On your computer, launch the configuration software ***TrikdisConfig***.
 
-2.  In the “**Remote access”** window, enter the communicator’s “Unique ID” number. You can find this number on the back of the device and on the device’s packaging.
+2.  In the “**Remote access”** window, enter the communicator’s “**Unique ID**” number. You can find this number on the back of the device and on the device’s packaging.
 
 <img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.3897637795275593in" />
 
-3.  (Optional) Enter a desired name for the communicator in the “**System Name”** field.
+3.  (Optional) Enter a desired name for the communicator in the “**System Name**” field.
 
-4.  Click “**Configure”**.
+4.  Click “**Configure**”.
 
 5.  In the window that opens, click **Read \[F4\]**. If prompted, enter the administrator or installer code.
 
-6.  When you are finished setting the desired parameters, click **Write \[F5\]**. If you are done working with ***TrikdisConfig**,* click “**Disconnect”.**
+6.  When you are finished setting the desired parameters, click **Write \[F5\]**. If you are done working with ***TrikdisConfig***, click “**Disconnect**”.
 
 ## Communicator testing
 
@@ -1338,11 +1338,11 @@ When configuration and installation are complete, perform a system check:
 
 3.  If a newer version of firmware is available, the program will automatically offer to install it.
 
-4.  Open the ***TrikdisConfig*** window “**Firmware”**.
+4.  Open the ***TrikdisConfig*** window “**Firmware**”.
 
 <img alt="" src="./image97.webp" style="width:7.086614173228346in;height:2.921259842519685in" />
 
-5.  Click the button “**Open firmware”** and choose the required firmware file.
+5.  Click the button “**Open firmware**” and choose the required firmware file.
 
 6.  Click the **Update \[F12\]** button.
 
