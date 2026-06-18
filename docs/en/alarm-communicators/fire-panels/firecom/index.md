@@ -166,30 +166,30 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | Indicator | Light status | Description |
 |----|----|----|
 | SIM | Off | Not connected to Cellular network |
-| SIM | Green blinking | SIM card is registering on Cellular network. |
-| SIM | Green solid | SIM card registered on Cellular network. |
-| SIM | Green solid and yellow blinking | The communicator is connected to Cellular network. Sufficient Cellular signal strength level for 4G is 3 (three yellow flashes). |
+|     | Green blinking | SIM card is registering on Cellular network. |
+|     | Green solid | SIM card registered on Cellular network. |
+|     | Green solid and yellow blinking | The communicator is connected to Cellular network. Sufficient Cellular signal strength level for 4G is 3 (three yellow flashes). |
 | ETH | Green blinking | LAN cable disconnected or DHCP problem. |
-| ETH | Green solid | Connected to LAN network. |
+|     | Green solid | Connected to LAN network. |
 | DAT / DATA | Off | All event messages sent |
-| DAT / DATA | Green solid | Message is being sent |
-| DAT / DATA | Yellow solid (DAT) | There are unsent event messages in buffer memory |
+|            | Green solid | Message is being sent |
+|            | Yellow solid (DAT) | There are unsent event messages in buffer memory |
 | STA / TROUBLE | Green blinking (STA) | No operational problems |
-| STA / TROUBLE | Off (TROUBLE) | No operational problems |
-| STA / TROUBLE | 1 red flash | No SIM card inserted |
-| STA / TROUBLE | 2 red flashes | The PIN code of the SIM card is incorrect |
-| STA / TROUBLE | 3 red flashes | Unable to connect to Cellular network |
-| STA / TROUBLE | 4 red flashes | Unable to connect to the IP receiver using the primary channel |
-| STA / TROUBLE | 5 red flashes | Unable to connect to the IP receiver using the secondary channel |
-| STA / TROUBLE | 6 red flashes | No DC power |
-| STA / TROUBLE | 7 red flashes | AUX output fault (overcurrent or overvoltage0 |
-| STA / TROUBLE | 8 red flashes | Battery failure |
-| STA / TROUBLE | 9 red flashes | The LAN cable is disconnected |
-| STA / TROUBLE | 10 red flashes | LAN DHCP problem |
+|  | Off (TROUBLE) | No operational problems |
+|  | 1 red flash | No SIM card inserted |
+|  | 2 red flashes | The PIN code of the SIM card is incorrect |
+|  | 3 red flashes | Unable to connect to Cellular network |
+|  | 4 red flashes | Unable to connect to the IP receiver using the primary channel |
+|  | 5 red flashes | Unable to connect to the IP receiver using the secondary channel |
+|  | 6 red flashes | No DC power |
+|  | 7 red flashes | AUX output fault (overcurrent or overvoltage0 |
+|  | 8 red flashes | Battery failure |
+|  | 9 red flashes | The LAN cable is disconnected |
+|  | 10 red flashes | LAN DHCP problem |
 | FPS / POWER | Off | Power supply is not connected |
-| FPS / POWER | Green solid | No problems with power supplies |
-| FPS / POWER | 1 green flash | No AC power |
-| FPS / POWER | 2 green flashes | Insufficient backup power supply voltage |
+|  | Green solid | No problems with power supplies |
+|  | 1 green flash | No AC power |
+|  | 2 green flashes | Insufficient backup power supply voltage |
 
 ### Components necessary for installation
 
