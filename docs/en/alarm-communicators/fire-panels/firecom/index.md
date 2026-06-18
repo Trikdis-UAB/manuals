@@ -459,7 +459,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 </div>
 
-**Slave** mode must be set for the **INIM Smartline** panel when it is connected to the FIRECOM communicator via RS485 bus.
+**Slave** mode must be set for the **INIM Smartline** panel when it is connected to the ***FIRECOM*** communicator via RS485 bus.
 
 <img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
