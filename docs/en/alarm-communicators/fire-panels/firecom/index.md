@@ -568,6 +568,55 @@ The fire panel is programmed. Disconnect the cable from USB2.0 A-B of the fire p
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
+### 3.9	Schematic for connecting the fire panel POLON-ALFA 3000
+
+**The ***FIRECOM*** communicator is wired to the POLON-ALFA 3000 via the RS485 bus**
+
+
+
+Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***. 
+1.	Choose the **POLON-ALFA 3000**. 
+2.	Select connection type **RS485**. 
+
+
+
+3.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
+
+
+
+4.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
+
+
+
+5.	Configure the communication channel if messages should be sent to the CMS receiver. 
+
+
+
+The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be configured using the **POLON Studio** application to operate via the Modbus RTU (RS485) protocol. 
+
+Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***. 
+
+***FIRECOM*** **communicator and the POLON-ALFA 3000 fire alarm panel are wired to the same LAN**
+
+
+
+Configuring the ***FIRECOM*** communicator using TrikdisConfig. 
+1.	Choose the **POLON-ALFA 3000**. 
+2.	Select connection type **TCP**. 
+3.	Enter the IP address of the **POLON-AlfA 3000** fire control panel.
+
+
+4.	Check the box “**DHCP**” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it. 
+
+
+5.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
+
+
+6.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
+
+
+
+
 ### Schematic for connecting a temperature sensor
 
 <img alt="" src="./image52.webp" style="width:3.616674321959755in;height:1.1900021872265967in" /> / <img alt="" src="./image53.webp" style="width:3.616674321959755in;height:1.3200021872265966in" />
