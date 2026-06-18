@@ -572,7 +572,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 **The ***FIRECOM*** communicator is wired to the Polon-Alfa 3000 via the RS485 bus**
 
-
+<img alt="" src="./FIRECOM + polon ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***. 
 1.	Choose the **Polon-Alfa 3000**. 
