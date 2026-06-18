@@ -419,7 +419,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 </div>
 
-FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **NSC Solution** fire alarm control panel.
+***FIRECOM*** communicator settings with ***TrikdisConfig*** when connecting the **NSC Solution** fire alarm control panel.
 
 1.  Choose the **NSC solution** fire alarm control panel.
 
