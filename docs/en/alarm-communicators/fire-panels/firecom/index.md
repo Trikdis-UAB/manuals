@@ -506,7 +506,7 @@ FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **C-T
 
 <img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.893700787401575in" />
 
-2.  Enter phone numbers, e-mail of users who should get messages from the FIRECOM.
+2.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
 <img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
 
