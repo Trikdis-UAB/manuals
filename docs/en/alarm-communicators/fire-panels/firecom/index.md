@@ -831,7 +831,7 @@ Using ***Protegus2***, users can see the system’s state and receive notificati
 
 To ensure safety, change the default administrator SMS password. Send an SMS message of the following format:
 
-#### PSW 123456 xxxxxx
+     **PSW 123456 xxxxxx**
 
 | **123456** | Default administrator password      |
 |----|----|----|
@@ -841,7 +841,7 @@ To ensure safety, change the default administrator SMS password. Send an SMS mes
 
 Only phone numbers on the user list can control the system using SMS messages or phone calls. From an administrator phone, send SMS messages with other people’s phone numbers and names to allow them to control the system:
 
-#### SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL
+     **SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
 
 | **xxxxxx** | 6-symbol administrator password |
 |----|----|----|
@@ -850,7 +850,7 @@ Only phone numbers on the user list can control the system using SMS messages or
 | **NAME** | User’s name |
 | **EMAIL** | User’s e-mail |
 
-#### SMS command list
+     **SMS command list**
 
 | Command | Data | Description |
 |----|----|----|
@@ -890,7 +890,7 @@ Perform these actions if you want to control a PGM output remotely:
 - Call the number of the ***FIRECOM***’s SIM card. The ***FIRECOM*** will answer the call and you can dial commands using the phone’s keypad (see the table).
 
 
-#### Mobile phone keyboard command list
+     **Mobile phone keyboard command list**
 
 | Keyboard buttons | Function | Description |
 |----|----|----|
