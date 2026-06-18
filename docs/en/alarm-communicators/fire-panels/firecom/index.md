@@ -781,7 +781,7 @@ After finishing configuration, click the **Write \[F5\]** button and disconnect 
 10.  **Encryption Key** – enter the receiver’s encryption key.
 
 !!! note
-    If you chose **DC-09** as the transmission protocol, additionally enter the object, line and receiver numbers in the “**Settings”** setting group of the **“Reporting to CMS”** window. 11. (Recommended) Configure the “**Backup channel”** settings.
+    If you chose **DC-09** as the transmission protocol, additionally enter the object, line and receiver numbers in the “**Settings”** setting group of the **“Reporting to CMS”** window.
 
 11. (Recommended) Configure the “Backup channel” settings. 
 
