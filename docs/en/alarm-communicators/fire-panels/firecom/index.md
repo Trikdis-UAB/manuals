@@ -12,15 +12,15 @@ Communicator ***FIREMCOM*** meets the requirements of standard EN 54-21:2006; EN
 
 The product complies with the performance requirements of EN54-21 standard Annex A for type 1 transmission system type.
 
-Communicator **FIRECOM** Certificate No: 1922-CPR-2083. Fire detection and fire alarm systems. Alarm transmission and fault warning routing equipment. Power supply equipment.
+Communicator ***FIRECOM*** Certificate No: 1922-CPR-2083. Fire detection and fire alarm systems. Alarm transmission and fault warning routing equipment. Power supply equipment.
 
 The product is certified by notified product certification body: No.1922 “Dedal”, Nesebar Mladost str. 50, Bulgaria, 8230
 
 Trikdis technical support contacts: support@trikdis.lt, +37067422877.
 
-The **FIRECOM** is used for transmitting fire alarm control panel messages via LAN and/or cellular networks to the Central Monitoring Station’s receiver.
+The ***FIRECOM*** is used for transmitting fire alarm control panel messages via LAN and/or cellular networks to the Central Monitoring Station’s receiver.
 
-Principle of operation. When an input (zone) of the communicator is violated, the **FIRECOM** will transmit an event message to the Central Monitoring Station’s receiver or to the Protegus2 app using mobile internet and/or LAN network. It can also send SMS messages and make phone calls. The communicator is available with 4G modem.
+Principle of operation. When an input (zone) of the communicator is violated, the ***FIRECOM*** will transmit an event message to the Central Monitoring Station’s receiver or to the ***Protegus2*** app using mobile internet and/or LAN network. It can also send SMS messages and make phone calls. The communicator is available with 4G modem.
 
 ### Features
 
@@ -32,7 +32,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 - Any CMS can receive reports, as long as they have TRIKDIS software/IP receiver or any other manufacturer’s IP receiver supporting SIA DC-09 IP protocol.
 
-- Prioritizing the transmission of events to the CMS: messages are first transmitted to the CMS and only then to *Protegus2*.
+- Prioritizing the transmission of events to the CMS: messages are first transmitted to the CMS and only then to ***Protegus2***.
 
 
 - Possibility to send event reports to CMS of two different security companies.
@@ -45,13 +45,13 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 - Sends SMS messages about events.
 
-- “Push” and special sound event notifications using the Protegus2 application.
+- “Push” and special sound event notifications using the ***Protegus2*** application.
 
 - Remote temperature monitoring.
 
 **Remote control of outputs**
 
-- Via Protegus2 app.
+- Via ***Protegus2*** app.
 
 - By calling the device‘s phone number.
 
@@ -98,7 +98,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | LAN module | Yes, built-in |
 | LAN network configuration type | DHCP or manual |
 | SIM card | 2, NANO size |
-| Report transmission directions | To main and backup receivers of 2 different security companies;​ To Protegus2 cloud, to iOS/​Android Protegus2 mobile apps;​ To 8 mobile phones via SMS messages. Calls 8 mobile phones. |
+| Report transmission directions | To main and backup receivers of 2 different security companies;​ To ***Protegus2*** cloud, to iOS/​Android ***Protegus2*** mobile apps;​ To 8 mobile phones via SMS messages. Calls 8 mobile phones. |
 | Event reporting transmission channels | 4G, Ethernet (LAN), SMS, call |
 | Message encryption | Yes |
 | Internal clock | Yes |
@@ -223,7 +223,7 @@ If there are problems with powering the system from the main power supply, an �
 
 | Name | Quantity |
 |----|:--:|
-| **FIRECOM** communicator board with antenna, built into a metal housing | 1 pc. |
+| ***FIRECOM*** communicator board with antenna, built into a metal housing | 1 pc. |
 | Metal housing with Mean Well impulse power supply | 1 pc. |
 | Resistor 10 kΩ | 20 pcs. |
 | Wire for connecting battery | 1 pc. |
@@ -361,7 +361,7 @@ In order to connect the smoke detector circuit to the selected input, it is nece
 
 </div>
 
-If you want to monitor the status of the fire alarm panel, connect its corresponding outputs to the **FIRECOM** inputs. The outputs (PGM1, PGM2, PGM3) of the fire panel must be configured as panel status outputs (Alarm, Trouble, etc.).
+If you want to monitor the status of the fire alarm panel, connect its corresponding outputs to the ***FIRECOM*** inputs. The outputs (PGM1, PGM2, PGM3) of the fire panel must be configured as panel status outputs (Alarm, Trouble, etc.).
 
 ### Schematic for connecting the fire panel with the ESPA4.4.4 protocol
 
@@ -385,11 +385,11 @@ FIRECOM communicator settings with TrikdisConfig when connecting the fire alarm 
 
 2.  Select connection type.
 
-3.  The **FIRECOM** communicator and the fire panel must have the same data transmission settings.
+3.  The ***FIRECOM*** communicator and the fire panel must have the same data transmission settings.
 
 <img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7755905511811023in" />
 
-4.  Enter phone numbers, e-mail of users who should get messages from the **FIRECOM**.
+4.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
 <img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
@@ -401,7 +401,7 @@ FIRECOM communicator settings with TrikdisConfig when connecting the fire alarm 
 
 <img alt="" src="./image26.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
-Test the system. Activate the fire alarm and check that **FIRECOM** messages are sent to the CMS (central monitoring station) and to Protegus2.
+Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
 ### Schematic for connecting the fire panel NSC Solution
 
@@ -427,7 +427,7 @@ FIRECOM communicator settings with TrikdisConfig when connecting the **NSC Solut
 
 <img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.122047244094488in" />
 
-3.  Enter phone numbers, e-mail of users who should get messages from the **FIRECOM**.
+3.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
 <img alt="" src="./image30.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
@@ -439,9 +439,9 @@ FIRECOM communicator settings with TrikdisConfig when connecting the **NSC Solut
 
 <img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
-After setting up the **FIRECOM** communicator, turn on power supply the fire control panel. Wait for the fire control panel software to load. It is necessary to scan the modules connected to the RS485 bus on the fire control panel. On the fire control panel, press: **PROG.\>INSTALLER\>(Enter the installer code) 00000 OK\>(Select) SETTINGS\>ENTER\>(Select) SCAN RS485\>ENTER**. Wait for the scan to complete. Return to the main screen by pressing “**CANCEL**“ twice.
+After setting up the ***FIRECOM*** communicator, turn on power supply the fire control panel. Wait for the fire control panel software to load. It is necessary to scan the modules connected to the RS485 bus on the fire control panel. On the fire control panel, press: **PROG.\>INSTALLER\>(Enter the installer code) 00000 OK\>(Select) SETTINGS\>ENTER\>(Select) SCAN RS485\>ENTER**. Wait for the scan to complete. Return to the main screen by pressing “**CANCEL**“ twice.
 
-Test the system. Activate the fire alarm and check that **FIRECOM** messages are sent to the CMS (central monitoring station) and to Protegus2.
+Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
 ### Schematic for connecting the fire panel INIM SMARTLINE
 
@@ -464,13 +464,13 @@ Test the system. Activate the fire alarm and check that **FIRECOM** messages are
 <img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note
-    You cannot connect the **FIRECOM** using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the **FIRECOM** is connected to the **INIM Smartline** panel via RS485 bus. **FIRECOM** communicator settings with TrikdisConfig when connecting the **INIM SMARTLINE** fire alarm control panel.
+    You cannot connect the ***FIRECOM*** using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the ***FIRECOM*** is connected to the **INIM Smartline** panel via RS485 bus. ***FIRECOM*** communicator settings with TrikdisConfig when connecting the **INIM SMARTLINE** fire alarm control panel.
 
 1.  Choose the **Inim Smartline** fire alarm control panel.
 
 <img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.893700787401575in" />
 
-2.  Enter phone numbers, e-mail of users who should get messages from the **FIRECOM**.
+2.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
 <img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
 
@@ -482,7 +482,7 @@ Test the system. Activate the fire alarm and check that **FIRECOM** messages are
 
 <img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
-Test the system. Activate the fire alarm and check that **FIRECOM** messages are sent to the CMS (central monitoring station) and to Protegus2.
+Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
 ### Schematic for connecting the fire panel C-TEC Cast ZFP
 
@@ -550,7 +550,7 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 13. In the “**Properties**” tab, enter the system name.
 
-14. Specify the “**ABUS RS485**” bus to which the **FIRECOM** communicator is connected.
+14. Specify the “**ABUS RS485**” bus to which the ***FIRECOM*** communicator is connected.
 
 15. Configure messages.
 
@@ -566,7 +566,7 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 The fire panel is programmed. Disconnect the cable from USB2.0 A-B of the fire panel.
 
-Test the system. Activate the fire alarm and check that **FIRECOM** messages are sent to the CMS (central monitoring station) and to Protegus2.
+Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
 ### Schematic for connecting a temperature sensor
 
@@ -584,7 +584,7 @@ According to the EN54 standard, the fire panel from the communicator must receiv
 
 ### Schematics for connecting iO series expander modules
 
-If the communicator **FIRECOM** needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander. The **FIRECOM**’s configuration for expander modules is described in chapter 6.5 ““Modules” window”.
+If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander. The ***FIRECOM***’s configuration for expander modules is described in chapter 6.5 ““Modules” window”.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
@@ -619,13 +619,13 @@ To turn on the communicator, first you need to turn on its power supply. The com
 
 1.  Download the configuration software TrikdisConfig from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it*.*
 
-2.  Connect the **FIRECOM** to the computer using a USB Type-C cable.
+2.  Connect the ***FIRECOM*** to the computer using a USB Type-C cable.
 
-3.  Launch TrikdisConfig. The program will automatically recognize the connected device and will automatically open the **FIRECOM** configuration window.
+3.  Launch TrikdisConfig. The program will automatically recognize the connected device and will automatically open the ***FIRECOM*** configuration window.
 
-4.  Click the **Read \[F4\]** button to see the current parameters of the **FIRECOM**. If a window requesting the administrator or installer code opens, enter the 6-digit code.
+4.  Click the **Read \[F4\]** button to see the current parameters of the ***FIRECOM***. If a window requesting the administrator or installer code opens, enter the 6-digit code.
 
-Below we describe the settings you need to edit to make the controller send events to the Protegus2 app or to the Central Monitoring Station.
+Below we describe the settings you need to edit to make the controller send events to the ***Protegus2*** app or to the Central Monitoring Station.
 
 ### Settings for connecting to Protegus2 app
 
@@ -643,38 +643,38 @@ Below we describe the settings you need to edit to make the controller send even
 
 3.  Tick the box “**Enable cloud service”**.
 
-4.  Change the ***Protegus2* “Cloud access Code”** if you want users to be asked to enter it when they add the system in the Protegus2 app (default password – 123456).
+4.  Change the ***Protegus2* “Cloud access Code”** if you want users to be asked to enter it when they add the system in the ***Protegus2*** app (default password – 123456).
 
 **In the “Reporting to CMS” window, “Settings” tab:**
 
 <img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.5669291338582676in" />
 
-3.  If a LAN cable is connected to the communicator, check the box „**DHCP**“ (automatic registration mode) so that the **FIRECOM** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
+3.  If a LAN cable is connected to the communicator, check the box „**DHCP**“ (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
 
-4.  The parameters for how the communicator will send messages to Protegus2 are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to Protegus2, then the “Return to Primary” connection type will be attempted after a set time interval.
+4.  The parameters for how the communicator will send messages to ***Protegus2*** are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to ***Protegus2***, then the “Return to Primary” connection type will be attempted after a set time interval.
 
 **In the “Zones” window, “Zones settings” tab:**
 
 <img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
-3.  Tick the boxes if you want users to receive notifications to Protegus2 about changes in zone states.
+3.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in zone states.
 
 **In the “PGM” window, “Outputs” tab:**
 
 <img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.968503937007874in" />
 
-4.  Tick the boxes if you want users to receive notifications to Protegus2 about changes in PGM output states.
+4.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in PGM output states.
 
 **In the “System events” window, “Events” tab:**
 
 <img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
-5.  Tick the boxes if you want users to receive notifications to Protegus2 about changes in the communicator’s internal event states.
+5.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in the communicator’s internal event states.
 
 After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
 
 !!! note
-    See chapter 6** “Description of TrikdisConfig windows”** to find more about other **FIRECOM** settings in ***TrikdisConfig*.**
+    See chapter 6** “Description of TrikdisConfig windows”** to find more about other ***FIRECOM*** settings in ***TrikdisConfig*.**
 
 ### Settings for connecting to Central Monitoring Station
 
@@ -692,7 +692,7 @@ After finishing configuration, click the **Write \[F5\]** button and disconnect 
 
 <img alt="" src="./image67.webp" style="width:7.086614173228346in;height:3.8503937007874014in" />
 
-4.  If a LAN cable is connected to the communicator, check the box “DHCP” (automatic registration mode) so that the **FIRECOM** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
+4.  If a LAN cable is connected to the communicator, check the box “DHCP” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
 
 5.  The parameters for how the communicator will send messages to CMS are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to CMS, then the “Return to Primary” connection type will be attempted after a set time interval.
 
@@ -718,15 +718,15 @@ After finishing configuration, click the **Write \[F5\]** button and disconnect 
 After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
 
 !!! note
-    See chapter **6 “Description of TrikdisConfig windows”** to find more about other **FIRECOM** settings in ***TrikdisConfig*.**
+    See chapter **6 “Description of TrikdisConfig windows”** to find more about other ***FIRECOM*** settings in ***TrikdisConfig*.**
 
 ## Remote control
 
 ### Adding the communicator to Protegus2 app
 
-Using Protegus2, users can see the system’s state and receive notifications about system events.
+Using ***Protegus2***, users can see the system’s state and receive notifications about system events.
 
-1.  Download and launch the Protegus2 app or use the browser version [www.protegus.app](https://www.protegus.app):
+1.  Download and launch the ***Protegus2*** app or use the browser version [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
 
@@ -737,12 +737,12 @@ Using Protegus2, users can see the system’s state and receive notifications ab
 2.  Create a new account or log in with your user name and password.
 
 !!! warning
-    “Important” When adding the system to Protegus2 the **FIRECOM** communicator must:
+    “Important” When adding the system to ***Protegus2*** the ***FIRECOM*** communicator must:
 
     1.  Have an inserted and activated SIM card with the PIN code entered or
         disabled;
 
-    2.  Have Protegus2 service enabled. See 6.4 "Users & Reporting"
+    2.  Have ***Protegus2*** service enabled. See 6.4 "Users & Reporting"
         window;
 
     3.  Have the power switched on ("**STA**" LED must be blink green);
@@ -751,7 +751,7 @@ Using Protegus2, users can see the system’s state and receive notifications ab
         blink yellow; or/and "**ETH**" LED is green when connected to LAN
         network).
 
-3.  Click “Add new system” and enter the ***FIRECOM***’s “*Unique ID*” number. It can be found on the device and packaging sticker. After entering the “*Unique ID”*, click the “Next” button.
+3.  Click “Add new system” and enter the ****FIRECOM****’s “*Unique ID*” number. It can be found on the device and packaging sticker. After entering the “*Unique ID”*, click the “Next” button.
 
 <img alt="" src="./image72.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
@@ -817,7 +817,7 @@ Perform these actions if you want to control a PGM output remotely:
 
 - The user must be allowed to control outputs OUT and the output OUT must have type “Remote control” assigned (using TrikdisConfig).
 
-- Call the number of the **FIRECOM**’s SIM card. The **FIRECOM** will answer the call and you can dial commands using the phone’s keypad (see the table).
+- Call the number of the ***FIRECOM***’s SIM card. The ***FIRECOM*** will answer the call and you can dial commands using the phone’s keypad (see the table).
 
 
 #### Mobile phone keyboard command list
@@ -831,7 +831,7 @@ Perform these actions if you want to control a PGM output remotely:
 
 ### Description of TrikdisConfig status bar
 
-Once the **FIRECOM** is connected, TrikdisConfig will display information about the connected device in its status bar.
+Once the ***FIRECOM*** is connected, TrikdisConfig will display information about the connected device in its status bar.
 
 <img alt="" src="./image73.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
 
@@ -847,7 +847,7 @@ Once the **FIRECOM** is connected, TrikdisConfig will display information about 
 | State          | Type of connection with the program (USB or remote) |
 | Role           | Access level (shown after access code is approved)  |
 
-When the **Read \[F4\]** button is clicked, the program will read and show settings currently saved on the **FIRECOM**. With TrikdisConfig, set the required parameters using the following program window descriptions.
+When the **Read \[F4\]** button is clicked, the program will read and show settings currently saved on the ***FIRECOM***. With TrikdisConfig, set the required parameters using the following program window descriptions.
 
 ### “System Options” window
 
@@ -871,7 +871,7 @@ When the **Read \[F4\]** button is clicked, the program will read and show setti
 
 - **Restore event reporting after …** – set the time after which suspending of event reporting will be cancelled. The time can be anywhere from 0 to 999 minutes.
 
-- **Call –** when an event occurs, the **FIRECOM** will call user(-s) as many times as is set. If the call is declined or answered, the **FIRECOM** will stop calling. Duration of a call is 20 seconds.
+- **Call –** when an event occurs, the ***FIRECOM*** will call user(-s) as many times as is set. If the call is declined or answered, the ***FIRECOM*** will stop calling. Duration of a call is 20 seconds.
 
 - **EOL Type** - specify the nominals of the resistors connected to the sensors (EOL – End Of Line. RT + R1 + R2. Resistor RT - tamper; resistor R1 - sensor No 1; resistor R2 - sensor No 2).
 
@@ -881,7 +881,7 @@ When the **Read \[F4\]** button is clicked, the program will read and show setti
 
 - Enter the “**SIM card PIN”** code**.**
 
-  - **APN** – network service provider’s mobile internet access point name. You must enter the **APN** if event messages will have to be sent to Protegus2 app or to the CMS via GPRS.
+  - **APN** – network service provider’s mobile internet access point name. You must enter the **APN** if event messages will have to be sent to ***Protegus2*** app or to the CMS via GPRS.
 
 - If required by the GPRS network service provider, enter the **APN** user name and password in the fields **Login** and **Password**.
 
@@ -895,7 +895,7 @@ You can set the time by clicking the “**Set PC time”** button. If “**Disab
 
 - **Time zone (hours)** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+3**.
 
-- **Time set** – specify a server to synchronize the ***FIRECOM**’s* internal clock with. Synchronization occurs after the communicator is powered on.
+- **Time set** – specify a server to synchronize the ****FIRECOM***’s* internal clock with. Synchronization occurs after the communicator is powered on.
 
 - **Daylight saving time** – if you check the box, the communicator’s internal clock will be automatically switched to summer or winter time.
 
@@ -905,7 +905,7 @@ You can set the time by clicking the “**Set PC time”** button. If “**Disab
 
 <img alt="" src="./image75.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
 
-Zones can be assigned to groups. The name of each group can be changed. Group names will be visible in Protegus2.
+Zones can be assigned to groups. The name of each group can be changed. Group names will be visible in ***Protegus2***.
 
 **“Access” tab**
 
@@ -962,7 +962,7 @@ Enable backup channel mode to allow messages to be sent using the backup channel
 
 **Settings group “Settings”**
 
-- **Return to Primary after** – time period after which the **FIRECOM** will attempt to regain connection with the “Primary channel”.
+- **Return to Primary after** – time period after which the ***FIRECOM*** will attempt to regain connection with the “Primary channel”.
 - **IP PING period** – sending period of internal PING signals for checking connectivity. These messages are sent only via IP channel. The receiver does not forward these signals to the monitoring software and thus does not overload the software. The monitoring software is only notified when the receiver does not receive a PING message from the device for a preset period of time.
 
 By default, the receiver will send a “*Connection lost*” message to the monitoring software after a time period that is three times longer than the communicator’s PING sending period. E.g. if the IP PING period is 3 minutes, the receiver will send a lost connection message if it does not receive a PING for 9 minutes.
@@ -985,21 +985,21 @@ The following settings are only shown when **DC-09_2007** or **DC-09_2012** prot
 
 **Settings group “Reporting mode”**
 
-For setting parameters on how the communicator will communicate with the CMS channels and with Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the “**Return to main”** connection type will be attempted after the specified time interval.
+For setting parameters on how the communicator will communicate with the CMS channels and with ***Protegus2***. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the “**Return to main”** connection type will be attempted after the specified time interval.
 
-- **Main type** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and Protegus2.
+- **Main type** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and ***Protegus2***.
 
-- **Backup type** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and Protegus2.
+- **Backup type** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and ***Protegus2***.
 
-- **Backup type 2** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and Protegus2.
+- **Backup type 2** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and ***Protegus2***.
 
 - **Dual path for CMS** - dual path mode enables CMS1 to operate over LAN and CMS2 to operate over SIM. These two channels and communication paths operate in parallel. 
 
-- **Return to main (both channel)** – time period after which the **FIRECOM** will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
+- **Return to main (both channel)** – time period after which the ***FIRECOM*** will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
 
 **Settings group “LAN network parameters”**
 
-- **DHCP mode** – mode for registering on the LAN network (manual or automatic). Tick the box and the **FIRECOM** communicator will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
+- **DHCP mode** – mode for registering on the LAN network (manual or automatic). Tick the box and the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
 
 - **Static IP** – static IP address for manual registration mode.
 
@@ -1011,11 +1011,11 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **Settings group “SIM parameters”**
 
-- **Disable indication of the absence of a SIM card** – when the box is ticked, the **FIRECOM** communicator will not display an indication that there is no SIM card inserted.
+- **Disable indication of the absence of a SIM card** – when the box is ticked, the ***FIRECOM*** communicator will not display an indication that there is no SIM card inserted.
 
-- **Use dial and SMS when working over internet module** – ticking this box will enable controlling the communicator using phone calls and SMS messages. If the box is not ticked and there is a LAN network available, then SMS and phone calls are not used. If the box is not ticked and there is no LAN network, the **FIRECOM** can still be controlled using phone calls and SMS messages. The **FIRECOM** will send SMS messages to the user.
+- **Use dial and SMS when working over internet module** – ticking this box will enable controlling the communicator using phone calls and SMS messages. If the box is not ticked and there is a LAN network available, then SMS and phone calls are not used. If the box is not ticked and there is no LAN network, the ***FIRECOM*** can still be controlled using phone calls and SMS messages. The ***FIRECOM*** will send SMS messages to the user.
 
-- **Disable the use of SIM card mobile data** – ticking the box will disable the usage of the SIM card’s mobile data. Data will only be sent using LAN. If a LAN network is temporarily unavailable, the **FIRECOM** will store data in memory. When the LAN network is restored, the **FIRECOM** will send data using LAN.
+- **Disable the use of SIM card mobile data** – ticking the box will disable the usage of the SIM card’s mobile data. Data will only be sent using LAN. If a LAN network is temporarily unavailable, the ***FIRECOM*** will store data in memory. When the LAN network is restored, the ***FIRECOM*** will send data using LAN.
 
 ### “Users & Reporting” window
 
@@ -1031,11 +1031,11 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 - **Tel number** – the user’s phone number that will receive SMS messages. The numbers must start with the international country code. The first 8 telephone numbers will receive reports using messages and phone calls.
 
-- **E-mail** - enter the user’s email, so that the user would be invited to Protegus2 to control the system.
+- **E-mail** - enter the user’s email, so that the user would be invited to ***Protegus2*** to control the system.
 
 - **PGM** – if the box is ticked, the user can remotely control outputs (calls, SMS).
 
-- **ACK** – if the box is ticked, the **FIRECOM** will send SMS messages with “**SMS answer text”** to the user after every received SMS command.
+- **ACK** – if the box is ticked, the ***FIRECOM*** will send SMS messages with “**SMS answer text”** to the user after every received SMS command.
 
 - **FWD** – if the box is ticked, SMS messages received from non-system users will be forwarded to the user (e.g. SIM card account balance, random promotional messages, etc.).
 
@@ -1045,11 +1045,11 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **Settings group “Cloud application”**
 
-- **Enable cloud service** – enable Protegus 2 service to allow the **FIRECOM** to exchange data with the Protegus2 app and remotely configure the device using TrikdisConfig.
+- **Enable cloud service** – enable Protegus 2 service to allow the ***FIRECOM*** to exchange data with the ***Protegus2*** app and remotely configure the device using TrikdisConfig.
 
-- **Parallel reporting** – enable parallel message sending via the “**Primary channel”** and to Protegus2.
+- **Parallel reporting** – enable parallel message sending via the “**Primary channel”** and to ***Protegus2***.
 
-- **Cloud access code** – 6-digit code for logging in to Protegus2 (default code - 123456).
+- **Cloud access code** – 6-digit code for logging in to ***Protegus2*** (default code - 123456).
 
 **“SMS answer texts” tab**
 
@@ -1075,13 +1075,13 @@ The text for answers to commands sent using SMS messages can be customized in th
 
 - **Name** – you can give the module a name.
 
-- **Firmware version** – the firmware version will be shown when the **FIRECOM** finds the connected module.
+- **Firmware version** – the firmware version will be shown when the ***FIRECOM*** finds the connected module.
 
 <img alt="" src="./image83.webp" style="width:7.086614173228346in;height:3.625984251968504in" />
 
 **Settings group “RS485 2 modules”**
 
-Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, **C-TEC Cast ZFP**, **Polon-Alfa 3000**) can be connected to the RS485 2 bus of the **FIRECOM** communicator. The connection diagram of the fire panel and settings is shown in paragraphs 3.5-3.9.
+Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, **C-TEC Cast ZFP**, **Polon-Alfa 3000**) can be connected to the RS485 2 bus of the ***FIRECOM*** communicator. The connection diagram of the fire panel and settings is shown in paragraphs 3.5-3.9.
 
 ### “Zones” window
 
@@ -1093,7 +1093,7 @@ Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, 
 
 - **Name** - the zone can be given a name that will be used in SMS messages and application.
 
-- **Input** – choose which **FIRECOM** or expansion module input IN to assign to a zone.
+- **Input** – choose which ***FIRECOM*** or expansion module input IN to assign to a zone.
 
 - **Group** - assigning a zone to a group.
 
@@ -1101,7 +1101,7 @@ Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, 
 
 - **CMS** – if the box is ticked, messages about zone events will be sent to the CMS (central monitoring station).
 
-- **Prot**. – if the box is ticked, notifications about zone events will be sent to Protegus2 app.
+- **Prot**. – if the box is ticked, notifications about zone events will be sent to ***Protegus2*** app.
 
 - **Delay** – IN input zone reaction time in milliseconds.
 
@@ -1119,9 +1119,9 @@ This window will only be displayed if at least one user phone number has been ad
 
 <img alt="" src="./image86.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
-When the zone is triggered, the communicator will send an event message. The input is assigned a Contact ID (SIA) code, which will be sent to CMS and Protegus2.
+When the zone is triggered, the communicator will send an event message. The input is assigned a Contact ID (SIA) code, which will be sent to CMS and ***Protegus2***.
 
-- **Enable** – checked event fields where messages will be sent to CMS and Protegus2.
+- **Enable** – checked event fields where messages will be sent to CMS and ***Protegus2***.
 
 - **E/R** – choose what type of event will be sent when input is triggered – “**Event”** (E) or “**Restore”** (R).
 
@@ -1143,7 +1143,7 @@ When the zone is triggered, the communicator will send an event message. The inp
 
 - **Name** - enter the name of the PGM output.
 
-- **PGM output** – assign outputs OUT of the **FIRECOM** or of an external device to a PGM.
+- **PGM output** – assign outputs OUT of the ***FIRECOM*** or of an external device to a PGM.
 
 - **Output definition** – select operational mode of an output OUT.
 
@@ -1151,7 +1151,7 @@ When the zone is triggered, the communicator will send an event message. The inp
 
 - **CMS** – if the box is ticked, messages about chosen events will be sent to CMS.
 
-- **Prot**. – if the box is ticked, output event notifications will be sent to Protegus2 app.
+- **Prot**. – if the box is ticked, output event notifications will be sent to ***Protegus2*** app.
 
 **“Set Action” tab**
 
@@ -1275,7 +1275,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 - **Clear Log** button – for clearing the event log entries from the device’s memory.
 
-- In the table, you can find the **“Event No.”**, **“Time”**, **“CID”** code, “**Event definition”**. The events log can show up to 1000 events stored in the **FIRECOM**’s memory.
+- In the table, you can find the **“Event No.”**, **“Time”**, **“CID”** code, “**Event definition”**. The events log can show up to 1000 events stored in the ***FIRECOM***’s memory.
 
 ### Restore default settings
 
@@ -1286,7 +1286,7 @@ To restore the communicator’s default settings, click the TrikdisConfig button
 ## Setting parameters remotely
 
 !!! warning
-    “Important” Remote configuration will only work when the **FIRECOM**:
+    “Important” Remote configuration will only work when the ***FIRECOM***:
 
     1.  Has an inserted and activated SIM card with the PIN code entered or
         disabled.
@@ -1301,7 +1301,7 @@ To restore the communicator’s default settings, click the TrikdisConfig button
         network).
 
     If "**SIM**" is yellow solid or "**DAT**" is yellow solid, the device
-    cannot connect to GSM and/or Protegus2.
+    cannot connect to GSM and/or ***Protegus2***.
 
 1.  On your computer, launch the configuration software TrikdisConfig.
 
@@ -1321,9 +1321,9 @@ To restore the communicator’s default settings, click the TrikdisConfig button
 
 When configuration and installation are complete, perform a system check:
 
-1.  To test an input of the communicator, enable it. Check if the events were received by the Central Monitoring Station (CMS) and/or Protegus2 application.
+1.  To test an input of the communicator, enable it. Check if the events were received by the Central Monitoring Station (CMS) and/or ***Protegus2*** application.
 
-2.  To test the communicator’s outputs, turn them on remotely and check their operation. Ensure that the events were received by the Central Monitoring Station (CMS) and/or Protegus2 application.
+2.  To test the communicator’s outputs, turn them on remotely and check their operation. Ensure that the events were received by the Central Monitoring Station (CMS) and/or ***Protegus2*** application.
 
 3.  Perform a fire alarm test to see if the CMS receives events correctly.
 
