@@ -530,7 +530,7 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 7.  Enter the code (default code – 4444).
 
-8.  Click „OK“.
+8.  Click „**OK**“.
 
 <img alt="" src="./image46.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
@@ -560,7 +560,7 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 17. Enter the code (default code – 4444).
 
-18. Click „OK“.
+18. Click „**OK**“.
 
 <img alt="" src="./image51.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
