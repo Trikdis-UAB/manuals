@@ -572,9 +572,16 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 <img alt="" src="./image52.webp" style="width:3.616674321959755in;height:1.1900021872265967in" /> / <img alt="" src="./image53.webp" style="width:3.616674321959755in;height:1.3200021872265966in" />
 
+Temperature sensors should be connected according to the given schematic. Maxim®/Dallas® DS18S20, DS18B20 temperature sensors (up to 8) or AM2301 humidity and temperature sensor (up to 1) can be connected to the communicator ***FIRECOM***. 
+If a wire longer than 0,5 meters is used to connect a temperature sensor, we recommend using twisted pair cable (UTP4x2x0,5 or STP4x2x0,5). 
+The “**+5V**” terminal on the board is for supplying devices connected to the “**1-Wire**” data bus with 5 V DC voltage. The maximum output current is 0,2 A. The output is protected from overload. If the maximum allowed current is exceeded, the power will automatically be switched off. The communicator automatically recognizes and links connected devices. 
+
+
 ### Schematics for connecting a relay and an LED indicator
 
 <img alt="" src="./image54.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image55.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
+
+Using the relay terminals, it is possible to remotely control (turn on/off) various electrical devices. The communicator’s universal “**I/O**” terminal must be configured as an output (OUT) and must have the definition “**Remote control**” assigned. 
 
 ### Schematics of connecting the inputs of the fire panel to the communicator
 
