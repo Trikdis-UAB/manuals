@@ -520,47 +520,47 @@ FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **C-T
 
 Install the **ZFPtools** program on your computer. Run the **ZFPtools** program. Turn on the power supply of the fire control panel. Wait until the fire panel software is loaded. Connect the fire panel to the computer using a USB2.0 A-B cable.
 
-5.  Open the “**Node View**” tab.
+1.  Open the “**Node View**” tab.
 
 <img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
-6.  Download the fire panel settings to your computer.
+2.  Download the fire panel settings to your computer.
 
 <img alt="" src="./image45.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
-7.  Enter the code (default code – 4444).
+3.  Enter the code (default code – 4444).
 
-8.  Click „**OK**“.
+4.  Click „**OK**“.
 
 <img alt="" src="./image46.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
-1.  Select „**BMS Interface**“.
+5.  Select „**BMS Interface**“.
 
-2.  Click on the free icon.
+6.  Click on the free icon.
 
 <img alt="" src="./image47.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
-3.  Click „**Edit Devices**“.
+7.  Click „**Edit Devices**“.
 
 <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
-4.  In the “**Device**” tab, enter the system name.
+8.  In the “**Device**” tab, enter the system name.
 
 <img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
-5.  In the “**Properties**” tab, enter the system name.
+9.  In the “**Properties**” tab, enter the system name.
 
-6. Specify the “**ABUS RS485**” bus to which the ***FIRECOM*** communicator is connected.
+10. Specify the “**ABUS RS485**” bus to which the ***FIRECOM*** communicator is connected.
 
-7. Configure messages.
+11. Configure messages.
 
-8. Write the settings to the fire panel.
+12. Write the settings to the fire panel.
 
 <img alt="" src="./image50.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
-9. Enter the code (default code – 4444).
+13. Enter the code (default code – 4444).
 
-10. Click „**OK**“.
+14. Click „**OK**“.
 
 <img alt="" src="./image51.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
@@ -592,7 +592,9 @@ Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***.
 
 <img alt="" src="./FIRECOM trikdisconfig 4 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
-| The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be configured using the **POLON Studio** application to operate via the Modbus RTU (RS485) protocol. | <img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:7.086614173228346in;height:in" /> |
+The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be configured using the **POLON Studio** application to operate via the Modbus RTU (RS485) protocol. 
+
+<img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:7.086614173228346in;height:in" /> 
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***. 
 
