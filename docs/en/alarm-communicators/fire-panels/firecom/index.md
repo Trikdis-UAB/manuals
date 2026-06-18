@@ -115,7 +115,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | Max. number of temperature sensors connected to 1-Wire data bus | 8 (Dallas) or 1 (if an AM2301 series sensor is used) |
 | RS485 bus | 2 |
 | RS485 bus length | Up to 100 m |
-| Supported modules | iO-8 – expander module;​ /​ iO-MO – iO-WL radio wave transceiver;​ /​ iO-LORA – expander module;​ /​ iO8-LORA – expander module;​ /​ PB-LORA – panic button;​ /​ REL-LORA – expander module;​ /​ Fire alarm control panel with ESPA 4.4.4 protocol;​ /​ NSC Solution – fire alarm control panel;​ /​ INIM Smartline - fire alarm control panel;​ /​ C-TEC Cast ZFP – fire alarm control panel. |
+| Supported modules | iO-8 – expander module;​ /​ iO-MO – iO-WL radio wave transceiver;​ /​ iO-LORA – expander module;​ /​ iO8-LORA – expander module;​ /​ PB-LORA – panic button;​ /​ REL-LORA – expander module;​ /​ Fire alarm control panel with ESPA 4.4.4 protocol;​ /​ NSC Solution – fire alarm control panel;​ /​ INIM Smartline - fire alarm control panel;​ /​ C-TEC Cast ZFP – fire alarm control panel; / Polon -Alfa 3000 – fire alarm control panel. |
 | Operating environment | Temperature from -10 °C to +50 °C, relative air humidity – up to 80% at +20°C. |
 | Dimensions | 235 x 205 x 92 mm |
 | Weight | 1.35 kg |
@@ -887,9 +887,11 @@ When the **Read \[F4\]** button is clicked, the program will read and show setti
 
 - **Locked ICCID** - enter the ICCID number of the SIM card if you want the communicator to work only with this SIM card.
 
+- **Preferred operator** - after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes.
+
 **“Time settings” settings group**
 
-You can set the time by clicking the “**Set PC time”** button. If “**Disabled”** is chosen in the “**Time synchronization”** field, the computer’s time will be set for the communicator. If a modem or a server is chosen in the “**Time synchronization”** field, the communicator will synchronize its time according to that modem or server.
+You can set the time by clicking the “**Set PC time”** button. If “**Disabled”** is chosen in the “**Time set”** field, the computer’s time will be set for the communicator. If a modem or a server is chosen in the “**Time set”** field, the communicator will synchronize its time according to that modem or server.
 
 - **Time zone (hours)** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+3**.
 
@@ -991,6 +993,8 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 - **Backup type 2** – select a connection type (SIM, Ethernet (LAN)) with the CMS receiver and Protegus2.
 
+- **Dual path for CMS** - dual path mode enables CMS1 to operate over LAN and CMS2 to operate over SIM. These two channels and communication paths operate in parallel. 
+
 - **Return to main (both channel)** – time period after which the FIRECOM will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
 
 **Settings group “LAN network parameters”**
@@ -1077,7 +1081,7 @@ The text for answers to commands sent using SMS messages can be customized in th
 
 **Settings group “RS485 2 modules”**
 
-Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, **C-TEC Cast ZFP**) can be connected to the RS485 2 bus of the FIRECOM communicator. The connection diagram of the fire panel and settings is shown in paragraphs 3.5-3.8.
+Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, **C-TEC Cast ZFP**, **Polon-Alfa 3000**) can be connected to the RS485 2 bus of the FIRECOM communicator. The connection diagram of the fire panel and settings is shown in paragraphs 3.5-3.9.
 
 ### “Zones” window
 
@@ -1224,6 +1228,8 @@ This tab will only be displayed if there is at least one user phone number in th
 - **Max** – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the “**High”** box must be ticked.
 
 - **Min** – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the “**Low”** box must be ticked.
+
+- **Delay** - an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
 
 - **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in the “**Module type”** column).
 
