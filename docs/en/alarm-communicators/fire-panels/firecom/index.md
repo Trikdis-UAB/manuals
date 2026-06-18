@@ -115,7 +115,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | Max. number of temperature sensors connected to 1-Wire data bus | 8 (Dallas) or 1 (if an AM2301 series sensor is used) |
 | RS485 bus | 2 |
 | RS485 bus length | Up to 100 m |
-| Supported modules | iO-8 – expander module;​ /​ iO-MO – iO-WL radio wave transceiver;​ /​ iO-LORA – expander module;​ /​ iO8-LORA – expander module;​ /​ PB-LORA – panic button;​ /​ REL-LORA – expander module;​ /​ Fire alarm control panel with ESPA 4.4.4 protocol;​ /​ NSC Solution – fire alarm control panel;​ /​ INIM Smartline - fire alarm control panel;​ /​ C-TEC Cast ZFP – fire alarm control panel; / Polon -Alfa 3000 – fire alarm control panel. |
+| Supported modules | **iO-8** – expander module;​ /​ **iO-MO** – **iO-WL** radio wave transceiver;​ /​ **iO-LORA** – expander module;​ /​ **iO8-LORA** – expander module;​ /​ **PB-LORA** – panic button;​ /​ **REL-LORA** – expander module;​ /​ Fire alarm control panel with **ESPA 4.4.4** protocol;​ /​ **NSC Solution** – fire alarm control panel;​ /​ **INIM Smartline** - fire alarm control panel;​ /​ **C-TEC Cast ZFP** – fire alarm control panel; / **Polon -Alfa 3000** – fire alarm control panel. |
 | Operating environment | Temperature from -10 °C to +50 °C, relative air humidity – up to 80% at +20°C. |
 | Dimensions | 235 x 205 x 92 mm |
 | Weight | 1.35 kg |
