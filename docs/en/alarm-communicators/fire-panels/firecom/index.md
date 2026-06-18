@@ -764,7 +764,6 @@ To ensure safety, change the default administrator SMS password. Send an SMS mes
 #### PSW 123456 xxxxxx
 
 | **123456** | Default administrator password      |
-|------------|-------------------------------------|
 | **xxxxxx** | New 6-symbol administrator password |
 
 1.  **Allow other users to control**
@@ -774,7 +773,6 @@ Only phone numbers on the user list can control the system using SMS messages or
 #### SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL
 
 | **xxxxxx** | 6-symbol administrator password |
-|----|----|
 | **x** | User’s number on the list. (If you write 1 as the user number, you will transfer your administrator’s rights to the other user.) |
 | **PHONENR** | User’s phone number |
 | **NAME** | User’s name |
