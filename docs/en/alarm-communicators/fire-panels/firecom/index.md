@@ -61,7 +61,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 - Quick and easy installation.
 
-- Device configuration either using an USB cable or remotely using TrikdisConfig software.
+- Device configuration either using an USB cable or remotely using ***TrikdisConfig*** software.
 
 - Remote updating of firmware.
 
@@ -109,7 +109,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | No. of PGM outputs | 3 relay (1 A, 30V DC). (can be 13 if IO terminals are set as outputs. Can be expanded to 16 outputs with expanders) |
 | Buffer memory capacity | 60 events |
 | Events log memory | Up to 1000 events. Oldest entries deleted automatically. |
-| Configuration | Remotely using TrikdisConfig software or locally using USB Type-C. |
+| Configuration | Remotely using ***TrikdisConfig*** software or locally using USB Type-C. |
 | 1-Wire data bus length \[1 WIRE\] | Up to 30 m |
 | Compatible temperature sensors | Maxim®/​Dallas® DS18S20, DS18B20;​ AM2301 series |
 | Max. number of temperature sensors connected to 1-Wire data bus | 8 (Dallas) or 1 (if an AM2301 series sensor is used) |
@@ -379,7 +379,7 @@ If you want to monitor the status of the fire alarm panel, connect its correspon
 
 </div>
 
-FIRECOM communicator settings with TrikdisConfig when connecting the fire alarm control panel.
+***FIRECOM*** communicator settings with ***TrikdisConfig*** when connecting the fire alarm control panel.
 
 1.  Choose the **ESPA4.4.4**.
 
@@ -419,7 +419,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 </div>
 
-FIRECOM communicator settings with TrikdisConfig when connecting the **NSC Solution** fire alarm control panel.
+FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **NSC Solution** fire alarm control panel.
 
 1.  Choose the **NSC solution** fire alarm control panel.
 
@@ -464,7 +464,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 <img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note
-    You cannot connect the ***FIRECOM*** using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the ***FIRECOM*** is connected to the **INIM Smartline** panel via RS485 bus. ***FIRECOM*** communicator settings with TrikdisConfig when connecting the **INIM SMARTLINE** fire alarm control panel.
+    You cannot connect the ***FIRECOM*** using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the ***FIRECOM*** is connected to the **INIM Smartline** panel via RS485 bus. ***FIRECOM*** communicator settings with ***TrikdisConfig*** when connecting the **INIM SMARTLINE** fire alarm control panel.
 
 1.  Choose the **Inim Smartline** fire alarm control panel.
 
@@ -500,7 +500,7 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 </div>
 
-FIRECOM communicator settings with TrikdisConfig when connecting the **C-TEC Cast ZFP** fire alarm control panel.
+FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **C-TEC Cast ZFP** fire alarm control panel.
 
 1.  Choose the **C-TEC Cast ZFP** fire alarm control panel.
 
@@ -617,11 +617,11 @@ To turn on the communicator, first you need to turn on its power supply. The com
 
 ## Quick configuration using *TrikdisConfig* software
 
-1.  Download the configuration software TrikdisConfig from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it*.*
+1.  Download the configuration software ***TrikdisConfig*** from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it*.*
 
 2.  Connect the ***FIRECOM*** to the computer using a USB Type-C cable.
 
-3.  Launch TrikdisConfig. The program will automatically recognize the connected device and will automatically open the ***FIRECOM*** configuration window.
+3.  Launch ***TrikdisConfig***. The program will automatically recognize the connected device and will automatically open the ***FIRECOM*** configuration window.
 
 4.  Click the **Read \[F4\]** button to see the current parameters of the ***FIRECOM***. If a window requesting the administrator or installer code opens, enter the 6-digit code.
 
@@ -815,7 +815,7 @@ Only phone numbers on the user list can control the system using SMS messages or
 
 Perform these actions if you want to control a PGM output remotely:
 
-- The user must be allowed to control outputs OUT and the output OUT must have type “Remote control” assigned (using TrikdisConfig).
+- The user must be allowed to control outputs OUT and the output OUT must have type “Remote control” assigned (using ***TrikdisConfig***).
 
 - Call the number of the ***FIRECOM***’s SIM card. The ***FIRECOM*** will answer the call and you can dial commands using the phone’s keypad (see the table).
 
@@ -824,14 +824,14 @@ Perform these actions if you want to control a PGM output remotely:
 
 | Keyboard buttons | Function | Description |
 |----|----|----|
-| \[output no\]\*\[state no\]# | Control selected output OUT | Controls the specified PGM output. State: \[0\] – output turned off; \[1\] – output turned on; \[2\] – turned off for pulse time; \[3\] – turned on for pulse time; (pulse time is specified in the TrikdisConfig software, “PGM” table) \[\*\] – this symbol shows the end of the command. E.g. (turn on output 1): 1*1# E.g. (turn off output 1): 1*0# E.g. (turn on output 2 for “Pulse time” specified in the TrikdisConfig “PGM” table): 2\*3# |
+| \[output no\]\*\[state no\]# | Control selected output OUT | Controls the specified PGM output. State: \[0\] – output turned off; \[1\] – output turned on; \[2\] – turned off for pulse time; \[3\] – turned on for pulse time; (pulse time is specified in the ***TrikdisConfig*** software, “PGM” table) \[\*\] – this symbol shows the end of the command. E.g. (turn on output 1): 1*1# E.g. (turn off output 1): 1*0# E.g. (turn on output 2 for “Pulse time” specified in the ***TrikdisConfig*** “PGM” table): 2\*3# |
 | \# | Retry entering the command | If you made a mistake while entering the command, press “#” on the phone’s keyboard and enter the command again. |
 
 ## Description of *TrikdisConfig* windows
 
 ### Description of TrikdisConfig status bar
 
-Once the ***FIRECOM*** is connected, TrikdisConfig will display information about the connected device in its status bar.
+Once the ***FIRECOM*** is connected, ***TrikdisConfig*** will display information about the connected device in its status bar.
 
 <img alt="" src="./image73.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
 
@@ -847,7 +847,7 @@ Once the ***FIRECOM*** is connected, TrikdisConfig will display information abou
 | State          | Type of connection with the program (USB or remote) |
 | Role           | Access level (shown after access code is approved)  |
 
-When the **Read \[F4\]** button is clicked, the program will read and show settings currently saved on the ***FIRECOM***. With TrikdisConfig, set the required parameters using the following program window descriptions.
+When the **Read \[F4\]** button is clicked, the program will read and show settings currently saved on the ***FIRECOM***. With ***TrikdisConfig***, set the required parameters using the following program window descriptions.
 
 ### “System Options” window
 
@@ -1045,7 +1045,7 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **Settings group “Cloud application”**
 
-- **Enable cloud service** – enable Protegus 2 service to allow the ***FIRECOM*** to exchange data with the ***Protegus2*** app and remotely configure the device using TrikdisConfig.
+- **Enable cloud service** – enable Protegus 2 service to allow the ***FIRECOM*** to exchange data with the ***Protegus2*** app and remotely configure the device using ***TrikdisConfig***.
 
 - **Parallel reporting** – enable parallel message sending via the “**Primary channel”** and to ***Protegus2***.
 
@@ -1279,7 +1279,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 ### Restore default settings
 
-To restore the communicator’s default settings, click the TrikdisConfig button “**Restore”.**
+To restore the communicator’s default settings, click the ***TrikdisConfig*** button “**Restore”.**
 
 <img alt="" src="./image95.webp" style="width:7.086614173228346in;height:1.0905511811023623in" />
 
@@ -1303,7 +1303,7 @@ To restore the communicator’s default settings, click the TrikdisConfig button
     If "**SIM**" is yellow solid or "**DAT**" is yellow solid, the device
     cannot connect to GSM and/or ***Protegus2***.
 
-1.  On your computer, launch the configuration software TrikdisConfig.
+1.  On your computer, launch the configuration software ***TrikdisConfig***.
 
 2.  In the “**Remote access”** window, enter the communicator’s “Unique ID” number. You can find this number on the back of the device and on the device’s packaging.
 
@@ -1330,7 +1330,7 @@ When configuration and installation are complete, perform a system check:
 ## Updating firmware
 
 !!! note
-    After connecting the communicator to TrikdisConfig, the program will automatically offer to update the firmware if any updates are available. Internet connection is needed for this feature. Antivirus software, firewall or strict internet access settings can block the automatic update feature. In this case, you will have to reconfigure your antivirus software. The communicator’s firmware can also be updated or changed manually. All prior settings of the communicator remain after an update. If the firmware is installed manually, it can be changed to a newer or an older version. Perform these steps:
+    After connecting the communicator to ***TrikdisConfig***, the program will automatically offer to update the firmware if any updates are available. Internet connection is needed for this feature. Antivirus software, firewall or strict internet access settings can block the automatic update feature. In this case, you will have to reconfigure your antivirus software. The communicator’s firmware can also be updated or changed manually. All prior settings of the communicator remain after an update. If the firmware is installed manually, it can be changed to a newer or an older version. Perform these steps:
 
 1.  Launch ***TrikdisConfig**.*
 
@@ -1338,7 +1338,7 @@ When configuration and installation are complete, perform a system check:
 
 3.  If a newer version of firmware is available, the program will automatically offer to install it.
 
-4.  Open the TrikdisConfig window “**Firmware”**.
+4.  Open the ***TrikdisConfig*** window “**Firmware”**.
 
 <img alt="" src="./image97.webp" style="width:7.086614173228346in;height:2.921259842519685in" />
 
