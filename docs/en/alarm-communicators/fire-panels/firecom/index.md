@@ -534,33 +534,33 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 <img alt="" src="./image46.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
-3.  Select „**BMS Interface**“.
+1.  Select „**BMS Interface**“.
 
-4.  Click on the free icon.
+2.  Click on the free icon.
 
 <img alt="" src="./image47.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
-11. Click „**Edit Devices**“.
+3.  Click „**Edit Devices**“.
 
 <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
-12. In the “**Device**” tab, enter the system name.
+4.  In the “**Device**” tab, enter the system name.
 
 <img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
-13. In the “**Properties**” tab, enter the system name.
+5.  In the “**Properties**” tab, enter the system name.
 
-14. Specify the “**ABUS RS485**” bus to which the ***FIRECOM*** communicator is connected.
+6. Specify the “**ABUS RS485**” bus to which the ***FIRECOM*** communicator is connected.
 
-15. Configure messages.
+7. Configure messages.
 
-16. Write the settings to the fire panel.
+8. Write the settings to the fire panel.
 
 <img alt="" src="./image50.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
-17. Enter the code (default code – 4444).
+9. Enter the code (default code – 4444).
 
-18. Click „**OK**“.
+10. Click „**OK**“.
 
 <img alt="" src="./image51.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
@@ -578,19 +578,19 @@ Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***.
 1.	Choose the **Polon-Alfa 3000**. 
 2.	Select connection type **RS485**. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 3.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig 2 ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 4.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig 3 ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 5.	Configure the communication channel if messages should be sent to the CMS receiver. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig 4 ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be configured using the **POLON Studio** application to operate via the Modbus RTU (RS485) protocol. 
 
@@ -598,30 +598,30 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 ***FIRECOM*** **communicator and the Polon-Alfa 3000 fire alarm panel are wired to the same LAN**
 
-
+<img alt="" src="./FIRECOM + polon lan ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 Configuring the ***FIRECOM*** communicator using TrikdisConfig. 
 1.	Choose the **Polon-Alfa 3000**. 
 2.	Select connection type **TCP**. 
 3.	Enter the IP address of the **Polon-AlfA 3000** fire control panel.
 
-
+<img alt="" src="./FIRECOM trikdisconfig lan 1 ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 4.	Check the box “**DHCP**” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig lan 2 ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 5.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig lan 3 ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 6.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig lan 4 ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 7.	Configure the communication channel if messages should be sent to the CMS receiver. 
 
-
+<img alt="" src="./FIRECOM trikdisconfig lan 5 ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 The **Polon-Alfa 3000** fire alarm panel with the **MK-30** module must be configured using the **Polon Studio** application to operate via the LAN. The LAN IP addresses must be entered according to your network settings. 
 
