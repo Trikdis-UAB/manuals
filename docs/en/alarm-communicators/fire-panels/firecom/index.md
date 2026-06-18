@@ -8,7 +8,7 @@
 
 ## Description
 
-Communicator **FIRECOM** meets the requirements of standard EN 54-21:2006; EN 54-4:1997/AC:1999/A1:2002/A2:2006.
+Communicator ***FIREMCOM*** meets the requirements of standard EN 54-21:2006; EN 54-4:1997/AC:1999/A1:2002/A2:2006.
 
 The product complies with the performance requirements of EN54-21 standard Annex A for type 1 transmission system type.
 
