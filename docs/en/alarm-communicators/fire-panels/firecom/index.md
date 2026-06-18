@@ -605,23 +605,23 @@ Configuring the ***FIRECOM*** communicator using TrikdisConfig.
 2.	Select connection type **TCP**. 
 3.	Enter the IP address of the **Polon-AlfA 3000** fire control panel.
 
-<img alt="" src="./FIRECOM trikdisconfig lan 1 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./FIRECOM trikdisconfig lan 1 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 4.	Check the box “**DHCP**” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 2 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./FIRECOM trikdisconfig lan 2 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 5.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 3 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./FIRECOM trikdisconfig lan 3 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 6.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 4 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./FIRECOM trikdisconfig lan 4 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 7.	Configure the communication channel if messages should be sent to the CMS receiver. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 5 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./FIRECOM trikdisconfig lan 5 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 The **Polon-Alfa 3000** fire alarm panel with the **MK-30** module must be configured using the **Polon Studio** application to operate via the LAN. The LAN IP addresses must be entered according to your network settings. 
 
