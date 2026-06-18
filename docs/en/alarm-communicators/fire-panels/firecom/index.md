@@ -594,7 +594,7 @@ Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***.
 
 The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be configured using the **POLON Studio** application to operate via the Modbus RTU (RS485) protocol. 
 
-<img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:3in;height:in" /> 
+<img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:2.5in;height:in" /> 
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***. 
 
@@ -627,7 +627,7 @@ Configuring the ***FIRECOM*** communicator using TrikdisConfig.
 
 The **Polon-Alfa 3000** fire alarm panel with the **MK-30** module must be configured using the **Polon Studio** application to operate via the LAN. The LAN IP addresses must be entered according to your network settings. 
 
-<img alt="" src="./module mk-30 ip 2026 06 18.webp" style="width:3in;height:in" />
+<img alt="" src="./module mk-30 ip 2026 06 18.webp" style="width:2.5in;height:in" />
 
 Test the system. Activate the fire alarm and check that **_FIRECOM_** messages are sent to the CMS (central monitoring station) and to **_Protegus2_**. 
 
