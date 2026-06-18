@@ -575,7 +575,9 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 <img alt="" src="./FIRECOM + polon ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
 
 Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***. 
-1.	Choose the **Polon-Alfa 3000**. 
+
+1.	Choose the **Polon-Alfa 3000**.
+	
 2.	Select connection type **RS485**. 
 
 <img alt="" src="./FIRECOM trikdisconfig 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
@@ -603,8 +605,11 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 <img alt="" src="./FIRECOM + polon lan ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
 
 Configuring the ***FIRECOM*** communicator using TrikdisConfig. 
-1.	Choose the **Polon-Alfa 3000**. 
-2.	Select connection type **TCP**. 
+
+1.	Choose the **Polon-Alfa 3000**.
+
+2.	Select connection type **TCP**.
+	
 3.	Enter the IP address of the **Polon-AlfA 3000** fire control panel.
 
 <img alt="" src="./FIRECOM trikdisconfig lan 1 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
