@@ -532,25 +532,25 @@
 
 **Коммуникатор FIRECOM подключен к пожарной панели Polon-Alfa 3000 через шину RS485**
 
-<img alt="" src="./FIRECOM polon prijungimas RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon prijungimas rs485 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 Настройка коммуникатора ***FIRECOM*** с ***TrikdisConfig***. 
 1.	Выберите пожарную панель **Polon-Alfa 3000**. 
 2.	Выберите тип подключения **RS485**. 
 
-<img alt="" src="./FIRECOM polon trikdisconfig 1 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon trikdisconfig 1 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 3.	Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM polon trikdisconfig 2 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon trikdisconfig 2 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 4.	Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./FIRECOM polon trikdisconfig 3 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon trikdisconfig 3 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 5.	Настройте канал связи, если сообщения должны отправляться на приемник ПЦН. 
 
-<img alt="" src="./FIRECOM polon trikdisconfig 4 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon trikdisconfig 4 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по протоколу Modbus RTU (RS485). 
 
@@ -560,30 +560,30 @@
 
 **Коммуникатор FIRECOM и пожарная панель POLON-ALFA 3000 подключены к одной локальной сети** 
 
-<img alt="" src="./FIRECOM polon prijungimas lan RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon prijungimas lan RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 Настройка коммуникатора ***FIRECOM*** с ***TrikdisConfig***. 
 1.	Выберите пожарную панель **Polon-Alfa 3000**. 
 2.	Выберите тип подключения **TCP**. 
 3.	Введите IP-адрес пожарной панели **Polon-Alfa 3000**. 
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 1 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon lan trikdisconfig 1 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 4.	Установите флажок „**DHCP**“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес. 
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 2 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon lan trikdisconfig 2 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 5.	Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 3 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon lan trikdisconfig 3 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 6.	Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 4 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon lan trikdisconfig 4 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 7.	Настройте канал связи, если сообщения должны отправляться на приемник ПЦН.
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 5 RU 2026 06 03.webp" style="width:7in;height:in" />
+<img alt="" src="./FIRECOM polon lan trikdisconfig 5 RU 2026 06 03.webp" style="width:7.0in;height:in" />
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по LAN сети. IP-адреса локальной сети необходимо вводить в соответствии с настройками вашей сети. 
 
