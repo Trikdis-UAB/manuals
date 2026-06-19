@@ -301,7 +301,7 @@ Komunikatoriaus plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių gr
 
 Dvilaidžių dūmų jutiklių prijungimo schemos.
 
-Dvilaidžių dūmų jutiklių prijungimo schema prie „**FLOOP**“ išėjimo. Kai yra naudojama šia jungimo schema, reikia lange **„Zonų įėjimai“** nurodyti **„Įėjimo“** tipą **„Priešgaisrinis jutiklis (2laidis)“**. Dūmų jutiklių aliarmo srovė turi būti didesnė nei 10 mA. Prie „**FLOOP**“ išvesties galima prijungti iki 8 dūmų jutiklių.
+Dvilaidžių dūmų jutiklių prijungimo schema prie „**FLOOP**“ išėjimo. Kai yra naudojama šia jungimo schema, reikia lange **„Zonų įėjimai“** nurodyti „**Įėjimo**“ tipą „**Priešgaisrinis jutiklis (2laidis)**“. Dūmų jutiklių aliarmo srovė turi būti didesnė nei 10 mA. Prie „**FLOOP**“ išvesties galima prijungti iki 8 dūmų jutiklių.
 
 <img alt="" src="./image15.webp" style="width:5.006676509186351in;height:1.2766688538932633in" />
 
@@ -349,7 +349,7 @@ Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus
 
 ***FIRECOM*** komunikatoriaus nustatymai su ***TrikdisConfig*** jungiant su priešgaisrine centrale.
 
-1.  Pasirinkite „**ESPA4.4.4“**.
+1.  Pasirinkite „**ESPA4.4.4**“.
 
 2.  Pasirinkite sąsajos tipą.
 
@@ -715,7 +715,7 @@ Naudodami ***Protegus2***, sistemos vartotojai gali matyti sistemos būseną ir 
     4.  Prisiregistravęs prie tinklo („**SIM**" LED šviečia žaliai ir mirksi
         geltonai; ir/arba „**ETH**" LED šviečia žaliai, kai prisijungęs prie
         LAN tinklo).
-3. Paspauskite „Pridėti sistemą“ ir įveskite ****FIRECOM**** „**IMEI/Unikalus ID**“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite mygtuką „**Toliau**“.
+3. Paspauskite „Pridėti sistemą“ ir įveskite ***FIRECOM*** „**IMEI/Unikalus ID**“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite mygtuką „**Toliau**“.
 
 <img alt="" src="./image74.webp" style="width:3.0in;height:3.909448818897638in" />
 
