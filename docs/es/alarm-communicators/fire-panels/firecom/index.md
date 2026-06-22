@@ -18,7 +18,7 @@ Contactos de asistencia técnica de Trikdis: support@trikdis.lt, +37067422877.
 
 El comunicador está diseñado para transmitir mensajes de la central de incendios a través de LAN y/o redes móviles.
 
-Principio de funcionamiento. Cuando se activa una entrada (zona) del comunicador, el comunicador FIRECOM enviará un mensaje a la CRA (estación central de monitoreo) o a la aplicación Protegus2 a través de Internet móvil y/o red LAN. El comunicador puede enviar mensajes SMS y realizar llamadas. Un módem 4G está instalado en el comunicador.
+Principio de funcionamiento. Cuando se activa una entrada (zona) del comunicador, el comunicador ***FIRECOM*** enviará un mensaje a la CRA (estación central de monitoreo) o a la aplicación ***Protegus2*** a través de Internet móvil y/o red LAN. El comunicador puede enviar mensajes SMS y realizar llamadas. Un módem 4G está instalado en el comunicador.
 
 **Características**
 
@@ -42,7 +42,7 @@ Envía eventos al receptor en una CRA
 - Llama a números de teléfono seleccionados (hasta 8 usuarios).
 - Enviar mensajes SMS sobre eventos (hasta 8 usuarios).
 
-- Notificaciones de eventos de sonido especiales y “push” utilizando la aplicación Protegus2.
+- Notificaciones de eventos de sonido especiales y “push” utilizando la aplicación ***Protegus2***.
 
 - Monitoreo remoto de temperatura.
 
@@ -58,7 +58,7 @@ Envía eventos al receptor en una CRA
 
 - Instalación rápida y fácil.
 
-- Configuración del dispositivo mediante un cable USB Type-C o de forma remota mediante el software TrikdisConfig.
+- Configuración del dispositivo mediante un cable USB Type-C o de forma remota mediante el software ***TrikdisConfig***.
 
 - Actualización remota de firmware.
 
@@ -68,13 +68,13 @@ Envía eventos al receptor en una CRA
 
 - 3 salidas de relé (1 A, 30 V CC).
 
-- La entrada "FLOOP" está destinada a la conexión de detectores de incendios de dos hilos.
+- La entrada "**FLOOP**" está destinada a la conexión de detectores de incendios de dos hilos.
 
 - 10 terminales de I/O, cada uno de los cuales se puede configurar como entrada (IN) o como salida (OUT). Tipos de entrada (IN): NC, NA, EOL, EOL-T, ATZ, ATZ-T. Los circuitos ATZ y EOL pueden usar diferentes valores de resistencia.
 
-- Usando los expansores de la serie iO, el número de entradas (IN) se puede aumentar a 32 y el número de salidas (OUT) se puede aumentar a 16.
+- Usando los expansores de la serie ***iO***, el número de entradas (IN) se puede aumentar a 32 y el número de salidas (OUT) se puede aumentar a 16.
 
-- Bus RS485 para conectar módulos expansores de la serie iO.
+- Bus RS485 para conectar módulos expansores de la serie ***iO***.
 
 - Bus RS485 2 se utiliza para conectar paneles de incendios.
 
@@ -112,7 +112,7 @@ Envía eventos al receptor en una CRA
 | Máximo de sensores de temperatura conectados al bus de datos de 1-Wire | 8 (Dallas) o 1 (si se usa un sensor de la serie AM2301) |
 | Bus RS485 | 2 und. |
 | Longitud del bus de datos RS485 | Hasta 100 m |
-| Módulos soportados | iO-8 – módulo expansor;​ /​ iO-MO – iO-WL transmisor-receptor de ondas de radio;​ /​ iO-LORA – módulo expansor;​ /​ iO8-LORA – módulo expansor;​ /​ PB-LORA – botón de alarma;​ /​ REL-LORA - módulo expansor;​ /​ Panel de control de incendios con protocolo ESPA 4.4.4;​ /​ NSC Solution - panel de control de incendios;​ /​ INIM Smartline - panel de control de incendios;​ /​ C-TEC Cast ZFP – panel de control de incendios. |
+| Módulos soportados | **iO-8** – módulo expansor;​ /​ **iO-MO** – **iO-WL** transmisor-receptor de ondas de radio;​ /​ **iO-LORA** – módulo expansor;​ /​ **iO8-LORA** – módulo expansor;​ /​ **PB-LORA** – botón de alarma;​ /​ **REL-LORA** - módulo expansor;​ /​ Panel de control de incendios con protocolo **ESPA 4.4.4**;​ /​ **NSC Solution** - panel de control de incendios;​ /​ **INIM Smartline** - panel de control de incendios;​ /​ **C-TEC Cast ZFP** – panel de control de incendios; / **Polon-Alfa 3000** - panel de control de incendios. |
 | Entorno operativo | Temperatura de -10 ° C a +50 ° C, humedad relativa - de hasta 80% a +20°C |
 | Dimensiones | 235 x 205 x 92 mm |
 | Peso | 1.35 kg |
@@ -122,7 +122,7 @@ Envía eventos al receptor en una CRA
 <img src="./image4.webp" alt="Elementos del comunicador FIRECOM" style="width: 100%; height: auto;" />
 
 1. Indicadores luminosos de conexión y funcionamiento
-2. Botón
+2. Botón. No está activo
 3. Bloque de terminales de la fuente de alimentación de respaldo
 4. Bloque de terminales de la fuente de alimentación principal
 5. Botón “RESET”
@@ -130,7 +130,7 @@ Envía eventos al receptor en una CRA
 7. Bloque de terminales 1-Wire
 8. Conector LAN
 9. Bloque de terminales de salidas de relé
-10. Ranuras para tarjetas SIM
+10. Porta tarjeta Nano SIM
 11. Conector de antena GSM
 12. Conector USB Type-C
 
@@ -145,14 +145,14 @@ Envía eventos al receptor en una CRA
 | BAT- | Terminal negativo para conectar una batería de 12 V |
 | AUX+ | Terminal positivo de alimentación de 12 V para dispositivos externos |
 | AUX- | Terminal común (negativo) |
-| A1 RS485 | Bus RS485 para conectar expansores iO |
+| A1 RS485 | Bus RS485 para conectar expansores ***iO*** |
 | A2 RS485 | Bus RS485 para conectar el panel de control de alarma contra incendios |
 | IO1 – IO10 | Terminales de entrada/​salida (ajuste de fábrica - entrada) |
 | C | Terminal común (negativo) |
 | AUX+ | Terminal positivo de alimentación de 12 V para dispositivos externos |
 | FLOOP | Terminal para conectar un detector de incendios de 2 hilos |
-| +5 V | Terminal positivo de alimentación de 5 V para dispositivos 1-Wire |
-| 1 WIRE | Terminal de bus de datos 1-Wire |
+| +5 V | Terminal positivo de alimentación de 5 V para dispositivos **1-Wire** |
+| 1 WIRE | Terminal de bus de datos **1-Wire** |
 | C | Terminal común (negativo) |
 | NO1/​C1/​NC1 | 1 relé salida PGM |
 | NO2/​C2/​NC2 | 2 relé salida PGM |
@@ -163,30 +163,30 @@ Envía eventos al receptor en una CRA
 | Indicador | Estado de la luz | Descripción |
 |-----------|------------------|-------------|
 | SIM | Off | Sin conexión a la red móvil |
-| SIM | Verde parpadeando | La conexión a una red móvil está en curso |
-| SIM | Verde sólido | La tarjeta SIM está registrada en la red móvil |
-| SIM | Verde sólido con parpadeo amarillo | El comunicador está conectado a una red móvil. Nivel de señal 4G suficiente -3 niveles (tres destellos amarillos) |
+|  | Verde parpadeando | La conexión a una red móvil está en curso |
+|  | Verde sólido | La tarjeta SIM está registrada en la red móvil |
+|  | Verde sólido con parpadeo amarillo | El comunicador está conectado a una red móvil. Nivel de señal 4G suficiente -3 niveles (tres destellos amarillos) |
 | ETH | Verde parpadeando | Problema de DHCP o cable LAN desconectado |
-| ETH | Verde sólido | Conectado a la red LAN |
+|  | Verde sólido | Conectado a la red LAN |
 | DAT / DATA | Off | No hay mensajes de eventos no enviados |
-| DAT / DATA | Verde sólido | El mensaje se está enviando |
-| DAT / DATA | Amarillo sólido (DAT) | Hay mensajes no enviados en la memoria |
+|  | Verde sólido | El mensaje se está enviando |
+|  | Amarillo sólido (DAT) | Hay mensajes no enviados en la memoria |
 | STA / TROUBLE | Verde parpadeando (STA) | No hay problemas de operación |
-| STA / TROUBLE | Off (TROUBLE) | No hay problemas de operación |
-| STA / TROUBLE | 1 parpadeo rojo | Tarjeta SIM no encontrada |
-| STA / TROUBLE | 2 parpadeos rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto) |
-| STA / TROUBLE | 3 parpadeos rojos | Problema con el registro a la red móvil |
-| STA / TROUBLE | 4 parpadeos rojos | No es posible conectarse al receptor CRA usando el canal 1 |
-| STA / TROUBLE | 5 parpadeos rojos | No es posible conectarse al receptor CRA usando el canal 2 |
-| STA / TROUBLE | 6 parpadeos rojos | Sin alimentación de red |
-| STA / TROUBLE | 7 parpadeos rojos | Mal funcionamiento de AUX (sobrecorriente) |
-| STA / TROUBLE | 8 parpadeos rojos | Falla de la batería |
-| STA / TROUBLE | 9 parpadeos rojos | Cable LAN desconectado |
-| STA / TROUBLE | 10 parpadeos rojos | Problema de LAN DHCP |
+|  | Off (TROUBLE) | No hay problemas de operación |
+|  | 1 parpadeo rojo | Tarjeta SIM no encontrada |
+|  | 2 parpadeos rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto) |
+|  | 3 parpadeos rojos | Problema con el registro a la red móvil |
+|  | 4 parpadeos rojos | No es posible conectarse al receptor CRA usando el canal 1 |
+|  | 5 parpadeos rojos | No es posible conectarse al receptor CRA usando el canal 2 |
+|  | 6 parpadeos rojos | Sin alimentación de red |
+|  | 7 parpadeos rojos | Mal funcionamiento de AUX (sobrecorriente) |
+|  | 8 parpadeos rojos | Falla de la batería |
+|  | 9 parpadeos rojos | Cable LAN desconectado |
+|  | 10 parpadeos rojos | Problema de LAN DHCP |
 | FPS / POWER | Off | La fuente de alimentación no está conectada |
-| FPS / POWER | Verde sólido | No hay problemas con las fuentes de alimentación |
-| FPS / POWER | 1 parpadeo verde | No hay alimentación de CA |
-| FPS / POWER | 2 parpadeos verdes | Voltaje de la fuente de alimentación de reserva insuficiente |
+|  | Verde sólido | No hay problemas con las fuentes de alimentación |
+|  | 1 parpadeo verde | No hay alimentación de CA |
+|  | 2 parpadeos verdes | Voltaje de la fuente de alimentación de reserva insuficiente |
 
 ### Componentes necesarios para la instalación 
 
@@ -214,7 +214,7 @@ El comunicador debe recibir alimentación de una fuente de alimentación de CC. 
 
 ### Fuente de alimentación de respaldo 
 
-Si ocurriesen problemas con la alimentación del sistema desde la fuente de alimentación principal, se generará un informe de evento de *„DC Fault”* y el comunicador cambiará automáticamente a la batería de respaldo de 12 V. Si el voltaje de la batería cae a 11.5 V, se generará un informe de evento de “*Batería Baja” (“Low Battery”)*. La batería se desconectará si el voltaje cae por debajo de 9.5 V. Si se restablece el voltaje de la red AC, se generará un informe de “*Restablecimiento de DC” (“DC Restore”)* y el proceso de carga de la batería comenzará automáticamente. Cuando el voltaje de la batería aumente a 12.6 V, se generará un informe de evento de “*Restauración De Batería” (“Battery Restore”)*.
+Si ocurriesen problemas con la alimentación del sistema desde la fuente de alimentación principal, se generará un informe de evento de „**DC Fault**” y el comunicador cambiará automáticamente a la batería de respaldo de 12 V. Si el voltaje de la batería cae a 11.5 V, se generará un informe de evento de “**Batería Baja**” (“**Low Battery**”). La batería se desconectará si el voltaje cae por debajo de 9.5 V. Si se restablece el voltaje de la red AC, se generará un informe de “**Restablecimiento de DC**” (“**DC Restore**”) y el proceso de carga de la batería comenzará automáticamente. Cuando el voltaje de la batería aumente a 12.6 V, se generará un informe de evento de “**Restauración De Batería**” (“**Battery Restore**”).
 
 ### Kit de comunicador 
 
@@ -231,6 +231,8 @@ Si ocurriesen problemas con la alimentación del sistema desde la fuente de alim
 !!! note "Nota"
     El cable USB Type-C para programar el comunicador se vende por separado.
 ## Instalación del comunicador 
+
+La placa comunicadora está montada en una carcasa que ya contiene una fuente de alimentación de CC con un fusible integrado de 3,15 A, así como espacio para instalar una batería. 
 
 **Dimensiones de la placa *FIRECOM***
 
@@ -258,7 +260,7 @@ La figura muestra las dimensiones de la placa y sus orificios de montaje. Las di
     con la norma EN54.
 ### Conexión de sensores 
 
-La placa del comunicador tiene 10 terminales IO1-IO10 (zonas) para conectar sensores. Usando expansores (iO-8, iO-MO, iO-LORA, iO8-LORA), la cantidad de entradas se puede aumentar hasta 32 uds. Cualquier terminal IO se puede configurar como entrada y establecer atributos: tipo de entrada (NA, NC, EOL, EOL_T, ATZ, ATZ_T); sensibilidad y eventos de corto plazo en el circuito; funciones de entrada (zonas), consulte la sección 6.6 Ventana “Zonas”.
+La placa del comunicador tiene 10 terminales IO1-IO10 (zonas) para conectar sensores. Usando expansores (**iO-8**, **iO-MO**, **iO-LORA**, **iO8-LORA**), la cantidad de entradas se puede aumentar hasta 32 uds. Cualquier terminal IO se puede configurar como entrada y establecer atributos: tipo de entrada (NA, NC, EOL, EOL_T, ATZ, ATZ_T); sensibilidad y eventos de corto plazo en el circuito; funciones de entrada (zonas), consulte la sección 6.6 Ventana “Zonas”.
 
 #### Diagrama para conectar sensores.
 
@@ -315,7 +317,7 @@ o
 
 Conexión de detectores de incendios de cuatro hilos.
 
-Para conectar un circuito de detector de humo a la entrada seleccionada, debe activar la entrada (IOx) y configurar el tipo de circuito (NA, NC, EOL, EOL_T, ATZ, ATZ_T) (consulte el párrafo 6.6 “Ventana “Zonas””). La salida (IO10) debe configurarse en el modo de funcionamiento "Sensor de fuego reiniciado" (consulte la sección 6.7 "Ventana "Salidas “PGM"").
+Para conectar un circuito de detector de humo a la entrada seleccionada, debe activar la entrada (IOx) y configurar el tipo de circuito (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (consulte el párrafo 6.6 “Ventana “Zonas””). La salida (IO10) debe configurarse en el modo de funcionamiento "**Sensor de fuego reiniciado**" (consulte la sección 6.7 "Ventana "Salidas “PGM"").
 
 \* El relé (K1) se utiliza para detectar un cable roto y retirar el detector de incendios. Si no se utiliza un relé (K1), se debe cortocircuitar el contacto K1.
 
@@ -332,7 +334,7 @@ Para conectar un circuito de detector de humo a la entrada seleccionada, debe ac
   </figure>
 </div>
 
-Si desea monitorear el estado del panel de alarma contra incendios, conecte sus salidas correspondientes a las entradas FIRECOM. Las salidas (PGM1, PGM2, PGM3) del panel de incendios deben configurarse como salidas de estado del panel (Alarma, Problema, etc.).
+Si desea monitorear el estado del panel de alarma contra incendios, conecte sus salidas correspondientes a las entradas ***FIRECOM***. Las salidas (PGM1, PGM2, PGM3) del panel de incendios deben configurarse como salidas de estado del panel (Alarma, Problema, etc.).
 
 ### Diagrama para conectar a la central de incendios con el protocolo ESPA4.4.4 
 
@@ -345,17 +347,17 @@ Si desea monitorear el estado del panel de alarma contra incendios, conecte sus 
   </figure>
 </div>
 
-Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de control de alarma contra incendios con el protocolo **ESPA4.4.4**.
+Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de control de alarma contra incendios con el protocolo **ESPA4.4.4**.
 
 1.  Seleccione **ESPA4.4.4**.
 
 2.  Seleccione el tipo de conexión.
 
-3.  El comunicador FIRECOM y el panel de control de incendios deben tener la misma configuración de transmisión de datos.
+3.  El comunicador ***FIRECOM*** y el panel de control de incendios deben tener la misma configuración de transmisión de datos.
 
 <img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7559055118110236in" />
 
-4. Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
+4. Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
 <img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.547244094488189in" />
 
@@ -367,7 +369,7 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 <img alt="" src="./image26.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
-Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
+Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***.
 
 ### Diagrama para conectar a la central de incendios NSC Solution 
 
@@ -380,7 +382,7 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
   </figure>
 </div>
 
-Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de control de alarma contra incendios **NSC Solution**.
+Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de control de alarma contra incendios **NSC Solution**.
 
 1.  Seleccione el panel de control de alarma contra incendios **NSC Solution**.
 
@@ -388,7 +390,7 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 <img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
 
-3. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
+3. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
 <img alt="" src="./image30.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
@@ -400,9 +402,9 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 <img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
 
-Después de configurar el comunicador FIRECOM, encienda la alimentación del panel de control de incendios. Espere a que se cargue el software del panel de control de incendios. Es necesario escanear los módulos conectados al bus RS485 en el panel de control de incendios. En el panel de control de incendios, presione: **PROG.>INSTALLER>(Ingrese el código de instalador) 00000 OK>(Seleccione) SETTINGS>ENTER>(Seleccione) SCAN RS485>ENTER**. Espere a que se complete el escaneo. Regrese a la pantalla principal presionando “**CANCEL**” dos veces.
+Después de configurar el comunicador ***FIRECOM***, encienda la alimentación del panel de control de incendios. Espere a que se cargue el software del panel de control de incendios. Es necesario escanear los módulos conectados al bus RS485 en el panel de control de incendios. En el panel de control de incendios, presione: **PROG.>INSTALLER>(Ingrese el código de instalador) 00000 OK>(Seleccione) SETTINGS>ENTER>(Seleccione) SCAN RS485>ENTER**. Espere a que se complete el escaneo. Regrese a la pantalla principal presionando “**CANCEL**” dos veces.
 
-Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
+Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***.
 
 ###  Diagrama para conectar a la central de incendios INIM Smartline 
 
@@ -415,22 +417,22 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
   </figure>
 </div>
 
-El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se conecta al comunicador FIRECOM a través del bus RS485.
+El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se conecta al comunicador ***FIRECOM*** a través del bus RS485.
 
 <img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note "Nota"
-    No puede conectar el FIRECOM usando el bus RS485 si los
+    No puede conectar el ***FIRECOM*** usando el bus RS485 si los
     repetidores están conectados al panel **INIM Smartline**. / Los módulos
-    de expansión iO no son compatibles cuando el FIRECOM está
+    de expansión ***iO*** no son compatibles cuando el ***FIRECOM*** está
     conectado al panel **INIM Smartline** a través del bus RS485.
-Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de control de alarma contra incendios **INIM Smartline**.
+Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de control de alarma contra incendios **INIM Smartline**.
 
 1.  Seleccione el panel de alarma contra incendios **INIM Smartline**.
 
 <img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.858267716535433in" />
 
-2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
+2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
 <img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5393700787401574in" />
 
@@ -442,7 +444,7 @@ Configuración del comunicador FIRECOM con TrikdisConfig al conectar el panel de
 
 <img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
 
-Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
+Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***.
 
 ### Diagrama para conectar a la central de incendios C-TEC Cast ZFP 
 
@@ -455,13 +457,13 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
   </figure>
 </div>
 
-Configuración del comunicador **FIRECOM** con TrikdisConfig al conectar el panel de alarma contra incendios **C-TEC Cast ZFP.**
+Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de alarma contra incendios **C-TEC Cast ZFP.**
 
 1.  Seleccione el panel de control de alarma contra incendios **C-TEC Cast ZFP**.
 
 <img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.84251968503937in" />
 
-2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de FIRECOM.
+2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
 <img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.5354330708661417in" />
 
@@ -475,71 +477,149 @@ Configuración del comunicador **FIRECOM** con TrikdisConfig al conectar el pane
 
 Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtools**. Encienda la alimentación de la central de incendios. Espere mientras se carga el software de la central de incendios. Conecte el cable USB2.0 A-B entre la central de incendios y el ordenador.
 
-5. Abra la pestaña „**Node View**“.
+1. Abra la pestaña „**Node View**“.
 
 <img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
-6. Lea la configuración del panel de incendios en la computadora.
+2. Lea la configuración del panel de incendios en la computadora.
 
 <img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
-7. Ingrese el código (el código de fábrica es 4444).
+3. Ingrese el código (el código de fábrica es 4444).
 
-2.  Haga clic en „ОК“.
+4.  Haga clic en „**ОК**“.
 
 <img alt="" src="./image48.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
-3. Seleccione „BMS Interface“.
+5. Seleccione „**BMS Interface**“.
 
-2.  Haga clic en el icono gratuito.
+6.  Haga clic en el icono gratuito.
 
 <img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
-11. Haga clic en „**Edit Devices**“.
+7. Haga clic en „**Edit Devices**“.
 
 <img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
-12. En la pestaña " **Device** ", ingrese el nombre del sistema.
+8. En la pestaña " **Device** ", ingrese el nombre del sistema.
 
 <img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
-13. En la pestaña "**Properties**", ingrese el nombre del sistema.
+9. En la pestaña "**Properties**", ingrese el nombre del sistema.
 
-14. Especifique el bus “**ABUS RS485**” al que está conectado el comunicador FIRECOM.
+10. Especifique el bus “**ABUS RS485**” al que está conectado el comunicador FIRECOM.
 
-15. Personalizar los mensajes de eventos.
+11. Personalizar los mensajes de eventos.
 
-16. Escriba la configuración en la central de incendios.
+12. Escriba la configuración en la central de incendios.
 
 <img alt="" src="./image52.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
-17. Ingrese el código (el código de fábrica es 4444).
+13. Ingrese el código (el código de fábrica es 4444).
 
-18. Haga clic en „ОК“.
+14. Haga clic en „**ОК**“.
 
 <img alt="" src="./image53.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 La central de incendios está programada. Desconecte el cable USB2.0 A-B de la central de incendios.
 
-Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes FIRECOM se envíen a la CRA (estación central de monitoreo) y a Protegus2.
+Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***.
+
+### Diagrama para conectar a la central de incendios Polon-Alfa 3000
+
+**El comunicador *FIRECOM* se conecta al panel de control de incendios Polon-Alfa 3000 a través del bus RS485** 
+
+
+
+Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***. 
+1.	Seleccione **Polon-Alfa 3000**. 
+2.	Seleccione el tipo de conexión **RS485**.
+
+
+
+3.	Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
+
+
+
+4.	Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**). 
+
+ 
+
+5.	Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. 
+
+
+
+El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para funcionar utilizando el protocolo Modbus RTU (RS485).
+
+
+
+
+
+Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***. 
+
+**El comunicador *FIRECOM* y el panel de control de incendios Polon-Alfa 3000 están conectados a la misma red LAN **
+
+
+
+Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***. 
+1.	Seleccione **Polon-Alfa 3000**. 
+2.	Seleccione el tipo de conexión **TCP**. 
+3.	Introduzca la dirección IP del panel de control de incendios **Polon-Alfa 3000**. 
+
+
+
+4.	Marque la casilla “**DHCP**” (modo de registro automático) para que el comunicador ***FIRECOM*** lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP. 
+
+
+
+
+5.	Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***. 
+
+
+
+
+6.	Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**). 
+
+
+
+
+7.	Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. 
+
+
+
+
+El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para que funcione a través de una red LAN. Las direcciones IP de la red local deben introducirse de acuerdo con la configuración de su red. 
+
+
+
+
+
+Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***. 
 
 ### Diagrama para conectar un sensor de temperatura 
 
 <img alt="" src="./image54.webp" style="width:3.4233398950131235in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.4233398950131235in;height:1.3200021872265966in" />
 
+Los sensores de temperatura se conectan de acuerdo con el diagrama anterior. Los sensores de temperatura Maxim®/Dallas® DS18S20, DS18B20 (hasta 8 piezas) o el sensor de humedad y temperatura AM2301 (1 pieza) se pueden conectar al comunicador ***FIRECOM***.
+El comunicador detecta automáticamente los sensores conectados y los registra.
+Se recomienda utilizar un cable de par trenzado (UTP4x2x0,5 o STP4x2x0,5) para conectar el sensor de temperatura
+El borne "**+5 V**" está diseñado para alimentar con tensión continua los dispositivos conectados al bus "**1-WIRE**". Corriente admisible 0,2 A. La salida está protegida contra sobrecarga. Cuando se excede la corriente permitida, la alimentación se apaga automáticamente. 
+
 ### Diagramas para conectar un relé y un indicador LED 
 
 <img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
+Usando las terminales de relé es posible controlar (encender/apagar) de forma remota varios dispositivos eléctricos. El terminal I/O universal del panel debe configurarse como una salida (OUT) y debe tener asignada la definición de “**Control remoto**”. 
+
 ### Diagrama para conectar las entradas del panel de incendio al comunicador 
 
-Según la norma EN54, el panel de incendio desde el comunicador debe recibir información sobre la falla de comunicación con la Central de Monitoreo, así como sobre el envío exitoso de mensajes a la CRA. Conecte las salidas PGM (por ejemplo: “Relay1” y “Relay2”) del comunicador a las entradas especiales del panel de incendio. La salida PGM del “Relay1” debe establecerse en "Falla CMS". La salida PGM del “Relay2” debe establecerse en "ACK recibido". La salida del “Relay1” se activa en caso de violación del canal de comunicación con la CRA. La salida del “Relay2” se activa durante 5 seg. al enviar con éxito un mensaje a la CRA.
+Según la norma EN54, el panel de incendio desde el comunicador debe recibir información sobre la falla de comunicación con la Central de Monitoreo, así como sobre el envío exitoso de mensajes a la CRA. Conecte las salidas PGM (por ejemplo: “**Relay1**” y “**Relay2**”) del comunicador a las entradas especiales del panel de incendio. La salida PGM del “**Relay1**” debe establecerse en "**Falla CRA**". La salida PGM del “**Relay2**” debe establecerse en "**ACK recibido**". La salida del “**Relay1**” se activa en caso de violación del canal de comunicación con la CRA. La salida del “**Relay2**” se activa durante 5 seg. al enviar con éxito un mensaje a la CRA.
 
 <img alt="" src="./image58.webp" style="width:3.550007655293088in;height:1.6733366141732284in" />
 
 ### Diagramas para conectar los módulos expansores de la serie iO 
 
-Para aumentar el número de zonas (IN) y salidas (OUT) al comunicador, conecte un expansor de E/S de la serie Trikdis iO cableado o inalámbrico. La configuración de FIRECOM con módulos de extensión se describe en la sección 6.5 "Ventana "Módulos"".
+Para aumentar el número de zonas (IN) y salidas (OUT) al comunicador, conecte un expansor de E/S de la serie Trikdis ***iO*** cableado o inalámbrico. La configuración de ***FIRECOM*** con módulos de extensión se describe en la sección 6.5 "Ventana "Módulos"".
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -550,7 +630,7 @@ Para aumentar el número de zonas (IN) y salidas (OUT) al comunicador, conecte u
   </figure>
 </div>
 
-Diagrama de conexión para los módulos expansores LORA.
+Diagrama de conexión para los módulos expansores **LORA**.
 
 <img alt="" src="./image61.webp" style="width:5.57667760279965in;height:6.636679790026247in" />
 
@@ -574,15 +654,15 @@ Encienda el comunicador. Los LED del comunicador deberían funcionar de la sigui
     alimentación y las conexiones de cableado.
 ## Configuración rápida con el software TrikdisConfig 
 
-1.  Descargue el software de configuración de TrikdisConfig en [www.trikdis.com](http://www.trikdis.com) (En el campo de búsqueda TrikdisConfig) e instálelo.
+1.  Descargue el software de configuración de ***TrikdisConfig*** en [www.trikdis.com](http://www.trikdis.com) (En el campo de búsqueda TrikdisConfig) e instálelo.
 
-2.  Utilizando el cable USB Type-C FIRECOM conecte al ordenador.
+2.  Utilizando el cable USB Type-C ***FIRECOM*** conecte al ordenador.
 
-3.  Ejecutar TrikdisConfig. El software reconocerá automáticamente que el comunicador está conectado y se abrirá una ventana para la configuración.
+3.  Ejecutar ***TrikdisConfig***. El software reconocerá automáticamente que el comunicador está conectado y se abrirá una ventana para la configuración.
 
 4.  Haga clic en **Leer [F4]** para leer la configuración del comunicador. Si se le solicita, introduzca el código de administrador o instalador de 6 dígitos en la ventana emergente.
 
-A continuación, describiremos las configuraciones que deben cambiarse para que el comunicador comience a enviar mensajes a la aplicación Protegus2 o al CRA.
+A continuación, describiremos las configuraciones que deben cambiarse para que el comunicador comience a enviar mensajes a la aplicación ***Protegus2*** o al CRA.
 
 ### Ajustes para la conexión con la aplicación Protegus2 
 
@@ -590,49 +670,49 @@ A continuación, describiremos las configuraciones que deben cambiarse para que 
 
 <img alt="" src="./image62.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
-1.  Introduzca el código “**PIN de la tarjeta SIM”**.
+1.  Introduzca el código “**PIN de la tarjeta SIM**”.
 
-2.  Cambiar el nombre “**APN”**. “**APN”** se puede encontrar en la página web del operador de la tarjeta SIM (“**Internet**” es universal y funciona en muchas redes de los operadores).
+2.  Cambiar el nombre “**APN**”. “**APN**” se puede encontrar en la página web del operador de la tarjeta SIM (“**Internet**” es universal y funciona en muchas redes de los operadores).
 
 **En la ventana " Usuarios y Reportes":**
 
 <img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
-3. Seleccione la casilla **“Activar conexión”** a la nube de PROTEGUS.
+3. Seleccione la casilla **“Activar conexión”** a la nube de ***PROTEGUS***.
 
-2.  Cambie el Código de acceso de la nube para iniciar sesión con Protegus2 si usted desea que los usuarios requieran ingresarlo cuando se agrega el sistema a la app de Protegus2 (contraseña por defecto – 123456).
+2.  Cambie el Código de acceso de la nube para iniciar sesión con ***Protegus2*** si usted desea que los usuarios requieran ingresarlo cuando se agrega el sistema a la app de ***Protegus2*** (contraseña por defecto – 123456).
 
 **En la ventana “Informes a CRA”:**
 
 <img alt="" src="./image64.webp" style="width:7.086614173228346in;height:3.5669291338582676in" />
 
-3. Si se conecta un cable LAN al comunicador, marque la casilla “**DHCP**” (modo de registro automático) para que el comunicador FIRECOM lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP.
+3. Si se conecta un cable LAN al comunicador, marque la casilla “**DHCP**” (modo de registro automático) para que el comunicador ***FIRECOM*** lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP.
 
-2.  Se establece el orden preferido de envío de mensajes a través de los canales en Protegus2. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación principal, se realiza la transición al canal de comunicación de respaldo, etc. Si el tipo de conexión de respaldo logró transmitir el mensaje al Protegus2, se intentará el tipo de conexión "**Regresar a principal**" después del intervalo de tiempo especificado.
+2.  Se establece el orden preferido de envío de mensajes a través de los canales en ***Protegus2***. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación principal, se realiza la transición al canal de comunicación de respaldo, etc. Si el tipo de conexión de respaldo logró transmitir el mensaje al ***Protegus2***, se intentará el tipo de conexión "**Regresar a principal**" después del intervalo de tiempo especificado.
 
 **En la ventana “Zonas”:**
 
 <img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
-3. Marque las casillas si desea que los usuarios reciban notificaciones de Protegus2 sobre los cambios en los estados de las zonas.
+3. Marque las casillas si desea que los usuarios reciban notificaciones de ***Protegus2*** sobre los cambios en los estados de las zonas.
 
 **En la ventana “PGM”:**
 
 <img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
-4. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre los cambios en los estados de salida de PGM.
+4. Marque las casillas si desea que los usuarios reciban notificaciones a ***Protegus2*** sobre los cambios en los estados de salida de PGM.
 
 **En la ventana "Eventos de sistema":**
 
 <img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.267716535433071in" />
 
-5. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre cambios en los estados de eventos internos del comunicador.
+5. Marque las casillas si desea que los usuarios reciban notificaciones a ***Protegus2*** sobre cambios en los estados de eventos internos del comunicador.
 
 Después de terminar la configuración, haga clic en el botón **Escribir [F5]** y desconecte el cable USB.
 
 !!! note "Nota"
-    Para obtener más información acerca de otros ajustes en FIRECOM
-    TrikdisConfig véase el capítulo 6 "Configuración de parámetros con
+    Para obtener más información acerca de otros ajustes en ***FIRECOM***
+    ***TrikdisConfig*** véase el capítulo 6 "Configuración de parámetros con
     el software TrikdisConfig".
 ### Ajustes para la conexión con la Central Receptora de Alarmas 
 
@@ -642,41 +722,41 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 1.  Introduzca **Objeto ID** proporcionado por la Central Receptora de Alarmas (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF**.).
 
-2.  Introduzca el código “**PIN de la tarjeta SIM”**.
+2.  Introduzca el código “**PIN de la tarjeta SIM**”.
 
-3.  Cambiar el nombre “**APN”**. “**APN”** se puede encontrar en la página web del operador de la tarjeta SIM (“**Internet**” es universal y funciona en muchas redes de los operadores).
+3.  Cambiar el nombre “**APN**”. “**APN**” se puede encontrar en la página web del operador de la tarjeta SIM (“**Internet**” es universal y funciona en muchas redes de los operadores).
 
 **En la ventana "Informes a CRA":**
 
 <img alt="" src="./image69.webp" style="width:7.086614173228346in;height:3.531496062992126in" />
 
-4. Si se conecta un cable LAN al comunicador, marque la casilla (modo de registro automático) para que el comunicador FIRECOM lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP.
+4. Si se conecta un cable LAN al comunicador, marque la casilla (modo de registro automático) para que el comunicador ***FIRECOM*** lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP.
 
-2.  Se establece el orden preferido de envío de mensajes a través de los canales en CRA. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación principal, se realiza la transición al canal de comunicación de respaldo, etc. Si el tipo de conexión de respaldo logró transmitir el mensaje al CRA, se intentará el tipo de conexión "**Regresar a principal**" después del intervalo de tiempo especificado.
+5.  Se establece el orden preferido de envío de mensajes a través de los canales en CRA. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación principal, se realiza la transición al canal de comunicación de respaldo, etc. Si el tipo de conexión de respaldo logró transmitir el mensaje al CRA, se intentará el tipo de conexión "**Regresar a principal**" después del intervalo de tiempo especificado.
 
 **En la ventana "Informes a CRA":**
 
 <img alt="" src="./image70.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
 
-3. **Tipo de comunicación** – seleccionar el método de conexión **IP**.
+6. **Tipo de comunicación** – seleccionar el método de conexión **IP**.
 
-2.  **Dominio o IP** – **-**introduzca la dirección IP o el dominio del receptor.
+7.  **Dominio o IP** – **-**introduzca la dirección IP o el dominio del receptor.
 
-3.  **Puerto** – introduzca el número de puerto de red del receptor.
+8.  **Puerto** – introduzca el número de puerto de red del receptor.
 
-4.  **Protocolo** – seleccione el tipo de protocolo para sus mensajes de eventos: **TRK** (para los receptores de TRIKDIS), **DC-09_2007** o **DC-09_2012** (a receptores universales), **TL150** (para los receptores de SUR-GARD).
+9.  **Protocolo** – seleccione el tipo de protocolo para sus mensajes de eventos: **TRK** (para los receptores de TRIKDIS), **DC-09_2007** o **DC-09_2012** (a receptores universales), **TL150** (para los receptores de SUR-GARD).
 
-5.  **Clave de encriptación** – introduzca la clave de cifrado que se establece en el receptor.
+10.  **Clave de encriptación** – introduzca la clave de cifrado que se establece en el receptor.
 
 !!! note "Nota"
     Si seleccionó el protocolo **DC-09**, además, en la pestaña
-    "**Configuraciones"** de la ventana de **"Informes a CRA"** ingrese los
+    "**Configuraciones**" de la ventana de **"Informes a CRA**" ingrese los
     números de objeto, línea y receptor.
-11. (Recomendado) Configure los parámetros de **Canal de** **Respaldo** del **Canal Principal**.
+11. (Recomendado) Configure los parámetros de **Canal de Respaldo** del **Canal Principal**.
 
 12. Configure los parámetros de **Canal paralelo** si los mensajes se enviarán al segundo receptor CRA.
 
-Después de terminar la configuración, haga clic en **Escribir [F5**] y desconecte el cable USB.
+Después de terminar la configuración, haga clic en **Escribir [F5]** y desconecte el cable USB.
 
 !!! note "Nota"
     Para obtener más información acerca de otros ajustes en FIRECOM
@@ -686,9 +766,9 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 ### Conexión del comunicador a la app Protegus2 
 
-Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificaciones sobre los eventos del sistema.
+Con ***Protegus2***, los usuarios pueden ver el estado del sistema y recibir notificaciones sobre los eventos del sistema.
 
-1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [www.protegus.app](https://www.protegus.app):
+1.  Descargue y abra la aplicación ***Protegus2*** o utilice la versión de navegador de internet: [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -705,13 +785,13 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
 2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
 !!! note "Nota"
-    Al agregar el sistema a Protegus2, el comunicador FIRECOM
+    Al agregar el sistema a ***Protegus2***, el comunicador ***FIRECOM***
     debe:
     
     1.  Se instala una tarjeta SIM activada y se ingresa o deshabilita un
         código PIN;
     
-    2.  Tenga habilitado el servicio Protegus. Consulte la
+    2.  Tenga habilitado el **servicio Protegus**. Consulte la
         ventana 6.4 "Usuarios y Reportes";
     
     3.  Encienda la alimentación (el LED "**STA**" debe parpadear en
@@ -720,7 +800,7 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
     4.  Estar conectado a una red (el LED de "**SIM**" debe ser verde fijo
         y parpadear en amarillo; y/o el indicador "**LAN**" se enciende en
         verde cuando está conectado a la red LAN).
-3. Haga clic en Agregar nuevo sistema e ingrese el número de "IMEI/Unique ID" del *FIRECOM*. Se puede encontrar en el dispositivo y en la etiqueta del empaque. Después de ingresar la ID única, haga clic en el botón “Siguiente”.
+3. Haga clic en Agregar nuevo sistema e ingrese el número de "**IMEI/Unique ID**" del ***FIRECOM***. Se puede encontrar en el dispositivo y en la etiqueta del empaque. Después de ingresar la ID única, haga clic en el botón “**Siguiente**”.
 
 <img alt="" src="./image74.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
@@ -730,17 +810,17 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
 
 Para garantizar la seguridad, cambie la contraseña de SMS de administrador predeterminada. Enviar un mensaje SMS del siguiente formato:
 
-#### PSW 123456 xxxxxx
+**PSW 123456 xxxxxx**
 
 | **123456** | Contraseña de administrador predeterminada      |
 |------------|-------------------------------------------------|
 | **xxxxxx** | Nueva contraseña de administrador de 6 símbolos |
 
-1.  **Permitir a otros usuarios controlar**
+2.  **Permitir a otros usuarios controlar**
 
 Solo los números de teléfono desde la lista de los usuarios pueden controlar el sistema mediante mensajes SMS o llamadas telefónicas. Desde un teléfono de administrador, envíe mensajes SMS con los números de teléfono y nombres de otras personas para que puedan controlar el sistema:
 
-#### SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL
+**SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
 
 | **xxxxxx** | contraseña de administrador de 6 símbolos |
 |----|----|
@@ -749,57 +829,57 @@ Solo los números de teléfono desde la lista de los usuarios pueden controlar e
 | **NAME** | Nombre del usuario |
 | **EMAIL** | Correo electrónico del usuario |
 
-#### Lista de comandos SMS
+**Lista de comandos SMS**
 
 | Comando | Dato | Descripción |
 |---------|------|-------------|
-| INFO |  | Solicitar información sobre el comunicador. La respuesta incluirá información: nombre del objeto, tipo de comunicador, número IMEI, nivel de señal GSM, versión de firmware, número de serie. Por ejemplo: INFO 123456 |
-| RESET |  | Reinicie el dispositivo. Por ejemplo: RESET 123456 |
+| INFO |  | Solicitar información sobre el comunicador. La respuesta incluirá información: nombre del objeto, tipo de comunicador, número IMEI, nivel de señal GSM, versión de firmware, número de serie. Por ejemplo: **INFO 123456** |
+| RESET |  | Reinicie el dispositivo. Por ejemplo: **RESET 123456** |
 | OUTPUTx | ON | Prendiendo la salida, "x" identifica el número de salida. |
-| OUTPUTx | OFF | Por ejemplo: OUTPUT1 123456 ON |
+| OUTPUTx | OFF | Por ejemplo: **OUTPUT1 123456 ON** |
 | OUTPUTx | PULSE=ttt | Apagando la salida, "x" identifica el número de salida. |
-| OUTPUTx |  | Por ejemplo: OUTPUT1 123456 OFF |
-| OUTPUTx |  | Encienda una salida durante unos segundos. “x” es el número de salida de OUT y “ttt” es un número de tres dígitos que especifica el tiempo de pulso en segundos. Por ejemplo: OUTPUT1 123456 PULSE=002 |
-| PSW | New password | Cambia la contraseña. Por ejemplo: PSW 123456 654123 |
-| TIME | YYYY/MM/DD,12:00:00 | Establecer fecha y hora. / Por ejemplo: TIME 123456 2023/05/09,12:23:00 |
-| TXTA | Nombre del objeto | Especificar un nombre de objeto. Por ejemplo: TXTA 123456 House |
+| OUTPUTx |  | Por ejemplo: **OUTPUT1 123456 OFF** |
+| OUTPUTx |  | Encienda una salida durante unos segundos. “x” es el número de salida de OUT y “ttt” es un número de tres dígitos que especifica el tiempo de pulso en segundos. Por ejemplo: **OUTPUT1 123456 PULSE=002** |
+| PSW | New password | Cambia la contraseña. Por ejemplo: **PSW 123456 654123** |
+| TIME | YYYY/MM/DD,12:00:00 | Establecer fecha y hora. / Por ejemplo: **TIME 123456 2026/05/09,10:02:00** |
+| TXTA | Nombre del objeto | Especificar un nombre de objeto. Por ejemplo: **TXTA 123456 House** |
 | RDR | PhoneNR#SMStext | Reenviar mensajes SMS al número especificado. El número de teléfono debe comenzar con un signo "+" y el código internacional del país. |
-| RDR | PhoneNR#SMStext | Por ejemplo: RDR 123456 +37061234567#forwarded text |
+| RDR | PhoneNR#SMStext | Por ejemplo: **RDR 123456 +37061234567#forwarded text** |
 | ASKI | Solicitar mensaje SMS sobre estados de entradas IN. |
-| ASKI | Por ejemplo: ASKI 123456 |
+| ASKI | Por ejemplo: **ASKI 123456** |
 | ASKO | Solicitar mensaje SMS sobre estados de salidas OUT. |
-| ASKO | Por ejemplo: ASKO 123456 |
-| ASKT |  | Enviar mensaje SMS con valores de todos los sensores de temperatura. / Ejemplo: ASKT 123456 |
-| FRS |  | Restablece la salida del sensor de incendio, si la salida OUT tiene asignada la función "Sensor de fuego reiniciado". Ejemplo: FRS 123456 |
-| SETN | PhoneX=PhoneNR#Name#email | Agregue un número de teléfono, un nombre de usuario y asígnelo al usuario "x". “x” es la línea del número de teléfono en la lista. El número de teléfono debe comenzar con un símbolo "+" y el código internacional del país. El número de teléfono y el nombre de usuario deben estar separados por un símbolo „#”. Por ejemplo: / SETN 123456 PHONE5=+37061234567#JOHN#john@trikdis.com |
-| SETN | PhoneX=DEL | Eliminar el número de teléfono y el nombre del usuario del sistema. / Por ejemplo: SETN 123456 PHONE5=DEL |
-| UUSD | *Uusd code# | Enviar un código USSD al operador. Por ejemplo: UUSD 123456 *245# |
+| ASKO | Por ejemplo: **ASKO 123456** |
+| ASKT |  | Enviar mensaje SMS con valores de todos los sensores de temperatura. / Ejemplo: **ASKT 123456** |
+| FRS |  | Restablece la salida del sensor de incendio, si la salida OUT tiene asignada la función "Sensor de fuego reiniciado". Ejemplo: **FRS 123456** |
+| SETN | PhoneX=PhoneNR#Name#email | Agregue un número de teléfono, un nombre de usuario y asígnelo al usuario "x". “x” es la línea del número de teléfono en la lista. El número de teléfono debe comenzar con un símbolo "+" y el código internacional del país. El número de teléfono y el nombre de usuario deben estar separados por un símbolo „#”. Por ejemplo: / **SETN 123456 PHONE5=+37061234567#JOHN#john@trikdis.com** |
+| SETN | PhoneX=DEL | Eliminar el número de teléfono y el nombre del usuario del sistema. / Por ejemplo: **SETN 123456 PHONE5=DEL** |
+| UUSD | *Uusd code# | Enviar un código USSD al operador. Por ejemplo: **UUSD 123456 245#** |
 | CONNECT | Protegus=ON | Conéctese a la nube de Protegus. |
-| CONNECT | Protegus=OFF | Por ejemplo: CONNECT 123456 PROTEGUS=ON |
+| CONNECT | Protegus=OFF | Por ejemplo: **CONNECT 123456 PROTEGUS=ON** |
 | CONNECT | Code=123456 | Desconéctese de la nube de Protegus. |
-| CONNECT | IP=0.0.0.0:8000 | Por ejemplo: CONNECT 123456 PROTEGUS=OFF |
-| CONNECT | IP=0 | Código de servicio en la nube de Protegus. / Por ejemplo: CONNECT 123456 CODE=123456 |
-| CONNECT | ENC=123456 | Especifique la IP TCP y el puerto del canal de conexión del servidor principal. Por ejemplo: CONNECT 123456 IP=0.0.0.0:8000 |
-| CONNECT | APN=Internet | Para apagar el canal principal. Por ejemplo: CONNECT 123456 IP=0 |
-| CONNECT | USER=user | Llave de encriptación TRK. Por ejemplo: CONNECT 123456 ENC=123456 |
-| CONNECT | PSW=password | Nombre APN. Por ejemplo: CONNECT 123456 APN=INTERNET |
-| CONNECT |  | Usuario de APN. Por ejemplo: CONNECT 123456 USER=User |
-| CONNECT |  | Contraseña APN. Por ejemplo: CONNECT 123456 PSW=Password |
+| CONNECT | IP=0.0.0.0:8000 | Por ejemplo: **CONNECT 123456 PROTEGUS=OFF** |
+| CONNECT | IP=0 | Código de servicio en la nube de Protegus. / Por ejemplo: **CONNECT 123456 CODE=123456** |
+| CONNECT | ENC=123456 | Especifique la IP TCP y el puerto del canal de conexión del servidor principal. Por ejemplo: **CONNECT 123456 IP=0.0.0.0:8000** |
+| CONNECT | APN=Internet | Para apagar el canal principal. Por ejemplo: **CONNECT 123456 IP=0** |
+| CONNECT | USER=user | Llave de encriptación TRK. Por ejemplo: **CONNECT 123456 ENC=123456** |
+| CONNECT | PSW=password | Nombre APN. Por ejemplo: **CONNECT 123456 APN=INTERNET** |
+| CONNECT |  | Usuario de APN. Por ejemplo: **CONNECT 123456 USER=User** |
+| CONNECT |  | Contraseña APN. Por ejemplo: **CONNECT 123456 PSW=Password** |
 
 ### Controle las salidas PGM mediante llamadas telefónicas 
 
 Realice estas acciones si desea controlar una salida PGM de forma remota:
 
-- El usuario debe tener permiso para controlar las salidas OUT y la salida OUT debe tener asignado el tipo “Control remoto” (usando TrikdisConfig).
+- El usuario debe tener permiso para controlar las salidas OUT y la salida OUT debe tener asignado el tipo “**Control remoto**” (usando ***TrikdisConfig***).
 
-- Llamar al número de la tarjeta SIM del FIRECOM. El *FIRECOM* contestará la llamada y podrá marcar comandos usando el teclado del teléfono (ver la tabla).
+- Llamar al número de la tarjeta SIM del ***FIRECOM***. El ***FIRECOM*** contestará la llamada y podrá marcar comandos usando el teclado del teléfono (ver la tabla).
 
-#### Lista de comandos del teclado del teléfono móvil
+**Lista de comandos del teclado del teléfono móvil**
 
 | Botones del teclado | Función | Descripción |
 |---------------------|---------|-------------|
-| [número de salida]*[número de estado]# | Control de SALIDA seleccionado | Controla la salida PGM especificada. Estado : [0] – salida apagada; [1] – salida activada; [2] – apagado por tiempo de pulso; [3] – encienda por tiempo de pulso; (el tiempo de pulso se especifica en el software TrikdisConfig, tabla “PGM”) [*] – este símbolo muestra el final del comando. Por ejemplo (encienda la salida 1): 1*1# Por ejemplo (apaga la salida 1): 1*0# Por ejemplo (encienda la salida 2 para el tiempo de pulso especificado en la tabla TrikdisConfig "PGM"): 2*3# |
-| # | Vuelva a intentar ingresar el comando | Si cometió un error al ingresar el comando, presione “#” en el teclado del teléfono e ingrese el comando nuevamente. |
+| [número de salida]*[número de estado]# | Control de SALIDA seleccionado | Controla la salida PGM especificada. Estado : [0] – salida apagada; [1] – salida activada; [2] – apagado por tiempo de pulso; [3] – encienda por tiempo de pulso; (el tiempo de pulso se especifica en el software TrikdisConfig, tabla “PGM”) [*] – este símbolo muestra el final del comando. Por ejemplo (encienda la salida 1): **1*1#** Por ejemplo (apaga la salida 1): **1*0#** Por ejemplo (encienda la salida 2 para el tiempo de pulso especificado en la tabla TrikdisConfig "PGM"): **2*3#** |
+| # | Vuelva a intentar ingresar el comando | Si cometió un error al ingresar el comando, presione “**#**” en el teclado del teléfono e ingrese el comando nuevamente. |
 
 ## Configuración de parámetros con el software *TrikdisConfig* 
 
@@ -821,7 +901,7 @@ Después de conectar FIRECOM y haciendo clic en **Leer [F4]**, TrikdisConfig pro
 | Estado | Tipo de conexión con el programa (USB o remoto) |
 | Propósito | Muestra el nivel de acceso (se muestra después de ingresar un código de acceso) |
 
-Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará la configuración almacenada en el FIRECOM. Con TrikdisConfig, puedes modificar la configuración deseada de acuerdo con las descripciones de las ventanas del programa que se muestran a continuación.
+Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará la configuración almacenada en el ***FIRECOM***. Con ***TrikdisConfig***, puedes modificar la configuración deseada de acuerdo con las descripciones de las ventanas del programa que se muestran a continuación.
 
 ### Ventana "Opciones de sistema" 
 
@@ -835,7 +915,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 - **Nombre del objeto** – el nombre dado al objeto que se utilizará en los mensajes SMS enviados al usuario.
 
-- **Periodo de test** - cuando la casilla está marcada, los mensajes de "Test" se enviarán cada período establecido.
+- **Periodo de test** - cuando la casilla está marcada, los mensajes de "**Test**" se enviarán cada período establecido.
 
 - **Comenzar test en** – marca la casilla y especifica la hora en que se deben enviar los informes de prueba.
 
@@ -847,9 +927,9 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 - **Restaurar eventos después de reporte ...** – establece el tiempo después del cual se cancelará la suspensión de informes de eventos. El tiempo puede ser de 0 a 999 minutos.
 
-- **Llamada** – cuando se produzca un evento, el FIRECOM llamará al usuario(s) tantas veces como se configure. Si la llamada es rechazada o respondida, el FIRECOM dejará de llamar. La duración de una llamada es de 20 segundos.
+- **Llamada** – cuando se produzca un evento, el ***FIRECOM*** llamará al usuario(s) tantas veces como se configure. Si la llamada es rechazada o respondida, el ***FIRECOM*** dejará de llamar. La duración de una llamada es de 20 segundos.
 
-- **EOL tipo** – especificar los valores nominales de las resistencias conectadas a los sensores (EOL – End Of Line. RT+R1+R2. Resistencia RT - sabotaje; resistencia R1 - sensor Nr.1; resistencia R2 - sensor Nr.2).
+- **EOL tipo** – especificar los valores nominales de las resistencias conectadas a los sensores (EOL – End Of Line. **RT+R1+R2**. Resistencia **RT** - sabotaje; resistencia **R1** - sensor Nr.1; resistencia **R2** - sensor Nr.2).
 
 - **Prueba de ruta de comunicación** – especifique el intervalo de tiempo después del cual el comunicador verificará los canales de comunicación de respaldo enviando mensajes al CSP. Después de enviar los mensajes a través de los canales de comunicación de respaldo, el comunicador volverá al canal de comunicación principal.
 
@@ -862,13 +942,15 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 - **ICCID bloqueado** - ingrese el número ICCID de la tarjeta SIM si desea que el comunicador funcione solo con esta tarjeta SIM.
 
+-	**Operador preferido** - después de ingresar el código del operador de la red móvil, el comunicador se conectará solo a la red del operador seleccionado. El código del operador de telefonía móvil consta de códigos MCC y MNS. 
+
 **Grupo de configuraciones “Ajustes de hora”**
 
-Puedes configurar la hora haciendo clic en el botón “**Establecer hora de PC”**. Si se elige “**Desactivado”** en el campo “**Tiempo de sincronización”**, se configurará la hora de la computadora para el comunicador. Si se elige un módem o un servidor en el campo “**Tiempo de sincronización”**, el comunicador sincronizará su hora de acuerdo con ese módem o servidor.
+Puedes configurar la hora haciendo clic en el botón “**Establecer hora de PC**”. Si se elige “**Desactivado**” en el campo “**Tiempo establecido**”, se configurará la hora de la computadora para el comunicador. Si se elige un módem o un servidor en el campo “**Tiempo establecido**”, el comunicador sincronizará su hora de acuerdo con ese módem o servidor.
 
 - **Zona horaria (horas)** – especifica la zona horaria de tu país.
 
-- **Tiempo establecido**– especifica un servidor para sincronizar el reloj interno del FIRECOM. La sincronización se produce después de encender el comunicador.
+- **Tiempo establecido**– especifica un servidor para sincronizar el reloj interno del ***FIRECOM***. La sincronización se produce después de encender el comunicador.
 
 - **Horario de verano** – si marca la casilla, el reloj interno del comunicador cambiará automáticamente al horario de verano o invierno.
 
@@ -925,7 +1007,7 @@ El canal de comunicación de respaldo se utiliza en caso de violación del canal
 
 - **Clave de encriptación** – clave de encriptación de 6 dígitos y que debe coincidir con la clave de encriptación del receptor CRA.
 
-Grupo de configuraciones “Canal de respaldo” (“Canal paralelo de reserva”)
+**Grupo de configuraciones “Canal de respaldo” (“Canal paralelo de reserva”)**
 
 Habilite el modo de canal de respaldo para permitir que se envíen mensajes a través del canal de respaldo si se interrumpe la comunicación en el canal principal. Configure un canal de respaldo usando la misma configuración que se describió anteriormente.
 
@@ -935,14 +1017,14 @@ Habilite el modo de canal de respaldo para permitir que se envíen mensajes a tr
 
 **Grupo de configuraciones “Configuraciones”**
 
-- **Regresar al Primario después** – período de tiempo después del cual el FIRECOM intentará recuperar la conexión utilizando el canal primario, en minutos.
+- **Regresar al Primario después** – período de tiempo después del cual el ***FIRECOM*** intentará recuperar la conexión utilizando el canal primario, en minutos.
 - **Período de Ping por IP** – periodo para enviar corazonadas PING internas. Estos mensajes sólo son enviados a través del canal GPRS. El receptor no reenviara los mensajes PING al software de monitoreo para evitar sobre cargarlo. Las notificaciones sólo serán enviadas al software de monitoreo si el receptor falla en recibir los mensajes PING del dispositivo dentro de un lapso de tiempo establecido.
 
-Por defecto, la notificación de “Conexión perdida” será transmitida al software de monitoreo si el mensaje PING no es recibido en el receptor en tiempos mayores al establecido en el dispositivo. Por ejemplo, si el PING es establecido para 3 minutos, el receptor transferirá la notificación de “Conexión perdida” si no recibe un PING en los próximos 9 minutos.
+Por defecto, la notificación de “**Conexión perdida**” será transmitida al software de monitoreo si el mensaje PING no es recibido en el receptor en tiempos mayores al establecido en el dispositivo. Por ejemplo, si el PING es establecido para 3 minutos, el receptor transferirá la notificación de “**Conexión perdida**” si no recibe un PING en los próximos 9 minutos.
 
-Las corazonadas de PING mantienen la sesión activa de comunicación entre el dispositivo y el receptor. Una sesión activa es requerida para conexiones remotas, control y configuración del dispositivo. Recomendamos establecer un periodo de PING no mayor a 5 minutos. .
+Las corazonadas de PING mantienen la sesión activa de comunicación entre el dispositivo y el receptor. Una sesión activa es requerida para conexiones remotas, control y configuración del dispositivo. Recomendamos establecer un periodo de PING no mayor a 5 minutos.
 
-- **Ir al canal de reserva después de** – ingresa cuántos intentos fallidos de enviar mensajes utilizando el canal primario deben pasar antes de cambiar al *canal de* *respaldo*.
+- **Ir al canal de reserva después de** – ingresa cuántos intentos fallidos de enviar mensajes utilizando el canal primario deben pasar antes de cambiar al canal de respaldo.
 
 - **DNS1, DNS2** – direcciones del servidor DNS.
 
@@ -956,18 +1038,18 @@ Las corazonadas de PING mantienen la sesión activa de comunicación entre el di
 
 **Grupo de configuración "Modo de informe"**
 
-Se establece el orden preferido de envío de mensajes a través de los canales CRA y al Protegus2. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación principal, se realiza la transición al canal de comunicación de respaldo, etc. Si el tipo de conexión de respaldo logró transmitir el mensaje al CRA, se intentará el tipo de conexión "**Regresar a principal**" después del intervalo de tiempo especificado.
+Se establece el orden preferido de envío de mensajes a través de los canales CRA y al ***Protegus2***. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación principal, se realiza la transición al canal de comunicación de respaldo, etc. Si el tipo de conexión de respaldo logró transmitir el mensaje al CRA, se intentará el tipo de conexión "**Regresar a principal**" después del intervalo de tiempo especificado.
 
-- **Tipo principal** – selecciona un tipo de conexión (SIM, Ethernet (LAN)) con el receptor CRA y Protegus2.
+- **Tipo principal** – selecciona un tipo de conexión (SIM, Ethernet (LAN)) con el receptor CRA y ***Protegus2***.
 
-- **Tipo de reserva** – selecciona un tipo de conexión (SIM, Ethernet (LAN)) con el receptor CRA y Protegus2.
+- **Tipo de reserva** – selecciona un tipo de conexión (SIM, Ethernet (LAN)) con el receptor CRA y ***Protegus2***.
 
-- **Tipo de reserva 2** – seleccione un tipo de conexión (SIM, Ethernet (LAN)) con el receptor CRA y Protegus2.
-- **Regresar a principal (ambos canales)** – período de tiempo después del cual el FIRECOM intentará recuperar la conexión utilizando el canal primario, en minutos.
+- **Tipo de reserva 2** – seleccione un tipo de conexión (SIM, Ethernet (LAN)) con el receptor CRA y ***Protegus2***.
+- **Regresar a principal (ambos canales)** – período de tiempo después del cual el ***FIRECOM*** intentará recuperar la conexión utilizando el canal primario, en minutos.
 
 **Grupo de configuración "Parámetros de la red LAN"**
 
-- **DHCP** – modo para registrarse en la red LAN (manual o automática). Marca la casilla y el comunicador del FIRECOM leerá automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asignará automáticamente una dirección IP (modo de registro automático).
+- **DHCP** – modo para registrarse en la red LAN (manual o automática). Marca la casilla y el comunicador del ***FIRECOM*** leerá automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asignará automáticamente una dirección IP (modo de registro automático).
 
 - **IP** **estática** – dirección IP estática para el modo de registro manual.
 
@@ -979,11 +1061,11 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Grupo de configuración "Parámetros SIM"**
 
-- **Desactivar la indicación de la ausencia de una tarjeta SIM** – cuando se marca la casilla, el comunicador FIRECOM no mostrará una indicación de que no hay una tarjeta SIM insertada.
+- **Desactivar la indicación de la ausencia de una tarjeta SIM** – cuando se marca la casilla, el comunicador ***FIRECOM*** no mostrará una indicación de que no hay una tarjeta SIM insertada.
 
-- **Utilice el marcado y SMS cuando trabaje a través del módulo de Internet** – marcar esta casilla permitirá controlar el comunicador mediante llamadas telefónicas y mensajes SMS. Si la casilla no está marcada y hay una red LAN disponible, no se utilizarán SMS ni llamadas telefónicas. Si la casilla no está marcada y no hay red LAN, el FIRECOM aún podrá controlarse mediante llamadas telefónicas y mensajes SMS. El *FIRECOM* enviará mensajes SMS al usuario.
+- **Utilice el marcado y SMS cuando trabaje a través del módulo de Internet** – marcar esta casilla permitirá controlar el comunicador mediante llamadas telefónicas y mensajes SMS. Si la casilla no está marcada y hay una red LAN disponible, no se utilizarán SMS ni llamadas telefónicas. Si la casilla no está marcada y no hay red LAN, el ***FIRECOM*** aún podrá controlarse mediante llamadas telefónicas y mensajes SMS. El ***FIRECOM*** enviará mensajes SMS al usuario.
 
-- **Desactiva el uso de datos móviles de la tarjeta SIM** – marcar esta casilla desactivará el uso de los datos móviles de la tarjeta SIM. Los datos solo se enviarán mediante LAN. Si una red LAN no está disponible, el FIRECOM almacenará datos en la memoria. Cuando se restaure la red LAN, el FIRECOM enviará datos mediante LAN.
+- **Desactiva el uso de datos móviles de la tarjeta SIM** – marcar esta casilla desactivará el uso de los datos móviles de la tarjeta SIM. Los datos solo se enviarán mediante LAN. Si una red LAN no está disponible, el ***FIRECOM*** almacenará datos en la memoria. Cuando se restaure la red LAN, el ***FIRECOM*** enviará datos mediante LAN.
 
 ### Ventana “Usuarios y Reportes” 
 
@@ -999,11 +1081,11 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 - **Núm. de teléfono** – el número de teléfono del usuario que recibirá los mensajes SMS. Los números deben ingresarse con el código internacional. Los primeros 8 números de teléfono recibirán informes utilizando mensajes y llamadas telefónicas.
 
-- **Correo electrónico** - ingresa el correo electrónico del usuario, así el usuario será invitado a Protegus2 para controlar el sistema.
+- **Correo electrónico** - ingresa el correo electrónico del usuario, así el usuario será invitado a ***Protegus2*** para controlar el sistema.
 
 - **PGM** – si la casilla está marcada, el usuario puede controlar las salidas de forma remota (llamada, SMS).
 
-- **ACK** – si la casilla está marcada, el FIRECOM enviará mensajes SMS con texto de respuesta SMS al usuario después de cada comando SMS recibido.
+- **ACK** – si la casilla está marcada, el ***FIRECOM*** enviará mensajes SMS con texto de respuesta SMS al usuario después de cada comando SMS recibido.
 
 - **FWD** – si la casilla está marcada, los mensajes SMS recibidos de usuarios que no sean del sistema se reenviarán al usuario (por ejemplo, saldo de la cuenta de la tarjeta SIM, mensajes promocionales aleatorios, etc.).
 
@@ -1013,11 +1095,11 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Grupo de configuración “Aplicación en la Nube”**
 
-- **Activar conexión** – habilite el servicio Protegus2 para permitir que el FIRECOM intercambie datos con la aplicación Protegus2 y configure el dispositivo de forma remota usando TrikdisConfig.
+- **Activar conexión** – habilite el servicio Protegus2 para permitir que el ***FIRECOM*** intercambie datos con la aplicación ***Protegus2*** y configure el dispositivo de forma remota usando ***TrikdisConfig***.
 
-- **Informes paralelos** – habilite el envío de mensajes paralelos a través del canal principal y a Protegus2. Los informes solo se enviarán a Protegus2 y a los usuarios después de que se hayan enviado a la empresa de seguridad.
+- **Informes paralelos** – habilite el envío de mensajes paralelos a través del canal principal y a ***Protegus2***. Los informes solo se enviarán a ***Protegus2*** y a los usuarios después de que se hayan enviado a la empresa de seguridad.
 
-- **Código de acceso a la Nube** – código de 6 dígitos para conectarse con Protegus2 (código predeterminado - 123456).
+- **Código de acceso a la Nube** – código de 6 dígitos para conectarse con ***Protegus2*** (código predeterminado - 123456).
 
 **Pestaña “SMS textos de respuesta”**
 
@@ -1037,19 +1119,19 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 - **ID** – número del módulo en la lista.
 
-- **Módulo** – elija el módulo que se está utilizando (módulos iO-8, iO-MO, iO-LORA, iO8-LORA, PB-LORA, REL-LORA) de la lista de módulos.
+- **Módulo** – elija el módulo que se está utilizando (módulos **iO-8**, **iO-MO**, **iO-LORA**, **iO8-LORA**, **PB-LORA**, **REL-LORA**) de la lista de módulos.
 
 - **Núm. de Serie** ingrese el número de serie del módulo, que se indica en el paquete o en la caja del módulo.
 
 - **Nombre** – puedes darle un nombre al módulo.
 
-- **Versión de firmware** – la versión del firmware se mostrará cuando el FIRECOM encuentre el módulo conectado.
+- **Versión de firmware** – la versión del firmware se mostrará cuando el ***FIRECOM*** encuentre el módulo conectado.
 
 <img alt="" src="./image85.webp" style="width:7.086614173228346in;height:3.562992125984252in" />
 
 **Grupo de configuración “Interfaz RS485 2”**
 
-Las centrales de incendios (con protocolo **ESPA4.4.4**, **NSC solución**, **INIM smartline**, **C-TEC Cast ZFP**) se pueden conectar al bus RS485 2 del comunicador FIRECOM. El diagrama de conexión de la central de incendios y su configuración se muestran en los párrafos 3.5- 3.8.
+Las centrales de incendios (con protocolo **ESPA4.4.4**, **NSC solución**, **INIM smartline**, **C-TEC Cast ZFP**, **Polon-Alfa 3000**) se pueden conectar al bus RS485 2 del comunicador FIRECOM. El diagrama de conexión de la central de incendios y su configuración se muestran en los párrafos 3.5- 3.9.
 
 ### Ventana “Zonas” 
 
@@ -1061,15 +1143,15 @@ Las centrales de incendios (con protocolo **ESPA4.4.4**, **NSC solución**, **IN
 
 - **Nombre** - ingrese el nombre de la zona.
 
-- **Entrada** – puedes seleccionar qué entrada IN del módulo expansor o FIRECOM se asignará a la zona.
+- **Entrada** – puedes seleccionar qué entrada IN del módulo expansor o ***FIRECOM*** se asignará a la zona.
 
 - **Grupo** - asignar una zona a un grupo.
 
-- **Tipo** – elige el tipo de circuito conectado a la entrada de zona IN de una lista: NC – normalmente cerrado; NO – normalmente abierto; EOL - con una resistencia *end of line*; EOL_T - con una resistencia *end of line* y monitoreo de manipulación; ATZ – circuito normalmente cerrado de dos zonas con resistencias *end of line*, sin función de monitoreo de manipulación (para usar este tipo, elige la segunda zona ATZ en la lista de entrada); ATZ_T – circuito normalmente cerrado de dos zonas con resistencias *end of line*, con función de monitoreo de manipulación (para usar este tipo, elige la segunda zona ATZ en la lista de entrada).
+- **Tipo** – elige el tipo de circuito conectado a la entrada de zona IN de una lista: **NC** – normalmente cerrado; **NO** – normalmente abierto; **EOL** - con una resistencia *end of line*; **EOL_T** - con una resistencia *end of line* y monitoreo de manipulación; **ATZ** – circuito normalmente cerrado de dos zonas con resistencias *end of line*, sin función de monitoreo de manipulación (para usar este tipo, elige la segunda zona ATZ en la lista de entrada); **ATZ_T** – circuito normalmente cerrado de dos zonas con resistencias *end of line*, con función de monitoreo de manipulación (para usar este tipo, elige la segunda zona ATZ en la lista de entrada).
 
 - **CRA** – si la casilla está marcada, los informes de eventos de zona se enviarán a la estación central de monitoreo (CRA).
 
-- **Prot**. – si la casilla está marcada, los informes de eventos de zona se enviarán a la nube de Protegus2.
+- **Prot**. – si la casilla está marcada, los informes de eventos de zona se enviarán a la nube de ***Protegus2***.
 
 - **Retraso** – tiempo de reacción de la zona entrada IN, en milisegundos.
 
@@ -1077,9 +1159,9 @@ Las centrales de incendios (con protocolo **ESPA4.4.4**, **NSC solución**, **IN
 
 <img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
 
-Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes". Esta configuración solo se puede realizar para los primeros 8 usuarios.
+**Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes"**. Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
-- **Zn** – número de zona con la palabra de identificación del evento. Puede ser "*Evento*" o "*Restaurar*".
+- **Zn** – número de zona con la palabra de identificación del evento. Puede ser "**Evento**" o "**Restaurar**".
 
 - **Usuario / SMS y Llam.** – elige de qué manera se informará a los usuarios sobre los eventos en cada zona individual, mediante mensajes SMS y/o llamadas telefónicas.
 
@@ -1087,13 +1169,13 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 <img alt="" src="./image88.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
-Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la entrada se le asigna un CID (SIA), que se enviará a la estación de monitoreo (CRA) y a Protegus2.
+Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la entrada se le asigna un CID (SIA), que se enviará a la estación de monitoreo (CRA) y a ***Protegus2***.
 
 - **Zona** - ingrese el nombre de la zona.
 
-- **Habilitar** – marque las casillas de eventos que enviarán mensajes a CRA y Protegus2.
+- **Habilitar** – marque las casillas de eventos que enviarán mensajes a CRA y ***Protegus2***.
 
-- **E/R -** especificar la condición para el envío del evento por parte del comunicador ("Evento" (E) o "Restaurar" (R)).
+- **E/R -** especificar la condición para el envío del evento por parte del comunicador ("**Evento**" (E) o "**Restaurar**" (R)).
 
 - **CID** - código de evento en formato Contact ID.
 
@@ -1113,7 +1195,7 @@ Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la en
 
 - **Nombre -** ingrese el nombre de la salida PGM.
 
-- **PGM Salida** – asigna las salidas OUT del FIRECOM o una salida de expansor.
+- **PGM Salida** – asigna las salidas OUT del ***FIRECOM*** o una salida de expansor.
 
 - **Definición de Salida** – elige el modo operativo de la salida OUT.
 
@@ -1121,7 +1203,7 @@ Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la en
 
 - **CRA** – si esta casilla está marcada, los informes de activación/desactivación de la salida PGM se enviarán a la estación central de monitoreo (CRA).
 
-- **Prot.** – si la casilla está marcada, los informes de activación/desactivación de la salida PGM se enviarán a la nube de Protegus2.
+- **Prot.** – si la casilla está marcada, los informes de activación/desactivación de la salida PGM se enviarán a la nube de ***Protegus2***.
 
 **Pestaña “Establecer acción”**
 
@@ -1130,25 +1212,25 @@ Cuando se activa una zona, el comunicador enviará un mensaje de evento. A la en
 - **Núm.** – número de salida en la lista.
 - **Habilitar** – activa el algoritmo de operación PGM.
 
-- **Núm. de PGM** – selecciona la salida OUT PGM deseada que se controlará después de que ocurra el evento descrito en las columnas “**Factor”, “Núm. de Factor”, “Iniciar cuando”, “Valor”**.
+- **Núm. de PGM** – selecciona la salida OUT PGM deseada que se controlará después de que ocurra el evento descrito en las columnas “**Factor**”, “**Núm. de Factor**”, “**Iniciar cuando**”, “**Valor**”.
 
 - **Acción**:
-- **PGM apagado** – estado de salida OUT - "apagado".
+- **PGM apagado** – estado de salida OUT - "**apagado**".
 
-- **PGM encendido** –estado de salida OUT - "encendido".
+- **PGM encendido** –estado de salida OUT - "**encendido**".
 
-- **Pulse apagado** – estado inicial de salida OUT - "encendido". Después del comando, el estado OUT se convertirá en "apagado" durante el tiempo del pulso, y más tarde volverá automáticamente al estado "encendido" inicial.
+- **Pulse apagado** – estado inicial de salida OUT - "**encendido**". Después del comando, el estado OUT se convertirá en "**apagado**" durante el tiempo del pulso, y más tarde volverá automáticamente al estado "encendido" inicial.
 
-- **Pulse encendido** – estado inicial de salida OUT - "apagado". Después del comando, el estado OUT se activará durante el **Tiempo de Pulso**, y luego volverá automáticamente al estado inicial "apagado".
+- **Pulse encendido** – estado inicial de salida OUT - "apagado". Después del comando, el estado OUT se activará durante el **Tiempo de Pulso**, y luego volverá automáticamente al estado inicial "**apagado**".
 - **Tiempo de Pulso, s** – puedes configurar el tiempo de pulso desde 0 a 9999 segundos.
 
-- **Factor/Núm. de Factor** – elige qué evento *(Entrada, SMS recibido, Fallo de zona)* encenderá la salida OUT.
+- **Factor/Núm. de Factor** – elige qué evento (**Entrada**, **SMS recibido**, **Fallo de zona**) encenderá la salida OUT.
 
   - La programación se pueden asignar a una salida OUT. La programación muestra cuándo se debe activar la salida. Se pueden preparar hasta 10 programaciones diferentes en la **pestaña Programador**.
 
-- **Inicia cuando** – puedes establecer una condición adicional para activar la salida OUT según el evento “**Factor”**.
+- **Inicia cuando** – puedes establecer una condición adicional para activar la salida OUT según el evento “**Factor**”.
 
-- **Valor** – dependiendo de la condición elegida en la columna “**Factor”** se puede especificar un valor (texto del mensaje SMS recibido). Si se identifica este valor, se realizará la acción (elegida en la columna “**Acción”**). El texto del mensaje SMS se puede separar usando símbolos de %. Los símbolos % se utilizan para separar la palabra clave que cambiará el estado de una salida PGM de todo el mensaje SMS recibido.
+- **Valor** – dependiendo de la condición elegida en la columna “**Factor**” se puede especificar un valor (texto del mensaje SMS recibido). Si se identifica este valor, se realizará la acción (elegida en la columna “**Acción**”). El texto del mensaje SMS se puede separar usando símbolos de %. Los símbolos % se utilizan para separar la palabra clave que cambiará el estado de una salida PGM de todo el mensaje SMS recibido.
 
 **%.....%** - parte del texto del mensaje SMS recibido debe coincidir con el texto ingresado entre símbolos de % (por ejemplo **%hoUSe%**. El texto en un mensaje SMS debe incluir el texto "**hoUSe**". Ejemplo de un mensaje SMS: **VacationhoUSe25864**).
 
@@ -1175,7 +1257,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 <img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.279527559055118in" />
 
-Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes". Esta configuración solo se puede realizar para los primeros 8 usuarios.
+**Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes"**. Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
 - **PGM** – muestra el número de salida OUT y el tipo de evento de activación/desactivación (“**Evento**” - evento de activación de salida OUT y “**Restauración**” - evento de desactivación de salida OUT).
 
@@ -1193,13 +1275,13 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 - **Nombre del sensor** – asigna un nombre al sensor de temperatura.
 
-- **Máximo** – cuando la temperatura es superior a esta configuración, se generará un informe de evento. Para que se genere un mensaje de evento, la casilla “**Alto”** debe estar marcada.
+- **Máximo** – cuando la temperatura es superior a esta configuración, se generará un informe de evento. Para que se genere un mensaje de evento, la casilla “**Alto**” debe estar marcada.
 
-- **Mínimo** – cuando la temperatura es inferior a esta configuración, se generará un informe de evento. Para que se genere un mensaje de evento, la casilla “**Bajo”** debe estar marcada.
+- **Mínimo** – cuando la temperatura es inferior a esta configuración, se generará un informe de evento. Para que se genere un mensaje de evento, la casilla “**Bajo**” debe estar marcada.
 
 - **Retraso** - se enviará un evento si el valor medido (Máx. o Mín.) por el sensor se excede dentro del tiempo establecido. El tiempo de retraso se ingresa en minutos.
 
-- **Tipo de sensor** – elige el tipo de sensor de temperatura conectado (“**Dallas 1Wire”** - se pueden conectar hasta 8 sensores de temperatura de este tipo. Si se eligen los sensores de Dallas, se vincularán automáticamente; “**Humedad y temperatura” (AM23xx serie)** - se puede conectar un sensor de temperatura y humedad AM2301. Si se utilizará el sensor de “Humedad y Temperatura”, debe asignarse manualmente en la columna “**Tipo de módulo”**).
+- **Tipo de sensor** – elige el tipo de sensor de temperatura conectado (“**Dallas 1Wire**” - se pueden conectar hasta 8 sensores de temperatura de este tipo. Si se eligen los sensores de Dallas, se vincularán automáticamente; “**Humedad y temperatura**” (**AM23xx serie**) - se puede conectar un sensor de temperatura y humedad AM2301. Si se utilizará el sensor de “**Humedad y Temperatura**”, debe asignarse manualmente en la columna “**Tipo de módulo**”).
 
 ### Ventana “Eventos de sistema” 
 
@@ -1215,7 +1297,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 - **CRA** – los informes de eventos seleccionados se enviarán al CRA.
 
-- **Prot**. – los informes de eventos seleccionados se enviarán a la nube de Protegus2.
+- **Prot**. – los informes de eventos seleccionados se enviarán a la nube de ***Protegus2***.
 
 - **Código CID** – Código ID de contacto del evento.
 
@@ -1227,7 +1309,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 <img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
-Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes". Esta configuración solo se puede realizar para los primeros 8 usuarios.
+**Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes"**. Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
 - **ID** – número y palabra de identificación (Evento, Restauración) del evento.
 
@@ -1243,23 +1325,23 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 - **Borrar Registro** – comando para borrar las entradas del registro de eventos de la memoria del dispositivo.
 
-- En la tabla, puedes encontrar el “**Núm. de Evento”**, “**Tiempo”**, código “**CID”** y “**Definición de evento”**. El registro de eventos puede mostrar hasta 1000 eventos almacenados en la memoria del FIRECOM.
+- En la tabla, puedes encontrar el “**Núm. de Evento”**, “**Tiempo”**, código “**CID”** y “**Definición de evento”**. El registro de eventos puede mostrar hasta 1000 eventos almacenados en la memoria del ***FIRECOM***.
 
 ### Restablecer la configuración predeterminada 
 
-Para restablecer la configuración predeterminada del comunicador, haz clic en el botón “**Restaurar”** en TrikdisConfig.
+Para restablecer la configuración predeterminada del comunicador, haz clic en el botón “**Restaurar**” en ***TrikdisConfig***.
 
 <img alt="" src="./image97.webp" style="width:7.086614173228346in;height:1.0905511811023623in" />
 
 ## Configuración Remota 
 
 !!! note "Nota"
-    La configuración remota solo funcionará cuando el FIRECOM:
+    La configuración remota solo funcionará cuando el ***FIRECOM***:
     
     1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
         ingresado o deshabilitado.
     
-    2.  La servicio Protegus2 está activada. Podrá encontrar
+    2.  La servicio ***Protegus2*** está activada. Podrá encontrar
         información sobre como activar la nube en la sección 6.4 Ventana de
         "Usuarios y Reportes".
     
@@ -1272,8 +1354,8 @@ Para restablecer la configuración predeterminada del comunicador, haz clic en e
     
     Si "**SIM**" está en amarillo fijo o "**DAT**" está en amarillo
     fijo, el dispositivo no puede conectarse a la red móvil y/o al servicio
-    Protegus2.
-1.  En su PC abra el software de configuración de TrikdisConfig.
+    ***Protegus2***.
+1.  En su PC abra el software de configuración de ***TrikdisConfig***.
 
 2.  En la sección de acceso remoto ingrese el IMEI/número único de ID. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
@@ -1281,26 +1363,26 @@ Para restablecer la configuración predeterminada del comunicador, haz clic en e
 
 3. (Opcional) en el espacio del nombre de Sistema ingrese el nombre deseado para el comunicador.
 
-2.  Presione „**Configuración”**.
+2.  Presione „**Configuración**”.
 
-3.  En la nueva ventana de clic en **Leer [F4].** A petición, ingrese el código del administrador o instalador. Para guardar la contraseña, seleccione “Recordar contraseña” en la ventana principal.
+3.  En la nueva ventana de clic en **Leer [F4]**. A petición, ingrese el código del administrador o instalador. Para guardar la contraseña, seleccione “**Recordar contraseña**” en la ventana principal.
 
-4.  Establezca las opciones deseadas y presione **Escribir [F5].**
+4.  Establezca las opciones deseadas y presione **Escribir [F5]**.
 
 ## Desempeño de la Prueba del Comunicador 
 
 Después de que la configuración y la instalación hayan sido completadas, lleve a cabo una prueba de sistema:
 
-1.  Para probar una entrada del comunicador, actívela. Compruebe si los eventos fueron recibidos por el Centro de recepción de alarmas (CRA) y/o la aplicación Protegus2.
+1.  Para probar una entrada del comunicador, actívela. Compruebe si los eventos fueron recibidos por el Centro de recepción de alarmas (CRA) y/o la aplicación ***Protegus2***.
 
-2.  Para probar las salidas del comunicador, enciéndalas de forma remota y verifique su funcionamiento. Asegúrese de que los eventos hayan sido recibidos por el Centro de recepción de alarmas (CRA) y/o la aplicación Protegus2.
+2.  Para probar las salidas del comunicador, enciéndalas de forma remota y verifique su funcionamiento. Asegúrese de que los eventos hayan sido recibidos por el Centro de recepción de alarmas (CRA) y/o la aplicación ***Protegus2***.
 
 3.  Realice una prueba de alarma contra incendios para ver si el CRA recibe los eventos correctamente.
 
 ## Actualización del firmware 
 
 !!! note "Nota"
-    Cuando el comunicador esté conectado a TrikdisConfig, el programa
+    Cuando el comunicador esté conectado a ***TrikdisConfig***, el programa
     ofrecerá actualizar el firmware del dispositivo si es que hay alguna
     actualización disponible. Las actualizaciones requieren una conexión al
     internet. / Si hay un antivirus instalado en su computadora, puede que
@@ -1308,7 +1390,7 @@ Después de que la configuración y la instalación hayan sido completadas, llev
     debe reconfigurar su software de antivirus.
 El firmware del comunicador puede ser actualizado o cambiado de forma manual. Después de una actualización, el comunicador mantendrá cualquier opción establecida. Cuando escriba el firmware de forma manual, este puede ser cambiado a una versión más reciente o antigua. Para actualizar:
 
-1.  Abra ***TrikdisConfig**.*
+1.  Abra ***TrikdisConfig***.
 
 2.  Conecte el comunicador a través de cable USB Type-C a la computadora o conéctese al comunicador de forma remota. Si existe una versión más nueva del firmware, el software ofrecerá descargar el archivo de la versión más nueva del firmware.
 
