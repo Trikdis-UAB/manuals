@@ -477,47 +477,47 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 Įdiekite **ZFPtools** programą savo kompiuteryje. Paleiskite programą **ZFPtools**. Įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Prijunkite USB2.0 A-B kabelį tarp priešgaisrinės centralės ir kompiuterio.
 
-5. Atidarykite „**Node View**“ skirtuką.
+1. Atidarykite „**Node View**“ skirtuką.
 
 <img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
-6. Nuskaitykite priešgaisrinės centralės nustatymus.
+2. Nuskaitykite priešgaisrinės centralės nustatymus.
 
 <img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
-7. Įveskite kodą (gamyklinis kodas – 4444).
+3. Įveskite kodą (gamyklinis kodas – 4444).
 
-2.  Spustelėkite „**ОК**“.
+4.  Spustelėkite „**ОК**“.
 
 <img alt="" src="./image48.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
-3. Pasirinkite „**BMS Interface**“.
+5. Pasirinkite „**BMS Interface**“.
 
-2.  Spustelėkite laisvą piktogramą.
+6.  Spustelėkite laisvą piktogramą.
 
 <img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
-11. Spustelėkite „**Edit Devices**“.
+7. Spustelėkite „**Edit Devices**“.
 
 <img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
-12. Skirtuke „**Device**“ įveskite sistemos pavadinimą.
+8. Skirtuke „**Device**“ įveskite sistemos pavadinimą.
 
 <img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
-13. Skirtuke „**Properties**“ įveskite sistemos pavadinimą.
+9. Skirtuke „**Properties**“ įveskite sistemos pavadinimą.
 
-14. Nurodykite „**ABUS RS485**“ sąsają, prie kurios prijungtas ***FIRECOM*** komunikatorius.
+10. Nurodykite „**ABUS RS485**“ sąsają, prie kurios prijungtas ***FIRECOM*** komunikatorius.
 
-15. Nustatykite pranešimus.
+11. Nustatykite pranešimus.
 
-16. Įrašykite nustatymus į priešgaisrinę centralę.
+12. Įrašykite nustatymus į priešgaisrinę centralę.
 
 <img alt="" src="./image52.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
-17. Įveskite kodą (gamyklinis kodas – 4444).
+13. Įveskite kodą (gamyklinis kodas – 4444).
 
-18. Spustelėkite „**OK**“.
+14. Spustelėkite „**OK**“.
 
 <img alt="" src="./image53.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
@@ -529,9 +529,16 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <img alt="" src="./image54.webp" style="width:3.5400076552930884in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.5400076552930884in;height:1.3200021872265966in" />
 
+Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie komunikatoriaus ***FIRECOM*** galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (iki 8 vnt.) arba temperatūros ir drėgmės jutiklį AM2301 (1 vnt.). 
+Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). 
+Plokštės gnybtas „**+5V**“ skirtas prie „**1-Wire**“ magistralės prijungtiems įrenginiams maitinti 5 V nuolatine įtampa. Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Viršijus leistiną srovę, maitinimas automatiškai atjungiamas. Komunikatorius prijungtus jutiklius automatiškai atpažįsta ir registruoja.
+
+
 ### Relės, LED indikatoriaus prijungimo schemos 
 
 <img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
+
+Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo (**I/O**) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas „**Nuotolinis valdymas**“.
 
 ### Priešgaisrinės centralės įėjimų ir komunikatoriaus jungimo schema 
 
