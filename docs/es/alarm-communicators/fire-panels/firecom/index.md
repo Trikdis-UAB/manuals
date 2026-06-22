@@ -828,35 +828,35 @@ Solo los números de teléfono desde la lista de los usuarios pueden controlar e
 | INFO |  | Solicitar información sobre el comunicador. La respuesta incluirá información: nombre del objeto, tipo de comunicador, número IMEI, nivel de señal GSM, versión de firmware, número de serie. Por ejemplo: **INFO 123456** |
 | RESET |  | Reinicie el dispositivo. Por ejemplo: **RESET 123456** |
 | OUTPUTx | ON | Prendiendo la salida, "x" identifica el número de salida. |
-| OUTPUTx | OFF | Por ejemplo: **OUTPUT1 123456 ON** |
-| OUTPUTx | PULSE=ttt | Apagando la salida, "x" identifica el número de salida. |
-| OUTPUTx |  | Por ejemplo: **OUTPUT1 123456 OFF** |
-| OUTPUTx |  | Encienda una salida durante unos segundos. “x” es el número de salida de OUT y “ttt” es un número de tres dígitos que especifica el tiempo de pulso en segundos. Por ejemplo: **OUTPUT1 123456 PULSE=002** |
+|  | OFF | Por ejemplo: **OUTPUT1 123456 ON** |
+|  | PULSE=ttt | Apagando la salida, "x" identifica el número de salida. |
+|  |  | Por ejemplo: **OUTPUT1 123456 OFF** |
+|  |  | Encienda una salida durante unos segundos. “x” es el número de salida de OUT y “ttt” es un número de tres dígitos que especifica el tiempo de pulso en segundos. Por ejemplo: **OUTPUT1 123456 PULSE=002** |
 | PSW | New password | Cambia la contraseña. Por ejemplo: **PSW 123456 654123** |
 | TIME | YYYY/MM/DD,12:00:00 | Establecer fecha y hora. / Por ejemplo: **TIME 123456 2026/05/09,10:02:00** |
 | TXTA | Nombre del objeto | Especificar un nombre de objeto. Por ejemplo: **TXTA 123456 House** |
 | RDR | PhoneNR#SMStext | Reenviar mensajes SMS al número especificado. El número de teléfono debe comenzar con un signo "+" y el código internacional del país. |
-| RDR | PhoneNR#SMStext | Por ejemplo: **RDR 123456 +37061234567#forwarded text** |
-| ASKI | Solicitar mensaje SMS sobre estados de entradas IN. |
-| ASKI | Por ejemplo: **ASKI 123456** |
-| ASKO | Solicitar mensaje SMS sobre estados de salidas OUT. |
-| ASKO | Por ejemplo: **ASKO 123456** |
+|  |  | Por ejemplo: **RDR 123456 +37061234567#forwarded text** |
+| ASKI |  | Solicitar mensaje SMS sobre estados de entradas IN. |
+|  |  | Por ejemplo: **ASKI 123456** |
+| ASKO |  | Solicitar mensaje SMS sobre estados de salidas OUT. |
+|  |  | Por ejemplo: **ASKO 123456** |
 | ASKT |  | Enviar mensaje SMS con valores de todos los sensores de temperatura. / Ejemplo: **ASKT 123456** |
 | FRS |  | Restablece la salida del sensor de incendio, si la salida OUT tiene asignada la función "Sensor de fuego reiniciado". Ejemplo: **FRS 123456** |
 | SETN | PhoneX=PhoneNR#Name#email | Agregue un número de teléfono, un nombre de usuario y asígnelo al usuario "x". “x” es la línea del número de teléfono en la lista. El número de teléfono debe comenzar con un símbolo "+" y el código internacional del país. El número de teléfono y el nombre de usuario deben estar separados por un símbolo „#”. Por ejemplo: / **SETN 123456 PHONE5=+37061234567#JOHN#john@trikdis.com** |
-| SETN | PhoneX=DEL | Eliminar el número de teléfono y el nombre del usuario del sistema. / Por ejemplo: **SETN 123456 PHONE5=DEL** |
+|  | PhoneX=DEL | Eliminar el número de teléfono y el nombre del usuario del sistema. / Por ejemplo: **SETN 123456 PHONE5=DEL** |
 | UUSD | *Uusd code# | Enviar un código USSD al operador. Por ejemplo: **UUSD 123456 245#** |
 | CONNECT | Protegus=ON | Conéctese a la nube de Protegus. |
-| CONNECT | Protegus=OFF | Por ejemplo: **CONNECT 123456 PROTEGUS=ON** |
-| CONNECT | Code=123456 | Desconéctese de la nube de Protegus. |
-| CONNECT | IP=0.0.0.0:8000 | Por ejemplo: **CONNECT 123456 PROTEGUS=OFF** |
-| CONNECT | IP=0 | Código de servicio en la nube de Protegus. / Por ejemplo: **CONNECT 123456 CODE=123456** |
-| CONNECT | ENC=123456 | Especifique la IP TCP y el puerto del canal de conexión del servidor principal. Por ejemplo: **CONNECT 123456 IP=0.0.0.0:8000** |
-| CONNECT | APN=Internet | Para apagar el canal principal. Por ejemplo: **CONNECT 123456 IP=0** |
-| CONNECT | USER=user | Llave de encriptación TRK. Por ejemplo: **CONNECT 123456 ENC=123456** |
-| CONNECT | PSW=password | Nombre APN. Por ejemplo: **CONNECT 123456 APN=INTERNET** |
-| CONNECT |  | Usuario de APN. Por ejemplo: **CONNECT 123456 USER=User** |
-| CONNECT |  | Contraseña APN. Por ejemplo: **CONNECT 123456 PSW=Password** |
+|  | Protegus=OFF | Por ejemplo: **CONNECT 123456 PROTEGUS=ON** |
+|  | Code=123456 | Desconéctese de la nube de Protegus. |
+|  | IP=0.0.0.0:8000 | Por ejemplo: **CONNECT 123456 PROTEGUS=OFF** |
+|  | IP=0 | Código de servicio en la nube de Protegus. / Por ejemplo: **CONNECT 123456 CODE=123456** |
+|  | ENC=123456 | Especifique la IP TCP y el puerto del canal de conexión del servidor principal. Por ejemplo: **CONNECT 123456 IP=0.0.0.0:8000** |
+|  | APN=Internet | Para apagar el canal principal. Por ejemplo: **CONNECT 123456 IP=0** |
+|  | USER=user | Llave de encriptación TRK. Por ejemplo: **CONNECT 123456 ENC=123456** |
+|  | PSW=password | Nombre APN. Por ejemplo: **CONNECT 123456 APN=INTERNET** |
+|  |  | Usuario de APN. Por ejemplo: **CONNECT 123456 USER=User** |
+|  |  | Contraseña APN. Por ejemplo: **CONNECT 123456 PSW=Password** |
 
 ### Controle las salidas PGM mediante llamadas telefónicas 
 
@@ -870,7 +870,15 @@ Realice estas acciones si desea controlar una salida PGM de forma remota:
 
 | Botones del teclado | Función | Descripción |
 |---------------------|---------|-------------|
-| [número de salida]*[número de estado]# | Control de SALIDA seleccionado | Controla la salida PGM especificada. Estado : [0] – salida apagada; [1] – salida activada; [2] – apagado por tiempo de pulso; [3] – encienda por tiempo de pulso; (el tiempo de pulso se especifica en el software TrikdisConfig, tabla “PGM”) [*] – este símbolo muestra el final del comando. Por ejemplo (encienda la salida 1): **1*1#** Por ejemplo (apaga la salida 1): **1*0#** Por ejemplo (encienda la salida 2 para el tiempo de pulso especificado en la tabla TrikdisConfig "PGM"): **2*3#** |
+| [número de salida]*[número de estado]# | Control de SALIDA seleccionado | Controla la salida PGM especificada. Estado : |
+|   |   |   [0] – salida apagada; |
+|   |   |   [1] – salida activada; |
+|   |   |   [2] – apagado por tiempo de pulso; |
+|   |   |   [3] – encienda por tiempo de pulso; (el tiempo de pulso se especifica en el software TrikdisConfig, tabla “PGM”) |
+|   |   |   [*] – este símbolo muestra el final del comando. |
+|   |   |   Por ejemplo (encienda la salida 1): **1*1#** |
+|   |   |   Por ejemplo (apaga la salida 1): **1*0#** |
+|   |   |   Por ejemplo (encienda la salida 2 para el tiempo de pulso especificado en la tabla TrikdisConfig "PGM"): **2*3#** |
 | # | Vuelva a intentar ingresar el comando | Si cometió un error al ingresar el comando, presione “**#**” en el teclado del teléfono e ingrese el comando nuevamente. |
 
 ## Configuración de parámetros con el software *TrikdisConfig* 
@@ -1390,7 +1398,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 <img alt="" src="./image99.webp" style="width:7.086614173228346in;height:2.9488188976377954in" />
 
-4. Presione “Abrir firmware” y seleccione el archivo de firmware requerido.
+4. Presione “**Abrir firmware**” y seleccione el archivo de firmware requerido.
 
 2.  Presione **Actualizar [F12]**.
 
