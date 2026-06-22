@@ -551,9 +551,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***.
 
 El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para funcionar utilizando el protocolo Modbus RTU (RS485).
 
-
-
-
+<img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:2.5in;height:in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***. 
 
@@ -586,9 +584,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***.
 
 El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para que funcione a través de una red LAN. Las direcciones IP de la red local deben introducirse de acuerdo con la configuración de su red. 
 
-
-
-
+<img alt="" src="./module mk-30 ip 2026 06 18.webp" style="width:2.5in;height:in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***. 
 
