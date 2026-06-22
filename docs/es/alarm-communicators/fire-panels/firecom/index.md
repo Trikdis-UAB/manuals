@@ -555,7 +555,7 @@ El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** de
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***. 
 
-**El comunicador *FIRECOM* y el panel de control de incendios Polon-Alfa 3000 están conectados a la misma red LAN **
+**El comunicador *FIRECOM* y el panel de control de incendios Polon-Alfa 3000 están conectados a la misma red LAN**
 
 <img alt="" src="./FIRECOM polon lan prijungimas ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
