@@ -529,25 +529,25 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 **El comunicador *FIRECOM* se conecta al panel de control de incendios Polon-Alfa 3000 a través del bus RS485** 
 
-
+<img alt="" src="./FIRECOM polon rs485 prijungimas ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***. 
 1.	Seleccione **Polon-Alfa 3000**. 
 2.	Seleccione el tipo de conexión **RS485**.
 
-
+<img alt="" src="./FIRECOM polon rs485 trikdisconfig 1 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 3.	Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
-
+<img alt="" src="./FIRECOM polon rs485 trikdisconfig 2 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 4.	Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**). 
 
- 
+ <img alt="" src="./FIRECOM polon rs485 trikdisconfig 3 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 5.	Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. 
 
-
+<img alt="" src="./FIRECOM polon rs485 trikdisconfig 4 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para funcionar utilizando el protocolo Modbus RTU (RS485).
 
@@ -559,34 +559,30 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 **El comunicador *FIRECOM* y el panel de control de incendios Polon-Alfa 3000 están conectados a la misma red LAN **
 
-
+<img alt="" src="./FIRECOM polon lan prijungimas ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***. 
 1.	Seleccione **Polon-Alfa 3000**. 
 2.	Seleccione el tipo de conexión **TCP**. 
 3.	Introduzca la dirección IP del panel de control de incendios **Polon-Alfa 3000**. 
 
-
+<img alt="" src="./FIRECOM polon lan trikdisconfig 1 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 4.	Marque la casilla “**DHCP**” (modo de registro automático) para que el comunicador ***FIRECOM*** lea automáticamente la configuración de red (máscara de subred, puerta de enlace) y se le asigne una dirección IP. 
 
-
-
+<img alt="" src="./FIRECOM polon lan trikdisconfig 2 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 5.	Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***. 
 
-
-
+<img alt="" src="./FIRECOM polon lan trikdisconfig 3 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 6.	Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**). 
 
-
-
+<img alt="" src="./FIRECOM polon lan trikdisconfig 4 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 7.	Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. 
 
-
-
+<img alt="" src="./FIRECOM polon lan trikdisconfig 5 ESP 2026 06 03.webp" style="width:7.0in;height:in" />
 
 El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para que funcione a través de una red LAN. Las direcciones IP de la red local deben introducirse de acuerdo con la configuración de su red. 
 
