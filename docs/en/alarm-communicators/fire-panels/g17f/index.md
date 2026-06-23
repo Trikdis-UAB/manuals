@@ -135,21 +135,21 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 | Indicator | Light status | Description |
 |-----------|--------------|-------------|
 | Network | Off | Not connected to Cellular network |
-| Network | Green solid and yellow blinking | The communicator is connected to Cellular network. Sufficient Cellular signal strength level for GPRS is 5 (five yellow flashes) and 3 for 4G (three yellow flashes). |
+|  | Green solid and yellow blinking | The communicator is connected to Cellular network. Sufficient Cellular signal strength level for GPRS is 5 (five yellow flashes) and 3 for 4G (three yellow flashes). |
 | Data | Green solid | Message is being sent |
-| Data | Yellow solid | There are unsent events in the data buffer |
+|  | Yellow solid | There are unsent events in the data buffer |
 | Power | Green blinking | The power supply voltage is sufficient |
-| Power | Yellow blinking | The power supply voltage is insufficient |
-| Power | Green and yellow blinking | Configuration mode is on |
+|  | Yellow blinking | The power supply voltage is insufficient |
+|  | Green and yellow blinking | Configuration mode is on |
 | Trouble | Off | No operational problems |
-| Trouble | 1 blink | No SIM card inserted |
-| Trouble | 2 blinks | The PIN code of the SIM card is incorrect |
-| Trouble | 3 blinks | Unable to connect to Cellular network |
-| Trouble | 4 blinks | Unable to connect to the IP receiver using the primary channel |
-| Trouble | 5 blinks | Unable to connect to the IP receiver using the backup channel |
-| Trouble | 6 blinks | Internal clock of the G17F is not set |
-| Trouble | 8 blinks | Insufficient power supply voltage |
-| Trouble | 9 blinks | Problems with the connection to the RS485 module |
+|  | 1 blink | No SIM card inserted |
+|  | 2 blinks | The PIN code of the SIM card is incorrect |
+|  | 3 blinks | Unable to connect to Cellular network |
+|  | 4 blinks | Unable to connect to the IP receiver using the primary channel |
+|  | 5 blinks | Unable to connect to the IP receiver using the backup channel |
+|  | 6 blinks | Internal clock of the G17F is not set |
+|  | 7 blinks | Insufficient power supply voltage |
+|  | 9 blinks | Problems with the connection to the RS485 module |
 
 ### Components necessary for installation
 
