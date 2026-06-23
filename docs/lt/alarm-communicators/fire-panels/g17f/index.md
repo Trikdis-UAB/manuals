@@ -134,21 +134,21 @@ Pranešimai vartotojams
 | Indikatorius | Būklė | Aprašymas |
 |--------------|-------|-----------|
 | Network / (Tinklas) | Nešviečia | Nėra ryšio su GSM tinklu |
-| Network / (Tinklas) | Šviečia žaliai ir mirksi geltonai | Komunikatorius prisijungė prie GSM tinklo. Pakankamas GSM signalo stiprumas GPRS ryšiui yra 5 lygis (penki geltoni sumirksėjimai) ir 4G ryšiui 3 lygis (trys geltoni sumirksėjimai). |
+|  | Šviečia žaliai ir mirksi geltonai | Komunikatorius prisijungė prie GSM tinklo. Pakankamas GSM signalo stiprumas GPRS ryšiui yra 5 lygis (penki geltoni sumirksėjimai) ir 4G ryšiui 3 lygis (trys geltoni sumirksėjimai). |
 | Data / (Duomenys) | Šviečia žaliai | Siunčiamas pranešimas |
-| Data / (Duomenys) | Šviečia geltonai | Yra neišsiųstų įvykių pranešimų buferinėje atmintyje |
+|  | Šviečia geltonai | Yra neišsiųstų įvykių pranešimų buferinėje atmintyje |
 | Power / (Maitinimas) | Mirksi žaliai | Maitinimo įtampa gera |
-| Power / (Maitinimas) | Mirksi geltonai | Maitinimo įtampa per maža |
-| Power / (Maitinimas) | Mirksi žaliai ir geltonai | Įjungtas konfigūravimo režimas |
+|  | Mirksi geltonai | Maitinimo įtampa per maža |
+|  | Mirksi žaliai ir geltonai | Įjungtas konfigūravimo režimas |
 | Trouble / (Nesklandumas) | Nešviečia ir nemirksi | Veikia be nesklandumų |
-| Trouble / (Nesklandumas) | 1 mirktelėjimas | Nėra SIM kortelės |
-| Trouble / (Nesklandumas) | 2 mirktelėjimai | Neteisingas SIM kortelės PIN kodas |
-| Trouble / (Nesklandumas) | 3 mirktelėjimai | Nepavyksta prisijungti prie GSM tinklo |
-| Trouble / (Nesklandumas) | 4 mirktelėjimai | Nepavyksta prisijungti prie IP imtuvo pirminiu kanalu |
-| Trouble / (Nesklandumas) | 5 mirktelėjimai | Nepavyksta prisijungti prie IP imtuvo atsarginiu kanalu |
-| Trouble / (Nesklandumas) | 6 mirktelėjimai | Nenustatytas vidinis G17F laikrodis |
-| Trouble / (Nesklandumas) | 7 mirktelėjimai | Nepakankama maitinimo įtampa |
-| Trouble / (Nesklandumas) | 9 mirktelėjimai | Ryšio su RS485 moduliu sutrikimas |
+|  | 1 mirktelėjimas | Nėra SIM kortelės |
+|  | 2 mirktelėjimai | Neteisingas SIM kortelės PIN kodas |
+|  | 3 mirktelėjimai | Nepavyksta prisijungti prie GSM tinklo |
+|  | 4 mirktelėjimai | Nepavyksta prisijungti prie IP imtuvo pirminiu kanalu |
+|  | 5 mirktelėjimai | Nepavyksta prisijungti prie IP imtuvo atsarginiu kanalu |
+|  | 6 mirktelėjimai | Nenustatytas vidinis G17F laikrodis |
+|  | 7 mirktelėjimai | Nepakankama maitinimo įtampa |
+|  | 9 mirktelėjimai | Ryšio su RS485 moduliu sutrikimas |
 
 ### Medžiagos reikalingos montavimo darbams
 
