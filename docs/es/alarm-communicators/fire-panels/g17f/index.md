@@ -134,21 +134,21 @@ Mensajes a los usuarios
 | Indicador | Estado de la luz | Descripción |
 |-----------|------------------|-------------|
 | Network | Off | Sin conexión a la red celular |
-| Network | Verde sólido con parpadeo amarillo | El comunicador está conectado a la red celular. / La potencia de la señal celular suficiente para 2G es el nivel 5 (cinco parpadeos amarillos) y para el nivel 3 de 4G (tres parpadeos amarillos) |
+|  | Verde sólido con parpadeo amarillo | El comunicador está conectado a la red celular. / La potencia de la señal celular suficiente para 2G es el nivel 5 (cinco parpadeos amarillos) y para el nivel 3 de 4G (tres parpadeos amarillos) |
 | Data | Verde sólido | El mensaje está siendo enviado |
-| Data | Amarillo sólido | Los eventos no enviados se almacenan en el búfer |
+|  | Amarillo sólido | Los eventos no enviados se almacenan en el búfer |
 | Power | Verde parpadeando | El voltaje de la fuente de alimentación es suficiente |
-| Power | Amarillo parpadeando | La tensión de alimentación es insuficiente |
-| Power | Parpadeo verde y amarillo | El modo de configuración está activado |
+|  | Amarillo parpadeando | La tensión de alimentación es insuficiente |
+|  | Parpadeo verde y amarillo | El modo de configuración está activado |
 | Trouble | Off | No hay problemas de operación |
-| Trouble | 1 parpadeo rojo | Tarjeta SIM no encontrada |
-| Trouble | 2 parpadeos rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto) |
-| Trouble | 3 parpadeos rojos | Problema con el registro a la red GSM |
-| Trouble | 4 parpadeos rojos | No se puede conectar al receptor de IP usando el canal principal |
-| Trouble | 5 parpadeos rojos | No se puede conectar al receptor de IP usando el canal de respaldo |
-| Trouble | 6 parpadeos rojos | El reloj interno de la G17F no está ajustado |
-| Trouble | 8 parpadeos rojos | Tensión de alimentación insuficiente |
-| Trouble | 9 parpadeos rojos | Problemas con la conexión al módulo RS485 |
+|  | 1 parpadeo rojo | Tarjeta SIM no encontrada |
+|  | 2 parpadeos rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto) |
+|  | 3 parpadeos rojos | Problema con el registro a la red GSM |
+|  | 4 parpadeos rojos | No se puede conectar al receptor de IP usando el canal principal |
+|  | 5 parpadeos rojos | No se puede conectar al receptor de IP usando el canal de respaldo |
+|  | 6 parpadeos rojos | El reloj interno de la G17F no está ajustado |
+|  | 7 parpadeos rojos | Tensión de alimentación insuficiente |
+|  | 9 parpadeos rojos | Problemas con la conexión al módulo RS485 |
 
 ### Componentes necesarios para la instalación 
 
