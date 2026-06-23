@@ -20,6 +20,8 @@ body {
 .md-search,
 .md-dialog,
 .md-overlay,
+.md-consent,
+[data-md-component="consent"],
 .md-toggle,
 .md-skip,
 [data-md-component="announce"],

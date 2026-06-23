@@ -1129,6 +1129,12 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   .trik-pdf-download {
     display: none !important;
   }
+
+  /* Cookie consent dialog/overlay must never appear in the printed PDF */
+  .md-consent,
+  [data-md-component="consent"] {
+    display: none !important;
+  }
 }
 
 /* =====================================================
