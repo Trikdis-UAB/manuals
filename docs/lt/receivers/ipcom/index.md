@@ -29,6 +29,16 @@ Funkciniai skirtumai tarp leidimų:
 
 `Perdavimas per imtuvą` reiškia, kad įrenginių įvykiai ir būsenos per IPcom persiunčiami į Protegus 2, o palaikomi veiksmai gali būti siunčiami atgal į įrenginius taip pat per IPcom.
 
+## Talpa ir mastelio keitimas
+
+IPcom kiekvienam įrenginiui palaiko vieną nuolatinę (persistent) TCP sesiją, kurią aktyvią palaiko periodiniai PING signalai. Kadangi kiekvienas įrenginys laiko vieną ilgalaikę jungtį, 1000 įrenginių diegimas atitinka maždaug 1000 vienu metu atvirų jungčių — nedidelis krūvis, neviršijantis sistemos ribų.
+
+- Kiekvienas įrenginys naudoja vieną nuolatinę TCP sesiją; serverio pusės stebėjimo mechanizmas (watchdog) aptinka ir pašalina nutrūkusias sesijas.
+- Vienas IPcom egzempliorius keičia mastelį iki dešimčių tūkstančių vienu metu atvirų įrenginių jungčių, o produkcijoje veikia ne vienas toks serveris.
+- Valdomuose Linux diegimuose OS lygmens apribojimai (failų deskriptoriai, soketų buferiai, jungčių ribos) suderinami diegimo metu su didele atsarga, todėl įprastas įrenginių skaičius niekada nepriartėja prie resursų ar OS apribojimo.
+
+Orientacinis konfigūravimas: kaip minimali apatinė riba, vienas egzempliorius, prižiūrintis iki maždaug 30 000 įrenginių, gali veikti su 1 vCPU, 1 GB RAM ir 20 GB disko. Produkcijos diegimams naudokite rekomenduojamas bazines konfigūracijas skyriuje [Aparatinės įrangos reikalavimai](#aparatinės-įrangos-reikalavimai) žemiau — jose numatyta atsarga žurnalams, duomenų bazėms, atsarginėms kopijoms ir augimui.
+
 ## Aparatinės įrangos reikalavimai
 
 Planuodami naujus diegimus vadovaukitės šiomis pradinėmis rekomendacijomis.

@@ -29,6 +29,16 @@ Diferencias funcionales entre ediciones:
 
 `Retransmisión a través del receptor` significa que los eventos y estados de los dispositivos se reenvían a Protegus 2 mediante IPcom, y que las acciones compatibles pueden enviarse de vuelta a los dispositivos a través de IPcom.
 
+## Capacidad y escalabilidad
+
+IPcom mantiene una sesión TCP persistente por dispositivo, conservada activa mediante señales PING periódicas. Como cada dispositivo mantiene una única conexión de larga duración, una implementación de 1000 dispositivos equivale a aproximadamente 1000 conexiones simultáneas: una carga ligera que se mantiene dentro de los límites del sistema.
+
+- Cada dispositivo utiliza una sesión TCP persistente; un mecanismo de supervisión (watchdog) del lado del servidor detecta y elimina las sesiones interrumpidas.
+- Una sola instancia de IPcom escala hasta decenas de miles de conexiones de dispositivos simultáneas, y en producción funcionan varios servidores de este tipo.
+- En implementaciones Linux gestionadas, los límites a nivel de SO (descriptores de archivo, búferes de socket, límites de conexión) se ajustan durante la instalación con amplio margen, por lo que un número habitual de dispositivos nunca se acerca a una restricción de recursos o del SO.
+
+Dimensionamiento de referencia: como límite inferior mínimo, una sola instancia que supervisa hasta aproximadamente 30 000 dispositivos puede funcionar con 1 vCPU, 1 GB de RAM y 20 GB de disco. Para implementaciones en producción, utilice las referencias recomendadas en [Requisitos de hardware](#requisitos-de-hardware) más abajo, que añaden margen para registros, bases de datos, copias de seguridad y crecimiento.
+
 ## Requisitos de hardware
 
 Use estas referencias de dimensionamiento al planificar nuevas instalaciones.

@@ -29,6 +29,16 @@ Functional differences between editions:
 
 `Relay via receiver` means device events and statuses are forwarded to Protegus 2 through IPCom, and supported actions can be sent back through IPCom to devices.
 
+## Capacity and scalability
+
+IPCom maintains one persistent TCP session per device, kept alive by periodic PING heartbeats. Because each device holds a single long-lived connection, a deployment of 1,000 devices corresponds to roughly 1,000 concurrent connections — a light load that stays well within system limits.
+
+- Each device uses one persistent TCP session; a server-side watchdog detects and clears dropped sessions.
+- A single IPCom instance scales to tens of thousands of concurrent device connections, and multiple such servers run in production.
+- On managed Linux deployments, OS-level limits (file descriptors, socket buffers, connection limits) are tuned at install time with ample headroom, so typical device counts never approach a resource or OS constraint.
+
+Reference sizing: as a lean lower bound, a single instance supervising up to roughly 30,000 devices can run on 1 vCPU, 1 GB RAM, and 20 GB disk. For production deployments, use the recommended baselines in [Hardware requirements](#hardware-requirements) below, which add headroom for logs, databases, backups, and growth.
+
 ## Hardware requirements
 
 Use these sizing baselines when planning new installations.
