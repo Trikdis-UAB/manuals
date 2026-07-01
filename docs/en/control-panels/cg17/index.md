@@ -1,7 +1,7 @@
 # Cellular security control panel CG17
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="Product Image" width="400">
+  <img src="./image1.webp" alt="Product photo of the white CG17 wall-mounted control panel enclosure showing an antenna connector on top, four status LEDs labeled NETWORK, DATA, POWER, and TROUBLE, and two rows of green screw terminals along the bottom labeled with power, bus, input, and output designations." width="400">
 </div>
 
 
@@ -157,7 +157,7 @@ This manual applies to these CG17 models:
 
 6.  Nano SIM card slot.
 
-<img alt="" src="./image4.webp" style="width:3.937007874015748in;height:2.4921259842519685in" />
+<img alt="Two labeled diagrams of the CG17 unit, the left showing the closed enclosure with callouts 1 (antenna connector), 2 (status LED group), and 3 (USB port on the side), and the right showing the open circuit board with callouts 4 (terminal blocks), 5 (USB Mini-B port), and 6 (SIM card slot)." src="./image4.webp" style="width:3.937007874015748in;height:2.4921259842519685in" />
 
 ### Purpose of terminals 
 
@@ -212,7 +212,7 @@ Before beginning installation, make sure you have the necessary components that 
 
 2.  Open the casing of the CG17 with a flat-head screwdriver as shown below:
 
-<img alt="" src="./image6.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
+<img alt="Three line-drawing steps showing a flat-head screwdriver prying open the side and bottom of the CG17 casing, followed by a close-up diagram of the internal USB Mini-B port location." src="./image6.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
 
 1.  Using a USB Mini-B cable connect the CG17 to the computer.
 
@@ -226,7 +226,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “System option” window, “SIM” tab:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="Screenshot of the TrikdisConfig software System Options screen with the SIM card PIN field (1) and APN field (2) highlighted in red boxes for entry." src="./image7.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 1.  Enter „**SIM card PIN**” code.
 
@@ -234,7 +234,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “User reporting” window, “Cloud application” tab:**
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:3.5393700787401574in" />
+<img alt="Screenshot of the TrikdisConfig software Users & Reporting screen showing a user list and iButton table, with the &quot;Enable cloud service&quot; checkbox (3) and Cloud Access Code field (4) highlighted in red boxes." src="./image8.webp" style="width:7.086614173228346in;height:3.5393700787401574in" />
 
 3. Tick the checkbox “**Enable cloud service**” to the Protegus Cloud.
 
@@ -250,7 +250,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System options” window:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7519685039370079in" />
+<img alt="Screenshot of the TrikdisConfig software System Options screen with the Object ID (1), SIM card PIN (2), and APN (3) fields highlighted in red boxes for Central Monitoring Station setup." src="./image9.webp" style="width:7.086614173228346in;height:1.7519685039370079in" />
 
 1.  Enter “**Object ID**” (account) number provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
@@ -260,7 +260,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “Reporting to CMS” window settings for “Primary channel”:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.5118110236220472in" />
+<img alt="Screenshot of the TrikdisConfig software Reporting to CMS screen showing Primary and Backup channel settings (communication type, IP/domain, port, protocol, encryption key highlighted as items 4-9) alongside general reporting settings and a Backup channel 2 phone number field (10)." src="./image10.webp" style="width:7.086614173228346in;height:3.5118110236220472in" />
 
 4. **Communication type** - select the **IP** connection method (We do not recommend SMS as the primary channel).
 
@@ -308,9 +308,9 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 7.  Insert a nano-SIM card. The SIM card must already be activated in the Cellular network and all required services must be enabled, i.e., the card must be able to call, send and receive SMS messages, use mobile internet. <u>Ask your SIM card’s mobile network operator how to enable the required services.</u>
 
-<img alt="" src="./image11.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Two line drawings showing the CG17 circuit board with a circled tab on the left edge to release it from the casing, and the rear casing with two circled screw mounting holes." src="./image11.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image12.webp" style="width:2.213337707786527in;height:1.3566699475065618in" />
+<img alt="Line drawing of a nano-SIM card being inserted into the CG17's SIM card slot in the direction of the arrow." src="./image12.webp" style="width:2.213337707786527in;height:1.3566699475065618in" />
 
 !!! note
     Make sure that the SIM card is activated. / Make sure that the mobile
@@ -340,7 +340,7 @@ Changing zones settings, partition assignment are described in section 4.7 “�
 
 Possible connection schematics:
 
-<img alt="" src="./image13.webp" style="width:6.43001312335958in;height:1.4266699475065616in" />
+<img alt="Four schematic diagrams illustrating input wiring options between COM and INx terminals: normally open (NO), normally closed (NC), normally closed with a 10k end-of-line resistor (EOL 10k), and normally closed with tamper and wire-fault recognition using two 10k resistors (EOL_T)." src="./image13.webp" style="width:6.43001312335958in;height:1.4266699475065616in" />
 
 ### Schematics for connecting a smoke detector 
 
@@ -348,17 +348,17 @@ Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig 
 
 - **Connecting a four-wire smoke detector**
 
-<img alt="" src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
+<img alt="Wiring schematic showing the CG17's +12V, x IN, COM, and x OUT terminals connected directly to a chain of two-wire smoke detectors (IN/OUT terminals with plus and minus) ending in a 10k end-of-line resistor (EOL)." src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
 
 - **Connecting a two-wire smoke detector**
 
 1)  using an EOL zone (or NC, no resistor).
 
-<img alt="" src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
+<img alt="Wiring schematic showing the CG17's terminals connected to an SM1 compatibility module (with -12V, R, +12V, C, NO, NC terminals) which in turn connects to a chain of two two-wire smoke detectors and a 10k end-of-line resistor." src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
 
 1)  using an EOL zone (or NO, no resistor).
 
-<img alt="" src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
+<img alt="Wiring schematic similar to the SM1 module connection diagram, showing the CG17's terminals wired through the SM1 module to two smoke detectors with the 10k end-of-line resistor connected using an alternate terminal arrangement on the SM1 module." src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
 
 \*SM1 – a compatibility module made by Trikdis that allows to remotely restart a two-wire smoke detector after a triggered alarm.
 
@@ -368,7 +368,7 @@ Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig 
 
 - If the wire connecting the temperature sensor is longer than 0,5 m, we recommend using a twisted pair cable (UTP4x2x0,5 or STP4x2x0,5).
 
-<img alt="" src="./image17.webp" style="width:3.0in;height:0.9791666666666666in" />
+<img alt="Wiring diagram showing a temperature sensor's four-wire cable connected to the CG17 terminals +5V, 1 Wire, and COM, with the internal wire colors labeled +Vdd (red), DQ (orange), and GND (black)." src="./image17.webp" style="width:3.0in;height:0.9791666666666666in" />
 
 Wire colors:
 
@@ -380,17 +380,17 @@ Wire colors:
 
 ### Schematics for connecting a relay and a LED
 
-<img alt="" src="./image18.webp" style="width:4.4175087489063865in;height:0.8850021872265966in" />
+<img alt="Two wiring diagrams side by side, one showing the CG17's +12V and xOUT terminals connected to a relay's NC, C, and NO contacts, and the other showing the CG17's +12V and xOUT terminals connected through a 2k2 resistor to an LED." src="./image18.webp" style="width:4.4175087489063865in;height:0.8850021872265966in" />
 
 ### Schematics for connecting contact key readers
 
 The TM17 reader should be connected to the CG17 using an *RS485* data bus. The wire length of an *RS485* data bus can be up to 100 m. Up to eight TM17 readers can be connected to the CG17.
 
-<img alt="" src="./image19.webp" style="width:3.9525076552930885in;height:2.0250043744531934in" />
+<img alt="Wiring diagram connecting the CG17's +12V, COM, A RS485, and B RS485 terminals to a TM17 contact key reader via red, blue, black, and white wires, with the TM17 panel showing six numbered LEDs, a State LED, a Trouble LED, and a central key-touch button." src="./image19.webp" style="width:3.9525076552930885in;height:2.0250043744531934in" />
 
 The iButton key reader should be connected to the CG17 using the “1 Wire” port. The wire length can be up to 30 m:
 
-<img alt="" src="./image20.webp" style="width:4.870009842519685in;height:2.490005468066492in" />
+<img alt="Wiring diagram connecting the CG17's +12V, xOUT, 1 WIRE, and COM terminals through two 1k resistors to a CZ-Dallas iButton reader's brown, green, yellow, white, and gray wires, with accompanying text explaining that the xOUT output must be set to &quot;System State&quot; and the reader's LED shows red when the alarm is on and yellow when off." src="./image20.webp" style="width:4.870009842519685in;height:2.490005468066492in" />
 
 !!! note
     Linking keys to the CG17 is described in chapter 4.4.1
@@ -399,7 +399,7 @@ The iButton key reader should be connected to the CG17 using the “1 Wire” p
 
 The wireless sensor *RF-SH* transceiver is meant for working with Crow brand wireless devices (movement sensors, magnetic contacts, siren, remote controllers etc.). One *RF-SH* transceiver can be connected to the *CG17*.
 
-<img alt="" src="./image21.webp" style="width:2.6875054680664916in;height:1.2050021872265966in" />
+<img alt="Wiring diagram connecting the CG17's +12V, COM, A RS485, and B RS485 terminals to the corresponding +DC, -DC, A RS485, and B RS485 terminals on an RF-SH wireless transceiver module." src="./image21.webp" style="width:2.6875054680664916in;height:1.2050021872265966in" />
 
 ### Schematics for connecting iO series expander modules 
 
@@ -407,10 +407,10 @@ If the security control panel CG17 needs to have more inputs IN or outputs OUT, 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="Wiring diagram connecting the CG17's +12V, COM, A RS485, and B RS485 terminals to the corresponding +DC, -DC, A, and B terminals on an iO-8 expander module." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image23.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image23.webp" alt="Wiring diagram connecting the CG17's +12V, COM, A RS485, and B RS485 terminals to the corresponding +DC, -DC, A RS485, and B RS485 terminals on an iO-WL expander module." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -418,7 +418,7 @@ If the security control panel CG17 needs to have more inputs IN or outputs OUT, 
 
 Up to 8 keypads (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner or Crow CR-16 PowerWave) can be connected to the *CG17*. In *TrikdisConfig*, it should be noted that the Crow keypad will be used (see chapter 4.2 „„System Options“ window“).
 
-<img alt="" src="./image24.webp" style="width:3.366673228346457in;height:1.19333552055993in" />
+<img alt="Wiring diagram connecting the CG17's +12V, COM, 2 I/O, and 1 WIRE terminals to a Crow keypad's POS, NEG, CLOCK, and DATA terminals, labeled as compatible with Crow CR-16, Crow LCD, and Crow Touch keypads." src="./image24.webp" style="width:3.366673228346457in;height:1.19333552055993in" />
 
 ### Schematics for connecting a siren
 
@@ -428,11 +428,11 @@ Up to 8 keypads (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner or Crow C
 
 - The output OUT must be assigned the function “Siren” and must have a security system area set.
 
-<img alt="" src="./image25.webp" style="width:2.773338801399825in;height:1.1566688538932632in" />
+<img alt="Wiring diagram showing a siren connected to the CG17's 6 OUT and +12V terminals via black and red wires." src="./image25.webp" style="width:2.773338801399825in;height:1.1566688538932632in" />
 
 ### Schematics for connecting iO series extension modules
 
-<img alt="" src="./image26.webp" style="width:7.0875in;height:4.36875in" />
+<img alt="Complex wiring diagram showing the CG17 control panel wired via RS485 bus to iO-MOD and iO expansion modules, with two of the iO-MOD modules each wirelessly linked (up to 300 m) to a separate iO-WL module requiring its own 12-28V power supply, plus a DS18B20/DS18S20 temperature sensor wired to one iO module and a CZ Dallas iButton reader wired via a 1-Wire connection to one of the iO-WL modules, with notes on module wire colors and the reader's red/green LED status meaning." src="./image26.webp" style="width:7.0875in;height:4.36875in" />
 
 **Note:**
 
@@ -448,7 +448,7 @@ Up to 8 keypads (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner or Crow C
 
 ### Schematics for connecting of the fuel level sensor Strela RS485
 
-<img alt="" src="./image27.webp" style="width:3.6200076552930884in;height:1.2375021872265968in" />
+<img alt="Wiring diagram connecting the CG17's +12V, COM, A RS485, and B RS485 terminals to a Strela RS485 fuel sensor via BL (blue), BN (brown), Y/G (yellow/green), and B (black) wires." src="./image27.webp" style="width:3.6200076552930884in;height:1.2375021872265968in" />
 
 One „Strela RS485” fuel level sensor can be connected to the CG17. When the fuel sensor is connected, no other modules (iO-8, iO, iO-WL, RF-SH, TM17, E485, W485, iO-LORA, iO8-LORA, PB-LORA, REL-LORA) are connected to the CG17.
 
@@ -460,17 +460,17 @@ It is mandatory to calibrate the fuel level sensor “**STRELA S485**” (<http
 
 2.  Launch the “DUTConfig” program. Choose “**Interface sensor**”.
 
-<img alt="" src="./image28.webp" style="width:3.4763779527559056in;height:1.641732283464567in" />
+<img alt="Screenshot of the DUTConfig 3.7.2 software's sensor type selection screen, with the &quot;Interface sensor&quot; button outlined in red and marked with a numbered callout &quot;2&quot;." src="./image28.webp" style="width:3.4763779527559056in;height:1.641732283464567in" />
 
 3. Set “**View**” mode “**Standart**”.
 
 2.  Click “**Connect**” and wait.
 
-<img alt="" src="./image29.webp" style="width:5.917322834645669in;height:2.4015748031496065in" />
+<img alt="Screenshot of the DUTConfig 3.7.2 software's sensor configuration screen showing sensor parameters and Omnicomm settings, with the View menu (set to Standart) and the green Connect button highlighted by numbered callouts &quot;3&quot; and &quot;4&quot;." src="./image29.webp" style="width:5.917322834645669in;height:2.4015748031496065in" />
 
 3. When the sensor is connected to “DUTConfig”, a box “**Connection: on**” appears.
 
-    <img alt="" src="./image30.webp" style="width:6.244094488188976in;height:2.4015748031496065in" />
+    <img alt="Screenshot of the DUTConfig software main window with the green &quot;Connection: on&quot; indicator and the &quot;Edit&quot; button both highlighted by red boxes and numbered 5 and 6." src="./image30.webp" style="width:6.244094488188976in;height:2.4015748031496065in" />
 
 2.  Click the “**Edit**” button and calibrate the sensor in full and empty tank modes.
 
@@ -478,17 +478,17 @@ It is mandatory to calibrate the fuel level sensor “**STRELA S485**” (<http
 
 4.  Click the “**OK**” button to save the values.
 
-    <img alt="" src="./image31.webp" style="width:5.925196850393701in;height:2.4015748031496065in" />
+    <img alt="Screenshot of the DUTConfig software showing the &quot;Empty tank&quot; and &quot;Full tank&quot; buttons and the &quot;OK&quot; button highlighted with red boxes and numbered 7 and 8." src="./image31.webp" style="width:5.925196850393701in;height:2.4015748031496065in" />
 
 5.  Change the “**View**” mode to “**Extended**”.
 
-<img alt="" src="./image32.webp" style="width:5.917322834645669in;height:2.393700787401575in" />
+<img alt="Screenshot of the DUTConfig software with the View menu open, showing &quot;Standart&quot; and &quot;Extended&quot; options, with &quot;Extended&quot; highlighted by a red box and numbered 9." src="./image32.webp" style="width:5.917322834645669in;height:2.393700787401575in" />
 
 10. Fill in the table according to the shape of the fuel tank. Simple method: just set 0% immersion as 0 litres and 100% immersion as the capacity of your fuel tank (the fuel tank in the example has a capacity of 200 l).
 
 11. After you are done filling in the table, click “**OK**”.
 
-<img alt="" src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
+<img alt="Screenshot of the DUTConfig extended view showing a fuel level calibration table and graph plotting immersion level percentage against fuel volume in litres, with the data table, OK button, and Disconnect button highlighted and numbered 10, 11, and 12." src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
 
 12. Click the “**Disconnect**” button.
 
@@ -514,19 +514,19 @@ A 12 V battery can be connected to the CG17. If AC power is lost, an event messa
 
 - Check to make sure the *CG17*’s charging current is sufficient to charge the battery.
 
-<img alt="" src="./image34.webp" style="width:1.9133377077865268in;height:1.360003280839895in" />
+<img alt="Wiring diagram showing the CG17 panel's BAT- and BAT+ terminals connected by black and red wires to the positive and negative terminals of a 12V battery." src="./image34.webp" style="width:1.9133377077865268in;height:1.360003280839895in" />
 
 ### Schematics for wiring the CG17 to a security control panel
 
 *CG17* works in communicator mode. Inputs type of *CG17* must be set to NO ir NC and definition “24_hours”. / The *CG17* inputs could be described with SMS text messages that the user will receive when the inputs are event/restore. / PGM outputs of security control panel must be assigned to specific events.
 
-<img alt="" src="./image35.webp" style="width:2.803472222222222in;height:1.4319444444444445in" />
+<img alt="Wiring diagram showing the CG17 panel's AC/+DC, AC/-DC, 1 IN, 2 I/O, 3 I/O, and 4 I/O terminals connected by wires to a security control panel's AUX+, AUX-, PGM1, PGM2, PGM3, and PGM4 terminals respectively." src="./image35.webp" style="width:2.803472222222222in;height:1.4319444444444445in" />
 
 ### DC Voltage measurement with CG17
 
 The *CG17* can be used to measure DC voltage. Four *CG17* inputs 1IN, 2IN, 3IN, 4IN can be selected for voltage measurements. Voltage from 0 V to 30 V is measured (exceeding 30 V will cause damage to the control panel *CG17*). The measured voltage must be connected to terminals “1IN” and “COM”. “1IN” - positive terminal. “COM” - negative terminal.
 
-<img alt="" src="./image36.webp" style="width:3.38000656167979in;height:0.9000021872265966in" />
+<img alt="Wiring diagram showing the CG17 panel's 1 IN and COM terminals connected by two wires to the +U and -U terminals of the equipment whose voltage is being measured." src="./image36.webp" style="width:3.38000656167979in;height:0.9000021872265966in" />
 
 Connect the CG17 to a computer with a USB Mini-B cable. Run TrikdisConfig. The software will automatically recognize the connected CG17 and will open a window for configuration. In the “**Sensor**” window, specify the “**In1 Voltage**” and also specify the amount of voltage above which a message will be generated.
 
@@ -534,15 +534,15 @@ Connect the CG17 to a computer with a USB Mini-B cable. Run TrikdisConfig. The s
 
 - **Min** – when the voltage is lower than this setting, an event message will be generated. For an event message to be generated, the “**Low**” box must be ticked.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="Screenshot of the TrikdisConfig software's Sensors tab showing a table of eight sensors with sensor 1 set to &quot;In1 Voltage&quot; and its Max and Min value fields highlighted by a red box." src="./image37.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 The PGM output can be controlled when measuring a voltage above a set value or below a set value. In TrikdisConfig you need to select the PGM output and set it to “**Remote Control**” operation mode.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="Screenshot of the TrikdisConfig software's PGM Outputs tab showing a table of five PGM outputs with PGM 1 set to &quot;CG17 5 OUT&quot; and &quot;Remote Control&quot; output definition highlighted by a red box." src="./image38.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 Go to the “**Set Action**” tab.
 
-<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="Screenshot of the TrikdisConfig software's PGM Set Action tab showing a table of action rules with row 1 configured for PGM1, sensor factor S1, &quot;Higher than set&quot; condition, and value 13, highlighted by a red box." src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **Enable** – enables the PGM.
 
@@ -568,13 +568,13 @@ Go to the “**Set Action**” tab.
 
 The *W485* module sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a WiFi internet router. When WiFi connectivity is available, the *CG17* (firmware from Ver.1.13) sends event messages via the *W485* module. When WiFi connectivity is disrupted, the *CG17* sends messages via GPRS. When WiFi connectivity is re-established, the *CG17* returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the *CG17* is described in chapter 4.5. „„Modules” window”. / You do not need a SIM card, when using the *W485* with the *CG17* security panel. / One *W485* module can be connected to the *CG17*.
 
-<img alt="" src="./image40.webp" style="width:3.09500656167979in;height:2.4225043744531933in" />
+<img alt="Wiring diagram showing a 16V power supply connected to the CG17 panel's AC/+DC and AC/-DC terminals, and the CG17's RS485 data lines and +12V/COM power terminals wired to the matching RS485 and power terminals on a W485 module up to 100 meters away." src="./image40.webp" style="width:3.09500656167979in;height:2.4225043744531933in" />
 
 ### Schematic for connecting the E485 „Ethernet“ module
 
 The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *CG17* (firmware from Ver.1.13), CSP and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *CG17* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *CG17* starts sending messages via *E485*. / Configuration of the *E485* WiFi module to work with the *CG17* is described in chapter 4.5. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the *CG17* security panel. / One *E485* module can be connected to the *CG17*.
 
-<img alt="" src="./image41.webp" style="width:3.09000656167979in;height:2.4225043744531933in" />
+<img alt="Wiring diagram showing a 16V power supply connected to the CG17 panel's AC/+DC and AC/-DC terminals, and the CG17's RS485 data lines and +12V/COM power terminals wired to the matching RS485 and power terminals on an E485 module up to 100 meters away." src="./image41.webp" style="width:3.09000656167979in;height:2.4225043744531933in" />
 
 ### Schematic for connecting of iO-LORA expansion modules 
 
@@ -582,11 +582,11 @@ CG17 controller firmware version 1.18 and higher.
 
 Connect the RF-LORA transceiver to CG17. After that, you can use the iO-LORA, iO8-LORA, PB-LORA, REL-LORA modules. One RF-LORA transceiver can be connected to CG17.
 
-<img alt="" src="./image42.webp" style="width:6.76001312335958in;height:5.857512029746282in" />
+<img alt="Wiring diagram showing the CG17 panel's +12V, COM, A RS485, and B RS485 terminals wired to the RF-LORA transceiver, which connects wirelessly up to 5000 meters to an iO-LORA module (itself wired to a 9-16V battery, a color-coded RFID keypad reader, and a DS18B20/DS18S20 temperature sensor), with a PB-LORA module shown only as a labeled placeholder with no terminals drawn, and an iO8-LORA module shown with its full terminal layout and 9-16V battery connection." src="./image42.webp" style="width:6.76001312335958in;height:5.857512029746282in" />
 
 Launch TrikdisConfig. Connect the CG17 via USB Mini-B cable to the computer or remotely. Click the **Read [F4]** button in the TrikdisConfig program to display the current values of the controller's operating parameters. When prompted, enter the administrator or installer code in the pop-up window. In the "**Modules**" list, select the LORA module you are using. In the "**Serial No.**" field, enter the serial number of the module.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
+<img alt="Screenshot of the TrikdisConfig &quot;Modules&quot; tab showing an RS485 modules table with two rows highlighted, an iO-LORA expander with serial number 146 and an iO8-LORA expander with serial number 197, both on Area 1." src="./image43.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
 After making the changes click **Write [F5]**. Wait for the update to complete. Click "**Disconnect**" and unplug the USB Mini-B cable.
 
@@ -596,7 +596,7 @@ After making the changes click **Write [F5]**. Wait for the update to complete.
 
 2.  Remove the lid of the CG17 using a flat-head screwdriver as shown below:
 
-<img alt="" src="./image6.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
+<img alt="Three line-drawing steps showing a flat-head screwdriver prying open the side and bottom of the CG17 casing, followed by a close-up diagram of the internal USB Mini-B port location." src="./image6.webp" style="width:6.0236220472440944in;height:1.594488188976378in" />
 
 1.  Connect the CG17 to a computer using a USB Mini-B cable.
 
@@ -608,7 +608,7 @@ After making the changes click **Write [F5]**. Wait for the update to complete.
 
 Once the CG17 is connected to the TrikdisConfig software, the program will display information about the connected device in the status bar:
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.562992125984252in" />
+<img alt="Screenshot of the TrikdisConfig status bar showing an IMEI/Unique ID number and connection details including device name CG17_1210, serial number 000336, bootloader and firmware versions, USB connection state, and Administrator role." src="./image44.webp" style="width:7.086614173228346in;height:0.562992125984252in" />
 
 #### Status bar
 
@@ -640,7 +640,7 @@ When the **Read [F4]** button is clicked, the program will read and show setting
 
 **“System general” tab**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
+<img alt="Screenshot of the TrikdisConfig &quot;System Options&quot; window on the &quot;System general&quot; tab, showing General settings (object ID, name, test period, language, keypad and modem options), SIM card fields, and Area Settings such as siren duration and entry/exit times." src="./image45.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
 
 **Settings group “General”**
 
@@ -697,7 +697,7 @@ If the siren is connected and an output OUT (must be allocated to an area) is se
 
 **“Access” tab**
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="Screenshot of the TrikdisConfig &quot;System Options&quot; window on the &quot;Access&quot; tab, showing Access codes fields for Administrator Code, SMS password, and Installer Code alongside a list of Installer permissions toggles for various menus." src="./image46.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 **Settings group “Access codes”**
 
@@ -717,7 +717,7 @@ If the siren is connected and an output OUT (must be allocated to an area) is se
 
 ### “Reporting to CMS” window 
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.515748031496063in" />
+<img alt="Screenshot of the TrikdisConfig &quot;Reporting to CMS&quot; window showing Primary channel and Backup channel settings (communication type, IP/domain, port, protocol, phone number, encryption key) alongside general Settings such as ping periods, DNS servers, and SIA DC-09 identifiers." src="./image47.webp" style="width:7.086614173228346in;height:3.515748031496063in" />
 
 The control panel can send messages to the security company's CMS receiver.
 
@@ -761,7 +761,7 @@ The control panel can send messages to the security company's CMS receiver.
 
 **“Users” tab**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:3.736220472440945in" />
+<img alt="Screenshot of the TrikdisConfig &quot;Users & Reporting&quot; window on the &quot;Users&quot; tab showing a table of user names, phone numbers, codes, areas, and arm/disarm permissions, plus an iButtons table and cloud application settings." src="./image48.webp" style="width:7.086614173228346in;height:3.736220472440945in" />
 
 **Settings group “Users & Reporting to User”**
 
@@ -831,13 +831,13 @@ The control panel can send messages to the security company's CMS receiver.
 
 The CG17 control panel with the iO-LORA module is used, to which an RFID reader with a keypad is connected. The ID number of the RFID card is entered in the "**iButton code**" field.
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="Screenshot of the TrikdisConfig &quot;Users&quot; tab with an example user named Jonas and a phone number entered, and the adjacent iButtons table with the &quot;iButton code&quot; field for two entries highlighted in red for editing." src="./image49.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 After making the changes click **Write [F5]**. Wait for the update to complete.
 
 **“SMS answer texts” tab**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="Screenshot of the TrikdisConfig &quot;SMS answer texts&quot; tab listing editable reply texts for Command done, Wrong password, Wrong data, and Wrong command responses." src="./image50.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 **Settings group “SMS answer texts”**
 
@@ -845,7 +845,7 @@ After making the changes click **Write [F5]**. Wait for the update to complete.
 
 ### “Modules” window
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.1968503937007875in" />
+<img alt="Screenshot of the TrikdisConfig &quot;Modules&quot; window on the &quot;RS485 modules&quot; tab with a dropdown open listing selectable module types such as iO expander, iO-WL radio expander, TM17 Reader, E485 communicator, W485 module, and several LORA expanders." src="./image51.webp" style="width:7.086614173228346in;height:3.1968503937007875in" />
 
 **Settings group “RS485 modules”**
 
@@ -862,7 +862,7 @@ After making the changes click **Write [F5]**. Wait for the update to complete.
 
 #### WiFi module W485 settings window
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="Screenshot of the TrikdisConfig &quot;W485 settings&quot; tab showing Communicator network settings (DHCP mode, static IP, subnet mask, gateway, WiFi SSID name and password) and SIM parameters checkboxes." src="./image52.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
 **Settings group “Communicator network settings”**
 
@@ -896,7 +896,7 @@ In the table, you can assign Contact ID event and restore codes to the RS485 dat
     *CG17* (firmware from Ver.1.13) security panel.**
 #### “Ethernet” module E485 settings window
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.0708661417322833in" />
+<img alt="Screenshot of the TrikdisConfig &quot;E485 settings&quot; tab showing Communicator network settings (DHCP mode, static IP, subnet mask, gateway) and SIM parameters checkboxes." src="./image53.webp" style="width:7.086614173228346in;height:2.0708661417322833in" />
 
 **Settings group “Communicator network settings”**
 
@@ -926,7 +926,7 @@ In the table, you can assign Contact ID event and restore codes to the RS485 dat
     *CG17* (firmware from Ver.1.13) security panel.**
 **“Internal modules” settings window**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.62992125984252in" />
+<img alt="Screenshot of the TrikdisConfig &quot;Internal modules&quot; tab configured for a GPS receiver, showing fields for coordinate reporting intervals, movement detection distance, smoothing coefficients, and alarm/movement reporting options." src="./image54.webp" style="width:7.086614173228346in;height:2.62992125984252in" />
 
 **Settings group “Internal modules”**
 
@@ -963,15 +963,15 @@ Messages with the coordinates are sent to the monitoring program Monas MS.
 
 - **Module** – select the module **FLS fuel sensor**.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="Screenshot of TrikdisConfig software Modules window with the RS485 modules tab open, showing ID 1 set to module type &quot;FLS fuel sensor&quot; with area and name fields." src="./image55.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
 
 Click **Write [F5]**. Wait until the data is saved. Remove the USB cable from the CG17. Wait for about 1 minute. Connect the USB cable to the CG17. Click **Read [F4]**. The program will read and show the settings currently saved on the CG17. The “**Serial No.**” and “**Firmware version**” of the fuel level sensor “**Strela S485**” will appear in the program window “**Modules**”.
 
-<img alt="" src="./image56.webp" style="width:7.141732283464567in;height:1.4015748031496063in" />
+<img alt="Screenshot of TrikdisConfig software Modules window after reading data, showing the FLS fuel sensor's serial number &quot;000000&quot; and firmware version &quot;23012015&quot; listed for Expander ID1." src="./image56.webp" style="width:7.141732283464567in;height:1.4015748031496063in" />
 
 Open the “**Sensors**” window.
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.216535433070866in" />
+<img alt="Screenshot of TrikdisConfig software Sensors window listing eight sensor slots with Module type, Serial No., Sensor name, Max/Min values and High/Low checkboxes, plus a Fuel sensor settings panel below with fuel loss detection options." src="./image57.webp" style="width:7.086614173228346in;height:3.216535433070866in" />
 
 - **Module type** – choose “**Fuel level sensor**”.
 
@@ -993,7 +993,7 @@ Open the “**Sensors**” window.
 
 The user will be informed about sudden fuel level changes with an SMS message. The user can edit the text of the SMS message.
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.074803149606299in" />
+<img alt="Screenshot of TrikdisConfig software System events window with a red box highlighting three fuel-related event rows (Fuel loss alarm, Low fuel level, High fuel level) and their SMS event/restore text and CID codes." src="./image58.webp" style="width:7.086614173228346in;height:3.074803149606299in" />
 
 Description of the operation of the fuel level sensor. The fuel level sensor **Strela RS485** is connected to the CG17 (see 3.10 „Schematics for connecting of the fuel level sensor Strela RS485”). The measuring parameters are set for the CG17. The fuel level sensor starts measurements:
 
@@ -1007,7 +1007,7 @@ During operation, the fuel level sensor measures the fuel level every time inter
 
 ### “Wireless sensors” window
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
+<img alt="Screenshot of TrikdisConfig software Wireless sensors window showing a table of device slots with Device type set to &quot;Disabled&quot; and columns for Serial No., Area, User, and Key 3/Key 4." src="./image59.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
 
 The CG17 can operate with Crow brand wireless Shepherd series sensors, sirens, remote controls using an **RF-SH** module.
 
@@ -1107,7 +1107,7 @@ All wireless sensors can be paired at once.
 
 7.  Press buttons 3 and 4 on the wireless controller and hold. A LED indicator will start blinking in yellow. After a few seconds it will stop and a green indicator will light up for a short period of time.
 
-<img alt="" src="./image60.webp" style="width:1.5354330708661417in;height:1.8818897637795275in" />
+<img alt="Line drawing of a wireless keyfob with four numbered buttons: an open-padlock (unlock) icon, a closed-padlock (lock) icon, a house icon marked &quot;PA&quot; with an upward arrow, and a star icon marked &quot;PA&quot; with an upward arrow." src="./image60.webp" style="width:1.5354330708661417in;height:1.8818897637795275in" />
 
 8. Release the buttons 3 and 4. The wireless controller is linked.
 
@@ -1248,7 +1248,7 @@ All wireless sensors can be paired at once.
 
 6.  The green blinking “**LEARN”** LED indicator shows that the **RF-SH** is in wireless device linking mode.
 
-7.  Insert batteries into the keypad and wait for the <img alt="" src="./image61.webp" style="width:0.25in;height:0.28000109361329834in" /> LED indicator to stop blinking in red and green. When the linking process is complete, the<img alt="" src="./image61.webp" style="width:0.25in;height:0.28000109361329834in" /> LED indicator will light up in green for 3 seconds and then it will turn off.
+7.  Insert batteries into the keypad and wait for the <img alt="Simple line icon of a house outline representing a &quot;home&quot; or &quot;stay&quot; function." src="./image61.webp" style="width:0.25in;height:0.28000109361329834in" /> LED indicator to stop blinking in red and green. When the linking process is complete, the<img alt="Simple line icon of a house outline representing a &quot;home&quot; or &quot;stay&quot; function." src="./image61.webp" style="width:0.25in;height:0.28000109361329834in" /> LED indicator will light up in green for 3 seconds and then it will turn off.
 
 8.  Press and hold the **RF-SH** transceiver’s “**LEARN”** button until the “**LEARN”** LED indicator stops blinking in green. The **RF-SH** receiver has exited linking mode.
 
@@ -1277,7 +1277,7 @@ All wireless sensors can be paired at once.
         now removed from the CG17's memory.
 ### “Zones” window 
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="Screenshot of TrikdisConfig software Zones window Zones settings tab listing four zones with their Name, Input, Area, Definition, Type, Bypass/Force/CMS/Prot. checkboxes, Delay, and CID Code values." src="./image62.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 **“Zones settings” tab**
 
@@ -1329,7 +1329,7 @@ All wireless sensors can be paired at once.
 
 **“SMS & Call reporting“ tab**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.8976377952755905in" />
+<img alt="Screenshot of TrikdisConfig software Zones window SMS & Call reporting tab showing a table of zone event/restore SMS text rows with checkboxes for SMS and Call notifications under &quot;User 2&quot;." src="./image63.webp" style="width:7.086614173228346in;height:1.8976377952755905in" />
 
 This window will only show if at least one user phone number is added in the “Users & Reporting” window*.*
 
@@ -1343,7 +1343,7 @@ This window will only show if at least one user phone number is added in the “
 
 **“Outputs” tab**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:1.8937007874015748in" />
+<img alt="Screenshot of TrikdisConfig software PGM window Outputs tab listing PGM outputs with their assigned terminal, Areas, Output definition (Fire Sensor Reset, Siren, Remote Control), Pulse Time, and CMS/Prot. checkboxes." src="./image64.webp" style="width:7.086614173228346in;height:1.8937007874015748in" />
 
 - **PGM No**– the PGM’s number on the list.
 
@@ -1371,7 +1371,7 @@ This window will only show if at least one user phone number is added in the “
 
 **“Set Action” tab**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
+<img alt="Screenshot of TrikdisConfig software PGM window Set Action tab showing a table of rules with Enable checkbox, PGM No., Action (PGM OFF), Pulse Time, Factor (Jamming), Factor No., Start when (Jamming start), and Set value columns." src="./image65.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
 
 - **ID** – output’s number on the list.
 - **Enable** – enables the PGM.
@@ -1407,7 +1407,7 @@ SMS text messages are important uppercase and lowercase letters.
 
 **“Scheduler” tab**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.8937007874015748in" />
+<img alt="Screenshot of TrikdisConfig software PGM window Scheduler tab showing a table of schedule rows with Enable checkboxes, Start time and Stop time fields, and day-of-week checkboxes Mon through Sun." src="./image66.webp" style="width:7.086614173228346in;height:1.8937007874015748in" />
 
 - **ID** – schedule’s number on the list.
 
@@ -1420,7 +1420,7 @@ SMS text messages are important uppercase and lowercase letters.
 
 **“Thermostat” tab**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
+<img alt="Screenshot of TrikdisConfig software's PGM window with the Thermostat tab open, listing thermostat rows with PGM number, action, active checkbox, sensor number, and temperature columns." src="./image67.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
 
 - **ID** – thermostat’s number on the list.
 
@@ -1436,7 +1436,7 @@ SMS text messages are important uppercase and lowercase letters.
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="Screenshot of TrikdisConfig software's PGM window with the SMS & Call reporting tab open, showing a table of PGM events with SMS text and SMS/Call checkboxes for User 2." src="./image68.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 This window will only show if at least one user phone number is added in the “Users & Reporting” window.
 
@@ -1448,7 +1448,7 @@ This window will only show if at least one user phone number is added in the “
 
 ### “Sensors” window 
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="Screenshot of TrikdisConfig software's Sensors window listing eight sensors with an open Module type dropdown showing options like Disable, In1-In4 Voltage, and Dallas 1W sensor, alongside serial number, sensor name, max/min, and high/low columns." src="./image69.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 - **ID** – sensor’s number on the list.
 
@@ -1466,7 +1466,7 @@ This window will only show if at least one user phone number is added in the “
 
 **“Events” tab**
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="Screenshot of TrikdisConfig software's System events window with the Events tab open, listing events such as RS485 fault, high/low temperature, GSM jamming, and AC fault with enable, CMS, protocol, CID code, and SMS text columns." src="./image70.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 - **ID** – event’s number on the list.
 
@@ -1484,7 +1484,7 @@ This window will only show if at least one user phone number is added in the “
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="Screenshot of TrikdisConfig software's System events window with the SMS & Call reporting tab open, listing events like battery low, periodic test, system disarmed/armed, and RS485 device fault with SMS/Call checkboxes for User 2." src="./image71.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 This tab will only show if at least one user phone number is added in the “Users & Reporting” window.
 
@@ -1496,7 +1496,7 @@ This tab will only show if at least one user phone number is added in the “Use
 
 ### “Events Log” window 
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
+<img alt="Screenshot of TrikdisConfig software's Events Log window showing a list of logged events with event number, timestamp, CID code, and event definition columns, plus Read Log and Clear Log buttons." src="./image72.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
 
 - **Read Log** button – for reading the event journal entries from the device’s memory.
 
@@ -1508,7 +1508,7 @@ This tab will only show if at least one user phone number is added in the “Use
 
 To restore the control panel’s default settings, click the “**Restore**” button in the TrikdisConfig program**.**
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
+<img alt="Screenshot of TrikdisConfig software's status bar showing the highlighted Restore button next to Default settings, the Communicator settings SET button with an IMEI/Unique ID number, and device info fields for Device, SN, BL, FW, HW, State, and Role." src="./image73.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
 
 ## Remote control 
 
@@ -1520,20 +1520,20 @@ Using Protegus2 users can control their security system remotely. They can also 
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
+        <img src="./protegus-android.webp" alt="&quot;Get it on Google Play&quot; badge for downloading the Protegus2 Android app." style="height:50px;">
       </a>
       <a href="https://www.protegus.app" target="_blank" style="display: inline-block; margin-right: 10px;">
-        <img src="./protegus-web.webp" alt="Open Web App" style="height:50px;">
+        <img src="./protegus-web.webp" alt="Protegus web logo consisting of a blue swirl icon and the text &quot;protegus web&quot;." style="height:50px;">
       </a>
       <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
-        <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
+        <img src="./protegus-ios.webp" alt="&quot;Get it on iTunes&quot; badge for downloading the Protegus2 iOS app." style="height:50px;">
       </a>
     </div>
 2. Log in with your user name and password or register and create a new account.
 
 2.  Click “Add new system” and enter the *CG17*’s IMEI code in the “Unique ID” field. You can find this number on the device or packaging sticker.
 
-<img alt="" src="./image80.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
+<img alt="Annotated screenshot of the Protegus2 app's &quot;Scan QR code&quot; screen with a callout pointing to the Unique ID/IMEI field explaining where to find the IMEI code, and a red box highlighting the QR code location on a sample product label below." src="./image80.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
 !!! warning "Important"
     When adding the CG17 to Protegus2:
@@ -1560,7 +1560,7 @@ Using Protegus2 users can control their security system remotely. They can also 
 
 3.  When the system changes the mode, the “ARM” icon will change too.
 
-<img alt="" src="./image81.webp" style="width:2.7559055118110236in;height:2.3897637795275593in" />
+<img alt="Screenshot of the Protegus2 app's CG17 system home screen with a red box highlighting the &quot;Arm&quot; button next to the disarmed Area &quot;1&quot; status." src="./image81.webp" style="width:2.7559055118110236in;height:2.3897637795275593in" />
 
 #### Add other users to Protegus2
 
@@ -1568,19 +1568,19 @@ Launch Protegus2 application on your phone. Log in with your user name and passw
 
 1.  Click „**Settings**“.
 
-<img alt="" src="./image82.webp" style="width:2.7559055118110236in;height:2.3858267716535435in" />
+<img alt="Screenshot of the Protegus2 app's CG17 system home screen with a red box highlighting the three-dot menu icon in the top right corner." src="./image82.webp" style="width:2.7559055118110236in;height:2.3858267716535435in" />
 
 1.  Click „**System configuration**“.
 
-<img alt="" src="./image83.webp" style="width:2.7559055118110236in;height:2.3858267716535435in" />
+<img alt="Screenshot of the Protegus2 app home screen with the &quot;Edit home screen&quot; menu open and &quot;System configuration&quot; option highlighted." src="./image83.webp" style="width:2.7559055118110236in;height:2.3858267716535435in" />
 
 2. Click „**Users**“.
 
-<img alt="" src="./image84.webp" style="width:2.7559055118110236in;height:4.625984251968504in" />
+<img alt="Screenshot of the Protegus2 app &quot;Configure CG17&quot; menu listing settings options with &quot;Users&quot; highlighted at the bottom." src="./image84.webp" style="width:2.7559055118110236in;height:4.625984251968504in" />
 
 3. Click „**Add new user**“
 
-<img alt="" src="./image85.webp" style="width:2.7559055118110236in;height:3.232283464566929in" />
+<img alt="Screenshot of the Protegus2 app Users screen showing the owner and device administrator list with the add-user (+) button highlighted." src="./image85.webp" style="width:2.7559055118110236in;height:3.232283464566929in" />
 
 4. Enter user's email address or username.
 
@@ -1594,13 +1594,13 @@ Launch Protegus2 application on your phone. Log in with your user name and passw
 
 6.  Click „**Add user**“.
 
-<img alt="" src="./image86.webp" style="width:2.7559055118110236in;height:5.574803149606299in" />
+<img alt="Screenshot of the Protegus2 app &quot;Add new user&quot; form with name/email, phone number, and code fields filled in, permission toggles, an area access toggle, and the &quot;Add user&quot; button highlighted." src="./image86.webp" style="width:2.7559055118110236in;height:5.574803149606299in" />
 
 11. A new user appears in the user list.
 
 12. Click „**Back**“ to return to the main window.
 
-<img alt="" src="./image87.webp" style="width:2.7559055118110236in;height:3.625984251968504in" />
+<img alt="Screenshot of the Protegus2 app Users screen showing the newly added second device administrator in the list with the back arrow highlighted." src="./image87.webp" style="width:2.7559055118110236in;height:3.625984251968504in" />
 
 ### Control using SMS commands 
 
@@ -1736,7 +1736,7 @@ Controlling outputs OUT using phone calls:
 
     4.  Is connected to the network ("**NETWORK**" LED is green solid and
         blinks yellow).
-<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:2.4133858267716537in" />
+<img alt="Screenshot of the TrikdisConfig software main window with the Remote access &quot;Unique ID&quot; field and &quot;Configure&quot; button highlighted." src="./image88.webp" style="width:7.086614173228346in;height:2.4133858267716537in" />
 
 1.  Download the software TrikdisConfig from [www.trikdis.com](http://www.trikdis.com) .
 
@@ -1758,31 +1758,31 @@ Controlling outputs OUT using phone calls:
 
 3.  Launch the configuration software TrikdisConfig and in the “**Unique ID**” field of the “Remote Access” group enter the IMEI number of your CG17 (the IMEI number can be found on stickers on the back of the device and on the packaging).
 
-<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:2.405511811023622in" />
+<img alt="Screenshot of the TrikdisConfig software main window with the Remote access &quot;Unique ID&quot; field and &quot;Control&quot; button highlighted." src="./image89.webp" style="width:7.086614173228346in;height:2.405511811023622in" />
 
 1.  Click “**Control**”**.**
 
 2.  Enter the “**Self-service code**” (default code – 123456) and press the “**OK**” button.
 
-<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.405511811023622in" />
+<img alt="Screenshot of the TrikdisConfig software showing an &quot;Access&quot; dialog prompting for the self-service code with the code field and &quot;Ok&quot; button highlighted." src="./image90.webp" style="width:7.086614173228346in;height:2.405511811023622in" />
 
 3. The “**Remote control**” window opens,where you can control the control panel “**Area**”, monitor “**Zone**” states, control “**PGM outputs**” and monitor the “**Temperature**”.
 
 2.  “**Partitions**” tab. Press “**Disarm**” (or “**ARM**”) button and enter the user code and the security control panel area will be Disarm (or Arm).
 
-<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:3.688976377952756in" />
+<img alt="Screenshot of the CG17 Remote Control window's Partitions tab listing eight areas with their armed/disarmed state and ARM/DISARM buttons." src="./image91.webp" style="width:7.086614173228346in;height:3.688976377952756in" />
 
 3. “**Zones**” tab. This windows shows the status of the zones. The Bypass of zone can be activated.
 
-<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:3.9015748031496065in" />
+<img alt="Screenshot of the CG17 Remote Control window's Zones tab listing eight zones with their status and Bypass buttons, one zone shown as bypassed." src="./image92.webp" style="width:7.086614173228346in;height:3.9015748031496065in" />
 
 4. “**PGM outputs**” tab. In this windows, you can control “**PGM outputs**” that are set to “**Remote control**”.
 
-<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:3.5039370078740157in" />
+<img alt="Screenshot of the CG17 Remote Control window's PGM outputs tab showing PGM10 (off) and PGM12 (on) with On/Off toggle buttons and pulse time fields." src="./image93.webp" style="width:7.086614173228346in;height:3.5039370078740157in" />
 
 10. “**Temperature**” tab. In this window, you can monitor the readings of temperature sensors.
 
-<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:3.1338582677165356in" />
+<img alt="Screenshot of the CG17 Remote Control window's Temperature tab showing readings for Sensor 3 (25.4°C) and Sensor 4 (26.0°C), both in normal state." src="./image94.webp" style="width:7.086614173228346in;height:3.1338582677165356in" />
 
 ## Testing of the installation 
 
@@ -1817,7 +1817,7 @@ Complete these steps:
 
 3.  Open the “**Firmware**” window.
 
-    <img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.952755905511811in" />
+    <img alt="Screenshot of the TrikdisConfig software Firmware page with fields to open a firmware file and a sound image file, alongside Update buttons and a progress bar." src="./image95.webp" style="width:7.086614173228346in;height:2.952755905511811in" />
 
 4.  Click the button “**Open firmware**” and choose the required firmware file.
 
@@ -1835,6 +1835,6 @@ Please read this manual carefully prior to installation in order to avoid mistak
 
 Always disconnect the power supply before making any electrical connections.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" /> Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
+<img alt="A crossed-out wheeled trash bin symbol indicating the device must not be disposed of with household waste." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" /> Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
 Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
