@@ -76,7 +76,7 @@ Kai signalizacija išjungta šviečia ikona <img src="./image9.webp" style="widt
 
 ## Pagalbos mygtukai
 
-**<u>Norėdami Jūsų apsaugos tarnybai išsiųsti pranešimą apie iškilusį pavojų</u>**
+### Norėdami Jūsų apsaugos tarnybai išsiųsti pranešimą apie iškilusį pavojų
 - **Policija** – 3 sek. palaikykite nuspaudę mygtuką **1**.
 
 - **Medikai** – 3 sek. palaikykite nuspaudę
@@ -94,7 +94,7 @@ mygtuką **4**.
 
 3. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />.
 
-**<u>LCD ekrano ryškumas</u>**
+### LCD ekrano ryškumas
 
 4. Paspauskite mygtuką <img src="./image11.webp" style="width:0.3500in;" />, po to **5** **2**.
 
@@ -102,7 +102,7 @@ mygtuką **4**.
 
 6. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />.
 
-**<u>Klaviatūros mygtukų paspaudymo garsumas</u>**
+### Klaviatūros mygtukų paspaudymo garsumas
 
 7. Paspauskite mygtuką <img src="./image11.webp" style="width:0.3500in;" />, po to **5** **1**.
 
@@ -149,7 +149,7 @@ mygtuką **4**.
 3. Surinkite dviženklį zonos, kurios stebėjimą norite išjungti, eilės numerį. Galite suvesti kelių zonų dviženklius numerius, jeigu norite išjungti kelių zonų stebėjimą.
 
 4. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />. Ekrane atsiras ikona [ <img src="./image12.webp" style="width:0.3500in;" /> ].
-**<u>BYPASS funkcijos išjungimas:</u>**
+### BYPASS funkcijos išjungimas
 Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėjimą.
 
 ## Vartotojo (User) kodų ištrynimas

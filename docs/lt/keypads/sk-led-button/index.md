@@ -76,7 +76,7 @@ Kai signalizacija išjungta šviečia indikatorius <img src="./image7.webp" alt=
 
 ## Pagalbos mygtukai
 
-**<u>Norėdami Jūsų apsaugos tarnybai išsiųsti pranešimą apie iškilusį pavojų</u>**
+### Norėdami Jūsų apsaugos tarnybai išsiųsti pranešimą apie iškilusį pavojų
 - **Policija** – 3 sek. palaikykite nuspaudę mygtuką **1**.
 
 - **Medikai** – 3 sek. palaikykite nuspaudę
@@ -94,7 +94,7 @@ mygtuką **4**.
 
 3. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
 
-**<u>Zonų LED indikacijos ryškumas</u>**
+### Zonų LED indikacijos ryškumas
 
 4. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **4**.
 
@@ -102,7 +102,7 @@ mygtuką **4**.
 
 6. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
 
-**<u>Klaviatūros mygtukų paspaudymo garsumas</u>**
+### Klaviatūros mygtukų paspaudymo garsumas
 
 7. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **7**.
 
@@ -150,7 +150,7 @@ mygtuką **4**.
 
 4. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />. Indikatorius <img src="./image10.webp" style="width:0.3500in;" /> pradės šviesti žaliai.
 
-**<u>BYPASS funkcijos išjungimas</u>**
+### BYPASS funkcijos išjungimas
 
 Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėjimą.
 

@@ -80,7 +80,7 @@ The STAY indicator will illuminate when STAY mode is on.
 
 ## Emergency buttons
 
-**<u>To send emergency message to your security service</u>**
+### To send emergency message to your security service
 
 - **Police** – hold **1** button pressed for 3 sec.
 
@@ -142,7 +142,7 @@ The STAY indicator will illuminate when STAY mode is on.
 
 4. Press **OK** button. The **BYP** indicator starts illuminating.
 
-**<u>BYPASS function deactivation:</u>**
+### BYPASS function deactivation
 
 Repeat the same actions as in deactivation of particular zone monitoring.
 

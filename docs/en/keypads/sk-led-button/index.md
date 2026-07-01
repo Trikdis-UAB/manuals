@@ -77,7 +77,7 @@ The <img src="./image7.webp" alt="" style="width:0.3500in;" /> indicator will il
 
 ## Emergency buttons
 
-**<u>To send emergency message to your security service</u>**
+### To send emergency message to your security service
 
 - **Police** – hold **1** button pressed for 3 sec.
 
@@ -95,7 +95,7 @@ The <img src="./image7.webp" alt="" style="width:0.3500in;" /> indicator will il
 
 3. Press <img src="./image3.webp" style="width:0.3500in;" /> to save the new value. Press the <img src="./image8.webp" style="width:0.3500in;" /> button to exit.
 
-**<u>The brightness of the zone LED indication</u>**
+### The brightness of the zone LED indication
 
 4. Press <img src="./image9.webp" style="width:0.3500in;" /> button, then **4**.
 
@@ -103,7 +103,7 @@ The <img src="./image7.webp" alt="" style="width:0.3500in;" /> indicator will il
 
 6. Press <img src="./image3.webp" style="width:0.3500in;" /> to save the new value. Press the <img src="./image8.webp" style="width:0.3500in;" /> button to exit.
 
-**<u>Keypad keystroke volume</u>**
+### Keypad keystroke volume
 
 7. Press <img src="./image9.webp" style="width:0.3500in;" /> button, then **7**.
 
@@ -151,7 +151,7 @@ The <img src="./image7.webp" alt="" style="width:0.3500in;" /> indicator will il
 
 4. Press <img src="./image3.webp" style="width:0.3500in;" /> button. The <img src="./image10.webp" style="width:0.3500in;" /> indicator starts illuminating green.
 
-**<u>BYPASS function deactivation:</u>**
+### BYPASS function deactivation
 
 Repeat the same actions as in deactivation of particular zone monitoring.
 

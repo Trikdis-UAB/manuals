@@ -72,7 +72,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 > Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón <img src="./image2.webp" alt="" style="width:0.3500in;" />.
 ## Botones de Emergencia
 
-**<u>Para enviar un mensaje de emergencia a su servicio de seguridad</u>**
+### Para enviar un mensaje de emergencia a su servicio de seguridad
 - **Policía** – mantenga presionado el botón **1** por 3 seg.
 
 - **Ayuda Médica** – mantenga presionado el botón **4** por 3 seg.
@@ -133,7 +133,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 4. Presione el botón <img src="./image4.webp" style="width:0.3500in;" />. El indicador **BYP** se empieza a iluminar.
 
-**<u>Desactivar la función BYPASS:</u>**
+### Desactivar la función BYPASS
 
 Ingrese un número de secuencia de dos dígitos de una zona en particular para deshabilitar su monitoreo. Para deshabilitar el monitoreo de varias zonas, ingrese números de dos dígitos de tales zonas.
 

@@ -85,7 +85,7 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 ## Emergency buttons
 
-**<u>To send emergency message to your security service:</u>**
+### To send emergency message to your security service
 
 - **Panic** – hold **1** button pressed for 3 sec.
 
@@ -129,7 +129,7 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 ## Two-wire fire (smoke) detector reset
 
-**<u>To reset two-wire fire (smoke) detectors:</u>**
+### To reset two-wire fire (smoke) detectors
 
 - Hold button <img src="./image2.webp" style="width:0.3000in;" /> pressed for 3 seconds.
 
@@ -152,7 +152,7 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 6. The keypad will exit zone bypassing mode.
 
-**<u>BYPASS function deactivation:</u>**
+### BYPASS function deactivation
 
 Repeat the same actions as in deactivation of particular zone monitoring.
 
