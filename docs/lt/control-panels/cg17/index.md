@@ -345,7 +345,7 @@ Galimos sujungimų schemos:
 
 ### Dūmų jutiklio prijungimo schemos
 
-Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti iš naujo, PGM išėjimui priskirkite funkciją „**Gaisro daviklių atstatymas“** (žr. TrikdisConfig langas „[PGM išėjimai“ –> skirtukas „Išėjimai“](#Output_tab)).
+Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti iš naujo, PGM išėjimui priskirkite funkciją „**Gaisro daviklių atstatymas“** (žr. TrikdisConfig langas „[PGM išėjimai“ –> skirtukas „Išėjimai“](#48-langas-pgm-isejimai)).
 
 - **Keturių laidų dūmų jutiklio prijungimas**
 
