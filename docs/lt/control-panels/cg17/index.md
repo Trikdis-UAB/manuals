@@ -1342,7 +1342,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 <img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
-Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#langas-vartotojai-ir-pranešimai)*.*
+Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#44-langas-vartotojai-ir-pranesimai)*.*
 
 - **Zn** – zonos numeris su įvykių identifikavimo žodžiu. Gali būti *„Įvykis“* arba „*Grįžtis*“.
 
@@ -1448,7 +1448,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 <img alt="" src="./image68.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
-Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#langas-vartotojai-ir-pranešimai).
+Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#44-langas-vartotojai-ir-pranesimai).
 
 - **PGM** – rodomas OUT išėjimo numeris ir įjungimo/išjungimo įvykio tipas („Įvykis“ – OUT išėjimo įjungimo įvykis ir „Grįžtis“ – OUT išjungimo įvykis).
 
@@ -1496,7 +1496,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 <img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
 
-Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#langas-vartotojai-ir-pranešimai)*.*
+Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#44-langas-vartotojai-ir-pranesimai)*.*
 
 - **Nr.** – įvykio numeris ir identifikavimo žodis (*Įvykis*, *Grįžtis*).
 

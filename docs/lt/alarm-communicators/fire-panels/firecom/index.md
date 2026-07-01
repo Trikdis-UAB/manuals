@@ -1077,7 +1077,7 @@ Priešgaisrines centrales (**ESPA4.4.4** sąsaja, **NSC solution**, **INIM smart
 
 <img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
-**Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#Users_window)*.***
+**Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#64-langas-vartotojai-ir-pranesimai)*.***
 
 - **Zn** – zonos numeris su įvykių identifikavimo žodžiu. Gali būti „**Įvykis**“ arba „**Grįžtis**“.
 
@@ -1171,7 +1171,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 <img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
 
-Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#Users_window). Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
+Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#64-langas-vartotojai-ir-pranesimai). Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
 
 - **PGM** – rodomas OUT išėjimo numeris ir įjungimo/išjungimo įvykio tipas („**Įvykis**“ – OUT išėjimo įjungimo įvykis ir „**Grįžtis**“ – OUT išjungimo įvykis).
 
@@ -1223,7 +1223,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 <img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.295275590551181in" />
 
-Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#Users_window)*.*
+Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#64-langas-vartotojai-ir-pranesimai)*.*
 
 - **Nr.** – įvykio numeris ir identifikavimo žodis (**Įvykis**, **Grįžtis**).
 
