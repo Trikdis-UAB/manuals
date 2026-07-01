@@ -7,6 +7,9 @@ Flags common conversion issues:
 - cover image (image1.png) not placed shortly after H1
 - title-looking H2s (Brief User Guide/etc.) when H1 doesn't match
 - underline-styled "titles" not promoted to headings
+- truncated procedure lists (an intro/heading followed by only step "1."
+  with no step "2.") -- the signature of the two-column-table conversion
+  bug that silently dropped every list item after the first
 """
 
 from __future__ import annotations
@@ -18,6 +21,9 @@ from typing import Iterable, List, Tuple
 
 H1_RE = re.compile(r"^#\s+")
 H2_RE = re.compile(r"^##\s+(.*)$")
+HEADING_RE = re.compile(r"^#{2,6}\s+(.*)$")
+# Top-level numbered step (no leading indent -> excludes nested sub-steps).
+TOP_NUMBERED_RE = re.compile(r"^(\d+)\.\s")
 IMAGE1_RE = re.compile(r"image1\.png", re.IGNORECASE)
 UNDERLINE_RE = re.compile(r"<u>.+</u>", re.IGNORECASE)
 TITLE_HINT_RE = re.compile(
@@ -84,6 +90,44 @@ def find_underlined_lines(lines: List[str]) -> List[Tuple[int, str]]:
     return results
 
 
+def find_truncated_lists(lines: List[str]) -> List[str]:
+    """Flag procedure blocks that contain a numbered list cut off at step 1.
+
+    A block starts at a heading (H2-H6) or an underline-styled lead-in line and
+    runs until the next such boundary. If the block's top-level numbered list
+    reaches only "1." (no "2."), it is almost certainly a list that lost its
+    remaining steps during conversion.
+    """
+    boundaries: List[int] = []
+    for idx, line in enumerate(lines):
+        is_heading = HEADING_RE.match(line)
+        is_underline_leadin = (
+            UNDERLINE_RE.search(line)
+            and not line.lstrip().startswith("#")
+            and not TOP_NUMBERED_RE.match(line.lstrip())
+        )
+        if is_heading or is_underline_leadin:
+            boundaries.append(idx)
+    if not boundaries:
+        return []
+    boundaries.append(len(lines))
+
+    results: List[str] = []
+    for i in range(len(boundaries) - 1):
+        start, end = boundaries[i], boundaries[i + 1]
+        numbers = [
+            int(m.group(1))
+            for line in lines[start:end]
+            if (m := TOP_NUMBERED_RE.match(line))
+        ]
+        if numbers and max(numbers) == 1:
+            title = re.sub(r"[#*_`]|</?u>", "", lines[start]).strip()
+            results.append(
+                f"Possible truncated list (only step 1) under '{title}' (line {start + 1})"
+            )
+    return results
+
+
 def check_file(path: Path) -> List[str]:
     issues: List[str] = []
     lines = load_lines(path)
@@ -145,6 +189,8 @@ def check_file(path: Path) -> List[str]:
                 break
         if not table_found:
             issues.append("Graphic symbols section missing symbol table near heading")
+
+    issues.extend(find_truncated_lists(lines))
 
     return issues
 

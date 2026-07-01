@@ -51,17 +51,37 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 (Saugomas patalpų perimetras. Viduje leidžiama judėti. Signalizacija suveiks nedelsiant, jei praversite įėjimo į patalpas duris):
 
-1. Suveskite **[Vartotojo kodą]**.
+1. Nuspauskite klaviatūros mygtuką **SLEEP**.
 
-2. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+2. Suveskite **[Vartotojo kodą]**.
+
+3. Jeigu sistema turi tik vieną sritį, praleiskite 4 ir 5 žingsnius.
+
+4. Paspauskite mygtukus su sričių numeriais, kurias norite valdyti.
+
+5. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+
+6. SLEEP režimas įsijungs nedelsiant, be išėjimo laiko atskaitos.
+
+7. Klaviatūros ekrane atsiras tekstas: **Naktis: Sritis**.
 
 ### STAY režimo įjungimas
 
 (Saugomas patalpų perimetras. Viduje leidžiama judėti. Jei praversite įėjimo į patalpas duris, įsijungs laiko atskaita, per kurią turite išjungti signalizaciją):
 
-1. Suveskite **[Vartotojo kodą]**.
+1. Nuspauskite klaviatūros mygtuką **STAY**.
 
-2. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+2. Suveskite **[Vartotojo kodą]**.
+
+3. Jeigu sistema turi tik vieną sritį, praleiskite 4 ir 5 žingsnius.
+
+4. Paspauskite mygtukus su sričių, kurias norite valdyti, numeriais.
+
+5. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+
+6. STAY režimas įsijungs nedelsiant, be išėjimo laiko atskaitos.
+
+7. Klaviatūros ekrane atsiras tekstas: **Namie: Sritis**.
 
 ## Pagalbos mygtukai
 
@@ -75,15 +95,37 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 ## Apšvietimo ryškumo ir indikacijos garsumo reguliavimas
 
-**<u>Norėdami nustatyti klaviatūros apšvietimo ryškumą ir indikacijų garsumą</u>**
+### Norėdami nustatyti klaviatūros apšvietimo ryškumą ir indikacijų garsumą
 
-1. Nuspauskite klaviatūros mygtuką **5**.
+1. Nuspauskite klaviatūros mygtuką **MENU**.
+
+2. Nuspauskite klaviatūros mygtuką **5**.
+
+3. Garsumo reguliavimui paspauskite mygtuką **2** ir mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> nustatykite norimą garsumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+
+4. Ekrano ryškumui nustatyti paspauskite mygtuką **4** mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> nustatykite norimą ekrano ryškumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+
+5. Mygtukų ryškumui nustatyti paspauskite mygtuką **3** mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> nustatykite norimą mygtukų ryškumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
 
 ## Vartotojo (User) arba Administratoriaus (Master) kodų įvedimas arba pakeitimas
 
-**<u>Norėdami įvesti naują arba pakeisti esamą vartotojo kodą</u>**
+### Norėdami įvesti naują arba pakeisti esamą vartotojo kodą
 
-1. Įveskite **[Administratoriaus kodą]** (gamyklinis kodas: 123456).
+1. Nuspauskite klaviatūros mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
+
+2. Įveskite 6-ženklį **[Administratoriaus kodą]** (gamyklinis kodas: 123456).
+
+3. Surinkite dviženklį vartotojo eilės numerį.
+
+4. Įveskite 4-ženklį **[Vartotojo kodą]**.
+
+5. Pakartotinai įveskite 4-ženklį **[Vartotojo kodą]**.
+
+6. Įveskite sritis, kurias galės valdyti vartotojas.
+
+7. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+
+8. Išėjimui iš režimo nuspauskite mygtuką **C**.
 
 ## Dvilaidžių gaisro (dūmų) jutiklių paleidimas veikti iš naujo
 
@@ -96,9 +138,19 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 ## Laikinas zonos stebėjimo išjungimas (BYPASS funkcija)
 
-**<u>BYPASS funkcijos įjungimas</u>**
+### BYPASS funkcijos įjungimas
 
-1. Nuspauskite klaviatūros mygtuką **3**.
+1. Nuspauskite klaviatūros mygtuką **MENU**.
+
+2. Nuspauskite klaviatūros mygtuką **3**.
+
+3. Suveskite **[Vartotojo kodą]**.
+
+4. Surinkite zonų, kurių kontrolę norite atjungti, dviženklius numerius.
+
+5. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+
+6. Klaviatūra išeis iš zonų atjungimo režimo.
 
 **<u>BYPASS funkcijos išjungimas</u>**
 
@@ -106,6 +158,14 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 ## Vartotojo (User) kodų ištrynimas
 
-**<u>Norėdami ištrinti vartotojo kodą</u>**
+### Norėdami ištrinti vartotojo kodą
 
-1. Įveskite **[Administratoriaus kodą]** (gamyklinis kodas: 123456).
+1. Nuspauskite klaviatūros mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
+
+2. Įveskite 6-ženklį **[Administratoriaus kodą]** (gamyklinis kodas: 123456).
+
+3. Surinkite reikiamą dviženklį vartotojo eilės numerį.
+
+4. Nuspauskite mygtuką **SLEEP**.
+
+5. Išėjimui iš režimo nuspauskite mygtuką **C**.
