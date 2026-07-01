@@ -73,7 +73,7 @@ El indicador <img src="./image7.webp" alt="" style="width:0.3500in;" /> se ilumi
 > Para cambiar el estado del área al contrario, basta con ingresar el código de usuario y seleccionar el área deseada. Presione el botón <img src="./image8.webp" alt="" style="width:0.3500in;" /> para eliminar los caracteres combinados o el comando
 ## Botones de Emergencia
 
-**<u>Para enviar un mensaje de emergencia a su servicio de seguridad</u>**
+### Para enviar un mensaje de emergencia a su servicio de seguridad
 - **Policía** – mantenga presionado el botón **1** por 3 seg.
 
 - **Ayuda Médica** – mantenga presionado el botón **4** por 3 seg.
@@ -90,7 +90,7 @@ El indicador <img src="./image7.webp" alt="" style="width:0.3500in;" /> se ilumi
 
 3. Presione <img src="./image3.webp" style="width:0.3500in;" /> para guardar el nuevo valor. Presione el botón <img src="./image8.webp" style="width:0.3500in;" /> para salir.
 
-**<u>El brillo de la indicación LED de zona:</u>**
+### El brillo de la indicación LED de zona
 
 4. Presione el botón <img src="./image9.webp" style="width:0.3500in;" />, luego **4**.
 
@@ -98,7 +98,7 @@ El indicador <img src="./image7.webp" alt="" style="width:0.3500in;" /> se ilumi
 
 6. Presione <img src="./image3.webp" style="width:0.3500in;" /> para guardar el nuevo valor. Presione el botón <img src="./image8.webp" style="width:0.3500in;" /> para salir.
 
-**<u>Volumen de pulsaciones de teclas del teclado:</u>**
+### Volumen de pulsaciones de teclas del teclado
 
 7. Presione el botón <img src="./image9.webp" style="width:0.3500in;" />, luego **7**.
 
@@ -146,7 +146,7 @@ El indicador <img src="./image7.webp" alt="" style="width:0.3500in;" /> se ilumi
 
 4. Presione el botón <img src="./image3.webp" style="width:0.3500in;" />. El indicador <img src="./image10.webp" style="width:0.3500in;" /> se empieza a iluminar en verde.
 
-**<u>Desactivar la función BYPASS:</u>**
+### Desactivar la función BYPASS
 
 Repita las mismas acciones que en la desactivación del monitoreo de una zona particular.
 

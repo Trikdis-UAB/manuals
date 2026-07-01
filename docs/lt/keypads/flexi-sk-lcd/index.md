@@ -85,7 +85,7 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 ## Pagalbos mygtukai
 
-**<u>Norėdami Jūsų apsaugos tarnybai išsiųsti pranešimą apie iškilusį pavojų</u>**
+### Norėdami Jūsų apsaugos tarnybai išsiųsti pranešimą apie iškilusį pavojų
 
 - **Pavojus** – 3 sek. palaikykite nuspaudę mygtuką **1**.
 
@@ -129,7 +129,7 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 ## Dvilaidžių gaisro (dūmų) jutiklių paleidimas veikti iš naujo
 
-**<u>Norėdami dvilaidžius gaisro (dūmų) jutiklius paleisti veikti iš naujo</u>**
+### Norėdami dvilaidžius gaisro (dūmų) jutiklius paleisti veikti iš naujo
 
 - 3 sekundes palaikykite paspaudę mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
 
@@ -152,7 +152,7 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 6. Klaviatūra išeis iš zonų atjungimo režimo.
 
-**<u>BYPASS funkcijos išjungimas</u>**
+### BYPASS funkcijos išjungimas
 
 Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėjimą.
 

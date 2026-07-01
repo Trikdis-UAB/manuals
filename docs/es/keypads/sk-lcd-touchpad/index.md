@@ -85,7 +85,7 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 ## Botones de emergencia
 
-**<u>Para enviar un mensaje de emergencia a su servicio de seguridad</u>**:
+### Para enviar un mensaje de emergencia a su servicio de seguridad
 
 - **Panico**: mantenga pulsado el botón **1** durante 3 segundos.
 
@@ -129,7 +129,7 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 ## Reinicio del detector de incendios (humo) de dos cables
 
-<u>Para restablecer los detectores de incendios (humo) de dos cables</u>:
+### Para restablecer los detectores de incendios (humo) de dos cables
 
 - Mantenga pulsado el botón <img src="./image2.webp" style="width:0.3000in;" /> durante 3 segundos.
 
@@ -152,7 +152,7 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 6. El teclado saldrá del modo de anulación de zona.
 
-**<u>Desactivación de la función BYPASS</u>:**
+### Desactivación de la función BYPASS
 
 Repita las mismas acciones que en la desactivación de la monitorización de una zona particular.
 
