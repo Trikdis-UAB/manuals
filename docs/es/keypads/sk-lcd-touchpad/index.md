@@ -51,17 +51,37 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 (El perímetro de las instalaciones está asegurado. Se permite el movimiento hacia el interior. Si abre la puerta de entrada, la alarma se activará inmediatamente):
 
-1. Introduzca **[Código de usuario]**.
+1. Presione el botón **SLEEP**.
 
-2. Confirme su selección presionando el botón **OK**.
+2. Introduzca **[Código de usuario]**.
+
+3. Si el sistema tiene solo una partición, omita los pasos 4 y 5.
+
+4. Presione el botón del área a activar.
+
+5. Confirme su selección presionando el botón **OK**.
+
+6. El modo SLEEP se activará inmediatamente, sin retardo de salida.
+
+7. El siguiente texto aparecerá en la pantalla del teclado: **Sleep: Área**.
 
 ### Activación del modo STAY
 
 (El perímetro de las instalaciones está asegurado. Se permite el movimiento en el interior. Cualquier apertura de la puerta de entrada permite un retraso de tiempo durante el cual debe desarmar la alarma):
 
-1. Introduzca **[Código de usuario]**.
+1. Presione el botón **STAY**.
 
-2. Confirme su selección presionando el botón **OK**.
+2. Introduzca **[Código de usuario]**.
+
+3. Si el sistema tiene solo una partición, omita los pasos 4 y 5.
+
+4. Presione el botón del área a activar.
+
+5. Confirme su selección presionando el botón **OK**.
+
+6. El modo STAY se activará inmediatamente, sin retardo de salida.
+
+7. El siguiente texto aparecerá en la pantalla del teclado: **Stay: Área**.
 
 ## Botones de emergencia
 
@@ -75,15 +95,37 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 ## Brillo de iluminación y ajuste de sonido de indicación
 
-<u>Para ajustar el brillo de la iluminación del teclado y el sonido de indicación</u>:
+### Para ajustar el brillo de la iluminación del teclado y el sonido de indicación
 
-1. Presione el botón **5**.
+1. Presione el botón **MENU**.
+
+2. Presione el botón **5**.
+
+3. Presione el botón **2** para ajustar el volumen y use los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> para configurar el volumen deseado. Confirme su selección presionando el botón **OK**.
+
+4. Presione el botón **4** para ajustar el brillo de la pantalla. Utilice los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> para ajustar el brillo de pantalla deseado. Confirme su selección presionando el botón **OK**.
+
+5. Presione el botón **3** para ajustar el brillo del botón. Utilice los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> para configurar el brillo del botón deseado. Confirme su selección presionando el botón **OK**.
 
 ## Introducción o cambio de códigos de Usuario o Maestros
 
-<u>Para ingresar un código de usuario nuevo o cambiar el existente</u>:
+### Para ingresar un código de usuario nuevo o cambiar el existente
 
-1. Introduzca **[Código de administrador]** (código predeterminado: 123456).
+1. Presione el botón <img src="./image2.webp" style="width:0.3000in;" />.
+
+2. Introduzca **[Código de administrador]** (código predeterminado: 123456).
+
+3. Ingrese el número de secuencia de dos dígitos del usuario, por ejemplo, **02**.
+
+4. Introduzca el **[Código de usuario]** de 4 dígitos.
+
+5. Vuelva a ingresar el **[Código de usuario]** de 4 dígitos.
+
+6. Pulse los números de secuencia de las áreas que debe controlar el usuario.
+
+7. Confirme su selección presionando el botón **OK**.
+
+8. Presione el botón **C** para salir del modo.
 
 ## Reinicio del detector de incendios (humo) de dos cables
 
@@ -96,9 +138,19 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 ## Desactivación temporal de la monitorización de zona (función BYPASS)
 
-**<u>Activación de la función BYPASS</u>:**
+### Activación de la función BYPASS
 
-1. Presione el botón **3**.
+1. Presione el botón **MENU**.
+
+2. Presione el botón **3**.
+
+3. Introduzca **[Código de usuario]**.
+
+4. Ingrese un número de secuencia de dos dígitos de una zona en particular para deshabilitar su monitoreo. Para deshabilitar el monitoreo de varias zonas, ingrese números de dos dígitos de dichas zonas.
+
+5. Confirme su selección presionando el botón **OK**.
+
+6. El teclado saldrá del modo de anulación de zona.
 
 **<u>Desactivación de la función BYPASS</u>:**
 
@@ -106,6 +158,14 @@ Repita las mismas acciones que en la desactivación de la monitorización de una
 
 ## Eliminar códigos de usuario
 
-**<u>Para eliminar el código de usuario</u>:**
+### Para eliminar el código de usuario
 
-1. Introduzca **[Código de administrador]** (código predeterminado: 123456).
+1. Presione el botón <img src="./image2.webp" style="width:0.3000in;" />.
+
+2. Introduzca **[Código de administrador]** (código predeterminado: 123456).
+
+3. Ingrese el número de secuencia de dos dígitos del usuario, por ejemplo, **02**.
+
+4. Presione el botón **SLEEP**.
+
+5. Presione el botón **C** para salir del modo.
