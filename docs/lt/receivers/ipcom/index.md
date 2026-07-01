@@ -37,7 +37,7 @@ IPcom kiekvienam įrenginiui palaiko vieną nuolatinę (persistent) TCP sesiją,
 - Vienas IPcom egzempliorius keičia mastelį iki dešimčių tūkstančių vienu metu atvirų įrenginių jungčių, o produkcijoje veikia ne vienas toks serveris.
 - Valdomuose Linux diegimuose OS lygmens apribojimai (failų deskriptoriai, soketų buferiai, jungčių ribos) suderinami diegimo metu su didele atsarga, todėl įprastas įrenginių skaičius niekada nepriartėja prie resursų ar OS apribojimo.
 
-Orientacinis konfigūravimas: kaip minimali apatinė riba, vienas egzempliorius, prižiūrintis iki maždaug 30 000 įrenginių, gali veikti su 1 vCPU, 1 GB RAM ir 20 GB disko. Produkcijos diegimams naudokite rekomenduojamas bazines konfigūracijas skyriuje [Aparatinės įrangos reikalavimai](#aparatinės-įrangos-reikalavimai) žemiau — jose numatyta atsarga žurnalams, duomenų bazėms, atsarginėms kopijoms ir augimui.
+Orientacinis konfigūravimas: kaip minimali apatinė riba, vienas egzempliorius, prižiūrintis iki maždaug 30 000 įrenginių, gali veikti su 1 vCPU, 1 GB RAM ir 20 GB disko. Produkcijos diegimams naudokite rekomenduojamas bazines konfigūracijas skyriuje [Aparatinės įrangos reikalavimai](#4-aparatines-irangos-reikalavimai) žemiau — jose numatyta atsarga žurnalams, duomenų bazėms, atsarginėms kopijoms ir augimui.
 
 ## Aparatinės įrangos reikalavimai
 

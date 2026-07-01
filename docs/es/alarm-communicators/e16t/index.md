@@ -530,7 +530,7 @@ Para obtener más información sobre el servicio PROTEGUS, visite [www.protegus.
 
 <img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
 
-- Ingrese el **Código de servicio** (código predeterminado: 123456), para mayor seguridad cámbielo a <u>código de autenticación de 6 símbolos</u>. Este código es utilizado cuando se agrega un nuevo sistema a la aplicación y se controla de forma remota a través del software TrikdisConfig (para más detalles, consulte [5 „Control remoto”](#configuración-remota) ).
+- Ingrese el **Código de servicio** (código predeterminado: 123456), para mayor seguridad cámbielo a <u>código de autenticación de 6 símbolos</u>. Este código es utilizado cuando se agrega un nuevo sistema a la aplicación y se controla de forma remota a través del software TrikdisConfig (para más detalles, consulte [5 „Control remoto”](#6-configuracion-remota) ).
 
 ### Ventana „Resumen de los eventos“ 
 

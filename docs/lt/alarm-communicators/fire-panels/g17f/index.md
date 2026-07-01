@@ -825,7 +825,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 <img alt="" src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
 
-Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra įrašytas [lange „Vartotojai ir pranešimai"](#Users_window)*.*
+Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra įrašytas [lange „Vartotojai ir pranešimai"](#91-langas-vartotojai-ir-pranesimai)*.*
 
 - **Zn** – įvykio numeris pagal sąrašą.
 
@@ -935,7 +935,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 <img alt="" src="./image66.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
 
-Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#Users_window)*.*
+Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#91-langas-vartotojai-ir-pranesimai)*.*
 
 - **Zn** – zonos numeris su įvykių identifikavimo žodžiu. Gali būti *„Įvykis“* arba „*Grįžtis*“.
 
@@ -969,7 +969,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 <img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
-Šis langas bus rodomas, jei bent vieno Vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#Users_window)*.*
+Šis langas bus rodomas, jei bent vieno Vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#91-langas-vartotojai-ir-pranesimai)*.*
 
 - **PGM** – rodomas OUT išėjimo numeris ir įjungimo/išjungimo įvykio tipas („Įvykis“ – OUT išėjimo įjungimo įvykis ir „Grįžtis“ – OUT išjungimo įvykis).
 
@@ -1009,7 +1009,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 <img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
-Šis langas bus rodomas, jei bent vieno Vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#Users_window)*.*
+Šis langas bus rodomas, jei bent vieno Vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#91-langas-vartotojai-ir-pranesimai)*.*
 
 - **Nr.** – įvykio numeris ir identifikavimo žodis (*Įvykis*, *Grįžtis*).
 
