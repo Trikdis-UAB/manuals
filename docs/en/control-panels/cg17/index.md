@@ -344,7 +344,7 @@ Possible connection schematics:
 
 ### Schematics for connecting a smoke detector 
 
-Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig window “PGM” [–> “Outputs”](#Output_tab) tab) so that the smoke detector can be restarted after an alarm.
+Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig window “PGM” [–> “Outputs”](#48-pgm-window) tab) so that the smoke detector can be restarted after an alarm.
 
 - **Connecting a four-wire smoke detector**
 
