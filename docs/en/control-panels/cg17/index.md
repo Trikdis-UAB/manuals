@@ -354,11 +354,11 @@ Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig 
 
 1)  using an EOL zone (or NC, no resistor).
 
-<img alt="Wiring schematic showing the CG17's terminals connected to an SM1 compatibility module (with -12V, R, +12V, C, NO, NC terminals) which in turn connects to a chain of two two-wire smoke detectors and a 10k end-of-line resistor." src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
+<img alt="Wiring diagram showing the CG17 panel's +12V and zone input wired through the SM1 module to a chain of smoke detectors, with the SM1's relay C and NC terminals connected via separate leads to a 10k end-of-line resistor and the CG17's zone output and COM terminals." src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
 
 1)  using an EOL zone (or NO, no resistor).
 
-<img alt="Wiring schematic similar to the SM1 module connection diagram, showing the CG17's terminals wired through the SM1 module to two smoke detectors with the 10k end-of-line resistor connected using an alternate terminal arrangement on the SM1 module." src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
+<img alt="Wiring diagram showing the CG17 panel's +12V and zone input wired through the SM1 module to a chain of smoke detectors, with the SM1's relay C and NO terminals joined at a common junction with the CG17's COM terminal and a 10k end-of-line resistor, differing from a similar diagram elsewhere in this manual only in how that junction is wired." src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
 
 \*SM1 – a compatibility module made by Trikdis that allows to remotely restart a two-wire smoke detector after a triggered alarm.
 
@@ -432,7 +432,7 @@ Up to 8 keypads (Crow CR-16 Runner, Crow LCD Runner, Crow Touch Runner or Crow C
 
 ### Schematics for connecting iO series extension modules
 
-<img alt="Complex wiring diagram showing the CG17 control panel wired via RS485 bus to iO-MOD and iO expansion modules, with two of the iO-MOD modules each wirelessly linked (up to 300 m) to a separate iO-WL module requiring its own 12-28V power supply, plus a DS18B20/DS18S20 temperature sensor wired to one iO module and a CZ Dallas iButton reader wired via a 1-Wire connection to one of the iO-WL modules, with notes on module wire colors and the reader's red/green LED status meaning." src="./image26.webp" style="width:7.0875in;height:4.36875in" />
+<img alt="Wiring diagram showing the CG17 connected over a shared wired RS485 bus to two iO-MOD modules and an iO expander, with one iO-MOD wirelessly linked to an iO-WL module that is wired to a second iO expander and a temperature sensor, and the other iO-MOD wirelessly linked to a separate iO-WL module that is wired to a CZ Dallas iButton reader." src="./image26.webp" style="width:7.0875in;height:4.36875in" />
 
 **Note:**
 
@@ -568,13 +568,13 @@ Go to the “**Set Action**” tab.
 
 The *W485* module sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a WiFi internet router. When WiFi connectivity is available, the *CG17* (firmware from Ver.1.13) sends event messages via the *W485* module. When WiFi connectivity is disrupted, the *CG17* sends messages via GPRS. When WiFi connectivity is re-established, the *CG17* returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the *CG17* is described in chapter 4.5. „„Modules” window”. / You do not need a SIM card, when using the *W485* with the *CG17* security panel. / One *W485* module can be connected to the *CG17*.
 
-<img alt="Wiring diagram showing a 16V power supply connected to the CG17 panel's AC/+DC and AC/-DC terminals, and the CG17's RS485 data lines and +12V/COM power terminals wired to the matching RS485 and power terminals on a W485 module up to 100 meters away." src="./image40.webp" style="width:3.09500656167979in;height:2.4225043744531933in" />
+<img alt="Wiring diagram showing a power supply connected to the CG17 panel's AC power terminals, and the CG17's A/B RS485 and +12V/COM terminals wired to the matching A 485/B 485 and +DC/-DC terminals on a W485 module up to 100 meters away." src="./image40.webp" style="width:3.09500656167979in;height:2.4225043744531933in" />
 
 ### Schematic for connecting the E485 „Ethernet“ module
 
 The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *CG17* (firmware from Ver.1.13), CSP and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *CG17* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *CG17* starts sending messages via *E485*. / Configuration of the *E485* WiFi module to work with the *CG17* is described in chapter 4.5. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the *CG17* security panel. / One *E485* module can be connected to the *CG17*.
 
-<img alt="Wiring diagram showing a 16V power supply connected to the CG17 panel's AC/+DC and AC/-DC terminals, and the CG17's RS485 data lines and +12V/COM power terminals wired to the matching RS485 and power terminals on an E485 module up to 100 meters away." src="./image41.webp" style="width:3.09000656167979in;height:2.4225043744531933in" />
+<img alt="Wiring diagram showing a power supply connected to the CG17 panel's AC power terminals, and the CG17's A/B RS485 and +12V/COM terminals wired to the matching A 485/B 485 and +DC/-DC terminals on an E485 module up to 100 meters away." src="./image41.webp" style="width:3.09000656167979in;height:2.4225043744531933in" />
 
 ### Schematic for connecting of iO-LORA expansion modules 
 
@@ -582,7 +582,7 @@ CG17 controller firmware version 1.18 and higher.
 
 Connect the RF-LORA transceiver to CG17. After that, you can use the iO-LORA, iO8-LORA, PB-LORA, REL-LORA modules. One RF-LORA transceiver can be connected to CG17.
 
-<img alt="Wiring diagram showing the CG17 panel's +12V, COM, A RS485, and B RS485 terminals wired to the RF-LORA transceiver, which connects wirelessly up to 5000 meters to an iO-LORA module (itself wired to a 9-16V battery, a color-coded RFID keypad reader, and a DS18B20/DS18S20 temperature sensor), with a PB-LORA module shown only as a labeled placeholder with no terminals drawn, and an iO8-LORA module shown with its full terminal layout and 9-16V battery connection." src="./image42.webp" style="width:6.76001312335958in;height:5.857512029746282in" />
+<img alt="Wiring diagram showing the CG17 panel wired to an RF-LORA transceiver, which links wirelessly to an iO-LORA module powered by its own battery and wired to an RFID keypad reader and a temperature sensor; a separate PB-LORA panic button and an iO8-LORA module with its own battery are shown as additional modules in the series with no wired or wireless connection depicted between them." src="./image42.webp" style="width:6.76001312335958in;height:5.857512029746282in" />
 
 Launch TrikdisConfig. Connect the CG17 via USB Mini-B cable to the computer or remotely. Click the **Read [F4]** button in the TrikdisConfig program to display the current values of the controller's operating parameters. When prompted, enter the administrator or installer code in the pop-up window. In the "**Modules**" list, select the LORA module you are using. In the "**Serial No.**" field, enter the serial number of the module.
 
