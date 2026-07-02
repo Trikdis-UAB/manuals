@@ -354,11 +354,11 @@ Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig 
 
 1)  using an EOL zone (or NC, no resistor).
 
-<img alt="Wiring diagram showing the CG17 panel's +12V and zone input wired through the SM1 module to a chain of smoke detectors, with the SM1's relay C and NC terminals connected via separate leads to a 10k end-of-line resistor and the CG17's zone output and COM terminals." src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
+<img alt="Wiring diagram showing the CG17 panel's +12V and R terminals feeding the SM1 module and a chain of smoke detectors, the CG17's zone output wired to the SM1's -12V terminal, and the CG17's zone input wired to the SM1 relay's C terminal, which connects through the SM1's NC terminal and a 10k end-of-line resistor to the CG17's COM terminal." src="./image15.webp" style="width:5.273344269466317in;height:1.8166699475065617in" />
 
 1)  using an EOL zone (or NO, no resistor).
 
-<img alt="Wiring diagram showing the CG17 panel's +12V and zone input wired through the SM1 module to a chain of smoke detectors, with the SM1's relay C and NO terminals joined at a common junction with the CG17's COM terminal and a 10k end-of-line resistor, differing from a similar diagram elsewhere in this manual only in how that junction is wired." src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
+<img alt="Wiring diagram showing the CG17 panel's +12V and R terminals feeding the SM1 module and a chain of smoke detectors, the CG17's zone output wired to the SM1's -12V terminal, and the CG17's zone input wired to the SM1 relay's C terminal, which connects through a 10k end-of-line resistor to a shared junction of the SM1's NO terminal and the CG17's COM terminal." src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
 
 \*SM1 – a compatibility module made by Trikdis that allows to remotely restart a two-wire smoke detector after a triggered alarm.
 
