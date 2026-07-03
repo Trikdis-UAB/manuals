@@ -1,7 +1,7 @@
 # RF-LoRa Wireless Expander
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Front view of the white RF-LORA wireless expander enclosure showing an SMA antenna connector on top, DATA/TROUBLE and POWER indicator lights, and a green screw terminal block labeled +DC, -DC, A 485, B 485, IO1, COM, IO2, IO3, COM, IO4." width="200">
 </div>
 
 ## Description
@@ -41,7 +41,7 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 
 ### Expander elements
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Annotated diagram of the RF-LORA expander's front and open casing labeling seven elements: 1 the antenna SMA connector, 2 the DATA/TROUBLE and POWER indicator lights, 3 a side latch/tab, 4 the terminal block, 5 a mini-USB port, 6 a jumper labeled SW1, and 7 a button near the antenna connector." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 1. SMA connector for RF antenna.
 2. Light indicators.
@@ -86,7 +86,7 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 
 1.  Remove the top lid.
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Two line-art illustrations of hands using a screwdriver to pry open the side of the enclosure and then to lift out the circuit board." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Remove the PCB board.
 
@@ -96,15 +96,15 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 
 5.  Close the top lid.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Line-art illustration of the circuit board with an arrow pointing to a mounting tab on its edge, alongside a separate drawing of the enclosure's back plate showing screw holes and a wall-mounting slot." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Schematic of RF-LORA transceiver connection to "FLEXi" SP3 control panel 
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Wiring schematic showing the SP3 control panel's AUX+, AUX-, 485 A, and 485 B terminals each connected by a labeled +12V/data line to the RF-LORA expander's +DC, -DC, A RS485, and B RS485 terminals respectively." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Schematics for connecting LORA modules 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Wiring schematic showing the SP3 panel's AUX+, AUX-, 485 A, and 485 B terminals wired to the RF-LORA expander's +DC, -DC, A RS485, and B RS485 terminals, with the RF-LORA shown wirelessly linked (up to 5000 m) to one or more iO-LORA/iO-8-LORA modules, each of whose +DC/-DC terminals connect to a separate 12-26V power source." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Configuration with TrikdisConfig
 
@@ -124,15 +124,15 @@ Up to 8 LORA modules (iO-LORA, iO-8-LORA, PB-LORA) can be connected to the "FLEX
 
 8.  In the "**Serial No.**" field, enter the serial number of the module iO-LORA (iO-8-LORA).
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Screenshot of the TrikdisConfig software's Modules tab showing the RS485 modules table listing an iO-LORA expander and an iO8-LORA expander with their ID, serial number, area, and name fields." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  In the "**Zones**" tab, make settings for the expander's input.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Screenshot of the TrikdisConfig software's Zones settings tab with the Input dropdown open for Zone 6, showing selectable options including Disable, SP3 I/O, and various RS485 Expander ID inputs and outputs." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. In the "**PGM**" tab, configure the expander's PGM output.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Screenshot of the TrikdisConfig software's PGM Outputs tab listing PGM numbers with assigned RS485 Expander outputs, output definitions, pulse times, and CMS/Prot. checkboxes." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Once configuration is complete, click the **Write [F5]** button.
 
@@ -152,4 +152,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="Crossed-out wheeled trash bin symbol indicating the product must not be disposed of with household waste." src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
