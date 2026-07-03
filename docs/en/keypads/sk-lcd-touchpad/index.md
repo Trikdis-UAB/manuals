@@ -3,7 +3,7 @@
 ## Keypad overview
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="Annotated diagram of the FLEXi SK-LCD TouchPad keypad labeling the time, date, temperature, battery status, area status display, area control buttons (ARM, SLEEP, STAY, OFF), and navigation buttons (up/down arrows)." width="600">
 </div>
 
 > [!NOTE]
@@ -101,11 +101,11 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 2. Press **5** button.
 
-3. Press the **2** button to adjust the volume and use the <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> buttons to set the desired volume. Confirm your selection by pressing the **OK** button.
+3. Press the **2** button to adjust the volume and use the <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Small upward-pointing chevron arrow icon." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Small downward-pointing chevron arrow icon." /> buttons to set the desired volume. Confirm your selection by pressing the **OK** button.
 
-4. Press the **4** button to adjust the screen brightness. Use the <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> buttons to adjust the desired screen brightness. Confirm your selection by pressing the **OK** button.
+4. Press the **4** button to adjust the screen brightness. Use the <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Small upward-pointing chevron arrow icon." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Small downward-pointing chevron arrow icon." /> buttons to adjust the desired screen brightness. Confirm your selection by pressing the **OK** button.
 
-5. Press the **3** button to adjust the button brightness. Use the <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> buttons to set the desired button brightness. Confirm your selection by pressing the **OK** button.
+5. Press the **3** button to adjust the button brightness. Use the <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Small upward-pointing chevron arrow icon." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Small downward-pointing chevron arrow icon." /> buttons to set the desired button brightness. Confirm your selection by pressing the **OK** button.
 
 ## Entering or changing User or Master codes
 
