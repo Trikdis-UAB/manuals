@@ -71,13 +71,13 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 - 3 relay outputs (1 A, 30V DC).
 
-- Input “FLOOP” is intended for connection of two-wire fire detectors.
+- Input “**FLOOP**” is intended for connection of two-wire fire detectors.
 
 - 10 I/O terminals, each of which can be set as an input (IN) or output (OUT) terminal. Selectable Input (IN) types: NC, NO, EOL, EOL-T, ATZ, ATZ-T. Resistors of different ratings can be used in EOL and ATZ circuits.
 
-- With iO expander modules, the number of IN inputs can be expanded up to 32 units, and the number of OUT outputs can be expanded up to 16 units.
+- With ***iO*** expander modules, the number of IN inputs can be expanded up to 32 units, and the number of OUT outputs can be expanded up to 16 units.
 
-- RS485 bus is used to connect iO series expander modules.
+- RS485 bus is used to connect ***iO*** series expander modules.
 
 - RS485 2 bus is used to connect fire alarm control panels.
 
@@ -122,7 +122,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 ### Elements of the *FIRECOM* communicator
 
-<img src="./image4.webp" alt="FIRECOM communicator elements" style="width: 100%; height: auto;" />
+<img src="./image4.webp" alt="FIRECOM communicator elements" style="width: 7.0in; height:in;" />
 
 1. Connectivity and operation indicator lights
 2. Button. Not used
@@ -217,7 +217,7 @@ The communicator must be powered by a DC source. A backup power supply – a 12 
 
 ### Backup power supply
 
-If there are problems with powering the system from the main power supply, an “*DC Fault”* event report will be generated and the panel will automatically switch to the backup 12 V battery. If the battery’s voltage falls to 11,5 V, a “*Low* *Battery”* event report will be generated. The battery will be disconnected if the voltage falls bellow 9,5 V. If DC voltage is restored, an “*DC Restore”* report will be generated and the battery charging process will begin automatically. When the battery’s voltage rises to 12,6 V, a “*Battery Restore”* event report will be generated.
+If there are problems with powering the system from the main power supply, an “**DC Fault**” event report will be generated and the panel will automatically switch to the backup 12 V battery. If the battery’s voltage falls to 11,5 V, a “**Low Battery**” event report will be generated. The battery will be disconnected if the voltage falls bellow 9,5 V. If DC voltage is restored, an “**DC Restore**” report will be generated and the battery charging process will begin automatically. When the battery’s voltage rises to 12,6 V, a “**Battery Restore**” event report will be generated.
 
 ### Communicator kit
 
@@ -270,18 +270,15 @@ There are 10 terminals IO1–IO10 (inputs) on the communicator board for connect
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image7.webp" alt="" style="width: 20%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image8.webp" alt="" style="width: 20%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image9.webp" alt="" style="width: 20%; height: auto;" />
 </figure>
 
 </div>
@@ -289,18 +286,15 @@ There are 10 terminals IO1–IO10 (inputs) on the communicator board for connect
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image10.webp" alt="" style="width: 20%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image11.webp" alt="" style="width: 20%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image12.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
@@ -308,13 +302,11 @@ There are 10 terminals IO1–IO10 (inputs) on the communicator board for connect
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image13.webp" alt="" style="width: 20%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image14.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
@@ -325,17 +317,17 @@ Schematic for connecting two-wire smoke detectors.
 
 Schematic for connecting two-wire smoke detectors to “**FLOOP**” output. When this circuit diagram is used, the “**Input**” type “**FC Fire sensor (FLOOP input)**” must be specified in the “Zones” window. The alarm current of the fire detector must be more than 10mA. Up to 8 fire detectors can be connected to the “**FLOOP**” output.
 
-<img alt="" src="./image15.webp" style="width:5.006676509186351in;height:1.2766688538932633in" />
+<img alt="" src="./image15.webp" style="width:6.0in;height:in" />
 
 Wiring diagrams for two-wire smoke detectors with relay module SM1. In order to connect the smoke detector circuit to the selected input, it is necessary to activate the input (IOx) and set the circuit type (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (see 6.6 “”Zones” window”). To connect a smoke detector power circuit to the PGM output (IO10), the **“Fire Sensor Reset”** function must be assigned to the output (see chapter 6.7 ““PGM” window”).
 
 \* The relay is used to detect a broken cable and removal of a fire detector. If you do not use a relay (K1), then contact K1 must be short-circuited.
 
-<img alt="" src="./image16.webp" style="width:5.8900120297462815in;height:2.07667104111986in" />
+<img alt="" src="./image16.webp" style="width:6.5in;height:in" />
 
 Or
 
-<img alt="" src="./image17.webp" style="width:5.8900120297462815in;height:2.3000043744531933in" />
+<img alt="" src="./image17.webp" style="width:6.5in;height:in" />
 
 Schematic for connecting four-wire smoke detectors.
 
@@ -343,20 +335,18 @@ In order to connect the smoke detector circuit to the selected input, it is nece
 
 \* The relay is used to detect a broken cable and removal of a fire detector. If you do not use a relay (K1), then contact K1 must be short-circuited.
 
-<img alt="" src="./image18.webp" style="width:6.060012029746281in;height:1.490003280839895in" />
+<img alt="" src="./image18.webp" style="width:6.5in;height:in" />
 
 ### Schematic for connecting the communicator to a fire alarm control panel
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image19.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image19.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image20.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image20.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
@@ -368,13 +358,11 @@ If you want to monitor the status of the fire alarm panel, connect its correspon
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image21.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image21.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image22.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
@@ -387,19 +375,19 @@ If you want to monitor the status of the fire alarm panel, connect its correspon
 
 3.  The ***FIRECOM*** communicator and the fire panel must have the same data transmission settings.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7755905511811023in" />
+<img alt="" src="./image23.webp" style="width:7.0in;height:in" />
 
 4.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="" src="./image24.webp" style="width:7.0in;height:in" />
 
 5.  If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.8307086614173227in" />
+<img alt="" src="./image25.webp" style="width:7.0in;height:in" />
 
 6.  Configure the communication channel if messages should be sent to the CMS receiver. Event messages are transmitted using the SIA DC-09 protocol.
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image26.webp" style="width:7.0in;height:in" />
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
@@ -408,13 +396,11 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image27.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image27.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image28.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image28.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
@@ -425,19 +411,19 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 2.  The “**NSC slavе address**” must not match the address of the connected fire panel modules.
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.122047244094488in" />
+<img alt="" src="./image29.webp" style="width:7.0in;height:in" />
 
 3.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:1.5433070866141732in" />
+<img alt="" src="./image30.webp" style="width:7.0in;height:in" />
 
 4.  Users will get SMS messages and phone calls about events that are ticked. You can add additional CID event codes in the **CID** column. You must enter **SMS text** messages next to new codes. If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image31.webp" style="width:7.0in;height:in" />
 
 5.  Configure the communication channel if messages should be sent to the CMS receiver.
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image32.webp" style="width:7.0in;height:in" />
 
 After setting up the ***FIRECOM*** communicator, turn on power supply the fire control panel. Wait for the fire control panel software to load. It is necessary to scan the modules connected to the RS485 bus on the fire control panel. On the fire control panel, press: **PROG.\>INSTALLER\>(Enter the installer code) 00000 OK\>(Select) SETTINGS\>ENTER\>(Select) SCAN RS485\>ENTER**. Wait for the scan to complete. Return to the main screen by pressing “**CANCEL**“ twice.
 
@@ -448,39 +434,37 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image33.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image33.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image34.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image34.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
 
 **Slave** mode must be set for the **INIM Smartline** panel when it is connected to the ***FIRECOM*** communicator via RS485 bus.
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="" src="./image35.webp" style="width:7.0in;height:in" />
 
 !!! note
     You cannot connect the ***FIRECOM*** using the RS485 bus if repeaters are connected to the **INIM Smartline** panel. / **iO** expansion modules are not supported when the ***FIRECOM*** is connected to the **INIM Smartline** panel via RS485 bus. ***FIRECOM*** communicator settings with ***TrikdisConfig*** when connecting the **INIM SMARTLINE** fire alarm control panel.
 
 1.  Choose the **Inim Smartline** fire alarm control panel.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.893700787401575in" />
+<img alt="" src="./image36.webp" style="width:7.0in;height:in" />
 
 2.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="" src="./image37.webp" style="width:7.0in;height:in" />
 
 3.  Users will get SMS messages and phone calls about events that are ticked. You can add additional CID event codes in the **CID** column. You must enter **SMS text** messages next to new codes. If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:2.2716535433070866in" />
+<img alt="" src="./image38.webp" style="width:7.0in;height:in" />
 
 4.  Configure the communication channel if messages should be sent to the CMS receiver.
 
-<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***.
 
@@ -489,13 +473,11 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image40.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image41.webp" alt="" style="width: 35%; height: auto;" />
 </figure>
 
 </div>
@@ -504,49 +486,49 @@ FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **C-T
 
 1.  Choose the **C-TEC Cast ZFP** fire alarm control panel.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.893700787401575in" />
+<img alt="" src="./image42.webp" style="width:7.0in;height:in" />
 
 2.  Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="" src="./image37.webp" style="width:7.0in;height:in" />
 
 3.  Users will get SMS messages and phone calls about events that are ticked. You can add additional CID event codes in the **CID** column. You must enter **SMS text** messages next to new codes. If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:2.2716535433070866in" />
+<img alt="" src="./image43.webp" style="width:7.0in;height:in" />
 
 4.  Configure the communication channel if messages should be sent to the CMS receiver.
 
-<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
 
 Install the **ZFPtools** program on your computer. Run the **ZFPtools** program. Turn on the power supply of the fire control panel. Wait until the fire panel software is loaded. Connect the fire panel to the computer using a USB2.0 A-B cable.
 
 1.  Open the “**Node View**” tab.
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="" src="./image44.webp" style="width:7.0in;height:in" />
 
 2.  Download the fire panel settings to your computer.
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="" src="./image45.webp" style="width:7.0in;height:in" />
 
 3.  Enter the code (default code – 4444).
 
 4.  Click „**OK**“.
 
-<img alt="" src="./image46.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="" src="./image46.webp" style="width:3.5in;height:in" />
 
 5.  Select „**BMS Interface**“.
 
 6.  Click on the free icon.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="" src="./image47.webp" style="width:7.0in;height:in" />
 
 7.  Click „**Edit Devices**“.
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image48.webp" style="width:7.0in;height:in" />
 
 8.  In the “**Device**” tab, enter the system name.
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="" src="./image49.webp" style="width:7.0in;height:in" />
 
 9.  In the “**Properties**” tab, enter the system name.
 
@@ -556,13 +538,13 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 12. Write the settings to the fire panel.
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="" src="./image50.webp" style="width:7.0in;height:in" />
 
 13. Enter the code (default code – 4444).
 
 14. Click „**OK**“.
 
-<img alt="" src="./image51.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="" src="./image51.webp" style="width:3.5in;height:in" />
 
 The fire panel is programmed. Disconnect the cable from USB2.0 A-B of the fire panel.
 
@@ -570,9 +552,9 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 ### Schematic for connecting the fire panel Polon-Alfa 3000
 
-**The ***FIRECOM*** communicator is wired to the Polon-Alfa 3000 via the RS485 bus**
+**The FIRECOM communicator is wired to the Polon-Alfa 3000 via the RS485 bus**
 
-<img alt="" src="./FIRECOM + polon ENG 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image98.webp" style="width:7.0in;height:in" />
 
 Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***. 
 
@@ -580,29 +562,29 @@ Configuring the ***FIRECOM*** communicator using ***TrikdisConfig***.
 	
 2.	Select connection type **RS485**. 
 
-<img alt="" src="./FIRECOM trikdisconfig 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image99.webp" style="width:7.0in;height:in" />
 
 3.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM trikdisconfig 2 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image100.webp" style="width:7.0in;height:in" />
 
 4.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
 
-<img alt="" src="./FIRECOM trikdisconfig 3 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image101.webp" style="width:7.0in;height:in" />
 
 5.	Configure the communication channel if messages should be sent to the CMS receiver. 
 
-<img alt="" src="./FIRECOM trikdisconfig 4 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image102.webp" style="width:7.0in;height:in" />
 
 The **POLON-ALFA 3000** fire alarm panel with the **MK-30** module must be configured using the **POLON Studio** application to operate via the Modbus RTU (RS485) protocol. 
 
-<img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:2.5in;height:in" /> 
+<img alt="" src="./image111.webp" style="width:3.5in;height:in" /> 
 
 Test the system. Activate the fire alarm and check that ***FIRECOM*** messages are sent to the CMS (central monitoring station) and to ***Protegus2***. 
 
 ***FIRECOM*** **communicator and the Polon-Alfa 3000 fire alarm panel are wired to the same LAN**
 
-<img alt="" src="./FIRECOM + polon lan ENG 2026 06 02.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image103.webp" style="width:7.0in;height:in" />
 
 Configuring the ***FIRECOM*** communicator using TrikdisConfig. 
 
@@ -612,27 +594,27 @@ Configuring the ***FIRECOM*** communicator using TrikdisConfig.
 	
 3.	Enter the IP address of the **Polon-AlfA 3000** fire control panel.
 
-<img alt="" src="./FIRECOM trikdisconfig lan 1 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image104.webp" style="width:7.0in;height:in" />
 
 4.	Check the box “**DHCP**” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 2 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image105.webp" style="width:7.0in;height:in" />
 
 5.	Enter phone numbers, e-mail of users who should get messages from the ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 3 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image106.webp" style="width:7.0in;height:in" />
 
 6.	If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 4 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image107.webp" style="width:7.0in;height:in" />
 
 7.	Configure the communication channel if messages should be sent to the CMS receiver. 
 
-<img alt="" src="./FIRECOM trikdisconfig lan 5 2026 06 01.webp" style="width:7.086614173228346in;height:in" />
+<img alt="" src="./image108.webp" style="width:7.0in;height:in" />
 
 The **Polon-Alfa 3000** fire alarm panel with the **MK-30** module must be configured using the **Polon Studio** application to operate via the LAN. The LAN IP addresses must be entered according to your network settings. 
 
-<img alt="" src="./module mk-30 ip 2026 06 18.webp" style="width:2.5in;height:in" />
+<img alt="" src="./image112.webp" style="width:3.5in;height:in" />
 
 Test the system. Activate the fire alarm and check that **_FIRECOM_** messages are sent to the CMS (central monitoring station) and to **_Protegus2_**. 
 
@@ -659,18 +641,16 @@ According to the EN54 standard, the fire panel from the communicator must receiv
 
 ### Schematics for connecting iO series expander modules
 
-If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander. The ***FIRECOM***’s configuration for expander modules is described in chapter 6.5 ““Modules” window”.
+If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS ***iO*** series input and output expander. The ***FIRECOM***’s configuration for expander modules is described in chapter 6.5 ““Modules” window”.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 
 <figure style="margin: 0;">
-
-<img src="./image57.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image57.webp" alt="" style="width: 30%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-
-<img src="./image58.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image58.webp" alt="" style="width: 30%; height: auto;" />
 </figure>
 
 </div>
@@ -698,7 +678,7 @@ To turn on the communicator, first you need to turn on its power supply. The com
 
 3.  Launch ***TrikdisConfig***. The program will automatically recognize the connected device and will automatically open the ***FIRECOM*** configuration window.
 
-4.  Click the **Read \[F4\]** button to see the current parameters of the ***FIRECOM***. If a window requesting the administrator or installer code opens, enter the 6-digit code.
+4.  Click the **Read [F4]** button to see the current parameters of the ***FIRECOM***. If a window requesting the administrator or installer code opens, enter the 6-digit code.
 
 Below we describe the settings you need to edit to make the controller send events to the ***Protegus2*** app or to the Central Monitoring Station.
 
@@ -706,7 +686,7 @@ Below we describe the settings you need to edit to make the controller send even
 
 **In the “System options” window, “SIM” settings group:**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image60.webp" style="width:7.0in;height:in" />
 
 1.  Enter the “**SIM card PIN”** code.
 
@@ -714,7 +694,7 @@ Below we describe the settings you need to edit to make the controller send even
 
 **In the “Users & Reporting” window, “Cloud application” settings group:**
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image61.webp" style="width:7.0in;height:in" />
 
 3.  Tick the box “**Enable cloud service”**.
 
@@ -722,58 +702,58 @@ Below we describe the settings you need to edit to make the controller send even
 
 **In the “Reporting to CMS” window, “Settings” tab:**
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.5669291338582676in" />
+<img alt="" src="./image62.webp" style="width:7.0in;height:in" />
 
 5.  If a LAN cable is connected to the communicator, check the box „**DHCP**“ (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
 
-6.  The parameters for how the communicator will send messages to ***Protegus2*** are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to ***Protegus2***, then the “Return to Primary” connection type will be attempted after a set time interval.
+6.  The parameters for how the communicator will send messages to ***Protegus2*** are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to ***Protegus2***, then the “**Return to Primary**” connection type will be attempted after a set time interval.
 
 **In the “Zones” window, “Zones settings” tab:**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="" src="./image63.webp" style="width:7.0in;height:in" />
 
 7.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in zone states.
 
 **In the “PGM” window, “Outputs” tab:**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.968503937007874in" />
+<img alt="" src="./image64.webp" style="width:7.0in;height:in" />
 
 8.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in PGM output states.
 
 **In the “System events” window, “Events” tab:**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="" src="./image65.webp" style="width:7.0in;height:in" />
 
 9.  Tick the boxes if you want users to receive notifications to ***Protegus2*** about changes in the communicator’s internal event states.
 
-After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
+After finishing configuration, click the **Write [F5]** button and disconnect the USB cable.
 
 !!! note
-    See chapter 6** “Description of TrikdisConfig windows”** to find more about other ***FIRECOM*** settings in ***TrikdisConfig*.**
+    See chapter 6 “Description of TrikdisConfig windows” to find more about other ***FIRECOM*** settings in ***TrikdisConfig*.**
 
 ### Settings for connecting to Central Monitoring Station
 
 **In the “System Options” window, “System general” tab:**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image66.webp" style="width:7.0in;height:in" />
 
 1.  Enter the “**Object ID”** (account) number provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
 2.  Enter the “**SIM card PIN”** number.
 
-3.  Change the “**APN”**. You will find the “**APN”** on the SIM operator’s website. “Internet” is universal and works in the networks of most operators.
+3.  Change the “**APN”**. You will find the “**APN”** on the SIM operator’s website. “**Internet**” is universal and works in the networks of most operators.
 
 **In the “Reporting to CMS” window, “Settings” tab:**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:3.8503937007874014in" />
+<img alt="" src="./image67.webp" style="width:7.0in;height:in" />
 
-4.  If a LAN cable is connected to the communicator, check the box “DHCP” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
+4.  If a LAN cable is connected to the communicator, check the box “**DHCP**” (automatic registration mode) so that the ***FIRECOM*** communicator will automatically read the network settings (subnet mask, gateway) and an IP address will be assigned to it.
 
 5.  The parameters for how the communicator will send messages to CMS are set. Connection types are set in sequence. If the connection with the primary connection type fails, it switches to the next one and so on. If the fallback connection type succeeded in passing the message to CMS, then the “Return to Primary” connection type will be attempted after a set time interval.
 
 **In the “Reporting to CMS” window, “Reporting” tab:**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
+<img alt="" src="./image68.webp" style="width:7.0in;height:in" />
 
 6.  **Communication type** – choose a communication type (TCP or UDP).
 
@@ -788,14 +768,14 @@ After finishing configuration, click the **Write \[F5\]** button and disconnect 
 !!! note
     If you chose **DC-09** as the transmission protocol, additionally enter the object, line and receiver numbers in the “**Settings”** setting group of the **“Reporting to CMS”** window.
 
-11. (Recommended) Configure the “Backup channel” settings. 
+11. (Recommended) Configure the “**Backup channel**” settings. 
 
 12. Configure „**Parallel channel**” if messages will be sent to the second receiver of the CMS.
 
-After finishing configuration, click the **Write \[F5\]** button and disconnect the USB cable.
+After finishing configuration, click the **Write [F5]** button and disconnect the USB cable.
 
 !!! note
-    See chapter **6 “Description of TrikdisConfig windows”** to find more about other ***FIRECOM*** settings in ***TrikdisConfig*.**
+    See chapter 6 “Description of TrikdisConfig windows” to find more about other ***FIRECOM*** settings in ***TrikdisConfig*.**
 
 ## Remote control
 
@@ -818,19 +798,19 @@ Using ***Protegus2***, users can see the system’s state and receive notificati
 
     1.  Have an inserted and activated SIM card with the PIN code entered or
         disabled;
-
+    
     2.  Have ***Protegus2*** service enabled. See 6.4 "Users & Reporting"
         window;
-
+    
     3.  Have the power switched on ("**STA**" LED must be blink green);
-
+    
     4.  Be connected to a network (the "**SIM**" LED must be green solid and
         blink yellow; or/and "**ETH**" LED is green when connected to LAN
         network).
 
 3.  Click “**Add new system**” and enter the ***FIRECOM***’s “**Unique ID**” number. It can be found on the device and packaging sticker. After entering the “**Unique ID**”, click the “**Next**” button.
 
-<img alt="" src="./image72.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
+<img alt="" src="./image72.webp" style="width:3.5in;height:in" />
 
 ### Configuration and control via SMS messages
 
@@ -838,55 +818,59 @@ Using ***Protegus2***, users can see the system’s state and receive notificati
 
 To ensure safety, change the default administrator SMS password. Send an SMS message of the following format:
 
-     **PSW 123456 xxxxxx**
+​	**PSW 123456 xxxxxx**
 
-| **123456** | Default administrator password      |
-|----|----|----|
-| **xxxxxx** | New 6-symbol administrator password |
+**123456**	Default administrator password
+
+**xxxxxx**	New 6-symbol administrator password
 
 **2.  Allow other users to control**
 
 Only phone numbers on the user list can control the system using SMS messages or phone calls. From an administrator phone, send SMS messages with other people’s phone numbers and names to allow them to control the system:
 
-     **SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
+​	**SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
 
-| **xxxxxx** | 6-symbol administrator password |
-|----|----|----|
-| **x** | User’s number on the list. (If you write 1 as the user number, you will transfer your administrator’s rights to the other user.) |
-| **PHONENR** | User’s phone number |
-| **NAME** | User’s name |
-| **EMAIL** | User’s e-mail |
+**xxxxxx**		6-symbol administrator password
 
-     **SMS command list**
+**x**			User’s number on the list. (If you write 1 as the user number, you will transfer your administrator’s rights to the other user.)
+
+**PHONENR**	User’s phone number
+
+**NAME**		User’s name
+
+**EMAIL**		User’s e-mail
+
+
+
+**SMS command list**
 
 | Command | Data | Description |
 |----|----|----|
-| INFO |  | Request information about the communicator. Object name, partition state, IMEI number, Cellular signal strength, firmware version and serial number will be included in the reply. E. g.: INFO 123456 |
-| RESET |  | Reset the device. E.g.: RESET 123456 |
-| OUTPUTx | ON | Turn on an output, “x” is the output number. E.g.: OUTPUT1 123456 ON |
-| OUTPUTx | OFF | Turn off an output, “x” is the output number. E.g.: OUTPUT1 123456 OFF |
-| OUTPUTx | PULSE=ttt | Turn on an output for a few seconds - “x” is the OUT output number, and “ttt” is a three-digit number that specifies pulse time in seconds. / E.g.: OUTPUT1 123456 PULSE=002 |
-| PSW | New password | Change password. E.g.: PSW 123456 654123 |
-| TIME | YYYY/MM/DD,12:00:00 | Set date and time. E.g.: TIME 123456 2023/05/09,12:23:00 |
-| TXTA | Object name | Specify an object name. E.g.: TXTA 123456 House |
-| RDR | PhoneNR#SMStext | Forward SMS messages to the specified number. The phone number must start with a “+” sign and the international country code. |
-| RDR | PhoneNR#SMStext | E.g.: RDR 123456 +37061234567#forwarded text |
-| ASKI |  | Request SMS message about statuses of inputs IN. E.g.: ASKI 123456 |
-| ASKO |  | Request SMS message about statuses of outputs OUT. E.g.: ASKO 123456 |
-| ASKT |  | Send SMS message with values of all temperature sensors. / E.g.: ASKT 123456 |
-| FRS |  | Resets the fire sensor’s output, if the output OUT is assigned the function “Fire sensor reset”. E.g.: FRS 123456 |
-| SETN | PhoneX=PhoneNR#Name#email | Add a phone number, username, e-mail and assign it to user “x”. “x” is the phone number’s line on the list. The phone number must start with a “+” symbol and international country code. The phone number and username must be separated by a “#” symbol. / E.g.: SETN 123456 PHONE5=+37061234567#JOHN#jonas@trikdis.lt |
-| SETN | PhoneX=DEL | Delete user’s phone number and name from the system. / E.g.: SETN 123456 PHONE5=DEL |
-| UUSD | \*Uusd code# | Send a UUSD code to the operator. E.g.: UUSD 123456 \*245# |
-| CONNECT | Protegus=ON | Connect to Protegus cloud service. E.g.: CONNECT 123456 PROTEGUS=ON |
-| CONNECT | Protegus=OFF | Disconnect from Protegus cloud service. / E.g.: CONNECT 123456 PROTEGUS=OFF |
-| CONNECT | Code=123456 | Protegus cloud service code. E.g.: CONNECT 123456 CODE=123456 |
-| CONNECT | IP=0.0.0.0:8000 | Specify the main server’s connection channel’s TCP IP and Port. / E.g.: CONNECT 123456 IP=0.0.0.0:8000 |
-| CONNECT | IP=0 | For turning off the main channel. E.g.: CONNECT 123456 IP=0 |
-| CONNECT | ENC=123456 | TRK encryption key. E.g.: CONNECT 123456 ENC=123456 |
-| CONNECT | APN=Internet | APN name. E.g.: CONNECT 123456 APN=INTERNET |
-| CONNECT | USER=user | APN user. E.g.: CONNECT 123456 USER=User |
-| CONNECT | PSW=password | APN password. E.g.: CONNECT 123456 PSW=Password |
+| INFO |  | Request information about the communicator. Object name, partition state, IMEI number, Cellular signal strength, firmware version and serial number will be included in the reply. E. g.: **INFO 123456** |
+| RESET |  | Reset the device. E.g.: **RESET 123456** |
+| OUTPUTx | ON | Turn on an output, “x” is the output number. E.g.: **OUTPUT1 123456 ON** |
+|  | OFF | Turn off an output, “x” is the output number. E.g.: **OUTPUT1 123456 OFF** |
+|  | PULSE=ttt | Turn on an output for a few seconds - “x” is the OUT output number, and “ttt” is a three-digit number that specifies pulse time in seconds.  E.g.: **OUTPUT1 123456 PULSE=002** |
+| PSW | New password | Change password. E.g.: **PSW 123456 654123** |
+| TIME | YYYY/MM/DD,12:00:00 | Set date and time. E.g.: **TIME 123456 2026/05/09,10:02:00** |
+| TXTA | Object name | Specify an object name. E.g.: **TXTA 123456 House** |
+| RDR | PhoneNR#SMStext | Forward SMS messages to the specified number. The phone number must start with a “+” sign and the international country code. E.g.: **RDR 123456 +37061234567#forwarded text** |
+| ASKI |  | Request SMS message about statuses of inputs IN. E.g.: **ASKI 123456** |
+| ASKO |  | Request SMS message about statuses of outputs OUT. E.g.: **ASKO 123456** |
+| ASKT |  | Send SMS message with values of all temperature sensors.  E.g.: **ASKT 123456** |
+| FRS |  | Resets the fire sensor’s output, if the output OUT is assigned the function “Fire sensor reset”. E.g.: **FRS 123456** |
+| SETN | PhoneX=PhoneNR#Name#email | Add a phone number, username, e-mail and assign it to user “x”. “x” is the phone number’s line on the list. The phone number must start with a “+” symbol and international country code. The phone number and username must be separated by a “#” symbol.  E.g.: **SETN 123456 PHONE5=+37061234567#JOHN#jonas@trikdis.lt** |
+|  | PhoneX=DEL | Delete user’s phone number and name from the system.  E.g.: **SETN 123456 PHONE5=DEL** |
+| UUSD | \*Uusd code# | Send a UUSD code to the operator. E.g.: **UUSD 123456 \*245#** |
+| CONNECT | Protegus=ON | Connect to Protegus cloud service. E.g.: **CONNECT 123456 PROTEGUS=ON** |
+|  | Protegus=OFF | Disconnect from Protegus cloud service.  E.g.: **CONNECT 123456 PROTEGUS=OFF** |
+|  | Code=123456 | Protegus cloud service code. E.g.: **CONNECT 123456 CODE=123456** |
+|  | IP=0.0.0.0:8000 | Specify the main server’s connection channel’s TCP IP and Port.  E.g.: **CONNECT 123456 IP=0.0.0.0:8000** |
+|  | IP=0 | For turning off the main channel. E.g.: **CONNECT 123456 IP=0** |
+|  | ENC=123456 | TRK encryption key. E.g.: **CONNECT 123456 ENC=123456** |
+|  | APN=Internet | APN name. E.g.: **CONNECT 123456 APN=INTERNET** |
+|  | USER=user | APN user. E.g.: **CONNECT 123456 USER=User** |
+|  | PSW=password | APN password. E.g.: **CONNECT 123456 PSW=Password** |
 
 ### Control PGM outputs using phone calls
 
@@ -896,13 +880,20 @@ Perform these actions if you want to control a PGM output remotely:
 
 - Call the number of the ***FIRECOM***’s SIM card. The ***FIRECOM*** will answer the call and you can dial commands using the phone’s keypad (see the table).
 
-
-     **Mobile phone keyboard command list**
+**Mobile phone keyboard command list**
 
 | Keyboard buttons | Function | Description |
 |----|----|----|
-| \[output no\]\*\[state no\]# | Control selected output OUT | Controls the specified PGM output. State: \[0\] – output turned off; \[1\] – output turned on; \[2\] – turned off for pulse time; \[3\] – turned on for pulse time; (pulse time is specified in the ***TrikdisConfig*** software, “PGM” table) \[\*\] – this symbol shows the end of the command. E.g. (turn on output 1): 1*1# E.g. (turn off output 1): 1*0# E.g. (turn on output 2 for “Pulse time” specified in the ***TrikdisConfig*** “PGM” table): 2\*3# |
-| \# | Retry entering the command | If you made a mistake while entering the command, press “#” on the phone’s keyboard and enter the command again. |
+| [output no]*[state no]# | Control selected output OUT | Controls the specified PGM output. State:                    |
+|  |  | [**0**] – output turned off;                                 |
+|  |  | [**1**] – output turned on;                                  |
+|                         |  | [**2**] – turned off for pulse time; |
+|  |  | [**3**] – turned on for pulse time; (pulse time is specified in the ***TrikdisConfig*** software, “PGM” table); |
+|  |  | [*****] – this symbol shows the end of the command. |
+|  |  | E.g. (turn on output 1): **1*1#** |
+|  |  | E.g. (turn off output 1): **1*0#** |
+|  |  | E.g. (turn on output 2 for “Pulse time” specified in the ***TrikdisConfig*** “PGM” table): **2\*3#** |
+| # | Retry entering the command | If you made a mistake while entering the command, press “#” on the phone’s keyboard and enter the command again. |
 
 ## Description of *TrikdisConfig* windows
 
@@ -910,13 +901,13 @@ Perform these actions if you want to control a PGM output remotely:
 
 Once the ***FIRECOM*** is connected, ***TrikdisConfig*** will display information about the connected device in its status bar.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
+<img alt="" src="./image73.webp" style="width:7.0in;height:in" />
 
 | Name           | Description                                         |
-|----------------|-----------------------------------------------------|
+| -------------- | --------------------------------------------------- |
 | IMEI/​Unique ID | Device’s IMEI number                                |
 | Status         | Operational state                                   |
-| Device         | Device type (must show FC_xxxx)                     |
+| Device         | Device type (must show **FC_xxxx**)                 |
 | SN             | Device’s serial number                              |
 | BL             | Bootloader version                                  |
 | FW             | Device’s firmware version                           |
@@ -924,11 +915,11 @@ Once the ***FIRECOM*** is connected, ***TrikdisConfig*** will display informatio
 | State          | Type of connection with the program (USB or remote) |
 | Role           | Access level (shown after access code is approved)  |
 
-When the **Read \[F4\]** button is clicked, the program will read and show settings currently saved on the ***FIRECOM***. With ***TrikdisConfig***, set the required parameters using the following program window descriptions.
+When the **Read [F4]** button is clicked, the program will read and show settings currently saved on the ***FIRECOM***. With ***TrikdisConfig***, set the required parameters using the following program window descriptions.
 
 ### “System Options” window
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
+<img alt="" src="./image74.webp" style="width:7.0in;height:in" />
 
 **“System general” tab** **“General” settings group**
 
@@ -956,9 +947,9 @@ When the **Read \[F4\]** button is clicked, the program will read and show setti
 
 **“SIM” settings group**
 
-- Enter the “**SIM card PIN”** code**.**
+- Enter the “**SIM card PIN”** code. 
 
-  - **APN** – network service provider’s mobile internet access point name. You must enter the **APN** if event messages will have to be sent to ***Protegus2*** app or to the CMS via GPRS.
+- **APN** – network service provider’s mobile internet access point name. You must enter the **APN** if event messages will have to be sent to ***Protegus2*** app or to the CMS via GPRS.
 
 - If required by the GPRS network service provider, enter the **APN** user name and password in the fields **Login** and **Password**.
 
@@ -972,7 +963,7 @@ You can set the time by clicking the “**Set PC time”** button. If “**Disab
 
 - **Time zone (hours)** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+3**.
 
-- **Time set** – specify a server to synchronize the ****FIRECOM***’s* internal clock with. Synchronization occurs after the communicator is powered on.
+- **Time set** – specify a server to synchronize the ***FIRECOM***’s internal clock with. Synchronization occurs after the communicator is powered on.
 
 - **Daylight saving time** – if you check the box, the communicator’s internal clock will be automatically switched to summer or winter time.
 
@@ -980,13 +971,13 @@ You can set the time by clicking the “**Set PC time”** button. If “**Disab
 
 **“Groups” tab**
 
-<img alt="" src="./image75.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image75.webp" style="width:7.0in;height:in" />
 
-Zones can be assigned to groups. The name of each group can be changed. Group names will be visible in ***Protegus2***.
+Zones can be assigned to groups. The name of each group can be changed. **Group** names will be visible in ***Protegus2***.
 
 **“Access” tab**
 
-<img alt="" src="./image76.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="" src="./image76.webp" style="width:7.0in;height:in" />
 
 **Settings group “Access codes”**
 
@@ -997,7 +988,9 @@ Zones can be assigned to groups. The name of each group can be changed. Group na
 - **Installer Code** – gives limited access to changing the communicator’s configuration (default code – 654321).
 
 !!! note
-    If the default *administrator code* is set (123456), after pressing **Read \[F4\]** the program will immediately show the current operational parameters of the device without asking for the code. **Settings group “Installer permissions”**
+    If the default administrator code is set (123456), after pressing **Read [F4]** the program will immediately show the current operational parameters of the device without asking for the code. 
+
+**Settings group “Installer permissions”**
 
 The administrator can set which parameters can be changed by the installer.
 
@@ -1005,7 +998,7 @@ The administrator can set which parameters can be changed by the installer.
 
 **“Reporting” tab**
 
-<img alt="" src="./image77.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
+<img alt="" src="./image77.webp" style="width:7.0in;height:in" />
 
 The communicator sends messages to the Central Monitoring Station using internet (IP).
 
@@ -1035,7 +1028,7 @@ Enable backup channel mode to allow messages to be sent using the backup channel
 
 **“Settings” tab**
 
-<img alt="" src="./image78.webp" style="width:7.086614173228346in;height:3.8464566929133857in" />
+<img alt="" src="./image78.webp" style="width:7.0in;height:in" />
 
 **Settings group “Settings”**
 
@@ -1098,7 +1091,7 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **“Users” tab**
 
-<img alt="" src="./image79.webp" style="width:7.086614173228346in;height:2.748031496062992in" />
+<img alt="" src="./image79.webp" style="width:7.0in;height:in" />
 
 **Settings group “Users & Reporting to User”**
 
@@ -1118,11 +1111,11 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **“Protegus” tab**
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image80.webp" style="width:7.0in;height:in" />
 
 **Settings group “Cloud application”**
 
-- **Enable cloud service** – enable Protegus 2 service to allow the ***FIRECOM*** to exchange data with the ***Protegus2*** app and remotely configure the device using ***TrikdisConfig***.
+- **Enable cloud service** – enable ***Protegus*** 2 service to allow the ***FIRECOM*** to exchange data with the ***Protegus2*** app and remotely configure the device using ***TrikdisConfig***.
 
 - **Parallel reporting** – enable parallel message sending via the “**Primary channel”** and to ***Protegus2***.
 
@@ -1130,7 +1123,7 @@ For setting parameters on how the communicator will communicate with the CMS cha
 
 **“SMS answer texts” tab**
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
+<img alt="" src="./image81.webp" style="width:7.0in;height:in" />
 
 **Settings group “SMS answer texts”**
 
@@ -1140,7 +1133,7 @@ The text for answers to commands sent using SMS messages can be customized in th
 
 **“RS485 modules” tab**
 
-<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:2.921259842519685in" />
+<img alt="" src="./image82.webp" style="width:7.0in;height:in" />
 
 **Settings group “RS485 modules”**
 
@@ -1154,7 +1147,7 @@ The text for answers to commands sent using SMS messages can be customized in th
 
 - **Firmware version** – the firmware version will be shown when the ***FIRECOM*** finds the connected module.
 
-<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:3.625984251968504in" />
+<img alt="" src="./image83.webp" style="width:7.0in;height:in" />
 
 **Settings group “RS485 2 modules”**
 
@@ -1164,7 +1157,7 @@ Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, 
 
 **“Zones settings” tab**
 
-<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.688976377952756in" />
+<img alt="" src="./image84.webp" style="width:7.0in;height:in" />
 
 - **Zone No** – zone’s number on the list.
 
@@ -1174,7 +1167,7 @@ Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, 
 
 - **Group** - assigning a zone to a group.
 
-- **Type** – choose the type of circuit connected to the zone input IN from a list: NC – normally closed; NO – normally open; EOL – with an end of line resistor; EOL_T – with an end of line resistor and tamper monitoring; ATZ – two zone normally closed circuit with end of line resistors, without tamper monitoring function (to use this type, choose the second ATZ zone in the input list); ATZ_T – two zone normally closed circuit with end of line resistors, with tamper monitoring function (to use this type, choose the second ATZ zone in the input list).
+- **Type** – choose the type of circuit connected to the zone input IN from a list: **NC** – normally closed; **NO** – normally open; **EOL** – with an end of line resistor; **EOL_T** – with an end of line resistor and tamper monitoring; **ATZ** – two zone normally closed circuit with end of line resistors, without tamper monitoring function (to use this type, choose the second ATZ zone in the input list); **ATZ_T** – two zone normally closed circuit with end of line resistors, with tamper monitoring function (to use this type, choose the second ATZ zone in the input list).
 
 - **CMS** – if the box is ticked, messages about zone events will be sent to the CMS (central monitoring station).
 
@@ -1184,9 +1177,9 @@ Fire panels (with **ESPA4.4.4** protocol, **NSC solution**, **INIM smartline**, 
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:2.0866141732283463in" />
+<img alt="" src="./image85.webp" style="width:7.0in;height:in" />
 
-This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window.
+**This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window.**
 
 - **Zn** – zone number with an event identification word. Can be “**Event**” or “**Restore**”.
 
@@ -1194,7 +1187,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 **“Zone’s codes” tab**
 
-<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image86.webp" style="width:7.0in;height:in" />
 
 When the zone is triggered, the communicator will send an event message. The input is assigned a Contact ID (SIA) code, which will be sent to CMS and ***Protegus2***.
 
@@ -1214,7 +1207,7 @@ When the zone is triggered, the communicator will send an event message. The inp
 
 **“Outputs” tab**
 
-<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.9606299212598426in" />
+<img alt="" src="./image87.webp" style="width:7.0in;height:in" />
 
 - **PGM No** – PGM output’s number on the list.
 
@@ -1232,7 +1225,7 @@ When the zone is triggered, the communicator will send an event message. The inp
 
 **“Set Action” tab**
 
-<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image88.webp" style="width:7.0in;height:in" />
 
 - **ID** – output’s number on the list.
 
@@ -1256,7 +1249,7 @@ When the zone is triggered, the communicator will send an event message. The inp
 
 - **Start when** – you can set an additional condition when to turn on the output OUT depending on the “**Factor**” event.
 
-- **Set value** – depending on the condition chosen in the “**Factor”** column a value (text of received SMS message) can be specified. If this value is identified, the action (chosen in the “**Action”** column) will be performed. The text of the SMS message can be separated by using % symbols. % symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
+- **Set value** – depending on the condition chosen in the “**Factor”** column a value (text of received SMS message) can be specified. If this value is identified, the action (chosen in the “**Action”** column) will be performed. The text of the SMS message can be separated by using **%** symbols. **%** symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
 
 **%…..%** - part of the received SMS message text must match with the text entered between % symbols (e.g. **%hoUSe%**. The text in an SMS message must include the text “**hoUSe**”. Example of an SMS message: **VacationhoUSe25864**).
 
@@ -1268,7 +1261,7 @@ The SMS message text is case-sensitive.
 
 **“Scheduler” tab**
 
-<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="" src="./image89.webp" style="width:7.0in;height:in" />
 
 - **ID** – schedule’s number on the list.
 
@@ -1282,9 +1275,9 @@ The SMS message text is case-sensitive.
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image90.webp" style="width:7.0in;height:in" />
 
-This tab will only be displayed if there is at least one user phone number in the “Users & Reporting” window. These settings can only be made for the first 8 users.
+**This tab will only be displayed if there is at least one user phone number in the “Users & Reporting” window**. These settings can only be made for the first 8 users.
 
 - **PGM** – the number of output OUT and turn on/off event type (“**Event**” – output OUT turn on event and “**Restore**” – OUT turn off event).
 
@@ -1292,7 +1285,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 ### “Sensors” windows
 
-<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="" src="./image91.webp" style="width:7.0in;height:in" />
 
 - **ID** – temperature sensor’s number on the list.
 
@@ -1306,7 +1299,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 - **Min** – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the “**Low**” box must be ticked.
 
-- **Delay** - an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
+- **Delay** - an event will be sent if the measured value (**Max** or **Min**) by the sensor is exceeded within the set time. Delay time is entered in minutes.
 
 - **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in the “**Module type**” column).
 
@@ -1314,7 +1307,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 **“Events” tab**
 
-<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="" src="./image92.webp" style="width:7.0in;height:in" />
 
 - **ID** – event’s number on the list.
 
@@ -1324,7 +1317,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 - **CMS** – messages about chosen events will be sent to CMS.
 
-- **Prot**. – notifications about chosen events will be sent to Protegus 2 app.
+- **Prot**. – notifications about chosen events will be sent to ***Protegus*** 2 app.
 
 - **CID Code** – event’s Contact ID code.
 
@@ -1334,9 +1327,9 @@ This tab will only be displayed if there is at least one user phone number in th
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="" src="./image93.webp" style="width:7.0in;height:in" />
 
-This tab will only be displayed if there is at least one user phone number in the “Users & Reporting” window
+**This tab will only be displayed if there is at least one user phone number in the “Users & Reporting” window**
 
 - **ID** – number and identification word (**Event**, **Restore**) of the event.
 
@@ -1346,7 +1339,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 ### “Events Log” window
 
-<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="" src="./image94.webp" style="width:7.0in;height:in" />
 
 - **Read Log** button – for reading the event log from the device’s memory.
 
@@ -1358,7 +1351,7 @@ This tab will only be displayed if there is at least one user phone number in th
 
 To restore the communicator’s default settings, click the ***TrikdisConfig*** button “**Restore**”.
 
-<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:1.0905511811023623in" />
+<img alt="" src="./image95.webp" style="width:7.0in;height:in" />
 
 ## Setting parameters remotely
 
@@ -1367,16 +1360,16 @@ To restore the communicator’s default settings, click the ***TrikdisConfig*** 
 
     1.  Has an inserted and activated SIM card with the PIN code entered or
         disabled.
-
+    
     2.  Has Protegus service enabled. See **6.4 "Users & Reporting"
         window**.
-
+    
     3.  Has the power switched on ("**STA**" LED must be blink green);
-
+    
     4.  Is connected to a network (the "**SIM**" LED must be green solid and
         blink yellow; or/and "**ETH**" LED is green when connected to LAN
         network).
-
+    
     If "**SIM**" is yellow solid or "**DAT**" is yellow solid, the device
     cannot connect to GSM and/or ***Protegus2***.
 
@@ -1384,15 +1377,15 @@ To restore the communicator’s default settings, click the ***TrikdisConfig*** 
 
 2.  In the “**Remote access”** window, enter the communicator’s “**Unique ID**” number. You can find this number on the back of the device and on the device’s packaging.
 
-<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.3897637795275593in" />
+<img alt="" src="./image96.webp" style="width:7.0in;height:in" />
 
 3.  (Optional) Enter a desired name for the communicator in the “**System Name**” field.
 
 4.  Click “**Configure**”.
 
-5.  In the window that opens, click **Read \[F4\]**. If prompted, enter the administrator or installer code.
+5.  In the window that opens, click **Read [F4]**. If prompted, enter the administrator or installer code.
 
-6.  When you are finished setting the desired parameters, click **Write \[F5\]**. If you are done working with ***TrikdisConfig***, click “**Disconnect**”.
+6.  When you are finished setting the desired parameters, click **Write [F5]**. If you are done working with ***TrikdisConfig***, click “**Disconnect**”.
 
 ## Communicator testing
 
@@ -1417,11 +1410,11 @@ When configuration and installation are complete, perform a system check:
 
 4.  Open the ***TrikdisConfig*** window “**Firmware**”.
 
-<img alt="" src="./image97.webp" style="width:7.086614173228346in;height:2.921259842519685in" />
+<img alt="" src="./image97.webp" style="width:7.0in;height:in" />
 
 5.  Click the button “**Open firmware**” and choose the required firmware file.
 
-6.  Click the **Update \[F12\]** button.
+6.  Click the **Update [F12]** button.
 
 7.  Wait for the update to finish.
 
