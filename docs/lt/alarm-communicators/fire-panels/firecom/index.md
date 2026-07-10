@@ -113,14 +113,14 @@ Pranešimai saugos tarnybai
 | Didžiausias temperatūros jutiklių, jungiamų prie 1-Wire magistralės, skaičius | 8 (Dallas) arba 1 (jei naudojamas AM2301 serijos jutiklis) |
 | RS485 magistralė | 2 vnt. |
 | RS485 magistralės ilgis | Iki 100 m |
-| Palaikomi moduliai | iO-8 - plėtimo modulis;​ /​ iO-MO – iO-WL radijo bangų imtuvas;​ /​ iO-LORA – plėtimo modulis;​ /​ iO8-LORA – plėtimo modulis;​ /​ PB-LORA – panikos mygtukas;​ /​ REL-LORA - plėtimo modulis;​ /​ priešgaisrinė centralė su ESPA 4.4.4 sąsaja;​ /​ NSC Solution - priešgaisrinė centralė;​ /​ INIM Smartline - priešgaisrinė centralė;​ /​ C-TEC Cast ZFP – priešgaisrinė centralė. |
+| Palaikomi moduliai | **iO-8** - plėtimo modulis;​ /​ **iO-MO** – **iO-WL** radijo bangų imtuvas;​ /​ **iO-LORA** – plėtimo modulis;​ /​ **iO8-LORA** – plėtimo modulis;​ /​ **PB-LORA** – panikos mygtukas;​ /​ **REL-LORA** - plėtimo modulis;​ /​ priešgaisrinė centralė su **ESPA 4.4.4** sąsaja;​ /​ **NSC Solution** - priešgaisrinė centralė;​ /​ **INIM Smartline** - priešgaisrinė centralė;​ /​ **C-TEC Cast ZFP** – priešgaisrinė centralė; **Polon-Alfa 3000** - priešgaisrinė centralė. |
 | Darbo aplinkos sąlygos | Temperatūra nuo -10 °C iki +50 °C, santykinė drėgmė – iki 80% prie +20 °C. |
 | Komunikatoriaus matmenys | 235 x 205 x 92 mm |
 | Svoris | 1.35 kg |
 
 ### Komunikatoriaus FIRECOM elementai 
 
-<img src="./image4.webp" alt="Komunikatoriaus FIRECOM elementai" style="width: 100%; height: auto;" />
+<img src="./image4.webp" alt="Komunikatoriaus FIRECOM elementai" style="width: 7.0in; height: in;" />
 
 1. Ryšio ir veikimo šviesinė indikacija
 2. Mygtukas
@@ -234,15 +234,17 @@ Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojama
     neteikiamas.
 ## Sistemos įrengimas 
 
+Komunikatoriaus plokštė sumontuota montavimo korpuse, kuriame jau yra nuolatinės srovės maitinimo šaltinis su įmontuotu 3,15 A saugikliu, taip pat yra vietos akumuliatoriui įdėti.
+
 **FIRECOM plokštės matmenys**
 
 Paveikslėlyje pateiktos komunikatoriaus plokštės ir jos tvirtinimo kiaurymių matmenys (pateikta milimetrais), bei jų išdėstymas.
 
-<img alt="" src="./image5.webp" style="width:6.080012029746282in;height:4.020007655293089in" />
+<img alt="" src="./image5.webp" style="width:6.0in;height:in" />
 
 ### Prietaisų prijungimo eiliškumas
 
-<img alt="" src="./image6.webp" style="width:7.086805555555555in;height:3.7111111111111112in" />
+<img alt="" src="./image6.webp" style="width:7.0;height:in" />
 
 1.  Jei naudojate SIM kortelę, į SIM kortelės laikiklį įdėkite prie mobiliojo tinklo jau priregistruotą SIM kortelę.
 
@@ -266,36 +268,37 @@ Komunikatoriaus plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių gr
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 40%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 45%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image14.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
 </div>
+
 
 ### Dūmų jutiklių jungimas 
 
@@ -303,17 +306,17 @@ Dvilaidžių dūmų jutiklių prijungimo schemos.
 
 Dvilaidžių dūmų jutiklių prijungimo schema prie „**FLOOP**“ išėjimo. Kai yra naudojama šia jungimo schema, reikia lange **„Zonų įėjimai“** nurodyti „**Įėjimo**“ tipą „**Priešgaisrinis jutiklis (2laidis)**“. Dūmų jutiklių aliarmo srovė turi būti didesnė nei 10 mA. Prie „**FLOOP**“ išvesties galima prijungti iki 8 dūmų jutiklių.
 
-<img alt="" src="./image15.webp" style="width:5.006676509186351in;height:1.2766688538932633in" />
+<img alt="" src="./image15.webp" style="width:5.0in;height:in" />
 
 Dvilaidžių dūmų jutiklių su reliniu moduliu SM1 prijungimo schemos. Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia aktyvuoti įėjimą (IOx) ir nustatyti grandinės tipą (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (žr. 6.6 „Langas „Zonų įėjimai“). Jungiant dūmų jutiklio maitinimo grandinę prie PGM išėjimo (IO10), išėjimui turi būti su nustatyta funkcija „**Gaisro jutiklių atstatymas**“ (žr. 6.7 „Langas „PGM išėjimai““).
 
 \* Relė (K1) naudojama nutrūkusio laido ir nuimto gaisro detektoriaus aptikimui. Jei nenaudojate relės (K1), kontaktas K1 turi būti užtrumpintas.
 
-<img alt="" src="./image16.webp" style="width:5.880012029746282in;height:2.07667104111986in" />
+<img alt="" src="./image16.webp" style="width:6.0in;height:in" />
 
 Arba
 
-<img alt="" src="./image17.webp" style="width:5.880012029746282in;height:2.3133377077865265in" />
+<img alt="" src="./image17.webp" style="width:6.0in;height:in" />
 
 Keturlaidžių dūmų jutiklių prijungimo schema.
 
@@ -321,18 +324,19 @@ Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia aktyv
 
 \* Relė (K1) naudojama nutrūkusio laido ir nuimto gaisro detektoriaus aptikimui. Jei nenaudojate relės (K1), kontaktas K1 turi būti užtrumpintas.
 
-<img alt="" src="./image18.webp" style="width:5.956678696412949in;height:1.4466699475065616in" />
+<img alt="" src="./image18.webp" style="width:6.0in;height:in" />
 
 ### Priešgaisrinės centralės ir komunikatoriaus jungimo schema 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image19.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image20.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
 </div>
+
 
 Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus jo išėjimus prie ***FIRECOM*** įėjimų. Priešgaisrinės centralės išėjimai (PGM1, PGM2, PGM3) turi būti sukonfigūruoti kaip centralės būsenos išėjimai (Aliarmas, Gedimas ir kt.).
 
@@ -340,10 +344,10 @@ Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
 </div>
 
@@ -355,19 +359,19 @@ Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus
 
 3.  ***FIRECOM*** komunikatoriaus ir gaisro centralės duomenų perdavimo parametrai turi būti vienodi.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.748031496062992in" />
+<img alt="" src="./image23.webp" style="width:7.0in;height:in" />
 
 4. Įveskite vartotojų, kurie turėtų gauti žinutes iš ***FIRECOM***, telefono numerius ir el. pašto adresus.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
+<img alt="" src="./image24.webp" style="width:7.0in;height:in" />
 
 5. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite laukelį **SMS** (arba **Skamb.**).
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.8346456692913384in" />
+<img alt="" src="./image25.webp" style="width:7.0in;height:in" />
 
 6. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą. Įvykių pranešimai perduodami naudojant SIA DC-09 protokolą.
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image26.webp" style="width:7.0in;height:in" />
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2***.
 
@@ -375,12 +379,13 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image27.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image28.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
 </div>
+
 
 ***FIRECOM*** komunikatoriaus nustatymai su ***TrikdisConfig*** jungiant su **NSC Solution** priešgaisrine centrale.
 
@@ -388,19 +393,19 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 2.  „**NSC slave adresas**“ neturėtų sutapti su prijungtų priešgaisrinės centralės modulių adresais.
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.141732283464567in" />
+<img alt="" src="./image29.webp" style="width:7.0in;height:in" />
 
 3. Įveskite vartotojų, kurie turėtų gauti žinutes iš ***FIRECOM***, telefono numerius ir el. pašto adresus.
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image30.webp" style="width:7.0in;height:in" />
 
 4. Vartotojai gaus SMS žinutes ir skambučius apie pažymėtus įvykius. CID stulpelyje galite pridėti papildomų CID įvykių kodų. Prie naujų kodų turite įvesti SMS žinučių tekstus. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite „**SMS**“ (arba „**Skamb.**“) laukelį.
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image31.webp" style="width:7.0in;height:in" />
 
 5. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image32.webp" style="width:7.0in;height:in" />
 
 Sukonfigūravus komunikatorių ***FIRECOM***, įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Centralėje būtina nuskaityti modulius, prijungtus prie RS485 magistralės. Priešgaisrinėje centralėje paspauskite: **PROG.>INSTALLER>(įveskite instaliuotojo kodą) 00000 OK>(pasirinkite) SETTINGS>ENTER>(pasirinkite) SCAN RS485>ENTER**. Palaukite, kol nuskaitymas bus baigtas. Grįžkite į pagrindinį ekraną du kartus paspausdami „**CANCEL**“.
 
@@ -410,16 +415,16 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image33.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image34.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
 </div>
 
 **INIM Smartline** centralei reikia nustatyti „**Slave**“ režimą, kai ji prijungta prie komunikatoriaus per RS485 sąsają.
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="" src="./image35.webp" style="width:7.0in;height:in" />
 
 !!! note "Pastaba"
     Jei prie **INIM Smartline** centralės prijungti kartotuvai, tai
@@ -430,19 +435,19 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 1.  Pasirinkite **Inim Smartline** priešgaisrine centrale.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
+<img alt="" src="./image36.webp" style="width:7.0in;height:in" />
 
 2. Įveskite vartotojų, kurie turėtų gauti žinutes iš ***FIRECOM***, telefono numerius ir el. pašto adresus.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="" src="./image37.webp" style="width:7.0in;height:in" />
 
 3. Vartotojai gaus SMS žinutes ir skambučius apie pažymėtus įvykius. CID stulpelyje galite pridėti papildomų CID įvykių kodų. Prie naujų kodų turite įvesti SMS žinučių tekstus. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite „**SMS**“ (arba „**Skamb.**“) laukelį.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="" src="./image38.webp" style="width:7.0in;height:in" />
 
 4. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2***.
 
@@ -450,10 +455,10 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
 </div>
 
@@ -461,49 +466,49 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 1.  Pasirinkite **C-TEC Cast ZFP** priešgaisrine centrale.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
+<img alt="" src="./image42.webp" style="width:7.0in;height:in" />
 
 2. Įveskite vartotojų, kurie turėtų gauti žinutes iš ***FIRECOM***, telefono numerius ir el. pašto adresus.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="" src="./image43.webp" style="width:7.0in;height:in" />
 
 3. Vartotojai gaus SMS žinutes ir skambučius apie pažymėtus įvykius. CID stulpelyje galite pridėti papildomų CID įvykių kodų. Prie naujų kodų turite įvesti SMS žinučių tekstus. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite „**SMS**“ (arba „**Skamb.**“) laukelį.
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
+<img alt="" src="./image44.webp" style="width:7.0in;height:in" />
 
 4. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="" src="./image45.webp" style="width:7.0in;height:in" />
 
 Įdiekite **ZFPtools** programą savo kompiuteryje. Paleiskite programą **ZFPtools**. Įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Prijunkite USB2.0 A-B kabelį tarp priešgaisrinės centralės ir kompiuterio.
 
 1. Atidarykite „**Node View**“ skirtuką.
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="" src="./image46.webp" style="width:7.0in;height:in" />
 
 2. Nuskaitykite priešgaisrinės centralės nustatymus.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="" src="./image47.webp" style="width:7.0in;height:in" />
 
 3. Įveskite kodą (gamyklinis kodas – 4444).
 
 4.  Spustelėkite „**ОК**“.
 
-<img alt="" src="./image48.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="" src="./image48.webp" style="width:3.5in;height:in" />
 
 5. Pasirinkite „**BMS Interface**“.
 
 6.  Spustelėkite laisvą piktogramą.
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="" src="./image49.webp" style="width:7.0in;height:in" />
 
 7. Spustelėkite „**Edit Devices**“.
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image50.webp" style="width:7.0in;height:in" />
 
 8. Skirtuke „**Device**“ įveskite sistemos pavadinimą.
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="" src="./image51.webp" style="width:7.0in;height:in" />
 
 9. Skirtuke „**Properties**“ įveskite sistemos pavadinimą.
 
@@ -513,21 +518,87 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 12. Įrašykite nustatymus į priešgaisrinę centralę.
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="" src="./image52.webp" style="width:7.0in;height:in" />
 
 13. Įveskite kodą (gamyklinis kodas – 4444).
 
 14. Spustelėkite „**OK**“.
 
-<img alt="" src="./image53.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="" src="./image53.webp" style="width:3.5in;height:in" />
 
 Priešgaisrinė centralė užprogramuota. Atjunkite USB2.0 A-B kabelį nuo priešgaisrinės centralės.
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2***.
 
+
+
+### Priešgaisrinės centralės Polon-Alfa 3000 prijungimo schema 
+
+***FIRECOM\*** **komunikatorius prijungtas prie POLON-ALFA 3000 centralės per RS485 magistralę.** 
+
+<img alt="" src="./image100.webp" style="width:7.0in;height:in" />                               
+
+***FIRECOM\*** komunikatoriaus nustatymai su ***TrikdisConfig\***. 
+
+1. Pasirinkite **POLON-ALFA 3000**. 
+
+2. Pasirinkite ryšio tipą **RS485**. 
+
+    <img alt="" src="./image101.webp" style="width:7.0in;height:in" />
+
+3. Įveskite vartotojų, kurie turėtų gauti žinutes iš ***FIRECOM\***, telefono numerius ir el. pašto adresus. 
+
+   <img alt="" src="./image102.webp" style="width:7.0in;height:in" /> 
+
+4. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite laukelį **SMS** (arba **Skamb.**).  
+
+   <img alt="" src="./image103.webp" style="width:7.0in;height:in" />
+
+5. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.  <img alt="" src="./image104.webp" style="width:7.0in;height:in" />
+
+**Polon-Alfa 3000**  priešgaisrinės signalizacijos centralė su **MK-30** moduliu turi būti  sukonfigūruota naudojant **Polon Studio** programa, kad ji veiktu per  „Modbus RTU“ (RS485) protokolą.
+
+<img alt="" src="./image111.webp" style="width:3.5in;height:in" />
+
+Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM\*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2\***. 
+
+***FIRECOM\*** **komunikatorius ir Polon-Alfa 3000 priešgaisrinės signalizacijos centralė prijungti prie to paties LAN tinklo.** <img alt="" src="./image105.webp" style="width:7.0in;height:in" />
+
+***FIRECOM\*** komunikatoriaus nustatymai su ***TrikdisConfig\***. 
+
+1. Pasirinkite **Polon-Alfa 3000**. 
+
+2. Pasirinkite ryšio tipą **TCP**. 
+
+3. Įveskite **Polon-Alfa 3000** priešgaisrinės centralės IP adresą.  
+
+   <img alt="" src="./image106.webp" style="width:7.0in;height:in" />
+
+4. Pažymėkite langelį „**Automatinis**“ (automatinis registracijos režimas), kad komunikatorius ***FIRECOM\*** automatiškai nuskaitytų tinklo nustatymus (potinklio kaukę, šliuzą) ir jam bus priskirtas IP adresas. 
+
+    <img alt="" src="./image107.webp" style="width:7.0in;height:in" />
+
+5. Įveskite vartotojų, kurie turėtų gauti žinutes iš ***FIRECOM\***, telefono numerius ir el. pašto adresus.  
+
+   <img alt="" src="./image108.webp" style="width:7.0in;height:in" />
+
+6. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite laukelį **SMS** (arba **Skamb.**).  
+
+   <img alt="" src="./image109.webp" style="width:7.0in;height:in" />
+
+7. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.  
+
+   <img alt="" src="./image110.webp" style="width:7.0in;height:in" />
+
+**Polon-Alfa 3000**  priešgaisrinės signalizacijos centralė su **MK-30** moduliu turi būti  sukonfigūruota naudojant **Polon Studio** programą, kad ji veiktu per LAN  tinklą. LAN tinklo IP adresai turi būti įvesti pagal jūsų tinklo nustatymus.  
+
+<img alt="" src="./image112.webp" style="width:3.5in;height:in" />
+
+Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM\*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2\***. 
+
 ### Temperatūros jutiklio prijungimo schema 
 
-<img alt="" src="./image54.webp" style="width:3.5400076552930884in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.5400076552930884in;height:1.3200021872265966in" />
+<img alt="" src="./image54.webp" style="width:4.0in;height:in" /> / <img alt="" src="./image55.webp" style="width:4.0in;height:in" />
 
 Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie komunikatoriaus ***FIRECOM*** galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (iki 8 vnt.) arba temperatūros ir drėgmės jutiklį AM2301 (1 vnt.). 
 Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). 
@@ -536,7 +607,7 @@ Plokštės gnybtas „**+5V**“ skirtas prie „**1-Wire**“ magistralės prij
 
 ### Relės, LED indikatoriaus prijungimo schemos 
 
-<img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
+<img alt="" src="./image56.webp" style="width:3.0in;height:in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo (**I/O**) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas „**Nuotolinis valdymas**“.
 
@@ -544,7 +615,7 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
 
 Pagal EN54 standartą gaisrinė centralė iš komunikatoriaus turi gauti informaciją apie ryšio su stebėjimo pultu gedimą, taip pat apie sėkmingą pranešimo gavimą į CSP. Prijunkite komunikatoriaus PGM išėjimus (pvz.: „**Relay1**“ ir „**Relay2**“) prie specialių gaisrinės centralės įėjimų. „**Relay1**“ PGM išėjimui turi būti nustatytas „**Pulto kanalo sutrikimas**“ režimas. „**Relay2**“ PGM išėjimui turi būti nustatytas „**Patvirtinimas gautas**“ režimas. „**Relay1**“ išėjimas aktyvuojamas kai dingsta ryšys su stebėjimo pultu. „**Relay2**“ išėjimas aktyvuojamas 5 sek. sėkmingai išsiuntus pranešimą stebėjimo pultui.
 
-<img alt="" src="./image58.webp" style="width:3.38000656167979in;height:1.660003280839895in" />
+<img alt="" src="./image58.webp" style="width:4.0in;height:in" />
 
 ### iO serijos išplėtimo modulių prijungimo schemos 
 
@@ -552,16 +623,17 @@ Jei reikia, kad komunikatorius ***FIRECOM*** turėtų daugiau įėjimų IN arba 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image59.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image59.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image60.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image60.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
 </div>
 
+
 **LORA** plėtimo modulių prijungimo schema
 
-<img alt="" src="./image61.webp" style="width:5.57667760279965in;height:6.636679790026247in" />
+<img alt="" src="./image61.webp" style="width:6.0in;height:in" />
 
 ### Komunikatoriaus įjungimas 
 
@@ -596,7 +668,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image62.webp" style="width:7.0in;height:in" />
 
 1.  Įveskite **SIM kortelės PIN kodą**.
 
@@ -604,7 +676,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 **Lange „Vartotojai ir pranešimai“:**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image63.webp" style="width:7.0in;height:in" />
 
 3. Pažymėkite varnele „**Įgalinti jungimąsi**“ prie ***Protegus2*** serviso.
 
@@ -612,29 +684,28 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 **Lange „Pranešimai į ST pultą“:**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:3.5669291338582676in" />
+<img alt="" src="./image64.webp" style="width:7.0in;height:in" />
 
-3. Jei prie komunikatoriaus prijungtas LAN kabelis, tai pažymėkite langelį „**Automatinis**“ (automatinis registracijos režimas), kad komunikatorius ***FIRECOM*** automatiškai nuskaitytų tinklo nustatymus (potinklio kaukę, šliuzą) ir jam bus priskirtas IP adresas.
-
-2.  Nustatomi parametrai, kaip komunikatorius siųs pranešimus į ***Protegus2***. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į ***Protegus2***, tai „**Grįžimą į pagrindinį**“ ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
+5. Jei prie komunikatoriaus prijungtas LAN kabelis, tai pažymėkite langelį „**Automatinis**“ (automatinis registracijos režimas), kad komunikatorius ***FIRECOM*** automatiškai nuskaitytų tinklo nustatymus (potinklio kaukę, šliuzą) ir jam bus priskirtas IP adresas. 
+6. Nustatomi parametrai, kaip komunikatorius siųs pranešimus į ***Protegus2***. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į ***Protegus2***, tai „**Grįžimą į pagrindinį**“ ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
 
 **Lange „Zonų įėjimai“:**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="" src="./image65.webp" style="width:7.0in;height:in" />
 
-3. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į ***Protegus2*** apie zonų būsenos pasikeitimus.
+7. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į ***Protegus2*** apie zonų būsenos pasikeitimus.
 
 **Lange „PGM išėjimai“:**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image66.webp" style="width:7.0in;height:in" />
 
-4. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į ***Protegus2*** apie PGM išėjimų būsenos pasikeitimus.
+8. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į ***Protegus2*** apie PGM išėjimų būsenos pasikeitimus.
 
 **Lange „Sistemos įvykiai“:**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.267716535433071in" />
+<img alt="" src="./image67.webp" style="width:7.0in;height:in" />
 
-5. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į ***Protegus2*** apie komunikatoriaus vidinių įvykių būsenos pasikeitimus.
+9. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į ***Protegus2*** apie komunikatoriaus vidinių įvykių būsenos pasikeitimus.
 
 Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
@@ -645,7 +716,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image68.webp" style="width:7.0in;height:in" />
 
 1.  Įrašykite **Objekto numerį** (4 simbolių šešioliktainis numeris, 0-9, A-F. **Nenaudokite FFFE, FFFF objekto numerių**.).
 
@@ -655,22 +726,19 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Pranešimai į ST pultą“:**
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:3.8503937007874014in" />
+<img alt="" src="./image69.webp" style="width:7.0in;height:in" />
 
 4. Jei prie komunikatoriaus prijungtas LAN kabelis, tai pažymėkite langelį „**Automatinis**“ (automatinis registracijos režimas), kad komunikatorius ***FIRECOM*** automatiškai nuskaitytų tinklo nustatymus (potinklio kaukę, šliuzą) ir jam bus priskirtas IP adresas.
 
 2.  Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į CSP, tai „**Grįžimą į pagrindinį“** ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
+<img alt="" src="./image70.webp" style="width:7.0in;height:in" />
 
-3. **Ryšio būdas** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai.
-
-2.  **Domenas arba IP** – įrašykite imtuvo domeno arba IP adresą.
-3. **Prievadas** – įrašykite imtuvo prievado (*angl. port*) numerį tinkle.
-
-2.  **Protokolas** – pasirinkite, kuria koduote turėtų būti siunčiami pranešimai: **TRK** (į TRIKDIS imtuvus), **DC-09_2007** arba **DC-09_2012** (į universalius imtuvus), **TL150** (į SUR-GARD imtuvus).
-
-3.  **Šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
+6. **Ryšio būdas** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai. 
+7. **Domenas arba IP** – įrašykite imtuvo domeno arba IP adresą. 
+8. **Prievadas** – įrašykite imtuvo prievado (*angl. port*) numerį tinkle. 
+9. **Protokolas** – pasirinkite, kuria koduote turėtų būti siunčiami pranešimai: **TRK** (į TRIKDIS imtuvus), **DC-09_2007** arba **DC-09_2012** (į universalius imtuvus), **TL150** (į SUR-GARD imtuvus). 
+10. **Šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
 
 !!! note "Pastaba"
     Jei pasirinkote **DC-09** pranešimų perdavimo koduotę, papildomai
@@ -724,7 +792,7 @@ Naudodami ***Protegus2***, sistemos vartotojai gali matyti sistemos būseną ir 
         LAN tinklo).
 3. Paspauskite „Pridėti sistemą“ ir įveskite ***FIRECOM*** „**IMEI/Unikalus ID**“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite mygtuką „**Toliau**“.
 
-<img alt="" src="./image74.webp" style="width:3.0in;height:3.909448818897638in" />
+<img alt="" src="./image74.webp" style="width:4.0in;height:in" />
 
 ### Konfigūravimas ir valdymas SMS žinutėmis 
 
@@ -732,54 +800,59 @@ Naudodami ***Protegus2***, sistemos vartotojai gali matyti sistemos būseną ir 
 
 Saugumui užtikrinti, pakeiskite gamyklinį administratoriaus SMS slaptažodį. Išsiųskite tokio formato SMS žinutę:
 
-**PSW 123456 xxxxxx**
+​	**PSW 123456 xxxxxx**
 
-| **123456** | Gamyklinis administratoriaus slaptažodis         |
-|------------|--------------------------------------------------|
-| **xxxxxx** | Naujasis 6-ženklis administratoriaus slaptažodis |
+**123456**	Gamyklinis administratoriaus slaptažodis
+
+**xxxxxx**	Naujasis 6-ženklis administratoriaus slaptažodis
 
 2.  **Leiskite valdyti kitiems naudotojams**
 
 Sistemą galima valdyti su SMS arba skambučiu tik tais telefono numeriais, kurie yra įrašyti vartotojų sąraše. Iš administratoriaus telefono nusiųskite SMS žinutes su asmenų telefonų numeriais ir vardais, įgalindami juos valdyti sistemą:
 
-**SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
+​	**SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
 
-| **xxxxxx** | 6-ženklis administratoriaus slaptažodis |
-|----|----|
-| **x** | Naudotojo numeris sąraše. (Įrašę 1, perleisite administratoriaus teises kitam asmeniui.) |
-| **PHONENR** | Naudotojo telefono numeris |
-| **NAME** | Naudotojo vardas |
-| **EMAIL** | Naudotojo elektroninis paštas |
+**xxxxxx**		6-ženklis administratoriaus slaptažodis
+
+**x**			Naudotojo numeris sąraše. (Įrašę 1, perleisite administratoriaus teises kitam asmeniui.)
+
+**PHONENR**	Naudotojo telefono numeris
+
+**NAME**		Naudotojo vardas
+
+**EMAIL**		Naudotojo elektroninis paštas
+
+
 
 **SMS komandų sąrašas**
 
 | Komanda | Duomenys | Aprašymas |
 |---------|----------|-----------|
-| INFO |  | Informacijos apie komunikatorių užklausa. Į atsakymą bus įtraukti: objekto pavadinimas, srities būsena, IMEI numeris, GSM signalo lygis, programinės įrangos versija ir gaminio serijos numeris. Pvz.: INFO 123456 |
-| RESET |  | Prietaiso paleidimas veikti iš naujo. Pvz.: RESET 123456 |
-| OUTPUTx | ON | Įjungti išėjimą, kur “x” - išėjimo numeris. Pvz.: OUTPUT1 123456 ON |
-| OUTPUTx | OFF | Išjungti išėjimą, kur “x” - išėjimo numeris. Pvz.: OUTPUT1 123456 OFF |
-| OUTPUTx | PULSE=ttt | Keletui sekundžių įjungti išėjimą - “x” reiškia OUT išėjimo numerį, o “ttt” yra trijų skaitmenų skaičius, reiškiantis impulso trukmę sekundėmis. / Pvz.: OUTPUT1 123456 PULSE=002 |
-| PSW | Naujas slaptažodis | Slaptažodžio keitimas. Pvz.: PSW 123456 654123 |
-| TIME | YYYY/MM/DD,12:00:00 | Datos ir laiko nustatymas. Pvz.: TIME 123456 2023/05/09,12:23:00 |
-| TXTA | Objekto pavadinimas | Objekto vardo įrašymas. Pvz.: TXTA 123456 Namas |
-| RDR | PhoneNR#SMStext | SMS pranešimų peradresavimas į nurodytą numerį. Telefono numeris turi būti su "+" ženklu ir šalies kodu. / Pvz.: RDR 123456 +37061234567#peradresuojamas tekstas |
-| ASKI |  | Siųsti SMS pranešimą apie įėjimų IN būsenas. Pvz.: ASKI 123456 |
-| ASKO |  | Siųsti SMS pranešimą apie išėjimų OUT būsenas. Pvz.: ASKO 123456 |
-| ASKT |  | Siųsti SMS pranešimą apie visų temperatūros jutiklių reikšmes. / Pvz.: ASKT 123456 |
-| FRS |  | Perkrauna gaisro jutiklio išėjimą, jei išėjimui OUT priskirta funkcija „Gaisro jutiklių atstatymas“. Pvz.: FRS 123456 |
-| SETN | PhoneX=PhoneNR#Name#email | Pridėti telefono numerį, vartotojo vardą, elektroninį paštą ir priskirti jį vartotojui „x“. „x“ reiškia telefono numerio eilės numerį sąraše. Telefono numeris turi būti su "+" ženklu ir šalies kodu. Telefono numeris nuo vartotojo vardo turi būti atskirtas # simboliu. / Pvz.: SETN 123456 PHONE5=+37061234567#JONAS#jonas@trikdis.lt |
-| SETN | PhoneX=DEL | Įrašyto telefono numerio ir vartotojo vardo pašalinimas iš sistemos. / Pvz.: SETN 123456 PHONE5=DEL |
-| UUSD | *Uusd code# | Siunčia UUSD kodą operatoriui. Pvz.: UUSD 123456 *245# |
-| CONNECT | Protegus=ON | Prisijungti prie Protegus cloud serviso. / Pvz.: CONNECT 123456 PROTEGUS=ON |
-| CONNECT | Protegus=OFF | Atsijungti nuo Protegus cloud serviso. / Pvz.: CONNECT 123456 PROTEGUS=OFF |
-| CONNECT | Code=123456 | Protegus cloud serviso kodas. Pvz.: CONNECT 123456 CODE=123456 |
-| CONNECT | IP=0.0.0.0:8000 | Nurodomas pagrindinio serverio jungimosi kanalo TCP IP ir Port. / Pvz.: CONNECT 123456 IP=0.0.0.0:8000 |
-| CONNECT | IP=0 | Jei norima išjungti pagrindinį kanalą. Pvz.: CONNECT 123456 IP=0 |
-| CONNECT | ENC=123456 | TRK šifravimo raktas. Pvz.: CONNECT 123456 ENC=123456 |
-| CONNECT | APN=Internet | APN vardas. Pvz.: CONNECT 123456 APN=INTERNET |
-| CONNECT | USER=user | APN naudotojas. Pvz.: CONNECT 123456 USER=User |
-| CONNECT | PSW=password | APN slaptažodis. Pvz.: CONNECT 123456 PSW=Password |
+| INFO |  | Informacijos apie komunikatorių užklausa. Į atsakymą bus įtraukti: objekto pavadinimas, srities būsena, IMEI numeris, GSM signalo lygis, programinės įrangos versija ir gaminio serijos numeris. Pvz.: **INFO 123456** |
+| RESET |  | Prietaiso paleidimas veikti iš naujo. Pvz.: **RESET 123456** |
+| OUTPUTx | ON | Įjungti išėjimą, kur “x” - išėjimo numeris. Pvz.: **OUTPUT1 123456 ON** |
+|  | OFF | Išjungti išėjimą, kur “x” - išėjimo numeris. Pvz.: **OUTPUT1 123456 OFF** |
+|  | PULSE=ttt | Keletui sekundžių įjungti išėjimą - “x” reiškia OUT išėjimo numerį, o “ttt” yra trijų skaitmenų skaičius, reiškiantis impulso trukmę sekundėmis. / Pvz.: **OUTPUT1 123456 PULSE=002** |
+| PSW | Naujas slaptažodis | Slaptažodžio keitimas. Pvz.: **PSW 123456 654123** |
+| TIME | YYYY/MM/DD,12:00:00 | Datos ir laiko nustatymas. Pvz.: **TIME 123456 2026/05/09,10:02:00** |
+| TXTA | Objekto pavadinimas | Objekto vardo įrašymas. Pvz.: **TXTA 123456 Namas** |
+| RDR | PhoneNR#SMStext | SMS pranešimų peradresavimas į nurodytą numerį. Telefono numeris turi būti su "+" ženklu ir šalies kodu. / Pvz.: **RDR 123456 +37061234567#peradresuojamas tekstas** |
+| ASKI |  | Siųsti SMS pranešimą apie įėjimų IN būsenas. Pvz.: **ASKI 123456** |
+| ASKO |  | Siųsti SMS pranešimą apie išėjimų OUT būsenas. Pvz.: **ASKO 123456** |
+| ASKT |  | Siųsti SMS pranešimą apie visų temperatūros jutiklių reikšmes. / Pvz.: **ASKT 123456** |
+| FRS |  | Perkrauna gaisro jutiklio išėjimą, jei išėjimui OUT priskirta funkcija „Gaisro jutiklių atstatymas“. Pvz.: **FRS 123456** |
+| SETN | PhoneX=PhoneNR#Name#email | Pridėti telefono numerį, vartotojo vardą, elektroninį paštą ir priskirti jį vartotojui „x“. „x“ reiškia telefono numerio eilės numerį sąraše. Telefono numeris turi būti su "+" ženklu ir šalies kodu. Telefono numeris nuo vartotojo vardo turi būti atskirtas # simboliu. / Pvz.: **SETN 123456 PHONE5=+37061234567#JONAS#jonas@trikdis.lt** |
+|  | PhoneX=DEL | Įrašyto telefono numerio ir vartotojo vardo pašalinimas iš sistemos. / Pvz.: **SETN 123456 PHONE5=DEL** |
+| UUSD | *Uusd code# | Siunčia UUSD kodą operatoriui. Pvz.: **UUSD 123456 *245#** |
+| CONNECT | Protegus=ON | Prisijungti prie Protegus cloud serviso. / Pvz.: **CONNECT 123456 PROTEGUS=ON** |
+|  | Protegus=OFF | Atsijungti nuo Protegus cloud serviso. / Pvz.: **CONNECT 123456 PROTEGUS=OFF** |
+|  | Code=123456 | Protegus cloud serviso kodas. Pvz.: **CONNECT 123456 CODE=123456** |
+|  | IP=0.0.0.0:8000 | Nurodomas pagrindinio serverio jungimosi kanalo TCP IP ir Port. / Pvz.: **CONNECT 123456 IP=0.0.0.0:8000** |
+|  | IP=0 | Jei norima išjungti pagrindinį kanalą. Pvz.: **CONNECT 123456 IP=0** |
+|  | ENC=123456 | TRK šifravimo raktas. Pvz.: **CONNECT 123456 ENC=123456** |
+|  | APN=Internet | APN vardas. Pvz.: **CONNECT 123456 APN=INTERNET** |
+|  | USER=user | APN naudotojas. Pvz.: **CONNECT 123456 USER=User** |
+|  | PSW=password | APN slaptažodis. Pvz.: **CONNECT 123456 PSW=Password** |
 
 ### PGM išėjimų valdymas skambučiu 
 
@@ -793,7 +866,15 @@ Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 
 | Klaviatūros klavišai | Funkcija | Aprašymas |
 |----------------------|----------|-----------|
-| [išėjimo nr]*[būsenos nr]# | Pasirinkto OUT išėjimo valdymas | Valdo konkretų PGM išėjimą. Būsena: [0] – išėjimas išjungtas; [1] – išėjimas įjungtas; [2] – išjungtas impulso trukmei; [3] – įjungtas impulso trukmei; (impulso trukmė aprašyta ***TrikdisConfig*** programoje, PGM lentelėje). [#] – šis simbolis reiškia kodo pabaigą. Pvz. (įjungti 1 išėjimą): 1*1# Pvz. (išjungti 1 išėjimą): 1*0# Pvz. (įjungti 2 išėjimą „Impulso trukmei“, nurodytai ***TrikdisConfig*** „PGM išėjimai“ lentelėje): 2*3# |
+| [išėjimo nr]*[būsenos nr]# | Pasirinkto OUT išėjimo valdymas | Valdo konkretų PGM išėjimą. Būsena: |
+|  |  | [**0**] – išėjimas išjungtas; |
+|  |  | [**1**] – išėjimas įjungtas; |
+|  |  | [**2**] – išjungtas impulso trukmei; |
+|  |  | [**3**] – įjungtas impulso trukmei; (impulso trukmė aprašyta ***TrikdisConfig*** programoje, PGM lentelėje); |
+|  |  | [**#**] – šis simbolis reiškia kodo pabaigą. |
+|  |  | Pvz. (įjungti 1 išėjimą): **1*1#** |
+|  |  | Pvz. (išjungti 1 išėjimą): **1*0#** |
+|  |  | Pvz. (įjungti 2 išėjimą „Impulso trukmei“, nurodytai ***TrikdisConfig*** „PGM išėjimai“ lentelėje): **2*3#** |
 | # | Įvesti komandą iš naujo | Jei įvedant komandą padarėte klaidą, nuspauskite telefono klaviatūroje „#“ ir įveskite komandą iš naujo. |
 
 ## TrikdisConfig langų aprašymas 
@@ -802,7 +883,7 @@ Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 
 Prijungus komunikatorių ***FIRECOM*** ***TrikdisConfig*** būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image75.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
+<img alt="" src="./image75.webp" style="width:7.0in;height:in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -822,7 +903,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Pagrindiniai“**
 
-<img alt="" src="./image76.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
+<img alt="" src="./image76.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -850,12 +931,13 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Parinkčių grupė „SIM“**
 
-- Įveskite **SIM PIN kodą.** Jei SIM kortelės PIN kodo įvedimo reikalavimas išjungtas, palikite gamyklos nustatytą kodo reikšmę.
-
-  - **APN** – ryšio tiekėjo mobilaus interneto prieigos adresas **APN** būtina įrašyti, kai pranešimai turės būti siunčiami į ***Protegus2*** debesiją arba į CSP per mobilųjį internetą.
+- Įveskite **SIM PIN kodą.** Jei SIM kortelės PIN kodo įvedimo reikalavimas išjungtas, palikite gamyklos nustatytą kodo reikšmę. 
+- **APN** – ryšio tiekėjo mobilaus interneto prieigos adresas **APN** būtina įrašyti, kai pranešimai turės būti siunčiami į ***Protegus2*** debesiją arba į CSP per mobilųjį internetą.
 - Jei SIM kortelės ryšio tiekėjas reikalauja, įveskite **APN** vartotojo vardą ir slaptažodį laukeliuose **Vartotojas** ir **Slaptažodis.**
 
-- **Susieti ICCID** - įveskite SIM kortelės ICCID numerį, jei norite, kad komunikatorius veiktų tik su šia SIM kortele.
+- **Susieti ICCID** - įveskite SIM kortelės ICCID numerį, jei norite, kad komunikatorius veiktų tik su šia SIM kortele. 
+
+- **Operatoriaus kodas** - įvedus mobilaus tinklo operatoriaus kodą, centralė jungsis tik prie pasirinkto operatoriaus tinklo. Mobilaus tinklo operatoriaus kodas susideda iš MCC ir MNS kodų. 
 
 **Parinkčių grupė „Laiko parametrai“**
 
@@ -871,13 +953,13 @@ Nustatyti laiką galima paspaudus mygtuką „**Nustatyti PK**“. Jei „**Laik
 
 **Skirtukas „Grupės“**
 
-<img alt="" src="./image77.webp" style="width:7.086614173228346in;height:1.3818897637795275in" />
+<img alt="" src="./image77.webp" style="width:7.0in;height:in" />
 
 Zonas galima priskirti grupėms. Kiekvienos grupės pavadinimas gali būti pakeistas. Grupės pavadinimas bus matomas ***Protegus2***.
 
 **Skirtukas „Prisijungimas“**
 
-<img alt="" src="./image78.webp" style="width:7.086614173228346in;height:3.1181102362204722in" />
+<img alt="" src="./image78.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Prieigos kodai“**
 
@@ -899,7 +981,7 @@ Administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas
 
 **Skirtukas „Pranešimai“**
 
-<img alt="" src="./image79.webp" style="width:7.086614173228346in;height:3.188976377952756in" />
+<img alt="" src="./image79.webp" style="width:7.0in;height:in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per internetą (IP).
 
@@ -929,7 +1011,7 @@ Nustačius lygiagretaus pulto kanalo parametrus, pranešimai vienu metu bus siun
 
 **Skirtukas „Nuostatos“**
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:3.8464566929133857in" />
+<img alt="" src="./image80.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Parametrai“**
 
@@ -963,6 +1045,8 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 - **Atsarginis 2** – nurodykite ryšio tipą (SIM, Ethernet (LAN)) su CSP imtuvu ir ***Protegus2***.
 
+- **Du kanalai CSP** – pasirinkus dviejų kanalų režimą, CSP1 fiksuotai veikia per LAN, o CSP2 per SIM kortelės duomenys. Abu kanalai veikia lygiagrečiai nurodytais CSP adresais. 
+
 - **Grįžimas į pagrindinį (abiems kanalams)** – laikas, kuriam pasibaigus, ***FIRECOM*** bandys atstatyti ryšį pagrindiniu kanalo tipu, jei veikė atsarginiu kanalu, min.
 
 **Parinkčių grupė „LAN tinklo nustatymai“**
@@ -989,7 +1073,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="" src="./image81.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Vartotojai ir pranešimai vartotojams“**
 
@@ -1009,7 +1093,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 **Skirtukas „Protegus“**
 
-<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image82.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Mobilioji aplikacija“**
 
@@ -1021,7 +1105,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 **Skirtukas „SMS atsakymo tekstai“**
 
-<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:2.4763779527559056in" />
+<img alt="" src="./image83.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Atsakymas SMS žinute“**
 
@@ -1031,7 +1115,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 **Skirtukas „RS485 moduliai“**
 
-<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.9448818897637796in" />
+<img alt="" src="./image84.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „RS485 moduliai“**
 
@@ -1045,7 +1129,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus ir į
 
 - **Mikroprogramos versija** - bus rodoma modulio mikroprogramos versija, kai ***FIRECOM*** suras prijungtą modulį.
 
-<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:3.6338582677165356in" />
+<img alt="" src="./image85.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „RS4852 sąsaja“**
 
@@ -1055,7 +1139,7 @@ Priešgaisrines centrales (**ESPA4.4.4** sąsaja, **NSC solution**, **INIM smart
 
 **Skirtukas „Zonų nustatymai“**
 
-<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:1.7519685039370079in" />
+<img alt="" src="./image86.webp" style="width:7.0in;height:in" />
 
 - **Zonos Nr.** – zonos eilės numeris.
 
@@ -1075,9 +1159,9 @@ Priešgaisrines centrales (**ESPA4.4.4** sąsaja, **NSC solution**, **INIM smart
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image87.webp" style="width:7.0in;height:in" />
 
-**Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#64-langas-vartotojai-ir-pranesimai)*.***
+**Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas lange „Vartotojai ir pranešimai"**. Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
 
 - **Zn** – zonos numeris su įvykių identifikavimo žodžiu. Gali būti „**Įvykis**“ arba „**Grįžtis**“.
 
@@ -1085,7 +1169,7 @@ Priešgaisrines centrales (**ESPA4.4.4** sąsaja, **NSC solution**, **INIM smart
 
 **Skirtukas „Zonų kodai“**
 
-<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="" src="./image88.webp" style="width:7.0in;height:in" />
 
 Suveikus zonai komunikatorius išsius pranešimą apie įvykį. Įėjimui priskiriamas Contact ID (SIA) kodas, kuris bus išsiustas į CSP ir ***Protegus2***.
 
@@ -1105,7 +1189,7 @@ Suveikus zonai komunikatorius išsius pranešimą apie įvykį. Įėjimui priski
 
 **Skirtukas „Išėjimai“**
 
-<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:1.9291338582677164in" />
+<img alt="" src="./image89.webp" style="width:7.0in;height:in" />
 
 - **PGM Nr.** – nurodo PGM išėjimo eilės numerį.
 
@@ -1123,7 +1207,7 @@ Suveikus zonai komunikatorius išsius pranešimą apie įvykį. Įėjimui priski
 
 **Skirtukas „Nustatyti veikimą“**
 
-<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image90.webp" style="width:7.0in;height:in" />
 
 - **Nr** – išėjimo eilės numeris.
 - **Įgalinti** – įgalina PGM veikimo algoritmą.
@@ -1156,7 +1240,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Grafikas“**
 
-<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image91.webp" style="width:7.0in;height:in" />
 
 - **Nr.** – grafiko eilės numeris.
 
@@ -1169,9 +1253,9 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image92.webp" style="width:7.0in;height:in" />
 
-Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#64-langas-vartotojai-ir-pranesimai). Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
+**Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas lange „Vartotojai ir pranešimai"**. Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
 
 - **PGM** – rodomas OUT išėjimo numeris ir įjungimo/išjungimo įvykio tipas („**Įvykis**“ – OUT išėjimo įjungimo įvykis ir „**Grįžtis**“ – OUT išjungimo įvykis).
 
@@ -1179,7 +1263,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Jutikliai“ 
 
-<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.8503937007874014in" />
+<img alt="" src="./image93.webp" style="width:7.0in;height:in" />
 
 - **Nr** – temperatūros jutiklio eilės numeris.
 
@@ -1201,7 +1285,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Įvykiai“**
 
-<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:2.2716535433070866in" />
+<img alt="" src="./image94.webp" style="width:7.0in;height:in" />
 
 - **Nr.** – įvykio numeris pagal sąrašą.
 
@@ -1221,9 +1305,9 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.295275590551181in" />
+<img alt="" src="./image95.webp" style="width:7.0in;height:in" />
 
-Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#64-langas-vartotojai-ir-pranesimai)*.*
+**Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas lange „Vartotojai ir pranešimai"**. Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
 
 - **Nr.** – įvykio numeris ir identifikavimo žodis (**Įvykis**, **Grįžtis**).
 
@@ -1233,7 +1317,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Įvykių žurnalas“
 
-<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.531496062992126in" />
+<img alt="" src="./image96.webp" style="width:7.0in;height:in" />
 
 - Mygtukas **„Nuskaityti“** – komanda, kuria galima nuskaityti įvykių žurnalą iš įrenginio atminties.
 
@@ -1245,7 +1329,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos ***TrikdisConfig*** mygtuką „**Atkurti**“.
 
-<img alt="" src="./image97.webp" style="width:7.086614173228346in;height:1.0708661417322836in" />
+<img alt="" src="./image97.webp" style="width:7.0in;height:in" />
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
@@ -1269,7 +1353,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 2.  Lauke „**Nuotolinė prieiga**“ įveskite komunikatoriaus „**IMEI/Unikalus ID**“ numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipdukų.
 
-<img alt="" src="./image98.webp" style="width:7.086614173228346in;height:2.326771653543307in" />
+<img alt="" src="./image98.webp" style="width:7.0in;height:in" />
 
 3. (Nebūtina) Langelyje „**Sistemos pavadinimas**“ įveskite norimą komunikatoriaus pavadinimą.
 
@@ -1308,7 +1392,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 4.  Parinkite programos ***TrikdisConfig*** meniu „**Programos atnaujinimas“**.
 
-<img alt="" src="./image99.webp" style="width:7.086614173228346in;height:2.9448818897637796in" />
+<img alt="" src="./image99.webp" style="width:7.0in;height:in" />
 
 5. Paspauskite mygtuką „**Atverti failą**“ ir parinkite reikiamą programinės įrangos bylą. Naujausias gaminių programinės įrangos bylas galite atsisiųsti iš tinklapio <u>www.trikdis.lt.</u>
 
