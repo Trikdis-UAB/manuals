@@ -269,36 +269,37 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 2.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 45%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 3.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 90%; height: auto;" />
+    <img src="./image14.webp" alt="" style="width: 5.0in; height:in;" />
   </figure>
 </div>
+
 
 
 ### Схемы подключения пожарных извещателей 
@@ -307,17 +308,17 @@
 
 Подключение двухпроводных пожарных извещателей к выходу „**FLOOP**“. Если применяется эта схема подключения, то необходимо в окне „**Зоны**“ входу (IOx) указать вход „**2-Wire loop (FLOOP)**“. Ток срабатывания пожарного извещателя должен быть больше 10 мА. К „**FLOOP**“ выходу можно подсоединить до 8 пожарных извещателей.
 
-<img alt="" src="./image15.webp" style="width:5.133344269466317in;height:1.2766688538932633in" />
+<img alt="" src="./image15.webp" style="width:5.5in;height:in" />
 
 Схема подключения двухпроводных пожарных извещателей с релейным модулем **SM1**. Для подключения цепи датчика дыма к выбранному входу необходимо активировать вход (**IOx**) и установить тип цепи (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (см. п.6.6 „„Окно „Зоны““). Выходу (**IO10**) должен быть установлен режим работы „**Сброс пожарного датчика**“ (см. п.6.7 „Окно „PGM выходы““).
 
 \* Реле (К1) используется для обнаружения обрыва провода и снятия пожарного извещателя. Если не используете реле (К1), то контакт К1 необходимо закоротить.
 
-<img alt="" src="./image16.webp" style="width:5.893345363079615in;height:2.0833377077865265in" />
+<img alt="" src="./image16.webp" style="width:6.0in;height:in" />
 
 или
 
-<img alt="" src="./image17.webp" style="width:5.893345363079615in;height:2.3133377077865265in" />
+<img alt="" src="./image17.webp" style="width:6.0in;height:in" />
 
 Подключение четырехпроводных пожарных извещателей.
 
@@ -325,18 +326,19 @@
 
 \* Реле (К1) используется для обнаружения обрыва провода и снятия пожарного извещателя. Если не используете реле (К1), то контакт К1 необходимо закоротить.
 
-<img alt="" src="./image18.webp" style="width:5.993345363079615in;height:1.490003280839895in" />
+<img alt="" src="./image18.webp" style="width:6.0in;height:in" />
 
 ### Схема подключения пожарной панели и коммуникатора 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image19.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image20.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
+
 
 
 Если хотите контролировать состояние пожарной панели, подключите ее соответствующие выходы к входам ***FIRECOM***. Выходы панели пожарной сигнализации (PGM1, PGM2, PGM3) должны быть настроены как выходы состояния панели (Тревога, Неисправность и т. д.).
@@ -345,12 +347,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
+
 
 
 Настройки коммуникатора ***FIRECOM*** с ***TrikdisConfig*** при подключении пожарной панели с протоколом **ESPA4.4.4**.
@@ -381,12 +384,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image27.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image28.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
+
 
 
 Настройки коммуникатора ***FIRECOM*** с ***TrikdisConfig*** при подключении пожарной панели сигнализации **NSC Solution.**
@@ -417,12 +421,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image33.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image34.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
+
 
 
 Пожарной панели **INIM Smartline** необходимо установить ведомый (Slave) режим работы, когда коммуникатор ***FIRECOM*** подключен через шину RS485 к пожарной панели.
@@ -459,12 +464,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
+
 
 
 Настройки коммуникатора ***FIRECOM*** с ***TrikdisConfig*** при подключении пожарной панели сигнализации **C-TEC Cast ZFP.**
@@ -600,7 +606,7 @@
 
 ### Схема подключения датчика температуры 
 
-<img alt="" src="./image54.webp" style="width:3.4166732283464567in;height:1.1900021872265967in" />  <img alt="" src="./image55.webp" style="width:3.4166732283464567in;height:1.3200021872265966in" />
+<img alt="" src="./image54.webp" style="width:3.5in;height:in" />  <img alt="" src="./image55.webp" style="width:3.5in;height:in" />
 
 Датчики температуры подсоединяются по приведенной схеме. К коммуникатору ***FIRECOM*** можно подключить температурные датчики Maxim®/Dallas® DS18S20, DS18B20 (до 8 шт.) или датчик влажности и температуры АМ2301 (1 шт.). 
 Коммуникатор автоматически определяет подключенные датчики и регистрирует их.
@@ -609,7 +615,7 @@
 
 ### Схема подключения реле и LED индикатора 
 
-<img alt="" src="./image56.webp" style="width:2.7100054680664916in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
+<img alt="" src="./image56.webp" style="width:3.0in;height:in" />  <img alt="" src="./image57.webp" style="width:2.5in;height:in" />
 
 Различные электрические устройства могут управляться (вкл/выкл) удаленно с помощью контактов реле. Универсальная IO (вход/выход) клемма коммуникатора должна быть установлена в режим работы Выход (OUT) и назначен тип „**Удаленное управление**“. 
 
@@ -617,7 +623,7 @@
 
 Согласно стандарта EN54, пожарная панель от коммуникатора должна получать информацию о нарушении связи с ПЦН, а так же об успешном отправлении сообщений на ПЦН. К специальным входам пожарной панели подключитe ПГМ выходы (например: „**Relay1**“ и „**Relay2**“) коммуникатора. ПГМ выходу „**Relay1**“ должен быть устанавлен режим „**CMS fail**“. ПГМ выходу „**Relay2**“ должен быть устанавлен режим „**ACK received**“. Выход „**Relay1**“ активируется при нарушении канала связи с ПЦН. Выход „**Relay2**” активируется на 5 сек. при отправленном сообщении на ПЦН.
 
-<img alt="" src="./image58.webp" style="width:3.41000656167979in;height:1.6933366141732284in" />
+<img alt="" src="./image58.webp" style="width:4.0in;height:in" />
 
 ### Схема подключения расширителей серии iO 
 
@@ -625,16 +631,17 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image59.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image59.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image60.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image60.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
+
 Схема подключения модулей расширения **LORA**.
 
-<img alt="" src="./image61.webp" style="width:5.603344269466317in;height:6.636679790026247in" />
+<img alt="" src="./image61.webp" style="width:6.0in;height:in" />
 
 ### Включение коммуникатора 
 
@@ -842,14 +849,14 @@
 | SETN | PhoneX=DEL | Удаление пользователя из списка. „X“ – порядковый номер пользователя в списке. Например: **SETN 123456 PHONE5=DEL** |
 | UUSD | *Uusd code# | Отправление UUSD кода оператору. Например: **UUSD 123456 *245#** |
 | CONNECT | Protegus=ON | Подключиться к Protegus сервису. / Например: **CONNECT 123456 PROTEGUS=ON** |
-| CONNECT | Protegus=OFF | Отключиться от Protegus сервиса. / Например: **CONNECT 123456 PROTEGUS=OFF** |
-| CONNECT | Code=123456 | Код подключения к Protegus сервису. / Например: **CONNECT 123456 CODE=123456** |
-| CONNECT | IP=0.0.0.0:8000 | Указывается адрес TCP/IP и Port сервера основного канала. / Например: **CONNECT 123456 IP=0.0.0.0:8000** |
-| CONNECT | IP=0 | Отключение основного канала. Например: **CONNECT 123456 IP=0** |
-| CONNECT | ENC=123456 | Ключ шифрования TRK. Например: **CONNECT 123456 ENC=123456** |
-| CONNECT | APN=Internet | Имя APN. Например: **CONNECT 123456 APN=INTERNET** |
-| CONNECT | USER=user | Пользователь APN. Например: **CONNECT 123456 USER=User** |
-| CONNECT | PSW=password | Пароль APN. Например : **CONNECT 123456 PSW=Password** |
+|  | Protegus=OFF | Отключиться от Protegus сервиса. / Например: **CONNECT 123456 PROTEGUS=OFF** |
+|  | Code=123456 | Код подключения к Protegus сервису. / Например: **CONNECT 123456 CODE=123456** |
+|  | IP=0.0.0.0:8000 | Указывается адрес TCP/IP и Port сервера основного канала. / Например: **CONNECT 123456 IP=0.0.0.0:8000** |
+|  | IP=0 | Отключение основного канала. Например: **CONNECT 123456 IP=0** |
+|  | ENC=123456 | Ключ шифрования TRK. Например: **CONNECT 123456 ENC=123456** |
+|  | APN=Internet | Имя APN. Например: **CONNECT 123456 APN=INTERNET** |
+|  | USER=user | Пользователь APN. Например: **CONNECT 123456 USER=User** |
+|  | PSW=password | Пароль APN. Например : **CONNECT 123456 PSW=Password** |
 
 ### Управление звонком PGM выходами 
 
