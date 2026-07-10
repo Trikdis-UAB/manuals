@@ -48,7 +48,7 @@ Envía eventos al receptor en una CRA
 
 **Control remoto de salidas**
 
-- A través de la aplicación Protegus2.
+- A través de la aplicación ***Protegus2***.
 
 - Llamada al número de la tarjeta SIM instalada en el comunicador.
 
@@ -266,36 +266,37 @@ La placa del comunicador tiene 10 terminales IO1-IO10 (zonas) para conectar sens
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 2.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image14.webp" alt="" style="width: 5.0in; height:in;" />
   </figure>
 </div>
+
 
 ### Conexión de detectores de humo 
 
@@ -303,17 +304,17 @@ Diagramas de cableado para detectores de incendios de dos cables.
 
 Conexión de detectores de incendio de dos hilos a salida "**FLOOP**". Si se utiliza este esquema de conexión, es necesario especificar la entrada "**2-Wire loop (FLOOP)**" en la ventana "Zonas" para la entrada (IOx). La corriente de activación del detector de incendios debe ser superior a 10 mA. Se pueden conectar hasta 8 detectores de incendios a la salida “**FLOOP**“.
 
-<img alt="" src="./image15.webp" style="width:5.006676509186351in;height:1.2766688538932633in" />
+<img alt="" src="./image15.webp" style="width:5.5in;height:in" />
 
 Diagrama de cableado para detectores de incendios de dos hilos con módulo de relé SM1. Para conectar el circuito del detector de humo a la entrada seleccionada, es necesario activar la entrada (IOx) y configurar el tipo de circuito (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (ver párrafo 6.6 “Ventana "Zonas"”). La salida (IO10) debe configurarse en el modo de funcionamiento "**Sensor de fuego reiniciado**" (consulte la sección 6.7 "Ventana "PGM"").
 
 \* El relé (K1) se utiliza para detectar un cable roto y retirar el detector de incendios. Si no se utiliza un relé (K1), se debe cortocircuitar el contacto K1.
 
-<img alt="" src="./image16.webp" style="width:5.880012029746282in;height:2.08667104111986in" />
+<img alt="" src="./image16.webp" style="width:6.0in;height:in" />
 
 o
 
-<img alt="" src="./image17.webp" style="width:5.880012029746282in;height:2.29667104111986in" />
+<img alt="" src="./image17.webp" style="width:6.0in;height:in" />
 
 Conexión de detectores de incendios de cuatro hilos.
 
@@ -321,18 +322,19 @@ Para conectar un circuito de detector de humo a la entrada seleccionada, debe ac
 
 \* El relé (K1) se utiliza para detectar un cable roto y retirar el detector de incendios. Si no se utiliza un relé (K1), se debe cortocircuitar el contacto K1.
 
-<img alt="" src="./image18.webp" style="width:5.943345363079615in;height:1.440003280839895in" />
+<img alt="" src="./image18.webp" style="width:6.0in;height:in" />
 
 ### Diagrama para conectar el comunicador a un panel de control de incendios 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image19.webp" alt="" style="width: 4.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image20.webp" alt="" style="width: 4.5in; height:in;" />
   </figure>
 </div>
+
 
 
 Si desea monitorear el estado del panel de alarma contra incendios, conecte sus salidas correspondientes a las entradas ***FIRECOM***. Las salidas (PGM1, PGM2, PGM3) del panel de incendios deben configurarse como salidas de estado del panel (Alarma, Problema, etc.).
@@ -341,12 +343,13 @@ Si desea monitorear el estado del panel de alarma contra incendios, conecte sus 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
+
 
 
 Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de control de alarma contra incendios con el protocolo **ESPA4.4.4**.
@@ -377,12 +380,13 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image27.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image28.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
+
 
 
 Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de control de alarma contra incendios **NSC Solution**.
@@ -413,12 +417,13 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image33.webp" alt="" style="width: 4.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image34.webp" alt="" style="width: 4.5in; height:in;" />
   </figure>
 </div>
+
 
 
 El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se conecta al comunicador ***FIRECOM*** a través del bus RS485.
@@ -454,12 +459,13 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
+
 
 
 Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar el panel de alarma contra incendios **C-TEC Cast ZFP.**
@@ -595,7 +601,7 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 ### Diagrama para conectar un sensor de temperatura 
 
-<img alt="" src="./image54.webp" style="width:3.4233398950131235in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.4233398950131235in;height:1.3200021872265966in" />
+<img alt="" src="./image54.webp" style="width:3.5in;height:in" />  <img alt="" src="./image55.webp" style="width:3.5in;height:in" />
 
 Los sensores de temperatura se conectan de acuerdo con el diagrama anterior. Los sensores de temperatura Maxim®/Dallas® DS18S20, DS18B20 (hasta 8 piezas) o el sensor de humedad y temperatura AM2301 (1 pieza) se pueden conectar al comunicador ***FIRECOM***.
 El comunicador detecta automáticamente los sensores conectados y los registra.
@@ -604,7 +610,7 @@ El borne "**+5 V**" está diseñado para alimentar con tensión continua los dis
 
 ### Diagramas para conectar un relé y un indicador LED 
 
-<img alt="" src="./image56.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image57.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
+<img alt="" src="./image56.webp" style="width:3.0in;height:in" />  <img alt="" src="./image57.webp" style="width:2.5in;height:in" />
 
 Usando las terminales de relé es posible controlar (encender/apagar) de forma remota varios dispositivos eléctricos. El terminal I/O universal del panel debe configurarse como una salida (OUT) y debe tener asignada la definición de “**Control remoto**”. 
 
@@ -612,7 +618,7 @@ Usando las terminales de relé es posible controlar (encender/apagar) de forma r
 
 Según la norma EN54, el panel de incendio desde el comunicador debe recibir información sobre la falla de comunicación con la Central de Monitoreo, así como sobre el envío exitoso de mensajes a la CRA. Conecte las salidas PGM (por ejemplo: “**Relay1**” y “**Relay2**”) del comunicador a las entradas especiales del panel de incendio. La salida PGM del “**Relay1**” debe establecerse en "**Falla CRA**". La salida PGM del “**Relay2**” debe establecerse en "**ACK recibido**". La salida del “**Relay1**” se activa en caso de violación del canal de comunicación con la CRA. La salida del “**Relay2**” se activa durante 5 seg. al enviar con éxito un mensaje a la CRA.
 
-<img alt="" src="./image58.webp" style="width:3.550007655293088in;height:1.6733366141732284in" />
+<img alt="" src="./image58.webp" style="width:3.5in;height:in" />
 
 ### Diagramas para conectar los módulos expansores de la serie iO 
 
@@ -620,12 +626,13 @@ Para aumentar el número de zonas (IN) y salidas (OUT) al comunicador, conecte u
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image59.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image59.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image60.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image60.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
+
 
 
 Diagrama de conexión para los módulos expansores **LORA**.
