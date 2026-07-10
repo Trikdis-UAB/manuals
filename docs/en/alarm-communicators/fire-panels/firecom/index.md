@@ -268,46 +268,45 @@ There are 10 terminals IO1–IO10 (inputs) on the communicator board for connect
 **Schematics for connecting sensors.**
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image7.webp" alt="" style="width: 20%; height: auto;" />
+<img src="./image7.webp" alt="" style="width: 2.0in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image8.webp" alt="" style="width: 20%; height: auto;" />
+<img src="./image8.webp" alt="" style="width: 2.0in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image9.webp" alt="" style="width: 20%; height: auto;" />
+<img src="./image9.webp" alt="" style="width: 2.0in; height:in;" />
+</figure>
+
+
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+<figure style="margin: 0;">
+<img src="./image10.webp" alt="" style="width: 2.0in; height:in;" />
+</figure>
+
+<figure style="margin: 0;">
+<img src="./image11.webp" alt="" style="width: 2.0in; height:in;" />
+</figure>
+
+<figure style="margin: 0;">
+<img src="./image12.webp" alt="" style="width: 3.0in; height:in;" />
 </figure>
 
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image10.webp" alt="" style="width: 20%; height: auto;" />
+<img src="./image13.webp" alt="" style="width: 2.5in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image11.webp" alt="" style="width: 20%; height: auto;" />
+<img src="./image14.webp" alt="" style="width: 4.5in; height:in;" />
 </figure>
 
-<figure style="margin: 0;">
-<img src="./image12.webp" alt="" style="width: 35%; height: auto;" />
-</figure>
-
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
-<figure style="margin: 0;">
-<img src="./image13.webp" alt="" style="width: 20%; height: auto;" />
-</figure>
-
-<figure style="margin: 0;">
-<img src="./image14.webp" alt="" style="width: 35%; height: auto;" />
-</figure>
 
 </div>
 
@@ -340,14 +339,14 @@ In order to connect the smoke detector circuit to the selected input, it is nece
 ### Schematic for connecting the communicator to a fire alarm control panel
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image19.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image19.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image20.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image20.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
+
 
 </div>
 
@@ -356,14 +355,14 @@ If you want to monitor the status of the fire alarm panel, connect its correspon
 ### Schematic for connecting the fire panel with the ESPA4.4.4 protocol
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image21.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image21.webp" alt="" style="width: 3.5in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image22.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image22.webp" alt="" style="width: 3.5in; height:in;" />
 </figure>
+
 
 </div>
 
@@ -395,12 +394,13 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 <figure style="margin: 0;">
-<img src="./image27.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image27.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image28.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image28.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
+
 
 
 </div>
@@ -432,14 +432,14 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 ### Schematic for connecting the fire panel INIM SMARTLINE
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image33.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image33.webp" alt="" style="width: 4.5in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image34.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image34.webp" alt="" style="width: 4.5in; height:in;" />
 </figure>
+
 
 </div>
 
@@ -471,18 +471,18 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 ### Schematic for connecting the fire panel C-TEC Cast ZFP
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image40.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image40.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image41.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image41.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
+
 
 </div>
 
-FIRECOM communicator settings with ***TrikdisConfig*** when connecting the **C-TEC Cast ZFP** fire alarm control panel.
+***FIRECOM*** communicator settings with ***TrikdisConfig*** when connecting the **C-TEC Cast ZFP** fire alarm control panel.
 
 1.  Choose the **C-TEC Cast ZFP** fire alarm control panel.
 
@@ -620,7 +620,7 @@ Test the system. Activate the fire alarm and check that **_FIRECOM_** messages a
 
 ### Schematic for connecting a temperature sensor
 
-<img alt="" src="./image52.webp" style="width:3.616674321959755in;height:1.1900021872265967in" /> / <img alt="" src="./image53.webp" style="width:3.616674321959755in;height:1.3200021872265966in" />
+<img alt="" src="./image52.webp" style="width:4.5in;height:in" /> / <img alt="" src="./image53.webp" style="width:3.616674321959755in;height:1.3200021872265966in" />
 
 Temperature sensors should be connected according to the given schematic. Maxim®/Dallas® DS18S20, DS18B20 temperature sensors (up to 8) or AM2301 humidity and temperature sensor (up to 1) can be connected to the communicator ***FIRECOM***. 
 If a wire longer than 0,5 meters is used to connect a temperature sensor, we recommend using twisted pair cable (UTP4x2x0,5 or STP4x2x0,5). 
@@ -629,7 +629,7 @@ The “**+5V**” terminal on the board is for supplying devices connected to th
 
 ### Schematics for connecting a relay and an LED indicator
 
-<img alt="" src="./image54.webp" style="width:2.686672134733158in;height:0.93333552055993in" /> / <img alt="" src="./image55.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
+<img alt="" src="./image54.webp" style="width:3.5in;height:in" /> / <img alt="" src="./image55.webp" style="width:2.09667104111986in;height:0.9066688538932633in" />
 
 Using the relay terminals, it is possible to remotely control (turn on/off) various electrical devices. The communicator’s universal “**I/O**” terminal must be configured as an output (OUT) and must have the definition “**Remote control**” assigned. 
 
@@ -637,7 +637,7 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
 
 According to the EN54 standard, the fire panel from the communicator must receive information about the failure of communication with the monitoring station, as well as about the successful received of messages to the monitoring station. It is necessary to connect the PGM outputs (for example: “**Relay1**” and “**Relay2**”) of the communicator to the special inputs of the fire panel. The PGM output of “**Relay1**” must be set to “**CMS fail**”. The PGM output of “**Relay2**” must be set to “**ACK received**”. “**Relay1**” output is activated in case of violation of the communication channel with the CMS. “**Relay2**” output is activated for 5 sec. upon successful sending of a message to the CMS.
 
-<img alt="" src="./image56.webp" style="width:3.42000656167979in;height:1.6966699475065616in" />
+<img alt="" src="./image56.webp" style="width:4.5in;height:in" />
 
 ### Schematics for connecting iO series expander modules
 
@@ -645,11 +645,11 @@ If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, c
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
 <figure style="margin: 0;">
-<img src="./image57.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image57.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image58.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image58.webp" alt="" style="width: 4.0in; height:in;" />
 </figure>
 
 
@@ -657,7 +657,7 @@ If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, c
 
 Schematics for connecting **LORA** modules.
 
-<img alt="" src="./image59.webp" style="width:5.57667760279965in;height:6.636679790026247in" />
+<img alt="" src="./image59.webp" style="width:7.0in;height:in" />
 
 ### Turning on the communicator
 
