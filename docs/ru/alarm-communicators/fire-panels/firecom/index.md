@@ -75,7 +75,7 @@
 
 - Используя расширители серии **iO**, количество входов (IN) может быть увеличено до 32, а количество выходов (OUT) может быть увеличено до 16.
 
-- Шина RS485 используется для подключения модулей расширения **iO**.
+- Шина RS485 используется для подключения модулей расширения ***iO***.
 
 - Шина RS485 2 используется для подключения пожарных панелей.
 
@@ -120,10 +120,10 @@
 
 ### Элементы коммуникатора FIRECOM
 
-<img src="./image4.webp" alt="Элементы коммуникатора FIRECOM" style="width: 100%; height: auto;" />
+<img src="./image4.webp" alt="Элементы коммуникатора FIRECOM" style="width: 7.0in; height:in;" />
 
 1. Световые индикаторы связи и рабочих режимов
-2. Кнопка
+2. Кнопка. Не используется
 3. Клеммы для подключения источника резервного питания
 4. Клеммы для подключения источника питания
 5. Кнопка RESET
@@ -240,11 +240,11 @@
 
 На рисунке представлены размеры платы и отверстия ее крепления. Размеры указаны в миллиметрах.
 
-<img alt="" src="./image5.webp" style="width:6.080012029746282in;height:4.020007655293089in" />
+<img alt="" src="./image5.webp" style="width:6.0in;height:in" />
 
 ### Последовательность подключения 
 
-<img alt="" src="./image6.webp" style="width:7.086805555555555in;height:3.7111111111111112in" />
+<img alt="" src="./image6.webp" style="width:7.0in;height:in" />
 
 1.  Если используете SIM карту, установите SIM карту, которая активирована в мобильной сети, в держатель.
 
@@ -260,6 +260,7 @@
     При выборе аккумулятора необходимо обратить внимание, что он должен быть
     заряжен до 80% в течение 24 часов, а оставшаяся емкость - в течение
     следующих 48 часов, чтобы соответствовать требованиям стандарта EN54.
+
 ### Схемы подключения входов (зон) 
 
 Плата коммуникатора имеет 10 клемм IO1-IO10 (зоны) для подсоединения датчиков. Применив расширители (***iO-8, iO-MO, iO-LORA, iO8-LORA***), количество входов можно увеличить до 32 шт. Любую IO клемму можно установить, как вход и установить атрибуты: тип входа (NO, NC, EOL, EOL_T, ATZ, ATZ_T); чувствительность и кратковременные события в цепи; функции входа (зоны), см. п.6.6 „Окно „Зоны““.
@@ -268,36 +269,37 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 50%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 45%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image14.webp" alt="" style="width: 90%; height: auto;" />
   </figure>
 </div>
+
 
 ### Схемы подключения пожарных извещателей 
 
@@ -307,7 +309,7 @@
 
 <img alt="" src="./image15.webp" style="width:5.133344269466317in;height:1.2766688538932633in" />
 
-Схема подключения двухпроводных пожарных извещателей с релейным модулем SM1. Для подключения цепи датчика дыма к выбранному входу необходимо активировать вход (**IOx**) и установить тип цепи (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (см. п.6.6 „„Окно „Зоны““). Выходу (**IO10**) должен быть установлен режим работы „**Сброс пожарного датчика**“ (см. п.6.7 „Окно „PGM выходы““).
+Схема подключения двухпроводных пожарных извещателей с релейным модулем **SM1**. Для подключения цепи датчика дыма к выбранному входу необходимо активировать вход (**IOx**) и установить тип цепи (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (см. п.6.6 „„Окно „Зоны““). Выходу (**IO10**) должен быть установлен режим работы „**Сброс пожарного датчика**“ (см. п.6.7 „Окно „PGM выходы““).
 
 \* Реле (К1) используется для обнаружения обрыва провода и снятия пожарного извещателя. Если не используете реле (К1), то контакт К1 необходимо закоротить.
 
@@ -329,12 +331,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image19.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image20.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
 </div>
+
 
 Если хотите контролировать состояние пожарной панели, подключите ее соответствующие выходы к входам ***FIRECOM***. Выходы панели пожарной сигнализации (PGM1, PGM2, PGM3) должны быть настроены как выходы состояния панели (Тревога, Неисправность и т. д.).
 
@@ -342,12 +345,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 60%; height: auto;" />
   </figure>
 </div>
+
 
 Настройки коммуникатора ***FIRECOM*** с ***TrikdisConfig*** при подключении пожарной панели с протоколом **ESPA4.4.4**.
 
@@ -357,19 +361,19 @@
 
 3.  Коммуникатор ***FIRECOM*** и пожарная панель должны иметь одинаковые настройки передачи данных.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7283464566929134in" />
+<img alt="" src="./image23.webp" style="width:7.0in;height:in" />
 
 4. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
+<img alt="" src="./image24.webp" style="width:7.0in;height:in" />
 
 5. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.822834645669291in" />
+<img alt="" src="./image25.webp" style="width:7.0in;height:in" />
 
 6. Настройте канал связи, если сообщения должны отправляться на приемник ПЦН. Сообщения о событиях передаются с использованием протокола SIA DC-09.
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image26.webp" style="width:7.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
@@ -377,12 +381,13 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image27.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image28.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
 </div>
+
 
 Настройки коммуникатора ***FIRECOM*** с ***TrikdisConfig*** при подключении пожарной панели сигнализации **NSC Solution.**
 
@@ -390,19 +395,19 @@
 
 2.  “**NSC slave addres**” не должен совпадать с адресом подключенных модулей пожарной панели.
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.078740157480315in" />
+<img alt="" src="./image29.webp" style="width:7.0in;height:in" />
 
 3. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="" src="./image30.webp" style="width:7.0in;height:in" />
 
 4. Пользователи будут получать SMS-сообщения и телефонные звонки о событиях, отмеченных галочкой. Вы можете добавить дополнительные коды событий CID в столбце CID. Вы должны ввести текстовые SMS-сообщения рядом с новыми кодами. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте поле **SMS** (или **Звонок**).
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="" src="./image31.webp" style="width:7.0in;height:in" />
 
 5. Настройте канал связи, если сообщения должны отправляться на приемник ПЦН.
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image32.webp" style="width:7.0in;height:in" />
 
 После настройки коммуникатора ***FIRECOM*** включите питание пожарной панели. Дождитесь загрузки программного обеспечения пожарной панели. Необходимо выполнить сканирование модулей, подключенных к шине RS485 пожарной панели. На пожарной панели нажмите: **PROG.>INSTALLER>(Введите код установщика) 00000 OK>(Выберите) SETTINGS>ENTER>(Выберите) SCAN RS485>ENTER**. Дождитесь завершения сканирования. Вернитесь на главный экран, дважды нажав “**CANCEL**”.
 
@@ -412,16 +417,17 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image33.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image34.webp" alt="" style="width: 80%; height: auto;" />
   </figure>
 </div>
 
+
 Пожарной панели **INIM Smartline** необходимо установить ведомый (Slave) режим работы, когда коммуникатор ***FIRECOM*** подключен через шину RS485 к пожарной панели.
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="" src="./image35.webp" style="width:7.0in;height:in" />
 
 !!! note "Примечание"
     Если к пожарной панели **INIM Smartline** подключены повторители, то
@@ -433,19 +439,19 @@
 
 1.  Выберите пожарную панель **INIM Smartline**.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
+<img alt="" src="./image36.webp" style="width:7.0in;height:in" />
 
 2. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
+<img alt="" src="./image37.webp" style="width:7.0in;height:in" />
 
 3. Пользователи будут получать SMS-сообщения и телефонные звонки о событиях, отмеченных галочкой. Вы можете добавить дополнительные коды событий CID в столбце CID. Вы должны ввести текстовые SMS-сообщения рядом с новыми кодами. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте поле **SMS** (или **Звонок)**.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="" src="./image38.webp" style="width:7.0in;height:in" />
 
 4. Настройте канал связи, если сообщения должны отправляться в приемник ПЦН.
 
-<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения в приемник ПЦН и в ***Protegus2***.
 
@@ -453,60 +459,61 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 70%; height: auto;" />
   </figure>
 </div>
+
 
 Настройки коммуникатора ***FIRECOM*** с ***TrikdisConfig*** при подключении пожарной панели сигнализации **C-TEC Cast ZFP.**
 
 1.  Выберите пожарную панель **C-TEC Cast ZFP**.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
+<img alt="" src="./image42.webp" style="width:7.0in;height:in" />
 
 2. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
+<img alt="" src="./image43.webp" style="width:7.0in;height:in" />
 
 3. Пользователи будут получать SMS-сообщения и телефонные звонки о событиях, отмеченных галочкой. Вы можете добавить дополнительные коды событий CID в столбце CID. Вы должны ввести текстовые SMS-сообщения рядом с новыми кодами. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте поле **SMS** (или **Звонок)**.
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
+<img alt="" src="./image44.webp" style="width:7.0in;height:in" />
 
 4. Настройте канал связи, если сообщения должны отправляться в приемник ПЦН.
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
+<img alt="" src="./image45.webp" style="width:7.0in;height:in" />
 
 Установите программу **ZFPtools** на свой компьютер. Запустите программу **ZFPtools**. Включите питание пожарной панели сигнализации. Дождитесь загрузки программного обеспечения пожарной панели. Подключите пожарную панель к компьютеру с помощью кабеля USB2.0 A-B.
 
 1. Откройте вкладку "**Node View**".
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="" src="./image46.webp" style="width:7.0in;height:in" />
 
 2. Загрузите настройки пожарной панели на свой компьютер.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="" src="./image47.webp" style="width:7.0in;height:in" />
 
 3. Введите код (заводской код – 4444).
 
 4.  Нажмите „**OK**“.
 
-<img alt="" src="./image48.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="" src="./image48.webp" style="width:3.5in;height:in" />
 
 5. Выберите „**BMS Interface**“.
 
 6.  Нажмите на свободную икону.
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="" src="./image49.webp" style="width:7.0in;height:in" />
 
 7. Нажмите на „**Edit Devices**“.
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="" src="./image50.webp" style="width:7.0in;height:in" />
 
 8. Во вкладке “**Device**” введите имя системы.
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="" src="./image51.webp" style="width:7.0in;height:in" />
 
 9. Во вкладке “**Properties**” введите имя системы.
 
@@ -516,13 +523,13 @@
 
 12. Запишите настройки в пожарную панель.
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="" src="./image52.webp" style="width:7.0in;height:in" />
 
 13. Введите код (заводской код – 4444).
 
 14. Нажмите „**OK**“.
 
-<img alt="" src="./image53.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="" src="./image53.webp" style="width:3.5in;height:in" />
 
 Пожарная панель запрограммирована. Отсоедините кабель USB2.0 A-B от пожарной панели.
 
@@ -532,68 +539,68 @@
 
 **Коммуникатор FIRECOM подключен к пожарной панели Polon-Alfa 3000 через шину RS485**
 
-<img alt="" src="./FIRECOM polon prijungimas rs485 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image100.webp" style="width:7.0in;height:in" />
 
 Настройка коммуникатора ***FIRECOM*** с ***TrikdisConfig***. 
 1.	Выберите пожарную панель **Polon-Alfa 3000**. 
 2.	Выберите тип подключения **RS485**. 
 
-<img alt="" src="./FIRECOM polon trikdisconfig 1 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image101.webp" style="width:7.0in;height:in" />
 
 3.	Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM polon trikdisconfig 2 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image102.webp" style="width:7.0in;height:in" />
 
 4.	Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./FIRECOM polon trikdisconfig 3 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image103.webp" style="width:7.0in;height:in" />
 
 5.	Настройте канал связи, если сообщения должны отправляться на приемник ПЦН. 
 
-<img alt="" src="./FIRECOM polon trikdisconfig 4 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image104.webp" style="width:7.0in;height:in" />
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по протоколу Modbus RTU (RS485). 
 
-<img alt="" src="./module mk-30 rs485 2026 06 18.webp" style="width:2.5in;height:in" />
+<img alt="" src="./image111.webp" style="width:3.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
 **Коммуникатор FIRECOM и пожарная панель POLON-ALFA 3000 подключены к одной локальной сети** 
 
-<img alt="" src="./FIRECOM polon prijungimas lan RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image105.webp" style="width:7.0in;height:in" />
 
 Настройка коммуникатора ***FIRECOM*** с ***TrikdisConfig***. 
 1.	Выберите пожарную панель **Polon-Alfa 3000**. 
 2.	Выберите тип подключения **TCP**. 
 3.	Введите IP-адрес пожарной панели **Polon-Alfa 3000**. 
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 1 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image106.webp" style="width:7.0in;height:in" />
 
 4.	Установите флажок „**DHCP**“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес. 
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 2 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image107.webp" style="width:7.0in;height:in" />
 
 5.	Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***. 
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 3 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image108.webp" style="width:7.0in;height:in" />
 
 6.	Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 4 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image109.webp" style="width:7.0in;height:in" />
 
 7.	Настройте канал связи, если сообщения должны отправляться на приемник ПЦН.
 
-<img alt="" src="./FIRECOM polon lan trikdisconfig 5 RU 2026 06 03.webp" style="width:7.0in;height:in" />
+<img alt="" src="./image110.webp" style="width:7.0in;height:in" />
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по LAN сети. IP-адреса локальной сети необходимо вводить в соответствии с настройками вашей сети. 
 
-<img alt="" src="./module mk-30 ip 2026 06 18.webp" style="width:2.5in;height:in" />
+<img alt="" src="./image112.webp" style="width:3.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
 ### Схема подключения датчика температуры 
 
-<img alt="" src="./image54.webp" style="width:3.4166732283464567in;height:1.1900021872265967in" /> / <img alt="" src="./image55.webp" style="width:3.4166732283464567in;height:1.3200021872265966in" />
+<img alt="" src="./image54.webp" style="width:3.4166732283464567in;height:1.1900021872265967in" />  <img alt="" src="./image55.webp" style="width:3.4166732283464567in;height:1.3200021872265966in" />
 
 Датчики температуры подсоединяются по приведенной схеме. К коммуникатору ***FIRECOM*** можно подключить температурные датчики Maxim®/Dallas® DS18S20, DS18B20 (до 8 шт.) или датчик влажности и температуры АМ2301 (1 шт.). 
 Коммуникатор автоматически определяет подключенные датчики и регистрирует их.
@@ -662,7 +669,7 @@
 
 **Окно „Системные параметры“:**
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="" src="./image62.webp" style="width:7.0in;height:in" />
 
 1.  Введите „**PIN SIM карты**“.
 
@@ -670,7 +677,7 @@
 
 **Окно „Пользователи и сообщения“:**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image63.webp" style="width:7.0in;height:in" />
 
 3. Отметьте поле „**Разрешить подключиться**“, чтобы разрешить доступ к серверу ***Protegus2***.
 
@@ -678,7 +685,7 @@
 
 **Окно „Сообщения на ПЦН“:**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:3.5551181102362204in" />
+<img alt="" src="./image64.webp" style="width:7.0in;height:in" />
 
 5. Если к коммуникатору подключен кабель LAN, установите флажок „DHCP“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес.
 
@@ -686,19 +693,19 @@
 
 **Окно „Зоны“:**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="" src="./image65.webp" style="width:7.0in;height:in" />
 
 7. Отметьте поле, если хотите, чтобы пользователь получал сообщения в ***Protegus2*** об изменениях состояния зон.
 
 **Окно „PGM выходы“:**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image66.webp" style="width:7.0in;height:in" />
 
 8. Отметьте поле, если хотите, чтобы пользователь получал сообщения в ***Protegus2*** об изменениях состояния PGM выходов.
 
 **Окно „Список событий“:**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.279527559055118in" />
+<img alt="" src="./image67.webp" style="width:7.0in;height:in" />
 
 9. Отметьте поле, если хотите, чтобы пользователь получал сообщения в ***Protegus2*** об изменениях внутренних событий коммуникатора.
 
@@ -711,7 +718,7 @@
 
 **Окно „Системные параметры“:**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="" src="./image68.webp" style="width:7.0in;height:in" />
 
 1.  Введите „**Объектовый номер“** (4-значный шестнадцатеричный номер. 0-9, А-F. **Не используйте FFFE, FFFF объектовые номера**).
 
@@ -721,7 +728,7 @@
 
 **Окно „Сообщения на ПЦН“:**
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:3.5708661417322833in" />
+<img alt="" src="./image69.webp" style="width:7.0in;height:in" />
 
 4. Если к коммуникатору подключен кабель LAN, установите флажок „**DHCP**“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес.
 
@@ -729,7 +736,7 @@
 
 **Окно „Сообщения на ПЦН“:**
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:3.173228346456693in" />
+<img alt="" src="./image70.webp" style="width:7.0in;height:in" />
 
 6. **Протокол** – выберите режим связи (TCP или UDP).
 
@@ -780,7 +787,9 @@
 !!! note "ВАЖНО"
     При добавлении коммуникатора ***FIRECOM*** к ***Protegus2*** должно быть: Установлена активированная SIM-карта и введен или отключен PIN код. Включен ***Protegus2*** сервис. См. в п. 6.4 Окно „Пользователи и сообщения“. Включено питание коммуникатору (мигает зеленый индикатор „**STA**“). Коммуникатор ***FIRECOM*** подключен к сети связи (горит зеленым и мигает желтым индикатор „**SIM**”;​ и/​или горит зеленым индикатор „**LAN**“, когда подключен к LAN сети).
 
-| Нажмите „**ADD NEW SYSTEM**“ и введите „**IMEI**“ номер ***FIRECOM***, который найдете на изделии или на упаковке. Нажмите кнопку „**NEXT**“. | <img alt="" src="./image74.webp" style="width:2.5in;height:" /> |
+Нажмите „**ADD NEW SYSTEM**“ и введите „**IMEI**“ номер ***FIRECOM***, который найдете на изделии или на упаковке. Нажмите кнопку „**NEXT**“. 
+
+ <img alt="" src="./image74.webp" style="width:3.5in;height:in" /> 
 
 ### Конфигурация и управление SMS сообщениями 
 
@@ -788,24 +797,29 @@
 
 В целях безопасности измените заводской SMS пароль администратора. Отправьте следующее SMS сообщение:
 
-**PSW 123456 xxxxxx**
+​	**PSW 123456 xxxxxx**
 
-| **123456** | Заводской пароль администратора.       |
-|------------|----------------------------------------|
-| **xxxxxx** | Новый 6-значный пароль администратора. |
+**123456**	Заводской пароль администратора
+
+**xxxxxx**	Новый 6-значный пароль администратора
 
 2.  **Разрешение управлять новым пользователям**
 
 Системой могут управлять телефонные номера, которые занесены в список пользователей. Пользователь может управлять системой SМS сообщениями или телефонным звонком. Из телефона администратора отправьте SMS сообщение следующего формата, чтобы добавить пользователя:
 
-**SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
+​	**SETN xxxxxx PHONEx=+PHONENR#NAME#EMAIL**
 
-| **xxxxxx** | 6- значный пароль администратора. |
-|----|----|
-| **x** | Номер пользователя в списке (записав 1 уступите права администратора другому лицу). |
-| **PHONENR** | Номер телефона пользователя. |
-| **NAME** | Имя пользователя. |
-| **EMAIL** | Электронная почта пользователя. |
+**xxxxxx**		6- значный пароль администратора
+
+**x**			Номер пользователя в списке (записав 1 уступите права администратора другому лицу)
+
+**PHONENR**	Номер телефона пользователя
+
+**NAME**		Имя пользователя
+
+**EMAIL**		Электронная почта пользователя
+
+
 
 **Список SMS команд (123456 - заводской код)**
 
@@ -849,12 +863,13 @@
 
 | Клавиш клавиатуры | Функция | Описание |
 |-------------------|---------|----------|
-| [№ выхода]*[№ состояния]# | Управление выходом OUT | Управление выбранным выходом OUT. Состояние:| 
+| [№ выхода]*[№ состояния]# | Управление выходом OUT | Управление выбранным выходом OUT. Состояние:|
 |  |  | [0] – выключить вход; |
 |  |  | [1] – включить вход; |
 |  |  | [2] – выключить вход на продолжительность импульса; |
 |  |  | [3] – включить вход на продолжительность импульса. |
-|  |  | (продолжительность импульса задается в программе ***TrikdisConfig*** в окне „PGM выходы“ -> „Выход“). [#] – символ окончания кода. |
+|  |  | (продолжительность импульса задается в программе ***TrikdisConfig*** в окне „PGM выходы“ -> „Выход“). |
+| | | [#] – символ окончания кода. |
 |  |  | Например (включить выход №1): **1*1#** |
 |  |  | Например (выключить выход №1): **1*0#** |
 |  |  | Например (включить выход №2 на продолжительность импульса): **2*3#** |
@@ -866,13 +881,13 @@
 
 После подключения коммуникатора к программе ***TrikdisConfig***, в строке состояния программы появится информация о подключенном коммуникаторе.
 
-<img alt="" src="./image75.webp" style="width:7.086614173228346in;height:0.5748031496062992in" />
+<img alt="" src="./image75.webp" style="width:7.0in;height:in" />
 
 | Наименование | Описание |
 |----|----|
 | IMEI/​Уникальный № | IMEI номер устройства |
 | Состояние | Рабочее состояние |
-| Модуль | Тип изделия (должно быть указано – FC_xxxx) |
+| Модуль | Тип изделия (должно быть указано – **FC_xxxx**) |
 | SN | Серийный номер изделия |
 | BL | Версия менеджера загрузки |
 | FW | Версия программного обеспечения изделия |
@@ -886,7 +901,7 @@
 
 **Закладка „Основные“**
 
-<img alt="" src="./image76.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
+<img alt="" src="./image76.webp" style="width:7.0in;height:in" />
 
 **Группа „Основные“**
 
@@ -934,13 +949,13 @@
 
 **Закладка „Группы“**
 
-<img alt="" src="./image77.webp" style="width:7.086614173228346in;height:1.374015748031496in" />
+<img alt="" src="./image77.webp" style="width:7.0in;height:in" />
 
 Зоны могут быть объединены в группы. Название каждой группы можно изменить.
 
 **Закладка „Подсоединение“**
 
-<img alt="" src="./image78.webp" style="width:7.086614173228346in;height:3.1102362204724407in" />
+<img alt="" src="./image78.webp" style="width:7.0in;height:in" />
 
 **Группа „Коды доступа“**
 
@@ -963,7 +978,7 @@
 
 **Закладка „Сообщения“**
 
-<img alt="" src="./image79.webp" style="width:7.086614173228346in;height:3.204724409448819in" />
+<img alt="" src="./image79.webp" style="width:7.0in;height:in" />
 
 Коммуникатор отправляет сообщения на ПЦН через мобильный (и/или LAN) интернет.
 
@@ -989,7 +1004,7 @@
 
 **Закладка „Настройки“**
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:3.8661417322834644in" />
+<img alt="" src="./image80.webp" style="width:7.0in;height:in" />
 
 **Группа „Настройки“**
 
@@ -1052,7 +1067,7 @@
 
 **Закладка „Пользователи“**
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image81.webp" style="width:7.0in;height:in" />
 
 Группа „Пользователи и сообщения пользователю“
 
@@ -1072,7 +1087,7 @@
 
 **Закладка „Protegus“**
 
-<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image82.webp" style="width:7.0in;height:in" />
 
 **Группа „Облачное приложение“**
 
@@ -1084,7 +1099,7 @@
 
 **Закладка „Тексты SMS ответов“**
 
-<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:2.440944881889764in" />
+<img alt="" src="./image83.webp" style="width:7.0in;height:in" />
 
 **Группа „Текст SMS ответов“**
 
@@ -1094,7 +1109,7 @@
 
 **Закладка „RS485 модули“**
 
-<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.9330708661417324in" />
+<img alt="" src="./image84.webp" style="width:7.0in;height:in" />
 
 **Группа „RS485 модули“**
 
@@ -1108,7 +1123,7 @@
 
 - **Версия прошивки** – будет показана версия прошивки модуля, когда коммуникатор ***FIRECOM*** идентифицирует подсоединенный модуль.
 
-<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:3.62992125984252in" />
+<img alt="" src="./image85.webp" style="width:7.0in;height:in" />
 
 **Группа "RS485 2 interface"**
 
@@ -1118,7 +1133,7 @@
 
 **Закладка „Настройки зон“**
 
-<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="" src="./image86.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер зоны.
 
@@ -1138,7 +1153,7 @@
 
 **Закладка „Сообщения SMS и звонком“**
 
-<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.559055118110236in" />
+<img alt="" src="./image87.webp" style="width:7.0in;height:in" />
 
 Закладка „**Сообщения SMS и звонком**“, появится если хоть один номер телефона пользователя будет описан в окне „**Пользователи и сообщения**“. Только для восьми первых пользователей можно сделать эти настройки.
 
@@ -1148,7 +1163,7 @@
 
 **Закладка „Коды зон“**
 
-<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="" src="./image88.webp" style="width:7.0in;height:in" />
 
 При активации зоны коммуникатор отправит сообщение о событии. Входу назначается код Contact ID (SIA), который будет отправлен ПЦН и ***Protegus2***.
 
@@ -1170,7 +1185,7 @@
 
 **Закладка „Выходы“**
 
-<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="" src="./image89.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер выхода.
 
@@ -1188,7 +1203,7 @@
 
 **Закладка „Действия“**
 
-<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
+<img alt="" src="./image90.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер строчки.
 - **Вкл.** – отметьте поле и будет включен алгоритм срабатывания выхода OUT.
@@ -1223,7 +1238,7 @@
 
 **Закладка „График“**
 
-<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image91.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер графика.
 
@@ -1237,7 +1252,7 @@
 
 **Закладка „Сообщения SMS и звонком“**
 
-<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="" src="./image92.webp" style="width:7.0in;height:in" />
 
 Закладка „**Сообщения SMS и звонком**“, появится если хоть один номер телефона пользователя будет описан в окне „**Пользователи и сообщения**“. Только для восьми первых пользователей можно сделать эти настройки.
 
@@ -1247,7 +1262,7 @@
 
 ### Окно „Датчики“ 
 
-<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.8307086614173227in" />
+<img alt="" src="./image93.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер датчика температуры.
 
@@ -1269,7 +1284,7 @@
 
 **Закладка „Внутренние события“**
 
-<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="" src="./image94.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер события.
 
@@ -1289,7 +1304,7 @@
 
 **Закладка „Сообщения SMS и звонком“**
 
-<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.2716535433070866in" />
+<img alt="" src="./image95.webp" style="width:7.0in;height:in" />
 
 Закладка „**Сообщения SMS и звонком**“, появится если хоть один номер телефона пользователя будет описан в окне „**Пользователи и сообщения**“. Только для восьми первых пользователей можно сделать эти настройки.
 
@@ -1301,7 +1316,7 @@
 
 ### Окно „Журнал событий“ 
 
-<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.4448818897637796in" />
+<img alt="" src="./image96.webp" style="width:7.0in;height:in" />
 
 - Нажать кнопку „**Считать**“ – будет считан журнал событий из памяти ***FIRECOM***.
 
@@ -1313,7 +1328,7 @@
 
 Для восстановления заводских настроек коммуникатора ***FIRECOM*** необходимо в программном окне ***TrikdisConfig*** нажать кнопку „**Восстановить**“.
 
-<img alt="" src="./image97.webp" style="width:7.086614173228346in;height:1.0866141732283465in" />
+<img alt="" src="./image97.webp" style="width:7.0in;height:in" />
 
 ## Удаленная настройка параметров 
 
@@ -1339,7 +1354,7 @@
 
 2.  В поле „**Уникальный №“** введите IMEI номер ***FIRECOM***, который указан на упаковке или на изделии.
 
-<img alt="" src="./image98.webp" style="width:7.086614173228346in;height:2.3622047244094486in" />
+<img alt="" src="./image98.webp" style="width:7.0in;height:in" />
 
 3. В поле „**Название системы“** напишите название объекта.
 
@@ -1378,7 +1393,7 @@
 
 4.  Нажмите кнопку „**Открыть файл**“ и выберите нужный файл для установки.
 
-<img alt="" src="./image99.webp" style="width:7.086614173228346in;height:2.937007874015748in" />
+<img alt="" src="./image99.webp" style="width:7.0in;height:in" />
 
 5. Нажмите кнопку **Обновить [F12]**.
 
