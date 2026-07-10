@@ -24,9 +24,9 @@ Veikimo principas. Kai pažeidžiamas komunikatoriaus įėjimas (zona), ***FIREC
 
 Pranešimai saugos tarnybai
 
-- Siunčia įvykius per vietinį LAN tinklą ir (arba) per 4G mobilų internetą.
+- Siunčia įvykius per vietinį LAN tinklą ir (arba) per 4G mobilų internetą. 
 
-  - Pranešimai galimais ryšio kanalais išsiunčiami parinktu prioritetu.
+- Pranešimai galimais ryšio kanalais išsiunčiami parinktu prioritetu.
 
 - Centrinio stebėjimo pulte pranešimai priimami TRIKDIS IP imtuvu arba SIA DC-09 IP protokolu veikiančiu IP imtuvu.
 
@@ -49,7 +49,7 @@ Pranešimai saugos tarnybai
 
 **Nuotolinis išėjimų valdymas**
 
-- Protegu0 2 programėle.
+- ***Protegus2*** programėle.
 
 - Paskambinus įrenginio telefono numeriu.
 
@@ -69,13 +69,13 @@ Pranešimai saugos tarnybai
 
 - 3 reliniai išėjimai (1 A, 30V DC).
 
-- „FLOOP“ įėjimas skirtas 2laidžių priešgaisrinių jutiklių prijungimui.
+- „**FLOOP**“ įėjimas skirtas 2laidžių priešgaisrinių jutiklių prijungimui.
 
 - 10 I/O kontaktų, iš kurių kiekvieną galima nustatyti kaip įėjimo (IN) arba išėjimo (OUT) kontaktą. Įėjimo (IN) tipai: NC, NO, EOL, EOL-T, ATZ, ATZ-T. EOL ir ATZ grandinėse galima naudoti skirtingų nominalų rezistorius.
 
-- Su iO plėtimo moduliais IN įėjimų skaičių galima išplėsti iki 32 vnt., o OUT išėjimų skaičių galima išplėsti iki 16 vnt.
+- Su ***iO*** plėtimo moduliais IN įėjimų skaičių galima išplėsti iki 32 vnt., o OUT išėjimų skaičių galima išplėsti iki 16 vnt.
 
-- iO serijos išplėtimo moduliams prijungti naudojama RS485 jungtis.
+- ***iO*** serijos išplėtimo moduliams prijungti naudojama RS485 jungtis.
 
 - RS485 2 sąsaja naudojama priešgaisrinėms centralėms prijungti.
 
@@ -244,7 +244,7 @@ Paveikslėlyje pateiktos komunikatoriaus plokštės ir jos tvirtinimo kiaurymių
 
 ### Prietaisų prijungimo eiliškumas
 
-<img alt="" src="./image6.webp" style="width:7.0;height:in" />
+<img alt="" src="./image6.webp" style="width:7.0in;height:in" />
 
 1.  Jei naudojate SIM kortelę, į SIM kortelės laikiklį įdėkite prie mobiliojo tinklo jau priregistruotą SIM kortelę.
 
@@ -268,36 +268,37 @@ Komunikatoriaus plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių gr
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image7.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image8.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 40%; height: auto;" />
+    <img src="./image9.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image10.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 50%; height: auto;" />
+    <img src="./image11.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image12.webp" alt="" style="width: 3.0in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 45%; height: auto;" />
+    <img src="./image13.webp" alt="" style="width: 2.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 80%; height: auto;" />
+    <img src="./image14.webp" alt="" style="width: 5.0in; height:in;" />
   </figure>
 </div>
+
 
 
 ### Dūmų jutiklių jungimas 
@@ -330,12 +331,13 @@ Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia aktyv
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image19.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image20.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
+
 
 
 Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus jo išėjimus prie ***FIRECOM*** įėjimų. Priešgaisrinės centralės išėjimai (PGM1, PGM2, PGM3) turi būti sukonfigūruoti kaip centralės būsenos išėjimai (Aliarmas, Gedimas ir kt.).
@@ -344,10 +346,10 @@ Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image21.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image22.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
@@ -379,12 +381,13 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image27.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image28.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
+
 
 
 ***FIRECOM*** komunikatoriaus nustatymai su ***TrikdisConfig*** jungiant su **NSC Solution** priešgaisrine centrale.
@@ -415,10 +418,10 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image33.webp" alt="" style="width: 4.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image34.webp" alt="" style="width: 4.5in; height:in;" />
   </figure>
 </div>
 
@@ -455,10 +458,10 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image40.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 70%; height: auto;" />
+    <img src="./image41.webp" alt="" style="width: 4.0in; height:in;" />
   </figure>
 </div>
 
@@ -562,7 +565,9 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM\*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2\***. 
 
-***FIRECOM\*** **komunikatorius ir Polon-Alfa 3000 priešgaisrinės signalizacijos centralė prijungti prie to paties LAN tinklo.** <img alt="" src="./image105.webp" style="width:7.0in;height:in" />
+***FIRECOM\*** **komunikatorius ir Polon-Alfa 3000 priešgaisrinės signalizacijos centralė prijungti prie to paties LAN tinklo.** 
+
+<img alt="" src="./image105.webp" style="width:7.0in;height:in" />
 
 ***FIRECOM\*** komunikatoriaus nustatymai su ***TrikdisConfig\***. 
 
@@ -598,7 +603,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 ### Temperatūros jutiklio prijungimo schema 
 
-<img alt="" src="./image54.webp" style="width:4.0in;height:in" /> / <img alt="" src="./image55.webp" style="width:4.0in;height:in" />
+<img alt="" src="./image54.webp" style="width:4.0in;height:in" />  <img alt="" src="./image55.webp" style="width:4.0in;height:in" />
 
 Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie komunikatoriaus ***FIRECOM*** galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (iki 8 vnt.) arba temperatūros ir drėgmės jutiklį AM2301 (1 vnt.). 
 Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). 
@@ -607,7 +612,7 @@ Plokštės gnybtas „**+5V**“ skirtas prie „**1-Wire**“ magistralės prij
 
 ### Relės, LED indikatoriaus prijungimo schemos 
 
-<img alt="" src="./image56.webp" style="width:3.0in;height:in" /> / <img alt="" src="./image57.webp" style="width:2.1233377077865265in;height:0.9066688538932633in" />
+<img alt="" src="./image56.webp" style="width:3.0in;height:in" />/ <img alt="" src="./image57.webp" style="width:2.5in;height:in" />
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo (**I/O**) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas „**Nuotolinis valdymas**“.
 
@@ -623,17 +628,18 @@ Jei reikia, kad komunikatorius ***FIRECOM*** turėtų daugiau įėjimų IN arba 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image59.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image59.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image60.webp" alt="" style="width: 60%; height: auto;" />
+    <img src="./image60.webp" alt="" style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
 
+
 **LORA** plėtimo modulių prijungimo schema
 
-<img alt="" src="./image61.webp" style="width:6.0in;height:in" />
+<img alt="" src="./image61.webp" style="width:6.5in;height:in" />
 
 ### Komunikatoriaus įjungimas 
 
