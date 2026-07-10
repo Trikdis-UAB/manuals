@@ -394,14 +394,14 @@ Test the system. Activate the fire alarm and check that ***FIRECOM*** messages a
 ### Schematic for connecting the fire panel NSC Solution
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image27.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image27.webp" alt="" style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image28.webp" alt="" style="width: 35%; height: auto;" />
+<img src="./image28.webp" alt="" style="width: 100%; height: auto;" />
 </figure>
+
 
 </div>
 
@@ -644,14 +644,14 @@ According to the EN54 standard, the fire panel from the communicator must receiv
 If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS ***iO*** series input and output expander. The ***FIRECOM***’s configuration for expander modules is described in chapter 6.5 ““Modules” window”.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-
 <figure style="margin: 0;">
-<img src="./image57.webp" alt="" style="width: 30%; height: auto;" />
+<img src="./image57.webp" alt="" style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
-<img src="./image58.webp" alt="" style="width: 30%; height: auto;" />
+<img src="./image58.webp" alt="" style="width: 100%; height: auto;" />
 </figure>
+
 
 </div>
 
