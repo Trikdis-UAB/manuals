@@ -477,6 +477,8 @@ Lauko sirenos MR100 pajungimas ir nustatymai pavaizduoti schemoje. Jei apsaugos 
 
 Prie klaviatūros magistralės galima prijungti iki 8 įrenginių. Programoje TrikdisConfig reikia nurodyti prijungiamos klaviatūros tipą (žr. 5.5 „Langas „Moduliai““). Centralė automatiškai atpažins ir užregistruos prijungtus įrenginius.
 
+Kaip valdyti apsaugos sistemą Protegus arba Paradox klaviatūra, programuoti vartotojų kodus, naudoti Bypass, iButton/RFID, skambučius, SMS ir PGM išėjimus, aprašyta [„FLEXi“ SP3 vartotojo vadove su Protegus ir Paradox klaviatūromis](paradox-user-guide/index.md).
+
 <img alt="" src="./image23.webp" style="width:7.086805555555555in;height:1.875in" />
 
 <img alt="" src="./image24.webp" style="width:4.430008748906387in;height:3.7400076552930885in" />
@@ -541,6 +543,8 @@ Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 0 revizijos pr
 ### RTX3 prijungimo schema
 
 Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 1 revizijos programą SP3_xxx1_0112.fw (veikimo programos versija 1.12 arba aukštesnė. Prijungus belaidžių jutiklių imtuvą *RTX3*, centralė *„FLEXi“ SP3* gali dirbti su firmos Paradox belaidžiais jutikliais (magnetiniais kontaktais, PIR jutikliais, stiklo dūžio jutikliais(G550), dūmų jutikliais (SD360), nuotolinio valdymo pulteliais (REM2, REM25), sirenomis (SR230, SR250), klaviatūromis (K37), PGM ir zonos išplėtimo moduliu (2WPGM), kartotuvu (RPT1)).
+
+RTX3 veikimo programos, prijungimo ir Paradox belaidžių įrenginių registravimo arba šalinimo instrukcijos pateiktos vadove [Paradox belaidžiai įrenginiai su „FLEXi“ SP3 (RTX3)](paradox-rtx3/index.md).
 
 <img alt="" src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
 

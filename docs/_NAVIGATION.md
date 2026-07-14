@@ -34,6 +34,8 @@ Editor entry points (start here when editing):
     - [T16](en/alarm-communicators/t16/index.md)
 - Control Panels
   - [FLEXi SP3](en/control-panels/sp3/index.md)
+    - [Using Protegus and Paradox keypads](en/control-panels/sp3/paradox-user-guide/index.md)
+    - [Paradox wireless devices (RTX3)](en/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](en/control-panels/cg17/index.md)
 - Gate Controllers
   - [GATOR](en/gate-controllers/gator/index.md)
@@ -91,6 +93,8 @@ Editor entry points (start here when editing):
     - [T16](lt/alarm-communicators/t16/index.md)
 - Apsaugos centrelės
   - [FLEXi SP3](lt/control-panels/sp3/index.md)
+    - [Protegus ir Paradox klaviatūrų vartotojo vadovas](lt/control-panels/sp3/paradox-user-guide/index.md)
+    - [Paradox belaidžiai įrenginiai (RTX3)](lt/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](lt/control-panels/cg17/index.md)
 - Valdikliai
   - [Gator](lt/gate-controllers/gator/index.md)
@@ -162,6 +166,8 @@ Editor entry points (start here when editing):
     - [T16](es/alarm-communicators/t16/index.md)
 - Paneles de control
   - [FLEXi SP3](es/control-panels/sp3/index.md)
+    - [Guía de usuario de teclados Protegus y Paradox](es/control-panels/sp3/paradox-user-guide/index.md)
+    - [Dispositivos inalámbricos Paradox (RTX3)](es/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](es/control-panels/cg17/index.md)
 - Controladores
   - [Gator](es/gate-controllers/gator/index.md)
@@ -233,6 +239,8 @@ Editor entry points (start here when editing):
     - [T16](ru/alarm-communicators/t16/index.md)
 - Панели управления
   - [FLEXi SP3](ru/control-panels/sp3/index.md)
+    - [Руководство пользователя клавиатур Protegus и Paradox](ru/control-panels/sp3/paradox-user-guide/index.md)
+    - [Беспроводные устройства Paradox (RTX3)](ru/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](ru/control-panels/cg17/index.md)
 - Контроллеры
   - [GATOR](ru/gate-controllers/gator/index.md)

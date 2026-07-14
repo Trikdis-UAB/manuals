@@ -251,6 +251,16 @@ def _should_number_headings(page, markdown: str, config) -> bool:
     if any(src_path.startswith(f"{locale}/faq/") for locale in locales):
         return False
 
+    # The companion guides are independently converted legacy manuals. Their
+    # descriptive headings should remain stable for deep links; adding numeric
+    # prefixes produces fragment ids that begin with digits and can break the
+    # Material instant-navigation selector.
+    if any(
+        src_path.startswith(f"{locale}/control-panels/sp3/paradox-")
+        for locale in locales
+    ):
+        return False
+
     return not any(NUMBERED_H2_RE.match(line) for line in markdown.splitlines())
 
 

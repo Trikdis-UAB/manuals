@@ -453,6 +453,8 @@ The diagram shows the connection and settings of the **MR100** outdoor siren. If
 
 Up to 8 devices can be connected to the keypad data bus. The type of the connected keypad must be specified using TrikdisConfig software (see chapter 5.5 ““Modules” window”). The control panel will automatically recognize and link the connected devices.
 
+For operating the alarm with Protegus or Paradox keypads, including user codes, bypass, iButton/RFID, calls, SMS and PGM outputs, see the [SP3 user guide for Protegus and Paradox keypads](paradox-user-guide/index.md).
+
 <img alt="" src="./image23.webp" style="width:7.016680883639545in;height:1.7333366141732283in" />
 
 <img alt="" src="./image24.webp" style="width:4.100008748906387in;height:3.4566732283464567in" />
@@ -517,6 +519,8 @@ The firmware version of the *"FLEXi" SP3* control panel must be SP3_xxx0_0101.f
 ### Schematic for connecting RTX3 
 
 The firmware version of the *"FLEXi" SP3* control panel must be: SP3_xxx1_0112.fw (firmware version 1.12 and higher). When connecting the RTX3 wireless sensor receiver, *"FLEXi" SP3* can work with wireless sensors from "Paradox" (magnetic contacts, PIR sensors, glass break sensors (G550), smoke detectors (SD360), key fobs (REM2, REM25), sirens (SR230, SR250), keypads (K37), PGM and zone expansion module (2WPGM), repeater (RPT1)).
+
+For RTX3 firmware, connection and Paradox wireless-device enrollment or removal, see [Using Paradox wireless devices with FLEXi SP3 (RTX3)](paradox-rtx3/index.md).
 
 <img alt="" src="./image35.webp" style="width:2.233337707786527in;height:1.23333552055993in" />
 
