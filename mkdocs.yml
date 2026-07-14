@@ -451,6 +451,11 @@ markdown_extensions:
 - tables
 - pymdownx.details
 - pymdownx.superfences
+- pymdownx.snippets:
+    base_path:
+    - docs
+    check_paths: true
+    dedent_subsections: true
 - pymdownx.tabbed:
     alternate_style: true
 - pymdownx.tasklist:
