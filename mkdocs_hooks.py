@@ -248,6 +248,9 @@ def _should_number_headings(page, markdown: str, config) -> bool:
     if any(src_path == f"{locale}/index.md" for locale in locales):
         return False
 
+    if any(src_path.startswith(f"{locale}/faq/") for locale in locales):
+        return False
+
     return not any(NUMBERED_H2_RE.match(line) for line in markdown.splitlines())
 
 

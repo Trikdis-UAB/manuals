@@ -4,6 +4,16 @@
   <img src="./sp3-product.webp" alt="FLEXi SP3" width="400">
 </div>
 
+**Preguntas comunes**
+
+??? question "¿Cómo configuro un lector Wiegand único (sin teclado) para pulsar una salida de puerta?"
+
+    --8<-- "es/faq/index.md:sp3-wiegand-reader-door-output-body"
+
+    Consulta la sección completa: [Vinculación de llaves RFID (tarjetas)](#541-vinculacion-de-llaves-rfid-tarjetas).
+
+¿No encuentras tu pregunta? Contacta con [support@trikdis.lt](mailto:support@trikdis.lt).
+
 ## Descripción
 
 El panel de control *„FLEXi“ SP3* es el procesador de un sistema de alarma contra incendios y de allanamiento (a las instalaciones) con un módulo WiFi incorporado y un módem celular 2G o 4G. El panel de control permite agrupar 64 alámbricas e inalámbricas en un sistema de 8 particiones. Los usuarios pueden cambiar los modos de protección para estas áreas de forma remota (por ejemplo, a través de la aplicación móvil Protegus2, SMS, llamadas telefónicas) y mediante el uso de varios dispositivos que permiten la identificación personal (por ejemplo, teclados alámbricos e inalámbricos, llaves electrónicas, tarjetas RFID, etc.). Después de cualquier evento del sistema, se enviará un informe a la estación central de monitoreo (CRA) y/o a la aplicación Protegus2 del usuario a través de redes de internet usando WiFi, y/o a través de redes móviles usando una tarjeta SIM.
@@ -1068,6 +1078,8 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 #### Vinculación de llaves RFID (tarjetas)
 
 Puedes agregar llaves (tarjetas) RFID ingresando sus números ID en el campo Tag código en *TrikdisConfig*. Haz clic en el botón Escribir [F5] para escribir la lista de llaves (tarjeta) RFID en el panel de control.
+
+--8<-- "es/faq/index.md:sp3-wiegand-reader-door-output"
 
 <img alt="" src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 

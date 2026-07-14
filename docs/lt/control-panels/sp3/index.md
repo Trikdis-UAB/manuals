@@ -6,6 +6,16 @@
 
 </div>
 
+**Dažni klausimai**
+
+??? question "Kaip nustatyti pavienį Wiegand skaitytuvą (be klaviatūros), kad jis impulsu suveiktų durų išėjimą?"
+
+    --8<-- "lt/faq/index.md:sp3-wiegand-reader-door-output-body"
+
+    Žr. visą skyrių: [RFID pakabukų (kortelių) registravimas](#541-rfid-pakabuku-korteliu-registravimas).
+
+Neradote atsakymo į savo klausimą? Susisiekite el. paštu [support@trikdis.lt](mailto:support@trikdis.lt).
+
 ## Aprašymas
 
 Apsaugos centralė *“FLEXi” SP3 – tai apsaugos ir gaisro signalizavimo sistema su integruotu WiFi moduliu ir 2G/4G mobiliojo ryšio modemu. Centralė leidžia sukurti į 8 sritis sugrupuotų 64 laidinių ir belaidžių zonų sistemą. Patalpų apsaugą galima valdyti tiek nuotoliniu būdu (su mobiliąja programa Protegus2, SMS, skambučiu), tiek klaviatūromis ir RFID. Informacija apie sistemos būklę gali būti siunčiama į saugos tarnybos centralizuoto stebėjimo pultą (CSP) ir objekto šeimininkui į programėlę Protegus2* per WiFi ir (arba) per mobiliojo interneto tinklus.
@@ -1066,6 +1076,8 @@ Nustatomi parametrai, kaip centralė siųs pranešimus į CSP kanalus ir į Prot
 #### RFID pakabukų (kortelių) registravimas
 
 RFID pakabukų (kortelių) registravimą galima atlikti programoje *TrikdisConfig* įvedant jų ID numerius į lauką Pakabuko kodas. Nuspauskite mygtuką Įrašyti \[F5\], kad RFID pakabukų (kortelių) sąrašas būtų įrašytas į centralę.
+
+--8<-- "lt/faq/index.md:sp3-wiegand-reader-door-output"
 
 <img alt="" src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 

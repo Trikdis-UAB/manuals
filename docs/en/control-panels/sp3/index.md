@@ -4,6 +4,15 @@
   <img src="./sp3-product.webp" alt="FLEXi SP3" width="400">
 </div>
 
+**Common questions**
+
+??? question "How do I set up a single Wiegand reader (no keypad) to pulse a door output?"
+
+    --8<-- "en/faq/index.md:sp3-wiegand-reader-door-output-body"
+
+    See the full section: [Linking RFID key fobs (cards)](#linking-rfid-key-fobs-cards).
+
+Don't see your question? Contact [support@trikdis.lt](mailto:support@trikdis.lt).
 
 ## Description
 
@@ -1059,6 +1068,8 @@ For setting parameters on how the control panel will communicate with the CMS ch
 #### Linking RFID key fobs (cards) 
 
 You can add RFID key fobs (cards) by entering their ID numbers into the Tag code field in *TrikdisConfig*. Click the Write [F5] button to write the RFID key fob (card) list into the control panel.
+
+--8<-- "en/faq/index.md:sp3-wiegand-reader-door-output"
 
 <img alt="" src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 

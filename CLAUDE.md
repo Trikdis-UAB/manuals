@@ -3,6 +3,8 @@
 
 **Nav hiding mechanism** (why WIP sections are invisible until directly navigated to): see `NAV_VISIBILITY.md`.
 
+**FAQ system** (support-case-sourced Q&A: entry format, the numbering-exclusion gotcha, nav visibility, how to add an entry): see `agents.md` §13.
+
 ## Credentials & API access
 
 See `.claude/credentials.local.md` (gitignored, not committed).

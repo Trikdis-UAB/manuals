@@ -170,3 +170,78 @@ For EOL products or manuals where the auto-generated PDF would be degraded (e.g.
 - The page is **excluded** from `pdf-manifest.json`, so the PDF generator does not overwrite it.
 
 **Example:** `docs/en/receivers/ip-network/rl14/` — uses `rl14-original.pdf` because the source DOCX contained EMF images and Word callout text-box overlays that Pandoc cannot extract.
+
+## 13) FAQ system (support-case-sourced Q&A)
+
+Purpose: close the loop between real customer support emails/tickets and the docs — capture recurring questions as they actually come in, rather than guessing what readers need. Entries should trace back to a real support case, not be invented.
+
+### Where content lives
+`docs/en/faq/index.md` — one page today, grouped by product under `##` headings (e.g. `## FLEXi SP3`). Split into per-product pages (`docs/en/faq/<product>.md`, with a nav sub-list) only once a product's section or the page as a whole gets unwieldy — no fixed threshold, use judgment.
+
+### Entry format
+Each entry is a collapsible question, not a heading, wrapped in `pymdownx.snippets` section markers so it can be transcluded into a manual later even if it isn't yet:
+```markdown
+<span id="sp3-wiegand-reader-door-output"></span>
+
+<!-- --8<-- [start:sp3-wiegand-reader-door-output] -->
+??? question "How do I set up a single Wiegand reader (no keypad) to pulse a door output?"
+
+    1. Step-by-step answer...
+<!-- --8<-- [end:sp3-wiegand-reader-door-output] -->
+```
+- `??? question "..."` is a Material/pymdown-extensions `details` admonition (type `question`), collapsed by default. This keeps the page scanning as a list of questions rather than another manual, and keeps entries out of the heading-numbering pass.
+- The `<span id="...">` is a manual anchor (slug: `<product>-<short-topic>`) for deep-linking into the FAQ page — collapsible admonitions get no automatic heading anchor, so without this span, nothing could target one specific question there.
+- **The span must stay *outside* the `[start:...]`/`[end:...]` markers.** A manual can (and the pattern below expects it to) transclude the same section twice on one page — once as a top-of-page digest, once in context further down. HTML ids must be unique per page; if the span were inside the markers, transcluding twice would emit the same `id` twice on that page and break anchor resolution. Only the FAQ page needs the id (it's the one place anyone deep-links to); the transcluded copies don't need their own.
+- Likewise keep any FAQ-page-only content (e.g. a closing "see the full manual" link) *outside* the markers — anything inside gets pulled verbatim into a manual too, where a self-link back to "the FLEXi SP3 manual" from inside the FLEXi SP3 manual would be circular.
+- Pagefind (this repo's search) still indexes collapsed content: `pymdownx.details` renders a real `<details><summary>`, which is ordinary `<body>` DOM, not hidden from the indexer.
+
+### Numbering exclusion lives in hooks.py, not mkdocs.yml
+FAQ pages must not get auto-numbered headings (`## FLEXi SP3` must not become `## 1. FLEXi SP3`). **Adding `en/faq/` to `add-number.excludes:` in `mkdocs.yml` has no effect** — `_apply_heading_numbers()` in `mkdocs_hooks.py` calls `AddNumberPlugin().load_config(...)` with its own hardcoded `"excludes": []`, ignoring whatever `excludes:` is set in the YAML plugin config. The real exclusion point is `_should_number_headings()` in `mkdocs_hooks.py`, which already special-cases `<locale>/faq/` pages for every configured locale. If FAQ numbering ever misbehaves, fix it there, not in `mkdocs.yml`.
+
+### Cross-linking from manuals
+Product manuals pull the answer in **inline**, via a `pymdownx.snippets` include — never a link out to the FAQ page, so the reader never has to navigate away:
+```markdown
+--8<-- "en/faq/index.md:sp3-wiegand-reader-door-output"
+```
+The FAQ file (`docs/en/faq/index.md`) stays the single source of truth — edit the entry there once, everywhere that includes it picks up the change on next build. `pymdownx.snippets` config lives in `mkdocs.yml`: `base_path: [docs]` (so includes are written relative to `docs/`, e.g. `en/faq/index.md:<anchor>`), `check_paths: true` (fails the build on a bad path/section instead of silently rendering nothing), `dedent_subsections: true` (required — see nested sections below).
+
+A manual includes each relevant entry **twice**, for two different readers:
+1. **A "Common questions" digest near the top of the page** (right after the hero image, before the first `##` heading) — for a reader who lands on the page not knowing the manual answers their question at all. Label it with a bold line, not a heading (`**Common questions**`, not `## Common questions`) — a real heading would get numbered by `add-number` and renumber every section after it. Close the digest with a plain contact line: `Don't see your question? Contact [support@trikdis.lt](mailto:support@trikdis.lt).` — that line is also the natural place a future "ask a question" widget/chatbot would slot in later.
+2. **In context, at the exact section the question is about** (e.g. inside "Linking RFID key fobs (cards)" for the Wiegand entry) — for a reader already reading that section via search or the TOC.
+
+#### When the digest needs one extra thing the in-context copy shouldn't have
+The digest often wants a "jump to the full section" link, e.g. `[Linking RFID key fobs (cards)](#541-linking-rfid-key-fobs-cards)`. Don't put this in the main shared section: it's an in-page link, so it's only valid on the SP3 manual page — it would be a dead link if it ended up on the FAQ page too (no such heading there), and it would be circular if it ended up on the in-context copy (already at that heading). Instead, nest a **second, narrower section** around just the reusable core (no wrapper, no link), and hand-write the `??? question "..."` wrapper plus the extra link locally at the digest only:
+
+**Getting the anchor right:** don't hand-derive the slug and trust it — `add-number` renumbers the target heading (e.g. "Linking RFID key fobs (cards)" → "5.4.1 Linking RFID key fobs (cards)") and the final id is `<number>-<ascii-folded-slug>` (e.g. `541-linking-rfid-key-fobs-cards`). For non-English headings the folded slug can differ a lot from the source text — Lithuanian/Spanish accents get stripped (`kortelių` → `korteliu`), and Russian gets far more aggressive: Cyrillic isn't transliterated at all, just dropped, so "Регистрация RFID карточек (брелоков)" collapses to `541-rfid` (confirmed unique on the page — the numeric prefix is unique per heading position even when the text remnant is this short). `mkdocs build --strict` won't catch a wrong anchor (same-page fragments aren't validated, so it silently just fails to scroll). Build first, then read the real id from the built page's nav TOC entry (grep for the heading's number, e.g. `"5.4.1"`, and take the `href` on that link — it's generated by the same pipeline that assigned the heading's `id`, so it's authoritative), put that exact id in the link, rebuild, and confirm the rendered `href` matches the heading `id` exactly.
+```markdown
+<!-- in docs/en/faq/index.md -->
+<!-- --8<-- [start:sp3-wiegand-reader-door-output] -->
+??? question "How do I set up a single Wiegand reader (no keypad) to pulse a door output?"
+
+<!-- --8<-- [start:sp3-wiegand-reader-door-output-body] -->
+    1. Step-by-step answer...
+<!-- --8<-- [end:sp3-wiegand-reader-door-output-body] -->
+<!-- --8<-- [end:sp3-wiegand-reader-door-output] -->
+```
+```markdown
+<!-- in the manual's top "Common questions" digest -->
+??? question "How do I set up a single Wiegand reader (no keypad) to pulse a door output?"
+
+    --8<-- "en/faq/index.md:sp3-wiegand-reader-door-output-body"
+
+    See the full section: [Linking RFID key fobs (cards)](#linking-rfid-key-fobs-cards).
+```
+The in-context copy keeps using the simple outer include (no `-body` suffix), unchanged — no wrapper, no extra link, nothing circular. Nested markers of different names don't interfere with each other; extracting the outer section just treats the inner markers as skippable comments.
+
+This only works with `dedent_subsections: true`: the `-body` section is authored indented (nested under the FAQ page's own `??? question`), and `pymdownx.snippets` re-indents whatever it splices in to match the including line's own indentation on top of whatever the extracted text already has. Without dedenting first, the digest's copy would double up (4 spaces baked into the extracted text + 4 more from being nested under the local wrapper) and fail to nest correctly.
+
+Either way, it's the same underlying answer text kept in one place — see the "span must stay outside the markers" note above for why the id itself only needs to exist once, on the FAQ page.
+
+### Nav visibility
+The FAQ page is intentionally **not** listed in `mkdocs.yml`'s nav yet — one entry doesn't warrant a permanent top-level slot. It's still fully built and reachable via direct URL and via the manuals that transclude its entries inline (see Cross-linking from manuals above). See `NAV_VISIBILITY.md` → "A Simpler Option — Omit From `nav:` Entirely". Promote it by adding `- FAQ: faq/index.md` back into the English nav (right after `Home`) once there's enough content to justify it — no other change required.
+
+### Adding a new entry from a support case
+1. Identify the product and phrase the question the way a customer would ask it, not how support would.
+2. Add `<span id="...">` + `??? question "..."` under that product's `##` heading in `docs/en/faq/index.md` (create the heading if it's a new product).
+3. If the relevant manual should show this answer inline, add a `--8<-- "en/faq/index.md:<anchor>"` include both in its top-of-page "Common questions" digest (create one if the manual doesn't have one yet) and at the point in its text where the topic comes up (see Cross-linking from manuals above).
+4. Rebuild with `mkdocs build --strict` and confirm the anchor resolves, the snippet include renders (not a literal `--8<--` line), and the accordion renders.

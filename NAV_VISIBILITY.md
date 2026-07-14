@@ -76,6 +76,24 @@ recommended approach for a gradual, intentional rollout.
 
 ---
 
+## A Simpler Option — Omit From `nav:` Entirely
+
+The three-layer mechanism above hides the *children* of a section that already has
+a nav entry with sub-items (e.g. Receivers → IPcom). It doesn't help for a single
+flat page with no children to collapse — the label itself would always render.
+
+For that case (e.g. `docs/en/faq/index.md`, added 2026-07 with one entry so far),
+just don't list the page in `nav:` at all. MkDocs still builds and serves it —
+confirmed by the build log's own `"pages exist in the docs directory, but are not
+included in the nav configuration"` notice, which already lists several pre-existing
+pages this way (e.g. `en/receivers/ipcom/ui/capture-pipeline.md`). The page stays
+reachable by direct URL and by ordinary content links from other pages (e.g. a
+"Related FAQ" callout on a product manual), it just has zero presence in the sidebar
+— stronger than the three-layer trick's "dim label," and simpler for a page with
+no sub-nav to hide.
+
+Promote it later by adding the `nav:` entry back — no other change needed.
+
 ## Files Involved
 
 | File | Role |
