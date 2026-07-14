@@ -461,6 +461,8 @@ El diagrama muestra la conexión y la configuración de la sirena exterior **MR1
 
 Se pueden conectar hasta 8 dispositivos al bus de datos del teclado. El tipo de teclado conectado debe especificarse en el software TrikdisConfig (consulta el capítulo 5.5 Ventana "Módulos"). El panel de control reconocerá y vinculará automáticamente los dispositivos conectados.
 
+Para operar la alarma con teclados Protegus o Paradox, incluidos los códigos de usuario, la anulación, iButton/RFID, llamadas, SMS y salidas PGM, consulta la [guía de usuario de FLEXi SP3 con teclados Protegus y Paradox](paradox-user-guide/index.md).
+
 <img alt="" src="./image23.webp" style="width:7.086805555555555in;height:1.7215277777777778in" />
 
 <img alt="" src="./image24.webp" style="width:3.9200076552930883in;height:3.5133409886264215in" />
@@ -525,6 +527,8 @@ La versión del firmware del panel de seguridad „*FLEXi“ SP3* debe ser SP3_x
 ### Diagrama de cableado para el receptor de sensor inalámbrico RTX3 
 
 La versión de firmware del panel de seguridad *„FLEXi“ SP3* debe ser: SP3_xxx1_0112.fw (versión de firmware 1.12 o superior). Al conectar el receptor de sensor inalámbrico *RTX3*, *„FLEXi“ SP3* puede funcionar con sensores inalámbricos de Paradox (contactos magnéticos, sensores PIR, sensores de rotura de cristales (G550), detectores de humo (SD360), mandos a distancia (REM2, REM25), sirenas (SR230, SR250), teclados (K37), módulo de expansión de zona y PGM (2WPGM), repetidor (RPT1)).
+
+Para el firmware, la conexión y la inscripción o eliminación de dispositivos inalámbricos Paradox con RTX3, consulta [Dispositivos inalámbricos Paradox con FLEXi SP3 (RTX3)](paradox-rtx3/index.md).
 
 <img alt="" src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
 
