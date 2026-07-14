@@ -137,8 +137,8 @@ plugins:
         - FLEXi SP3:
           - FLEXi SP3 manual: control-panels/sp3/index.md
           - Using Protegus and Paradox keypads: control-panels/sp3/paradox-user-guide/index.md
-          - Paradox wireless devices (RTX3): control-panels/sp3/paradox-rtx3/index.md
           - Adding S8/S9 wireless sensors: control-panels/sp3/add-s8-sensors.md
+          - Paradox wireless devices (RTX3): control-panels/sp3/paradox-rtx3/index.md
         - CG17: control-panels/cg17/index.md
       - Gate Controllers:
         - GATOR: gate-controllers/gator/index.md
