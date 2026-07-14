@@ -35,6 +35,7 @@ Editor entry points (start here when editing):
 - Control Panels
   - [FLEXi SP3](en/control-panels/sp3/index.md)
     - [Using Protegus and Paradox keypads](en/control-panels/sp3/paradox-user-guide/index.md)
+    - [Adding S8/S9 wireless sensors](en/control-panels/sp3/add-s8-sensors.md)
     - [Paradox wireless devices (RTX3)](en/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](en/control-panels/cg17/index.md)
 - Gate Controllers
