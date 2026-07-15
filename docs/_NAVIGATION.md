@@ -95,6 +95,7 @@ Editor entry points (start here when editing):
 - Apsaugos centrelės
   - [FLEXi SP3](lt/control-panels/sp3/index.md)
     - [Protegus ir Paradox klaviatūrų vartotojo vadovas](lt/control-panels/sp3/paradox-user-guide/index.md)
+    - [S8/S9 belaidžių jutiklių pridėjimas](lt/control-panels/sp3/add-s8-sensors.md)
     - [Paradox belaidžiai įrenginiai (RTX3)](lt/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](lt/control-panels/cg17/index.md)
 - Valdikliai
@@ -168,6 +169,7 @@ Editor entry points (start here when editing):
 - Paneles de control
   - [FLEXi SP3](es/control-panels/sp3/index.md)
     - [Guía de usuario de teclados Protegus y Paradox](es/control-panels/sp3/paradox-user-guide/index.md)
+    - [Añadir sensores inalámbricos S8/S9](es/control-panels/sp3/add-s8-sensors.md)
     - [Dispositivos inalámbricos Paradox (RTX3)](es/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](es/control-panels/cg17/index.md)
 - Controladores
@@ -241,6 +243,7 @@ Editor entry points (start here when editing):
 - Панели управления
   - [FLEXi SP3](ru/control-panels/sp3/index.md)
     - [Руководство пользователя клавиатур Protegus и Paradox](ru/control-panels/sp3/paradox-user-guide/index.md)
+    - [Добавление беспроводных датчиков S8/S9](ru/control-panels/sp3/add-s8-sensors.md)
     - [Беспроводные устройства Paradox (RTX3)](ru/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](ru/control-panels/cg17/index.md)
 - Контроллеры

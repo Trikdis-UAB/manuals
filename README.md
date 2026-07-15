@@ -58,6 +58,20 @@ TRIKDOCS_CRISP_WEBSITE_ID=test-website-id npm run build:docs
 Scripts/check_crisp_chat_site.sh 8013
 ```
 
+### SP3 S8/S9 guide localizations
+
+The English S8/S9 wireless-sensor guide is the structural source for its Lithuanian, Spanish, and Russian copies. After changing the guide or its screenshots, synchronize and verify the localized copies before building the site:
+
+```bash
+python3 Scripts/sync_sp3_s8_assets.py
+python3 Scripts/check_sp3_s8_translations.py
+python3 Scripts/compare_manuals.py \
+  --base docs/en/control-panels/sp3/add-s8-sensors.md \
+  --targets docs/lt/control-panels/sp3/add-s8-sensors.md \
+            docs/es/control-panels/sp3/add-s8-sensors.md \
+            docs/ru/control-panels/sp3/add-s8-sensors.md
+```
+
 ## Repository Layout
 ```
 mkdocs.yml                 # MkDocs configuration (theme, navigation, build settings)
