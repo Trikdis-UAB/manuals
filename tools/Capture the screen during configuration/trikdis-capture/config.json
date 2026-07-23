@@ -1,0 +1,15 @@
+{
+  "url": "https://web.protegus.app/d/128612/configure/sp3",
+  "outputDir": "./sessions",
+  "screenshotQuality": 90,
+  "captureEvents": {
+    "navigation": true,
+    "clicks": true,
+    "formChanges": true,
+    "dialogs": true,
+    "pageErrors": true
+  },
+  "debounceMs": 400,
+  "screenshotFormat": "png",
+  "viewport": { "width": 390, "height": 844 }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "trikdis-capture",
+  "version": "1.0.0",
+  "description": "Playwright session capture for TrikdisConfig documentation",
+  "main": "capture.js",
+  "scripts": {
+    "start": "node capture.js",
+    "capture": "node capture.js"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
