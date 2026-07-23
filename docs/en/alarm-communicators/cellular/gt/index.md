@@ -102,7 +102,7 @@ This manual is for 4G communicators.
 | Modem EG915U-LA /​ (Latin America) | GSM: B2/​B3/​B5/​B8 |
 | Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
-| Power supply voltage | 10-32 V DC |
+| Power supply voltage | 10-18 V DC |
 | Current consumption | 125 mA |
 | Transmission protocols | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Message encryption | AES 128 |
@@ -133,7 +133,7 @@ This manual is for 4G communicators.
 
 | Terminal | Description |
 |----|----|
-| +12 VDC | +10 V/​+32 V DC power supply |
+| +12 VDC | +10 V/​+18 V DC power supply |
 | -12 VDC | 0 V DC power supply |
 | TIP | Terminal to connect with security control panel TIP terminal |
 | RING | Terminal to connect with security control panel RING terminal |

@@ -100,7 +100,7 @@ Este manual es para comunicadores 4G.
 | Modem EG915U-LA /​ (América Latina) | GSM: B2/​B3/​B5/​B8 |
 | Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
-| Voltaje de la fuente de alimentación | 10-32 V DC |
+| Voltaje de la fuente de alimentación | 10-18 V DC |
 | Consumo de corriente | 125 mA |
 | Protocolos de Transmisión | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Encriptación del mensaje | AES 128 |
@@ -132,8 +132,8 @@ Este manual es para comunicadores 4G.
 
 | Terminal | Descripción |
 |----------|-------------|
-| +12 VDC | Terminal de conexión de alimentación (terminal positivo de 10-32 V CC) |
-| -12 VDC | Terminal de conexión de alimentación (terminal negativo 10-32V CC) |
+| +12 VDC | Terminal de conexión de alimentación (terminal positivo de 10-18 V CC) |
+| -12 VDC | Terminal de conexión de alimentación (terminal negativo de 0 V CC) |
 | TIP | Terminal para conectar con panel de control TIP terminal |
 | RING | Terminal para conectar con panel de control RING terminal |
 | CLK | Terminal de bus serial para conexión directa al panel de control |
