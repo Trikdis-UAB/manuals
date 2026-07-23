@@ -1264,7 +1264,7 @@ El comunicador recibidos desde panel de control los códigos de Contacto ID conv
 | No más alarma de CO en la zona: <z> | R162 | "GH" |
 | No más falla en la zona de fuego: <z> | R200 | "FV" |
 | Monitoreo de restauración de alarma | R220 | "BH" |
-| No más fallo del sistema (300) | R300 | "YA" |
+| No más fallo del sistema (300) | R300 | "YQ" |
 | Fuente de alimentación AC OK | R301 | "AR" |
 | Batería OK | R302 | "YR" |
 | No más fallo del sistema (304) | R304 | "YG" |

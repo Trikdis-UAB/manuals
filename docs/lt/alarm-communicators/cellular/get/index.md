@@ -1224,7 +1224,7 @@ Komunikatorius, gautus iš signalizacijos centralės, Contact ID kodus konvertu
 | Zonos <z> jutiklis po pavojaus atsistatė | R135 | "BH" |
 | Elektroninės apsaugos grandinė po pažeidimo atsistatė | R137 | "TA" |
 | Zonos <z> jutiklis po pavojaus atsistatė | R140 | "UH" |
-| Nebėra sistemos gedimo (143) | R143 | "UR" |
+| Nebėra sistemos gedimo (143) | R143 | "ER" |
 | Zonos <z> jutiklis po sabotažo pavojaus atsistatė | R144 | "TR" |
 | Zonos <z> jutiklis po sabotažo pavojaus atsistatė | R145 | "TR" |
 | Zonos <z> jutiklis po sabotažo pavojaus atsistatė | R146 | "BH" |
@@ -1237,7 +1237,7 @@ Komunikatorius, gautus iš signalizacijos centralės, Contact ID kodus konvertu
 | CO dujų jutiklis po pavojaus atsistatė | R162 | "GH" |
 | Nebėra gaisro gedimo zonoje: <z> | R200 | "FV" |
 | Aliarmo atkūrimo stebėjimas | R220 | "BH" |
-| Nebėra sistemos gedimo (300) | R300 | "YA" |
+| Nebėra sistemos gedimo (300) | R300 | "YQ" |
 | Maitinimas kintama įtampa atsikūrė | R301 | "AR" |
 | Akumuliatorius įkrautas | R302 | "YR" |
 | Nebėra sistemos gedimo (304) | R304 | "YG" |

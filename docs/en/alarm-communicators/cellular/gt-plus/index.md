@@ -1288,7 +1288,7 @@ The communicator converts Contact ID codes received from the alarm control panel
 | No more alarm in zone: <z> | R135 | "BH" |
 | No more tamper in zone: <z> | R137 | "TA" |
 | No more alarm in zone:<z> | R140 | "UH" |
-| No more system failure (143) | R143 | "UR" |
+| No more system failure (143) | R143 | "ER" |
 | No more tamper in zone: <z> | R144 | "TR" |
 | No more tamper in zone: <z> | R145 | "TR" |
 | No more alarm in zone: <z> | R146 | "BH" |
@@ -1301,7 +1301,7 @@ The communicator converts Contact ID codes received from the alarm control panel
 | No more CO alarm in zone: <z> | R162 | "GH" |
 | No more fire failure in zone: <z> | R200 | "FV" |
 | Monitored restore alarm | R220 | "BH" |
-| No more system failure (300) | R300 | "YA" |
+| No more system failure (300) | R300 | "YQ" |
 | AC power supply OK | R301 | "AR" |
 | Battery OK | R302 | "YR" |
 | No more system failure (304) | R304 | "YG" |
