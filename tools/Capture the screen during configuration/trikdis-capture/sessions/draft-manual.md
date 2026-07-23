@@ -2,6 +2,18 @@
 
 This guide covers the initial setup of the SP3 alarm panel in the Protegus web app ([web.protegus.app](https://web.protegus.app)), including adding the system, naming it, and pairing wireless sensors.
 
+> [!NOTE]
+> This guide walks through the **Protegus web app**. The same setup — adding the system, naming it, and pairing wireless sensors — is also available in the **Protegus mobile app** for Android and iOS.
+
+<div style="margin: 16px 0; text-align: center;">
+  <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
+    <img src="./protegus-android.webp" alt="Get it on Google Play" style="height:50px;">
+  </a>
+  <a href="https://apps.apple.com/us/app/protegus-2/id1555450252" target="_blank" style="display: inline-block;">
+    <img src="./protegus-ios.webp" alt="Download on the App Store" style="height:50px;">
+  </a>
+</div>
+
 **What you need before you start:**
 
 - A Protegus account (register at [web.protegus.app](https://web.protegus.app))
