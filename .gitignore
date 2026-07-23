@@ -18,5 +18,8 @@ Scripts/ipcom5control-web/.env
 # Local Netlify folder
 .netlify
 
+# Playwright MCP debug output (console logs, page snapshots)
+.playwright-mcp/
+
 # Local credentials (never commit)
 .claude/credentials.local.md
