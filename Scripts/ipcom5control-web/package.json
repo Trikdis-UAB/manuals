@@ -8,7 +8,7 @@
     "capture:options": "node capture_options.mjs",
     "generate:manual": "node generate_manual.mjs",
     "validate:coverage": "node validate_coverage.mjs",
-    "docs:all": "npm run capture:web && npm run generate:manual && npm run validate:coverage",
+    "docs:all": "npm run capture:web && npm run generate:manual && npm run validate:coverage && npm run check:trikdis-functions",
     "check:scaffold": "node check_scaffold.mjs",
     "check:syntax": "node --check capture_web.mjs",
     "check:accessibility": "node check_accessibility_fallback.mjs",
@@ -17,6 +17,7 @@
     "check:intro-page": "node check_intro_page.mjs",
     "check:monitoring-docs": "node check_monitoring_admin_docs.mjs",
     "check:ipcom-structure": "node check_ipcom_structure.mjs",
+    "check:trikdis-functions": "node check_trikdis_functions.mjs",
     "redact:images": "python3 redact_sensitive_images.py --spec ../../projects/Ipcom5/redaction-spec.json",
     "check:redaction": "python3 check_redaction.py --spec ../../projects/Ipcom5/redaction-spec.json"
   },

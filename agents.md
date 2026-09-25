@@ -50,7 +50,7 @@ security add-generic-password -a "$USER" -s <service-name> -w "<value>"
 ## 5) Change hygiene (small diffs, predictable structure)
 - Make the smallest coherent change that fully solves the problem.
 - Keep diffs clean: avoid drive-by refactors unless they are necessary to complete the task safely.
-- Prefer incremental commits locally; do not push unless asked.
+- Prefer incremental commits locally. **Push your finished work — do not leave it staged for Andrius to push** (changed 2026-09-25; the old "do not push unless asked" rule left a finished fix unpushed for 22 days). Stage explicit paths, never `git add -A`/`git add .`, because this tree often holds unrelated work from other sessions. A push to `main` deploys to docs.trikdis.com, so `mkdocs build --strict` must pass first and you confirm the live pages afterwards.
 - Update docs when behavior changes so README / docs / comments match reality after your change.
 
 ## 6) Proactive documentation maintenance (keep docs true)

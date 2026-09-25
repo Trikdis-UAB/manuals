@@ -1,0 +1,136 @@
+{
+  "purpose": "Fail the docs build if any feature gated behind LicenseFeature.TrikdisFunctions is documented. Those features are Trikdis-internal and must not appear in customer-facing manuals.",
+  "authority": "Aleksejus Tkačiovas, ATPR3I05-516 comment 2026-08-13: 'Negalima rašyti apie funkcijas, kurios aktyvuojamos turint LicenseFeature.TrikdisFunctions. Tai yra mums skirtos funkcijos.'",
+  "source": {
+    "repo": "git@192.168.1.108:ipcc_web",
+    "local_checkout": "/Users/andriaus/Projects/TRIKDIS/worktrees/ipcc_web",
+    "flag": "LicenseFeature.TrikdisFunctions",
+    "flag_id": 20,
+    "flag_defined_in": "src/app/services/request.service.ts:803",
+    "verified_at_commit": "b25f4cf",
+    "verified_on": "2026-09-03",
+    "recheck_note": "Re-derive this list whenever ipcc_web changes. Grep the source for 'TrikdisFunctions', then trace each consumer (trikdisFunctionsEnabled / trikdisFeaturesEnabled) into its template."
+  },
+  "scan": {
+    "doc_roots": [
+      "docs/en/receivers/ipcom",
+      "docs/lt/receivers/ipcom",
+      "docs/es/receivers/ipcom",
+      "docs/ru/receivers/ipcom"
+    ],
+    "exclude_files": [
+      "docs/en/receivers/ipcom/ui/ha-cluster-backup.md"
+    ],
+    "exclude_rationale": {
+      "docs/en/receivers/ipcom/ui/ha-cluster-backup.md": "Unpublished draft, held out of the build via exclude_docs in mkdocs.yml. The guard also asserts that exclusion is still in place."
+    },
+    "must_stay_excluded_in_mkdocs": [
+      "en/receivers/ipcom/ui/ha-cluster-backup.md"
+    ]
+  },
+  "matching": {
+    "case_insensitive": true,
+    "accent_folded": true,
+    "accent_folding_note": "Terms and content are both NFD-normalized with combining marks stripped, so an 'cluster' term matches Spanish 'clúster'. The 2026-09-03 audit initially missed es/general.md line 100 for exactly this reason."
+  },
+  "cross_language_note": "The manuals keep IPCom UI control names in English even in LT/ES/RU pages (observed: 'Enable cluster', 'Enabled', 'Port', 'Whitelist', 'Encrypt' all untranslated). English control-name terms are therefore effective across every language tree, and translated forms are added below as they are observed.",
+  "gated_features": [
+    {
+      "id": "general-cluster-settings",
+      "ui_label": "Cluster settings",
+      "source_ref": "src/app/pages/main-view/general/general.component.html:100 (*ngIf=\"settings.cluster && trikdisFunctionsEnabled\"), general.component.ts:120",
+      "controls": ["Enable cluster", "Related IPComs (host/port/username/password node table)"],
+      "terms": [
+        "cluster",
+        "clúster",
+        "klasteris",
+        "klasterio",
+        "related ipcoms"
+      ],
+      "asset_patterns": ["cluster"]
+    },
+    {
+      "id": "general-device-status-export",
+      "ui_label": "Device STATUS export settings",
+      "source_ref": "src/app/pages/main-view/general/general.component.html:222 (*ngIf=\"settings.device_status_output && trikdisFunctionsEnabled\"), general.component.ts:123",
+      "controls": ["Enabled", "Port", "Whitelist (IP only)", "Encrypt", "Encryption key"],
+      "terms": [
+        "device status export",
+        "status export",
+        "device_status_output",
+        "status eksporto",
+        "status del dispositivo",
+        "exportacion de status"
+      ],
+      "asset_patterns": ["device-status-export"]
+    },
+    {
+      "id": "general-track-device-sessions",
+      "ui_label": "Track device sessions / session data point retention",
+      "source_ref": "src/app/pages/main-view/general/general.component.html:315,318",
+      "controls": ["Track device sessions", "Number of session data points to keep"],
+      "terms": [
+        "track device sessions",
+        "track_device_sessions",
+        "session data points",
+        "device_session_log_count"
+      ],
+      "asset_patterns": []
+    },
+    {
+      "id": "objects-session-avg-time",
+      "ui_label": "Objects table: session_avg_time column and filter",
+      "source_ref": "src/app/pages/main-view/objects/objects.component.ts:281-286,1183",
+      "controls": ["session_avg_time column", "session_avg_time filter field"],
+      "terms": ["session_avg_time", "session avg"],
+      "asset_patterns": []
+    },
+    {
+      "id": "objects-check-for-problems",
+      "ui_label": "Objects toolbar: Check for problems",
+      "source_ref": "src/app/pages/main-view/objects/objects.component.html:5",
+      "controls": ["Check for problems button", "device problems popup"],
+      "terms": ["check for problems", "device problems"],
+      "asset_patterns": []
+    },
+    {
+      "id": "objects-context-menu-logs",
+      "ui_label": "Objects context menu: Communication log / Session log / Console",
+      "source_ref": "src/app/pages/main-view/objects/objects.component.ts:542-545",
+      "controls": ["Communication log...", "Session log...", "Console... (hw_type 0x5D only)"],
+      "terms": [
+        "communication log",
+        "session log",
+        "device console",
+        "console..."
+      ],
+      "narrowing": "Bare 'console' is deliberately NOT a term — it false-positives on ordinary prose. A page documenting the menu item as just 'Console' would slip past this guard; that is a known, accepted gap, not an oversight.",
+      "asset_patterns": [],
+      "allow": [
+        {
+          "file": "docs/en/receivers/ipcom/index.md",
+          "line_contains": "System logs and session logs for operational visibility",
+          "reason": "Generic prose about IPCom's logging capability in the product overview, not the licence-gated per-object 'Session log...' context-menu action. Reviewed 2026-09-03."
+        }
+      ]
+    },
+    {
+      "id": "logs-log-settings",
+      "ui_label": "Logs: right-click context menu -> Log settings popup",
+      "source_ref": "src/app/pages/main-view/logs/logs.component.ts:85",
+      "controls": ["Log settings popup (internal users, or 'administrator' with the licence)"],
+      "terms": ["log settings"],
+      "asset_patterns": []
+    }
+  ],
+  "not_gated_but_related": [
+    {
+      "item": "UserScope.DeviceStatus ('device_status') user permission",
+      "note": "Listed unconditionally in users.component.ts:39; only filtered when settings are absent, NOT by the licence flag. Not treated as gated here, but it is the permission for a gated feature — raise with Alex if it ever gets documented."
+    },
+    {
+      "item": "users.component.ts trikdisFunctionsEnabled",
+      "note": "Assigned at users.component.ts:105 but never read. Dead code as of b25f4cf; nothing on the Users screen is gated."
+    }
+  ]
+}

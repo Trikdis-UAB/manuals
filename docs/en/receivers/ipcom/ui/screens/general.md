@@ -48,22 +48,9 @@ API exposure should be restricted to trusted admin/integration networks.
 **Operational checks and actions:**
 
 - Monitor: `Enable HTTP API`, API ports, and TLS status. Alert cue: unexpected open management path or certificate issues.
-- Monitor: `Enable cluster`. Alert cue: node state drift or failover anomalies.
 - Confirm: `api_port` and `api_http_port` must be between `1` and `65535`.
 - Confirm: `api_jwt_secret` must be exactly 64 characters.
 - Confirm: `private_key` and `public_key` must be non-empty and point to valid PEM files.
-
-### Device STATUS export settings
-
-Enables a status export listener and configures its port and IP whitelist. Use this for downstream systems that consume device status updates. Encryption can be enabled when the export is sent over untrusted networks.
-
-![General tab Device STATUS export settings section](../assets/screens/general-sections/device-status-export-settings.webp)
-
-**Operational checks and actions:**
-
-- Monitor: `Enabled`, `Port`, `Whitelist`, and `Encrypt` values. Alert cue: missing status export or traffic from unexpected sources.
-- Confirm: Device STATUS export `port` must be `1..65535`.
-- Confirm: if STATUS export encryption is enabled, key length must be exactly 16 characters.
 
 ### Database settings
 
@@ -78,7 +65,6 @@ Enables the SQL database and configures connection details (user, password, host
 - Confirm: if database is enabled, `sqluser`, `sqlpass`, `sqlhost`, and `sqldatabase` must be non-empty.
 - Confirm: `sqlport` must be `1..65535` (`0` makes IPCom use default port `3306`).
 - Confirm: `remove_lost_objects_age` and `remove_events_age` must be `1..365` days.
-- Confirm: `device_session_log_count` must be `1..25`.
 
 
 ### Ignorable startup event settings
@@ -97,4 +83,4 @@ Lets you suppress specific event codes on device startup. This is useful to redu
 - Schedule changes to API, database, and retention settings during maintenance windows.
 - Record before-and-after values and expected impact for audit and rollback.
 - After each change, verify `Status`, `Logs`, and destination delivery paths.
-- Keep a rollback path ready for database, API, and cluster-related updates.
+- Keep a rollback path ready for database and API updates.

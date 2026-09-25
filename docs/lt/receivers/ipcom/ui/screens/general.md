@@ -48,22 +48,9 @@ API prieigą reikėtų riboti patikimais administravimo / integracijų tinklais.
 **Veikimo patikros ir veiksmai:**
 
 - Stebėkite: `Enable HTTP API`, API prievadus ir TLS būseną. Įspėjamasis požymis: netikėtai atvertas valdymo kelias arba sertifikato problemos.
-- Stebėkite: `Enable cluster`. Įspėjamasis požymis: mazgų būsenos išsiskyrimas arba failover anomalijos.
 - Patvirtinkite: `api_port` ir `api_http_port` turi būti tarp `1` ir `65535`.
 - Patvirtinkite: `api_jwt_secret` turi būti tiksliai 64 simbolių ilgio.
 - Patvirtinkite: `private_key` ir `public_key` negali būti tušti ir turi rodyti į galiojančius PEM failus.
-
-### Įrenginių STATUS eksporto nustatymai
-
-Įjungia būsenos eksporto listenerį ir konfigūruoja jo prievadą bei IP whitelist. Naudokite šią funkciją tolesnėms sistemoms, kurios vartoja įrenginių būsenos atnaujinimus. Jei eksportas siunčiamas nepatikimais tinklais, galima įjungti šifravimą.
-
-![Kortelės Bendrieji nustatymai skiltis Įrenginių STATUS eksporto nustatymai](../assets/screens/general-sections/device-status-export-settings.webp)
-
-**Veikimo patikros ir veiksmai:**
-
-- Stebėkite: `Enabled`, `Port`, `Whitelist` ir `Encrypt` reikšmes. Įspėjamasis požymis: dingęs būsenos eksportas arba srautas iš netikėtų šaltinių.
-- Patvirtinkite: Device STATUS eksporto `port` turi būti `1..65535`.
-- Patvirtinkite: jei STATUS eksporto šifravimas įjungtas, rakto ilgis turi būti tiksliai 16 simbolių.
 
 ### Duomenų bazės nustatymai
 
@@ -78,7 +65,6 @@ API prieigą reikėtų riboti patikimais administravimo / integracijų tinklais.
 - Patvirtinkite: jei duomenų bazė įjungta, `sqluser`, `sqlpass`, `sqlhost` ir `sqldatabase` negali būti tušti.
 - Patvirtinkite: `sqlport` turi būti `1..65535` (`0` reiškia, kad IPcom naudos numatytąjį prievadą `3306`).
 - Patvirtinkite: `remove_lost_objects_age` ir `remove_events_age` turi būti `1..365` dienos.
-- Patvirtinkite: `device_session_log_count` turi būti `1..25`.
 
 
 ### Nepaisomų paleidimo įvykių nustatymai
@@ -97,4 +83,4 @@ Leidžia slopinti konkrečius įvykių kodus įrenginio paleidimo metu. Tai naud
 - API, duomenų bazės ir saugojimo nustatymų pakeitimus planuokite techninės priežiūros languose.
 - Audito ir grąžinimo tikslams užfiksuokite reikšmes prieš pakeitimą ir po jo bei numatomą poveikį.
 - Po kiekvieno pakeitimo patikrinkite `Būseną`, `Žurnalus` ir paskirties sistemų pristatymo kelius.
-- Iš anksto pasiruoškite grąžinimo kelią duomenų bazės, API ir cluster tipo pakeitimams.
+- Iš anksto pasiruoškite grąžinimo kelią duomenų bazės ir API pakeitimams.

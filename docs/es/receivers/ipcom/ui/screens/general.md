@@ -48,22 +48,9 @@ La exposición de la API debe restringirse a redes de administración o integrac
 **Comprobaciones y acciones operativas:**
 
 - Supervisar: `Enable HTTP API`, puertos de API y estado TLS. Señal de alerta: ruta de gestión abierta inesperada o problemas de certificado.
-- Supervisar: `Enable cluster`. Señal de alerta: deriva del estado del nodo o anomalías de failover.
 - Confirmar: `api_port` y `api_http_port` deben estar entre `1` y `65535`.
 - Confirmar: `api_jwt_secret` debe tener exactamente 64 caracteres.
 - Confirmar: `private_key` y `public_key` no deben estar vacíos y deben apuntar a archivos PEM válidos.
-
-### Ajustes de exportación de STATUS del dispositivo
-
-Habilita un listener de exportación de estado y configura su puerto y la lista permitida de IP. Úselo para sistemas descendentes que consumen actualizaciones del estado de los dispositivos. El cifrado puede activarse cuando la exportación se envía por redes no confiables.
-
-![Sección Ajustes de exportación de STATUS del dispositivo de la pestaña General](../assets/screens/general-sections/device-status-export-settings.webp)
-
-**Comprobaciones y acciones operativas:**
-
-- Supervisar: valores de `Enabled`, `Port`, `Whitelist` y `Encrypt`. Señal de alerta: falta de exportación de estado o tráfico desde orígenes inesperados.
-- Confirmar: el `port` de exportación STATUS del dispositivo debe estar en `1..65535`.
-- Confirmar: si el cifrado de exportación STATUS está habilitado, la longitud de la clave debe ser exactamente de 16 caracteres.
 
 ### Ajustes de la base de datos
 
@@ -78,7 +65,6 @@ Habilita la base de datos SQL y configura detalles de conexión (usuario, contra
 - Confirmar: si la base de datos está habilitada, `sqluser`, `sqlpass`, `sqlhost` y `sqldatabase` no deben estar vacíos.
 - Confirmar: `sqlport` debe estar en `1..65535` (`0` hace que IPcom use el puerto predeterminado `3306`).
 - Confirmar: `remove_lost_objects_age` y `remove_events_age` deben ser `1..365` días.
-- Confirmar: `device_session_log_count` debe estar en `1..25`.
 
 
 ### Ajustes de eventos de inicio ignorables
@@ -97,4 +83,4 @@ Permite suprimir códigos de evento específicos durante el arranque del disposi
 - Programe cambios en API, base de datos y retención durante ventanas de mantenimiento.
 - Registre valores antes y después del cambio, así como el impacto esperado, para auditoría y reversión.
 - Después de cada cambio, verifique `Estado`, `Registros` y las rutas de entrega de destino.
-- Mantenga un camino de reversión listo para cambios relacionados con base de datos, API y clúster.
+- Mantenga un camino de reversión listo para cambios relacionados con base de datos y API.
