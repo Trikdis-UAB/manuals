@@ -53,6 +53,14 @@ security add-generic-password -a "$USER" -s <service-name> -w "<value>"
 - Prefer incremental commits locally. **Push your finished work — do not leave it staged for Andrius to push** (changed 2026-09-25; the old "do not push unless asked" rule left a finished fix unpushed for 22 days). Stage explicit paths, never `git add -A`/`git add .`, because this tree often holds unrelated work from other sessions. A push to `main` deploys to docs.trikdis.com, so `mkdocs build --strict` must pass first and you confirm the live pages afterwards.
 - Update docs when behavior changes so README / docs / comments match reality after your change.
 
+### Direct to `main`, or open a PR? (policy set 2026-09-25)
+**Default: commit and push straight to `main`.** Open a PR instead when either applies:
+
+1. **The change asserts a product fact you inferred rather than sourced.** The gate is where the fact came from, not how big the diff is. A fact taken from source code, an engineering document, a datasheet, or a colleague's written statement can be pushed. A fact you derived — from looking at a UI, from reasoning, from a pattern across similar products — goes in a PR, because what needs a human eye is the *fact*, not the prose. A one-character change to a voltage rating is riskier than a 200-line rewording: installers act on it.
+2. **The change is structural** — `mkdocs.yml` nav, adding/removing/renaming a page, or spanning many pages — where someone should see it rendered before it is public.
+
+Say which route you took and why in the handoff. Reverting a bad docs commit is one command, so prefer shipping over waiting when the facts are sourced.
+
 ## 6) Proactive documentation maintenance (keep docs true)
 - When you discover outdated, incomplete, or misleading documentation, proactively update it as part of the change.
 - Documentation candidates: project `AGENTS.md`, README, CONTRIBUTING, docs pages, troubleshooting notes.
