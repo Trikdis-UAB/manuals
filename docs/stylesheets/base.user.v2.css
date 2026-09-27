@@ -1273,3 +1273,43 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
+
+/* Support chat launcher (docs/javascripts/support-chat.js). Sits where the
+   respond.io launcher appears, so nothing jumps when the widget takes over. */
+.trikdocs-chat-launcher {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  /* Below Material's cookie-consent banner (z-index 5). */
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.trikdocs-chat-launcher:hover,
+.trikdocs-chat-launcher:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.trikdocs-chat-launcher:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color, #fff);
+  outline-offset: 3px;
+}
+
+@media print {
+  .trikdocs-chat-launcher {
+    display: none;
+  }
+}

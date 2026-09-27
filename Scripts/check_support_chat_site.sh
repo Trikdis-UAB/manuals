@@ -6,7 +6,7 @@ PORT="${1:-8013}"
 SITE_DIR="${2:-site}"
 BASE_URL="http://127.0.0.1:${PORT}"
 PLAYWRIGHT_BASE_URL="http://docs.trikdis.com:${PORT}"
-LOG_FILE="$(mktemp -t crisp-chat-site.XXXXXX.log)"
+LOG_FILE="$(mktemp -t support-chat-site.XXXXXX.log)"
 
 cleanup() {
   if [[ -n "${SERVER_PID:-}" ]] && kill -0 "${SERVER_PID}" 2>/dev/null; then
@@ -49,5 +49,5 @@ if ! curl -fsS "${BASE_URL}/" >/dev/null 2>&1; then
   exit 1
 fi
 
-CRISP_CHAT_BASE_URL="${PLAYWRIGHT_BASE_URL}" npm run test:crisp-ui --silent
-echo "Crisp chat UI checks passed on ${PLAYWRIGHT_BASE_URL}."
+SUPPORT_CHAT_BASE_URL="${PLAYWRIGHT_BASE_URL}" npm run test:chat-ui --silent
+echo "Support chat UI checks passed on ${PLAYWRIGHT_BASE_URL}."

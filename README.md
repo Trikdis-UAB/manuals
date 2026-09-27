@@ -37,9 +37,9 @@ After the first dependency install, faster reruns can use:
 ```bash
 CONTEXT=production Scripts/build_docs.sh
 ```
-To exercise the Crisp rollout locally with a temporary website id override:
+To exercise the support chat locally with a temporary channel id override:
 ```bash
-TRIKDOCS_CRISP_WEBSITE_ID=test-website-id npm run build:docs
+TRIKDOCS_RESPONDIO_CHANNEL_ID=test-channel-id npm run build:docs
 ```
 
 For browser-level modal behavior checks (manual scope + immediate language fallback UI and no Lunr runtime request), run:
@@ -52,10 +52,10 @@ This expects a running docs server. For a one-shot serve + UI verification flow:
 npm install
 Scripts/check_pagefind_serve.sh 8011
 ```
-For the Crisp preview gate and launcher visibility checks:
+For the support chat preview gate, click-to-load and launcher checks (set `PLAYWRIGHT_CHANNEL=chrome` to use the installed Chrome instead of Playwright's own browser):
 ```bash
-TRIKDOCS_CRISP_WEBSITE_ID=test-website-id npm run build:docs
-Scripts/check_crisp_chat_site.sh 8013
+npm run build:docs
+Scripts/check_support_chat_site.sh 8013
 ```
 
 ### SP3 S8/S9 guide localizations
@@ -190,22 +190,21 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
 
 Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTOINDEX=0` and run `pagefind` explicitly once in `Scripts/build_docs.sh`, after `mkdocs build` and before PDF generation.
 
-## Crisp Chat Rollout
-- Crisp configuration is injected at build time from `mkdocs_hooks.py` into each page and loaded by `docs/javascripts/crisp-chat.js`.
+## Support Chat (respond.io)
+- The chat is respond.io's Website Chat widget. It replaced a Crisp trial in September 2026 because respond.io also carries WhatsApp, including calls, in the same inbox. Its config is injected at build time from `mkdocs_hooks.py` into each page and read by `docs/javascripts/support-chat.js`.
+- **Nothing from respond.io loads until a visitor clicks the chat button.** The widget stores a visitor id as soon as it loads, so loading it on every page view would need cookie consent. After a visitor has opened the chat once, later page loads restore the widget so the conversation stays reachable.
 - Default rollout behavior:
-  - only boot on `docs.trikdis.com`
+  - only boot on the hosts in `TRIKDOCS_CHAT_HOSTS` (default: the `site_url` host, `docs.trikdis.com`)
   - preview-only gate enabled by default
   - session gate query parameter: `?chat_preview=1`
   - clear the session gate with `?chat_preview=0`
 - Build/deploy env vars:
-  - `TRIKDOCS_CRISP_WEBSITE_ID` defaults to the current production TRIKDIS workspace id and can be overridden per build
-  - `TRIKDOCS_CRISP_ENABLED` defaults to `1`
-  - `TRIKDOCS_CRISP_PREVIEW_ONLY` defaults to `1`
-  - `TRIKDOCS_CRISP_PREVIEW_QUERY` defaults to `chat_preview`
-- Crisp API helpers:
-  - `npm run crisp:audit` reads website settings/helpdesk state
-  - `npm run crisp:apply-settings` applies the baseline docs widget settings
-  - both expect `CRISP_WEBSITE_ID`, `CRISP_IDENTIFIER`, and `CRISP_KEY`; set `CRISP_TIER=plugin` if you are using plugin-tier credentials
+  - `TRIKDOCS_RESPONDIO_CHANNEL_ID` defaults to the TRIKDIS Website Chat channel (the `cId` in respond.io's install snippet)
+  - `TRIKDOCS_CHAT_ENABLED` defaults to `1`
+  - `TRIKDOCS_CHAT_PREVIEW_ONLY` defaults to `1`; set it to `0` to show the chat to every visitor
+  - `TRIKDOCS_CHAT_PREVIEW_QUERY` defaults to `chat_preview`
+  - `TRIKDOCS_CHAT_HOSTS` is a comma-separated host list
+- The widget's look, the pre-chat email form and the allowed domains are set in respond.io (Settings → Channels → Website Chat). respond.io refuses to load the widget on a domain that is not on its list, and it treats `localhost:8000` as a different domain from `localhost`.
 
 ## AI Readiness
 - `docs/robots.txt` is published at the site root and points crawlers to `https://docs.trikdis.com/sitemap.xml`.
