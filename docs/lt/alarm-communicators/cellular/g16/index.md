@@ -1,16 +1,23 @@
 # GSM komunikatorius G16
 
-<div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 200px)); justify-content: center; align-items: end; gap: 1.5rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image1.webp" alt="Komunikatorius G16 (2G)" style="width: 100%; height: auto;" />
+    <figcaption style="font-size: 0.9em; text-align: center; margin-top: 0.5rem;">2G</figcaption>
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image2.webp" alt="Komunikatorius G16 (3G/4G)" style="width: 100%; height: auto;" />
+    <figcaption style="font-size: 0.9em; text-align: center; margin-top: 0.5rem;">3G, 4G</figcaption>
+  </figure>
 </div>
 
-## Aprašymas
+## Aprašymas 
 
-Mobilaus ryšio komunikatorius G16 gali būti tiesiogiai prijungtas prie DSC, Paradox, UTC Interlogix (CADDX), Innerrange, Texecom, Honeywell,Crow ir Pyronix apsaugos centralių.
+Mobilaus ryšio komunikatorius G16 gali būti tiesiogiai prijungtas prie DSC, Paradox, UTC Interlogix (CADDX), Innerrange, Texecom, Honeywell, Crow ir Pyronix apsaugos centralių.
 
 Komunikatorius gali perduoti pilną įvykių informaciją į saugos tarnybos stebėjimo pulto imtuvą.
 
-Komunikatorius veikia su Protegus programėle. Su Protegus vartotojai gali valdyti savo signalizaciją nuotoliniu būdu ir gauti pranešimus apie įvykius. Protegus programėlė veikia su visomis kitų gamintojų apsaugos sistemomis, kurias palaiko komunikatorius G16. Komunikatorius gali siųsti pranešimus į saugos tarnybos pultą ir veikti su Protegus vienu metu.
+Komunikatorius veikia su Protegus2 programėle. Su Protegus2 vartotojai gali valdyti savo signalizaciją nuotoliniu būdu ir gauti pranešimus apie įvykius. Protegus2 programėlė veikia su visomis kitų gamintojų apsaugos sistemomis, kurias palaiko komunikatorius G16. Komunikatorius gali siųsti pranešimus į saugos tarnybos pultą ir veikti su Protegus2 vienu metu.
 
 Komunikatorius G16 gali tiesiogiai prisijungti prie DSC®, Paradox®, UTC Interlogix® (CADDX), Innerrange®, Texecom®, Honeywell®, Crow® ir Pyronix® centralių. Kitų gamintojų centralėms naudokite komunikatorių G16T.
 
@@ -34,35 +41,31 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 - Įgalinus lygiagrečius ryšio kanalus, įvykiai bus siunčiami į du imtuvus vienu metu.
 
-- Kai įjungta Protegus paslauga, įvykiai visų pirma siunčiami į CSP ir tik po to - programėlės naudotojams.
+- Kai įjungta *Protegus* paslauga, įvykiai visų pirma siunčiami į CSP ir tik po to programėlės naudotojams.
 
-Veikia su Protegus programėle:
+Veikia su Protegus2 programėle:
 
 - “*Push*” ir specialūs garso įspėjimai apie įvykius.
 
+<img alt="" src="./image4.webp" style="width:2.3622047244094486in;height:3.3897637795275593in" />
 
 - Nuotolinis sistemos įjungimas/išjungimas.
 
 - Nuotolinis prijungtų įrenginių valdymas (šviesų, vartų, kondicionieriaus, šildymo, pievutės laistymo ir kt.).
 
-- Temperatūros stebėsena (su išplėtėju iO arba iO-WL).
-
 - Skirtingos vartotojų teisės administratoriui, instaliuotojui ir vartotojui.
 
 **Informuoja vartotojus:**
 
-- Vartotojus galima informuoti apie įvykius ne tik su Protegus programėle, bet ir su SMS žinutėmis bei skambučiu.
+- Vartotojus galima informuoti apie įvykius ne tik su Protegus2 programėle, bet ir su SMS žinutėmis bei skambučiu.
 
 **Valdomi išėjimai ir įėjimai:**
 
-- 2 išėjimai, valdomi su:
+- 3 universalus I/O gnybtai, kurios galima nustatyti kaip įėjimo (IN) arba išėjimo (OUT) gnybtą.
 
-  - Protegus programėle.
+- Išėjimai valdomi su Protegus2 programėle ir SMS.
 
-  - SMS.
-
-- 1 pasirenkamo tipo įėjimas, tipai: NC; NO; NC/EOL; NO/EOL; NC/DEOL; NO/DEOL.
-- Pridėkite papildomų įėjimų ir valdomų išėjimų su laidiniais ir belaidžiais iO plėtikliais.
+- Pridėkite papildomų įėjimų ir valdomų išėjimų su iO-8 plėtikliais (**tik 3G ir 4G modeliams**).
 
 **Greitai sukonfigūruojamas:**
 
@@ -72,14 +75,14 @@ Veikia su Protegus programėle:
 
 - Nuotolinis konfigūravimas ir programinės įrangos atnaujinimas.
 
-### Suderinamų centralių sąrašas
+### Suderinamų centralių sąrašas 
 
 | Gamintojas | Modelis |
 |------------|---------|
-| DSC® | <u>PC585</u>, PC1404, <u>PC1565</u>, <u>PC1616</u>, <u>PC1832</u>, <u>PC1864</u>, PC5015, PC5020 |
-| PARADOX® | <u>SPECTRA SP4000</u>, <u>SP5500</u>, <u>SP6000</u>, <u>SP7000</u>, <u>SP65</u> |
-| PARADOX® | <u>MAGELLAN MG5000</u>, <u>MG5050</u>, <u>MG5050E</u> |
-| PARADOX® | <u>DIGIPLEX EVO48</u>, <u>EVO192</u>, <u>EVOHD</u>, NE96, EVO96 |
+| DSC® | <u>PC585</u>, <u>PC1404</u>, <u>PC1565</u>, <u>PC1616</u>, <u>PC1832</u>, <u>PC1864</u>, PC5015, PC5020 |
+| PARADOX® | <u>SPECTRA SP4000</u>, <u>SP5500</u>, <u>SP6000</u>, <u>SP7000</u>, <u>SP65</u>, <u>SP5500+</u>, <u>SP6000+</u>, <u>SP7000+</u> |
+| PARADOX® | <u>MAGELLAN MG5000</u>, <u>MG5050</u>, MG5050E, <u>MG5050+</u> |
+| PARADOX® | <u>DIGIPLEX EVO192</u>, <u>EVOHD</u>, NE96, EVO48, EVO96 |
 | PARADOX® | SPECTRA 1727, 1728, 1738 |
 | PARADOX® | ESPRIT E55, 728ULT, 738ULT |
 | UTC Interlogix® | <u>NetworX (Caddx) NX-4v2</u>, <u>NX-6v2</u>, <u>NX-8v2</u>, <u>NX-8e</u> |
@@ -93,38 +96,38 @@ Veikia su Protegus programėle:
 
 \*Kitų gamintojų centrales prijunkite su komunikatoriumi G16T.
 
-### Komunikatoriaus modelių tipai
+### Komunikatoriaus modelio tipas 
 
-Ši instrukcija skirta šiems komunikatoriaus modeliams:
+Ši instrukcija skirta 2G, 3G, 4G komunikatoriaus modeliams.
 
-- G16_321x – 3 versija, 1 SIM, 2G modemas.
-
-- G16_331x – 3 versija, 1 SIM, 3G modemas.
-
-- G16_341x – 3 versija, 1 SIM, 4G modemas.
-
-- G16_3M10 – 3 versija, 1 SIM, LTE CatM1 & EGPRS modemas.
-
-### Techniniai parametrai
+### Techniniai parametrai 
 
 | Parametras | Aprašymas |
 |----|----|
-| Įėjimai | 1 pasirenkamo tipo įėjimas, NC;​NO;​ NC/​EOL;​ NO/​EOL;​ NC/​DEOL;​ NO/​DEOL. /​ Galima praplėsti su iO serijos plėtikliais. |
-| Išėjimas | 2, OC tipas, iki 0,15 A, 30 V DC maks. Galima praplėsti su iO serijos plėtikliais. |
-| 2G modemo dažniai | 850 /​ 900 /​ 1800 /​ 1900 MHz |
-| 3G modemo dažniai | 800 /​ 850 /​ 900 /​ 1900 /​ 2100 MHz |
-| 4G modemo dažniai | Priklausomai nuo regiono |
+| Universalus įėjimas/​išėjimas [I/​O] | 3 vnt., nustatomas kaip įėjimas IN, kurio tipas: NC;​ NO;​ NC/​EOL;​ NO/​EOL;​ NC/​DEOL;​ NO/​DEOL. (2,2 kΩ);​ arba išėjimas OUT: atviro kolektoriaus (OC) tipas, iki 0,15 A, 30 V DC maks. /​ Galima praplėsti su iO-8 plėtikliais (**tik 3G ir 4G modeliams**) |
+| LTE FDD | B1/​B2/​B3/​B4/​B5/​B7/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B28 |
+| LTE TDD | B38/​B39/​B40/​B41 |
+| UMTS | B1/​B2/​B4/​B5/​B6/​B8/​B19 |
+| GSM | 850/​900/​1800/​1900 MHz |
 | Maitinimo įtampa | 10-18 V nuolatinės srovės |
-| Naudojama srovė | 60-100 mA (budėjimo režime) /​ Iki 250 mA (duomenų siuntimo metu) |
+| Naudojama srovė | Iki 100 mA (budėjimo režime) /​ Iki 500 mA (duomenų siuntimo metu) |
 | Perdavimo protokolai | TRK, DC-09_2007, DC-09_2012, TL150 |
 | Pranešimo šifravimas | AES 128 |
 | Atmintis | Iki 60 pranešimų |
 | Veikimo konfigūravimas | Su kompiuterine programa TrikdisConfig nuotoliniu būdu arba lokaliai per USB Mini-B. Nuotoliniu būdu SMS žinutėmis. |
 | Darbo aplinkos sąlygos | Temperatūra nuo -10 °C iki +50 °C, santykinė drėgmė – iki 80%, prie +20 °C. |
-| Komunikatoriaus matmenys | 92 x 65 x 25 mm |
+| Komunikatoriaus matmenys | 92 x 62 x 25 mm |
 | Svoris | 80 g |
 
-### Komunikatoriaus elementai
+### Komunikatoriaus elementai 
+
+**Komunikatorius G16 (2G)**
+
+<img alt="" src="./image5.webp" style="width:4.7933431758530185in;height:3.19000656167979in" />
+
+**Komunikatorius G16 (3G/4G)**
+
+<img alt="" src="./image6.webp" style="width:4.44334208223972in;height:3.11000656167979in" />
 
 1.  GSM antenos SMA jungtis.
 
@@ -138,8 +141,6 @@ Veikia su Protegus programėle:
 
 6.  SIM kortelės laikiklis.
 
-<img alt="" src="./image4.webp" style="width:4.7933431758530185in;height:3.19000656167979in" />
-
 ### Išorinių kontaktų paskirtis
 
 | Gnybtas | Aprašymas |
@@ -147,11 +148,11 @@ Veikia su Protegus programėle:
 | +DC | maitinimo gnybtas (10-18 V nuolatinės srovės teigiamas gnybtas) |
 | -DC | maitinimo gnybtas (10-18 V nuolatinės srovės neigiamas gnybtas) |
 | CLK | Serijinio prievado gnybtai tiesioginiam prijungimui prie centralės |
-| A 485 | RS485 gnybtai prijungti iO įėjimų ir išėjimų plėtiklį arba kitus priedus |
+| I/​O 1 | 1as įėjimo/​išėjimo gnybtas (gamyklinis nustatymas - išjungtas) |
+| I/​O 2 | 2as įėjimo/​išėjimo gnybtas (gamyklinis nustatymas – IN, NO grandinė) |
+| I/​O 3 | 3as įėjimo/​išėjimo gnybtas (gamyklinis nustatymas - OUT) |
 | COM | Bendras (neigiamas) |
-| IN | Įėjimo gnybtas, pasirenkamo tipo NC;​ NO;​ NC/​EOL;​ NO/​EOL;​ NC/​DEOL;​ NO/​DEOL |
-| OUT1 | 1as valdomas išėjimas, OC tipo, srovė iki 0,15 A |
-| OUT2 | 2as valdomas išėjimas, OC tipo, srovė iki 0,15 A |
+| A 485 | RS485 gnybtai skirti prijungti iO-8 įėjimų ir išėjimų plėtikliams, arba WiFi moduliui W485, arba „Ethernet“ moduliui E485. (tik 3G ir 4G modeliams) |
 
 ### Šviesinė veikimo indikacija
 
@@ -159,7 +160,7 @@ Veikia su Protegus programėle:
 |--------------|-------|-----------|
 | NETWORK | Nešviečia | Nėra ryšio su GSM tinklu. |
 | NETWORK | Geltonas mirksi | Jungiasi prie GSM tinklo. |
-| NETWORK | Šviečia žalia ir mirksi geltona | Komunikatorius prisijungė prie GSM tinklo. Pakankamas GSM signalo stiprumas GPRS ryšiui yra 5 lygis (penki geltoni sumirksėjimai) ir 3G ryšiui 3 lygis (trys geltoni sumirksėjimai). |
+| NETWORK | Šviečia žalia ir mirksi geltona | Komunikatorius prisijungė prie GSM tinklo. Pakankamas GSM signalo stiprumas GPRS ryšiui yra 5 lygis (penki geltoni sumirksėjimai) ir 3G/4G ryšiui 3 lygis (trys geltoni sumirksėjimai). |
 | DATA | Nešviečia | Nėra neišsiųstų įvykių pranešimų. |
 | DATA | Šviečia žaliai | Yra neišsiųstų pranešimų. |
 | DATA | Mirksi žaliai | (konfigūravimo režimas) duomenys perkeliami į komunikatorių arba iš jo. |
@@ -178,38 +179,44 @@ Veikia su Protegus programėle:
 | TROUBLE | 7 raudoni mirksniai | Dingo ryšys su centrale. |
 | TROUBLE | Mirksi raudona | (konfigūravimo režimas) atminties klaida. |
 | TROUBLE | Šviečia raudona | (konfigūravimo režimas) programinės įrangos klaida. |
+| BAND / (tik 3G ir 4G modeliams) | 1 žalias mirksnis | Nėra ryšio |
+| BAND / (tik 3G ir 4G modeliams) | 2 žali mirksniai | Ryšys GSM |
+| BAND / (tik 3G ir 4G modeliams) | 3 žali mirksniai | Ryšys GPRS |
+| BAND / (tik 3G ir 4G modeliams) | 4 žali mirksniai | Ryšys EDGE |
+| BAND / (tik 3G ir 4G modeliams) | 5 žali mirksniai | Ryšys HSDPA, HSUPA, HSPA+, WCDMA |
+| BAND / (tik 3G ir 4G modeliams) | 6 žali mirksniai | Ryšys LTE TDD, LTE FDD |
 
 ### GSM komunikatoriaus G16 panaudojimo struktūrinė schema
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:3.022222222222222in" />
+<img alt="" src="./image7.webp" style="width:7.0875in;height:3.022222222222222in" />
 
 !!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
     
-    1)  USB Mini-B tipo kabelį, reikalingas konfigūravimui.
+    1.  USB Mini-B tipo kabelį, reikalingas konfigūravimui.
     
-    2)  Mažiausiai 4 gyslų kabelį komunikatoriaus prijungimui prie apsaugos
+    2.  Mažiausiai 4 gyslų kabelį komunikatoriaus prijungimui prie apsaugos
         centralės.
     
-    3)  CRP2 kabelį Paradox centralių prijungimui prie nuosekliojo prievado.
+    3.  CRP2 kabelį Paradox centralių prijungimui prie nuosekliojo prievado.
     
-    4)  Plokščią 2,5 mm atsuktuvą.
+    4.  Plokščią 2,5 mm atsuktuvą.
     
-    5)  Išorinę GSM anteną, jeigu vietoje silpnas ryšys.
+    5.  Išorinę GSM anteną, jeigu vietoje silpnas ryšys.
     
-    6)  Aktyvuotą SIM kortelę (PIN kodo reikalavimas gali būti išjungtas).
+    6.  Aktyvuotą SIM kortelę (PIN kodo reikalavimas gali būti išjungtas).
     
-    7)  Apsaugos centralės instrukcija, prie kurios bus jungiamas
+    7.  Apsaugos centralės instrukcija, prie kurios bus jungiamas
         komunikatorius.
     
     Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
-## Greitas konfigūravimas su programa *TrikdisConfig*
+## Greitas konfigūravimas su programa *TrikdisConfig* 
 
-1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.lt](http://www.trikdis.lt) (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiegite*.*
+1.  Parsisiųskite konfigūravimo programą TrikdisConfig iš [www.trikdis.lt](http://www.trikdis.lt) (programą rasite paieškos lauke surinkę „TrikdisConfig“), ir ją įdiekite*.*
 
 2.  Plokščiu atsuktuvu nuimkite G16 dangtelį kaip parodyta žemiau:
 
-    <img alt="" src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
+    <img alt="" src="./image8.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
 
 3.  Su USB Mini-B kabeliu sujunkite G16 su kompiuteriu.
 
@@ -217,88 +224,91 @@ Veikia su Protegus programėle:
 
 5.  Spustelkite programos mygtuką **Skaityti [F4]**, kad ji pateiktų esamas G16 veikimo parametrų reikšmes. Jei atsivers administratoriaus arba instaliatoriaus kodo įvedimo reikalavimo langelis, įveskite 6 skaitmenų kodą.
 
-Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į Stebėjimo pultą ir kad apsaugos centralę būtų galima valdyti su Protegus programėle.
+Žemiau aprašome nustatymus, kuriuos reikia pakeisti, kad komunikatorius pradėtų siųsti pranešimus į Stebėjimo pultą ir kad apsaugos centralę būtų galima valdyti su Protegus2 programėle.
 
-### Nustatymai ryšiui su Protegus programėle
+### Nustatymai ryšiui su Protegus2 programėle 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7834645669291338in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
-2.  Pažymėkite varnele **Nuotolinis centralės valdymas**, jei norite, kad vartotojai galėtų valdyti centralę Protegus programėlėje su savo klaviatūros kodu. Šis nustatymas rodomas tiesiogiai valdomoms centralėms.
+2.  Pažymėkite varnele **Nuotolinis centralės valdymas**, jei norite, kad vartotojai galėtų valdyti centralę Protegus2 programėlėje su savo klaviatūros kodu. Šis nustatymas rodomas tiesiogiai valdomoms centralėms.
 
-3.  Paradox ir Texecom centralių tiesioginiam valdymui įveskite **Centralės PC download/UDL slaptažodį**. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje.
+3.  Paradox ir Texecom centralių tiesioginiam valdymui įveskite **Centralės PC download slaptažodį**. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje.
 
 !!! note "Pastaba"
     Kad veiktų tiesioginis centralės valdymas, reikės pakeisti centralės
-    nustatymus. Kaip tai padaryti aprašyta skyriuje **4 „Apsaugos centralių
-    programavimas"**. Šiame skyriuje aprašyta ir kaip pakeisti centralės PC
-    download/UDL slaptažodį.
+    nustatymus. Kaip tai padaryti aprašyta skyriuje
+    **[4](#apsaugos-centralių-programavimas) „[Apsaugos centralių
+    programavimas](#apsaugos-centralių-programavimas)"**. Šiame skyriuje
+    aprašyta ir kaip pakeisti centralės PC download/UDL slaptažodį.
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
 
-4. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
+4.  Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
-2.  Pakeiskite prisijungimo prie **PROTEGUS slaptažodį**, jeigu norite, kad vartotojų prašytų jį suvesti pridedant sistemą Protegus programėlėje (gamyklinis – 123456).
+5.  Pakeiskite prisijungimo prie **PROTEGUS slaptažodį**, jeigu norite, kad vartotojų prašytų jį suvesti pridedant sistemą Protegus2 programėlėje (gamyklinis – 123456).
 
 **Lange „SIM kortelė“:**
 
-<img alt="" src="./image9.webp" style="width:7.090551181102362in;height:2.1496062992125986in" />
+<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.311023622047244in" />
 
-3. Įveskite **SIM kortelės PIN kodą**.
+6.  Įveskite **SIM kortelės PIN kodą**.
 
-2.  Pakeiskite **APN** vardą. **APN** rasite SIM operatoriaus interneto puslapyje. „Internet” yra universalus ir veikia daugelio operatorių tinkluose.
+7.  Pakeiskite **APN** vardą. **APN** rasite SIM operatoriaus interneto puslapyje. „Internet” yra universalus ir veikia daugelio operatorių tinkluose.
 
 Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB kabelį.
 
 !!! note "Pastaba"
-    Plačiau apie kitus G16 nustatymus TrikdisConfig žr. **6
-    „TrikdisConfig langų aprašymas".**
-### Nustatymai ryšiui su Stebėjimo pultu
+    Plačiau apie kitus G16 nustatymus TrikdisConfig žr.
+    **[6](#trikdisconfig-langų-aprašymas) „[TrikdisConfig langų
+    aprašymas](#trikdisconfig-langų-aprašymas)".**
+### Nustatymai ryšiui su Stebėjimo pultu 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.7834645669291338in" />
 
 1.  Įrašykite **Objekto numerį (Nenaudokite FFFE, FFFF objekto numerių**.**)**.
 
 2.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
-Lange „Siuntimas į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
+Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image11.webp" style="width:7.082677165354331in;height:3.8307086614173227in" />
+<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:3.8858267716535435in" />
 
-3. **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminio kanalo).
+3.  **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminio kanalo).
 
-2.  **Protokolas** – pasirinkite, kuria koduote turėtų būti siunčiami pranešimai: **TRK** (į TRIKDIS imtuvus), **DC-09_2007** arba **DC-09_2012** (į universalius imtuvus), **TL150** ( į SUR-GARD imtuvus).
+4.  **Protokolas** – pasirinkite, kuria koduote turėtų būti siunčiami pranešimai: **TRK** (į TRIKDIS imtuvus), **DC-09_2007** arba **DC-09_2012** (į universalius imtuvus), **TL150** (į SUR-GARD imtuvus).
 
-3.  **TRK šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
+5.  **TRK šifravimo raktas** – įrašykite šifravimo raktą, kuris yra nustatytas imtuve.
 
-4.  **Domenas arba IP** – įrašykite imtuvo domeno arba IP adresą.
+6.  **Domenas arba IP** – įrašykite imtuvo domeno arba IP adresą.
 
-5.  **Prievadas** – įrašykite imtuvo prievado (*angl. port*) numerį tinkle.
+7.  **Prievadas** – įrašykite imtuvo prievado (*angl. port*) numerį tinkle.
 
-6.  **TCP arba UDP** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai.
+8.  **TCP arba UDP** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai.
 
 !!! note "Pastaba"
     Jei norite nustatyti ryšį su pultu **SMS** žinutėmis, reikės nustatyti
     tik **šifravimo raktą** ir **telefono numerį**. SMS pranešimus gali
     priimti TRIKDIS stebėjimo pulto IP/SMS imtuvas RL14, daugiakanalis
     imtuvas RM14 ir SMS imtuvas GM14. / Jei pasirinkote **DC-09** pranešimų
-    perdavimo koduotę, papildomai / **Langas** "Siuntimas į CSP" lange,
+    perdavimo koduotę, papildomai / [  
+    ](#_Ref526842239) / [Langas "Pranešimai į CSP"](#_Ref526842239),
     skirtuke **Parametrai**, įveskite objekto, linijos ir imtuvo numerius.
-7. (Rekomenduojama) Sukonfigūruokite **Atsarginio kanalo režimo** nustatymus.
+9.  (Rekomenduojama) Sukonfigūruokite **Atsarginio kanalo režimo** nustatymus.
 
-2.  (Rekomenduojama) Įveskite **Atsarginio SMS kanalo** telefono numerį.
+10. (Rekomenduojama) Įveskite **Atsarginio SMS kanalo** telefono numerį.
 
 **Lange „SIM kortelė“:**
 
-<img alt="" src="./image12.webp" style="width:7.090551181102362in;height:2.1377952755905514in" />
+<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
 
-11. Įveskite **SIM kortelės PIN** kodą.
+11. Įveskite **SIM kortelės PIN** **kodą**.
 
 12. Pakeiskite **APN** vardą. Jį rasite SIM operatoriaus interneto puslapyje. „Internet” yra universalus ir veikia daugelio operatorių tinkluose.
 
@@ -306,10 +316,11 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 !!! note "Pastaba"
     Plačiau apie kitus G16 nustatymus TrikdisConfig žr. skyrių
-    **6 „TrikdisConfig langų aprašymas"**.
-## Sujungimų schemos, įrengimas ir paleidimas veikti
+    **[6](#trikdisconfig-langų-aprašymas) „[TrikdisConfig langų
+    aprašymas](#trikdisconfig-langų-aprašymas)"**.
+## Sujungimų schemos, įrengimas ir paleidimas veikti 
 
-### Tvirtinimas
+### Tvirtinimas 
 
 1.  Nuimkite viršutinį dangtelį, ištraukite kontaktinių kaladėlių kištukinę dalį.
 
@@ -325,83 +336,84 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image13.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="" src="./image15.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image14.webp" style="width:2.748031496062992in;height:1.1811023622047243in" />
+<img alt="" src="./image16.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Pastaba"
     Įsitikinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
-    mobilaus interneto paslauga, jei bus naudojama Protegus programėlė
-    arba ryšys su pultu IP kanalu. / Jei norite išvengti PIN kodo įvedimo
-    TrikdisConfig, įdėkite SIM kortelę į telefoną ir išjunkite PIN
-    kodo užklausos funkciją.
-### Apsaugos centralių prijungimo schemos su komunikatoriumi
+    mobilaus interneto paslauga, jei bus naudojama Protegus2
+    programėlė arba ryšys su pultu IP kanalu. / Jei norite išvengti PIN kodo
+    įvedimo TrikdisConfig, įdėkite SIM kortelę į telefoną ir išjunkite
+    PIN kodo užklausos funkciją.
+### Apsaugos centralių prijungimo schemos su komunikatoriumi 
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image15.webp" style="width:7.085014216972878in;height:2.8525054680664916in" />
+<img alt="" src="./image17.webp" style="width:7.085014216972878in;height:2.840005468066492in" />
 
-<img alt="" src="./image16.webp" style="width:7.085014216972878in;height:2.8925054680664917in" />
+<img alt="" src="./image18.webp" style="width:7.085014216972878in;height:2.862505468066492in" />
 
-<img alt="" src="./image17.webp" style="width:7.085014216972878in;height:2.6825054680664917in" />
+<img alt="" src="./image19.webp" style="width:7.085014216972878in;height:2.8375054680664915in" />
 
-<img alt="" src="./image18.webp" style="width:7.085014216972878in;height:2.8675054680664918in" />
+<img alt="" src="./image20.webp" style="width:7.085014216972878in;height:2.8900054680664917in" />
 
-<img alt="" src="./image19.webp" style="width:3.25500656167979in;height:2.6825054680664917in" />
+<img alt="" src="./image21.webp" style="width:3.24500656167979in;height:2.7675054680664917in" />
 
-### G16 prijungimo schema prie centralės jungiklio (angl. keyswitch) zonos
+### G16 prijungimo schema prie centralės jungiklio (angl. keyswitch) zonos 
 
 Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su G16 PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
 !!! note "Pastaba"
-    G16 komunikatorius turi du programuojamus išėjimus OUT (PGM),
-    kurie gali valdyti dvi apsaugos sistemos sritis. Valdant šiuo būdu,
-    TrikdisConfig lange **Langas „Sistemos parinktys"** turi būti
-    nuimta varnelė prie **Nuotolinis centralės valdymas**. Programėlėje
-    Protegus reikia padaryti nustatymus, kurie aprašyti
+    G16 komunikatorius turi 3 universalius įėjimo/išėjimo gnybtus,
+    kuriems galima nustatyti išėjimo OUT (PGM) veikimo režimą. Išėjimai gali
+    valdyti tris apsaugos sistemos sritis. Valdant šiuo būdu,
+    TrikdisConfig lange „**Sistemos parinktys**" turi būti nuimta
+    varnelė prie **Nuotolinis centralės valdymas**. Programėlėje
+    Protegus2 reikia padaryti nustatymus, kurie aprašyti
     p. 5.2 „Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio
     zoną".
-<img alt="" src="./image20.webp" style="width:3.56500656167979in;height:2.2400043744531932in" />
+<img alt="" src="./image22.webp" style="width:3.42750656167979in;height:2.5825054680664916in" />
 
-### Įėjimo prijungimo schemos
+### Įėjimo prijungimo schemos 
 
-Komunikatorius turi vieną įėjimo gnybtą (IN1) prijungti NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinėms. Gamyklinis įėjimo nustatymas – stebėti NO tipo grandinę. Kitą įėjimo tipą galima nustatyti TrikdisConfig lange **Langas „**Sistemos parinktys“ **-> Įėjimo IN1 tipas**.
+Komunikatorius turi 3 universalius įėjimo/išėjimo gnybtus, kuriems galima nustatyti įėjimo IN veikimo režimą. Prie įėjimo gnybto galima prijungti NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandines. Gamyklinis **I/O 2** įėjimo nustatymas – stebėti NO tipo grandinę. Kitą įėjimo tipą galima nustatyti TrikdisConfig lange „**Sistemos parinktys**“ **-> Tipas**.
 
 NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image21.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
+<img alt="" src="./image23.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
 
-<img alt="" src="./image22.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
+<img alt="" src="./image24.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
-    OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį
-    arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
-### Relės prijungimo schema
+    OUT, prijunkite TRIKDIS iO-8 įėjimų ir išėjimų plėtiklį. (**tik 3G
+    ir 4G modeliams**)
+### Relės prijungimo schema 
 
-Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus.
+Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
-<img alt="" src="./image23.webp" style="width:2.552505468066492in;height:0.9575021872265966in" />
+<img alt="" src="./image25.webp" style="width:2.3650043744531932in;height:0.9075021872265967in" />
 
-### iO serijos plėtimo modulių prijungimo schemos
+### iO-8 plėtimo modulių prijungimo schema (tik 3G ir 4G modeliams) 
 
-Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. G16 konfigūravimas su plėtimo moduliais aprašytas p. 6.6. „Langas „RS485 moduliai“.
+Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį TRIKDIS *iO-8* įėjimų ir išėjimų plėtiklį. *G16* konfigūravimas su plėtimo moduliais aprašytas p. 6.6. „Langas „RS485 moduliai“.
 
-<img alt="" src="./image24.webp" style="width:7.0875in;height:3.4375in" />
+<img alt="" src="./image26.webp" style="width:3.33250656167979in;height:2.0575043744531936in" />
 
-### WiFi modulio W485 prijungimo schema
+### WiFi modulio W485 prijungimo schema (tik 3G ir 4G modeliams) 
 
-Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *G16* pranešimai į CSP ir į *Protegus* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *G16* pradeda toliau siusti pranešimus per *W485*. / *G16* konfigūravimas su WiFi moduliu *W485* aprašytas p. 6.6. „Langas „RS485 moduliai“. / Komunikatoriuje *G16* turi būti įstatyta SIM kortelė, kad veiktu *W485*.
+Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *G16* pranešimai į CSP ir į *Protegus2* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *G16* pradeda toliau siusti pranešimus per *W485*. / *G16* konfigūravimas su WiFi moduliu *W485* aprašytas p. 6.7. „Langas „RS485 moduliai“. / Komunikatoriuje *G16* turi būti įstatyta SIM kortelė, kad veiktu *W485*.
 
-<img alt="" src="./image25.webp" style="width:3.24250656167979in;height:2.3200043744531933in" />
+<img alt="" src="./image27.webp" style="width:3.1866732283464567in;height:2.1200043744531936in" />
 
-### „Ethernet“ modulio E485 prijungimo schema
+### „Ethernet“ modulio E485 prijungimo schema (tik 3G ir 4G modeliams) 
 
-Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *G16* pranešimai į CSP ir į *Protegus* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *G16* pradeda toliau siusti pranešimus per *E485*. / *G16* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 6.6. „Langas „RS485 moduliai“. / Komunikatoriuje *G16* turi būti įstatyta SIM kortelė, kad veiktu *E485.*
+Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *G16* pranešimai į CSP ir į *Protegus2* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *G16* pradeda toliau siusti pranešimus per *E485*. / *G16* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 6.7. „Langas „RS485 moduliai“. / Komunikatoriuje *G16* turi būti įstatyta SIM kortelė, kad veiktu *E485.*
 
-<img alt="" src="./image26.webp" style="width:3.22500656167979in;height:2.325004374453193in" />
+<img alt="" src="./image28.webp" style="width:3.2033398950131233in;height:2.1200043744531936in" />
 
-### Komunikatoriaus paleidimas veikti
+### Komunikatoriaus paleidimas veikti 
 
 Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maitinimo šaltinį. Turi užsidegti ši G16 komunikatoriaus šviesinė indikacija:
 
@@ -410,20 +422,21 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
 - Diodas „NETWORK“ turi šviesti žaliai ir mirksi geltonai, kai prisiregistravęs prie tinklo.
 
 !!! note "Pastaba"
-    Pakankamą GSM signalo lygis - 5 (penki „NETWORK" indikatoriaus geltoni
-    mirksniai). Pakankamą 3G signalo lygis - 3 (trys „NETWORK" indikatoriaus
-    geltoni mirksniai). / Jeigu suskaičiuojate mažiau geltonų „NETWORK"
-    diodo mirksnių, tai GSM signalo lygis nepakankamas. Rekomenduojame arba
-    pasirinkti kitą komunikatoriaus įrengimo vietą, arba naudoti jautresnę
-    GSM anteną. / Jei šviesinė indikacija kitokia, kad nustatytumėte, kas
-    nutikę žiūrėkite skyrių **1.6 „Šviesinė veikimo indikacija".** / Jei
-    G16 indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir
-    sujungimus.
-## Apsaugos centralių programavimas
+    Pakankamas 2G signalo lygis - 5 (penki „NETWORK" indikatoriaus geltoni
+    mirksniai). Pakankamas 3G, 4G signalo lygis - 3 (trys „NETWORK"
+    indikatoriaus geltoni mirksniai). / Jeigu suskaičiuojate mažiau geltonų
+    „NETWORK" diodo mirksnių, tai GSM signalo lygis nepakankamas.
+    Rekomenduojame arba pasirinkti kitą komunikatoriaus įrengimo vietą, arba
+    naudoti jautresnę GSM anteną. / Jei šviesinė indikacija kitokia, kad
+    nustatytumėte, kas nutikę žiūrėkite skyrių
+    **[1.6](#šviesinė-veikimo-indikacija) „[Šviesinė veikimo
+    indikacija](#šviesinė-veikimo-indikacija)".** / Jei G16 indikacija
+    visai nešviečia, patikrinkite maitinimo šaltinį ir sujungimus.
+## Apsaugos centralių programavimas 
 
 Žemiau aprašome, kaip reikia programuoti apsaugos centrales, kad komunikatorius G16 galėtų nuskaityti centralės pranešimus ir ją tiesiogiai valdyti nuotoliniu būdu.
 
-Jei norite įgalinti nuotolinį centralės valdymą, įsitikinkite, kad yra uždėta varnelė prie **Nuotolinis centralės valdymas** TrikdisConfig lange **Langas „Sistemos parinktys**“.
+Jei norite įgalinti nuotolinį centralės valdymą, įsitikinkite, kad yra uždėta varnelė prie **Nuotolinis centralės valdymas** TrikdisConfig lange [**Langas „Sistemos parinktys**“](#langas-sistemos-parinktys).
 
 ### DSC
 
@@ -433,7 +446,7 @@ DSC centralių programuoti nereikia.
 
 Paradox centrales reikia programuoti tik tiesioginiam valdymui su Protegus. Pranešimų nuskaitymui Paradox centralių programuoti nereikia.
 
-Nuotoliniam Paradox centralių valdymui reikia nustatyti PC prisijungimo slaptažodį (angl. „*PC download password*“). Šis slaptažodis turi sutapti su slaptažodžiu, kurį nustatėte TrikdisConfig lange **Langas „Sistemos parinktys“** uždėjus varnelę **Nuotolinis centralės valdymas** atsiradusiame lauke.
+Nuotoliniam Paradox centralių valdymui reikia nustatyti PC prisijungimo slaptažodį (angl. „*PC download password*“). Šis slaptažodis turi sutapti su slaptažodžiu, kurį nustatėte TrikdisConfig lange [**Langas „Sistemos parinktys“**](#langas-sistemos-parinktys) uždėjus varnelę **Nuotolinis centralės valdymas** atsiradusiame lauke.
 
 Norėdami nustatyti šį slaptažodį, su prie apsaugos centralės prijungta klaviatūrą:
 
@@ -445,7 +458,7 @@ Norėdami nustatyti šį slaptažodį, su prie apsaugos centralės prijungta kla
 
 Texecom centrales reikia programuoti tiek pranešimų nuskaitymui, tiek ir nuotoliniam valdymui.
 
-Reikia nustatyti Texecom centralės **UDL** **passcode**. Šis slaptažodis turi sutapti su slaptažodžiu, kurį nustatėte TrikdisConfig lange **Langas „Sistemos** parinktys“ uždėjus varnelę **Nuotolinis centralės valdymas** atsiradusiame lauke.
+Reikia nustatyti Texecom centralės **UDL** **passcode**. Šis slaptažodis turi sutapti su slaptažodžiu, kurį nustatėte TrikdisConfig lange [**Langas „Sistemos parinktys“**](#langas-sistemos-parinktys) uždėjus varnelę **Nuotolinis centralės valdymas** atsiradusiame lauke.
 
 Centralę galite programuoti su Texecom programine įranga Wintex. Įveskite **UDL passcode** (4 skaičių kodas) lange **Communication Option**, skirtuke **Options**.
 
@@ -492,7 +505,7 @@ Centralę turi būti prijungta prie interneto. Prisijunkite prie **Innerrange In
 
 Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupėje **3rd Party Device Reporting** reikia nustatyti:
 
-<img alt="" src="./image27.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="" src="./image29.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – pažymėti šį lauką.
 
@@ -501,10 +514,6 @@ Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupė
 3.  **Serial port** – nustatyti „Serial Port 1 (Plugged In, In Use By 3rd Party Device)“.
 
 4.  Išsaugoti nustatymus ir išeiti iš programos.
-
-**Innerrange Integriti**. Centralės programinės įrangos versija turi būti **19.1.0.36608**, profesionalios programinės įrangos versija **19.1.0.15396** arba aukštesnė.
-
-Centralės konfigūravimo programoje nurodykite Trikdis ryšio protokolą. Duomenų formatas Contact ID. Centralės prievadui TTL Port-0, prie kurio prijungtas komunikatorius G16, numatytieji parametrai 19200, 8, N, 1. Išsaugokite nustatymus ir išeikite iš programos.
 
 ### Honeywell Ademco Vista
 
@@ -522,13 +531,13 @@ Programavimas skirtas centralėms **Honeywell Ademco Vista-20** ir **Honeywell
 
 Crow Runner 4/8 ir Runner 8/16 centralių programuoti nereikia.
 
-## Nuotolinis valdymas
+## Nuotolinis valdymas 
 
-### Apsaugos sistemos pridėjimas Protegus programėlėje
+### Apsaugos sistemos pridėjimas Protegus2 programėlėje 
 
-Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
+Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
-1.  Parsisiųskite ir paleiskite Protegus programėlę arba naudokite versiją naršyklėje [www.protegus.app](https://www.protegus.app):
+1.  Parsisiųskite ir paleiskite Protegus2 programėlę arba naudokite versiją naršyklėje [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -542,58 +551,61 @@ Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. J
       </a>
     </div>
 
+![](./image33.webp)
+
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note "Pastaba"
-    Pridėjimo prie Protegus metu G16 turi būti:
+!!! warning "Svarbu"
+    Pridėjimo prie Protegus2 metu G16 turi būti:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas;
     
-    2.  Įjungta Protegus servisas paslauga. Žr. **6.4 Langas
-        „Pranešimai vartotojui"**;
+    2.  Įjungta Protegus servisas paslauga. Žr.
+        **[6.4](#langas-pranešimai-vartotojui) [Langas „Pranešimai
+        vartotojui"](#langas-pranešimai-vartotojui)**;
     
     3.  Įjungtas maitinimas („POWER" LED šviečia žaliai);
     
     4.  Prisiregistravęs prie tinklo („NETWORK" LED šviečia žaliai ir mirksi
         geltonai).
-3. Paspauskite **Pridėti sistemą** ir įveskite G16 „*IMEI/Unikalus ID*“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
+3.  Paspauskite “Pridėti sistemą” ir įveskite *G16* „*IMEI/Unikalus ID*“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
 
-    <img alt="" src="./image34.webp" style="width:6.326771653543307in;height:1.9015748031496063in" />
+4.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau".
 
-### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
+<img alt="" src="./image36.webp" style="width:3.0in;height:3.673228346456693in" />
 
-!!! note "Pastaba"
+### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
+
+!!! warning "Svarbu"
     Centralės zonai, prie kurios prijungtas G16 išėjimas OUT, turi
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16 PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-1.  Naujame lange šoniniame meniu spustelėkite „**Sritys**“. Atsidariusiame lange nurodykite, kiek signalizacijos sričių (1 arba 2) yra sistemoje ir paspauskite „**Toliau**“.
+1.  Paspauskite „**Tęsti**“.
 
-    <img alt="" src="./image35.webp" style="width:7.086614173228346in;height:2.354330708661417in" />
+<img alt="" src="./image37.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
 
-2.  Naujame lange nurodykite, koks yra kiekvienos iš nurodytų sričių numeris sistemoje ir spustelėkite „**Išsaugoti**“.
+2.  Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.7086614173228347in" />
+3.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
+4.  Paspauskite „**Išsaugoti**“.
 
-3. Šoniniame meniu paspauskite „Nustatymai“ ir atsidariusiame lange paspauskite „Nustatymai“. Pažymėkite varnele „**Naudoti PGM sistemos Įjungimui/išjungimui**“ ir nurodykite, kurią sritį valdys išėjimas. Vienas G16 PGM išėjimas gali būti skirtas vienos srities valdymui (1 PGM - 1 sritis; 2 PGM - 2 sritis).
+<img alt="" src="./image38.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
 
-<img alt="" src="./image37.webp" style="width:7.1141732283464565in;height:3.574803149606299in" />
+5.  Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
-4. Pasirinkite **Lygis** arba **Impulsas**, priklausomai nuo to, koks centralės jungiklio zonos (angl. keyswitch) tipas. Taip pat galite pakeisti impulso intervalo trukmę, jei tai reikalinga prijungiamai centralei.
+6.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-2.  Papildomam saugumui, galite pasirinkti „**Naudoti programėlės slaptažodį įjungimui/išjungimui**”. Tuomet paspaudus mygtuką įjungti/išjungti apsaugos sistemą, atsivers programėlės slaptažodžio įvedimo užklausos langas.
+<img alt="" src="./image39.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
 
-### Sistemos įjungimas/išjungimas su *Protegus*
+### Sistemos įjungimas/išjungimas su *Protegus2* 
 
-1.  Kad suvaldytumėte sistemą, eikite į Protegus langą „**Sritys**“.
+1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
+2.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-2.  „**Sritys**“ lange paspauskite ant srities mygtuko. Atsivėrusiame lange pasirinkite veiksmą (įjungti arba išjungti apsaugos sistemos sritį).
+<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
 
-3.  Paprašius, įveskite vartotojo kodą arba Protegus slaptažodį.
-
-<img alt="" src="./image38.webp" style="width:7.1141732283464565in;height:3.751968503937008in" />
-
-### Konfigūravimas ir valdymas SMS žinutėmis
+### Konfigūravimas ir valdymas SMS žinutėmis 
 
 Komunikatorių nuotoliniu būdu galima valdyti ir konfigūruoti SMS pranešimais.
 
@@ -607,7 +619,7 @@ Kaip slaptažodį naudokite **Administratoriaus kodą** (gali įvykdyti *INFO, R
 |---------|----------|-----------|
 | INFO |  | Informacijos apie įrenginį užklausa. Į atsakymą bus įtraukti: įrenginio tipas, IMEI numeris, serijos numeris ir programinės įrangos versija. Pvz.: 123456 INFO |
 | RESET |  | Prietaiso paleidimas veikti iš naujo. Pvz.: 123456 RESET |
-| OUTPUTx | ON | x - G16 išėjimo numeris (1 arba 2) |
+| OUTPUTx | ON | x - G16 išėjimo numeris (1, 2 arba 3) |
 | OUTPUTx | OFF | Įjungti išėjimą OUTPUT1. Pvz.: 123456 OUTPUT1 ON |
 | OUTPUTx | PULSE=tttt | Išjungti išėjimą OUTPUT1. Pvz.: 123456 OUTPUT1 OFF |
 | OUTPUTx |  | Įjungti išėjimą OUTPUT2 tam tikram laikui. “tttt” yra impulso trukmė sekundėmis, nurodoma keturiais skaitmenimis. Pvz.: 123456 OUTPUT2 PULSE=0002 |
@@ -618,21 +630,22 @@ Kaip slaptažodį naudokite **Administratoriaus kodą** (gali įvykdyti *INFO, R
 | CONNECT | APN=Internet | Nustatyti APN vardą. Pvz.: 123456 CONNECT APN=INTERNET |
 | CONNECT | USER=user | Nustatyti APN naudotoją. Pvz.: 123456 CONNECT USER=User |
 | CONNECT | PASS=password | Nustatyti APN slaptažodį. Pvz.: 123456 CONNECT PASS=Password |
-| CONNECT | CP= | Įjungti/išjungti telefoninės linijos „DTMF“ sąsają (1- Išjungti ; 2 - Įjungti). / Pvz. 123456 CONNECT CP=2 |
+| CONNECT | CP= | Iš sąrašo pasirinkite centralės modelį. Pvz. (pasirinkite centralę Paradox SP6000, kuri G16 sąraše yra 4). Pvz. 123456 CONNECT CP=4 |
+| CONNECT | DIR= | Tiesioginio valdymo 4 skaitmenų slaptažodis arba OFF, kad jį išjungtumėte. / Pvz. (įveskite tiesioginio valdymo 4 skaitmenų slaptažodį 1122): / 123456 CONNECT DIR=1122 |
 
-Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys priims ir vykdys. Kaip tai atlikti aprašyta skyriuje **6.4 Langas „Pranešimai vartotojui”**, skirtuke **“Valdymas SMS žinutėmis”.**
+Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys priims ir vykdys. Kaip tai atlikti aprašyta skyriuje **[6.4](#langas-pranešimai-vartotojui) [Langas „Pranešimai vartotojui”](#langas-pranešimai-vartotojui)**, skirtuke **“Valdymas SMS žinutėmis”.**
 
-## TrikdisConfig langų aprašymas
+## TrikdisConfig langų aprašymas 
 
-### *TrikdisConfig* būsenos juostos aprašymas
+### *TrikdisConfig* būsenos juostos aprašymas 
 
 Prijungus G16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image39.webp" style="width:7.070866141732283in;height:0.5905511811023622in" />
+<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:0.6417322834645669in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
-| Unikalus ID | Gaminio IMEI numeris |
+| IMEI/​Unikalus ID | Gaminio IMEI numeris |
 | Būsena | Darbinė būsena |
 | Įrenginys | Gaminio tipas (turi rodyti G16) |
 | SN | Gaminio serijinis numeris |
@@ -644,9 +657,9 @@ Prijungus G16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungt
 
 Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, kurie yra įrašyti G16. Su TrikdisConfig, nustatykite reikiamus nustatymus pagal žemiau pateiktus programos langų aprašymus.
 
-### Langas „Sistemos parinktys“
+### Langas „Sistemos parinktys“ 
 
-<img alt="" src="./image40.webp" style="width:7.082677165354331in;height:3.0551181102362204in" />
+<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 Parinkčių grupė „Pagrindinės“
 
@@ -654,15 +667,11 @@ Parinkčių grupė „Pagrindinės“
 
 - Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
-- **Nuotolinis centralės valdymas** – kai langelį pažymėsite varnele, G16 centralę valdys tiesiogiai nuotoliniu būdu. Šis nustatymas rodomas tiesiogiai valdomoms centralėms. Tiesioginiam centralės valdymui reikia pakeisti apsaugos centralės nustatymus, tai aprašyta skyriuje **4 „Apsaugos centralių programavimas*“***.
+- **Nuotolinis centralės valdymas** – kai langelį pažymėsite varnele, G16 centralę valdys tiesiogiai nuotoliniu būdu. Šis nustatymas rodomas tiesiogiai valdomoms centralėms. Tiesioginiam centralės valdymui reikia pakeisti apsaugos centralės nustatymus, tai aprašyta skyriuje **[4](#apsaugos-centralių-programavimas) „[Apsaugos centralių programavimas](#apsaugos-centralių-programavimas)*“***.
 
-  - **Centralės PC download/UDL slaptažodis** – Paradox ir Texecom centralių tiesioginiam valdymui reikia suvesti PC/UDL slaptažodį. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje. Kaip pakeisti šį slaptažodį centralėje aprašyta skyriuje 4* „*Apsaugos centralių programavimas pranešimų nuskaitymui ir tiesioginiam valdymui*“.*
+  - **Centralės PC download slaptažodis** – Paradox ir Texecom centralių tiesioginiam valdymui reikia suvesti PC/UDL slaptažodį. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje. Kaip pakeisti šį slaptažodį centralėje aprašyta skyriuje **4* „*Apsaugos centralių programavimas*“****.*
 
-- **Įėjimo IN1 tipas** - parinkite įėjimo tipą iš sąrašo (NO, NC, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL)**.**
-
-- **Įšėjimų OUT1 ir OUT2 veikimas** - parinkite išėjimo veikimo funkciją iš sąrašo.
-
-- **Laiko sinchronizavimas** - pasirinkite, kurį serverį naudoti laiko sinchronizacijai.
+- **Laiko nustatymas** - pasirinkite, kurį serverį naudoti laiko sinchronizacijai.
 
 Parinkčių grupė „Prisijungimas“
 
@@ -674,13 +683,13 @@ Parinkčių grupė „Prisijungimas“
 
 **Pastaba**: jei laukelis **„Atkurti“ gali tik administratorius** pažymėtas, o administratoriaus kodo nežinote, gamyklinius parametrus galės atkurti tik gamintojas – UAB „Trikdis“. Paslauga mokama.
 
-- **Leisti instaliuotojui keisti** – administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.
+- **Instaliuotojui leisti keisti** – administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas.<span id="_Ref526842239"></span>
 
-### Langas “Siuntimas į CSP”
+### Langas “Pranešimai į CSP” 
 
-**Skirtukas „CSP parametrai“**
+**Skirtukas „CSP nustatymai“**
 
-<img alt="" src="./image41.webp" style="width:7.082677165354331in;height:4.047244094488189in" />
+<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:4.078740157480315in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per internetą (IP) arba SMS pranešimais.
 
@@ -694,11 +703,11 @@ Pranešimai į stebėjimo pultą perduodami užkoduoti ir apsaugoti slaptažodž
 
 Ryšys su SMS pranešimais yra ypatingai naudingas kaip atsarginis kanalas, nes veikia, kai sutrinka mobiliojo interneto ryšys operatoriaus tinkle. Nerekomenduojame naudoti SMS kaip pirminio kanalo.
 
-Parinkčių grupė „Pirmas ryšio kanalas”
+Parinkčių grupė „Pirminis ryšio kanalas”
 
 - **Ryšio būdas** – pasirinkite ryšio su stebėjimo pulto imtuvu būdą (IP, SMS).
 
-- **Protokolas** – **TRK** protokolu perduodamus įvykių pranešimus priims Trikdžio IP imtuvai; **SIA DC-09** protokolais – IP imtuvai, gebantys priimti SIA DC-09 protokolais perduodamus įvykių pranešimus; **TL150** protokolu perduodamus įvykių pranešimus priims SUR-GARD IP imtuvai.
+- **Protokolas** – **TRK** protokolu perduodamus įvykių pranešimus priims Trikdžio IP imtuvai; o **SIA DC-09** protokolais – IP imtuvai, gebantys priimti SIA DC-09 protokolais perduodamus įvykių pranešimus; **TL150** protokolu perduodamus įvykių pranešimus priims SUR-GARD IP imtuvai.
 
 - **TRK šifravimo raktas** – 6 skaitmenų pranešimų šifravimo raktas. Į komunikatorių įrašytas šifravimo raktas turi būti toks, koks įrašytas į imtuvą, t.y. turi sutapti, būti vienodas.
 
@@ -730,14 +739,13 @@ SMS pranešimai bus siunčiami į stebėjimo pulto SMS imtuvą: 1) iš karto, pr
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image42.webp" style="width:7.090551181102362in;height:2.877952755905512in" />
+<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.6496062992125986in" />
 
 Parinkčių grupė „Parametrai“
 
 - **Testo periodas** – ryšio tikrinimo TEST pranešimų periodas. Jie siunčiami kaip Contact ID pranešimai ir perduodami į stebėjimo programą.
 
-- **IP ping periodas** – vidinių PING ryšio tikrinimo signalų siuntimo periodas. Šie pranešimai siunčiami tik IP kanalu.  
-  Jų imtuvas neperduoda į stebėjimo programą, taip jos neapkraudamas. Į stebėjimo programą perduodama tik tada, kai imtuvas negauna PING pranešimo iš įrenginio per nustatytą laiką.
+- **IP ping periodas** – vidinių PING ryšio tikrinimo signalų siuntimo periodas. Šie pranešimai siunčiami tik IP kanalu. Jų imtuvas neperduoda į stebėjimo programą, taip jos neapkraudamas. Į stebėjimo programą perduodama tik tada, kai imtuvas negauna PING pranešimo iš įrenginio per nustatytą laiką.
 
   Numatytai imtuvas perduos „*Connection lost*” prarasto ryšio pranešimą į stebėjimo programą praėjus trigubai ilgesniam laikui nei nustatytas komunikatoriaus PING pranešimo periodas. Pvz., jei nustatytas 3 minučių PING, imtuvas perduos prarasto ryšio pranešimą negavęs PING per 9 minutes.
 
@@ -759,23 +767,23 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 - **DC-09 imtuvo Nr.** – įveskite imtuvo numerį.
 
-### Langas „Pranešimai vartotojui”
+### Langas „Pranešimai vartotojui” 
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image43.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
 **Parinkčių grupė „Protegus servisas“**
 
-- **Leisti prisijungti** – Protegus serviso įjungimas, G16 galės keistis duomenimis su Protegus programėle ir bus galima su TrikdisConfig atlikti konfigūravimą nuotoliniu būdu.
+- **Leisti prisijungti** – Protegus serviso įjungimas, G16 galės keistis duomenimis su Protegus2 programėle ir bus galima su TrikdisConfig atlikti konfigūravimą nuotoliniu būdu.
 
-- **PROTEGUS Cloud prieigos kodas** - prisijungimo su Protegus 6 skaitmenų kodas (gamyklinis kodas - 123456).
+- **PROTEGUS Cloud prieigos kodas** - prisijungimo su Protegus2 6 skaitmenų kodas (gamyklinis kodas - 123456).
 
 **Skirtukas “SMS ir skambučiai”**
 
-<img alt="" src="./image44.webp" style="width:7.082677165354331in;height:3.854330708661417in" />
+<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.874015748031496in" />
 
 Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešimais arba skambučiu.
 
@@ -793,9 +801,9 @@ Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešim
 
 **Skirtukas “Valdymas SMS žinutėmis”**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
-Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba pakeis nustatymus. Valdymo SMS komandas rasite skyriuje **5.4 „Konfigūravimas ir valdymas SMS žinutėmis“**.
+Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba pakeis nustatymus. Valdymo SMS komandas rasite skyriuje **[5.4](#konfigūravimas-ir-valdymas-sms-žinutėmis) „[Konfigūravimas ir valdymas SMS žinutėmis](#konfigūravimas-ir-valdymas-sms-žinutėmis)“**.
 
 - **SMS atsakymo žinutės tekstas** – SMS tekstas, kurį vartotojas gauna po SMS komandos išsiuntimo. SMS žinutės tekstą galima redaguoti.
 
@@ -806,14 +814,14 @@ Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba p
     komandas iš bet kurio telefono numerio. Bet kuriuo atveju saugumą
     užtikrina reikalavimas į SMS komandą įvesti administratoriaus arba
     instaliuotojo slaptažodį.
-### Langas “SIM kortelė”
+### Langas “SIM kortelė” 
 
-!!! note "Pastaba"
+!!! warning "Svarbu"
     1\. Prieš naudodami SIM kortelę, įsitikinkite, ar ji aktyvuota. / 2. Jei
     bus naudojamas mobilusis interneto ryšys pranešimams perduoti IP kanalu
-    į saugos tarnybos imtuvą arba į Protegus, patikrinkite, ar įjungta
-    mobiliųjų duomenų perdavimo paslauga.
-<img alt="" src="./image46.webp" style="width:7.082677165354331in;height:2.3070866141732282in" />
+    į saugos tarnybos imtuvą arba į Protegus2, patikrinkite, ar
+    įjungta mobiliųjų duomenų perdavimo paslauga.
+<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.3070866141732282in" />
 
 Parinkčių grupė „SIM kortelė“
 
@@ -824,13 +832,31 @@ Parinkčių grupė „SIM kortelė“
 - **Vartotojas, slaptažodis** – jei reikia, įveskite vardą ir slaptažodį prisijungimui prie APN.
 - **Nutraukti registraciją esant tarptinkliniam ryšiui** – funkcija draudžianti komunikatoriui jungtis prie užsienio šalies GSM ryšio tiekėjo tinklų. Pažymėkite šį laukelį, jei komunikatorius įrengtas netoli pasienio ar pasienyje.
 
-### Langas „RS485 moduliai“
+### Langas „IN/OUT“ 
 
-Prie komunikatoriaus galima prijungti **iO** serijos plėtiklius, kuriais pridėsite papildomus įėjimus, valdomus išėjimus ir magistralę temperatūros jutikliams. Prijungti plėtikliai turi būti įtraukti į **Modulių sąrašo** lentelę.
+<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
-<img alt="" src="./image47.webp" style="width:7.090551181102362in;height:2.377952755905512in" />
+Komunikatorius turi 3 universalius (įėjimo/išėjimo) gnybtus. Lentelėje galima nustatyti gnybtui veikimo režimą (Išjungta, IN, OUT). Įėjimui reikia nurodyti prijungiamos grandinės tipą NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL.
 
-Parinkčių grupė „RS485 moduliai“
+Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus jutikliui komunikatorius išsius pranešimą apie įvykį. Įėjimui priskiriamas Contact ID kodas, kuris bus išsiustas į CSP ir Protegus2.
+
+- **Įgalinti** – pažymėkite įvykių laukus, kuriu pranešimai bus siunčiami į CSP ir Protegus2.
+
+- **Į/A** – nurodykite komunikatoriaus vidinio įvykio siuntimo sąlyga (Įvykis arba Atsistatymas).
+
+- **CID** – įvykio kodas.
+
+- **Srit.** – įrašykite srities numerį, kuris bus siunčiamas įvykus vidiniam įvykiui ir atsistačius sistemai.
+
+- **Zona** - įrašykite zonos numerį, kuris bus siunčiamas įvykus vidiniam įvykiui ir atsistačius sistemai.
+
+### Langas „RS485 moduliai“ (tik 3G ir 4G modeliams) 
+
+Prie komunikatoriaus galima prijungti iO-8 plėtiklius (kuriais pridėsite papildomus įėjimus, valdomus išėjimus) arba WiFi modulį W485 arba „Ethernet“ modulį E485. Prijungti moduliai turi būti įtraukti į **Modulių sąrašo** lentelę.
+
+<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
+
+Parinkčių grupė „Modulių sąrašas“
 
 - **Nr** – modulio eilės numeris.
 
@@ -838,23 +864,23 @@ Parinkčių grupė „RS485 moduliai“
 
 - **Serijos numeris** – įveskite prijungto modulio serijinį numerį (6 skaitmenys). Numerį rasite ant lipduko, užklijuoto ant prijungto modulio arba jo įpakavimo dėžutės.
 
-Išrinkus prijungtą modulį ir nurodžius jo serijos numerį, nuspauskite mygtuką **Įrašyti [F5].** Kai pakeitimas bus įrašytas, atjunkite USB Mini-B kabelį nuo komunikatoriaus. Palaukite apie minutę (komunikatorius turi priregistruoti prijungtą modulį). Prijunkite USB Mini-B kabelį prie komunikatoriaus. Nuspauskite mygtuką **Skaityti [F4]**. Pereikite prie **RS485 moduliai → Modulis.**
+Išrinkus prijungtą modulį ir nurodžius jo serijos numerį, pereikite prie **RS485 moduliai → Modulis.**
 
 **Skirtukai „Modulis“**
 
-Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 moduliai** lange atsiras naujas skirtukas su šio modulio nustatymais. Skirtukui suteikiamas eilės numeris. Žemiau aprašome nustatymų laukus **iO-8** ir **iO** serijos plėtikliams, WiFi moduliui W485, „Ethernet“ moduliui E485.
+Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 moduliai** lange atsiras naujas skirtukas su šio modulio nustatymais. Skirtukui suteikiamas eilės numeris. Žemiau aprašome nustatymų laukus iO-8 plėtikliams, WiFi moduliui W485, „Ethernet“ moduliui E485.
 
-**iO-8 plėtiklio nustatymų langas**
+**iO-8 plėtiklio nustatymų langas (tik 3G ir 4G modeliams)**
 
-<img alt="" src="./image48.webp" style="width:7.082677165354331in;height:2.5236220472440944in" />
+<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
 
 Plėtiklis iO-8 turi 8 universalius (įėjimo/išėjimo) gnybtus. Galima prijungti keturis iO-8 plėtiklius.
 
 - **Įėjimų** **skaičius** - pasirinkite, kiek gnybtų priskirti įėjimo (IN) režimą. Likę kontaktai taps valdomais išėjimais (OUT).
 
-Valdomų išėjimų nustatymai (priskirti išėjimą apsaugos sistemos įjungimui/išjungimui arba naudoti nuotoliniam įrenginių valdymui) atliekami tiesiogiai Protegus programėlėje.
+Valdomų išėjimų nustatymai (priskirti išėjimą apsaugos sistemos įjungimui/išjungimui arba naudoti nuotoliniam įrenginių valdymui) atliekami tiesiogiai Protegus2 programėlėje.
 
-Lentelėje įėjimams (INPUT) galima priskirti Contact ID įvykių ir atsistatymo kodus. Suveiksminus įėjimą, komunikatorius išsiųs pranešimą su nurodytu įvykio kodu į stebėjimo pulto imtuvą, Protegus programėlę ir SMS (į vartotojo telefono numerį).
+Lentelėje įėjimams (INPUT) galima priskirti Contact ID įvykių ir atsistatymo kodus. Suveiksminus įėjimą, komunikatorius išsiųs pranešimą su nurodytu įvykio kodu į stebėjimo pulto imtuvą, Protegus2 programėlę ir SMS (į vartotojo telefono numerį).
 
 **Contact ID įvykio kodas**:
 
@@ -884,25 +910,11 @@ Lentelėje įėjimams (INPUT) galima priskirti Contact ID įvykių ir atsistaty
 
 - **Įėjimo tipas** – nurodomas įėjimo tipas (NO arba NC).
 
-Kad vartotojams apie įėjimų suveikimus būtų siunčiami SMS pranešimai arba skambinama, įrašykite įėjimui priskirtą Contact ID įvykio kodą į lentelę lange **Langas „Pranešimai vartotojui”** **→ SMS ir skambučiai**.
+Kad vartotojams apie įėjimų suveikimus būtų siunčiami SMS pranešimai arba skambinama, įrašykite įėjimui priskirtą Contact ID įvykio kodą į lentelę lange [**Langas „Pranešimai vartotojui”**](#langas-pranešimai-vartotojui) **→ SMS ir skambučiai**.
 
-**iO plėtiklio nustatymų langas**
+#### WiFi modulio W485 nustatymų langas (tik 3G ir 4G modeliams)
 
-<img alt="" src="./image49.webp" style="width:7.082677165354331in;height:3.295275590551181in" />
-
-Plėtiklis iO turi: 1 įėjimo, 1 išėjimo (relės kontaktai) gnybtus ir 1-Wire magistralę temperatūros jutiklių prijungimui.
-
-- **Įėjimo IN1 tipas** – nurodomas įėjimo tipas (NO arba NC).
-
-- **Max <sup>◦</sup>C(T1)** – didžiausia ribinė temperatūros daviklio reikšmė, kurią viršijus bus formuojamas pranešimas apie įvykį. Kad būtų formuojamas pranešimas, jis turi būti įgalintas lentelėje.
-
-- **Min <sup>◦</sup>C(T2)** – mažiausia ribinė temperatūros daviklio reikšmė, žemiau kurios nukritus, bus formuojamas pranešimas apie įvykį. Kad būtų formuojamas pranešimas, jis turi būti įgalintas lentelėje.
-
-Lentelėje įvykiams galima priskirti Contact ID įvykių ir atsistatymo kodus. Suveiksminus įėjimą, komunikatorius pranešimą su nurodytu įėjimo kodu išsiųs į stebėjimo pulto imtuvą ir Protegus programėlę. Nustatykite kaip aprašyta ankstesniame puslapyje apie **iO-8 plėtiklio nustatymų langą**.
-
-#### WiFi modulio W485 nustatymų langas
-
-<img alt="" src="./image50.webp" style="width:7.078740157480315in;height:3.125984251968504in" />
+<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.1535433070866143in" />
 
 - **DHCP režimas** – WiFi modulio registracijos tinkle rėžimas (rankinis (Statinis) arba automatinis (DHCP)).
 
@@ -916,16 +928,17 @@ Lentelėje įvykiams galima priskirti Contact ID įvykių ir atsistatymo kodus. 
 
 - **Wifi SSID slaptažodis** - WiFi tinklo slaptažodis.
 
-Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirti Contact ID įvykio ir atsistatymo kodus. Sutrikus arba atsistačius ryšiui tarp W485 ir G16, komunikatorius G16 pranešimą su nurodytu CID kodu išsiųs į stebėjimo pulto imtuvą ir Protegus programėlę.
+Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirti Contact ID įvykio ir atsistatymo kodus. Sutrikus arba atsistačius ryšiui tarp W485 ir G16, komunikatorius G16 pranešimą su nurodytu CID kodu išsiųs į stebėjimo pulto imtuvą ir Protegus2 programėlę.
 
 !!! note "Pastaba"
-    Kad pranešimai būtu siunčiami į CSP ir į Protegus reikia sukonfigūruoti
-    G16, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo pultu" ir
-    p. 2.1 „Nustatymai ryšiui su Protegus programėle". / **Komunikatoriuje
-    *G16* turi būti įstatyta SIM kortelė, kad veiktu *W485.***
-#### „Ethernet“ modulio E485 nustatymų langas
+    Kad pranešimai būtu siunčiami į CSP ir į Protegus2 reikia
+    sukonfigūruoti G16, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo
+    pultu" ir p. 2.1 „Nustatymai ryšiui su Protegus2
+    programėle". / **Komunikatoriuje *G16* turi būti įstatyta SIM kortelė,
+    kad veiktu *W485.***
+#### „Ethernet“ modulio E485 nustatymų langas (tik 3G ir 4G modeliams)
 
-<img alt="" src="./image51.webp" style="width:7.078740157480315in;height:3.12992125984252in" />
+<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.161417322834646in" />
 
 - **DHCP režimas** – „Ethernet“ modulio registracijos tinkle rėžimas (rankinis (Statinis) arba automatinis (DHCP)).
 
@@ -935,32 +948,27 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
 
 - **Numatytasis šliuzas** – tinklų sietuvo adresas esant rankiniam registracijos rėžimui.
 
-Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirti Contact ID įvykio ir atsistatymo kodus. Sutrikus arba atsistačius ryšiui tarp E485 ir G16, komunikatorius G16 pranešimą su nurodytu CID kodu išsiųs į stebėjimo pulto imtuvą ir Protegus programėlę.
+Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirti Contact ID įvykio ir atsistatymo kodus. Sutrikus arba atsistačius ryšiui tarp E485 ir G16, komunikatorius G16 pranešimą su nurodytu CID kodu išsiųs į stebėjimo pulto imtuvą ir Protegus2 programėlę.
 
 !!! note "Pastaba"
-    Kad pranešimai būtu siunčiami į CSP ir į Protegus reikia sukonfigūruoti
-    G16, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo pultu" ir
-    p. 2.1 „Nustatymai ryšiui su Protegus programėle". / **Komunikatoriuje
-    *G16* turi būti įstatyta SIM kortelė, kad veiktu *E485.***
-### Langas „Įvykių aprašas”
+    Kad pranešimai būtu siunčiami į CSP ir į Protegus2 reikia
+    sukonfigūruoti G16, žr. p. 2.2 „Nustatymai ryšiui su stebėjimo
+    pultu" ir p. 2.1 „Nustatymai ryšiui su Protegus2
+    programėle". / **Komunikatoriuje *G16* turi būti įstatyta SIM kortelė,
+    kad veiktu *E485.***
+### Langas „Įvykių aprašas” 
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
-<img alt="" src="./image52.webp" style="width:7.082677165354331in;height:2.2874015748031495in" />
+<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:1.9645669291338583in" />
 
 - **COMMUNICATION** – pranešimas apie ryšio sutrikimą tarp centralės ir G16.
 
-- **IN_ALARM** – pranešimas apie įėjimo (IN) grandinės suveikimą.
-
-- **IN_TAMPER** – pranešimas apie įėjimo (IN) grandinės tamperio suveikimą.
-
-- **PING** – PING ryšio patikros pranešimas.
-
 - **POWER** – pranešimas apie žemą maitinimo įtampą.
 
-- **REMOTE_STARTED** – pranešimas apie nuotolinį prisijungimą konfigūruoti G16 su **TrikdisConfig**.
+- **REMOTE_FINISHED** – pranešimas apie atsijungimą nuo nuotolinio konfigūravimo su TrikdisConfig.
 
-- **REMOTE_FINISHED** – pranešimas apie atsijungimą nuo nuotolinio konfigūravimo su **TrikdisConfig**.
+- **REMOTE_STARTED** – pranešimas apie nuotolinį prisijungimą konfigūruoti G16 su TrikdisConfig.
 
 - **START** – pranešimas apie G16 prijungimą prie tinklo.
 
@@ -968,47 +976,49 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
 
 !!! note "Pastaba"
     Norėdami įjungti periodinius TEST pranešimus ir nustatyti laikotarpį,
-    eikite į / **Langas** "Siuntimas į CSP" **→ Parametrai
-    → Testo periodas**.
+    eikite į langą / „**Pranešimai į CSP**" / [  
+    ](#_Ref526842239) / [Langas "Pranešimai į
+    CSP"](#_Ref526842239)**→ Parametrai → Testo periodas**.
 - **Įgalinti** – pažymėjus varnele, įgalinamas pranešimo siuntimas.
 
 Galite pakeisti kiekvieno įvykio Contact ID kodą, taip pat su pranešimu nurodomą zonos ir srities numerį.
 
-### Gamyklinių nustatymų atstatymas
+### Gamyklinių nustatymų atstatymas 
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:0.9881889763779528in" />
+<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:0.9960629921259843in" />
 
-1.  <span id="_Toc69722055"></span>**Nuotolinis veikimo parametrų nustatymas**
+## Nuotolinis veikimo parametrų nustatymas
 
-!!! note "Pastaba"
+!!! warning "Svarbu"
     Nuotolinis konfigūravimas veiks tik tuomet, kai G16:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
     
-    2.  Įjungta Protegus servisas paslauga. Žr. **6.4 Langas
-        „Pranešimai vartotojui".**
+    2.  Įjungta Protegus servisas paslauga. Žr.
+        **[6.4](#langas-pranešimai-vartotojui) [Langas „Pranešimai
+        vartotojui"](#langas-pranešimai-vartotojui).**
     
     3.  Įjungtas maitinimas („POWER" LED šviečia žaliai).
     
     4.  Prisiregistravęs prie tinklo („NETWORK" LED šviečia žaliai ir mirksi
         geltonai).
-2. Kompiuteryje paleiskite konfigūravimo programą TrikdisConfig.
+2.  Kompiuteryje paleiskite konfigūravimo programą TrikdisConfig.
 
-2.  Lauke **Nuotolinė prieiga** įveskite komunikatoriaus *IMEI/Unikalus ID* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipdukų.
+3.  Lauke **Nuotolinė prieiga** įveskite komunikatoriaus *IMEI/Unikalus ID* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipduko.
 
-<img alt="" src="./image54.webp" style="width:6.5984251968503935in;height:1.015748031496063in" />
+<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
 
-3. (Nebūtina) Langelyje **Sistemos pavadinimas** įveskite norimą komunikatoriaus pavadinimą.
+4.  (Nebūtina) Langelyje **Sistemos pavadinimas** įveskite norimą komunikatoriaus pavadinimą.
 
-2.  Paspauskite **Konfigūravimas**.
+5.  Paspauskite **Konfigūravimas**.
 
-3.  Atsidariusiame lange paspauskite **Skaityti [F4]**. Programai paprašius, įveskite administratoriaus arba instaliuotojo kodą.
+6.  Atsidariusiame lange paspauskite **Skaityti [F4]**. Programai paprašius, įveskite administratoriaus arba instaliuotojo kodą.
 
-4.  Nustatykite norimus nustatymus ir pabaigę nuspauskite **Įrašyti [F5]**.
+7.  Nustatykite norimus nustatymus ir pabaigę nuspauskite **Įrašyti [F5]**.
 
-## GSM komunikatoriaus *G16* testavimas
+## GSM komunikatoriaus *G16* testavimas 
 
 Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
@@ -1018,22 +1028,23 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 - suveiksmindami centralės zoną esant įjungtam saugojimo režimui.
 
-1.  Patikrinkite, ar įvykiai buvo gauti Centriniame stebėjimo pulte ir/arba Protegus programėlėje.
+2.  Patikrinkite, ar įvykiai buvo gauti Centriniame stebėjimo pulte ir/arba Protegus2 programėlėje.
 
-2.  Norėdami išbandyti komunikatoriaus įėjimą, suveiksminkite jį ir patikrinkite, ar gavėjai gauna teisingus pranešimus.
+3.  Norėdami išbandyti komunikatoriaus įėjimą, suveiksminkite jį ir patikrinkite, ar gavėjai gauna teisingus pranešimus.
 
-3.  Norėdami išbandyti komunikatoriaus išėjimus, juos įjunkite nuotoliniu būdu ir patikrinkite jų veikimą.
+4.  Norėdami išbandyti komunikatoriaus išėjimus, juos įjunkite nuotoliniu būdu ir patikrinkite jų veikimą.
 
-4.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus programėle.
+5.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus2 programėle.
 
-## Programinės įrangos atnaujinimas
+## Programinės įrangos atnaujinimas 
 
 !!! note "Pastaba"
     Prijungus komunikatorių prie TrikdisConfig, programa automatiškai
     pasiūlys atnaujinti įrenginio veikimo programą, jeigu yra atnaujinimų.
     Šiam veikimui reikalingas interneto ryšys. Antivirusinė programa,
     ugniasienė arba griežti prieigos prie tinklo nustatymai gali blokuoti
-    automatinių atnaujinimų funkciją.
+    automatinių atnaujinimų funkciją. Šiuo atveju turėsite perkonfigūruoti
+    savo antivirusinę programą.
 Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnaujinimo išlieka visi ankstesni komunikatoriaus nustatymai. Veikimo programą įrašant rankiniu būdu, ją galima pakeisti į naujesnę arba senesnę versiją. Atlikite šiuos žingsnius:
 
 1.  Paleiskite ***TrikdisConfig**.*
@@ -1044,15 +1055,13 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu **Programos naujinimas**.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:3.1811023622047245in" />
+<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.1692913385826773in" />
 
-4. Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
+4.  Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
 
-2.  Paspauskite atnaujinimo mygtuką **Naujinti [F12]**.
+5.  Paspauskite atnaujinimo mygtuką **Naujinti [F12]**.
 
-3.  Palaukite, kol bus atlikti atnaujinimai.
-
-## Turi nys
+6.  Palaukite, kol bus atlikti atnaujinimai.
 
 ## Saugos reikalavimai
 
@@ -1064,9 +1073,13 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="" src="./image3.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
-## Priedas
+<div style="text-align: center;">
+  <img src="./image4.webp" alt="" width="400">
+</div>
+
+## Priedas 
 
 Komunikatorius gali dirbti su SUR-GARD imtuvu. Komunikatorius, gautus iš signalizacijos centralės, Contact ID kodus konvertuoja į SIA kodus.
 
