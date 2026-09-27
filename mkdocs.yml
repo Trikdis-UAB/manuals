@@ -162,6 +162,7 @@ plugins:
       - Receivers:
         - IPcom:
           - Overview: receivers/ipcom/index.md
+          - RL25 hardware receiver: receivers/ipcom/rl25.md
           - Access and login: receivers/ipcom/ui/access-and-login.md
           - User interface:
             - Status: receivers/ipcom/ui/screens/status.md
