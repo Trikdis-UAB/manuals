@@ -16,8 +16,8 @@ Esta página resume los límites de red de IPcom desde la perspectiva de operaci
 
 ## Notas sobre lista permitida de IP {#network-ip-allowlist}
 
-- Los campos `IP Whitelist` aparecen tanto en `General` como en contextos de `Salidas`.
-- La dirección y el comportamiento de aplicación deben validarse en su implementación antes de confiar en ello para la segmentación. [REVIEW]
+- `IP Whitelist` se aplica a los tipos de salida en los que IPCom queda a la espera de una conexión entrante: `JSON Server` y `TCP Server`. Se configura por salida en la pestaña `Salidas`.
+- Filtra por origen: solo las direcciones que incluya pueden conectarse a ese servicio. No restringe hacia dónde envía IPCom el tráfico saliente, por lo que los tipos de salida salientes no se ven afectados.
 
 ## Lista de comprobación de cambios {#network-change-checklist}
 

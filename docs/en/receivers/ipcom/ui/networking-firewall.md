@@ -16,8 +16,8 @@ This page summarizes network boundaries for IPCom from an IT operations perspect
 
 ## IP allowlist notes {#network-ip-allowlist}
 
-- `IP Whitelist` fields appear in both `General` and `Outputs` contexts.
-- Direction and enforcement behavior must be validated in your deployment before relying on it for segmentation. [REVIEW]
+- `IP Whitelist` applies to the output types where IPCom listens for an incoming connection: `JSON Server` and `TCP Server`. Set it per output in the `Outputs` tab.
+- It filters by source: only the addresses you list may connect to that listener. It does not restrict where IPCom sends outgoing traffic, so outbound output types are unaffected by it.
 
 ## Change checklist {#network-change-checklist}
 

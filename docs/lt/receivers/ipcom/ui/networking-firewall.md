@@ -16,8 +16,8 @@
 
 ## IP leidžiamų adresų pastabos {#network-ip-allowlist}
 
-- `IP Whitelist` laukai pateikiami tiek `Bendrieji nustatymai`, tiek `Išėjimai` kontekstuose.
-- Krypties ir taikymo logiką būtina patikrinti jūsų diegime prieš remiantis šia funkcija segmentavimui. [REVIEW]
+- `IP Whitelist` taikomas toms išėjimų rūšims, kuriose IPCom pats laukia įeinančio prisijungimo: `JSON Server` ir `TCP Server`. Nustatoma kiekvienam išėjimui atskirai kortelėje `Išėjimai`.
+- Filtruojama pagal šaltinį: prie to klausytuvo gali jungtis tik jūsų išvardyti adresai. Tai neriboja, kur IPCom siunčia išeinantį srautą, todėl išeinančioms išėjimų rūšims įtakos neturi.
 
 ## Pakeitimų kontrolinis sąrašas {#network-change-checklist}
 

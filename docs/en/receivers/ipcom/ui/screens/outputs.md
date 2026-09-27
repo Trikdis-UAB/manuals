@@ -25,7 +25,7 @@ Each row represents a destination and its routing configuration. Key fields:
 - `Buffer size`: queue limit per output used to detect delivery bottlenecks.
 - `Heartbeat` and `Heartbeat interval`: connection health checks.
 - `Encrypt` and `Encryption key`: secure the transport when required (API-backed integrations use a fixed-length key).
-- `IP Whitelist`: restricts allowed destination IPs.
+- `IP Whitelist`: allowlist of source IPs permitted to connect. Available only on `JSON Server` and `TCP Server` outputs, where IPCom listens for an inbound connection.
 - `Filters`: event routing filters that control which events are sent.
 
 Available `Type` options:

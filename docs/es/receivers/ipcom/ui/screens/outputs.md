@@ -25,7 +25,7 @@ Cada fila representa un destino y su configuración de enrutamiento. Campos prin
 - `Buffer size`: límite de cola por salida utilizado para detectar cuellos de botella de entrega.
 - `Heartbeat` y `Heartbeat interval`: comprobaciones de salud de la conexión.
 - `Encrypt` y `Encryption key`: protegen el transporte cuando es necesario (las integraciones respaldadas por API usan una clave de longitud fija).
-- `IP Whitelist`: restringe las IP de destino permitidas.
+- `IP Whitelist`: lista de IP de origen autorizadas a conectarse. Disponible solo en salidas `JSON Server` y `TCP Server`, donde IPCom queda a la espera de una conexión entrante.
 - `Filters`: filtros de enrutamiento de eventos que controlan qué eventos se envían.
 
 Opciones disponibles de `Type`:

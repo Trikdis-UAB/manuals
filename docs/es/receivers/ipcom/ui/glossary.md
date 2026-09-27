@@ -8,6 +8,7 @@ Use este glosario al revisar las pestañas `Estado`, `Eventos entrantes` y `Obje
 - `PUID` - UID parcial (UID truncado del dispositivo mostrado en listas de eventos).
 - `UID` - Identificador único del dispositivo.
 - `ICCID` - Identificador de la tarjeta SIM para dispositivos celulares.
+- `OOVR` - Sobrescritura del OID. Número de objeto alternativo que sustituye al OID propio del objeto; se usa para reasignar el objeto al número de abonado que espera su software de monitorización. Vacío o `0` significa que no se aplica ninguna sobrescritura.
 
 ## Conectividad y transporte
 
@@ -19,15 +20,15 @@ Use este glosario al revisar las pestañas `Estado`, `Eventos entrantes` y `Obje
 
 ## Campos de enrutamiento {#glossary-routing-fields}
 
-- `RR ID` - Identificador de enrutamiento del receptor. [REVIEW]
-- `RR` - Número de receptor utilizado para el enrutamiento de eventos. [REVIEW]
-- `LL` - Número de línea utilizado para el enrutamiento de eventos. [REVIEW]
-- `Dev RR` - Valor de receptor informado por el dispositivo. [REVIEW]
-- `Dev LL` - Valor de línea informado por el dispositivo. [REVIEW]
-- `Reg?` - Indicador del estado de registro del dispositivo. [REVIEW]
+- `RR ID` - ID del receptor.
+- `RR` - Número de receptor.
+- `LL` - Número de línea.
+- `Dev RR` - Número de receptor informado por el propio dispositivo.
+- `Dev LL` - Número de línea informado por el propio dispositivo.
 
 ## Campos de la carga del evento
 
+- `Reg?` - Indica si ese evento concreto es un evento de registro. Describe el evento, no el estado actual del dispositivo.
 - `Seq` - Número de secuencia del evento.
 - `Code` - Código de evento enviado a los sistemas de destino.
 - `Group` - Valor de grupo del evento.
@@ -40,7 +41,3 @@ Use este glosario al revisar las pestañas `Estado`, `Eventos entrantes` y `Obje
 - `Online` - El dispositivo se comunica activamente dentro de los umbrales de supervisión.
 - `Offline` - El dispositivo ha superado los umbrales de supervisión sin comunicación.
 - `Untracked` - El dispositivo está presente, pero actualmente no lo supervisa la lógica de seguimiento.
-
-## Campos de supervisión {#glossary-supervision-fields}
-
-- `OOVR` - Campo relacionado con supervisión/anulación del objeto mostrado en `Objetos`. El comportamiento exacto sigue en [REVIEW].

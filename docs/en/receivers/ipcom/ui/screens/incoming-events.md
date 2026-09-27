@@ -28,7 +28,7 @@ The table is wide and grouped by purpose:
 - Identification: `Time`, `OID`, `PUID`, `UID`, `ICCID` identify the device.
 - Connectivity: `Signal`, `Com` (communication type), `Con` (protocol), `IP`, `Ping`, `SMS Ping` show transport health.
 - Device version: `HW` and `FW` help correlate behavior with hardware or firmware revisions.
-- Routing: `RR ID` (route identifier), `RR` (receiver route value), and `LL` (line value) show routing context; `Dev RR` and `Dev LL` are device-reported routing values. `Reg?` indicates registration status.
+- Routing: `RR ID` (receiver ID), `RR` (receiver number), and `LL` (line number) show routing context; `Dev RR` and `Dev LL` are device-reported routing values. `Reg?` marks whether that event is a registration event, not the device's current state.
 - Event details: `Seq`, `C`, `Code`, `Group`, `Zone`, `Type`, `SubType`, `P` define the event payload.
 
 Use these columns to confirm that events are correctly decoded and routed to the intended output.

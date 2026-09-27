@@ -25,7 +25,7 @@ Kiekviena eilutė reiškia vieną paskirties tašką ir jo maršrutizavimo konfi
 - `Buffer size`: eilės limitas vienam išėjimui, naudojamas pristatymo siaurųjų vietų nustatymui.
 - `Heartbeat` ir `Heartbeat interval`: ryšio būklės tikrinimas.
 - `Encrypt` ir `Encryption key`: saugo transportą, kai to reikia (API integracijos naudoja fiksuoto ilgio raktą).
-- `IP Whitelist`: riboja leidžiamus paskirties IP adresus.
+- `IP Whitelist`: leidžiamų šaltinio IP adresų sąrašas. Prieinamas tik `JSON Server` ir `TCP Server` išėjimams, kuriuose IPCom laukia įeinančio prisijungimo.
 - `Filters`: įvykių maršrutizavimo filtrai, valdantys, kurie įvykiai siunčiami.
 
 Galimi `Type` pasirinkimai:

@@ -28,7 +28,7 @@ Lentelė yra plati ir sugrupuota pagal paskirtį:
 - Identifikavimas: `Time`, `OID`, `PUID`, `UID`, `ICCID` identifikuoja įrenginį.
 - Ryšys: `Signal`, `Com` (ryšio tipas), `Con` (protokolas), `IP`, `Ping`, `SMS Ping` rodo perdavimo būklę.
 - Įrenginio versija: `HW` ir `FW` padeda susieti elgseną su aparatinės arba programinės įrangos leidimais.
-- Maršrutizavimas: `RR ID` (maršruto identifikatorius), `RR` (imtuvo maršruto reikšmė) ir `LL` (linijos reikšmė) rodo maršrutizavimo kontekstą; `Dev RR` ir `Dev LL` yra įrenginio pateiktos maršrutizavimo reikšmės. `Reg?` nurodo registracijos būseną.
+- Maršrutizavimas: `RR ID` (imtuvo ID), `RR` (imtuvo numeris) ir `LL` (linijos numeris) rodo maršrutizavimo kontekstą; `Dev RR` ir `Dev LL` yra įrenginio pateiktos maršrutizavimo reikšmės. `Reg?` žymi, ar tas įvykis yra registracijos įvykis, o ne esamą įrenginio būseną.
 - Įvykio detalės: `Seq`, `C`, `Code`, `Group`, `Zone`, `Type`, `SubType`, `P` apibrėžia įvykio duomenis.
 
 Naudokite šiuos stulpelius patvirtinti, kad įvykiai teisingai dekoduojami ir maršrutizuojami į numatytą išėjimą.

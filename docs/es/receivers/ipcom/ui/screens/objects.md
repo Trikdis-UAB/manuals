@@ -15,7 +15,7 @@
 
 - `Refresh` recarga la lista para mostrar los estados más recientes de los dispositivos.
 - `Delete all objects` elimina todos los objetos de la lista y solo debe usarse con aprobación explícita.
-- `Export` descarga la lista para informes o análisis. [REVIEW]
+- `Export` descarga la lista filtrada actual como un archivo CSV delimitado por punto y coma llamado `objects.csv`, con una fila por dispositivo y filas adicionales por cada canal y, si se muestran, por cada objeto relacionado. Los valores van entre comillas dobles y los booleanos se escriben como `Yes`/`No`. El archivo incluye identificadores de objetos y dispositivos: trátelo y almacénelo en consecuencia.
 - Los campos de filtro para `OID` y `UID` ayudan a reducir listas grandes, con `+` para aplicar y `Clear` para restablecer.
 - `Show Related Objects` amplía la lista con entradas relacionadas.
 
@@ -29,8 +29,8 @@ Las columnas principales incluyen:
 - Estado: `Status` y `Last Activity` muestran disponibilidad y la última hora informada.
 - Conectividad: `Ping`, `IP`, `Lvl` (nivel de señal), `Com Type` (GSM/WiFi/LAN) y `Con` (TCP/UDP) muestran el estado del transporte.
 - Versión del dispositivo: `HW` y `FW` ayudan a relacionar el comportamiento con niveles de firmware.
-- Enrutamiento: `RR ID` (identificador de ruta), `RR` (valor de ruta del receptor) y `LL` (valor de línea) muestran el contexto de enrutamiento; `Dev RR` y `Dev LL` son valores de enrutamiento informados por el dispositivo.
-- `OOVR` es un campo de supervisión del objeto. La semántica exacta sigue en [REVIEW].
+- Enrutamiento: `RR ID` (ID del receptor), `RR` (número de receptor) y `LL` (número de línea) muestran el contexto de enrutamiento; `Dev RR` y `Dev LL` son valores de enrutamiento informados por el dispositivo.
+- `OOVR` es la sobrescritura del OID: un número de objeto alternativo que sustituye al OID propio del objeto para reasignarlo al número de abonado que espera su software de monitorización. Vacío o `0` significa que no se aplica ninguna sobrescritura.
 
 Los indicadores rojos `X` en la columna `Ping` normalmente significan que no se registró ningún ping reciente.
 Para ver definiciones completas de los campos, consulte `Glosario` en la navegación de IPcom.
@@ -47,7 +47,7 @@ Use dos pasadas rápidas: primero supervise señales del estado de los objetos a
 - Estado de filtro obsoleto. Señal de alerta: faltan dispositivos esperados en la vista actual.
 - Divergencia entre `Status` y `Last Activity`. Señal de alerta: objeto reportado como online pero con marca de actividad obsoleta.
 - `Ping` con `X` roja repetida en el mismo grupo de transporte. Señal de alerta: degradación del canal o de la ruta.
-- Valores `OOVR` sin resolver que cambian alrededor de ventanas de incidentes. Señal de alerta: posible transición oculta del estado de supervisión. [REVIEW]
+- Valores `OOVR` que cambian de forma inesperada. Señal de alerta: el objeto se ha reasignado a otro número de abonado, por lo que sus eventos llegarán con ese número a su software de monitorización.
 
 **Confirme antes del uso en producción:**
 

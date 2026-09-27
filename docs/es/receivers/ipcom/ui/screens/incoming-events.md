@@ -28,7 +28,7 @@ La tabla es ancha y está agrupada por propósito:
 - Identificación: `Time`, `OID`, `PUID`, `UID`, `ICCID` identifican el dispositivo.
 - Conectividad: `Signal`, `Com` (tipo de comunicación), `Con` (protocolo), `IP`, `Ping`, `SMS Ping` muestran el estado del transporte.
 - Versión del dispositivo: `HW` y `FW` ayudan a correlacionar el comportamiento con revisiones de hardware o firmware.
-- Enrutamiento: `RR ID` (identificador de ruta), `RR` (valor de ruta del receptor) y `LL` (valor de línea) muestran el contexto de enrutamiento; `Dev RR` y `Dev LL` son valores de enrutamiento informados por el dispositivo. `Reg?` indica el estado de registro.
+- Enrutamiento: `RR ID` (ID del receptor), `RR` (número de receptor) y `LL` (número de línea) muestran el contexto de enrutamiento; `Dev RR` y `Dev LL` son valores de enrutamiento informados por el dispositivo. `Reg?` indica si ese evento es un evento de registro, no el estado actual del dispositivo.
 - Detalles del evento: `Seq`, `C`, `Code`, `Group`, `Zone`, `Type`, `SubType`, `P` definen la carga del evento.
 
 Use estas columnas para confirmar que los eventos se decodifican y enrutan correctamente hacia la salida prevista.

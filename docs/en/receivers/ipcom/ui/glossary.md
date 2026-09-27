@@ -8,6 +8,7 @@ Use this glossary when reviewing `Status`, `Incoming events`, and `Objects` tabs
 - `PUID` - Partial UID (truncated device UID shown in event lists).
 - `UID` - Unique device identifier.
 - `ICCID` - SIM card identifier for cellular devices.
+- `OOVR` - Override OID. An alternative object number that replaces the object's own OID, used to remap an object to the account number your monitoring software expects. Empty or `0` means no override is applied.
 
 ## Connectivity and transport
 
@@ -19,15 +20,15 @@ Use this glossary when reviewing `Status`, `Incoming events`, and `Objects` tabs
 
 ## Routing fields {#glossary-routing-fields}
 
-- `RR ID` - Receiver routing identifier. [REVIEW]
-- `RR` - Receiver number used for event routing. [REVIEW]
-- `LL` - Line number used for event routing. [REVIEW]
-- `Dev RR` - Device-reported receiver value. [REVIEW]
-- `Dev LL` - Device-reported line value. [REVIEW]
-- `Reg?` - Device registration state flag. [REVIEW]
+- `RR ID` - Receiver ID.
+- `RR` - Receiver number.
+- `LL` - Line number.
+- `Dev RR` - Receiver number as reported by the device itself.
+- `Dev LL` - Line number as reported by the device itself.
 
 ## Event payload fields
 
+- `Reg?` - Marks whether this particular event is a registration event. It describes the event, not the device's current state.
 - `Seq` - Event sequence number.
 - `Code` - Event code sent to downstream systems.
 - `Group` - Event group value.
@@ -40,7 +41,3 @@ Use this glossary when reviewing `Status`, `Incoming events`, and `Objects` tabs
 - `Online` - Device is actively communicating within supervision thresholds.
 - `Offline` - Device has missed supervision thresholds.
 - `Untracked` - Device is present but not currently supervised by tracker logic.
-
-## Supervision fields {#glossary-supervision-fields}
-
-- `OOVR` - Object supervision/override-related field shown in `Objects`. Exact behavior is still [REVIEW].
