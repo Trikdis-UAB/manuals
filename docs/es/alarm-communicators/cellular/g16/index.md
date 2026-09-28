@@ -47,8 +47,6 @@ Funciona con la aplicación Protegus2:
 
 - Armado/Desarmado de forma remota.
 
-<img alt="" src="./image4.webp" style="width:2.3622047244094486in;height:3.3897637795275593in" />
-
 - Control remoto de dispositivos conectados (luces, portones/barreras, sistemas de ventilación, calefacción, aspersores, etc.).
 
 - Diferentes derechos de usuario para administrador, instalador y usuario.
@@ -1076,10 +1074,6 @@ Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctr
 <img alt="" src="./image3.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
-
-<div style="text-align: center;">
-  <img src="./image4.webp" alt="" width="400">
-</div>
 
 ## Anexo
 

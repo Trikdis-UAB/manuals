@@ -45,8 +45,6 @@ Sends events to monitoring station receiver:
 
 - “*Push*” and special sound notifications informing about events.
 
-<img alt="" src="./image4.webp" style="width:2.3622047244094486in;height:3.3897637795275593in" />
-
 - Remote system Arm/Disarm.
 
 - Remote control of connected devices (lights, gates, ventilation systems, heating, sprinklers, etc.).
@@ -1074,10 +1072,6 @@ Disconnect the power supply before making any electrical connections.
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
 <img alt="" src="./image3.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
-
-<div style="text-align: center;">
-  <img src="./image4.webp" alt="" width="400">
-</div>
 
 ## Annex
 

@@ -47,8 +47,6 @@ Veikia su Protegus2 programėle:
 
 - “*Push*” ir specialūs garso įspėjimai apie įvykius.
 
-<img alt="" src="./image4.webp" style="width:2.3622047244094486in;height:3.3897637795275593in" />
-
 - Nuotolinis sistemos įjungimas/išjungimas.
 
 - Nuotolinis prijungtų įrenginių valdymas (šviesų, vartų, kondicionieriaus, šildymo, pievutės laistymo ir kt.).
@@ -1074,10 +1072,6 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
 <img alt="" src="./image3.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
-
-<div style="text-align: center;">
-  <img src="./image4.webp" alt="" width="400">
-</div>
 
 ## Priedas 
 

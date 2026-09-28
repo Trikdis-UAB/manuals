@@ -18,6 +18,9 @@ exist only in this DOCX, and it leaves three smaller things to fix:
 5. Chapter titles typed as numbered list paragraphs (LT and RU "Remote
    configuration") come out as "1. **Title**" list items. They are promoted to
    the heading level the DOCX's own table of contents gives them.
+6. The product photo that sits beside the Features list in a Word layout table
+   lands in the middle of that list, and a centred copy of it follows the
+   relocated "Safety requirements". Both are removed: the hero already shows it.
 
 Photos, labels and legend items are read from the DOCX itself (via pandoc JSON),
 so the rebuilt sections stay in each language's own words.
@@ -183,8 +186,17 @@ def read_docx(docx: Path) -> dict:
         if match:
             toc_levels.setdefault(match.group(2), match.group(1).count(".") + 2)
 
+    # Decoration: photos in a layout table that also holds a bullet list (Features).
+    decorative = sorted({
+        image["src"]
+        for table in tables
+        if any(item.get("t") == "BulletList" for item in walk(table))
+        for image in images_of(table)
+    })
+
     return {"photos": photos, "captions": captions, "variants": variants,
-            "legend": legend, "callouts": callouts, "toc_levels": toc_levels}
+            "legend": legend, "callouts": callouts, "toc_levels": toc_levels,
+            "decorative": decorative}
 
 
 def img_tag(image: dict) -> str:
@@ -272,6 +284,24 @@ def promote_toc_list_headings(text: str, toc_levels: dict[str, int]) -> str:
     return TOC_LIST_HEADING_RE.sub(promote, text)
 
 
+def remove_decorative_images(text: str, names: list[str], folder: Path) -> str:
+    # Each pattern also takes one following blank line, so no gap is left behind.
+    for name in names:
+        src = re.escape(f"./{name}")
+        text = re.sub(
+            rf'^<div style="text-align: center;">\s*<img src="{src}"[^>\n]*>\s*</div>[ \t]*\n(?:[ \t]*\n)?',
+            "", text, flags=re.MULTILINE,
+        )
+        text = re.sub(
+            rf'^[ \t]*<img [^>\n]*src="{src}"[^>\n]*/?>[ \t]*\n(?:[ \t]*\n)?',
+            "", text, flags=re.MULTILINE,
+        )
+        if f"./{name}" in text:
+            sys.exit(f"decorative image {name} is still referenced after removal")
+        (folder / name).unlink(missing_ok=True)
+    return text
+
+
 def fix_backtick_apostrophes(text: str) -> str:
     return re.sub(r"(?<=\w)\\?`(?=\w)", "'", text)
 
@@ -311,6 +341,7 @@ def main() -> None:
     text = retype_callouts(text, args.lang, data["callouts"])
     text = fix_backtick_apostrophes(text)
     text = promote_toc_list_headings(text, data["toc_levels"])
+    text = remove_decorative_images(text, data["decorative"], args.md.parent)
     validate(args.md, text, data)
     args.md.write_text(text, encoding="utf-8")
     print(f"{args.lang}: hero {[p['src'] for p in data['photos']]}, "
