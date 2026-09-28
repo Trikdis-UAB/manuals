@@ -3,7 +3,11 @@
 # Converts all PNG/JPG/JPEG images in docs/ to WebP format
 # and updates all references in markdown and config files.
 #
-# Usage: ./scripts/convert-images-to-webp.sh [--dry-run]
+# Usage: ./scripts/convert-images-to-webp.sh [--dry-run] [DIR]
+#
+# DIR limits the run to one folder (e.g. a single re-converted manual) and skips
+# mkdocs.yml. Pass it when updating one manual, so the run cannot convert and
+# delete PNG/JPG files belonging to other manuals.
 #
 # Requirements: cwebp (brew install webp)
 
@@ -12,13 +16,24 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 DOCS_DIR="$REPO_DIR/docs"
 DRY_RUN=false
+TARGET_DIR=""
 QUALITY=90          # lossy quality for photos (0-100)
 LOSSLESS_THRESHOLD=50000  # files under 50KB get lossless (icons, small diagrams)
 
-if [[ "${1:-}" == "--dry-run" ]]; then
-    DRY_RUN=true
+for arg in "$@"; do
+    case "$arg" in
+        --dry-run) DRY_RUN=true ;;
+        *) TARGET_DIR="$arg" ;;
+    esac
+done
+
+if $DRY_RUN; then
     echo "=== DRY RUN MODE — no files will be changed ==="
     echo
+fi
+
+if [[ -n "$TARGET_DIR" ]]; then
+    DOCS_DIR="$(cd "$TARGET_DIR" && pwd)"
 fi
 
 # Verify cwebp is installed
@@ -131,7 +146,7 @@ echo "  Markdown files updated: $md_updated"
 
 # Update mkdocs.yml (logo, favicon references)
 yml_file="$REPO_DIR/mkdocs.yml"
-if [[ -f "$yml_file" ]] && grep -qE '\.(png|jpg|jpeg)' "$yml_file"; then
+if [[ -z "$TARGET_DIR" && -f "$yml_file" ]] && grep -qE '\.(png|jpg|jpeg)' "$yml_file"; then
     if ! $DRY_RUN; then
         sed -i '' \
             -e 's/\.png\([^a-zA-Z]\)/.webp\1/g' \
