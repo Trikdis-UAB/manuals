@@ -15,17 +15,17 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 - **Done:**
   - CG17 pilot (PR #14);
   - wave 2: the FLEXi/TouchPad keypad pair, iO-8 and RF-LORA (PR #15);
-  - wave 3: the rest of GT, and all of GT+ and GET, 152 images (PR #22).
-- **In review, don't redo:**
-  - PR #21: the GT manual's 5 panel wiring diagrams (`docs/en/alarm-communicators/cellular/gt/`, image18–image22). Use it as the pattern for wiring diagrams.
-  - wave 4: G16 and G16T, 90 images (the G16 PR).
-- **Remaining** (counted as if the open PRs are merged; GT's 5 are #21's):
+  - GT's 5 panel wiring diagrams (PR #21), the pattern for wiring diagrams;
+  - wave 3: the rest of GT, and all of GT+ and GET, 152 images (PR #22);
+  - wave 4: G16 and G16T, 90 images (PR #23).
+- **Human review:** merged without Andrius's review; Igoris (documentation) was asked on 2026-09-28 to check the 60 wiring and block diagrams via a side-by-side review page. Apply any corrections he sends.
+- **Remaining:**
 
   "Needs alt" counts empty alt, a missing alt attribute, empty Markdown alt and the pipeline placeholder "Product Image". The first version of this file counted only `alt=""` and missed about 100 English images.
 
   | Language | Needs alt | Total |
   |---|---|---|
-  | EN | 796 | 1,343 |
+  | EN | 791 | 1,343 |
   | LT | 1,160 | 1,345 |
   | ES | 1,148 | 1,327 |
   | RU | 1,175 | 1,329 |
