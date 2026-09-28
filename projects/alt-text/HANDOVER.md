@@ -18,42 +18,49 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 - **In review, don't redo:** PR #21 covers the GT manual's 5 panel wiring diagrams (`docs/en/alarm-communicators/cellular/gt/`, image18–image22). Use it as the pattern for wiring diagrams.
 - **Remaining, images with empty alt:**
 
-  | Language | Empty | Total |
+  "Needs alt" counts empty alt, a missing alt attribute, empty Markdown alt and the pipeline placeholder "Product Image". The first version of this file counted only `alt=""` and missed about 100 English images.
+
+  | Language | Needs alt | Total |
   |---|---|---|
-  | EN | 939 | 1,263 |
-  | LT | 1,094 | 1,291 |
-  | ES | 1,071 | 1,268 |
-  | RU | 1,089 | 1,249 |
+  | EN | 1,038 | 1,343 |
+  | LT | 1,160 | 1,345 |
+  | ES | 1,148 | 1,327 |
+  | RU | 1,175 | 1,329 |
 
 - **Largest English gaps:**
 
-  | Manual | Empty | Total |
+  | Manual | Needs alt | Total |
   |---|---|---|
   | FIRECOM | 107 | 111 |
   | SP3 | 96 | 100 |
+  | SK-LCD (button) | 79 | 79 |
   | G17F | 70 | 73 |
   | GATOR | 65 | 68 |
   | GATOR WiFi | 57 | 60 |
-  | GT+ | 52 | 56 |
-  | SK-LCD (button) | 51 | 79 |
-  | GT | 51 | 55 |
-  | GET | 51 | 55 |
-  | G16 | 46 | 50 |
-  | G16T | 41 | 45 |
+  | GT+ | 53 | 56 |
+  | GT | 52 | 55 |
+  | GET | 52 | 55 |
+  | G16 | 48 | 53 |
+  | G16T | 42 | 45 |
   | SP3 Paradox RTX3 | 41 | 42 |
 
   Regenerate the list before you start. Run this from the repo root:
 
   ```bash
-  for f in $(find docs/en -name index.md); do e=$(grep -o 'alt=""' $f | wc -l | tr -d ' '); t=$(grep -o '<img ' $f | wc -l | tr -d ' '); [ "$t" -gt 0 ] && [ "$e" -gt 0 ] && echo "$e/$t $f"; done | sort -t/ -k1 -n -r
+  python3 projects/alt-text/scripts/alt_status.py en
   ```
+
+- **Scripts** (`projects/alt-text/scripts/`, all deterministic):
+  - `alt_status.py`: what still needs alt text, per language or per manual.
+  - `extract_image_context.py <page>`: one JSON item per image needing alt, with its path, heading trail, the text around it, and Joy's OCR of the picture as a spelling hint for printed labels. OCR is noisy, so the picture itself is the source of truth.
+  - `apply_alt_text.py <page> <drafts.json>`: writes `[{"src", "alt"}]` into the page, strips double quotes, and refuses to write anything unless every draft lands and the count drops by exactly that many.
 
 **Order:**
 1. English first, highest-traffic products first: communicators (GT, GT+, GET, G16, G16T, G17F, FIRECOM), then SP3, then the GATOR controllers.
 2. Then LT, ES and RU. Each language has its own image files, and the alt text is written in that page's language.
 
 ## The process (proven on CG17 and wave 2, keep it)
-1. **Gather context without a model.** For each image, a script collects its heading trail and the paragraph around it.
+1. **Gather context without a model.** `extract_image_context.py` collects each image's heading trail and the text around it.
 2. **Draft per manual.** Look at each image directly and write one or two sentences, grounded in that context.
 3. **Flag complexity at draft time:** `COMPLEXITY: simple | high`. "High" means either:
    - a diagram connecting 3 or more components; or
@@ -73,11 +80,11 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 - **Describe only what the image shows.** If an image contradicts the text, don't fix the text silently: list it in the PR description.
 
 ## How to ship
-- **Work in your own worktree:** `~/.claude/tools/agent-worktree.sh ~/Projects/TRIKDIS/manuals <name> origin/main`. Andrius's main checkout sits on a draft branch with uncommitted work, so never edit or switch it.
+- **Work in your own worktree:** `~/.claude/tools/agent-worktree.sh ~/Projects/TRIKDIS/manuals <name> origin/main`. Andrius's own checkout (`~/Projects/TRIKDIS/manuals`) often has uncommitted work of his, so never edit, switch or pull it.
 - **Open a PR, don't push to `main`.** Connections read from pictures are inferred facts (`agents.md`, "Direct to main, or open a PR?"), and installers act on wiring. Use one PR per manual, or per small group of manuals.
 - **Put the "high" images in each PR description** (file names plus one line each), so the reviewer knows where to look.
 - **Before each PR:** run `mkdocs build --strict`. Then check that the empty-alt count actually dropped by the number you meant, and diff a sample.
-  - An earlier apply script had a regex group bug and silently replaced 0 of N. "No error" doesn't mean it worked. Match `<img alt="" src="./imageN.webp"` exactly, and assert each one occurs exactly once.
+  - An earlier apply script had a regex group bug and silently replaced 0 of N. "No error" doesn't mean it worked. `apply_alt_text.py` now checks this itself; if you write your own, make it check too.
 - **Don't touch** image files, `mkdocs.yml`, heading numbering or page text. This job is alt attributes only.
 
 ## Already noticed (report in the PR, don't fix silently)
