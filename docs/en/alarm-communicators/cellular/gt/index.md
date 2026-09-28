@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.webp" alt="Product Image" width="400">
+<img src="./image1.webp" alt="Photo of the GT cellular communicator case, front view, with the TRIKDIS logo. LED labels top to bottom: NETWORK, DATA, POWER, TROUBLE, BAND. Terminal block labels: +12 VDC, -12 VDC, TIP, RING, CLK, DATA, 1 I/O, 2 I/O, A 485, B 485." width="400">
 
 </div>
 
@@ -127,7 +127,7 @@ This manual is for 4G communicators.
 
 7.  SIM card slot
 
-<img alt="" src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
+<img alt="GT communicator elements with numbered callouts. Left, the closed case: 1 cellular antenna SMA connector, 2 light indicators, 3 frontal case opening slot. Right, the open case with the circuit board: 4 terminal for external connections, 5 USB-C port for programming, 6 RESET button, 7 SIM card slot." src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
 
 ### Purpose of terminals
 
@@ -178,7 +178,7 @@ This manual is for 4G communicators.
 
 ### Structural schematic with *GT* usage
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
+<img alt="Block diagram of GT use: alarm panel to the LTE communicator (GT). The communicator sends over GSM as calls and SMS to a phone with Protegus software, and over LTE to the Internet. From the Internet, the Protegus server reaches the same phone, and a two-way link connects to the receiver at the monitoring station in the security company, which feeds the Monas MS monitoring software." src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
 
 !!! note
     Before you begin, make sure that you have the necessary:
@@ -206,7 +206,7 @@ This manual is for 4G communicators.
 
 2.  Open the casing of the GT with a flat-head screwdriver as shown below:
 
-    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="Line drawing showing how to open the GT case with a flat-head screwdriver: insert it at the top seam near the antenna and pry outward, then insert it at the bottom seam and pry downward. A detail view shows the USB-C port location on the PCB edge." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Using a USB-C cable connect the GT to the computer.
 
@@ -220,11 +220,11 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “Panel settings” window:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig software, Panel settings tab, TLC group: Communication protocol dropdown set to '2. Dual Tone' (highlighted)." src="./image7.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**Dual tone**” setting.
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
+<img alt="TrikdisConfig software, Panel settings tab: Communication protocol set to '1. DISABLED'; Serial Bus group: Event coding protocol 'CID', Security panel model '5. PARADOX SP/MG se...' (highlighted), Remote Arm/Disarm checkbox ticked (highlighted), Security panel PC download password '1234' (highlighted)." src="./image8.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 The communicator is connected to the keypad bus or serial bus of the control panel.
 
@@ -237,7 +237,7 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 !!! note
     For the direct panel control to work, you will need to change the panel settings. How to do this is described in chapter 4 “Programming the control panel”. In this section you will find information on how to change the PC download/UDL password. **In “User reporting” window, “PROTEGUS Cloud” tab:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
+<img alt="TrikdisConfig software, User reporting tab, PROTEGUS Cloud sub-tab: 'Enable connection' checkbox ticked (highlighted), 'PROTEGUS Cloud access Code' field set to 123456 (highlighted)." src="./image9.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
 4.  Tick the checkbox “**Enable connection**” to the Protegus Cloud.
 
@@ -245,7 +245,7 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 **In “SIM card” window:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.043307086614173in" />
+<img alt="TrikdisConfig software, Network settings tab, SIM1 sub-tab, SIM card group: 'SIM card PIN' set to 1111 (highlighted), 'APN' set to internet (highlighted), 'DNS 1' and 'DNS 2' fields empty (both highlighted)." src="./image10.webp" style="width:7.086614173228346in;height:3.043307086614173in" />
 
 3.  Enter “**SIM card PIN**” code.
 
@@ -264,21 +264,21 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 **In “System settings” window:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig software, System settings tab, General group: 'Object ID' set to 561234 (highlighted); Access group shows Administrator code 123456 and Installer code 654321." src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  Enter “**Object ID**” (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig software, Panel settings tab, TLC group: Communication protocol dropdown set to '2. Dual Tone' (highlighted)." src="./image12.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**Dual tone**” setting.
 
-<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
+<img alt="TrikdisConfig software, Panel settings tab: Communication protocol set to '1. DISABLED'; Serial Bus group: Event coding protocol 'CID', Security panel model '5. PARADOX SP/MG se...' (highlighted), Remote Arm/Disarm checkbox ticked." src="./image13.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
 
 2.  The communicator is connected to the keypad bus or the serial bus of control panel. Select „**Security panel model**” that will be connected to the communicator.
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:3.3503937007874014in" />
+<img alt="TrikdisConfig software, CMS reporting tab, CMS settings sub-tab, Primary channel group: Communication type 'Disable', Protocol empty, Encryption key '1234567890ABCDEF' (hex unticked), Domain or IP empty, Port empty, TCP or UDP 'TCP' (all highlighted); Primary channel Backup group below repeats the same fields (also highlighted); Parallel channel group on the right shows Communication type 'Disable' (not highlighted)." src="./image14.webp" style="width:7.086614173228346in;height:3.3503937007874014in" />
 
 3.  **Communication type** - select the **IP** connection method.
 
@@ -296,7 +296,7 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 **In “SIM card” window:**
 
-<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:3.059055118110236in" />
+<img alt="TrikdisConfig software, Network settings tab, SIM1 sub-tab: 'APN' set to internet (highlighted), 'Login' field empty (highlighted), 'DNS 2' field empty (highlighted), 'Preferred operator' field empty (highlighted)." src="./image15.webp" style="width:7.086614173228346in;height:3.059055118110236in" />
 
 11. Enter “**SIM card PIN**” code.
 
@@ -329,9 +329,9 @@ After finishing configuration, click **Write \[F5\]** and disconnect the USB cab
 
 7.  Close the top cover.
 
-<img alt="" src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Line drawing: left, the PCB assembly being released from the case, with a circled tab near the antenna connector and an arrow showing the release direction; right, the empty case back showing two circled mounting screw posts." src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Line drawing of the PCB SIM slot with an arrow showing a nano-SIM card being inserted into the slot." src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note
     Ensure that the SIM card is activated. / Ensure that mobile internet service (mobile data) is enabled if connected via IP channel. / To avoid entering the PIN code in TrikdisConfig, insert the SIM card into your mobile phone and turn off the PIN request function.
@@ -362,7 +362,7 @@ When connecting the communicator to the keypad bus and the TIP/RING terminals of
 
 4.  To directly control the security panel, enter the “**Security panel PC download password**”. It must match the password entered in the security panel.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
+<img alt="TrikdisConfig software, Panel settings tab, TLC group: Communication protocol '2. Dual Tone' (highlighted); Serial Bus group: Event coding protocol 'CID', Security panel model '7. PARADOX SP+/MG+' (highlighted), Remote Arm/Disarm ticked (highlighted), Event unticked, Security panel PC download password '1234' (highlighted)." src="./image23.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
 
 The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the Protegus2 application.
 
@@ -379,11 +379,11 @@ Follow this schematic if the control panel will be armed/disarmed with a GT PGM 
 !!! note
     GT communicator has 2 universal input / output terminals that can be set to the OUT (PGM) operating mode. The outputs (OUT) can control two areas of the security system. If you want to control the system in this way, in TrikdisConfig, in the “**System settings**” window, uncheck **Remote Arm/Disarm**. The Protegus2 apps must be configured with the settings described in chapter 5.2 “Additional settings to arm/disarm the system using the control panel’s keyswitch zone”. The communicator is connected to the keypad bus or serial bus of the control panel. / Arming/disarming the panel via keyswitch zone.
 
-<img alt="" src="./image24.webp" style="width:3.7100076552930883in;height:2.2700043744531935in" />
+<img alt="Wiring diagram: control panel to GT, arming through the keyswitch zones. Keypad bus or serial: RED (+12V) to +DC, BLK to -DC, YEL to CLK, GRN to DATA. Zones (keyswitch): 1-st Area to 1 I/O, 2-nd Area to 2 I/O. GT TIP, RING, A RS485 and B RS485 are not connected." src="./image24.webp" style="width:3.7100076552930883in;height:2.2700043744531935in" />
 
 The communicator is connected to the telephone communicator (TIP/RING terminals) of the control panel. / Arming/disarming the panel via the key switch zone.
 
-<img alt="" src="./image25.webp" style="width:3.7833409886264215in;height:2.3000043744531933in" />
+<img alt="Wiring diagram: control panel to GT, arming through the keyswitch zones. Power: +AUX (+12 V) to +DC, -AUX to -DC. Telephone line communicator terminals: TIP to TIP, RING to RING. Zone (keyswitch): 1-st Area to 1 I/O, 2-nd Area to 2 I/O. GT CLK, DATA, A RS485 and B RS485 are not connected." src="./image25.webp" style="width:3.7833409886264215in;height:2.3000043744531933in" />
 
 ### Schematics for input connection
 
@@ -391,7 +391,7 @@ The communicator has 2 universal input / output terminals that can be set to inp
 
 Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="" src="./image26.webp" style="width:5.169291338582677in;height:4.003937007874016in" />
+<img alt="Six input wiring schematics, each from COM to INx. NO: Short - Alarm, Open - Restore. NC: Short - Restore, Open - Alarm. NC with a 2,2k end of line resistor in series (EOL 2,2k): Short - Alarm, Open - Alarm, 2,2k - Restore. NO with a 2,2k EOL resistor in parallel: Short - Alarm, Open - Alarm, 2,2k - Restore. NO with tamper recognition (DEOL): tamper switch and a 2,2k resistor in series, then the NO contact with a second 2,2k resistor across it; Short - Tamper, Open - Tamper, 2,2k - Alarm, 3,3k-5,5k - Restore. NC with tamper recognition (DEOL): the same with an NC contact; Short - Tamper, Open - Tamper, 2,2k - Restore, 3,3k-5,5k - Alarm." src="./image26.webp" style="width:5.169291338582677in;height:4.003937007874016in" />
 
 !!! note
     If more inputs or outputs need to be connected to the communicator, connect the TRIKDIS iO-8 expander. Connection method is described in the [iO-8 manual](../../../expanders/io-8/index.md) and chapter 3.7 “Schematics for connecting iO-8 expansion modules”.
@@ -400,13 +400,13 @@ Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, 
 
 With relay contacts you can control (turn on/off) various electric appliances. The I/O terminal of the communicator must be set to an output (OUT) mode.
 
-<img alt="" src="./image27.webp" style="width:2.3300043744531935in;height:0.9100021872265966in" />
+<img alt="Wiring diagram: GT +DC and x I/O terminals connect to a relay coil; the relay's contacts are labelled NC, C (common) and NO." src="./image27.webp" style="width:2.3300043744531935in;height:0.9100021872265966in" />
 
 ### Schematics for connecting iO-8 expansion modules
 
 If more inputs or outputs need to be connected to the communicator connect the TRIKDIS *iO-8* expander. Configuration of expander modules connected to the *GT* is described in chapter 6.8. ““RS485 modules” window”.
 
-<img alt="" src="./image28.webp" style="width:3.56750656167979in;height:2.0600043744531935in" />
+<img alt="Wiring diagram: control panel to GT and iO-8 expander. Power: panel +AUX (+12 V) to +DC on both GT and iO-8, panel -AUX to -DC on both. RS485 bus: GT A 485 to iO-8 A (RS485), GT B 485 to iO-8 B (RS485)." src="./image28.webp" style="width:3.56750656167979in;height:2.0600043744531935in" />
 
 ### Turn on the communicator
 
@@ -494,7 +494,7 @@ The control panel must be connected to the internet. Connect to **Innerrange Inc
 
 Open **Configuration \> General \> Alarm Reporting**. In the **3rd Party Device Configuration** settings group you need to enter:
 
-<img alt="" src="./image29.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="Innerrange Inception software, Alarm Reporting page, 3rd Party Device Configuration group: 'Enable 3rd Party Device Reporting' checkbox ticked (highlighted), '3rd Party Device Type' set to Trikdis (highlighted), 'Serial Port' set to 'Serial Port 1 (Plugged In, In Use By 3rd Party Device)' (highlighted)." src="./image29.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** - select this checkbox.
 
@@ -629,11 +629,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 3.  Click “**Add new system”** and enter the GT’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
-<img alt="" src="./image36.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
+<img alt="Protegus2 app, Scan QR code screen: a callout points to the 'Unique ID/IMEI' field, with text explaining the IMEI code can be found on the package, on the PCB board, or in TrikdisConfig as the Unique ID; below, a 'Scan QR code' button and an example product label with the QR-code area highlighted." src="./image36.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
 
 4.  Enter the system „**Name**”. Click “**Next**”.
 
-<img alt="" src="./image37.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="Protegus2 app 'Add new system' screen: Name field set to GT, a Background colour picker, Time zone set to Europe/Vilnius, with Cancel and Next buttons." src="./image37.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone
 
@@ -642,7 +642,7 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Click „**Continue**“.
 
-<img alt="" src="./image38.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Protegus2 app screen titled 'The system is not controlled remotely': illustration of the GT unit's LEDs (NETWORK, DATA, POWER, TROUBLE) and terminal row +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2 (rated 10-18V 0.5A Max), next to a person with a question mark. Text below reads: You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system. Continue button." src="./image38.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 
@@ -650,13 +650,13 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 4.  Click „**Save**“.
 
-<img alt="" src="./image39.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
+<img alt="Protegus2 app 'Add new area' screen: Area number 1, Area name '1 Area', 'Control with Protegus2 Europe' toggle on, Assigned Output PGM1, Pulse option selected with Pulse interval in seconds set to 3, Level option unselected, Cancel and Save buttons." src="./image39.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
 3.  If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 4.  After completing the settings, click the “**Skip**” button.
 
-<img alt="" src="./image40.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+<img alt="Protegus2 app 'Areas' screen: list showing '1 Area, Controlled with: PGM1' with a remove (X) button, a plus button and 'Click to add an area' text below, and Skip / Next buttons." src="./image40.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Arming/disarming the alarm system with Protegus2
 
@@ -664,7 +664,7 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="" src="./image41.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
+<img alt="Protegus2 app home screen for system GT: status Online with signal bars, '1 Area' showing status Unknown, Arm and Disarm buttons, and a PGM2 output toggle button at bottom left." src="./image41.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
 
 ### Control with SMS messages
 
@@ -692,7 +692,7 @@ You can restrict the phone numbers from which the communicator will accept the c
 
 After connecting the GT and clicking **Read \[F4\], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:0.594488188976378in" />
+<img alt="TrikdisConfig status bar after reading the device: IMEI/Unique ID, Status (reading done), Device (GT_M150), SN, BL, FW, HW, State and access level (Administrator), explained in the table below." src="./image42.webp" style="width:7.086614173228346in;height:0.594488188976378in" />
 
 | Object         | Description                                        |
 |----------------|----------------------------------------------------|
@@ -710,7 +710,7 @@ After pressing **Read \[F4\]**, the program will read and show the settings whic
 
 ### “System settings” window
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:2.7755905511811023in" />
+<img alt="TrikdisConfig 'System settings' window: General group with Object ID 561234, Module ID 0123456789, Time set First channel; Access group with Administrator code 123456, Installer code 654321, 'Only an administrator can restore' checked, and 'Allow installer to change' checkboxes for Account number, CMS reporting, User reporting, SIM card and Event summary all checked." src="./image43.webp" style="width:7.086614173228346in;height:2.7755905511811023in" />
 
 **“General” settings group**
 
@@ -736,7 +736,7 @@ When setting up the communicator GT there are two levels of access for, the admi
 
 **“TLC” settings group**
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:3.5078740157480315in" />
+<img alt="TrikdisConfig 'Panel settings' window: TLC group Communication protocol dropdown open showing options 1. DISABLED (selected) and 2. Dual Tone; Serial Bus group Event coding protocol CID, Security panel model 1. DISABLED, with Remote Arm/Disarm and Event checkboxes greyed out; bottom-left Remember password unchecked, Show passwords checked, and a Restore button under Default settings." src="./image44.webp" style="width:7.086614173228346in;height:3.5078740157480315in" />
 
 When the communicator is connected to the TIP/RING terminals of the control panel, the following settings must be made.
 
@@ -750,7 +750,7 @@ When the communicator is connected to the TIP/RING terminals of the control pane
 
 **“Serial bus” settings group**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
+<img alt="TrikdisConfig 'Panel settings' window: TLC group Communication protocol 1. DISABLED; Serial Bus group Event coding protocol CID, Security panel model 5. PARADOX SP/MG se(ries), Remote Arm/Disarm and Event checked, Security panel PC download password 1234." src="./image45.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
 
 When the communicator is connected to keypad bus or serial bus of the control panel, the following settings must be made.
 
@@ -766,7 +766,7 @@ When the communicator is connected to keypad bus or serial bus of the control pa
 
 **“CMS settings” tab**
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
+<img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab: Primary channel with Communication type Disable, Encryption key 1234567890ABCDEF (hex unchecked), TCP or UDP set to TCP, empty Domain/IP and Port fields; Primary channel Backup with the same Disable type and encryption key; Parallel channel Communication type Disable." src="./image46.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
 
 The communicator sends events to the monitoring station via cellular internet (IP).
 
@@ -798,7 +798,7 @@ Events are transmitted in parallel with the first channel through this channel. 
 
 Enable the backup channel mode to send events via backup channel if connection via primary channel is lost. Backup channel settings are same as described above.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:2.578740157480315in" />
+<img alt="TrikdisConfig 'CMS reporting'  Settings tab: Test period checked at 24h 0min, IP ping period 0min 30s (greyed), Backup reporting after 2 fails, Return from Backup after 1min 30s, Line No. 1, Receiver No. 1." src="./image47.webp" style="width:7.086614173228346in;height:2.578740157480315in" />
 
 \*\*\*\*“Settings” tab\*\* “Settings” settings group\*\*
 
@@ -824,7 +824,7 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 **“PROTEGUS cloud” tab**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
+<img alt="TrikdisConfig 'User reporting'  PROTEGUS Cloud tab: Enable connection checked, PROTEGUS Cloud access Code 123456, Parallel reporting unchecked." src="./image48.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
 
 Protegus service allows users to remotely monitor and control the communicator. For more information about Protegus service, visit [www.protegus.app](https://www.protegus.app).
 
@@ -838,7 +838,7 @@ Protegus service allows users to remotely monitor and control the communicator. 
 
 **“SMS & Call Reporting“ tab**
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.035433070866142in" />
+<img alt="TrikdisConfig 'User reporting'  SMS & Call Reporting tab: Object name 'Account Name', SMS language ENGLISH; tables for Tel numbers (Tel 1-4, empty), Area name (01 Area 1, 02 Area 2, Others AREA), User name (001 User 1, 002 User 2, Others USER) and Zone name (001 Zone 1, 002 Zone 2, Others ZONE); a CID event table with per-phone SMS/Call checkboxes, showing entries such as E100 MEDICAL PANIC ALARM, E110 FIRE PANIC ALARM, E120 PANIC ALARM, E121 DURESS ALARM, E130 ALARM!!! ALARM!!! ALARM!!! ALARM!!!." src="./image49.webp" style="width:7.086614173228346in;height:4.035433070866142in" />
 
 Notifications about system events can be transmitted to users’ mobile phones via SMS messages or phone calls.
 
@@ -856,7 +856,7 @@ You can change the texts for SMS messages of default events, change the contact 
 
 **“Control by SMS” tab**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="TrikdisConfig 'Control by SMS' tab: Reply text table mapping Command done to 'Command OK', Wrong password to 'Wrong Access Code', Wrong command to 'Wrong Command', Wrong data to 'Wrong Data'; Tel numbers for control by SMS table with empty Tel 1-4 entries." src="./image50.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 You can send an SMS command to the GT communicator, which will activate the output or send information about the communicator. Find the control commands in chapter see the referenced section „see the referenced section”.
 
@@ -870,7 +870,7 @@ You can send an SMS command to the GT communicator, which will activate the outp
 ### “Network settings” window
 
 !!! warning
-    “Important” 1. Ensure that the SIM card is activated and working before using it. / 2. If mobile internet connection will be used for sending events via IP channel or to Protegus2, ensure that mobile data service is enabled. <img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.043307086614173in" />
+    “Important” 1. Ensure that the SIM card is activated and working before using it. / 2. If mobile internet connection will be used for sending events via IP channel or to Protegus2, ensure that mobile data service is enabled. <img alt="TrikdisConfig 'Network settings'  SIM1 tab: SIM card PIN 1111, APN internet, empty Login, Password, SIM ICCID, DNS 1, DNS 2 and Preferred operator fields, Hard ICCID lock unchecked." src="./image51.webp" style="width:7.086614173228346in;height:3.043307086614173in" />
 
 **“SIM card” settings group**
 
@@ -890,13 +890,13 @@ You can send an SMS command to the GT communicator, which will activate the outp
 
 “Connection Type” tab
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="TrikdisConfig 'Network settings'  Connection Type tab: Connection Type set to LTE CAT-M1, 'Select all' checked, with LTE band checkboxes B1, B2, B3, B4, B5, B8, B12, B13, B18, B19, B20, B25, B26, B27, B28, B66 and B85 all checked." src="./image52.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 These settings are valid for communicators with a CAT-M1 modem. You can specify the frequencies on which the communicator’s modem will operate.
 
 ### “IN/OUT” windows
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="TrikdisConfig 'IN/OUT' window: terminal table with Terminal 1 set to Function IN, Type NO, and Terminal 2 set to Function OUT; Contact ID table showing IN1_ALARM (Event CID 130, SIA BA, Part. 99, Zone 001; Restore CID 130, SIA BH) and IN1_TAMPER (Event CID 144, SIA TA; Restore CID 144, SIA TR), both enabled." src="./image53.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
 The communicator has 2 universal (input / output) terminals. The table can set the terminal operating mode (Off, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -920,7 +920,7 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 
 iO-8 expanders can be connected to the communicator to add additional inputs, outputs. Connected expanders must be added to the “**Modules list**” table.
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="TrikdisConfig 'RS485 modules'  Modules list tab: table of module IDs 1-4, each set to 'Not Available'; ID 4's Module Type dropdown is open showing the options 'Not Available' and 'Expander iO-8'." src="./image54.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 - **Module type** – select the module that is connected to the communicator via RS485 from the list.
 
@@ -934,7 +934,7 @@ After adding the expander to the communicator as described above, in the “**RS
 
 **iO-8 expander settings window**
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.5354330708661417in" />
+<img alt="TrikdisConfig 'RS485 modules'  Module 1 tab, Expander iO-8 settings: Serial No 23, Input Count 3, 'Show Object ID' unchecked; event table listing BUS_FAULT (CID 333, SIA ET/ER, Part. 91, Zone 001), INPUT1 (CID 130, SIA BA/BH, Zone 001, type NO), INPUT2 (Zone 002) and INPUT3 (Zone 003), all enabled with Event and Restore codes." src="./image55.webp" style="width:7.086614173228346in;height:2.5354330708661417in" />
 
 Expander iO-8 has 8 universal (input/output) terminal contacts. Up to four iO-8 expanders can be connected.
 
@@ -980,7 +980,7 @@ In the table inputs can be assigned Contact ID event and restore codes. After in
 
 This window allows you to turn on, off, and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.1377952755905514in" />
+<img alt="TrikdisConfig 'Event summary' window: table listing COMMUNICATION (Event CID 350 SIA YC, Restore CID 350 SIA YK), POWER (Event CID 302 SIA YT, Restore CID 302 SIA YR), REMOTE_FINISHED (CID 412 SIA RS), REMOTE_STARTED (CID 411 SIA RB), START (CID 700 SIA RR) and TEST (CID 602 SIA RP), all under Part. 99, Zone 999, with Event enabled and Restore only enabled for COMMUNICATION and POWER." src="./image56.webp" style="width:7.086614173228346in;height:2.1377952755905514in" />
 
 In this window, you can turn on, turn off or change the internal event messages sent by the device. After turning off the internal event in this window, it will not be sent irrespective of other settings.
 
@@ -1003,7 +1003,7 @@ You can change the Contact ID code for each event, and also the zone and partiti
 
 To restore the communicator’s factory settings, you need to click the „**Restore”** button in the TrikdisConfig window.
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:0.984251968503937in" />
+<img alt="TrikdisConfig window with the Restore button highlighted in the Default settings group, used to restore factory settings." src="./image57.webp" style="width:7.086614173228346in;height:0.984251968503937in" />
 
 Another way to restore factory settings.
 
@@ -1029,7 +1029,7 @@ Power supply is connected to the communicator. Press and hold the “RESET” bu
 
 2.  In the “**Remote access**” section enter the communicator’s “**IMEI/Unique ID**” number. This number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.1929133858267718in" />
+<img alt="TrikdisConfig start window: USB configuration group with a Configuration program dropdown and OK button; Remote access group with 'Choose module' Unique ID field and Configure button both highlighted in red boxes, a System Name dropdown, and a Control button." src="./image58.webp" style="width:7.086614173228346in;height:2.1929133858267718in" />
 
 3.  (Optional) in the “**System name**” field, enter the desired name for the GT with this Unique ID.
 
@@ -1070,7 +1070,7 @@ When the configuration and installation is complete, perform a system check:
 
 3.  In TrikdisConfig select “**Firmware**”.
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.52755905511811in" />
+<img alt="TrikdisConfig 'Firmware' window: empty Open field with an 'Open firmware' button, a greyed-out Update (F12) button, and a progress bar at 0%." src="./image59.webp" style="width:7.086614173228346in;height:2.52755905511811in" />
 
 4.  Press „**Open firmware**” and select the required firmware file.
 
@@ -1088,7 +1088,7 @@ Disconnect the power supply before making any electrical connections.
 
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
+<img alt="Crossed-out wheeled bin symbol (WEEE), indicating the device must be disposed of separately from household waste." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 ## Annex
 
