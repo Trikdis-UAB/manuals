@@ -11,20 +11,21 @@ Every image in the manuals gets alt text. The job covers three things:
 
 For **wiring diagrams**, alt text must list the actual connections, not just name the diagram. "E16 Innerrange Integriti panel connection diagram" tells nobody which wire goes where.
 
-## Where it stands (2026-09-28, after wave 3)
+## Where it stands (2026-09-28, after wave 4)
 - **Done:**
   - CG17 pilot (PR #14);
-  - wave 2: the FLEXi/TouchPad keypad pair, iO-8 and RF-LORA (PR #15).
+  - wave 2: the FLEXi/TouchPad keypad pair, iO-8 and RF-LORA (PR #15);
+  - wave 3: the rest of GT, and all of GT+ and GET, 152 images (PR #22).
 - **In review, don't redo:**
   - PR #21: the GT manual's 5 panel wiring diagrams (`docs/en/alarm-communicators/cellular/gt/`, image18–image22). Use it as the pattern for wiring diagrams.
-  - PR #22: the rest of GT, and all of GT+ and GET (152 images).
-- **Remaining** (counted as if #21 and #22 are merged; GT's 5 are #21's):
+  - wave 4: G16 and G16T, 90 images (the G16 PR).
+- **Remaining** (counted as if the open PRs are merged; GT's 5 are #21's):
 
   "Needs alt" counts empty alt, a missing alt attribute, empty Markdown alt and the pipeline placeholder "Product Image". The first version of this file counted only `alt=""` and missed about 100 English images.
 
   | Language | Needs alt | Total |
   |---|---|---|
-  | EN | 886 | 1,343 |
+  | EN | 796 | 1,343 |
   | LT | 1,160 | 1,345 |
   | ES | 1,148 | 1,327 |
   | RU | 1,175 | 1,329 |
@@ -39,12 +40,11 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   | G17F | 70 | 73 |
   | GATOR | 65 | 68 |
   | GATOR WiFi | 57 | 60 |
-  | G16 | 48 | 53 |
-  | G16T | 42 | 45 |
   | SP3 Paradox RTX3 | 41 | 42 |
   | E16 | 40 | 43 |
   | SK-LED (button) | 38 | 38 |
   | T16 | 30 | 30 |
+  | E16T | 28 | 31 |
 
   Regenerate the list before you start. Run this from the repo root:
 
@@ -58,7 +58,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   - `apply_alt_text.py <page> <drafts.json>`: writes `[{"src", "alt"}]` into the page, strips double quotes, and refuses to write anything unless every draft lands and the count drops by exactly that many.
 
 **Order:**
-1. English first, highest-traffic products first: communicators (G16, G16T, G17F, FIRECOM, E16, T16; GT, GT+ and GET are in #21/#22), then SP3, then the GATOR controllers.
+1. English first, highest-traffic products first: communicators (G17F, FIRECOM, E16, E16T, T16; GT, GT+, GET, G16 and G16T are done or in review), then SP3, then the GATOR controllers.
 2. Then LT, ES and RU. Each language has its own image files, and the alt text is written in that page's language.
 
 ## The process (proven on CG17 and wave 2, keep it)
@@ -72,7 +72,9 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
    - Across roughly 280 checked images, the real errors were on "high" diagrams and on one numbered-callout photo. Don't re-verify everything, and never skip the "high" ones.
    - The drafter can be confidently wrong on a crossing. In #22 it traced a Paradox diagram "pixel by pixel" and got GRN/YEL and TIP/RING swapped. A plain crossing without a junction dot is a pass-over. When your reading and the drafter's differ, get Codex's independent read, and ask neutrally without giving either answer.
    - Codex CLI: `-i` takes every following argument as an image, so put the prompt before `-i`.
-5. **Batching that worked (#22):** deduplicate byte-identical pictures across the manuals in a wave (by content hash), then give one Sonnet subagent each batch of about 23 pictures. Each subagent writes JSON to a scratch folder, and `apply_alt_text.py` runs per page.
+5. **Batching that worked (#22, G16):** deduplicate byte-identical pictures across the manuals in a wave (by content hash), and reuse the already-shipped alt text of any picture that is byte-identical to one done before. Then give one Sonnet subagent each batch of about 20 to 23 pictures. Each subagent writes JSON, and `apply_alt_text.py` runs per page.
+   - **Keep work files in `projects/alt-text/work/`** (listed in `.git/info/exclude`, never committed), not the session scratchpad. The scratchpad was wiped when the session was interrupted and resumed, and the G16 drafts had to be rebuilt from the subagents' transcripts.
+   - **Re-read reused alt text for the new page.** A GT alt text called a generic app illustration "the GT unit"; reused on G16 that was visibly wrong, and it was wrong on GT too.
 6. **Shortcut for mirrored pages.** `flexi-sk-lcd` = `sk-lcd-touchpad` and `flexi-sk-led` = `sk-led-touchpad`. Draft once and keep the pairs in sync.
 
 ## Alt text rules

@@ -1,7 +1,7 @@
 # Cellular communicator G16T
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="Product Image" width="400">
+  <img src="./image1.webp" alt="TRIKDIS G16T communicator, angled photo. SMA antenna connector on top; LED indicators labelled NETWORK, DATA, POWER, TROUBLE; power rating '10-18 V 0.5 A Max'; terminal block labelled +DC, -DC, TIP, RING, T-1/IN1, R-1/IN2, OUT, COM, A 485, B 485." width="400">
 </div>
 
 ## Description 
@@ -124,7 +124,7 @@ This manual applies to these G16T models:
 
 6.  SIM card slot
 
-<img alt="" src="./image4.webp" style="width:4.052083333333333in;height:2.516023622047244in" />
+<img alt="G16T communicator elements with numbered callouts. Left, the closed case: 1 cellular antenna SMA connector, 2 light indicators (NETWORK, DATA, POWER, TROUBLE), 3 frontal case opening slot. Right, the open case with the circuit board: 4 terminal for external connections, 5 USB Mini-B port for communicator programming, 6 SIM card slot." src="./image4.webp" style="width:4.052083333333333in;height:2.516023622047244in" />
 
 ### Purpose of terminals 
 
@@ -186,7 +186,7 @@ This manual applies to these G16T models:
 
 ### Structural schematic with G16T usage 
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.970138888888889in" />
+<img alt="Block diagram of G16T use: alarm panel to the 2G/3G/LTE communicator. The communicator sends over GSM as calls and SMS to a phone with Protegus software; over GPRS to the Internet, from where the Protegus server reaches the same phone and a two-way link connects to the receiver; and over GSM directly to the receiver. The receiver, at the monitoring station in the security company, feeds the Monas MS monitoring software." src="./image5.webp" style="width:7.0875in;height:2.970138888888889in" />
 
 !!! note
     Before you begin, make sure that you have the necessary:
@@ -211,7 +211,7 @@ This manual applies to these G16T models:
 
 2.  Open the casing of the G16T with a flat-head screwdriver as shown below:
 
-<img alt="" src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
+<img alt="Three line drawings showing how to open the G16 casing with a flat-head screwdriver: prying open the front cover tab, then prying open the side latch, and a close-up of the internal USB Mini-B connector." src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
 
 1.  Using a USB Mini-B cable connect the G16T to the computer.
 
@@ -225,7 +225,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “User reporting window” “PROTEGUS Cloud” tab:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.7913385826771653in" />
+<img alt="TrikdisConfig 1.66.35 (G16T_3210) window, User reporting, PROTEGUS Cloud tab, with numbered callouts: 1 Enable connection checkbox (checked), 2 PROTEGUS Cloud access Code field (masked, 6 characters)." src="./image7.webp" style="width:7.082677165354331in;height:1.7913385826771653in" />
 
 1.  Select checkbox **Enable connection** to the Protegus Cloud.
 
@@ -233,7 +233,7 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In “SIM card” window:**
 
-<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:2.062992125984252in" />
+<img alt="TrikdisConfig SIM card window, with numbered callouts: 3 SIM card PIN field (masked), 4 APN field showing internet." src="./image8.webp" style="width:7.082677165354331in;height:2.062992125984252in" />
 
 3. Enter **SIM** **card** **PIN** code.
 
@@ -252,13 +252,13 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System settings” window:**
 
-<img alt="" src="./image9.webp" style="width:7.078740157480315in;height:2.0866141732283463in" />
+<img alt="TrikdisConfig System settings window, General group, with callout 1 on the Object ID field, showing value 1111." src="./image9.webp" style="width:7.078740157480315in;height:2.0866141732283463in" />
 
 1.  Enter **Object ID** (account) number provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
 **In “CMS reporting” window settings for “Primary channel”:**
 
-<img alt="" src="./image10.webp" style="width:7.078740157480315in;height:3.858267716535433in" />
+<img alt="TrikdisConfig CMS reporting window, CMS settings tab, Primary channel column, with numbered callouts: 2 Communication type (IP), 3 Protocol (TRK), 4 TRK encryption key (masked), 5 Domain or IP (empty), 6 Port (empty), 7 TCP or UDP (TCP), 8 a brace over the whole Primary channel Backup group (set to Disable, plus its Protocol, TRK encryption key masked, Domain or IP, Port, TCP or UDP fields), 9 Backup SMS reporting number (empty). Parallel channel column shown at right, not circled." src="./image10.webp" style="width:7.078740157480315in;height:3.858267716535433in" />
 
 2. **Communication type** - select the **IP** connection method (we do not recommend SMS as the primary channel).
 
@@ -285,7 +285,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “SIM card” window:**
 
-<img alt="" src="./image11.webp" style="width:7.082677165354331in;height:2.043307086614173in" />
+<img alt="TrikdisConfig SIM card window, with numbered callouts: 10 SIM card PIN field (masked), 11 APN field showing internet." src="./image11.webp" style="width:7.082677165354331in;height:2.043307086614173in" />
 
 10. Enter **SIM card PIN** code.
 
@@ -318,9 +318,9 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 7.  Close the top cover.
 
-<img alt="" src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Line drawing: left, the PCB assembly being released from the case, with a circled tab near the antenna connector and an arrow showing the release direction; right, the empty case back showing two circled mounting screw posts." src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image13.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Line drawing of the PCB SIM slot with an arrow showing a nano-SIM card being inserted into the slot." src="./image13.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note
     Ensure that the SIM card is activated. / Ensure that mobile internet
@@ -332,11 +332,11 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 Following one of the schematics provided below, wire the communicator to the control panel.
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:3.4756944444444446in" />
+<img alt="Two wiring diagrams, both titled Control panel connection diagram. Left, no telephone line supervision: panel +AUX to G16T +DC, panel -AUX to -DC, panel TIP to G16T TIP, panel RING to G16T RING. Right, with telephone line supervision: same four, plus panel T-1 to G16T T1/IN1, panel R-1 to R1/IN2. G16T terminals OUT, COM, A RS485, B RS485 are not connected in either diagram." src="./image14.webp" style="width:7.0875in;height:3.4756944444444446in" />
 
 ### Schematics for connecting to panel keyswitch zone 
 
-<img alt="" src="./image15.webp" style="width:7.0875in;height:3.4680555555555554in" />
+<img alt="Two wiring diagrams, both titled Control panel connection diagram, for arming/disarming via keyswitch zone. Left, no telephone line supervision: panel +AUX to G16T +DC, -AUX to -DC, TIP to TIP, RING to RING, and panel Zone (keyswitch) to G16T OUT. Right, with telephone line supervision: same, plus panel T-1 to T1/IN1, R-1 to R1/IN2. COM, A RS485, B RS485 not connected in either diagram." src="./image15.webp" style="width:7.0875in;height:3.4680555555555554in" />
 
 Follow these schematics if the control panel will be armed/disarmed with the G16T PGM output turning on/off the panel’s keyswitch zone.
 
@@ -351,9 +351,9 @@ The communicator has two input terminals (IN1, IN2) for connecting NO, NC, NO/EO
 
 Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="" src="./image16.webp" style="width:5.228346456692913in;height:1.720472440944882in" />
+<img alt="Three input wiring schematics, each from COM to INx. Normally open (NO): Short - Alarm, Open - Restore. Normally closed (NC): Short - Restore, Open - Alarm. Normally closed with a 10k end of line resistor in series (NC/EOL): Short - Alarm, Open - Alarm, 10k - Restore." src="./image16.webp" style="width:5.228346456692913in;height:1.720472440944882in" />
 
-<img alt="" src="./image17.webp" style="width:5.232283464566929in;height:2.125984251968504in" />
+<img alt="Three input wiring schematics, each from COM to INx. Normally open with a 10k end of line resistor in parallel (NO/EOL): Short - Alarm, Open - Alarm, 10k - Restore. Normally open with tamper recognition (NO/DEOL): tamper switch and a 10k resistor in series, then the NO contact with a second 10k resistor across it; Short - Tamper, Open - Tamper, 10k - Alarm, 12k-25k - Restore. Normally closed with tamper recognition (NC/DEOL): the same with an NC contact; Short - Tamper, Open - Tamper, 10k - Restore, 15k-25k - Alarm." src="./image17.webp" style="width:5.232283464566929in;height:2.125984251968504in" />
 
 !!! note
     If more inputs or outputs need to be connected to the communicator, or
@@ -363,25 +363,25 @@ Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, 
 
 With relay contacts you can control (turn on/off) various electronic appliances.
 
-<img alt="" src="./image18.webp" style="width:2.6377952755905514in;height:0.9488188976377953in" />
+<img alt="Wiring diagram: G16T +DC to one relay coil terminal, OUT to the other coil terminal. The relay's NC, C and NO contacts are shown as a legend, not wired to anything else." src="./image18.webp" style="width:2.6377952755905514in;height:0.9488188976377953in" />
 
 ### Schematics for connecting iO series expansion modules 
 
 If more inputs or outputs need to be connected to the communicator, or if you want to connect a temperature sensor, connect the TRIKDIS iO series wired or wireless output expander.
 
-<img alt="" src="./image19.webp" style="width:7.0875in;height:3.48125in" />
+<img alt="Wiring diagram: G16T with iO, iO-MOD and iO-8 expanders on one bus, powered by the control panel. Power: panel +AUX (+12 V) to +DC and panel -AUX to -DC on G16T, iO, iO-MOD and iO-8. RS485: G16T A RS485 to A (RS485) on iO, iO-MOD and iO-8, and B RS485 to B (RS485) on each. An iO-WL module is linked by wireless connection, up to 300 m; its +DC and -DC go to a 12-28 V DC, 0,5 A power supply, and its +5 V, 1-Wire and COM go to Vdd+, DQ and COM of a DS18B20 or DS18S20 temperature sensor." src="./image19.webp" style="width:7.0875in;height:3.48125in" />
 
 ### Schematic for connecting the *W485* WiFi module 
 
 The *W485* module sends messages to the CMS (Central Monitoring Station) and to Protegus using a WiFi internet router. When WiFi connectivity is available, the *G16T* sends event messages via the *W485* module. When WiFi connectivity is disrupted, the *G16T* sends messages via GPRS. When WiFi connectivity is re-established, the *G16T* returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the *G16T* is described in chapter 6.6. „„RS485 modules” window”. / Insert SIM card into the communicator *G16T* for *W485* to work.
 
-<img alt="" src="./image20.webp" style="width:2.9325054680664917in;height:2.1975043744531932in" />
+<img alt="Wiring diagram: external power supply (12V DC, 0.5A) to G16T +DC and -DC, shared via junction dots down to W485 +DC and -DC. RS485 connection (up to 100m): G16T A 485 to W485 A 485, G16T B 485 to W485 B 485." src="./image20.webp" style="width:2.9325054680664917in;height:2.1975043744531932in" />
 
 ### Schematic for connecting the E485 „Ethernet“ module 
 
 The *E485* module sends messages to the CMS (Central Monitoring Station) and to Protegus using a wired internet connection. Using the *E485* with *G16T*, CSP and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *G16T* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *G16T* starts sending messages via *E485*. / Configuration of the *E485* WiFi module to work with the *G16T* is described in chapter 6.6. „„RS485 modules” window”. / Insert SIM card into the communicator *G16T* for *E485* to work.
 
-<img alt="" src="./image21.webp" style="width:2.9600054680664916in;height:2.2300043744531934in" />
+<img alt="Wiring diagram: external power supply (12V DC, 0.5A) to G16T +DC and -DC, shared via junction dots down to E485 +DC and -DC. RS485 connection (up to 100m): G16T A 485 to E485 A 485, G16T B 485 to E485 B 485." src="./image21.webp" style="width:2.9600054680664916in;height:2.2300043744531934in" />
 
 ### Turn on the communicator 
 
@@ -495,15 +495,15 @@ With Protegus users will be able to control their alarm system remotely. They wi
         flashes yellow).
 3. Click **Add new system** and enter the G16T’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. After entering press **Next**.
 
-<img alt="" src="./image25.webp" style="width:6.52755905511811in;height:1.9015748031496063in" />
+<img alt="Protegus Add new system screen, Unique ID field empty, Next button, with a callout box: Enter the IMEI code, found on the package, on the back of the controller housing, or in TrikdisConfig as a Unique ID." src="./image25.webp" style="width:6.52755905511811in;height:1.9015748031496063in" />
 
 4. In the new window, click **Areas** in the side menu. In the next window specify how many alarm system areas are in the system and press **Next**.
 
-<img alt="" src="./image27.webp" style="width:7.066929133858268in;height:2.5118110236220472in" />
+<img alt="Protegus Areas setup screen for G16T_3, asking How many Areas are in the system, with value 1 entered, and a Next button." src="./image27.webp" style="width:7.066929133858268in;height:2.5118110236220472in" />
 
 5. In the new window, identify what is the number for each of the specified areas in the security system and press **Save**.
 
-<img alt="" src="./image28.webp" style="width:7.070866141732283in;height:2.531496062992126in" />
+<img alt="Protegus Areas setup screen for G16T_3, Area 1 number field showing 1, and a Save button." src="./image28.webp" style="width:7.070866141732283in;height:2.531496062992126in" />
 
 ### Additional settings to arm/disarm the alarm system using control panel’s keyswitch zone 
 
@@ -514,7 +514,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  In the side menu press **Settings** and in the newly opened window press **Settings**. Select the box **Arm/Disarm** **with** **PGM** and specify which area the output will control. One output OUT can control only one area.
 
-<img alt="" src="./image29.webp" style="width:7.0in;height:3.177165354330709in" />
+<img alt="Protegus Settings screen for G16T_3: Arm/Disarm with PGM 1 checkbox checked, set to Area 1 and Pulse, Use Application password for ARM/DISARM unchecked, Pulse interval in seconds set to 3 sec." src="./image29.webp" style="width:7.0in;height:3.177165354330709in" />
 
 2. Select **Level** or **Pulse**, depending on the type of control panel keyswitch zone. You can also change the duration of the pulse interval if it is required for the connected control panel.
 
@@ -528,7 +528,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 3.  If asked, enter the user code or Protegus password.
 
-<img alt="" src="./image30.webp" style="width:6.377952755905512in;height:3.062992125984252in" />
+<img alt="Protegus Areas screen for G16T_3 with the Area 1 popup open, showing Arm, Off and Cancel buttons." src="./image30.webp" style="width:6.377952755905512in;height:3.062992125984252in" />
 
 ### Configuration and control with SMS messages 
 
@@ -564,7 +564,7 @@ You can restrict the phone numbers from which the communicator will accept the c
 
 After connecting the G16T and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image31.webp" style="width:7.066929133858268in;height:0.6259842519685039in" />
+<img alt="TrikdisConfig status bar shown after clicking Read F4: IMEI/Unique ID field, Status reading done, Device G16T_3210, SN field, BL 1.06, FW 1.41, HW 0.01, State HID, Administrator access level." src="./image31.webp" style="width:7.066929133858268in;height:0.6259842519685039in" />
 
 | Object         | Description                                        |
 |----------------|----------------------------------------------------|
@@ -582,7 +582,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 ###  “System settings” window 
 
-<img alt="" src="./image32.webp" style="width:7.082677165354331in;height:3.0669291338582676in" />
+<img alt="TrikdisConfig System settings window. General group: Object ID 1111, Security panel model 2. INTERFACE DTMF, Dial tone frequency 425 Hz enabled, Line supervision unchecked, Input IN1-IN2 type NO, Output OUT1 mode Remote control, Time set Cloud application. Access group: Administrator code 123456, Installer code 654321, Only an administrator can restore checked, Allow installer to change enabled for Account number, CMS reporting, User reporting, SIM card, Event summary." src="./image32.webp" style="width:7.082677165354331in;height:3.0669291338582676in" />
 
 **“General” settings group**
 
@@ -618,7 +618,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 **“CMS settings” tab**
 
-<img alt="" src="./image33.webp" style="width:7.082677165354331in;height:4.05511811023622in" />
+<img alt="TrikdisConfig CMS reporting window, CMS settings tab. Primary channel: Communication type IP, Protocol TRK, TCP or UDP TCP, Primary channel Backup disabled. Parallel channel: Communication type IP, Protocol TRK, TCP or UDP TCP, Parallel channel Backup set to IP with Protocol TRK, TCP or UDP TCP." src="./image33.webp" style="width:7.082677165354331in;height:4.05511811023622in" />
 
 The communicator sends events to the monitoring station via cellular internet (IP) or with SMS messages.
 
@@ -664,7 +664,7 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 
 **“Settings” tab**
 
-<img alt="" src="./image34.webp" style="width:7.082677165354331in;height:2.8622047244094486in" />
+<img alt="TrikdisConfig CMS reporting window, Settings tab. Settings group: Test period 24 h 0 min enabled, IP ping period 0 min 30 s enabled, Receiver and line number 00 RR 0 L, Backup reporting after 2 fails, Return from Backup after 1 min 30 s. DC-09 Settings group: Object ID in DC-09 123456, DC-09 line No 1, DC-09 receiver No. 1." src="./image34.webp" style="width:7.082677165354331in;height:2.8622047244094486in" />
 
 **“Settings” settings group**
 
@@ -696,7 +696,7 @@ The settings are displayed when the **DC-09_2007** or **DC-09_2012** protocol is
 
 **“PROTEGUS Cloud” tab**
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="TrikdisConfig User reporting window, PROTEGUS Cloud tab. Enable connection checkbox checked, PROTEGUS Cloud access Code field filled with a masked 6-digit code." src="./image35.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 Protegus service allows users to remotely monitor and control the communicator. For more information about Protegus service, visit [www.protegus.app](https://www.protegus.app).
 
@@ -708,7 +708,7 @@ Protegus service allows users to remotely monitor and control the communicator. 
 
 **“SMS & Call Reporting” tab**
 
-<img alt="" src="./image36.webp" style="width:7.082677165354331in;height:3.8661417322834644in" />
+<img alt="TrikdisConfig User reporting window, SMS & Call Reporting tab. Object name Account Name, SMS language LITHUANIAN. Tel 1 number +37060123456, Tel 2-4 empty. Area names 01 Area 1, 02 Area 2. User names 001 User 1, 002 User 2. Zone names 001 Zone 1, 002 Zone 2. CID event table with per-phone SMS/Call checkboxes for events including E100 MEDICAL PANIC ALARM, E110 FIRE PANIC ALARM, E120 PANIC ALARM, E121 DURESS ALARM, E130 ALARM, E301 AC Power failure on control panel." src="./image36.webp" style="width:7.082677165354331in;height:3.8661417322834644in" />
 
 Notifications about system events can be transmitted to users’ mobile phones via SMS messages or phone calls.
 
@@ -726,7 +726,7 @@ You can change the texts for SMS messages of default events, change the contact 
 
 **“Control by SMS” tab**
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="TrikdisConfig User reporting window, Control by SMS tab. Reply text table: Command done shows Command OK, Wrong password shows Wrong Access Code, Wrong command shows Wrong Command, Wrong data shows Wrong Data. Tel numbers for control by SMS: Tel 1 to Tel 4, all empty." src="./image37.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 You can send SMS commands to the communicator that will control the output or change settings. Find the control commands in chapter **5.4 Configuration and control with SMS messages**.
 
@@ -745,7 +745,7 @@ You can send SMS commands to the communicator that will control the output or ch
     it. / 2. If mobile internet connection will be used for sending events
     via IP channel to the monitoring station receiver or to Protegus,
     ensure that mobile data service is enabled.
-<img alt="" src="./image38.webp" style="width:7.082677165354331in;height:2.295275590551181in" />
+<img alt="TrikdisConfig SIM card window. SIM card PIN field masked, APN set to internet, Login and Password fields empty, Forbid connection when roaming detected checkbox checked." src="./image38.webp" style="width:7.082677165354331in;height:2.295275590551181in" />
 
 **“SIM card” settings group**
 
@@ -763,7 +763,7 @@ You can send SMS commands to the communicator that will control the output or ch
 
 **iO** series expanders can be connected to the communicator to add additional inputs, outputs and serial buses for temperature sensors. Connected expanders must be added to the **Modules list** table.
 
-<img alt="" src="./image39.webp" style="width:7.078740157480315in;height:2.3661417322834644in" />
+<img alt="TrikdisConfig RS485 modules window, Modules list tab, with the Module Type dropdown open showing options Not Available, Expander IO, Expander IO-WL, Expander IO-LO, Expander LO-MOD, Expander iO-8, W17u/W485, E485." src="./image39.webp" style="width:7.078740157480315in;height:2.3661417322834644in" />
 
 - **Module type** – select the module that is connected to the communicator via RS485 from the list.
 
@@ -777,7 +777,7 @@ After adding the expander to the communicator as described above, in the **RS485
 
 **iO-8 expander settings window**
 
-<img alt="" src="./image40.webp" style="width:7.082677165354331in;height:2.5393700787401574in" />
+<img alt="TrikdisConfig RS485 modules window, Module 1 tab, Expander iO-8 settings. Serial No field, Input Count set to 3, Show Object ID unchecked. Event table: BUS_FAULT CID 333, INPUT1 CID 130 type NO, INPUT2 CID 130, INPUT3 CID 130, all partition 91 with zones 001-003, each with a matching restore code." src="./image40.webp" style="width:7.082677165354331in;height:2.5393700787401574in" />
 
 Expander iO-8 has 8 universal (input/output) terminal contacts. Up to four iO-8 expanders can be connected.
 
@@ -819,7 +819,7 @@ For customers to receive SMS messages or calls about input triggers, enter the C
 
 **iO expander settings window**
 
-<img alt="" src="./image41.webp" style="width:7.082677165354331in;height:3.220472440944882in" />
+<img alt="TrikdisConfig RS485 modules window, Module 1 tab, Expander iO settings. Serial No field, Input IN1 type NO, Max C(T1) 30, Min C(T2) 15. Event table: INPUT CID 130, HIGH_TEMPERATURE CID 158, LOW_TEMPERATURE CID 159, BUS_FAULT CID 333, all partition 91 zone 001 with matching restore codes." src="./image41.webp" style="width:7.082677165354331in;height:3.220472440944882in" />
 
 Expander iO has: terminals for 1 input, 1 output (relay contacts) and 1-Wire serial bus for connecting temperature sensors.
 
@@ -835,7 +835,7 @@ In the table inputs can be assigned Contact ID event and restore codes. After an
 
 **WiFi module W485 settings window**
 
-<img alt="" src="./image42.webp" style="width:7.078740157480315in;height:3.125984251968504in" />
+<img alt="TrikdisConfig RS485 modules window, Module 1 tab, W17u/W485 settings. Serial No field, DHCP mode DHCP, Static IP 192.168.1.27, Subnet mask 255.255.255.0, Default gateway 192.168.1.254, Wifi SSID name TRIKDIS, Wifi SSID password field filled. Event table: BUS_FAULT CID 333, partition 91, zone 001, with matching restore code." src="./image42.webp" style="width:7.078740157480315in;height:3.125984251968504in" />
 
 - **DHCP mode** – WiFi module’s mode for registering to network (manual or automatic).
 
@@ -859,7 +859,7 @@ In the table, you can assign Contact ID event and restore codes to the RS485 dat
     work.**
 **“Ethernet” module E485 settings window**
 
-<img alt="" src="./image43.webp" style="width:7.078740157480315in;height:3.122047244094488in" />
+<img alt="TrikdisConfig RS485 modules window, Module 1 tab, E485 settings. Serial No field, DHCP mode DHCP, Static IP 192.168.1.27, Subnet mask 255.255.255.0, Default gateway 192.168.1.254. Event table: BUS_FAULT CID 333, partition 91, zone 001, with matching restore code." src="./image43.webp" style="width:7.078740157480315in;height:3.122047244094488in" />
 
 - **DHCP mode** – ethernet module’s mode for registering to network (manual or automatic).
 
@@ -879,7 +879,7 @@ In the table, you can assign Contact ID event and restore codes to the RS485 dat
     work.**
 ### “Event summary” window 
 
-<img alt="" src="./image44.webp" style="width:7.082677165354331in;height:2.5551181102362204in" />
+<img alt="TrikdisConfig Event summary window listing internal events with enable checkboxes and Contact ID codes: COMMUNICATION CID 350 (disabled), IN1_ALARM CID 130, IN1_TAMPER CID 144, IN2_ALARM CID 130, IN2_TAMPER CID 144, PING CID 760, POWER CID 302, REMOTE_FINISHED CID 412, REMOTE_STARTED CID 411, START CID 700, TEST CID 602; partition 99, zone 999 except IN1/IN2 events at zone 001/002." src="./image44.webp" style="width:7.082677165354331in;height:2.5551181102362204in" />
 
 In this window, you can turn on, turn off or change the internal event messages sent by the device. After turning off an internal event in this window, it will not be sent irrespective of other settings.
 
@@ -912,7 +912,7 @@ You can change the Contact ID code for each event, and also the zone and partiti
 
 To restore the communicator's factory settings, you need to click the **Restore** button in the TrikdisConfig window.
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:0.9960629921259843in" />
+<img alt="TrikdisConfig status bar with the Restore button under Default settings highlighted in red. Below: IMEI/Unique ID field, Status reading done, Device G16T_3210, SN field, BL 1.06, FW 1.41, HW 0.01, State HID, Administrator access level." src="./image45.webp" style="width:7.086614173228346in;height:0.9960629921259843in" />
 
 ## Remote configuration 
 
@@ -933,7 +933,7 @@ To restore the communicator's factory settings, you need to click the **Restore*
         flashes yellow).
 2. In the **Remote access** field, enter the communicator’s **IMEI/Unique ID** number. This number can be found on the device and the packaging sticker.
 
-<img alt="" src="./image46.webp" style="width:6.618110236220472in;height:1.0118110236220472in" />
+<img alt="TrikdisConfig Remote access panel, Choose module row, with the Unique ID field and the Configure button both highlighted in red; System Name dropdown and Control button also shown." src="./image46.webp" style="width:6.618110236220472in;height:1.0118110236220472in" />
 
 3. (Optional) In the **System name** field, enter the desired name for the G16T with this Unique ID.
 
@@ -983,7 +983,7 @@ G16T firmware can also be updated or changed manually. After an update, all prev
 
 3.  Press **Update [F12].**
 
-    <img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.161417322834646in" />
+    <img alt="TrikdisConfig Firmware window. Open field empty, Open firmware button, Update F12 button greyed out, progress bar at 0%." src="./image47.webp" style="width:7.086614173228346in;height:3.161417322834646in" />
 
 4.  Wait for the update to complete.
 
@@ -999,7 +999,7 @@ Disconnect the power supply before making any electrical connections.
 
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
+<img alt="Crossed-out wheeled bin symbol (WEEE), indicating the device must be disposed of separately from household waste." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
 
 
 ## Annex 

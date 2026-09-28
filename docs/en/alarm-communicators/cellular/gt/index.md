@@ -642,7 +642,7 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
 1.  Click „**Continue**“.
 
-<img alt="Protegus2 app screen titled 'The system is not controlled remotely': illustration of the GT unit's LEDs (NETWORK, DATA, POWER, TROUBLE) and terminal row +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2 (rated 10-18V 0.5A Max), next to a person with a question mark. Text below reads: You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system. Continue button." src="./image38.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Protegus2 app screen titled 'The system is not controlled remotely': an illustration of a communicator with NETWORK, DATA, POWER and TROUBLE LEDs and terminals +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2, beside a puzzled person. Text below: You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system. Continue button." src="./image38.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 
