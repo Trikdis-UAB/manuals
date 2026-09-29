@@ -18,7 +18,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   - GT's 5 panel wiring diagrams (PR #21), the pattern for wiring diagrams;
   - wave 3: the rest of GT, and all of GT+ and GET, 152 images (PR #22);
   - wave 4: G16 and G16T, 90 images (PR #23).
-- **Human review:** merged without Andrius's review; Igoris (documentation) was asked on 2026-09-28 to check the 60 wiring and block diagrams via a side-by-side review page. Apply any corrections he sends.
+- **Human review:** Igoris (documentation) checked the 60 wiring and block diagrams of GT, GT+, GET, G16 and G16T and replied "kaip ir gerai" on 2026-09-28. He confirmed the Paradox serial cable is CRP2.4; the page text said CRP2 and was fixed in all languages. Asked him again on 2026-09-29, with pictures, about: the Russian label on GT's Paradox SP diagram, the non-English screenshots (GT+ status bar, G16/G16T SMS language, W17u/W485), and G16's reversed keyswitch-zone order. For later waves, send him the new diagrams the same way: each image from the live site with its alt text under it, in the email body.
 - **Remaining:**
 
   "Needs alt" counts empty alt, a missing alt attribute, empty Markdown alt and the pipeline placeholder "Product Image". The first version of this file counted only `alt=""` and missed about 100 English images.
