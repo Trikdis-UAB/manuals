@@ -186,7 +186,7 @@ Veikia su Protegus2 programėle:
     2.  Mažiausiai 4 gyslų kabelį komunikatoriaus prijungimui prie apsaugos
         centralės.
     
-    3.  CRP2 kabelį Paradox centralių prijungimui prie nuosekliojo prievado.
+    3.  CRP2.4 kabelį Paradox centralių prijungimui prie nuosekliojo prievado.
     
     4.  Plokščią 2,5 mm atsuktuvą.
     

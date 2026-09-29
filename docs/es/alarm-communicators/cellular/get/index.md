@@ -180,7 +180,7 @@ Este manual es para comunicadores LTE.
     2.  Por lo menos 4 alambres para conectar el comunicador con el panel de
         control.
     
-    3.  Un cable CRP2 para conectarse con el puerto serial del panel de
+    3.  Un cable CRP2.4 para conectarse con el puerto serial del panel de
         Paradox.
     
     4.  Desatornillador de cabeza plana.

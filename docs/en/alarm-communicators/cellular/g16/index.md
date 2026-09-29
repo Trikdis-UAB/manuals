@@ -195,7 +195,7 @@ This manual is for 2G/3G/4G communicators.
     
     2.  At least 4-wire cable for connecting communicator to control panel.
     
-    3.  CRP2 cable for connecting to Paradox panel's serial port.
+    3.  CRP2.4 cable for connecting to Paradox panel's serial port.
     
     4.  Flat-head 2,5 mm screwdriver.
     

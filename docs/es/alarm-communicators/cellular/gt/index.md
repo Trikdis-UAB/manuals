@@ -185,7 +185,7 @@ Este manual es para comunicadores 4G.
     
     2.  Cable de 4 hilos para conexión al panel de control.
     
-    3.  Cable CRP2 para conexión al puerto serie del panel de control
+    3.  Cable CRP2.4 para conexión al puerto serie del panel de control
         Paradox.
     
     4.  Destornillador de hoja plana de 2,5 mm.
