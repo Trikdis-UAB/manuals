@@ -24,7 +24,8 @@ def norm(src):
 
 def main(md_path, drafts_path):
     md_path = Path(md_path)
-    text = md_path.read_text(encoding="utf-8")
+    with open(md_path, encoding="utf-8", newline="") as fh:   # keep CRLF files CRLF
+        text = fh.read()
     drafts = json.loads(Path(drafts_path).read_text(encoding="utf-8"))
     refs = image_refs(text)
     before = sum(1 for r in refs if needs_alt(r["alt"]))
@@ -57,7 +58,8 @@ def main(md_path, drafts_path):
     if before - after != len(edits):
         print(f"NOT APPLIED: expected {len(edits)} fewer images needing alt, got {before - after}")
         sys.exit(1)
-    md_path.write_text(text, encoding="utf-8")
+    with open(md_path, "w", encoding="utf-8", newline="") as fh:
+        fh.write(text)
     print(f"Applied {len(edits)} alt texts ({len(drafts)} drafts) to {md_path}; "
           f"needing alt: {before} -> {after}")
 

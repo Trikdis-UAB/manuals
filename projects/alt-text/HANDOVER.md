@@ -17,7 +17,8 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   - wave 2: the FLEXi/TouchPad keypad pair, iO-8 and RF-LORA (PR #15);
   - GT's 5 panel wiring diagrams (PR #21), the pattern for wiring diagrams;
   - wave 3: the rest of GT, and all of GT+ and GET, 152 images (PR #22);
-  - wave 4: G16 and G16T, 90 images (PR #23).
+  - wave 4: G16 and G16T, 90 images (PR #23);
+  - wave 5: G17F and FIRECOM, 177 images, drafted and re-checked by Codex (2026-09-30).
 - **Human review:** Igoris (documentation) checked the 60 wiring and block diagrams of GT, GT+, GET, G16 and G16T and replied "kaip ir gerai" on 2026-09-28. He confirmed the Paradox serial cable is CRP2.4; the page text said CRP2 and was fixed in all languages. On 2026-09-29 he sent corrected EN images, now live: GT Paradox SP diagram (English label), G16 keyswitch diagram (zones were drawn reversed; now 1-st Area to I/O 1), and English GT+ status bar, Restore and SMS & Call Reporting screenshots. The Estonian/Lithuanian SMS language in G16/G16T screenshots and the W17u/W485 name are fine as they are. Not yet checked: whether the LT, ES and RU pages carry the same drawing problems (the G16 zone order especially); look when doing their alt text and ask Igoris. For later waves, send him the new diagrams the same way: each image from the live site with its alt text under it, in the email body.
 - **Remaining:**
 
@@ -25,7 +26,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 
   | Language | Needs alt | Total |
   |---|---|---|
-  | EN | 791 | 1,343 |
+  | EN | 614 | 1,343 |
   | LT | 1,160 | 1,345 |
   | ES | 1,148 | 1,327 |
   | RU | 1,175 | 1,329 |
@@ -34,10 +35,8 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 
   | Manual | Needs alt | Total |
   |---|---|---|
-  | FIRECOM | 107 | 111 |
   | SP3 | 96 | 100 |
   | SK-LCD (button) | 79 | 79 |
-  | G17F | 70 | 73 |
   | GATOR | 65 | 68 |
   | GATOR WiFi | 57 | 60 |
   | SP3 Paradox RTX3 | 41 | 42 |
@@ -45,6 +44,9 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   | SK-LED (button) | 38 | 38 |
   | T16 | 30 | 30 |
   | E16T | 28 | 31 |
+  | RL14 | 24 | 25 |
+  | RF-S8 | 20 | 20 |
+  | SP3 Paradox user guide | 20 | 20 |
 
   Regenerate the list before you start. Run this from the repo root:
 
@@ -58,7 +60,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   - `apply_alt_text.py <page> <drafts.json>`: writes `[{"src", "alt"}]` into the page, strips double quotes, and refuses to write anything unless every draft lands and the count drops by exactly that many.
 
 **Order:**
-1. English first, highest-traffic products first: communicators (G17F, FIRECOM, E16, E16T, T16; GT, GT+, GET, G16 and G16T are done or in review), then SP3, then the GATOR controllers.
+1. English first, highest-traffic products first: communicators (E16, E16T, T16; GT, GT+, GET, G16, G16T, G17F and FIRECOM are done), then SP3, then the GATOR controllers.
 2. Then LT, ES and RU. Each language has its own image files, and the alt text is written in that page's language.
 
 ## The process (proven on CG17 and wave 2, keep it)
@@ -83,11 +85,13 @@ Claude budget was out, and DeepSeek cannot see images (tested 2026-09-29: V4 Pro
 ```bash
 python3 projects/alt-text/scripts/codex_wave.py prepare w6 docs/en/<manual>/index.md [...]
 python3 projects/alt-text/scripts/codex_wave.py draft w6 --jobs 3
-python3 projects/alt-text/scripts/codex_wave.py verify w6 --jobs 3
+python3 projects/alt-text/scripts/codex_wave.py verify w6 --all --jobs 3   # --all: re-check simple items too
 python3 projects/alt-text/scripts/codex_wave.py status w6     # disputes -> work/w6/resolutions.json
 python3 projects/alt-text/scripts/codex_wave.py apply w6
 python3 projects/alt-text/scripts/codex_wave.py review w6     # diagram list for Igoris's email
 ```
+
+Wave 5 lessons: (1) Codex slipped one picture inside a batch (three screenshot drafts described their neighbour), so always re-check ALL items with `--all`, not just 'high'; the status step then refuses unchecked items. (2) Most re-check disputes are omitted values: keep the manual's example values (PIN 1234, key 123456, Object ID 0001), drop identifiers and personal details (IMEI, serials, passwords, phone numbers, names, emails). Scan the final diff for them anyway: two slipped through in undisputed drafts. (3) Real wiring errors were caught by the re-check and confirmed by zooming (smoke-detector relay coil, panel PGM wiring); look at every wiring dispute yourself. (4) Some pages have CRLF line endings; `apply_alt_text.py` now preserves them (it once rewrote a whole file).
 
 A pilot on three known-hard pictures (the GET Paradox diagram a Sonnet drafter got wrong, the G16T expander bus, the GET callout photo) came back fully correct. Codex re-checking Codex is weaker than a cross-family check, so the human review by Igoris is part of the process, not optional.
 

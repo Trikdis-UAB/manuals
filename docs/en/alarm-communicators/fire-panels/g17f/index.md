@@ -1,7 +1,7 @@
 # LTE communicator for fire alarm control panels G17F
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Front of the TRIKDIS G17F communicator, with an antenna connector on top and NETWORK, DATA, POWER and TROUBLE indicator labels. The case is marked 9–32 VDC, 0.1 A max. The bottom terminals are labeled, left to right: +DC, −DC, 1 IN, 2 IN, COM, 3 I/O, 4 I/O, COM, 5 I/O, 6 IN, A RS485 and B RS485." width="400">
 </div>
 
 
@@ -112,7 +112,7 @@ Principle of operation. When an input (zone) of the communicator is violated, th
 
 6.  SIM card holder.
 
-<img alt="" src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
+<img alt="G17F communicator, front view on the left and exposed circuit board on the right. Left: 1 SMA connector for Cellular antenna, 2 indicator lights, 3 slot for removing top cover. Right: 4 terminals for connecting wires, 5 USB Mini-B connector for programming the communicator, 6 SIM card holder." src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
 
 ### Purpose of terminals 
 
@@ -175,7 +175,7 @@ Order the necessary components separately from your local distributor.
 
 2.  Remove the lid of the G17F using a flat-head screwdriver as shown below:
 
-<img alt="" src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
+<img alt="Three line drawings showing how to open the G16 casing with a flat-head screwdriver: prying open the front cover tab, then prying open the side latch, and a close-up of the internal USB Mini-B connector." src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
 
 1.  Connect the G17F to the computer using a USB Mini-B cable.
 
@@ -189,7 +189,7 @@ Below we describe the settings you need to edit to make the controller send even
 
 **In the “Users & Reporting” window, “Cloud application” settings group:**
 
-<img alt="" src="./image6.webp" style="width:7.086614173228346in;height:3.590551181102362in" />
+<img alt="TrikdisConfig G17F configuration, Users & Reporting window. In Cloud application, Enable cloud service is checked and Cloud Access Code shows the example code 123456." src="./image6.webp" style="width:7.086614173228346in;height:3.590551181102362in" />
 
 1.  Tick the box **Enable cloud service**.
 
@@ -197,7 +197,7 @@ Below we describe the settings you need to edit to make the controller send even
 
 **In the “System options” window, “SIM” settings group:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="TrikdisConfig G17F configuration, System Options window. In the SIM group, callout 3 highlights SIM card PIN 1234, and callout 4 highlights APN internet." src="./image7.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 3. Enter the **SIM card PIN** code.
 
@@ -205,19 +205,19 @@ Below we describe the settings you need to edit to make the controller send even
 
 **In the “Zones” window:**
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig G17F configuration, Zones window. The Prot. notification boxes are checked for Zones 1 through 6." src="./image8.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 3. Tick the boxes if you want users to receive notifications to Protegus2 about changes in zone states.
 
 **In the “PGM” window:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="TrikdisConfig G17F configuration, PGM window. PGM 1 uses G17F 4 I/O; PGM 2 and 3 are set to Disable. The Prot. notification boxes are checked for all three rows." src="./image9.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 4. Tick the boxes if you want users to receive notifications to Protegus2 about changes in PGM output states.
 
 **In the “System events” window:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig G17F configuration, System events window. The Prot. notification boxes are checked for Low power, Periodic test, RS485 fault, GSM jamming and Start IP event." src="./image10.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 5. Tick the boxes if you want users to receive notifications to Protegus2 about changes in the communicator’s internal event states.
 
@@ -230,7 +230,7 @@ After finishing configuration, click the **Write [F5]** button and disconnect th
 
 **In the “System Options” window:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="TrikdisConfig G17F configuration, System Options window. Highlighted fields are Object ID 0001, SIM card PIN 1234, and APN internet." src="./image11.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 1.  Enter the **Object ID** (account) number provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
@@ -240,7 +240,7 @@ After finishing configuration, click the **Write [F5]** button and disconnect th
 
 **In the “Reporting to CMS” window:**
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="TrikdisConfig G17F configuration, Reporting to CMS window. The primary channel shows Communication type Disabled, Domain or IP 0.0.0.0, Port 0, Protocol TRK, and highlighted Encryption Key 123456. The backup channel shows the same values, including Encryption Key 123456. Backup channel 2 has an empty Phone number field." src="./image12.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 4. **Communication type** – choose a communication type (we do not recommend using SMS for the primary channel).
 
@@ -287,9 +287,9 @@ After finishing configuration, click the **Write [F5]** button and disconnect t
 
 7.  Insert a nano-SIM card. The SIM card must be registered to a Cellular network and services must be enabled and functional, i.e. the card must be able to call, send and receive SMS messages, have enabled mobile data. <u>Ask your SIM card’s mobile network operator how to enable desired services.</u>
 
-<img alt="" src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
+<img alt="Two line drawings showing the CG17 circuit board with a circled tab on the left edge to release it from the casing, and the rear casing with two circled screw mounting holes." src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
 
-<img alt="" src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
+<img alt="Drawing of a nano-SIM card being inserted from the right into the SIM card holder on the G17F circuit board." src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
 !!! note
     Ensure that the SIM card is activated. / Ensure that mobile data is
@@ -307,11 +307,11 @@ After finishing configuration, click the **Write [F5]** button and disconnect t
 
 If you want to monitor the status of the fire alarm panel, connect its corresponding outputs to the *G17F* inputs. The outputs (PGM1, PGM2, PGM3) of the fire panel must be configured as panel status outputs (Alarm, Trouble, etc.).
 
-<img alt="" src="./image15.webp" style="width:3.047244094488189in;height:2.87007874015748in" />
+<img alt="Wiring diagram: fire control panel to G17F. Power: panel +24 V to +DC, GND to -DC. Status outputs: PGM1 to 1 IN, PGM2 to 2 IN, PGM3 to 6 IN, with their returns connected to COM. Each PGM circuit has a 10k resistor in parallel between its input line and COM return." src="./image15.webp" style="width:3.047244094488189in;height:2.87007874015748in" />
 
 ### Connection diagram of the ESPA4.4.4 fire control panel and the G17F communicator 
 
-<img alt="" src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
+<img alt="Wiring diagram: G17F to ESPA4.4.4 fire panel. Power: G17F +DC to ESPA4.4.4 +24V, -DC to 0V. RS485: G17F A to ESPA4.4.4 A, B to B." src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
 
 G17F communicator settings using TrikdisConfig when connected to the **ESPA4.4.4** fire panel.
 
@@ -321,25 +321,25 @@ G17F communicator settings using TrikdisConfig when connected to the **ESPA4.4.4
 
 3.  The data transmission parameters of the G17F communicator and the fire panel must be the same.
 
-<img alt="" src="./image17.webp" style="width:7.086614173228346in;height:3.4803149606299213in" />
+<img alt="TrikdisConfig G17F configuration, Modules window. RS485 module 1 is set to ESPA 4.4.4 protocol. ESPA 4.4.4 interface settings show Baudrate 9600, 8 bits, parity None, 1 stop bit and Delay 40 mS." src="./image17.webp" style="width:7.086614173228346in;height:3.4803149606299213in" />
 
 4. Enter phone numbers of users who should get messages from the G17F.
 
-<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="TrikdisConfig G17F, Users & Reporting window. Callout 4 highlights user 1: Name IT, a telephone number, with ACK and FW checked." src="./image18.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 5. If you want the user to receive messages (or calls) about events, tick the SMS (or Call) box
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
+<img alt="TrikdisConfig G17F configuration, System events window, SMS & Call reporting tab. For User 1, the ESPA 4.4.4 text event has SMS checked and Call unchecked." src="./image19.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
 
 6. Configure the communication channel if messages should be sent to the CMS receiver. Event messages are transmitted using the SIA DC-09 protocol.
 
-<img alt="" src="./image20.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
+<img alt="TrikdisConfig G17F, Reporting to CMS window. Callout 6 highlights Primary channel settings: Communication type Disabled, Domain or IP 0.0.0.0, Port 0, Protocol TRK, Phone number blank, and Encryption Key 123456." src="./image20.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
 
 Test the system. Activate the fire alarm and check that G17F messages are sent to the CMS (central monitoring station) and to Protegus2.
 
 ### Connection diagram of the NSC Solution fire control panel and the G17F communicator 
 
-<img alt="" src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
+<img alt="Wiring diagram: G17F to NSC Solution. Power: +DC to +24V (+24 V), -DC to 0V. RS485: A to A, B to B." src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
 G17F communicator settings using TrikdisConfig when connected to the **NSC Solution** fire panel.
 
@@ -347,19 +347,19 @@ G17F communicator settings using TrikdisConfig when connected to the **NSC Solut
 
 2.  The “NSC slave address” must not match the addresses of the connected fire panel modules.
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:3.0118110236220472in" />
+<img alt="TrikdisConfig G17F, Modules window. Callout 1 highlights NSC Solution in RS485 modules row 1, named Expander ID1. Callout 2 highlights NSC slave address 10." src="./image22.webp" style="width:7.086614173228346in;height:3.0118110236220472in" />
 
 3. Enter phone numbers of users who should get messages from the G17F.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="TrikdisConfig G17F, Users & Reporting window. Callout 3 highlights user 1: Name IT, a telephone number, with ACK and FW checked." src="./image23.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 4. Users will get SMS messages and phone calls about events that are ticked. You can add additional CID event codes in the **CID** column. You must enter **SMS text** messages next to new codes. If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="TrikdisConfig G17F, Users & Reporting, SMS for Panel events tab. Callout 4 highlights User 1: SMS checked and Call unchecked for the 16 displayed events, from E110 Fire alarm through R373 Fault restore." src="./image24.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 5. Configure the communication channel if messages should be sent to the CMS receiver.
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
+<img alt="TrikdisConfig G17F, Reporting to CMS window. Callout 5 highlights the Primary channel fields: Communication type Disabled, Domain or IP 0.0.0.0, Port 0, Protocol TRK, Phone number blank, and Encryption Key 123456." src="./image25.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 After setting up the G17Fcommunicator, turn on power supply the fire control panel. Wait for the fire control panel software to load. It is necessary to scan the modules connected to the RS485 bus on the fire control panel. On the fire control panel, press: **PROG.>INSTALLER>(Enter the installer code) 00000 OK>(Select) SETTINGS>ENTER>(Select) SCAN RS485>ENTER**. Wait for the scan to complete. Return to the main screen by pressing “**CANCEL**“ twice.
 
@@ -367,11 +367,11 @@ Test the system. Activate the fire alarm and ensure that the G17F sends messages
 
 ### Connection diagram of the INIM Smartline fire control panel and the G17F communicator 
 
-<img alt="" src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
+<img alt="Wiring diagram: G17F to INIM Smartline. Power: +DC to 13 +24 (+24 V), -DC to 16 GND. RS485: A to 15 +RS485, B to 14 -RS485. The diagonal wires cross without joining." src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
 
 Slave mode must be set for the **INIM Smartline** panel when it is connected to the G17F communicator via RS485 bus.
 
-<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="SmartLeague, RS485 Bus Programming window. Under Master/Slave Settings, Configure as Slave is selected and Assign address is 1." src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note
     You cannot connect the G17F using the RS485 bus if repeaters are
@@ -383,77 +383,77 @@ Setting up communicator parameters for operation with the **INIM Smartline** fir
 
 **In the “Modules” window:**
 
-<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
+<img alt="TrikdisConfig G17F, Modules window. Callout 1 highlights Inim Smartline in RS485 modules row 1, named Expander ID1." src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
 
 1.  Choose the **Inim Smartline** module.
 
 **In the “Users & Reporting” window:**
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:1.5708661417322836in" />
+<img alt="TrikdisConfig G17F, Users & Reporting window. Callout 2 highlights user 1: Name IT, a telephone number, with the ACK and FW boxes checked." src="./image29.webp" style="width:7.086614173228346in;height:1.5708661417322836in" />
 
 2. Enter phone numbers of users who should get messages from the G17F communicator.
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="TrikdisConfig G17F, Users & Reporting, SMS for Panel events tab. Callout 3 highlights User 1: SMS checked and Call unchecked for the first 16 events, from E110 Fire alarm through R373 Fault restore; both boxes are unchecked for row 17, E000." src="./image30.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 3. Users will get SMS messages and phone calls about events that are ticked. You can add additional CID event codes in the **CID** column. You must enter **SMS text** messages next to new codes. If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
 2.  Configure the communication channel if messages should be sent to the CMS receiver.
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.0in" />
+<img alt="TrikdisConfig G17F, Reporting to CMS window. Callout 4 highlights the Primary channel fields: Communication type Disabled, Domain or IP 0.0.0.0, Port 0, Protocol TRK, Phone number blank, and Encryption Key 123456." src="./image31.webp" style="width:7.086614173228346in;height:2.0in" />
 
 Test the system. Activate the fire alarm and ensure that the G17F sends messages to the central monitoring station (CMS) and Protegus2.
 
 ### Connection diagram of the C-TEC Cast ZFP fire control panel and the G17F communicator 
 
-<img alt="" src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
+<img alt="Wiring diagram: G17F to C-TEC Cast ZFP. Power: +DC to +24V (+24 V), -DC to 0V. ABUS RS485: A to A, B to B." src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
 G17F communicator settings using TrikdisConfig when connected to the **C-TEC Cast ZFP** fire panel.
 
 1.  Choose the **C-TEC Cast ZFP** fire control panel.
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="TrikdisConfig G17F, Modules window. Callout 1 highlights C-TEC Cast ZFP in RS485 modules row 1, named Expander ID1." src="./image33.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 1.  Enter phone numbers of users who should get messages from the G17F communicator.
 
-<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
+<img alt="TrikdisConfig G17F, Users & Reporting  Users. Callout 2 highlights user 1, named IT, with a telephone number and the ACK and FW boxes checked." src="./image34.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
 
 2. Users will get SMS messages and phone calls about events that are ticked. You can add additional CID event codes in the **CID** column. You must enter **SMS text** messages next to new codes. If you want the user to receive messages (or calls) about events, tick the **SMS** (or **Call**) box.
 
-<img alt="" src="./image35.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="TrikdisConfig, Users & Reporting  SMS for Panel events. For User 1, the visible events have SMS checked and Call unchecked; the table pairs CID codes with SMS text, including E110 and Fire alarm." src="./image35.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 3. Configure the communication channel if messages should be sent to the CMS receiver.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
+<img alt="TrikdisConfig, Reporting to CMS  Primary channel. Callout 4 highlights Communication type Disabled, Domain or IP 0.0.0.0, Port 0, Protocol TRK, a blank Phone number field, and Encryption Key 123456." src="./image36.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
 
 Install the **ZFPtools** program on your computer. Run the **ZFPtools** program. Turn on the power supply of the fire control panel. Wait until the fire panel software is loaded. Connect the fire panel to the computer using a USB2.0 A-B cable.
 
 4. Open the "**Node View**" tab.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="ZFP Programming Tools, Site Details window. The Node View tab is highlighted for selection." src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
 5. Download the fire panel settings to your computer.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="ZFP Programming Tools, Node View for Panel 1. The Retrieve All Data button is highlighted." src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
 6. Enter the code (default code – 4444).
 
 2.  Click „OK“.
 
-<img alt="" src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="ZFP Programming Tools, Panel Log In window. Enter Access Level 3 Code appears above four empty code boxes; the green check button confirms the entry." src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
 3. Select „**BMS Interface**“.
 
 2.  Click on the free icon.
 
-<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="ZFP Programming Tools, Node View  Devices. BMS Interface is selected in the Device Palette, and the Edit Devices button is highlighted." src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
 11. Click „**Edit Devices**“.
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="ZFP Programming Tools, Node View  Devices. A BMS Interface occupies device slot 16, and the Edit Devices button is highlighted." src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 12. In the “**Device**” tab, enter the system name.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="ZFP Programming Tools, Node View  Devices  Device Properties for device 16. On the Device tab, Name is FIRECOM and Device Type is BMS Interface." src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
 13. In the “**Properties**” tab, enter the system name.
 
@@ -463,13 +463,13 @@ Install the **ZFPtools** program on your computer. Run the **ZFPtools** program.
 
 16. Write the settings to the fire panel.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="ZFP Programming Tools, Device Properties for the BMS Interface. Name is FIRECOM; Connection is ABUS RS485; BAUD Rate is 57600; Response Timeout is 250; Max Retries is 5. Zone Disablements reports Zone; Input Group Disablements, Output Group Disablements and Group Actions report Group. The Send All Data button is highlighted." src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
 17. Enter the code (default code – 4444).
 
 18. Click „OK“.
 
-<img alt="" src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="ZFP Programming Tools, Panel Log In window. Enter Access Level 3 Code appears above four empty code boxes; the green check button confirms the entry." src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 The fire panel is programmed. Disconnect the cable from USB2.0 A-B of the fire panel.
 
@@ -481,37 +481,37 @@ The communicator has six (1IN – 6IN) input terminals (three terminals are dual
 
 Schematics of NO, NC, EOL type circuits:
 
-<img alt="" src="./image45.webp" style="width:6.71751312335958in;height:1.725003280839895in" />
+<img alt="Four input wiring diagrams, left to right. Normally open (NO): NO contact between COM and INx; Short - Alarm, Open - Restore. Normally closed (NC): NC contact between COM and INx; Short - Restore, Open - Alarm. Normally open with 10k End of line resistor (EOL10k): 10 k resistor in parallel with NO contact; Short - Alarm, Open - Alarm, 10k - Restore. Normally closed with 10k End of line resistor (EOL10k): NC contact in series with 10 k resistor; Short - Alarm, Open - Alarm, 10k - Restore." src="./image45.webp" style="width:6.71751312335958in;height:1.725003280839895in" />
 
 ### Schematic for connecting iO series expander modules 
 
 If the communicator needs more inputs IN or outputs OUT, connect a wired or wireless TRIKDIS iO series input and output expander.
 
-<img alt="" src="./image46.webp" style="width:7.086805555555555in;height:5.0777777777777775in" />
+<img alt="Wiring diagram: G17F to iO-MOD, iO-WL and iO modules. G17F to the two shown iO-MOD units: DC+ to +DC by red wire, DC- to -DC by blue wire, A RS485 to A RS485 by black wire, B RS485 to B RS485 by white wire; 12-28V supply, up to 4 iO-MOD modules. Each iO-MOD has a wireless connection to an iO-WL, up to 300 m. Upper iO-WL to iO: A RS485 to A RS485 and B RS485 to B RS485, up to 300 m and up to 8 system expansion modules. Both have 12-28V supplies with -DC joined. Lower iO-WL has its own 12-28V supply." src="./image46.webp" style="width:7.086805555555555in;height:5.0777777777777775in" />
 
 ### Schematic for connecting an iO-8 expander module 
 
 If you need the communicator to have more IN inputs or OUT outputs, connect the *iO-8* wired expander.
 
-<img alt="" src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
+<img alt="Wiring diagram: G17F to iO-8. G17F +DC to iO-8 +DC, -DC to -DC, A RS485 to A, and B RS485 to B." src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
 
 ### Schematics for connecting LORA series expander modules
 
 Schematics for connecting LORA modules.
 
-<img alt="" src="./image48.webp" style="width:5.283344269466316in;height:6.646679790026247in" />
+<img alt="Wiring diagram: G17F to RF-LORA. Power: +DC to +DC (+12 V), -DC to -DC. RS485: G17F A to RF-LORA A RS 485, B to B RS485. A wireless connection arrow points from RF-LORA to iO-LORA, up to 5000 m. The illustrated iO-LORA and iO-8-LORA each have a separate 12-26V supply at +DC and -DC; PB-LORA and REL-LORA are also shown. REL-LORA has 100-230V AC at L and N." src="./image48.webp" style="width:5.283344269466316in;height:6.646679790026247in" />
 
 ### Schematic for connecting the W485 WiFi module 
 
 *G17F* firmware version from 1.08. / The *W485* module sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a WiFi internet router. When WiFi connectivity is available, the *G17F* sends event messages via the *W485* module. When WiFi connectivity is disrupted, the *G17F* sends messages via GPRS. When WiFi connectivity is re-established, the *G17F* returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the *G17F* is described in chapter 5.5. „„Modules” window”. / You do not need a SIM card, when using the *W485* with the *G17F.*
 
-<img alt="" src="./image49.webp" style="width:3.1496062992125986in;height:2.3897637795275593in" />
+<img alt="Wiring diagram: G17F to W485. Power supply (12 V DC, 0,5 A) to +DC and -DC of both, joined at junction dots. RS485 connection (up to 100 m): G17F A 485 to W485 A 485, B 485 to B 485." src="./image49.webp" style="width:3.1496062992125986in;height:2.3897637795275593in" />
 
 ### Schematic for connecting the E485 “Ethernet” module 
 
 *G17F* firmware version from 1.08. / The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *G17F*, CMS and *Protegus2* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *G17F* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *G17F* starts sending messages via *E485*. / Configuration of the *E485* module to work with the *G17F* is described in chapter 5.5. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the *G17F.*
 
-<img alt="" src="./image50.webp" style="width:3.1496062992125986in;height:2.3897637795275593in" />
+<img alt="Wiring diagram: G17F to E485. Power supply (12 V DC, 0,5 A): +DC to +DC and -DC to -DC, each joined at a junction dot. RS485 connection (up to 100 m): G17F A 485 to E485 A 485, B 485 to B 485." src="./image50.webp" style="width:3.1496062992125986in;height:2.3897637795275593in" />
 
 ### Turning on the communicator 
 
@@ -569,7 +569,7 @@ Using Protegus2, users can see the system’s state and receive notifications ab
         blink yellow).
 3. Click „Add new system” and enter the *G17F*’s “*Unique ID*” number. It can be found on the device and packaging sticker. After entering the *unique ID*, click the “Next” button.
 
-<img alt="" src="./image54.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
+<img alt="Annotated screenshot of the Protegus2 app's &quot;Scan QR code&quot; screen with a callout pointing to the Unique ID/IMEI field explaining where to find the IMEI code, and a red box highlighting the QR code location on a sample product label below." src="./image54.webp" style="width:2.811023622047244in;height:3.8464566929133857in" />
 
 ### Configuration and control via SMS messages 
 
@@ -654,7 +654,7 @@ Perform these actions if you want to control a PGM output remotely:
 
 Once the G17F is connected, TrikdisConfig will display information about the connected device in its status bar.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
+<img alt="TrikdisConfig status bar for a connected G17F: Status Ready, bootloader 2.03, firmware 1.18, State USB and Role Administrator. IMEI/Unique ID and serial number fields are also shown." src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
 
 | **Name**       | **Description**                                     |
 |----------------|-----------------------------------------------------|
@@ -672,7 +672,7 @@ When the **Read [F4]** button is clicked, the program will read and show setting
 
 ### “System Options” window 
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
+<img alt="TrikdisConfig System Options, System general tab. General settings show Object ID 0001, object name G17F, test period enabled at 1 day 0 hours, Time set to GSM modem, Clear Events after reset checked, Text language Baltic, suspend event reporting after 2 same events per 10 seconds, restore reporting after 1 minute, Low power voltage 24 volts and EOL resistor value 10k. SIM settings show PIN 1234 and APN internet. Time zone is enabled at +2 hours 0 minutes, with Daylight saving time checked." src="./image56.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
 
 **“System general” tab** **“General” settings group**
 
@@ -709,7 +709,7 @@ When the **Read [F4]** button is clicked, the program will read and show setting
 
 **“Access” tab**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="TrikdisConfig System Options, Access tab. Access codes show Administrator Code 123456, SMS password 123456 and Installer Code 654321. Under Installer permissions, Object ID and SIM card are checked. Area Settings and the Users & Reporting, Modules, Zones, PGM, Reporting to CMS and System events menus are set to Editable." src="./image57.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 **Settings group “Access codes”**
 
@@ -725,7 +725,7 @@ The administrator can set which parameters can be changed by the installer.
 
 ### “Reporting to CMS” window 
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="TrikdisConfig Reporting to CMS window. Primary and Backup channels both show Communication type Disabled, Domain or IP 0.0.0.0, Port 0, Protocol TRK and Encryption Key 123456; their phone-number fields are blank. Settings show Return to Primary after 5 min, enabled IP Ping period 60 s and SMS Ping period 10 min, Backup reporting after 3 attempts, DNS1 8.8.8.8 and DNS2 8.8.4.4. SIA DC-09 fields show Object ID 0001, receiver No. 1 and line No. 1. The Backup channel 2 phone-number field is blank." src="./image58.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 The communicator sends messages to the Central Monitoring Station using internet (IP) or SMS messages.
 
@@ -788,7 +788,7 @@ The following settings are only shown when **DC-09_2007** or **DC-09_2012** prot
 
 **“Users” tab**
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.5511811023622046in" />
+<img alt="TrikdisConfig Users & Reporting window, Users tab: the first user row is populated, with ACK and FW checked; the other visible rows are empty. In Cloud application, Enable cloud service is checked, Parallel reporting is unchecked, and a Cloud Access Code field is shown." src="./image59.webp" style="width:7.086614173228346in;height:3.5511811023622046in" />
 
 **Settings group “Users & Reporting to User”**
 
@@ -814,7 +814,7 @@ The following settings are only shown when **DC-09_2007** or **DC-09_2012** prot
 
 **“SMS answer texts” tab**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="TrikdisConfig Users & Reporting window, SMS answer texts tab: the SMS text matches each answer label shown—Command done, Wrong password, Wrong data and Wrong command." src="./image60.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 **Settings group “SMS answer texts”**
 
@@ -822,7 +822,7 @@ The following settings are only shown when **DC-09_2007** or **DC-09_2012** prot
 
 **“SMS for Panel events” tab**
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
+<img alt="TrikdisConfig Users & Reporting window, SMS for Panel events tab. For User 1, SMS is checked and Call is unchecked for these visible CID events: E110 Fire alarm, E118 Fire pre-alarm state, E380 Detector fault, E323 Line fault, E301 AC loss, E302 Low battery, E311 Missing battery, E305 Panel reset, E372 Zone short, E371 Zone open, E574 Zone disabled, R574 Zone enabled, E604 Test, E320 Sounder fault, R320 Sounder restore and R373 Fault restore. The final visible row, E000, has neither SMS nor Call checked." src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
 
 This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window*.*
 
@@ -836,7 +836,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 ### “Modules” window 
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
+<img alt="TrikdisConfig Modules window, RS485 modules tab. An eight-row table lists module IDs 1–8 with names Expander ID1–Expander ID8; the first row's Module dropdown is open. Its visible choices are Not available, iO expander, iO-WL radio expander, iO-8 expander, Inim Smartline, E485 communicator, W485 (W17u) module, iO-LORA expander, iO8-LORA expander, PB-LORA Panic button, REL-LORA expander, NSC Solution, C-TEC Cast ZFP and ESPA 4.4.4 protocol." src="./image62.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
 
 **Settings group “RS485 modules”**
 
@@ -852,7 +852,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 **„W485 settings“ tab**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.704724409448819in" />
+<img alt="TrikdisConfig Modules window, W485 settings tab: DHCP mode is checked; Static IP, Subnet mask and Default gateway each show 0.0.0.0; Wifi SSID name is TRIKDIS. In SIM parameters, Use dial and SMS when working over internet module is checked, while the other two options are unchecked." src="./image63.webp" style="width:7.086614173228346in;height:2.704724409448819in" />
 
 WiFi module W485 (W17u) settings window „Communicator network settings“ settings group
 
@@ -878,7 +878,7 @@ WiFi module W485 (W17u) settings window „Communicator network settings“ sett
 
 **„E485 settings“ tab**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig Modules window, E485 settings tab: DHCP mode is checked, and Static IP, Subnet mask and Default gateway each show 0.0.0.0. In SIM parameters, Use dial and SMS when working over internet module is checked; Disable indication of the absence of a SIM card and Disable the use of SIM card mobile data are unchecked." src="./image64.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 „Ethernet“ module E485 settings windows „Communicator network settings“ settings group
 
@@ -902,7 +902,7 @@ WiFi module W485 (W17u) settings window „Communicator network settings“ sett
 
 **“Zones settings” tab**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig Zones window, Zones settings tab. Six zones use G17F inputs 1 IN, 2 IN, 3 I/O, 4 I/O, 5 I/O and 6 IN, respectively. Every row shows Definition 24_hours, Type EOL, checked CMS and Prot. boxes, Delay 400, CID Code 133, SIA E FA, SIA R FR and LOOP 99." src="./image65.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 - **Zone No** – zone’s number on the list.
 
@@ -930,7 +930,7 @@ WiFi module W485 (W17u) settings window „Communicator network settings“ sett
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
+<img alt="TrikdisConfig Zones window, SMS & Call reporting tab: User 1 has SMS checked and Call unchecked for the visible zone Event and Restore rows. SMS texts include Zone 1 Alarm, Zone 1 Restore, Zone 2 Alarm, Zone 2 Restore, Zone 3 Alarm, Zone 3 Restore and Zone 4 Alarm." src="./image66.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
 
 This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window*.*
 
@@ -944,7 +944,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 **“Outputs” tab**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig PGM window, Outputs tab: PGM 1 uses G17F 4 I/O; PGM 2 and 3 show Disable. All three rows show Output definition Remote Control, Pulse Time 20 s, Prot. checked, SIA E RC and SIA R RO." src="./image67.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 - **PGM No** – PGM output’s number on the list.
 
@@ -962,7 +962,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig PGM window, SMS & Call reporting tab: for User 1, PGM 1 Event has SMS text OUT1 ON and PGM 1 Restore has SMS text OUT1 OFF. SMS is checked and Call is unchecked for both rows." src="./image68.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window
 
@@ -976,7 +976,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 **“Events” tab**
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="TrikdisConfig G17F System events window, Events tab. Enabled events include Low power (CID 302), Periodic test (602), RS485 fault (333), GSM jamming (344) and Start IP event (700). The table also shows CMS and Prot. selections, SIA codes, loop numbers, and SMS event and restore text." src="./image69.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 - **ID** – event’s number on the list.
 
@@ -1000,7 +1000,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 **“SMS & Call reporting” tab**
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.5669291338582676in" />
+<img alt="TrikdisConfig G17F System events window, SMS & Call reporting tab. For User 1, SMS is checked for the visible Low power, Power restore, Periodic test, RS485 device fault and restore, and GSM jamming and restore rows. Call is unchecked for all visible rows; SMS and Call are both unchecked for ESPA 4.4.4 text." src="./image70.webp" style="width:7.086614173228346in;height:2.5669291338582676in" />
 
 This window will only be displayed if at least one user phone number has been added to the „Users & Reporting“ window
 
@@ -1012,7 +1012,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 ### “Events Log” window
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig G17F Events Log window with Read Log and Clear Log buttons. The table lists Event No., Time, CID and Event definition; visible entries include Alarm in input IN5, System start and Configuration changed." src="./image71.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - **Read Log** button – for reading the event log from the device’s memory.
 
@@ -1024,7 +1024,7 @@ This window will only be displayed if at least one user phone number has been ad
 
 To restore the communicator’s default settings, click the TrikdisConfig button **Restore.**
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:1.0866141732283465in" />
+<img alt="TrikdisConfig Default settings section with the Restore button highlighted. The IMEI/Unique ID field and device status bar are visible." src="./image72.webp" style="width:7.086614173228346in;height:1.0866141732283465in" />
 
 ## Setting parameters remotely 
 
@@ -1048,7 +1048,7 @@ To restore the communicator’s default settings, click the TrikdisConfig button
 
 2.  In the **Remote access** window, enter the communicator’s Unique ID number. You can find this number on the back of the device and on the device’s packaging.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:2.078740157480315in" />
+<img alt="TrikdisConfig start window. In Remote access, the Unique ID field and Configure button are highlighted; the optional System Name field is beside Unique ID." src="./image73.webp" style="width:7.086614173228346in;height:2.078740157480315in" />
 
 3. (Optional) Enter a desired name for the communicator in the **System Name** field.
 
@@ -1086,7 +1086,7 @@ The communicator’s firmware can also be updated or changed manually. All prior
 
 3.  Open the TrikdisConfig window **Firmware**.
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:2.9330708661417324in" />
+<img alt="TrikdisConfig G17F Firmware window with an empty Open firmware file field, an Open firmware button, a disabled Update (F12) button and a progress bar at 0%." src="./image74.webp" style="width:7.086614173228346in;height:2.9330708661417324in" />
 
 4. Click the button **Open firmware** and choose the required firmware file.
 
@@ -1104,4 +1104,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any modifications, modernization or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with household waste.
+<img alt="Crossed-out wheeled bin symbol (WEEE), indicating the device must be disposed of separately from household waste." src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with household waste.

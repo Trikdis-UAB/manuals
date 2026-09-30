@@ -29,7 +29,8 @@ carefully; zoom mentally into crossings and small labels. Never describe a pictu
   (given in the item's context) for each number, and say which photo (left/right) each number is on.
 - **Screenshots:** which program and window, then the highlighted or relevant fields with their
   values, using the UI's own labels. Never copy device-specific identifiers (IMEI, serial numbers,
-  ICCID, passwords); name the field instead. Keep the manual's example values that the steps use
+  ICCID, passwords) or personal details in example rows (names, phone numbers, email addresses);
+  name the field instead. Keep the manual's example values that the steps use
   (Object ID 561234, PIN 1111, codes 123456).
 - **Block diagrams:** only the links the arrows show; never add a link that is not drawn.
 - **Small inline icons:** just the meaning, e.g. "Read button".

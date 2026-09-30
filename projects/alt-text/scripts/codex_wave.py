@@ -194,8 +194,12 @@ def draft(a):
 def verify(a):
     W = wdir(a.wave)
     d = drafts(W)
-    high = [dict(g, draft=d[g["id"]]) for g in load(W / "all.json") if g["id"] in d and d[g["id"]].get("complexity") == "high"]
-    pool(verify_batch, a.jobs, [(W, i // VERIFY_BATCH + 1, high[i:i + VERIFY_BATCH]) for i in range(0, len(high), VERIFY_BATCH)])
+    done = set(verdicts(W))
+    want = [g for g in load(W / "all.json") if g["id"] in d and g["id"] not in done
+            and (a.all or d[g["id"]].get("complexity") == "high")]
+    todo = [dict(g, draft=d[g["id"]]) for g in want]
+    start = max([int(f.stem[1:]) for f in (W / "verify").glob("v*.json")] + [0]) + 1
+    pool(verify_batch, a.jobs, [(W, start + i // VERIFY_BATCH, todo[i:i + VERIFY_BATCH]) for i in range(0, len(todo), VERIFY_BATCH)])
 
 
 def final_alts(W):
@@ -210,8 +214,8 @@ def final_alts(W):
             alts[i] = reuse[i]
         elif i not in d:
             open_.append((i, "not drafted"))
-        elif d[i].get("complexity") == "high" and i not in v:
-            open_.append((i, "high, not re-checked"))
+        elif i not in v and (d[i].get("complexity") == "high" or v):
+            open_.append((i, "not re-checked"))
         elif i in v and v[i]["verdict"] != "ok":
             open_.append((i, "DISPUTE: " + v[i].get("problems", "")))
         else:
@@ -240,8 +244,16 @@ def apply(a):
     for g in load(W / "all.json"):
         if g["id"] in alts:
             for o in g["occurrences"]:
-                per[o["manual"]].append({"src": o["src"], "alt": alts[g["id"]]})
+                entry = {"src": o["src"], "alt": alts[g["id"]]}
+                if entry not in per[o["manual"]]:   # same picture used twice on a page: apply handles both
+                    per[o["manual"]].append(entry)
     for manual, lst in per.items():
+        page = ROOT / "docs" / manual / "index.md"
+        pending = {r["src"] for r in image_refs(page.read_text(encoding="utf-8")) if needs_alt(r["alt"])}
+        lst = [e for e in lst if e["src"] in pending]    # rerun-safe: skip what is already applied
+        if not lst:
+            print(f"{manual}: nothing left to apply")
+            continue
         f = W / f"apply-{manual.replace('/', '_')}.json"
         dump(f, lst)
         subprocess.run([sys.executable, str(HERE / "apply_alt_text.py"), str(ROOT / "docs" / manual / "index.md"), str(f)], check=True)
@@ -276,5 +288,7 @@ if __name__ == "__main__":
             s.add_argument("pages", nargs="+")
         if name in ("draft", "verify"):
             s.add_argument("--jobs", type=int, default=2)
+        if name == "verify":
+            s.add_argument("--all", action="store_true", help="also re-check 'simple' items (catches drafts that slipped to a neighbouring picture)")
     a = ap.parse_args()
     globals()[a.cmd](a)
