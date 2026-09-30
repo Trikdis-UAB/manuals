@@ -728,7 +728,7 @@ You can restrict the phone numbers from which the communicator will accept the c
 
 After connecting the GT+ and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="TrikdisConfig status bar after reading the device: IMEI/Unique ID, Status, Device (GT+_M150), SN, BL, FW, HW, State and access level fields, explained in the table below." src="./image43.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="TrikdisConfig status bar after reading the device: IMEI/Unique ID, Status (reading done), Device (GT+_M150), SN, BL, FW, HW, State and access level (Administrator), explained in the table below." src="./image43.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 | Object | Description |
 |--------|-------------|

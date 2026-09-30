@@ -371,7 +371,7 @@ Follow this schematic if the control panel will be armed/disarmed with a G16 PGM
     configured with the settings described in chapter 5.2 "Additional
     settings to arm/disarm the system using the control panel's keyswitch
     zone".
-<img alt="Wiring diagram: control panel to G16, arming through the keyswitch zones. Keypad bus or serial: RED (+12V) to +DC, BLK to -DC, YEL to CLK, GRN to DATA. Zones (keyswitch): 3-d Area to I/O 1, 2-nd Area to I/O 2, 1-st Area to I/O 3. G16 COM, A 485, B 485 not connected." src="./image22.webp" style="width:3.716674321959755in;height:2.30667104111986in" />
+<img alt="Wiring diagram: control panel to G16, arming through the keyswitch zones. Keypad bus or serial: RED (+12V) to +DC, BLK to -DC, YEL to CLK, GRN to DATA. Zones (keyswitch): 1-st Area to I/O 1, 2-nd Area to I/O 2, 3-d Area to I/O 3. G16 COM, A 485, B 485 not connected." src="./image22.webp" style="width:3.716674321959755in;height:2.30667104111986in" />
 
 ### Schematics for input connection 
 
