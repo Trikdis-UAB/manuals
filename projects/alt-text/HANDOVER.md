@@ -77,6 +77,20 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
    - **Re-read reused alt text for the new page.** A GT alt text called a generic app illustration "the GT unit"; reused on G16 that was visibly wrong, and it was wrong on GT too.
 6. **Shortcut for mirrored pages.** `flexi-sk-lcd` = `sk-lcd-touchpad` and `flexi-sk-led` = `sk-led-touchpad`. Draft once and keep the pairs in sync.
 
+## Running a wave with Codex (from wave 5, 2026-09-30)
+Claude budget was out, and DeepSeek cannot see images (tested 2026-09-29: V4 Pro and Flash both report they cannot see an attached image, even though the API accepts it). Codex (gpt-6-sol, read-only) drafts and re-checks instead; the brief is `projects/alt-text/CODEX_BRIEF.md`:
+
+```bash
+python3 projects/alt-text/scripts/codex_wave.py prepare w6 docs/en/<manual>/index.md [...]
+python3 projects/alt-text/scripts/codex_wave.py draft w6 --jobs 3
+python3 projects/alt-text/scripts/codex_wave.py verify w6 --jobs 3
+python3 projects/alt-text/scripts/codex_wave.py status w6     # disputes -> work/w6/resolutions.json
+python3 projects/alt-text/scripts/codex_wave.py apply w6
+python3 projects/alt-text/scripts/codex_wave.py review w6     # diagram list for Igoris's email
+```
+
+A pilot on three known-hard pictures (the GET Paradox diagram a Sonnet drafter got wrong, the G16T expander bus, the GET callout photo) came back fully correct. Codex re-checking Codex is weaker than a cross-family check, so the human review by Igoris is part of the process, not optional.
+
 ## Alt text rules
 - **Wiring diagrams use one format:** `Wiring diagram: <panel or device> to <device>. <group>: <terminal> to <terminal>, …`. For example, from PR #21:
   > Wiring diagram: PARADOX SP, SP+, MG or MG+ panel to GT. Keypad bus: +AUX (+12 V) to +DC, -AUX to -DC, GRN to DATA, YEL to CLK. Telephone communicator: panel TIP to GT TIP, panel RING to GT RING.
