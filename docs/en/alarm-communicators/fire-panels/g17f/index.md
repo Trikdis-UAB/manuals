@@ -499,7 +499,7 @@ If you need the communicator to have more IN inputs or OUT outputs, connect the 
 
 Schematics for connecting LORA modules.
 
-<img alt="Wiring diagram: G17F to RF-LORA. Power: +DC to +DC (+12 V), -DC to -DC. RS485: G17F A to RF-LORA A RS 485, B to B RS485. A wireless connection arrow points from RF-LORA to iO-LORA, up to 5000 m. The illustrated iO-LORA and iO-8-LORA each have a separate 12-26V supply at +DC and -DC; PB-LORA and REL-LORA are also shown. REL-LORA has 100-230V AC at L and N." src="./image48.webp" style="width:5.283344269466316in;height:6.646679790026247in" />
+<img alt="Wiring diagram: G17F to RF-LORA. Power: +DC to +DC (+12 V), -DC to -DC. RS485: G17F A to RF-LORA A RS 485, B to B RS485. RF-LORA works wirelessly, up to 5000 m, with iO-LORA, iO-8-LORA, PB-LORA and REL-LORA. The illustrated iO-LORA and iO-8-LORA each have a separate 12-26V supply at +DC and -DC; PB-LORA and REL-LORA are also shown. REL-LORA has 100-230V AC at L and N." src="./image48.webp" style="width:5.283344269466316in;height:6.646679790026247in" />
 
 ### Schematic for connecting the W485 WiFi module 
 

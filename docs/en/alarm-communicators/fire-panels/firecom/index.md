@@ -657,7 +657,7 @@ If the communicator ***FIRECOM*** needs to have more inputs IN or outputs OUT, c
 
 Schematics for connecting **LORA** modules.
 
-<img alt="FIRECOM connects to RF-LORA: AUX+ (+12 V) to +DC, AUX− to −DC, RS485 A1 to A RS485, and B1 to B RS485. A wireless connection arrow marked “up to 5000 m” points toward 1* iO-LORA. Also pictured below, without individual connection lines, are 2* iO-8-LORA, 3* PB-LORA, and 8* REL-LORA. iO-LORA and iO-8-LORA each have a separate 12–26 V supply connected to +DC and −DC; REL-LORA has 100–230 V AC connected to L and N." src="./image59.webp" style="width:7.0in;height:in" />
+<img alt="FIRECOM connects to RF-LORA: AUX+ (+12 V) to +DC, AUX− to −DC, RS485 A1 to A RS485, and B1 to B RS485. RF-LORA works wirelessly, up to 5000 m, with 1* iO-LORA, 2* iO-8-LORA, 3* PB-LORA and 8* REL-LORA. iO-LORA and iO-8-LORA each have a separate 12–26 V supply connected to +DC and −DC; REL-LORA has 100–230 V AC connected to L and N." src="./image59.webp" style="width:7.0in;height:in" />
 
 ### Turning on the communicator
 
