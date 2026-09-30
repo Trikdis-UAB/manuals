@@ -1,7 +1,7 @@
 # GATOR Cellular Gate Controller
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="GATOR gate control unit with NETWORK, DATA, POWER and TROUBLE indicators on the front, an antenna connector on top and a screw terminal block along the bottom." width="400">
 </div>
 
 
@@ -91,7 +91,7 @@ Users can control controller with Protegus2 application, telephone calls and SMS
 
 6.  Cellular antenna SMA connector.
 
-<img alt="" src="./image4.webp" style="width:4.606299212598425in;height:2.7874015748031495in" />
+<img alt="GATOR controller elements. Left photo: 1 Light indicators; 2 Frontal case opening slot. Right photo: 3 USB Mini-B port for controller programming; 4 Terminal for external connections; 5 Nano-SIM card slot; 6 Cellular antenna SMA connector." src="./image4.webp" style="width:4.606299212598425in;height:2.7874015748031495in" />
 
 ### Purpose of terminals 
 
@@ -176,31 +176,31 @@ If the LED indication is not working, check the power supply and connections.
 
 7.  Close the top lid.
 
-<img alt="" src="./image5.webp" style="width:3.4645669291338583in;height:1.7716535433070866in" />
+<img alt="Two fastening drawings. Left: the PCB retaining tab is circled, with an arrow pointing left for removal. Right: two screw holes in the case base are circled." src="./image5.webp" style="width:3.4645669291338583in;height:1.7716535433070866in" />
 
-<img alt="" src="./image6.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="A nano-SIM card is shown moving in the arrow direction into the slot on the controller PCB." src="./image6.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 ### Schematic for connecting the power supply 
 
 Using wires, connect the controller according to the schematic shown below.
 
-<img alt="" src="./image7.webp" style="width:4.0in;height:2.8464566929133857in" />
+<img alt="Wiring diagram: power supply and gate control to GATOR. Power: ~230 V through FU 125 mA, 250 V to a ~230 V/16 V, 10 VA, 50 Hz transformer; its secondary connects to AC/+ DC and AC/- DC. An alternative DC power supply is labeled 9-32 V, 0,2 A. Gate control: 5 OUT C and NO contacts, rated 1 A / 30 V DC or 0,5 A / 125 V AC." src="./image7.webp" style="width:4.0in;height:2.8464566929133857in" />
 
 ### Schematics for connecting inputs 
 
 The controller has four inputs IN (two of which are universal and can operate either as inputs or outputs) for the connection of various alarm sensors. These inputs can operate in NC, NO, EOL modes. Connect the inputs according to the set input type (NC, NO, EOL) as is shown in the schematics bellow:
 
-<img alt="" src="./image8.webp" style="width:5.417322834645669in;height:1.7007874015748032in" />
+<img alt="Four input circuits from COM to INx. Normally open (NO): NO contact; Short - Alarm, Open - Restore. Normally closed (NC): NC contact; Short - Restore, Open - Alarm. Normally closed with 10k End of line resistor (EOL): NC contact and series 10k resistor; Short - Alarm, Open - Alarm, 10k - Restore. Normally open with 10k End of line resistor (EOL): NO contact and parallel 10k resistor; Short - Alarm, Open - Alarm, 10k - Restore." src="./image8.webp" style="width:5.417322834645669in;height:1.7007874015748032in" />
 
 ### Schematic for connecting the relay 
 
 Above is the schematic for connecting the relay when the controller is connected to a DC power source. Using the terminals of the relay, it is possible to remotely control (turn on/off) various electric devices. The I/O terminal of the controller must be set to an output (OUT) mode.
 
-<img alt="" src="./image9.webp" style="width:2.4645669291338583in;height:0.8740157480314961in" />
+<img alt="Wiring diagram: GATOR to external relay. GATOR AC/+DC and xI/O connect to the relay coil; the relay provides NC, C and NO contact terminals." src="./image9.webp" style="width:2.4645669291338583in;height:0.8740157480314961in" />
 
 ### Schematic for connecting an automatic gate opener to the controller 
 
-<img alt="" src="./image10.webp" style="width:3.8858267716535435in;height:2.6692913385826773in" />
+<img alt="Wiring diagram: gate control unit to GATOR through relay K1. Power: gate 24 V to GATOR AC/+ DC, 0 V to AC/- DC. Gate status: gate OUT and N to the K1 coil; K1 contact between GATOR 1 IN and COM. Gate control: gate COM to GATOR 5 OUT C, gate IN to 5 OUT NO." src="./image10.webp" style="width:3.8858267716535435in;height:2.6692913385826773in" />
 
 All wiring should be done with the power supply disconnected. / The purposes and voltages of the automatic gate opener‘s terminals are described in detail in the automatic gate‘s manual. / The automatic gate‘s IN, COM terminals are used for controlling the gates. / The automatic gate has a gate state output (OUT) that shows when the gates are closed and when they are open. The gate‘s state output can be a voltage output or a relay output. In the schematic, relay K1 is connected to a voltage automated gate output. There is voltage (~230V) between the voltage outputs OUT and N of the automated gates when the gates are open. The intermediate relay K1 is turned on when the gates are open and it activates the controller‘s 1IN input. The state of the controller‘s 1IN input gives precise information about the state of the gates (when the gates are closed and when they are open).
 
@@ -210,31 +210,31 @@ Configuring controller with an RFID Reader is described in chapter 5.3. „„IN
 
 Schematic for connecting of single RFID reader to GATOR controller.
 
-<img alt="" src="./image11.webp" style="width:4.590009842519685in;height:3.9033409886264216in" />
+<img alt="Wiring diagram: one Wiegand 26/34 RFID reader with keypad and an Exit button to GATOR. DC supply 9-16 V, 0,5 A to AC/+ DC and AC/- DC. Reader: R red (+U) to AC/+ DC, G green (D0) to 1 IN, W white (D1) to 2 IN, B black (GND) to COM. Exit button between COM and 3 I/O. Gate control on 5 OUT C and NO, rated 1 A / 30 V DC or 0,5 A / 125 V AC." src="./image11.webp" style="width:4.590009842519685in;height:3.9033409886264216in" />
 
 In the TrikdisConfig program, it should be noted that one RFID reader and the "**Exit**" button will be used. When by pressing the “**Exit**” button, the 5OUT output of the controller will be activated for the set pulse duration. When the “**Exit**” button is not connected to the controller, then it is not necessary to mark the field “**IO3** **as exit button**”.
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:2.594488188976378in" />
+<img alt="TrikdisConfig Gator, IN/OUT window. Under Tag reader settings, Wiegand reader mode is set to Single Reader and IO3 as exit button (5 OUT) is checked." src="./image12.webp" style="width:7.086614173228346in;height:2.594488188976378in" />
 
 Schematic for connecting of two RFID readers to GATOR controller.
 
-<img alt="" src="./image13.webp" style="width:4.830009842519685in;height:3.9000076552930882in" />
+<img alt="Wiring diagram: entry and exit Wiegand 26/34 RFID readers with keypads to GATOR. DC supply 9-16 V, 0,5 A to AC/+ DC and AC/- DC. Both readers: R red (+U) to AC/+ DC and B black (GND) to COM. Entry reader G green (D0) to 1 IN, W white (D1) to 2 IN; exit reader G to 3 I/O, W to 4 I/O. Gate control on 5 OUT C and NO, rated 1 A / 30 V DC or 0,5 A / 125 V AC." src="./image13.webp" style="width:4.830009842519685in;height:3.9000076552930882in" />
 
 When connecting two RFID readers to the controller, it should be noted in the TrikdisConfig program that two RFID readers will be used.
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:2.4448818897637796in" />
+<img alt="TrikdisConfig Gator, IN/OUT window. Under Tag reader settings, Wiegand reader mode is set to Dual Reader." src="./image14.webp" style="width:7.086614173228346in;height:2.4448818897637796in" />
 
 ### Schematic for connecting the W485 WiFi module 
 
 Controller firmware version from 1.06. / The *W485* module sends messages to the CMS (Central Monitoring Station) and to *Protegus2* apps using a WiFi internet router. When WiFi connectivity is available, the controller sends event messages via the *W485* module. When WiFi connectivity is disrupted, the controller sends messages via GPRS. When WiFi connectivity is re-established, the controller returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the controller is described in chapter 5.4. „„Modules” window”. / You do not need a SIM card, when using the *W485* with the controller*.*
 
-<img alt="" src="./image15.webp" style="width:3.141732283464567in;height:2.1496062992125986in" />
+<img alt="Wiring diagram: GATOR to W485. Power supply 10-28 V DC, 0,5 A: positive to GATOR AC/+ DC and W485 + DC; negative to GATOR AC/- DC and W485 - DC, joined at junction dots. RS485 connection up to 100 m: GATOR A 485 to W485 A 485, B 485 to B 485." src="./image15.webp" style="width:3.141732283464567in;height:2.1496062992125986in" />
 
 ### Schematic for connecting the E485 “Ethernet” module 
 
 Controller firmware version from 1.06. / The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* apps using a wired internet connection. Using the *E485* with controller, CMS and *GATOR* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the controller sends messages via the mobile Internet. When the wired Internet connectivity is re-established, controller starts sending messages via *E485*. / Configuration of the *E485* module to work with the controller is described in chapter 5.4. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the controller*.*
 
-<img alt="" src="./image16.webp" style="width:3.141732283464567in;height:2.1496062992125986in" />
+<img alt="Wiring diagram: GATOR to E485. Power supply 10-28 V DC, 0,5 A: positive to GATOR AC/+ DC and E485 + DC; negative to GATOR AC/- DC and E485 - DC, joined at junction dots. RS485 connection up to 100 m: GATOR A 485 to E485 A 485, B 485 to B 485." src="./image16.webp" style="width:3.141732283464567in;height:2.1496062992125986in" />
 
 ### Schematic for connecting of the iO-LORA expander with RFID reader 
 
@@ -242,19 +242,19 @@ Firmware version of the GATOR controller from 2.13.
 
 Connect the RF-LORA transceiver to the GATOR controller. After that, you can use the iO-LORA expander, to which the RFID reader (Wiegand 26/34) is connected. The RFID reader controls the PGM output of the iO-LORA expander, to which it is connected.
 
-<img alt="" src="./image17.webp" style="width:7.086805555555555in;height:5.251388888888889in" />
+<img alt="Wiring diagram: GATOR to RF-LORA and iO-LORA expanders. Shared DC supply 9-16 V, 0,5 A: GATOR AC/+ DC to RF-LORA + DC, AC/- DC to - DC; A RS485 to A RS485, B RS485 to B RS485. RF-LORA wireless connection to iO-LORA, up to 5000 m; modules 1* through 8* are shown, each with a 9-16 V supply. On iO-LORA 1*, Wiegand 26/34 RFID reader R red (+U) to +DC, B black (GND) to -DC, G green (D0) to D0, W white (D1) to D1. Exit button between COM and IN; gate control on C and NO, rated 2 A / 230 V AC." src="./image17.webp" style="width:7.086805555555555in;height:5.251388888888889in" />
 
 Launch TrikdisConfig. Connect GATOR via USB Mini-B cable to the computer or remotely. Press the **Read [F4]** button and the TrikdisConfig program will display the current controller settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window. Select "**iO-LORA controller**" from the "**Modules**" list. In the "**Serial No.**" field, enter the serial number of the device.
 
-<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.3700787401574803in" />
+<img alt="TrikdisConfig Gator Modules screen. The selected row lists iO-LORA controller as the Module; the Serial No. field is highlighted for entry." src="./image18.webp" style="width:7.086614173228346in;height:1.3700787401574803in" />
 
 In the "**IN/OUT**" list, the "**EXIT button**" must be specified for the "**6 IN**" input. When the "**Exit**" button is pressed, the iO-LORA "**7 OUT**" output is activated for the set pulse duration.
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="TrikdisConfig Gator IN/OUT screen. In Input/Output settings, the Function field for 6 IN shows Exit butt; 7 OUT is set to Output with Type Pulse and a 3-second pulse." src="./image19.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 In the "**Users**" list, specify the number of the RFID card, the user's name, enable the permission to control the PGM output, specify the PGM output (which will be controlled by the user), the code. After completing the settings, click **Write [F5]**. Wait until the process of updating the controller settings is finished. Click "**Disconnect**" and disconnect the USB cable.
 
-<img alt="" src="./image20.webp" style="width:7.086614173228346in;height:2.9015748031496065in" />
+<img alt="TrikdisConfig Gator User list screen. A highlighted user row has E-mail address, Phone/RFID, Name and Code fields filled in, En checked, and output 7 checked." src="./image20.webp" style="width:7.086614173228346in;height:2.9015748031496065in" />
 
 Activate PGM output with RFID card/code. Press the "**Exit**" button (the PGM output must activate for the set pulse duration).
 
@@ -262,11 +262,11 @@ Activate PGM output with RFID card/code. Press the "**Exit**" button (the PGM ou
 
 The *GATOR* controller can be connected to an *iO8* or *iO8-LORA* expander to increase the number of inputs (IN) and outputs (OUT). One *iO8* or *iO8-LORA* expansion module can be connected to the controller. / *iO8* expander connection diagram.
 
-<img alt="" src="./image21.webp" style="width:3.346673228346457in;height:2.1333377077865268in" />
+<img alt="Wiring diagram: GATOR to iO8. Power supply (10-28 V DC, 0,5 A): positive to GATOR AC/+ DC and iO8 + DC; negative to GATOR AC/- DC and iO8 - DC, joined at junction dots. RS485 connection (up to 100 m): GATOR A RS485 to iO8 A, GATOR B RS485 to iO8 B." src="./image21.webp" style="width:3.346673228346457in;height:2.1333377077865268in" />
 
 iO8-LORA expander connection diagram.
 
-<img alt="" src="./image22.webp" style="width:5.936678696412948in;height:1.94667104111986in" />
+<img alt="Wiring diagram: GATOR to RF-LORA and wirelessly to iO8-LORA. GATOR to RF-LORA: AC/+ DC to + DC, AC/- DC to - DC, A RS485 to A 485, B RS485 to B 485. DC power supply (9-16 V, 0,5 A) joins the first two connections at junction dots. RF-LORA to iO8-LORA: wireless connection up to 5000 m. Separate 9-16 V supply to iO8-LORA +DC and -DC." src="./image22.webp" style="width:5.936678696412948in;height:1.94667104111986in" />
 
 ## Quick set up of the controller 
 
@@ -350,27 +350,27 @@ With Protegus2 cloud users will be able to control controller remotely. They wil
         and blink yellow).
 3. Choose “**Add new system”**.
 
-<img alt="" src="./image27.webp" style="width:2.7559055118110236in;height:2.5826771653543306in" />
+<img alt="Protegus2 app side menu with Add new system highlighted." src="./image27.webp" style="width:2.7559055118110236in;height:2.5826771653543306in" />
 
 4. Enter the controller “Unique ID (IMEI)” number found on the product or on the packaging sticker. Press “**Next**”.
 
-<img alt="" src="./image28.webp" style="width:2.7559055118110236in;height:4.606299212598425in" />
+<img alt="Protegus2 Scan QR code screen. The Unique ID/IMEI field, the QR code on an example product label, and the Next button are highlighted; a Scan QR code button is also available." src="./image28.webp" style="width:2.7559055118110236in;height:4.606299212598425in" />
 
 5. Enter the system name. Press "**Next**".
 
-<img alt="" src="./image29.webp" style="width:2.7559055118110236in;height:2.7598425196850394in" />
+<img alt="Protegus2 Add new system screen. Name is set to Gator, Time zone shows Europe/Kaliningrad, and Next is highlighted." src="./image29.webp" style="width:2.7559055118110236in;height:2.7598425196850394in" />
 
 6. Press „**Skip**“.
 
-<img alt="" src="./image30.webp" style="width:2.7559055118110236in;height:3.8464566929133857in" />
+<img alt="Protegus2 System added successfully screen. It offers Personalize to change default names and highlights Skip to change them later." src="./image30.webp" style="width:2.7559055118110236in;height:3.8464566929133857in" />
 
 7. Wait 1 minute.
 
-<img alt="" src="./image31.webp" style="width:2.7559055118110236in;height:2.405511811023622in" />
+<img alt="Protegus2 Gator system screen showing Online status and an Output5 control tile. A banner says the system may take up to 1 minute to become fully operational." src="./image31.webp" style="width:2.7559055118110236in;height:2.405511811023622in" />
 
 8. Activate the PGM output by clicking on the "**Output5**" icon.
 
-<img alt="" src="./image32.webp" style="width:2.7559055118110236in;height:2.0in" />
+<img alt="Protegus2 Gator system screen showing Online status, with the Output5 control tile highlighted." src="./image32.webp" style="width:2.7559055118110236in;height:2.0in" />
 
 ### Adding a Widget on your phone 
 
@@ -380,39 +380,39 @@ Touch the screen with your finger and hold. A settings bar will appear.
 
 1.  Press “**Widgets**”**.**
 
-<img alt="" src="./image33.webp" style="width:2.7559055118110236in;height:3.02755905511811in" />
+<img alt="Android home screen editing view. Callout 1 highlights Widgets in the bottom settings bar." src="./image33.webp" style="width:2.7559055118110236in;height:3.02755905511811in" />
 
 Find Protegus2 in the settings bar.
 
 2. Select „Protegus2“.
 
-<img alt="" src="./image34.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="Android widget picker. Callout 2 highlights the Protegus 2 widget group." src="./image34.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 3. Click on „**Switch** **Protegus2**“.
 
-<img alt="" src="./image35.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="Android widget picker showing Protegus 2 widgets. Callout 3 highlights the Switch Protegus 2 widget." src="./image35.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 4. Select “**Gator Output5**” controller output.
 
 2.  Click on “**ADD WIDGET**”.
 
-<img alt="" src="./image36.webp" style="width:2.7559055118110236in;height:2.2755905511811023in" />
+<img alt="Protegus widget output selection screen. Callout 4 marks the selected Gator Output5 option; callout 5 highlights ADD WIDGET." src="./image36.webp" style="width:2.7559055118110236in;height:2.2755905511811023in" />
 
 3. An icon will appear on the phone‘s screen.
 
-<img alt="" src="./image37.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
+<img alt="Callout 6 marks the Output5 power-button widget in the Protegus 2 widget picker. Below it, Switch Protegus 2 is shown as a 1 x 1 widget." src="./image37.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
 4. Return to the home screen. Press the icon.
 
-<img alt="" src="./image38.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
+<img alt="Phone home screen with callout 7 around the gray Output5 power-button widget, beside the Protegus 2 app icon." src="./image38.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
 A circle that shows when the PGM is turned on will appear on the screen.
 
-<img alt="" src="./image39.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
+<img alt="Phone home screen with the gray Output5 widget beside the Protegus 2 app icon. A large white circle with a gray power button and a small refresh symbol appears below." src="./image39.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
 5. When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
 
-<img alt="" src="./image40.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
+<img alt="Phone home screen with callout 8 around the Output5 widget, whose power button is green." src="./image40.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
 ### Adding users on your phone 
 
@@ -533,7 +533,7 @@ With TrikdisConfig you can change the controller’s settings (if default settin
 
 2.  Using a flat-head screwdriver, remove the controller’s lid as shown below:
 
-<img alt="" src="./image47.webp" style="width:5.905511811023622in;height:1.562992125984252in" />
+<img alt="Three drawings, left to right: hold the controller and insert a flat-head screwdriver into the lid slot; move the screwdriver downward to release the lid; locate the USB Mini-B connector." src="./image47.webp" style="width:5.905511811023622in;height:1.562992125984252in" />
 
 1.  Connect the controller to a computer using a USB Mini-B cable.
 
@@ -555,7 +555,7 @@ With TrikdisConfig you can change the controller’s settings (if default settin
 
 After connecting the controller to the TrikdisConfig software, the software will show information about the connected device in the status bar:
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:0.6614173228346457in" />
+<img alt="TrikdisConfig status bar showing the IMEI/Unique ID field, Status: reading done, Device: GV17_2200, serial number field, BL: 2.02, FW: 2.16, State field, and USB connection." src="./image48.webp" style="width:7.086614173228346in;height:0.6614173228346457in" />
 
 | Name           | Description                                               |
 |----------------|-----------------------------------------------------------|
@@ -573,7 +573,7 @@ When the button **Read [F4]** is clicked, the program will read and show the set
 
 ### “System Options” window 
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:4.188976377952756in" />
+<img alt="TrikdisConfig Gator System Options window. General settings show Object ID 0000, Object name GV17, Time set to GSM modem, Administrator Code 123456, Text language Baltic, and Modem reboot disabled. SIM settings show APN internet with Auto checked. Time zone is +2 hours with daylight saving time checked; Periodical Test is disabled." src="./image49.webp" style="width:7.086614173228346in;height:4.188976377952756in" />
 
 **Settings group “General”**
 
@@ -635,7 +635,7 @@ The text of SMS messages that the user will receive after sending SMS commands.
 
 **“IN/OUT” tab**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.015748031496063in" />
+<img alt="TrikdisConfig Gator IN/OUT window, IN/OUT tab. The Input/Output settings table shows terminal 1 IN as Input, terminal 2 IN and terminals 3 and 4 I/O as Disabled, and terminal 5 OUT as Output named PGM5_5 with Type Pulse and a 5-second pulse. Tag reader settings and Work status settings appear below." src="./image50.webp" style="width:7.086614173228346in;height:3.015748031496063in" />
 
 **Settings group „Input/Output settings“**
 
@@ -694,7 +694,7 @@ The text of SMS messages that the user will receive after sending SMS commands.
 
   Outputs can be controlled automatically according to a set schedule.
 
-  <img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.1811023622047245in" />
+  <img alt="TrikdisConfig Gator IN/OUT window, Scheduler tab. The schedule table has columns for enabling, locking, output mode, holidays, and start and end times by weekday. The first row shows Output Level, Start time 09:25, and End time 09:28." src="./image51.webp" style="width:7.086614173228346in;height:2.1811023622047245in" />
 
 - **Name** - enter the name of the schedule.
 
@@ -720,7 +720,7 @@ The text of SMS messages that the user will receive after sending SMS commands.
 
 Enter the calendar holidays during which it will be possible to set the additional activation of the PGM output provided in the Scheduler table.
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig Gator IN/OUT window, Holidays tab. The first holiday interval is enabled, with Start date 12.06.2025 and Stop date 13.06.2025. Start time on holidays is 09:30 and Stop time on holidays is 09:33." src="./image52.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - **En.** – check the box to specify a specific holiday interval.
 
@@ -746,7 +746,7 @@ Only one iO8 or iO8-LORA expander can be connected to the GATOR controller.
 
 If there is wireless internet (WiFi) or wired internet at the controller installation site, the W485 WiFi module or the E485 „Ethernet“ module can be connected to the controller. The module will be able to transfer data to Protegus2 cloud and CMS (central monitoring station) via the Internet. Using a module (W485 or E485) with controller: 1) does not use mobile internet, it is also possible to disable controller GPRS data transmission; 2) You can use the controller without a SIM card (controlled by the Protegus2 apps).
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
+<img alt="TrikdisConfig Gator Modules window. The Module dropdown is open with options including W485 (W17u) module, E485 communicator, iO-LORA controller, IO-8, IO8-Lora, and AP-IO4R. The table also has Serial No., Name, and Firmware version columns." src="./image53.webp" style="width:7.086614173228346in;height:2.2755905511811023in" />
 
 - **Modules** – select the module that is connected to the gate controller via RS485 from the list.
 
@@ -758,7 +758,7 @@ After selecting the connected module and entering its serial number, go to **Mod
 
 **WiFi module W485 settings window**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.7007874015748032in" />
+<img alt="TrikdisConfig Gator Modules window, Parameters tab. Communicator network settings show DHCP mode checked, Static IP, Subnet mask, and Default gateway all 0.0.0.0, and WiFi SSID name TRIKDIS. In SIM parameters, Use dial and SMS when working over internet module is checked; the other two options are unchecked." src="./image54.webp" style="width:7.086614173228346in;height:2.7007874015748032in" />
 
 **Settings group „Communicator network settings“**
 
@@ -784,7 +784,7 @@ After selecting the connected module and entering its serial number, go to **Mod
 
 **„Ethernet“ module E485 settings windows**
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig Gator Modules window, Parameters tab. Communicator network settings show DHCP mode checked and Static IP, Subnet mask, and Default gateway all 0.0.0.0. In SIM parameters, Use dial and SMS when working over internet module is checked; the other two options are unchecked." src="./image55.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 **Settings group „ Communicator network settings“**
 
@@ -806,7 +806,7 @@ After selecting the connected module and entering its serial number, go to **Mod
 
 ### “IP Reporting” window 
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:3.4960629921259843in" />
+<img alt="TrikdisConfig Gator IP Reporting window. Primary channel and Backup channel Communication type are Disabled. Settings show Return to Primary after 5 min, IP Ping period 60 s, SMS Ping period 10 min, Backup reporting after 3 attempts, DNS1 8.8.8.8, and DNS2 1.1.1.1. Enable cloud service is unchecked; Cloud Access Code is 123456." src="./image56.webp" style="width:7.086614173228346in;height:3.4960629921259843in" />
 
 The controller can send messages to the security company's CMS receiver.
 
@@ -854,7 +854,7 @@ The settings are identical to those of the main communication channel.
 
 **“Users” tab**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="TrikdisConfig Gator User list window, Users tab. Above the user table are Register RFID and Clear users buttons. The table includes ID, E-mail address, Phone/RFID, Name, En, GRE, Schedule, Dial, and More Settings columns; one row is marked Not authorized." src="./image57.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 - **ID** - user serial number. Numbers with the letter "A" (1A to 7A) are administrator numbers that can make settings on the controller, control outputs, and receive messages from the gate controller. Other user numbers (11 to 1010) can control outputs.
 
@@ -900,7 +900,7 @@ The settings are identical to those of the main communication channel.
 
 - Receive test SMS – check the box and administrator will receive test messages.
 
-<img alt="" src="./image58.webp" style="width:4.330708661417323in;height:3.4803149606299213in" />
+<img alt="TrikdisConfig User settings window. Enabled is checked. SMS notification for IN1 and OUT5 is checked; ACK for SMS message, Receive test SMS, Forward unknown SMS, and Can control outputs OUT5 are unchecked." src="./image58.webp" style="width:4.330708661417323in;height:3.4803149606299213in" />
 
 - **Forward unknown SMS** – SMS message forwarding from unknown numbers.
 
@@ -931,7 +931,7 @@ The settings are identical to those of the main communication channel.
 
 - Valid until – specify date and time until when the user can control the controller.
 
-<img alt="" src="./image59.webp" style="width:4.330708661417323in;height:3.9763779527559056in" />
+<img alt="TrikdisConfig User settings window. Assign schedule is blank. Valid from shows 13.10.2025 00:00 and Valid until shows 14.10.2025 00:00, with both date checkboxes unchecked. Enable counter is unchecked; Set counter and Current counter both show 0." src="./image59.webp" style="width:4.330708661417323in;height:3.9763779527559056in" />
 
 - **Enable counter** – check the box to enable the counter.
 
@@ -949,37 +949,37 @@ The settings are identical to those of the main communication channel.
 
 1.  Connect the RFID reader to the controller (see p.2.6 " Schematic for connecting for RFID reader (Wiegand 26/34)"). Turn on the power to the controller. Connect the USB Mini-B cable to the controller. Specify how many RFID readers are connected in the TrikdisConfig window "IN / OUT".
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:2.97244094488189in" />
+<img alt="TrikdisConfig IN/OUT window. The Wiegand reader mode menu is open with Dual Reader selected and Single Reader available." src="./image60.webp" style="width:7.086614173228346in;height:2.97244094488189in" />
 
 Click “**Register RFID**” in the “User list” window.
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig User list window with the Register RFID button highlighted above the Users table." src="./image61.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 The RFID pendants (cards) registration window will open.
 
-<img alt="" src="./image62.webp" style="width:2.854330708661417in;height:2.3070866141732282in" />
+<img alt="TrikdisConfig RFID registration mode window prompts Add RFID tag/card to reader and shows a STOP registration button." src="./image62.webp" style="width:2.854330708661417in;height:2.3070866141732282in" />
 
 Attach the RFID pendant (card) to the RFID reader. A new window will open when the reader scans the pendant (card). In it, “**Enter user name**” and select the “**User can control PGM Output 5**”. Press the “**ADD**” button. / Repeat the steps above to add more RFID pendant (cards). When the registration of all RFID pendant (cards) is completed, press the “**STOP registration**” button. / Press the button **Write [F5]** to save the RFID pendant list to the controller.
 
-<img alt="" src="./image63.webp" style="width:2.858267716535433in;height:2.6653543307086616in" />
+<img alt="TrikdisConfig RFID registration mode window after a card is found. Enter user name is filled in, User can control PGM Output 5 and Device administrator are checked, and the ADD button is highlighted." src="./image63.webp" style="width:2.858267716535433in;height:2.6653543307086616in" />
 
 RFID pendants (cards) can be registered in *TrikdisConfig* by entering their ID numbers in the “Phone/RFID” field. Give the user a Name, check field the “En.” and a managed “Outputs” field. Press the Write [F5] button to save the list of RFID pendants (cards) to the controller.
 
-<img alt="" src="./image64.webp" style="width:2.3818897637795278in;height:1.515748031496063in" />
+<img alt="RFID card with its printed ID number highlighted along the lower edge." src="./image64.webp" style="width:2.3818897637795278in;height:1.515748031496063in" />
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="TrikdisConfig User list window. A newly added user row is highlighted, with Phone/RFID and Name filled in, En checked, and output 5 checked." src="./image65.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 2. RFID pendant (card) registration with Protegus2 application.
 
 In the *Protegus2* application, select “Add New User”. Enter e-mail address, user name, RFID pendant (card) ID number, user 4-character code (when using an RFID keypad reader). Mark the controlled “Output”. Press “NEXT”. New user with RFID pendant (card) added to user list.
 
-<img alt="" src="./image66.webp" style="width:2.7559055118110236in;height:5.6141732283464565in" />
+<img alt="Protegus2 Edit user screen. Email, Name, Phone number or RFID code, and Code fields are highlighted. The Output5 control switch is on, and Save is highlighted." src="./image66.webp" style="width:2.7559055118110236in;height:5.6141732283464565in" />
 
 **“Scheduler” tab**
 
 The user can control the Outputs according to the set schedule. Schedule must be assigned to user.
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.2125984251968505in" />
+<img alt="TrikdisConfig User list Scheduler tab. Schedule 1 through Schedule 5 each have an Enable checkbox, Start time and weekdays, and Stop time and weekdays; the visible times are 00:00 and the checkboxes are unchecked." src="./image67.webp" style="width:7.086614173228346in;height:2.2125984251968505in" />
 
 - **Name** - enter a name for the schedule.
 
@@ -991,7 +991,7 @@ The user can control the Outputs according to the set schedule. Schedule must be
 
 **“Black list” tab**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig User list Black list tab showing an empty Email/Phone no table." src="./image68.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 The “**Black list**” contains e-mail addresses, phone numbers, RFID pendant (card) ID numbers of users who are banned from controlling the controller.
 
@@ -999,7 +999,7 @@ There is an easy way to add new items to the black list straight from the events
 
 ### “System events” window 
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:2.295275590551181in" />
+<img alt="TrikdisConfig System events window. The table lists event names and CID codes, including IPcom registration 700, Test 602, Output ON/OFF 780, Configuration changed 306, RS485 bus fault 333, Exit button 779, Access denied 421, Working start/end 786, Automatic work end 787, and Test when work status 601. Enabled, CMS, and Cloud are checked for each visible event." src="./image69.webp" style="width:7.086614173228346in;height:2.295275590551181in" />
 
 Setting up sending controller events to the CMS (central monitoring station) and to the Protegus2 application.
 
@@ -1017,7 +1017,7 @@ Setting up sending controller events to the CMS (central monitoring station) and
 
 ### “Events Log” window 
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
+<img alt="TrikdisConfig Events Log window with Read Log and Clear Log buttons. The table has Event No., Name / E-mail, Tel number, Time, and Event definition columns; visible entries include System start, Low Power, and Output OFF, OUT 5." src="./image70.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
 Click the button “**Read Log**”. The events log will be read from the controller’s memory. The “**Events log**“ provides information about the controller’s actions and its internal events.
 
@@ -1025,7 +1025,7 @@ Click the button “**Read Log**”. The events log will be read from the contro
 
 To restore the default settings of the controller you need to click the “**Restore**” button in the TrikdisConfig program window.
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:1.0118110236220472in" />
+<img alt="TrikdisConfig Default settings section with the Restore button highlighted above the IMEI/Unique ID field." src="./image71.webp" style="width:7.086614173228346in;height:1.0118110236220472in" />
 
 ### Settings for gate state indication 
 
@@ -1033,17 +1033,17 @@ Protegus2 app and Widget can show the current state of the gates (closed or open
 
 In the TrikdisConfig window “**IN/OUT**”, assign the connected input to the controller output that will control the gates:
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig IN/OUT window. The highlighted 1 IN row has Function Input, Name Input1_1, SMS event Open, SMS restore Close, Type NO, Inactive 0, and Delay 400. In the 5 OUT row, Assign I is set to 1 IN." src="./image72.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 If you want to receive SMS messages about the gates opening/closing, enter SMS texts for input 1IN event/restore.
 
 In the "**Users**" window, click on the “**More settings**” button.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="TrikdisConfig Gator, Users tab: the More Settings button is highlighted for a user row." src="./image73.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 In the “User settings” window, tick the IN1 box if you want the user to receive SMS messages about the state of the gate. Click “Save”.
 
-<img alt="" src="./image74.webp" style="width:4.330708661417323in;height:3.4606299212598426in" />
+<img alt="TrikdisConfig User settings window: under SMS notification for, IN1 and OUT5 are checked. The IN1 checkbox is highlighted, and Save is below." src="./image74.webp" style="width:4.330708661417323in;height:3.4606299212598426in" />
 
 ## Setting parameters remotely 
 
@@ -1063,7 +1063,7 @@ In the “User settings” window, tick the IN1 box if you want the user to rece
 
 3.  Launch the configuration program TrikdisConfig and in the field “**Unique ID**” of the “**Remote access**” section enter the “**IMEI/Unique ID**” number of your controller (the IMEI number is given on the stickers that can be found on the lower part of the device’s case and on the packaging).
 
-<img alt="" src="./image75.webp" style="width:7.086614173228346in;height:2.043307086614173in" />
+<img alt="TrikdisConfig Remote access section: the Unique ID field and Configure button are highlighted, with the System Name field between them." src="./image75.webp" style="width:7.086614173228346in;height:2.043307086614173in" />
 
 4. In the field “**System Name**” you can give any name to this controller. Click “**Configure**”.
 
@@ -1102,7 +1102,7 @@ The controller’s firmware can also be updated and changed manually. All prior 
 
 4.  Click the “**Open firmware**” button and choose the required firmware file.
 
-    <img alt="" src="./image76.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
+    <img alt="TrikdisConfig Gator, Firmware window: an empty Open firmware file field, Open firmware button, Start update (F12) button and progress bar at 0%." src="./image76.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 5.  Click the button **Start update [F12]**.
 
@@ -1118,4 +1118,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="Crossed-out wheeled bin symbol (WEEE), indicating the device must be disposed of separately from household waste." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
