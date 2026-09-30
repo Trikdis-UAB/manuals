@@ -5,6 +5,8 @@
 
 **FAQ system** (support-case-sourced Q&A: entry format, the numbering-exclusion gotcha, nav visibility, how to add an entry): see `agents.md` §13.
 
+**Who confirms which product facts** (software vs product/commercial vs hardware — who to ask for an unknown, and why the source usually beats asking): see `NOTES/agent-lessons/who-confirms-product-facts.md`.
+
 ## Credentials & API access
 
 See `.claude/credentials.local.md` (gitignored, not committed).
