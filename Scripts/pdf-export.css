@@ -164,3 +164,40 @@ body {
 .md-typeset a {
   color: inherit !important;
 }
+
+/* Content tabs (e.g. "Protegus app | TrikdisConfig"): print each tool's block under
+   its own label. On screen these are a pill-style switcher (base.user.v2.css), and
+   that styling also overrides Material's print layout, which would otherwise interleave
+   label and block. Without this the PDF shows the pill bar once, with the first label
+   looking selected, followed by every block. */
+.md-typeset .tabbed-set.tabbed-alternate {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels,
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-content {
+  display: contents !important;
+}
+
+/* Classes repeated on purpose: must outrank the on-screen active-label rule in
+   base.user.v2.css (input:nth-child(n):checked ~ … label:nth-child(n)). */
+.md-typeset.md-typeset.md-typeset .tabbed-set.tabbed-set.tabbed-alternate.tabbed-alternate > .tabbed-labels.tabbed-labels > label {
+  display: block;
+  flex: none;
+  margin: 0.9em 0 0.3em;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0;
+  background: none !important;
+  color: #1a1a1a !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-content > .tabbed-block {
+  display: block !important;
+}
