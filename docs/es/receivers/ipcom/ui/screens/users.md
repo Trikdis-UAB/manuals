@@ -41,7 +41,7 @@ Use dos pasadas rápidas al cambiar cuentas: primero supervise señales activas 
 
 **Confirme antes del uso en producción:**
 
-- Los permisos permitidos son solo `users`, `settings`, `objects`, `device_control`, `events`, `omit_mpass`, `restart_services`, `turnoff_receiver`, `license`.
+- Los permisos documentados aquí son `users`, `settings`, `objects`, `device_control`, `events`, `omit_mpass`, `restart_services`, `turnoff_receiver`, `license`, `clear_output_buffers`, `update_firmware`, `restore_defaults` y `network_settings`. `network_settings` solo se aplica a RL25 — véase [Receptor RL25](https://docs.trikdis.com/en/receivers/ipcom/rl25/#network-settings).
 - `token_time` está en el rango `1..5,256,000` minutos.
 - `id` es único y mayor que `0`; `login` y `password` no están vacíos.
 - Si `visible_receivers.all = false`, la lista personalizada de receptores no está vacía.

@@ -18,7 +18,7 @@ Las ediciones siguientes corresponden al mismo producto IPcom v5 con distintos m
 | Instalación en Linux (hardware o VM) | IPcom v5 instalado en un servidor Linux o en una máquina virtual | Implementaciones escalables e infraestructura de servidor |
 | Receptor de hardware RL25 | IPcom v5 en hardware RL25 dedicado | Implementación tipo appliance con Linux preconfigurado |
 
-## Comparación de capacidades por implementación
+## Comparación de capacidades por implementación {#capability-comparison-by-deployment}
 
 Diferencias funcionales entre ediciones:
 

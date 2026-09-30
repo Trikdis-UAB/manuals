@@ -41,7 +41,7 @@ Use two quick passes when changing accounts: first monitor active risk signals, 
 
 **Confirm before production use:**
 
-- Allowed scopes are only `users`, `settings`, `objects`, `device_control`, `events`, `omit_mpass`, `restart_services`, `turnoff_receiver`, `license`.
+- The scopes documented here are `users`, `settings`, `objects`, `device_control`, `events`, `omit_mpass`, `restart_services`, `turnoff_receiver`, `license`, `clear_output_buffers`, `update_firmware`, `restore_defaults` and `network_settings`. `network_settings` applies to RL25 only — see [RL25 hardware receiver](../../rl25.md#network-settings).
 - `token_time` is in range `1..5,256,000` minutes.
 - `id` is unique and greater than `0`; `login` and `password` are not empty.
 - If `visible_receivers.all = false`, the custom receiver list is not empty.

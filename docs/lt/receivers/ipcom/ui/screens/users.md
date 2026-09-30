@@ -41,7 +41,7 @@ Keisdami paskyras atlikite dvi greitas peržiūras: pirmiausia stebėkite aktyvi
 
 **Patvirtinkite prieš naudojimą produkcijoje:**
 
-- Leidžiami scopes yra tik `users`, `settings`, `objects`, `device_control`, `events`, `omit_mpass`, `restart_services`, `turnoff_receiver`, `license`.
+- Čia aprašyti scopes: `users`, `settings`, `objects`, `device_control`, `events`, `omit_mpass`, `restart_services`, `turnoff_receiver`, `license`, `clear_output_buffers`, `update_firmware`, `restore_defaults` ir `network_settings`. `network_settings` taikomas tik RL25 — žr. [RL25 aparatinis imtuvas](https://docs.trikdis.com/en/receivers/ipcom/rl25/#network-settings).
 - `token_time` turi būti intervale `1..5,256,000` minučių.
 - `id` turi būti unikalus ir didesnis už `0`; `login` ir `password` negali būti tušti.
 - Jei `visible_receivers.all = false`, pasirinktinių imtuvų sąrašas negali būti tuščias.

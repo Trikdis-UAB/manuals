@@ -18,7 +18,7 @@ Toliau pateikti leidimai yra tas pats IPcom v5 produktas su skirtingais diegimo 
 | Diegimas į Linux (aparatinė įranga arba VM) | IPcom v5 įdiegtas Linux serveryje arba virtualiojoje mašinoje | Plečiami diegimai ir serverinė infrastruktūra |
 | RL25 aparatinis imtuvas | IPcom v5 dedikuotoje RL25 aparatinėje įrangoje | Appliance tipo diegimas su iš anksto paruošta Linux aplinka |
 
-## Galimybių palyginimas pagal diegimo būdą
+## Galimybių palyginimas pagal diegimo būdą {#capability-comparison-by-deployment}
 
 Funkciniai skirtumai tarp leidimų:
 
