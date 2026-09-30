@@ -13,10 +13,10 @@ The control panel firmware must be changed with firmware, which will ensure the 
 
 | Control panel modification | Firmware version compatible with the control panel |
 |:--:|:--:|
-| <img alt="" src="./image2.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_1xx1_0112.fw |
-| <img alt="" src="./image4.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_3xx1_0112.fw |
-| <img alt="" src="./image5.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_4xx1_0112.fw |
-| <img alt="" src="./image6.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_5xx1_0112.fw |
+| <img alt="Product label with QR code: SP3_4G/E, FW 1.12. The S/N modification code SP3_14E0 is highlighted." src="./image2.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_1xx1_0112.fw |
+| <img alt="Product label with QR code: SP3_ETH, FW 1.12. The S/N modification code SP3_3E00 is highlighted." src="./image4.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_3xx1_0112.fw |
+| <img alt="Product label with QR code: SP3_4G/E, FW 1.12. The S/N modification code SP3_44E0 is highlighted." src="./image5.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_4xx1_0112.fw |
+| <img alt="Product label with QR code: SP3_2G, FW 1.12. The S/N modification code SP3_5200 is highlighted." src="./image6.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_5xx1_0112.fw |
 
 Follow the steps below to replace the firmware:
 
@@ -36,11 +36,11 @@ Follow the steps below to replace the firmware:
 
 Connect the wires of the main power supply to the control panel’s AC/DC terminals. Connect the *RTX3* module to the control panel.
 
-<img alt="" src="./image7.png" style="width:2.2433377077865266in;height:1.2266688538932633in" />
+<img alt="Wiring diagram: SP3 to RTX3. Keypad bus: AUX+ (+12V) to RED, AUX- to BLK, GRN to GRN, YEL to YEL." src="./image7.png" style="width:2.2433377077865266in;height:1.2266688538932633in" />
 
 Insert an activated SIM card into the SIM card holder. Turn on the main power supply. Wait a few minutes. Using TrikdisConfig, remotely connect to the **„*FLEXi” SP3 control panel. The TrikdisConfig*** status bar displays information about the version of the installed firmware (1). In the **„Modules” / „Keypads”** window, the table contains the RTX3 module (2) that is connected to the control panel.
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:4.066929133858268in" />
+<img alt="TrikdisConfig Modules  Keypads window: callout 1 highlights the final digit of the Device field in the status bar; FW shows 1.12 nearby. Callout 2 highlights row 1, whose Keypad type is RTX3 transceiver." src="./image8.png" style="width:7.082677165354331in;height:4.066929133858268in" />
 
 After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can work in wireless sensors from Paradox (magnetic contacts, motion detectors, glass break detector (G550), smoke detector (SD360), remote control (REM2, REM25), sirens (SR230, SR250), keypads (K37), expansion module (2 WPGM), repeater (RPT1)).
 
@@ -54,17 +54,17 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 4.  In TrikdisConfig, in the **„Wireless”** window, click the **„Learn sensors”** button.
 
-<img alt="" src="./image9.png" style="width:7.078740157480315in;height:1.610236220472441in" />
+<img alt="TrikdisConfig Wireless window: the Learn sensors button is highlighted above the wireless device table." src="./image9.png" style="width:7.078740157480315in;height:1.610236220472441in" />
 
 5.  Select the type of device: **„Sensors”**.
 
 6.  Press the **„Start”** button.
 
-<img alt="" src="./image10.png" style="width:3.074803149606299in;height:1.937007874015748in" />
+<img alt="TrikdisConfig Learning mode dialog: Sensors is selected as the device type to learn, and the Start button is highlighted." src="./image10.png" style="width:3.074803149606299in;height:1.937007874015748in" />
 
 7.  Press the sensor **„Tamper”** button.
 
-<img alt="" src="./image11.png" style="width:3.7244094488188977in;height:2.1929133858267718in" />
+<img alt="TrikdisConfig Learning mode dialog: learning mode has started and the message asks for a short press of the device tamper. A Stop learning button appears below." src="./image11.png" style="width:3.7244094488188977in;height:2.1929133858267718in" />
 
 8.  Wait a few seconds. The control panel will detect the sensor.
 
@@ -74,7 +74,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 11. Click **„Save”**.
 
-<img alt="" src="./image12.png" style="width:3.0866141732283463in;height:2.515748031496063in" />
+<img alt="TrikdisConfig New device was found dialog: a Magnetic contact was detected and its UID is displayed. Zone number is 10, Zone definition is Interior, and Save is highlighted." src="./image12.png" style="width:3.0866141732283463in;height:2.515748031496063in" />
 
 12. Wireless sensor added to the list of wireless devices.
 
@@ -82,19 +82,19 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 14. Click **„Stop learning”** to complete the registration of wireless sensors.
 
-<img alt="" src="./image13.png" style="width:3.7244094488188977in;height:2.661417322834646in" />
+<img alt="TrikdisConfig Learning mode dialog: the new device message shows ID 1, Magnetic contact, and a UID. The Stop learning button is highlighted." src="./image13.png" style="width:3.7244094488188977in;height:2.661417322834646in" />
 
 15. Click **„Yes”** for the sensor to be written to the **„*FLEXi” SP3*** control panel.
 
-<img alt="" src="./image14.png" style="width:3.0078740157480315in;height:1.2322834645669292in" />
+<img alt="TrikdisConfig Save configuration dialog asks whether to save new parameters to the module. The Yes button is highlighted." src="./image14.png" style="width:3.0078740157480315in;height:1.2322834645669292in" />
 
 16. A new wireless sensor will be added to the list of **„Wireless”** devices.
 
-<img alt="" src="./image15.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
+<img alt="TrikdisConfig Wireless window: row 1 is highlighted and shows Device type Magnetic contact with a Serial No. entry." src="./image15.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
 
 17. You must assign the sensors to **„Zones”** and **„Area”** of the security control panel (**„Zones”** window).
 
-<img alt="" src="./image16.png" style="width:7.086614173228346in;height:2.6692913385826773in" />
+<img alt="TrikdisConfig Zones window, Zones settings table: the highlighted Zone 10 row shows Input beginning Wireless Magne, Area 1, Definition Interior, and Type NO." src="./image16.png" style="width:7.086614173228346in;height:2.6692913385826773in" />
 
 18. Click **Write [F5]** after making the changes.
 
@@ -124,7 +124,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 6.  Press the **„Start”** button.
 
-<img alt="" src="./image17.png" style="width:3.106299212598425in;height:1.8976377952755905in" />
+<img alt="TrikdisConfig Learning mode window: device type set to Pendants, with the Start button highlighted." src="./image17.png" style="width:3.106299212598425in;height:1.8976377952755905in" />
 
 7.  Press and hold any button on the remote controller to turn on the LED on the remote control. Release the button.
 
@@ -138,7 +138,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 12. Click **„Save”**.
 
-<img alt="" src="./image18.png" style="width:3.0984251968503935in;height:2.5236220472440944in" />
+<img alt="TrikdisConfig New device was found dialog: a keyfob and its UID are shown. Area is set to 1, User is set to 1, and Save is highlighted." src="./image18.png" style="width:3.0984251968503935in;height:2.5236220472440944in" />
 
 13. Wireless pendant is included in the list of sensors.
 
@@ -146,18 +146,18 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 15. Click **„Stop learning”** to complete the registration of wireless pendant.
 
-<img alt="" src="./image19.png" style="width:3.720472440944882in;height:2.661417322834646in" />
+<img alt="TrikdisConfig Learning mode window: a keyfob has been found with ID 1 and a UID. The Stop learning button is highlighted." src="./image19.png" style="width:3.720472440944882in;height:2.661417322834646in" />
 
 16. Click **„Yes”** for the pendant to be written to the **„*FLEXi” SP3*** control panel.
 
-<img alt="" src="./image20.png" style="width:3.0039370078740157in;height:1.2440944881889764in" />
+<img alt="TrikdisConfig Save configuration dialog asks whether to save new parameters to the module. Yes is highlighted." src="./image20.png" style="width:3.0039370078740157in;height:1.2440944881889764in" />
 
 17. The wireless keyfob has been added to the list of **„Wireless”** devices.
 18. You can assign additional functions to the controller’s buttons 3 and 4 (Arm, Disarm; Silent alarm; Panic alarm; PGM control).
 
-<img alt="" src="./image21.png" style="width:1.6933366141732284in;height:2.06667104111986in" />
+<img alt="Keyfob drawing with four numbered buttons: 1 is the upper closed padlock, 2 the lower open padlock, 3 the left power symbol, and 4 the right arrow." src="./image21.png" style="width:1.6933366141732284in;height:2.06667104111986in" />
 
-<img alt="" src="./image22.png" style="width:7.082677165354331in;height:1.562992125984252in" />
+<img alt="TrikdisConfig Wireless window: the highlighted keyfob row shows ID 1, Area 1, User 1, Key 3 set to Panic, and Key 4 set to Silent panic." src="./image22.png" style="width:7.082677165354331in;height:1.562992125984252in" />
 
 19. Click **Write [F5]** after making the changes.
 
@@ -187,7 +187,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 6.  Press the **„Start”** button.
 
-<img alt="" src="./image23.png" style="width:3.0826771653543306in;height:1.921259842519685in" />
+<img alt="TrikdisConfig Learning mode window: device type set to Sirens, with the Start button highlighted." src="./image23.png" style="width:3.0826771653543306in;height:1.921259842519685in" />
 
 7.  Press and hold the **„LEARN”** button on the siren board for 3 seconds. The LED on the siren will start flashing. Release the button.
 
@@ -199,7 +199,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 11. Click **„Save”**.
 
-<img alt="" src="./image24.png" style="width:3.0826771653543306in;height:2.177165354330709in" />
+<img alt="TrikdisConfig New device was found dialog: a siren and its UID are shown. Area is set to 1, and Save is highlighted." src="./image24.png" style="width:3.0826771653543306in;height:2.177165354330709in" />
 
 12. Wireless siren is included in the list of wireless devices.
 
@@ -207,15 +207,15 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 14. Click **„Stop learning”** to complete the registration of wireless siren.
 
-<img alt="" src="./image25.png" style="width:3.7283464566929134in;height:2.673228346456693in" />
+<img alt="TrikdisConfig Learning mode window instructs the user to shortly press the tamper on the device. It reports a new device: ID 1, Siren. Stop learning is highlighted." src="./image25.png" style="width:3.7283464566929134in;height:2.673228346456693in" />
 
 15. Click **Yes** for the siren to be written to the **„*FLEXi” SP3*** control panel.
 
-<img alt="" src="./image26.png" style="width:3.0118110236220472in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig Save configuration dialog asks whether to save new parameters to the module. Yes is highlighted." src="./image26.png" style="width:3.0118110236220472in;height:1.2401574803149606in" />
 
 16. The wireless siren added to the list of **„Wireless”** devices.
 
-<img alt="" src="./image27.png" style="width:7.078740157480315in;height:1.5551181102362204in" />
+<img alt="TrikdisConfig Wireless window: the highlighted siren row shows ID 1 and Area 1. User, Key 3, and Key 4 show N/A." src="./image27.png" style="width:7.078740157480315in;height:1.5551181102362204in" />
 
 17. Click **Write [F5]** after making the changes.
 
@@ -245,9 +245,9 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 6.  Press the **„Start”** button.
 
-<img alt="" src="./image28.png" style="width:3.074803149606299in;height:1.8976377952755905in" />
+<img alt="TrikdisConfig Learning mode window: device type set to Keypads, with the Start button highlighted." src="./image28.png" style="width:3.074803149606299in;height:1.8976377952755905in" />
 
-7.  Simultaneously press and hold the **[** <img alt="" src="./image29.png" style="width:0.12992125984251968in;height:0.14173228346456693in" /> **]** and **[BYP]** buttons on the keypad for 3 seconds. The keypad will beep several times. Release the buttons.
+7.  Simultaneously press and hold the **[** <img alt="Power symbol button." src="./image29.png" style="width:0.12992125984251968in;height:0.14173228346456693in" /> **]** and **[BYP]** buttons on the keypad for 3 seconds. The keypad will beep several times. Release the buttons.
 
 8.  Wait a few seconds. The security panel will detect the keypad.
 
@@ -257,7 +257,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 11. Click **Save**.
 
-<img alt="" src="./image30.png" style="width:3.106299212598425in;height:2.1850393700787403in" />
+<img alt="TrikdisConfig New device was found dialog: a keypad and its UID are shown. Area is set to 1, and Save is highlighted." src="./image30.png" style="width:3.106299212598425in;height:2.1850393700787403in" />
 
 12. Wireless keypad is included in the list of wireless devices.
 
@@ -265,15 +265,15 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 14. Click **„Stop learning”** to complete the registration of wireless keypad.
 
-<img alt="" src="./image31.png" style="width:3.7283464566929134in;height:2.6692913385826773in" />
+<img alt="TrikdisConfig Learning mode window instructs the user to shortly press the tamper on the device. It reports a new device: ID 1, Keypad. Stop learning is highlighted." src="./image31.png" style="width:3.7283464566929134in;height:2.6692913385826773in" />
 
 15. Click **„Yes”** for the keypad to be written to the **„*FLEXi” SP3*** control panel.
 
-<img alt="" src="./image32.png" style="width:2.9921259842519685in;height:1.220472440944882in" />
+<img alt="TrikdisConfig Save configuration dialog asks whether to save new parameters to the module. Yes is highlighted." src="./image32.png" style="width:2.9921259842519685in;height:1.220472440944882in" />
 
 16. The wireless keypad has been added to the list of **„Wireless”** devices.
 
-<img alt="" src="./image33.png" style="width:7.078740157480315in;height:1.5748031496062993in" />
+<img alt="TrikdisConfig SP3, Wireless window: row 1 lists Device type Keypad and Area 1. The Serial No. field is populated, and Write (F5) is available." src="./image33.png" style="width:7.078740157480315in;height:1.5748031496062993in" />
 
 17. Click **Write [F5]** after making the changes.
 
@@ -303,7 +303,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 6.  Press the **„Start”** button.
 
-<img alt="" src="./image34.png" style="width:3.078740157480315in;height:1.9094488188976377in" />
+<img alt="TrikdisConfig Learning mode window: device type is set to PGM devices, with Start highlighted." src="./image34.png" style="width:3.078740157480315in;height:1.9094488188976377in" />
 
 7.  Remove jumper JP2 on the 2WPGM module and put jumper back in it after a few seconds.
 
@@ -315,7 +315,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 11. Click **„Save”**.
 
-<img alt="" src="./image35.png" style="width:3.0826771653543306in;height:2.177165354330709in" />
+<img alt="TrikdisConfig New device was found window: a 2WPGM PGM device was found. Select output is set to 4, and Save is highlighted." src="./image35.png" style="width:3.0826771653543306in;height:2.177165354330709in" />
 
 12. Wireless module 2WPGM is included in the list of wireless devices.
 
@@ -323,19 +323,19 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 14. Click **„Stop learning”** to complete the registration of wireless module 2WPGM.
 
-<img alt="" src="./image36.png" style="width:3.720472440944882in;height:2.6692913385826773in" />
+<img alt="TrikdisConfig Learning mode window reports a newly found 2WPGM PGM device and instructs the user to shortly press the device tamper. Stop learning is highlighted." src="./image36.png" style="width:3.720472440944882in;height:2.6692913385826773in" />
 
 15. Click **„Yes”** for the wireless module 2WPGM to be written to the **„*FLEXi” SP3*** control panel.
 
-<img alt="" src="./image37.png" style="width:3.0in;height:1.220472440944882in" />
+<img alt="TrikdisConfig Save configuration dialog asks whether to save new parameters to the module. Yes is highlighted." src="./image37.png" style="width:3.0in;height:1.220472440944882in" />
 
 16. The 2WPGM wireless module has been added to the list of **„Wireless”** devices.
 
-<img alt="" src="./image38.png" style="width:7.0875in;height:1.561887576552931in" />
+<img alt="TrikdisConfig SP3, Wireless window: row 1 lists Device type 2WPGM PGM. The Serial No. field is populated, and Write (F5) is available." src="./image38.png" style="width:7.0875in;height:1.561887576552931in" />
 
 17. PGM output can be renamed.
 
-<img alt="" src="./image39.png" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="TrikdisConfig SP3, PGM Outputs tab: row 4 shows Name Gate, PGM output 2WPGM ID1, Output definition Remote Control, and Pulse Time 20 s." src="./image39.png" style="width:7.086614173228346in;height:1.921259842519685in" />
 
 18. Click **Write [F5]** after making the changes.
 
@@ -366,7 +366,7 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 6.  Press the **„Start”** button.
 
-<img alt="" src="./image40.png" style="width:3.074803149606299in;height:1.8976377952755905in" />
+<img alt="TrikdisConfig Learning mode window: device type is set to Repeaters, with Start highlighted." src="./image40.png" style="width:3.074803149606299in;height:1.8976377952755905in" />
 
 7.  Press the **„LEARN”** button on the RPT1 repeater.
 
@@ -376,15 +376,15 @@ After connecting the RTX3 module, the **„*FLEXi” SP3*** control panel can wo
 
 10. Click **„Stop learning”** to complete the registration of wireless repeaters.
 
-<img alt="" src="./image41.png" style="width:3.720472440944882in;height:2.7007874015748032in" />
+<img alt="TrikdisConfig Learning mode window reports a newly found Repeater and instructs the user to shortly press the device tamper. Stop learning is highlighted." src="./image41.png" style="width:3.720472440944882in;height:2.7007874015748032in" />
 
 11. Click **„Yes”** for the wireless repeater RPT1 to be written to the **„*FLEXi” SP3*** control panel.
 
-<img alt="" src="./image42.png" style="width:2.984251968503937in;height:1.220472440944882in" />
+<img alt="TrikdisConfig Save configuration dialog asks whether to save new parameters to the module. Yes is highlighted." src="./image42.png" style="width:2.984251968503937in;height:1.220472440944882in" />
 
 12. The wireless repeater RPT1 has been added to the list of **„Wireless”** devices.
 
-<img alt="" src="./image43.png" style="width:7.078740157480315in;height:1.5590551181102361in" />
+<img alt="TrikdisConfig SP3, Wireless window: row 1 lists Device type Repeater. The Serial No. field is populated, and Write (F5) is available." src="./image43.png" style="width:7.078740157480315in;height:1.5590551181102361in" />
 
 13. Click **Write [F5]** after making the changes.
 

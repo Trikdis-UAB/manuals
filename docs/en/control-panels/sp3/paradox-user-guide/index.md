@@ -1,7 +1,7 @@
 # FLEXi SP3 user guide with Protegus and Paradox keypads
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="400">
+<img src="./image1.png" alt="Keypad SK232LED W: the upper display is the security and zone mode indicator, showing zones 1–32 and ARM, SLEEP, STAY and OFF for two areas. The lower backlit buttons set operation modes and enter numbers." width="400">
 </div>
 
 
@@ -92,13 +92,13 @@ Used to protect against accidental disarming of the alarm. If the alarm was disa
 
 The Trikdis keypad SK232LED W for alarm system control displays the states of 32 zones and 2 partitions.
 
-<img alt="" src="./image1.png" style="width:5.1600in;" />
+<img alt="Keypad SK232LED W: the upper display is the security and zone mode indicator, showing zones 1–32 and ARM, SLEEP, STAY and OFF for two areas. The lower backlit buttons set operation modes and enter numbers." src="./image1.png" style="width:5.1600in;" />
 
 #### Buttons for setting operation modes and entering numbers
 
 | **Button** | **Description** |
 |:---|----|
-| <img alt="" src="./image2.png" style="width:0.3000in;" /> | A constantly glowing button means the alarm system is powered from the AC power network, and a blinking button shows a battery fault. The button is off – the power voltage supply is off or the system is operating using the battery. The button is also used for editing control codes and for resetting fire sensors. |
+| <img alt="Power indicator." src="./image2.png" style="width:0.3000in;" /> | A constantly glowing button means the alarm system is powered from the AC power network, and a blinking button shows a battery fault. The button is off – the power voltage supply is off or the system is operating using the battery. The button is also used for editing control codes and for resetting fire sensors. |
 | MEM | A constantly glowing button shows that in memory there is new information about the alarm being triggered, and a blinking button shows that the keypad is operating in MEM mode. The button is also used for choosing the memory viewing mode. |
 | BYP | A constantly glowing button means that there are temporarily bypassed zones, and a blinking button shows the keypad is operating in BYP mode. The button is also used for selecting temporary bypass mode. |
 | TRB | A constantly glowing button means that operational trouble has been recorded, and a blinking button shows that the keypad is operating in TBL mode. The button is also used for selecting trouble viewing mode. |
@@ -126,13 +126,13 @@ The Paradox K636 keypad for alarm system control displays the states of 10 zones
 
 Paradox keypads K32LED, K32+, K35 for alarm system control display the states of 32 zones and 2 partitions.
 
-<img alt="" src="./image4.png" style="width:5.1567in;" />
+<img alt="Paradox K32LED and K32+ keypads on the left and K35 keypad on the right. The upper displays show security and zone modes; the lower backlit buttons set operation modes and enter numbers." src="./image4.png" style="width:5.1567in;" />
 
 #### Buttons for setting operation modes and entering numbers
 
 | **Button** | **Description** |
 |----|----|
-| <img alt="" src="./image5.png" style="width:0.5433in;" /> | Button for resetting fire sensors. |
+| <img alt="Power button" src="./image5.png" style="width:0.5433in;" /> | Button for resetting fire sensors. |
 | MEM | A constantly glowing button shows that in memory there is new information about the alarm being triggered, and a blinking button shows that the keypad is operating in MEM mode. The button is also used for choosing the memory viewing mode. |
 | BYP | A constantly glowing button means that there are temporarily bypassed zones, and a blinking button shows the keypad is operating in BYP mode. The button is also used for selecting temporary bypass mode. |
 | TBL | A constantly glowing button means that operational trouble has been recorded, and a blinking button shows that the keypad is operating in TBL mode. The button is also used for selecting trouble viewing mode. |
@@ -143,7 +143,7 @@ Paradox keypads K32LED, K32+, K35 for alarm system control display the states of
 | SLEEP | Button for turning on **SLEEP** mode. |
 | STAY | Button for turning on **STAY** mode. |
 | OFF | Button for turning on **OFF** (DISARM) mode. |
-| <img alt="" src="./image6.png" style="width:0.7087in;" /> | Power voltage indicator. Constantly glowing – power voltage is turned on. Blinking – battery fault. Off – the power voltage source is off or the system is operating from the battery. |
+| <img alt="Alternating current symbol" src="./image6.png" style="width:0.7087in;" /> | Power voltage indicator. Constantly glowing – power voltage is turned on. Blinking – battery fault. Off – the power voltage source is off or the system is operating from the battery. |
 
 > [!NOTE]
 >     1. To turn off programming mode or delete an incorrectly entered value,
@@ -305,7 +305,7 @@ When the alarm is activated, the indicator **MEM** starts glowing. To find out t
 
 After the triggering of fire (smoke) sensors, to reset the sensors you must:
 
-1. Press and hold the keypad button <img alt="" src="./image7.png" style="width:0.3000in;" /> (or <img alt="" src="./image8.png" style="width:0.4016in;" />) for 3 seconds.
+1. Press and hold the keypad button <img alt="Lightning bolt button" src="./image7.png" style="width:0.3000in;" /> (or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) for 3 seconds.
 
 1. The PGM output that the fire sensors are connected to and that is set to operate in **Fire sensor reset** mode will activate.
 
@@ -368,11 +368,11 @@ If there is any operational trouble, the **TRB** indicator on the keypad lights 
 
 #### Entering new User codes
 
-1. Press the <img alt="" src="./image9.png" style="width:0.3000in;" /> (or <img alt="" src="./image8.png" style="width:0.4016in;" />) button on the keypad.
+1. Press the <img alt="Lightning bolt button" src="./image9.png" style="width:0.3000in;" /> (or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) button on the keypad.
 
 2. Enter the 6-digit **Administrator code**.
 
-1. The <img alt="" src="./image9.png" style="width:0.3000in;" /> (or <img alt="" src="./image8.png" style="width:0.4016in;" />) button will begin to blink.
+1. The <img alt="Lightning bolt button" src="./image9.png" style="width:0.3000in;" /> (or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) button will begin to blink.
 
 3. Enter a free two-digit user serial number.
 
@@ -388,11 +388,11 @@ If there is any operational trouble, the **TRB** indicator on the keypad lights 
 
 #### Editing User codes
 
-1. Press the <img alt="" src="./image9.png" style="width:0.3000in;" /> (or <img alt="" src="./image8.png" style="width:0.4016in;" />) button on the keypad.
+1. Press the <img alt="Lightning bolt button" src="./image9.png" style="width:0.3000in;" /> (or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) button on the keypad.
 
 2. Enter the 6-digit **Administrator code**.
 
-1. The <img alt="" src="./image9.png" style="width:0.3000in;" /> (or <img alt="" src="./image8.png" style="width:0.4016in;" />) button will begin to blink.
+1. The <img alt="Lightning bolt button" src="./image9.png" style="width:0.3000in;" /> (or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) button will begin to blink.
 
 3. Enter the desired two-digit user serial number.
 
@@ -423,11 +423,11 @@ LED indicators numbered from 1 to 8 will show the states of the partitions: On �
 
 To delete existing User codes:
 
-1. Press the <img alt="" src="./image9.png" style="width:0.3000in;" />(or <img alt="" src="./image8.png" style="width:0.4016in;" />) button on the keypad.
+1. Press the <img alt="Lightning bolt button" src="./image9.png" style="width:0.3000in;" />(or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) button on the keypad.
 
 2. Enter the 6-digit **Administrator code**.
 
-1. The <img alt="" src="./image9.png" style="width:0.3000in;" /> (or <img alt="" src="./image8.png" style="width:0.4016in;" />) button will begin to blink.
+1. The <img alt="Lightning bolt button" src="./image9.png" style="width:0.3000in;" /> (or <img alt="Power button" src="./image8.png" style="width:0.4016in;" />) button will begin to blink.
 
 3. Enter the desired two-digit user serial number.
 
