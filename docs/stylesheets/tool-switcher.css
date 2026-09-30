@@ -1,0 +1,123 @@
+/* =====================================================
+   Configuration-tool switcher (docs/javascripts/tool-switcher.js)
+   One sticky switcher per chapter replaces the tab bar in each section.
+   ===================================================== */
+
+.trik-tool-bar {
+  position: sticky;
+  top: var(--trik-header-height, 2.4rem);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.25rem;
+  padding: 0.5rem 0;
+  background: var(--md-default-bg-color, #fff);
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.trik-tool-bar__caption {
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #666;
+}
+
+.trik-tool-bar__options {
+  display: flex;
+  flex: 1;
+  gap: 4px;
+  max-width: 28rem;
+  padding: 3px;
+  background: #ebebeb;
+  border: 1px solid #d6d6d6;
+  border-radius: 999px;
+}
+
+.trik-tool-bar__option {
+  flex: 1;
+  min-height: 2.2rem;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: #666;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.trik-tool-bar__option:hover {
+  background: rgba(255, 255, 255, 0.65);
+  color: #222;
+}
+
+.trik-tool-bar__option[aria-checked="true"] {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.trik-tool-bar__option:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #cb2215);
+  outline-offset: 2px;
+}
+
+/* Headings inside a chapter with a switcher must not land under it. */
+.trik-tool-region [id] {
+  scroll-margin-top: calc(var(--trik-header-height, 2.4rem) + var(--trik-tool-bar-height, 4rem) + 0.5rem);
+}
+
+/* Hide the per-section tab bars only once the switcher is working, and only on
+   screen: without JavaScript they stay, and the PDF prints each label. */
+@media screen {
+  .trik-tool-switcher-ready .trik-tool-region .tabbed-set.trik-tool-set > .tabbed-labels {
+    display: none;
+  }
+}
+
+@media print {
+  .trik-tool-bar {
+    display: none !important;
+  }
+}
+
+/* Phone: the caption goes, the two choices take the full width. */
+@media screen and (max-width: 44.9375em) {
+  .trik-tool-bar__caption {
+    display: none;
+  }
+
+  .trik-tool-bar__options {
+    max-width: none;
+  }
+
+  .trik-tool-bar__option {
+    min-height: 2.75rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Dark mode */
+body[data-md-color-scheme="slate"] .trik-tool-bar {
+  border-bottom-color: var(--trik-border);
+}
+
+body[data-md-color-scheme="slate"] .trik-tool-bar__caption,
+body[data-md-color-scheme="slate"] .trik-tool-bar__option {
+  color: var(--trik-text-muted);
+}
+
+body[data-md-color-scheme="slate"] .trik-tool-bar__options {
+  background: var(--trik-surface-3);
+  border-color: var(--trik-border);
+}
+
+body[data-md-color-scheme="slate"] .trik-tool-bar__option[aria-checked="true"] {
+  background: var(--trik-surface-1);
+  color: var(--trik-text);
+  border-color: var(--trik-border);
+}
