@@ -20,7 +20,8 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   - wave 4: G16 and G16T, 90 images (PR #23);
   - wave 5: G17F and FIRECOM, 177 images, drafted and re-checked by Codex (2026-09-30);
   - wave 6: SP3, SP3 Paradox RTX3 and SP3 Paradox user guide, 157 images, Codex (2026-09-30);
-  - wave 7: GATOR and GATOR WiFi, 122 images, Codex (2026-09-30).
+  - wave 7: GATOR and GATOR WiFi, 122 images, Codex (2026-09-30);
+  - wave 8: SK-LCD and SK-LED (button) keypads, plus the last 3 images each of SK-LCD TouchPad and FLEXi SK-LCD, 123 images, Codex (2026-10-01).
 - **Human review:** Igoris (documentation) checked the 60 wiring and block diagrams of GT, GT+, GET, G16 and G16T and replied "kaip ir gerai" on 2026-09-28. He confirmed the Paradox serial cable is CRP2.4; the page text said CRP2 and was fixed in all languages. On 2026-09-29 he sent corrected EN images, now live: GT Paradox SP diagram (English label), G16 keyswitch diagram (zones were drawn reversed; now 1-st Area to I/O 1), and English GT+ status bar, Restore and SMS & Call Reporting screenshots. The Estonian/Lithuanian SMS language in G16/G16T screenshots and the W17u/W485 name are fine as they are. Not yet checked: whether the LT, ES and RU pages carry the same drawing problems (the G16 zone order especially); look when doing their alt text and ask Igoris. Wave 5 (G17F, FIRECOM): Igoris replied 'kaip ir gerai' on 2026-09-30, with one fix: RF-LORA works up to 5000 m with iO-LORA, iO-8-LORA, PB-LORA and REL-LORA (the alt had described only the one drawn arrow); fixed in G17F, FIRECOM and SP3. On 2026-09-30 Igoris also answered: SP3 diagrams ok; 'Sritis' and the RTX3 callout can stay; the G17F and GATOR text step numbers must follow the screenshot callouts (renumbered); GATOR WiFi's ID is the MAC, not the IMEI (fixed); he sent English GATOR WiFi screenshots (replaced). Closed 2026-10-01: the ESPA4.4.4 screenshots only show which window to configure (TRK there is an example; the customer sets their own), so the text stays; 'iO-MO' in the FIRECOM diagram is correct as drawn. All of Igoris's questions on waves 3-7 are answered. From wave 6 Andrius chose a lighter review: send Igoris only the page-versus-picture questions plus the 5-10 hardest diagrams (mostly the ones the re-check corrected), not the full list. For later waves, send him the new diagrams the same way: each image from the live site with its alt text under it, in the email body.
 - **Remaining:**
 
@@ -28,7 +29,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 
   | Language | Needs alt | Total |
   |---|---|---|
-  | EN | 335 | 1,343 |
+  | EN | 212 | 1,343 |
   | LT | 1,160 | 1,345 |
   | ES | 1,148 | 1,327 |
   | RU | 1,175 | 1,329 |
@@ -37,9 +38,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 
   | Manual | Needs alt | Total |
   |---|---|---|
-  | SK-LCD (button) | 79 | 79 |
   | E16 | 40 | 43 |
-  | SK-LED (button) | 38 | 38 |
   | T16 | 30 | 30 |
   | E16T | 28 | 31 |
   | RL14 | 24 | 25 |

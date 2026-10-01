@@ -111,7 +111,7 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 ### To enter a new or change the existing User code
 
-1. Press the <img src="./image2.webp" style="width:0.3000in;" /> button.
+1. Press the <img alt="Lightning-bolt button." src="./image2.webp" style="width:0.3000in;" /> button.
 
 2. Enter **[Administrator Code]** (default code: 123456).
 
@@ -131,7 +131,7 @@ When the alarm is disarmed, the text **Disarmed: Area** will appear on the keypa
 
 ### To reset two-wire fire (smoke) detectors
 
-- Hold button <img src="./image2.webp" style="width:0.3000in;" /> pressed for 3 seconds.
+- Hold button <img alt="Lightning-bolt button." src="./image2.webp" style="width:0.3000in;" /> pressed for 3 seconds.
 
 > [!NOTE]
 > Two-wire fire detectors do not reset automatically after fire emergency detection. They can be reset only manually.
@@ -160,7 +160,7 @@ Repeat the same actions as in deactivation of particular zone monitoring.
 
 ### To delete User code
 
-1. Press the <img src="./image2.webp" style="width:0.3000in;" /> button.
+1. Press the <img alt="Lightning-bolt button." src="./image2.webp" style="width:0.3000in;" /> button.
 
 2. Enter **[Administrator Code]** (default code: 123456).
 
