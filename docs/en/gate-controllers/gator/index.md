@@ -394,15 +394,15 @@ Find Protegus2 in the settings bar.
 
 4. Select “**Gator Output5**” controller output.
 
-2.  Click on “**ADD WIDGET**”.
+5.  Click on “**ADD WIDGET**”.
 
 <img alt="Protegus widget output selection screen. Callout 4 marks the selected Gator Output5 option; callout 5 highlights ADD WIDGET." src="./image36.webp" style="width:2.7559055118110236in;height:2.2755905511811023in" />
 
-3. An icon will appear on the phone‘s screen.
+6. An icon will appear on the phone‘s screen.
 
 <img alt="Callout 6 marks the Output5 power-button widget in the Protegus 2 widget picker. Below it, Switch Protegus 2 is shown as a 1 x 1 widget." src="./image37.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
-4. Return to the home screen. Press the icon.
+7. Return to the home screen. Press the icon.
 
 <img alt="Phone home screen with callout 7 around the gray Output5 power-button widget, beside the Protegus 2 app icon." src="./image38.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
@@ -410,7 +410,7 @@ A circle that shows when the PGM is turned on will appear on the screen.
 
 <img alt="Phone home screen with the gray Output5 widget beside the Protegus 2 app icon. A large white circle with a gray power button and a small refresh symbol appears below." src="./image39.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
-5. When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
+8. When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
 
 <img alt="Phone home screen with callout 8 around the Output5 widget, whose power button is green." src="./image40.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 

@@ -186,15 +186,15 @@ Connect the RF-LORA transceiver to the GATOR WiFi controller. After that, you ca
 
 Launch TrikdisConfig. Connect GATOR WiFi via USB Mini-B cable to the computer or remotely. Press the **Read [F4]** button and the TrikdisConfig program will display the current controller settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window. Select "**iO-LORA controller**" from the "**Modules**" list. In the "**Serial No.**" field, enter the serial number of the device.
 
-<img alt="TrikdisConfig WP17, Moduliai window: row 1 has Modulis set to iO-LORA valdiklis, with the Serijos Nr. field highlighted." src="./image10.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
+<img alt="TrikdisConfig WP17, Modules window: row 1 has Module set to iO-LORA controller, with the Module and Serial No. fields highlighted." src="./image10.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
 In the "**IN/OUT**" list, the "**EXIT button**" must be specified for the "**6 IN**" input. When the "**Exit**" button is pressed, the iO-LORA "**7 OUT**" output is activated for the set pulse duration.
 
-<img alt="TrikdisConfig WP17, IN/OUT window: 6 IN has Paskirtis set to Išėjimo mygtukas, Pavadinimas IN6 and Tipas NO. The 7 OUT row shows Išėjimas, OUT7, Impuls and a 3-second pulse; the Wiegand skaitytuvo režimas checkbox is checked." src="./image11.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="TrikdisConfig WP17, IN/OUT window: 6 IN is highlighted with Function Exit button and Name IN6, type NO. 5 OUT and 7 OUT are Outputs with a 3-second Pulse, and Wiegand reader mode is checked." src="./image11.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
 In the "**Users**" list, specify the number of the RFID card, the user's name, enable the permission to control the PGM output, specify the PGM output (which will be controlled by the user), the code. After completing the settings, click **Write [F5]**. Wait until the process of updating the controller settings is finished. Click "**Disconnect**" and disconnect the USB cable.
 
-<img alt="TrikdisConfig WP17, Vartotojai window: the RFID kodas field is highlighted in a user row. Two user rows have the 5 and 7 output permission checkboxes checked, with entries in the Kodas column." src="./image12.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="TrikdisConfig WP17, User list window, Users tab: the RFID Code field is highlighted in a user row. Two users have output 5 checked, and their Code entries are highlighted." src="./image12.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 Activate PGM output with RFID card/code. Press the "**Exit**" button (the PGM output must activate for the set pulse duration).
 
@@ -248,7 +248,7 @@ Choose “**Add new system”**.
 
 <img alt="Protegus2 app menu with Add new system highlighted." src="./image22.webp" style="width:2.7559055118110236in;height:2.6141732283464565in" />
 
-Enter the controller “Unique ID (IMEI)” number found on the product or on the packaging sticker. Press “**Next**”.
+Enter the controller “Unique ID (MAC)” number found on the product or on the packaging sticker. Press “**Next**”.
 
 <img alt="Protegus2 Scan QR code screen. The Unique ID/IMEI field, QR code on the product label and Next button are highlighted as ways to identify and add the device." src="./image23.webp" style="width:2.7559055118110236in;height:4.9015748031496065in" />
 
@@ -318,15 +318,15 @@ Find Protegus2 in the settings bar.
 
 4. Select “**WP17 Output5**” controller output.
 
-2.  Click on “**ADD WIDGET**”.
+5.  Click on “**ADD WIDGET**”.
 
 <img alt="Protegus widget screen: callout 4 marks the WP17 Output5 controller output; callout 5 marks the ADD WIDGET button." src="./image38.webp" style="width:2.7559055118110236in;height:2.145669291338583in" />
 
-3. An icon will appear on the phone‘s screen.
+6. An icon will appear on the phone‘s screen.
 
 <img alt="Callout 6 marks the Output5 power-button widget in the Protegus 2 widget picker. Below it, Switch Protegus 2 is shown as a 1 x 1 widget." src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
-4. Return to the home screen. Press the icon.
+7. Return to the home screen. Press the icon.
 
 <img alt="Phone home screen with callout 7 around the gray Output5 power-button widget, beside the Protegus 2 app icon." src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
@@ -334,7 +334,7 @@ A circle that shows when the PGM is turned on will appear on the screen.
 
 <img alt="Phone home screen with the gray Output5 widget beside the Protegus 2 app icon. A large white circle with a gray power button and a small refresh symbol appears below." src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
-5. When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
+8. When the controller is connected to the automatic gate with gate state indication, the icon will show the state of the open/closed gates.
 
 <img alt="Phone home screen with callout 8 around the Output5 widget, whose power button is green." src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
@@ -372,7 +372,7 @@ After connecting the GATOR WiFi to the TrikdisConfig software, the software will
 
 | Name           | Description                                               |
 |----------------|-----------------------------------------------------------|
-| IMEI/​Unique ID | The device’s MAC number                                   |
+| MAC/Unique ID | The device’s MAC number                                   |
 | State          | Operational state                                         |
 | Device         | Device type (must show WP17_xxxx)                   |
 | SN             | Device’s serial number                                    |
