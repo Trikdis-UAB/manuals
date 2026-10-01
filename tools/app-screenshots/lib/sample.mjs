@@ -10,17 +10,36 @@ export const SAMPLE = {
   installerCode: '654321',
 };
 
-// Hardware models served by the shared g16 configurator. `version` is how the device reports
-// itself: "<name>_<fw x100>"; the app shows the name and fw (e.g. 0112 -> 1.12).
+// Hardware models served by the shared g16 configurator. Firmware and hardware revision change
+// which fields the app shows (e.g. account number per CMS channel from fw 1.31, Bands/Generation
+// from fw 1.17 on revision M15), so they must match a current real device. The values below are
+// PLACEHOLDERS until confirmed; override per run with --fw and --revision.
 export const G16_MODELS = {
-  'GET':   { hwId: '4E', deviceId: 0x4e, hwType: 'GET',  version: 'GET_0112',  bt: '0103' },
-  'GT':    { hwId: '53', deviceId: 0x53, hwType: 'GT',   version: 'GT_0130',   bt: '0103' },
-  'GT+':   { hwId: '52', deviceId: 0x52, hwType: 'GT+',  version: 'GT+_0130',  bt: '0103' },
-  'G16':   { hwId: '42', deviceId: 0x42, hwType: 'G16',  version: 'G16_0112',  bt: '0103' },
-  'G16T':  { hwId: '45', deviceId: 0x45, hwType: 'G16T', version: 'G16T_0112', bt: '0103' },
-  'E16':   { hwId: '3A', deviceId: 0x3a, hwType: 'E16',  version: 'E16_0112',  bt: '0103' },
-  'E16T':  { hwId: '3C', deviceId: 0x3c, hwType: 'E16T', version: 'E16T_0112', bt: '0103' },
+  'GET':   { hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.12', revision: null, bt: '0103' },
+  'GT':    { hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
+  'GT+':   { hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
+  'G16':   { hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
+  'G16T':  { hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
+  'E16':   { hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
+  'E16T':  { hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
 };
+
+export function setFirmware(model, { firmware, revision }) {
+  if (firmware) G16_MODELS[model].firmware = firmware;
+  if (revision) G16_MODELS[model].revision = revision;
+}
+
+export function sampleFirmware(model) {
+  const m = G16_MODELS[model];
+  return { firmware: m.firmware, revision: m.revision };
+}
+
+// How the device reports itself in config/info: "<name>[_<revision>]_<fw x100>". The app shows
+// the last part as firmware (0112 -> 1.12) and takes the revision from the second part.
+function deviceVersion(m) {
+  const fw = String(Math.round(parseFloat(m.firmware) * 100)).padStart(4, '0');
+  return m.revision ? `${m.name}_${m.revision}_${fw}` : `${m.name}_${fw}`;
+}
 
 const PERMISSION_AREAS = [
   'company_settings', 'ipcom_settings', 'reactions', 'roles', 'systems', 'events', 'tags', 'users',
@@ -118,7 +137,7 @@ export function sampleSystem(modelName) {
     stabilityScoreTier: 'unavailable',
     showStabilityScore: false,
     canUpgradeFirmware: false,
-    fw_version: m.version,
+    fw_version: deviceVersion(m),
     sos_type: 0,
     troubles: [],
     devices: [],
@@ -200,7 +219,7 @@ export function sampleConfigInfo(modelName) {
   return {
     success: true,
     data: {
-      zones: 0, outputs: 0, version: m.version, hwId: m.hwId, fireReset: false,
+      zones: 0, outputs: 0, version: deviceVersion(m), hwId: m.hwId, fireReset: false,
       supports_custom_outputs: false, supported_commands: '', ns: false, central_panel: 0,
       uid: SAMPLE.imei, sn: '000123', bt: m.bt, dr: '', areas: 0, supported_wireless: null,
       ipcom: 1, objectId: 'sample', signalLevel: 80, isInForeignRegion: false, foreignRegion: '',

@@ -9,8 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { openApp, routerGo, settle, LAYOUTS } from './lib/app.mjs';
-import { G16_MODELS, SAMPLE } from './lib/sample.mjs';
+import { openApp, routerGo, settle, contentBottom, LAYOUTS } from './lib/app.mjs';
+import { G16_MODELS, SAMPLE, sampleFirmware, setFirmware } from './lib/sample.mjs';
 import { readJson, APP_ORIGIN } from './lib/guard.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -21,6 +21,8 @@ const layouts = (args.layout ?? 'desktop,phone').split(',');
 const outDir = path.resolve(ROOT, args.out ?? 'out');
 const def = readJson(ROOT, 'screens', 'g16.json');
 if (!G16_MODELS[model]) throw new Error(`Unknown model ${model}. Known: ${Object.keys(G16_MODELS).join(', ')}`);
+setFirmware(model, { firmware: args.fw, revision: args.revision });
+if (!args.fw) console.log(`NOTE firmware ${G16_MODELS[model].firmware} is a placeholder; pass --fw (and --revision) with the current release`);
 const screens = def.screens
   .filter((s) => !args.screen || args.screen.split(',').includes(s.id))
   .filter((s) => !s.onlyModels || s.onlyModels.includes(model));
@@ -60,18 +62,31 @@ for (const lang of langs) {
         for (const s of shots) {
           const file = path.join(outDir, lang, s.file);
           const opts = { path: file, animations: 'disabled', caret: 'hide' };
-          if (s.selector) await page.locator(s.selector).first().screenshot(opts);
-          else await page.screenshot(opts);
+          let crop = null;
+          if (s.selector) {
+            await page.locator(s.selector).first().screenshot(opts);
+          } else if (layout === 'phone') {
+            // Phone images are cut 24 px below the last card (the manual shows them at 320 px wide).
+            crop = await contentBottom(page);
+            const { width, height } = LAYOUTS.phone.viewport;
+            await page.screenshot({ ...opts, clip: { x: 0, y: 0, width, height: Math.min(height, crop.bottom + 24) } });
+            if (crop.overflows) console.log(`WARN ${label}: content continues below the phone screen; image shows the first screenful`);
+          } else {
+            await page.screenshot(opts);
+          }
           records.push({
             screen: screen.id,
             configurator: def.configurator,
             appPath: menuLabels,
             model,
             hwId: G16_MODELS[model].hwId,
+            firmware: sampleFirmware(model).firmware,
+            revision: sampleFirmware(model).revision,
             language: lang,
             layout: s.variant,
             file: path.relative(outDir, file),
             viewport: LAYOUTS[layout].viewport,
+            ...(crop ? { croppedToCss: { width: LAYOUTS.phone.viewport.width, height: Math.min(LAYOUTS.phone.viewport.height, crop.bottom + 24) }, contentOverflows: crop.overflows } : {}),
             deviceScaleFactor: LAYOUTS[layout].deviceScaleFactor,
             appUrl: new URL(page.url()).pathname,
             appBuild,

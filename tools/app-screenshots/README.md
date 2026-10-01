@@ -26,11 +26,13 @@ records and leaves the rest.
 | `--lang` | `en` | comma-separated; any language the app has (`en,lt,es,ru`) |
 | `--layout` | `desktop,phone` | desktop is 1440×900 @2x, phone is 390×844 @3x |
 | `--screen` | all in `screens/g16.json` | comma-separated screen ids |
+| `--fw`, `--revision` | placeholder | firmware (e.g. `1.37`) and hardware revision the sample device reports. They change which fields the app shows, so pass the current release; both go into the manifest |
 | `--out` | `out` | output folder |
 
 Each desktop capture gives two files: the whole window (`…-desktop.png`) and just the configurator
 column (`…-desktop-panel.png`). The phone layout is what the native apps show, since they wrap the same
-web app.
+web app; phone images are cut 24 px below the last card, so short pages don't carry empty grey. If a
+page is longer than one phone screen the run warns and the manifest says `contentOverflows`.
 
 The label packs are fetched from the public translations endpoint on first use and cached in
 `fixtures/translations/` (not committed). Run `node fetch-public.mjs en lt es ru` before a batch to pick
