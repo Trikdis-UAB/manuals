@@ -102,7 +102,7 @@ In the Protegus app, open **Settings → Advanced settings** and set:
     app_cms = """
 In the Protegus app, open **Settings → Advanced settings** and set:
 
-1.  **System options → System general**: enter the **Account No.** provided by the Central Monitoring Station (0-9, A-F; **do not use FFFE, FFFF**). On firmware that keeps the account number per channel, the field is in **Reporting to CMS → CMS settings → Primary channel** as **Primary Account no.** instead.
+1.  **System options → System general**: enter the **Account No.** provided by the Central Monitoring Station (0-9, A-F; **do not use FFFE, FFFF**). On newer hardware versions with firmware 1.31 or later, the account number is set per channel instead: **Reporting to CMS → CMS settings → Primary channel → Primary Account no.**
 
 2.  **Panel settings → TLF** (TIP/RING connection): set **Security panel model** to **AUTO**. Or **Panel settings → Serial Bus** (keypad or serial bus connection): select the **Security panel model**.
 
@@ -201,7 +201,7 @@ The settings are grouped in the menu as **System options**, **Panel settings**, 
 {tabs('''
 In the Protegus app: **Advanced settings → System options → System general** (Object ID, Module ID, Time set) and **System options → Access** (codes and installer permissions).
 
-Depending on the firmware version, **Account No.** and **Device account No.** are either in **System general**, or per channel in **Reporting to CMS → CMS settings → Primary channel** (**Primary Account no.**) and in **Reporting to CMS → Settings** (**Device account No.**).
+Depending on the firmware and hardware version, **Account No.** and **Device account No.** are either in **System general**, or (firmware 1.31 or later on newer hardware versions) per channel in **Reporting to CMS → CMS settings → Primary channel** (**Primary Account no.**) and in **Reporting to CMS → Settings** (**Device account No.**).
 ''', f"In TrikdisConfig, open the **System settings** window.\n\n{img('image46.webp')}")}
 {sys_shared.replace("- **Object ID** –", "- **Object ID** (**Account No.**) –").replace("- **Module ID** –", "- **Module ID** (**Device account No.**) –").replace("- **Allow installer to change** – the administrator can specify which settings can be changed by the installer.", "- **Allow installer to change** – the administrator can specify which settings can be changed by the installer: **Account number**, **CMS reporting**, **User reporting**, **SIM card** and **Event summary**.")}
 
