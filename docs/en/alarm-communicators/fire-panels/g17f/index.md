@@ -201,25 +201,25 @@ Below we describe the settings you need to edit to make the controller send even
 
 3. Enter the **SIM card PIN** code.
 
-2.  Change the **APN**. You will find the **APN** on the SIM operator’s website. “Internet” is universal and works in the networks of most operators.
+4.  Change the **APN**. You will find the **APN** on the SIM operator’s website. “Internet” is universal and works in the networks of most operators.
 
 **In the “Zones” window:**
 
 <img alt="TrikdisConfig G17F configuration, Zones window. The Prot. notification boxes are checked for Zones 1 through 6." src="./image8.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
-3. Tick the boxes if you want users to receive notifications to Protegus2 about changes in zone states.
+5. Tick the boxes if you want users to receive notifications to Protegus2 about changes in zone states.
 
 **In the “PGM” window:**
 
 <img alt="TrikdisConfig G17F configuration, PGM window. PGM 1 uses G17F 4 I/O; PGM 2 and 3 are set to Disable. The Prot. notification boxes are checked for all three rows." src="./image9.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
-4. Tick the boxes if you want users to receive notifications to Protegus2 about changes in PGM output states.
+6. Tick the boxes if you want users to receive notifications to Protegus2 about changes in PGM output states.
 
 **In the “System events” window:**
 
 <img alt="TrikdisConfig G17F configuration, System events window. The Prot. notification boxes are checked for Low power, Periodic test, RS485 fault, GSM jamming and Start IP event." src="./image10.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
-5. Tick the boxes if you want users to receive notifications to Protegus2 about changes in the communicator’s internal event states.
+7. Tick the boxes if you want users to receive notifications to Protegus2 about changes in the communicator’s internal event states.
 
 After finishing configuration, click the **Write [F5]** button and disconnect the USB cable.
 
