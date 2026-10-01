@@ -1,0 +1,14 @@
+{
+  "name": "app-screenshots",
+  "description": "Screenshots of Protegus app configurator screens from the released web app, with sample data and no live device or account.",
+  "scripts": {
+    "fetch-public": "node fetch-public.mjs",
+    "capture": "node capture.mjs",
+    "test-guard": "node guard-selftest.mjs"
+  },
+  "type": "module",
+  "devDependencies": {
+    "playwright": "1.60.0"
+  },
+  "private": true
+}

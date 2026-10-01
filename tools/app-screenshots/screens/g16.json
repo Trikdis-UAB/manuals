@@ -1,0 +1,17 @@
+{
+  "configurator": "g16",
+  "models": ["GET", "GT", "GT+", "G16", "G16T", "E16", "E16T"],
+  "screens": [
+    {
+      "id": "panel-tlf",
+      "menu": ["config_g16.navigation.panel", "config_g16.navigation.panelTree.tlf"],
+      "route": "panel/tlf",
+      "onlyModels": ["GET", "GT", "GT+"],
+      "note": "The Panel settings menu is shown only for GET, GT and GT+. On G16/G16T/E16/E16T the panel fields are under System options."
+    }
+  ],
+  "liveOnly": [
+    { "id": "read-progress", "what": "'Reading… n%' status and progress bar while a configuration is read", "why": "driven by the realtime configuration-event channel during a live read" },
+    { "id": "write-progress", "what": "'Preparing…' / 'Writing… n%' status and progress bar, and the write result", "why": "driven by the realtime channel during a live write; writes are never sent" }
+  ]
+}

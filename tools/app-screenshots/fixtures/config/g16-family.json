@@ -1,0 +1,95 @@
+{
+  "_comment": "Sample configuration for the shared g16 configurator (GET, GT, GT+, G16, G16T, E16, E16T), shaped like GET /v3/api/config/read data. Invented values. Device-stored option lists (panelList*) use the strings TrikdisConfig shows for GET, without TrikdisConfig's own 'N. ' numbering. Panel values mirror the GET manual's TrikdisConfig 'Panel settings' screenshot (image47).",
+  "systemOptions": {
+    "systemGeneral": {
+      "objectNumber": "1234",
+      "timeSync": 1
+    },
+    "access": {
+      "installerAccess": {
+        "canChangeAccount": true,
+        "canChangeCmsSettings": true,
+        "canChangeUserReporting": true,
+        "canChangeSimPin": true,
+        "canChangeEvents": true
+      },
+      "onlyAdminCanRestore": false,
+      "adminCode": "123456",
+      "installerCode": "654321"
+    }
+  },
+  "panel": {
+    "tlf": {
+      "panelKey": "01",
+      "HSKTone": "30",
+      "HSKTone2": "40",
+      "panelList": [
+        { "queueNo": 0, "isDirectControl": false, "key": "00", "text": "DISABLED" },
+        { "queueNo": 1, "isDirectControl": false, "key": "01", "text": "AUTO" },
+        { "queueNo": 2, "isDirectControl": false, "key": "02", "text": "MANUAL" }
+      ],
+      "panelList_type1": [
+        { "queueNo": 0, "isDirectControl": false, "key": "30", "text": "Dual Tone" },
+        { "queueNo": 1, "isDirectControl": false, "key": "40", "text": "SIA FSK" }
+      ],
+      "panelList_type2": [
+        { "queueNo": 0, "isDirectControl": false, "key": "30", "text": "Dual Tone" },
+        { "queueNo": 1, "isDirectControl": false, "key": "40", "text": "SIA FSK" }
+      ],
+      "usePanelAccountId": false,
+      "waitForAck": false,
+      "dialToneEnabled": true,
+      "dialTone": 425
+    },
+    "serial": {
+      "panelKey": "00",
+      "panelProtocol": 0,
+      "canRemoteControl": false,
+      "canReceiveEvents": false,
+      "panelPassword": "1234",
+      "panelList": [
+        { "value": "00", "canRemoteControl": false, "canReceiveEvents": false, "pcCodeNeeded": false, "text": "DISABLED" },
+        { "value": "01", "canRemoteControl": true, "canReceiveEvents": true, "pcCodeNeeded": false, "text": "DSC PC585/PC1565" },
+        { "value": "06", "canRemoteControl": true, "canReceiveEvents": true, "pcCodeNeeded": true, "text": "PARADOX SP+/MG+" }
+      ]
+    }
+  },
+  "reporting": {
+    "cmsSettings": {
+      "primary": {
+        "domain": "192.168.1.10", "port": 55555, "phone": "", "communicationType": 1, "protocol": 0,
+        "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+      },
+      "backup": {
+        "domain": "", "port": 0, "phone": "", "communicationType": 0, "protocol": 0,
+        "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+      },
+      "parallel": {
+        "primary": {
+          "domain": "", "port": 0, "phone": "", "communicationType": 0, "protocol": 0,
+          "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+        },
+        "backup": {
+          "domain": "", "port": 0, "phone": "", "communicationType": 0, "protocol": 0,
+          "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+        }
+      },
+      "reportingMode": { "primary": "0", "backup": "0", "testHours": 24, "testEnabled": true }
+    },
+    "settings": {
+      "pingEnabled": true, "pingSeconds": 30, "backupAfter": 3, "primaryAfterMinutes": 1,
+      "receiverNumberSia": "01", "lineNumberSia": "1", "testEnabled": true, "testHours": 24, "testMinutes": 0
+    }
+  },
+  "userReporting": {
+    "cloud": { "enabled": true, "code": "123456", "parallel": false }
+  },
+  "sim": { "pin": "", "disableWhenRoaming": false, "apn": "internet", "userName": "", "password": "", "dns1": "", "dns2": "", "iccid": "" },
+  "sim2": { "pin": "", "disableWhenRoaming": false, "apn": "internet", "userName": "", "password": "", "dns1": "", "dns2": "", "iccid": "" },
+  "ethernet": { "dhcpEnabled": true, "staticIp": "192.168.1.100", "netmask": "255.255.255.0", "gateway": "192.168.1.1" },
+  "inOut": { "count": 0, "terminals": [], "alarms": [], "tampers": [] },
+  "rs485": { "moduleTypes": [], "modules": [] },
+  "events": [],
+  "shared": {},
+  "f": "screenshot-mode"
+}
