@@ -7,6 +7,7 @@ const ARTIFACT_DIR =
   process.env.SUPPORT_CHAT_ARTIFACT_DIR || path.join(process.cwd(), "artifacts/ui/support-chat");
 const HOST_RULE = "MAP docs.trikdis.com 127.0.0.1";
 const WIDGET_URL_PREFIX = "https://cdn.respond.io/webchat/widget/widget.js";
+const CHATWOOT_SDK_URL = "https://chat.trikdis.com/packs/js/sdk.js";
 const LAUNCHER = "#trikdocs-chat-launcher";
 
 function ensureArtifactsDir() {
@@ -48,6 +49,34 @@ function widgetStubScript() {
   `;
 }
 
+// Stands in for Chatwoot's sdk.js: records calls, draws a fake bubble and, like the
+// real widget, announces "chatwoot:ready" a moment after run().
+function chatwootStubScript() {
+  return `
+    (function () {
+      var calls = [];
+      window.__CHATWOOT_STUB__ = { calls: calls };
+      window.chatwootSDK = {
+        run: function (options) {
+          calls.push("run:" + options.baseUrl + ":" + (options.websiteToken ? "token" : "no-token"));
+          var bubble = document.createElement("div");
+          bubble.id = "chatwoot-stub-bubble";
+          bubble.setAttribute("data-open", "false");
+          document.body.appendChild(bubble);
+          window.$chatwoot = {
+            toggle: function (state) {
+              calls.push("toggle:" + state);
+              bubble.setAttribute("data-open", state === "open" ? "true" : "false");
+            },
+            setLocale: function (locale) { calls.push("setLocale:" + locale); }
+          };
+          setTimeout(function () { window.dispatchEvent(new Event("chatwoot:ready")); }, 300);
+        }
+      };
+    })();
+  `;
+}
+
 async function withPage(run) {
   const browser = await chromium.launch({
     channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
@@ -71,6 +100,16 @@ async function withPage(run) {
     requests.push(`UNEXPECTED ${route.request().url()}`);
     await route.abort();
   });
+  await page.route(/https:\/\/chat\.trikdis\.com\//, async (route) => {
+    const url = route.request().url();
+    if (url === CHATWOOT_SDK_URL) {
+      requests.push(url);
+      await route.fulfill({ body: chatwootStubScript(), contentType: "application/javascript", status: 200 });
+      return;
+    }
+    requests.push(`UNEXPECTED ${url}`);
+    await route.abort();
+  });
 
   try {
     await run({ browser, context, page, requests });
@@ -92,12 +131,13 @@ async function chatState(page) {
   return page.evaluate(() => ({
     chat: window.__TRIKDOCS_CHAT__ || null,
     stub: window.__RESPONDIO_STUB__ || null,
+    chatwoot: window.__CHATWOOT_STUB__ || null,
     launcher: !!document.getElementById("trikdocs-chat-launcher")
   }));
 }
 
 test.describe("Support chat rollout", () => {
-  test("stays hidden until the preview gate is on, then loads respond.io only on click", async () => {
+  test("stays hidden until the preview gate is on, then loads Chatwoot only on click", async () => {
     ensureArtifactsDir();
 
     await withPage(async ({ page, requests }) => {
@@ -112,6 +152,46 @@ test.describe("Support chat rollout", () => {
       expect(requests).toEqual([]);
 
       await page.goto(`${BASE_URL}/en/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      await page.waitForFunction(() => !window.location.search.includes("chat_preview"));
+      state = await chatState(page);
+      expect(state.chat.provider).toBe("chatwoot");
+      expect(requests).toEqual([]);
+
+      await answerConsent(page);
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      expect(requests).toEqual([]);
+
+      await page.click(LAUNCHER);
+      await expect
+        .poll(async () => page.evaluate(() => {
+          const bubble = document.getElementById("chatwoot-stub-bubble");
+          return bubble ? bubble.getAttribute("data-open") : null;
+        }))
+        .toBe("true");
+      state = await chatState(page);
+      expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:en", "toggle:open"]);
+      expect(requests).toEqual([CHATWOOT_SDK_URL]);
+      expect(state.launcher).toBeFalsy();
+      expect(await page.evaluate(() => localStorage.getItem("trikdocs-chat-engaged"))).toBe("1");
+
+      // A later full page load restores the widget (closed), in the page's language.
+      await page.goto(`${BASE_URL}/lt/`, { waitUntil: "domcontentloaded" });
+      await expect.poll(async () => ((await chatState(page)).chatwoot || { calls: [] }).calls.length).toBe(2);
+      state = await chatState(page);
+      expect(state.chat.restored).toBeTruthy();
+      expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:lt"]);
+      expect(state.launcher).toBeFalsy();
+      expect(requests.filter((url) => url.startsWith("UNEXPECTED"))).toEqual([]);
+    });
+  });
+
+  test("?chat_preview=respondio still loads respond.io only on click", async () => {
+    ensureArtifactsDir();
+
+    await withPage(async ({ page, requests }) => {
+      let state;
+      await page.goto(`${BASE_URL}/en/?chat_preview=respondio`, { waitUntil: "domcontentloaded" });
       await page.waitForSelector(LAUNCHER, { state: "visible" });
       await page.waitForFunction(() => !window.location.search.includes("chat_preview"));
 

@@ -1,19 +1,25 @@
-// Support chat (respond.io Website Chat), loaded on demand.
+// Support chat, loaded on demand: our own Chatwoot at chat.trikdis.com (Joy answers
+// there), or respond.io Website Chat while we compare the two.
 //
-// Nothing from respond.io loads until a visitor clicks our chat button. The
+// Nothing from the chat provider loads until a visitor clicks our chat button. The
 // widget writes a visitor id into storage as soon as it loads, so loading it on
 // every page view would need cookie consent; loading it on request does not.
 // After a visitor has opened the chat once, later page loads bring the widget
 // back automatically so their conversation stays reachable.
 //
 // Config comes from the JSON block that mkdocs_hooks.py injects into each page.
+// ?chat_preview=1 uses the configured provider; ?chat_preview=respondio or
+// ?chat_preview=chatwoot picks one for this tab.
 (function () {
   var CONFIG_ID = "trikdocs-chat-config";
   var PREVIEW_SESSION_KEY = "trikdocs-chat-preview-enabled";
+  var PROVIDER_SESSION_KEY = "trikdocs-chat-provider";
   var ENGAGED_KEY = "trikdocs-chat-engaged";
   var LAUNCHER_ID = "trikdocs-chat-launcher";
   var SCRIPT_ID = "respondio__widget";
   var SCRIPT_BASE = "https://cdn.respond.io/webchat/widget/widget.js?cId=";
+  var CHATWOOT_SCRIPT_ID = "trikdocs-chatwoot-sdk";
+  var PROVIDERS = ["chatwoot", "respondio"];
   var DEFAULT_PREVIEW_QUERY = "chat_preview";
 
   var state = window.__TRIKDOCS_CHAT__ || {
@@ -61,9 +67,12 @@
 
     try {
       var parsed = JSON.parse(node.textContent);
+      var chatwoot = parsed.chatwoot || {};
       return {
         enabled: parsed.enabled === true,
+        provider: PROVIDERS.indexOf(parsed.provider) !== -1 ? parsed.provider : "respondio",
         channelId: parsed.channelId || "",
+        chatwoot: { baseUrl: chatwoot.baseUrl || "", websiteToken: chatwoot.websiteToken || "" },
         hosts: Array.isArray(parsed.hosts) ? parsed.hosts : [],
         previewOnly: parsed.previewOnly !== false,
         previewQuery: parsed.previewQuery || DEFAULT_PREVIEW_QUERY
@@ -75,7 +84,8 @@
   }
 
   // ?chat_preview=1 turns the preview gate on for this browser tab,
-  // ?chat_preview=0 turns it off. The parameter is removed from the address bar.
+  // ?chat_preview=0 turns it off, and a provider name turns it on with that
+  // provider. The parameter is removed from the address bar.
   function updatePreviewState(queryName) {
     var url;
     var requested = null;
@@ -89,8 +99,13 @@
 
     if (requested === "1") {
       storageSet("sessionStorage", PREVIEW_SESSION_KEY, "1");
+      storageRemove("sessionStorage", PROVIDER_SESSION_KEY);
+    } else if (PROVIDERS.indexOf(requested) !== -1) {
+      storageSet("sessionStorage", PREVIEW_SESSION_KEY, "1");
+      storageSet("sessionStorage", PROVIDER_SESSION_KEY, requested);
     } else if (requested === "0") {
       storageRemove("sessionStorage", PREVIEW_SESSION_KEY);
+      storageRemove("sessionStorage", PROVIDER_SESSION_KEY);
     }
 
     if (url && requested !== null) {
@@ -124,7 +139,11 @@
     }, 250);
   }
 
-  function loadWidget(channelId) {
+  function loadWidget(config) {
+    if (state.provider === "chatwoot") {
+      loadChatwoot(config.chatwoot);
+      return;
+    }
     if (state.scriptRequested || document.getElementById(SCRIPT_ID)) {
       state.scriptRequested = true;
       return;
@@ -132,13 +151,66 @@
 
     var script = document.createElement("script");
     script.id = SCRIPT_ID;
-    script.src = SCRIPT_BASE + encodeURIComponent(channelId);
+    script.src = SCRIPT_BASE + encodeURIComponent(config.channelId);
     script.async = true;
     script.onload = function () {
       state.scriptLoaded = true;
     };
     document.head.appendChild(script);
     state.scriptRequested = true;
+  }
+
+  // The page language, from the site's /en/, /lt/, /es/, /ru/ paths: the widget's
+  // own texts follow it.
+  function pageLocale() {
+    var match = window.location.pathname.match(/^\/(en|lt|es|ru)(\/|$)/);
+    return match ? match[1] : "en";
+  }
+
+  // Chatwoot: its SDK script, then chatwootSDK.run(). It announces "chatwoot:ready"
+  // on window; a requested open waits for that.
+  function loadChatwoot(chatwoot) {
+    if (state.scriptRequested || document.getElementById(CHATWOOT_SCRIPT_ID)) {
+      state.scriptRequested = true;
+      return;
+    }
+    if (!state.readyListenerBound) {
+      state.readyListenerBound = true;
+      window.addEventListener("chatwoot:ready", function () {
+        state.widgetReady = true;
+        if (window.$chatwoot && typeof window.$chatwoot.setLocale === "function") {
+          window.$chatwoot.setLocale(pageLocale());
+        }
+        openChatwootIfRequested();
+      });
+    }
+    window.chatwootSettings = {
+      position: "right",
+      type: "standard",
+      locale: pageLocale(),
+      darkMode: "auto"
+    };
+    var base = chatwoot.baseUrl.replace(/\/+$/, "");
+    var script = document.createElement("script");
+    script.id = CHATWOOT_SCRIPT_ID;
+    script.src = base + "/packs/js/sdk.js";
+    script.async = true;
+    script.onload = function () {
+      state.scriptLoaded = true;
+      if (window.chatwootSDK && typeof window.chatwootSDK.run === "function") {
+        window.chatwootSDK.run({ websiteToken: chatwoot.websiteToken, baseUrl: base });
+      }
+    };
+    document.head.appendChild(script);
+    state.scriptRequested = true;
+  }
+
+  function openChatwootIfRequested() {
+    if (!state.openRequested || state.opened || !state.widgetReady || !window.$chatwoot) {
+      return;
+    }
+    window.$chatwoot.toggle("open");
+    state.opened = true;
   }
 
   function removeLauncher() {
@@ -166,8 +238,12 @@
     button.addEventListener("click", function () {
       storageSet("localStorage", ENGAGED_KEY, "1");
       state.openRequested = true;
-      loadWidget(config.channelId);
-      openWhenReady(0);
+      loadWidget(config);
+      if (state.provider === "chatwoot") {
+        openChatwootIfRequested();
+      } else {
+        openWhenReady(0);
+      }
       removeLauncher();
     });
     document.body.appendChild(button);
@@ -192,10 +268,18 @@
     }
 
     updatePreviewState(config.previewQuery);
-    state.permitted = config.enabled && !!config.channelId && (!config.previewOnly || state.previewEnabled);
+    // Once a widget is on the page, stay with it until the next full page load.
+    if (!state.scriptRequested) {
+      var chosen = storageGet("sessionStorage", PROVIDER_SESSION_KEY);
+      state.provider = PROVIDERS.indexOf(chosen) !== -1 ? chosen : config.provider;
+    }
+    var configured = state.provider === "chatwoot"
+      ? !!(config.chatwoot.baseUrl && config.chatwoot.websiteToken)
+      : !!config.channelId;
+    state.permitted = config.enabled && configured && (!config.previewOnly || state.previewEnabled);
 
     if (!state.permitted) {
-      state.reason = config.enabled && config.channelId ? "preview-gated" : "disabled";
+      state.reason = config.enabled && configured ? "preview-gated" : "disabled";
       removeLauncher();
       return;
     }
@@ -210,7 +294,7 @@
     if (storageGet("localStorage", ENGAGED_KEY) === "1") {
       state.reason = "restored";
       state.restored = true;
-      loadWidget(config.channelId);
+      loadWidget(config);
       removeLauncher();
       return;
     }
