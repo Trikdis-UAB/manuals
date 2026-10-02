@@ -196,7 +196,7 @@ This manual is for LTE communicators.
 
 Below we describe what settings need to be set for the communicator to begin sending events to the Central Monitoring Station (CMS) and to allow the security system to be controlled with the Protegus2 app.
 
-You can make these settings in the Protegus app or in TrikdisConfig. Choose your tool in the tabs below; every section on this page switches to it.
+You can make these settings in the Protegus app or in TrikdisConfig. Choose your tool once below; every section on this page follows your choice.
 
 === "Protegus app"
 
@@ -249,7 +249,7 @@ You can make these settings in the Protegus app or in TrikdisConfig. Choose your
 
     7.  **Network settings → SIM** and **SIM2** (for each inserted SIM card): enter the **SIM card PIN** and the **APN**. Check that **DNS1** and **DNS2** match those supported by your ISP.
 
-    8.  **Reporting to CMS → CMS settings → Reporting mode**: set **Main type**, **Backup type** and **Backup type 2**, the order in which the communicator uses LAN, SIM1 and SIM2.
+    8.  **Reporting to CMS → CMS settings → Reporting mode**: set **Main type**, **Backup type** and **Backup type 2**, the order in which the communicator uses **LAN**, **SIM** (SIM1) and **SIM2**.
 
     9.  Tap **Write**.
 
@@ -306,9 +306,7 @@ You can make these settings in the Protegus app or in TrikdisConfig. Choose your
 
     2.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
-    3.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
-
-    4.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+    3.  **DNS1, DNS2**: Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
     **In “CMS reporting” window:**
 
@@ -404,9 +402,7 @@ You can make these settings in the Protegus app or in TrikdisConfig. Choose your
 
     14. Change the “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
 
-    15. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
-
-    16. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+    15. **DNS1, DNS2**: Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
 
     After finishing configuration, click **Write [F5]** and disconnect the USB cable.
 
@@ -797,7 +793,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 ## Communicator settings
 
-All GET settings described below can be changed in the Protegus app or in TrikdisConfig. What each setting does is described once; the tabs show where to find it in your tool. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
+All GET settings described below can be changed in the Protegus app or in TrikdisConfig. What each setting does is described once; each section shows where to find it in the tool you chose. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
 
 ### Connecting to the communicator
 
@@ -805,7 +801,7 @@ All GET settings described below can be changed in the Protegus app or in Trikdi
 
     Open the system in the Protegus app and go to **Settings → Advanced settings** (see [Quick configuration](#quick-configuration)). The top of each screen shows the connected device: **Unique ID** (IMEI), **Serial**, **Firmware** and **Boot** version.
 
-    The settings are grouped in the menu as **System options**, **Panel settings**, **Reporting to CMS**, **User reporting**, **Network settings**, **IN/OUT** and **System events**. After changing settings, tap **Write** to save them to the communicator.
+    The settings are grouped in the menu as **System options**, **Panel settings**, **Reporting to CMS**, **User reporting**, **Network settings**, **IN/OUT** and **System events**. After changing settings, tap **Write** to save them to the communicator. **Read** loads the current settings from the communicator again.
 
     ![Protegus app, Advanced settings menu for GET: device card with Unique ID, serial number, boot and firmware 1.35 versions; Read and Write buttons; menu items System options, Panel settings, Reporting to CMS, User reporting, Network settings, IN/OUT and System events.](./protegus-app/get-menu-phone.webp){ .trik-mob-img }
 
@@ -821,7 +817,7 @@ All GET settings described below can be changed in the Protegus app or in Trikdi
     | Status | Operating condition |
     | Device | Device type (GET should be shown) |
     | SN | Device serial number |
-    | BL | Browser version |
+    | BL | Bootloader version |
     | FW | Device firmware version |
     | HW | Device hardware version |
     | State | Connection to program type (via USB or remote) |
@@ -833,7 +829,7 @@ All GET settings described below can be changed in the Protegus app or in Trikdi
 
 === "Protegus app"
 
-    In the Protegus app: **Advanced settings → System options → System general** (Object ID, Module ID, Time set) and **System options → Access** (codes and installer permissions).
+    In the Protegus app: **Advanced settings → System options → System general** (account numbers, time set) and **System options → Access** (codes and installer permissions).
 
     Depending on the firmware and hardware version, **Account No.** and **Device account No.** are either in **System general**, or (firmware 1.31 or later on newer hardware versions) per channel in **Reporting to CMS → CMS settings → Primary channel** (**Primary Account no.**) and in **Reporting to CMS → Settings** (**Device account No.**).
 
@@ -897,7 +893,7 @@ The communicator is connected to the TIP RING terminals of the telephone communi
 
 - **Communication protocol** (**Security panel model**) – enable/disable DTMF landline interface on the communicator.
 
-- **First HSK tone / Second HSK tone** – handshake" tone of control panel.
+- **First HSK tone / Second HSK tone** – handshake tone of control panel.
 
 - **Use security panel account ID** – if the box is marked with a check mark, the communicator will not send the value set in the "**Object ID**" field, but the object number entered in the control panel.
 
@@ -983,7 +979,7 @@ Events are transmitted in parallel with the primary channel through this channel
 
     ![Protegus app, CMS settings, Reporting mode: Main type LAN, Backup type SIM, Backup type 2 Disabled, Test enabled on, Communication path test 1 day(s) 0 h.](./protegus-app/get-reporting-cms-reportingmode-phone.webp){ .trik-mob-img }
 
-    The app has an on/off switch next to each period: **Enable test** for **Test period**, **Enable ping** for **IP ping period**, and **Test enabled** for **Communication path test**.
+    The app has an on/off switch next to each period: **Enable test** for **Test period**, **Enable ping** for **IP ping period**, and **Test enabled** for **Communication path test**. In **Reporting mode**, the connection types are named **LAN**, **SIM** (SIM1) and **SIM2**.
 
 === "TrikdisConfig"
 
