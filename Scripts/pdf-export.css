@@ -264,3 +264,10 @@ body {
   break-inside: avoid;
   page-break-inside: avoid;
 }
+
+/* Single-panel wiring diagrams (split from two-per-image originals by
+   Scripts/split_wiring_diagrams.py): cap the height so two fit on a page.
+   Still larger than each diagram was when two shared one image. */
+.md-typeset img.wiring-diagram.trik-pdf-schematic {
+  max-height: 110mm !important;
+}
