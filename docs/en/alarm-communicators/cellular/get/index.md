@@ -325,7 +325,7 @@ You can make these settings in the Protegus app or in TrikdisConfig. Choose your
 
     In the Protegus app, open **Settings → Advanced settings** and set:
 
-    1.  **System options → System general**: enter the **Account No.** provided by the Central Monitoring Station (0-9, A-F; **do not use FFFE, FFFF**). On newer hardware versions with firmware 1.31 or later, the account number is set per channel instead: **Reporting to CMS → CMS settings → Primary channel → Primary Account no.**
+    1.  **System options → System general**: enter the **Account No.** provided by the Central Monitoring Station (0-9, A-F; **do not use FFFE, FFFF**). On hardware version x1x1 with firmware 1.31 or later, the account number is set per channel instead: **Reporting to CMS → CMS settings → Primary channel → Primary Account no.** You can tell from the screen: if **System general** shows only **Time set**, use the channel setting.
 
     2.  **Panel settings → TLF** (TIP/RING connection): set **Security panel model** to **AUTO**. Or **Panel settings → Serial Bus** (keypad or serial bus connection): select the **Security panel model**.
 
@@ -793,7 +793,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 ## Communicator settings
 
-All GET settings described below can be changed in the Protegus app or in TrikdisConfig. What each setting does is described once; each section shows where to find it in the tool you chose. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
+Most GET settings described below can be changed in the Protegus app or in TrikdisConfig; settings and actions available in only one tool are marked. What each setting does is described once; each section shows where to find it in the tool you chose. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
 
 ### Connecting to the communicator
 
@@ -803,7 +803,7 @@ All GET settings described below can be changed in the Protegus app or in Trikdi
 
     The settings are grouped in the menu as **System options**, **Panel settings**, **Reporting to CMS**, **User reporting**, **Network settings**, **IN/OUT** and **System events**. After changing settings, tap **Write** to save them to the communicator. **Read** loads the current settings from the communicator again.
 
-    ![Protegus app, Advanced settings menu for GET: device card with Unique ID, serial number, boot and firmware 1.35 versions; Read and Write buttons; menu items System options, Panel settings, Reporting to CMS, User reporting, Network settings, IN/OUT and System events.](./protegus-app/get-menu-phone.webp){ .trik-mob-img }
+    ![Protegus app, Advanced settings menu for GET: device card with Unique ID, serial number, boot version 1.03 and firmware 1.35; Read and Write buttons; menu items System options, Panel settings, Reporting to CMS, User reporting, Network settings, IN/OUT and System events.](./protegus-app/get-menu-phone.webp){ .trik-mob-img }
 
 === "TrikdisConfig"
 
@@ -831,7 +831,7 @@ All GET settings described below can be changed in the Protegus app or in Trikdi
 
     In the Protegus app: **Advanced settings → System options → System general** (account numbers, time set) and **System options → Access** (codes and installer permissions).
 
-    Depending on the firmware and hardware version, **Account No.** and **Device account No.** are either in **System general**, or (firmware 1.31 or later on newer hardware versions) per channel in **Reporting to CMS → CMS settings → Primary channel** (**Primary Account no.**) and in **Reporting to CMS → Settings** (**Device account No.**).
+    Where **Account No.** and **Device account No.** are depends on the hardware version and firmware. On hardware version x1x1 with firmware 1.31 or later they are in **Reporting to CMS → CMS settings → Primary channel** (**Primary Account no.**; **Parallel Account no.** on the parallel channel) and in **Reporting to CMS → Settings** (**Device account No.**), and **System general** shows only **Time set**. Otherwise they are in **System general**.
 
     <span class="trik-mob-pair">
     <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, System options, System general on GET hardware x1x1 with firmware 1.35: only Time set (First channel); the account numbers are in the CMS settings." src="./protegus-app/get-systemoptions-general-x1x1-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x1</span></span>
@@ -867,7 +867,7 @@ When setting up the communicator GET there are two levels of access for, the adm
 - **Allow installer to change** – the administrator can specify which settings can be changed by the installer: **Account number**, **CMS reporting**, **User reporting**, **SIM card** and **Event summary**.
 
 !!! note "Installer access in the Protegus app"
-    When the communicator is opened with the installer code, the Protegus app hides **Administrator code** and **Only an administrator can restore**, and shows the settings the administrator did not allow as read-only. In the app, the **SIM card** permission also covers the **LAN** settings.
+    When the communicator is opened with the installer code, the Protegus app hides **Administrator code** and **Only an administrator can restore**, and shows the settings the administrator did not allow as read-only. In the app, the **SIM card** permission also covers the **LAN** settings, and where the account numbers are in the CMS settings (see above), they follow the **CMS reporting** permission.
 
 ### Panel settings
 
@@ -921,7 +921,7 @@ The communicator is connected to the control panel via a Serial Bus.
 
 Events can be sent over several channels of communication. The primary and parallel communication channels can operate simultaneously, this way the communicator can send events to two receivers at the same time. Backup channels can be assigned for both primary and parallel channels, which will be used when the connection via the primary or parallel channel is interrupted.
 
-Communication is encoded and password protected. A TRIKDIS receiver is required for receiving and sending event information to the monitoring programs:
+Communication is encoded and password protected. With the TRK protocols, a TRIKDIS receiver is required for receiving and sending event information to the monitoring programs (DC-09 and TL150 are for universal and SUR-GUARD receivers, see **Protocol** below):
 
 - **For connection over IP** - software receiver IPcom Windows/Linux, hardware IP/SMS receiver RL14 or multichannel receiver RM14.
 
@@ -950,7 +950,7 @@ Communication is encoded and password protected. A TRIKDIS receiver is required 
 
 - **Protocol** - select in which coding the events should be sent: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
-- **Encryption key** (**TRK encryption key**; for DC-09 protocols, **Enable encryption key** and **DC-09 encryption key**, with **HEX** for a key in hexadecimal) - 6-digit message encryption key. The key written to the communicator must match the receiver’s key.
+- **Encryption key** (**TRK encryption key**; for DC-09 protocols, **Enable encryption key** and **DC-09 encryption key**, with **HEX** for a key in hexadecimal) - message encryption key. The key written to the communicator must match the receiver’s key. In the Protegus app, the TRK encryption key takes up to 6 characters and the DC-09 encryption key up to 16 (32 in HEX).
 
 - **Domain or IP** - enter the domain or IP address of the receiver.
 
@@ -1076,8 +1076,8 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 **These settings must be made for each SIM card inserted into the communicator.** The SIM1 and SIM2 slots have the same settings.
 
 !!! warning "Important"
-    1\. Ensure that the SIM card is activated and working before using
-    it. / 2. Ensure that mobile data service is enabled.
+    1. Ensure that the SIM card is activated and working before using it.
+    2. Ensure that mobile data service is enabled.
 
 === "Protegus app"
 
@@ -1085,7 +1085,7 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 
     ![Protegus app, Network settings, SIM (SIM card screen): SIM card PIN, APN internet, Login, Password, SIM ICCID, DNS1, DNS2, and Forbid connection when roaming detected off.](./protegus-app/get-network-sim-phone.webp){ .trik-mob-img }
 
-    The Protegus app has no **Preferred operator** field; this screen has a **Forbid connection when roaming detected** switch instead.
+    The Protegus app does not show **Preferred operator** for GET; this screen has a **Forbid connection when roaming detected** switch instead. On hardware revision M15 with firmware 1.17 or later, the **SIM** screen also has **Generation** and **Bands**, which limit the mobile network technology and frequency bands the communicator uses.
 
 === "TrikdisConfig"
 
@@ -1118,7 +1118,7 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 
     In the Protegus app: **Advanced settings → IN/OUT**, then select terminal **1** or **2**. Set **Function** (**Disabled**, **IN**, **OUT**) and, for an input, **Type**. The **Alarm** and **Tamper** sections hold the event and restore messages sent when the input is triggered.
 
-    ![Protegus app, IN/OUT, terminal 1: Function IN, Type NO; Alarm event: Enabled on, Classificator Event, CID code 130, Sia code BA, Partition number 99, Zone number 001. The screen continues with the alarm restore and the tamper event and restore.](./protegus-app/get-inout-terminal-phone.webp){ .trik-mob-img }
+    ![Protegus app, IN/OUT, terminal 1: Function IN, Type NO; Alarm event: Enabled on, Classificator Event, CID code 130, Sia code BA, Partition number 99, Zone number 001.](./protegus-app/get-inout-terminal-phone.webp){ .trik-mob-img }
 
 === "TrikdisConfig"
 
@@ -1132,7 +1132,7 @@ Additional sensors can be connected to the communicator inputs. When the sensor 
 
 - **CID** (**CID code**) – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
 
-- **SIA** (**Sia code**, shown when a SIA protocol is used) – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
+- **SIA** (**Sia code**) – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
 
 - **Part.** (**Partition number**) – enter the partition (area) number that will be sent when an internal event occurs and the system is restored.
 

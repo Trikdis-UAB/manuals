@@ -29,7 +29,7 @@ PLACEMENTS = [
     ]),
     ("The settings are grouped in the menu as **System options**", [
         ("get-menu-phone",
-         "Protegus app, Advanced settings menu for GET: device card with Unique ID, serial number, boot and firmware 1.35 versions; "
+         "Protegus app, Advanced settings menu for GET: device card with Unique ID, serial number, boot version 1.03 and firmware 1.35; "
          "Read and Write buttons; menu items System options, Panel settings, Reporting to CMS, User reporting, Network settings, "
          "IN/OUT and System events."),
     ]),
@@ -97,7 +97,7 @@ PLACEMENTS = [
     ("In the Protegus app: **Advanced settings → IN/OUT**", [
         ("get-inout-terminal-phone",
          "Protegus app, IN/OUT, terminal 1: Function IN, Type NO; Alarm event: Enabled on, Classificator Event, CID code 130, "
-         "Sia code BA, Partition number 99, Zone number 001. The screen continues with the alarm restore and the tamper event and restore."),
+         "Sia code BA, Partition number 99, Zone number 001."),
     ]),
     ("In the Protegus app: **Advanced settings → System events**.", [
         ("get-events-phone",
