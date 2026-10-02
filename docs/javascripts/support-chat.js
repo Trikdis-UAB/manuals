@@ -19,6 +19,21 @@
   var SCRIPT_ID = "respondio__widget";
   var SCRIPT_BASE = "https://cdn.respond.io/webchat/widget/widget.js?cId=";
   var CHATWOOT_SCRIPT_ID = "trikdocs-chatwoot-sdk";
+  var TEASER_ID = "trikdocs-chat-teaser";
+  var TEASER_DISMISSED_KEY = "trikdocs-chat-teaser-dismissed";
+  var TEASER_DELAY_MS = 1200;
+  // Joy's face, next to this script: /javascripts/ -> /images/.
+  var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || "";
+  var LABELS = {
+    en: { launcher: "Chat with Joy, TRIKDIS AI assistant", close: "Close",
+          teaser: "Hi, I’m Joy, TRIKDIS’s AI assistant 👋 Ask me about wiring and settings for any TRIKDIS product." },
+    lt: { launcher: "Pokalbis su Joy, TRIKDIS DI asistente", close: "Uždaryti",
+          teaser: "Sveiki, aš Joy, TRIKDIS dirbtinio intelekto asistentė 👋 Klauskite apie bet kurio TRIKDIS gaminio prijungimą ir nustatymus." },
+    es: { launcher: "Chatea con Joy, la asistente de IA de TRIKDIS", close: "Cerrar",
+          teaser: "Hola, soy Joy, la asistente de IA de TRIKDIS 👋 Pregúntame sobre la conexión y la configuración de cualquier producto TRIKDIS." },
+    ru: { launcher: "Чат с Joy, ИИ-ассистентом TRIKDIS", close: "Закрыть",
+          teaser: "Здравствуйте, я Joy, ИИ-ассистент TRIKDIS 👋 Спросите о подключении и настройке любого устройства TRIKDIS." }
+  };
   var PROVIDERS = ["chatwoot", "respondio"];
   var DEFAULT_PREVIEW_QUERY = "chat_preview";
 
@@ -188,7 +203,9 @@
       position: "right",
       type: "standard",
       locale: pageLocale(),
-      darkMode: "auto"
+      darkMode: "auto",
+      // A button in the chat header that opens the chat in a window of its own.
+      showPopoutButton: true
     };
     var base = chatwoot.baseUrl.replace(/\/+$/, "");
     var script = document.createElement("script");
@@ -213,11 +230,67 @@
     state.opened = true;
   }
 
+  function labels() {
+    return LABELS[pageLocale()] || LABELS.en;
+  }
+
+  function avatarUrl() {
+    try {
+      return new URL("../images/joy-avatar.svg", SCRIPT_SRC || window.location.href).href;
+    } catch (error) {
+      return "/images/joy-avatar.svg";
+    }
+  }
+
+  function removeTeaser() {
+    var teaser = document.getElementById(TEASER_ID);
+    if (teaser && teaser.parentNode) {
+      teaser.parentNode.removeChild(teaser);
+    }
+  }
+
   function removeLauncher() {
+    removeTeaser();
     var launcher = document.getElementById(LAUNCHER_ID);
     if (launcher && launcher.parentNode) {
       launcher.parentNode.removeChild(launcher);
     }
+  }
+
+  // "Hi, I'm Joy" next to the launcher, once a visit until dismissed. It also says
+  // she's an AI before anyone types (EU AI Act Art. 50).
+  function scheduleTeaser(open) {
+    if (storageGet("sessionStorage", TEASER_DISMISSED_KEY) === "1") {
+      return;
+    }
+    window.clearTimeout(state.teaserTimer);
+    state.teaserTimer = window.setTimeout(function () {
+      if (document.getElementById(TEASER_ID) || !document.getElementById(LAUNCHER_ID)) {
+        return;
+      }
+      var text = labels();
+      var teaser = document.createElement("div");
+      teaser.id = TEASER_ID;
+      teaser.className = "trikdocs-chat-teaser";
+      teaser.setAttribute("role", "status");
+      var body = document.createElement("span");
+      body.textContent = text.teaser;
+      var close = document.createElement("button");
+      close.type = "button";
+      close.className = "trikdocs-chat-teaser-close";
+      close.setAttribute("aria-label", text.close);
+      close.textContent = "×";
+      close.addEventListener("click", function (event) {
+        event.stopPropagation();
+        storageSet("sessionStorage", TEASER_DISMISSED_KEY, "1");
+        removeTeaser();
+      });
+      teaser.appendChild(body);
+      teaser.appendChild(close);
+      teaser.addEventListener("click", open);
+      document.body.appendChild(teaser);
+      state.teaserShown = true;
+    }, TEASER_DELAY_MS);
   }
 
   function renderLauncher(config) {
@@ -229,13 +302,19 @@
     button.id = LAUNCHER_ID;
     button.type = "button";
     button.className = "trikdocs-chat-launcher";
-    button.setAttribute("aria-label", "Chat with TRIKDIS Support");
-    button.title = "Chat with TRIKDIS Support";
-    button.innerHTML =
-      '<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">' +
-      '<path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2zm3 6v2h2V9H7zm4 0v2h2V9h-2zm4 0v2h2V9h-2z"/>' +
-      "</svg>";
-    button.addEventListener("click", function () {
+    button.setAttribute("aria-label", labels().launcher);
+    button.title = labels().launcher;
+    var face = document.createElement("img");
+    face.src = avatarUrl();
+    face.alt = "";
+    face.width = 60;
+    face.height = 60;
+    var dot = document.createElement("span");
+    dot.className = "trikdocs-chat-online-dot";
+    dot.setAttribute("aria-hidden", "true");
+    button.appendChild(face);
+    button.appendChild(dot);
+    var open = function () {
       storageSet("localStorage", ENGAGED_KEY, "1");
       state.openRequested = true;
       loadWidget(config);
@@ -245,8 +324,10 @@
         openWhenReady(0);
       }
       removeLauncher();
-    });
+    };
+    button.addEventListener("click", open);
     document.body.appendChild(button);
+    scheduleTeaser(open);
   }
 
   function sync() {

@@ -161,8 +161,15 @@ test.describe("Support chat rollout", () => {
       await answerConsent(page);
       await page.waitForSelector(LAUNCHER, { state: "visible" });
       expect(requests).toEqual([]);
+      // Joy's face on the launcher, and her "Hi, I'm Joy" pop-up a moment later.
+      expect(await page.evaluate(() => document.querySelector("#trikdocs-chat-launcher img").getAttribute("src")))
+        .toMatch(/\/images\/joy-avatar\.svg$/);
+      await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
+      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("AI assistant");
+      await page.screenshot({ path: path.join(ARTIFACT_DIR, "chatwoot-launcher.png"), fullPage: false });
 
       await page.click(LAUNCHER);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
       await expect
         .poll(async () => page.evaluate(() => {
           const bubble = document.getElementById("chatwoot-stub-bubble");
@@ -172,6 +179,7 @@ test.describe("Support chat rollout", () => {
       state = await chatState(page);
       expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:en", "toggle:open"]);
       expect(requests).toEqual([CHATWOOT_SDK_URL]);
+      expect(await page.evaluate(() => window.chatwootSettings.showPopoutButton)).toBe(true);
       expect(state.launcher).toBeFalsy();
       expect(await page.evaluate(() => localStorage.getItem("trikdocs-chat-engaged"))).toBe("1");
 
@@ -183,6 +191,24 @@ test.describe("Support chat rollout", () => {
       expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:lt"]);
       expect(state.launcher).toBeFalsy();
       expect(requests.filter((url) => url.startsWith("UNEXPECTED"))).toEqual([]);
+    });
+  });
+
+  test("the pop-up stays closed once dismissed, and speaks the page language", async () => {
+    await withPage(async ({ page, requests }) => {
+      await page.goto(`${BASE_URL}/lt/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+      await answerConsent(page);
+      await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
+      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("dirbtinio intelekto asistentė");
+      await page.click("#trikdocs-chat-teaser .trikdocs-chat-teaser-close");
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
+      expect((await chatState(page)).launcher).toBe(true);
+
+      await page.goto(`${BASE_URL}/lt/`, { waitUntil: "domcontentloaded" });
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      await page.waitForTimeout(2000);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
+      expect(requests).toEqual([]);
     });
   });
 
@@ -200,7 +226,7 @@ test.describe("Support chat rollout", () => {
       expect(state.chat.reason).toBe("launcher");
       // The launcher alone must not fetch anything from respond.io.
       expect(requests).toEqual([]);
-      expect(await page.getAttribute(LAUNCHER, "aria-label")).toBe("Chat with TRIKDIS Support");
+      expect(await page.getAttribute(LAUNCHER, "aria-label")).toBe("Chat with Joy, TRIKDIS AI assistant");
 
       await answerConsent(page);
       await page.waitForSelector(LAUNCHER, { state: "visible" });
