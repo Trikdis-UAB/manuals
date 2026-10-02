@@ -1,0 +1,45 @@
+{
+  "page": "docs/lt/alarm-communicators/cellular/gt-plus/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image18.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image19.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image20.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": ""
+      }
+    }
+  ]
+}
