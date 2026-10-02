@@ -221,7 +221,7 @@ You can make these settings in the Protegus app or in TrikdisConfig. Choose your
 
     2.  Open the casing of the communicator with a flat-head screwdriver as shown below:
 
-        <img alt="Line drawing showing how to open the GT case with a flat-head screwdriver: insert it at the top seam near the antenna and pry outward, then insert it at the bottom seam and pry downward. A detail view shows the USB-C port location on the PCB edge." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+        <img alt="Line drawing showing how to open the communicator case with a flat-head screwdriver: insert it at the top seam near the antenna and pry outward, then insert it at the bottom seam and pry downward. A detail view shows the USB-C port location on the PCB edge." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
     3.  Using a USB-C cable connect the communicator to the computer.
 
@@ -367,6 +367,8 @@ You can make these settings in the Protegus app or in TrikdisConfig. Choose your
     **In “CMS reporting” window settings for “Primary channel”:**
 
     <img alt="TrikdisConfig CMS reporting window, CMS settings tab. Primary channel fields highlighted and numbered 4 to 9: Communication type (Disable), Protocol, Encryption key (0123456789ABCDEF), Domain or IP, Port, TCP or UDP (TCP). The Primary channel Backup group is highlighted as 10. The Parallel channel and Parallel channel Backup show Communication type IP, Protocol TRK8, the same encryption key and TCP." src="./image16.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
+
+    The screenshot shows the window before configuration: the **Primary channel** is still disabled.
 
     4. **Communication type** - select the **IP** connection method.
 
