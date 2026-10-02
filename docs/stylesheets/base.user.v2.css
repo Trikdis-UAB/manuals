@@ -1274,6 +1274,35 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* Two phone screenshots side by side, e.g. the same app screen on two hardware
+   versions (Scripts/config_tabs/add_app_screenshots.py). Spans, because inside a tab
+   the markup sits in a <p>. Stacks on narrow screens. */
+.md-typeset .trik-mob-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1.5rem;
+}
+
+.md-typeset .trik-mob-pair__item {
+  display: block;
+  flex: 0 1 260px;
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+.md-typeset .trik-mob-pair img.trik-mob-img {
+  max-width: 100%;
+  margin: 0 auto 0.4rem;
+}
+
+.md-typeset .trik-mob-pair__caption {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light, #666);
+}
+
 /* Support chat launcher (docs/javascripts/support-chat.js). Sits where the
    respond.io launcher appears, so nothing jumps when the widget takes over. */
 .trikdocs-chat-launcher {

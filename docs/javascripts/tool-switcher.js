@@ -133,6 +133,17 @@
     if (!article || article.dataset.toolSwitcher === "true") {
       return;
     }
+    // Copy each tab's label onto its block, for every tab set on the page; the PDF
+    // export prints the label from there (Scripts/pdf-export.css).
+    Array.prototype.forEach.call(article.querySelectorAll(".tabbed-set"), function (set) {
+      var labels = labelsOf(set);
+      var blocks = set.querySelectorAll(":scope > .tabbed-content > .tabbed-block");
+      Array.prototype.forEach.call(blocks, function (block, i) {
+        if (labels[i]) {
+          block.dataset.label = labels[i];
+        }
+      });
+    });
     var sets = Array.prototype.filter.call(
       article.querySelectorAll(".tabbed-set"),
       isToolSet
