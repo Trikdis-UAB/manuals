@@ -21,7 +21,8 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
   - wave 5: G17F and FIRECOM, 177 images, drafted and re-checked by Codex (2026-09-30);
   - wave 6: SP3, SP3 Paradox RTX3 and SP3 Paradox user guide, 157 images, Codex (2026-09-30);
   - wave 7: GATOR and GATOR WiFi, 122 images, Codex (2026-09-30);
-  - wave 8: SK-LCD and SK-LED (button) keypads, plus the last 3 images each of SK-LCD TouchPad and FLEXi SK-LCD, 123 images, Codex (2026-10-01).
+  - wave 8: SK-LCD and SK-LED (button) keypads, plus the last 3 images each of SK-LCD TouchPad and FLEXi SK-LCD, 123 images, Codex (2026-10-01);
+  - wave 9: E16, T16 and E16T, 98 images, Codex (2026-10-02).
 - **Human review:** Igoris (documentation) checked the 60 wiring and block diagrams of GT, GT+, GET, G16 and G16T and replied "kaip ir gerai" on 2026-09-28. He confirmed the Paradox serial cable is CRP2.4; the page text said CRP2 and was fixed in all languages. On 2026-09-29 he sent corrected EN images, now live: GT Paradox SP diagram (English label), G16 keyswitch diagram (zones were drawn reversed; now 1-st Area to I/O 1), and English GT+ status bar, Restore and SMS & Call Reporting screenshots. The Estonian/Lithuanian SMS language in G16/G16T screenshots and the W17u/W485 name are fine as they are. Not yet checked: whether the LT, ES and RU pages carry the same drawing problems (the G16 zone order especially); look when doing their alt text and ask Igoris. Wave 5 (G17F, FIRECOM): Igoris replied 'kaip ir gerai' on 2026-09-30, with one fix: RF-LORA works up to 5000 m with iO-LORA, iO-8-LORA, PB-LORA and REL-LORA (the alt had described only the one drawn arrow); fixed in G17F, FIRECOM and SP3. On 2026-09-30 Igoris also answered: SP3 diagrams ok; 'Sritis' and the RTX3 callout can stay; the G17F and GATOR text step numbers must follow the screenshot callouts (renumbered); GATOR WiFi's ID is the MAC, not the IMEI (fixed); he sent English GATOR WiFi screenshots (replaced). Closed 2026-10-01: the ESPA4.4.4 screenshots only show which window to configure (TRK there is an example; the customer sets their own), so the text stays; 'iO-MO' in the FIRECOM diagram is correct as drawn. All of Igoris's questions on waves 3-7 are answered. From wave 6 Andrius chose a lighter review: send Igoris only the page-versus-picture questions plus the 5-10 hardest diagrams (mostly the ones the re-check corrected), not the full list. For later waves, send him the new diagrams the same way: each image from the live site with its alt text under it, in the email body.
 - **Remaining:**
 
@@ -29,7 +30,7 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 
   | Language | Needs alt | Total |
   |---|---|---|
-  | EN | 212 | 1,343 |
+  | EN | 114 | 1,343 |
   | LT | 1,160 | 1,345 |
   | ES | 1,148 | 1,327 |
   | RU | 1,175 | 1,329 |
@@ -38,9 +39,6 @@ For **wiring diagrams**, alt text must list the actual connections, not just nam
 
   | Manual | Needs alt | Total |
   |---|---|---|
-  | E16 | 40 | 43 |
-  | T16 | 30 | 30 |
-  | E16T | 28 | 31 |
   | RL14 | 24 | 25 |
   | RF-S8 | 20 | 20 |
   | expanders/io8-lora | 18 | 18 |
@@ -89,6 +87,8 @@ python3 projects/alt-text/scripts/codex_wave.py status w6     # disputes -> work
 python3 projects/alt-text/scripts/codex_wave.py apply w6
 python3 projects/alt-text/scripts/codex_wave.py review w6     # diagram list for Igoris's email
 ```
+
+Wave 9 lessons: (1) the Codex CLI path moves on app updates; `codex_wave.py` now searches for it. (2) `prepare` reused any byte-identical picture's alt, including thin legacy ones ('E16T panel connection diagram'); it now reuses only alts of 60+ characters. (3) The re-check can itself be wrong: on T16 image11 it invented a fourth connector lead; the draft was right. Zoom on every wiring dispute, whichever side it favours.
 
 Wave 5 lessons: (1) Codex slipped one picture inside a batch (three screenshot drafts described their neighbour), so always re-check ALL items with `--all`, not just 'high'; the status step then refuses unchecked items. (2) Most re-check disputes are omitted values: keep the manual's example values (PIN 1234, key 123456, Object ID 0001), drop identifiers and personal details (IMEI, serials, passwords, phone numbers, names, emails). Scan the final diff for them anyway: two slipped through in undisputed drafts. (3) Real wiring errors were caught by the re-check and confirmed by zooming (smoke-detector relay coil, panel PGM wiring); look at every wiring dispute yourself. (4) Some pages have CRLF line endings; `apply_alt_text.py` now preserves them (it once rewrote a whole file).
 

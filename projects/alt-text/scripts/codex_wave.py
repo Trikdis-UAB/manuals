@@ -23,7 +23,20 @@ ROOT = HERE.parents[2]
 sys.path.insert(0, str(HERE))
 from altlib import image_refs, needs_alt  # noqa: E402
 
-CODEX = os.environ.get("CODEX_BIN", str(Path.home() / ".codex/plugins/.plugin-appserver/codex"))
+def _find_codex():
+    """The Codex app moves its CLI on updates (2026-10-01: .../codex -> .../codex-cli/bin/codex)."""
+    import shutil
+    base = Path.home() / ".codex/plugins/.plugin-appserver"
+    for p in [os.environ.get("CODEX_BIN"), shutil.which("codex"), base / "codex-cli/bin/codex", base / "codex"]:
+        if p and Path(p).is_file() and os.access(p, os.X_OK):
+            return str(p)
+    found = sorted(base.glob("**/bin/codex")) if base.is_dir() else []
+    if found:
+        return str(found[0])
+    sys.exit("Codex CLI not found; set CODEX_BIN")
+
+
+CODEX = _find_codex()
 MODEL = os.environ.get("CODEX_MODEL", "gpt-6-sol")
 BATCH = 15
 VERIFY_BATCH = 8
@@ -58,7 +71,7 @@ def prepare(a):
     for page in glob.glob(str(ROOT / "docs/en/**/index.md"), recursive=True):
         for r in image_refs(open(page, encoding="utf-8").read()):
             p = Path(page).parent / r["src"]
-            if not needs_alt(r["alt"]) and p.is_file():
+            if not needs_alt(r["alt"]) and len(r["alt"]) >= 60 and p.is_file():   # skip thin legacy alts
                 known.setdefault(hashlib.sha1(p.read_bytes()).hexdigest(), r["alt"])
     groups = collections.OrderedDict()
     for page in a.pages:

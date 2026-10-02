@@ -1,7 +1,7 @@
 # Ethernet communicator E16T
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="Product Image" width="400">
+  <img src="./image1.webp" alt="Front of the TRIKDIS E16T communicator, showing NETWORK, DATA, POWER, TROUBLE and LINE indicators. The bottom terminals are labelled + DC, - DC, TIP, RING, T-1 / IN1, R-1 / IN2, OUT, COM, A 485 and B 485; the power label states 10-18 V, 0.5 A Max." width="400">
 </div>
 
 
@@ -35,7 +35,7 @@ Sends events to monitoring station receiver:
 
 - When Protegus service is enabled, events are first delivered to CMS, and only then are sent to app users.
 
-<img alt="" src="./image1.webp" style="width:2.3622047244094486in;height:3.232283464566929in" />
+<img alt="Front of the TRIKDIS E16T communicator, showing NETWORK, DATA, POWER, TROUBLE and LINE indicators. The bottom terminals are labelled + DC, - DC, TIP, RING, T-1 / IN1, R-1 / IN2, OUT, COM, A 485 and B 485; the power label states 10-18 V, 0.5 A Max." src="./image1.webp" style="width:2.3622047244094486in;height:3.232283464566929in" />
 
 **Works with Protegus app:**
 
@@ -126,7 +126,7 @@ Sends events to monitoring station receiver:
 
 ### Structural schematic with E16T usage 
 
-<img alt="" src="./image4.webp" style="width:7.086805555555555in;height:2.975in" />
+<img alt="Block diagram: alarm panel to E16T Ethernet communicator to router to Internet. From the Internet, one arrow leads to the Protegus server and then a phone with Protegus software; another leads to a receiver and then monitoring software at a security company's monitoring station." src="./image4.webp" style="width:7.086805555555555in;height:2.975in" />
 
 !!! note
     Before configuration, make sure you have all the necessary components:
@@ -150,7 +150,7 @@ Sends events to monitoring station receiver:
 
 2.  Open the casing of the E16T with a flat-head screwdriver as shown below:
 
-<img alt="" src="./image5.webp" style="width:5.503937007874016in;height:1.4803149606299213in" />
+<img alt="Two drawings show a flat-head screwdriver inserted into the small slot at the upper edge of the E16T cover. A left-pointing arrow appears in the first drawing and a downward-pointing arrow beside the screwdriver in the second. A separate detail labels the USB Mini-B connector." src="./image5.webp" style="width:5.503937007874016in;height:1.4803149606299213in" />
 
 1.  Using a USB Mini-B cable connect the E16T to the computer.
 
@@ -164,13 +164,13 @@ Below we describe what settings need to be set for the communicator to begin sen
 
 **In the *“System Settings*” window:**
 
-<img alt="" src="./image6.webp" style="width:7.090551181102362in;height:1.8937007874015748in" />
+<img alt="TrikdisConfig E16T, System settings window. Callout 1 highlights Security panel model, set to INTERFACE DTMF." src="./image6.webp" style="width:7.090551181102362in;height:1.8937007874015748in" />
 
 1.  Select **Security panel model** that will be connected to the communicator.
 
 **In “Reporting” window “Protegus Service” tab:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="TrikdisConfig E16T, Reporting window, PROTEGUS service tab. Callout 2 highlights the checked Enable connection box; callout 3 highlights the masked Service code field." src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 2. Check **Enable connection** in Protegus service checkbox.
 
@@ -185,7 +185,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “System settings” window:**
 
-<img alt="" src="./image8.webp" style="width:7.078740157480315in;height:1.8818897637795275in" />
+<img alt="TrikdisConfig E16T, System settings window. Callout 1 highlights Account number E102; callout 2 highlights Security panel model INTERFACE DTMF." src="./image8.webp" style="width:7.078740157480315in;height:1.8818897637795275in" />
 
 1.  Enter **Account number** provided by the Central Monitoring Station (4 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**).
 
@@ -193,7 +193,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 **In “Reporting” window settings for „Primary“ channel:**
 
-<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:4.059055118110236in" />
+<img alt="TrikdisConfig E16T, Reporting window, CMS Reporting tab. Callouts 3-8 show Primary: Enable checked, Remote Host 0.0.0.0, Remote Port 0, TCP or UDP set to TCP, PING Time checked at 30, and a masked Encryption key. Callout 9 groups Backup settings: Enable checked, Remote Host 0.0.0.0, Remote Port 0, TCP, PING Time unchecked at 30, and a masked Encryption key. Callouts 10-14 show TCP protocol TRK03, Encryption enabled unchecked, a zero-filled DC-09 encryption key, and blank DC-09 receiver No. and DC-09 line No. fields." src="./image9.webp" style="width:7.082677165354331in;height:4.059055118110236in" />
 
 3.  **Enable** – enable primary communication channel.
 
@@ -225,7 +225,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
     and receiver numbers.
 **In “Reporting” window “Protegus Service” tab:**
 
-<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="TrikdisConfig E16T, Reporting window, PROTEGUS service tab. Callout 15 highlights the checked Enable connection box; callout 16 highlights the masked Service code field." src="./image10.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 15. Select checkbox **Enable connection** to the PROTEGUS Cloud.
 
@@ -242,9 +242,9 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 Following the provided schematics connect the communicator to the control panel.
 
-<img alt="" src="./image11.webp" style="width:4.409448818897638in;height:2.547244094488189in" />
+<img alt="Wiring diagram: control panel to E16T. Power: AUX+ to + DC, AUX- to - DC. Telephone: RING to RING, TIP to TIP. Zone labelled 'keyswitch': ZNx to OUT, labelled output type 'Remote control'. A LAN cable connects to the E16T." src="./image11.webp" style="width:4.409448818897638in;height:2.547244094488189in" />
 
-<img alt="" src="./image12.webp" style="width:4.283464566929134in;height:2.5551181102362204in" />
+<img alt="Wiring diagram: SP231 to E16T. Power: AUX+ to + DC, AUX- to - DC. RS485 connection, up to 100 m: A 485 to A RS485, B 485 to B RS485. A LAN cable connects to the E16T." src="./image12.webp" style="width:4.283464566929134in;height:2.5551181102362204in" />
 
 ### Schematics for wiring inputs 
 
@@ -252,15 +252,15 @@ The communicator has two input terminals (IN1, IN2) for connecting NO, NC, EOL t
 
 Connect the input according to the selected input type (NO, NC, EOL), as shown in the schemes below:
 
-<img alt="" src="./image13.webp" style="width:5.68503937007874in;height:1.625984251968504in" />
+<img alt="Four input wiring diagrams from COM to INx, left to right: Normally open (NO), with an NO contact; Normally closed (NC), with an NC contact; Normally closed with End Of Line resistor 2,2k (EOL 2,2k), with the resistor in series with the NC contact; and Normally open with End Of Line resistor 2,2k (EOL 2,2k), with the resistor in parallel with the NO contact." src="./image13.webp" style="width:5.68503937007874in;height:1.625984251968504in" />
 
 ### Connect LAN cable 
 
-<img alt="" src="./image14.webp" style="width:2.8346456692913384in;height:2.3622047244094486in" />
+<img alt="Wiring diagram: LAN cable to E16T. An arrow shows the LAN plug entering the communicator's side socket." src="./image14.webp" style="width:2.8346456692913384in;height:2.3622047244094486in" />
 
 ### Schematic for wiring a relay and LED 
 
-<img alt="" src="./image15.webp" style="width:4.437007874015748in;height:0.9133858267716536in" />
+<img alt="Wiring diagram: E16T to relay and LED. Relay coil: +DC and OUT to the two coil terminals; relay contacts are labelled NC, C and NO. LED: E16T +DC to a 2k2 resistor, then to the LED and back to OUT in series." src="./image15.webp" style="width:4.437007874015748in;height:0.9133858267716536in" />
 
 ## Programming the control panel 
 
@@ -348,7 +348,7 @@ With Protegus users will be able to control their alarm system remotely. They wi
         "NETWORK" indicator lights up green when there is a connection.
 3. Click **Add new system** and enter the E16T’s „*MAC*” number. This number can be found on the device and the packaging sticker. After entering press **Next**.
 
-    <img alt="" src="./image19.webp" style="width:5.818897637795276in;height:2.0196850393700787in" />
+    <img alt="Protegus Add new system window. Enter the communicator MAC in the required Unique ID field, then select Next. The callout says the MAC is on the packing box, the back of the communicator housing, or in TrikdisConfig as Unique ID." src="./image19.webp" style="width:5.818897637795276in;height:2.0196850393700787in" />
 
 ### Additional settings to arm/disarm the alarm system using control panel’s keyswitch zone 
 
@@ -359,11 +359,11 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  In the new window, click "Areas" in the side menu. In the window that opens, specify the area of the alarm system 1 (communicator has one OUT output) and press "Next.
 
-    <img alt="" src="./image23.webp" style="width:6.446679790026247in;height:2.2500043744531935in" />
+    <img alt="Protegus Areas setup for E16T. The How many Areas are in the system? field is set to 1, with a Next button." src="./image23.webp" style="width:6.446679790026247in;height:2.2500043744531935in" />
 
 2.  In the new window, identify what is the number for each of the specified areas in the security system and press **Save**.
 
-    <img alt="" src="./image24.webp" style="width:6.446679790026247in;height:2.2600043744531932in" />
+    <img alt="Protegus Areas setup for E16T. The Area 1 number field contains 1, with a Save button." src="./image24.webp" style="width:6.446679790026247in;height:2.2600043744531932in" />
 
 3.  In the side menu press **Settings** and in the newly opened window press **Settings**. Select the box **Arm/Disarm** **with** **PGM** and specify which area the output will control. One output OUT can control only one area.
 
@@ -371,7 +371,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 5.  For additional security, you can select **Use Application password for ARM/DISARM**. Then after pressing the button to arm/disarm the alarm system, a window for entering the app password will open.
 
-    <img alt="" src="./image25.webp" style="width:6.353346456692913in;height:2.853338801399825in" />
+    <img alt="Protegus Settings for E16T. Arm/Disarm with PGM Output 1 is checked, with Area 1 and Pulse selected. Use Application password for ARM/DISARM is unchecked; Pulse interval in seconds is set to 3 sec." src="./image25.webp" style="width:6.353346456692913in;height:2.853338801399825in" />
 
 ### Arming/disarming the alarm system with Protegus 
 
@@ -381,7 +381,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 3.  If asked, enter the user code or Protegus password.
 
-    <img alt="" src="./image26.webp" style="width:6.353346456692913in;height:3.5200076552930883in" />
+    <img alt="Protegus Areas window for E16T. Selecting Area 1 opens a dialog with Arm, Disarm and Cancel buttons." src="./image26.webp" style="width:6.353346456692913in;height:3.5200076552930883in" />
 
 ## Remote configuration 
 
@@ -401,7 +401,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 3.  Start the configuration program TrikdisConfig and the section **Remote Access** in the **Unique ID** field, enter the existing E16T MAC address (the MAC address is indicated on the stickers affixed to the underside of the communicator and the package).
 
-<img alt="" src="./image27.webp" style="width:6.917322834645669in;height:0.952755905511811in" />
+<img alt="TrikdisConfig Remote access section. The Unique ID field and Configure button are outlined in red; a System Name field and Control button are also shown." src="./image27.webp" style="width:6.917322834645669in;height:0.952755905511811in" />
 
 4. (Optional) In the **System name** field, enter the desired name for the E16T with this Unique ID. Press **Configure.**
 
@@ -415,7 +415,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 After connecting the E16T and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
 
-<img alt="" src="./image28.webp" style="width:6.925196850393701in;height:0.6220472440944882in" />
+<img alt="TrikdisConfig status bar for an E16T. It shows the Unique ID field, Status: done, Device: E16T, and fields for SN, BL, FW, HW, State and Admin role." src="./image28.webp" style="width:6.925196850393701in;height:0.6220472440944882in" />
 
 | Object    | Description                                        |
 |-----------|----------------------------------------------------|
@@ -433,7 +433,7 @@ After pressing **Read [F4]**, the program will read and show the settings which 
 
 ### “System settings” window 
 
-<img alt="" src="./image29.webp" style="width:6.937007874015748in;height:4.05511811023622in" />
+<img alt="TrikdisConfig E16T System settings window. General shows Account number E102, Test period enabled at 1440 min, and Security panel model INTERFACE DTMF. Ethernet settings shows DHCP checked, IP 192.168.1.118, mask 255.255.255.0, gateway 0.0.0.0, and DNS servers 8.8.8.8 and 8.8.4.4. Access shows masked administrator and installer codes, with only Reporting checked under installer permissions. Output shows OUT type Remote Control, OUT mode Level, and Pulse Time 10 s." src="./image29.webp" style="width:6.937007874015748in;height:4.05511811023622in" />
 
 **“General” settings group**
 
@@ -491,7 +491,7 @@ There are two access levels (administrator and installer) when configuring the E
 
 **„CMS Reporting“ tab**
 
-<img alt="" src="./image30.webp" style="width:6.940944881889764in;height:4.051181102362205in" />
+<img alt="TrikdisConfig E16T Reporting window on the CMS Reporting tab. Primary and Backup are enabled; each shows Remote Host 0.0.0.0, Remote Port 0, TCP, and a masked encryption key. Primary PING Time is enabled at 30; Backup PING Time is unchecked. Settings shows TCP protocol TRK03 and MCI slave address 1. In SIA IP settings, Encryption enabled and Use time stamp are unchecked." src="./image30.webp" style="width:6.940944881889764in;height:4.051181102362205in" />
 
 The communicator sends messages to the monitoring station via a wired internet (IP) connection.
 
@@ -537,7 +537,7 @@ Settings can be changed, when the DC-09_2007 or DC-09_2012 encoding for universa
 
 - **Use time stamp –** the time will be included in the message if the field is checked.
 
-<img alt="" src="./image31.webp" style="width:6.940944881889764in;height:1.7716535433070866in" />
+<img alt="TrikdisConfig E16T Reporting window, PROTEGUS service tab. Enable connection is checked, and the Service code field is masked." src="./image31.webp" style="width:6.940944881889764in;height:1.7716535433070866in" />
 
 **„Protegus service“ tab** **“Protegus service” settings group**
 
@@ -547,7 +547,7 @@ Settings can be changed, when the DC-09_2007 or DC-09_2012 encoding for universa
 
 ### „Event Summary“ windows 
 
-<img alt="" src="./image32.webp" style="width:6.940944881889764in;height:4.051181102362205in" />
+<img alt="TrikdisConfig E16T Event Summary window. Inputs IN 1 and IN 2 each have Contact ID 132 and Type NO, with Zone No. 001 and 002 respectively; Alarm and Restore are checked for both. The listed internal events—Transmission of the message failed, Periodic test report, System reset, Low Battery, and Battery Restore—have Contact IDs 350, 602, 305, 302, and 302. Their Enable boxes are unchecked. The first four rows are set to Event; Battery Restore is set to Restore." src="./image32.webp" style="width:6.940944881889764in;height:4.051181102362205in" />
 
 This window allows you to enable, disable, and change internal messages and input messages from the device. Turning off the internal message in this window will not send it regardless of other settings.
 
@@ -585,7 +585,7 @@ The event Contact ID codes that will be sent to the CMS and to the Protegus, whe
 
 To restore the communicator’s factory defaults, you need to click the **Restore** button in the TrikgisConfig window.
 
-<img alt="" src="./image33.webp" style="width:6.937007874015748in;height:1.062992125984252in" />
+<img alt="TrikdisConfig Default settings section. The Restore button is outlined in red above the Unique ID field." src="./image33.webp" style="width:6.937007874015748in;height:1.062992125984252in" />
 
 ## Test communicator performance 
 
@@ -629,7 +629,7 @@ E16T firmware can also be updated or changed manually. After an update, all prev
 
 2.  Press **Open firmware** and select the required firmware file. If you do not have the file, the newest firmware file can be downloaded by <u>registered users</u> from [www.trikdis.com](http://www.trikdis.com) , under the download section of the E16T communicator.
 
-    <img alt="" src="./image34.webp" style="width:6.937007874015748in;height:3.0866141732283463in" />
+    <img alt="TrikdisConfig E16T Firmware window. It shows the Open firmware file field, Open firmware button, checked Preserve settings box, Update (F12) button and a progress bar at 0%." src="./image34.webp" style="width:6.937007874015748in;height:3.0866141732283463in" />
 
 3.  Press **Update [F12]**.
 
@@ -645,4 +645,4 @@ Disconnect the power supply before making any electrical connections.
 
 Changes, modifications or repairs not authorized by the manufacturer shall void your rights under the warranty.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.
+<img alt="Crossed-out wheeled bin symbol (WEEE), indicating the device must be disposed of separately from household waste." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Please act according to your local rules and do not dispose of your unusable alarm system or its components with other household waste.

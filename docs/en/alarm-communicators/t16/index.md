@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.webp" alt="" width="400">
+<img src="./image1.webp" alt="Front of a TRIKDIS T16V transmitter, showing the antenna connector, NETWORK, DATA and POWER indicators, and two terminal blocks along the bottom." width="400">
 
 </div>
 
@@ -54,7 +54,7 @@ The transmitter can send its own event messages and event messages received from
 
 2 output. (*T16U5*)
 
-<img alt="" src="./image4.webp" style="width:2.3622047244094486in;height:3.5669291338582676in" />
+<img alt="Front of a TRIKDIS T16V transmitter. Indicators are labelled NETWORK, DATA and POWER. Bottom terminals are labelled +DC, -DC, RX/CLK, TX/DATA, A RS485, B RS485, COM, TIP, IN/R-1, IN2/T-1, IN3, IN4, COM, IN5, IN6 and OUT." src="./image4.webp" style="width:2.3622047244094486in;height:3.5669291338582676in" />
 
 ### Description of operation 
 
@@ -198,23 +198,23 @@ The zones (inputs IN) of ***T16V,** **T16U, T16U5*** transmitters can be connect
 
 **Data cable**. The data cable connecting the RF transmitter and the control panel must be no longer than 50 cm. If the data cable is longer, a shielded cable must be used. The data cable should be connected to the keypad bus, serial port or telephone communicator on the control panel. Avoid mounting the cable in parallel with AC power cables, the antenna cable or other strong sources of electromagnetic field.
 
-<img alt="" src="./image7.webp" style="width:7.0875in;height:2.566666666666667in" />
+<img alt="Two wiring diagrams. DSC panel keypad bus to T16: RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA. PARADOX panel to T16 through the EX-CRP2.4 cable, ordered separately: +AUX (+12V) and red wire R to + DC; -AUX and black wire B to - DC; yellow wire Y to Rx/CLK; green wire G to Tx/DATA." src="./image7.webp" style="width:7.0875in;height:2.566666666666667in" />
 
-<img alt="" src="./image8.webp" style="width:7.0875in;height:2.546527777777778in" />
+<img alt="Two wiring diagrams. CADDX panel keypad bus to T16: POS (+12V) to + DC, COM to - DC, DATA to Tx/DATA; Rx/CLK is unused. TEXECOM panel to T16 through the EX-CRP4 cable, ordered separately: +DC (+12V) and red wire R to + DC; -DC and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA." src="./image8.webp" style="width:7.0875in;height:2.546527777777778in" />
 
-<img alt="" src="./image9.webp" style="width:7.0875in;height:2.588888888888889in" />
+<img alt="Two wiring diagrams. CROW Runner panel keypad bus to T16: POS (+12V) to + DC, NEG to - DC, CLK to Rx/CLK, DATA to Tx/DATA. SECOLink panel to T16 through the EX-CRP4 cable, ordered separately: +AUX (+12V) and red wire R to + DC; COM and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA." src="./image9.webp" style="width:7.0875in;height:2.588888888888889in" />
 
-<img alt="" src="./image10.webp" style="width:7.0875in;height:1.7743055555555556in" />
+<img alt="Two wiring diagrams. ARGUS-SPEKTR STRELEC panel to T16: +PWR (+12V) to + DC, GND to - DC, TD to Rx/CLK, RD to Tx/DATA. BOLID C2000 panel to T16: +U (+12V) to + DC, GND to - DC, Tx to Rx/CLK, Rx to Tx/DATA." src="./image10.webp" style="width:7.0875in;height:1.7743055555555556in" />
 
-<img alt="" src="./image11.webp" style="width:7.0875in;height:2.91875in" />
+<img alt="Two wiring diagrams. PYRONIX Matrix panel to T16: +AUX (+12V) to + DC, -AUX to - DC, KD to Tx/DATA; Rx/CLK is unused. ROVALANT A6-06 panel: SLOT XP4 connects to the ИС-RF serial module; Rovalant +12V to T16 + DC and -12V to - DC. The ИС-RF serial connector has three leads, to T16 - DC (joined with the -12V line at a dot), Rx/CLK and Tx/DATA; no connector lead goes to + DC." src="./image11.webp" style="width:7.0875in;height:2.91875in" />
 
-<img alt="" src="./image12.webp" style="width:7.0875in;height:1.66875in" />
+<img alt="Two wiring diagrams. RISCO LightSYS panel keypad bus to T16: RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA. HONEYWELL VISTA panel keypad bus to T16: terminal 4 to - DC, 5 to + DC, 6 to Tx/DATA, 7 to Rx/CLK; each pair of wires crosses without a junction dot." src="./image12.webp" style="width:7.0875in;height:1.66875in" />
 
-<img alt="" src="./image13.webp" style="width:3.36750656167979in;height:1.830003280839895in" />
+<img alt="Wiring diagram: INIM SMARTLINE panel to T16. +12V to + DC, GND to - DC, -RS485 to Rx/CLK, +RS485 to Tx/DATA." src="./image13.webp" style="width:3.36750656167979in;height:1.830003280839895in" />
 
 ### Schematic for connecting control panel’s landline dialer 
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:2.286111111111111in" />
+<img alt="Two wiring diagrams. Control panel landline dialer to T16: +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP. With landline control: the same four connections, plus panel R-1 to T16 IN1/R-1 and T-1 to IN2/T-1." src="./image14.webp" style="width:7.0875in;height:2.286111111111111in" />
 
 !!! warning "Important"
     T16 should not be connected to a working telecom landline.
@@ -240,11 +240,11 @@ The transmitter has 6 (or 5) input terminals (IN1, IN2, IN3, IN4, IN5, IN6) for 
 
 Schematics for connecting NO, NC, EOL type circuits:
 
-<img alt="" src="./image15.webp" style="width:6.4763779527559056in;height:2.2283464566929134in" />
+<img alt="Four input circuits from COM to INx. Normally open (NO): shorted - alarm; open - restore. Normally closed (NC): shorted - restore; open - alarm. Normally closed with 2.2k end of line resistor (EOL) in series: shorted - alarm; open - alarm; 2.2k - restore. Normally open with 2.2k EOL resistor in parallel: shorted - alarm; open - alarm; 2.2k - restore." src="./image15.webp" style="width:6.4763779527559056in;height:2.2283464566929134in" />
 
 ### Schematic for connecting control panel’s PGMs 
 
-<img alt="" src="./image16.webp" style="width:3.32750656167979in;height:2.3700043744531936in" />
+<img alt="Wiring diagram: control panel PGM outputs to T16. +AUX (+12 V) to + DC, -AUX to - DC, PGM1 to IN1/R-1, PGM2 to IN2/T-1, PGM3 to IN3, PGM4 to IN4." src="./image16.webp" style="width:3.32750656167979in;height:2.3700043744531936in" />
 
 The transmitter’s inputs (IN) should be set to either NO or NC.
 
@@ -252,13 +252,13 @@ The transmitter’s inputs (IN) should be set to either NO or NC.
 
 The siren should be connected when the *TM17* is connected to the transmitter. A siren that consumes up to 1 A of current can be connected to the *T16* transmitter’s output OUT1 (or OUT2). It is activated if one of the transmitter’s inputs (IN) is triggered in armed mode. The siren turns off after 3 minutes or after using a contact key.
 
-<img alt="" src="./image17.webp" style="width:3.01000656167979in;height:1.2066688538932633in" />
+<img alt="Wiring diagram: T16 to siren. OUT1 to the siren’s black wire; +DC to its red wire." src="./image17.webp" style="width:3.01000656167979in;height:1.2066688538932633in" />
 
 ### Schematics for connecting RS485 modules 
 
-<img alt="" src="./image18.webp" style="width:6.807086614173229in;height:2.7086614173228347in" />
+<img alt="Two wiring diagrams. Left, panel to T16 and W485: +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals; T16 A 485 to W485 A 485 and B 485 to B 485. RS485 connection up to 100 m. Right, T16 to TM17 reader: 12 V, 1,5 A DC source powers both devices; TM17 red wire to +DC, blue to -DC, black to T16 A 485, white to T16 B 485." src="./image18.webp" style="width:6.807086614173229in;height:2.7086614173228347in" />
 
-<img alt="" src="./image19.webp" style="width:3.783464566929134in;height:2.7086614173228347in" />
+<img alt="Wiring diagram: panel to T16 and E485 Ethernet module. Power: panel +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals. RS485 connection up to 100 m: T16 A 485 to E485 A 485, B 485 to B 485." src="./image19.webp" style="width:3.783464566929134in;height:2.7086614173228347in" />
 
 When the RS485 data bus is longer than 1 m, use a twisted-pair cable (STP 4x2x0,5). Avoid mounting the cable in parallel with AC power cables, the antenna cable or other strong sources of electromagnetic field.
 
@@ -272,7 +272,7 @@ The E485 “Ethernet” module is compatible with T16 radio transmitters. The E4
 
 2.  Remove the front cover of the T16 using a flat-head screwdriver as shown below:
 
-<img alt="" src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
+<img alt="Three drawings show a flat-head screwdriver inserted into the T16 cover notch and pressed downward, the front cover pulled away to the left, and the USB Mini-B socket on the side of the opened unit." src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
 
 1.  Connect the T16 to a computer using a USB Mini-B cable.
 
@@ -282,7 +282,7 @@ The E485 “Ethernet” module is compatible with T16 radio transmitters. The E4
 
 Once the T16 is connected to the TrikdisConfig software, the program will display information about the connected device in the status bar:
 
-<img alt="" src="./image21.webp" style="width:7.086614173228346in;height:0.6850393700787402in" />
+<img alt="TrikdisConfig status bar for T16: Status Reading done; BL 1.01; FW 1.10; HW 1.02; Connection USB; Role Admin. The IMEI/Unique ID and serial number fields are also shown." src="./image21.webp" style="width:7.086614173228346in;height:0.6850393700787402in" />
 
 | Name          | Description                                             |
 |---------------|---------------------------------------------------------|
@@ -312,7 +312,7 @@ After the Read [F4] button is clicked, the program will read and show settings c
 
 **“Settings” tab**
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:4.0984251968503935in" />
+<img alt="TrikdisConfig T16 MainSetting window, Settings tab. Serial interface is checked and Telephone line interface is unchecked. The Security panel model selection begins “PARADOX DIGIPLEX EVO48, EVO192” and is cut off at the right edge. Radio Frequency 1 and 2 are enabled; both show RF Protocol RAS-3, Account ID 1FFF, System 0, Event transmit 5 times, and Test event transmit 4 times. Radio Frequency 1 shows RF Name / Frequency 1+1 MHz and RF Power 4W." src="./image22.webp" style="width:7.086614173228346in;height:4.0984251968503935in" />
 
 **Settings group “Main settings”**
 
@@ -350,7 +350,7 @@ Settings are identical to **Radio frequency 1**.
 
 **“Access” tab**
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7007874015748032in" />
+<img alt="TrikdisConfig T16 MainSetting window, Access tab. Administrator access code and Installer access code fields contain masked values. Under Allow Installer to change, Protocol, Account ID, Identification, System, RF, Power, Event transmission repeat, Events, CID to Uni table and Network 2 allowed are all checked." src="./image23.webp" style="width:7.086614173228346in;height:3.7007874015748032in" />
 
 **Settings group “Access”**
 
@@ -366,7 +366,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Inputs” tab**
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.4330708661417324in" />
+<img alt="TrikdisConfig T16 Events window, Inputs tab. Partition number is 99. Inputs 1–6 are enabled, numbered 001–006, set to Type NO with Delay 0 s, and have Event and Restore code 130 for both Radio Frequency 1 and 2. The Type menu shows None, NC, NO and EOL." src="./image24.webp" style="width:7.086614173228346in;height:3.4330708661417324in" />
 
 - **Enabled** – tick the box to send events when the input is triggered.
 
@@ -386,7 +386,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Events” tab**
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.421259842519685in" />
+<img alt="TrikdisConfig T16 Events window, Events tab, with Partition number 99. Low battery, Sleep mode, Test, TM17 Open/Close and Power Supply Failure are enabled. Both radio frequencies show the same codes: Low battery 311 event and restore; Sleep mode 302; Configuration changed 306; RS485 error and Security panel lost 350 event and restore; Power On 700; Special and Test 602; TM17 Open/Close 401 event and restore; Power Supply Failure 444." src="./image25.webp" style="width:7.086614173228346in;height:3.421259842519685in" />
 
 - **Enabled** – tick the box to turn on the sending of internal events:
 - **Low battery** – power supply voltage less than 11,5 V.
@@ -413,7 +413,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Supervision” tab**
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:2.3661417322834644in" />
+<img alt="TrikdisConfig T16 Events window, Supervision tab. For both Radio Frequency 1 and 2, Test Period is 24 h, First test after is 0 h and Ping period is 0 min. Send test only if there is no event and Send Ping only if there is no event are checked for both." src="./image26.webp" style="width:7.086614173228346in;height:2.3661417322834644in" />
 
 - **Test period** – specify the time interval between two test messages using the 1st and 2nd channels. The purpose of periodic tests is to periodically inspect the functionality of radio systems. A typical test period is 24h. It can be shortened down to 1 hour. CMS monitoring software automatically tracks the test message. A warning is generated if there are no test messages from the object.
 - **First test delay** – specify the time for delaying the first message after powering on. The goal is to be able to spread out the sending of messages across the day (24 hours) to avoid network overloads. Specify times for 1st and 2nd channels.
@@ -428,7 +428,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
 
 **“Modules list” tab**
 
-<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:3.822834645669291in" />
+<img alt="TrikdisConfig T16 RS485 modules window, Modules list tab. Detect external RS485 device automatically is unchecked. Module ID 1 has Type TM17; the Type menu for ID 2 shows Not Available, W485/W17u, TM17 and E485. Serial fields are present." src="./image27.webp" style="width:7.086614173228346in;height:3.822834645669291in" />
 
 - **Detect external RS485 device automatically** – tick the box to enable automatic identification of modules connected to the RS485 bus.
 
@@ -443,7 +443,7 @@ There are two access levels for configuring the radio transmitter T16 (administr
     E485) modules to the T16 transmitter.
 **“Module 1” tab**
 
-<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:2.6653543307086616in" />
+<img alt="TrikdisConfig T16 RS485 modules window, Module 1 tab. DKey1 and DKey2 contain contact key identifiers; DKey3 through DKey9 show 0. Sound level is 25." src="./image28.webp" style="width:7.086614173228346in;height:2.6653543307086616in" />
 
 It is possible to connect a TM17 reader to the T16 transmitter. After connecting the TM17 reader, the transmitter can be used as a security control panel. Up to 9 contact (iButton) keys can be assigned to the reader (one of which is the “Master key”) for controlling the security system’s state (armed/disarmed).
 
@@ -492,7 +492,7 @@ Blinking LED indicators on the TM17 inform about activated inputs during the tim
 | Trouble | Off | No operational problems |
 | Trouble | 9 red blinks | Problem with the connection to RS485 module |
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.677165354330709in" />
+<img alt="TrikdisConfig T16 RS485 modules window, W485 tab. Primary is enabled with Domain or IP 195.16.187.20, Port 44454 and TCP. Backup is enabled with Domain or IP 196.10.20.30, Port 6021 and TCP. Protegus is enabled; DHPC mode is checked. The displayed network fields are Static IP 192.168.1.27, Subnet mask 255.255.255.0, Default gateway 192.168.1.254, DNS 1 8.8.8.8 and DNS 2 8.8.4.4. Wifi SSID name is TRIKDIS; encryption key and Wifi SSID password fields are present." src="./image29.webp" style="width:7.086614173228346in;height:3.677165354330709in" />
 
 **“W485” tab** **“Primary” settings group**
 
@@ -528,7 +528,7 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 - **Wifi SSID password** - WiFi network password.
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.661417322834646in" />
+<img alt="TrikdisConfig T16 RS485 modules window, E485 tab. Primary is enabled with Domain or IP 195.16.187.20, Port 44454 and TCP. Backup is enabled with Domain or IP 193.10.20.30, Port 6021 and TCP. Protegus is enabled; DHPC mode is checked. The displayed network fields are Static IP 192.168.1.27, Subnet mask 255.255.255.0, Default gateway 192.168.1.254, DNS 1 8.8.8.8 and DNS 2 8.8.4.4. Encryption key fields are present." src="./image30.webp" style="width:7.086614173228346in;height:3.661417322834646in" />
 
 **“E485” tab** **“Primary” settings group**
 
@@ -562,7 +562,7 @@ Enable the backup channel mode to send events via backup channel if connection v
 
 ### “Options” window 
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="TrikdisConfig T16 Options window. Available radio frequencies lists RF name 1+1 at 160 MHz and 1+2 at 140 MHz. Fields for New RF Frequency Name and Frequency value in MHz appear above Add and Remove buttons." src="./image31.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 **Settings group “Available radio frequencies”**
 
@@ -570,7 +570,7 @@ You can add/delete radio frequencies that the T16 transmitter can use to/from th
 
 ### “CID to UNI table” window 
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:3.1811023622047245in" />
+<img alt="TrikdisConfig T16, CID to UNI table window. The editable table maps CID codes to RAS-2M and LARS codes; some rows show +z." src="./image32.webp" style="width:7.086614173228346in;height:3.1811023622047245in" />
 
 Contact ID codes received from the security system’s control panel are converted to the radio system’s (RAS2M, LARS) codes. Only Contact ID messages described in the table (CID column) are converted to the radio system’s codes and sent to the CMS. The "?" symbol indicates any number in this position. The "z" symbol means that the number in the position is added to the main radio system code. The table is editable, but please change it responsibly and only if it is mandatory to do so, because if there are errors in the table, the system might not work properly.
 
@@ -581,7 +581,7 @@ Contact ID codes received from the security system’s control panel are conver
 
 To restore the **transmitter’s** factory settings, click the button **Restore** in the TrikdisConfig program**.**
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.1338582677165354in" />
+<img alt="TrikdisConfig T16, Default settings area. The Restore button is highlighted." src="./image33.webp" style="width:7.086614173228346in;height:1.1338582677165354in" />
 
 ## Testing of the T16 RF transmitter 
 
@@ -610,7 +610,7 @@ The T16’s firmware can be updated or changed manually. All prior settings of t
 
 3.  Choose **Firmware**.
 
-    <img alt="" src="./image34.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
+    <img alt="TrikdisConfig T16, Firmware window. An Open firmware file path is filled in, Preserve settings is checked, the Open firmware and Update (F12) buttons are visible, and progress is 0%." src="./image34.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 4.  Click the button **Open firmware** and select the required firmware file. If you do not have the file, the newest firmware file can be downloaded <u>by registered users</u> from [www.trikdis.com](http://www.trikdis.com), in the T16 download section.
 
