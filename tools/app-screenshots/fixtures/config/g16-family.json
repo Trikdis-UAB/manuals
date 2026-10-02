@@ -1,9 +1,10 @@
 {
-  "_comment": "Sample configuration for the shared g16 configurator (GET, GT, GT+, G16, G16T, E16, E16T), shaped like GET /v3/api/config/read data. Invented values. Device-stored option lists (panelList*) use the strings TrikdisConfig shows for GET, without TrikdisConfig's own 'N. ' numbering. Panel values mirror the GET manual's TrikdisConfig 'Panel settings' screenshot (image47).",
+  "_comment": "Sample configuration for the shared g16 configurator (GET, GT, GT+, G16, G16T, E16, E16T), shaped like GET /v3/api/config/read data (field shapes follow the app's own USB parser). Invented values, taken where possible from the GET manual's TrikdisConfig screenshots so both tabs agree. Device-stored option lists (panel lists, protocols) are strings stored on the device; they include the device's own 'N. ' numbering, as TrikdisConfig shows them (the app's setup flow strips up to '. ' and tests for '. DSC'). Inferred: serial panel value codes and the order/wording of entries other than DISABLED and PARADOX SP+/MG+; protocol queue numbers after TRK8=0, DC-09=1/2.",
   "systemOptions": {
     "systemGeneral": {
-      "objectNumber": "1234",
-      "timeSync": 1
+      "objectNumber": "561234",
+      "timeSync": 1,
+      "moduleId": "0123456789"
     },
     "access": {
       "installerAccess": {
@@ -13,7 +14,7 @@
         "canChangeSimPin": true,
         "canChangeEvents": true
       },
-      "onlyAdminCanRestore": false,
+      "onlyAdminCanRestore": true,
       "adminCode": "123456",
       "installerCode": "654321"
     }
@@ -24,17 +25,52 @@
       "HSKTone": "30",
       "HSKTone2": "40",
       "panelList": [
-        { "queueNo": 0, "isDirectControl": false, "key": "00", "text": "DISABLED" },
-        { "queueNo": 1, "isDirectControl": false, "key": "01", "text": "AUTO" },
-        { "queueNo": 2, "isDirectControl": false, "key": "02", "text": "MANUAL" }
+        {
+          "queueNo": 0,
+          "isDirectControl": false,
+          "key": "00",
+          "text": "1. DISABLED"
+        },
+        {
+          "queueNo": 1,
+          "isDirectControl": false,
+          "key": "01",
+          "text": "2. AUTO"
+        },
+        {
+          "queueNo": 2,
+          "isDirectControl": false,
+          "key": "02",
+          "text": "3. MANUAL"
+        }
       ],
       "panelList_type1": [
-        { "queueNo": 0, "isDirectControl": false, "key": "30", "text": "Dual Tone" },
-        { "queueNo": 1, "isDirectControl": false, "key": "40", "text": "SIA FSK" }
+        {
+          "queueNo": 0,
+          "isDirectControl": false,
+          "key": "30",
+          "text": "Dual Tone"
+        },
+        {
+          "queueNo": 1,
+          "isDirectControl": false,
+          "key": "40",
+          "text": "SIA FSK"
+        }
       ],
       "panelList_type2": [
-        { "queueNo": 0, "isDirectControl": false, "key": "30", "text": "Dual Tone" },
-        { "queueNo": 1, "isDirectControl": false, "key": "40", "text": "SIA FSK" }
+        {
+          "queueNo": 0,
+          "isDirectControl": false,
+          "key": "30",
+          "text": "Dual Tone"
+        },
+        {
+          "queueNo": 1,
+          "isDirectControl": false,
+          "key": "40",
+          "text": "SIA FSK"
+        }
       ],
       "usePanelAccountId": false,
       "waitForAck": false,
@@ -42,54 +78,680 @@
       "dialTone": 425
     },
     "serial": {
-      "panelKey": "00",
+      "panelKey": "28",
       "panelProtocol": 0,
-      "canRemoteControl": false,
-      "canReceiveEvents": false,
+      "canRemoteControl": true,
+      "canReceiveEvents": true,
       "panelPassword": "1234",
       "panelList": [
-        { "value": "00", "canRemoteControl": false, "canReceiveEvents": false, "pcCodeNeeded": false, "text": "DISABLED" },
-        { "value": "01", "canRemoteControl": true, "canReceiveEvents": true, "pcCodeNeeded": false, "text": "DSC PC585/PC1565" },
-        { "value": "06", "canRemoteControl": true, "canReceiveEvents": true, "pcCodeNeeded": true, "text": "PARADOX SP+/MG+" }
+        {
+          "value": "00",
+          "canRemoteControl": false,
+          "canReceiveEvents": false,
+          "pcCodeNeeded": false,
+          "text": "1. DISABLED"
+        },
+        {
+          "value": "12",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "2. DSC PC585/PC1565"
+        },
+        {
+          "value": "11",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "3. DSC PC1616/PC1832/PC1864/PC5020"
+        },
+        {
+          "value": "13",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "4. DSC PC1404"
+        },
+        {
+          "value": "21",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": true,
+          "text": "5. PARADOX SP/MG SERIES"
+        },
+        {
+          "value": "28",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": true,
+          "text": "6. PARADOX SP+/MG+"
+        },
+        {
+          "value": "23",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": true,
+          "text": "7. PARADOX DIGIPLEX EVO"
+        },
+        {
+          "value": "29",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": true,
+          "text": "8. PARADOX EVOHD+"
+        },
+        {
+          "value": "24",
+          "canRemoteControl": false,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "9. PARADOX SPECTRA 1727/1728/1738"
+        },
+        {
+          "value": "25",
+          "canRemoteControl": false,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "10. PARADOX ESPRIT E55"
+        },
+        {
+          "value": "41",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "11. INTERLOGIX NX (CADDX)"
+        },
+        {
+          "value": "51",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": true,
+          "text": "12. TEXECOM PREMIER"
+        },
+        {
+          "value": "52",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": true,
+          "text": "13. TEXECOM PREMIER ELITE"
+        },
+        {
+          "value": "61",
+          "canRemoteControl": false,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "14. INNERRANGE INCEPTION"
+        },
+        {
+          "value": "62",
+          "canRemoteControl": false,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "15. INNERRANGE INTEGRITI"
+        },
+        {
+          "value": "71",
+          "canRemoteControl": true,
+          "canReceiveEvents": true,
+          "pcCodeNeeded": false,
+          "text": "16. HONEYWELL VISTA"
+        }
       ]
     }
   },
   "reporting": {
     "cmsSettings": {
       "primary": {
-        "domain": "192.168.1.10", "port": 55555, "phone": "", "communicationType": 1, "protocol": 0,
-        "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+        "domain": "receiver.example.com",
+        "port": "55555",
+        "phone": "",
+        "communicationType": 1,
+        "protocol": 0,
+        "communicationMode": 0,
+        "protocols": [
+          {
+            "queueNo": 0,
+            "name": "TRK8",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          },
+          {
+            "queueNo": 1,
+            "name": "DC-09_2007",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          },
+          {
+            "queueNo": 2,
+            "name": "DC-09_2012",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          },
+          {
+            "queueNo": 3,
+            "name": "TL150",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          }
+        ],
+        "encryptionKey": "123456",
+        "siaDcEncryptionEnabled": false,
+        "siaDcInHex": false,
+        "encryptionKeySia": "",
+        "objectNumber": "561234"
       },
       "backup": {
-        "domain": "", "port": 0, "phone": "", "communicationType": 0, "protocol": 0,
-        "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+        "domain": "",
+        "port": "",
+        "phone": "",
+        "communicationType": 0,
+        "protocol": 0,
+        "communicationMode": 0,
+        "protocols": [
+          {
+            "queueNo": 0,
+            "name": "TRK8",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          },
+          {
+            "queueNo": 1,
+            "name": "DC-09_2007",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          },
+          {
+            "queueNo": 2,
+            "name": "DC-09_2012",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          },
+          {
+            "queueNo": 3,
+            "name": "TL150",
+            "belongsTo": {
+              "gprs": true,
+              "dtmf": false,
+              "sms": false,
+              "ftp": false
+            }
+          }
+        ],
+        "encryptionKey": "123456",
+        "siaDcEncryptionEnabled": false,
+        "siaDcInHex": false,
+        "encryptionKeySia": ""
       },
       "parallel": {
         "primary": {
-          "domain": "", "port": 0, "phone": "", "communicationType": 0, "protocol": 0,
-          "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+          "domain": "",
+          "port": "",
+          "phone": "",
+          "communicationType": 0,
+          "protocol": 0,
+          "communicationMode": 0,
+          "protocols": [
+            {
+              "queueNo": 0,
+              "name": "TRK8",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            },
+            {
+              "queueNo": 1,
+              "name": "DC-09_2007",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            },
+            {
+              "queueNo": 2,
+              "name": "DC-09_2012",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            },
+            {
+              "queueNo": 3,
+              "name": "TL150",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            }
+          ],
+          "encryptionKey": "123456",
+          "siaDcEncryptionEnabled": false,
+          "siaDcInHex": false,
+          "encryptionKeySia": ""
         },
         "backup": {
-          "domain": "", "port": 0, "phone": "", "communicationType": 0, "protocol": 0,
-          "communicationMode": 0, "protocols": [], "encryptionKey": "123456"
+          "domain": "",
+          "port": "",
+          "phone": "",
+          "communicationType": 0,
+          "protocol": 0,
+          "communicationMode": 0,
+          "protocols": [
+            {
+              "queueNo": 0,
+              "name": "TRK8",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            },
+            {
+              "queueNo": 1,
+              "name": "DC-09_2007",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            },
+            {
+              "queueNo": 2,
+              "name": "DC-09_2012",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            },
+            {
+              "queueNo": 3,
+              "name": "TL150",
+              "belongsTo": {
+                "gprs": true,
+                "dtmf": false,
+                "sms": false,
+                "ftp": false
+              }
+            }
+          ],
+          "encryptionKey": "123456",
+          "siaDcEncryptionEnabled": false,
+          "siaDcInHex": false,
+          "encryptionKeySia": ""
         }
       },
-      "reportingMode": { "primary": "0", "backup": "0", "testHours": 24, "testEnabled": true }
+      "reportingMode": {
+        "primary": 1,
+        "backup": 2,
+        "backup2": 0,
+        "testHours": 24,
+        "testEnabled": true
+      }
     },
     "settings": {
-      "pingEnabled": true, "pingSeconds": 30, "backupAfter": 3, "primaryAfterMinutes": 1,
-      "receiverNumberSia": "01", "lineNumberSia": "1", "testEnabled": true, "testHours": 24, "testMinutes": 0
+      "pingEnabled": true,
+      "pingMinutes": 3,
+      "pingSeconds": 0,
+      "backupAfter": 3,
+      "primaryAfterMinutes": 1,
+      "primaryAfterSeconds": 0,
+      "receiverNumberSia": "01",
+      "lineNumberSia": "1",
+      "testEnabled": true,
+      "testHours": 24,
+      "testMinutes": 0
     }
   },
   "userReporting": {
-    "cloud": { "enabled": true, "code": "123456", "parallel": false }
+    "cloud": {
+      "enabled": true,
+      "code": "123456",
+      "parallel": false
+    }
   },
-  "sim": { "pin": "", "disableWhenRoaming": false, "apn": "internet", "userName": "", "password": "", "dns1": "", "dns2": "", "iccid": "" },
-  "sim2": { "pin": "", "disableWhenRoaming": false, "apn": "internet", "userName": "", "password": "", "dns1": "", "dns2": "", "iccid": "" },
-  "ethernet": { "dhcpEnabled": true, "staticIp": "192.168.1.100", "netmask": "255.255.255.0", "gateway": "192.168.1.1" },
-  "inOut": { "count": 0, "terminals": [], "alarms": [], "tampers": [] },
-  "rs485": { "moduleTypes": [], "modules": [] },
-  "events": [],
+  "sim": {
+    "pin": "",
+    "disableWhenRoaming": false,
+    "apn": "internet",
+    "userName": "",
+    "password": "",
+    "dns1": "",
+    "dns2": "",
+    "iccid": ""
+  },
+  "sim2": {
+    "pin": "",
+    "disableWhenRoaming": false,
+    "apn": "internet",
+    "userName": "",
+    "password": "",
+    "dns1": "",
+    "dns2": "",
+    "iccid": ""
+  },
+  "ethernet": {
+    "dhcpEnabled": true,
+    "staticIp": "192.168.1.100",
+    "netmask": "255.255.255.0",
+    "gateway": "192.168.1.1",
+    "dns1": "8.8.8.8",
+    "dns2": "8.8.4.4"
+  },
+  "inOut": {
+    "count": 2,
+    "terminals": [
+      {
+        "queueNo": 0,
+        "inputVisible": true,
+        "outputVisible": true,
+        "function": 1,
+        "type": 0
+      },
+      {
+        "queueNo": 1,
+        "inputVisible": true,
+        "outputVisible": true,
+        "function": 2,
+        "type": 0
+      }
+    ],
+    "alarms": [
+      {
+        "queueNo": 0,
+        "name": "IN1_ALARM",
+        "event": {
+          "enabled": true,
+          "active": true,
+          "classificator": 0,
+          "cid": "130",
+          "area": "99",
+          "zone": "001",
+          "siaCode": "BA"
+        },
+        "restore": {
+          "enabled": true,
+          "active": true,
+          "classificator": 1,
+          "cid": "130",
+          "area": "99",
+          "zone": "001",
+          "siaCode": "BH"
+        }
+      },
+      {
+        "queueNo": 1,
+        "name": "IN2_ALARM",
+        "event": {
+          "enabled": true,
+          "active": true,
+          "classificator": 0,
+          "cid": "130",
+          "area": "99",
+          "zone": "002",
+          "siaCode": "BA"
+        },
+        "restore": {
+          "enabled": true,
+          "active": true,
+          "classificator": 1,
+          "cid": "130",
+          "area": "99",
+          "zone": "002",
+          "siaCode": "BH"
+        }
+      }
+    ],
+    "tampers": [
+      {
+        "queueNo": 0,
+        "name": "IN1_TAMPER",
+        "event": {
+          "enabled": true,
+          "active": true,
+          "classificator": 0,
+          "cid": "144",
+          "area": "99",
+          "zone": "001",
+          "siaCode": "TA"
+        },
+        "restore": {
+          "enabled": true,
+          "active": true,
+          "classificator": 1,
+          "cid": "144",
+          "area": "99",
+          "zone": "001",
+          "siaCode": "TR"
+        }
+      },
+      {
+        "queueNo": 1,
+        "name": "IN2_TAMPER",
+        "event": {
+          "enabled": true,
+          "active": true,
+          "classificator": 0,
+          "cid": "144",
+          "area": "99",
+          "zone": "002",
+          "siaCode": "TA"
+        },
+        "restore": {
+          "enabled": true,
+          "active": true,
+          "classificator": 1,
+          "cid": "144",
+          "area": "99",
+          "zone": "002",
+          "siaCode": "TR"
+        }
+      }
+    ]
+  },
+  "rs485": {
+    "moduleTypes": [],
+    "modules": []
+  },
+  "events": [
+    {
+      "queueNo": 0,
+      "name": "COMMUNICATION",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "350",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "YC"
+      },
+      "restore": {
+        "enabled": true,
+        "active": true,
+        "classificator": 1,
+        "cid": "350",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "YK"
+      }
+    },
+    {
+      "queueNo": 1,
+      "name": "LAN_FAILURE",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "358",
+        "area": "99",
+        "zone": "903",
+        "siaCode": "YC"
+      },
+      "restore": {
+        "enabled": true,
+        "active": true,
+        "classificator": 1,
+        "cid": "358",
+        "area": "99",
+        "zone": "903",
+        "siaCode": "YK"
+      }
+    },
+    {
+      "queueNo": 2,
+      "name": "POWER",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "302",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "YT"
+      },
+      "restore": {
+        "enabled": true,
+        "active": true,
+        "classificator": 1,
+        "cid": "302",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "YR"
+      }
+    },
+    {
+      "queueNo": 3,
+      "name": "REMOTE_FINISHED",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "412",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "RS"
+      },
+      "restore": {
+        "enabled": false
+      }
+    },
+    {
+      "queueNo": 4,
+      "name": "REMOTE_STARTED",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "411",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "RB"
+      },
+      "restore": {
+        "enabled": false
+      }
+    },
+    {
+      "queueNo": 5,
+      "name": "SIM1_FAILURE",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "358",
+        "area": "99",
+        "zone": "901",
+        "siaCode": "YC"
+      },
+      "restore": {
+        "enabled": true,
+        "active": true,
+        "classificator": 1,
+        "cid": "358",
+        "area": "99",
+        "zone": "901",
+        "siaCode": "YK"
+      }
+    },
+    {
+      "queueNo": 6,
+      "name": "SIM2_FAILURE",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "358",
+        "area": "99",
+        "zone": "905",
+        "siaCode": "YC"
+      },
+      "restore": {
+        "enabled": true,
+        "active": true,
+        "classificator": 1,
+        "cid": "358",
+        "area": "99",
+        "zone": "905",
+        "siaCode": "YK"
+      }
+    },
+    {
+      "queueNo": 7,
+      "name": "TEST",
+      "event": {
+        "enabled": true,
+        "active": true,
+        "classificator": 0,
+        "cid": "602",
+        "area": "99",
+        "zone": "999",
+        "siaCode": "RP"
+      },
+      "restore": {
+        "enabled": false
+      }
+    }
+  ],
   "shared": {},
   "f": "screenshot-mode"
 }

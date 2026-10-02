@@ -13,7 +13,8 @@ have, filled with invented values.
 ```bash
 cd tools/app-screenshots
 npm ci                      # Playwright only; it drives the installed Google Chrome, no browser download
-node capture.mjs --model GET --lang en --layout desktop,phone
+node capture.mjs --model GET --lang en --layout phone,desktop     # all screens in screens/g16.json
+node capture.mjs --model GET --lang en --layout phone --screen panel-tlf,events
 ```
 
 Output goes to `out/<lang>/` and `out/manifest.json` (one record per image: screen, app path, file,
@@ -26,19 +27,25 @@ records and leaves the rest.
 | `--lang` | `en` | comma-separated; any language the app has (`en,lt,es,ru`) |
 | `--layout` | `desktop,phone` | desktop is 1440×900 @2x, phone is 390×844 @3x |
 | `--screen` | all in `screens/g16.json` | comma-separated screen ids |
-| `--fw`, `--revision` | placeholder | firmware (e.g. `1.37`) and hardware revision the sample device reports. They change which fields the app shows, so pass the current release; both go into the manifest |
+| `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (confirmed); the other models are placeholders until confirmed, and the run says so. Both go into the manifest |
 | `--out` | `out` | output folder |
 
 Each desktop capture gives two files: the whole window (`…-desktop.png`) and just the configurator
 column (`…-desktop-panel.png`). The phone layout is what the native apps show, since they wrap the same
 web app; phone images are cut 24 px below the last card, so short pages don't carry empty grey. If a
-page is longer than one phone screen the run warns and the manifest says `contentOverflows`.
+page is longer than one phone screen, the phone screen is made taller so the whole page renders, and
+the manifest says `tallerThanPhoneScreen`.
+
+A screen whose fields depend on the hardware revision (`revisions` in the screen list) is captured once
+per revision, with the revision in the file name: `get-systemoptions-general-x1x1-phone.png` and
+`…-x1x0-phone.png`. File names are `<model>-<screen>[-<revision>]-<layout>.png`.
 
 The label packs are fetched from the public translations endpoint on first use and cached in
 `fixtures/translations/` (not committed). Run `node fetch-public.mjs en lt es ru` before a batch to pick
 up label changes.
 
-A run of one screen in two layouts takes about 25 seconds, and two runs give pixel-identical images.
+Each capture starts a fresh browser and walks the app from the start, about 12 seconds per screen and
+layout. Two runs give pixel-identical images.
 
 ## Safety
 
@@ -87,18 +94,29 @@ skipped by setting the same local flags the app sets when you dismiss them.
 
 ## Adding a screen
 
-Add an entry to `screens/g16.json`: an `id`, the translation keys of the menu items to click
-(`menu`), the route it lands on (`route`), and `onlyModels` if the menu item is model-specific. Fill in
-the matching branch of `fixtures/config/g16-family.json` if the page reads data that is not there yet.
+Add an entry to `screens/g16.json` (its `_fields` line explains each field): an `id`, the translation
+keys of the menu items to click (`menu`), the route it lands on (`route`; `""` for the root and for
+submenu levels, which have no route of their own), `onlyModels` if the menu item is model-specific,
+`revisions` if fields depend on the hardware revision, and `config` to patch the sample data for that
+screen only. Fill in the matching branch of `fixtures/config/g16-family.json` if the page reads data
+that is not there yet. The field shapes follow the app's USB parser
+(`configurators/wired/g16-communication.service.ts` in the front-end source), which builds the same
+object from the device's own memory.
 Debug a new path with `node dev/step.mjs desktop '[{"text":"Sample system"}, …]'` (a screenshot after
 each step) and `node dev/catch.mjs` (reports every exception, including ones the app swallows).
 
 ## Known limits
 
-- **Device-stored option texts are inferred.** On GET/GT/GT+ the panel lists ("AUTO", "Dual Tone",
-  "SIA FSK", panel models) are strings stored on the device, not app labels. The samples use the texts
-  TrikdisConfig shows for GET without its "N. " numbering. They stay in English in every language, as
-  on a real device.
+- **Device-stored option texts are partly inferred.** On GET/GT/GT+ the panel lists ("2. AUTO",
+  "Dual Tone", "6. PARADOX SP+/MG+") and the CMS protocol names are strings stored on the device, not
+  app labels, so they stay in English in every language, as on a real device. The device strings
+  include their own "N. " numbering: the app strips up to ". " in its setup flow and tests for ". DSC".
+  The samples use the texts TrikdisConfig shows for GET. The serial panel value codes, the wording of
+  entries not shown in the manual, and the protocol queue numbers after TRK8 = 0 and DC-09 = 1/2 are
+  inferred; none of them appears in a screenshot except the selected entry.
+- **The device-info header shows "GET_x1x1".** The app shows the version string without its firmware
+  part unless the device also sends a separate name (`dr`). Whether a real GET sends one is not known
+  from the code; the sample sends none.
 - **Live-only screens are not captured:** the read and write progress ("Reading… n%", "Writing… n%",
   progress bar) and the write result, which the app drives from its realtime channel. The manifest lists
   them under `liveOnly`.

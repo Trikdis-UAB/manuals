@@ -1,17 +1,182 @@
 {
   "configurator": "g16",
-  "models": ["GET", "GT", "GT+", "G16", "G16T", "E16", "E16T"],
+  "models": [
+    "GET",
+    "GT",
+    "GT+",
+    "G16",
+    "G16T",
+    "E16",
+    "E16T"
+  ],
+  "_fields": "id: file-name part. menu: label keys clicked from the configurator root. click: extra items clicked by their visible text. route: where the app lands, relative to configure/g16 ('' = the root, also for submenu levels that have no route). revisions: capture once per hardware revision. config: patch merged into fixtures/config/g16-family.json for this screen only. kind 'intro': the Advanced settings warning page before the configurator. waitFor: a label key that must be visible before the shot.",
   "screens": [
     {
+      "id": "advanced-intro",
+      "kind": "intro",
+      "waitFor": "systems.titles.useAtOwnRisk",
+      "note": "The 'Proceed with Caution' page shown before the configurator until 'Do not show this again' is ticked."
+    },
+    {
+      "id": "menu",
+      "menu": [],
+      "route": ""
+    },
+    {
+      "id": "systemoptions-general",
+      "menu": [
+        "config_g16.navigation.systemOptions",
+        "config_g16.navigation.systemOptionsTree.systemGeneral"
+      ],
+      "route": "systemOptions/systemGeneral",
+      "revisions": [
+        "x1x1",
+        "x1x0"
+      ],
+      "note": "On fw 1.31+ with a *1*1 revision the account numbers move to the CMS pages, leaving only Time set here."
+    },
+    {
+      "id": "systemoptions-access",
+      "menu": [
+        "config_g16.navigation.systemOptions",
+        "config_g16.navigation.systemOptionsTree.access"
+      ],
+      "route": "systemOptions/access"
+    },
+    {
       "id": "panel-tlf",
-      "menu": ["config_g16.navigation.panel", "config_g16.navigation.panelTree.tlf"],
+      "menu": [
+        "config_g16.navigation.panel",
+        "config_g16.navigation.panelTree.tlf"
+      ],
       "route": "panel/tlf",
-      "onlyModels": ["GET", "GT", "GT+"],
+      "onlyModels": [
+        "GET",
+        "GT",
+        "GT+"
+      ],
       "note": "The Panel settings menu is shown only for GET, GT and GT+. On G16/G16T/E16/E16T the panel fields are under System options."
+    },
+    {
+      "id": "panel-serial",
+      "menu": [
+        "config_g16.navigation.panel",
+        "config_g16.navigation.panelTree.serial"
+      ],
+      "route": "panel/serial",
+      "onlyModels": [
+        "GET",
+        "GT",
+        "GT+"
+      ],
+      "note": "A directly controlled panel (PARADOX SP+/MG+) is selected so Remote Arm/Disarm and the PC download password show."
+    },
+    {
+      "id": "reporting-cms",
+      "menu": [
+        "config_g16.navigation.reporting",
+        "config_g16.navigation.reportingTree.cmsSettings"
+      ],
+      "route": "",
+      "note": "Submenu level (no route of its own): the channel list."
+    },
+    {
+      "id": "reporting-cms-primary",
+      "menu": [
+        "config_g16.navigation.reporting",
+        "config_g16.navigation.reportingTree.cmsSettings",
+        "config_g16.navigation.reportingTree.cmsSettingsTree.primary"
+      ],
+      "route": "reporting/cmsSettings/primary",
+      "revisions": [
+        "x1x1",
+        "x1x0"
+      ],
+      "note": "From fw 1.31 on a *1*1 revision the account number is shown per channel."
+    },
+    {
+      "id": "reporting-cms-reportingmode",
+      "menu": [
+        "config_g16.navigation.reporting",
+        "config_g16.navigation.reportingTree.cmsSettings",
+        "config_g16.navigation.reportingTree.cmsSettingsTree.reportingMode"
+      ],
+      "route": "reporting/cmsSettings/reportingMode",
+      "onlyModels": [
+        "GET"
+      ]
+    },
+    {
+      "id": "reporting-settings",
+      "menu": [
+        "config_g16.navigation.reporting",
+        "config_g16.navigation.reportingTree.settings"
+      ],
+      "route": "reporting/settings",
+      "revisions": [
+        "x1x1",
+        "x1x0"
+      ],
+      "note": "On a *1*1 revision with fw 1.31+ 'Device account No.' is here; otherwise it is in System general."
+    },
+    {
+      "id": "userreporting-cloud",
+      "menu": [
+        "config_g16.navigation.userReporting",
+        "config_g16.navigation.userReportingTree.cloud"
+      ],
+      "route": "userReporting/cloud"
+    },
+    {
+      "id": "network-lan",
+      "menu": [
+        "config_g16.navigation.network",
+        "config_g16.navigation.networkTree.lan"
+      ],
+      "route": "network/lan",
+      "onlyModels": [
+        "GET"
+      ]
+    },
+    {
+      "id": "network-sim",
+      "menu": [
+        "config_g16.navigation.network",
+        "config_g16.navigation.networkTree.sim"
+      ],
+      "route": "network/sim",
+      "onlyModels": [
+        "GET"
+      ],
+      "note": "SIM2 is identical."
+    },
+    {
+      "id": "inout-terminal",
+      "menu": [
+        "config_g16.navigation.inOut",
+        "config_g16.sections.inOut.io"
+      ],
+      "route": "inOut/terminal/0",
+      "note": "I/O 1 with Function IN, so the Alarm and Tamper sections show."
+    },
+    {
+      "id": "events",
+      "menu": [
+        "config_g16.navigation.events"
+      ],
+      "route": "events"
     }
   ],
   "liveOnly": [
-    { "id": "read-progress", "what": "'Reading… n%' status and progress bar while a configuration is read", "why": "driven by the realtime configuration-event channel during a live read" },
-    { "id": "write-progress", "what": "'Preparing…' / 'Writing… n%' status and progress bar, and the write result", "why": "driven by the realtime channel during a live write; writes are never sent" }
+    {
+      "id": "read-progress",
+      "what": "'Reading… n%' status and progress bar while a configuration is read",
+      "why": "driven by the realtime configuration-event channel during a live read"
+    },
+    {
+      "id": "write-progress",
+      "what": "'Preparing…' / 'Writing… n%' status and progress bar, and the write result",
+      "why": "driven by the realtime channel during a live write; writes are never sent"
+    }
   ]
 }

@@ -18,7 +18,7 @@ export function fakeToken() {
   return `${b64({ typ: 'JWT', alg: 'none' })}.${b64(payload)}.c2FtcGxl`;
 }
 
-export function createMocks({ lang, model }) {
+export function createMocks({ lang, model, configPatch = null }) {
   const routes = [];
   const on = (method, endpoint, fn) => routes.push({ method, endpoint, fn });
   const regions = readJson(FIX, 'public', 'regions.json').regions;
@@ -57,7 +57,7 @@ export function createMocks({ lang, model }) {
   // Device configuration (what a live read would return).
   on('*', '/config/info', () => sampleConfigInfo(model));
   on('*', '/config/read', () => {
-    const data = readJson(FIX, 'config', 'g16-family.json');
+    const data = deepMerge(readJson(FIX, 'config', 'g16-family.json'), configPatch ?? {});
     delete data._comment;
     data.isInstaller = false;
     return { success: true, data };
@@ -70,4 +70,13 @@ export function createMocks({ lang, model }) {
       return r?.fn;
     },
   };
+}
+
+// Objects merge key by key; arrays and values in the patch replace what is there.
+function deepMerge(base, patch) {
+  for (const [k, v] of Object.entries(patch)) {
+    const isObj = (x) => x && typeof x === 'object' && !Array.isArray(x);
+    base[k] = isObj(v) && isObj(base[k]) ? deepMerge(base[k], v) : v;
+  }
+  return base;
 }

@@ -12,10 +12,12 @@ export const SAMPLE = {
 
 // Hardware models served by the shared g16 configurator. Firmware and hardware revision change
 // which fields the app shows (e.g. account number per CMS channel from fw 1.31, Bands/Generation
-// from fw 1.17 on revision M15), so they must match a current real device. The values below are
-// PLACEHOLDERS until confirmed; override per run with --fw and --revision.
+// from fw 1.17 on revision M15), so they must match a current real device. Entries without
+// `confirmed` are PLACEHOLDERS; override per run with --fw and --revision.
+// GET 1.35: released 2026-06-05 as GET_x1x0_0135 and GET_x1x1_0135 (two hardware variants);
+// Andrius chose 1.35 with both variants on 2026-10-02.
 export const G16_MODELS = {
-  'GET':   { hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.12', revision: null, bt: '0103' },
+  'GET':   { hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', confirmed: true },
   'GT':    { hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
   'GT+':   { hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
   'G16':   { hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
@@ -204,7 +206,7 @@ export function sampleListRow(modelName) {
   const m = G16_MODELS[modelName];
   return {
     id: SAMPLE.systemId, imei: SAMPLE.imei, name: 'Sample system', last_ip_com: 1,
-    created_at: '2026-01-01 00:00:00', object_id: '1234', installer_id: SAMPLE.userId,
+    created_at: '2026-01-01 00:00:00', object_id: '561234', installer_id: SAMPLE.userId,
     installerName: 'Sample Installer', supported_commands: '', company_id: 0, hw_type: m.hwType,
     device_id: m.deviceId, address: 'Sample street 1', companyName: null,
     installerEmail: 'installer@example.com', owner: '', connectionStatus: 'online',

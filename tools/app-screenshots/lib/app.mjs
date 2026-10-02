@@ -12,7 +12,7 @@ export const LAYOUTS = {
   phone: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true },
 };
 
-export async function openApp({ lang, model, layout, log = () => {} }) {
+export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null }) {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   const context = await browser.newContext({
     ...LAYOUTS[layout],
@@ -21,16 +21,16 @@ export async function openApp({ lang, model, layout, log = () => {} }) {
     timezoneId: 'Europe/Vilnius',
     colorScheme: 'light',
   });
-  const mocks = createMocks({ lang, model });
+  const mocks = createMocks({ lang, model, configPatch });
   const guard = await installGuard(context, { mocks, log });
-  await context.addInitScript(({ token, lang, userId, systemId }) => {
+  await context.addInitScript(({ token, lang, userId, systemId, skipAdvancedIntro }) => {
     if (location.origin !== 'https://web.protegus.app' || localStorage.getItem('token')) return;
     localStorage.setItem('token', JSON.stringify(token));
     localStorage.setItem('lang', JSON.stringify(lang));
     localStorage.setItem('privacy_consent', 'true'); // the "Data we collect" notice
-    // Skip the Advanced-settings warning page and go straight to the configurator.
-    localStorage.setItem(`do_not_show_adv_${userId}_${systemId}`, '1');
-  }, { token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId });
+    // Skip the Advanced-settings warning page ("don't show again") and go straight to the configurator.
+    if (skipAdvancedIntro) localStorage.setItem(`do_not_show_adv_${userId}_${systemId}`, '1');
+  }, { token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId, skipAdvancedIntro });
 
   const page = await context.newPage();
   const errors = [];
