@@ -5,7 +5,8 @@ Each diagram gets its own heading, file and alt text, so it can be linked to,
 found by search and read by Joy one panel at a time. The diagram's own title
 (e.g. "DSC panel connection diagram") stays inside the image.
 
-The split column is the widest all-white gutter in the middle of the image.
+The split column is the middle of the widest blank gutter in the middle of the image.
+Each half is cropped to its drawing and given a white margin of PAD px.
 Images keep the `wiring-diagram` class so the PDF export still treats them as
 schematics (Scripts/export_manual_pdfs.mjs) under their new, non-"wiring" headings.
 
@@ -24,6 +25,7 @@ from pathlib import Path
 from PIL import Image
 
 PAD = 12  # px of white kept around each diagram
+INK = 200  # grey level below which a pixel is drawing; fainter lines and compression noise are not
 
 
 def gutter(img: Image.Image) -> int:
@@ -33,7 +35,8 @@ def gutter(img: Image.Image) -> int:
     best = (0, 0)
     run_start = None
     for x in range(int(w * 0.3), int(w * 0.7) + 1):
-        blank = x < int(w * 0.7) and all(px[x, y] > 235 for y in range(0, h, 2))
+        # Blank = (almost) no dark pixels; tolerates light compression noise in the gap.
+        blank = x < int(w * 0.7) and sum(1 for y in range(0, h, 2) if px[x, y] < INK) <= max(1, h // 400)
         if blank and run_start is None:
             run_start = x
         if not blank and run_start is not None:
@@ -46,10 +49,13 @@ def gutter(img: Image.Image) -> int:
 
 
 def trim(img: Image.Image) -> Image.Image:
-    g = img.convert("L").point(lambda v: 0 if v > 235 else 255)
-    box = g.getbbox()
-    l, t, r, b = box
-    return img.crop((max(l - PAD, 0), max(t - PAD, 0), min(r + PAD, img.width), min(b + PAD, img.height)))
+    l, t, r, b = img.convert("L").point(lambda v: 255 if v < INK else 0).getbbox()
+    # Drawing sits exactly PAD from every edge of a white canvas, also where it touched the source edge.
+    # Up to 2 px around it are kept for the anti-aliasing of the outermost lines.
+    box = (max(l - 2, 0), max(t - 2, 0), min(r + 2, img.width), min(b + 2, img.height))
+    out = Image.new("RGB", (r - l + 2 * PAD, b - t + 2 * PAD), "white")
+    out.paste(img.crop(box), (PAD - (l - box[0]), PAD - (t - box[1])))
+    return out
 
 
 def main() -> None:
@@ -63,6 +69,14 @@ def main() -> None:
         found = pattern.findall(text)
         if len(found) != 1:
             sys.exit(f'{item["src"]}: expected one <img> line on the page, found {len(found)}')
+        if "single" in item:
+            # Already one diagram per image: only give it a heading and the PDF class.
+            line = found[0]
+            if 'class="wiring-diagram"' not in line:
+                line = line.replace("<img ", '<img class="wiring-diagram" ', 1)
+            text = text.replace(found[0], f'{hashes} {item["single"]["heading"]}\n\n{line}', 1)
+            print(f'{item["src"]}: heading added')
+            continue
         img = Image.open(folder / item["src"]).convert("RGB")
         x = gutter(img)
         blocks = []

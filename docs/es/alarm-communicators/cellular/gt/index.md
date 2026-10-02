@@ -347,13 +347,37 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicador con el panel de control.
 
-<img alt="" src="./image17.webp" style="width:7.0875in;height:2.7888888888888888in" />
+#### DSC
 
-<img alt="" src="./image18.webp" style="width:7.0875in;height:2.8118055555555554in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="545" height="481" />
 
-<img alt="" src="./image19.webp" style="width:7.0875in;height:2.772222222222222in" />
+#### PARADOX
 
-<img alt="" src="./image20.webp" style="width:6.860014216972878in;height:2.720005468066492in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="650" height="481" />
+
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="535" height="480" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="661" height="484" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="634" height="479" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="564" height="461" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="589" height="486" />
+
+#### Panel de control (comunicador telefónico, TIP/RING)
+
+<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="620" height="477" />
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
 
