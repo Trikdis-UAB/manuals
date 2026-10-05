@@ -71,6 +71,7 @@ extra_css:
 - stylesheets/base.user.v2.css
 - stylesheets/numbered-headings.css
 - stylesheets/tool-switcher.css
+- stylesheets/print.css
 extra_javascript:
 - javascripts/redirect-trailing-slash.js
 - javascripts/close-language-select.js
