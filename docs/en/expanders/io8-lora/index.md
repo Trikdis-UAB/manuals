@@ -1,7 +1,7 @@
 # iO8-LoRa Wireless Expander
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Photograph of the iO8-LoRa expander circuit board, showing its terminal blocks, indicator LEDs, SW1 button, and SW2 DIP switch." width="400">
 </div>
 
 ## Description 
@@ -46,7 +46,7 @@ Inputs and outputs:
 
 ### Expander elements 
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+<img alt="Numbered photograph of the iO8-LoRa expander board on the left. Callout 1 marks the light indicators; 2 marks the terminals for external connections; 3 marks the SW1 button for linking the device and checking the connection; 4 marks the SW2 DIP switch. The numbered names appear in a list on the right." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
 
 !!! note "DIP switch 'SW2' settings"
     For product HW iO8_x5xx_7_230419 version:
@@ -81,7 +81,7 @@ Inputs and outputs:
 
 ### Schematic for connecting the power supply 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Wiring diagram: Power supply to iO-8-LORA. Power: +12V to +DC, 0V to -DC; the positive wire is labelled (+12 V)." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Schematics for connecting inputs 
 
@@ -89,48 +89,48 @@ There are 8 terminals IO1–IO8 (inputs) on the iO-8-LORA expander board for con
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="Normaly open (NO) input circuit: an NO contact connects IOx to C when closed. No resistor is shown." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="Normaly close (NC) input circuit: an NC contact connects IOx to C. No resistor is shown." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="Resistor value table with columns RT, R1, R2. The six rows are 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; and 2.2k, 4.7k, 8.2k." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Normaly open with End of line resistor (EOL) circuit: IOx and C connect through resistor R1, with an NO contact wired in parallel across R1." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Normaly closed with End of line resistor (EOL) circuit: IOx connects through an NC contact and then resistor R1 in series to C." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="Wiring diagram: normally closed EOL_T input between IOx and C. The NC tamper contact and RT resistor are in series; the NC detector contact and R1 resistor are in parallel between RT and C." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="Wiring diagram: normally closed input without EOL (ATZ) between IOx and C. Detector terminal 1 has an NC contact in parallel with R1; detector terminal 2 has an NC contact in parallel with R2. The two detector circuits are in series." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="Wiring diagram: normally closed ATZ_T input between IOx and C. Detector terminal 1 has an NC tamper contact and RT in series, followed by an NC contact in parallel with R1. Detector terminal 2 has an NC tamper contact in series, followed by an NC contact in parallel with R2." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Wiring diagram: normally closed 3EOL input between IOx and C. An NC tamper contact and RT are in series with the alarm and anti-masking circuits. The alarm NC contact is in parallel with R1; the anti-masking NC contact is in parallel with R2." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Schematic for connecting a relay 
 
 Using the relay terminals, it is possible to remotely control (turn on/off) various electrical devices. The *iO-8-LORA* wireless expander universal I/O terminal must be configured as an output (OUT) and must have the definition "Remote control" assigned.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Wiring diagram: iO-8-LORA to relay. AUX+ and IOx connect to the relay coil. The relay provides contacts labelled NC, C and NO." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Schematic for connecting iO-8-LORA expanders to the control panel "FLEXi" SP3 
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="Wiring diagram: SP3 to RF-LORA and up to eight iO-8-LORA expanders. SP3 AUX+ (+12 V) to RF-LORA +DC, AUX- to -DC, 485 A to A RS 485, and 485 B to B RS485. RF-LORA connects wirelessly to the expanders over up to 5000 m. Each iO-8-LORA has a separate 12-26 V supply connected to +DC and -DC." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     An RF-LORA transceiver must be connected to the "FLEXi"
@@ -155,15 +155,15 @@ Using the relay terminals, it is possible to remotely control (turn on/off) vari
 
 8.  In the "**Serial No.**" field, enter the serial number of the module iO-8-LORA.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 Modules window, RS485 modules tab. Row 1 lists an iO8-LORA expander with a serial number entered, Area 1 and Name Expander ID1. Row 2 shows Not available, Area 1 and Name Expander ID2." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  In the "**Zones**" tab, make settings for the expander's inputs.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 Zones window, Zones settings tab. The open Input list includes Disable, SP3 10 I/O and RS485 Expander ID1 inputs IO1, IO2 and IO3; RS485 Expander ID1, IO1 is highlighted for a zone." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. In the "**PGM**" tab, configure the expander's PGM outputs.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 PGM window, Outputs tab. The PGM output column shows BELL for PGM 1 and RS485 Expander ID1, IO2 for PGM 222. PGM 222 has Output definition Remote Control and Pulse Time, s of 10." src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Once configuration is complete, click the **Write [F5]** button.
 
@@ -181,4 +181,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="Crossed-out wheeled trash bin symbol indicating the product must not be disposed of with household waste." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.

@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Radio Receiver
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="White TRIKDIS radio receiver enclosure with a recessed front module, status indicators, USB and reset openings, and an antenna connector." style="width: 100%; max-width: 600px;">
 </div>
 
 ## About Radio Receiver

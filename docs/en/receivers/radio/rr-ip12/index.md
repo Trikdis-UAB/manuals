@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Repeater R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Gray rectangular repeater enclosure with four corner screws and two mounting feet." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Purpose of the Product

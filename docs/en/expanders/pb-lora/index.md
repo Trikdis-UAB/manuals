@@ -1,7 +1,7 @@
 # PB-LoRa Wireless Panic Button
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="Front of the TRIKDIS PB-LORA wireless panic button: a red faceplate with a central metal button, ALARM printed below it, and a NETWORK indicator on the left." width="200">
 </div>
 
 ## Description 
@@ -38,7 +38,7 @@ Compatible with the [SP3](../../control-panels/sp3/index.md) security control pa
 
 ### Wireless Panic button elements 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="PB-LORA panic button. Left, the front cover: 1, light indicator (NETWORK); 2, frontal case opening slot on the right edge; a large ALARM button in the centre. Right, the open case with its circuit board: 3, battery 3 V (CR123A); 4, TAMP button for linking the device and checking the connection; 5, DIP switch SW." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 1. Light indicator.
 2. Frontal case opening slot.
@@ -74,7 +74,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 1.  Remove the top lid.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Two drawings of opening the PB-LORA case with a screwdriver in the slot at the top. Left: an arrow shows pushing the screwdriver into the slot. Right: an arrow shows pressing the screwdriver handle down, which separates the front cover from the base." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Remove the PCB board.
 
@@ -86,11 +86,11 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 6.  Close the top lid.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="Two PB-LORA fastening drawings. Left: the PCB retaining clip is circled, with an arrow showing it pushed outward to release the board. Right: the empty case base shows its mounting holes." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Schematic for connecting of the wireless PB-LORA panic button 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Wiring diagram: SP3 to RF-LORA transceiver. Power and RS485: AUX+ (+12 V) to +DC, AUX- to -DC, 485 A to A RS 485, 485 B to B RS485. The transceiver connects wirelessly to PB-LORA panic buttons at up to 5000 m; the diagram labels buttons 1* through 250*." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     The RF-LORA transceiver must be connected to the "FLEXi"
@@ -119,11 +119,11 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 8.  In the "**Serial No.**" field, enter the serial number of the PB-LORA.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Modules  RS485 modules. The highlighted first row shows ID 1, module PB-LORA Panic button and a serial number in the Serial No. field." src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  In the "**Zones**" tab, make settings for the panic button.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Zones settings. Highlighted Zone 10 has Input RS485 Expander and Definition 24 hours; the Write (F5) button is also highlighted." src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Once configuration is complete, click the **Write [F5]** button.
 
@@ -139,7 +139,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 16. The firmware version of the PB-LORA will appear in the “**Modules**” window.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Modules  RS485 modules. The highlighted PB-LORA Panic button row shows its Firmware version as PB-LORA 00.00." src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Click the "**Disconnect**" button and disconnect the USB cable.
 
@@ -189,7 +189,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
         yellow blinking).
 6.  Launch the configuration program TrikdisConfig and in the field “**Unique ID”** of the “**Remote access**” section enter the IMEI number of „FLEXi“ SP3. The IMEI number is given on the stickers that can be found on the control panel and on the packaging.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, Remote access section. The empty Unique ID field and Configure button are highlighted." src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Click „**Configure”**.
 
@@ -203,7 +203,7 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 12. Wait for the updates to finish.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Modules  RS485 modules. The RF-LORA transceiver is listed at ID 1, with a serial number entered in its highlighted Serial No. field. Read (F4) and Write (F5) are also highlighted." src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Wait 1 minute.
 
@@ -211,13 +211,13 @@ NOTE: after installing the battery, it is recommended to wait at least 10 second
 
 15. The firmware version of the “**RF-LORA transceiver**” will appear in the “**Modules**” window**.**
 
-<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Modules  RS485 modules. The highlighted RF-LORA transceiver row shows Firmware version RF-LORA 433 02.20." src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Go to the “**Wireless sensor**” window.
 
 17. Click the “**Learn sensors**” button.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Wireless sensors  Panic buttons. The Learn sensors button is highlighted above the ID and Serial No. list." src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 All wireless panic buttons can be linked simultaneously.
 
@@ -231,7 +231,7 @@ When enrolling PB-LORA panic buttons, the *RF-LORA* module must be at least 1 m 
 
 21. The “**DATA/TROUBLE**” LED on the RF-LORA module will turn green for a few seconds. After that, the “**DATA/TROUBLE**” LED on the RF-LORA module will continue flashing red/green.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig Learning mode window. It says learning mode has started, instructs the user to insert batteries into the new sensor and wait for initialization, and offers Stop learning." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. After a few seconds, the PB-LORA panic button will be added to the list of sensors.
 
@@ -241,17 +241,17 @@ When enrolling PB-LORA panic buttons, the *RF-LORA* module must be at least 1 m 
 
 25. Click “**Stop learning**” to complete the registration of wireless panic buttons.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig Learning mode window: learning mode started, insert the batteries into the new sensor. A highlighted message says a new device was found and gives its ID 1 and UID. The Stop learning button is also highlighted." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Click “**Yes**” for the sensors to be written to the “FLEXi” SP3 control panel.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Save configuration dialog asks whether to save new parameters to the module. The Yes button is highlighted." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Wait a few minutes. Click **Read [F4].**
 
 TrikdisConfig will display a list of registered wireless panic buttons in the “**Wireless**” window. The “**Serial No.**” field will list the serial number that must match the PB-LORA panic button serial number written on the back of the case.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, Wireless sensors  Panic buttons. Read (F4) and the first device's serial number in the Serial No. column are highlighted." src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     To delete wireless PB-LORA panic buttons from the ***"FLEXi"
@@ -277,4 +277,4 @@ Always disconnect the power supply before making any electrical connections.
 
 Any changes, modifications or repairs not authorized by the manufacturer shall render the warranty void.
 
-<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
+<img alt="Crossed-out wheeled trash bin symbol indicating the product must not be disposed of with household waste." src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Please adhere to your local waste sorting regulations and do not dispose of this equipment or its components with other household waste.
