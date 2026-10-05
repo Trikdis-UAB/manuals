@@ -15,8 +15,10 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin: 0.5rem 0 1.25rem;
-  padding: 0.5rem 0;
+  /* The shadow shows the bar's edges, so it gets side padding, and reaches out by the
+     same amount: the caption stays in line with the text, with room inside the bar. */
+  margin: 0.5rem -0.6rem 1.25rem;
+  padding: 0.5rem 0.6rem;
   background: var(--md-default-bg-color, #fff);
   border-bottom: 1px solid #e3e3e3;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -99,8 +101,8 @@
 @media screen and (max-width: 44.9375em) {
   .trik-tool-bar {
     display: block;
-    margin: 0.35rem 0 0.9rem;
-    padding: 0.25rem 0 0.35rem;
+    margin: 0.35rem -0.6rem 0.9rem;
+    padding: 0.25rem 0.6rem 0.35rem;
   }
 
   .trik-tool-bar__caption {

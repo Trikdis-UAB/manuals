@@ -1266,7 +1266,8 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
    Mobile app screenshots — constrain width on desktop
    ===================================================== */
 .md-typeset img.trik-mob-img {
-  max-width: 320px;
+  /* Never wider than the column: a bare 320px stuck out of lists on small phones. */
+  max-width: min(320px, 100%);
   height: auto;
   display: block;
   margin: 0.75rem auto;
