@@ -37,9 +37,9 @@ After the first dependency install, faster reruns can use:
 ```bash
 CONTEXT=production Scripts/build_docs.sh
 ```
-To exercise the support chat locally with a temporary channel id override:
+To exercise the support chat locally with another Chatwoot inbox:
 ```bash
-TRIKDOCS_RESPONDIO_CHANNEL_ID=test-channel-id npm run build:docs
+TRIKDOCS_CHATWOOT_WEBSITE_TOKEN=<inbox website token> npm run build:docs
 ```
 
 For browser-level modal behavior checks (manual scope + immediate language fallback UI and no Lunr runtime request), run:
@@ -191,17 +191,15 @@ If no category keyword is found in the folder name, it defaults to "Alarm Commun
 Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTOINDEX=0` and run `pagefind` explicitly once in `Scripts/build_docs.sh`, after `mkdocs build` and before PDF generation.
 
 ## Support Chat (Chatwoot, with Joy)
-- The chat is our own Chatwoot at `https://chat.trikdis.com`, where Joy (TRIKDIS's AI assistant) answers from the published manuals and hands chats to engineers. It replaced respond.io's Website Chat in October 2026; respond.io stays selectable for comparison until its trial ends. How Joy is connected: `joy-support/docs/CHATWOOT.md`. The config is injected at build time from `mkdocs_hooks.py` into each page and read by `docs/javascripts/support-chat.js`.
+- The chat is our own Chatwoot at `https://chat.trikdis.com`, where Joy (TRIKDIS's AI assistant) answers from the published manuals and hands chats to engineers. It replaced respond.io's Website Chat in October 2026 (respond.io lapsed on 2026-10-05). How Joy is connected: `joy-support/docs/CHATWOOT.md`. The config is injected at build time from `mkdocs_hooks.py` into each page and read by `docs/javascripts/support-chat.js`.
 - **Nothing from the chat provider loads until a visitor clicks the chat button.** The widget stores a visitor id as soon as it loads, so loading it on every page view would need cookie consent. After a visitor has opened the chat once, later page loads restore the widget so the conversation stays reachable.
 - Default rollout behavior:
   - only boot on the hosts in `TRIKDOCS_CHAT_HOSTS` (default: the `site_url` host, `docs.trikdis.com`)
   - preview-only gate enabled by default
-  - session gate query parameter: `?chat_preview=1` (the configured provider), `?chat_preview=respondio` or `?chat_preview=chatwoot` (that one, for this tab)
+  - session gate query parameter: `?chat_preview=1`
   - clear the session gate with `?chat_preview=0`
 - Build/deploy env vars:
-  - `TRIKDOCS_CHAT_PROVIDER` defaults to `chatwoot` (`respondio` switches back)
   - `TRIKDOCS_CHATWOOT_BASE_URL` defaults to `https://chat.trikdis.com`; `TRIKDOCS_CHATWOOT_WEBSITE_TOKEN` to the docs-site inbox (public: every visitor's browser sends it)
-  - `TRIKDOCS_RESPONDIO_CHANNEL_ID` defaults to the TRIKDIS Website Chat channel (the `cId` in respond.io's install snippet)
   - `TRIKDOCS_CHAT_ENABLED` defaults to `1`
   - `TRIKDOCS_CHAT_PREVIEW_ONLY` defaults to `1`; set it to `0` to show the chat to every visitor
   - `TRIKDOCS_CHAT_PREVIEW_QUERY` defaults to `chat_preview`

@@ -26,10 +26,8 @@ LOGGER = logging.getLogger("mkdocs.hooks.manuals")
 PDF_DOWNLOAD_ENABLED_VALUES = {"1", "true", "yes", "on"}
 CHAT_ENABLED_VALUES = {"1", "true", "yes", "on"}
 CHAT_CONFIG_SCRIPT_ID = "trikdocs-chat-config"
-DEFAULT_RESPONDIO_CHANNEL_ID = "558d75afe0dfc7a4d20867765fe1307"
 # Our own Chatwoot (Joy answers there). The website token is public: it is what the
 # widget sends from every visitor's browser.
-DEFAULT_CHAT_PROVIDER = "chatwoot"
 DEFAULT_CHATWOOT_BASE_URL = "https://chat.trikdis.com"
 DEFAULT_CHATWOOT_WEBSITE_TOKEN = "5HgFmcXGYLNuT4YUYbcHUTnZ"
 DEFAULT_CHAT_PREVIEW_QUERY = "chat_preview"
@@ -348,7 +346,6 @@ def _chat_flag(name: str, default: str) -> bool:
 
 
 def _chat_config_payload(config) -> Dict[str, object]:
-    channel_id = os.environ.get("TRIKDOCS_RESPONDIO_CHANNEL_ID", DEFAULT_RESPONDIO_CHANNEL_ID).strip()
     preview_query = os.environ.get("TRIKDOCS_CHAT_PREVIEW_QUERY", DEFAULT_CHAT_PREVIEW_QUERY).strip()
     site_url = (config.get("site_url") or "").strip()
     default_host = urlparse(site_url).hostname or "docs.trikdis.com"
@@ -358,17 +355,15 @@ def _chat_config_payload(config) -> Dict[str, object]:
         if host.strip()
     ]
 
-    provider = os.environ.get("TRIKDOCS_CHAT_PROVIDER", DEFAULT_CHAT_PROVIDER).strip().lower()
     chatwoot = {
         "baseUrl": os.environ.get("TRIKDOCS_CHATWOOT_BASE_URL", DEFAULT_CHATWOOT_BASE_URL).strip(),
         "websiteToken": os.environ.get("TRIKDOCS_CHATWOOT_WEBSITE_TOKEN", DEFAULT_CHATWOOT_WEBSITE_TOKEN).strip(),
     }
-    configured = bool(chatwoot["baseUrl"] and chatwoot["websiteToken"]) if provider == "chatwoot" else bool(channel_id)
+    configured = bool(chatwoot["baseUrl"] and chatwoot["websiteToken"])
 
     return {
         "enabled": _chat_flag("TRIKDOCS_CHAT_ENABLED", "1") and configured,
-        "provider": provider,
-        "channelId": channel_id,
+        "provider": "chatwoot",
         "chatwoot": chatwoot,
         "hosts": hosts,
         "previewOnly": _chat_flag("TRIKDOCS_CHAT_PREVIEW_ONLY", "1"),

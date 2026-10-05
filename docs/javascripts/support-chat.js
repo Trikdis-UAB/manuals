@@ -1,23 +1,18 @@
-// Support chat, loaded on demand: our own Chatwoot at chat.trikdis.com (Joy answers
-// there), or respond.io Website Chat while we compare the two.
+// Support chat, loaded on demand: our own Chatwoot at chat.trikdis.com, where Joy
+// (TRIKDIS's AI assistant) answers. respond.io, used before it, lapsed on 2026-10-05.
 //
-// Nothing from the chat provider loads until a visitor clicks our chat button. The
+// Nothing from Chatwoot loads until a visitor clicks our chat button. The
 // widget writes a visitor id into storage as soon as it loads, so loading it on
 // every page view would need cookie consent; loading it on request does not.
 // After a visitor has opened the chat once, later page loads bring the widget
 // back automatically so their conversation stays reachable.
 //
 // Config comes from the JSON block that mkdocs_hooks.py injects into each page.
-// ?chat_preview=1 uses the configured provider; ?chat_preview=respondio or
-// ?chat_preview=chatwoot picks one for this tab.
 (function () {
   var CONFIG_ID = "trikdocs-chat-config";
   var PREVIEW_SESSION_KEY = "trikdocs-chat-preview-enabled";
-  var PROVIDER_SESSION_KEY = "trikdocs-chat-provider";
   var ENGAGED_KEY = "trikdocs-chat-engaged";
   var LAUNCHER_ID = "trikdocs-chat-launcher";
-  var SCRIPT_ID = "respondio__widget";
-  var SCRIPT_BASE = "https://cdn.respond.io/webchat/widget/widget.js?cId=";
   var CHATWOOT_SCRIPT_ID = "trikdocs-chatwoot-sdk";
   var TEASER_ID = "trikdocs-chat-teaser";
   var TEASER_DISMISSED_KEY = "trikdocs-chat-teaser-dismissed";
@@ -34,7 +29,6 @@
     ru: { launcher: "Чат с Joy, ИИ-ассистентом TRIKDIS", close: "Закрыть",
           teaser: "Здравствуйте, я Joy, ИИ-ассистент TRIKDIS 👋 Спросите о подключении и настройке любого устройства TRIKDIS." }
   };
-  var PROVIDERS = ["chatwoot", "respondio"];
   var DEFAULT_PREVIEW_QUERY = "chat_preview";
 
   var state = window.__TRIKDOCS_CHAT__ || {
@@ -85,8 +79,6 @@
       var chatwoot = parsed.chatwoot || {};
       return {
         enabled: parsed.enabled === true,
-        provider: PROVIDERS.indexOf(parsed.provider) !== -1 ? parsed.provider : "respondio",
-        channelId: parsed.channelId || "",
         chatwoot: { baseUrl: chatwoot.baseUrl || "", websiteToken: chatwoot.websiteToken || "" },
         hosts: Array.isArray(parsed.hosts) ? parsed.hosts : [],
         previewOnly: parsed.previewOnly !== false,
@@ -98,9 +90,9 @@
     }
   }
 
-  // ?chat_preview=1 turns the preview gate on for this browser tab,
-  // ?chat_preview=0 turns it off, and a provider name turns it on with that
-  // provider. The parameter is removed from the address bar.
+  // ?chat_preview=1 turns the preview gate on for this browser tab (so does the
+  // older ?chat_preview=chatwoot), ?chat_preview=0 turns it off. The parameter is
+  // removed from the address bar.
   function updatePreviewState(queryName) {
     var url;
     var requested = null;
@@ -112,15 +104,10 @@
       url = null;
     }
 
-    if (requested === "1") {
+    if (requested === "1" || requested === "chatwoot") {
       storageSet("sessionStorage", PREVIEW_SESSION_KEY, "1");
-      storageRemove("sessionStorage", PROVIDER_SESSION_KEY);
-    } else if (PROVIDERS.indexOf(requested) !== -1) {
-      storageSet("sessionStorage", PREVIEW_SESSION_KEY, "1");
-      storageSet("sessionStorage", PROVIDER_SESSION_KEY, requested);
     } else if (requested === "0") {
       storageRemove("sessionStorage", PREVIEW_SESSION_KEY);
-      storageRemove("sessionStorage", PROVIDER_SESSION_KEY);
     }
 
     if (url && requested !== null) {
@@ -132,47 +119,8 @@
     return state.previewEnabled;
   }
 
-  // respond.io passes "chat:open" into its iframe, and the message is lost while
-  // the iframe is still starting. So keep asking until it reports "chat:opened",
-  // for up to 10 seconds.
-  function openWhenReady(attempt) {
-    var api = window.$respond;
-    if (state.opened || attempt >= 40) {
-      return;
-    }
-    if (api && typeof api.do === "function") {
-      if (!state.openListenerBound && typeof api.on === "function") {
-        state.openListenerBound = true;
-        api.on("chat:opened", function () {
-          state.opened = true;
-        });
-      }
-      api.do("chat:open");
-    }
-    window.setTimeout(function () {
-      openWhenReady(attempt + 1);
-    }, 250);
-  }
-
   function loadWidget(config) {
-    if (state.provider === "chatwoot") {
-      loadChatwoot(config.chatwoot);
-      return;
-    }
-    if (state.scriptRequested || document.getElementById(SCRIPT_ID)) {
-      state.scriptRequested = true;
-      return;
-    }
-
-    var script = document.createElement("script");
-    script.id = SCRIPT_ID;
-    script.src = SCRIPT_BASE + encodeURIComponent(config.channelId);
-    script.async = true;
-    script.onload = function () {
-      state.scriptLoaded = true;
-    };
-    document.head.appendChild(script);
-    state.scriptRequested = true;
+    loadChatwoot(config.chatwoot);
   }
 
   // The page language, from the site's /en/, /lt/, /es/, /ru/ paths: the widget's
@@ -318,11 +266,7 @@
       storageSet("localStorage", ENGAGED_KEY, "1");
       state.openRequested = true;
       loadWidget(config);
-      if (state.provider === "chatwoot") {
-        openChatwootIfRequested();
-      } else {
-        openWhenReady(0);
-      }
+      openChatwootIfRequested();
       removeLauncher();
     };
     button.addEventListener("click", open);
@@ -349,14 +293,7 @@
     }
 
     updatePreviewState(config.previewQuery);
-    // Once a widget is on the page, stay with it until the next full page load.
-    if (!state.scriptRequested) {
-      var chosen = storageGet("sessionStorage", PROVIDER_SESSION_KEY);
-      state.provider = PROVIDERS.indexOf(chosen) !== -1 ? chosen : config.provider;
-    }
-    var configured = state.provider === "chatwoot"
-      ? !!(config.chatwoot.baseUrl && config.chatwoot.websiteToken)
-      : !!config.channelId;
+    var configured = !!(config.chatwoot.baseUrl && config.chatwoot.websiteToken);
     state.permitted = config.enabled && configured && (!config.previewOnly || state.previewEnabled);
 
     if (!state.permitted) {

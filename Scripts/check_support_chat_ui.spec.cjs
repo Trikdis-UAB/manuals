@@ -6,47 +6,11 @@ const BASE_URL = (process.env.SUPPORT_CHAT_BASE_URL || "http://docs.trikdis.com:
 const ARTIFACT_DIR =
   process.env.SUPPORT_CHAT_ARTIFACT_DIR || path.join(process.cwd(), "artifacts/ui/support-chat");
 const HOST_RULE = "MAP docs.trikdis.com 127.0.0.1";
-const WIDGET_URL_PREFIX = "https://cdn.respond.io/webchat/widget/widget.js";
 const CHATWOOT_SDK_URL = "https://chat.trikdis.com/packs/js/sdk.js";
 const LAUNCHER = "#trikdocs-chat-launcher";
 
 function ensureArtifactsDir() {
   fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
-}
-
-// Stands in for respond.io's widget.js: records API calls and draws a fake
-// launcher, so the checks never reach respond.io. Like the real widget, it
-// drops the first "chat:open" because its iframe is not ready yet.
-function widgetStubScript() {
-  return `
-    (function () {
-      var calls = [];
-      var listeners = {};
-      var ready = false;
-      var widget = document.createElement("div");
-      widget.id = "respondio-stub-widget";
-      widget.setAttribute("data-open", "false");
-      document.body.appendChild(widget);
-      window.$respond = {
-        do: function (command) {
-          calls.push(command);
-          if (command === "chat:open") {
-            if (!ready) {
-              ready = true;
-              return;
-            }
-            widget.setAttribute("data-open", "true");
-            (listeners["chat:opened"] || []).forEach(function (callback) { callback(); });
-          }
-        },
-        on: function (name, callback) {
-          (listeners[name] = listeners[name] || []).push(callback);
-        },
-        is: function () { return false; }
-      };
-      window.__RESPONDIO_STUB__ = { calls: calls };
-    })();
-  `;
 }
 
 // Stands in for Chatwoot's sdk.js: records calls, draws a fake bubble and, like the
@@ -86,17 +50,8 @@ async function withPage(run) {
   const page = await context.newPage();
   const requests = [];
 
-  await page.route(`${WIDGET_URL_PREFIX}*`, async (route) => {
-    requests.push(route.request().url());
-    await route.fulfill({
-      body: widgetStubScript(),
-      contentType: "application/javascript",
-      status: 200
-    });
-  });
-  // Anything else on respond.io's domains would mean the page loaded the real
-  // widget without a click. Fail loudly instead of reaching the network.
-  await page.route(/https:\/\/[^/]*respond\.io\/(?!webchat\/widget\/widget\.js)/, async (route) => {
+  // respond.io lapsed on 2026-10-05: anything from it would be a leftover. Fail loudly.
+  await page.route(/https:\/\/[^/]*respond\.io\//, async (route) => {
     requests.push(`UNEXPECTED ${route.request().url()}`);
     await route.abort();
   });
@@ -130,7 +85,6 @@ async function answerConsent(page) {
 async function chatState(page) {
   return page.evaluate(() => ({
     chat: window.__TRIKDOCS_CHAT__ || null,
-    stub: window.__RESPONDIO_STUB__ || null,
     chatwoot: window.__CHATWOOT_STUB__ || null,
     launcher: !!document.getElementById("trikdocs-chat-launcher")
   }));
@@ -155,7 +109,6 @@ test.describe("Support chat rollout", () => {
       await page.waitForSelector(LAUNCHER, { state: "visible" });
       await page.waitForFunction(() => !window.location.search.includes("chat_preview"));
       state = await chatState(page);
-      expect(state.chat.provider).toBe("chatwoot");
       expect(requests).toEqual([]);
 
       await answerConsent(page);
@@ -209,58 +162,6 @@ test.describe("Support chat rollout", () => {
       await page.waitForTimeout(2000);
       expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
       expect(requests).toEqual([]);
-    });
-  });
-
-  test("?chat_preview=respondio still loads respond.io only on click", async () => {
-    ensureArtifactsDir();
-
-    await withPage(async ({ page, requests }) => {
-      let state;
-      await page.goto(`${BASE_URL}/en/?chat_preview=respondio`, { waitUntil: "domcontentloaded" });
-      await page.waitForSelector(LAUNCHER, { state: "visible" });
-      await page.waitForFunction(() => !window.location.search.includes("chat_preview"));
-
-      state = await chatState(page);
-      expect(state.chat.previewEnabled).toBeTruthy();
-      expect(state.chat.reason).toBe("launcher");
-      // The launcher alone must not fetch anything from respond.io.
-      expect(requests).toEqual([]);
-      expect(await page.getAttribute(LAUNCHER, "aria-label")).toBe("Chat with Joy, TRIKDIS AI assistant");
-
-      await answerConsent(page);
-      await page.waitForSelector(LAUNCHER, { state: "visible" });
-      expect(requests).toEqual([]);
-      await page.screenshot({ path: path.join(ARTIFACT_DIR, "launcher.png"), fullPage: false });
-
-      await page.click(LAUNCHER);
-      await page.waitForFunction(() => !!window.__RESPONDIO_STUB__);
-      // The first open is dropped, so the loader must retry, then stop once opened.
-      await expect
-        .poll(async () => page.evaluate(() => document.getElementById("respondio-stub-widget").getAttribute("data-open")))
-        .toBe("true");
-      await page.waitForTimeout(800);
-      expect(await page.evaluate(() => window.__RESPONDIO_STUB__.calls.join(","))).toBe("chat:open,chat:open");
-
-      state = await chatState(page);
-      expect(requests).toHaveLength(1);
-      expect(requests[0]).toContain("cId=");
-      expect(state.launcher).toBeFalsy();
-      expect(await page.evaluate(() => localStorage.getItem("trikdocs-chat-engaged"))).toBe("1");
-
-      await page.screenshot({ path: path.join(ARTIFACT_DIR, "opened.png"), fullPage: false });
-
-      // A later full page load restores the widget (closed) without our launcher.
-      await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/g16/`, { waitUntil: "domcontentloaded" });
-      await page.waitForFunction(() => !!window.__RESPONDIO_STUB__);
-
-      state = await chatState(page);
-      expect(state.chat.restored).toBeTruthy();
-      expect(state.chat.openRequested).toBeFalsy();
-      expect(state.launcher).toBeFalsy();
-      expect(state.stub.calls).toEqual([]);
-      expect(requests).toHaveLength(2);
-      expect(requests.filter((url) => url.startsWith("UNEXPECTED"))).toEqual([]);
     });
   });
 
