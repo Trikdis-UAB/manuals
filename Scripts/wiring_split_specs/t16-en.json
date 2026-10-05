@@ -89,6 +89,7 @@
     },
     {
       "src": "image14.webp",
+      "x": 570,
       "left": {
         "file": "wiring-landline-dialer.webp",
         "heading": "Without landline control",

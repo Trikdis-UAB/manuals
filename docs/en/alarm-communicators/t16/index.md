@@ -254,11 +254,11 @@ The zones (inputs IN) of ***T16V,** **T16U, T16U5*** transmitters can be connect
 
 #### Without landline control
 
-<img class="wiring-diagram" alt="Wiring diagram: control panel landline dialer to T16. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP." src="./wiring-landline-dialer.webp" width="648" height="350" />
+<img class="wiring-diagram" alt="Wiring diagram: control panel landline dialer to T16. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP." src="./wiring-landline-dialer.webp" width="575" height="350" />
 
 #### With landline control
 
-<img class="wiring-diagram" alt="Wiring diagram: control panel landline dialer to T16 with landline control. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP, plus panel R-1 to T16 IN1/R-1 and T-1 to IN2/T-1." src="./wiring-landline-dialer-control.webp" width="574" height="398" />
+<img class="wiring-diagram" alt="Wiring diagram: control panel landline dialer to T16 with landline control. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP, plus panel R-1 to T16 IN1/R-1 and T-1 to IN2/T-1." src="./wiring-landline-dialer-control.webp" width="632" height="398" />
 
 !!! warning "Important"
     T16 should not be connected to a working telecom landline.

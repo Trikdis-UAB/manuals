@@ -14,7 +14,7 @@ Usage (repo root):  python3 Scripts/split_wiring_diagrams.py <spec.json> [--prev
   --preview writes the pieces to <dir> and leaves the page and its folder untouched.
 
 Spec: {"page": "...index.md", "heading_level": 4, "images": [ITEM, ...]}   (any ITEM may set its own heading_level)
-  Two side by side:   {"src": "image22.webp", "min_gap": 20,
+  Two side by side:   {"src": "image22.webp", "min_gap": 20,   ("x": 570 cuts at that column instead)
                        "left":  {"file": "wiring-dsc.webp", "heading": "DSC", "alt": "..."},
                        "right": {"file": "wiring-paradox.webp", "heading": "PARADOX", "alt": "..."}}
   Several, in rows:   {"src": "image23.webp", "rows": 2, "parts": [PIECE, ...]}   (row by row)
@@ -41,6 +41,7 @@ def gutter(img: Image.Image, min_gap: int = 20) -> int:
     w, h = g.size
     px = g.load()
     best = (0, 0)
+    gaps = []
     run_start = None
     for x in range(int(w * 0.3), int(w * 0.7) + 1):
         # Blank = (almost) no dark pixels; tolerates light compression noise in the gap.
@@ -48,11 +49,17 @@ def gutter(img: Image.Image, min_gap: int = 20) -> int:
         if blank and run_start is None:
             run_start = x
         if not blank and run_start is not None:
+            if x - run_start >= min_gap:
+                gaps.append((run_start, x))
             if x - run_start > best[1] - best[0]:
                 best = (run_start, x)
             run_start = None
     if best[1] - best[0] < min_gap:
         sys.exit("no clear gutter found")
+    if len(gaps) > 1:
+        # The widest gap can lie inside a diagram (e.g. beside a rotated label): look, or set "x".
+        print(f"  check the cut: {len(gaps)} gaps in the middle "
+              f"({', '.join(f'{a}-{b}' for a, b in gaps)}), cutting at {(best[0] + best[1]) // 2}", file=sys.stderr)
     return (best[0] + best[1]) // 2
 
 
@@ -93,7 +100,7 @@ def trim(img: Image.Image) -> Image.Image:
 def pieces(img: Image.Image, item: dict) -> list:
     """(target, image) for every diagram in a composite, row by row."""
     if "parts" not in item:
-        x = gutter(img, item.get("min_gap", 20))
+        x = item["x"] if "x" in item else gutter(img, item.get("min_gap", 20))
         return [(item["left"], trim(img.crop((0, 0, x, img.height)))),
                 (item["right"], trim(img.crop((x, 0, img.width, img.height))))]
     rows = item.get("rows", 1)
