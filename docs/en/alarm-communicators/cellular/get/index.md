@@ -196,7 +196,7 @@ This manual is for LTE communicators.
 
 Below we describe what settings need to be set for the communicator to begin sending events to the Central Monitoring Station (CMS) and to allow the security system to be controlled with the Protegus2 app.
 
-You can make these settings in the Protegus app or in TrikdisConfig. Choose your tool once below; every section on this page follows your choice.
+You can make these settings in the Protegus app or in TrikdisConfig; each section below gives the steps for both.
 
 === "Protegus app"
 
@@ -819,7 +819,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 ## Communicator settings
 
-Most GET settings described below can be changed in the Protegus app or in TrikdisConfig; settings and actions available in only one tool are marked. What each setting does is described once; each section shows where to find it in the tool you chose. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
+Most GET settings described below can be changed in the Protegus app or in TrikdisConfig; settings and actions available in only one tool are marked. What each setting does is described once; each section shows where to find it in each tool. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
 
 ### Connecting to the communicator
 

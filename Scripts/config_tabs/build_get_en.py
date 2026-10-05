@@ -130,7 +130,7 @@ In the Protegus app, open **Settings → Advanced settings** and set:
         "",
         intro,
         "",
-        "You can make these settings in the Protegus app or in TrikdisConfig. Choose your tool in the tabs below; every section on this page switches to it.",
+        "You can make these settings in the Protegus app or in TrikdisConfig; each section below gives the steps for both.",
         "",
         tabs(app_connect, tc_connect),
         L[qp],  # heading kept for stable anchors
