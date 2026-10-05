@@ -512,7 +512,7 @@ Prijungus E16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungt
 
 | Pavadinimas | Aprašymas |
 |----|----|
-| MAC/​Unikalus Nr. | Gaminio IMEI numeris |
+| MAC/​Unikalus Nr. | Gaminio MAC numeris |
 | Būsena | Darbinė būsena |
 | Įrenginys | Gaminio tipas (turi rodyti E16) |
 | SN | Gaminio serijinis numeris |
