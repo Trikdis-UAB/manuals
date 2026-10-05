@@ -82,6 +82,15 @@
   width: auto;
 }
 
+/* Wider layout on wide screens. Material caps the page at 61rem, which left the text
+   column at about a third of a 1920 px window (review feedback). 72rem gives the text
+   about 30% more width, around 105 characters per line, and more room for tables and
+   screenshots. The sidebars keep their size, windows narrower than the cap are unchanged,
+   and print and the PDF set their own width. */
+.md-grid {
+  max-width: 72rem;
+}
+
 /* GitHub-style alerts for Typora and MkDocs */
 .md-alert,
 .md-typeset .md-alert,
