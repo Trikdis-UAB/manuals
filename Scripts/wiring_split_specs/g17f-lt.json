@@ -1,0 +1,31 @@
+{
+  "page": "docs/lt/alarm-communicators/fire-panels/g17f/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image45.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normaliai atvira (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normaliai uždara (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normaliai atvira grandinė su 10k rezistoriumi linijos gale (NO/EOL 10k)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normaliai uždara grandinė su 10k rezistoriumi linijos gale (NC/EOL 10k)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

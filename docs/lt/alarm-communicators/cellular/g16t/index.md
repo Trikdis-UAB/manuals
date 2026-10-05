@@ -334,11 +334,23 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:3.252083333333333in" />
+#### Be telefono linijos stebėjimo
+
+<img class="wiring-diagram" alt="" src="./wiring-tip-ring.webp" width="593" height="555" />
+
+#### Su telefono linijos stebėjimu
+
+<img class="wiring-diagram" alt="" src="./wiring-tip-ring-supervised.webp" width="594" height="555" />
 
 ### G16T prijungimo schema prie centralės jungiklio (angl. keyswitch) zonos 
 
-<img alt="" src="./image15.webp" style="width:7.0875in;height:2.9520833333333334in" />
+#### Be telefono linijos stebėjimo
+
+<img class="wiring-diagram" alt="" src="./wiring-keyswitch.webp" width="593" height="483" />
+
+#### Su telefono linijos stebėjimu
+
+<img class="wiring-diagram" alt="" src="./wiring-keyswitch-supervised.webp" width="594" height="483" />
 
 Vadovaukitės šiomis schemomis, jei apsaugos centralė bus valdoma su G16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
@@ -353,9 +365,29 @@ Komunikatorius turi 2 įėjimo gnybtus (IN1, IN2) prijungti NO, NC, NO/EOL, C/EO
 
 NO, NC, NO/EOL, C/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image16.webp" style="width:4.921259842519685in;height:1.7716535433070866in" />
+#### Normaliai atvira (NO)
 
-<img alt="" src="./image17.webp" style="width:4.921259842519685in;height:1.9291338582677164in" />
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="297" height="295" />
+
+#### Normaliai uždara (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="304" height="295" />
+
+#### Normaliai uždara grandinė su 10k rezistoriumi linijos gale (NC/EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="327" height="395" />
+
+#### Normaliai atvira grandinė su 10k rezistoriumi linijos gale (NO/EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="320" height="435" />
+
+#### Normaliai atvira grandinė su 10k varža linijos gale ir tamperio atpažinimu (NO/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="409" height="446" />
+
+#### Normaliai uždara grandinė su 10k varža linijos gale ir tamperio atpažinimu (NC/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="412" height="446" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų

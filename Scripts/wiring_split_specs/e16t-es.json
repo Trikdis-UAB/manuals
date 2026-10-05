@@ -1,0 +1,31 @@
+{
+  "page": "docs/es/alarm-communicators/e16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image14.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normalmente abierto (NA)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normalmente cerrado (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

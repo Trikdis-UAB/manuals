@@ -479,7 +479,21 @@ Komunikatorius turi šešis (1IN – 6IN) įėjimo gnybtus (trys gnybtai yra dvi
 
 NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image45.webp" style="width:6.299212598425197in;height:1.6220472440944882in" />
+#### Normaliai atvira (NO)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="256" height="227" />
+
+#### Normaliai uždara (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="258" height="227" />
+
+#### Normaliai atvira grandinė su 10k rezistoriumi linijos gale (NO/EOL 10k)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="312" height="317" />
+
+#### Normaliai uždara grandinė su 10k rezistoriumi linijos gale (NC/EOL 10k)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="314" height="293" />
 
 ### iO serijos plėtimo modulių prijungimo schema
 

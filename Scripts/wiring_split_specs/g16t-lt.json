@@ -1,0 +1,72 @@
+{
+  "page": "docs/lt/alarm-communicators/cellular/g16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-tip-ring.webp",
+        "heading": "Be telefono linijos stebėjimo",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-tip-ring-supervised.webp",
+        "heading": "Su telefono linijos stebėjimu",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image15.webp",
+      "left": {
+        "file": "wiring-keyswitch.webp",
+        "heading": "Be telefono linijos stebėjimo",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-keyswitch-supervised.webp",
+        "heading": "Su telefono linijos stebėjimu",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image16.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normaliai atvira (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normaliai uždara (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normaliai uždara grandinė su 10k rezistoriumi linijos gale (NC/EOL)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image17.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normaliai atvira grandinė su 10k rezistoriumi linijos gale (NO/EOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-deol.webp",
+          "heading": "Normaliai atvira grandinė su 10k varža linijos gale ir tamperio atpažinimu (NO/DEOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-deol.webp",
+          "heading": "Normaliai uždara grandinė su 10k varža linijos gale ir tamperio atpažinimu (NC/DEOL)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

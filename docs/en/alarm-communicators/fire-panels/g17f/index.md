@@ -481,7 +481,21 @@ The communicator has six (1IN – 6IN) input terminals (three terminals are dual
 
 Schematics of NO, NC, EOL type circuits:
 
-<img alt="Four input wiring diagrams, left to right. Normally open (NO): NO contact between COM and INx; Short - Alarm, Open - Restore. Normally closed (NC): NC contact between COM and INx; Short - Restore, Open - Alarm. Normally open with 10k End of line resistor (EOL10k): 10 k resistor in parallel with NO contact; Short - Alarm, Open - Alarm, 10k - Restore. Normally closed with 10k End of line resistor (EOL10k): NC contact in series with 10 k resistor; Short - Alarm, Open - Alarm, 10k - Restore." src="./image45.webp" style="width:6.71751312335958in;height:1.725003280839895in" />
+#### Normally open (NO)
+
+<img class="wiring-diagram" alt="Input wiring diagram: normally open (NO) contact between COM and INx. Short - Alarm, Open - Restore." src="./wiring-input-no.webp" width="256" height="227" />
+
+#### Normally closed (NC)
+
+<img class="wiring-diagram" alt="Input wiring diagram: normally closed (NC) contact between COM and INx. Short - Restore, Open - Alarm." src="./wiring-input-nc.webp" width="258" height="227" />
+
+#### Normally open with 10k end-of-line resistor (EOL10k)
+
+<img class="wiring-diagram" alt="Input wiring diagram: NO contact with a 10 k end of line resistor in parallel between COM and INx (EOL10k). Short - Alarm, Open - Alarm, 10k - Restore." src="./wiring-input-no-eol.webp" width="269" height="317" />
+
+#### Normally closed with 10k end-of-line resistor (EOL10k)
+
+<img class="wiring-diagram" alt="Input wiring diagram: NC contact in series with a 10 k end of line resistor between COM and INx (EOL10k). Short - Alarm, Open - Alarm, 10k - Restore." src="./wiring-input-nc-eol.webp" width="314" height="293" />
 
 ### Schematic for connecting iO series expander modules 
 

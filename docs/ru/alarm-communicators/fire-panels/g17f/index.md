@@ -479,7 +479,21 @@
 
 Коммуникатор имеет шесть (1IN – 6IN) клемм входов. Три клеммы универсальные (IN/OUT), которым можно установить тип NO, NC, EOL (4,7кΩ, 10 кΩ). Заводская настройка – EOL. Другой тип входа может быть установлен в ***TrikdisConfig*** в окне „**Зоны**“. Схемы соединений для NO, NC, EOL типов входов:
 
-<img alt="" src="./image45.webp" style="width:6.56501312335958in;height:1.422503280839895in" />
+#### Нормально открытый (NO)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="262" height="219" />
+
+#### Нормально закрытый (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="263" height="219" />
+
+#### Нормально открытый с резистором 10 кОм в конце линии (EOL 10 кОм)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="269" height="268" />
+
+#### Нормально закрытый с резистором 10 кОм в конце линии (EOL 10 кОм)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="313" height="244" />
 
 ### Схема подключения расширителей серии iO 
 

@@ -265,15 +265,41 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="Two wiring diagrams. DSC panel keypad bus to E16: RED (+12V) to +DC, BLK to -DC, YEL to CLK, GRN to DATA. PARADOX panel serial port to E16 through the EX-CRP2.4 cable, ordered separately: R (red, +12V) to +DC, B (black) to -DC, Y (yellow) to CLK, G (green) to DATA." src="./image11.webp" style="width:7.0875in;height:2.8256944444444443in" />
+#### DSC
 
-<img alt="Two wiring diagrams. CADDX panel keypad bus to E16: POS (+12V) to +DC, COM to -DC, DATA to DATA; CLK is unused. TEXECOM panel serial port to E16 through the EX-CRP4 cable, ordered separately: R (red, +12V) to +DC, B (black) to -DC, BL (blue) to CLK, W (white) to DATA." src="./image12.webp" style="width:7.0875in;height:2.8472222222222223in" />
+<img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to E16. RED (+12V) to +DC, BLK to -DC, YEL to CLK, GRN to DATA." src="./wiring-dsc.webp" width="546" height="481" />
 
-<img alt="Two wiring diagrams. Inner Range Inception to E16: VOUT + (+12V) to +DC; VOUT 0V to -DC, joined to the black wire of USB cable 993030USB; cable green wire to CLK and white wire to DATA. Inner Range Integriti to E16 through cable INTG-996795: +DET (+13V) to +DC, Port 0 GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA." src="./image13.webp" style="width:7.0875in;height:2.714583333333333in" />
+#### PARADOX
 
-<img alt="Two wiring diagrams. Crow Runner 4/8 or Runner 8/16 panel keypad bus to E16: POS (+12V) to +DC, NEG to -DC, CLK to CLK, DATA to DATA. Pyronix panel keypad bus to E16: +AUX (+12V) to +DC, -AUX to -DC, KD to DATA; CLK is unused." src="./image14.webp" style="width:7.0875in;height:2.936111111111111in" />
+<img class="wiring-diagram" alt="Wiring diagram: PARADOX panel serial port to E16 through the EX-CRP2.4 cable, ordered separately. R (red, +12V) to +DC, B (black) to -DC, Y (yellow) to CLK, G (green) to DATA." src="./wiring-paradox.webp" width="650" height="456" />
 
-<img alt="Wiring diagram: Honeywell Vista-20 or Vista-48 panel keypad bus to E16. Terminal 5 (+12V) to +DC, terminal 4 to -DC, terminal 7 to CLK, terminal 6 to DATA." src="./image15.webp" style="width:3.23750656167979in;height:2.717505468066492in" />
+#### CADDX
+
+<img class="wiring-diagram" alt="Wiring diagram: CADDX panel keypad bus to E16. POS (+12V) to +DC, COM to -DC, DATA to DATA; CLK is unused." src="./wiring-caddx.webp" width="547" height="481" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="Wiring diagram: TEXECOM panel serial port to E16 through the EX-CRP4 cable, ordered separately. R (red, +12V) to +DC, B (black) to -DC, BL (blue) to CLK, W (white) to DATA." src="./wiring-texecom.webp" width="650" height="463" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="Wiring diagram: Inner Range Inception to E16. VOUT + (+12V) to +DC; VOUT 0V to -DC, joined to the black wire of USB cable 993030USB; cable green wire to CLK and white wire to DATA." src="./wiring-innerrange-inception.webp" width="627" height="467" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="Wiring diagram: Inner Range Integriti to E16 through cable INTG-996795. +DET (+13V) to +DC, Port 0 GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA." src="./wiring-innerrange-integriti.webp" width="555" height="454" />
+
+#### Crow Runner 4/8, Runner 8/16
+
+<img class="wiring-diagram" alt="Wiring diagram: Crow Runner 4/8 or Runner 8/16 panel keypad bus to E16. POS (+12V) to +DC, NEG to -DC, CLK to CLK, DATA to DATA." src="./wiring-crow-runner.webp" width="548" height="505" />
+
+#### Pyronix
+
+<img class="wiring-diagram" alt="Wiring diagram: Pyronix panel keypad bus to E16. +AUX (+12V) to +DC, -AUX to -DC, KD to DATA; CLK is unused." src="./wiring-pyronix.webp" width="597" height="504" />
+
+#### Honeywell Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="Wiring diagram: Honeywell Vista-20 or Vista-48 panel keypad bus to E16. Terminal 5 (+12V) to +DC, terminal 4 to -DC, terminal 7 to CLK, terminal 6 to DATA." src="./wiring-honeywell-vista.webp" width="564" height="474" />
 
 ### Schematic for connecting to panel keyswitch zone 
 
@@ -296,7 +322,29 @@ The communicator has 3 universal input / output terminals that can be set to inp
 
 Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="Six input wiring schematics, each from COM to INx. NO: Short - Alarm, Open - Restore. NC: Short - Restore, Open - Alarm. NC with a 2,2k end of line resistor in series (EOL 2,2k): Short - Alarm, Open - Alarm, 2,2k - Restore. NO with a 2,2k EOL resistor in parallel: Short - Alarm, Open - Alarm, 2,2k - Restore. NO with tamper recognition (DEOL): tamper switch and a 2,2k resistor in series, then the NO contact with a second 2,2k resistor across it; Short - Tamper, Open - Tamper, 2,2k - Alarm, 3,3k-5,5k - Restore. NC with tamper recognition (DEOL): the same with an NC contact; Short - Tamper, Open - Tamper, 2,2k - Restore, 3,3k-5,5k - Alarm." src="./image17.webp" style="width:5.169291338582677in;height:4.003937007874016in" />
+#### Normally open (NO)
+
+<img class="wiring-diagram" alt="Input wiring schematic: normally open (NO) contact between COM and INx. Short - Alarm, Open - Restore." src="./wiring-input-no.webp" width="296" height="256" />
+
+#### Normally closed (NC)
+
+<img class="wiring-diagram" alt="Input wiring schematic: normally closed (NC) contact between COM and INx. Short - Restore, Open - Alarm." src="./wiring-input-nc.webp" width="311" height="256" />
+
+#### Normally closed with 2,2k end-of-line resistor (EOL 2,2k)
+
+<img class="wiring-diagram" alt="Input wiring schematic: NC contact with a 2,2k end of line resistor in series between COM and INx (EOL 2,2k). Short - Alarm, Open - Alarm, 2,2k - Restore." src="./wiring-input-nc-eol.webp" width="324" height="356" />
+
+#### Normally open with 2,2k end-of-line resistor (EOL 2,2k)
+
+<img class="wiring-diagram" alt="Input wiring schematic: NO contact with a 2,2k end of line resistor in parallel between COM and INx (EOL 2,2k). Short - Alarm, Open - Alarm, 2,2k - Restore." src="./wiring-input-no-eol.webp" width="315" height="430" />
+
+#### Normally open with 2,2k end-of-line resistor and tamper recognition (DEOL)
+
+<img class="wiring-diagram" alt="Input wiring schematic with tamper recognition (DEOL): between COM and INx, a tamper switch and a 2,2k resistor in series, then the NO contact with a second 2,2k resistor across it. Short - Tamper, Open - Tamper, 2,2k - Alarm, 3,3k-5,5k - Restore." src="./wiring-input-no-deol.webp" width="399" height="442" />
+
+#### Normally closed with 2,2k end-of-line resistor and tamper recognition (DEOL)
+
+<img class="wiring-diagram" alt="Input wiring schematic with tamper recognition (DEOL): between COM and INx, a tamper switch and a 2,2k resistor in series, then the NC contact with a second 2,2k resistor across it. Short - Tamper, Open - Tamper, 2,2k - Restore, 3,3k-5,5k - Alarm." src="./wiring-input-nc-deol.webp" width="398" height="442" />
 
 !!! note
     If more inputs or outputs need to be connected to the communicator,

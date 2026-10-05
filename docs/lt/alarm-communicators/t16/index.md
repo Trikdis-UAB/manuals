@@ -199,23 +199,67 @@ Siųstuvų ***T16V**, **T16U**, **T16U5*** zonas (įėjimus IN) galima tiesiogia
 
 **Duomenų kabelis**. Duomenų kabelis sujungiantis radijo siųstuvą ir apsaugos centralę turi būti ne ilgesnis nei 50 cm. Jei duomenų kabelis ilgesnis reikia naudoti ekranuota kabelį. Duomenų kabelis jungiamas centralėje prie klaviatūros magistralės, nuosekliosios jungties arba centralės telefoninio komunikatoriaus. Venkite kabelio montavimo lygiagrečiai su kintamos srovės jėgos kabeliais, antenos kabeliu ar kitais stipriais elektromagnetinio lauko šaltiniais.
 
-<img alt="" src="./image7.webp" style="width:7.0875in;height:2.566666666666667in" />
+#### DSC
 
-<img alt="" src="./image8.webp" style="width:7.0875in;height:2.546527777777778in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="523" height="297" />
 
-<img alt="" src="./image9.webp" style="width:7.0875in;height:2.588888888888889in" />
+#### PARADOX
 
-<img alt="" src="./image10.webp" style="width:7.0875in;height:1.7743055555555556in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="658" height="440" />
 
-<img alt="" src="./image11.webp" style="width:7.0875in;height:2.91875in" />
+#### CADDX
 
-<img alt="" src="./image12.webp" style="width:7.0875in;height:1.66875in" />
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="523" height="291" />
 
-<img alt="" src="./image13.webp" style="width:3.36750656167979in;height:1.792503280839895in" />
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="656" height="436" />
+
+#### CROW Runner
+
+<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="523" height="292" />
+
+#### SECOLink
+
+<img class="wiring-diagram" alt="" src="./wiring-secolink.webp" width="655" height="446" />
+
+#### ARGUS-SPEKTR STRELEC
+
+<img class="wiring-diagram" alt="" src="./wiring-argus-spektr-strelec.webp" width="523" height="301" />
+
+#### BOLID C2000
+
+<img class="wiring-diagram" alt="" src="./wiring-bolid-c2000.webp" width="656" height="306" />
+
+#### PYRONIX
+
+<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="523" height="318" />
+
+#### ROVALANT A6-06
+
+<img class="wiring-diagram" alt="" src="./wiring-rovalant-a6-06.webp" width="602" height="499" />
+
+#### RISCO LightSYS
+
+<img class="wiring-diagram" alt="" src="./wiring-risco-lightsys.webp" width="523" height="283" />
+
+#### HONEYWELL VISTA
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="656" height="288" />
+
+#### INIM SMARTLINE
+
+<img class="wiring-diagram" alt="" src="./wiring-inim-smartline.webp" width="571" height="304" />
 
 ### Apsaugos centralės telefoninio komunikatoriaus prijungimo schema
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
+#### Be telefono linijos kontrolės
+
+<img class="wiring-diagram" alt="" src="./wiring-landline-dialer.webp" width="575" height="350" />
+
+#### Su telefono linijos kontrole
+
+<img class="wiring-diagram" alt="" src="./wiring-landline-dialer-control.webp" width="632" height="398" />
 
 !!! note "Pastaba"
     T16 negalima jungti prie veikiančios telefoninės linijos.
@@ -241,7 +285,21 @@ Siųstuvas turi 6 (arba 5) įėjimo gnybtus (IN1, IN2, IN3, IN4, IN5, IN6) NO, N
 
 NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image15.webp" style="width:5.874015748031496in;height:2.0196850393700787in" />
+#### Normaliai atvira (NO)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="271" height="255" />
+
+#### Normaliai uždara (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="277" height="255" />
+
+#### Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="298" height="347" />
+
+#### Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="291" height="394" />
 
 ### Centralės PGM-ų prijungimo schema 
 
@@ -257,9 +315,17 @@ Sirena jungiama, kai prie siųstuvo yra prijungtas skaitytuvais *TM17*. Sireną,
 
 ### RS485 modulių prijungimo schemos 
 
-<img alt="" src="./image18.webp" style="width:6.8075131233595805in;height:3.04250656167979in" />
+#### Wi-Fi modulis W485
 
-<img alt="" src="./image19.webp" style="width:3.40250656167979in;height:2.6075054680664915in" />
+<img class="wiring-diagram" alt="" src="./wiring-w485.webp" width="604" height="462" />
+
+#### TM17 kontaktinių raktų skaitytuvas
+
+<img class="wiring-diagram" alt="" src="./wiring-tm17.webp" width="576" height="541" />
+
+#### Ethernet modulis E485
+
+<img class="wiring-diagram" alt="" src="./wiring-e485.webp" width="654" height="502" />
 
 Kai RS485 magistralės ilgis yra didesnis nei 1 m, naudokite vytos poros kabelį (STP 4x2x0,5). Venkite kabelio montavimo lygiagrečiai su kintamos srovės jėgos kabeliais, antenos kabeliu ir kitais stipriais elektromagnetinio lauko šaltiniais.
 

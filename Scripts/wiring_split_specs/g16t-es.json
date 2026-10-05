@@ -1,0 +1,72 @@
+{
+  "page": "docs/es/alarm-communicators/cellular/g16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-tip-ring.webp",
+        "heading": "Sin supervisión de la línea telefónica",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-tip-ring-supervised.webp",
+        "heading": "Con supervisión de la línea telefónica",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image15.webp",
+      "left": {
+        "file": "wiring-keyswitch.webp",
+        "heading": "Sin supervisión de la línea telefónica",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-keyswitch-supervised.webp",
+        "heading": "Con supervisión de la línea telefónica",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image16.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normalmente abierto (NA)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normalmente cerrado (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normalmente cerrado con resistencia de fin de línea de 10k (EOL)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image17.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normalmente abierto con resistencia de fin de línea de 10k (EOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-deol.webp",
+          "heading": "Normalmente abierto con resistencia de fin de línea y reconocimiento de manipulación",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-deol.webp",
+          "heading": "Normalmente cerrado con resistencia de fin de línea y reconocimiento de manipulación",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

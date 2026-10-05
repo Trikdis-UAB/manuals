@@ -478,7 +478,21 @@ El comunicador tiene seis terminales de entrada (1 IN - 6 IN) (tres terminales s
 
 Esquemas de circuitos tipo NO, NC, EOL:
 
-<img alt="" src="./image45.webp" style="width:5.807086614173229in;height:1.7007874015748032in" />
+#### Normalmente abierto (NA)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="261" height="233" />
+
+#### Normalmente cerrado (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="263" height="233" />
+
+#### Normalmente cerrado con resistencia de fin de línea de 10k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="299" height="305" />
+
+#### Normalmente abierto con resistencia de fin de línea de 10k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="290" height="357" />
 
 ### Esquema para conectar los módulos expansores de la serie iO 
 

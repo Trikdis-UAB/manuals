@@ -198,23 +198,67 @@ Las zonas (entradas IN) de los tranmisores T16V, T16U, T16U5 se pueden conectar 
 
 **Cable de datos**. El cable de datos que conecta el transmisor T16 y el panel de control no debe superar los 50 cm. Si el cable de datos es más largo, debe usarse un cable blindado. El cable de datos se conecta en la central al bus del teclado, conexión serie o comunicador telefónico de la central. Evite montar el cable en paralelo con los cables de alimentación de aire acondicionado, el cable de la antena u otras fuentes de campo electromagnético.
 
-<img alt="" src="./image7.webp" style="width:7.025014216972878in;height:2.4925054680664918in" />
+#### DSC
 
-<img alt="" src="./image8.webp" style="width:7.025014216972878in;height:2.5125054680664918in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="528" height="284" />
 
-<img alt="" src="./image9.webp" style="width:7.025014216972878in;height:2.5575054680664917in" />
+#### PARADOX
 
-<img alt="" src="./image10.webp" style="width:7.025014216972878in;height:1.755003280839895in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="664" height="428" />
 
-<img alt="" src="./image11.webp" style="width:7.025014216972878in;height:2.8925054680664917in" />
+#### CADDX
 
-<img alt="" src="./image12.webp" style="width:7.025014216972878in;height:1.637503280839895in" />
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="528" height="284" />
 
-<img alt="" src="./image13.webp" style="width:3.31250656167979in;height:1.837503280839895in" />
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="662" height="437" />
+
+#### CROW Runner
+
+<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="529" height="284" />
+
+#### SECOLink
+
+<img class="wiring-diagram" alt="" src="./wiring-secolink.webp" width="663" height="436" />
+
+#### ARGUS-SPEKTR STRELEC
+
+<img class="wiring-diagram" alt="" src="./wiring-argus-spektr-strelec.webp" width="528" height="304" />
+
+#### BOLID C2000
+
+<img class="wiring-diagram" alt="" src="./wiring-bolid-c2000.webp" width="662" height="290" />
+
+#### PYRONIX
+
+<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="528" height="311" />
+
+#### ROVALANT A6-06
+
+<img class="wiring-diagram" alt="" src="./wiring-rovalant-a6-06.webp" width="607" height="495" />
+
+#### RISCO LightSYS
+
+<img class="wiring-diagram" alt="" src="./wiring-risco-lightsys.webp" width="537" height="284" />
+
+#### HONEYWELL VISTA
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="662" height="290" />
+
+#### INIM SMARTLINE
+
+<img class="wiring-diagram" alt="" src="./wiring-inim-smartline.webp" width="536" height="297" />
 
 ### Esquema para conectar el marcador de línea fija del panel de control
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:2.5708333333333333in" />
+#### Sin control de línea fija
+
+<img class="wiring-diagram" alt="" src="./wiring-landline-dialer.webp" width="579" height="379" />
+
+#### Con control de línea fija
+
+<img class="wiring-diagram" alt="" src="./wiring-landline-dialer-control.webp" width="637" height="443" />
 
 !!! note "Nota"
     El *T16* no puede ser conectado a una línea telefónica fija. Refiriéndose a las instrucciones de programación del panel de control, configure los siguientes parámetros para el marcador de línea fija del panel de control:
@@ -239,7 +283,21 @@ El transmisor tiene 6 (o 5) terminales de entrada (IN1, IN2, IN3, IN4, IN5, IN6)
 
 Esquemas para la conexión de circuitos tipo NO, NC, EOL:
 
-<img alt="" src="./image15.webp" style="width:5.618110236220472in;height:1.779527559055118in" />
+#### Normalmente abierto (NA)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="262" height="259" />
+
+#### Normalmente cerrado (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="265" height="259" />
+
+#### Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="300" height="329" />
+
+#### Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="293" height="385" />
 
 ### Esquema para conectar PGM del panel de control
 
@@ -255,9 +313,17 @@ La sirena debe estar conectada cuando el *TM17* esté conectado al transmisor. U
 
 ### Esquemas de conexión del módulo RS485
 
-<img alt="" src="./image18.webp" style="width:6.988188976377953in;height:2.822834645669291in" />
+#### Módulo Wi-Fi W485
 
-<img alt="" src="./image19.webp" style="width:3.7283464566929134in;height:2.838582677165354in" />
+<img class="wiring-diagram" alt="" src="./wiring-w485.webp" width="643" height="489" />
+
+#### Lector TM17
+
+<img class="wiring-diagram" alt="" src="./wiring-tm17.webp" width="538" height="496" />
+
+#### Módulo Ethernet E485
+
+<img class="wiring-diagram" alt="" src="./wiring-e485.webp" width="647" height="492" />
 
 Cuando el bus de datos RS485 es más largo a 1m, use un cable de par trenzado (STP 4x2x0,5). Evite montar el cable en paralelo con los cables de electricidad de aires acondicionados, el cable de la antena u otras fuentes de campo electromagnético.
 

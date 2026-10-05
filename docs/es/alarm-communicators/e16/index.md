@@ -264,15 +264,41 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicador con el panel de control.
 
-<img alt="" src="./image11.webp" style="width:7.0875in;height:2.825in" />
+#### DSC
 
-<img alt="" src="./image12.webp" style="width:7.0875in;height:2.8305555555555557in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="530" height="489" />
 
-<img alt="" src="./image13.webp" style="width:7.0875in;height:2.7180555555555554in" />
+#### PARADOX
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:2.9479166666666665in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="661" height="468" />
 
-<img alt="" src="./image15.webp" style="width:3.25000656167979in;height:2.7250054680664917in" />
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="530" height="488" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="637" height="492" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="648" height="471" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="563" height="459" />
+
+#### Crow Runner 4/8, Runner 8/16
+
+<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="590" height="507" />
+
+#### Pyronix
+
+<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="590" height="508" />
+
+#### Honeywell Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="582" height="488" />
 
 ### **Diagramas de conexión para control el panel de control a través de la zona de keyswitch**
 
@@ -286,9 +312,29 @@ El comunicador tiene 3 terminales de entrada / salida universales que se pueden 
 
 Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), como se muestra en los esquemas de abajo:
 
-<img alt="" src="./image17.webp" style="width:5.228346456692913in;height:1.720472440944882in" />
+#### Normalmente abierto (NA)
 
-<img alt="" src="./image18.webp" style="width:5.232283464566929in;height:2.437007874015748in" />
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="286" height="341" />
+
+#### Normalmente cerrado (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="289" height="341" />
+
+#### Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="387" height="359" />
+
+#### Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="311" height="519" />
+
+#### Normalmente abierto con resistencia de fin de línea y reconocimiento de manipulación
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="408" height="530" />
+
+#### Normalmente cerrado con resistencia de fin de línea y reconocimiento de manipulación
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="417" height="530" />
 
 !!! note "Nota"
     Si más entradas o salidas necesitan ser conectadas al comunicador,

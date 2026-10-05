@@ -1,0 +1,31 @@
+{
+  "page": "docs/ru/alarm-communicators/fire-panels/g17f/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image45.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Нормально открытый (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Нормально закрытый (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Нормально открытый с резистором 10 кОм в конце линии (EOL 10 кОм)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Нормально закрытый с резистором 10 кОм в конце линии (EOL 10 кОм)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

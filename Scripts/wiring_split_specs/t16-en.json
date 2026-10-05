@@ -1,0 +1,149 @@
+{
+  "page": "docs/en/alarm-communicators/t16/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image7.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": "Wiring diagram: DSC panel keypad bus to T16. RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA."
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": "Wiring diagram: PARADOX panel to T16 through the EX-CRP2.4 cable, ordered separately. +AUX (+12V) and red wire R to + DC; -AUX and black wire B to - DC; yellow wire Y to Rx/CLK; green wire G to Tx/DATA."
+      }
+    },
+    {
+      "src": "image8.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": "Wiring diagram: CADDX panel keypad bus to T16. POS (+12V) to + DC, COM to - DC, DATA to Tx/DATA; Rx/CLK is unused."
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": "Wiring diagram: TEXECOM panel to T16 through the EX-CRP4 cable, ordered separately. +DC (+12V) and red wire R to + DC; -DC and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA."
+      }
+    },
+    {
+      "src": "image9.webp",
+      "left": {
+        "file": "wiring-crow-runner.webp",
+        "heading": "CROW Runner",
+        "alt": "Wiring diagram: CROW Runner panel keypad bus to T16. POS (+12V) to + DC, NEG to - DC, CLK to Rx/CLK, DATA to Tx/DATA."
+      },
+      "right": {
+        "file": "wiring-secolink.webp",
+        "heading": "SECOLink",
+        "alt": "Wiring diagram: SECOLink panel to T16 through the EX-CRP4 cable, ordered separately. +AUX (+12V) and red wire R to + DC; COM and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA."
+      }
+    },
+    {
+      "src": "image10.webp",
+      "left": {
+        "file": "wiring-argus-spektr-strelec.webp",
+        "heading": "ARGUS-SPEKTR STRELEC",
+        "alt": "Wiring diagram: ARGUS-SPEKTR STRELEC panel to T16. +PWR (+12V) to + DC, GND to - DC, TD to Rx/CLK, RD to Tx/DATA."
+      },
+      "right": {
+        "file": "wiring-bolid-c2000.webp",
+        "heading": "BOLID C2000",
+        "alt": "Wiring diagram: BOLID C2000 panel to T16. +U (+12V) to + DC, GND to - DC, Tx to Rx/CLK, Rx to Tx/DATA."
+      }
+    },
+    {
+      "src": "image11.webp",
+      "left": {
+        "file": "wiring-pyronix.webp",
+        "heading": "PYRONIX",
+        "alt": "Wiring diagram: PYRONIX Matrix panel to T16. +AUX (+12V) to + DC, -AUX to - DC, KD to Tx/DATA; Rx/CLK is unused."
+      },
+      "right": {
+        "file": "wiring-rovalant-a6-06.webp",
+        "heading": "ROVALANT A6-06",
+        "alt": "Wiring diagram: ROVALANT A6-06 panel to T16. SLOT XP4 connects to the ИС-RF serial module; Rovalant +12V to T16 + DC and -12V to - DC. The ИС-RF serial connector has three leads, to T16 - DC (joined with the -12V line at a dot), Rx/CLK and Tx/DATA; no connector lead goes to + DC."
+      }
+    },
+    {
+      "src": "image12.webp",
+      "left": {
+        "file": "wiring-risco-lightsys.webp",
+        "heading": "RISCO LightSYS",
+        "alt": "Wiring diagram: RISCO LightSYS panel keypad bus to T16. RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA."
+      },
+      "right": {
+        "file": "wiring-honeywell-vista.webp",
+        "heading": "HONEYWELL VISTA",
+        "alt": "Wiring diagram: HONEYWELL VISTA panel keypad bus to T16. Terminal 4 to - DC, 5 to + DC, 6 to Tx/DATA, 7 to Rx/CLK; each pair of wires crosses without a junction dot."
+      }
+    },
+    {
+      "src": "image13.webp",
+      "single": {
+        "heading": "INIM SMARTLINE",
+        "file": "wiring-inim-smartline.webp"
+      }
+    },
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-landline-dialer.webp",
+        "heading": "Without landline control",
+        "alt": "Wiring diagram: control panel landline dialer to T16. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP."
+      },
+      "right": {
+        "file": "wiring-landline-dialer-control.webp",
+        "heading": "With landline control",
+        "alt": "Wiring diagram: control panel landline dialer to T16 with landline control. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP, plus panel R-1 to T16 IN1/R-1 and T-1 to IN2/T-1."
+      }
+    },
+    {
+      "src": "image15.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normally open (NO)",
+          "alt": "Input circuit: normally open (NO) contact between COM and INx. Shorted - alarm; open - restore."
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normally closed (NC)",
+          "alt": "Input circuit: normally closed (NC) contact between COM and INx. Shorted - restore; open - alarm."
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normally closed with 2.2k end-of-line resistor (EOL)",
+          "alt": "Input circuit: NC contact with a 2.2k end of line resistor (EOL) in series between COM and INx. Shorted - alarm; open - alarm; 2.2k - restore."
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normally open with 2.2k end-of-line resistor (EOL)",
+          "alt": "Input circuit: NO contact with a 2.2k end of line resistor (EOL) in parallel between COM and INx. Shorted - alarm; open - alarm; 2.2k - restore."
+        }
+      ]
+    },
+    {
+      "src": "image18.webp",
+      "left": {
+        "file": "wiring-w485.webp",
+        "heading": "Wi-Fi module W485",
+        "alt": "Wiring diagram: panel to T16 and the Wi-Fi module W485. +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals; T16 A 485 to W485 A 485 and B 485 to B 485. RS485 connection up to 100 m."
+      },
+      "right": {
+        "file": "wiring-tm17.webp",
+        "heading": "TM17 reader",
+        "alt": "Wiring diagram: T16 to the TM17 reader. A 12 V, 1,5 A DC source powers both devices; TM17 red wire to +DC, blue to -DC, black to T16 A 485, white to T16 B 485."
+      }
+    },
+    {
+      "src": "image19.webp",
+      "single": {
+        "heading": "Ethernet module E485",
+        "file": "wiring-e485.webp"
+      }
+    }
+  ]
+}

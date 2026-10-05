@@ -1,0 +1,44 @@
+{
+  "page": "docs/lt/alarm-communicators/e16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image13.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normaliai atvira (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normaliai uždara (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (EOL 2,2k)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (EOL 2,2k)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image15.webp",
+      "left": {
+        "file": "wiring-relay.webp",
+        "heading": "Relė",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-led.webp",
+        "heading": "Šviesos diodas (LED)",
+        "alt": ""
+      }
+    }
+  ]
+}
