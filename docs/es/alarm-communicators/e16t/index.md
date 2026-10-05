@@ -342,7 +342,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
         ilumina en verde);
     
     3.  Registrado en la red ( el LED de "NETWORK" se ilumina en verde).
-3. Haga clic en **Añadir sistema** e introduzca el número “IMEI/ID Único ” de E16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
+3. Haga clic en **Añadir sistema** e introduzca el número “MAC” de E16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
 
 <img alt="" src="./image20.webp" style="width:6.5984251968503935in;height:2.405511811023622in" />
 

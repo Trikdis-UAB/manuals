@@ -1303,27 +1303,42 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
   color: var(--md-default-fg-color--light, #666);
 }
 
-/* Support chat launcher (docs/javascripts/support-chat.js). Sits where the
-   respond.io launcher appears, so nothing jumps when the widget takes over. */
+/* Support chat launcher (docs/javascripts/support-chat.js): Joy's face, with a
+   green "online" dot. It sits where the chat widget's own launcher appears, so
+   nothing jumps when the widget takes over. */
 .trikdocs-chat-launcher {
   position: fixed;
   right: 25px;
   bottom: 25px;
   /* Below Material's cookie-consent banner (z-index 5). */
   z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: var(--md-primary-fg-color);
-  color: #fff;
+  background: #cb2215;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.trikdocs-chat-launcher img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.trikdocs-chat-online-dot {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #22c55e;
 }
 
 .trikdocs-chat-launcher:hover,
@@ -1337,8 +1352,85 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > .t
   outline-offset: 3px;
 }
 
+/* "Hi, I'm Joy" pop-up next to the launcher, once per visit until dismissed. */
+.trikdocs-chat-teaser {
+  position: fixed;
+  right: 25px;
+  bottom: 98px;
+  z-index: 4;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: min(300px, calc(100vw - 50px));
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  border-radius: 14px 14px 4px 14px;
+  background: var(--md-default-bg-color, #fff);
+  color: var(--md-default-fg-color, #222);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  cursor: pointer;
+  animation: trikdocs-chat-teaser-in 0.25s ease-out;
+}
+
+.trikdocs-chat-teaser-close {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: -0.25rem -0.25rem 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  opacity: 0.55;
+  font-size: 1rem;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.trikdocs-chat-teaser-close:hover,
+.trikdocs-chat-teaser-close:focus-visible {
+  opacity: 1;
+}
+
+@keyframes trikdocs-chat-teaser-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chatwoot's own launcher (it lives in this page, not in its frame): Joy's face
+   instead of the stock chat icon, so the launcher looks the same before and after
+   the widget loads. Its separate "close" button keeps Chatwoot's X. */
+.woot-widget-bubble:not(.woot--close):not(.woot-widget--expanded) {
+  background: #cb2215 url("../images/joy-avatar.svg") center / cover no-repeat !important;
+}
+
+.woot-widget-bubble:not(.woot--close):not(.woot-widget--expanded) svg {
+  visibility: hidden;
+}
+
+/* A larger chat panel on roomy desktop screens. The widget's pop-out button opens
+   it in a window of its own. */
+@media screen and (min-width: 1100px) and (min-height: 820px) {
+  .woot-widget-holder.woot-elements--right:not(.has-unread-view) {
+    width: 440px !important;
+    height: min(740px, calc(100vh - 130px)) !important;
+    max-height: none !important;
+  }
+}
+
 @media print {
-  .trikdocs-chat-launcher {
-    display: none;
+  .trikdocs-chat-launcher,
+  .trikdocs-chat-teaser,
+  .woot-widget-bubble,
+  .woot-widget-holder {
+    display: none !important;
   }
 }

@@ -27,6 +27,11 @@ PDF_DOWNLOAD_ENABLED_VALUES = {"1", "true", "yes", "on"}
 CHAT_ENABLED_VALUES = {"1", "true", "yes", "on"}
 CHAT_CONFIG_SCRIPT_ID = "trikdocs-chat-config"
 DEFAULT_RESPONDIO_CHANNEL_ID = "558d75afe0dfc7a4d20867765fe1307"
+# Our own Chatwoot (Joy answers there). The website token is public: it is what the
+# widget sends from every visitor's browser.
+DEFAULT_CHAT_PROVIDER = "chatwoot"
+DEFAULT_CHATWOOT_BASE_URL = "https://chat.trikdis.com"
+DEFAULT_CHATWOOT_WEBSITE_TOKEN = "5HgFmcXGYLNuT4YUYbcHUTnZ"
 DEFAULT_CHAT_PREVIEW_QUERY = "chat_preview"
 PDF_DOWNLOAD_LABELS = {
     "en": "Download PDF",
@@ -353,10 +358,18 @@ def _chat_config_payload(config) -> Dict[str, object]:
         if host.strip()
     ]
 
+    provider = os.environ.get("TRIKDOCS_CHAT_PROVIDER", DEFAULT_CHAT_PROVIDER).strip().lower()
+    chatwoot = {
+        "baseUrl": os.environ.get("TRIKDOCS_CHATWOOT_BASE_URL", DEFAULT_CHATWOOT_BASE_URL).strip(),
+        "websiteToken": os.environ.get("TRIKDOCS_CHATWOOT_WEBSITE_TOKEN", DEFAULT_CHATWOOT_WEBSITE_TOKEN).strip(),
+    }
+    configured = bool(chatwoot["baseUrl"] and chatwoot["websiteToken"]) if provider == "chatwoot" else bool(channel_id)
+
     return {
-        "enabled": _chat_flag("TRIKDOCS_CHAT_ENABLED", "1") and bool(channel_id),
-        "provider": "respondio",
+        "enabled": _chat_flag("TRIKDOCS_CHAT_ENABLED", "1") and configured,
+        "provider": provider,
         "channelId": channel_id,
+        "chatwoot": chatwoot,
         "hosts": hosts,
         "previewOnly": _chat_flag("TRIKDOCS_CHAT_PREVIEW_ONLY", "1"),
         "previewQuery": preview_query or DEFAULT_CHAT_PREVIEW_QUERY,

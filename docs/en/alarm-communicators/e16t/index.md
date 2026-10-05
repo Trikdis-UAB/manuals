@@ -419,7 +419,7 @@ After connecting the E16T and clicking **Read [F4], *TrikdisConfig*** will provi
 
 | Object    | Description                                        |
 |-----------|----------------------------------------------------|
-| Unique ID | Device IMEI number                                 |
+| Unique ID | Device MAC number                                  |
 | Status    | Operating condition                                |
 | Device    | Device type (E16T should be shown)           |
 | SN        | Device serial number                               |
