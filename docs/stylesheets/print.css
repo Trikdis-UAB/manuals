@@ -108,4 +108,21 @@
     break-inside: avoid;
     page-break-inside: avoid;
   }
+
+  /* Wiring diagrams, one per image (Scripts/split_wiring_diagrams.py): two to a page, as
+     in the PDF, each kept with its heading. The PDF export sets the same size with its
+     own class and !important rules in Scripts/pdf-export.css, which win there. */
+  .md-typeset img.wiring-diagram {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 88%;
+    max-height: 110mm;
+    margin: 0 auto 12px;
+  }
+
+  .md-typeset h4:has(+ p > img.wiring-diagram) {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
 }
