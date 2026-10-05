@@ -234,11 +234,16 @@ body {
 
 /* Phone screenshots (.trik-mob-img): print at phone size, not full page width.
    The generic image rule above (max-width: 100% !important) would otherwise
-   blow them up to a page each. Pairs (.trik-mob-pair) print side by side. */
+   blow them up to a page each. Pairs (.trik-mob-pair) print side by side.
+   No drop shadow: Chrome prints it as a flat grey frame reaching above the image,
+   and when the image moved to the next page that part stayed behind as a grey strip
+   at the bottom of the previous one. A hairline border keeps the outline instead. */
 .md-typeset img.trik-mob-img {
   width: auto !important;
   max-width: 60mm !important;
   margin: 3mm auto !important;
+  box-shadow: none !important;
+  border: 0.25mm solid #d0d0d0;
 }
 
 .md-typeset .trik-mob-pair {
