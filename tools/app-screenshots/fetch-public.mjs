@@ -10,7 +10,9 @@ import { fileURLToPath } from 'node:url';
 const API = 'https://web.protegus.app/v3/api';
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const langs = process.argv.slice(2).length ? process.argv.slice(2) : ['en'];
-const CONFIG_PACKS = ['g16']; // add 'sp3', 'gv17', ... as screens for those configurators are added
+// 'sp5' has no pack of its own: the endpoint returns the shared configurator labels, which the
+// newer configurator pages use alongside the main app pack.
+const CONFIG_PACKS = ['g16', 'sp5'];
 
 async function save(file, res) {
   const body = await res.json();

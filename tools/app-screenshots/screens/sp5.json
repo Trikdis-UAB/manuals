@@ -1,0 +1,170 @@
+{
+  "configurator": "sp5",
+  "flow": "configuration",
+  "base": "configuration",
+  "models": [
+    "SP5"
+  ],
+  "_fields": "As in g16.json, plus: layouts (capture only in these layouts), unverified (a caveat copied into the manifest). flow 'configuration': the newer configurator; desktop reads on its own after Advanced settings, the phone menu has a Read button; menu labels are clicked inside the sidebar navigation.",
+  "screens": [
+    {
+      "id": "advanced-intro",
+      "kind": "intro",
+      "waitFor": "systems.titles.useAtOwnRisk"
+    },
+    {
+      "id": "menu",
+      "menu": [],
+      "route": "",
+      "layouts": [
+        "phone"
+      ],
+      "note": "Phone only: the configurator menu after Read. On desktop the same menu is the left sidebar."
+    },
+    {
+      "id": "dashboard",
+      "menu": [],
+      "route": "dashboard",
+      "layouts": [
+        "desktop"
+      ],
+      "note": "Desktop only; the phone menu has no Dashboard."
+    },
+    {
+      "id": "systemoptions",
+      "menu": [
+        "configurators.navigation.systemOptions"
+      ],
+      "route": "systemOptions"
+    },
+    {
+      "id": "communication-connection",
+      "menu": [
+        "configurators.navigation.communication",
+        "configurators.navigation.communicationChildren.connection"
+      ],
+      "route": "communication/connection"
+    },
+    {
+      "id": "communication-cmsreporting",
+      "menu": [
+        "configurators.navigation.communication",
+        "configurators.navigation.communicationChildren.cmsReporting"
+      ],
+      "route": "communication/cmsReporting"
+    },
+    {
+      "id": "areas",
+      "menu": [
+        "configurators.navigation.areasAndZones",
+        "configurators.navigation.areasAndZonesChildren.areas"
+      ],
+      "route": "areasAndZones/partitions"
+    },
+    {
+      "id": "zones",
+      "menu": [
+        "configurators.navigation.areasAndZones",
+        "configurators.navigation.areasAndZonesChildren.zones"
+      ],
+      "route": "areasAndZones/zones"
+    },
+    {
+      "id": "terminals",
+      "menu": [
+        "configurators.navigation.terminals"
+      ],
+      "route": "terminals"
+    },
+    {
+      "id": "keypads",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.keypads"
+      ],
+      "route": "devicesAndInterfaces/keypads"
+    },
+    {
+      "id": "expanders",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.expanders"
+      ],
+      "route": "devicesAndInterfaces/expanders"
+    },
+    {
+      "id": "wireless",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.wireless"
+      ],
+      "route": "devicesAndInterfaces/wireless"
+    },
+    {
+      "id": "sensors",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.temperatureSensors"
+      ],
+      "route": "devicesAndInterfaces/sensors"
+    },
+    {
+      "id": "thermostats",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.thermostats"
+      ],
+      "route": "devicesAndInterfaces/thermostats"
+    },
+    {
+      "id": "users-list",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.userList"
+      ],
+      "route": "users/usersList"
+    },
+    {
+      "id": "users-groups",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.groups"
+      ],
+      "route": "users/groups"
+    },
+    {
+      "id": "users-blacklist",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.blacklist"
+      ],
+      "route": "users/blacklist"
+    },
+    {
+      "id": "panel-events",
+      "menu": [
+        "configurators.navigation.panelEvents"
+      ],
+      "route": "panelEvents",
+      "unverified": "Contact ID codes are standard codes, not checked against a real SP5's defaults."
+    }
+  ],
+  "notShown": [
+    {
+      "id": "cameras",
+      "why": "VideoHub only: the SP5 menu never shows Cameras."
+    }
+  ],
+  "liveOnly": [
+    {
+      "id": "read-progress",
+      "what": "'Reading configuration… n%' while a configuration is read",
+      "why": "driven by the realtime channel during a live read"
+    },
+    {
+      "id": "write-progress",
+      "what": "'Writing… n%' and the write result",
+      "why": "driven by the realtime channel during a live write; writes are never sent"
+    }
+  ]
+}

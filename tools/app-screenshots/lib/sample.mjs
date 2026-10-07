@@ -10,34 +10,40 @@ export const SAMPLE = {
   installerCode: '654321',
 };
 
-// Hardware models served by the shared g16 configurator. Firmware and hardware revision change
-// which fields the app shows (e.g. account number per CMS channel from fw 1.31, Bands/Generation
-// from fw 1.17 on revision M15), so they must match a current real device. Entries without
-// `confirmed` are PLACEHOLDERS; override per run with --fw and --revision.
+// Hardware models, each with the configurator that serves it, its sample configuration and its
+// screen list. Firmware and hardware revision change which fields the app shows (e.g. account
+// number per CMS channel from fw 1.31, Bands/Generation from fw 1.17 on revision M15), so they must
+// match a current real device. Entries without `confirmed` are PLACEHOLDERS; the run says so and the
+// manifest records it. Override per run with --fw and --revision.
 // GET 1.35: released 2026-06-05 as GET_x1x0_0135 and GET_x1x1_0135 (two hardware variants);
 // Andrius chose 1.35 with both variants on 2026-10-02.
-export const G16_MODELS = {
-  'GET':   { hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', confirmed: true },
-  'GT':    { hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
-  'GT+':   { hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
-  'G16':   { hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
-  'G16T':  { hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
-  'E16':   { hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
-  'E16T':  { hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
+const G16 = { configurator: 'g16', fixture: 'g16-family.json' };
+export const MODELS = {
+  'GET':   { ...G16, hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', confirmed: true },
+  'GT':    { ...G16, hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
+  'GT+':   { ...G16, hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
+  'G16':   { ...G16, hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
+  'G16T':  { ...G16, hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
+  'E16':   { ...G16, hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
+  'E16T':  { ...G16, hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
+  // SP5 firmware and revision are unknown (2026-10-07): placeholders until confirmed.
+  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: null, bt: '0100' },
 };
 
 export function setFirmware(model, { firmware, revision }) {
-  if (firmware) G16_MODELS[model].firmware = firmware;
-  if (revision) G16_MODELS[model].revision = revision;
+  if (firmware) MODELS[model].firmware = firmware;
+  if (revision) MODELS[model].revision = revision;
 }
 
 export function sampleFirmware(model) {
-  const m = G16_MODELS[model];
+  const m = MODELS[model];
   return { firmware: m.firmware, revision: m.revision };
 }
 
 // How the device reports itself in config/info: "<name>[_<revision>]_<fw x100>". The app shows
 // the last part as firmware (0112 -> 1.12) and takes the revision from the second part.
+export function sampleVersion(model) { return deviceVersion(MODELS[model]); }
+
 function deviceVersion(m) {
   const fw = String(Math.round(parseFloat(m.firmware) * 100)).padStart(4, '0');
   return m.revision ? `${m.name}_${m.revision}_${fw}` : `${m.name}_${fw}`;
@@ -78,7 +84,7 @@ export function installerRule() {
 }
 
 export function sampleSystem(modelName) {
-  const m = G16_MODELS[modelName];
+  const m = MODELS[modelName];
   return {
     id: SAMPLE.systemId,
     name: 'Sample system',
@@ -203,7 +209,7 @@ export function sampleMe({ regions, modelName, withSystem }) {
 
 // Row in the installer's systems list (GET /systems-with-devices).
 export function sampleListRow(modelName) {
-  const m = G16_MODELS[modelName];
+  const m = MODELS[modelName];
   return {
     id: SAMPLE.systemId, imei: SAMPLE.imei, name: 'Sample system', last_ip_com: 1,
     created_at: '2026-01-01 00:00:00', object_id: '561234', installer_id: SAMPLE.userId,
@@ -217,7 +223,7 @@ export function sampleListRow(modelName) {
 }
 
 export function sampleConfigInfo(modelName) {
-  const m = G16_MODELS[modelName];
+  const m = MODELS[modelName];
   return {
     success: true,
     data: {

@@ -16,10 +16,18 @@ export const APP_ORIGIN = 'https://web.protegus.app';
 const STATIC_GET_HOSTS = new Set(['web.protegus.app', 'fonts.googleapis.com', 'fonts.gstatic.com']);
 const BLOCKED_PATH_PREFIXES = ['/ingest/']; // PostHog analytics + session recording
 
-// The app's route resolver waits for Google Sign-In to load before it opens a system.
+// Third-party resources the app needs, answered locally instead of fetched:
+//  - Google Sign-In: the app's route resolver waits for it to load before it opens a system.
+//  - mcc-mnc.com: the SP5 SIM card reads its operator list from there; one sample entry.
 const LOCAL_STUBS = {
-  'https://accounts.google.com/gsi/client':
-    'window.google={accounts:{id:{initialize(){},prompt(){},renderButton(){},disableAutoSelect(){},cancel(){}}}};',
+  'https://accounts.google.com/gsi/client': {
+    contentType: 'text/javascript',
+    body: 'window.google={accounts:{id:{initialize(){},prompt(){},renderButton(){},disableAutoSelect(){},cancel(){}}}};',
+  },
+  'https://mcc-mnc.com/api/v1/mcc-mnc.php': {
+    contentType: 'application/json',
+    body: JSON.stringify({ data: [{ mcc: '246', mnc: '01', network: 'Sample Mobile', iso: 'lt', country: 'Lithuania', countryCode: '370' }] }),
+  },
 };
 
 export async function installGuard(context, { mocks, log }) {
@@ -57,7 +65,7 @@ export async function installGuard(context, { mocks, log }) {
 
     const stub = LOCAL_STUBS[url.origin + url.pathname];
     if (method === 'GET' && stub !== undefined) {
-      return route.fulfill({ status: 200, contentType: 'text/javascript', body: stub });
+      return route.fulfill({ status: 200, contentType: stub.contentType, headers: { 'access-control-allow-origin': '*' }, body: stub.body });
     }
 
     const blockedPath = BLOCKED_PATH_PREFIXES.some((p) => url.pathname.startsWith(p));

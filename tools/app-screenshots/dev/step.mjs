@@ -10,7 +10,7 @@ fs.rmSync(dir, { recursive: true, force: true });
 fs.mkdirSync(dir, { recursive: true });
 const quiet = /me\?|regions|pgm-icon|widget|systems-with/;
 const { browser, page, guard, errors } = await openApp({
-  lang: 'en', model: 'GET', layout, log: (m) => { if (!quiet.test(m)) console.log(m); },
+  lang: 'en', model: process.env.MODEL ?? 'GET', layout, log: (m) => { if (!quiet.test(m)) console.log(m); },
 });
 let i = 0;
 page.on('console', (m) => { const t = m.text(); if (!/ERR_BLOCKED/.test(t)) console.log('console.' + m.type(), t.slice(0, 250)); });

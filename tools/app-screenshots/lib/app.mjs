@@ -5,6 +5,11 @@ import { chromium } from 'playwright';
 import { installGuard, APP_ORIGIN } from './guard.mjs';
 import { createMocks, fakeToken } from './mocks.mjs';
 import { SAMPLE } from './sample.mjs';
+import { readJson } from './guard.mjs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export const LAYOUTS = {
   desktop: { viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2, isMobile: false, hasTouch: false },
@@ -12,7 +17,7 @@ export const LAYOUTS = {
   phone: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true },
 };
 
-export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null }) {
+export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {} }) {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   const context = await browser.newContext({
     ...LAYOUTS[layout],
@@ -22,15 +27,21 @@ export async function openApp({ lang, model, layout, log = () => {}, skipAdvance
     colorScheme: 'light',
   });
   const mocks = createMocks({ lang, model, configPatch });
+  // Start as a returning user whose label pack is already cached. On a browser's very first visit
+  // some configurator pages build their option lists before the labels arrive and show raw keys.
+  const pack = readJson(ROOT, 'fixtures', 'translations', `app.${lang}.json`);
   const guard = await installGuard(context, { mocks, log });
-  await context.addInitScript(({ token, lang, userId, systemId, skipAdvancedIntro }) => {
+  await context.addInitScript(({ token, lang, userId, systemId, skipAdvancedIntro, storage, labels, labelsVersion }) => {
     if (location.origin !== 'https://web.protegus.app' || localStorage.getItem('token')) return;
+    for (const [k, v] of Object.entries(JSON.parse(labels))) localStorage.setItem(k, v.replace(/&apos;/g, "'").replace(/&quot;/g, '"'));
+    localStorage.setItem('lang_version', JSON.stringify(labelsVersion));
     localStorage.setItem('token', JSON.stringify(token));
     localStorage.setItem('lang', JSON.stringify(lang));
     localStorage.setItem('privacy_consent', 'true'); // the "Data we collect" notice
     // Skip the Advanced-settings warning page ("don't show again") and go straight to the configurator.
     if (skipAdvancedIntro) localStorage.setItem(`do_not_show_adv_${userId}_${systemId}`, '1');
-  }, { token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId, skipAdvancedIntro });
+    for (const [k, v] of Object.entries(storage)) localStorage.setItem(k, JSON.stringify(v));
+  }, { token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId, skipAdvancedIntro, storage, labels: pack.translations, labelsVersion: pack.version });
 
   const page = await context.newPage();
   const errors = [];

@@ -6,7 +6,8 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readJson } from './guard.mjs';
-import { SAMPLE, sampleMe, sampleSystem, sampleConfigInfo, sampleListRow } from './sample.mjs';
+import { SAMPLE, MODELS, sampleMe, sampleSystem, sampleConfigInfo, sampleListRow } from './sample.mjs';
+import { configuratorMocks } from './mocks-configurators.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const FIX = path.join(ROOT, 'fixtures');
@@ -57,11 +58,14 @@ export function createMocks({ lang, model, configPatch = null }) {
   // Device configuration (what a live read would return).
   on('*', '/config/info', () => sampleConfigInfo(model));
   on('*', '/config/read', () => {
-    const data = deepMerge(readJson(FIX, 'config', 'g16-family.json'), configPatch ?? {});
-    delete data._comment;
+    const data = deepMerge(readJson(FIX, 'config', MODELS[model].fixture), configPatch ?? {});
+    for (const k of Object.keys(data)) if (k.startsWith('_')) delete data[k]; // notes and side data, not config
     data.isInstaller = false;
     return { success: true, data };
   });
+
+  // Calls a particular configurator makes besides config/read (status, keypads, users, ...).
+  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model });
 
   return {
     sampleSystem: () => sampleSystem(model),
