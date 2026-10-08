@@ -211,7 +211,7 @@ def verify(a):
     want = [g for g in load(W / "all.json") if g["id"] in d and g["id"] not in done
             and (a.all or d[g["id"]].get("complexity") == "high")]
     todo = [dict(g, draft=d[g["id"]]) for g in want]
-    start = max([int(f.stem[1:]) for f in (W / "verify").glob("v*.json")] + [0]) + 1
+    start = max([int(f.stem[1:]) for f in (W / "verify").glob("v*.json") if f.stem[1:].isdigit()] + [0]) + 1   # vt*.json: translate_wave text checks
     pool(verify_batch, a.jobs, [(W, start + i // VERIFY_BATCH, todo[i:i + VERIFY_BATCH]) for i in range(0, len(todo), VERIFY_BATCH)])
 
 
