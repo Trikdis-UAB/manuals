@@ -178,7 +178,7 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image5.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Brėžinys: kairėje plokštė korpuse; apskritimu pažymėtas fiksatorius apatiniame kairiajame plokštės krašte, o rodyklė nukreipta į kairę. Dešinėje korpuso pagrindas su dviem apskritimais pažymėtomis tvirtinimo angomis." src="./image5.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Plokštės SIM kortelės laikiklio brėžinys su rodykle, rodančia nano-SIM kortelės įstatymą į laikiklį." src="./image6.webp" style="width:2.748031496062992in;height:1.1811023622047243in" />
 
@@ -204,7 +204,7 @@ Relės prijungimo schema, kai valdiklio *GATOR* maitinamas nuo nuolatinės srov�
 
 Visi laidų prijungimo darbai atliekami tik atjungus maitinimo įtampą. / Vartų automatikos instrukcijoje yra detaliai aprašyta gnybtų paskirtis ir jų įtampa. / Vartų automatikos gnybtai IN, COM skirti vartų valdymui. / Vartų automatika turi vartų padėties išėjimą (OUT), kuris parodo kada vartai yra uždaryti arba atidaryti. Vartų padėties išėjimas gali būti įtampinis arba relinis. Schemoje pavaizduotas relės K1 prijungimas prie įtampinio vartų automatikos išėjimo. Vartų automatikos išėjimo įtampiniai gnybtai (OUT, N) turi įtampą (~230V) kai vartai atviri. Tarpinė relė K1 suveikia kai vartai atviri ir valdiklio *GATOR* 1IN įėjimas aktyvuojamas. Pagal *GATOR* 1IN įėjimo būseną turime tikslią informaciją apie vartų padėti (kada vartai yra uždaryti arba atidaryti).
 
-<img alt="" src="./image10.webp" style="width:3.8858267716535435in;height:2.6692913385826773in" />
+<img alt="GATOR ir vartų automatikos prijungimo schema. Vartų automatikos 24 V gnybtas prijungtas prie GATOR AC/+ DC, o 0 V – prie AC/- DC. Vartų automatikos OUT ir N prijungti prie relės K1 ritės; K1 kontaktas jungia GATOR 1 IN ir COM vartų būsenai nustatyti. Vartų valdymui vartų automatikos COM tiesiogiai prijungtas prie GATOR 5 OUT C, o IN – prie 5 OUT NO." src="./image10.webp" style="width:3.8858267716535435in;height:2.6692913385826773in" />
 
 GATOR konfigūravimą su vartų būsenos indikacija žr. p. 5.9 „Nustatymai vartų būsenos indikacijai“.
 

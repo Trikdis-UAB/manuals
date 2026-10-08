@@ -295,7 +295,7 @@ Komunikatoriaus plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių gr
     <img src="./image13.webp" alt="Prijungimo schema: IOx įėjimas ir C gnybtas, „Normaliai uždara grandinė be rezistoriaus linijos gale (ATZ)“. Tarp IOx ir 1 jutiklio gnybtų NC kontaktas sujungtas lygiagrečiai su R1; tarp 2 jutiklio gnybtų ir C kitas NC kontaktas sujungtas lygiagrečiai su R2. Abi jutiklių grandinės sujungtos nuosekliai." style="width: 2.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 5.0in; height:in;" />
+    <img src="./image14.webp" alt="Prijungimo schema „Normaliai uždara grandinė su rezistoriumi linijos gale ir tamperio stebėjimu (ATZ_T)“. Nuo IOx iki C nuosekliai sujungtos dviejų jutiklių grandinės. Pirmojo jutiklio grandinėje yra NC tamperio kontaktas, RT rezistorius ir lygiagrečiai su R1 rezistoriumi sujungtas NC kontaktas. Antrojo jutiklio grandinėje yra NC tamperio kontaktas ir lygiagrečiai su R2 rezistoriumi sujungtas NC kontaktas." style="width: 5.0in; height:in;" />
   </figure>
 </div>
 

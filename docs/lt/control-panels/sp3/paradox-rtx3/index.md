@@ -40,7 +40,7 @@ Prie centralės prijunkite maitinimo laidus. Prijunkite belaidžių zonų išpl�
 
 Į SIM kortelės laikiklį įdėkite prie mobiliojo tinklo jau priregistruotą SIM kortelę. Įjunkite maitinimą centralei. Palaukite kelias minutes. Prisijunkite su TrikdisConfig prie „FLEXi” SP3 nuotoliniu būdu. Programoje TrikdisConfig būsenos juostoje yra pateikta informacija apie įdiegtos veikimo programos versija ( 1 ). Langė **„Moduliai“**, lentelėje yra įtrauktas modulis RTX3 ( 2 ), kuris prijungtas prie centralės.
 
-<img alt="" src="./image8.png" style="width:7.082677165354331in;height:4.05511811023622in" />
+<img alt="TrikdisConfig langas „Moduliai“, skirtukas „Klaviatūros“. Žyma 1 rodo skaitmenį prie „Modulis: SP3_44“ apatinėje būsenos juostoje; joje atskirai rodoma „FW: 1.11“. Žyma 2 rodo lentelės įrašą „RTX3 imtuvas“." src="./image8.png" style="width:7.082677165354331in;height:4.05511811023622in" />
 
 Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti su firmos Paradox belaidžiais jutikliais (magnetiniais kontaktais, PIR jutikliais, stiklo dūžio jutikliais(G550), dūmų jutikliais (SD360), nuotolinio valdymo pulteliais (REM2, REM25), sirenomis (SR230, SR250), klaviatūromis (K37), PGM ir zonos išplėtimo moduliu (2WPGM), kartotuvas (RPT1)).
 

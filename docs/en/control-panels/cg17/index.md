@@ -348,7 +348,7 @@ Assign a PGM output the function “**Fire sensor reset**” (see TrikdisConfig 
 
 - **Connecting a four-wire smoke detector**
 
-<img alt="Wiring schematic showing the CG17's +12V, x IN, COM, and x OUT terminals connected directly to a chain of two-wire smoke detectors (IN/OUT terminals with plus and minus) ending in a 10k end-of-line resistor (EOL)." src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
+<img alt="Wiring diagram: CG17 to a chain of four-wire smoke detectors. Power: +12 V to the detectors' + terminals and x OUT to their − terminals. Signal: x IN and COM to the detectors' IN terminals; each detector's OUT terminals continue to the next detector. A 10k end-of-line resistor (EOL) connects across the last detector's signal OUT terminals." src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
 
 - **Connecting a two-wire smoke detector**
 

@@ -166,7 +166,7 @@ R11config programos mygtukai:
 
 **Main** langas.
 
-<img alt="" src="./image9.webp" style="width:5.045833333333333in;height:3.404861111111111in" />
+<img alt="Programos R11config langas Main: Repeater Mode įjungtas, Frequency – MyFrequency, Transmitter ID – Account ID. RF Noise Level rodo -, 4sec Refresh išjungtas, Show PC Time įjungtas." src="./image9.webp" style="width:5.045833333333333in;height:3.404861111111111in" />
 
 - **Repeater mode**. Retransliatoriaus režimas. Kai imtuvas numatytas būti retransliatoriaus imtuvu, šis požymis turi būti įjungtas, o kai centrinio pulto imtuvu – išjungtas.
 
@@ -198,7 +198,7 @@ R11config programos mygtukai:
 
 **Filters** langas.
 
-<img alt="" src="./image10.webp" style="width:5.045833333333333in;height:3.404861111111111in" />
+<img alt="Programos R11config langas Filters: Time filter Deaf time, s – 90. RF coding įjungtas RAS-3; Milcol-D, RAS2M, LARS ir LARS1 išjungti. Subsystem allow įjungtos visos posistemės nuo 0 iki 15. Account ID allow pirmoji grupė – nuo 0000 iki FFFF; Repeater allow grupės – nuo F iki 0." src="./image10.webp" style="width:5.045833333333333in;height:3.404861111111111in" />
 
 - **Time Filter**. Nurodo, kiek laiko imtuvas nepriima pasikartojančio pranešimo iš to paties objekto. Rekomenduojamas 90 sekundžių laikas.
 
@@ -212,7 +212,7 @@ R11config programos mygtukai:
 
 **Reports** langas.
 
-<img alt="" src="./image11.webp" style="width:5.022916666666666in;height:3.3895833333333334in" />
+<img alt="Programos R11config langas Reports: Output Protocol – Monas3D, Receiver Number – 3, Repeater/Line Number – 3, System – 0. HB period – 3 × 10 s, HB No Event įjungtas, RF Noise Max – 3, Noise TO – 5 min. RS232 nustatytas In, In Protocol – Monas3D, Baud Rate – 9600. MCI įjungtas; Self Address – 0, Baud Rate – 9600." src="./image11.webp" style="width:5.022916666666666in;height:3.3895833333333334in" />
 
 - **Output Protocol**. Nurodomas imtuvo duomenų išėjimo protokolas. Jei R11 imtuvas numatytas būti retransliatoriaus R-IP12 imtuvu, protokolas turi būti „Monas3D“.
 
@@ -301,7 +301,7 @@ Sąsajos duomenų perdavimo greitis „Boud Rate“ turi sutapti su siunčianči
 
 **Inputs/Outputs** langas.
 
-<img alt="" src="./image12.webp" style="width:5.045833333333333in;height:3.4125in" />
+<img alt="Programos R11config langas Inputs/Outputs: Inputs lentelėje du įėjimai. Abiejų Type – NC; pirmojo Delay, ms – 60, antrojo – 60000. Kiekvienam įėjimui pateikti Event Code ir Restore Code." src="./image12.webp" style="width:5.045833333333333in;height:3.4125in" />
 
 **Inputs**.
 
@@ -321,7 +321,7 @@ Lentelėje „Inputs“ yra penki stulpeliai:
 
 **Settings** langas.
 
-<img alt="" src="./image13.webp" style="width:5.0152777777777775in;height:3.3819444444444446in" />
+<img alt="Programos R11config langas Settings: Radio Frequencies lentelėje MyFrequency – 146000000 Hz, Frequency 1 – 172000000 Hz, UHF Frequency – 465000000 Hz. Greta yra mygtukai Add ir Delete." src="./image13.webp" style="width:5.0152777777777775in;height:3.3819444444444446in" />
 
 - **Radio Frequencies** lentelėje galima aprašyti naudojamus dažnius suteikiant jiems sąlyginius pavadinimus, kuriuos galima bus išsirinkti nustatant R11 dažni „Main“ lange.
 
@@ -329,7 +329,7 @@ Lentelėje „Inputs“ yra penki stulpeliai:
 
 Norint atnaujinti imtuvo programą, reikia jį USB kabeliu sujungti su kompiuteriu. Tada paspaudus mygtuką SW1 ir jį palaikius daugiau 3 sekundes (kai ims šviesti visi šviesos indikatoriai), atsidarys langas RF11 (arba atsiranda atminties įrenginys RF11).
 
-<img alt="" src="./image14.webp" style="width:4.923611111111111in;height:3.7020833333333334in" />
+<img alt="Windows Explorer langas RF11 (H:): keičiamajame diske matomas programinės įrangos failas rf11.fw, 500 KB." src="./image14.webp" style="width:4.923611111111111in;height:3.7020833333333334in" />
 
 Jame esantį failą „rf11.fw“ reikia ištrinti ir į jo vietą įrašyti naują imtuvo veikimo programą. Jei įrašymas sėkmingas, po 1-2 sekundžių langas turi savaime užsidaryti. Po veikimo programos įrašymo, rekomenduojama pasitikslinti imtuvo programos versiją programa „R11config“.
 

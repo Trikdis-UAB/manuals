@@ -306,7 +306,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus jo išėjimus prie *G17F* įėjimų. Priešgaisrinės centralės išėjimai (PGM1, PGM2, PGM3) turi būti sukonfigūruoti kaip centralės būsenos išėjimai (Aliarmas, Gedimas ir kt.).
 
-<img alt="" src="./image15.webp" style="width:3.047244094488189in;height:2.877952755905512in" />
+<img alt="Prijungimo schema: priešgaisrinė centralė ir G17F. Maitinimas: centralės +24 V prijungtas prie +DC, GND – prie -DC. Būsenos išėjimai: PGM1 prijungtas prie 1 IN, PGM2 – prie 2 IN, PGM3 – prie 6 IN; jų grįžtamieji laidai prijungti prie COM. Kiekvienoje PGM grandinėje tarp įėjimo linijos ir grįžtamosios COM linijos lygiagrečiai prijungtas 10 k rezistorius." src="./image15.webp" style="width:3.047244094488189in;height:2.877952755905512in" />
 
 ## Priešgaisrinės centralės ESPA4.4.4 prijungimo schema
 

@@ -39,7 +39,7 @@ Perdavimas į stebėjimo pultą vykdomas vienu arba keliais perdavimo moduliais,
 
 Retransliatoriaus R-IP12 struktūrinė schema pateikta 1 paveiksle.
 
-<img alt="" src="./image3.webp" style="width:6.166666666666667in;height:3.375in" />
+<img alt="Retransliatoriaus struktūrinė schema: RAS-3 radijo signalas patenka į R11, o RAS-2M – į R7; R7 perduoda duomenis R11 per RS232. Iš R11 MCI jungtis veda į 1 numerio GM10 ir E10C, 2 numerio GM10 bei 3 numerio T10R. Abu GM10 siunčia per GPRS, E10C – per LAN, T10R – per RF." src="./image3.webp" style="width:6.166666666666667in;height:3.375in" />
 
 1 pav. Struktūrinė retransliatoriaus R-IP12 schema
 

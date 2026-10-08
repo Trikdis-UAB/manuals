@@ -179,7 +179,7 @@ Veikia su Protegus2 programėle:
 
 2.  Plokščiu atsuktuvu nuimkite E16 dangtelį kaip parodyta žemiau:
 
-    <img alt="" src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
+    <img alt="Du E16 priekinio dangtelio nuėmimo piešiniai: plokščio atsuktuvo galas įkištas į viršutinę korpuso angą. Viename piešinyje rodyklė nukreipta į kairę, kitame – žemyn. Dešinėje atskirai parodyta USB Mini-B jungtis." src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
 
 3.  Su USB Mini-B kabeliu sujunkite E16 su kompiuteriu.
 
@@ -732,7 +732,7 @@ Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 mod
 
 **iO-8 plėtiklio nustatymų langas**
 
-<img alt="" src="./image42.webp" style="width:7.082677165354331in;height:2.543307086614173in" />
+<img alt="TrikdisConfig E16_1000 langas „RS485 moduliai“, skirtukas „Modulis 1“, plėtiklis iO-8. Įrašytas serijos numeris, įėjimų skaičius 3; „Rodyti Objekto numerį“ nepažymėta. Lentelėje BUS_FAULT įvykio ir atsistatymo Contact ID kodas 333, INPUT1–INPUT3 – 130. Nurodyta sritis 91; BUS_FAULT ir INPUT1 zona 001, INPUT2 zona 002, INPUT3 zona 003. INPUT1–INPUT3 įėjimų tipas NO." src="./image42.webp" style="width:7.082677165354331in;height:2.543307086614173in" />
 
 Plėtiklis iO-8 turi 8 universalius (įėjimo/išėjimo) gnybtus. Galima prijungti keturis iO-8 plėtiklius.
 

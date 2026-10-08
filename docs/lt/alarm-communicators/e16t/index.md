@@ -149,7 +149,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 2.  Plokščiu atsuktuvu nuimkite E16T dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image5.webp" style="width:6.192913385826771in;height:1.6653543307086613in" />
+<img alt="Du E16 priekinio dangtelio nuėmimo piešiniai: plokščio atsuktuvo galas įkištas į viršutinę korpuso angą. Viename piešinyje rodyklė nukreipta į kairę, kitame – žemyn. Dešinėje atskirai parodyta USB Mini-B jungtis." src="./image5.webp" style="width:6.192913385826771in;height:1.6653543307086613in" />
 
 1.  Su USB Mini-B kabeliu sujunkite E16T su kompiuteriu.
 

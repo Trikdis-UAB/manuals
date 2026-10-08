@@ -331,7 +331,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Brėžinys: kairėje plokštė korpuse; apskritimu pažymėtas fiksatorius apatiniame kairiajame plokštės krašte, o rodyklė nukreipta į kairę. Dešinėje korpuso pagrindas su dviem apskritimais pažymėtomis tvirtinimo angomis." src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Plokštės SIM kortelės laikiklio brėžinys su rodykle, rodančia nano-SIM kortelės įstatymą į laikiklį." src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
@@ -795,7 +795,7 @@ Parinkčių grupė „Prisijungimas“
 
 **Parinkčių grupė „Tip/Ring sąsaja“**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:3.456692913385827in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“. Grupėje „Tip/Ring sąsaja“ atvertame „Komunikacijos protokolas“ sąraše pasirinkta „1. DISABLED“; kita parinktis – „2. Dual Tone“. „Naudoti centralės obj. Nr.“ ir „Laukti patvirtinimo iš CSP“ nepažymėti; „Dial tone dažnis“ pažymėtas, reikšmė 425 Hz. Grupėje „Data/CLK sąsaja“ „Įvykių protokolas“ nustatytas CID, „Centralės modelis“ – „1. DISABLED“, o „Nuotolinis centralės valdymas“ ir „Įvykiai“ neaktyvūs. Apačioje kairėje „Įsiminti slaptažodį“ nepažymėta, „Rodyti kodus“ pažymėta; po „Gamintojo parametrai“ yra mygtukas „Atkurti“." src="./image45.webp" style="width:7.086614173228346in;height:3.456692913385827in" />
 
 Kai komunikatorius prijungtas prie centralės TIP/RING gnybtų, reikia atlikti šiuos nustatymus.
 

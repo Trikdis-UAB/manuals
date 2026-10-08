@@ -334,7 +334,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image15.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Brėžinys: kairėje plokštė korpuse; apskritimu pažymėtas fiksatorius apatiniame kairiajame plokštės krašte, o rodyklė nukreipta į kairę. Dešinėje korpuso pagrindas su dviem apskritimais pažymėtomis tvirtinimo angomis." src="./image15.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Plokštės SIM kortelės laikiklio brėžinys su rodykle, rodančia nano-SIM kortelės įstatymą į laikiklį." src="./image16.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
@@ -916,7 +916,7 @@ Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 mod
 
 **iO-8 plėtiklio nustatymų langas (tik 3G ir 4G modeliams)**
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
+<img alt="TrikdisConfig lango „RS485 moduliai“ skirtukas „Modulis 1“: plėtiklis iO-8, įrašytas serijos numeris, įėjimų skaičius – 3; „Rodyti Objekto numerį“ nepažymėta. Contact ID lentelėje BUS_FAULT CID 333, sritis 91, zona 001; INPUT1, INPUT2 ir INPUT3 CID 130, sritis 91, zonos atitinkamai 001, 002 ir 003. Šių įvykių ir atsistatymų laukeliai pažymėti. INPUT1–INPUT3 įėjimo tipas – NO; BUS_FAULT eilutėje tipas nenurodytas." src="./image51.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
 
 Plėtiklis iO-8 turi 8 universalius (įėjimo/išėjimo) gnybtus. Galima prijungti keturis iO-8 plėtiklius.
 

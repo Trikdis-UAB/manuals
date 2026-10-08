@@ -128,11 +128,11 @@ Prijungimas:
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms**.**
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig „Zonų įėjimai“ skirtukas „Zonų nustatymai“. Atvertame 1 zonos lauko „Įėjimas“ sąraše matyti „Išjungta“, SP3 I/O, „RS485 Expander ID1, IN1“ ir „RS485 Expander ID2, IO1“ bei „IO2“ parinktys." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams**.**
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig „PGM išėjimai“ skirtuko „Išėjimai“ lentelė. PGM 1 priskirtas BELL; kiti matomi įrašai apima RS485 Expander ID1 OUT1 ir ID2 IO1 bei IO6, o PGM 5 išjungtas. Taip pat rodomi išėjimų aprašymai, impulsų trukmės ir „CSP“ bei „Prot.“ žymimieji langeliai." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. "Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 

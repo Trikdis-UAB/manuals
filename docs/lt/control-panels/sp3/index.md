@@ -315,7 +315,7 @@ Sutrikus sistemos maitinimui iš pagrindinio maitinimo šaltinio, bus formuojama
 
 Centralės plokštė montuojama į montažinį korpusą, kuriame sumontuotas žeminantis transformatorius su 500 mA saugikliu ir numatyta vieta rezervinio maitinimo akumuliatoriui. / Plastikiniais centralės plokštės atstumo laikikliais įtvirtinkite centralę į pasirinktą plastikinį arba metalinį montažinį korpusą. Jei parinkote metalinį korpusą, instaliacijos metu nepamirškite jo įžeminti. Naudojamas korpusas privalo tenkinti standartų EN 60950 ir EN 50131 reikalavimus.
 
-<img alt="" src="./image5.webp" style="width:2.6766721347331583in;height:1.96667104111986in" />
+<img alt="SP3 plokštės atstumo laikiklis, parodytas iš priekio ir iš šono. Viršutinė laikiklio dalis tvirtinama prie SP3 plokštės ir pažymėta Ø 4; apatinė dalis tvirtinama prie korpuso ir pažymėta Ø 4,8." src="./image5.webp" style="width:2.6766721347331583in;height:1.96667104111986in" />
 
 **„FLEXi” SP3 plokštės matmenys**
 
@@ -453,11 +453,11 @@ Dvilaidžių dūmų jutiklių prijungimo schema prie PGM (LED) išėjimo. Kai yr
 
 Dvilaidžių dūmų jutiklių su reliniu moduliu **SM1** prijungimo schemos. Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia įėjimui (IOx) nustatyti „Gaisro“ zonos funkciją (žr. 5.7 „Langas „Zonų įėjimai“). Jungiant dūmų jutiklio grandinę prie pasirinkto PGM išėjimo (IO10), išėjimui turi būti su nustatyta funkcija „**Gaisro jutiklių atstatymas**“ (žr. 5.8 „Langas „PGM išėjimai““). Relė (K1) naudojama nutrūkusio laido ir nuimto gaisro detektoriaus aptikimui.
 
-<img alt="" src="./image18.webp" style="width:5.796678696412949in;height:2.213337707786527in" />
+<img alt="Prijungimo schema: SP3 prie SM1, dvilaidžių dūmų jutiklių ir relės K1. AUX+ į SM1 +12V ir pirmojo jutiklio viršutinį IN; IO10 į SM1 -12V ir vieną K1 ritės galą; SM1 R į apatinį IN. Jutiklių OUT linijos tęsiasi į kito IN; paskutinio viršutinis OUT į kitą K1 ritės galą. IOx į SM1 C; SM1 NC per K1 kontaktą ir galinį linijos rezistorių R1 į SP3 C. SM1 NO nenaudojamas." src="./image18.webp" style="width:5.796678696412949in;height:2.213337707786527in" />
 
 Arba
 
-<img alt="" src="./image19.webp" style="width:5.796678696412949in;height:1.9700043744531934in" />
+<img alt="Prijungimo schema: alternatyvus SP3 jungimas su SM1 ir dvilaidžiais dūmų jutikliais. AUX+ jungiamas prie SM1 +12V ir jutiklio + IN; IO10 – prie SM1 -12V ir relės K1 ritės; SM1 R – prie jutiklio - IN. Jutiklių IN ir OUT gnybtai tęsia grandinę; paskutinio jutiklio + OUT jungiamas prie K1. Kontrolės grandinė: IOx jungiamas prie SM1 C; galinės linijos rezistorius R1 yra tarp SM1 C ir NO; SP3 C per K1 kontaktą jungiamas prie SM1 NO." src="./image19.webp" style="width:5.796678696412949in;height:1.9700043744531934in" />
 
 Keturlaidžių dūmų jutiklių prijungimo schema.
 
@@ -568,7 +568,7 @@ Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 4 revizijos pr
 
 ### LORA serijos išplėtimo modulių prijungimo schema
 
-<img alt="" src="./image39.webp" style="width:7.086805555555555in;height:5.420138888888889in" />
+<img alt="Prijungimo schema: SP3 AUX+ (+12 V), AUX-, 485 A ir 485 B atitinkamai jungiami prie RF-LORA +DC, -DC, A 485 ir B 485. RF-LORA bevieliu ryšiu iki 5000 m atstumu veikia su iO-LORA, iO-8-LORA, PB-LORA ir REL-LORA. REL-LORA L ir N jungiami prie 100-230V AC; iO-8-LORA +DC ir -DC – prie 12-26V maitinimo šaltinio. PB-LORA pavaizduotas be laidų. iO-LORA +DC ir -DC jungiami prie 12V DC. Jo D0, D1, -DC ir +DC atitinkamai jungiami prie Wiegand 26/34 įėjimo skaitytuvo G, W, B ir R laidų. Jo 1-Wire jungiamas prie CZ-Dallas skaitytuvo balto laido; COM – prie pilko laido, o per geltoną laidą – prie LED-. 1-Wire jungties ilgis – iki 30 m. iO-LORA C jungiamas prie +DC; NO per 1k rezistorių ir žalią laidą jungiamas prie RED LED+, o NC per 1k rezistorių ir rudą laidą – prie Green LED+. Išėjimui xOUT priskiriamas tipas „Sistemos būsena“: įjungus apsaugos sistemą skaitytuvas šviečia raudonai, išjungus – žaliai." src="./image39.webp" style="width:7.086805555555555in;height:5.420138888888889in" />
 
 ### iO serijos išplėtimo modulių prijungimo schemos
 
@@ -588,7 +588,7 @@ Jei reikia, kad apsaugos centralė „FLEXi” SP3 turėtų daugiau įėjimų IN
 
 </div>
 
-<img alt="" src="./image42.webp" style="width:7.086805555555555in;height:4.564583333333333in" />
+<img alt="Prijungimo schema: SP3 BAT+ ir BAT- jungiami prie 12V akumuliatoriaus. SP3 AUX+ ir AUX- raudonu ir mėlynu laidais jungiami prie laidinių iO-MOD ir iO +DC ir -DC; 485 A ir 485 B juodu ir baltu laidais jungiami prie jų A RS485 ir B RS485. Abu pavaizduoti iO-MOD moduliai bevieliu ryšiu, iki 300 m atstumu, jungiasi su iO-WL. Viršutinis iO-WL ir iO naudoja bendrą 12-28V maitinimo šaltinį, prijungtą prie +DC ir -DC; jų A RS485 ir B RS485 jungiami RS485 linija, kurios ilgis – iki 300 m. Viršutinio iO +5V, 1-Wire ir COM jungiami prie temperatūros jutiklio DS18B20 arba DS18S20 Vdd+, DQ ir GND. Apatinis iO-WL turi 12-28V maitinimo šaltinį. Jo 1-Wire jungiamas prie CZ-Dallas skaitytuvo balto laido; COM – prie pilko laido, o per geltoną laidą – prie LED-. 1-Wire jungties ilgis – iki 30 m. Apatinio iO-WL C jungiamas prie +DC; NO per 1k rezistorių ir žalią laidą jungiamas prie RED LED+, o NC per 1k rezistorių ir rudą laidą – prie Green LED+. Išėjimui xOUT priskiriamas tipas „Sistemos būsena“: įjungus apsaugos sistemą skaitytuvas šviečia raudonai, išjungus – žaliai. Schemoje nurodyta iki 8 sistemos išplėtėjų ir iki 4 iO-MOD subsistemų." src="./image42.webp" style="width:7.086805555555555in;height:4.564583333333333in" />
 
 ### Radijo siųstuvo T16 prijungimo schema
 

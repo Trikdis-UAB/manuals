@@ -359,7 +359,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 8.  Jei LAN tinklas bus naudojamas įvykiams perduoti į CSP, tai turi būti prijungtas LAN kabelis prie komunikatoriaus.
 
-<img alt="" src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Brėžinys: kairėje plokštė korpuse; apskritimu pažymėtas fiksatorius apatiniame kairiajame plokštės krašte, o rodyklė nukreipta į kairę. Dešinėje korpuso pagrindas su dviem apskritimais pažymėtomis tvirtinimo angomis." src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="GET komunikatoriaus plokštės vaizdas iš viršaus: SIM1 lizdas yra netoli centro, SIM2 lizdas – kairiajame krašte. Rodyklės žymi kortelių įdėjimo kryptis." src="./image21.webp" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
@@ -777,7 +777,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas “Centralės sąsaja”
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:4.062992125984252in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“. Grupėje „Tip/Ring sąsaja“: „Komunikacijos protokolas“ – 2. AUTO, „First HSK tone“ – Dual Tone, „Second HSK tone“ – SIA FSK; „Naudoti centralės obj. Nr“ ir „Laukti patvirtinimo iš CSP“ nepažymėti, „Dial tone dažnis“ pažymėtas – 425 Hz. Grupėje „Data/CLK sąsaja“: „Įvykių protokolas“ – CID, „Centralės modelis“ – 1. DISABLED; „Nuotolinis centralės valdymas“ ir „Įvykiai“ papilkinti ir nepažymėti." src="./image48.webp" style="width:7.086614173228346in;height:4.062992125984252in" />
 
 **Parinkčių grupė „Tip/Ring sąsaja“**
 
@@ -813,7 +813,7 @@ Komunikatorius prie centralės yra prijungtas per nuosekliąją sąsają.
 
 **Skirtukas „CSP nustatymai“**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
+<img alt="TrikdisConfig langas „Pranešimai į CSP“, skirtukas „CSP nustatymai“. Matomos skiltys „Pirminis ryšio kanalas“, „Lygiagretusis ryšio kanalas“ ir „Atsarginio kanalo režimas“. Pirminio ir lygiagrečiojo kanalų „Ryšio būdas“ – „Išjungtas“; atsarginio kanalo režimas taip pat „Išjungtas“. Pirminio ir atsarginio kanalų srityse matomi protokolo, šifravimo rakto, domeno arba IP, prievado ir TCP ar UDP laukai. Abiejuose šifravimo rakto laukuose įrašyta reikšmė." src="./image50.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
 
 Pranešimai gali būti siunčiami keliais ryšio kanalais. Pirmas ir antras ryšio kanalai gali veikti lygiagrečiai, taip komunikatorius gali siųsti įvykius tuo pačiu metu į du imtuvus. Tiek pirmam, tiek ir antram kanalui galima priskirti atsarginį ryšio kanalą, kuris bus naudojamas nutrūkus ryšiui pirminiu kanalu.
 

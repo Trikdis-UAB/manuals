@@ -318,7 +318,7 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 7.  Close the top cover.
 
-<img alt="Line drawing: left, the PCB assembly being released from the case, with a circled tab near the antenna connector and an arrow showing the release direction; right, the empty case back showing two circled mounting screw posts." src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Line drawing: left, the board in the case, with a circled latch on its left edge and an arrow pointing left to release it; right, the empty case back with two circled mounting screw holes." src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Line drawing of the PCB SIM slot with an arrow showing a nano-SIM card being inserted into the slot." src="./image13.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 

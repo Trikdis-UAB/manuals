@@ -331,7 +331,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Brėžinys: kairėje plokštė korpuse; apskritimu pažymėtas fiksatorius apatiniame kairiajame plokštės krašte, o rodyklė nukreipta į kairę. Dešinėje korpuso pagrindas su dviem apskritimais pažymėtomis tvirtinimo angomis." src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Plokštės SIM kortelės laikiklio brėžinys su rodykle, rodančia nano-SIM kortelės įstatymą į laikiklį." src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 

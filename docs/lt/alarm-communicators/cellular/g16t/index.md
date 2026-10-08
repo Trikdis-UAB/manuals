@@ -260,7 +260,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:3.854330708661417in" />
+<img alt="TrikdisConfig lango „Pranešimai į CSP“ kortelė „CSP nustatymai“. Skiltyje „Pirminis ryšio kanalas“ numeriai žymi: 2 – „Ryšio būdas“ (IP); 3 – „Protokolas“ (TRK); 4 – užmaskuotas „TRK šifravimo raktas“; 5 – tuščias „Domenas arba IP“; 6 – tuščias „Prievadas“; 7 – „TCP ar UDP“ (TCP). Numeris 8 apima „Atsarginio kanalo režimo“ laukus: režimas „Išjungtas“, tuščias protokolo laukas, užmaskuotas šifravimo raktas, tušti domeno arba IP ir prievado laukai bei pasirinktas TCP. Numeris 9 žymi tuščią „Atsarginio SMS kanalo numerio“ lauką. Dešinėje matoma „Lygiagretus ryšio kanalas“ skiltis su IP, TRK, užmaskuotu šifravimo raktu ir TCP." src="./image10.webp" style="width:7.082677165354331in;height:3.854330708661417in" />
 
 2. **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminio kanalo).
 

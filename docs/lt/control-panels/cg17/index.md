@@ -349,7 +349,7 @@ Kad nuotoliniu būdu būtų galima dūmų jutiklį po suveikimo paleisti veikti 
 
 - **Keturių laidų dūmų jutiklio prijungimas**
 
-<img alt="" src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
+<img alt="Keturių laidų dūmų jutiklių prijungimo schema. CG17 +12 V ir x OUT prijungti prie pirmojo jutiklio maitinimo + ir − gnybtų; x IN ir COM – prie jo signalinių IN gnybtų. Maitinimo ir signalų laidai tęsiami iki kito jutiklio. Tarp paskutinio jutiklio signalinių OUT gnybtų prijungtas 10k galinis linijos rezistorius (EOL)." src="./image14.webp" style="width:5.0833431758530185in;height:1.5333366141732283in" />
 
 - **Dviejų laidų dūmų jutiklio prijungimas**
 
@@ -584,7 +584,7 @@ Valdiklio veikimo programos versija nuo 1.18 arba aukštesnė.
 
 Prijunkite RF-LORA transiverį prie CG17. Po to galite naudoti iO-LORA, iO8-LORA, PB-LORA, REL-LORA modulius. Prie CG17 galima prijungti vieną RF-LORA transiverį.
 
-<img alt="" src="./image42.webp" style="width:6.78501312335958in;height:5.880012029746282in" />
+<img alt="CG17 +12V, COM, A RS485 ir B RS485 laidais atitinkamai sujungti su RF-LORA +DC, -DC, A RS485 ir B RS485. Parodytas belaidis ryšys su iO-LORA iki 5000 m. Atskiras 9–16 V šaltinis prijungtas prie iO-LORA +DC ir -DC. RFID skaitytuvo su klaviatūra laidai R, B, G ir W atitinkamai prijungti prie iO-LORA +DC, -DC, D0 ir D1. Temperatūros jutiklio DS18B20 arba DS18S20 Vdd, DQ ir GND atitinkamai prijungti prie +5V, 1-Wire ir COM. Apačioje parodytas PB-LORA be jungčių ir iO8-LORA su atskiru 9–16 V šaltiniu prie +DC ir -DC; jų jungtys su kitais moduliais nenubrėžtos." src="./image42.webp" style="width:6.78501312335958in;height:5.880012029746282in" />
 
 Paleiskite TrikdisConfig. Prijunkite CG17 per USB Mini-B kabelį prie kompiuterio arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite modulį LORA, kurį naudojate. Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
@@ -1354,7 +1354,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 **Skirtukas „Išėjimai“**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig lango „PGM išėjimai“ skirtukas „Išėjimai“. PGM 1 priskirtas „CG17 5 OUT“ (aprašymas prasideda „Gaisro jutiklių atst“), PGM 2 – „CG17 6 OUT“ („Sirena“, sritis 1). PGM 3–5 išjungti. Visose penkiose eilutėse impulso trukmė 20 s, „Prot.“ langeliai pažymėti, „CSP“ langeliai tušti." src="./image64.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **PGM Nr**– nurodo PGM išėjimo eilės numerį.
 
