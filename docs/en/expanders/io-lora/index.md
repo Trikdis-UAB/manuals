@@ -51,7 +51,13 @@ Connection:
 
 ### Expander elements 
 
-<img alt="Two photos of the iO-LORA expander, closed on the left and with its PCB exposed on the right. Callouts: 1, NETWORK indicator on the left; 2, side opening on the left; 3, terminal blocks on the right; 4, SW2 push button on the right; 5, SW1 DIP switch on the right." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="Two photos of the iO-LORA expander, closed on the left and with its circuit board exposed on the right. Left: 1, light indicators (NETWORK, OUTPUT, POWER); 2, frontal case opening slot on the right edge. Right: 3, terminal for external connections; 4, SW2 button for linking the device and checking the connection; 5, DIP switch SW1." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+
+1. Light indicators.
+2. Frontal case opening slot.
+3. Terminal for external connections.
+4. "SW2" button for linking the device and checking the connection.
+5. DIP switch "SW1".
 
 !!! note "DIP switch 'SW1' settings"
     For product HW iO-LO_x30x_7_230418 version:
