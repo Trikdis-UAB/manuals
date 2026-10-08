@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.webp" alt="" width="400">
+<img src="./image1.webp" alt="TRIKDIS T16V siųstuvo priekinė pusė: antenos jungtis, NETWORK, DATA ir POWER indikatoriai bei dvi gnybtų kaladėlės apačioje." width="400">
 
 </div>
 
@@ -201,65 +201,65 @@ Siųstuvų ***T16V**, **T16U**, **T16U5*** zonas (įėjimus IN) galima tiesiogia
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="523" height="297" />
+<img class="wiring-diagram" alt="Prijungimo schema: DSC centralės klaviatūros magistralė prijungta prie T16. RED (+12V) jungiamas prie + DC, BLK – prie - DC, YEL – prie Rx/CLK, GRN – prie Tx/DATA." src="./wiring-dsc.webp" width="523" height="297" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="658" height="440" />
+<img class="wiring-diagram" alt="Prijungimo schema: PARADOX centralė prijungta prie T16 per atskirai užsakomą kabelį EX-CRP2.4. +AUX (+12V) ir raudonas laidas R jungiami prie + DC; -AUX ir juodas laidas B – prie - DC; geltonas laidas Y – prie Rx/CLK; žalias laidas G – prie Tx/DATA." src="./wiring-paradox.webp" width="658" height="440" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="523" height="291" />
+<img class="wiring-diagram" alt="Prijungimo schema: CADDX centralės klaviatūros magistralė prijungta prie T16. POS (+12V) jungiamas prie + DC, COM – prie - DC, DATA – prie Tx/DATA; Rx/CLK nenaudojamas." src="./wiring-caddx.webp" width="523" height="291" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="656" height="436" />
+<img class="wiring-diagram" alt="Prijungimo schema: TEXECOM centralė prijungta prie T16 per atskirai užsakomą kabelį EX-CRP4. +DC (+12V) ir raudonas laidas R jungiami prie + DC; -DC ir juodas laidas B – prie - DC; mėlynas laidas BL – prie Rx/CLK; baltas laidas W – prie Tx/DATA." src="./wiring-texecom.webp" width="656" height="436" />
 
 #### CROW Runner
 
-<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="523" height="292" />
+<img class="wiring-diagram" alt="Prijungimo schema: CROW Runner centralės klaviatūros magistralė prijungta prie T16. POS (+12V) jungiamas prie + DC, NEG – prie - DC, CLK – prie Rx/CLK, DATA – prie Tx/DATA." src="./wiring-crow-runner.webp" width="523" height="292" />
 
 #### SECOLink
 
-<img class="wiring-diagram" alt="" src="./wiring-secolink.webp" width="655" height="446" />
+<img class="wiring-diagram" alt="Prijungimo schema: SECOLink centralė prijungta prie T16 per atskirai užsakomą kabelį EX-CRP4. +AUX (+12V) ir raudonas laidas R jungiami prie + DC; COM ir juodas laidas B – prie - DC; mėlynas laidas BL – prie Rx/CLK; baltas laidas W – prie Tx/DATA." src="./wiring-secolink.webp" width="655" height="446" />
 
 #### ARGUS-SPEKTR STRELEC
 
-<img class="wiring-diagram" alt="" src="./wiring-argus-spektr-strelec.webp" width="523" height="301" />
+<img class="wiring-diagram" alt="Prijungimo schema: ARGUS-SPEKTR STRELEC centralė prijungta prie T16. +PWR (+12V) jungiamas prie + DC, GND – prie - DC, TD – prie Rx/CLK, RD – prie Tx/DATA." src="./wiring-argus-spektr-strelec.webp" width="523" height="301" />
 
 #### BOLID C2000
 
-<img class="wiring-diagram" alt="" src="./wiring-bolid-c2000.webp" width="656" height="306" />
+<img class="wiring-diagram" alt="Prijungimo schema: BOLID C2000 centralė prijungta prie T16. +U (+12V) jungiamas prie + DC, GND – prie - DC, Tx – prie Rx/CLK, Rx – prie Tx/DATA." src="./wiring-bolid-c2000.webp" width="656" height="306" />
 
 #### PYRONIX
 
-<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="523" height="318" />
+<img class="wiring-diagram" alt="Prijungimo schema: PYRONIX Matrix centralė prijungta prie T16. +AUX (+12V) jungiamas prie + DC, -AUX – prie - DC, KD – prie Tx/DATA; Rx/CLK nenaudojamas." src="./wiring-pyronix.webp" width="523" height="318" />
 
 #### ROVALANT A6-06
 
-<img class="wiring-diagram" alt="" src="./wiring-rovalant-a6-06.webp" width="602" height="499" />
+<img class="wiring-diagram" alt="Prijungimo schema: ROVALANT A6-06 centralė prijungta prie T16. SLOT XP4 jungiamas prie nuosekliosios jungties modulio ИС-RF; Rovalant +12V jungiamas prie T16 + DC, o -12V – prie - DC. ИС-RF nuosekliosios jungties jungtis turi tris laidus: jie jungiami prie T16 - DC (taške sujungiant su -12V laidu), Rx/CLK ir Tx/DATA; nė vienas jungties laidas nejungiamas prie + DC." src="./wiring-rovalant-a6-06.webp" width="602" height="499" />
 
 #### RISCO LightSYS
 
-<img class="wiring-diagram" alt="" src="./wiring-risco-lightsys.webp" width="523" height="283" />
+<img class="wiring-diagram" alt="Prijungimo schema: RISCO LightSYS centralės klaviatūros magistralė prijungta prie T16. RED (+12V) prie + DC, BLK prie - DC, YEL prie Rx/CLK, GRN prie Tx/DATA." src="./wiring-risco-lightsys.webp" width="523" height="283" />
 
 #### HONEYWELL VISTA
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="656" height="288" />
+<img class="wiring-diagram" alt="Prijungimo schema: HONEYWELL VISTA centralės klaviatūros magistralė prijungta prie T16. Gnybtas 4 prie - DC, 5 prie + DC, 6 prie Tx/DATA, 7 prie Rx/CLK; abi laidų poros susikerta be sujungimo taško." src="./wiring-honeywell-vista.webp" width="656" height="288" />
 
 #### INIM SMARTLINE
 
-<img class="wiring-diagram" alt="" src="./wiring-inim-smartline.webp" width="571" height="304" />
+<img class="wiring-diagram" alt="Prijungimo schema: INIM SMARTLINE centralė prijungta prie T16. +12V prie + DC, GND prie - DC, -RS485 prie Rx/CLK, +RS485 prie Tx/DATA." src="./wiring-inim-smartline.webp" width="571" height="304" />
 
 ### Apsaugos centralės telefoninio komunikatoriaus prijungimo schema
 
 #### Be telefono linijos kontrolės
 
-<img class="wiring-diagram" alt="" src="./wiring-landline-dialer.webp" width="575" height="350" />
+<img class="wiring-diagram" alt="Prijungimo schema: centralės telefoninis komunikatorius prijungtas prie T16. +AUX (+12 V) prie + DC, -AUX prie - DC, RING prie COM/RING, TIP prie TIP." src="./wiring-landline-dialer.webp" width="575" height="350" />
 
 #### Su telefono linijos kontrole
 
-<img class="wiring-diagram" alt="" src="./wiring-landline-dialer-control.webp" width="632" height="398" />
+<img class="wiring-diagram" alt="Prijungimo schema: centralės telefoninis komunikatorius prijungtas prie T16 su telefono linijos kontrole. +AUX (+12 V) prie + DC, -AUX prie - DC, RING prie COM/RING, TIP prie TIP, taip pat centralės R-1 prie T16 IN1/R-1 ir T-1 prie IN2/T-1." src="./wiring-landline-dialer-control.webp" width="632" height="398" />
 
 !!! note "Pastaba"
     T16 negalima jungti prie veikiančios telefoninės linijos.
@@ -287,23 +287,23 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 #### Normaliai atvira (NO)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="271" height="255" />
+<img class="wiring-diagram" alt="Įėjimo grandinė: normaliai atviras (NO) kontaktas tarp COM ir INx. Užtrumpinta – aliarmas; atvira – atstatymas." src="./wiring-input-no.webp" width="271" height="255" />
 
 #### Normaliai uždara (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="277" height="255" />
+<img class="wiring-diagram" alt="Įėjimo grandinė: normaliai uždaras (NC) kontaktas tarp COM ir INx. Užtrumpinta – atstatymas; atvira – aliarmas." src="./wiring-input-nc.webp" width="277" height="255" />
 
 #### Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="298" height="347" />
+<img class="wiring-diagram" alt="Įėjimo grandinė: NC kontaktas ir su juo nuosekliai sujungtas 2.2k rezistorius linijos gale (EOL) tarp COM ir INx. Užtrumpinta – aliarmas; atvira – aliarmas; 2.2k – atstatymas." src="./wiring-input-nc-eol.webp" width="298" height="347" />
 
 #### Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="291" height="394" />
+<img class="wiring-diagram" alt="Įėjimo grandinė: NO kontaktas ir su juo lygiagrečiai sujungtas 2.2k rezistorius linijos gale (EOL) tarp COM ir INx. Užtrumpinta – aliarmas; atvira – aliarmas; 2.2k – atstatymas." src="./wiring-input-no-eol.webp" width="291" height="394" />
 
 ### Centralės PGM-ų prijungimo schema 
 
-<img alt="" src="./image16.webp" style="width:3.24250656167979in;height:2.387504374453193in" />
+<img alt="Prijungimo schema: centralės PGM išėjimai prie T16 siųstuvo. Maitinimas: +AUX (+12 V) į +DC, -AUX į -DC. PGM išėjimai: PGM1 į IN1/R-1, PGM2 į IN2/T-1, PGM3 į IN3, PGM4 į IN4." src="./image16.webp" style="width:3.24250656167979in;height:2.387504374453193in" />
 
 Siųstuvo įėjimų (IN) nustatymo tipas NO arba NC.
 
@@ -311,21 +311,21 @@ Siųstuvo įėjimų (IN) nustatymo tipas NO arba NC.
 
 Sirena jungiama, kai prie siųstuvo yra prijungtas skaitytuvais *TM17*. Sireną, naudojančią iki 1 A srovę, galima prijungti prie siųstuvo *T16* OUT1 (arba OUT2) išėjimo. Jį aktyvuojama jei saugojimo režime siųstuve suveikia vienas iš įėjimų (IN). Sirena išjungiama po 3 minučių arba naudojant kontaktinį raktą (iButton).
 
-<img alt="" src="./image17.webp" style="width:3.437007874015748in;height:1.2440944881889764in" />
+<img alt="Prijungimo schema: T16 siųstuvas prie sirenos. OUT1 prie sirenos juodo laido, +DC prie sirenos raudono laido." src="./image17.webp" style="width:3.437007874015748in;height:1.2440944881889764in" />
 
 ### RS485 modulių prijungimo schemos 
 
 #### Wi-Fi modulis W485
 
-<img class="wiring-diagram" alt="" src="./wiring-w485.webp" width="604" height="462" />
+<img class="wiring-diagram" alt="Prijungimo schema: centralė prijungta prie T16 ir Wi-Fi modulio W485. +AUX (+12 V) prie abiejų + DC gnybtų; -AUX prie abiejų - DC gnybtų; T16 A 485 prie W485 A 485, o B 485 prie B 485. RS485 jungties ilgis iki 100m." src="./wiring-w485.webp" width="604" height="462" />
 
 #### TM17 kontaktinių raktų skaitytuvas
 
-<img class="wiring-diagram" alt="" src="./wiring-tm17.webp" width="576" height="541" />
+<img class="wiring-diagram" alt="Prijungimo schema: T16 ir kontaktinių raktų skaitytuvas TM17 maitinami iš 12 V, 1,5 A nuolatinės srovės šaltinio. Raudonas TM17 laidas jungiamas prie T16 + DC, mėlynas – prie - DC, juodas – prie A 485, baltas – prie B 485." src="./wiring-tm17.webp" width="576" height="541" />
 
 #### Ethernet modulis E485
 
-<img class="wiring-diagram" alt="" src="./wiring-e485.webp" width="654" height="502" />
+<img class="wiring-diagram" alt="Prijungimo schema: centralė prijungta prie T16 ir „Ethernet“ modulio E485. Centralės +AUX (+12 V) jungiamas prie abiejų įrenginių + DC, o -AUX – prie abiejų - DC. Iki 100 m ilgio RS485 jungtis: T16 A 485 jungiamas prie E485 A 485, B 485 – prie B 485." src="./wiring-e485.webp" width="654" height="502" />
 
 Kai RS485 magistralės ilgis yra didesnis nei 1 m, naudokite vytos poros kabelį (STP 4x2x0,5). Venkite kabelio montavimo lygiagrečiai su kintamos srovės jėgos kabeliais, antenos kabeliu ir kitais stipriais elektromagnetinio lauko šaltiniais.
 
@@ -339,7 +339,7 @@ Wi-Fi modulis W485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užpr
 
 2.  Plokščiu atsuktuvu nuimkite T16 dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
+<img alt="Trys brėžiniai: plokščias atsuktuvas įstatomas į T16 dangtelio įpjovą ir spaudžiamas žemyn; priekinis dangtelis atitraukiamas į kairę; parodyta USB Mini-B jungtis atidaryto įrenginio šone." src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
 
 1.  Su USB Mini-B kabeliu prijunkite T16 prie kompiuterio.
 
@@ -419,7 +419,7 @@ Nustatymai analogiški kaip ir **Radijo dažnis 1**.
 
 **Skirtukas „Prieiga“**
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:4.165354330708661in" />
+<img alt="TrikdisConfig T16 langas Nustatymai, skirtukas Prieiga. Rodomi užmaskuoti Administratoriaus kodas ir Montuotojo kodas. Skiltyje Montuotojui leisti keisti pažymėti Protokolas, Objekto ID, Identifikavimas, Sistema, RF, Galia, Įvykio perdavimą pakartoti, Įvykiai, CID į UNI lentelė ir Tinklas 2 įjungtas." src="./image23.webp" style="width:7.086614173228346in;height:4.165354330708661in" />
 
 **Parinkčių grupė „Prieiga“**
 
@@ -482,7 +482,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Ryšio kontrolė“**
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
+<img alt="TrikdisConfig T16 langas Įvykiai, skirtukas Ryšio kontrolė. Radijo dažnis 1 ir Radijo dažnis 2: Testo periodas 24 val., Pirmas testas po 0 val., Ping periodas 0 min. Langeliai Siųsti testą tik tuo atveju, jei nėra įvykio ir Siųsti Ping tik tuo atveju, jei nėra įvykio nepažymėti." src="./image26.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
 
 - **Testo periodas** – nurodykite laiko tarpą tarp testo pranešimo siuntimu 1 ir 2 ryšio kanalais. Periodinių bandymų pranešimų tikslas yra radijo sistemų periodiško funkcionalumo bandymas. Tipinis bandymo laikotarpis yra 24 val.. Tačiau jis gali būti sutrumpintas iki 1 valandos. Testo pranešimą automatiškai stebi CSP stebėjimo programinė įranga. Jei iš objekto nėra Testo pranešimų generuojamas įspėjimas.
 - **Primas testas po** – nurodykite uždelsimo laiką pirmo Testo pranešimo siuntimui po maitinimo įjungimo. Tikslas - turėti galimybę siusti pranešimus išskirstytus per dieną (24 valandas), kad radijo tinkle išvengti tinklo perkrovų. Nurodomi laikai 1 ir 2 ryšio kanalams.
@@ -497,7 +497,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Modulių sąrašas“**
 
-<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:3.8622047244094486in" />
+<img alt="TrikdisConfig T16 langas „RS485 moduliai“, skirtukas „Modulių sąrašas“. „Automatiškai aptikti išorinį RS485 įrenginį“ nepažymėta. Abiejose modulių sąrašo eilutėse rodoma „Nenaudojamas“; atvertame modulio tipo sąraše matyti „Nenaudojamas“, „W485/W17u“, „TM17“ ir „E485“. Yra „Serijos numeris“ laukai." src="./image27.webp" style="width:7.086614173228346in;height:3.8622047244094486in" />
 
 - **Automatiškai aptikti išorinį RS485 įrenginį** – pažymėkite langelį varnele ir bus įjungtas prijungtu moduliu prie RS485 magistralės automatinis atpažinimas.
 
@@ -512,7 +512,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
     W485(arba E485) modulius.
 **Skirtukas „ТМ17“**
 
-<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:2.677165354330709in" />
+<img alt="TrikdisConfig T16 langas „RS485 moduliai“, skirtukas „TM17“. „DKey1“ ir „DKey2“ laukai užpildyti kontaktinių raktų identifikatoriais; „DKey3“–„DKey9“ rodo 0. „Garso lygis“ yra 25." src="./image28.webp" style="width:7.086614173228346in;height:2.677165354330709in" />
 
 Prie siųstuvo T16 yra galimybė prijungti skaitytuvą TM17. Prijungus skaitytuvą TM17, siųstuvą galima naudoti kaip apsaugos centralę. Skaitytuvui galima priskirti 9 kontaktinius (iButton) raktus (vienas iš kurių „Pagrindinis raktas“), kuriais bus valdoma saugos būsena (įjungti/išjungti).
 
@@ -602,7 +602,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 **Skirtukas „E485“**
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.6811023622047245in" />
+<img alt="TrikdisConfig T16 langas „RS485 moduliai“, skirtukas „E485“. „Pagrindinis“ ir „Atsarginis“ kanalai įjungti; abiejų „Domenas arba IP“ laukuose rodoma 0.0.0.0, „Prievadas“ laukai tušti, o „TCP ar UDP“ nustatyta į „TCP“. „Protegus“ įjungta ir pažymėtas „DHCP režimas“. Rodomi tinklo laukai: „Statinis IP“ 192.168.1.27, „Potinklio kaukė“ 255.255.255.0, „Numatytasis šliuzas“ 192.168.1.254, „DNS 1“ 8.8.8.8 ir „DNS 2“ 8.8.4.4. Matomi „TRK šifravimo raktas“ laukai." src="./image30.webp" style="width:7.086614173228346in;height:3.6811023622047245in" />
 
 **Parinkčių grupė „Pagrindinis“**
 
@@ -636,7 +636,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 ### Langas “Parinktys” 
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:3.574803149606299in" />
+<img alt="TrikdisConfig T16 langas Parinktys. Sąraše Galimi radijo dažniai pateikti RF pavadinimas 1+1 – Dažnis 160 MHz ir 1+2 – 140 MHz. Žemiau yra laukai Naujas RF dažnio pavadinimas ir Dažnio reikšmė, MHz bei mygtukai Pridėti ir Pašalinti." src="./image31.webp" style="width:7.086614173228346in;height:3.574803149606299in" />
 
 **Parinkčių grupė „Galimi radijo dažniai“**
 
@@ -644,7 +644,7 @@ Galima Pridėti/Pašalinti radijo dažnius prie sąrašo, kuriuose gali dirbti s
 
 ### Langas „Iš CID į UNI lentelė” 
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:3.2125984251968505in" />
+<img alt="TrikdisConfig T16 langas Iš CID į UNI lentelė. Lentelės stulpeliai: CID, RAS-2M ir LARS; pavyzdyje CID kodas E1????00z atitinka RAS-2M 16 ir LARS 16, o šalia pažymėta +z." src="./image32.webp" style="width:7.086614173228346in;height:3.2125984251968505in" />
 
 Contact ID kodai, gauti iš signalizacijos centralės, konvertuojami į radijo sistemos (RAS2M, LARS) kodus. Tik Contact ID pranešimai, aprašyti lentelėje (CID stulpelis), yra konvertuojami į radijo sistemos kodus ir perduodami CSP. Simbolis "?" reiškia bet kurį skaičių pozicijoje. Simbolis "z" reiškia, kad numeris pozicijoje pridedamas prie pagrindinio radijo sistemos kodo. <u>Lentelė redaguojama, tačiau prašome padaryti tai atsakingai ir tik tuo atveju, jei tai tikrai būtina, nes jei lentelėje atsiras klaidų, sistema gali netinkamai veikti.</u>
 
@@ -684,7 +684,7 @@ T16 veikimo programą galima atnaujinti ar pakeisti rankiniu būdu. Po atnaujini
 
 3.  Parinkite gamyklinės programinės įrangos submeniu **Programos naujinimas**.
 
-    <img alt="" src="./image34.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
+    <img alt="TrikdisConfig T16 langas Programos atnaujinimas. Matomi mygtukai Atverti failą ir Naujinti (F12), pažymėta Išsaugoti nustatymus, atnaujinimo eiga – 0 %." src="./image34.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
 
 4.  Paspauskite gamyklinės programinės įrangos atidarymo langelį **Atverti failą** ir parinkite reikiamą gamyklinės programinės įrangos bylą. Jei neturite bylos, naujausią gamyklinės programinės įrangos bylą galite parsisiųsti <u>kaip registruotas vartotojas</u> iš [www.trikdis.com](http://www.trikdis.com) , pagal T16 parsisiuntimo sekciją.
 

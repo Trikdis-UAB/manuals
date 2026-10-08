@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Radijo Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Baltas TRIKDIS radijo imtuvo korpusas su įgilintu priekiniu moduliu, būsenos indikatoriais, USB ir atstatymo angomis bei antenos jungtimi." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Apie Radijo Imtuvą

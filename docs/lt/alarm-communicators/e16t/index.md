@@ -1,7 +1,7 @@
 # Ethernet komunikatorius E16T
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="TRIKDIS E16T komunikatoriaus priekinė dalis su NETWORK, DATA, POWER, TROUBLE ir LINE indikatoriais. Apatiniai gnybtai pažymėti + DC, - DC, TIP, RING, T-1 / IN1, R-1 / IN2, OUT, COM, A 485 ir B 485; maitinimo žyma nurodo „10-18 V, 0.5 A Max“." width="400">
 </div>
 
 ## Aprašymas
@@ -34,7 +34,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 - Kai įjungta *Protegus* paslauga, įvykiai visų pirma siunčiami į CSP ir tik po to - programėlės naudotojams.
 
-<img alt="" src="./image1.webp" style="width:2.3622047244094486in;height:3.232283464566929in" />
+<img alt="TRIKDIS E16T komunikatoriaus priekinė dalis su NETWORK, DATA, POWER, TROUBLE ir LINE indikatoriais. Apatiniai gnybtai pažymėti + DC, - DC, TIP, RING, T-1 / IN1, R-1 / IN2, OUT, COM, A 485 ir B 485; maitinimo žyma nurodo „10-18 V, 0.5 A Max“." src="./image1.webp" style="width:2.3622047244094486in;height:3.232283464566929in" />
 
 **Veikia su Protegus programėle:**
 
@@ -125,7 +125,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 ### Internetinio komunikatoriaus E16T panaudojimo struktūrinė schema
 
-<img alt="" src="./image4.webp" style="width:7.086805555555555in;height:2.95in" />
+<img alt="Struktūrinė schema: apsaugos centralė → internetinis komunikatorius E16T → maršrutizatorius → internetas. Iš interneto viena rodyklė veda į Protegus serverį, tada į telefoną su Protegus programėle; kita – į imtuvą, tada į stebėjimo programinę įrangą saugos tarnybos stebėjimo pulte." src="./image4.webp" style="width:7.086805555555555in;height:2.95in" />
 
 !!! note "Pastaba"
     Prieš pradėdami, įsitikinkite, kad turite:
@@ -163,13 +163,13 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 **Lange „Sistemos parametrai“:**
 
-<img alt="" src="./image6.webp" style="width:7.090551181102362in;height:1.8937007874015748in" />
+<img alt="TrikdisConfig E16T langas Sistemos parametrai. Raudonas žymėjimas 1 nurodo lauką Centralės modelis, kuriame pasirinkta INTERFACE DTMF." src="./image6.webp" style="width:7.090551181102362in;height:1.8937007874015748in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
 **Lango „Pranešimai“ kortelėje „Protegus servisas“:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="TrikdisConfig E16T lango Pranešimai skirtukas PROTEGUS servisas. Raudonas žymėjimas 2 nurodo pažymėtą Leisti prisijungti langelį; 3 nurodo Slaptažodis lauką, kuriame reikšmė paslėpta." src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 2. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -184,7 +184,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 **Lange „Sistemos parametrai“:**
 
-<img alt="" src="./image8.webp" style="width:7.078740157480315in;height:1.8818897637795275in" />
+<img alt="TrikdisConfig E16T langas „Sistemos parametrai“. Žyma 1 išskiria lauką „Objekto numeris“ su reikšme E102; žyma 2 – lauką „Centralės modelis“ su reikšme INTERFACE DTMF." src="./image8.webp" style="width:7.078740157480315in;height:1.8818897637795275in" />
 
 1.  Įrašykite **Objekto numerį**.
 
@@ -192,7 +192,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
 
 **Lange „Pranešimai“, parinkčių grupėje „Pagrindinis“ ryšio kanalas:**
 
-<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:4.059055118110236in" />
+<img alt="TrikdisConfig E16T langas „Pranešimai“, kortelė „CSP parametrai“. Žymos 3–8 rodo grupę „Pagrindinis“: pažymėtas „Įgalinti“, „Nuotolinis IP“ – 0.0.0.0, „Nuotolinis Prievadas“ – 0, „TCP ar UDP“ – TCP, pažymėtas „PING periodas“ – 30, „Šifravimo raktas“ paslėptas. Žyma 9 apima grupę „Atsarginis“: pažymėtas „Įgalinti“, „Nuotolinis IP“ – 0.0.0.0, „Nuotolinis Prievadas“ – 0, „TCP ar UDP“ – TCP, „PING periodas“ nepažymėtas, reikšmė 30, „Šifravimo raktas“ paslėptas. Žymos 10–14 rodo „TCP protokolas“ – SIA DC09_2012, pažymėtą „Įjungti šifravimą“, nuliais užpildytą „DC-09 šifravimo raktas“ ir tuščius laukus „DC-09 imtuvo Nr.“ bei „DC-09 linijos Nr.“." src="./image9.webp" style="width:7.082677165354331in;height:4.059055118110236in" />
 
 3.  **Įgalinti** – įjunkite pagrindinį ryšio kanalą.
 
@@ -224,7 +224,7 @@ Siunčia įvykius į stebėjimo pulto imtuvą:
     linijos ir imtuvo numerius.
 **Lango „Pranešimai“ kortelėje „Protegus servisas“:**
 
-<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
+<img alt="TrikdisConfig E16T lango Pranešimai skirtukas PROTEGUS servisas. Raudonas žymėjimas 15 nurodo pažymėtą Leisti prisijungti langelį; 16 nurodo Slaptažodis lauką, kuriame reikšmė paslėpta." src="./image10.webp" style="width:7.082677165354331in;height:1.7677165354330708in" />
 
 15. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -243,9 +243,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image11.webp" style="width:5.043307086614173in;height:2.645669291338583in" />
+<img alt="Prijungimo schema: centralė prie E16T. Maitinimas: AUX+ į + DC, AUX- į - DC. Telefono linija: RING į RING, TIP į TIP. Jungiklio zona: ZNx į OUT; zonos tipas 'Jungiklis' (keyswitch), išėjimo tipas 'Nuotolinis valdymas'. Prie E16T prijungtas LAN kabelis." src="./image11.webp" style="width:5.043307086614173in;height:2.645669291338583in" />
 
-<img alt="" src="./image12.webp" style="width:4.31496062992126in;height:2.641732283464567in" />
+<img alt="Prijungimo schema: SP231 prie E16T. Maitinimas: AUX+ į + DC, AUX- į - DC. RS485: A 485 į A RS485, B 485 į B RS485; jungties ilgis iki 100m. Prie E16T prijungtas LAN kabelis." src="./image12.webp" style="width:4.31496062992126in;height:2.641732283464567in" />
 
 ### Įėjimų prijungimo schemos
 
@@ -255,33 +255,33 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 #### Normaliai atvira (NO)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="261" height="231" />
+<img class="wiring-diagram" alt="Prijungimo schema: normaliai atviras (NO) kontaktas tarp COM ir INx." src="./wiring-input-no.webp" width="261" height="231" />
 
 #### Normaliai uždara (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="262" height="231" />
+<img class="wiring-diagram" alt="Prijungimo schema: normaliai uždaras (NC) kontaktas tarp COM ir INx." src="./wiring-input-nc.webp" width="262" height="231" />
 
 #### Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (EOL 2,2k)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="298" height="276" />
+<img class="wiring-diagram" alt="Prijungimo schema: NC kontaktas ir nuosekliai su juo tarp COM ir INx prijungtas 2,2k rezistorius linijos gale (EOL 2,2k)." src="./wiring-input-nc-eol.webp" width="298" height="276" />
 
 #### Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (EOL 2,2k)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="274" height="358" />
+<img class="wiring-diagram" alt="Prijungimo schema: NO kontaktas ir lygiagrečiai su juo tarp COM ir INx prijungtas 2,2k rezistorius linijos gale (EOL 2,2k)." src="./wiring-input-no-eol.webp" width="274" height="358" />
 
 ### LAN kabelio prijungimas
 
-<img alt="" src="./image14.webp" style="width:2.8346456692913384in;height:2.3622047244094486in" />
+<img alt="Prijungimo schema: LAN kabelis jungiamas prie E16T. Rodyklė rodo LAN kištuko įstatymo į komunikatoriaus šoninį lizdą kryptį." src="./image14.webp" style="width:2.8346456692913384in;height:2.3622047244094486in" />
 
 ### Relės ir LED prijungimo schemos
 
 #### Relė
 
-<img class="wiring-diagram" alt="" src="./wiring-relay.webp" width="647" height="247" />
+<img class="wiring-diagram" alt="Prijungimo schema: E16T prijungtas prie relės. +DC ir OUT prijungti prie dviejų relės ritės gnybtų; relės kontaktai pažymėti NC, C ir NO." src="./wiring-relay.webp" width="647" height="247" />
 
 #### Šviesos diodas (LED)
 
-<img class="wiring-diagram" alt="" src="./wiring-led.webp" width="531" height="203" />
+<img class="wiring-diagram" alt="Prijungimo schema: E16T prijungtas prie LED. Nuo +DC laidas eina per 2k2 rezistorių į LED, o iš LED grįžta į OUT." src="./wiring-led.webp" width="531" height="203" />
 
 ## Apsaugos centralės programavimas
 
@@ -369,7 +369,7 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
         Indikatorius "NETWORK" šviečia žaliai, kai yra ryšys.
 3. Paspauskite **Pridėti sistemą** ir įveskite E16T MAC adresą. MAC adresą rasite ant gaminio arba pakuotės lipduko.
 
-    <img alt="" src="./image19.webp" style="width:6.535433070866142in;height:1.9448818897637796in" />
+    <img alt="Protegus langas 'Pridėti sistemą': laukelyje 'Unikalus ID' reikia įvesti MAC adresą ir spausti 'Toliau'. Paaiškinime nurodyta, kad MAC adresas yra ant pakuotės, komunikatoriaus korpuso nugarėlės arba programoje TrikdisConfig kaip unikalus ID." src="./image19.webp" style="width:6.535433070866142in;height:1.9448818897637796in" />
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
@@ -380,11 +380,11 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 1.  Įvedus „*IMEI/UnikalusID*“ numerį spustelėkite „**Toliau**“. Naujame lange šoniniame meniu spustelėkite „**Sritys**“. Atsidariusiame lange nurodykite 1 signalizacijos sistemos sritį (komunikatorius turi viena OUT išėjimą) ir paspauskite „**Toliau**“.
 
-    <img alt="" src="./image23.webp" style="width:5.826771653543307in;height:2.559055118110236in" />
+    <img alt="Protegus srities pridėjimo langas: klausimui 'Kiek sričių yra sistemoje?' pasirinkta 1; dešinėje yra mygtukas 'Toliau'." src="./image23.webp" style="width:5.826771653543307in;height:2.559055118110236in" />
 
 2.  Naujame lange nurodykite, koks yra srities numeris sistemoje ir spustelėkite „**Išsaugoti**“.
 
-    <img alt="" src="./image24.webp" style="width:5.826771653543307in;height:2.0354330708661417in" />
+    <img alt="Protegus srities nustatymo langas: laukelyje 'Sritis 1 Numeris' įrašyta 1; dešinėje yra mygtukas 'Išsaugoti'." src="./image24.webp" style="width:5.826771653543307in;height:2.0354330708661417in" />
 
 3.  Šoniniame meniu paspauskite „Nustatymai“ ir atsidariusiame lange paspauskite „Nustatymai“. Pažymėkite varnele „**Naudoti PGM sistemos Įjungimui/išjungimui**“ ir nurodykite, kurią sritį valdys išėjimas. Vienas E16T OUT išėjimas gali būti skirtas vienos srities valdymui (1 PGM - 1 sritis).
 
@@ -392,7 +392,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 5.  Papildomam saugumui, galite pasirinkti „**Naudoti programėlės slaptažodį įjungimui/išjungimui**”. Tuomet paspaudus mygtuką įjungti/išjungti apsaugos sistemą, atsivers programėlės slaptažodžio įvedimo užklausos langas.
 
-    <img alt="" src="./image25.webp" style="width:5.830708661417323in;height:2.6496062992125986in" />
+    <img alt="Protegus langas 'Nustatymai': pažymėta 'Naudoti PGM sistemos Įjungimui/Išjungimui', pasirinkta 'Sritis 1'. Atvertame režimo sąraše pasirinkta 'Lygis', galima rinktis ir 'Impulsas'. Laukelyje 'Pulso intervalas sekundėmis' rodoma '3 sek.'; viršuje yra 'Išsaugoti'." src="./image25.webp" style="width:5.830708661417323in;height:2.6496062992125986in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus*
 
@@ -402,7 +402,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 3.  Paprašius, įveskite vartotojo kodą arba Protegus slaptažodį.
 
-    <img alt="" src="./image26.webp" style="width:5.826771653543307in;height:3.1023622047244093in" />
+    <img alt="Protegus langas 'Sritys': pasirinkus 'Sritis 1', atveriami veiksmai 'Įjungti', 'Išjungti' ir 'Atšaukti'." src="./image26.webp" style="width:5.826771653543307in;height:3.1023622047244093in" />
 
 ## Nuotolinis veikimo parametrų nustatymas
 
@@ -422,7 +422,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 3.  Paleiskite konfigūravimo programą TrikdisConfig ir skyriaus *Nuotolinė prieiga* laukelyje **Unikalus ID** įrašykite turimo E16T MAC adresą (MAC adresas nurodytas ant lipdukų, užklijuotų ant gaminio korpuso apatinės dalies ir pakuotės).
 
-<img alt="" src="./image27.webp" style="width:6.75984251968504in;height:1.1023622047244095in" />
+<img alt="TrikdisConfig skiltis 'Nuotolinė prieiga': paryškintas laukelis 'Unikalus ID' ir mygtukas 'Konfigūravimas'; šalia yra laukelis 'Sistemos pavadinimas' ir mygtukas 'Valdymas'." src="./image27.webp" style="width:6.75984251968504in;height:1.1023622047244095in" />
 
 4. Laukelyje **Sistemos pavadinimas** norimu vardu pavadinkite E16T su šiuo Unikalių ID. Spauskite **Konfigūravimas**.
 
@@ -510,7 +510,7 @@ Konfigūruojant komunikatorių E16T yra du prieigos lygiai (administratoriaus ir
 
 **Skirtukas „CSP parametrai“**
 
-<img alt="" src="./image30.webp" style="width:7.082677165354331in;height:4.043307086614173in" />
+<img alt="TrikdisConfig E16T langas 'Pranešimai', skirtukas 'CSP parametrai'. Pagrindiniam ir atsarginiam ryšiui pažymėta 'Įgalinti'; abiem nustatyta 'Nuotolinis IP' 0.0.0.0, 'Nuotolinis Prievadas' 0 ir 'TCP ar UDP' TCP. Pagrindinio ryšio 'PING periodas' įjungtas, 30; atsarginio neįjungtas. 'TCP protokolas' SIA DC09_2012, 'MCI adresas' 1; pažymėta 'Įjungti šifravimą', 'hex' ir 'Naudoti laiko žymę'." src="./image30.webp" style="width:7.082677165354331in;height:4.043307086614173in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per laidinį interneto (IP) ryšį.
 
@@ -558,7 +558,7 @@ Nustatymus galima keisti, kai ryšio kanalo **TCP protokolas** lauke pasirinkta 
 
 **Skirtukas „Protegus servisas“**
 
-<img alt="" src="./image31.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="TrikdisConfig E16T lango „Pranešimai“ skirtukas „PROTEGUS servisas“. Laukas „Leisti prisijungti“ pažymėtas; lauke „Slaptažodis“ įvestas paslėptas kodas." src="./image31.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
 
 **Parinkčių grupė „Protegus servisas“**
 
@@ -568,7 +568,7 @@ Nustatymus galima keisti, kai ryšio kanalo **TCP protokolas** lauke pasirinkta 
 
 ### Langas „Įvykių aprašas“
 
-<img alt="" src="./image32.webp" style="width:7.082677165354331in;height:4.051181102362205in" />
+<img alt="TrikdisConfig E16T langas „Įvykių aprašas“. Įėjimų aprašyme „Sritis“ – FF; IN 1 ir IN 2: „Contact ID“ – 132, „Zonos Nr.“ – atitinkamai 001 ir 002, „Tipas“ – NO; abiem pažymėti „Suveikimas“ ir „Atsistatymas“. Vidinių įvykių aprašymuose „En“ laukeliai nepažymėti; „Contact ID“ – 350, 602, 305, 302 ir 302, „Sritis“ – FF, „Zona“ – 000. „I/A“ pasirinkimai – „Įvykis“ ir „Atsistatymas“." src="./image32.webp" style="width:7.082677165354331in;height:4.051181102362205in" />
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus ir įėjimų pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
@@ -606,7 +606,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti**.
 
-<img alt="" src="./image33.webp" style="width:7.078740157480315in;height:1.0669291338582678in" />
+<img alt="TrikdisConfig skyrius „Gamintojo parametrai“. Mygtukas „Atkurti“ apibrėžtas raudonai virš lauko „Unikalus ID“." src="./image33.webp" style="width:7.078740157480315in;height:1.0669291338582678in" />
 
 ## Komunikatoriaus E16T testavimas
 
@@ -648,7 +648,7 @@ E16T veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnau
 
 4.  Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
 
-    <img alt="" src="./image34.webp" style="width:7.082677165354331in;height:3.0866141732283463in" />
+    <img alt="TrikdisConfig E16T langas „Programos atnaujinimas“. Matomi laukas „Atverti failą“, mygtukas „Atverti failą“, pažymėtas langelis „Išsaugoti nustatymus“, mygtukas „Naujinti (F12)“ ir 0 % eigos juosta." src="./image34.webp" style="width:7.082677165354331in;height:3.0866141732283463in" />
 
 5.  Paspauskite atnaujinimo mygtuką **Naujinti [F12]**.
 
@@ -666,4 +666,4 @@ Visada išjunkite el. energijos tiekimą prieš atliekant prietaiso pajungimą.
 
 Ne gamintojo atlikti gaminio pakeitimai, modifikacijos ar remontai panaikina gamintojo suteiktą garantiją.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.
+<img alt="Perbrauktos ratukinės atliekų dėžės simbolis (WEEE), nurodantis, kad prietaisą reikia šalinti atskirai nuo buitinių atliekų." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.

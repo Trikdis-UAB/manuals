@@ -1,7 +1,7 @@
 # GSM vartų valdiklis GATOR gali valdyti vartų automatiką ir kitą įrangą nuotoliniu būdu
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="GATOR vartų valdiklio priekyje yra NETWORK, DATA, POWER ir TROUBLE indikatoriai, viršuje – antenos jungtis, apačioje – varžtinių gnybtų blokas." width="400">
 </div>
 
 ##  Aprašymas 
@@ -90,7 +90,7 @@ Pranešimai saugos tarnybai
 
 6.  GSM antenos SMA jungtis.
 
-<img alt="" src="./image4.webp" style="width:4.606676509186352in;height:2.7866721347331582in" />
+<img alt="GATOR valdiklio elementai. Kairėje nuotraukoje: 1 šviesos indikatoriai; 2 priekinio dangtelio atidarymo plyšys. Dešinėje nuotraukoje: 3 USB Mini-B jungtis valdikliui programuoti; 4 gnybtai išoriniams laidams prijungti; 5 Nano-SIM kortelės laikiklis; 6 GSM antenos SMA jungtis." src="./image4.webp" style="width:4.606676509186352in;height:2.7866721347331582in" />
 
 ### Išorinių kontaktų paskirtis 
 
@@ -180,25 +180,25 @@ Jeigu LED indikacija visai nešviečia, patikrinkite maitinimo šaltinį ir suju
 
 <img alt="" src="./image5.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image6.webp" style="width:2.748031496062992in;height:1.1811023622047243in" />
+<img alt="Plokštės SIM kortelės laikiklio brėžinys su rodykle, rodančia nano-SIM kortelės įstatymą į laikiklį." src="./image6.webp" style="width:2.748031496062992in;height:1.1811023622047243in" />
 
 ### Maitinimo prijungimo schema 
 
 Laidais sujunkite valdiklį GATOR pagal pateiktą sujungimų schemą.
 
-<img alt="" src="./image7.webp" style="width:4.0in;height:2.8464566929133857in" />
+<img alt="Prijungimo schema: GATOR maitinimas ir vartų valdymas. ~230 V maitinimas per FU 125 mA, 250 V saugiklį tiekiamas į ~230 V/16 V, 10 VA, 50 Hz transformatorių; jo antrinė apvija prijungta prie AC/+ DC ir AC/- DC. Alternatyvus nuolatinės srovės maitinimo šaltinis pažymėtas 9-32 V, 0,2 A. Vartų valdymui naudojami 5 OUT C ir NO kontaktai, kurių apkrova – 1 A / 30 V DC arba 0,5 A / 125 V AC." src="./image7.webp" style="width:4.0in;height:2.8464566929133857in" />
 
 ### Zonų laidinių įėjimų sujungimų schemos 
 
 Valdiklis GATOR turi keturis įėjimus IN (du iš kurių yra universalūs ir gali veikti kaip įėjimai arba išėjimai) įvairiems signalizacijos jutikliams prijungti. Įėjimai gali veikti NC, NO, EOL režimais. Prijunkite įėjimus pagal nustatytą įėjimo tipą (NC, NO, EOL), kaip tai pavaizduota žemiau pateiktose schemose:
 
-<img alt="" src="./image8.webp" style="width:5.866141732283465in;height:1.4094488188976377in" />
+<img alt="Keturios GATOR valdiklio COM ir INx įėjimų prijungimo schemos. Normaliai atvira (NO): tarp COM ir INx nuosekliai prijungtas NO kontaktas. Normaliai uždara (NC): tarp COM ir INx nuosekliai prijungtas NC kontaktas. Normaliai uždara grandinė su 10 kΩ rezistoriumi linijos gale (EOL): NC kontaktas ir 10k rezistorius sujungti nuosekliai. Normaliai atvira grandinė su 10 kΩ rezistoriumi linijos gale (EOL): 10k rezistorius prijungtas lygiagrečiai NO kontaktui." src="./image8.webp" style="width:5.866141732283465in;height:1.4094488188976377in" />
 
 ### Relės prijungimo schema
 
 Relės prijungimo schema, kai valdiklio *GATOR* maitinamas nuo nuolatinės srovės maitinimo šaltinio. Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Valdiklio universaliam įėjimo/išėjimo (I/O) gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
-<img alt="" src="./image9.webp" style="width:2.4645669291338583in;height:0.8740157480314961in" />
+<img alt="Prijungimo schema: GATOR prijungtas prie išorinės relės. GATOR AC/+DC ir xI/O gnybtai prijungti prie relės ritės; relė turi NC, C ir NO kontaktų gnybtus." src="./image9.webp" style="width:2.4645669291338583in;height:0.8740157480314961in" />
 
 ### Valdiklio ir vartų automatikos prijungimo schema 
 
@@ -214,31 +214,31 @@ Valdiklio GATOR konfigūravimas su RFID skaitytuvu aprašytas p. 5.3. „Langa
 
 Valdiklio GATOR ir vieno RFID skaitytuvo prijungimo schema.
 
-<img alt="" src="./image11.webp" style="width:5.073343175853019in;height:4.066675415573053in" />
+<img alt="Prijungimo schema: vienas RFID skaitytuvas su klaviatūra (Wiegand 26/34), mygtukas Išėjimas ir GATOR. Maitinimo šaltinis 9-16 V, 0,5 A jungiamas prie AC/+ DC ir AC/- DC. Skaitytuvas: R prie AC/+ DC, G prie 1 IN, W prie 2 IN, B prie COM. Mygtukas jungiamas tarp COM ir 3 I/O. Vartų valdymas – per 5 OUT gnybtus C ir NO; nurodyta 1 A / 30 V DC arba 0,5 A / 125 V AC." src="./image11.webp" style="width:5.073343175853019in;height:4.066675415573053in" />
 
 Programoje TrikdisConfig būtina pažymėti, kad bus naudojamas vienas RFID skaitytuvas ir „Išėjimo“ mygtukas. Paspaudus „Išėjimo“ mygtuką, vartų valdiklio išėjimas 5OUT suveiks nustatytai impulso trukmei. Kai mygtukas „Išėjimas“ nėra prijungtas prie valdiklio, tai nereikia žymėti lauko „**IO3 kaip išėjimo mygtukas**“**.**
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:2.578740157480315in" />
+<img alt="TrikdisConfig programos Gator langas IN/OUT. Skaitytuvo parametrų lauke Wiegand skaitytuvo režimas pasirinkta Vienas skaitytuvas; pažymėtas laukas IO3 kaip išėjimo mygtukas (5 OUT)." src="./image12.webp" style="width:7.086614173228346in;height:2.578740157480315in" />
 
 Valdiklio GATOR ir dviejų RFID skaitytuvų prijungimo schema.
 
-<img alt="" src="./image13.webp" style="width:5.32667760279965in;height:4.06334208223972in" />
+<img alt="Prijungimo schema: du RFID skaitytuvai su klaviatūromis (Wiegand 26/34) prie GATOR. Maitinimo šaltinis 9-16 V, 0,5 A jungiamas prie AC/+ DC ir AC/- DC. Įėjimo skaitytuvas: R prie AC/+ DC, G prie 1 IN, W prie 2 IN, B prie COM. Išėjimo skaitytuvas: R prie AC/+ DC, G prie 3 I/O, W prie 4 I/O, B prie COM. Vartų valdymas – per 5 OUT gnybtus C ir NO; nurodyta 1 A / 30 V DC arba 0,5 A / 125 V AC." src="./image13.webp" style="width:5.32667760279965in;height:4.06334208223972in" />
 
 Kai prie valdiklio yra prijungti du RFID skaitytuvai, tai programoje TrikdisConfig reikia tai nurodyti, kad bus naudojami du RFID skaitytuvai.
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:2.4448818897637796in" />
+<img alt="TrikdisConfig programos Gator langas IN/OUT. Skaitytuvo parametrų lauke Wiegand skaitytuvo režimas pasirinkta Du skaitytuvai." src="./image14.webp" style="width:7.086614173228346in;height:2.4448818897637796in" />
 
 ### WiFi modulio W485 prijungimo schema 
 
 Vartų valdiklio veikimo programos versija nuo 1.06. / Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su valdikliu pranešimai į CSP ir į *Protegus2* programėlę siunčiami WiFi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka WiFi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, valdiklis pradeda toliau siusti pranešimus per *W485*. / Valdiklio konfigūravimas su WiFi moduliu *W485* aprašytas p. 5.4. „Langas „Moduliai“. / Naudojant modulį *W485* kartu su valdikliu SIM kortelė nebūtina.
 
-<img alt="" src="./image15.webp" style="width:3.1929133858267718in;height:2.1496062992125986in" />
+<img alt="Prijungimo schema: GATOR prie W485. Maitinimo šaltinis 10-28 V, 0,5 A: GATOR AC/+ DC prie W485 + DC, GATOR AC/- DC prie W485 - DC. RS485: GATOR A 485 prie W485 A 485, GATOR B 485 prie W485 B 485. RS485 jungties ilgis iki 100m." src="./image15.webp" style="width:3.1929133858267718in;height:2.1496062992125986in" />
 
 ### „Ethernet“ modulio E485 prijungimo schema
 
 Vartų valdiklio veikimo programos versija nuo 1.06. / Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su valdikliu pranešimai į CSP ir į *Protegus2* programėlę siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, valdiklis pradeda toliau siusti pranešimus per *E485*. / Valdiklio konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 5.4. „Langas „Moduliai“. / Naudojant modulį *E485* kartu su valdikliu SIM kortelė nebūtina.
 
-<img alt="" src="./image16.webp" style="width:3.1929133858267718in;height:2.1496062992125986in" />
+<img alt="Prijungimo schema: GATOR prie E485. Maitinimo šaltinis 10-28 V, 0,5 A: GATOR AC/+ DC prie E485 + DC, GATOR AC/- DC prie E485 - DC. RS485: GATOR A 485 prie E485 A 485, GATOR B 485 prie E485 B 485. RS485 jungties ilgis iki 100m." src="./image16.webp" style="width:3.1929133858267718in;height:2.1496062992125986in" />
 
 ### Plėtiklio iO-LORA su RFID skaitytuvu prijungimo schema 
 
@@ -246,7 +246,7 @@ Vartų valdiklio veikimo programos versija nuo 2.13.
 
 Prijunkite RF-LORA transiverį prie GATOR. Po to galite naudoti iO-LORA plėtiklį, prie kurio prijungtas RFID skaitytuvas (Wiegand 26/34). RFID skaitytuvas valdo iO-LORA PGM išėjimą, prie kurio jis prijungtas.
 
-<img alt="" src="./image17.webp" style="width:7.086805555555555in;height:4.925in" />
+<img alt="Prijungimo schema: GATOR prie RF-LORA, bevieliu ryšiu iki 5000 m – prie iO-LORA. GATOR AC/+ DC, AC/- DC, A RS485 ir B RS485 atitinkamai jungiami prie RF-LORA + DC, - DC, A RS485 ir B RS485; abiem tiekiama 9-16 V, 0,5 A. iO-LORA maitinamas atskiru 9-16V šaltiniu. RFID skaitytuvas: R prie + DC, B prie - DC, G prie D0, W prie D1. Mygtukas Išėjimas jungiamas tarp COM ir IN. Vartų valdymas – per C ir NO, 2 A / 230 V AC. Apačioje pavaizduotas dar vienas iO-LORA su atskiru 9-16V maitinimu." src="./image17.webp" style="width:7.086805555555555in;height:4.925in" />
 
 Paleiskite TrikdisConfig. Prijunkite GATOR per USB Mini-B kabelį prie kompiuterio arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite "**iO-LORA valdiklis**". Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
@@ -254,11 +254,11 @@ Paleiskite TrikdisConfig. Prijunkite GATOR per USB Mini-B kabelį prie kompiuter
 
 "**IN/OUT**" sąraše „**6IN**“ nustatykite „**Išėjimo mygtukas**“. Paspaudus „**Išėjimo**“ mygtuką, iO-LORA išėjimas „**7OUT**“ suveiks nustatytai impulso trukmei.
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
+<img alt="TrikdisConfig programos Gator langas IN/OUT. Įėjimų ir išėjimų nustatymų lentelėje raudonai pažymėtas 6 IN eilutės laukas Paskirtis; jame matomas sutrumpintas tekstas Išėjimo r." src="./image19.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
 Sąraše "**Vartotojai**" įrašykite RFID kortelės numerį, vartotojo vardą, įjunkite leidimą valdyti PGMą, nurodykite valdoma PGMą, kodą. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai. Nuspauskite "**Atsijungti**" ir atjunkite USB kabelį.
 
-<img alt="" src="./image20.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
+<img alt="TrikdisConfig Gator sąrašas „Vartotojai“. Pažymėtoje vartotojo eilutėje užpildyti laukai „El. pašto adresas“, „Tel. numeris/ RFID“, „Vardas“ ir „Kodas“; pažymėti langeliai „Įj“ ir „7“." src="./image20.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
 
 Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuką (turi suveikti PGM išėjimas).
 
@@ -266,11 +266,11 @@ Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuk�
 
 Jei reikia, kad vartų valdiklis *GATOR* turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite TRIKDIS *iO8* arba *iO8-LORA* serijos įėjimų ir išėjimų plėtiklį. Prie *GATOR* galima prijungti vieną *iO8* arba *iO8-LORA* plėtiklį. / *iO8* plėtiklio prijungimo schema.
 
-<img alt="" src="./image21.webp" style="width:3.3166732283464566in;height:2.1200043744531936in" />
+<img alt="Prijungimo schema: GATOR prie iO8. Maitinimo šaltinis 10-28 V, 0,5 A: GATOR AC/+ DC prie iO8 + DC, GATOR AC/- DC prie iO8 - DC. RS485 jungtis iki 100m: GATOR A RS485 prie iO8 A, GATOR B RS485 prie iO8 B." src="./image21.webp" style="width:3.3166732283464566in;height:2.1200043744531936in" />
 
 iO8-LORA plėtiklio prijungimo schema.
 
-<img alt="" src="./image22.webp" style="width:5.823345363079615in;height:2.0900043744531933in" />
+<img alt="Prijungimo schema: GATOR prie RF-LORA, bevieliu ryšiu iki 5000 m – prie iO8-LORA. GATOR AC/+ DC, AC/- DC, A RS485 ir B RS485 atitinkamai jungiami prie RF-LORA + DC, - DC, A 485 ir B 485. GATOR ir RF-LORA maitinimo šaltinis – 9-16 V, 0,5 A. iO8-LORA gnybtai + DC ir - DC jungiami prie atskiro 9-16V šaltinio." src="./image22.webp" style="width:5.823345363079615in;height:2.0900043744531933in" />
 
 ## Greitas valdiklio paleidimas veikti 
 
@@ -354,27 +354,27 @@ Su programėle vartotojai galės valdyti valdiklį nuotoliniu būdu. Jie taip pa
         mirksi geltonai).
 3. Paspauskite “**Pridėti sistemą**”.
 
-<img alt="" src="./image29.webp" style="width:2.7559055118110236in;height:2.5511811023622046in" />
+<img alt="Protegus2 programėlės šoninis meniu. Raudonai pažymėtas mygtukas Pridėti sistemą." src="./image29.webp" style="width:2.7559055118110236in;height:2.5511811023622046in" />
 
 4. Įveskite „**Unikalus ID**“ (IMEI) numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
-<img alt="" src="./image30.webp" style="width:2.7559055118110236in;height:4.606299212598425in" />
+<img alt="Protegus2 langas Nuskaityti QR kodą. Pažymėtas laukas Unikalus ID, gaminio etiketėje parodyta QR kodo vieta ir apačioje pažymėtas mygtukas Toliau." src="./image30.webp" style="width:2.7559055118110236in;height:4.606299212598425in" />
 
 5. Įveskite sistemos „**Pavadinimą**“. Spustelėkite „**Toliau**".
 
-<img alt="" src="./image31.webp" style="width:2.7559055118110236in;height:2.6535433070866143in" />
+<img alt="Protegus2 langas Pridėti sistemą. Lauke Pavadinimas įrašyta Gator, laiko juosta – Europe/Kaliningrad; pažymėtas mygtukas Toliau." src="./image31.webp" style="width:2.7559055118110236in;height:2.6535433070866143in" />
 
 6. Spustelėkite „**Praleisti**".
 
-<img alt="" src="./image32.webp" style="width:2.7559055118110236in;height:3.97244094488189in" />
+<img alt="Protegus2 pranešimas Sistema sėkmingai pridėta! Apačioje pažymėtas mygtukas Praleisti." src="./image32.webp" style="width:2.7559055118110236in;height:3.97244094488189in" />
 
 7. Palaukite 1 minute.
 
-<img alt="" src="./image33.webp" style="width:2.7559055118110236in;height:2.4488188976377954in" />
+<img alt="Protegus2 sistemos Gator pagrindinis ekranas. Rodoma būsena Prisijungtas, įspėjimas, kad sistema gali pradėti pilnai veikti per 1 minutę, ir išėjimo Output5 valdymo piktograma." src="./image33.webp" style="width:2.7559055118110236in;height:2.4488188976377954in" />
 
 8. Suvaldykite PGM išėjimą paspausdami ikoną „**Output5**“.
 
-<img alt="" src="./image34.webp" style="width:2.7559055118110236in;height:1.9330708661417322in" />
+<img alt="Protegus2 Gator sistemos ekranas rodo būseną „Prisijungtas“; išskirta valdymo plytelė „Output5“." src="./image34.webp" style="width:2.7559055118110236in;height:1.9330708661417322in" />
 
 ### Widget pridėjimas telefone 
 
@@ -382,39 +382,39 @@ Vartų valdymo Widget galima įkelti į telefono ekraną. Valdiklis turi būti p
 
 Pridėkite pirštą prie ekrano ir palaikykite. Atsiras parinkčių juosta. / 1. Nuspauskite „**Widgets**“.
 
-<img alt="" src="./image35.webp" style="width:2.7559055118110236in;height:3.02755905511811in" />
+<img alt="Android pradžios ekrano redagavimo rodinys. Žyma 1 išryškina „Widgets“ apatinėje parinkčių juostoje." src="./image35.webp" style="width:2.7559055118110236in;height:3.02755905511811in" />
 
 Suraskite parinkčių juostoje Protegus2.
 
 1.  Nuspauskite Protegus2.
 
-<img alt="" src="./image36.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="Android valdiklių pasirinkimo langas. Žyma 2 išryškina Protegus 2 valdiklių grupę." src="./image36.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 2. Nuspauskite „**Switch Protegus2**“.
 
-<img alt="" src="./image37.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="Android valdiklių pasirinkimo langas su Protegus 2 valdikliais. Žyma 3 išryškina valdiklį „Switch Protegus 2“." src="./image37.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 3. Pasirinkite valdiklio „**Gator Output5**“**.**
 
 2.  Nuspauskite „**Pridėti valdiklį**“.
 
-<img alt="" src="./image38.webp" style="width:2.7559055118110236in;height:2.216535433070866in" />
+<img alt="Protegus valdiklio pridėjimo langas. Skaičiumi 4 pažymėtas Gator Output5 pasirinkimo apskritimas, skaičiumi 5 – mygtukas PRIDĖTI VALDIKLĮ." src="./image38.webp" style="width:2.7559055118110236in;height:2.216535433070866in" />
 
 3. Telefono ekrane atsiras ikona.
 
-<img alt="" src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
+<img alt="Žyma 6 Protegus 2 valdiklių pasirinkimo lange nurodo „Output5“ valdiklį su įjungimo mygtuku. Po juo „Switch Protegus 2“ rodomas kaip 1 x 1 valdiklis." src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
 4. Pereikite prie normalaus ekrano. Spustelkite ikoną.
 
-<img alt="" src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
+<img alt="Telefono pradžios ekranas. Žyma 7 apibrėžia pilką „Output5“ valdiklį su įjungimo mygtuku šalia Protegus 2 programėlės piktogramos." src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
 Ekrane atsiras apskritimas, kuriame bus atvaizduotas PGM suveikimas.
 
-<img alt="" src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
+<img alt="Telefono pradžios ekranas su pilku „Output5“ valdikliu šalia Protegus 2 programėlės piktogramos. Apačioje matomas didelis baltas apskritimas su pilku įjungimo mygtuku ir mažu atnaujinimo simboliu." src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
 5. Kai valdiklis prijungtas prie vartų automatikos su vartų būsenos indikacija, tai ikona atvaizduos atvirų/uždarų vartų būseną.
 
-<img alt="" src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
+<img alt="Telefono pradžios ekranas. Žyma 8 apibrėžia „Output5“ valdiklį, kurio įjungimo mygtukas žalias." src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
 ### Vartotojų pridėjimas telefone 
 
@@ -422,19 +422,19 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 1.  Nuspauskite „**Nustatymai**“**.**
 
-<img alt="" src="./image43.webp" style="width:2.7559055118110236in;height:1.921259842519685in" />
+<img alt="Protegus2 sistemos Gator pagrindinis ekranas. Viršutiniame dešiniajame kampe pažymėtas trijų taškų meniu mygtukas." src="./image43.webp" style="width:2.7559055118110236in;height:1.921259842519685in" />
 
 1.  Nuspauskite „**Sistemos konfigūracija**“.
 
-<img alt="" src="./image44.webp" style="width:2.7559055118110236in;height:1.921259842519685in" />
+<img alt="Protegus2 sistemos Gator trijų taškų meniu. Pažymėtas pasirinkimas Sistemos konfigūracija." src="./image44.webp" style="width:2.7559055118110236in;height:1.921259842519685in" />
 
 2. Nuspauskite „**Vartotojai**“.
 
-<img alt="" src="./image45.webp" style="width:2.7559055118110236in;height:3.1692913385826773in" />
+<img alt="Protegus2 langas Konfigūruoti Gator. Nustatymų sąraše pažymėtas pasirinkimas Vartotojai." src="./image45.webp" style="width:2.7559055118110236in;height:3.1692913385826773in" />
 
 3. Nuspauskite „**Pridėti naują vartotoją**“.
 
-<img alt="" src="./image46.webp" style="width:2.7559055118110236in;height:4.421259842519685in" />
+<img alt="Protegus2 langas Vartotojai. Po esamų vartotojų kategorijomis pažymėtas rožinis pliuso mygtukas naujam vartotojui pridėti." src="./image46.webp" style="width:2.7559055118110236in;height:4.421259842519685in" />
 
 4. Įveskite vartotojo el. pašto adresą.
 
@@ -446,7 +446,7 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 5.  Nuspauskite „**Pridėti vartotoją**“.
 
-<img alt="" src="./image47.webp" style="width:2.7559055118110236in;height:5.645669291338582in" />
+<img alt="Telefono programėlės langas Pridėti naują vartotoją. Užpildyti laukai El. pašto adresas, Vartotojo vardas ir Telefono numeris arba RFID kodas; leidimas valdyti Output5 įjungtas. Apačioje pažymėtas mygtukas Pridėti vartotoją." src="./image47.webp" style="width:2.7559055118110236in;height:5.645669291338582in" />
 
 10. Vartotojų sąraše atsiras naujas vartotojas.
 
@@ -564,7 +564,7 @@ Su TrikdisConfig galite pakeisti valdiklio nustatymus (jei gamyklinių nustatym�
 
 2.  Plokščiu atsuktuvu nuimkite valdiklio dangtelį, kaip parodyta žemiau:
 
-<img alt="" src="./image49.webp" style="width:7.086805555555555in;height:1.8763888888888889in" />
+<img alt="Trys brėžiniai iš kairės į dešinę: laikykite valdiklį ir įkiškite plokščią atsuktuvą į dangtelio plyšį; nuleiskite atsuktuvą, kad atlaisvintumėte dangtelį; raskite USB Mini-B jungtį." src="./image49.webp" style="width:7.086805555555555in;height:1.8763888888888889in" />
 
 1.  Su USB Mini-B kabeliu prijunkite valdiklį prie kompiuterio.
 
@@ -666,7 +666,7 @@ Protegus2 galite nustatyti esama savo šalies laiką. Norėdami tai padaryti, tu
 
 **Skirtukas „IN/OUT“**
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.0354330708661417in" />
+<img alt="TrikdisConfig langas IN/OUT, pasirinktas skirtukas IN/OUT. Įėjimų/išėjimų nustatymų lentelėje 1 ir 2 pažymėti kaip IN, 3 ir 4 – I/O, 5 – OUT; žemiau matomos Skaitytuvo parametrai ir Darbo būsena grupės." src="./image52.webp" style="width:7.086614173228346in;height:3.0354330708661417in" />
 
 - **Išvadai** – nurodyti valdiklio įėjimų ir išėjimų gnybtų numeriai.
 
@@ -723,7 +723,7 @@ Protegus2 galite nustatyti esama savo šalies laiką. Norėdami tai padaryti, tu
 
 Išėjimai (OUT) gali būti valdomi automatiškai pagal nustatyta tvarkaraštį.
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.1811023622047245in" />
+<img alt="TrikdisConfig langas IN/OUT, pasirinktas skirtukas Grafikas. Grafikų lentelėje pirmojo įrašo pradžios laikas yra 09:25, pabaigos – 09:28; matomi dienų pasirinkimo langeliai ir išėjimo veikimo režimas Lygis." src="./image53.webp" style="width:7.086614173228346in;height:2.1811023622047245in" />
 
 - **Pavadinimas** – suteikite laiko grafikui pavadinimą.
 
@@ -749,7 +749,7 @@ Išėjimai (OUT) gali būti valdomi automatiškai pagal nustatyta tvarkaraštį.
 
 Įveskite kalendorines šventines dienas, kuriu laikotarpyje bus galima nustatyti papildomą automatinį Išėjimų (OUT) veikimą numatytą **Grafikų** lentelėje.
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig langas IN/OUT, pasirinktas skirtukas Šventės. Lentelės pirmoje eilutėje Data nuo – 12.06.2025, Data iki – 13.06.2025; dešinėje Pradžios laikas per šventes – 09:30, Pabaigos laikas per šventes – 09:33." src="./image54.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 - **Įj.** – pažymėkite lauką, kad būtu įjungtas švenčių tvarkaraštis.
 
@@ -775,7 +775,7 @@ Prie GATOR galima prijungti vieną iO8 arba iO8-LORA plėtiklį.
 
 Jei valdiklio įrengimo vietoje yra bevielis internetas (WiFi) arba laidinis internetas, tai prie valdiklio gali būti prijungtas WiFi modulis W485 arba „Ethernet“ modulis E485. Su moduliu bus galima perduoti duomenis į Protegus2 programėlę ir CSP (centrinis stebėjimo pultas) per interneto tinklą. Naudojant modulį (W485 arba E485) su valdikliu: 1) nenaudojamas mobilusis internetas, taip pat galima išjungti valdiklio GPRS duomenų perdavimą; 2) valdiklį galite naudoti be SIM kortelės (valdymas vykdomas naudojant Protegus2 programėlę).
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
+<img alt="TrikdisConfig Gator langas „Moduliai“. Atvertame lauko „Modulis“ sąraše matomi „W485 (W17u) modulis“, „E485 komunikatorius“, „iO-LORA valdiklis“, „iO-8“, „IO8-Lora“ ir „AP-IO4R“. Lentelėje taip pat yra stulpeliai „Serijos Nr.“, „Pavadinimas“ ir „Mikroprogramos versija“." src="./image55.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
 - **Modulis** – iš sąrašo išrinkite prie valdiklio RS485 magistralės prijungtą modulį.
 
@@ -809,7 +809,7 @@ Jei valdiklio įrengimo vietoje yra bevielis internetas (WiFi) arba laidinis int
 
 **„Ethernet“ modulio E485 nustatymų langas**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.1023622047244093in" />
+<img alt="TrikdisConfig langas Moduliai, pasirinktas skirtukas Parametrai. Komunikatoriaus tinklo nustatymuose pažymėtas DHCP režimas; Statinis IP, Potinklio kaukė ir Numatytasis šliuzas rodo 0.0.0.0. SIM parametruose pažymėta Naudoti skambutį ir SMS, kai veikiama per IP tinklą." src="./image57.webp" style="width:7.086614173228346in;height:2.1023622047244093in" />
 
 **Parinkčių grupė „Komunikatoriaus tinklo nustatymai“**
 
@@ -831,7 +831,7 @@ Jei valdiklio įrengimo vietoje yra bevielis internetas (WiFi) arba laidinis int
 
 ### Langas „IP pranešimai“ 
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.5196850393700787in" />
+<img alt="TrikdisConfig Gator langas „IP pranešimai“. „Pagrindinis kanalas“ ir „Atsarginis kanalas“: lauke „Ryšio tipas“ pasirinkta „Išjungta“. „Parametrai“: grįžimas prie pagrindinio kanalo po 5 min, IP PING periodas 60 s, SMS PING periodas 10 min, perėjimas prie atsarginio kanalo po 3 bandymų, DNS1 – 8.8.8.8, DNS2 – 1.1.1.1. Skiltyje „Mobilioji aplikacija“ langelis „Įgalinti jungimąsi“ pažymėtas." src="./image58.webp" style="width:7.086614173228346in;height:3.5196850393700787in" />
 
 Vartų valdiklis gali siųsti pranešimus į saugos tarnybos CSP imtuvą.
 
@@ -879,7 +879,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.188976377952756in" />
+<img alt="TrikdisConfig langas Vartotojai, pasirinktas skirtukas Vartotojai. Lentelėje matomi laukai Nr., El. pašto adresas, Tel. numeris/RFID, Vardas, Įj., PAS, Schedule, 5, Skamb. ir Daugiau parametrų; pirmoje eilutėje įjungtas 5 išėjimo langelis." src="./image59.webp" style="width:7.086614173228346in;height:2.188976377952756in" />
 
 - **Nr.** – vartotojo eilės numeris. Numeriai su „A“ raide (nuo 1A iki 7A) yra administratorių numeriai, kurie gali daryti nustatymus valdiklyje, valdyti išėjimus ir gauti pranešimus iš vartų valdiklio. Kiti vartotojų numeriai (nuo 11 iki 1010) gali valdyti išėjimus.
 
@@ -923,7 +923,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 - SMS žinučių atsakas – pažymėkite lauką, ir administratorius gaus atsakymus SMS žinutėmis, kai valdiklis valdomas ir konfigūruojamas SMS žinutėmis.
 
-<img alt="" src="./image60.webp" style="width:4.330708661417323in;height:3.5039370078740157in" />
+<img alt="TrikdisConfig langas „Vartotojo aprašymas“. „Įgalintas“ pažymėtas. Skiltyje „SMS žinutės dėl suveikimo“ pažymėti IN1 ir OUT5; „SMS žinučių atsakas“, „Gauti testavimo žinutes“, „Peradresuoti nežinomas žinutes“ ir „Gali valdyti išėjimus“ OUT5 nepažymėti." src="./image60.webp" style="width:4.330708661417323in;height:3.5039370078740157in" />
 
 - **Gauti testavimo žinutes** – pažymėkite lauką, kad administratorius gautu testo žinutes.
 
@@ -954,7 +954,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 - Aktyvus nuo – nurodoma data ir laikas, kada vartotojui leista valdyti valdiklį.
 
-<img alt="" src="./image61.webp" style="width:4.330708661417323in;height:3.940944881889764in" />
+<img alt="TrikdisConfig langas „Vartotojo aprašymas“. Matomi vartotojo duomenų, priskirto tvarkaraščio, aktyvumo datų, skaitliuko ir OUT5 valdymo laukai; apačioje – mygtukas „Išsaugoti“." src="./image61.webp" style="width:4.330708661417323in;height:3.940944881889764in" />
 
 - **Aktyvus iki** – nurodoma data ir laikas iki kada vartotojas gali valdyti valdiklį.
 
@@ -974,19 +974,19 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 1.  Prie valdiklio prijunkite RFID skaitytuvą (žr. p.2.6 „RFID skaitytuvo (Wiegand 26/34) prijungimo schema“). Įjunkite maitinimą valdikliui. Prijunkite USB Mini-B kabelį prie valdiklio. Programos TrikdisConfig lange „IN/OUT**“** nurodykite kiek skaitytuvų yra prijungta.
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.0236220472440944in" />
+<img alt="TrikdisConfig langas „IN/OUT“. Skiltyje „Skaitytuvo parametrai“ išskleistas „Wiegand“ skaitytuvo režimo sąrašas su pasirinkimais „Du skaitytuvai“ ir „Vienas skaitytuvas“." src="./image62.webp" style="width:7.086614173228346in;height:3.0236220472440944in" />
 
 Programos lange „Vartotojai“ nuspauskite „**Registruokite RFID**“.
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig langas „Vartotojai“: virš vartotojų lentelės paryškintas mygtukas „Registruokite RFID“." src="./image63.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
-| Atsivers RFID pakabukų (kortelių) registravimo langas. | <img alt="" src="./image64.webp" style="width:2.3800043744531933in;height:1.860003280839895in" /> |
+| Atsivers RFID pakabukų (kortelių) registravimo langas. | <img alt="TrikdisConfig langas „RFID registracijos režimas“ prašo pridėti RFID žymę arba kortelę prie skaitytuvo. Rodomas registracijos indikatorius ir mygtukas „SUSTABDYTI registraciją“." src="./image64.webp" style="width:2.3800043744531933in;height:1.860003280839895in" /> |
 |:---|---:|
 | Pridėkite RFID pakabuką (kortelę) prie RFID skaitytuvo. Kai skaitytuvas nuskaitys pakabuką (kortelę) atsivers naujas langas. Jame „**Įveskite vartotojo vardą“** ir pažymėkite lauką „**Vartotojas gali valdyti PGM išėjimą 5“**. Nuspauskite mygtuką „**PRIDĖTI“**. / Jei norite pridėti dar RFID pakabukų (kortelių), pakartokite aukščiau aprašytus veiksmus. Kai registracija visų RFID pakabukų (kortelių) bus baigta nuspauskite mygtuką „**SUSTABDYTI registracija“**. / Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų sąrašas būtų įrašytas į valdiklį. | <img alt="" src="./image65.webp" style="width:2.39667104111986in;height:2.273337707786527in" /> |
 
 RFID pakabukų (kortelių) registravimą galima atlikti programoje *TrikdisConfig* įvedant jų ID numerius į lauką „Tel.numeris/RFID“. Suteikite vartotojui „Vardą“, pažymėkite lauką „Įj.“ ir valdomo „Išėjimo“ lauką. Nuspauskite mygtuką Įrašyti [F5], kad RFID pakabukų (kortelių) sąrašas būtų įrašytas į valdiklį.
 
-<img alt="" src="./image66.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
+<img alt="RFID kortelė, kurios apatiniame krašte išryškintas atspausdintas ID numeris." src="./image66.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
 <img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
@@ -1000,7 +1000,7 @@ RFID pakabukų (kortelių) registravimą galima atlikti programoje *TrikdisConfi
 
 Išėjimai (OUT) gali būti valdomi vartotojo pagal nustatyta tvarkaraštį. Tvarkaraštis turi būti priskirtas vartotojui.
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:2.1929133858267718in" />
+<img alt="TrikdisConfig lango „Vartotojai“ skirtukas „Grafikas“. Eilutėse „Schedule 1“–„Schedule 5“ yra įgalinimo langeliai, pradžios laikas ir savaitės dienos bei pabaigos laikas ir savaitės dienos. Matomi laikai yra 00:00, langeliai nepažymėti." src="./image69.webp" style="width:7.086614173228346in;height:2.1929133858267718in" />
 
 - **Pavadinimas** - įrašykite grafiko pavadinimą.
 
@@ -1012,7 +1012,7 @@ Išėjimai (OUT) gali būti valdomi vartotojo pagal nustatyta tvarkaraštį. Tva
 
 **Skirtukas „Juodasis sąrašas“**
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.188976377952756in" />
+<img alt="TrikdisConfig lango „Vartotojai“ skirtukas „Juodasis sąrašas“. Matoma tuščia lentelė su stulpeliu „E-paštas/Telefono numeris“." src="./image70.webp" style="width:7.086614173228346in;height:2.188976377952756in" />
 
 Į **Juodąjį sąrašą** įtraukiami vartotojų elektroninio pašto adresai, telefono numeriai, RFID pakabuko (kortelės) ID numeriai, kuriems bus uždrausta valdyti valdiklį.
 
@@ -1038,7 +1038,7 @@ Valdiklio įvykių siuntimo nustatymas į CSP ir Protegus2 programėlę.
 
 ### Langas „Įvykių žurnalas“ 
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
+<img alt="TrikdisConfig langas „Įvykių žurnalas“ su mygtukais „Nuskaityti“ ir „Išvalyti“. Lentelės stulpeliai: „Įvykio Nr.“, „Vardas / E-paštas“, „Telefono numeris“, „Laikas“ ir „Įvykio pavadinimas“. Matomi įvykiai: „Sistema pasileido“, „Žema įtampa“ ir „Išsijungė išėjimas Nr 5“." src="./image72.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
 Nuspauskite mygtuką „**Nuskaityti**“. „**Įvykių žurnalas**“ bus nuskaitytas iš valdiklio atminties. „**Įvykių žurnalas**“ suteikia informaciją apie valdiklio atliktus veiksmus ir jo vidinius įvykius.
 
@@ -1046,7 +1046,7 @@ Nuspauskite mygtuką „**Nuskaityti**“. „**Įvykių žurnalas**“ bus nusk
 
 Valdiklio gamykliniams nustatymams atstatyti reikia programos TrikdisConfig lange nuspausti mygtuką „**Atkurti**“.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:0.8543307086614174in" />
+<img alt="TrikdisConfig skiltyje „Gamintojo parametrai“ virš lauko „IMEI/Unikalus ID:“ paryškintas mygtukas „Atkurti“." src="./image73.webp" style="width:7.086614173228346in;height:0.8543307086614174in" />
 
 ### Nustatymai vartų būsenos indikacijai 
 
@@ -1054,15 +1054,15 @@ Protegus2 programėlė ir Widget gali rodyti realią vartų padėtį (vartai ati
 
 TrikdisConfig lange „IN/OUT“ reikia prijungtą įėjimą priskirti prie valdiklio išėjimo, kuris valdys vartus:
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
+<img alt="TrikdisConfig langas „IN/OUT“. Paryškinta įėjimo „1 IN“ eilutė su paskirtimi „Įėjimas“ ir vartų būsenos SMS tekstų laukais; išėjimo „5 OUT“ eilutėje laukas „Prisk. IN“ nustatytas į „1 IN“." src="./image74.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 Jei norite gauti SMS pranešimus apie vartų atidarymą/uždarymą, įrašykite įėjimo 1IN įvykio/grįžties SMS tekstus, nuspauskite mygtuką „**Daugiau parametrų**“ vartotojų sąraše.
 
-<img alt="" src="./image75.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="TrikdisConfig langas „Vartotojai“. Vartotojų lentelėje paryškintas mygtukas „Daugiau parametrų“." src="./image75.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 Lange „Vartotojai“ reikia pažymėti lauką IN1 varnele, kad vartotojas gautu SMS apie vartų padėtį. Paspauskite „Išsaugoti“.
 
-<img alt="" src="./image76.webp" style="width:4.330708661417323in;height:3.4803149606299213in" />
+<img alt="TrikdisConfig langas „Vartotojo aprašymas“. Skiltyje „SMS žinutės dėl suveikimo“ pažymėti „IN1“ ir „OUT5“ langeliai; apačioje yra mygtukas „Išsaugoti“." src="./image76.webp" style="width:4.330708661417323in;height:3.4803149606299213in" />
 
 ## Nuotolinis veikimo parametrų nustatymas 
 
@@ -1082,7 +1082,7 @@ Lange „Vartotojai“ reikia pažymėti lauką IN1 varnele, kad vartotojas gaut
 
 3.  Paleiskite konfigūravimo programą TrikdisConfig ir skyriaus „**Nuotolinė prieiga**“ laukelyje „**Unikalus ID**“ įrašykite turimo valdiklio IMEI numerį (IMEI numeris nurodytas ant lipdukų, užklijuotų ant gaminio korpuso apatinės dalies ir pakuotės).
 
-<img alt="" src="./image77.webp" style="width:7.086614173228346in;height:2.15748031496063in" />
+<img alt="TrikdisConfig 1.66.64 langas. Skiltyje Nuotolinė prieiga raudonai pažymėti laukas Unikalus ID ir mygtukas Konfigūravimas; šalia yra laukas Sistemos pavadinimas." src="./image77.webp" style="width:7.086614173228346in;height:2.15748031496063in" />
 
 4. Laukelyje „**Sistemos pavadinimas**“ norimu vardu pavadinkite valdiklį. Spauskite „**Konfigūravimas**“.
 
@@ -1121,7 +1121,7 @@ Valdiklio veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po 
 
 4.  Paspauskite gamyklinės programinės įrangos atidarymo langelį „**Atverti failą**“ ir parinkite reikiamą gamyklinės programinės įrangos bylą.
 
-    <img alt="" src="./image78.webp" style="width:7.086614173228346in;height:2.4763779527559056in" />
+    <img alt="TrikdisConfig Gator langas „Programos atnaujinimas“: tuščias failo pasirinkimo laukas, mygtukas „Atverti failą“, mygtukas „Įkelti (F12)“ ir eigos juosta ties 0%." src="./image78.webp" style="width:7.086614173228346in;height:2.4763779527559056in" />
 
 5.  Paspauskite atnaujinimo mygtuką **Naujinti [F12]**.
 
@@ -1139,4 +1139,4 @@ Visada išjunkite el. energijos tiekimą prieš atliekant prietaiso pajungimą.
 
 Ne gamintojo atlikti gaminio pakeitimai, modifikacijos ar remontai panaikina gamintojo suteiktą garantiją.
 
-<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.
+<img alt="Perbrauktos ratukinės atliekų dėžės simbolis (WEEE), nurodantis, kad prietaisą reikia šalinti atskirai nuo buitinių atliekų." src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Laikykitės atliekų rūšiavimo taisyklių ir neišmeskite nenaudojamos įrangos komponentų su kitomis buitinėmis atliekomis.

@@ -1,7 +1,7 @@
 # „FLEXi“ SP3 apsaugos centralės su Protegus ir Paradox klaviatūromis vartotojo vadovas
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="400">
+<img src="./image1.png" alt="Klaviatūra SK232LED W: viršutiniai saugojimo režimų ir zonų būsenos indikatoriai rodo 1–32 zonas ir ARM, SLEEP, STAY bei OFF režimus dviem sritims. Apatiniai šviečiantys mygtukai skirti veikimo režimams nustatyti ir skaičiams įvesti." width="400">
 </div>
 
 
@@ -92,13 +92,13 @@ Tai apsauga nuo netyčinio signalizacijos išjungimo. Išjungus signalizaciją t
 
 Signalizacijos valdymo Trikdis klaviatūra SK232LED W užtikrina 32 zonų ir 2 sričių atvaizdavimą.
 
-<img alt="" src="./image1.png" style="width:5.1600in;" />
+<img alt="Klaviatūra SK232LED W: viršutiniai saugojimo režimų ir zonų būsenos indikatoriai rodo 1–32 zonas ir ARM, SLEEP, STAY bei OFF režimus dviem sritims. Apatiniai šviečiantys mygtukai skirti veikimo režimams nustatyti ir skaičiams įvesti." src="./image1.png" style="width:5.1600in;" />
 
 **Veikimo režimų nustatymo ir skaičių įvedimo mygtukai**
 
 | **Mygtukai** | **Aprašymas** |
 |:---|----|
-| <img alt="" src="./image2.png" style="width:0.3000in;" /> | Nuolatos šviečiantis mygtukas reiškia maitinimą iš kintamos srovės tinklo, o mirksintis – rodo akumuliatoriaus gedimą. Nedega – išjungtas maitinimo įtampos šaltinis arba sistema veikia nuo akumuliatoriaus. Mygtukas taip pat naudojamas valdymo kodams redaguoti ir gaisro jutiklių perkrovimui. |
+| <img alt="Maitinimo indikatorius." src="./image2.png" style="width:0.3000in;" /> | Nuolatos šviečiantis mygtukas reiškia maitinimą iš kintamos srovės tinklo, o mirksintis – rodo akumuliatoriaus gedimą. Nedega – išjungtas maitinimo įtampos šaltinis arba sistema veikia nuo akumuliatoriaus. Mygtukas taip pat naudojamas valdymo kodams redaguoti ir gaisro jutiklių perkrovimui. |
 | MEM | Nuolatos šviečiantis mygtukas reiškia, kad yra naujos informacijos apie suveikimą atmintyje, o mirksintis – rodo veikimo MEM režimą. Mygtukas taip pat naudojamas atminties peržiūros režimui pasirinkti. |
 | BYP | Nuolatos šviečiantis mygtukas reiškia, kad yra laikinai atjungtų zonų, o mirksintis – rodo veikimo BYPASS režimą. Mygtukas taip pat naudojamas laikino zonų atjungimo režimui pasirinkti. |
 | TRB | Nuolatos šviečiantis mygtukas reiškia, kad užfiksuoti veikimo nesklandumai, o mirksintis – rodo veikimo TBL režimą. Mygtukas taip pat naudojamas nesklandumų peržiūros režimui pasirinkti. |
@@ -125,13 +125,13 @@ Signalizacijos valdymo Paradox klaviatūra K636 užtikrina 10 zonų ir 1 srities
 
 Signalizacijos valdymo Paradox klaviatūros K32LED, K32+, K35 užtikrina 32 zonų ir 2 sričių atvaizdavimą.
 
-<img alt="" src="./image4.png" style="width:5.1567in;" />
+<img alt="Kairėje klaviatūros K32LED ir K32+: viršuje saugojimo režimų ir zonų būsenos indikatoriai, apačioje režimų ir skaičių mygtukai. Dešinėje klaviatūra K35: būsenos rodomos ekrane, apačioje tie patys valdymo mygtukai. Dvikryptės rodyklės gretina abiejų klaviatūrų indikatorių ir mygtukų sritis." src="./image4.png" style="width:5.1567in;" />
 
 **Veikimo režimų nustatymo ir skaičių įvedimo mygtukai**
 
 | **Mygtukas** | **Aprašymas** |
 |----|----|
-| <img alt="" src="./image5.png" style="width:0.5433in;" /> | Gaisro jutiklių perkrovimo mygtukas. |
+| <img alt="Maitinimo mygtukas." src="./image5.png" style="width:0.5433in;" /> | Gaisro jutiklių perkrovimo mygtukas. |
 | MEM | Nuolatos šviečiantis mygtukas reiškia, kad yra naujos informacijos apie suveikimą atmintyje, o mirksintis – rodo veikimo MEM režimą. Mygtukas taip pat naudojamas atminties peržiūros režimui pasirinkti. |
 | BYP | Nuolatos šviečiantis mygtukas reiškia, kad yra laikinai atjungtų zonų, o mirksintis - rodo veikimo BYPASS režimą. mygtukas taip pat naudojamas laikino zonų atjungimo režimui pasirinkti |
 | TBL | Nuolatos šviečiantis mygtukas reiškia, kad užfiksuoti veikimo nesklandumai, o mirksintis –rodo veikimo TBL režimą. mygtukas taip pat naudojamas nesklandumų peržiūros režimui pasirinkti |
@@ -142,7 +142,7 @@ Signalizacijos valdymo Paradox klaviatūros K32LED, K32+, K35 užtikrina 32 zon�
 | SLEEP | Mygtukas **SLEEP** režimui jungti. |
 | STAY | Mygtukas **STAY** režimui jungti. |
 | OFF | Mygtukas **OFF** (DISARM) režimui jungti. |
-| <img alt="" src="./image6.png" style="width:0.7087in;" /> | Maitinimo įtampos indikatorius. Šviečia – įjungta maitinimo įtampa. Mirksi – akumuliatoriaus gedimas. Nedega – išjungtas maitinimo įtampos šaltinis arba sistema veikia nuo akumuliatoriaus. |
+| <img alt="Kintamosios srovės simbolis." src="./image6.png" style="width:0.7087in;" /> | Maitinimo įtampos indikatorius. Šviečia – įjungta maitinimo įtampa. Mirksi – akumuliatoriaus gedimas. Nedega – išjungtas maitinimo įtampos šaltinis arba sistema veikia nuo akumuliatoriaus. |
 
 > [!NOTE]
 >     1. Programavimo režimui išjungti, ar klaidingai įvestai reikšmei
@@ -303,7 +303,7 @@ Suveikus signalizacijai, pradeda šviesti mygtukas **MEM**. Suveikimo priežasč
 
 Po gaisro (dūmų) jutiklių suveikimo, norėdami jutiklių indikaciją paleisti veikti iš naujo:
 
-1. Nuspauskite ir palaikykite 3 sekundes, klaviatūros mygtuką <img alt="" src="./image7.png" style="width:0.3000in;" /> (arba <img alt="" src="./image8.png" style="width:0.4016in;" />).
+1. Nuspauskite ir palaikykite 3 sekundes, klaviatūros mygtuką <img alt="Mygtukas su žaibo simboliu." src="./image7.png" style="width:0.3000in;" /> (arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />).
 
 1. Suveiks PGM išėjimas nustatytas veikti **Gaisro jutiklių atstatymas** režimu, prie kurio prijungti gaisro jutikliai.
 
@@ -317,13 +317,13 @@ Nuspauskite kartu ir palaikykite 3 sekundes mygtukus:
 
 
 > [!NOTE]
-> 1 <img src="./image8.png" alt="" style="width:0.3500in;" /> 3, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Panic apie jums gresiantį pavojų.
+> 1 <img src="./image8.png" alt="Maitinimo mygtukas." style="width:0.3500in;" /> 3, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Panic apie jums gresiantį pavojų.
 
 > [!NOTE]
-> 4 <img src="./image8.png" alt="" style="width:0.3500in;" /> 6, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Medical apie medicininės pagalbos poreikį.
+> 4 <img src="./image8.png" alt="Maitinimo mygtukas." style="width:0.3500in;" /> 6, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Medical apie medicininės pagalbos poreikį.
 
 > [!NOTE]
-> 7 <img src="./image8.png" alt="" style="width:0.3500in;" /> 9, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Fire apie gaisrą. apie gaisrą.
+> 7 <img src="./image8.png" alt="Maitinimo mygtukas." style="width:0.3500in;" /> 9, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Fire apie gaisrą. apie gaisrą.
 
 > [!NOTE]
 > 1, kad išsiųsti pranešimą ], kad išsiųsti pranešimą Panic apie jums gresiantį pavojų.
@@ -378,11 +378,11 @@ Atsiradus veikimo nesklandumams, pradeda šviesti klaviatūros **TRB** mygtuko i
 
 #### Naujų vartotojų (User) kodų įvedimas
 
-1. Nuspauskite klaviatūros mygtuką <img alt="" src="./image9.png" style="width:0.3000in;" /> (arba <img alt="" src="./image8.png" style="width:0.4016in;" />).
+1. Nuspauskite klaviatūros mygtuką <img alt="Mygtukas su žaibo simboliu." src="./image9.png" style="width:0.3000in;" /> (arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />).
 
 2. Įveskite 6-ženklį **Administratoriaus** **kodą**.
 
-1. Mygtukas <img alt="" src="./image9.png" style="width:0.3000in;" /> (arba <img alt="" src="./image8.png" style="width:0.4016in;" />) pradės mirksėti.
+1. Mygtukas <img alt="Mygtukas su žaibo simboliu." src="./image9.png" style="width:0.3000in;" /> (arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />) pradės mirksėti.
 
 3. Surinkite laisvą dviženklį vartotojo eilės numerį.
 
@@ -398,11 +398,11 @@ Atsiradus veikimo nesklandumams, pradeda šviesti klaviatūros **TRB** mygtuko i
 
 #### Vartotojų (User) kodų redagavimas
 
-1. Nuspauskite klaviatūros mygtuką <img alt="" src="./image9.png" style="width:0.3000in;" /> (arba <img alt="" src="./image8.png" style="width:0.4016in;" />).
+1. Nuspauskite klaviatūros mygtuką <img alt="Mygtukas su žaibo simboliu." src="./image9.png" style="width:0.3000in;" /> (arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />).
 
 2. Įveskite 6-ženklį **Administratoriaus** **kodą**.
 
-1. Mygtukas <img alt="" src="./image9.png" style="width:0.3000in;" /> (arba <img alt="" src="./image8.png" style="width:0.4016in;" />) pradės mirksėti.
+1. Mygtukas <img alt="Mygtukas su žaibo simboliu." src="./image9.png" style="width:0.3000in;" /> (arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />) pradės mirksėti.
 
 3. Surinkite reikiamą dviženklį vartotojo eilės numerį.
 
@@ -433,11 +433,11 @@ LED indikatoriai nuo 1 iki 8 parodys sričių būsenas: Dega – įjungtas **Arm
 
 Esamų vartotojų (**User**) kodų ištrynimui:
 
-1. Nuspauskite klaviatūros mygtuką <img alt="" src="./image9.png" style="width:0.3000in;" />(arba <img alt="" src="./image8.png" style="width:0.4016in;" />).
+1. Nuspauskite klaviatūros mygtuką <img alt="Mygtukas su žaibo simboliu." src="./image9.png" style="width:0.3000in;" />(arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />).
 
 2. Įveskite 6-ženklį **Administratoriaus** **kodą**.
 
-1. Mygtukas <img alt="" src="./image9.png" style="width:0.3000in;" /> (arba <img alt="" src="./image8.png" style="width:0.4016in;" />) pradės mirksėti.
+1. Mygtukas <img alt="Mygtukas su žaibo simboliu." src="./image9.png" style="width:0.3000in;" /> (arba <img alt="Maitinimo mygtukas." src="./image8.png" style="width:0.4016in;" />) pradės mirksėti.
 
 3. Surinkite reikiamą dviženklį vartotojo eilės numerį.
 

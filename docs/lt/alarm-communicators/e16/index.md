@@ -1,7 +1,7 @@
 # Ethernet komunikatorius E16
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="TRIKDIS E16 Ethernet komunikatoriaus priekis. Indikatoriai: NETWORK, DATA, POWER ir TROUBLE. Gnybtai: +DC, -DC, CLK, DATA, I/O 1, I/O 2, I/O 3, COM, A RS485 ir B RS485. Maitinimo žyma: 10-18 VDC, 0.25A Max." width="400">
 </div>
 
 ## Aprašymas
@@ -115,7 +115,7 @@ Veikia su Protegus2 programėle:
 
 5.  RJ45 lizdas LAN kabeliui prijungti.
 
-<img alt="" src="./image4.webp" style="width:4.750009842519685in;height:2.853338801399825in" />
+<img alt="E16 komunikatorius: kairėje vaizdas iš priekio, dešinėje – atidaryto korpuso vaizdas. Kairėje: 1 – šviesos indikatoriai; 2 – priekinio dangtelio atidarymo plyšys. Dešinėje: 3 – išorinių laidų prijungimo gnybtai; 4 – USB Mini-B jungtis komunikatoriui programuoti; 5 – RJ45 lizdas LAN kabeliui prijungti." src="./image4.webp" style="width:4.750009842519685in;height:2.853338801399825in" />
 
 ### Išorinių kontaktų paskirtis
 
@@ -155,7 +155,7 @@ Veikia su Protegus2 programėle:
 
 ### „Ethernet“ komunikatoriaus E16 panaudojimo struktūrinė schema
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9138888888888888in" />
+<img alt="Struktūrinė schema: apsaugos centralė → Ethernet komunikatorius E16 → maršrutizatorius → internetas. Iš interneto viena šaka veda į Protegus serverį ir telefoną su Protegus programėle; kita – į imtuvą ir stebėjimo programinę įrangą saugos tarnybos stebėjimo pulte." src="./image5.webp" style="width:7.0875in;height:2.9138888888888888in" />
 
 !!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
@@ -208,7 +208,7 @@ Veikia su Protegus2 programėle:
     centralės PC download/UDL slaptažodį.
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="TrikdisConfig E16 lango Pranešimai vartotojui skirtukas PROTEGUS servisas. Pažymėtas Leisti prisijungti langelis ir PROTEGUS Cloud prieigos kodas 123456." src="./image8.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 4. Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -231,7 +231,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:3.559055118110236in" />
+<img alt="TrikdisConfig langas „Pranešimai į CSP“. „Pirminis ryšio kanalas“: „Ryšio būdas“ – IP, „Protokolas“ – TRK, „TRK šifravimo raktas“ – paslėptas, „Domenas arba IP“ – 155.14.178.152, „Prievadas“ – 55448, „TCP ar UDP“ – UDP. „Atsarginio kanalo režimas“: IP, TRK, paslėptas raktas, „Domenas arba IP“ – 160.12.15.180, „Prievadas“ – 44558, „TCP ar UDP“ – TCP. „Lygiagretusis ryšio kanalas“: „Ryšio būdas“ – Išjungtas." src="./image10.webp" style="width:7.082677165354331in;height:3.559055118110236in" />
 
 3. **Ryšio būdas** – pasirinkite **IP** ryšio būdą .
 
@@ -266,39 +266,39 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="545" height="479" />
+<img class="wiring-diagram" alt="Prijungimo schema: DSC centralės klaviatūros magistralė jungiama prie E16. RED (+12V) jungiamas prie +DC, BLK – prie -DC, YEL – prie CLK, GRN – prie DATA." src="./wiring-dsc.webp" width="545" height="479" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="646" height="464" />
+<img class="wiring-diagram" alt="Prijungimo schema: PARADOX centralės nuoseklioji jungtis jungiama prie E16 atskirai užsakomu kabeliu EX-CRP2.4. R (raudona, +12V) jungiamas prie +DC, B (juoda) – prie -DC, Y (geltona) – prie CLK, G (žalia) – prie DATA." src="./wiring-paradox.webp" width="646" height="464" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="545" height="480" />
+<img class="wiring-diagram" alt="Prijungimo schema: CADDX centralės klaviatūros magistralė jungiama prie E16. POS (+12V) jungiamas prie +DC, COM – prie -DC, DATA – prie DATA; CLK nenaudojamas." src="./wiring-caddx.webp" width="545" height="480" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="647" height="480" />
+<img class="wiring-diagram" alt="Prijungimo schema: TEXECOM centralės nuoseklioji jungtis jungiama prie E16 atskirai užsakomu kabeliu EX-CRP4. R (raudona, +12V) jungiamas prie +DC, B (juoda) – prie -DC, BL (mėlyna) – prie CLK, W (balta) – prie DATA." src="./wiring-texecom.webp" width="647" height="480" />
 
 #### INNERRANGE INCEPTION
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="625" height="465" />
+<img class="wiring-diagram" alt="Prijungimo schema: Inner Range Inception jungiama prie E16. VOUT + (+12V) jungiamas prie +DC; VOUT 0V – prie -DC ir sujungiamas su USB kabelio 993030USB juodu laidu; žalias kabelio laidas jungiamas prie CLK, baltas – prie DATA." src="./wiring-innerrange-inception.webp" width="625" height="465" />
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="553" height="452" />
+<img class="wiring-diagram" alt="Prijungimo schema: Inner Range Integriti jungiama prie E16 kabeliu INTG-996795. +DET (+13V) jungiamas prie +DC, Port 0 GND 5 – prie -DC, Rx 3 – prie CLK, Tx 2 – prie DATA." src="./wiring-innerrange-integriti.webp" width="553" height="452" />
 
 #### Crow Runner 4/8, Runner 8/16
 
-<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="547" height="502" />
+<img class="wiring-diagram" alt="Prijungimo schema: Crow Runner 4/8 arba Runner 8/16 centralės klaviatūros magistralė jungiama prie E16. POS (+12V) jungiamas prie +DC, NEG – prie -DC, CLK – prie CLK, DATA – prie DATA." src="./wiring-crow-runner.webp" width="547" height="502" />
 
 #### Pyronix
 
-<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="595" height="502" />
+<img class="wiring-diagram" alt="Prijungimo schema: Pyronix centralės klaviatūros magistralė jungiama prie E16. +AUX (+12V) jungiamas prie +DC, -AUX – prie -DC, KD – prie DATA; CLK nenaudojamas." src="./wiring-pyronix.webp" width="595" height="502" />
 
 #### Honeywell Vista-20, Vista-48
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="574" height="480" />
+<img class="wiring-diagram" alt="Prijungimo schema: Honeywell Vista-20 arba Vista-48 centralės klaviatūros magistralė prijungta prie E16. Centralės 5 gnybtas (+12V) jungiamas prie +DC, 4 – prie -DC, 7 – prie CLK, 6 – prie DATA." src="./wiring-honeywell-vista.webp" width="574" height="480" />
 
 ### E16 prijungimo prie centralės jungiklio (angl. keyswitch) zonos schema
 
@@ -313,7 +313,7 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su E16 PGM išėji
     Protegus2 reikia padaryti nustatymus, kurie aprašyti
     p. 5.2 „Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio
     zoną".
-<img alt="" src="./image16.webp" style="width:3.22250656167979in;height:2.5975054680664917in" />
+<img alt="Prijungimo schema: centralė prie E16. Klaviatūros magistralė: RED (+12V) prie + DC, BLK prie - DC, YEL prie CLK, GRN prie DATA. Jungiklio zonos: 1-a Sritis prie I/O 1, 2-a Sritis prie I/O 2, 3-ia Sritis prie I/O 3. COM, A RS485 ir B RS485 neprijungti." src="./image16.webp" style="width:3.22250656167979in;height:2.5975054680664917in" />
 
 ### Įėjimo prijungimo schemos
 
@@ -323,27 +323,27 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
 
 #### Normaliai atvira (NO)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="305" height="268" />
+<img class="wiring-diagram" alt="Prijungimo schema: normaliai atviras (NO) kontaktas tarp COM ir INx. Trumpasis jungimas – aliarmas, atvira grandinė – būsenos atkūrimas." src="./wiring-input-no.webp" width="305" height="268" />
 
 #### Normaliai uždara (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="315" height="268" />
+<img class="wiring-diagram" alt="Prijungimo schema: normaliai uždaras (NC) kontaktas tarp COM ir INx. Trumpasis jungimas – būsenos atkūrimas, atvira grandinė – aliarmas." src="./wiring-input-nc.webp" width="315" height="268" />
 
 #### Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (NC/EOL 2,2k)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="353" height="374" />
+<img class="wiring-diagram" alt="Prijungimo schema: tarp COM ir INx nuosekliai sujungti NC kontaktas ir 2,2k rezistorius linijos gale (EOL 2,2k). Trumpasis jungimas – aliarmas, atvira grandinė – aliarmas, 2,2k – būsenos atkūrimas." src="./wiring-input-nc-eol.webp" width="353" height="374" />
 
 #### Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (NO/EOL 2,2k)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="308" height="452" />
+<img class="wiring-diagram" alt="Prijungimo schema: tarp COM ir INx lygiagrečiai sujungti NO kontaktas ir 2,2k rezistorius linijos gale (EOL 2,2k). Trumpasis jungimas – aliarmas, atvira grandinė – aliarmas, 2,2k – būsenos atkūrimas." src="./wiring-input-no-eol.webp" width="308" height="452" />
 
 #### Normaliai atvira grandinė su 2,2k varža linijos gale ir tamperio atpažinimu (NO/DEOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="410" height="464" />
+<img class="wiring-diagram" alt="Prijungimo schema su tamperio atpažinimu (DEOL): tarp COM ir INx nuosekliai sujungti tamperio jungiklis ir 2,2k rezistorius, po jų – NO kontaktas, su kuriuo lygiagrečiai sujungtas antras 2,2k rezistorius. Trumpasis jungimas – tamperis, atvira grandinė – tamperis, 2,2k – aliarmas, 3,3k-5,5k – būsenos atkūrimas." src="./wiring-input-no-deol.webp" width="410" height="464" />
 
 #### Normaliai uždara grandinė su 2,2k varža linijos gale ir tamperio atpažinimu (NC/DEOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="417" height="464" />
+<img class="wiring-diagram" alt="Prijungimo schema: tarp COM ir INx nuosekliai sujungti „Tamper“ jungiklis ir 2,2k varža; toliau – NC kontaktas, lygiagrečiai su juo prijungta antra 2,2k varža. „Short - Tamper; Open - Tamper; 2,2k - Restore; 3,3k-5,5k - Alarm.“" src="./wiring-input-nc-deol.webp" width="417" height="464" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
@@ -351,19 +351,19 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
     arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
 ### LAN kabelio prijungimas
 
-<img alt="" src="./image19.webp" style="width:2.8250054680664918in;height:2.282504374453193in" />
+<img alt="Prijungimo schema: LAN kabelio kištukas nukreiptas į E16 komunikatorių." src="./image19.webp" style="width:2.8250054680664918in;height:2.282504374453193in" />
 
 ### Relės prijungimo schema
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo OUT veikimo režimas.
 
-<img alt="" src="./image20.webp" style="width:2.552505468066492in;height:0.9575021872265966in" />
+<img alt="Prijungimo schema: E16 prijungtas prie relės. +DC jungiamas prie vieno relės ritės gnybto, I/O x – prie kito. Relės kontaktų gnybtai pažymėti NC, C ir NO." src="./image20.webp" style="width:2.552505468066492in;height:0.9575021872265966in" />
 
 ### iO serijos plėtimo modulių prijungimo schemos
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, arba turėtų magistralę temperatūros jutikliui, prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį. E16 konfigūravimas su plėtimo moduliais aprašytas p. 6.7. „Langas „RS485 moduliai“.
 
-<img alt="" src="./image21.webp" style="width:7.0875in;height:3.4375in" />
+<img alt="Prijungimo schema: centralė prie E16, iO, iO-MOD ir iO-8. Maitinimas (+12 V): centralės +AUX prie E16 + DC; -AUX prie E16 - DC. E16, iO, iO-MOD ir iO-8 atitinkami + DC, - DC, A RS485 ir B RS485 gnybtai sujungti ties taškais. iO-MOD su iO-WL sieja bevielis ryšys iki 300 m. Atskiras nuolatinės srovės šaltinis 12-28 V, 0,5 A jungiamas prie iO-WL + DC ir - DC. iO-WL +5 V, 1-Wire ir COM jungiami atitinkamai prie temperatūros jutiklio DS18B20 arba DS18S20 Vdd+, DQ ir COM." src="./image21.webp" style="width:7.0875in;height:3.4375in" />
 
 ### Komunikatoriaus paleidimas veikti
 
@@ -450,7 +450,7 @@ Centralę turi būti prijungta prie interneto. Prisijunkite prie **Innerrange I
 
 Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupėje **3rd Party Device Reporting** reikia nustatyti:
 
-<img alt="" src="./image22.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="Inception programos langas Alarm Reporting, skiltis 3rd Party Device Configuration. Pažymėta: 1 – įjungtas Enable 3rd Party Device Reporting; 2 – 3rd Party Device Type nustatyta Trikdis; 3 – Serial Port nustatyta Serial Port 1 (Plugged In, In Use By 3rd Party Device)." src="./image22.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – pažymėti šį lauką.
 
@@ -526,27 +526,27 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjim
 
 1.  Paspauskite „**Tęsti**“.
 
-<img alt="" src="./image30.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
+<img alt="Protegus2 pranešimas „Sistema nėra valdoma nuotoliniu būdu“. Paaiškinime nurodyta prijungti išvestį prie apsaugos sistemos įvesties terminalo ir sukonfigūruoti Protegus2 Europe, kad būtų galima įjungti arba išjungti apsaugos sistemą; apačioje yra „Tęsti“." src="./image30.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
 2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
 3. Paspauskite „**Išsaugoti**“.
 
-<img alt="" src="./image31.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
+<img alt="Protegus2 ekranas „Pridėti naują sritį“: srities numeris 1, pavadinimas „Sritis1“, įjungta „Valdyti naudojant Protegus2 Europe“, priskirtas išėjimas PGM1. Pasirinktas „Impulsas“, jo trukmė 3 sekundės; apačioje yra „Išsaugoti“." src="./image31.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
 
 4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
 2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-<img alt="" src="./image32.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
+<img alt="Protegus2 ekranas „Sritys“: pridėta „Sritis1“, valdoma su PGM1. Po sričių sąrašu yra pridėjimo mygtukas su pliusu, o apačioje – „Praleisti“ ir „Toliau“." src="./image32.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-<img alt="" src="./image33.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
+<img alt="Protegus2 E16 pagrindiniame lange rodoma „Prisijungtas“, „Sritis1“ su būsena „Nežinoma“, mygtukai „Įjungti“ ir „Išjungti“ bei PGM2 valdiklis." src="./image33.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
 
 ## TrikdisConfig langų aprašymas
 
@@ -679,7 +679,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 ### Langas “Ethernet parinktys”
 
-<img alt="" src="./image39.webp" style="width:7.082677165354331in;height:2.2401574803149606in" />
+<img alt="TrikdisConfig lange „Ethernet parinktys“ pažymėta „Naudoti DHCP“. „Statinis IP“ yra 0.0.0.0, „Potinklio kaukė“ – 255.255.255.0, „Numatytasis šliuzas“ – 0.0.0.0, „DNS 1“ – 8.8.8.8, „DNS 2“ – 8.8.4.4." src="./image39.webp" style="width:7.082677165354331in;height:2.2401574803149606in" />
 
 **Parinkčių grupė „Ethernet parinktys“**
 
@@ -790,7 +790,7 @@ Lentelėje įvykiams galima priskirti Contact ID, SIA, 4+2 įvykių ir atsistaty
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
-<img alt="" src="./image44.webp" style="width:7.090551181102362in;height:2.15748031496063in" />
+<img alt="TrikdisConfig E16_1000 langas Įvykių aprašas. Lentelėje pateikti COMMUNICATION, POWER, REMOTE_FINISHED, REMOTE_STARTED, START ir TEST pranešimai su Contact ID įvykio kodais 350, 302, 412, 411, 700 ir 602. COMMUNICATION siuntimas neįgalintas; kitų išvardytų įvykių siuntimas įgalintas." src="./image44.webp" style="width:7.090551181102362in;height:2.15748031496063in" />
 
 - **COMMUNICATION** – pranešimas apie ryšio sutrikimą tarp centralės ir E16.
 
@@ -833,7 +833,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 2.  Lauke **Nuotolinė prieiga** įveskite komunikatoriaus *MAC adresą*. Šį adresą rasite ant įrenginio pakuotės ir nugarėlės lipdukų.
 
-<img alt="" src="./image46.webp" style="width:6.5984251968503935in;height:1.015748031496063in" />
+<img alt="TrikdisConfig nuotolinės prieigos langas. Pažymėtas tuščias Unikalus ID laukas ir mygtukas Konfigūravimas; šalia yra Sistemos pavadinimas laukas ir mygtukas Valdymas." src="./image46.webp" style="width:6.5984251968503935in;height:1.015748031496063in" />
 
 3. (Nebūtina) Langelyje **Sistemos pavadinimas** įveskite norimą komunikatoriaus pavadinimą.
 
@@ -884,7 +884,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu **Programos naujinimas**.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.177165354330709in" />
+<img alt="TrikdisConfig E16_1000 langas „Programos atnaujinimas“. Kairiajame meniu pasirinkta „Programos atnaujinimas“; failo kelio laukas tuščias, mygtukas „Atverti failą“ aktyvus, „Naujinti (F12)“ neaktyvus, eiga – 0 %." src="./image47.webp" style="width:7.086614173228346in;height:3.177165354330709in" />
 
 4. Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą. Jei neturite bylos, visi tinklapio [www.trikdis.lt](http://www.trikdis.lt) registruoti vartotojai gali nemokamai parsisiųsti naujausias gaminių programinės įrangos bylas.
 
@@ -904,7 +904,7 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos ratukinės atliekų dėžės simbolis (WEEE), nurodantis, kad prietaisą reikia šalinti atskirai nuo buitinių atliekų." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
 ## Priedas
 

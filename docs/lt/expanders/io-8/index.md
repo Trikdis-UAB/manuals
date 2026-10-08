@@ -1,7 +1,7 @@
 # iO-8 Įėjimų ir išėjimų plėtiklis
 
 <div style="text-align: center;">
-  <img src="./cover.webp" alt="" width="400">
+  <img src="./cover.webp" alt="Žalios iO-8 išplėtimo modulio plokštės nuotrauka: kairėje yra +DC, -DC, A, B ir AUX maitinimo gnybtai, apačioje – aštuoni sunumeruoti įėjimų ir bendrieji gnybtai, nuo 1 iki 8, su C tarp kiekvienų gretimų numerių." width="400">
 </div>
 
 Su plėtikliu iO-8 jus galite padidinti įėjimų ir išėjimu skaičių suderinamuose **TRIKDIS** įrenginiuose.
@@ -16,29 +16,29 @@ Suderinamas su [SP3](../../control-panels/sp3/index.md), [CG17](../../control-pa
 
 1.  Prijunkite iO-8 prie suderinamo **TRIKDIS** įrenginio, kaip parodyta:
 
-<img alt="" src="./image1.webp" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
+<img alt="Prijungimo schema: TRIKDIS įrenginio +DC, -DC, 485 A ir 485 B gnybtai keturiais lygiagrečiais laidais, pažymėtais (+12 V), sujungti su atitinkamais iO-8 modulio +DC, -DC, A ir B gnybtais." src="./image1.webp" style="display: block; margin: 1rem auto; max-width: 350px; height: auto;" />
 
 2.  Sujunkite įėjimus, kaip parodyta:
 
-<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Prijungimo schema: iO-8 įėjimas prie NO, NC ir EOL grandinių. Normaliai atvira (NO): xIN per NO kontaktą į C. Normaliai uždara (NC): xIN per NC kontaktą į C. Normaliai uždara/atvira grandinė su rezistoriumi linijos gale (EOL): xIN per NC kontaktą į mazgą; nuo jo NO kontaktas ir 2,2k (10k) rezistorius lygiagrečiai sujungti su C." src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 Įėjimų jungimo schemas ir rezistorių dydžius nustato pagrindinis įrenginys, prie kurio prijungtas iO-8 modulis.
 
 3.  Sujunkite išėjimus, kaip parodyta:
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 530px; height: auto;" />
+<img alt="Prijungimo schema: dviejose schemose iO-8 gnybtai AUX+ ir xOUT prijungti prie relės ritės, kurios kontaktai pažymėti NC, C ir NO, ir atskirai prie nuosekliai su LED sujungto 2k2 rezistoriaus." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 530px; height: auto;" />
 
 4.  Prijunkite USB kabelį prie pagrindinio **TRIKDIS** įrenginio ir atidarykite programą TrikdisConfig. Paspauskite **Skaityti [F4]**.
 
 5.  Eikite į **Modulių** langą ir spustelėkite laisvą eilutę **RS485 modulių** srityje. Išskleidžiamajame sąraše pasirinkite **iO-8 plėtiklis**, kaip parodyta:
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="TrikdisConfig lange pasirinkta Modulių skiltis. RS485 moduliai sąraše atvertas Modulis laukas, kuriame paryškintas pasirinkimas iO-8 plėtiklis." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 6.  Laukelyje dešinėje įveskite iO-8 serijos numerį (tik skaičius). Šį numerį rasite ant iO-8 lipduko.
 
 7.  Išplečiamojo meniu languose **Zonų įėjimai** ir **PGM išėjimai** dabar matysite iO-8 įėjimus ir išėjimus, kuriuos galite įjungti:
 
-    <img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+    <img alt="TrikdisConfig lange pasirinkta Zonų įėjimai skiltis. Lentelės Įėjimas lauke atvertas sąrašas su Išjungta ir RS485 Expander ID1, IO1–IO8 pasirinkimais; matomų zonų Sritis reikšmė yra 1." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Sąranka gali skirtis priklausomai nuo pagrindinio **TRIKDIS** prietaiso. Konfigūruokite **Zonų** ir **PGM išėjimų** nustatymus pagal pagrindinio įrenginio instrukciją.
 

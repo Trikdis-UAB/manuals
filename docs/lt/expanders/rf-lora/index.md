@@ -1,7 +1,7 @@
 # RF-LoRa Belaidis Plėtiklis
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Balto RF-LORA bevielio išplėtimo modulio korpuso vaizdas iš priekio: viršuje yra SMA antenos jungtis, matomi DATA/TROUBLE ir POWER indikatoriai bei žalia prisukama gnybtų kaladėlė, pažymėta +DC, -DC, A 485, B 485, IO1, COM, IO2, IO3, COM, IO4." width="200">
 </div>
 
 ## Aprašymas
@@ -41,7 +41,7 @@ Prijungimas:
 
 ### Transiverio elementai
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Anotuota RF-LORA išplėtimo modulio priekio ir atidaryto korpuso schema su septyniais sunumeruotais elementais: 1 – antenos SMA jungtis, 2 – DATA/TROUBLE ir POWER šviesos indikatoriai, 3 – šoninis fiksatorius, 4 – gnybtų kaladėlė, 5 – mini-USB jungtis, 6 – trumpiklis, pažymėtas SW1, 7 – mygtukas šalia antenos jungties." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 1. RF antenos SMA jungtis.
 2. Šviesos indikatoriai.
@@ -86,7 +86,7 @@ Prijungimas:
 
 1.  Nuimkite viršutinį dangtelį.
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Dvi linijinės iliustracijos: rankos atsuktuvu atkabina korpuso šoną, tada iškelia plokštę." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Išimkite plokštę iš korpuso pagrindo.
 
@@ -96,15 +96,15 @@ Prijungimas:
 
 5.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Linijinė plokštės iliustracija su rodykle, nukreipta į tvirtinimo fiksatorių jos krašte; šalia atskirai pavaizduota galinė korpuso plokštelė su varžtų angomis ir tvirtinimo prie sienos plyšiu." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Transiverio RF-LORA prijungimas prie apsaugos centralės "FLEXi" SP3 
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Prijungimo schema: SP3 centralės gnybtai AUX+, AUX-, 485 A ir 485 B atitinkamai sujungti pažymėtomis +12V / duomenų linijomis su RF-LORA išplėtimo modulio gnybtais +DC, -DC, A RS485 ir B RS485." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### LORA plėtimo modulių prijungimo schema 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Prijungimo schema: centralės SP3 gnybtai AUX+, AUX-, 485 A ir 485 B atitinkamai sujungti su transiverio RF-LORA gnybtais +DC, -DC, A RS 485 ir B RS485. RF-LORA bevieliu ryšiu iki 5000 m atstumu susietas su iO-LORA ir iO-8-LORA moduliais. Kiekvieno modulio +DC ir -DC gnybtai prijungti prie atskiro 12-26V maitinimo šaltinio." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Konfigūracija naudojant TrikdisConfig
 
@@ -152,4 +152,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos šiukšlių dėžės su ratukais simbolis, reiškiantis, kad gaminio negalima išmesti su buitinėmis atliekomis." src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

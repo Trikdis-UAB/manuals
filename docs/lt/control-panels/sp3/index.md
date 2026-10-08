@@ -321,11 +321,11 @@ Centralės plokštė montuojama į montažinį korpusą, kuriame sumontuotas že
 
 Paveikslėlyje pateiktos centralės plokštės ir jos tvirtinimo kiaurymių matmenys (pateikta milimetrais), bei jų išdėstymas.
 
-<img alt="" src="./image6.webp" style="width:5.223344269466317in;height:3.9800076552930883in" />
+<img alt="FLEXi SP3 plokštės matmenys milimetrais: plotis 116,5, aukštis 78,5. Pažymėtos keturios Ø4 mm tvirtinimo kiaurymės; jų centrai horizontaliai nutolę 93 mm, vertikaliai – 61 mm. Kairiųjų kiaurymių centrai yra 5 mm nuo kairiojo krašto, apatinių – 10 mm nuo apatinio krašto." src="./image6.webp" style="width:5.223344269466317in;height:3.9800076552930883in" />
 
 #### Prietaisų prijungimo eiliškumas
 
-<img alt="" src="./image7.webp" style="width:7.086805555555555in;height:3.2888888888888888in" />
+<img alt="Prijungimo schema: FLEXi SP3 maitinimo šaltiniai. 1. GSM ir WiFi antenos jungiamos prie savo antenų jungčių; 2. nano-SIM kortelė dedama į SIM laikiklį; 3. įrenginiai jungiami prie išorinių gnybtų bloko; 4. pagrindinis maitinimas jungiamas prie AC/DC gnybtų: ~230 V/16 V, 40 VA, 50 Hz transformatorius su 500 mA, 250 V saugikliu ~230 V grandinėje arba 16–24 V, 2,5 A nuolatinės srovės šaltinis; 5. rezervinio 12 V, 7 Ah akumuliatoriaus teigiamas polius jungiamas prie BAT+, neigiamas – prie BAT–." src="./image7.webp" style="width:7.086805555555555in;height:3.2888888888888888in" />
 
 1.  Prie antenos jungčių prijunkite GSM ir WiFi antenas.
 
@@ -392,17 +392,17 @@ Centralės plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių grandin
 
 <figure style="margin: 0;">
 
-<img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image8.webp" alt="Prijungimo schema: normaliai atvira (NO) jutiklio grandinė. Suveikęs NO kontaktas sujungia IOx su C." style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
 
-<img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image9.webp" alt="Prijungimo schema: normaliai uždara (NC) jutiklio grandinė. Uždarytas NC kontaktas sujungia IOx su C." style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
 
-<img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image10.webp" alt="Rezistorių lentelė su stulpeliais RT, R1 ir R2. Septynios eilutės: 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; 2.2k, 4.7k, 8.2k; 4.7k, 4.7k, 2.2k." style="width: 100%; height: auto;" />
 </figure>
 
 </div>
@@ -411,17 +411,17 @@ Centralės plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių grandin
 
 <figure style="margin: 0;">
 
-<img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image11.webp" alt="Prijungimo schema: normaliai atvira grandinė su rezistoriumi linijos gale (EOL) tarp IOx ir C. NO kontaktas ir rezistorius R1 sujungti lygiagrečiai." style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
 
-<img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image12.webp" alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale (EOL) tarp IOx ir C. NC kontaktas ir rezistorius R1 sujungti nuosekliai." style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
 
-<img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image13.webp" alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale ir tamperio stebėjimu (EOL_T) tarp IOx ir C. Nuo IOx nuosekliai prijungti NC Tamper kontaktas ir rezistorius RT; po jų rezistorius R1 ir kitas NC kontaktas prijungti lygiagrečiai iki C." style="width: 100%; height: auto;" />
 </figure>
 
 </div>
@@ -430,17 +430,17 @@ Centralės plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių grandin
 
 <figure style="margin: 0;">
 
-<img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image14.webp" alt="Prijungimo schema: normaliai uždara grandinė be rezistoriaus linijos gale (ATZ). Nuo IOx iki C nuosekliai prijungti du jutikliai: pirmojo NC kontaktui lygiagrečiai prijungtas R1, antrojo NC kontaktui – R2." style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
 
-<img src="./image15.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image15.webp" alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale ir tamperio stebėjimu (ATZ_T). Tarp IOx ir C nuosekliai sujungtos dvi jutiklių grandinės. 1 jutiklio gnybtuose NC tamperio kontaktas ir RT sujungti nuosekliai, po jų – NC kontaktas, lygiagrečiai sujungtas su R1. 2 jutiklio gnybtuose nuosekliai prijungtas NC tamperio kontaktas, po jo – NC kontaktas, lygiagrečiai sujungtas su R2." style="width: 100%; height: auto;" />
 </figure>
 
 </div>
 
-| <img alt="" src="./image16.webp" style="width:3.1466732283464567in;height:1.690003280839895in" /> |  |
+| <img alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale ir tamperio stebėjimu (3EOL). Nuo IOx iki C nuosekliai eina Tamper NC kontaktas, RT, Aliarmas grandinė ir Antimaskingas grandinė. Aliarmas NC kontaktui lygiagrečiai prijungtas R1, Antimaskingas NC kontaktui – R2." src="./image16.webp" style="width:3.1466732283464567in;height:1.690003280839895in" /> |  |
 |----|----|
 
 ### Dūmų jutiklių jungimas
@@ -449,7 +449,7 @@ Dvilaidžių dūmų jutiklių prijungimo schemos.
 
 Dvilaidžių dūmų jutiklių prijungimo schema prie PGM (LED) išėjimo. Kai yra naudojama šia jungimo schema, reikia **Gaisro kilpa naudoja LED išėjimą** lauką pažymėti varnele (žr. 5.2 „Langas „Sistemos parinktys““).
 
-<img alt="" src="./image17.webp" style="width:4.600009842519685in;height:1.2900021872265968in" />
+<img alt="Prijungimo schema: SP3 prie dvilaidžių dūmų jutiklių. AUX+ į pirmojo jutiklio viršutinį IN, LED į apatinį IN; abiejų linijų OUT sujungti su kito jutiklio IN. Paskutinio jutiklio OUT linijas jungia 2.2kΩ galinis linijos rezistorius (EOL)." src="./image17.webp" style="width:4.600009842519685in;height:1.2900021872265968in" />
 
 Dvilaidžių dūmų jutiklių su reliniu moduliu **SM1** prijungimo schemos. Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia įėjimui (IOx) nustatyti „Gaisro“ zonos funkciją (žr. 5.7 „Langas „Zonų įėjimai“). Jungiant dūmų jutiklio grandinę prie pasirinkto PGM išėjimo (IO10), išėjimui turi būti su nustatyta funkcija „**Gaisro jutiklių atstatymas**“ (žr. 5.8 „Langas „PGM išėjimai““). Relė (K1) naudojama nutrūkusio laido ir nuimto gaisro detektoriaus aptikimui.
 
@@ -463,13 +463,13 @@ Keturlaidžių dūmų jutiklių prijungimo schema.
 
 Norint prie pasirinkto įėjimo prijungti dūmų jutiklio grandinę reikia įėjimui (IOx) nustatyti „Gaisro“ zonos funkciją (žr. 5.7 „Langas „Zonų įėjimai“). Jungiant keturlaidžio dūmų jutiklio grandinę prie pasirinkto PGM išėjimo (IO10), išėjimui turi būti su nustatyta funkcija „**Gaisro jutiklių atstatymas**“ (žr. 5.8 „Langas „PGM išėjimai““). Relė (K1) naudojama nutrūkusio laido ir nuimto gaisro detektoriaus aptikimui.
 
-<img alt="" src="./image20.webp" style="width:5.47667760279965in;height:1.450003280839895in" />
+<img alt="Prijungimo schema: keturlaidžiai dūmų jutikliai ir relė K1. SP3 AUX+, IOx, C ir IO10 iš viršaus į apačią jungiami prie pirmojo jutiklio +, viršutinio kontakto, apatinio kontakto ir - IN gnybtų. Kiekvienas iš keturių OUT gnybtų jungiamas prie atitinkamo kito jutiklio IN gnybto. Po paskutinio jutiklio K1 kontaktas ir galinės linijos rezistorius R1 nuosekliai jungiami tarp IOx ir C linijų. Relės K1 ritė jungiama tarp AUX+ ir IO10 linijų." src="./image20.webp" style="width:5.47667760279965in;height:1.450003280839895in" />
 
 ### Sirenos prijungimo schema
 
-<img alt="" src="./image21.webp" style="width:3.40000656167979in;height:1.2166688538932633in" />
+<img alt="Prijungimo schema: SP3 prie sirenos. BELL + į sirenos raudoną laidą, BELL - į juodą laidą." src="./image21.webp" style="width:3.40000656167979in;height:1.2166688538932633in" />
 
-<img alt="" src="./image22.webp" style="width:5.016676509186352in;height:1.89667104111986in" />
+<img alt="Prijungimo schema: SP3 ir lauko sirena MR100. BELL + (+12V) jungiamas prie Vdd; BELL - – prie S ir L; AUX - – prie GND; C ir IO9 – prie dviejų SAB gnybtų. Trumpikliai pavaizduoti ties PL+, PS+, L-, S-, S1 ir 4; kitos padėtys pažymėtos PL-, PS-, L+, S+, S2, 1 ir 16. JPS1 ON: R_SAB = 0 Ω; JPS1 OFF: R_SAB = 2,2 kΩ." src="./image22.webp" style="width:5.016676509186352in;height:1.89667104111986in" />
 
 Lauko sirenos MR100 pajungimas ir nustatymai pavaizduoti schemoje. Jei apsaugos centralėje bus naudojamas kitas sirenos tamperio (SAB gnybtai) grandinės EOL stebėjimo būdas (gamyklinis nustatymas EOL 2,2 kΩ), tai reikia trumpikliu užtrumpinti kontaktus JPS1 ir nuosekliai į tamperio grandinę įjungti reikiamo nominalo rezistorių. IO9 įėjimui gamykliškai yra nustatytas **24 valandų** zonos tipas.
 
@@ -479,27 +479,27 @@ Prie klaviatūros magistralės galima prijungti iki 8 įrenginių. Programoje Tr
 
 Kaip valdyti apsaugos sistemą Protegus arba Paradox klaviatūra, programuoti vartotojų kodus, naudoti Bypass, iButton/RFID, skambučius, SMS ir PGM išėjimus, aprašyta [„FLEXi“ SP3 vartotojo vadove su Protegus ir Paradox klaviatūromis](paradox-user-guide/index.md).
 
-<img alt="" src="./image23.webp" style="width:7.086805555555555in;height:1.875in" />
+<img alt="Dvi prijungimo schemos: SP3 prie klaviatūrų. Kairėje AUX+ (+12V) į RED, AUX- į BLK, GRN į GRN, YEL į YEL; klaviatūros ZONE per kontaktą jungiamas su AUX-. Tinka SK-LED TouchPad, SK-LCD TouchPad, SK LCD Button, SK LED Button, Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 ir TM70. Dešinėje AUX+ (+12V) į POS, AUX- į NEG, GRN į DATA, YEL į CLOCK; tinka Crow CR16 ir Crow CR-LCD." src="./image23.webp" style="width:7.086805555555555in;height:1.875in" />
 
-<img alt="" src="./image24.webp" style="width:4.430008748906387in;height:3.7400076552930885in" />
+<img alt="Prijungimo schema: SP3 prie klaviatūros ir įėjimo RFID skaitytuvo su klaviatūra (Wiegand 26/34). Klaviatūra: AUX+ (+12V) į RED, AUX- į BLK, GRN į GRN, YEL į YEL. Skaitytuvas: AUX+ į R – raudoną laidą (+U), AUX- į B – juodą laidą (GND), IO1 į G – žalią laidą (D0), IO2 į W – baltą laidą (D1). Klaviatūros modeliai: SK-LED TouchPad, SK-LCD TouchPad, SK LCD Button, SK LED Button, Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 ir TM70." src="./image24.webp" style="width:4.430008748906387in;height:3.7400076552930885in" />
 
-<img alt="" src="./image25.webp" style="width:4.416675415573053in;height:3.136673228346457in" />
+<img alt="Prijungimo schema: SP3 prie Crow CR16 arba Crow CR-LCD klaviatūros ir įėjimo RFID skaitytuvo su klaviatūra (Wiegand 26/34). Klaviatūra: AUX+ (+12V) į POS, AUX- į NEG, GRN į DATA, YEL į CLOCK. Skaitytuvas: AUX+ į R – raudoną laidą (+U), AUX- į B – juodą laidą (GND), IO1 į G – žalią laidą (D0), IO2 į W – baltą laidą (D1)." src="./image25.webp" style="width:4.416675415573053in;height:3.136673228346457in" />
 
 Prie centralės galima prijungti iki 2 RFID skaitytuvų. Klaviatūros prie centralės nesijungia, kai yra prijungti 2 RFID skaitytuvai.
 
-<img alt="" src="./image26.webp" style="width:4.410008748906387in;height:1.7633366141732283in" />
+<img alt="Prijungimo schema: SP3 prie įėjimo RFID skaitytuvo su klaviatūra (Wiegand 26/34). AUX+ (+12V) į R – raudoną laidą (+U), AUX- į B – juodą laidą (GND), GRN į G – žalią laidą (D0), YEL į W – baltą laidą (D1)." src="./image26.webp" style="width:4.410008748906387in;height:1.7633366141732283in" />
 
-<img alt="" src="./image27.webp" style="width:4.410008748906387in;height:3.22000656167979in" />
+<img alt="Prijungimo schema: SP3 prie įėjimo ir išėjimo RFID skaitytuvų su klaviatūra (Wiegand 26/34). Abiem skaitytuvams AUX+ (+12V) į R – raudoną laidą (+U), AUX- į B – juodą laidą (GND). Įėjimo skaitytuvui GRN į G – žalią laidą (D0), YEL į W – baltą laidą (D1). Išėjimo skaitytuvui IO1 į G – žalią laidą (D0), IO2 į W – baltą laidą (D1)." src="./image27.webp" style="width:4.410008748906387in;height:3.22000656167979in" />
 
 ### TM17, CZ-Dallas skaitytuvų prijungimo schemos
 
 **CZ-Dallas iButton raktų skaitytuvas** prie „FLEXi” SP3 jungiamas per „*1 Wire“* magistralės. Magistralės laidų ilgis gali būti iki 30 m:
 
-<img alt="" src="./image28.webp" style="width:5.270010936132984in;height:2.7000054680664918in" />
+<img alt="Prijungimo schema: SP3 centralė prie CZ-Dallas reader. AUX+ per atskirus 1k rezistorius jungiamas rudu laidu prie RED LED+ ir žaliu laidu prie GREEN LED+; SP3 LED gnybtas taip pat jungiamas prie žalio laido. C jungiamas geltonu laidu prie LED- ir pilku laidu prie skaitytuvo; 1 W jungiamas baltu laidu prie skaitytuvo. LED išėjimo tipas – Sistemos būsena: įjungus apsaugą skaitytuvas šviečia raudonai, išjungus – geltonai." src="./image28.webp" style="width:5.270010936132984in;height:2.7000054680664918in" />
 
 **TM17** skaitytuvas prie „FLEXi” SP3 jungiamas per *RS485* duomenų magistralės. *RS485* duomenų magistralės laidų ilgis gali būti iki 100 m.
 
-<img alt="" src="./image29.webp" style="width:4.140008748906387in;height:2.043337707786527in" />
+<img alt="Prijungimo schema: SP3 centralė prie TM17 skaitytuvo. AUX+ (+12V) jungiamas raudonu laidu, AUX- – mėlynu laidu, 485 A – juodu laidu, 485 B – baltu laidu prie atitinkamų TM17 jungčių." src="./image29.webp" style="width:4.140008748906387in;height:2.043337707786527in" />
 
 ### Temperatūros jutiklio prijungimo schema
 
@@ -511,10 +511,10 @@ Plokštės gnybtas +5V skirtas prie „1-Wire" magistralės prijungtiems įrengi
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image30.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image30.webp" alt="Prijungimo schema: SP3 centralė prie temperatūros jutiklio DS18B20. +5V jungiamas raudonu laidu prie +Vdd, 1 W – geltonu laidu prie DQ, C – juodu laidu prie GND." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image31.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image31.webp" alt="Prijungimo schema: SP3 centralė prie temperatūros ir drėgmės jutiklio AM2301. +5V jungiamas raudonu laidu prie +Vdd, 1 W – geltonu laidu prie DQ, C – juodu laidu prie GND." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -522,13 +522,13 @@ Plokštės gnybtas +5V skirtas prie „1-Wire" magistralės prijungtiems įrengi
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Centralės universaliam įėjimo/išėjimo (I/O) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas „Nuotolinis valdymas“.
 
-<img alt="" src="./image32.webp" style="width:4.10334208223972in;height:0.89333552055993in" />
+<img alt="Dvi prijungimo schemos. Kairėje SP3 centralė prie relės: AUX+ ir IOx jungiami prie relės ritės; relės kontaktai pažymėti NC, C ir NO. Dešinėje SP3 centralė prie LED: AUX+ jungiamas per 2k2 rezistorių ir LED prie IOx." src="./image32.webp" style="width:4.10334208223972in;height:0.89333552055993in" />
 
 ### „Ethernet“ komunikatoriaus E485 prijungimo schema
 
 Modulis *E485* leidžia centralei siųsti ir priimti valdymo komandas per laidinį interneto ryšį. Prie centralės prijungus modulį *E485*, pranešimai į CSP ir į *Protegus2* mobiliąją programą siunčiami laidiniais interneto tinklais, o mobilusis internetas nenaudojamas. Jei nutrūksta ryšys per laidinį internetą, pranešimai į CSP perduodami per mobilųjį internetą. Atsikūrus laidinio interneto ryšiui, centralė automatiškai išjungia pranešimų siuntimą per mobilųjį internetą ir vėl pradeda komunikuoti su CSP ir *Protegus2* mobiliąja programa per *E485*, t.y. per laidinį internetą.
 
-<img alt="" src="./image33.webp" style="width:3.3233398950131234in;height:1.5833366141732284in" />
+<img alt="Prijungimo schema: SP3 centralė prie E485 komunikatoriaus. AUX+ (+12V) į + DC, AUX- į - DC, 485 A į A 485, 485 B į B 485. E485 prijungiamas LAN kabelis; RS485 jungties ilgis iki 100m." src="./image33.webp" style="width:3.3233398950131234in;height:1.5833366141732284in" />
 
 Skyriuje p.5.3 „Langas „Pranešimai į ST pulta““ pasirenkamas ryšio prioritetas (GPRS, LAN, WiFi). „FLEXi” SP3 konfigūravimas su „Ethernet“ moduliu E485 aprašytas p. 5.5. „Langas „Moduliai“.
 
@@ -538,7 +538,7 @@ Prijungus modulį E485 prie centralės ir jei mobilus ryšis nenaudojamas, centr
 
 Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 0 revizijos programą SP3_xxx0_0101.fw (veikimo programos versija 1.01 arba aukštesnė). Prijungus belaidžių jutiklių imtuvą *RF-SH*, centralė *„FLEXi“ SP3* gali dirbti su firmos „Crow“ bevieliais jutikliais (iki 32vnt.), bevielėmis sirenomis (iki 16 vnt.), valdymo pulteliais (iki 42 vnt.), bevielėmis klaviatūromis (iki 8vnt.).
 
-<img alt="" src="./image34.webp" style="width:2.533338801399825in;height:1.21333552055993in" />
+<img alt="Prijungimo schema: SP3 centralė prie RF-SH. AUX+ (+12 V) į +DC, AUX- į -DC, 485 A į A 485, 485 B į B 485." src="./image34.webp" style="width:2.533338801399825in;height:1.21333552055993in" />
 
 ### RTX3 prijungimo schema
 
@@ -546,25 +546,25 @@ Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 1 revizijos pr
 
 RTX3 veikimo programos, prijungimo ir Paradox belaidžių įrenginių registravimo arba šalinimo instrukcijos pateiktos vadove [Paradox belaidžiai įrenginiai su „FLEXi“ SP3 (RTX3)](paradox-rtx3/index.md).
 
-<img alt="" src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
+<img alt="Prijungimo schema: SP3 ir RTX3. SP3 AUX+ (+12V) jungiamas prie RTX3 RED, AUX- – prie BLK, GRN – prie GRN, YEL – prie YEL." src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
 
 ### RF-HW prijungimo schema
 
 Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 2 revizijos programą SP3_xxx2_0114.fw (veikimo programos versija 1.14 arba aukštesnė). Prijungus belaidžių jutiklių imtuvą *RF-HW*, centralė *„FLEXi“ SP3* gali dirbti su firmos „Honeywell“ belaidžiais jutikliais, sirenomis, valdymo pulteliais.
 
-<img alt="" src="./image36.webp" style="width:2.6100054680664915in;height:1.21333552055993in" />
+<img alt="Prijungimo schema: SP3 ir RF-HW. SP3 AUX+ (+12 V) jungiamas prie RF-HW +DC, AUX- – prie -DC, 485 A – prie A 485, 485 B – prie B 485." src="./image36.webp" style="width:2.6100054680664915in;height:1.21333552055993in" />
 
 ### RF-S8 prijungimo schema
 
 Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 4 revizijos programą SP3_xxx4_0122.fw (veikimo programos versija 1.22 arba aukštesnė). Prijungus belaidžių jutiklių imtuvą *RF-S8*, centralė *„FLEXi“ SP3* gali dirbti su „S8“ belaidžiais jutikliais, sirenomis, valdymo pulteliais.
 
-<img alt="" src="./image37.webp" style="width:2.6100054680664915in;height:1.23333552055993in" />
+<img alt="Prijungimo schema: SP3 ir RF-S8. SP3 AUX+ (+12 V) jungiamas prie RF-S8 +DC, AUX- – prie -DC, 485 A – prie A 485, 485 B – prie B 485." src="./image37.webp" style="width:2.6100054680664915in;height:1.23333552055993in" />
 
 ### RF-LORA prijungimo schema
 
 Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 4 revizijos programą SP3_xxx4_0121.fw (veikimo programos versija 1.21 arba aukštesnė). Prijungus belaidžių jutiklių imtuvą *RF-LORA*, centralė *„FLEXi“ SP3* gali dirbti su firmos „Maximum“ belaidžiais jutikliais (iki 32vnt.), sirenomis (iki 16 vnt.), valdymo pulteliais (iki 32 vnt.). / *„FLEXi” SP3* konfigūravimas su plėtimo moduliais aprašytas p. 5.5. „Langas „Moduliai“.
 
-<img alt="" src="./image38.webp" style="width:2.853338801399825in;height:1.2266688538932633in" />
+<img alt="Prijungimo schema: SP3 ir RF-LORA. SP3 AUX+ (+12 V) jungiamas prie RF-LORA +DC, AUX- – prie -DC, 485 A – prie A 485, 485 B – prie B 485." src="./image38.webp" style="width:2.853338801399825in;height:1.2266688538932633in" />
 
 ### LORA serijos išplėtimo modulių prijungimo schema
 
@@ -578,12 +578,12 @@ Jei reikia, kad apsaugos centralė „FLEXi” SP3 turėtų daugiau įėjimų IN
 
 <figure style="margin: 0;">
 
-<img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image40.webp" alt="Prijungimo schema: SP3 centralė prie iO-8 išplėtimo modulio. AUX+ (+12 V) į +DC, AUX- į -DC, 485 A į A, 485 B į B." style="width: 100%; height: auto;" />
 </figure>
 
 <figure style="margin: 0;">
 
-<img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
+<img src="./image41.webp" alt="Prijungimo schema: SP3 centralė prie iO-WL išplėtimo modulio. AUX+ (+12 V) į +DC, AUX- į -DC, 485 A į A 485, 485 B į B 485." style="width: 100%; height: auto;" />
 </figure>
 
 </div>
@@ -594,19 +594,19 @@ Jei reikia, kad apsaugos centralė „FLEXi” SP3 turėtų daugiau įėjimų IN
 
 Radijo siųstuvas *T16* naudojamas apsaugos centralių įvykių pranešimams perduoti per “Trikdis” radijo tinklus. / Siųstuvas gali siųsti savus įvykių pranešimus ir įvykių pranešimus, gautus iš apsaugos centralių į CSP (centralizuotą stebėjimo pultą) su galimybe iš CSP nukreipti galutiniam vartotojui.
 
-<img alt="" src="./image43.webp" style="width:2.220004374453193in;height:1.2400021872265967in" />
+<img alt="Prijungimo schema: SP3 centralė prie T16 radijo siųstuvo. AUX+ (+12 V) į +DC, AUX- į -DC, 485 A į A 485, 485 B į B 485." src="./image43.webp" style="width:2.220004374453193in;height:1.2400021872265967in" />
 
 ### SF485 modulio prijungimo schema
 
 *SF485* veikia kaip rezervinis ryšio kanalas, skirtas apsaugos centralės įvykiams perduoti į CSP (centralizuota stebėjimo pultą) arba į *Protegus2* mobiliąją programėlę per SigFox tinklą, kai nepavyksta įvykius perduoti pagrindiniu ryšio kanalu. Pranešimai perduodami „Contact ID“ formatu.
 
-<img alt="" src="./image44.webp" style="width:2.2100043744531934in;height:1.24333552055993in" />
+<img alt="Prijungimo schema: SP3 centralė prie SF485 modulio. Maitinimas (+12 V): AUX+ prie +DC, AUX- prie -DC. RS485: 485 A prie A 485, 485 B prie B 485." src="./image44.webp" style="width:2.2100043744531934in;height:1.24333552055993in" />
 
 ### Įtampos matavimas su „FLEXi“ SP3
 
 Su *„FLEXI” SP3* galima atlikti nuolatinės įtampos matavimą. Matuojama įtampa nuo 0 V iki 30 V (viršijus 30 V apsaugos centralė *„FLEXI” SP3* bus sugadinta). Prie “IN1” ir “C” gnybtų reikia prijungti matuojamą įtampą. “IN1” - teigiamas gnybtas. “C” – neigiamas gnybtas.
 
-<img alt="" src="./image45.webp" style="width:3.41000656167979in;height:0.9100021872265966in" />
+<img alt="Prijungimo schema: įrenginys, kurio įtampa matuojama, prie SP3 centralės. Įrenginio +U prie SP3 IN1, -U prie SP3 C; viršutinis laidas pažymėtas +." src="./image45.webp" style="width:3.41000656167979in;height:0.9100021872265966in" />
 
 Prijunkite „FLEXI” SP3 prie kompiuterio su USB Mini-B kabeliu. Paleiskite programą TrikdisConfig. Programa automatiškai atpažins prijungtą gaminį ir atidarys „FLEXI” SP3 konfigūravimo langą. „**Jutiklių**“ lange nurodykite „**IN1 įtampą**“ ir taip pat nurodykite įtampos dydį, kurį viršijus (sumažėjus) bus formuojamas pranešimas.
 
@@ -614,15 +614,15 @@ Prijunkite „FLEXI” SP3 prie kompiuterio su USB Mini-B kabeliu. Paleiskite pr
 
 - **Min.** – mažiausia ribinė įtampos reikšmė, žemiau kurios nukritus, bus formuojamas pranešimas apie įvykį. Kad būtų formuojamas pranešimas, turi būti uždėta varnelė „**Min**“ stulpelyje. **Įtampos reikšmė nurodoma voltais**.
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig langas „Jutikliai“. Pažymėtoje 1 eilutėje „Įrenginys“ yra „IN1 įtampa“, „Jutiklio pavadinimas“ – „Sensor 1“, „Maks.“ – 15, „Min.“ – 6, abu „Maks.“ ir „Min.“ žymimieji langeliai pažymėti, „Uždelsimas“ – 0." src="./image46.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 PGM išėjimas gali būti valdomas kai matuojama įtampa viršija nustatytą reikšmę arba yra žemesnė nustatytos reikšmės. TrikdisConfig programoje reikia pasirinkti „**PGM**“ išėjimą ir nustatyti jam „**Nuotolinis valdymas**“ veikimo režimą.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig langas „PGM išėjimai“, skirtukas „Išėjimai“. Pažymėto PGM Nr. 3 pavadinimas „PGM 3“, išėjimas „SP3 10 I/O“, išėjimo aprašymas „Nuotolinis valdymas“, impulso trukmė – 20 s." src="./image47.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 Pereikite prie skirtuko „**Nustatyti veikimą**“.
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
+<img alt="TrikdisConfig langas PGM išėjimai, skirtukas Nustatyti veikimą. Pirmoji eilutė įgalinta: PGM3 - SP3 10 I/O, veiksmas Įj. PGM, impulso trukmė 0, faktorius Jutiklio reikšmė, faktoriaus Nr. S1, pradėti kai Aukštesnė nei, nustatyta reikšmė 13." src="./image48.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
 
 - **Įgalinti** – pažymėkite lauką varnele, kad įgalinti PGM veikti.
 
@@ -692,7 +692,7 @@ Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie t
 
 3.  Paspauskite „Pridėti sistemą“ ir įveskite *„FLEXi” SP3* „Unikalus ID“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
 
-<img alt="" src="./image50.webp" style="width:3.0in;height:3.909448818897638in" />
+<img alt="Protegus2 ekranas Nuskaityti QR kodą. Galima užpildyti lauką Unikalus ID arba spausti Nuskaityti QR kodą; rodyklės anotacija nurodo įvesti IMEI kodą, rastą ant pakuotės, valdiklio arba programoje TrikdisConfig kaip Unikalų ID. Apačioje yra mygtukas Toliau." src="./image50.webp" style="width:3.0in;height:3.909448818897638in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus2*
 
@@ -702,7 +702,7 @@ Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie t
 
 3.  Jei programa pateikia visai kitą vaizdą ar nevykdo Jūsų komandų, pasirinkite *Nustatymai* -\> *Sistemos konfigūracija* -\> *Sistema nesinchronizuota?* ir spustelkite mygtuką „Sinchronizuoti“.
 
-<img alt="" src="./image51.webp" style="width:2.220472440944882in;height:3.283464566929134in" />
+<img alt="Protegus2 sistemos ekranas su dviem sritimis: „sritis 1“ yra „Įjungta“, „SRITIS 2“ – „Išjungta“. Kiekvienoje srityje yra įjungimo ir išjungimo mygtukai." src="./image51.webp" style="width:2.220472440944882in;height:3.283464566929134in" />
 
 ### Konfigūravimas ir valdymas SMS žinutėmis
 
@@ -806,7 +806,7 @@ Paspaudus mygtuką **Skaityti \[F4\]**, programa nuskaitys ir parodys nustatymus
 
 **Skirtukas „Pagrindiniai”**
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:4.070866141732283in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Pagrindiniai. Matomi Objekto numeris 0001, Testo periodas 1 diena ir 0 val., Pradėti testą 13:30, Pavadinimų kalba Baltų, SIM APN internet, Laiko juosta +2 ir Įtampos dingimo uždelsimas 300 s." src="./image53.webp" style="width:7.086614173228346in;height:4.070866141732283in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -862,7 +862,7 @@ Nustatyti laiką galima paspaudus mygtuką **Nustatyti PK**. Jei **Laiko nustaty
 
 **Skirtukas „Sritys“**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.783464566929134in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Sritys. Sričių skaičius 8; Area 1 įėjimo, išėjimo ir sirenos laikai yra 10, 45 ir 300, o Area 2 – 30, 30 ir 120. Jungiklis: Area 1 – Lygis, Area 2 – Impulsas." src="./image54.webp" style="width:7.086614173228346in;height:2.783464566929134in" />
 
 - **Sričių skaičius** – nurodykite sričių skaičių, į kiek savarankiškų dalių apsaugos sistema bus padalinta.
 
@@ -886,7 +886,7 @@ Nustatyti laiką galima paspaudus mygtuką **Nustatyti PK**. Jei **Laiko nustaty
 
 **Skirtukas „Grafikas“**
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Grafikas. Matomų grafikų eilutės neįgalintos; jose nurodyta Sritis 1, Laikas 00:00, Veiksmas Išjungti, savaitės dienos nepažymėtos, o Šventės nustatyta Nenaudoti." src="./image55.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 Lentelėje galite nustatyti automatinius apsaugos sistemos įjungimo ir išjungimo scenarijus, pasirenkant skirtingas savaitės dienas ir įtraukiant šventines dienas.
 
@@ -908,7 +908,7 @@ Lentelėje galite nustatyti automatinius apsaugos sistemos įjungimo ir išjungi
 
 **Skirtukas „Šventės“**
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Šventės. Matomos keturios įgalintos eilutės: Data nuo ir Data iki yra 01.01.2000, o Grupė 1, Grupė 2, Grupė 3 ir Grupė 4 nepažymėtos." src="./image56.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 - **Įgalinta** – pažymėkite lauką varnele, kad įjungtumėte švenčių dienos grafiką.
 
@@ -920,7 +920,7 @@ Lentelėje galite nustatyti automatinius apsaugos sistemos įjungimo ir išjungi
 
 **Skirtukas „Gedimai“**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.956692913385827in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Gedimai. Lentelėje pateikti gedimai, įskaitant maitinimo, baterijos, maitinimo linijos, sirenos, CSP komunikacijos, RS485 modulio, bevielio jutiklio ir sabotažo gedimus; matomi stulpelio Apriboti įjungimą langeliai nepažymėti." src="./image57.webp" style="width:7.086614173228346in;height:2.956692913385827in" />
 
 Jei yra pažymėtas bent vienas apsaugos centralės vidinio gedimo laukas, tai apsaugos centralę negalėsite įjungti, jei yra ši klaida.
 
@@ -945,7 +945,7 @@ Jei yra pažymėtas bent vienas apsaugos centralės vidinio gedimo laukas, tai a
 
 **Skirtukas „Pranešimai“**
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.8188976377952755in" />
+<img alt="TrikdisConfig langas „Pranešimai į ST pultą“, skirtukas „Pranešimai“. „Pagrindinis kanalas“ ir „Atsarginis kanalas“ turi išjungtą „Ryšio tipas“ nustatymą; „Lygiagretusis ryšio kanalas“ ir „Lygiagretaus kanalo atsarginis“ nustatyti kaip „TCP/IP“. Šiuose keturiuose skyduose yra laukai „Domenas arba IP“, „Prievadas“, „Protokolas“, „Telefono numeris“ ir „Šifravimo raktas“. Atskiruose skyduose „Atsarginis kanalas 2“ ir „Lygiagretaus kanalo atsarginis 2“ yra tik „Telefono numeris“ laukai." src="./image59.webp" style="width:7.086614173228346in;height:3.8188976377952755in" />
 
 Apsaugos centralė siunčia pranešimus į stebėjimo pultą per internetą (IP) arba SMS pranešimais.
 
@@ -987,7 +987,7 @@ SMS pranešimai bus siunčiami į stebėjimo pulto SMS imtuvą: 1) iš karto, pr
 
 **Skirtukas „Nuostatos“**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:3.838582677165354in" />
+<img alt="TrikdisConfig lango Pranešimai į ST pultą skirtukas Nuostatos. Grupėje Parametrai: Grįžti prie pagrindinio po 5 min, IP PING periodas 60 s įjungtas, SMS PING periodas išjungtas, Pereiti prie atsarginio po 3 bandymų, DNS1 8.8.8.8, DNS2 1.1.1.1. Komunikatoriaus tinklo nustatymuose įjungtas DHCP režimas; Siuntimo tvarkoje pagrindinis kanalas WiFi, atsarginis SIM." src="./image60.webp" style="width:7.086614173228346in;height:3.838582677165354in" />
 
 **Parinkčių grupė „Parametrai“**
 
@@ -1051,7 +1051,7 @@ Nustatomi parametrai, kaip centralė siųs pranešimus į CSP kanalus ir į Prot
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:2.732283464566929in" />
+<img alt="TrikdisConfig lango Vartotojai ir pranešimai skirtukas Vartotojai. Lentelėje Vartotojai ir pranešimai vartotojams rodomi laukai Nr., Vardas, Telefono numeris, El-paštas, Kodas, Pakabuko kodas, Sritis ir pranešimų parinkčių žymimieji langeliai; pirmoje eilutėje pasirinkta sritis 1." src="./image61.webp" style="width:7.086614173228346in;height:2.732283464566929in" />
 
 **Parinkčių grupė „Vartotojai ir pranešimai vartotojams“**
 
@@ -1114,7 +1114,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 !!! note
     „Pagrindinio rakto” paskirtis – kitiems kontaktiniams raktams registruoti. Naudojant „Pagrindinį raktą” komandų (ARM/DISARM) vykdymas turės uždelsimą. **Skirtukas „Protegus“**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="TrikdisConfig lango Vartotojai ir pranešimai skirtukas Protegus. Grupėje Mobilioji aplikacija pažymėti Įgalinti jungimąsi ir Lygiagretus siuntimas; lauke Aplikacijos prieigos kodas įrašyta 123456." src="./image63.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 **Parinkčių grupė „Mobilioji aplikacija“**
 
@@ -1126,7 +1126,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 **Skirtukas „SMS atsakymo tekstai“**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.437007874015748in" />
+<img alt="TrikdisConfig lango Vartotojai ir pranešimai skirtukas SMS atsakymo tekstai. Grupės Atsakymas SMS žinute lentelėje atsakymų tipams Komanda įvykdyta, Neteisingas slaptažodis, Neteisingi duomenys ir Neteisinga komanda priskirti redaguojami SMS žinutės tekstai anglų kalba." src="./image64.webp" style="width:7.086614173228346in;height:2.437007874015748in" />
 
 **Parinkčių grupė „Atsakymas SMS žinute“**
 
@@ -1136,7 +1136,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 **Skirtukas „Klaviatūros“**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="TrikdisConfig lango Moduliai skirtukas Klaviatūros. Kairėje klaviatūrų lentelė su laukais Serijos nr., Klaviatūros tipas, Sritis ir Pašalinti. Dešinėje Klaviatūros parametrai: Klaviatūros tipas Paradox/Proteg, Greitas įjungimas įjungtas, Neteisingi kodai iki blokavimo 3, Blokavimo laikas 1 min, Pavojaus tipas, Medicinos tipas ir Gaisro tipas – Tylus." src="./image65.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 - **Serijos Nr**. – klaviatūros serijinis numeris, kurį centralė aptinka automatiškai. Norint ištrinti klaviatūrą, reikia įrašyti nulius arba nuspausti „**Pašalinti**“.
 
@@ -1178,7 +1178,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 **Skirtukas „RS485 moduliai“**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:2.9803149606299213in" />
+<img alt="TrikdisConfig lango Moduliai skirtukas RS485 moduliai. Atvertas pirmos eilutės lauko Modulis sąrašas: Nenaudojamas, iO plėtiklis, iO-WL bevielis plėtiklis, iO-8 plėtiklis, E485 komunikatorius, T16 komunikatorius, SF485 komunikatorius, iO-MO plėtiklis, iO-LORA plėtiklis, iO8-LORA plėtiklis ir PB-LORA Panikos mygtukas." src="./image66.webp" style="width:7.086614173228346in;height:2.9803149606299213in" />
 
 **Parinkčių grupė „RS485 moduliai“**
 
@@ -1196,7 +1196,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 **Skirtukas „E485 parametrai“**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.0866141732283463in" />
+<img alt="TrikdisConfig langas „Moduliai“, skirtukas „E485 parametrai“. Skiltyje „Komunikatoriaus tinklo nustatymai“ pažymėtas „DHCP režimas“; laukuose „Statinis IP“, „Potinklio kaukė“ ir „Numatytasis šliuzas“ nurodyta 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.0866141732283463in" />
 
 - **DHCP režimas** – modulio E485 registracijos prie LAN tinklo režimas (rankinis arba automatinis). Pažymėkite langelį (automatinis registracijos režimas) centralė „FLEXi” SP3 automatiškai nuskaitys tinklo nustatymus (potinklio kaukę, šliuzą) ir jai bus priskirtas IP adresas.
 
@@ -1208,7 +1208,7 @@ Kontaktinių raktų registravimas su skaitytuvu CZ-Dallas.
 
 ### Langas „Bevieliai jutikliai“
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7165354330708662in" />
+<img alt="TrikdisConfig lango Bevieliai jutikliai skirtukas Jutikliai. Lentelėje matomi laukai Nr., Įrenginio tipas, Serijos Nr., Sritis, Vartotoj, Klavišas3, Klavišas4 ir Konfigūravimas; matomose eilutėse įrenginio tipas yra Išjungtas." src="./image68.webp" style="width:7.086614173228346in;height:1.7165354330708662in" />
 
 Prijungus RF-LORA modulį „FLEXi” SP3 gali dirbti su firmos „Maximum“ bevieliais jutikliais, sirenomis, valdymo pulteliais.
 
@@ -1278,7 +1278,7 @@ Dabar atliksime nuotolinį prisijungimą su TrikdisConfig prie centralės „FLE
 
 TrikdisConfig lauke **„Nuotolinė prieiga“** įveskite centralės „FLEXi“ SP3 „**Unikalus ID“** numerį. Šį numerį rasite ant įrenginio pakuotės ir centralės plokštės.
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.031496062992126in" />
+<img alt="TrikdisConfig lango „Nuotolinė prieiga“ skiltis. Prisijungimui prie centralės pažymėti laukas „Unikalus ID“ ir mygtukas „Konfigūravimas“." src="./image72.webp" style="width:7.086614173228346in;height:2.031496062992126in" />
 
 Paspauskite **„Konfigūravimas“**.
 
@@ -1286,11 +1286,11 @@ Atsidariusiame lange paspauskite **Skaityti \[F4\]**. Programai paprašius, įve
 
 Pereikite į langą **„Bevieliai jutikliai“**.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig programos langas 'Bevieliai jutikliai', skirtukas 'Jutikliai'. Virš tuščio jutiklių sąrašo yra mygtukas 'Jutiklių primokymas'." src="./image73.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Paspauskite **„Jutiklių primokymas“**.
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig programos langas 'Bevieliai jutikliai', skirtukas 'Jutikliai'. Raudonai pažymėtas mygtukas 'Jutiklių primokymas'." src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Bevielių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite į belaidžius jutiklius (PIR, magnetinis kontaktas, vandens nuotėkio jutiklis, dūmų jutiklis, sirena) baterijas.
 
@@ -1300,11 +1300,11 @@ Registruojant jutiklius *RF-LORA* modulis turi būti ne arčiau 1 m atstumu nuo
 
 2.  RF-LORA modulis yra perėjas į primokymo režimą. TrikdisConfig atvers programos primokymo langą.
 
-<img alt="" src="./image75.webp" style="width:3.7401574803149606in;height:2.3503937007874014in" />
+<img alt="TrikdisConfig langas 'Primokymas': primokymas pradėtas; prašoma įdėti baterijas į naują jutiklį ir palaukti, kol jis baigs inicijuotis. Apačioje yra mygtukas 'Sustabdyti'." src="./image75.webp" style="width:3.7401574803149606in;height:2.3503937007874014in" />
 
 3.  Nuspausite „**TAMPER**“ mygtuką jutiklyje.
 
-<img alt="" src="./image76.webp" style="width:1.8233366141732283in;height:2.37667104111986in" />
+<img alt="Atviro bevielio jutiklio galinės dalies brėžinys. Raudona rodyklė su užrašu „Tamperis“ rodo spyruoklinį tamperio jungiklį viršuje kairėje." src="./image76.webp" style="width:1.8233366141732283in;height:2.37667104111986in" />
 
 4.  RF-LORA modulyje **„DATA/TROUBLE“** indikatorius trumpam užsidegs žalia spalva (tai reiškia, kad jutiklis priregistruotas). Po kelių sekundžių indikatorius “**DATA/TROUBLE**” vėl mirksės žaliai/raudonai.
 
@@ -1324,7 +1324,7 @@ Registruojant jutiklius *RF-LORA* modulis turi būti ne arčiau 1 m atstumu nuo
 
 10. Atsivėrusiame lange paspauskite „**Yes**“. Priregistruoti bevieliai jutikliai bus įrašyti į centralės „FLEXi“ SP3 atminti. Arba paspauskite „**No**“, jei norite papildomai nustatyti parametrus.
 
-<img alt="" src="./image79.webp" style="width:2.7559055118110236in;height:1.2716535433070866in" />
+<img alt="TrikdisConfig patvirtinimo langas 'Išsaugoti' klausia, ar iškart išsaugoti parametrus į įrenginį. Raudonai pažymėtas mygtukas 'Yes'; šalia yra 'No'." src="./image79.webp" style="width:2.7559055118110236in;height:1.2716535433070866in" />
 
 Palaukite kelias minutes. Nuspauskite mygtuką **Skaityti \[F4\]**.
 
@@ -1334,7 +1334,7 @@ Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas prire
 
 Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig langas „Zonų įėjimai“, skirtukas „Zonų nustatymai“. Pažymėtoje „Zone 1“ eilutėje įėjimo pavadinimas prasideda „Belaidis Corner“, sritis – 1, paskirtis – momentinė, tipas – „EOL_T“." src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Jei nustatote zonos **„Tipą“** EOL-T, bus įjungtas jutiklio tamperio stebėjimo režimas.
 
@@ -1373,7 +1373,7 @@ Bevielių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite į
 
 7.  Nuspausite „TAMPER“ mygtuką jutiklyje.
 
-<img alt="" src="./image76.webp" style="width:1.8233366141732283in;height:2.37667104111986in" />
+<img alt="Atviro bevielio jutiklio galinės dalies brėžinys. Raudona rodyklė su užrašu „Tamperis“ rodo spyruoklinį tamperio jungiklį viršuje kairėje." src="./image76.webp" style="width:1.8233366141732283in;height:2.37667104111986in" />
 
 2.  RF-LORA modulyje **„DATA/TROUBLE“** indikatorius trumpam užsidegs žalia spalva (tai reiškia, kad jutiklis priregistruotas).
 
@@ -1393,7 +1393,7 @@ Bevielių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite į
 
 15. Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig langas „Zonų įėjimai“, skirtukas „Zonų nustatymai“. Pažymėtoje „Zone 1“ eilutėje įėjimo pavadinimas prasideda „Belaidis Corner“, sritis – 1, paskirtis – momentinė, tipas – „EOL_T“." src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 16. Atlikus pakeitimus nuspauskite **Įrašyti \[F5\]**.
 
@@ -1403,7 +1403,7 @@ Bevielių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite į
 
 **Skirtukas „Zonų nustatymai“**
 
-<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
+<img alt="TrikdisConfig programos langas 'Zonų įėjimai', skirtukas 'Zonų nustatymai'. Lentelėje matomos 1–8 zonos, jų pavadinimai, įėjimai 'SP3 1 I/O'–'SP3 8 I/O', sritis 1, paskirtys ir tipas 'EOL'." src="./image82.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
 
 - **Zonos Nr** – zonos eilės numeris.
 
@@ -1469,7 +1469,7 @@ Kai apsauga įjungta STAY režimu, „Vidaus (nakties)“ zona nesaugoma.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:2.2598425196850394in" />
+<img alt="TrikdisConfig programos langas 'Zonų įėjimai', skirtukas 'SMS ir skambučiai'. Lentelėje matomos zonų įvykių ir grįžčių eilutės bei vartotojo SMS ir skambučių pasirinkimo langeliai." src="./image83.webp" style="width:7.086614173228346in;height:2.2598425196850394in" />
 
 Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai”*](#Users_window)*.*
 
@@ -1483,7 +1483,7 @@ Kai apsauga įjungta STAY režimu, „Vidaus (nakties)“ zona nesaugoma.
 
 **Skirtukas „Išėjimas“**
 
-<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.078740157480315in" />
+<img alt="TrikdisConfig langas „PGM išėjimai“, skirtukas „Išėjimai“. PGM 1 naudoja „BELL“, išėjimo aprašymas – „Sirena“; PGM 2 naudoja „LED“, aprašymas – „Sistemos būsena“; PGM 3 naudoja „SP3 10 I/O“, aprašymas prasideda „Gaisro jutiklių atst“. Kiekvienos matomos eilutės impulso trukmė – 20 s." src="./image84.webp" style="width:7.086614173228346in;height:2.078740157480315in" />
 
 - **PGM Nr**– nurodo PGM išėjimo eilės numerį.
 
@@ -1517,7 +1517,7 @@ Kai apsauga įjungta STAY režimu, „Vidaus (nakties)“ zona nesaugoma.
 
 **Skirtukas „Nustatyti veikimą“**
 
-<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig programos langas 'PGM išėjimai', skirtukas 'Nustatyti veikimą'. Matomi stulpeliai 'Nr.', 'Įgalinti', 'PGM Nr.', 'Veiksmas', 'Impulso trukmė', 'Faktorius', 'Faktoriaus Nr.', 'Pradėti, kai' ir 'Nustatyta reikšmė'; pirmoje eilutėje 'Įgalinti' nepažymėta, 'PGM Nr.' yra 'N/A', o impulso trukmė – 0." src="./image85.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 - **Nr** – išėjimo eilės numeris.
 
@@ -1555,7 +1555,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Valdymas“**
 
-<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:2.6338582677165356in" />
+<img alt="TrikdisConfig langas 'PGM išėjimai', skirtukas 'Valdymas'. Grupėje 'Įeigos kontrolė' išvardyti iButton ir kiti skaitytuvai, jų įjungimo, kodo, išėjimo ir režimo laukai. Grupėje 'Paradox/Protegus valdymas' funkcinio klavišo 1 parinktis yra 'Sričių būsena', kitų funkcinių klavišų – 'Išjungta' ir 'Impulsas'." src="./image86.webp" style="width:7.086614173228346in;height:2.6338582677165356in" />
 
 **Parinkčių grupė „Įeigos kontrolė“**
 
@@ -1577,7 +1577,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Grafikas“**
 
-<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig langas 'PGM išėjimai', skirtukas 'Grafikas'. Lentelėje kiekvienam grafikui pateikiami 'Nr.', 'Įgalinti', 'Laikas nuo' ir 'Laikas iki' laukai bei savaitės dienų žymimieji langeliai; matomų eilučių pradžios ir pabaigos laikas yra 00:00." src="./image87.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 - **Nr.** – grafiko eilės numeris.
 
@@ -1591,7 +1591,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Termostatas“**
 
-<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:3.3897637795275593in" />
+<img alt="TrikdisConfig langas 'PGM išėjimai', skirtukas 'Termostatas'. Lentelėje matomi 'Nr.', 'PGM Nr.', 'Veiksmas', 'Aktyvuoti', 'Jutiklio Nr' ir 'Temperatūra' laukai; matomų termostatų veiksmas yra 'Šildymas', jutiklio numeris 'N/A', temperatūra 0." src="./image88.webp" style="width:7.086614173228346in;height:3.3897637795275593in" />
 
 - **Nr.** – termostato eilės numeris.
 
@@ -1607,7 +1607,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig langas „PGM išėjimai“, skirtukas „SMS ir skambučiai“. Eilutėse „1 Įvykis“, „1 Grįžtis“ ir paskesniuose išėjimų įvykiuose „Vartotojas 1“ turi „SMS“ ir „Skamb.“ žymimuosius langelius; matomi langeliai nepažymėti." src="./image89.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai”](#Users_window). Tik pirmiems 8 vartotojams galima padaryti šios nustatymus.
 
@@ -1617,7 +1617,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Jutikliai“
 
-<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.8464566929133857in" />
+<img alt="TrikdisConfig langas „Jutikliai“. Lentelėje yra įrenginio, serijos numerio, jutiklio pavadinimo, didžiausios ir mažiausios reikšmių, jų žymimųjų langelių ir uždelsimo stulpeliai. Atvertame meniu „Jutiklio tipas“ galima pasirinkti „Dallas 1-Wire“ arba „Drėgmės ir temperatūros (AM23xx tipo)“." src="./image90.webp" style="width:7.086614173228346in;height:2.8464566929133857in" />
 
 - **Nr** – temperatūros jutiklio eilės numeris.
 
@@ -1639,7 +1639,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „Įvykiai“**
 
-<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
+<img alt="TrikdisConfig lango „Sistemos įvykiai“ skirtukas „Įvykiai“. Lentelėje yra stulpeliai „Įvykio pavadinimas“, „Įgalinti“, „CSP“, „Prot.“, „CID kodas“, „Įvykio SMS tekstas“ ir „Grįžties įvykio SMS tekstas“. Matomi įvykiai „Žema baterijos įtampa“, „Testas“, „Įjungimas/Išjungimas“, „RS485 gedimas“, „Aukšta temperatūra“ ir „Žema temperatūra“." src="./image91.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
 
 - **Nr** – įvykio numeris pagal sąrašą.
 
@@ -1657,7 +1657,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
+<img alt="TrikdisConfig lango „Sistemos įvykiai“ skirtukas „SMS ir skambučiai“. Įvykio ir grįžties eilutėse, įskaitant „Battery low“ ir „Battery restore“, prie „Vartotojas 1“ yra SMS ir skambučio žymimieji langeliai. Matomi langeliai nepažymėti." src="./image92.webp" style="width:7.086614173228346in;height:2.452755905511811in" />
 
 Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai”](#Users_window)*.*
 
@@ -1669,7 +1669,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Įvykių žurnalas“
 
-<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.6692913385826773in" />
+<img alt="TrikdisConfig langas 'Įvykių žurnalas'. Virš žurnalo yra mygtukai 'Nuskaityti' ir 'Išvalyti'; lentelės stulpeliai – 'Įvykio Nr.', 'Laikas', 'CID' ir 'Įvykio pavadinimas'." src="./image93.webp" style="width:7.086614173228346in;height:2.6692913385826773in" />
 
 - Mygtukas **Nuskaityti** – komanda, kuria galima nuskaityti įvykių žurnalą iš įrenginio atminties.
 
@@ -1681,7 +1681,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 Norint atkurti centralės gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką „**Atkurti**“**.**
 
-<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:1.1023622047244095in" />
+<img alt="TrikdisConfig lango apačia: raudonu rėmeliu pažymėtas mygtukas 'Atkurti' prie užrašo 'Gamintojo parametrai'." src="./image94.webp" style="width:7.086614173228346in;height:1.1023622047244095in" />
 
 ### Nuotolinis valdymas su TrikdisConfig
 
@@ -1704,7 +1704,7 @@ Norint atkurti centralės gamyklinius nustatymus, reikia nuspausti programos Tri
 
 2.  Lauke „**Nuotolinė prieiga**“ įveskite centralės „*IMEI/Unikalus ID“* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipduko.
 
-<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.1338582677165356in" />
+<img alt="TrikdisConfig lango 'Nuotolinė prieiga' dalis. Raudonais rėmeliais pažymėti įvedimo laukas 'Unikalus ID' ir mygtukas 'Konfigūravimas'; greta yra laukas 'Sistemos pavadinimas'." src="./image95.webp" style="width:7.086614173228346in;height:2.1338582677165356in" />
 
 3.  (Nebūtina) Langelyje „**Sistemos pavadinimas**“ įveskite norimą centralės pavadinimą.
 
@@ -1743,7 +1743,7 @@ Atlikite šiuos žingsnius:
 
 3.  Parinkite gamyklinės programinės įrangos submeniu **Programos naujinimas**.
 
-<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.909448818897638in" />
+<img alt="TrikdisConfig langas „Programos atnaujinimas“: laukas „Atverti failą“ tuščias, šalia yra mygtukas „Atverti failą“ ir neaktyvus mygtukas „Naujinti (F12)“. Eigos juosta rodo 0%." src="./image96.webp" style="width:7.086614173228346in;height:2.909448818897638in" />
 
 4.  Paspauskite gamyklinės programinės įrangos atidarymo langelį **Atverti failą** ir parinkite reikiamą gamyklinės programinės įrangos bylą. Jei neturite bylos, naujausią gamyklinės programinės įrangos bylą galite parsisiųsti <u>kaip registruotas vartotojas</u> iš [www.trikdis.com](http://www.trikdis.com), pagal „FLEXi” SP3 parsisiuntimo sekciją.
 

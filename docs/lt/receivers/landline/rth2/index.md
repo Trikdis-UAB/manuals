@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Telefoninio Ryšio Linijos Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="TRIKDIS imtuvo priekinis skydelis su būsenos indikatoriais, RESET mygtuku, LINE jungtimi ir vertikaliu RT2 žymėjimu dešinėje." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Apie Telefoninio Ryšio Linijos Imtuvą

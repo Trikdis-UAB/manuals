@@ -1,7 +1,7 @@
 # iO8-LoRa Belaidis plėtiklis
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="iO8-LoRa išplėtimo modulio plokštės nuotrauka su gnybtų kaladėlėmis, LED indikatoriais, mygtuku SW1 ir DIP jungikliu SW2." width="400">
 </div>
 
 ## Aprašymas 
@@ -46,7 +46,7 @@ Ryšys:
 
 ### Plėtiklio elementai 
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+<img alt="Kairėje – numeruota iO8-LoRa plėtiklio plokštės nuotrauka. 1 žymi šviesos indikatorius; 2 – išorinių kontaktų jungtis; 3 – įrenginio primokymo bei ryšio tikrinimo mygtuką „SW1“; 4 – DIP jungiklį „SW2“. Numerių reikšmės išvardytos dešinėje." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
 
 !!! note "DIP jungiklio „SW2“ nustatymai"
     Nuo HW iO8_x5xx_7_230419 versijos:
@@ -81,7 +81,7 @@ Ryšys:
 
 ### Maitinimo šaltinio prijungimo schema 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Prijungimo schema: maitinimo šaltinis į iO-8-LORA. +12V gnybtas jungiamas prie +DC, 0V gnybtas – prie -DC; schemoje pažymėta (+12 V)." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Įėjimų prijungimo schemos 
 
@@ -92,45 +92,45 @@ iO-8-LORA plokštėje yra 8 kontaktai IO1–IO8 (įėjimai) jutiklių grandinėm
     <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="Prijungimo schema: normaliai uždaros (NC) įėjimo grandinės NC kontaktas jungia ZNx su C. Rezistorius nepavaizduotas." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="Rezistorių verčių lentelė su stulpeliais RT, R1 ir R2. Šešios eilutės: 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; 2.2k, 4.7k, 8.2k." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Prijungimo schema: normaliai atvira grandinė su rezistoriumi linijos gale (EOL). Tarp ZNx ir C NO kontaktas prijungtas lygiagrečiai rezistoriui R1." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale (EOL). Tarp ZNx ir C NC kontaktas ir rezistorius R1 sujungti nuosekliai." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale ir tamperio stebėjimu (EOL_T). Nuo ZNx iki C nuosekliai eina Tamper NC kontaktas ir RT; toliau NC kontaktas prijungtas lygiagrečiai R1." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="Prijungimo schema: normaliai uždara grandinė be rezistoriaus linijos gale (ATZ). Tarp ZNx ir C nuosekliai sujungti 1 jutiklio ir 2 jutiklio gnybtai: pirmojo NC kontaktas lygiagretus R1, antrojo NC kontaktas lygiagretus R2." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="Prijungimo schema: normaliai uždara ATZ_T grandinė tarp ZNx ir C. 1 jutiklio gnybtų dalyje nuosekliai sujungti NC tamperio kontaktas ir RT, po jų – NC kontaktas, lygiagrečiai sujungtas su R1. 2 jutiklio gnybtų dalyje yra nuoseklus NC tamperio kontaktas, po jo – NC kontaktas, lygiagrečiai sujungtas su R2." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Prijungimo schema: normaliai uždara grandinė su rezistoriumi linijos gale ir tamperio stebėjimu (3EOL). Nuo ZNx iki C nuosekliai eina Tamper NC kontaktas ir RT, Aliarmo NC kontaktas lygiagrečiai R1, tada Antimaskingo NC kontaktas lygiagrečiai R2." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Relės prijungimo schema 
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. *iO-8-LORA* plėtiklio universaliam įėjimo/išėjimo (I/O) gnybtui turi būti nustatytas išėjimo (OUT) veikimo režimas ir priskirtas veikimo tipas "Nuotolinis valdymas".
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Prijungimo schema: iO-8-LORA gnybtai AUX+ ir IOx prijungti prie relės ritės. Relės kontaktai pažymėti NC, C ir NO." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### iO-8-LORA plėtimo modulių prijungimo schema 
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="Prijungimo schema: SP3 sujungta su RF-LORA ir iki aštuonių iO-8-LORA plėtimo modulių. SP3 AUX+ (+12 V) prijungtas prie RF-LORA +DC, AUX- – prie -DC, 485 A – prie A RS 485, 485 B – prie B RS485. RF-LORA su plėtimo moduliais palaiko bevielį ryšį iki 5000 m atstumu. Kiekvienas iO-8-LORA turi atskirą 12-26V maitinimo šaltinį, prijungtą prie +DC ir -DC." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
@@ -155,7 +155,7 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
 
 8.  Lauke "**Serijos Nr.**" įrašykite iO-8-LORA serijos numerį.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „Moduliai“, skirtukas „RS485 moduliai“. Pirmoje eilutėje nurodytas „iO8-LORA plėtiklis“, užpildytas „Serijos Nr.“ laukas, „Sritis“ 1 ir „Pavadinimas“ „Expander ID1“. Antroje eilutėje – „Nenaudojamas“, „Sritis“ 1 ir „Pavadinimas“ „Expander ID2“." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms.
 
@@ -163,7 +163,7 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „PGM išėjimai“, skirtukas „Išėjimai“. PGM 1 eilutės „Išėjimas“ yra BELL, o PGM 222 eilutės – „RS485 Expander ID1, IO2“. PGM 222 „Išėjimo aprašymas“ yra nuotolinis valdymas, „Impulso trukmė, s“ – 10." src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -181,4 +181,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos šiukšlių dėžės su ratukais simbolis, reiškiantis, kad gaminio negalima išmesti su buitinėmis atliekomis." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

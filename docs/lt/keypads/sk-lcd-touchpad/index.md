@@ -3,7 +3,7 @@
 ## Klaviatūros apžvalga
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="FLEXi SK-LCD TouchPad klaviatūros apžvalga. Ekrane rodomi data, laikas, temperatūra, akumuliatoriaus būsena ir srities būsena Namie: Area 1. Apačioje pažymėti navigaciniai mygtukai, o dešinėje – sričių valdymo mygtukai ARM, SLEEP, STAY ir OFF." width="600">
 </div>
 
 > [!NOTE]
@@ -101,17 +101,17 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 2. Nuspauskite klaviatūros mygtuką **5**.
 
-3. Garsumo reguliavimui paspauskite mygtuką **2** ir mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> nustatykite norimą garsumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+3. Garsumo reguliavimui paspauskite mygtuką **2** ir mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Mažos į viršų nukreiptos kampinės rodyklės piktograma." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Mažos žemyn nukreiptos kampinės rodyklės piktograma." /> nustatykite norimą garsumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
 
-4. Ekrano ryškumui nustatyti paspauskite mygtuką **4** mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> nustatykite norimą ekrano ryškumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+4. Ekrano ryškumui nustatyti paspauskite mygtuką **4** mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Mažos į viršų nukreiptos kampinės rodyklės piktograma." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Mažos žemyn nukreiptos kampinės rodyklės piktograma." /> nustatykite norimą ekrano ryškumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
 
-5. Mygtukų ryškumui nustatyti paspauskite mygtuką **3** mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> nustatykite norimą mygtukų ryškumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
+5. Mygtukų ryškumui nustatyti paspauskite mygtuką **3** mygtukais <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Mažos į viršų nukreiptos kampinės rodyklės piktograma." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Mažos žemyn nukreiptos kampinės rodyklės piktograma." /> nustatykite norimą mygtukų ryškumą. Patvirtinkite pasirinkimą paspaudus mygtuką **OK**.
 
 ## Vartotojo (User) arba Administratoriaus (Master) kodų įvedimas arba pakeitimas
 
 ### Norėdami įvesti naują arba pakeisti esamą vartotojo kodą
 
-1. Nuspauskite klaviatūros mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
+1. Nuspauskite klaviatūros mygtuką <img src="./image2.webp" style="height:0.14119in" alt="Žaibo simboliu pažymėtas mygtukas." />.
 
 2. Įveskite 6-ženklį **[Administratoriaus kodą]** (gamyklinis kodas: 123456).
 
@@ -131,7 +131,7 @@ Kai signalizacija išjungta, klaviatūros ekrane atsiras tekstas: **Išjungta: S
 
 ### Norėdami dvilaidžius gaisro (dūmų) jutiklius paleisti veikti iš naujo
 
-- 3 sekundes palaikykite paspaudę mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
+- 3 sekundes palaikykite paspaudę mygtuką <img src="./image2.webp" style="height:0.14119in" alt="Žaibo simboliu pažymėtas mygtukas." />.
 
 > [!NOTE]
 > Užfiksavę gaisro pavojų, dvilaidžiai gaisro jutikliai automatiškai veikti iš naujo nepasileidžia. Jie paleidžiami veikti tik rankiniu būdu.
@@ -160,7 +160,7 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 ### Norėdami ištrinti vartotojo kodą
 
-1. Nuspauskite klaviatūros mygtuką <img src="./image2.webp" style="height:0.14119in" alt="" />.
+1. Nuspauskite klaviatūros mygtuką <img src="./image2.webp" style="height:0.14119in" alt="Žaibo simboliu pažymėtas mygtukas." />.
 
 2. Įveskite 6-ženklį **[Administratoriaus kodą]** (gamyklinis kodas: 123456).
 

@@ -1,7 +1,7 @@
 # Priešgaisrinių centralių LTE komunikatorius G17F
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="TRIKDIS G17F komunikatoriaus priekinė dalis: viršuje antenos jungtis, NETWORK, DATA, POWER ir TROUBLE indikatorių žymos. Ant korpuso nurodyta „9–32 VDC, 0.1 A max“. Apatiniai gnybtai iš kairės į dešinę pažymėti +DC, −DC, 1 IN, 2 IN, COM, 3 I/O, 4 I/O, COM, 5 I/O, 6 IN, A RS485 ir B RS485." width="400">
 </div>
 
 ## Aprašymas
@@ -111,7 +111,7 @@ Pranešimai vartotojams
 
 6.  SIM kortelės laikiklis.
 
-<img alt="" src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
+<img alt="G17F komunikatorius: kairėje vaizdas iš priekio, dešinėje atidengta plokštė. Kairėje: 1 GSM antenos SMA jungtis, 2 šviesos indikatoriai, 3 priekinio dangtelio atidarymo plyšys. Dešinėje: 4 gnybtai laidų prijungimui, 5 USB Mini-B jungtis komunikatoriui programuoti, 6 SIM kortelės laikiklis." src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
 
 ### Išorinių kontaktų paskirtis
 
@@ -174,7 +174,7 @@ Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
 2.  Plokščiu atsuktuvu nuimkite G17F dangtelį kaip parodyta žemiau:
 
-<img alt="" src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
+<img alt="Trys brėžiniai, rodantys, kaip plokščiu atsuktuvu atidaryti G16 korpusą: atlenkti priekinio dangtelio fiksatorių, tada šoninį fiksatorių; stambiu planu parodyta vidinė USB Mini-B jungtis." src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
 
 1.  Sujunkite G17F su kompiuteriu USB Mini-B kabeliu.
 
@@ -204,19 +204,19 @@ Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
 **Lange „Zonų įejimai“:**
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig langas „Zonų įėjimai“, kortelė „Zonų nustatymai“. Raudonai pažymėtame „Prot.“ stulpelyje pažymėti 1–6 zonų langeliai." src="./image8.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 3. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į Protegus2 apie zonų būsenos pasikeitimus.
 
 **Lange „PGM išėjimai“:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig G17F, langas „PGM išėjimai“, skirtukas „Išėjimai“. PGM 1 išėjimas yra G17F 4 I/O; PGM 2 ir 3 nustatyti „Išjungta“. Visų trijų eilučių „Prot.“ pranešimų langeliai pažymėti." src="./image9.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 4. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į Protegus2 apie PGM išėjimų būsenos pasikeitimus.
 
 **Lange „Sistemos įvykiai“:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
+<img alt="TrikdisConfig langas „Sistemos įvykiai“, kortelė „Įvykiai“. Raudonai pažymėtame „Prot.“ stulpelyje pažymėti penkių rodomų įvykių langeliai: „Žema maitinimo įtampa“, „Testas“, „RS485 gedimas“, „GSM slopinimas“ ir „IP prisistatymas“." src="./image10.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
 
 5. Pažymėkite varnele, jei norite, kad vartotojas gautų pranešimus į Protegus2 apie komunikatoriaus vidinių įvykių būsenos pasikeitimus.
 
@@ -286,9 +286,9 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 7.  Įstatykite nano-SIM kortelę. SIM kortelė turi būti priregistruota GSM tinkle su jau įjungtomis ir veikiančiomis paslaugomis, pvz., gali paskambinti, išsiųsti ir priimti SMS žinutes, veikia mobilusis internetas. <u>Kaip įjungti pageidaujamas paslaugas, teiraukitės SIM kortelės mobiliojo ryšio operatoriaus.</u>
 
-<img alt="" src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
+<img alt="Du brėžiniai: CG17 plokštė su apibrėžtu fiksatoriumi kairiajame krašte, skirtu jai atlaisvinti iš korpuso, ir galinė korpuso dalis su dviem apibrėžtomis tvirtinimo varžtų kiaurymėmis." src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
 
-<img alt="" src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
+<img alt="Brėžinys: nano-SIM kortelė iš dešinės įstatoma į SIM kortelės laikiklį G17F plokštėje." src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
 !!! note "Pastaba"
     Įsitinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
@@ -310,7 +310,7 @@ Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus
 
 ## Priešgaisrinės centralės ESPA4.4.4 prijungimo schema
 
-<img alt="" src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
+<img alt="Prijungimo schema: G17F ir priešgaisrinė centralė ESPA4.4.4. Maitinimas: G17F +DC jungiamas prie ESPA4.4.4 +24V, -DC – prie 0V. RS485: G17F A jungiamas prie ESPA4.4.4 A, B – prie B." src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
 
 G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine centrale **ESPA4.4.4**.
 
@@ -320,7 +320,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 3.  G17F komunikatoriaus ir gaisro centralės duomenų perdavimo parametrai turi būti vienodi.
 
-<img alt="" src="./image17.webp" style="width:7.086614173228346in;height:3.421259842519685in" />
+<img alt="TrikdisConfig langas „Moduliai“, kortelė „RS485 moduliai“. Numeriu 1 pažymėta pirmoji modulio eilutė: „ESPA 4.4.4 protokolas“, pavadinimas „Expander ID1“. Numeriu 2 pažymėta „Sparta“ – 9600; numeriu 3 – duomenų perdavimo nustatymai: 8 bitai, „None“ paritetas, 1 stop bitas ir 40 ms delsa." src="./image17.webp" style="width:7.086614173228346in;height:3.421259842519685in" />
 
 4. Įrašykite vartotojų telefonų numerius, kurie turėtų gauti pranešimus iš komunikatoriaus G17F.
 
@@ -328,7 +328,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 5. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite laukelį **SMS** (arba **Skamb.**).
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.5669291338582676in" />
+<img alt="TrikdisConfig G17F langas „Sistemos įvykiai“, skirtukas „SMS ir skambučiai“. „Vartotojas 1“ eilutėje „ESPA 4.4.4 text“ SMS laukelis pažymėtas, o skambučio laukelis nepažymėtas." src="./image19.webp" style="width:7.086614173228346in;height:2.5669291338582676in" />
 
 6. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą. Įvykių pranešimai perduodami naudojant SIA DC-09 protokolą.
 
@@ -338,7 +338,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17
 
 ## Priešgaisrinės centralės NSC Solution prijungimo schema
 
-<img alt="" src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
+<img alt="Prijungimo schema: G17F ir NSC Solution. Maitinimas: +DC jungiamas prie +24V (+24 V), -DC – prie 0V. RS485: A jungiamas prie A, B – prie B." src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
 G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine centrale **NSC Solution**.
 
@@ -346,7 +346,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 2.  „**NSC slave adresas**“ neturėtų sutapti su prijungtų priešgaisrinės centralės modulių adresais.
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:3.0708661417322833in" />
+<img alt="TrikdisConfig langas „Moduliai“, kortelė „RS485 moduliai“. Numeriu 1 pažymėta pirmoji modulio eilutė: „NSC Solution“, pavadinimas „Expander ID1“. Numeriu 2 pažymėtas „NSC slave adresas“ – 10." src="./image22.webp" style="width:7.086614173228346in;height:3.0708661417322833in" />
 
 3. Įrašykite vartotojų telefonų numerius, kurie turėtų gauti pranešimus iš komunikatoriaus G17F.
 
@@ -354,7 +354,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 4. Vartotojai gaus SMS žinutes ir skambučius apie pažymėtus įvykius. CID stulpelyje galite pridėti papildomų CID įvykių kodų. Prie naujų kodų turite įvesti SMS žinučių tekstus. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite „**SMS**“ (arba „**Skamb.**“) laukelį.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="TrikdisConfig G17F langas „Vartotojai ir pranešimai“, skirtukas „SMS centralės įvykiams“. Žyma 4 išskiria „Vartotojas 1“: visiems 16 matomų įvykių, nuo E110 Fire alarm iki R373 Fault restore, SMS laukeliai pažymėti, o skambučio laukeliai nepažymėti." src="./image24.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 5. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
@@ -366,11 +366,11 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17
 
 ### Priešgaisrinės centralės INIM Smartline ir komunikatoriaus jungimo schema
 
-<img alt="" src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
+<img alt="Prijungimo schema: G17F ir INIM Smartline. Maitinimas: +DC jungiamas prie 13 +24 (+24 V), -DC – prie 16 GND. RS485: A jungiamas prie 15 +RS485, B – prie 14 -RS485. Įstrižai einantys laidai susikerta, bet nėra sujungti." src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
 
 **INIM Smartline** centralei reikia nustatyti **Slave** režimą, kai ji prijungta prie komunikatoriaus G17F per RS485 sąsają.
 
-<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="SmartLeague programos langas „RS485 Bus Programming“. Skiltyje „Master/Slave Settings“ pasirinkta „Configure as Slave“, o „Assign address“ reikšmė yra 1." src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note "Pastaba"
     Jei prie **INIM Smartline** centralės prijungti kartotuvai, tai
@@ -391,7 +391,7 @@ Nustatymai TrikdisConfig, kai prijungta priešgaisrinė centralė INIM Smartline
 
 2. Įrašykite vartotojų telefonų numerius, kurie turėtų gauti pranešimus iš komunikatoriaus G17F.
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.641732283464567in" />
+<img alt="TrikdisConfig G17F langas „Vartotojai ir pranešimai“, skirtukas „SMS centralės įvykiams“. Žyma 3 išskiria „Vartotojas 1“: pirmųjų 16 įvykių, nuo E110 Fire alarm iki R373 Fault restore, SMS laukeliai pažymėti, o skambučio laukeliai nepažymėti; 17 eilutės E000 abu laukeliai nepažymėti." src="./image30.webp" style="width:7.086614173228346in;height:3.641732283464567in" />
 
 3. Vartotojai gaus SMS pranešimus ir skambučius, kurie pažymėti varnele. **CID** kodų stulpelyje galima pridėti papildomų **CID** įvykių kodų. Prie naujų kodų reikia surašyti **SMS teksto** pranešimus. Kad vartotojas gautų pranešimus (arba skambučius) apie įvykius, pažymėkite **SMS** (arba **Skambutis**) lauką varnele.
 
@@ -403,21 +403,21 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17
 
 ## Priešgaisrinės centralės C-TEC Cast ZFP prijungimo schema
 
-<img alt="" src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
+<img alt="Prijungimo schema: G17F ir C-TEC Cast ZFP. Maitinimas: +DC jungiamas prie +24V (+24 V), -DC – prie 0V. ABUS RS485: A jungiamas prie A, B – prie B." src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
 G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine centrale **C-TEC Cast ZFP**.
 
 1.  Pasirinkite **C-TEC Cast ZFP** priešgaisrine centrale.
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
+<img alt="TrikdisConfig G17F langas „Moduliai“. Žyma 1 išskiria „RS485 moduliai“ pirmą eilutę: modulis C-TEC Cast ZFP, pavadinimas „Expander ID1“." src="./image33.webp" style="width:7.086614173228346in;height:1.5511811023622046in" />
 
 1.  Įveskite vartotojų, kurie turėtų gauti žinutes iš G17F, telefono numerius.
 
-<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:1.7598425196850394in" />
+<img alt="TrikdisConfig langas Vartotojai ir pranešimai, skirtukas Vartotojai. Raudonai pažymėta pirmoji vartotojo eilutė su laukais Vardas ir Telefono numeris; ACK ir FW langeliai pažymėti." src="./image34.webp" style="width:7.086614173228346in;height:1.7598425196850394in" />
 
 2. Vartotojai gaus SMS žinutes ir skambučius apie pažymėtus įvykius. CID stulpelyje galite pridėti papildomų CID įvykių kodų. Prie naujų kodų turite įvesti SMS žinučių tekstus. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite „**SMS**“ (arba „**Skamb.**“) laukelį.
 
-<img alt="" src="./image35.webp" style="width:7.086614173228346in;height:3.5196850393700787in" />
+<img alt="TrikdisConfig G17F langas „Vartotojai ir pranešimai“, skirtukas „SMS centralės įvykiams“. Žyma 3 išskiria „Vartotojas 1“: visiems 16 matomų įvykių, nuo E110 Fire alarm iki R373 Fault restore, SMS laukeliai pažymėti, o skambučio laukeliai nepažymėti." src="./image35.webp" style="width:7.086614173228346in;height:3.5196850393700787in" />
 
 3. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
@@ -427,31 +427,31 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 4. Atidarykite „**Node View**“ skirtuką.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="ZFP Programming Tools programos langas „Site Details“. Pažymėtas skirtukas „Node View“." src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
 5. Nuskaitykite priešgaisrinės centralės nustatymus.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="ZFP Programming Tools programos „Panel 1“ langas „Node View“. Pažymėtas mygtukas „Retrieve All Data“." src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
 6. Įveskite kodą (gamyklinis kodas – 4444).
 
 2.  Spustelėkite „ОК“.
 
-<img alt="" src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="ZFP Programming Tools programos langas „Panel Log In“. Virš keturių tuščių kodo langelių rodomas užrašas „Enter Access Level 3 Code“; žalias varnelės mygtukas patvirtina įvestį." src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
 3. Pasirinkite „**BMS Interface**“.
 
 2.  Spustelėkite laisvą piktogramą.
 
-<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="ZFP Programming Tools programos langas „Node View“ → „Devices“. Skiltyje „Device Palette“ pasirinkta „BMS Interface“, pažymėtas mygtukas „Edit Devices“." src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
 11. Spustelėkite „**Edit Devices**“.
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="ZFP Programming Tools programos langas „Node View“ → „Devices“. „BMS Interface“ užima 16-ą įrenginio vietą; pažymėtas mygtukas „Edit Devices“." src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 12. Skirtuke „**Device**“ įveskite sistemos pavadinimą.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="ZFP Programming Tools programos 16-o įrenginio langas „Node View“ → „Devices“ → „Device Properties“. Skirtuke „Device“ lauke „Name“ nurodyta FIRECOM, o lauke „Device Type“ – „BMS Interface“." src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
 13. Skirtuke „**Properties**“ įveskite sistemos pavadinimą.
 
@@ -461,13 +461,13 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 16. Įrašykite nustatymus į priešgaisrinę centralę.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="ZFP Programming Tools programos „BMS Interface“ langas „Device Properties“. „Name“ yra FIRECOM; „Connection“ – ABUS RS485; „BAUD Rate“ – 57600; „Response Timeout“ – 250; „Max Retries“ – 5. „Zone Disablements“ praneša apie „Zone“; „Input Group Disablements“, „Output Group Disablements“ ir „Group Actions“ praneša apie „Group“. Pažymėtas mygtukas „Send All Data“." src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
 17. Įveskite kodą (gamyklinis kodas – 4444).
 
 18. Spustelėkite „OK“.
 
-<img alt="" src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="ZFP Programming Tools programos langas „Panel Log In“. Virš keturių tuščių kodo langelių rodomas užrašas „Enter Access Level 3 Code“; žalias varnelės mygtukas patvirtina įvestį." src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 Priešgaisrinė centralė užprogramuota. Atjunkite USB2.0 A-B kabelį nuo priešgaisrinės centralės.
 
@@ -481,31 +481,31 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 #### Normaliai atvira (NO)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="256" height="227" />
+<img class="wiring-diagram" alt="Prijungimo schema: normaliai atviras (NO) kontaktas tarp COM ir INx. Trumpasis jungimas – aliarmas; atvira grandinė – atsistatymas." src="./wiring-input-no.webp" width="256" height="227" />
 
 #### Normaliai uždara (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="258" height="227" />
+<img class="wiring-diagram" alt="Prijungimo schema: normaliai uždaras (NC) kontaktas tarp COM ir INx. Trumpasis jungimas – atsistatymas; atvira grandinė – aliarmas." src="./wiring-input-nc.webp" width="258" height="227" />
 
 #### Normaliai atvira grandinė su 10k rezistoriumi linijos gale (NO/EOL 10k)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="312" height="317" />
+<img class="wiring-diagram" alt="Prijungimo schema: NO kontaktas lygiagrečiai su 10 k linijos galo rezistoriumi tarp COM ir INx (NO/EOL 10k). Trumpasis jungimas – aliarmas; atvira grandinė – aliarmas; 10k – atsistatymas." src="./wiring-input-no-eol.webp" width="312" height="317" />
 
 #### Normaliai uždara grandinė su 10k rezistoriumi linijos gale (NC/EOL 10k)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="314" height="293" />
+<img class="wiring-diagram" alt="Prijungimo schema: NC kontaktas nuosekliai su 10 k linijos galo rezistoriumi tarp COM ir INx (NC/EOL 10k). Trumpasis jungimas – aliarmas; atvira grandinė – aliarmas; 10k – atsistatymas." src="./wiring-input-nc-eol.webp" width="314" height="293" />
 
 ### iO serijos plėtimo modulių prijungimo schema
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT prijunkite laidinį arba belaidį TRIKDIS iO serijos įėjimų ir išėjimų plėtiklį.
 
-<img alt="" src="./image46.webp" style="width:6.82751312335958in;height:5.095009842519685in" />
+<img alt="Prijungimo schema: G17F prie dviejų iO-MOD, bevielių iO-WL ir laidinio iO. G17F +DC, -DC, A RS485 ir B RS485 atitinkamai sujungti su abiejų iO-MOD tais pačiais gnybtais; G17F ir iO-MOD maitinami iš 12–28 V šaltinio. Kiekvienas iO-MOD bevieliu ryšiu jungiasi su atskiru iO-WL iki 300 m atstumu; pažymėta iki 4 iO-MOD subsistemų. Viršutinis iO-WL maitinamas atskiru 12–28 V šaltiniu, o jo A RS485 ir B RS485 sujungti su iO atitinkamais gnybtais; RS485 jungties ilgis iki 300 m, pažymėta iki 8 sistemos išplėtėjų. iO maitinamas dar vienu 12–28 V šaltiniu; apatinis iO-WL – atskiru 12–28 V šaltiniu." src="./image46.webp" style="width:6.82751312335958in;height:5.095009842519685in" />
 
 ### iO-8 plėtimo modulio prijungimo schema
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį TRIKDIS *iO-8* įėjimų ir išėjimų plėtiklį.
 
-<img alt="" src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
+<img alt="Prijungimo schema: G17F ir iO-8. G17F +DC jungiamas prie iO-8 +DC, -DC – prie -DC, A RS485 – prie A, B RS485 – prie B." src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
 
 ### LORA serijos išplėtimo modulių prijungimo schema
 
@@ -517,13 +517,13 @@ LORA plėtimo modulių prijungimo schema.
 
 Komunikatoriaus *G17F* veikimo programos versija nuo 1.08. / Modulis *W485* skirtas įvykių siuntimui ir valdymui naudojant WiFi interneto ryšį. Naudojant *W485* kartu su *G17F* pranešimai į CSP ir į *Protegus2* siunčiami Wi-Fi interneto tinklu ir mobilus internetas nenaudojamas. Jei sutrinka Wi-Fi ryšys duomenys perduodami per mobilųjį internetą. Atsistačius WiFi ryšiui, *G17F* pradeda toliau siusti pranešimus per *W485*. / *G17F* konfigūravimas su WiFi moduliu *W485* aprašytas p. 5.5. „Langas „Moduliai“. / Naudojant modulį *W485* kartu su *G17F* SIM kortelė nebūtina.
 
-<img alt="" src="./image49.webp" style="width:3.1496062992125986in;height:2.1929133858267718in" />
+<img alt="Prijungimo schema: komunikatorius G17F prie W485. Nuolatinės srovės maitinimo šaltinis 10-28 V, 0,5 A prijungtas prie abiejų įrenginių + DC ir - DC gnybtų, sujungtų taškais. RS485 jungtis iki 100 m: G17F A 485 prie W485 A 485, G17F B 485 prie W485 B 485." src="./image49.webp" style="width:3.1496062992125986in;height:2.1929133858267718in" />
 
 ### „Ethernet“ modulio E485 prijungimo schema
 
 Komunikatoriaus *G17F* veikimo programos versija nuo 1.08. / Modulis *E485* skirtas įvykių siuntimui ir valdymui naudojant laidinį interneto ryšį. Naudojant *E485* kartu su *G17F* pranešimai į CSP ir į *Protegus2* siunčiami laidiniais interneto tinklais ir mobilusis internetas nenaudojamas. Jei sutrinka laidinis interneto tinklas duomenys į CSP perduodami per mobilųjį internetą. Atsistačius laidinio interneto tinklui, *G17F* pradeda toliau siusti pranešimus per *E485*. / *G17F* konfigūravimas su „Ethernet“ moduliu *E485* aprašytas p. 5.5. „Langas „Moduliai“. / Naudojant modulį *E485* kartu su *G17F* SIM kortelė nebūtina.
 
-<img alt="" src="./image50.webp" style="width:3.1496062992125986in;height:2.204724409448819in" />
+<img alt="Prijungimo schema: komunikatorius G17F prie E485. Nuolatinės srovės maitinimo šaltinis 10-28 V, 0,5 A prijungtas prie abiejų įrenginių + DC ir - DC gnybtų, sujungtų taškais. RS485 jungtis iki 100 m: G17F A 485 prie E485 A 485, G17F B 485 prie E485 B 485." src="./image50.webp" style="width:3.1496062992125986in;height:2.204724409448819in" />
 
 ### Komunikatoriaus įjungimas
 
@@ -581,7 +581,7 @@ Naudodami Protegus2, sistemos vartotojai gali matyti sistemos būseną ir gauti 
         geltonai).
 3. Paspauskite Pridėti sistemą ir įveskite *G17F* „*IMEI/Unikalus ID*“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite mygtuką „Toliau“.
 
-<img alt="" src="./image54.webp" style="width:2.9803149606299213in;height:3.8858267716535435in" />
+<img alt="Protegus2 langas 'Nuskaityti QR kodą': galima įvesti 'Unikalus ID' arba spausti 'Nuskaityti QR kodą'. Rodyklė į ID lauką nurodo, kad IMEI kodą galima rasti ant pakuotės, valdiklio arba programoje TrikdisConfig kaip unikalų ID; apačioje yra mygtukas 'Toliau'." src="./image54.webp" style="width:2.9803149606299213in;height:3.8858267716535435in" />
 
 ### Konfigūravimas ir valdymas SMS žinutėmis
 
@@ -829,7 +829,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „SMS atsakymo tekstai“**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
+<img alt="TrikdisConfig lango 'Vartotojai ir pranešimai' skirtukas 'SMS atsakymo tekstai'. Lentelėje 'Atsakymas SMS žinute' pateikti atsakymai: 'Komanda įvykdyta' – 'Command done', 'Neteisingas slaptažodis' – 'Wrong password', 'Neteisingi duomenys' – 'Wrong data', 'Neteisinga komanda' – 'Wrong command'." src="./image60.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
 
 **Parinkčių grupė „Atsakymas SMS žinute“**
 
@@ -837,7 +837,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „SMS INIM centralės įvykiams“**
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
+<img alt="TrikdisConfig langas „Vartotojai ir pranešimai“, skirtukas „SMS centralės įvykiams“. „Vartotojas 1“ stulpelyje SMS pažymėta, o skambutis nepažymėtas šiems matomiems CID įvykiams: E110 „Fire alarm“, E118 „Fire pre-alarm state“, E380 „Detector fault“, E323 „Line fault“, E301 „AC loss“, E302 „Low battery“, E311 „Missing battery“, E305 „Panel reset“, E372 „Zone short“, E371 „Zone open“, E574 „Zone disabled“, R574 „Zone enabled“, E604 „Test“, E320 „Sounder fault“, R320 „Sounder restore“ ir R373 „Fault restore“. Paskutinėje matomoje eilutėje E000 nepažymėtas nei SMS, nei skambutis." src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
 
 Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra įrašytas [lange „Vartotojai ir pranešimai"](#91-langas-vartotojai-ir-pranesimai)*.*
 
@@ -851,7 +851,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 ### Langas „Moduliai“
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.3464566929133857in" />
+<img alt="TrikdisConfig langas „Moduliai“, skirtukas „RS485 moduliai“. Aštuonių eilučių lentelėje pateikti modulių ID 1–8 ir pavadinimai „Expander ID1“–„Expander ID8“; pirmos eilutės išskleidžiamasis „Modulis“ sąrašas atvertas. Matomi pasirinkimai: „Nenaudojamas“, „iO plėtiklis“, „iO-WL bevielis plėtiklis“, „iO-8 plėtiklis“, „Inim Smartline“, „E485 komunikatorius“, „W485 (W17u) modulis“, „iO-LORA plėtiklis“, „iO8-LORA plėtiklis“, „PB-LORA Panikos mygtukas“, „REL-LORA plėtiklis“, „NSC Solution“, „C-TEC Cast ZFP“ ir „ESPA 4.4.4 protokolas“." src="./image62.webp" style="width:7.086614173228346in;height:3.3464566929133857in" />
 
 **Parinkčių grupė „RS485 moduliai“**
 
@@ -895,7 +895,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **„Ethernet“ modulio E485 nustatymų langas**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig lango 'Moduliai' skirtukas 'E485 parametrai': 'DHCP režimas' pažymėtas, statinis IP, potinklio kaukė ir numatytasis šliuzas rodo 0.0.0.0. SIM parametruose pažymėta 'Naudoti skambučiui ir SMS, kai veikiama per IP tinklą'; SIM kortelės nebuvimo indikacijos ir mobiliųjų duomenų naudojimo išjungimo langeliai nepažymėti." src="./image64.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 **Parinkčių grupė „Kominikatoriaus tinklo nustatymai“**
 
@@ -919,7 +919,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „Zonų nustatymai“**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig lango 'Zonų įėjimai' skirtuko 'Zonų nustatymai' lentelė: 1–3 zonoms priskirti G17F 1 IN, 2 IN ir 3 I/O, 4 zona išjungta, 5 ir 6 zonoms priskirti G17F 5 I/O ir 6 IN. Visų matomų zonų paskirtis '24 valandų', daugumos tipas EOL, 4 zonos – NO; užlaikymas 400, išskyrus 2 zonos 500." src="./image65.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - **Zonos Nr.** – zonos eilės numeris.
 
@@ -947,7 +947,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
+<img alt="TrikdisConfig langas „Zonų įėjimai“, skirtukas „SMS ir skambučiai“: „Vartotojas 1“ stulpelyje matomoms zonų „Įvykis“ ir „Grįžtis“ eilutėms SMS pažymėta, o skambutis nepažymėtas. SMS tekstai: „Zone 1 Alarm“, „Zone 1 Restore“, „Zone 2 Alarm“, „Zone 2 Restore“, „Zone 3 Alarm“, „Zone 3 Restore“ ir „Zone 4 Alarm“." src="./image66.webp" style="width:7.086614173228346in;height:2.3976377952755907in" />
 
 Šis langas bus rodomas, jei bent vieno vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#91-langas-vartotojai-ir-pranesimai)*.*
 
@@ -961,7 +961,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „Išėjimai“**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig lango 'PGM išėjimai' skirtuko 'Išėjimai' lentelė: PGM 1 priskirtas 'G17F 4 I/O', impulso trukmė 15 s; PGM 2 ir 3 išjungti, jų impulso trukmė 20 s. Visose trijose eilutėse pažymėti CSP ir 'Prot.' langeliai, SIA E yra RC, SIA R – RO." src="./image67.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 - **PGM Nr.** – nurodo PGM išėjimo eilės numerį.
 
@@ -981,7 +981,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig langas „PGM išėjimai“, skirtukas „SMS ir skambučiai“: „Vartotojas 1“ stulpelyje PGM 1 įvykio SMS tekstas yra „OUT1 ON“, o grįžties – „OUT1 OFF“. Abiejose eilutėse SMS pažymėta, skambutis nepažymėtas." src="./image68.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 Šis langas bus rodomas, jei bent vieno Vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#91-langas-vartotojai-ir-pranesimai)*.*
 
@@ -995,7 +995,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „Įvykiai“**
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="TrikdisConfig G17F langas „Sistemos įvykiai“, skirtukas „Įvykiai“. Įgalinti įvykiai: „Žema maitinimo įtampa“ (CID 302), „Testas“ (602), „RS485 gedimas“ (333), „GSM slopinimas“ (344) ir „IP prisistatymas“ (700). Lentelėje taip pat rodomi „CSP“ ir „Prot.“ pasirinkimai, SIA kodai, kilpų numeriai, įvykio ir grįžties SMS tekstai." src="./image69.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 - **Nr.** – įvykio numeris pagal sąrašą.
 
@@ -1021,7 +1021,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="TrikdisConfig G17F langas „Sistemos įvykiai“, skirtukas „SMS ir skambučiai“. „Vartotojas 1“ stulpelyje SMS pažymėta matomoms „Low power“, „Power restore“, „Periodic test“, „RS485 device fault“, „RS485 device restore“, „GSM jamming“ ir „NO GSM jamming“ eilutėms. Visose matomose eilutėse skambutis nepažymėtas; „ESPA 4.4.4 text“ eilutėje nepažymėta nei SMS, nei skambutis." src="./image70.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 Šis langas bus rodomas, jei bent vieno Vartotojo telefono numeris yra įrašytas [lange *„Vartotojai ir pranešimai"*](#91-langas-vartotojai-ir-pranesimai)*.*
 
@@ -1033,7 +1033,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 ### Langas „Įvykių žurnalas“
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig G17F langas „Įvykių žurnalas“ su mygtukais „Nuskaityti“ ir „Išvalyti“. Lentelės stulpeliai: „Įvykio Nr.“, „Laikas“, „CID“ ir „Įvykio pavadinimas“. Tarp matomų įrašų yra „Suveikė įėjimas IN5“, „Sistema pasileido“ ir „Konfigūracija pakeista“." src="./image71.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - Mygtukas **Nuskaityti** – komanda, kuria galima nuskaityti įvykių žurnalą iš įrenginio atminties.
 
@@ -1045,7 +1045,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
+<img alt="TrikdisConfig skiltis „Gamintojo parametrai“: paryškintas mygtukas „Atkurti“. Matomas laukas „IMEI/Unikalus ID“ ir įrenginio būsenos juosta." src="./image72.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
 
 ## Nuotolinis veikimo parametrų nustatymas
 
@@ -1068,7 +1068,7 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
 
 2.  Lauke **Nuotolinė prieiga** įveskite komunikatoriaus *IMEI/Unikalus ID* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipdukų.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:2.1850393700787403in" />
+<img alt="TrikdisConfig langas. Skiltyje Nuotolinė prieiga paryškinti laukas Unikalus ID ir mygtukas Konfigūravimas; šalia yra pasirenkamas laukas Sistemos pavadinimas." src="./image73.webp" style="width:7.086614173228346in;height:2.1850393700787403in" />
 
 3. (Nebūtina) Langelyje **Sistemos pavadinimas** įveskite norimą komunikatoriaus pavadinimą.
 
@@ -1104,7 +1104,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu **Programos atnaujinimas**.
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:2.97244094488189in" />
+<img alt="TrikdisConfig G17F langas „Programos atnaujinimas“: tuščias laukas „Atverti failą“, mygtukas „Atverti failą“, neaktyvus mygtukas „Naujinti (F12)“ ir 0 % eigos juosta." src="./image74.webp" style="width:7.086614173228346in;height:2.97244094488189in" />
 
 4. Paspauskite mygtuką **Atverti failą** ir parinkite reikiamą programinės įrangos bylą.
 
@@ -1122,4 +1122,4 @@ Prieš jungdami bet kokius elektros kontaktus, atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos ratukinės atliekų dėžės simbolis (WEEE), nurodantis, kad prietaisą reikia šalinti atskirai nuo buitinių atliekų." src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

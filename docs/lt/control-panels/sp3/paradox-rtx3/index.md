@@ -36,7 +36,7 @@ Atlikite šiuos žingsnius įrašant veikimo programą rankiniu būdu:
 
 Prie centralės prijunkite maitinimo laidus. Prijunkite belaidžių zonų išplėtimo modulį *RTX3*.
 
-<img alt="" src="./image7.png" style="width:2.2433377077865266in;height:1.2266688538932633in" />
+<img alt="Prijungimo schema: SP3 ir RTX3. Klaviatūros magistralė: AUX+ (+12V) jungiamas prie RED, AUX- – prie BLK, GRN – prie GRN, YEL – prie YEL." src="./image7.png" style="width:2.2433377077865266in;height:1.2266688538932633in" />
 
 Į SIM kortelės laikiklį įdėkite prie mobiliojo tinklo jau priregistruotą SIM kortelę. Įjunkite maitinimą centralei. Palaukite kelias minutes. Prisijunkite su TrikdisConfig prie „FLEXi” SP3 nuotoliniu būdu. Programoje TrikdisConfig būsenos juostoje yra pateikta informacija apie įdiegtos veikimo programos versija ( 1 ). Langė **„Moduliai“**, lentelėje yra įtrauktas modulis RTX3 ( 2 ), kuris prijungtas prie centralės.
 
@@ -54,17 +54,17 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 4.  Programoje TrikdisConfig lange **„Belaidžiai“** nuspauskite **„Jutiklių primokymas“**.
 
-<img alt="" src="./image9.png" style="width:7.082677165354331in;height:1.7755905511811023in" />
+<img alt="TrikdisConfig langas 'Belaidžiai'. Raudonu rėmeliu pažymėtas mygtukas 'Jutiklių primokymas' virš belaidžių įrenginių lentelės." src="./image9.png" style="width:7.082677165354331in;height:1.7755905511811023in" />
 
 5.  Pasirinkite primokomo jutiklio tipą: **„Jutikliai“**.
 
 6.  Nuspauskite mygtuką **„Pradėti“**.
 
-<img alt="" src="./image10.png" style="width:3.094488188976378in;height:1.9645669291338583in" />
+<img alt="TrikdisConfig dialogas 'Primokymo režimas'. Tekstas prašo pasirinkti primokomo jutiklio tipą; raudonais rėmeliais pažymėtas pasirinkimas 'Jutikliai' ir mygtukas 'Pradėti'." src="./image10.png" style="width:3.094488188976378in;height:1.9645669291338583in" />
 
 7.  Trumpam nuspauskite jutiklio Tamper mygtuką.
 
-<img alt="" src="./image11.png" style="width:3.7401574803149606in;height:2.4803149606299213in" />
+<img alt="TrikdisConfig dialogas 'Primokymas'. Rodomas pranešimas 'Primokymas pradėtas. Įdėkite baterijas į naują jutiklį ir palaukite kol jis baigs inicijuotis' bei mygtukas 'Sustabdyti'." src="./image11.png" style="width:3.7401574803149606in;height:2.4803149606299213in" />
 
 8.  Palaukite kelias sekundes. Centralė aptiks jutiklį.
 
@@ -86,11 +86,11 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 15. Nuspauskite **„Yes“** ir jutiklis bus įrašytas į centralę „FLEXi“ SP3.
 
-<img alt="" src="./image14.png" style="width:2.751968503937008in;height:1.2716535433070866in" />
+<img alt="TrikdisConfig patvirtinimo langas 'Išsaugoti' klausia, ar iškart išsaugoti parametrus į įrenginį. Pažymėtas mygtukas 'Yes'." src="./image14.png" style="width:2.751968503937008in;height:1.2716535433070866in" />
 
 16. **„Belaidžių“** įrenginių sąraše bus įrašytas naujas belaidis jutiklis.
 
-<img alt="" src="./image15.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
+<img alt="TrikdisConfig SP3 langas „Belaidžiai“: 1 eilutėje įrenginio tipas yra „Magnetinis kontaktas“, laukas „Serijos Nr.“ užpildytas, o laukas „Sritis“ tuščias. Matomas mygtukas „Įrašyti (F5)“." src="./image15.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
 
 17. **„Zonų įėjimų“** lentelėje jutiklį būtina priskirti **„Sričiai“**, suteikti zonai **„Pavadinimą“**, nustatyti zonos **„Paskirtį“**.
 
@@ -127,7 +127,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 6.  Nuspauskite mygtuką **„Pradėti“.**
 
-<img alt="" src="./image17.png" style="width:3.0826771653543306in;height:1.9330708661417322in" />
+<img alt="TrikdisConfig langas 'Primokymo režimas': primokomo jutiklio tipo sąraše pasirinkta 'Pulteliai'. Pažymėtas mygtukas 'Pradėti'." src="./image17.png" style="width:3.0826771653543306in;height:1.9330708661417322in" />
 
 7.  Valdymo pultelyje turi būti įdėta baterija. Nuspauskite ir palaikykite pultelio bet kurį mygtuką, kad pultelyje užsidegtu LED indikatorius. Atleiskite mygtuką.
 
@@ -151,12 +151,12 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 15. Nuspauskite **„Yes“** ir pultelis bus įrašytas į centralę „FLEXi“ SP3.
 
-<img alt="" src="./image20.png" style="width:2.748031496062992in;height:1.279527559055118in" />
+<img alt="TrikdisConfig patvirtinimo langas 'Išsaugoti' klausia, ar iškart išsaugoti parametrus į įrenginį. Pažymėtas mygtukas 'Yes'." src="./image20.png" style="width:2.748031496062992in;height:1.279527559055118in" />
 
 16. Belaidis pultelis įtrauktas į belaidžių įrenginių sąrašą.
 17. Pultelio klavišams 3 ir 4 galite priskirti papildomas funkcijas (Išjungti, Įjungti sritį; Tylus aliarmas; Panikos aliarmas; PGM valdymas).
 
-<img alt="" src="./image21.png" style="width:1.6933366141732284in;height:2.06667104111986in" />
+<img alt="Valdymo pultelio piešinys su keturiais sunumeruotais mygtukais: 1 – viršutinis užrakintos spynos simbolis, 2 – apatinis atrakintos spynos simbolis, 3 – kairėje esantis maitinimo simbolis, 4 – dešinėje esanti rodyklė." src="./image21.png" style="width:1.6933366141732284in;height:2.06667104111986in" />
 
 <img alt="" src="./image22.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
 
@@ -191,7 +191,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 6.  Nuspauskite mygtuką **„Pradėti“.**
 
-<img alt="" src="./image23.png" style="width:3.0708661417322833in;height:1.9330708661417322in" />
+<img alt="TrikdisConfig langas 'Primokymo režimas': primokomo jutiklio tipo sąraše pasirinkta 'Sirenos'. Pažymėtas mygtukas 'Pradėti'." src="./image23.png" style="width:3.0708661417322833in;height:1.9330708661417322in" />
 
 7.  Sirenos plokštėje nuspauskite ir palaikykite 3 sekundes „**LEARN“** mygtuką, sirenoje pradės mirksėti LED blykstė. Atleiskite mygtuką.
 
@@ -213,7 +213,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 14. Nuspauskite **„Yes“** ir sirena bus įrašyta į centralę „FLEXi“ SP3.
 
-<img alt="" src="./image26.png" style="width:2.7440944881889764in;height:1.2322834645669292in" />
+<img alt="TrikdisConfig langas 'Išsaugoti' klausia, ar iškart išsaugoti parametrus į įrenginį. Pažymėtas mygtukas 'Yes'." src="./image26.png" style="width:2.7440944881889764in;height:1.2322834645669292in" />
 
 15. Belaidė sirena įtraukta į belaidžių įrenginių sąrašą.
 
@@ -249,9 +249,9 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 6.  Nuspauskite mygtuką **„Pradėti“.**
 
-<img alt="" src="./image28.png" style="width:3.0826771653543306in;height:1.9409448818897639in" />
+<img alt="TrikdisConfig langas 'Primokymo režimas': primokomo jutiklio tipas 'Klaviatūros'. Pažymėtas mygtukas 'Pradėti'." src="./image28.png" style="width:3.0826771653543306in;height:1.9409448818897639in" />
 
-7.  Nuspauskite kartu ir palaikykite 3 sekundes klaviatūros mygtukus <img alt="" src="./image29.png" style="width:0.12992125984251968in;height:0.14173228346456693in" /> ir [BYP]. Klaviatūra kelis kartus pyptelės. Atleiskite mygtukus.
+7.  Nuspauskite kartu ir palaikykite 3 sekundes klaviatūros mygtukus <img alt="Mygtukas su maitinimo simboliu." src="./image29.png" style="width:0.12992125984251968in;height:0.14173228346456693in" /> ir [BYP]. Klaviatūra kelis kartus pyptelės. Atleiskite mygtukus.
 
 8.  Palaukite kelias sekundes. Centralė aptiks klaviatūrą.
 
@@ -271,7 +271,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 14. Nuspauskite **„Yes“** ir klaviatūra bus įrašyta į centralę „FLEXi“ SP3.
 
-<img alt="" src="./image32.png" style="width:2.7559055118110236in;height:1.2322834645669292in" />
+<img alt="TrikdisConfig langas 'Išsaugoti' klausia, ar iškart išsaugoti parametrus į įrenginį. Pažymėtas mygtukas 'Yes'." src="./image32.png" style="width:2.7559055118110236in;height:1.2322834645669292in" />
 
 15. Belaidė klaviatūra įtraukta į belaidžių įrenginių sąrašą.
 
@@ -308,7 +308,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 6.  Nuspauskite mygtuką **„Pradėti“.**
 
-<img alt="" src="./image34.png" style="width:3.0826771653543306in;height:1.9330708661417322in" />
+<img alt="TrikdisConfig langas 'Primokymo režimas': primokomo jutiklio tipas 'PGM įrenginys'. Pažymėtas mygtukas 'Pradėti'." src="./image34.png" style="width:3.0826771653543306in;height:1.9330708661417322in" />
 
 7.  Belaidžio dvipusio ryšio PGM modulyje nuimkite trumpiklį JP2 po kelių sekundžių uždėkite trumpiklį JP2 atgal.
 
@@ -330,7 +330,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 14. Nuspauskite **„Yes“** ir modulis **2WPGM** bus įrašytas į centralę „FLEXi“ SP3.
 
-<img alt="" src="./image37.png" style="width:2.7598425196850394in;height:1.2440944881889764in" />
+<img alt="TrikdisConfig langas Išsaugoti klausia, ar iškart išsaugoti parametrus į įrenginį. Paryškintas mygtukas Yes; šalia yra No." src="./image37.png" style="width:2.7598425196850394in;height:1.2440944881889764in" />
 
 15. Belaidis modulis **2WPGM** įtrauktas į belaidžių įrenginių sąrašą.
 
@@ -371,7 +371,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 6.  Nuspauskite mygtuką **„Pradėti“.**
 
-<img alt="" src="./image40.png" style="width:3.078740157480315in;height:1.9330708661417322in" />
+<img alt="TrikdisConfig langas Primokymo režimas: lauke Pasirinkite primokomo jutiklio tipą pasirinkta Kartotuvai. Paryškintas mygtukas Pradėti." src="./image40.png" style="width:3.078740157480315in;height:1.9330708661417322in" />
 
 7.  Trumpam nuspauskite ***RPT1* „LEARN“** mygtuką.
 
@@ -385,7 +385,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 11. Nuspauskite **„Yes“** ir RPT1 bus įrašytas į centralę „FLEXi“ SP3.
 
-<img alt="" src="./image42.png" style="width:2.7598425196850394in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig langas Išsaugoti klausia, ar iškart išsaugoti parametrus į įrenginį. Paryškintas mygtukas Yes; šalia yra No." src="./image42.png" style="width:2.7598425196850394in;height:1.2401574803149606in" />
 
 12. Belaidis ryšio kartotuvas RPT1 įtrauktas į belaidžių įrenginių sąrašą.
 

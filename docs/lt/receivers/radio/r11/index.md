@@ -5,7 +5,7 @@ pdf: r11-original.pdf
 # R11 Radijo Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="TRIKDIS R11 radijo imtuvo vaizdas iš priekio: matoma antenos jungtis, indikatorių užrašai NETWORK, DATA ir POWER bei šoninis gnybtų blokas." style="width: 100%; max-width: 600px;">
 </div>
 
 Radijo imtuvai R11 ir RF11 skirti koduotų pranešimų, siunčiamų radijo ryšio kanalu VHF ar UHF dažnių diapazonuose, priėmimui ir dekodavimui ir naudojami kaip sudėtinė radijo apsauginės sistemos RAS3 dalis.
@@ -147,13 +147,13 @@ Paruošimo darbui eiga:
 
 Veikimo parametrų nustatymas atliekamas parametrų nustatymo programa “R11config”, sujungus kompiuterį ir imtuvą USB kabeliu. Naudoti programą ir keisti nustatymus galima tiek esant įjungtam išoriniam maitinimui, tiek maitinant per USB jungtį. Įjungus programą R11config atsiveria pradinis langas:
 
-<img alt="" src="./image7.webp" style="width:4.885416666666667in;height:3.3131944444444446in" />
+<img alt="Programos R11config pradinis langas. Viduryje yra tuščias Password laukelis; viršuje matomi Read, Write, Open, Save ir Exit mygtukai, kairėje – Main, Filters, Reports, Inputs/Outputs ir Settings skyriai." src="./image7.webp" style="width:4.885416666666667in;height:3.3131944444444446in" />
 
 Gamyklinisprisijungimo slaptažodis yra “1234”. Jį įvedus ir paspaudus klaviatūros “Enter” klavišą, atsivers “Main” langas.
 
 Skiltyje “Settings” nurodykite kompiuterio USB prievado numerį ir mainų parametrus:
 
-<img alt="" src="./image8.webp" style="width:1.8625in;height:1.8701388888888888in" />
+<img alt="R11config langas Setup. Settings reikšmės: Port COM8, Baud rate 115200, Data bits 8, Stop bits 1, Parity None, Flow control None." src="./image8.webp" style="width:1.8625in;height:1.8701388888888888in" />
 
 R11config programos mygtukai:
 

@@ -3,7 +3,7 @@
 ## Klaviatūros apžvalga
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="FLEXi SK-LED button klaviatūros apžvalga. Viršuje pažymėta maitinimo ir sistemos būsenos indikacija, 1 ir 2 sričių būsenos indikacijos bei zonų indikatoriai 1–16: šviečia – zona pažeista, nešviečia – zona stebima, žybsi – zona arba vartotojas pasirinktas, dažnai žybsi – zona buvo pažeista. Dešinėje pažymėti trys sričių valdymo mygtukai." width="600">
 </div>
 
 > [!NOTE]
@@ -15,49 +15,49 @@
 
 1. Įsitikinkite, kad visos zonos nėra pažeistos (nešviečia nei vienas iš zonų indikatorių).
 
-2. Paspauskite mygtuką <img src="./image2.webp" alt="" style="width:0.3500in;" />.
+2. Paspauskite mygtuką <img src="./image2.webp" alt="Mygtukas su užrakintos spynos simboliu sričiai įjungti." style="width:0.3500in;" />.
 
 3. Surinkite vartotojo kodą.
 
 4. Pasirinkite įjungiamos srities mygtuką.
 
-5. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />.
+5. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />.
 
 6. Per laiko atskaitą išeikite iš patalpų.
 
-Surinkus kodą, per laiko atskaitą mirksės indikatorius <img src="./image2.webp" alt="" style="width:0.3500in;" />. Įsijungus saugojimo režimui, pradės šviesti <img src="./image2.webp" alt="" style="width:0.3500in;" /> indikatorius.
+Surinkus kodą, per laiko atskaitą mirksės indikatorius <img src="./image2.webp" alt="Mygtukas su užrakintos spynos simboliu sričiai įjungti." style="width:0.3500in;" />. Įsijungus saugojimo režimui, pradės šviesti <img src="./image2.webp" alt="Mygtukas su užrakintos spynos simboliu sričiai įjungti." style="width:0.3500in;" /> indikatorius.
 
 ### SLEEP režimo įjungimas
 
 (Saugomas patalpų perimetras. Viduje leidžiama judėti. Signalizacija suveiks nedelsiant, jei praversite įėjimo į patalpas duris):
 
-1. Paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />.
+1. Paspauskite mygtuką <img alt="SLEEP režimo mygtukas." src="./image4.webp" style="width:0.3500in;" />.
 
 2. Surinkite vartotojo kodą.
 
 3. Paspauskite įjungiamos srities mygtuką.
 
-4. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />.
+4. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />.
 
 5. SLEEP režimas įsijungs nedelsiant, be išėjimo laiko atskaitos.
 
-Įsijungus SLEEP režimui, pradės šviesti <img src="./image4.webp" style="width:0.3500in;" /> indikatorius.
+Įsijungus SLEEP režimui, pradės šviesti <img alt="SLEEP režimo mygtukas." src="./image4.webp" style="width:0.3500in;" /> indikatorius.
 
 ### STAY režimo įjungimas
 
 (Saugomas patalpų perimetras. Viduje leidžiama judėti. Jei praversite įėjimo į patalpas duris, įsijungs laiko atskaita, per kurią turite išjungti signalizaciją):
 
-1. Paspauskite mygtuką <img src="./image5.webp" style="width:0.3500in;" />.
+1. Paspauskite mygtuką <img alt="STAY režimo mygtukas su namo ir žmogaus simboliu." src="./image5.webp" style="width:0.3500in;" />.
 
 2. Surinkite vartotojo kodą.
 
 3. Paspauskite įjungiamos srities mygtuką.
 
-4. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />.
+4. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />.
 
 5. STAY režimas įsijungs nedelsiant, be išėjimo laiko atskaitos.
 
-Įsijungus STAY režimui, pradės šviesti <img src="./image6.webp" alt="" style="width:0.3500in;" /> indikatorius.
+Įsijungus STAY režimui, pradės šviesti <img src="./image6.webp" alt="STAY režimo indikatorius (namas)." style="width:0.3500in;" /> indikatorius.
 
 ### Signalizacijos išjungimas
 
@@ -65,12 +65,12 @@ Surinkus kodą, per laiko atskaitą mirksės indikatorius <img src="./image2.web
 
 2. Paspauskite mygtuką, kuris atitinka norimą išjungti sritį.
 
-3. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />.
+3. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />.
 
-Kai signalizacija išjungta šviečia indikatorius <img src="./image7.webp" alt="" style="width:0.3500in;" />.
+Kai signalizacija išjungta šviečia indikatorius <img src="./image7.webp" alt="Išjungtos signalizacijos indikatorius (atidaryta spyna)." style="width:0.3500in;" />.
 
 > [!NOTE]
-> Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką <img src="./image8.webp" alt="" style="width:0.3500in;" />.
+> Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką <img src="./image8.webp" alt="Mygtukas su lenkta rodykle į kairę." style="width:0.3500in;" />.
 
 
 
@@ -88,35 +88,35 @@ mygtuką **4**.
 
 ### Klaviatūros mygtukų ryškumas
 
-1. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **1**.
+1. Paspauskite mygtuką <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" />, po to **1**.
 
 2. Pasirinkite norimą apatinių mygtukų apšvietimo ryškumą mygtukais **2** ir **8**.
 
-3. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+3. Naujai reikšmei užfiksuoti būtina paspausti <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.
 
 ### Zonų LED indikacijos ryškumas
 
-4. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **4**.
+4. Paspauskite mygtuką <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" />, po to **4**.
 
 5. Pasirinkite norimą zonų būsenų indikacijos apšvietimo ryškumą mygtukais **2** ir **8**.
 
-6. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+6. Naujai reikšmei užfiksuoti būtina paspausti <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.
 
 ### Klaviatūros mygtukų paspaudymo garsumas
 
-7. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **7**.
+7. Paspauskite mygtuką <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" />, po to **7**.
 
 8. Pasirinkite norimą mygtukų paspaudymo garsumą mygtukais **2** ir **8**.
 
-9. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+9. Naujai reikšmei užfiksuoti būtina paspausti <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.
 > [!NOTE]
-> Ramybės būsenos klaviatūros apšvietimo išjungimas. Paspaudus <img src="./image9.webp" style="width:0.3500in;" /> po to su **5** galima keisti ramybės būsenos apšvietimo įjungta/išjungta būsenas. Naujai reikšmei užfiksuoti būtina paspausti <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+> Ramybės būsenos klaviatūros apšvietimo išjungimas. Paspaudus <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" /> po to su **5** galima keisti ramybės būsenos apšvietimo įjungta/išjungta būsenas. Naujai reikšmei užfiksuoti būtina paspausti <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.
 
 ## Vartotojo (User) arba Administratoriaus (Master) kodų įvedimas arba pakeitimas
 
 ### Norėdami įvesti naują arba pakeisti esamą vartotojo kodą
 
-1. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **0**.
+1. Paspauskite mygtuką <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" />, po to **0**.
 
 2. Surinkite *Master* kodą, numatytasis – 1234.
 
@@ -128,13 +128,13 @@ mygtuką **4**.
 
 5. Paspauskite sričių numerius, kurias vartotojas galės valdyti.
 
-6. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+6. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.
 
 ## Gaisro (dūmų) jutiklių atstatymas
 
 ### Norėdami dvilaidžius gaisro (dūmų) jutiklius paleisti veikti iš naujo
 
-- 3 sekundes palaikykite paspaudę mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+- 3 sekundes palaikykite paspaudę mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.
 > [!NOTE]
 > Užfiksavę gaisro pavojų, dvilaidžiai gaisro jutikliai automatiškai veikti iš naujo nepasileidžia. Jie paleidžiami veikti tik rankiniu būdu.
 
@@ -142,13 +142,13 @@ mygtuką **4**.
 
 ### BYPASS funkcijos įjungimas
 
-1. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **6**.
+1. Paspauskite mygtuką <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" />, po to **6**.
 
-2. Surinkite signalizacijos valdymo kodą. Indikatorius <img src="./image10.webp" style="width:0.3500in;" /> pradės mirksėti žaliai.
+2. Surinkite signalizacijos valdymo kodą. Indikatorius <img alt="Sistemos būsenos indikatorius (trikampis su šauktuku)." src="./image10.webp" style="width:0.3500in;" /> pradės mirksėti žaliai.
 
 3. Surinkite dviženklį zonos, kurios stebėjimą norite išjungti, eilės numerį. Galite suvesti kelių zonų dviženklius numerius, jeigu norite išjungti kelių zonų stebėjimą.
 
-4. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />. Indikatorius <img src="./image10.webp" style="width:0.3500in;" /> pradės šviesti žaliai.
+4. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Indikatorius <img alt="Sistemos būsenos indikatorius (trikampis su šauktuku)." src="./image10.webp" style="width:0.3500in;" /> pradės šviesti žaliai.
 
 ### BYPASS funkcijos išjungimas
 
@@ -158,12 +158,12 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 ### Norėdami ištrinti vartotojo kodą
 
-1. Paspauskite mygtuką <img src="./image9.webp" style="width:0.3500in;" />, po to **0**.
+1. Paspauskite mygtuką <img alt="MENU mygtukas." src="./image9.webp" style="width:0.3500in;" />, po to **0**.
 
 2. Surinkite *Master* kodą.
 
 3. Surinkite dviženklį vartotojo eilės numerį, pvz., **02**.
 
-4. Paspauskite klaviatūros mygtuką <img src="./image4.webp" style="width:0.3500in;" />. Pasigirs garso signalas ir užges mygtukas, rodantis to vartotojo kodo eilės numerį, kurio kodą ištrynėte iš atminties.
+4. Paspauskite klaviatūros mygtuką <img alt="SLEEP režimo mygtukas." src="./image4.webp" style="width:0.3500in;" />. Pasigirs garso signalas ir užges mygtukas, rodantis to vartotojo kodo eilės numerį, kurio kodą ištrynėte iš atminties.
 
-5. Paspauskite mygtuką <img src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img src="./image8.webp" style="width:0.3500in;" />.
+5. Paspauskite mygtuką <img alt="Mygtukas su varnelės simboliu pasirinkimui patvirtinti." src="./image3.webp" style="width:0.3500in;" />. Išėjimui paspauskite mygtuką <img alt="Mygtukas su lenkta rodykle į kairę." src="./image8.webp" style="width:0.3500in;" />.

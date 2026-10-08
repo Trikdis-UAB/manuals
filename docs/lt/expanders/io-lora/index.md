@@ -1,7 +1,7 @@
 # iO-LORA Belaidis plėtiklis
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="TRIKDIS iO-LORA bevielio išplėtimo modulio priekis su NETWORK, OUTPUT ir POWER indikatoriais. Ant korpuso nurodyta 9-26 V, 0.1 A Max ir gnybtų žymėjimai +DC, -DC, D0, D1, +5V, 1 Wire/OUT wgd, COM, IN1, NC, C ir NO." width="200">
 </div>
 
 ## Aprašymas 
@@ -51,7 +51,7 @@ Prijungimas:
 
 ### Plėtiklio elementai 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="Dvi iO-LORA išplėtimo modulio nuotraukos: kairėje – uždarytas korpusas, dešinėje – atidengta plokštė. Kairėje: 1 – šviesos indikatoriai NETWORK, OUTPUT ir POWER; 2 – priekinio dangtelio atidarymo plyšys dešiniajame krašte. Dešinėje: 3 – išorinių jungčių gnybtas; 4 – mygtukas SW2 įrenginiui primokyti ir ryšiui patikrinti; 5 – DIP jungiklis SW1." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 !!! note "DIP jungiklio „SW1“ nustatymai"
     Nuo HW iO-LO_x30x_7_230418 versijos:
@@ -95,7 +95,7 @@ Prijungimas:
 
 1.  Nuimkite viršutinį dangtelį.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Du piešiniai, kaip nuimti iO-LORA viršutinį dangtelį. Kairėje atsuktuvas įstatomas į plyšį viršutiniame krašte. Dešinėje atsuktuvo rankena spaudžiama žemyn, kad dangtelis atsikabintų." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Išimkite plokštę iš korpuso pagrindo.
 
@@ -105,11 +105,11 @@ Prijungimas:
 
 5.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="iO-LORA korpuso piešinys: dešinėje pavaizduotas pagrindas ir jo tvirtinimo angos; kairėje – plokštė ties korpuso kraštu, apibraukta ją laikanti vieta ir į išorę nukreipta rodyklė." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Maitinimo šaltinio prijungimo schema 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Prijungimo schema: maitinimo šaltinis prie iO-LORA. Maitinimas: +12V gnybtas prie +DC, 0V gnybtas prie -DC; teigiamo laido įtampa pažymėta (+12 V)." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Įėjimo prijungimo schemos 
 
@@ -117,10 +117,10 @@ iO-LORA turi 1 įėjimo gnybtą. Prie įėjimo gnybto galima prijungti NC, NO ti
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Prijungimo schema: iO-LORA įėjimas prie normaliai atviros (NO) grandinės. IN gnybtas per NO kontaktą sujungiamas su COM gnybtu." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Prijungimo schema: normaliai uždara (NC) grandinė. IN per NC kontaktą sujungtas su COM." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -128,7 +128,7 @@ iO-LORA turi 1 įėjimo gnybtą. Prie įėjimo gnybto galima prijungti NC, NO ti
 
 Temperatūros jutikliai jungiami pagal pateiktą schemą. Prie *iO- LORA* plėtiklio galima prijungti Maxim®/Dallas® DS18S20, DS18B20 temperatūros jutiklius (1 vnt.). Jungiant temperatūros jutiklį laidu, ilgesniu nei 0,5 m, rekomenduojame naudoti vytos poros kabelį (UTP4x2x0,5 arba STP4x2x0,5). Plokštės gnybtas „+5V“ skirtas prie "1-Wire" magistralės prijungtiems įrenginiams maitinti 5 V nuolatine įtampa.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Prijungimo schema: iO-LORA į temperatūros jutiklį DS18B20. Raudonas laidas: +5V į +Vdd; geltonas laidas: 1 Wire į DQ; juodas laidas: C į GND." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Viršijus leistiną srovę, maitinimas automatiškai atjungiamas. Centralė "FLEXi" SP3 prijungtus įrenginius automatiškai atpažįsta ir registruoja.
 
@@ -136,11 +136,11 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 **CZ-Dallas iButton** raktų skaitytuvas prie iO-LORA jungiamas prie "**1 Wire**" magistralės. Magistralės laidų ilgis gali būti iki 30 m.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Prijungimo schema: iO-LORA į CZ-Dallas reader. Maitinimas 12-26V: + į +DC, − į -DC. Baltas laidas: 1-Wire į skaitytuvą, jungties ilgis iki 30 m. Pilkas laidas: COM į LED-; ten pat prijungtas geltonas laidas. NO per 1k ir žalią laidą į RED LED+; NC per 1k ir rudą laidą į Green LED+. C sujungtas su +DC. OUT tipas 'Sistemos būsena': apsaugai esant įjungtai skaitytuvas šviečia raudonai, išjungtai – žaliai." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### iO-LORA plėtimo modulių prijungimo schema 
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Prijungimo schema: SP3 prijungta prie RF-LORA, kuris bevieliu ryšiu jungiasi su iO-LORA moduliais nuo 1 iki 8 iki 5000 m atstumu. SP3 AUX+ (+12 V) jungiamas su RF-LORA +DC, AUX- su -DC, 485 A su A RS 485, 485 B su B RS485. 1 modulis: 12-26V maitinimas jungiamas prie +DC ir -DC; +5V, 1-Wire ir COM jungiami su temperatūros jutiklio Vdd+, DQ ir GND (DS18B20 arba DS18S20). 8 modulis: 12-26V maitinimas jungiamas prie +DC ir -DC; 1-Wire jungiamas su CZ-Dallas skaitytuvo baltu laidu, COM – su pilku ir geltonu LED- laidais. C sujungtas su +DC, NO per 1k rezistorių jungiamas prie RED LED+, o NC per 1k rezistorių – prie Green LED+. Skaitytuvo 1-Wire jungties ilgis – iki 30 m. Išėjimui OUT priskiriamas tipas „Sistemos būsena“: įjungus apsaugos sistemą skaitytuvas šviečia raudonai, išjungus – žaliai." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Prie apsaugos centralės "FLEXi" SP3 turi būti prijungtas
@@ -172,15 +172,15 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonai.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „Zonų įėjimai“, skirtukas „Zonų nustatymai“. Lauko „Įėjimas“ išskleidžiamajame sąraše yra „RS485 Expander ID1, IN1“, skirtas plėtiklio įėjimui priskirti zonai. Lentelėje taip pat rodomi laukai „Sritis“, „Paskirtis“, „Tipas“ ir pranešimų nustatymai." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimui.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „PGM išėjimai“, skirtukas „Išėjimai“. PGM 2 eilutėje „Išėjimas“ nustatytas kaip „RS485 Expander ID1, OUT1“, „Išėjimo aprašymas“ – „Nuotolinis valdym“, o „Impulso trukmė, s“ – 10." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. "**Jutikliai**" sąraše bus įtrauktas temperatūros jutiklis, jei plėtiklyje iO-LORA yra prijungtas temperatūros jutiklis.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig 1.66.47 SP3 langas, pasirinkta 'Jutikliai'. Sąraše aštuoni jutikliai: pirmojo 'Įrenginys' yra 'RS485 Expander ID1', kitų – 'Išjungta'. 'Jutiklio pavadinimas' rodo Sensor 1–Sensor 8. Visų 'Maks.' reikšmė 30; pirmojo 'Min.' yra 20, kitų – 2. Visų Maks. ir Min. langeliai pažymėti, uždelsimas – 0." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -198,4 +198,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos šiukšlių dėžės su ratukais simbolis, reiškiantis, kad gaminio negalima išmesti su buitinėmis atliekomis." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

@@ -1,7 +1,7 @@
 # PB-LoRa Belaidis panikinis mygtukas
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="TRIKDIS PB-LORA bevielio panikos mygtuko priekis: raudonas priekinis skydelis su metaliniu mygtuku centre, po juo užrašu ALARM ir kairėje esančiu NETWORK indikatoriumi." width="200">
 </div>
 
 ## Aprašymas
@@ -38,7 +38,7 @@ Prijungimas:
 
 ### Panikos mygtuko elementai
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="PB-LORA panikos mygtukas. Kairėje – priekinis dangtelis: 1 – šviesos indikatorius NETWORK; 2 – priekinio dangtelio atidarymo plyšys dešiniajame krašte; centre – didelis mygtukas ALARM. Dešinėje – atidarytas korpusas su plokšte: 3 – baterija 3 V (CR123A); 4 – mygtukas TAMP įrenginiui primokyti ir ryšiui patikrinti; 5 – DIP jungiklis SW." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 1. Šviesos indikatorius.
 2. Priekinio dangtelio atidarymo plyšys.
@@ -74,7 +74,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 1.  Nuimkite viršutinį dangtelį.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Du piešiniai, kaip atidaryti PB-LORA korpusą atsuktuvu viršuje esančiame plyšyje. Kairėje rodyklė rodo, kaip atsuktuvas stumiamas į plyšį. Dešinėje rodyklė rodo, kaip atsuktuvo rankena spaudžiama žemyn ir priekinis dangtelis atskiriamas nuo pagrindo." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Išimkite plokštę iš korpuso pagrindo.
 
@@ -86,11 +86,11 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 6.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="Du PB-LORA tvirtinimo piešiniai. Kairėje apibrauktas plokštę laikantis fiksatorius, o rodyklė rodo, kaip jis stumiamas į išorę plokštei atlaisvinti. Dešinėje parodytas tuščias korpuso pagrindas su tvirtinimo angomis." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Belaidžio PB-LORA panikos mygtuko prijungimo schema
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Prijungimo schema: SP3 sujungta su RF-LORA transiveriu. Maitinimo ir RS485 jungtys: AUX+ (+12 V) prijungtas prie +DC, AUX- – prie -DC, 485 A – prie A RS 485, 485 B – prie B RS485. Transiveris su PB-LORA panikos mygtukais palaiko bevielį ryšį iki 5000 m atstumu; schemoje mygtukai pažymėti nuo 1* iki 250*." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     Prie apsaugos centralės “FLEXi” SP3 turi būti prijungtas transiveris RF-LORA ir gali būti prijungti iki 8 vnt. PB-LORA bevielių pavojaus mygtukų (centralės veikimo programos versija 1.17 arba aukštesnė. Pvz.: SP3_xxxx_0117.fw) arba iki 250 vnt. PB-LORA mygtukų (centralės 2 laidos veikimo programos versija 1.16 arba aukštesnė. Pvz.: SP3_xxx2_0116.fw).
@@ -185,7 +185,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 6.  TrikdisConfig lauke **„Nuotolinė prieiga“** įveskite centralės „FLEXi“ SP3 „**Unikalus ID“** numerį. Šį numerį rasite ant įrenginio pakuotės ir centralės plokštės.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig lango skiltyje „Nuotolinė prieiga“ pažymėti tuščias „Unikalus ID“ laukas ir mygtukas „Konfigūravimas“." src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Paspauskite **„Konfigūravimas“**.
 
@@ -213,7 +213,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 17. Paspauskite **„Jutiklių primokymas“**.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, „Bevieliai jutikliai“  „Panikos mygtukai“. Virš sąrašo su stulpeliais „Nr.“ ir „Serijos Nr.“ pažymėtas mygtukas „Jutiklių primokymas“." src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 Belaidžių panikos mygtukų registravimą galima atlikti visiems iš karto.
 
@@ -227,7 +227,7 @@ Registruojant *PB-LORA* panikos mygtukus *RF-LORA* modulis turi būti ne arčiau
 
 21. Modulyje RF-LORA kelioms sekundėms žaliai užsidegs indikatorius **„DATA/TROUBLE“**. Po to modulyje RF-LORA pradės mirksėti raudonai/žaliai LED indikatorius **„DATA/TROUBLE“**.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig langas Primokymas. Rodomas pranešimas Primokymas pradėtas. Įdėkite baterijas į naują jutiklį ir palaukite kol jis baigs inicijuotis. Apačioje yra mygtukas Sustabdyti." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. Po kelių sekundžių pavojaus mygtukas PB-LORA bus įtrauktas į jutiklių sąrašą.
 
@@ -241,7 +241,7 @@ Registruojant *PB-LORA* panikos mygtukus *RF-LORA* modulis turi būti ne arčiau
 
 26. Atsivėrusiame lange paspauskite **„Yes“**. Priregistruoti PB-LORA belaidžiai pavojaus mygtukai bus įrašyti į centralės „FLEXi“ SP3 atminti.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 420px; height: auto;" />
+<img alt="TrikdisConfig patvirtinimo langas Išsaugoti klausia, ar iškart išsaugoti parametrus į įrenginį. Raudonai pažymėtas mygtukas Yes." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 420px; height: auto;" />
 
 Palaukite kelias minutes. Nuspauskite mygtuką **Skaityti \[F4\]**.
 
@@ -273,4 +273,4 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos šiukšlių dėžės su ratukais simbolis, reiškiantis, kad gaminio negalima išmesti su buitinėmis atliekomis." src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.

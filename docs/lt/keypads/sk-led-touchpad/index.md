@@ -3,7 +3,7 @@
 ## Klaviatūros apžvalga
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="FLEXi SK-LED TouchPad klaviatūros apžvalga. Viršuje pažymėtos 1 ir 2 sričių būsenos indikacijos bei zonų indikatoriai 1–32: šviečia – zona pažeista, nešviečia – zona stebima, žybsi – zona arba vartotojas pasirinktas, dažnai žybsi – zona buvo pažeista. Apačioje pažymėta maitinimo indikacija, funkciniai klavišai ir sričių valdymo mygtukai ARM, SLEEP, STAY, OFF." width="600">
 </div>
 
 > [!NOTE]
@@ -70,7 +70,7 @@ Surinkus kodą, per laiko atskaitą mirksės indikatorius ARM.
 Kai signalizacija išjungta, turi šviesti indikatorius OFF, o saugojimo režimų indikatoriai turi nešviesti.
 
 > [!NOTE]
-> Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką <img src="./image2.webp" alt="" style="width:0.3500in;" />.
+> Srities būsenos pakeitimui į priešingą užtenka suvesti vartotojo kodą ir pasirinkti norimą sritį. Norėdami ištrinti suvestus simbolius ar komandą, paspauskite mygtuką <img src="./image2.webp" alt="Atskirai kaip žyma parodytas klaviatūros mygtukas „C“." style="width:0.3500in;" />.
 
 
 
@@ -98,7 +98,7 @@ mygtuką **4**.
 
 5. Pasirinkite klaviatūros LED indikacijos pašvietimo įjungimą/išjungimą budėjimo režime mygtuku **0**. Paspauskite **0**, jei dega kas antras zonų LED indikatorius – klaviatūros pašvietimas budėjimo režime išjungtas, jei dega visi zonų LED indikatoriai – klaviatūros pašvietimas budėjimo režime įjungtas.
 
-6. Norint išsaugoti nustatymus, dar kartą paspauskite mygtuką <img src="./image2.webp" alt="" style="width:0.3500in;" />.
+6. Norint išsaugoti nustatymus, dar kartą paspauskite mygtuką <img src="./image2.webp" alt="Atskirai kaip žyma parodytas klaviatūros mygtukas „C“." style="width:0.3500in;" />.
 
 ## Vartotojo (User) arba Administratoriaus (Master) kodų įvedimas arba pakeitimas
 
@@ -116,7 +116,7 @@ mygtuką **4**.
 
 5. Paspauskite eilės numerius sričių, kurias vartotojas galės valdyti.
 
-6. Paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />. Išėjimui du kartus paspauskite mygtuką **C**.
+6. Paspauskite mygtuką <img alt="Mygtukas OK." src="./image4.webp" style="width:0.3500in;" />. Išėjimui du kartus paspauskite mygtuką **C**.
 
 ## Dvilaidžių gaisro (dūmų) jutiklių atstatymas
 
@@ -138,7 +138,7 @@ mygtuką **4**.
 
 3. Surinkite dviženklį zonos, kurios stebėjimą norite išjungti, eilės numerį. Galite suvesti kelių zonų dviženklius numerius, jeigu norite išjungti kelių zonų stebėjimą.
 
-4. Paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />. Indikatorius **BYP** pradės šviesti.
+4. Paspauskite mygtuką <img alt="Mygtukas OK." src="./image4.webp" style="width:0.3500in;" />. Indikatorius **BYP** pradės šviesti.
 ### BYPASS funkcijos išjungimas
 Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėjimą.
 
@@ -154,4 +154,4 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 4. Paspauskite klaviatūros mygtuką **SLEEP**. Pasigirs garso signalas ir užges mygtukas, rodantis to vartotojo kodo eilės numerį, kurio kodą ištrynėte iš atminties.
 
-5. Du kartus paspauskite mygtuką <img src="./image4.webp" style="width:0.3500in;" />.
+5. Du kartus paspauskite mygtuką <img alt="Mygtukas OK." src="./image4.webp" style="width:0.3500in;" />.

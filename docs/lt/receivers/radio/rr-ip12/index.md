@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Retransliatorius R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Pilkas stačiakampis retransliatoriaus korpusas su keturiais kampiniais varžtais ir dviem tvirtinimo kojelėmis." style="width: 100%; max-width: 600px;">
 </div>
 
 

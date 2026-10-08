@@ -1,7 +1,7 @@
 # GT GSM komunikatorius
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="GT GSM komunikatoriaus korpuso vaizdas iš priekio su TRIKDIS logotipu. Indikatorių žymos iš viršaus į apačią: NETWORK, DATA, POWER, TROUBLE, BAND. Gnybtų kaladėlės žymos: +12 VDC, -12 VDC, TIP, RING, CLK, DATA, 1 I/O, 2 I/O, A 485, B 485." width="400">
 </div>
 
 ## Aprašymas 
@@ -126,7 +126,7 @@ Veikia su Protegus2 programėle:
 
 7.  SIM kortelės laikiklis.
 
-<img alt="" src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
+<img alt="GT komunikatoriaus elementai su numeruotomis nuorodomis. Kairėje uždarytas korpusas: 1 GSM antenos SMA jungtis, 2 šviesos indikatoriai, 3 priekinio dangtelio atidarymo plyšys. Dešinėje atidarytas korpusas su plokšte: 4 gnybtai laidų prijungimui, 5 USB-C jungtis programavimui, 6 RESET mygtukas, 7 SIM kortelės laikiklis." src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
 
 ### Išorinių kontaktų paskirtis 
 
@@ -176,7 +176,7 @@ Veikia su Protegus2 programėle:
 
 ### GSM komunikatoriaus GT panaudojimo struktūrinė schema
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
+<img alt="GT naudojimo struktūrinė schema: apsaugos centralė prijungta prie LTE komunikatoriaus. Komunikatorius per GSM siunčia skambučius ir SMS į telefoną su Protegus programėle, o per LTE jungiasi prie interneto. Per internetą Protegus serveris pasiekia tą patį telefoną; dvikryptis ryšys jungia internetą su saugos tarnybos stebėjimo pulto imtuvu, kuris perduoda duomenis į monas ms stebėjimo programinę įrangą." src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
 
 !!! note "Pastaba"
     Prieš pradėdami įrengimą, įsitikinkite, kad turite:
@@ -204,7 +204,7 @@ Veikia su Protegus2 programėle:
 
 2.  Plokščiu atsuktuvu nuimkite GT dangtelį kaip parodyta žemiau:
 
-    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="Brėžinys, rodantis, kaip plokščiu atsuktuvu atidaryti komunikatoriaus korpusą: įkišti jį į viršutinį tarpą prie antenos ir atlenkti į išorę, tada įkišti į apatinį tarpą ir atlenkti žemyn. Atskirame vaizde parodyta USB-C jungties vieta plokštės krašte." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Su USB-C kabeliu sujunkite GT su kompiuteriu.
 
@@ -218,7 +218,7 @@ Veikia su Protegus2 programėle:
 
 **Lange „Centralės sąsaja“:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.2322834645669292in" />
+<img alt="TrikdisConfig langas Centralės sąsaja. 1: grupėje Tip/Ring sąsaja raudonai pažymėtas laukas Komunikacijos protokolas, pasirinkta 2. Dual Tone." src="./image7.webp" style="width:7.086614173228346in;height:1.2322834645669292in" />
 
 1.  Jei komunikatorius prijungtas prie centralės TIP/RING gnybtų, tuomet reikia nustatyti „**Dual tone**“.
 
@@ -266,15 +266,15 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.594488188976378in" />
+<img alt="TrikdisConfig, langas Sistemos parinktys. Žyma 1 nurodo lauką Objekto numeris, kuriame įrašyta 561234." src="./image11.webp" style="width:7.086614173228346in;height:1.594488188976378in" />
 
 1.  Įrašykite **Objekto numerį (Nenaudokite FFFE, FFFF objekto numerių**.**)**.
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig, langas Centralės sąsaja. Žyma 2 nurodo Tip/Ring sąsajos lauką Komunikacijos protokolas; pasirinkta 2. Dual Tone." src="./image12.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  Jei komunikatorius prijungtas prie centralės TIP/RING gnybtų, tuomet reikia nustatyti „**Dual tone**“.
 
-<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
+<img alt="TrikdisConfig, langas Centralės sąsaja. Žyma 3 nurodo Data/CLK sąsajos lauką Centralės modelis; matomas pasirinkimas 5. PARADOX SP/MG se." src="./image13.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
 
 2. Komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės. Pasirinkite „**Centralės modelį**“, kuris bus prijungtas prie komunikatoriaus.
 
@@ -333,7 +333,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 <img alt="" src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Plokštės SIM kortelės laikiklio brėžinys su rodykle, rodančia nano-SIM kortelės įstatymą į laikiklį." src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Pastaba"
     Įsitikinkite, kad SIM kortelė yra aktyvuota. / Įsitikinkite, kad įjungta
@@ -352,39 +352,39 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="541" height="480" />
+<img class="wiring-diagram" alt="Prijungimo schema: DSC centralės klaviatūros magistralė prijungta prie GT. RED – prie + DC, BLK – prie - DC, YEL – prie CLK, GRN – prie DATA." src="./wiring-dsc.webp" width="541" height="480" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="650" height="491" />
+<img class="wiring-diagram" alt="Prijungimo schema: PARADOX centralės nuoseklioji jungtis prijungta prie GT per atskirai užsakomą kabelį EX-CRP2.4. R (raudonas laidas) – prie + DC, B (juodas) – prie - DC, Y (geltonas) – prie CLK, G (žalias) – prie DATA." src="./wiring-paradox.webp" width="650" height="491" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="535" height="479" />
+<img class="wiring-diagram" alt="Prijungimo schema: CADDX centralės klaviatūros magistralė prijungta prie GT. POS – prie + DC, COM – prie - DC, DATA – prie DATA." src="./wiring-caddx.webp" width="535" height="479" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="661" height="490" />
+<img class="wiring-diagram" alt="Prijungimo schema: TEXECOM centralės nuoseklioji jungtis prijungta prie GT per atskirai užsakomą kabelį EX-CRP4. R (raudonas laidas) – prie + DC, B (juodas) – prie - DC, BL (mėlynas) – prie CLK, W (baltas) – prie DATA." src="./wiring-texecom.webp" width="661" height="490" />
 
 #### INNERRANGE INCEPTION
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="634" height="459" />
+<img class="wiring-diagram" alt="Prijungimo schema: INNERRANGE INCEPTION centralė prijungta prie GT. VOUT + – prie + DC, VOUT 0V – prie - DC; nuo centralės USB jungties per USB kabelį juodas laidas – prie - DC, žalias – prie CLK, baltas – prie DATA." src="./wiring-innerrange-inception.webp" width="634" height="459" />
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="563" height="459" />
+<img class="wiring-diagram" alt="Prijungimo schema: INNERRANGE INTEGRITI centralės Port 0 prijungtas prie GT per „Inner Range“ kabelį INTG-996795. +DET (+13V) – prie + DC, GND 5 – prie - DC, Rx 3 – prie CLK, Tx 2 – prie DATA." src="./wiring-innerrange-integriti.webp" width="563" height="459" />
 
 #### Honeywell Vista-15, Vista-20, Vista-48
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="573" height="477" />
+<img class="wiring-diagram" alt="Prijungimo schema: Honeywell Vista-15, Vista-20 arba Vista-48 centralės klaviatūros magistralė prijungta prie GT. Gnybtas 4 – prie - DC, 5 – prie + DC, 6 – prie DATA, 7 – prie CLK." src="./wiring-honeywell-vista.webp" width="573" height="477" />
 
 #### Centralė (telefoninis komunikatorius, TIP/RING)
 
-<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="596" height="511" />
+<img class="wiring-diagram" alt="Prijungimo schema: centralės telefoninio komunikatoriaus gnybtai prijungti prie GT: +AUX prie +DC, -AUX prie -DC, TIP prie TIP, RING prie RING." src="./wiring-control-panel-tip-ring.webp" width="596" height="511" />
 
 ### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų) 
 
-<img alt="" src="./image22.webp" style="width:3.550007655293088in;height:2.743338801399825in" />
+<img alt="Prijungimo schema: PARADOX SP/SP+/MG/MG+ centralė prie GT. Klaviatūros magistralė: +AUX (+12V) prie + DC, -AUX prie - DC, GRN prie DATA, YEL prie CLK. Telefono komunikatorius: TIP prie TIP, RING prie RING." src="./image22.webp" style="width:3.550007655293088in;height:2.743338801399825in" />
 
 Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/RING gnybtų, tuomet GT reikia nustatyti:
 
@@ -421,11 +421,11 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su GT PGM išėjim
     zoną".
 Komunikatorius prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės. / Apsaugos įjungimas/išjungimas per jungiklio zoną
 
-<img alt="" src="./image24.webp" style="width:3.4533398950131233in;height:2.593338801399825in" />
+<img alt="Prijungimo schema: centralė prie GT. Klaviatūros magistralė arba nuoseklusis jungtis: RED (+12V) prie + DC, BLK prie - DC, YEL prie CLK, GRN prie DATA. Jungiklio zona: 1-a Sritis prie 1 I/O, 2-a Sritis prie 2 I/O." src="./image24.webp" style="width:3.4533398950131233in;height:2.593338801399825in" />
 
 Komunikatorius yra prijungtas prie centralės telefono komunikatoriaus (TIP/RING gnybtų). / Apsaugos įjungimas / išjungimas per jungiklio zoną.
 
-<img alt="" src="./image25.webp" style="width:3.7900076552930884in;height:2.510005468066492in" />
+<img alt="Prijungimo schema: centralė prie GT. Maitinimas: +AUX (+12 V) prie + DC, -AUX prie - DC. Telefono komunikatoriaus gnybtai: TIP prie TIP, RING prie RING. Jungiklio zona: 1-a Sritis prie 1 I/O, 2-a Sritis prie 2 I/O." src="./image25.webp" style="width:3.7900076552930884in;height:2.510005468066492in" />
 
 ### Įėjimo prijungimo schemos 
 
@@ -433,9 +433,9 @@ Komunikatorius turi 2 universalius įėjimo/išėjimo gnybtus, kuriems galima nu
 
 NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image26.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
+<img alt="Trys įėjimo grandinės tarp COM ir INx. Normaliai atvira (NO): NO kontaktas; Short – Alarm, Open – Restore. Normaliai uždara (NC): NC kontaktas; Short – Restore, Open – Alarm. NC/EOL 2,2k: NC kontaktas ir nuoseklus 2,2k rezistorius linijos gale; Short – Alarm, Open – Alarm, 2,2k – Restore." src="./image26.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
 
-<img alt="" src="./image27.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
+<img alt="Trys įėjimo grandinės tarp COM ir INx. NO/EOL 2,2k: rezistorius lygiagrečiai NO kontaktui; Short – Alarm, Open – Alarm, 2,2k – Restore. NO/DEOL: Tamper kontaktas ir nuoseklus 2,2k rezistorius, o kitas 2,2k rezistorius lygiagrečiai NO kontaktui; Short – Tamper, Open – Tamper, 2,2k – Alarm, 3,3k–5,5k – Restore. NC/DEOL: tokia pati rezistorių jungtis su NC kontaktu; Short – Tamper, Open – Tamper, 2,2k – Restore, 3,3k–5,5k – Alarm." src="./image27.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų
@@ -444,13 +444,13 @@ NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų sc
 
 Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvairius elektrinius prietaisus. Komunikatoriaus universaliam įėjimo/išėjimo gnybtui turi būti nustatytas išėjimo „OUT“ veikimo režimas.
 
-<img alt="" src="./image28.webp" style="width:2.1550043744531933in;height:0.8950021872265966in" />
+<img alt="Prijungimo schema: GT prie relės. GT +DC ir x I/O gnybtai prijungti prie relės ritės. Relės kontaktai pažymėti NC, C ir NO." src="./image28.webp" style="width:2.1550043744531933in;height:0.8950021872265966in" />
 
 ### iO-8 plėtimo modulių prijungimo schema 
 
 Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT, prijunkite laidinį TRIKDIS *iO-8* įėjimų ir išėjimų plėtiklį. *GT* konfigūravimas su plėtimo moduliais aprašytas p. 6.8. „Langas „RS485 moduliai“.
 
-<img alt="" src="./image29.webp" style="width:3.33250656167979in;height:2.0575043744531936in" />
+<img alt="Prijungimo schema: centralė prie GT ir iO-8. Maitinimas: centralės +AUX (+12 V) prie abiejų įrenginių + DC, -AUX prie abiejų - DC; atšakos pažymėtos jungties taškais. RS485: GT A 485 prie iO-8 A (RS485), GT B 485 prie iO-8 B (RS485)." src="./image29.webp" style="width:3.33250656167979in;height:2.0575043744531936in" />
 
 ### Komunikatoriaus paleidimas veikti 
 
@@ -545,7 +545,7 @@ Centralę turi būti prijungta prie interneto. Prisijunkite prie **Innerrange In
 
 Atidarykite langus **Configuration>General>Alarm Reporting**. Parinkčių grupėje **3rd Party Device Reporting** reikia nustatyti:
 
-<img alt="" src="./image30.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="Inception programos langas Alarm Reporting, skiltis 3rd Party Device Configuration. Pažymėta: 1 – įjungtas Enable 3rd Party Device Reporting; 2 – 3rd Party Device Type nustatyta Trikdis; 3 – Serial Port nustatyta Serial Port 1 (Plugged In, In Use By 3rd Party Device)." src="./image30.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – pažymėti šį lauką.
 
@@ -689,11 +689,11 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
         geltonai).
 3. Paspauskite “**Pridėti sistemą**” ir įveskite GT „IMEI/Unikalus ID“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
-<img alt="" src="./image37.webp" style="width:2.9921259842519685in;height:3.661417322834646in" />
+<img alt="Protegus2 langas Nuskaityti QR kodą. Galima įvesti IMEI į lauką Unikalus ID arba paspausti Nuskaityti QR kodą; pavyzdinėje etiketėje pažymėtas QR kodas. Paaiškinime nurodyta, kad IMEI yra ant pakuotės, valdiklio korpuso arba TrikdisConfig programoje kaip Unikalus ID." src="./image37.webp" style="width:2.9921259842519685in;height:3.661417322834646in" />
 
 4. Įveskite sistemos „**Pavadinimą**“. Spustelėkite „**Toliau**".
 
-<img alt="" src="./image38.webp" style="width:2.2007874015748032in;height:2.2559055118110236in" />
+<img alt="Protegus2 langas „Pridėti sistemą“: lauke „Pavadinimas“ įrašyta GT, matomas „Fonas“ spalvos pasirinkimas, „Laiko juosta“ nustatyta Europe/Vilnius; apačioje mygtukai „Atšaukti“ ir „Toliau“." src="./image38.webp" style="width:2.2007874015748032in;height:2.2559055118110236in" />
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
 
@@ -704,27 +704,27 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GT PGM išėjimu
 
 1.  Paspauskite „**Tęsti**“.
 
-<img alt="" src="./image39.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
+<img alt="Protegus2 pranešimas „Sistema nėra valdoma nuotoliniu būdu“. Paaiškinime nurodyta prijungti išvestį prie apsaugos sistemos įvesties terminalo ir sukonfigūruoti Protegus2 Europe, kad būtų galima įjungti arba išjungti apsaugos sistemą; apačioje yra „Tęsti“." src="./image39.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
 2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
 3. Paspauskite „**Išsaugoti**“.
 
-<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
+<img alt="Protegus2 ekranas „Pridėti naują sritį“: srities numeris 1, pavadinimas „Sritis1“, įjungta „Valdyti naudojant Protegus2 Europe“, priskirtas išėjimas PGM1. Pasirinktas „Impulsas“, jo trukmė 3 sekundės; apačioje yra „Išsaugoti“." src="./image40.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
 
 4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
 2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-<img alt="" src="./image41.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
+<img alt="Protegus2 ekranas „Sritys“: pridėta „Sritis1“, valdoma su PGM1. Po sričių sąrašu yra pridėjimo mygtukas su pliusu, o apačioje – „Praleisti“ ir „Toliau“." src="./image41.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
 
 ### Sistemos įjungimas/išjungimas su *Protegus2* 
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-<img alt="" src="./image42.webp" style="width:2.2007874015748032in;height:2.6850393700787403in" />
+<img alt="Protegus2 pagrindinis langas: GT prijungtas, Sritis1 būsena – Nežinoma. Matomi mygtukai Įjungti, Išjungti ir PGM2." src="./image42.webp" style="width:2.2007874015748032in;height:2.6850393700787403in" />
 
 ### Komunikatoriaus valdymas SMS žinutėmis 
 
@@ -859,7 +859,7 @@ Parinkčių grupės „Atsarginio kanalo režimas”
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
+<img alt="TrikdisConfig lango „Pranešimai į CSP“ skirtukas „Parametrai“: „Testo periodas“ pažymėtas ir nustatytas 24 val 0 min; neaktyvus „IP ping periodas“ rodo 0 min 30 s. „Pereiti į atsarginį po“ nustatyta 2 bandymų, „Grįžti iš atsarginio po“ – 1 min 30 s, „Linijos Nr.“ – 1, „Imtuvo Nr.“ – 1." src="./image48.webp" style="width:7.086614173228346in;height:2.574803149606299in" />
 
 Parinkčių grupė „Parametrai“
 
@@ -956,13 +956,13 @@ Parinkčių grupė „SIM kortelė“
 
 Parinkčių grupė „Connection Type“
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
+<img alt="TrikdisConfig lango „Tinklo nustatymai“ skirtukas „Connection Type“: „Connection Type“ nustatyta „LTE CAT-M1“, pažymėta „Select all“ ir visi dažnių laukeliai B1, B2, B3, B4, B5, B8, B12, B13, B18, B19, B20, B25, B26, B27, B28, B66 ir B85." src="./image53.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
 
 Šie nustatymai galioja komunikatoriams su CAT-M1 modemu. Galite nurodyti dažnius, kuriais veiks komunikatoriaus modemas.
 
 ### Langas „IN/OUT“ 
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.4645669291338583in" />
+<img alt="TrikdisConfig langas „IN/OUT“: 1 gnybtui priskirtas IN režimas ir NO tipas, 2 gnybtui – OUT režimas. Contact ID lentelėje įjungti IN1_ALARM (įvykio CID 130, SIA BA, sritis 99, zona 001; atsistatymo CID 130, SIA BH) ir IN1_TAMPER (įvykio CID 144, SIA TA; atsistatymo CID 144, SIA TR)." src="./image54.webp" style="width:7.086614173228346in;height:2.4645669291338583in" />
 
 Komunikatorius turi 2 universalius (įėjimo/išėjimo) gnybtus. Lentelėje galima nustatyti gnybtui veikimo režimą (Išjungta, IN, OUT). Įėjimui reikia nurodyti prijungiamos grandinės tipą NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL.
 
@@ -984,7 +984,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Prie komunikatoriaus galima prijungti iO-8 plėtiklius (kuriais pridėsite papildomus įėjimus, valdomus išėjimus). Prijungti moduliai turi būti įtraukti į „**Modulių sąrašo**“ lentelę.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
+<img alt="TrikdisConfig lango „RS485 moduliai“ skirtukas „Modulių sąrašas“: 1–4 modulių tipas yra „Nenaudojamas“. Atvertame 4 modulio tipo sąraše matyti „Nenaudojamas“ ir „Plėtiklis iO-8“." src="./image55.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
 
 Parinkčių grupė „Modulių sąrašas“
 
@@ -1048,7 +1048,7 @@ Lentelėje įėjimams (INPUT) galima priskirti Contact ID (SIA) įvykių ir ats
 
 Šiame lange galima įjungti, išjungti ir pakeisti įrenginio siunčiamus vidinius pranešimus. Išjungus vidinį pranešimą šiame lange, jis nebus siunčiamas nepriklausomai nuo kitų nustatymų.
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.145669291338583in" />
+<img alt="TrikdisConfig langas „Įvykių aprašas“: lentelėje yra COMMUNICATION (įvykio CID 350, SIA YC; atsistatymo CID 350, SIA YK), POWER (įvykio CID 302, SIA YT; atsistatymo CID 302, SIA YR), REMOTE_FINISHED (CID 412, SIA RS), REMOTE_STARTED (CID 411, SIA RB), START (CID 700, SIA RR) ir TEST (CID 602, SIA RP). Visų įvykių sritis 99, zona 999 ir įvykio laukeliai pažymėti; atsistatymo laukeliai pažymėti tik COMMUNICATION ir POWER." src="./image57.webp" style="width:7.086614173228346in;height:2.145669291338583in" />
 
 - **COMMUNICATION** – pranešimas apie ryšio sutrikimą tarp centralės ir GT.
 
@@ -1072,7 +1072,7 @@ Galite pakeisti kiekvieno įvykio Contact ID, SIA kodą, taip pat su pranešimu 
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką „**Atkurti“.**
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:1.0039370078740157in" />
+<img alt="TrikdisConfig lango grupėje „Gamintojo parametrai“ raudonai išskirtas gamykliniams nustatymams atkurti skirtas mygtukas „Atkurti“." src="./image58.webp" style="width:7.086614173228346in;height:1.0039370078740157in" />
 
 Kitas būdas atkurti gamyklinius nustatymus.
 
@@ -1096,7 +1096,7 @@ Komunikatoriaus maitinimas įjungtas. Paspauskite ir palaikykite mygtuką „RES
 
 2.  Lauke „**Nuotolinė prieiga“** įveskite komunikatoriaus „*IMEI/Unikalus ID“* numerį. Šį numerį rasite ant įrenginio pakuotės ir nugarėlės lipduko.
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.232283464566929in" />
+<img alt="TrikdisConfig pradinis langas. Skiltyje Nuotolinė prieiga pažymėtas Unikalus ID įvedimo laukas ir mygtukas Konfigūravimas; šalia yra Sistemos pavadinimas laukas." src="./image59.webp" style="width:7.086614173228346in;height:2.232283464566929in" />
 
 3. (Nebūtina) Langelyje „**Sistemos pavadinimas“** įveskite norimą komunikatoriaus pavadinimą.
 
@@ -1143,7 +1143,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 3.  Parinkite programos TrikdisConfig meniu „**Programos atnaujinimas**“.
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:2.484251968503937in" />
+<img alt="TrikdisConfig langas „Programos atnaujinimas“: tuščias laukas „Atverti“, mygtukas „Atverti failą“, mygtukas „Naujinti (F12)“ ir 0 % rodanti eigos juosta." src="./image60.webp" style="width:7.086614173228346in;height:2.484251968503937in" />
 
 4. Paspauskite mygtuką „**Atverti failą**“ ir parinkite reikiamą programinės įrangos bylą.
 
@@ -1161,7 +1161,7 @@ Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 
 Dėl bet kokių pakeitimų, modernizavimo ar remonto, kurie atlikti be gamintojo sutikimo, bus nutraukiamas teisės į garantiją galiojimas.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
+<img alt="Perbrauktos ratukinės atliekų dėžės simbolis (WEEE), nurodantis, kad prietaisą reikia šalinti atskirai nuo buitinių atliekų." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Įrenginys pasibaigus eksploatacijai turi būti utilizuojamas pagal vietinius galiojančius teisės aktus ir jo bei jį sudarančių komponentų negalima išmesti kaip buitinių atliekų.
 
 ## Priedas 
 

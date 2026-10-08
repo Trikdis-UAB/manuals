@@ -5,7 +5,7 @@ pdf: rl14-original.pdf
 # RL14 IP/SMS Imtuvas
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="TRIKDIS RL14 imtuvo priekinis vaizdas: ilgas baltas korpusas su tvirtinimo plokštelėmis abiejuose galuose ir būsenos indikatoriais dešinėje." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Saugos reikalavimai
@@ -107,7 +107,7 @@ Imtuvo vaizdas iš galo
 | Antenna | Integruoto SMS imtuvo lizdinė (angl. female) SMA tipo GSM antenos jungtis. |
 | HDMI | Monitoriaus HDMI jungtis. |
 | USB | USB jungtis. |
-| <img alt="" src="./image5.webp" style="width:0.19305555555555556in;height:0.17222222222222222in" /> | Imtuvo įžeminimo grandinės jungtis. |
+| <img alt="Apsauginio įžeminimo simbolis." src="./image5.webp" style="width:0.19305555555555556in;height:0.17222222222222222in" /> | Imtuvo įžeminimo grandinės jungtis. |
 | \- BAT + | Rezervinio maitinimo 12 V akumuliatoriaus jungtis. /​ Kai imtuvas maitinimas iš kintamos srovės tinklo, akumuliatoriaus įkrova kontroliuojama. Akumuliatoriaus krovimo srovė iki 900 mA. |
 | 100-240 VAC | Maitinimo kabelio jungtis ir jungiklis O/​I. |
 
@@ -133,7 +133,7 @@ Imtuvo vaizdas nuėmus viršutinį dangtį
 
 ### Paruoškite darbui kompiuterių tinklą (LAN), atsižvelgdami į pateiktą principinę schemą.
 
-> <img alt="" src="./image7.webp" style="width:4.65625in;height:2.9791666666666665in" />
+> <img alt="Principinė RL14 tinklo schema. Iš WAN pranešimai per GPRS ir internetą pasiekia LAN maršrutizatorių su statiniu IP adresu, o iš jo – LAN. LAN dvipusėmis rodyklėmis sujungtas su PC, kuriame veikia IPcomControl, RL14 ir pranešimų monitoringo programa. Iš RL14 į monitoringo programą nubrėžta RS232 jungtis. Į RL14 taip pat nukreipti pranešimai iš integruoto SMS imtuvo ir per RS232 prievadą iš atskiro pranešimų imtuvo." src="./image7.webp" style="width:4.65625in;height:2.9791666666666665in" />
 
 ### Įdiekite programą IPcomControl v4 (žr. „Imtuvo konfigūravimas“).
 
@@ -186,7 +186,7 @@ Kaip, reikalui esant, atkurti pirminius adresus nurodyta IX skyriuje (žr. „Im
 
 1.  Pakeiskite kompiuterio, kuriuo konfigūruosite imtuvą, tinklo plokštės adresus į tokius, kokie pateikti kortelėje.
 
-<img alt="" src="./image8.webp" style="width:2.702173009623797in;height:3.031056430446194in" />
+<img alt="Windows langas Internet Protocol Version 4 (TCP/IPv4) Properties. Pasirinkta Use the following IP address: IP address 192.168.100.2, Subnet mask 255.255.255.0, Default gateway 192.168.100.254. Pasirinkta Use the following DNS server addresses, tačiau DNS laukeliai tušti." src="./image8.webp" style="width:2.702173009623797in;height:3.031056430446194in" />
 
 2.  LAN kabeliu sujunkite imtuvą su kompiuteriu, kuriuo konfigūruosite imtuvą.
 
@@ -194,15 +194,15 @@ Kaip, reikalui esant, atkurti pirminius adresus nurodyta IX skyriuje (žr. „Im
 
 4.  Paleiskite veikti kompiuterio programą IPcomControl v4. Į atsivėrusį IP adreso užklausos langą įrašykite pirminį imtuvo tinklo plokštės IP adresą ir paspauskite mygtuką OK.
 
-> <img alt="" src="./image9.webp" style="width:2.109722222222222in;height:1.2347222222222223in" />
+> <img alt="IPcomControl langas Enter IP: laukelyje IP įrašyta 192.168.100.3; apačioje yra mygtukai OK ir Cancel." src="./image9.webp" style="width:2.109722222222222in;height:1.2347222222222223in" />
 
 5.  Į atsivėrusį imtuvo vartotojo prisijungimo vardo ir slaptažodžio užklausos langą įveskite vartotojo vardo (angl. User name) *administrator* reikšmę, o į slaptažodžio (angl. Password) – *admin* reikšmę. Paspauskite mygtuką Login.
 
-> <img alt="" src="./image10.webp" style="width:1.9375in;height:1.2083333333333333in" />
+> <img alt="IPcomControl prisijungimo langas Login. Laukelyje User name įrašyta administrator, laukelyje Password reikšmė paslėpta; apačioje yra mygtukas Login." src="./image10.webp" style="width:1.9375in;height:1.2083333333333333in" />
 
 6.  Pasirinkite programos IPcomControl v4 langą Configure. Paspauskite mygtuką Get. Į *Primary* IP, Subnet ir Gateway langelius įrašykite tokias LAN tinklo reikšmes, kad į tinklą įjungtas imtuvas taptų šio tinklo dalimi. Paspauskite mygtuką Set.
 
-<img alt="" src="./image11.webp" style="width:5.580302930883639in;height:2.73083552055993in" />
+<img alt="IPcomControl lango Configure kortelė su Network cards nustatymais. Primary laukeliuose nurodyta IP 192.168.100.3, Subnet 255.255.255.0 ir Gateway 192.168.100.254; virš jų yra mygtukai Get ir Set." src="./image11.webp" style="width:5.580302930883639in;height:2.73083552055993in" />
 
 7.  Imtuvas automatiškai išsijungs ir pasileisti veikti iš naujo. Programa IPcomControl v4 išsijungs. Imtuvas paruoštas veikti nurodytame programuojant LAN tinkle.
 
@@ -216,11 +216,11 @@ LAN tinkle veikiantis imtuvas konfigūruojamas programa IPcomControl v4, kuri in
 
 1.  Paleiskite veikti kompiuterio programą IPcomControl v4. Į atsivėrusį IP adreso užklausos langą įrašykite nustatytą LAN tinklo imtuvo tinklo plokštės IP adresą, pvz., 195.15.184.138, ir paspauskite mygtuką OK.
 
-> <img alt="" src="./image12.webp" style="width:1.9583333333333333in;height:1.1826388888888888in" />
+> <img alt="IPcomControl langas Enter IP: laukelyje IP įrašyta 195.15.184.138; apačioje yra mygtukai OK ir Cancel." src="./image12.webp" style="width:1.9583333333333333in;height:1.1826388888888888in" />
 
 2.  Į atsivėrusį imtuvo vartotojo prisijungimo vardo ir slaptažodžio užklausos langą įveskite vartotojo vardo (angl. User name) reikšmę, pvz., *administrator*, o į slaptažodžio (angl. Password) reikšmę, pvz., *admin*. Paspauskite mygtuką Login.
 
-> <img alt="" src="./image10.webp" style="width:1.9375in;height:1.2083333333333333in" />
+> <img alt="IPcomControl prisijungimo langas Login. Laukelyje User name įrašyta administrator, laukelyje Password reikšmė paslėpta; apačioje yra mygtukas Login." src="./image10.webp" style="width:1.9375in;height:1.2083333333333333in" />
 
 3.  Atsivėrusiame programos IPcomControl v4 lange nuspauskite mygtuką Read <img alt="Nuskaityti" src="./image13.webp" style="width:0.3020833333333333in;height:0.28125in" />.
 
@@ -400,7 +400,7 @@ Pranešimų išvedimo į pranešimų stebėjimo programą prievadų parametrai:
 
 Kortelėje „Filter“ nustatomas IP adresas, į kurį papildomai nukreipiami visi priimti pranešimai.
 
-<img alt="" src="./image20.webp" style="width:5.598601268591426in;height:2.739790026246719in" />
+<img alt="IPcomControl kortelė Filter. Srityje Raw data matomi IP 127.0.0.1 ir Port 37519; Started nepažymėta, Standard messages pažymėta, o laukai neaktyvūs. Filter settings lentelė tuščia. Srityje Not filtered pažymėta Tunneling, Receiver no. ir Line no. reikšmės yra 0." src="./image20.webp" style="width:5.598601268591426in;height:2.739790026246719in" />
 
 Laukelyje *Raw data* įrašomas IP adresas [IP] ir prievado numeris [Port], į kurį bus siunčiami visi priimti pranešimai. Imtuvas persiųs pranešimus, Kai pažymėtas langelis [Started], nustatytu IP adresu bus siunčiami pranešimai be apdorojimo, o kai pažymėtas langelis [Standard messages], siunčiami pranešimai, pakeisti pagal Contact ID protokolą.
 
