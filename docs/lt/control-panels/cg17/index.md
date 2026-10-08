@@ -157,7 +157,7 @@ Dirba su „Protegus2“ programėle:
 
 6.  „Nano“ dydžio SIM kortelės laikiklis.
 
-<img alt="" src="./image4.webp" style="width:3.937007874015748in;height:2.4921259842519685in" />
+<img alt="Dvi CG17 schemos su numeruotomis žymomis: kairėje – uždarytas korpusas, kuriame 1 žymi antenos jungtį, 2 – būsenos LED indikatorių grupę, 3 – USB jungtį šone; dešinėje – atvira plokštė, kurioje 4 žymi gnybtų kaladėles, 5 – USB Mini-B jungtį, 6 – SIM kortelės lizdą." src="./image4.webp" style="width:3.937007874015748in;height:2.4921259842519685in" />
 
 | Kontaktas | Aprašymas |
 |----|----|
@@ -247,7 +247,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="TrikdisConfig CG17 lango Sistemos parinktys kortelė Pagrindiniai. Raudoni numeriai žymi 1 – Objekto numeris, 2 – SIM PIN kodas ir 3 – APN, kurio reikšmė internet." src="./image9.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 1.  Įrašykite „**Objekto numerį“ (Nenaudokite FFFE, FFFF objekto numerių)**.
 
@@ -257,7 +257,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Lange „Pranešimai į ST pultą“, parinkčių grupėje „Pagrindinis kanalas“:
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
+<img alt="TrikdisConfig CG17 langas Pranešimai į ST pultą. Pagrindinis kanalas: 4 – Ryšio tipas Išjungta, 5 – Domenas arba IP, 6 – Prievadas, 7 – Protokolas TRK, 8 – Šifravimo raktas. 9 žymi tuos pačius Atsarginio kanalo laukus, 10 – Atsarginis kanalas 2 lauką Telefono numeris." src="./image10.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
 
 4. **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminį kanalą).
 
@@ -467,7 +467,7 @@ Kuro jutiklį „STRELA S485“ (http://strela-fls.com/products/fuel_level_sens
 
 2.  Paspauskite „**Connect**“ ir palaukite.
 
-<img alt="" src="./image29.webp" style="width:5.917322834645669in;height:2.4015748031496065in" />
+<img alt="DUTConfig 3.7.2 jutiklio konfigūravimo langas su jutiklio parametrais ir Omnicomm nustatymais. Meniu „View“, kuriame pasirinkta „Standart“, ir žalias mygtukas „Connect“ išskirti numeruotomis žymomis „3“ ir „4“." src="./image29.webp" style="width:5.917322834645669in;height:2.4015748031496065in" />
 
 3. Kai kuro jutiklis prisijungia prie DUTConfig atsiranda langas **Connection: ON**.
 
@@ -489,7 +489,7 @@ Kuro jutiklį „STRELA S485“ (http://strela-fls.com/products/fuel_level_sens
 
 11. Užpildę šią lentelę paspauskite „**OK“**.
 
-<img alt="" src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
+<img alt="DUTConfig išplėstinis vaizdas: kuro lygio kalibravimo lentelė ir grafikas, kuriame panardinimo lygis procentais siejamas su kuro tūriu litrais. Duomenų lentelė, mygtukas „OK“ ir mygtukas „Disconnect“ išskirti ir pažymėti skaičiais 10, 11 ir 12." src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
 
 12. Nuspauskite mygtuką „**Disconnect**“.
 
@@ -588,7 +588,7 @@ Prijunkite RF-LORA transiverį prie CG17. Po to galite naudoti iO-LORA, iO8-LORA
 
 Paleiskite TrikdisConfig. Prijunkite CG17 per USB Mini-B kabelį prie kompiuterio arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite modulį LORA, kurį naudojate. Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.547244094488189in" />
+<img alt="TrikdisConfig lango „Moduliai“ skirtuke „RS485 moduliai“ raudonas rėmelis apima dviejų modulių pavadinimus ir įrašytus serijos numerius: „iO-LORA plėtiklis“ ir „iO8-LORA plėtiklis“. Abiejų modulių sritis yra 1; jų pavadinimai lentelėje – „Expander ID1“ ir „Expander ID2“." src="./image43.webp" style="width:7.086614173228346in;height:1.547244094488189in" />
 
 Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai. Nuspauskite "**Atsijungti**" ir atjunkite USB kabelį.
 
@@ -610,7 +610,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 Prijungus CG17 prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.5590551181102362in" />
+<img alt="TrikdisConfig CG17 būsenų juosta: matomi IMEI/Unikalus ID ir SN laukai, Modulis CG17_1210, BL 1.02, FW 1.18, Būsena USB ir Teisės Administratorius. Kairėje rodoma Būsena: Atkūrimas baigtas." src="./image44.webp" style="width:7.086614173228346in;height:0.5590551181102362in" />
 
 #### Būsenų juosta
 
@@ -644,7 +644,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Pagrindiniai“**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Pagrindiniai. Pagrindiniai: Objekto numeris 0001, Objekto pavadinimas CG17, Testo periodas 1 diena ir 0 val., Laiko nustatymas GSM modemas. SIM: APN internet. Sričių nustatymai: Sričių skaičius 1, Sirenos trukmė 60 s, Įėjimo ir Išėjimo laikas po 20, Jungiklio režimas Lygis, Tamperio režimas Garsinis kai įjungta." src="./image45.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -701,7 +701,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 **Skirtukas „Prisijungimas“**
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
+<img alt="TrikdisConfig langas Sistemos parinktys, skirtukas Prisijungimas. Prieigos kodai: Administratoriaus kodas 123456; taip pat matomi SMS slaptažodžio ir Instaliuotojo kodo laukai. Instaliuotojo teisės: Objekto numeris ir SIM kortelė pažymėti, o Sričių nustatymai ir išvardyti meniu nustatyti kaip Redaguojama." src="./image46.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 **Parinkčių grupė „Prieigos kodai“**
 
@@ -721,7 +721,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 ### Langas „Pranešimai į ST pultą“
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.547244094488189in" />
+<img alt="TrikdisConfig langas Pranešimai į ST pultą. Pagrindinis ir Atsarginis kanalas: Ryšio tipas Išjungta, Domenas arba IP 0.0.0.0, Prievadas 0, Protokolas TRK. Parametrai: Grįžti prie pagrindinio po 5 min, IP PING periodas 60 s, SMS PING periodas 10 min, Pereiti prie atsarginio po 3 bandymų, DNS1 8.8.8.8, DNS2 8.8.4.4; Atsarginis kanalas 2 turi Telefono numerio lauką." src="./image47.webp" style="width:7.086614173228346in;height:3.547244094488189in" />
 
 **Parinkčių grupės „Pagrindinis kanalas“ ir „Atsarginis kanalas“**
 
@@ -763,7 +763,7 @@ Jei sirena prijungta ir išėjimas OUT (turi būti priskirtas sričiai) yra nust
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:3.826771653543307in" />
+<img alt="TrikdisConfig langas Vartotojai ir pranešimai, skirtukas Vartotojai. Vartotojų lentelėje yra Vardas, Telefono numeris, Kodas, Sritys ir pranešimų žymos; dešinėje yra iButton raktų lentelė su iButton kodo ir Valdymo laukais. Mobilioji aplikacija: Įgalinti jungimąsi pažymėta, Lygiagretus siuntimas nepažymėta. Vartotojo ID9 leidimai Įjungti ir Išjungti pažymėti." src="./image48.webp" style="width:7.086614173228346in;height:3.826771653543307in" />
 
 **Parinkčių grupė „Vartotojai ir pranešimai vartotojams“**
 
@@ -879,7 +879,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
 
 **WiFi modulio W485 nustatymų langas**
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.6850393700787403in" />
+<img alt="TrikdisConfig langas Moduliai, skirtukas W485 parametrai. Komunikatoriaus tinklo nustatymai: DHCP režimas pažymėtas, Statinis IP 192.168.1.40, Potinklio kaukė 255.255.255.0, Numatytasis šliuzas 192.168.1.254, Wifi SSID pavadinimas TRIKDIS; taip pat matomas Wifi SSID slaptažodžio laukas. SIM parametrai: Naudoti skambutį ir SMS, kai veikiama per IP tinklą pažymėta." src="./image52.webp" style="width:7.086614173228346in;height:2.6850393700787403in" />
 
 **Parinkčių grupė „Komunikatoriaus tinklo nustatymai“**
 
@@ -941,7 +941,7 @@ Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti a
     nebūtina***.***
 **Skirtukas „Integruojami moduliai“**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.641732283464567in" />
+<img alt="TrikdisConfig langas Moduliai, skirtukas Integruojami moduliai. Įrenginys – GPS imtuvas; koordinates perduoti kas 1 min, kai nėra judėjimo, arba kas 5 sek., kai aptiktas judėjimas ar zonos aliarmas. Lėtas vidurkis 64, Greitas vidurkis 8; persiuntimą po aliarmo pristabdyti 4 min." src="./image54.webp" style="width:7.086614173228346in;height:2.641732283464567in" />
 
 **Parinkčių grupė „Integruojami moduliai“**
 
@@ -981,7 +981,7 @@ Pranešimas su koordinatėmis siunčiamas į stebėjimo programą Monas MS.
 
 Nuspauskite **Įrašyti [F5]**. Sulaukite kol duomenys bus įrašyti. Ištraukite USB kabelį iš CG17. Palaukite apie 1 minutę. Prijunkite USB kabelį prie CG17. Nuspauskite **Skaityti [F4]**. Programa nuskaitys ir parodys nustatymus, kurie yra įrašyti CG17. Programos lange „**Moduliai**“ bus nurodytas kuro lygio jutiklio „**Strela S485**“ „**Serijos numeris**“ ir „**Mikroprogramos versija**“.
 
-<img alt="" src="./image56.webp" style="width:7.18503937007874in;height:1.468503937007874in" />
+<img alt="TrikdisConfig langas Moduliai, lentelė RS485 moduliai. Pirmoje eilutėje Modulis – FLS kuro lygio sensorius, Sritis 1, Pavadinimas Expander ID1; užpildyti Serijos numeris ir Mikroprogramos versija laukai." src="./image56.webp" style="width:7.18503937007874in;height:1.468503937007874in" />
 
 Pereikite prie lango „**Jutikliai**“.
 
@@ -1340,7 +1340,7 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig lango „Zonų įėjimai“ skirtuke „SMS ir skambučiai“ rodoma zonų įvykių ir grįžčių SMS tekstų lentelė su „Vartotojas 1“ SMS ir skambučių žymimaisiais langeliais." src="./image63.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 Šis langas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange *„Vartotojai ir pranešimai"*](#44-langas-vartotojai-ir-pranesimai)*.*
 
@@ -1458,7 +1458,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 ### Langas „Jutikliai“
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig langas „Jutikliai“ su aštuonių jutiklių lentele. Atvertame „Įrenginys“ sąraše matomi „Išjungta“, „IN1 įtampa“, „IN2 įtampa“, „IN3 įtampa“ ir „Dallas 1W jutiklis“. Kiti stulpeliai: „Serijos Nr.“, „Jutiklio pavadinimas“, maksimalios ir minimalios reikšmės bei jų žymimieji langeliai." src="./image69.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - **Nr** – temperatūros daviklio eilės numeris.
 
@@ -1494,7 +1494,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
+<img alt="TrikdisConfig lango „Sistemos įvykiai“ skirtukas „SMS ir skambučiai“. Lentelėje matomi „Žema baterijos įtampa“, „Testas“, „Įjungimas/Išjungimas“ ir „RS485 gedimas“ įvykių bei grįžčių SMS tekstai. Dešinėje yra „Vartotojas 1“ SMS ir skambučio žymimieji langeliai." src="./image71.webp" style="width:7.086614173228346in;height:2.263779527559055in" />
 
 Šis skirtukas bus rodomas, jei bent vienas vartotojo telefono numeris yra aprašytas [lange „Vartotojai ir pranešimai"](#44-langas-vartotojai-ir-pranesimai)*.*
 
@@ -1518,7 +1518,7 @@ SMS žinutės tekste yra svarbios didžiosios ir mažosios raidės.
 
 Norint atkurti centralės gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
+<img alt="TrikdisConfig lange prie „Gamintojo parametrai“ raudonu rėmeliu pažymėtas mygtukas „Atkurti“. Matomas „Komunikatoriaus režimas“ mygtukas „SET“ ir įrenginio IMEI / unikalus ID. Apačioje rodoma „Būsena: Atkūrimas baigtas“, modulis CG17_1210, serijos numeris, BL 1.02, FW 1.18, „Būsena USB“ ir „Teisės: Administratorius“." src="./image73.webp" style="width:7.086614173228346in;height:1.0748031496062993in" />
 
 ## Nuotolinis valdymas
 
@@ -1601,13 +1601,13 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 6.  Nuspauskite „**Pridėti vartotoją**“.
 
-<img alt="" src="./image86.webp" style="width:2.7559055118110236in;height:5.122047244094488in" />
+<img alt="Protegus2 programėlės ekranas 'Pridėti naują vartotoją'. Pažymėti užpildyti laukai 'Vardas/el. paštas', 'Telefono numeris' ir 'Kodas', įjungtas srities Area '1' valdymo jungiklis ir mygtukas 'Pridėti vartotoją'. Įvykių peržiūra bei zonų išjungimas leidžiami, vartotojų sąrašo redagavimas ir išplėstinių nustatymų peržiūra išjungti." src="./image86.webp" style="width:2.7559055118110236in;height:5.122047244094488in" />
 
 11. Vartotojų sąraše atsiras naujas vartotojas.
 
 12. Nuspauskite „**Atgal**“, kad sugrįžti į pagrindinį langą.
 
-<img alt="" src="./image87.webp" style="width:2.7559055118110236in;height:3.6181102362204722in" />
+<img alt="Protegus2 programėlės ekranas 'Vartotojai'. Įrenginio administratorių sąraše pažymėta naujai pridėto antro vartotojo eilutė, o viršutiniame kairiajame kampe – grįžimo rodyklė." src="./image87.webp" style="width:2.7559055118110236in;height:3.6181102362204722in" />
 
 ### Valdymas SMS komandomis
 

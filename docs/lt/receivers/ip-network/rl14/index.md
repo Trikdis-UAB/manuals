@@ -515,7 +515,7 @@ Imtuvas formuoja savus pranešimus apie įrangos veikimą ir siunčia juos į pr
 
 Pradinės licencijos leistini parametrai gali būti keičiami (papildomi) įdiegiant naują licenciją. Tam seka *Options → Activate product* atverkite tam skirtą langą ir nurodykite naują licencijos bylą su plėtiniu .lic.
 
-<img alt="" src="./image22.webp" style="width:3.9645658355205597in;height:2.163607830271216in" />
+<img alt="„Activate product“ langas. 1 žingsnyje yra „Company name“, „Device type“ ir „Save“ valdikliai; 2 žingsnyje galima įvesti licencijos kodą arba mygtuku „Browse“ pasirinkti licencijos bylą, taip pat yra „Apply“ mygtukas." src="./image22.webp" style="width:3.9645658355205597in;height:2.163607830271216in" />
 
 Naujos licencijos įdiegimui nuspauskite mygtuką Apply.
 

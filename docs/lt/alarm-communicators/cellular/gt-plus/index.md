@@ -222,7 +222,7 @@ Veikia su Protegus2 programėle:
 
 1.  Jei komunikatorius prijungtas prie centralės TIP/RING gnybtų, tuomet reikia nustatyti „**AUTO**“.
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“, skiltis „Data/CLK sąsaja“: pažymėtas laukas „Centralės modelis“, pasirinkta „5. PARADOX SP/MG se“; pažymėtas varnele pažymėtas laukas „Nuotolinis centralės valdymas“; pažymėtas laukas „Centralės PC download slaptažodis“. Skiltyje „Tip/Ring sąsaja“ laukas „Komunikacijos protokolas“ rodo „1. DISABLED“." src="./image8.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
 
 Komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės.
 
@@ -247,7 +247,7 @@ Komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuo
 
 **Lange „Tinklo nustatymai“:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.0196850393700787in" />
+<img alt="TrikdisConfig langas „Tinklo nustatymai“, kortelė „SIM1“: pažymėtas laukas „SIM kortelės PIN kodas“; pažymėtas laukas „APN“, įrašyta „internet“; pažymėti tušti laukai „DNS 1“ ir „DNS 2“." src="./image10.webp" style="width:7.086614173228346in;height:3.0196850393700787in" />
 
 3. Įveskite „**SIM kortelės PIN kodą**“.
 
@@ -280,7 +280,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:3.374015748031496in" />
+<img alt="TrikdisConfig langas „Pranešimai į CSP“, kortelė „CSP nustatymai“, skiltis „Pirminis ryšio kanalas“: pažymėti laukai „Ryšio būdas“ („Išjungtas“), „Protokolas“, „Šifravimo raktas“, „Domenas arba IP“, „Prievadas“ ir „TCP ar UDP“ („TCP“). Žemiau taip pat pažymėta „Atsarginio kanalo režimas“ laukų grupė su tais pačiais nustatymais." src="./image14.webp" style="width:7.086614173228346in;height:3.374015748031496in" />
 
 3. **Ryšio būdas** – pasirinkite **IP** ryšio būdą.
 
@@ -298,7 +298,7 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 **Lange „Tinklo nustatymai“:**
 
-<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:3.043307086614173in" />
+<img alt="TrikdisConfig langas „Tinklo nustatymai“, kortelė „SIM1“: pažymėtas laukas „SIM kortelės PIN kodas“; pažymėtas laukas „APN“, įrašyta „internet“; pažymėti tušti laukai „DNS 1“ ir „DNS 2“." src="./image15.webp" style="width:7.086614173228346in;height:3.043307086614173in" />
 
 11. Įveskite **SIM kortelės PIN** **kodą**.
 
@@ -396,7 +396,7 @@ Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/R
 
 4.  Norėdami tiesiogiai valdyti centralę, įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, įvestu centralėje.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“: pažymėtas laukas „Komunikacijos protokolas“, pasirinkta „2. AUTO“; pažymėtas laukas „Centralės modelis“, kuriame matoma „5. PARADOX SP/MG se“; pažymėtas pasirinkimas „Nuotolinis centralės valdymas“ su varnele; pažymėtas laukas „Centralės PC download slaptažodis“." src="./image24.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pultui ir nuotoliniam valdymui iš Protegus2.
 
@@ -751,7 +751,7 @@ Kaip slaptažodį naudokite **Administratoriaus kodą** (gali įvykdyti *INFO, R
 
 Prijungus GT+ TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
+<img alt="TrikdisConfig būsenos juosta: matomi laukai IMEI/Unikalus ID ir SN, Būsena – skaitymas baigtas, Įrenginys – GT+_M150, BL – 1.00, FW – 1.30, HW – 0.00." src="./image41.webp" style="width:7.086614173228346in;height:0.5866141732283464in" />
 
 | Pavadinimas | Aprašymas |
 |-------------|-----------|
@@ -769,7 +769,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.763779527559055in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“ (GT+_M150). Grupėje „Pagrindinės“ rodomi laukai „Objekto numeris“ ir „Module ID“, o „Laiko nustatymas“ pasirinkta „Pirmas kanalas“. Grupėje „Prisijungimas“ rodomi administratoriaus ir montuotojo kodų laukai; „„Atkurti“ gali tik administratorius“ pažymėta. Montuotojui leisti keisti „Objekto numeris“, „Pranešimai į CSP“, „Pranešimai vartotojui“, „SIM kortelė“ ir „Įvykių aprašas“ – visi šie pasirinkimai pažymėti." src="./image42.webp" style="width:7.086614173228346in;height:2.763779527559055in" />
 
 Parinkčių grupė „Pagrindinės“
 
@@ -795,7 +795,7 @@ Parinkčių grupė „Prisijungimas“
 
 **Parinkčių grupė „Tip/Ring sąsaja“**
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="TrikdisConfig langas Centralės sąsaja, grupė Tip/Ring sąsaja: atvertame lauko Komunikacijos protokolas meniu matomos reikšmės 1. DISABLED, 2. AUTO ir 3. MANUAL; pasirinkta 1. DISABLED." src="./image43.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 Kai komunikatorius prijungtas prie centralės TIP/RING gnybtų, reikia atlikti šiuos nustatymus.
 
@@ -809,7 +809,7 @@ Kai komunikatorius prijungtas prie centralės TIP/RING gnybtų, reikia atlikti �
 
 **Parinkčių grupė „Data/CLK sąsaja“**
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.12992125984252in" />
+<img alt="TrikdisConfig langas Centralės sąsaja, grupė Data/CLK sąsaja: Įvykių protokolas – CID; Centralės modelis – matoma reikšmės dalis 5. PARADOX SP/MG se; Nuotolinis centralės valdymas ir Įvykiai pažymėti, Centralės PC download slaptažodis užpildytas." src="./image44.webp" style="width:7.086614173228346in;height:2.12992125984252in" />
 
 Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės, reikia atlikti šiuos nustatymus.
 
@@ -825,7 +825,7 @@ Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba
 
 **Skirtukas „CSP nustatymai“**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
+<img alt="TrikdisConfig langas Pranešimai į CSP, skirtukas CSP nustatymai: pirminio ir lygiagrečiojo ryšio kanalų Ryšio būdas – Išjungtas; Atsarginio kanalo režimas – Išjungtas. Pirminiam ir atsarginiam kanalams lauke TCP ar UDP pasirinkta TCP; matomi protokolo, domeno arba IP, prievado ir šifravimo rakto laukai." src="./image45.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
 
 Konfigūruokite „Pirminių“ ir „Atsarginių“ ryšio kanalų parametrus, jei komunikatorius siųs pranešimus į CSP.
 
@@ -883,7 +883,7 @@ Parinkčių grupė „Parametrai“
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
+<img alt="TrikdisConfig lango „Pranešimai vartotojui“ skirtukas „PROTEGUS servisas“ (GT+_M150): „Leisti prisijungti“ pažymėta, rodomas „PROTEGUS Cloud prieigos kodas“ laukas, „Lygiagretus siuntimas“ nepažymėta." src="./image47.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -897,7 +897,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
   **Skirtukas “SMS ir skambučiai”**
 
-  <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
+  <img alt="TrikdisConfig lango „Pranešimai vartotojui“ skirtukas „SMS ir skambučiai“ (GT+_M150): „Objekto pavadinimas“ – „Account Name“, „SMS kalba“ – „LITHUANIAN“. Rodomos telefono numerių, sričių pavadinimų (01 „Area 1“, 02 „Area 2“), vartotojų vardų (001 „User 1“, 002 „User 2“) ir zonų pavadinimų (001 „Zone 1“, 002 „Zone 2“) lentelės. CID įvykių sąraše matomi E100 „MEDICAL PANIC ALARM“, E110 „FIRE PANIC ALARM“, E120 „PANIC ALARM“, E121 „DURESS ALARM“ ir E130 su kartojamu „ALARM“ tekstu; Tel 1–4 yra SMS ir skambučių žymimieji langeliai." src="./image48.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
 
 Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešimais arba skambučiu.
 
@@ -937,7 +937,7 @@ Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba a
     įjungta mobiliųjų duomenų perdavimo paslauga.
 **Skirtukas “SIM1”**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.0196850393700787in" />
+<img alt="TrikdisConfig langas „Tinklo nustatymai“, skirtukas „SIM1“ (GT+_M150): lauke „SIM kortelės PIN kodas“ įvesta reikšmė, „APN“ – internet; laukai „Vartotojas“, „Slaptažodis“, „SIM ICCID“, „DNS 1“, „DNS 2“ ir „Numatytasis operatorius“ tušti, „ICCID užrakinimas!“ nepažymėtas." src="./image50.webp" style="width:7.086614173228346in;height:3.0196850393700787in" />
 
 Parinkčių grupė „SIM kortelė“
 
@@ -1002,7 +1002,7 @@ Prie komunikatoriaus pridėjus plėtiklį kaip aprašyta aukščiau, **RS485 mod
 
 **iO-8 plėtiklio nustatymų langas**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="TrikdisConfig langas „RS485 moduliai“, skirtukas „Modulis 1“: plėtiklio iO-8 nustatymai (GT+_M150). Lauke „Serijos numeris“ įvesta reikšmė, „Įėjimų skaičius“ – 3, „Rodyti Objekto numerį“ nepažymėtas. Contact ID lentelėje BUS_FAULT kodai CID 333, SIA ET/ER; INPUT1 kodai CID 130, SIA BA/BH, zona 001; INPUT2 – zona 002; INPUT3 – zona 003. Visų įvykių sritis 91." src="./image54.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 Plėtiklis iO-8 turi 8 universalius (įėjimo/išėjimo) gnybtus. Prie komunikatoriaus galima prijungti keturis iO-8 plėtiklius.
 

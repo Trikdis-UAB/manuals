@@ -185,7 +185,7 @@ Pranešimų perdavimas į saugos tarnybos centralizuoto stebėjimo pultą (CSP):
 
 ### Išorinių kontaktų paskirtis
 
-<img alt="" src="./image4.webp" style="width:5.480010936132984in;height:3.826674321959755in" />
+<img alt="FLEXi SP3 plokštė: 1. ryšio ir veikimo šviesiniai indikatoriai; 2. rezervinio maitinimo gnybtų kaladėlė; 3. pagrindinio maitinimo gnybtų kaladėlė; 4. išorinių gnybtų kaladėlė; 5. 1-WIRE magistralės gnybtų kaladėlė; 6. WiFi antenos SMA užsukamo tipo jungtis; 7. nano-SIM kortelės laikiklis; 8. mobiliojo ryšio antenos SMA užsukamo tipo jungtis; 9. USB Mini-B jungtis centralės veikimo parametrams konfigūruoti." src="./image4.webp" style="width:5.480010936132984in;height:3.826674321959755in" />
 
 1.  Ryšio ir veikimo šviesinė indikacija.
 2.  Rezervinio maitinimo kontaktų kaladėlė.
@@ -786,7 +786,7 @@ Garso failo įrašo pradžią ir pabaigą palydi garso signalas. Garso failo įr
 
 Prijungus „FLEXi” SP3, TrikdisConfig būsenų juostoje pateiks prijungto gaminio informaciją.
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="TrikdisConfig būsenos juosta su laukais „IMEI/Unikalus ID“, „Būsena: Pasiruošęs“, „Modulis“, „SN“, „BL: 1.02“, „FW: 1.23“, „Būsena USB“ ir „Teisės: Administratorius“." src="./image52.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 | **Pavadinimas** | **Aprašymas** |
 |----|----|
@@ -926,7 +926,7 @@ Jei yra pažymėtas bent vienas apsaugos centralės vidinio gedimo laukas, tai a
 
 **Skirtukas „Prisijungimas“**
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.074803149606299in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“, skirtukas „Prisijungimas“. Grupėje „Prieigos kodai“ matomi Administratoriaus kodas 123456, SMS slaptažodžio ir Instaliuotojo kodo laukai. Grupėje „Instaliuotojo teisės“ pažymėti „Objekto numeris“ ir „SIM kortelė“; sričių nustatymų ir matomų meniu teisės nustatytos „Redaguojama“." src="./image58.webp" style="width:7.086614173228346in;height:3.074803149606299in" />
 
 **Parinkčių grupė „Prieigos kodai“**
 
@@ -1083,7 +1083,7 @@ RFID pakabukų (kortelių) registravimą galima atlikti programoje *TrikdisConfi
 
 --8<-- "lt/faq/index.md:sp3-wiegand-reader-door-output"
 
-<img alt="" src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
+<img alt="RFID kortelė, kurios ties apatiniu kraštu išspausdintas ID numeris apibrėžtas raudonai." src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
 #### Kontaktinių (iButton) raktų registravimas
 
@@ -1226,13 +1226,13 @@ Centralės „FLEXi“ SP3 veikimo programą yra 4 revizijos SP3_xxx4_0121.fw (v
 
 5.  **„Modulių“** sąraše turi atsirasti **„RF-LORA imtuvas“** ir rodomas RF-LORA serijos numeris ir mikroprogramos versija**.** Jei matote RF-LORA siųstuvo-imtuvo programinės įrangos versiją, galite praleisti 6–13 veiksmus.
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="TrikdisConfig lango Moduliai skirtukas RS485 moduliai. Raudonu rėmeliu pažymėtoje pirmoje eilutėje Modulis yra RF-LORA imtuvas, Sritis 1, o Mikroprogramos versija RF-Lora 433 02.39." src="./image69.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 6.  Jei RF-LORA imtuvas neatsirado, tai reikia **„Modulių“** sąraše išsirinkti **„RF-LORA imtuvą“.**
 
 7.  Lauke **„Serijos Nr.“** įrašykite gaminio RF-LORA serijos numerį. Serijos numerį rasite ant gaminio ir pakuotės etiketės.
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig lango Moduliai skirtukas RS485 moduliai. Raudonu rėmeliu pažymėtoje pirmoje eilutėje pasirinktas Modulis RF-LORA imtuvas, užpildytas laukas Serijos Nr., nustatyta Sritis 1; Mikroprogramos versija nerodoma." src="./image70.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 3.  Nuspauskite **Įrašyti \[F5\]**.
 
@@ -1246,7 +1246,7 @@ Centralės „FLEXi“ SP3 veikimo programą yra 4 revizijos SP3_xxx4_0121.fw (v
 
 8.  Lange „**Moduliai**“ rodoma RF-LORA mikroprogramos versija.
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="TrikdisConfig lango Moduliai skirtukas RS485 moduliai. Raudonu rėmeliu pažymėtoje pirmoje eilutėje Modulis yra RF-LORA imtuvas, Sritis 1, o Mikroprogramos versija RF-Lora 433 02.39." src="./image69.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 14. Modulis RF-LORA priregistruotas prie „FLEXi” SP3.
 
@@ -1254,7 +1254,7 @@ Centralės „FLEXi“ SP3 veikimo programą yra 4 revizijos SP3_xxx4_0121.fw (v
 
 16. Nuspauskite **„Atsijungti“**.
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:1.7559055118110236in" />
+<img alt="TrikdisConfig lango Moduliai skirtukas RS485 moduliai. Pirmoje eilutėje rodomas RF-LORA imtuvas ir jo Mikroprogramos versija RF-Lora 433 02.39; viršuje raudonu rėmeliu pažymėtas mygtukas Atsijungti." src="./image71.webp" style="width:7.086614173228346in;height:1.7559055118110236in" />
 
 17. Palaukite 1 minutę.
 
@@ -1312,7 +1312,7 @@ Registruojant jutiklius *RF-LORA* modulis turi būti ne arčiau 1 m atstumu nuo
 
 6.  Paspauskite **„Išsaugoti“**.
 
-<img alt="" src="./image77.webp" style="width:3.0708661417322833in;height:2.173228346456693in" />
+<img alt="TrikdisConfig langas 'Rastas naujas jutiklis'. Rasto 'Corner PIR' jutiklio laukai: 'Zonos numeris' – 1, 'Zonos paskirtis' – 'Momentinė'; raudonai pažymėtas mygtukas 'Išsaugoti'." src="./image77.webp" style="width:3.0708661417322833in;height:2.173228346456693in" />
 
 4.  Naujas jutiklis įtrauktas į jutiklių sąrašą.
 
@@ -1320,7 +1320,7 @@ Registruojant jutiklius *RF-LORA* modulis turi būti ne arčiau 1 m atstumu nuo
 
 6.  Jei jutiklių primokymas baigtas nuspauskite **„Sustabdyti“**.
 
-<img alt="" src="./image78.webp" style="width:3.7401574803149606in;height:2.6496062992125986in" />
+<img alt="TrikdisConfig lange „Primokymas“ rodomas pranešimas „Rastas naujas jutiklis: ID:1 Corner PIR“ su jutiklio UID. Raudonai pažymėti pranešimas ir mygtukas „Sustabdyti“." src="./image78.webp" style="width:3.7401574803149606in;height:2.6496062992125986in" />
 
 10. Atsivėrusiame lange paspauskite „**Yes**“. Priregistruoti bevieliai jutikliai bus įrašyti į centralės „FLEXi“ SP3 atminti. Arba paspauskite „**No**“, jei norite papildomai nustatyti parametrus.
 
@@ -1330,7 +1330,7 @@ Palaukite kelias minutes. Nuspauskite mygtuką **Skaityti \[F4\]**.
 
 Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų belaidžių jutiklių. Lauke **„Serijos Nr.“** bus surašyti 7-ženkliai kodai.
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig programos langas 'Bevieliai jutikliai', skirtukas 'Jutikliai'. Pirmoje sąrašo eilutėje raudonai pažymėti priregistruoto 'Corner PIR' jutiklio tipas ir užpildytas laukas 'Serijos Nr.'." src="./image80.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
@@ -1389,7 +1389,7 @@ Bevielių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite į
 
 8.  Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų bevielių jutiklių. Lauke **„Serijos Nr.“** bus surašyti 7-ženkliai kodai.
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig programos langas 'Bevieliai jutikliai', skirtukas 'Jutikliai'. Pirmoje sąrašo eilutėje raudonai pažymėti priregistruoto 'Corner PIR' jutiklio tipas ir užpildytas laukas 'Serijos Nr.'." src="./image80.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 15. Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 

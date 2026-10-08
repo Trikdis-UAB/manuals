@@ -108,13 +108,13 @@ Programinės įrangos atnaujinimas:
 
 13. **„Modulių“** sąraše turi atsirasti **„RF-S8 imtuvas“** ir rodomas RF-S8 serijos numeris ir mikroprogramos versija. Jei matote RF-S8 siųstuvo-imtuvo programinės įrangos versiją, galite praleisti 14–22 veiksmus.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig lango Moduliai skirtuke RS485 moduliai raudonai pažymėta eilutė ID 1: Modulis RF-S8 imtuvas, Pavadinimas Expander ID1, Mikroprogramos versija RF-S8 01.00." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 14. Jei RF-S8 imtuvas neatsirado, tai reikia **„Modulių“** sąraše išsirinkti **„RF-S8 imtuvą“.**
 
 15. Lauke **„Serijos Nr.“** įrašykite gaminio RF-S8 serijos numerį. Serijos numerį rasite ant gaminio ir pakuotės etiketės.
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig lango Moduliai skirtuke RS485 moduliai raudonai pažymėtas RF-S8 imtuvo eilutės laukas Serijos Nr., kuriame įrašomas modulio serijos numeris." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Nuspauskite **Įrašyti [F5]**.
 
@@ -128,7 +128,7 @@ Programinės įrangos atnaujinimas:
 
 21. Lange „**Moduliai**“ rodoma RF-S8 mikroprogramos versija.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig lango Moduliai skirtuke RS485 moduliai raudonai pažymėta eilutė ID 1: Modulis RF-S8 imtuvas, Pavadinimas Expander ID1, Mikroprogramos versija RF-S8 01.00." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 22. Modulis RF-S8 priregistruotas prie „FLEXi” SP3.
 
@@ -206,7 +206,7 @@ Registruojant jutiklius *RF-S8* modulis turi būti ne arčiau 1 m atstumu nuo j
 
 6.  Paspauskite **„Išsaugoti“**.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="TrikdisConfig langas 'Rastas naujas jutiklis': rastas S8 magnetinis jutiklis. Lauke 'Zonos numeris' pasirinkta 10, lauke 'Zonos paskirtis' – 'Momentinė'; pažymėtas mygtukas 'Išsaugoti'." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 7.  Naujas jutiklis įtrauktas į jutiklių sąrašą.
 
@@ -214,7 +214,7 @@ Registruojant jutiklius *RF-S8* modulis turi būti ne arčiau 1 m atstumu nuo j
 
 9.  Jei jutiklių primokymas baigtas nuspauskite **„Sustabdyti“**.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="TrikdisConfig langas 'Primokymas': pranešama, kad rastas naujas S8 magnetinis jutiklis. Pažymėtas mygtukas 'Sustabdyti'." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 10. Atsivėrusiame lange paspauskite „**Yes**“. Priregistruoti belaidžiai jutikliai bus įrašyti į centralės „FLEXi“ SP3 atminti. Arba paspauskite „**No**“, jei norite papildomai nustatyti parametrus.
 
@@ -224,11 +224,11 @@ Palaukite kelias minutes. Nuspauskite mygtuką **Skaityti [F4]**.
 
 Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų belaidžių jutiklių. Lauke **„Serijos Nr.“** bus įrašytas jutiklio serijinis numeris.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig lango 'Bevieliai jutikliai' sąraše pirmoje eilutėje matomas S8 magnetinis jutiklis; jo duomenys įrašyti laukuose 'Įrenginio tipas' ir 'Serijos Nr.'." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig skiltyje „Zonų įėjimai“, kortelėje „Zonų nustatymai“, raudonai pažymėta 10 zonos eilutė. Jos įėjimo lauke matomas sutrumpintas užrašas „Belaidis S8 Mag…“; „Sritis“ – 1, „Paskirtis“ – „Momentinė“, „Tipas“ – „EOL_T“." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Jei nustatote zonos **„Tipą“** EOL-T, bus įjungtas jutiklio tamperio stebėjimo režimas.
 
@@ -281,11 +281,11 @@ Belaidžių jutiklių registravimą galima atlikti visiems iš karto. Įdėkite 
 
 14. Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų belaidžių jutiklių. Lauke **„Serijos Nr.“** įrašytas jutiklio serijinis numeris.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig lango 'Bevieliai jutikliai' sąraše pirmoje eilutėje matomas S8 magnetinis jutiklis; jo duomenys įrašyti laukuose 'Įrenginio tipas' ir 'Serijos Nr.'." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 15. Patikrinkite ar jutikliai teisingai priskirti apsaugos centralės zonoms ir sritims (langas **„Zonų įėjimai“**).
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig skiltyje „Zonų įėjimai“, kortelėje „Zonų nustatymai“, raudonai pažymėta 10 zonos eilutė. Jos įėjimo lauke matomas sutrumpintas užrašas „Belaidis S8 Mag…“; „Sritis“ – 1, „Paskirtis“ – „Momentinė“, „Tipas“ – „EOL_T“." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 

@@ -115,11 +115,11 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 8.  Lauke “**Serijos Nr.**” įrašykite PB-LORA serijos numerį.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „Moduliai“, skirtukas „RS485 moduliai“. Pažymėtoje pirmoje eilutėje nurodyta ID 1, modulis „PB-LORA Panikos mygtukas“, o „Serijos Nr.“ laukas užpildytas." src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  “**Zonų įėjimo**” sąraše atlikite nustatymus panikos mygtukui**.**
 
-<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „Zonų įėjimai“, skirtukas „Zonų nustatymai“. Pažymėtoje 10 zonos eilutėje „Įėjimas“ prasideda „RS485 Expander“, „Sritis“ yra 1, o „Paskirtis“ prasideda „24 valand.“. Taip pat pažymėtas mygtukas „Įrašyti (F5)“." src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Atlikus pakeitimus nuspauskite **Įrašyti \[F5\]**.
 
@@ -135,7 +135,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 16. “**Modulių**” sąraše eilutėje “**PB-LORA panikos mygtukas**” bus nurodyta Mikroprogramos versija**.**
 
-<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „Moduliai“, skirtukas „RS485 moduliai“. Pažymėtoje „PB-LORA Panikos mygtukas“ eilutėje „Mikroprogramos versija“ yra „PB-LORA 00.00“." src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Nuspauskite “**Atsijungti**” ir atjunkite USB kabelį.
 
@@ -199,7 +199,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 12. Palaukite, kol bus atlikti atnaujinimai.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, „Moduliai“  „RS485 moduliai“. „RF-LORA imtuvas“ įrašytas 1 eilutėje; jo laukas „Serijos Nr.“ pažymėtas ir jame įvestas numeris. Taip pat pažymėti mygtukai „Skaityti (F4)“ ir „Įrašyti (F5)“." src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Palaukite 1 minutę.
 
@@ -207,7 +207,7 @@ PASTABA: po baterijos įdėjimo rekomenduojama palaukti ne mažiau 10 sekundži�
 
 15. “**Modulių**” sąraše eilutėje “**PB-LORA imtuvas**” bus nurodyta Mikroprogramos versija**.**
 
-<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, „Moduliai“  „RS485 moduliai“. Pažymėtoje „RF-LORA imtuvas“ eilutėje rodoma „Mikroprogramos versija“: RF-LORA 433 02.21." src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Pereikite į langą **„Bevieliai jutikliai“**.
 
@@ -237,7 +237,7 @@ Registruojant *PB-LORA* panikos mygtukus *RF-LORA* modulis turi būti ne arčiau
 
 25. Jei jutiklių primokimas baigtas nuspauskite **„Sustabdyti“**.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig lange „Primokymas“ raudonai pažymėti pranešimas „Rastas naujas jutiklis: ID:1“ su įrenginio UID ir mygtukas „Sustabdyti“." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Atsivėrusiame lange paspauskite **„Yes“**. Priregistruoti PB-LORA belaidžiai pavojaus mygtukai bus įrašyti į centralės „FLEXi“ SP3 atminti.
 
@@ -247,7 +247,7 @@ Palaukite kelias minutes. Nuspauskite mygtuką **Skaityti \[F4\]**.
 
 Programoje TrikdisConfig lange **„Bevieliai jutikliai“** bus sąrašas priregistruotų PB-LORA belaidžių pavojaus mygtukų. Lauke **„Serijos Nr.“** bus surašyti 6-ženkliai pavojaus mygtukų serijiniai numeriai, kurie turi sutapti su PB-LORA serijiniais numeriais užrašytais ant korpuso nugaros.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, „Bevieliai jutikliai“  „Panikos mygtukai“. Pažymėti mygtukas „Skaityti (F4)“ ir pirmojo įrenginio įrašas stulpelyje „Serijos Nr.“." src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     PB-LORA belaidžių panikos mygtukų ištrynimas iš „FLEXi” SP3 atminties:

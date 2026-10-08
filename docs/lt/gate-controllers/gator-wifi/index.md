@@ -186,7 +186,7 @@ Prijunkite RF-LORA transiverį prie GATOR WiFi. Po to galite naudoti iO-LORA pl�
 
 Paleiskite TrikdisConfig. Prijunkite GATOR WiFi prie kompiuterio naudodami USB Mini-B kabelį arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite "**iO-LORA valdiklis**". Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
+<img alt="TrikdisConfig langas 'Moduliai': pirmoje modulio eilutėje pasirinktas 'iO-LORA valdiklis', o šalia pažymėtas laukas 'Serijos Nr.'." src="./image10.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
 "**IN/OUT**" sąraše „**6IN**“ nustatykite „**Išėjimo mygtukas**“. Paspaudus „**Išėjimo**“ mygtuką, iO-LORA išėjimas „**OUT7**“ suveiks nustatytai impulso trukmei.
 
@@ -194,7 +194,7 @@ Paleiskite TrikdisConfig. Prijunkite GATOR WiFi prie kompiuterio naudodami USB M
 
 Sąraše "**Vartotojai**" įrašykite RFID kortelės numerį, vartotojo vardą, įjunkite leidimą valdyti PGMą, nurodykite valdoma PGMą, kodą. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**. Palaukite, kol bus atlikti atnaujinimai. Nuspauskite "**Atsijungti**" ir atjunkite USB kabelį.
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
+<img alt="TrikdisConfig WP17 langas, skirtukas Vartotojai. Pažymėtose naudotojų eilutėse matomi laukai RFID kodas, Vardas ir Kodas; stulpeliuose 5 ir 7 pažymėti išėjimų valdymo langeliai." src="./image12.webp" style="width:7.086614173228346in;height:1.9015748031496063in" />
 
 Suveikdinkite su RFID kortele/kodu PGM išėjimą. Paspauskite išėjimo mygtuką (turi suveikti PGM išėjimas).
 
@@ -368,7 +368,7 @@ Su TrikdisConfig galite pakeisti valdiklio GATOR WiFi nustatymus (jei gamyklini�
 
 Prijungus GATOR WiFi prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.5393700787401575in" />
+<img alt="TrikdisConfig būsenų juosta: 'MAC/Unikalus ID' laukas, 'Būsena: skaitymas baigtas', 'Modulis: WP17_3001', 'SN' laukas, 'BL: 1.08', 'FW: 1.21', 'HW' laukas ir ryšio būsena 'USB'." src="./image44.webp" style="width:7.086614173228346in;height:0.5393700787401575in" />
 
 | Pavadinimas      | Aprašymas                                             |
 |------------------|-------------------------------------------------------|
@@ -385,7 +385,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“ 
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:4.05511811023622in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“. Skiltyje „Pagrindiniai“ „Laiko nustatymas“ yra „NTP serveris“, „Laiko juosta“ – +0, „Vasaros laiko regionas“ – „Europa“, „Vartotojų sąrašo kalba“ – „Baltų“. Skiltyje „Komunikatoriaus tinklo nustatymai“ pažymėtas „DHCP režimas“, „Statinis IP“ – 192.168.0.2, „Potinklio kaukė“ – 255.255.255.0, „Numatytasis šliuzas“ – 192.168.0.1. Skiltyje „Periodinis testas“ „Įgalinti testą“ nepažymėta, „Testo periodas“ – 1 diena ir 0 val., „Pradėti testą“ – 12:00." src="./image45.webp" style="width:7.086614173228346in;height:4.05511811023622in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -430,7 +430,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „IN/OUT“**
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.952755905511811in" />
+<img alt="TrikdisConfig lango IN/OUT skirtukas IN/OUT. Lentelėje Įėjimų/Išėjimų nustatymai 1–4 I/O išjungti, o 5 OUT pavadintas Output5; skiltyje Skaitytuvo parametrai pažymėtas laukas Žemos įtampos skaitytuvai." src="./image46.webp" style="width:7.086614173228346in;height:2.952755905511811in" />
 
 Įėjimų/Išėjimų nustatymų langas.
 
@@ -499,7 +499,7 @@ OUT išėjimas gali būti aktyvuotas pagal nustatyta grafiką. Būtina nurodyti 
 
   Įveskite kalendorines šventines dienas, kuriu laikotarpyje bus galima nustatyti papildomą automatinį Išėjimų (OUT) veikimą numatytą **Grafikų** lentelėje.
 
-  <img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
+  <img alt="TrikdisConfig lango IN/OUT skirtukas Šventės. Lentelėje yra laukai Įj., Data nuo ir Data iki; atskirai nurodyti Pradžios laikas per šventes 15:25 ir Pabaigos laikas per šventes 16:44." src="./image48.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
 - **Įj.** – pažymėkite lauką, kad būtu įjungtas švenčių tvarkaraštis.
 
 - **Data nuo** – nurodykite šventinių dienų pradžią.
@@ -524,7 +524,7 @@ Prijungus RF-LORA transiverį, prie valdiklio GATOR WiFi galima prijungti iki 8 
 
 ### Langas „IP pranešimai“ 
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.251968503937008in" />
+<img alt="TrikdisConfig langas „IP pranešimai“: „Pagrindinis kanalas“ ir „Atsarginis kanalas“ turi „Ryšio tipas“ reikšmę „Išjungta“. Skiltyje „Parametrai“ „Grįžti prie pagrindinio po“ – 5 min, pažymėtas „IP PING periodas“ – 60 s, „Pereiti prie atsarginio po“ – 3 bandymų. Skiltyje „Mobilioji aplikacija“ pažymėti „Įgalinti jungimąsi“ ir „Lygiagretus siuntimas“." src="./image50.webp" style="width:7.086614173228346in;height:3.251968503937008in" />
 
 **Parinkčių grupė „Pagrindinis kanalas“**
 
@@ -562,7 +562,7 @@ Nustatymai analogiški pagrindiniam ryšio kanalui.
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.0039370078740157in" />
+<img alt="TrikdisConfig langas „Vartotojai“, skirtukas „Vartotojai“. Virš lentelės yra mygtukai „Registruokite RFID“ ir „Ištrinti sąrašą“. Lentelės stulpeliai: „El. pašto adresas“, „RFID kodas“, „Vardas“, „Įj“, „Schedule“, „5“ ir „Daugiau parametrų“." src="./image51.webp" style="width:7.086614173228346in;height:2.0039370078740157in" />
 
 - **El. pašto adresas** – įrašykite vartotojo el.pašto adresą.
 
@@ -625,13 +625,13 @@ Atsivers RFID pakabukų (kortelių) registravimo langas.
 
 Pridėkite RFID pakabuką (kortelę) prie RFID skaitytuvo. Kai skaitytuvas nuskaitys pakabuką (kortelę) atsivers naujas langas. Jame „**Įveskite vartotojo vardą“** ir pažymėkite lauką „**Vartotojas gali valdyti PGM išėjimą 5“**. Nuspauskite mygtuką „**PRIDĖTI“**. / Jei norite pridėti dar RFID pakabukų (kortelių), pakartokite aukščiau aprašytus veiksmus.
 
-<img alt="" src="./image55.webp" style="width:2.84251968503937in;height:2.3976377952755907in" />
+<img alt="TrikdisConfig lange RFID registracijos režimas rodoma rasta kortelė / žyma, laukas Įveskite vartotojo vardą, pažymėtas langelis Vartotojas gali valdyti PGM išėjimą 5 ir mygtukas PRIDĖTI." src="./image55.webp" style="width:2.84251968503937in;height:2.3976377952755907in" />
 
 Kai registracija visų RFID pakabukų (kortelių) bus baigta nuspauskite mygtuką „**SUSTABDYTI registracija“**. / Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų sąrašas būtų įrašytas į valdiklį.
 
 <img alt="TrikdisConfig langas RFID registracijos režimas rodo pranešimą Vartotojas pridėtas ir mygtuką SUSTABDYTI registraciją." src="./image56.webp" style="width:2.838582677165354in;height:2.377952755905512in" />
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.0354330708661417in" />
+<img alt="TrikdisConfig langas „Vartotojai“, skirtukas „Vartotojai“; raudonai apvesta naujai užpildyta vartotojo eilutė, kurioje pažymėti laukai „Įj“ ir „5“." src="./image57.webp" style="width:7.086614173228346in;height:2.0354330708661417in" />
 
 RFID pakabukų (kortelių) registravimą galima atlikti programoje TrikdisConfig įvedant jų ID numerius į lauką „**RFID kodas“**. Suteikite vartotojui „**Vardą“**, pažymėkite lauką „**Įj.**“ ir valdomo „**Išėjimo“** lauką. Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų (kortelių) sąrašas būtų įrašytas į valdiklį.
 

@@ -168,7 +168,7 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 8.  Lauke "**Serijos Nr.**" įrašykite iO-LORA serijos numerį.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3 langas „Moduliai“, skirtukas „RS485 moduliai“. ID 1 eilutėje modulis nustatytas kaip „iO-LORA plėtiklis“, laukas „Serijos Nr.“ užpildytas, „Sritis“ – 1, „Pavadinimas“ – „Expander ID1“." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonai.
 

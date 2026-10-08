@@ -1,7 +1,7 @@
 # Priešgaisrinių centralių komunikatorius FIRECOM
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="FIRECOM komunikatoriaus priekinis dangtis su POWER, DATA ir TROUBLE indikatorių vietomis raudoname skydelyje." width="400">
 </div>
 
 ## Aprašymas 
@@ -373,7 +373,7 @@ Jei norite stebėti priešgaisrinės centralės būseną, prijunkite atitinkamus
 
 6. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą. Įvykių pranešimai perduodami naudojant SIA DC-09 protokolą.
 
-<img alt="" src="./image26.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig langas Pranešimai ir ST pultą, kortelė Pranešimai. 6 pažymėti pagrindinio ryšio kanalo laukai: Ryšio tipas – Išjungta, Domenas arba IP – tuščias, Prievadas – 0, Protokolas – TRK; taip pat rodomas laukas Šifravimo raktas. Lygiagrečiojo ryšio kanalo Ryšio tipas – Išjungta." src="./image26.webp" style="width:7.0in;height:in" />
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2***.
 
@@ -408,7 +408,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 5. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image32.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig langas „Pranešimai į ST pultą“, skirtukas „Pranešimai“. Skaičiumi 5 pažymėti pagrindinio kanalo laukai: „Ryšio tipas“ – „Išjungta“, „Domenas arba IP“ – tuščias, „Prievadas“ – 0, „Protokolas“ – TRK, „Šifravimo raktas“ užpildytas. Lygiagrečiojo ryšio kanalo „Ryšio tipas“ – „Išjungta“." src="./image32.webp" style="width:7.0in;height:in" />
 
 Sukonfigūravus komunikatorių ***FIRECOM***, įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Centralėje būtina nuskaityti modulius, prijungtus prie RS485 magistralės. Priešgaisrinėje centralėje paspauskite: **PROG.>INSTALLER>(įveskite instaliuotojo kodą) 00000 OK>(pasirinkite) SETTINGS>ENTER>(pasirinkite) SCAN RS485>ENTER**. Palaukite, kol nuskaitymas bus baigtas. Grįžkite į pagrindinį ekraną du kartus paspausdami „**CANCEL**“.
 
@@ -450,7 +450,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 4. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig langas 'Pranešimai į ST pultą', skirtukas 'Pranešimai'. 4 – sukonfigūruokite 'Pagrindinis kanalas': 'Ryšio tipas' – Išjungta, 'Domenas arba IP' – tuščias, 'Prievadas' – 0, 'Protokolas' – TRK; taip pat rodomas laukas 'Šifravimo raktas'. 'Lygiagretusis ryšio kanalas' – Išjungta." src="./image39.webp" style="width:7.0in;height:in" />
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***FIRECOM*** pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į ***Protegus2***.
 
@@ -481,7 +481,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 4. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image45.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig langas 'Pranešimai į ST pultą', skirtukas 'Pranešimai'. 4 – sukonfigūruokite 'Pagrindinis kanalas': 'Ryšio tipas' – Išjungta, 'Domenas arba IP' – tuščias, 'Prievadas' – 0, 'Protokolas' – TRK; taip pat rodomas laukas 'Šifravimo raktas'. 'Lygiagretusis ryšio kanalas' – Išjungta." src="./image45.webp" style="width:7.0in;height:in" />
 
 Įdiekite **ZFPtools** programą savo kompiuteryje. Paleiskite programą **ZFPtools**. Įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Prijunkite USB2.0 A-B kabelį tarp priešgaisrinės centralės ir kompiuterio.
 
@@ -593,7 +593,7 @@ Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar ***
 
 7. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.  
 
-   <img alt="" src="./image110.webp" style="width:7.0in;height:in" />
+   <img alt="TrikdisConfig langas Pranešimai į ST pultą, kortelė Pranešimai. 7 – Pagrindinis kanalas: Ryšio tipas Išjungta, Domenas arba IP ir Prievadas tušti, Protokolas TRK, Šifravimo raktas tuščias." src="./image110.webp" style="width:7.0in;height:in" />
 
 **Polon-Alfa 3000**  priešgaisrinės signalizacijos centralė su **MK-30** moduliu turi būti  sukonfigūruota naudojant **Polon Studio** programą, kad ji veiktu per LAN  tinklą. LAN tinklo IP adresai turi būti įvesti pagal jūsų tinklo nustatymus.  
 
@@ -674,7 +674,7 @@ Norint įjungti komunikatorių, reikia įjungti jo maitinimo šaltinį. Jei komu
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image62.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig FC_E170 langas Sistemos parinktys, skirtukas Pagrindiniai. 1 – SIM PIN kodas įrašytas abiejuose laukuose; 2 – APN abiejuose laukuose yra internet." src="./image62.webp" style="width:7.0in;height:in" />
 
 1.  Įveskite **SIM kortelės PIN kodą**.
 
@@ -722,7 +722,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image68.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig FC_E170 langas Sistemos parinktys, skirtukas Pagrindiniai. 1 – paryškintas Objekto numeris; 2 – SIM PIN kodas įrašytas abiejuose laukuose; 3 – APN abiejuose laukuose yra internet." src="./image68.webp" style="width:7.0in;height:in" />
 
 1.  Įrašykite **Objekto numerį** (4 simbolių šešioliktainis numeris, 0-9, A-F. **Nenaudokite FFFE, FFFF objekto numerių**.).
 
@@ -738,7 +738,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 2.  Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP kanalus. Eilės tvarka nustatomi ryšio tipai. Nepavykus jungtis pirminiu ryšio tipu, pereinama į sekantį ir t.t. Jei atsarginiu ryšio tipu pavyko perduoti pranešimą į CSP, tai „**Grįžimą į pagrindinį“** ryšio tipą bus bandoma atlikti po nustatyto laiko tarpo.
 
-<img alt="" src="./image70.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig lango „Pranešimai į ST pultą“ skirtukas „Pranešimai“. Raudoni žymekliai 6–10 nurodo pagrindinio kanalo laukus: ryšio tipas „Išjungta“, tuščias domenas arba IP, prievadas 0, protokolas TRK ir užpildytas šifravimo raktas. Žymeklis 11 apima atsarginį kanalą su tokiomis pačiomis reikšmėmis. Žymeklis 12 apima lygiagretųjį ryšio kanalą: ryšio tipas TCP/IP, tuščias domenas arba IP, prievadas 0, protokolas TRK ir užpildytas šifravimo raktas." src="./image70.webp" style="width:7.0in;height:in" />
 
 6. **Ryšio būdas** – pasirinkite, kuriuo protokolu (TCP arba UDP) turėtų būti siunčiami pranešimai. 
 7. **Domenas arba IP** – įrašykite imtuvo domeno arba IP adresą. 
@@ -798,7 +798,7 @@ Naudodami ***Protegus2***, sistemos vartotojai gali matyti sistemos būseną ir 
         LAN tinklo).
 3. Paspauskite „Pridėti sistemą“ ir įveskite ***FIRECOM*** „**IMEI/Unikalus ID**“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite mygtuką „**Toliau**“.
 
-<img alt="" src="./image74.webp" style="width:4.0in;height:in" />
+<img alt="Protegus2 programėlės langas „Nuskaityti QR kodą“. Galima įvesti „Unikalus ID“ arba spausti „Nuskaityti QR kodą“; pavyzdinėje gaminio etiketėje paryškintas QR kodas. Rodyklė į ID lauką paaiškina: įveskite IMEI kodą, kurį rasite ant pakuotės, valdiklio arba TrikdisConfig programoje kaip unikalų ID. Apačioje yra mygtukai „Atšaukti“ ir „Toliau“." src="./image74.webp" style="width:4.0in;height:in" />
 
 ### Konfigūravimas ir valdymas SMS žinutėmis 
 
@@ -889,7 +889,7 @@ Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 
 Prijungus komunikatorių ***FIRECOM*** ***TrikdisConfig*** būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image75.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig būsenos juostos fragmentas: rodomi laukai „IMEI/Unikalus ID“, „Būsena: Pasiruošęs“, „Modulis: FC_E170“, „SN“, „BL: 1.02“, „FW: 1.07“, „HW“, „Būsena USB“ ir „Teisės: Administratorius“." src="./image75.webp" style="width:7.0in;height:in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -909,7 +909,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Pagrindiniai“**
 
-<img alt="" src="./image76.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig lango „Sistemos parinktys“ skirtukas „Pagrindiniai“. „Objekto numeris“ – 0001, „Objekto pavadinimas“ – „Fire communicator“, „Testo periodas“ – 1 diena ir 0 val., „Pradėti testą“ – 13:30. Dešinėje matomi „SIM“ ir „Laiko parametrai“ nustatymai; „APN“ – „internet“, „Laiko juosta (val)“ – +2, „Įtampos dingimo uždelsimas, s“ – 300." src="./image76.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -965,7 +965,7 @@ Zonas galima priskirti grupėms. Kiekvienos grupės pavadinimas gali būti pakei
 
 **Skirtukas „Prisijungimas“**
 
-<img alt="" src="./image78.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig lango „Sistemos parinktys“ skirtukas „Prisijungimas“. „Prieigos kodai“ apima „Administratoriaus kodas“, „SMS slaptažodis“ ir „Instaliuotojo kodas“. „Instaliuotojo teisės“: pažymėti „Objekto numeris“ ir „SIM kortelė“; „Sričių nustatymai“ bei matomi meniu leidimai nustatyti kaip „Redaguojama“." src="./image78.webp" style="width:7.0in;height:in" />
 
 **Parinkčių grupė „Prieigos kodai“**
 
@@ -987,7 +987,7 @@ Administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas
 
 **Skirtukas „Pranešimai“**
 
-<img alt="" src="./image79.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig FC_E170, langas „Pranešimai į ST pultą“, skirtukas „Pranešimai“. „Pagrindinis kanalas“ ir „Atsarginis kanalas“: „Ryšio tipas“ – „Išjungta“; „Lygiagretusis ryšio kanalas“ ir „Lygiagretaus kanalo atsarginis“: „Ryšio tipas“ – TCP/IP. Visuose keturiuose kanaluose „Prievadas“ – 0, „Protokolas“ – TRK, „Šifravimo raktas“ užpildytas. Laukai „Domenas arba IP“ tušti." src="./image79.webp" style="width:7.0in;height:in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per internetą (IP).
 

@@ -436,7 +436,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėji
 
 Prijungus E16T TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image28.webp" style="width:7.070866141732283in;height:0.6062992125984252in" />
+<img alt="TrikdisConfig E16T lango apačia: virš būsenos juostos rodomas įrenginio „Unikalus ID“. Būsenos juostoje: „Status: done“, „Device: E16T“, serijos numeris, BL ir FW versijos, tuščias „HW“, „State: HID“ ir „Admin role“." src="./image28.webp" style="width:7.070866141732283in;height:0.6062992125984252in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -454,7 +454,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parametrai“
 
-<img alt="" src="./image29.webp" style="width:7.082677165354331in;height:4.043307086614173in" />
+<img alt="TrikdisConfig E16T langas 'Sistemos parametrai'. 'Pagrindinės': 'Objekto numeris' E102, 'Testo periodas' įjungtas ir nustatytas 1440 min, 'Centralės modelis' INTERFACE DTMF. 'Ethernet parinktys': 'Naudoti DHCP' pažymėta, 'Vidinis IP' 192.168.1.118, 'Potinklis' 255.255.255.0, 'Vartai' 0.0.0.0, 'DNS 1' 8.8.8.8, 'DNS 2' 8.8.4.4. 'Išėjimas': 'OUT tipas' Nuotolinis valdymas, 'OUT režimas' Lygis, 'Impulso trukmė' 10 s." src="./image29.webp" style="width:7.082677165354331in;height:4.043307086614173in" />
 
 **Parinkčių grupė „Pagrindinės“**
 

@@ -89,7 +89,7 @@ iO-8-LORA plokštėje yra 8 kontaktai IO1–IO8 (įėjimai) jutiklių grandinėm
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="Normaliai atviros (NO) įėjimo grandinės schema: tarp ZNx ir C pavaizduotas atviras NO kontaktas. Rezistoriaus nėra." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
     <img src="./image6.webp" alt="Prijungimo schema: normaliai uždaros (NC) įėjimo grandinės NC kontaktas jungia ZNx su C. Rezistorius nepavaizduotas." style="width: 100%; height: auto;" />
@@ -159,7 +159,7 @@ Nuotoliniu būdu su relės kontaktais galima valdyti (įjungti/išjungti) įvair
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig langas Zonų įėjimai. Pirmos zonos lauke Įėjimas atvertas pasirinkimų sąrašas, kuriame matomi Išjungta, SP3 I/O ir RS485 Expander įėjimai." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. "**PGM išėjimų**" sąraše atlikite nustatymus plėtiklio PGM išėjimams.
 

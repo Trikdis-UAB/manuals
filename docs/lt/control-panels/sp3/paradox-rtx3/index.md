@@ -13,10 +13,10 @@ Centralės veikimo programą reikia pakeisti į programą, kuri veikia su beviel
 
 | Centralės modifikacija | Programos versija suderinama su centralės modifikacija |
 |:--:|:--:|
-| <img alt="" src="./image2.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_1xx1_0112.fw |
-| <img alt="" src="./image4.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_3xx1_0112.fw |
-| <img alt="" src="./image5.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_4xx1_0112.fw |
-| <img alt="" src="./image6.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_5xx1_0112.fw |
+| <img alt="Gaminio etiketė su QR kodu: SP3_4G/E, FW 1.12. Pažymėtas S/N modifikacijos kodas SP3_14E0." src="./image2.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_1xx1_0112.fw |
+| <img alt="Gaminio etiketė su QR kodu: SP3_ETH, FW 1.12. Pažymėtas S/N modifikacijos kodas SP3_3E00." src="./image4.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_3xx1_0112.fw |
+| <img alt="Gaminio etiketė su QR kodu: SP3_4G/E, FW 1.12. Pažymėtas S/N modifikacijos kodas SP3_44E0." src="./image5.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_4xx1_0112.fw |
+| <img alt="Gaminio etiketė su QR kodu: SP3_2G, FW 1.12. Pažymėtas S/N modifikacijos kodas SP3_5200." src="./image6.png" style="width:2.437007874015748in;height:1.0984251968503937in" /> | SP3_5xx1_0112.fw |
 
 Atlikite šiuos žingsnius įrašant veikimo programą rankiniu būdu:
 
@@ -74,7 +74,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 11. Nuspauskite **„Išsaugoti“**.
 
-<img alt="" src="./image12.png" style="width:3.094488188976378in;height:2.838582677165354in" />
+<img alt="TrikdisConfig langas „Rastas naujas jutiklis“: pranešime nurodyta, kad rastas magnetinis kontaktas, ir pateiktas jo UID. „Zonos numeris“ – 5, „Zonos paskirtis“ – „24 valandų“. Raudonai pažymėtas mygtukas „Išsaugoti“." src="./image12.png" style="width:3.094488188976378in;height:2.838582677165354in" />
 
 12. Naujas jutiklis įtrauktas į belaidžių įrenginių sąrašą.
 
@@ -82,7 +82,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 14. Norint užbaigti belaidžių jutiklių registravimą nuspauskite **„Sustabdyti“**.
 
-<img alt="" src="./image13.png" style="width:3.7401574803149606in;height:2.795275590551181in" />
+<img alt="TrikdisConfig lange „Primokymas“ pranešama „Rastas naujas jutiklis: ID:1 Magnetinis kontaktas“ kartu su jo UID. Raudonai pažymėtas mygtukas „Sustabdyti“." src="./image13.png" style="width:3.7401574803149606in;height:2.795275590551181in" />
 
 15. Nuspauskite **„Yes“** ir jutiklis bus įrašytas į centralę „FLEXi“ SP3.
 
@@ -94,7 +94,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 17. **„Zonų įėjimų“** lentelėje jutiklį būtina priskirti **„Sričiai“**, suteikti zonai **„Pavadinimą“**, nustatyti zonos **„Paskirtį“**.
 
-<img alt="" src="./image16.png" style="width:7.090551181102362in;height:1.9291338582677164in" />
+<img alt="TrikdisConfig langas 'Zonų įėjimai', lentelė 'Zonų nustatymai'. Pažymėta 5 zona: 'Pavadinimas' – Zone 5, 'Sritis' – 2; 'Įėjimas' ir 'Paskirtis' rodomi nukirpti. Viršuje yra mygtukas 'Įrašyti (F5)'." src="./image16.png" style="width:7.090551181102362in;height:1.9291338582677164in" />
 
 18. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -141,13 +141,13 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 12. Nuspauskite **„Išsaugoti“.**
 
-<img alt="" src="./image18.png" style="width:3.078740157480315in;height:2.5in" />
+<img alt="Langas „Rastas naujas jutiklis“ praneša, kad rastas pultelis, ir pateikia jo UID. Laukuose „Sritis“ ir „Vartotojas“ pasirinkta 1. Pažymėtas mygtukas „Išsaugoti“." src="./image18.png" style="width:3.078740157480315in;height:2.5in" />
 
 13. Naujas pultelis įtrauktas į belaidžių įrenginių sąrašą.
 
 14. Norint užbaigti belaidžių pultelių registravimą nuspauskite **„Sustabdyti“.**
 
-<img alt="" src="./image19.png" style="width:3.7283464566929134in;height:2.7440944881889764in" />
+<img alt="TrikdisConfig lange „Primokymas“ rodoma aptikimo eilutė „Rastas naujas jutiklis: ID:3 Pultelis“ su jo UID. Pažymėtas mygtukas „Sustabdyti“." src="./image19.png" style="width:3.7283464566929134in;height:2.7440944881889764in" />
 
 15. Nuspauskite **„Yes“** ir pultelis bus įrašytas į centralę „FLEXi“ SP3.
 
@@ -158,7 +158,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 <img alt="Valdymo pultelio piešinys su keturiais sunumeruotais mygtukais: 1 – viršutinis užrakintos spynos simbolis, 2 – apatinis atrakintos spynos simbolis, 3 – kairėje esantis maitinimo simbolis, 4 – dešinėje esanti rodyklė." src="./image21.png" style="width:1.6933366141732284in;height:2.06667104111986in" />
 
-<img alt="" src="./image22.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
+<img alt="TrikdisConfig SP3 langas „Belaidžiai“: 1 eilutėje įrenginio tipas yra „Pultelis“, laukas „Serijos Nr.“ užpildytas, „Sritis“ ir „Vartotojas“ yra 1, o „Klavišas3“ ir „Klavišas4“ nustatyti atitinkamai „Išjungti2“ ir „Įjungti2“. Matomas mygtukas „Įrašyti (F5)“." src="./image22.png" style="width:7.082677165354331in;height:1.5669291338582678in" />
 
 18. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -203,13 +203,13 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 11. Nuspauskite **„Išsaugoti“.**
 
-<img alt="" src="./image24.png" style="width:3.0708661417322833in;height:2.173228346456693in" />
+<img alt="Langas „Rastas naujas jutiklis“ praneša, kad rasta sirena, ir pateikia jos UID. Lauke „Sritis“ pasirinkta 1. Pažymėtas mygtukas „Išsaugoti“." src="./image24.png" style="width:3.0708661417322833in;height:2.173228346456693in" />
 
 12. Belaidė sirena įtraukta į belaidžių įrenginių sąrašą.
 
 13. Norint užbaigti belaidžių sirenų registravimą nuspauskite **„Sustabdyti“.**
 
-<img alt="" src="./image25.png" style="width:3.716535433070866in;height:2.7440944881889764in" />
+<img alt="TrikdisConfig langas 'Primokymas': rastas naujas jutiklis 'Sirena'. Pažymėtas mygtukas 'Sustabdyti'." src="./image25.png" style="width:3.716535433070866in;height:2.7440944881889764in" />
 
 14. Nuspauskite **„Yes“** ir sirena bus įrašyta į centralę „FLEXi“ SP3.
 
@@ -217,7 +217,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 15. Belaidė sirena įtraukta į belaidžių įrenginių sąrašą.
 
-<img alt="" src="./image27.png" style="width:7.0875in;height:1.6562948381452318in" />
+<img alt="TrikdisConfig SP3 lango 'Belaidžiai' sąraše įrenginio tipas 'Sirena', o lauke 'Sritis' pasirinkta 1." src="./image27.png" style="width:7.0875in;height:1.6562948381452318in" />
 
 16. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -261,13 +261,13 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 11. Nuspauskite **„Išsaugoti“.**
 
-<img alt="" src="./image30.png" style="width:3.078740157480315in;height:2.1653543307086616in" />
+<img alt="TrikdisConfig langas 'Rastas naujas jutiklis': rasta klaviatūra; lauke 'Sritis' pasirinkta 1. Pažymėtas mygtukas 'Išsaugoti'." src="./image30.png" style="width:3.078740157480315in;height:2.1653543307086616in" />
 
 12. Belaidė klaviatūra įtraukta į belaidžių įrenginių sąrašą.
 
 13. Norint užbaigti belaidžių klaviatūrų registravimą nuspauskite **„Sustabdyti“.**
 
-<img alt="" src="./image31.png" style="width:3.732283464566929in;height:2.7559055118110236in" />
+<img alt="TrikdisConfig langas 'Primokymas': rastas naujas jutiklis 'Klaviatūra'. Pažymėtas mygtukas 'Sustabdyti'." src="./image31.png" style="width:3.732283464566929in;height:2.7559055118110236in" />
 
 14. Nuspauskite **„Yes“** ir klaviatūra bus įrašyta į centralę „FLEXi“ SP3.
 
@@ -275,7 +275,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 15. Belaidė klaviatūra įtraukta į belaidžių įrenginių sąrašą.
 
-<img alt="" src="./image33.png" style="width:7.082677165354331in;height:1.5511811023622046in" />
+<img alt="TrikdisConfig SP3 langas „Belaidžiai“: 1 eilutėje įrenginio tipas yra „Klaviatūra“, laukas „Serijos Nr.“ užpildytas, o „Sritis“ yra 1. Matomas mygtukas „Įrašyti (F5)“." src="./image33.png" style="width:7.082677165354331in;height:1.5511811023622046in" />
 
 16. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -320,13 +320,13 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 11. Nuspauskite **„Išsaugoti“.**
 
-<img alt="" src="./image35.png" style="width:3.0826771653543306in;height:2.1850393700787403in" />
+<img alt="TrikdisConfig langas 'Rastas naujas jutiklis': rastas '2WPGM PGM'; lauke 'Pasirinkite išėjimą' pasirinkta 4. Pažymėtas mygtukas 'Išsaugoti'." src="./image35.png" style="width:3.0826771653543306in;height:2.1850393700787403in" />
 
 12. Belaidis dvipusio ryšio bevielis PGM modulis įtrauktas į belaidžių įrenginių sąrašą.
 
 13. Norint užbaigti belaidžių modulių **2WPGM** registravimą nuspauskite **„Sustabdyti“.**
 
-<img alt="" src="./image36.png" style="width:3.7283464566929134in;height:2.673228346456693in" />
+<img alt="TrikdisConfig langas 'Primokymas' nurodo spustelėti įrenginio tamperio mygtuką. Rastas naujas jutiklis '2WPGM PGM'; pažymėtas mygtukas 'Sustabdyti'." src="./image36.png" style="width:3.7283464566929134in;height:2.673228346456693in" />
 
 14. Nuspauskite **„Yes“** ir modulis **2WPGM** bus įrašytas į centralę „FLEXi“ SP3.
 
@@ -334,11 +334,11 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 15. Belaidis modulis **2WPGM** įtrauktas į belaidžių įrenginių sąrašą.
 
-<img alt="" src="./image38.png" style="width:7.082677165354331in;height:1.547244094488189in" />
+<img alt="TrikdisConfig langas „Belaidžiai“: pažymėtoje 1 eilutėje įrenginio tipas yra „2WPGM PGM“, o laukas „Sritis“ tuščias. Vartotojo, „Klavišas3“ ir „Klavišas4“ laukuose rodoma „N/A“." src="./image38.png" style="width:7.082677165354331in;height:1.547244094488189in" />
 
 16. PGM išėjimui galima priskirti **„Pavadinimą“**.
 
-<img alt="" src="./image39.png" style="width:7.094488188976378in;height:1.9133858267716535in" />
+<img alt="TrikdisConfig SP3 lango „PGM išėjimai“ skirtuko „Išėjimai“ 4 eilutėje pavadinimas yra „Vartai“, išėjimas – „2WPGM ID1“, išėjimo aprašymo lauke matoma „Nuotolinis valdym...“, o impulso trukmė – 20 s." src="./image39.png" style="width:7.094488188976378in;height:1.9133858267716535in" />
 
 17. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 
@@ -381,7 +381,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 10. Norint užbaigti belaidžių kartotuvų registravimą nuspauskite **„Sustabdyti“.**
 
-<img alt="" src="./image41.png" style="width:3.736220472440945in;height:2.7086614173228347in" />
+<img alt="TrikdisConfig langas Primokymas rodo pranešimą apie rastą naują jutiklį Kartotuvas su ID ir UID. Paryškintas mygtukas Sustabdyti." src="./image41.png" style="width:3.736220472440945in;height:2.7086614173228347in" />
 
 11. Nuspauskite **„Yes“** ir RPT1 bus įrašytas į centralę „FLEXi“ SP3.
 
@@ -389,7 +389,7 @@ Prijungus belaidžių zonų išplėtimo modulį RTX3 „FLEXi“ SP3 gali dirbti
 
 12. Belaidis ryšio kartotuvas RPT1 įtrauktas į belaidžių įrenginių sąrašą.
 
-<img alt="" src="./image43.png" style="width:7.082677165354331in;height:1.5511811023622046in" />
+<img alt="TrikdisConfig langas „Belaidžiai“: pažymėtoje 1 eilutėje įrenginio tipas yra „Kartotuvas“, o laukas „Sritis“ tuščias. Vartotojo, „Klavišas3“ ir „Klavišas4“ laukuose rodoma „N/A“." src="./image43.png" style="width:7.082677165354331in;height:1.5511811023622046in" />
 
 13. Atlikus pakeitimus nuspauskite **Įrašyti [F5]**.
 

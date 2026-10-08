@@ -218,7 +218,7 @@ Veikia su Protegus2 programėle:
 
 1.  Jei komunikatorius prijungtas prie centralės TIP/RING gnybtų, tuomet reikia nustatyti „**AUTO**“.
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0236220472440944in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“: „Komunikacijos protokolas“ nustatytas į „1. DISABLED“. „Data/CLK sąsaja“ grupėje 2 numeriu pažymėtas „Centralės modelis“ – „6. PARADOX SP+/MG+“; 3 numeriu – pažymėta „Nuotolinis centralės valdymas“; 4 numeriu – „Centralės PC download slaptažodis“ laukas." src="./image8.webp" style="width:7.086614173228346in;height:2.0236220472440944in" />
 
 Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuosekliosios magistralės.
 
@@ -237,7 +237,7 @@ Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba
     slaptažodį**".
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="TrikdisConfig programos langas „Pranešimai vartotojui“, kortelė „PROTEGUS servisas“: pažymėtas langelis „Leisti prisijungti“ (5); laukas „PROTEGUS Cloud prieigos kodas“ (6) užpildytas." src="./image9.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 4. Pažymėkite varnele „**Leisti prisijungti“** prie Protegus serviso.
 
@@ -251,7 +251,7 @@ Kai komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba
 
 3. Pažymėkite varnele **„Naudoti DHCP“** režimą, kad komunikatorius automatiškai nuskaitytų kompiuterinio tinklo nustatymus (potinklio kaukę, šliuzą) ir jam būtų priskirtas IP adresas.
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="TrikdisConfig programos langas „Tinklo nustatymai“, kortelė „SIM1“: laukas „SIM kortelės PIN kodas“ (8) užpildytas, „APN“ (9) įrašyta „internet“, laukai „DNS 1“ (10) ir „DNS 2“ (11) tušti." src="./image11.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikti šiuos nustatymus.
 
@@ -294,7 +294,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image16.webp" style="width:7.086614173228346in;height:3.354330708661417in" />
+<img alt="TrikdisConfig langas „Pranešimai į CSP“, skirtukas „CSP nustatymai“. Paryškinti „Pirminis ryšio kanalas“ laukai: „Ryšio būdas“ – „Išjungtas“, „Protokolas“, „Šifravimo raktas“, „Domenas arba IP“, „Prievadas“, „TCP ar UDP“ – „TCP“. Taip pat paryškinti atitinkami „Atsarginio kanalo režimas“ laukai." src="./image16.webp" style="width:7.086614173228346in;height:3.354330708661417in" />
 
 4. **Ryšio būdas** – pasirinkite **IP** ryšio būdą.
 
@@ -322,7 +322,7 @@ Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas�
 
 12. Pažymėkite varnele **„Naudoti DHCP“** režimą, kad komunikatorius automatiškai nuskaitytų kompiuterinio tinklo nustatymus (potinklio kaukę, šliuzą) ir jam būtų priskirtas IP adresas.
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.87007874015748in" />
+<img alt="TrikdisConfig programos langas „Tinklo nustatymai“, kortelė „SIM1“: laukas „SIM kortelės PIN kodas“ (13) užpildytas, „APN“ (14) įrašyta „internet“, laukai „DNS 1“ (15) ir „DNS 2“ (16) tušti." src="./image19.webp" style="width:7.086614173228346in;height:2.87007874015748in" />
 
 Jei komunikatoriuje įdėta SIM kortelė (arba dvi SIM kortelės), reikia atlikti šiuos nustatymus.
 
@@ -425,7 +425,7 @@ Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/R
 
 4.  Norėdami tiesiogiai valdyti centralę, įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, įvestu centralėje.
 
-<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“. Paryškinta „Komunikacijos protokolas“ – „2. AUTO“, „Centralės modelis“ – „7. PARADOX SP+/MG+“, pažymėtas „Nuotolinis centralės valdymas“ ir laukas „Centralės PC download slaptažodis“." src="./image27.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pultui ir nuotoliniam valdymui iš Protegus2.
 
@@ -735,7 +735,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GET PGM išėjim
 
 Prijungus GET TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="TrikdisConfig būsenos juosta nuskaitytam įrenginiui: rodomas IMEI/Unikalus ID, „Būsena: skaitymas baigtas“, „Įrenginys: GET_S170“, serijos numeris, BL 1.00, FW 1.15, HW 0.00, „Būsena: HID“ ir prieigos lygis „Administrator“. Laukai paaiškinti toliau esančioje lentelėje." src="./image46.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -753,7 +753,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:2.7992125984251968in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“. Grupėje „Pagrindinės“ yra laukai „Objekto numeris“, „Module ID“ ir „Laiko nustatymas“, kuriame pasirinkta „Pirmas kanalas“. Grupėje „Prisijungimas“ yra „Administratoriaus kodas“ ir „Instaliatoriaus kodas“; pažymėta „„Atkurti“ gali tik administratorius“. Skiltyje „Instaliuotojui leisti keisti“ pažymėti „Objekto numeris“, „Pranešimai į CSP“, „Pranešimai vartotojui“, „SIM kortelė“ ir „Įvykių aprašas“." src="./image47.webp" style="width:7.086614173228346in;height:2.7992125984251968in" />
 
 **Parinkčių grupė „Pagrindinės“**
 
@@ -793,7 +793,7 @@ Komunikatorius yra prijungtas prie centralės telefoninio komunikatoriaus gnybt�
 
 - **Dial tone dažnis -** dažnis, kuriuo komunikatorius palaiko ryšį su centrale per telefoninį komunikatorių.
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
+<img alt="TrikdisConfig langas „Centralės sąsaja“. Grupėje „Tip/Ring sąsaja“ „Komunikacijos protokolas“ – 1. DISABLED. Grupėje „Data/CLK sąsaja“: „Įvykių protokolas“ – CID, „Centralės modelis“ – 6. PARADOX SP+/MG+; „Nuotolinis centralės valdymas“ ir „Įvykiai“ pažymėti, „Centralės PC download slaptažodis“ laukelis užpildytas." src="./image49.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
 
 **Parinkčių grupė „Data/CLK sąsaja“**
 
@@ -881,7 +881,7 @@ Nustatomi parametrai, kaip komunikatorius siųs pranešimus į CSP ir į Protegu
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
+<img alt="TrikdisConfig lango „Pranešimai vartotojui“ skirtukas „PROTEGUS servisas“. „Leisti prisijungti“ pažymėta, „PROTEGUS Cloud prieigos kodas“ laukelis užpildytas, „Lygiagretus siuntimas“ nepažymėtas." src="./image52.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -917,7 +917,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 !!! note "Pastaba"
     1\. Prieš naudodami SIM kortelę, įsitikinkite, ar ji aktyvuota. / 2.
     Patikrinkite, ar įjungta mobiliųjų duomenų perdavimo paslauga.
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="TrikdisConfig lango „Tinklo nustatymai“ skirtukas „SIM1“. Grupėje „SIM kortelė“ „SIM kortelės PIN kodas“ laukelis užpildytas, „APN“ – internet; „Vartotojas“, „Slaptažodis“, „SIM ICCID“, „DNS 1“, „DNS 2“ ir „Numatytasis operatorius“ laukai tušti." src="./image54.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Šiuos nustatymus reikia atlikti jei į komunikatoriaus SIM1 lizdą yra įstatyta SIM kortelė.
 
@@ -937,7 +937,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 **Skirtukas „SIM2“**
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
+<img alt="TrikdisConfig lango „Tinklo nustatymai“ skirtukas „SIM2“. Grupėje „SIM kortelė“ „SIM kortelės PIN kodas“ laukelis užpildytas, „APN“ – internet; „Vartotojas“, „Slaptažodis“, „SIM ICCID“, „DNS 1“, „DNS 2“ ir „Numatytasis operatorius“ laukai tušti." src="./image55.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
 
 Šiuos nustatymus reikia atlikti jei į komunikatoriaus SIM2 lizdą yra įstatyta SIM kortelė.
 
@@ -1009,7 +1009,7 @@ Galite pakeisti kiekvieno įvykio Contact ID (SIA) kodą, taip pat su pranešimu
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:0.968503937007874in" />
+<img alt="TrikdisConfig lango „Gamintojo parametrai“ dalis. Raudonai apibrėžtas mygtukas „Atkurti“; po juo rodomas įrenginio IMEI / unikalus ID numeris." src="./image58.webp" style="width:7.086614173228346in;height:0.968503937007874in" />
 
 Kitas būdas atkurti gamyklinius nustatymus.
 

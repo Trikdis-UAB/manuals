@@ -124,7 +124,7 @@ Prijungimas:
 
 8.  Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig „Moduliai“  „RS485 moduliai“. Lentelėje pateikti „iO-LORA plėtiklis“ ir „iO8-LORA plėtiklis“ bei jų „ID“, „Serijos Nr.“, „Sritis“ ir „Pavadinimas“ laukai." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  "**Zonų įėjimo**" sąraše atlikite nustatymus plėtiklio zonoms**.**
 

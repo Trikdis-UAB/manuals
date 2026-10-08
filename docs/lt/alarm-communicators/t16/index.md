@@ -349,7 +349,7 @@ Wi-Fi modulis W485 suderinamas su T16 radijo siųstuvų. Kai įdiegsite ir užpr
 
 Prijungus T16 prie programos TrikdisConfig ir nuspaudus mygtuką **Skaityti [F4]**, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image21.webp" style="width:7.086614173228346in;height:0.7519685039370079in" />
+<img alt="TrikdisConfig T16 būsenos juosta po nuskaitymo. Rodomi laukai IMEI/Unikalus ID, Būsena, Įrenginys, SN, BL, FW, HW, Sujungimas ir Teisės; sujungimas nurodytas kaip USB, teisės – Admin." src="./image21.webp" style="width:7.086614173228346in;height:0.7519685039370079in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -381,7 +381,7 @@ Naujai programuojant T16, pirmiausia reikia nuskaityti jo konfigūraciją (gamyk
 
 **Skirtukas „Nustatymai“**
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:4.165354330708661in" />
+<img alt="TrikdisConfig T16 langas Nustatymai, skirtukas Nustatymai. Pažymėta Nuoseklioji sąsaja, nepažymėta Telefono linijos sąsaja; Apsaugos centralės modelis – TRIKDIS Cxx. Radijo dažnis 1 įjungtas, RF protokolas RAS-3, Objekto numeris 1689, Sistema 0, RF galia 2W. Radijo dažnis 2 neįjungtas, RF protokolas RAS-3, Objekto numeris 1FFF, Sistema 0." src="./image22.webp" style="width:7.086614173228346in;height:4.165354330708661in" />
 
 **Parinkčių grupė „Pagrindiniai nustatymai“**
 
@@ -435,7 +435,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Įėjimai“**
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.440944881889764in" />
+<img alt="TrikdisConfig T16 langas Įvykiai, skirtukas Įėjimai. Srities numeris 01; įjungti Įėjimas1–Įėjimas6, jų Nr – 001–006, Tipas – NO. Įėjimas1 užlaikymas 30 s, kitų – 0 s. Atvertame Tipo sąraše matyti Negalimas, NC, NO ir EOL. Lentelėje rodomi Radijo dažnis 1 ir Radijo dažnis 2 įvykio bei atsistatymo kodai." src="./image24.webp" style="width:7.086614173228346in;height:3.440944881889764in" />
 
 - **Įjungta** – pažymėkite langelį, kad įjungti įvykio siuntimą, kai suveikia įėjimas.
 
@@ -455,7 +455,7 @@ Konfigūruojant radijo siųstuvą T16 yra du prieigos lygiai (administratoriaus 
 
 **Skirtukas „Įvykiai“**
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.393700787401575in" />
+<img alt="TrikdisConfig T16 langas Įvykiai, skirtukas Įvykiai. Srities numeris 01. Lentelėje pateikti vidiniai įvykiai, jų Įgalinta langeliai ir Radijo dažnis 1 bei Radijo dažnis 2 stulpeliai Įvykis ir Atsistatymas. Pažymėti Žema baterijos įtampa, Miego režimas, Konfigūracija pakeista, Testas ir TM17 išjungimas/įjungimas; Žema baterijos įtampa abiem dažniams turi kodus 311 ir 311." src="./image25.webp" style="width:7.086614173228346in;height:3.393700787401575in" />
 
 - **Įgalinta** – pažymėkite langelį, kad įjungti vidiniu įvykiu pranešimu siuntimą:
 - **Žema baterijos įtampa** – maitinimo įtampa žemesnė 11,5 V.
@@ -565,7 +565,7 @@ Apie saugojimo metu suveikusius įėjimus informuoja TM17 mirksintys atitinkamų
 
 **Skirtukas „W485“**
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.6692913385826773in" />
+<img alt="TrikdisConfig T16 langas „RS485 moduliai“, skirtukas „W485“. „Pagrindinis“ ir „Atsarginis“ kanalai įjungti; abiejų „Domenas arba IP“ laukuose rodoma 0.0.0.0, „Prievadas“ laukai tušti, o „TCP ar UDP“ nustatyta į „TCP“. „Protegus“ įjungta ir pažymėtas „DHCP režimas“. Rodomi tinklo laukai: „Statinis IP“ 192.168.1.27, „Potinklio kaukė“ 255.255.255.0, „Numatytasis šliuzas“ 192.168.1.254, „DNS 1“ 8.8.8.8 ir „DNS 2“ 8.8.4.4. „Wifi SSID pavadinimas“ yra TRIKDIS01; taip pat matyti „TRK šifravimo raktas“ ir „Wifi SSID slaptažodis“ laukai." src="./image29.webp" style="width:7.086614173228346in;height:3.6692913385826773in" />
 
 **Parinkčių grupė „Pagrindinis“**
 
@@ -655,7 +655,7 @@ Contact ID kodai, gauti iš signalizacijos centralės, konvertuojami į radijo 
 
 Norint atkurti siųstuvo gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.188976377952756in" />
+<img alt="TrikdisConfig T16 lango srityje „Gamintojo parametrai“ raudonai apvestas mygtukas „Atkurti“." src="./image33.webp" style="width:7.086614173228346in;height:1.188976377952756in" />
 
 ## Radijo siųstuvo T16 testavimas 
 

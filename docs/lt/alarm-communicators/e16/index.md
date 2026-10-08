@@ -193,7 +193,7 @@ Veikia su Protegus2 programėle:
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="TrikdisConfig E16 langas Sistemos parinktys. Skiltyje Pagrindinės pažymėti Centralės modelis, Nuotolinis centralės valdymas su varnele ir Centralės PC download slaptažodis laukai." src="./image7.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
@@ -223,7 +223,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="TrikdisConfig E16 langas Sistemos parinktys. Skiltyje Pagrindinės pažymėti Objekto numeris ir Centralės modelis laukai." src="./image9.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 1.  Įrašykite **Objekto numerį (Nenaudoti FFFE, FFFF objekto numerių**.**)**.
 
@@ -515,7 +515,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 4. Paspauskite “Pridėti sistemą” ir įveskite *E16* MAC adresą. MAC adresą rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
 1.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau".
 
-<img alt="" src="./image29.webp" style="width:3.0in;height:3.673228346456693in" />
+<img alt="Protegus2 lange „Nuskaityti QR kodą“ galima įvesti MAC adresą į lauką „Unikalus ID“ arba nuskaityti pavyzdinėje gaminio etiketėje pažymėtą QR kodą. Išnašoje nurodyta, kad MAC adresas yra ant pakuotės, valdiklio plokštės arba programoje TrikdisConfig kaip unikalus ID. Apačioje yra mygtukai „Atšaukti“ ir „Toliau“." src="./image29.webp" style="width:3.0in;height:3.673228346456693in" />
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
@@ -554,7 +554,7 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjim
 
 Prijungus E16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image34.webp" style="width:7.070866141732283in;height:0.6062992125984252in" />
+<img alt="TrikdisConfig būsenos juostoje matomas laukas „MAC/Unikalus Nr.“, būsena „skaitymas baigtas“, įrenginys E16_1000, BL: 1.00, FW: 1.10 ir HW: 0.01. Taip pat matomi laukai „SN“, „Būsena“, „HID“ ir „Administrator“." src="./image34.webp" style="width:7.070866141732283in;height:0.6062992125984252in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -572,7 +572,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.090551181102362in" />
+<img alt="TrikdisConfig lange „Sistemos parinktys“, grupėje „Pagrindinės“, „Objekto numeris“ yra 1122, o „Centralės modelis“ laukelyje matyti „2. DSC PC1616, PC183“. „Nuotolinis centralės valdymas“ pažymėtas, „Laiko nustatymas“ – „Mobilioji aplikacija“. Grupėje „Prisijungimas“ matomi administratoriaus ir instaliatoriaus kodų laukai, pažymėta „Atkurti“ gali tik administratorius ir pažymėtos visos penkios „Instaliuotojui leisti keisti“ parinktys." src="./image35.webp" style="width:7.082677165354331in;height:3.090551181102362in" />
 
 Parinkčių grupė „Pagrindinės“
 
@@ -602,7 +602,7 @@ Parinkčių grupė „Prisijungimas“
 
 **Skirtukas „CSP parametrai“**
 
-<img alt="" src="./image36.webp" style="width:7.082677165354331in;height:4.047244094488189in" />
+<img alt="TrikdisConfig E16_1000 langas Pranešimai į CSP, skirtukas CSP nustatymai. Pirminis ryšio kanalas: Ryšio būdas IP, Protokolas TRK, TCP ar UDP – UDP. Lygiagretusis ryšio kanalas: IP, DC-09_2012, TCP. Atsarginio kanalo režimas – Išjungtas; lygiagretaus kanalo rezervas – IP, TRK, TCP." src="./image36.webp" style="width:7.082677165354331in;height:4.047244094488189in" />
 
 Komunikatorius siunčia pranešimus į stebėjimo pultą per laidinį internetą (IP).
 
@@ -636,7 +636,7 @@ Parinkčių grupės „Atsarginio kanalo režimas”
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image37.webp" style="width:7.078740157480315in;height:2.3818897637795278in" />
+<img alt="TrikdisConfig E16_1000 langas Pranešimai į CSP, skirtukas Parametrai. Testo periodas įjungtas: 24 val. 0 min.; IP ping periodas įjungtas: 0 min. 30 s; Imtuvo ir linijos numeris: 00 RR ir 0 L; Pereiti į atsarginį po 2 bandymų; Grįžti iš atsarginio po 1 min. 30 s. Dešinėje pateikti DC-09 objekto, linijos ir imtuvo numerių laukai." src="./image37.webp" style="width:7.078740157480315in;height:2.3818897637795278in" />
 
 Parinkčių grupė „Parametrai“
 
@@ -667,7 +667,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image38.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
+<img alt="TrikdisConfig lange „Pranešimai vartotojui“, skirtuke „PROTEGUS servisas“, pažymėta „Leisti prisijungti“, o laukas „PROTEGUS Cloud prieigos kodas“ užpildytas." src="./image38.webp" style="width:7.082677165354331in;height:1.779527559055118in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -694,7 +694,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 ### Langas „IN/OUT“
 
-<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
+<img alt="TrikdisConfig E16_1000 langas IN/OUT. Išvadų lentelėje 1 nustatytas Išjungta, 2 – IN, tipas NO, o 3 išskleidžiamajame sąraše pasirinktas OUT. Apačioje IN2_ALARM ir IN2_TAMPER įvykiams bei atsistatymams įgalinti Contact ID kodai 130 ir 144." src="./image40.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 Komunikatorius turi 3 universalius (įėjimo/išėjimo) gnybtus. Lentelėje galima nustatyti gnybtui veikimo režimą (Išjungta, IN, OUT). Įėjimui reikia nurodyti prijungiamos grandinės tipą NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL.
 
@@ -714,7 +714,7 @@ Prie komunikatoriaus įėjimų galima prijungti papildomus jutiklius. Suveikus j
 
 Prie komunikatoriaus galima prijungti iO serijos plėtiklius, kuriais pridėsite papildomus įėjimus, valdomus išėjimus ir magistralę temperatūros jutikliams. Prijungti plėtikliai turi būti įtraukti į **Modulių sąrašo** lentelę.
 
-<img alt="" src="./image41.webp" style="width:7.078740157480315in;height:2.141732283464567in" />
+<img alt="TrikdisConfig lange „RS485 moduliai“, skirtuke „Modulių sąrašas“, lentelės stulpeliai yra „Nr“, „Modulio tipas“ ir „Serijos numeris“. Pirmoje eilutėje matyti „Plėtiklis iO-8“, o atvertame „Modulio tipas“ sąraše paryškinta „Nenaudojamas“." src="./image41.webp" style="width:7.078740157480315in;height:2.141732283464567in" />
 
 Parinkčių grupė „Modulių sąrašas“
 
@@ -770,7 +770,7 @@ Lentelėje įėjimams (INPUT) galima priskirti Contact ID įvykių ir atsistaty
 
 **iO plėtiklio nustatymų langas**
 
-<img alt="" src="./image43.webp" style="width:7.082677165354331in;height:3.2401574803149606in" />
+<img alt="TrikdisConfig E16_1000 langas RS485 moduliai, skirtukas Modulis 1, plėtiklis iO. Įėjimo IN1 tipas – NO; Max °C(T1) – 30, Min °C(T2) – 15. Relės valdymas: Jei TT1 IR Nėra, tai Išėjimą išjung, po 0 val. 0 min. 0 s. Apačioje pateikti INPUT, HIGH_TEMPERATURE, LOW_TEMPERATURE ir BUS_FAULT Contact ID kodai." src="./image43.webp" style="width:7.082677165354331in;height:3.2401574803149606in" />
 
 Plėtiklis iO turi: 1 įėjimo, 1 išėjimo (relės kontaktai) gnybtus ir 1-Wire magistralę temperatūros jutiklio prijungimui.
 
@@ -816,7 +816,7 @@ Galite pakeisti kiekvieno įvykio Contact ID kodą, taip pat su pranešimu nurod
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image45.webp" style="width:7.082677165354331in;height:1.0275590551181102in" />
+<img alt="TrikdisConfig skiltyje „Gamintojo parametrai“ raudonai apibrėžtas mygtukas „Atkurti“. Po juo rodomas įrenginio MAC/unikalus numeris, apačioje – įrenginio būsenos juosta." src="./image45.webp" style="width:7.082677165354331in;height:1.0275590551181102in" />
 
 1.  <span id="_Toc169871370"></span>**Nuotolinis veikimo parametrų nustatymas**
 

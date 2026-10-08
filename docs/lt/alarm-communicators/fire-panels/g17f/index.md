@@ -188,7 +188,7 @@ Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
 **Lango „Vartotojai ir pranešimai“ kortelėje „Mobilioji aplikacija“:**
 
-<img alt="" src="./image6.webp" style="width:7.086614173228346in;height:3.590551181102362in" />
+<img alt="TrikdisConfig G17F, langas „Vartotojai ir pranešimai“, skirtukas „Vartotojai“. Skiltyje „Mobilioji aplikacija“ pažymėta „Įgalinti jungimąsi“, o laukas „Aplikacijos prieigos kodas“ užpildytas." src="./image6.webp" style="width:7.086614173228346in;height:3.590551181102362in" />
 
 1.  Pažymėkite varnele **Įgalinti jungimąsi** prie Protegus serviso.
 
@@ -196,7 +196,7 @@ Reikalingas medžiagas galite užsisakyti iš vietinio platintojo.
 
 **Lango „Sistemos parinktys“ kortelėje „SIM“:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“, kortelė „Pagrindiniai“. SIM skiltyje raudonai pažymėti „SIM PIN kodas“ ir „APN“ laukai; APN reikšmė – internet." src="./image7.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
 3. Įveskite **SIM kortelės PIN kodą**.
 
@@ -229,7 +229,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“, kortelė „Pagrindiniai“. Numeriais 1–3 pažymėti „Objekto numeris“, „SIM PIN kodas“ ir „APN“ laukai; APN reikšmė – internet." src="./image11.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 1.  Įrašykite **Objekto numerį** (4 simbolių šešioliktainis numeris, 0-9, A-F. **Nenaudokite FFFE, FFFF objekto numerių**.).
 
@@ -239,7 +239,7 @@ Baigę konfigūravimą, paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 **Lange „Pranešimai į ST pultą“:**
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
+<img alt="TrikdisConfig langas „Pranešimai į ST pultą“. Pagrindiniame kanale pažymėti laukai „Ryšio tipas“ – Išjungta, „Domenas arba IP“, „Prievadas“ – 0, „Protokolas“ – TRK ir „Šifravimo raktas“. Taip pat pažymėti atsarginio kanalo ryšio laukai ir „Atsarginis kanalas 2“ telefono numerio laukas." src="./image12.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
 
 4. **Ryšio būdas** – pasirinkite ryšio būdą (nerekomenduojame naudoti SMS kaip pirminio kanalo).
 
@@ -324,7 +324,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 4. Įrašykite vartotojų telefonų numerius, kurie turėtų gauti pranešimus iš komunikatoriaus G17F.
 
-<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.720472440944882in" />
+<img alt="TrikdisConfig langas „Vartotojai ir pranešimai“, kortelė „Vartotojai“. Numeriu 4 pažymėta vartotojo eilutė su „Vardas“ ir „Telefono numeris“ laukais bei pažymėtais „ACK“ ir „FW“ langeliais." src="./image18.webp" style="width:7.086614173228346in;height:1.720472440944882in" />
 
 5. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite laukelį **SMS** (arba **Skamb.**).
 
@@ -332,7 +332,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 6. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą. Įvykių pranešimai perduodami naudojant SIA DC-09 protokolą.
 
-<img alt="" src="./image20.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig langas „Pranešimai į ST pultą“. Numeriu 6 pažymėti „Pagrindinis kanalas“ laukai: „Ryšio tipas“ – Išjungta, „Domenas arba IP“, „Prievadas“ – 0, „Protokolas“ – TRK, „Telefono numeris“ ir „Šifravimo raktas“." src="./image20.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17F pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
@@ -350,7 +350,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 3. Įrašykite vartotojų telefonų numerius, kurie turėtų gauti pranešimus iš komunikatoriaus G17F.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig langas Vartotojai ir pranešimai, skirtukas Vartotojai. Raudonai pažymėta pirmoji vartotojo eilutė su laukais Vardas ir Telefono numeris; ACK ir FW langeliai pažymėti." src="./image23.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 4. Vartotojai gaus SMS žinutes ir skambučius apie pažymėtus įvykius. CID stulpelyje galite pridėti papildomų CID įvykių kodų. Prie naujų kodų turite įvesti SMS žinučių tekstus. Jei norite, kad vartotojas gautų žinutes (arba skambučius) apie įvykius, pažymėkite „**SMS**“ (arba „**Skamb.**“) laukelį.
 
@@ -358,7 +358,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 5. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig langas Pranešimai į ST pultą. Raudonai pažymėti Pagrindinio kanalo laukai: Ryšio tipas – Išjungta, Domenas arba IP – tuščias, Prievadas – 0, Protokolas – TRK, Telefono numeris – tuščias, Šifravimo raktas – užpildytas." src="./image25.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 Sukonfigūravus komunikatorių G17F, įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Centralėje būtina nuskaityti modulius, prijungtus prie RS485 magistralės. Priešgaisrinėje centralėje paspauskite: **PROG.>INSTALLER>(įveskite instaliuotojo kodą) 00000 OK>(pasirinkite) SETTINGS>ENTER>(pasirinkite) SCAN RS485>ENTER**. Palaukite, kol nuskaitymas bus baigtas. Grįžkite į pagrindinį ekraną du kartus paspausdami „**CANCEL**“.
 
@@ -381,13 +381,13 @@ Nustatymai TrikdisConfig, kai prijungta priešgaisrinė centralė INIM Smartline
 
 **Langas „Moduliai“:**
 
-<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
+<img alt="TrikdisConfig langas „Moduliai“, skirtukas „RS485 moduliai“. Raudonas rėmelis su žyma 1 išskiria pirmosios eilutės lauką „Modulis“, kuriame pasirinkta „Inim Smartline“." src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
 
 1.  Pasirinkite modulį **INIM Smartline**.
 
 **Langas „Vartotojai ir pranešimai“:**
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig langas Vartotojai ir pranešimai, skirtukas Vartotojai. Raudonai pažymėta pirmoji vartotojo eilutė su laukais Vardas ir Telefono numeris; ACK ir FW langeliai pažymėti." src="./image29.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 2. Įrašykite vartotojų telefonų numerius, kurie turėtų gauti pranešimus iš komunikatoriaus G17F.
 
@@ -397,7 +397,7 @@ Nustatymai TrikdisConfig, kai prijungta priešgaisrinė centralė INIM Smartline
 
 2.  Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig langas Pranešimai į ST pultą. Raudonai pažymėti Pagrindinio kanalo laukai: Ryšio tipas – Išjungta, Domenas arba IP – tuščias, Prievadas – 0, Protokolas – TRK, Telefono numeris – tuščias, Šifravimo raktas – užpildytas." src="./image31.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 Išbandykite sistemą. Aktyvuokite gaisro signalizaciją ir patikrinkite, ar G17F pranešimai siunčiami į CSP (centrinį stebėjimo pultą) ir į Protegus2.
 
@@ -421,7 +421,7 @@ G17F komunikatoriaus nustatymai su TrikdisConfig jungiant su priešgaisrine cent
 
 3. Sukonfigūruokite ryšio kanalą, jei pranešimai turi būti siunčiami į CSP imtuvą.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig langas Pranešimai į ST pultą. Raudonai pažymėti Pagrindinio kanalo laukai: Ryšio tipas – Išjungta, Domenas arba IP – tuščias, Prievadas – 0, Protokolas – TRK, Telefono numeris – tuščias, Šifravimo raktas – užpildytas." src="./image36.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 Įdiekite **ZFPtools** programą savo kompiuteryje. Paleiskite programą **ZFPtools**. Įjunkite priešgaisrinės centralės maitinimą. Palaukite, kol bus įkelta priešgaisrinės centralės programinė įranga. Prijunkite USB2.0 A-B kabelį tarp priešgaisrinės centralės ir kompiuterio.
 
@@ -511,7 +511,7 @@ Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų OUT
 
 LORA plėtimo modulių prijungimo schema.
 
-<img alt="" src="./image48.webp" style="width:5.26667760279965in;height:6.646679790026247in" />
+<img alt="Prijungimo schema: G17F prijungtas prie RF-LORA. Maitinimas: +DC su +DC (+12 V), -DC su -DC. RS485: G17F A su RF-LORA A RS 485, B su B RS485. RF-LORA bevieliu ryšiu, iki 5000 m, susisiekia su iO-LORA, iO-8-LORA, PB-LORA ir REL-LORA. Pavaizduoti iO-LORA ir iO-8-LORA turi atskirus 12-26V maitinimo šaltinius, prijungtus prie +DC ir -DC; taip pat pavaizduoti PB-LORA ir REL-LORA. REL-LORA prie L ir N prijungtas 100-230V AC maitinimas." src="./image48.webp" style="width:5.26667760279965in;height:6.646679790026247in" />
 
 ### WiFi modulio W485 (W17U) prijungimo schema
 
@@ -666,7 +666,7 @@ Norėdami valdyti PGM išėjimą nuotoliniu būdu atlikite šiuos veiksmus:
 
 Prijungus G17F TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
+<img alt="TrikdisConfig būsenos juostoje rodomi laukai 'IMEI/Unikalus ID', 'Būsena: Pasiruošęs', 'Modulis: G17F_54S0', 'BL: 2.03', 'FW: 1.18', 'Būsena USB' ir 'Teisės: Administratorius'." src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
 
 | **Pavadinimas** | **Aprašymas** |
 |----|----|
@@ -686,7 +686,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Pagrindiniai“**
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:3.12992125984252in" />
+<img alt="TrikdisConfig lango 'Sistemos parinktys' skirtukas 'Pagrindiniai': objekto numeris 0001, pavadinimas G17F, testo periodas 1 diena ir 0 val., įtampos tikrinimo riba 24 voltai, EOL rezistoriaus vertė 4,7k. SIM grupėje APN 'internet'; laiko juosta įjungta ir nustatyta +2, vasaros laiko persukimas pažymėtas." src="./image56.webp" style="width:7.086614173228346in;height:3.12992125984252in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -723,7 +723,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Skirtukas „Prisijungimas“**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.0984251968503935in" />
+<img alt="TrikdisConfig lango 'Sistemos parinktys' skirtukas 'Prisijungimas': grupėje 'Prieigos kodai' matomi administratoriaus kodas 123456, SMS slaptažodis 123456 ir instaliuotojo kodo laukas. Grupėje 'Instaliuotojo teisės' objekto numerio bei SIM kortelės langeliai pažymėti, o matomų meniu teisės nustatytos 'Redaguojama'." src="./image57.webp" style="width:7.086614173228346in;height:3.0984251968503935in" />
 
 **Parinkčių grupė „Prieigos kodai“**
 
@@ -739,7 +739,7 @@ Administratorius gali nustatyti, kuriuos parametrus galės keisti instaliuotojas
 
 ## Langas „Pranešimai į ST pultą“
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:4.039370078740157in" />
+<img alt="TrikdisConfig langas 'Pranešimai į ST pultą': pagrindinio ir atsarginio kanalų 'Ryšio tipas' nustatytas 'Išjungta', jų 'Protokolas' – TRK. 'Parametrai' rodo grįžimą prie pagrindinio po 5 min, IP PING periodą 60 s, SMS PING periodą 10 min, perėjimą prie atsarginio po 3 bandymų ir DNS1 8.8.8.8 bei DNS2 8.8.4.4." src="./image58.webp" style="width:7.086614173228346in;height:4.039370078740157in" />
 
 Komunikatorius gali siųsti pranešimus į stebėjimo pultą per internetą (IP) arba SMS pranešimais.
 
@@ -803,7 +803,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „Vartotojai“**
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
+<img alt="TrikdisConfig langas „Vartotojai ir pranešimai“, skirtukas „Vartotojai“: pirmoji vartotojo eilutė užpildyta, pažymėti „ACK“ ir „FW“; kitos matomos eilutės tuščios. Skiltyje „Mobilioji aplikacija“ pažymėti „Įgalinti jungimąsi“ ir „Lygiagretus siuntimas“, rodomas laukas „Aplikacijos prieigos kodas“." src="./image59.webp" style="width:7.086614173228346in;height:3.543307086614173in" />
 
 **Parinkčių grupė „Vartotojai ir pranešimai vartotojams“**
 
@@ -869,7 +869,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **WiFi modulio W485 (W17u) nustatymų langas**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.6850393700787403in" />
+<img alt="TrikdisConfig lango 'Moduliai' skirtukas 'W485 parametrai': 'DHCP režimas' pažymėtas, statinis IP, potinklio kaukė ir numatytasis šliuzas rodo 0.0.0.0; 'Wifi SSID pavadinimas' – TRIKDIS. SIM parametruose pažymėta 'Naudoti skambučiui ir SMS, kai veikiama per IP tinklą', o kiti du matomi langeliai nepažymėti." src="./image63.webp" style="width:7.086614173228346in;height:2.6850393700787403in" />
 
 **Parinkčių grupė „Komunikatoriaus tinklo nustatymai“**
 

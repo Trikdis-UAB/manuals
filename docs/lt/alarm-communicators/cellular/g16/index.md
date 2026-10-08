@@ -228,7 +228,7 @@ Veikia su Protegus2 programėle:
 
 **Lange „Sistemos parinktys“:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7834645669291338in" />
+<img alt="TrikdisConfig langas Sistemos parinktys. Pažymėta: 1 – Centralės modelis, pasirinkimas 5. PARADOX SP4000, S; 2 – įjungtas Nuotolinis centralės valdymas; 3 – Centralės PC download slaptažodis, kurio reikšmė pavyzdyje matoma." src="./image9.webp" style="width:7.086614173228346in;height:1.7834645669291338in" />
 
 1.  Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
@@ -244,7 +244,7 @@ Veikia su Protegus2 programėle:
     aprašyta ir kaip pakeisti centralės PC download/UDL slaptažodį.
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
+<img alt="TrikdisConfig langas „Pranešimai vartotojui“, kortelė „PROTEGUS servisas“, su numeruotomis žymomis. 4 Pažymėtas laukelis „Leisti prisijungti“. 5 Laukelis „PROTEGUS Cloud prieigos kodas“." src="./image10.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
 
 4.  Pažymėkite varnele **Leisti prisijungti** prie Protegus serviso.
 
@@ -276,7 +276,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 Lange „Pranešimai į CSP“, parinkčių grupėje „Pirminis ryšio kanalas“:
 
-<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:3.8858267716535435in" />
+<img alt="TrikdisConfig langas Pranešimai į CSP, kortelė CSP nustatymai. Pažymėta: 3 – Pirminio ryšio kanalo Ryšio būdas IP; 4 – Protokolas TRK; 5 – TRK šifravimo raktas; 6 – Domenas arba IP tuščias; 7 – Prievadas tuščias; 8 – TCP ar UDP nustatyta TCP; 9 – Atsarginio kanalo režimas Išjungtas ir po juo esantys atsarginio kanalo laukai; 10 – Atsarginio SMS kanalo numeris tuščias." src="./image13.webp" style="width:7.086614173228346in;height:3.8858267716535435in" />
 
 3.  **Ryšio būdas** – pasirinkite **IP** ryšio būdą (Nerekomenduojame naudoti SMS kaip pirminio kanalo).
 
@@ -685,7 +685,7 @@ Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys pr
 
 Prijungus G16 TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį.
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:0.6417322834645669in" />
+<img alt="TrikdisConfig būsenos juosta po nuskaitymo: laukas „IMEI/Unikalus ID“, „Būsena: skaitymas baigtas“, „Įrenginys G16_U110“, serijos numerio laukas, BL: 1.00, FW: 1.03, HW: 0.00, „Būsena HID“, prieigos lygis „Administrator“." src="./image41.webp" style="width:7.086614173228346in;height:0.6417322834645669in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -703,7 +703,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“ 
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“. Grupėje „Pagrindinės“ matyti „Objekto numeris“ 1111, centralės modelio pasirinkimas, įjungtas „Nuotolinis centralės valdymas“ ir „Laiko nustatymas“ – „Mobilioji aplikacija“. Grupėje „Prisijungimas“ rodomi administratoriaus ir instaliatoriaus kodų laukai bei leidimų žymės." src="./image42.webp" style="width:7.086614173228346in;height:3.090551181102362in" />
 
 Parinkčių grupė „Pagrindinės“
 
@@ -783,7 +783,7 @@ SMS pranešimai bus siunčiami į stebėjimo pulto SMS imtuvą: 1) iš karto, pr
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:2.6496062992125986in" />
+<img alt="TrikdisConfig lango „Pranešimai į CSP“ skirtukas „Parametrai“. „Testo periodas“ – 24 val. 0 min.; „IP ping periodas“ – 0 min. 30 s; „Pereiti į atsarginį po“ – 2 bandymų; „Grįžti iš atsarginio po“ – 1 min. 30 s. DNS 1 ir DNS 2 laukai tušti; DC-09 linijos ir imtuvo numeriai – po 1." src="./image44.webp" style="width:7.086614173228346in;height:2.6496062992125986in" />
 
 Parinkčių grupė „Parametrai“
 
@@ -815,7 +815,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas “Protegus servisas”**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
+<img alt="TrikdisConfig langas „Pranešimai vartotojui“, skirtukas „PROTEGUS servisas“: pažymėtas „Leisti prisijungti“ laukelis ir užpildytas „PROTEGUS Cloud prieigos kodas“ laukas." src="./image45.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -827,7 +827,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 **Skirtukas “SMS ir skambučiai”**
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:3.874015748031496in" />
+<img alt="TrikdisConfig langas „Pranešimai vartotojui“, skirtukas „SMS ir skambučiai“: „Objekto pavadinimas“ – „Account Name“, „SMS kalba“ – „LITHUANIAN“, užpildytas pirmasis „Telefono numeris SMS/skambučio pranešimams“ laukas. Sričių, vartotojų ir zonų pavadinimų lentelėse yra 01/001 „Area 1“/„User 1“/„Zone 1“ ir 02/002 „Area 2“/„User 2“/„Zone 2“. CID įvykių lentelėje pateikti E100 „MEDICAL PANIC ALARM“, E110 „FIRE PANIC ALARM“, E120 „PANIC ALARM“, E121 „DURESS ALARM“, E130 „ALARM !!! ALARM !!! ALARM !!! ALARM !!!“ ir E301 „AC Power failure on control panel“, su SMS ir skambučio laukeliais Tel 1–4." src="./image46.webp" style="width:7.086614173228346in;height:3.874015748031496in" />
 
 Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešimais arba skambučiu.
 
@@ -845,7 +845,7 @@ Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešim
 
 **Skirtukas “Valdymas SMS žinutėmis”**
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="TrikdisConfig lango „Pranešimai vartotojui“ skirtukas „Valdymas SMS žinutėmis“. Kairėje „SMS atsakymo žinutės tekstas“ su atsakymais apie įvykdytą komandą, neteisingą slaptažodį, komandą ir duomenis; dešinėje „Telefonų numeriai nuotoliniam valdymui“ su Tel 1–Tel 4 laukais." src="./image47.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba pakeis nustatymus. Valdymo SMS komandas rasite skyriuje **[5.4](#konfigūravimas-ir-valdymas-sms-žinutėmis) „[Konfigūravimas ir valdymas SMS žinutėmis](#konfigūravimas-ir-valdymas-sms-žinutėmis)“**.
 
@@ -958,7 +958,7 @@ Kad vartotojams apie įėjimų suveikimus būtų siunčiami SMS pranešimai arba
 
 #### WiFi modulio W485 nustatymų langas (tik 3G ir 4G modeliams)
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.1535433070866143in" />
+<img alt="TrikdisConfig langas „RS485 moduliai“, skirtukas „Modulis 1“: W17u/W485, serijos numerio laukas, „DHCP režimas“ – DHCP, „Statinis IP“ – 192.168.1.27, „Potinklio kaukė“ – 255.255.255.0, „Numatytasis šliuzas“ – 192.168.1.254, „Wifi SSID pavadinimas“ – TRIKDIS ir užpildytas „Wifi SSID slaptažodis“ laukas. Contact ID lentelėje BUS_FAULT įvykis ir atsistatymas: CID 333, sritis 91, zona 001; abu įgalinti." src="./image52.webp" style="width:7.086614173228346in;height:3.1535433070866143in" />
 
 - **DHCP režimas** – WiFi modulio registracijos tinkle rėžimas (rankinis (Statinis) arba automatinis (DHCP)).
 
@@ -982,7 +982,7 @@ Lentelėje RS485 duomenų magistralės ryšio sutrikimo įvykiui galima priskirt
     kad veiktu *W485.***
 #### „Ethernet“ modulio E485 nustatymų langas (tik 3G ir 4G modeliams)
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.161417322834646in" />
+<img alt="TrikdisConfig langas „RS485 moduliai“, kortelė „Modulis 1“: E485, laukas „Serijos numeris“, „DHCP režimas“ – DHCP, „Statinis IP“ – 192.168.1.27, „Potinklio kaukė“ – 255.255.255.0, „Numatytasis šliuzas“ – 192.168.1.254. Contact ID lentelėje rodomas BUS_FAULT įvykis ir atsistatymas; abiem įjungtas siuntimas, CID 333, „Srit.“ 91, „Zona“ 001." src="./image53.webp" style="width:7.086614173228346in;height:3.161417322834646in" />
 
 - **DHCP režimas** – „Ethernet“ modulio registracijos tinkle rėžimas (rankinis (Statinis) arba automatinis (DHCP)).
 
@@ -1031,7 +1031,7 @@ Galite pakeisti kiekvieno įvykio Contact ID kodą, taip pat su pranešimu nurod
 
 Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programos TrikdisConfig mygtuką **Atkurti.**
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:0.9960629921259843in" />
+<img alt="TrikdisConfig dalyje „Gamintojo parametrai“ raudonai apibrėžtas mygtukas „Atkurti“, skirtas gamykliniams nustatymams atstatyti. Po juo rodomas įrenginio IMEI/Unikalus ID numeris." src="./image55.webp" style="width:7.086614173228346in;height:0.9960629921259843in" />
 
 ## Nuotolinis veikimo parametrų nustatymas
 

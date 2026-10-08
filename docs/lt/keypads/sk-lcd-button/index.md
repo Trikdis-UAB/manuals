@@ -170,7 +170,7 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 
 | Simbolis | Aprašymas | Simbolis | Aprašymas |
 |---|---|---|---|
-| <img alt="" src="./image13.webp" style="width:1.1250in;" /> | Valdymo pultas neprijungtas | <img alt="Gaisro kilpos gedimo simbolis." src="./image14.webp" style="width:0.7812in;" /> | Gaisro kilpos gedimas |
+| <img alt="Simbolis „Centralė neprijungta“." src="./image13.webp" style="width:1.1250in;" /> | Valdymo pultas neprijungtas | <img alt="Gaisro kilpos gedimo simbolis." src="./image14.webp" style="width:0.7812in;" /> | Gaisro kilpos gedimas |
 | <img alt="Įjungtos 1 srities simbolis." src="./image15.webp" style="width:0.7188in;" /> | Sritis 1 įjungta | <img alt="Tinklo gedimų sąrašo simbolis." src="./image16.webp" style="width:0.8125in;" /> | Tinklo gedimų sąrašas |
 | <img alt="4 sritis išjungta." src="./image17.webp" style="width:0.7254in;" /> | Sritis 4 išjungta | <img alt="CMS 1 (2) gedimo piktograma, pažymėta C1." src="./image18.webp" style="width:0.9375in;" /> | CMS 1 (2) gedimas |
 | <img alt="Sritis 2 STAY režime." src="./image19.webp" style="width:0.6250in;" /> | Sritis 2 STAY režime | <img alt="Debesijos gedimas." src="./image20.webp" style="width:0.7188in;" /> | Debesijos gedimas |
@@ -181,16 +181,16 @@ Pakartokite tuos pačius veiksmus, kaip ir išjungiant konkrečios zonos stebėj
 | <img alt="Aliarmas." src="./image29.webp" style="width:0.9375in;" /> | Aliarmas | <img alt="RS485 sąsajos gedimas." src="./image30.webp" style="width:0.7812in;" /> | RS485 sąsajos gedimas |
 | <img alt="Gaisras." src="./image31.webp" style="width:0.6003in;" /> | Gaisras | <img alt="SIM kortelės 2 gedimas." src="./image32.webp" style="width:1.0000in;" /> | SIM kortelės 2 gedimas |
 | <img alt="Vartotojo kodas." src="./image33.webp" style="width:0.8579in;" /> | Vartotojo kodas | <img alt="LAN gedimas." src="./image34.webp" style="width:0.7812in;" /> | LAN gedimas |
-| <img alt="Vartotojas." src="./image35.webp" style="width:0.6171in;" /> | Vartotojas | <img alt="" src="./image36.webp" style="width:1.0312in;" /> | Belaidžio įrenginio žema baterija |
+| <img alt="Vartotojas." src="./image35.webp" style="width:0.6171in;" /> | Vartotojas | <img alt="Bevielio įrenginio baterija senka." src="./image36.webp" style="width:1.0312in;" /> | Belaidžio įrenginio žema baterija |
 | <img alt="Įėjimas/Išėjimas." src="./image37.webp" style="width:0.7250in;" /> | Įėjimas/Išėjimas | <img alt="Maitinimo gedimas." src="./image38.webp" style="width:0.7500in;" /> | Maitinimo gedimas |
 | <img alt="Zona atvira." src="./image39.webp" style="width:0.6151in;" /> | Zona atvira | <img alt="Sirenos gedimas." src="./image40.webp" style="width:0.9375in;" /> | Sirenos gedimas |
 | <img alt="Bypass." src="./image41.webp" style="width:0.8562in;" /> | Bypass | <img alt="Sabotažo gedimas." src="./image42.webp" style="width:0.7188in;" /> | Sabotažo gedimas |
 | <img alt="Atmintis." src="./image43.webp" style="width:0.7250in;" /> | Atmintis | <img alt="Antimaskingo gedimas." src="./image44.webp" style="width:1.0938in;" /> | Antimaskingo gedimas |
-| <img alt="Gedimas." src="./image45.webp" style="width:0.8562in;" /> | Gedimas | <img alt="" src="./image46.webp" style="width:0.9865in;" /> | Belaidžio ryšio gedimas |
+| <img alt="Gedimas." src="./image45.webp" style="width:0.8562in;" /> | Gedimas | <img alt="Bevielio ryšio gedimas." src="./image46.webp" style="width:0.9865in;" /> | Belaidžio ryšio gedimas |
 | <img alt="Sistemos gedimų sąrašo piktograma." src="./image47.webp" style="width:1.0045in;" /> | Sistemos gedimų sąrašas | <img alt="Išplėtimo modulio gedimo piktograma." src="./image48.webp" style="width:0.8125in;" /> | Išplėtimo modulio gedimas |
 | <img alt="AC maitinimo gedimo piktograma." src="./image49.webp" style="width:0.8750in;" /> | AC maitinimo gedimas | <img alt="Nustatymų piktograma." src="./image50.webp" style="width:0.7500in;" /> | Nustatymai |
 | <img alt="Baterijos gedimo piktograma." src="./image51.webp" style="width:0.9062in;" /> | Baterijos gedimas | <img alt="Garsumo piktograma." src="./image52.webp" style="width:0.9062in;" /> | Garsumas |
 | <img alt="AUX viršsrovės piktograma." src="./image53.webp" style="width:1.0000in;" /> | AUX viršsrovė | <img alt="LCD ryškumo piktograma." src="./image54.webp" style="width:1.0938in;" /> | LCD ryškumas |
-| <img alt="" src="./image55.webp" style="width:0.8438in;" /> | Laikas nenustatytas | <img alt="Klaviatūros ryškumo piktograma." src="./image56.webp" style="width:1.0625in;" /> | Klaviatūros ryškumas |
+| <img alt="Piktograma „Laikas nenustatytas“." src="./image55.webp" style="width:0.8438in;" /> | Laikas nenustatytas | <img alt="Klaviatūros ryškumo piktograma." src="./image56.webp" style="width:1.0625in;" /> | Klaviatūros ryškumas |
 | <img alt="Sirenos viršsrovės piktograma." src="./image57.webp" style="width:0.8750in;" /> | Sirenos viršsrovė | <img alt="Budėjimo šviesos valdymas: O – įjungta, I – išjungta." src="./image58.webp" style="width:0.9688in;" /> | Budėjimo šviesa O-Įjungta / I-Išjungta |
 | <img alt="Sirenos nebuvimo piktograma." src="./image59.webp" style="width:0.8438in;" /> | Sirenos nėra | <img alt="Informacijos piktograma." src="./image60.webp" style="width:0.7188in;" /> | Informacija |

@@ -320,7 +320,7 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 7.  Uždarykite viršutinį dangtį.
 
-<img alt="" src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Brėžinys: kairėje plokštės mazgas atlaisvinamas iš korpuso; prie antenos jungties esantis fiksatorius apibrėžtas apskritimu, o rodyklė rodo atlaisvinimo kryptį. Dešinėje tuščias korpuso pagrindas su dviem apskritimais pažymėtais varžtų tvirtinimo stulpeliais." src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Plokštės SIM kortelės laikiklio brėžinys; rodyklė rodo, kaip nano-SIM kortelė įstumiama į laikiklį." src="./image13.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
@@ -600,7 +600,7 @@ Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys pr
 
 Prijungus G16T TrikdisConfig būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image31.webp" style="width:7.106299212598425in;height:0.6377952755905512in" />
+<img alt="TrikdisConfig būsenos juosta: rodomas įrenginio IMEI/Unikalus ID, „Būsena: skaitymas baigtas“, įrenginys G16T_3210, serijos numeris, BL 1.06, FW 1.41 ir HW 0.01; dešinėje matomi „Būsena“, „HID“ ir „Administrator“." src="./image31.webp" style="width:7.106299212598425in;height:0.6377952755905512in" />
 
 | Pavadinimas | Aprašymas |
 |----|----|
@@ -618,7 +618,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“ 
 
-<img alt="" src="./image32.webp" style="width:7.082677165354331in;height:3.074803149606299in" />
+<img alt="TrikdisConfig langas „Sistemos parinktys“. Grupė „Pagrindinės“: „Centralės modelis“ – „2. INTERFACE DTMF“, „Dial tone dažnis“ – 425 Hz, pažymėtas, „Linijos kontrolė“ – nepažymėta, „Įėjimų IN1 ir IN2 tipas“ – NO, „Išėjimo OUT1 režimas“ – „Nuotolinis valdymas“, „Laiko nustatymas“ – „Mobilioji aplikacija“. Grupė „Prisijungimas“: „Atkurti“ gali tik administratorius – pažymėta; „Instaliuotojui leisti keisti“ pažymėti „Objekto numeris“, „Pranešimai į CSP“, „Pranešimai vartotojui“, „SIM kortelė“ ir „Įvykių aprašas“." src="./image32.webp" style="width:7.082677165354331in;height:3.074803149606299in" />
 
 **Parinkčių grupė „Pagrindinės“**
 
@@ -706,7 +706,7 @@ SMS pranešimai bus siunčiami į stebėjimo pulto SMS imtuvą: 1) iš karto, pr
 
 **Skirtukas „Parametrai“**
 
-<img alt="" src="./image34.webp" style="width:7.078740157480315in;height:2.87007874015748in" />
+<img alt="TrikdisConfig langas „Pranešimai į CSP“, skirtukas „Parametrai“. Grupėje „Parametrai“ įjungtas „Testo periodas“ – 24 val 0 min, įjungtas „IP ping periodas“ – 0 min 30 s, „Imtuvo ir linijos numeris“ – 00 RR 0 L, „Pereiti į atsarginį po“ – 2 bandymų, „Grįžti iš atsarginio po“ – 1 min 30 s. Grupėje „DC-09 parametrai“ užpildytas „DC-09 obj. Nr.“ laukas, „DC-09 linijos Nr“ – 1, „DC-09 imtuvo Nr.“ – 1." src="./image34.webp" style="width:7.078740157480315in;height:2.87007874015748in" />
 
 **Parinkčių grupė „Parametrai“**
 
@@ -739,7 +739,7 @@ Nustatymai rodomi, kai ryšio kanalo **Protokolas** lauke pasirinkta **DC-09_200
 
 **Skirtukas „PROTEGUS servisas“**
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="TrikdisConfig langas „Pranešimai vartotojui“, skirtukas „PROTEGUS servisas“. Pažymėtas „Leisti prisijungti“ langelis, užpildytas „PROTEGUS Cloud prieigos kodas“ laukas." src="./image35.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komunikatorių. Daugiau informacijos apie Protegus paslaugą rasite [www.protegus.app](https://www.protegus.app).
 
@@ -751,7 +751,7 @@ Protegus paslauga leidžia vartotojams nuotoliniu būdu stebėti ir valdyti komu
 
 **Skirtukas „SMS ir skambučiai“**
 
-<img alt="" src="./image36.webp" style="width:7.078740157480315in;height:3.8858267716535435in" />
+<img alt="TrikdisConfig langas „Pranešimai vartotojui“, skirtukas „SMS ir skambučiai“: matomi laukai „Objekto pavadinimas“, „SMS kalba“ su reikšme LITHUANIAN, telefono numerių, sričių, vartotojų ir zonų lentelės bei CID įvykių SMS ir skambučių parinktys." src="./image36.webp" style="width:7.078740157480315in;height:3.8858267716535435in" />
 
 Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešimais arba skambučiu.
 

@@ -250,7 +250,7 @@ Prijunkite RF-LORA transiverį prie GATOR. Po to galite naudoti iO-LORA plėtikl
 
 Paleiskite TrikdisConfig. Prijunkite GATOR per USB Mini-B kabelį prie kompiuterio arba nuotoliniu būdu. Spustelkite programos TrikdisConfig mygtuką **Skaityti [F4]**, kad ji pateiktų esamas valdiklio veikimo parametrų reikšmes. Jei programa pareikalaus, iššokusiame langelyje įveskite administratoriaus arba montuotojo kodą. "**Modulių**" sąraše išsirinkite "**iO-LORA valdiklis**". Lauke "**Serijos Nr.**" įrašykite gaminio serijos numerį.
 
-<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.3661417322834646in" />
+<img alt="TrikdisConfig Gator langas „Moduliai“. Raudonai apibrėžta eilutė: ID 1, modulis „iO-LORA valdiklis“, įrašytas serijos numeris; pavadinimas „Expander ID1“." src="./image18.webp" style="width:7.086614173228346in;height:1.3661417322834646in" />
 
 "**IN/OUT**" sąraše „**6IN**“ nustatykite „**Išėjimo mygtukas**“. Paspaudus „**Išėjimo**“ mygtuką, iO-LORA išėjimas „**7OUT**“ suveiks nustatytai impulso trukmei.
 
@@ -452,7 +452,7 @@ Paleiskite Protegus2 programėlę telefone. Prisijunkite savo vartotojo vardu ir
 
 11. Nuspauskite „**Atgal**“, kad sugrįžti į pagrindinį langą.
 
-<img alt="" src="./image48.webp" style="width:2.7559055118110236in;height:5.078740157480315in" />
+<img alt="Telefono programėlės langas Vartotojai. Skiltyje Naudotojai matoma naujai pridėto vartotojo eilutė; viršuje kairėje pažymėta grįžimo rodyklė." src="./image48.webp" style="width:2.7559055118110236in;height:5.078740157480315in" />
 
 ### Valdymas SMS žinutėmis 
 
@@ -588,7 +588,7 @@ Su TrikdisConfig galite pakeisti valdiklio nustatymus (jei gamyklinių nustatym�
 
 Prijungus valdiklį prie programos TrikdisConfig, programa būsenų juostoje pateiks informaciją apie prijungtą gaminį:
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:0.5393700787401575in" />
+<img alt="TrikdisConfig būsenų juostos iškarpa: rodomas įrenginio IMEI/Unikalus ID; būsena – „įrašymas baigtas“; modulis – GV17_2200; serijos numeris; BL – 2.02; FW – 2.16. HW reikšmė nerodoma, dešinėje būsena – USB." src="./image50.webp" style="width:7.086614173228346in;height:0.5393700787401575in" />
 
 | Pavadinimas | Aprašymas |
 |-------------|-----------|
@@ -606,7 +606,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 ### Langas „Sistemos parinktys“ 
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
+<img alt="TrikdisConfig langas Sistemos parinktys. Grupėje Pagrindiniai matomi Objekto numeris 0110, Objekto pavadinimas GV17, Laiko nustatymas GSM modemas ir Administratoriaus kodas laukas. Dešinėje yra SIM bei Laiko juosta, apačioje – Periodinis testas ir SMS atsakymo tekstai." src="./image51.webp" style="width:7.086614173228346in;height:4.047244094488189in" />
 
 **Parinkčių grupė „Pagrindiniai“**
 
@@ -785,7 +785,7 @@ Jei valdiklio įrengimo vietoje yra bevielis internetas (WiFi) arba laidinis int
 
 **WiFi modulio W485 nustatymų langas**
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="TrikdisConfig langas Moduliai, pasirinktas skirtukas Parametrai. Komunikatoriaus tinklo nustatymuose pažymėtas DHCP režimas, matomi Statinis IP, Potinklio kaukė ir Numatytasis šliuzas laukai bei Wifi SSID pavadinimas. SIM parametruose pažymėta Naudoti skambutį ir SMS, kai veikiama per IP tinklą." src="./image56.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
 **Parinkčių grupė „Komunikatoriaus tinklo nustatymai“**
 
@@ -982,19 +982,19 @@ Programos lange „Vartotojai“ nuspauskite „**Registruokite RFID**“.
 
 | Atsivers RFID pakabukų (kortelių) registravimo langas. | <img alt="TrikdisConfig langas „RFID registracijos režimas“ prašo pridėti RFID žymę arba kortelę prie skaitytuvo. Rodomas registracijos indikatorius ir mygtukas „SUSTABDYTI registraciją“." src="./image64.webp" style="width:2.3800043744531933in;height:1.860003280839895in" /> |
 |:---|---:|
-| Pridėkite RFID pakabuką (kortelę) prie RFID skaitytuvo. Kai skaitytuvas nuskaitys pakabuką (kortelę) atsivers naujas langas. Jame „**Įveskite vartotojo vardą“** ir pažymėkite lauką „**Vartotojas gali valdyti PGM išėjimą 5“**. Nuspauskite mygtuką „**PRIDĖTI“**. / Jei norite pridėti dar RFID pakabukų (kortelių), pakartokite aukščiau aprašytus veiksmus. Kai registracija visų RFID pakabukų (kortelių) bus baigta nuspauskite mygtuką „**SUSTABDYTI registracija“**. / Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų sąrašas būtų įrašytas į valdiklį. | <img alt="" src="./image65.webp" style="width:2.39667104111986in;height:2.273337707786527in" /> |
+| Pridėkite RFID pakabuką (kortelę) prie RFID skaitytuvo. Kai skaitytuvas nuskaitys pakabuką (kortelę) atsivers naujas langas. Jame „**Įveskite vartotojo vardą“** ir pažymėkite lauką „**Vartotojas gali valdyti PGM išėjimą 5“**. Nuspauskite mygtuką „**PRIDĖTI“**. / Jei norite pridėti dar RFID pakabukų (kortelių), pakartokite aukščiau aprašytus veiksmus. Kai registracija visų RFID pakabukų (kortelių) bus baigta nuspauskite mygtuką „**SUSTABDYTI registracija“**. / Nuspauskite mygtuką **Įrašyti [F5]**, kad RFID pakabukų sąrašas būtų įrašytas į valdiklį. | <img alt="TrikdisConfig langas „RFID registracijos režimas“ rodo rastos kortelės ar žymos lauką. Pažymėti laukai „Vartotojas gali valdyti PGM išėjimą 5“ ir „Administratorių sąrašas“; paryškintas vartotojo vardo laukas ir mygtukas „PRIDĖTI“." src="./image65.webp" style="width:2.39667104111986in;height:2.273337707786527in" /> |
 
 RFID pakabukų (kortelių) registravimą galima atlikti programoje *TrikdisConfig* įvedant jų ID numerius į lauką „Tel.numeris/RFID“. Suteikite vartotojui „Vardą“, pažymėkite lauką „Įj.“ ir valdomo „Išėjimo“ lauką. Nuspauskite mygtuką Įrašyti [F5], kad RFID pakabukų (kortelių) sąrašas būtų įrašytas į valdiklį.
 
 <img alt="RFID kortelė, kurios apatiniame krašte išryškintas atspausdintas ID numeris." src="./image66.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig langas „Vartotojai“: paryškintoje naujo vartotojo eilutėje užpildyti laukai „Tel. numeris/ RFID“ ir „Vardas“, pažymėti „Įj“ ir išėjimo 5 langeliai." src="./image67.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 2. RFID pakabukų (kortelių) registravimas su Protegus2 programėle.
 
 *Protegus2* programėlėje pasirinkite „Naujo vartotojo pridėjimą“. Įveskite e-mail adresą, vartotojo vardą, RFID pakabuko (kortelės) ID numerį, vartotojo 4-ženklį kodą (kai naudojamas RFID skaitytuvas su klaviatūra). Pažymėkite valdomą išėjimą. Nuspauskite mygtuką „Pridėti vartotoją“. Į vartotojų sąrašą pridėtas naujas vartotojas su RFID pakabuku (kortele).
 
-<img alt="" src="./image68.webp" style="width:2.7559055118110236in;height:5.645669291338582in" />
+<img alt="Protegus2 langas „Pridėti naują vartotoją“. Paryškinti el. pašto adreso, vartotojo vardo, telefono numerio arba RFID kodo ir kodo laukai, įjungtas „Output5“ valdymo jungiklis ir paryškintas mygtukas „Pridėti vartotoją“." src="./image68.webp" style="width:2.7559055118110236in;height:5.645669291338582in" />
 
 **Skirtukas „Grafikas“**
 
@@ -1020,7 +1020,7 @@ Patogu į juodąjį sąrašą pridėti vartotojus tiesiai iš įvykių žurnalo.
 
 ### Langas „Sistemos įvykiai“ 
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
+<img alt="TrikdisConfig lange „Sistemos įvykiai“ matoma įvykių lentelė su stulpeliais „Nr.“, „Įvykio pavadinimas“, „Įjungtas“, „CSP“, „App“ ir „CID kodas“. Visose matomose eilutėse pažymėti „Įjungtas“, „CSP“ ir „App“ langeliai. Pirmosios eilutės „IPCom registracija“ CID kodas – 700." src="./image71.webp" style="width:7.086614173228346in;height:2.2874015748031495in" />
 
 Valdiklio įvykių siuntimo nustatymas į CSP ir Protegus2 programėlę.
 
