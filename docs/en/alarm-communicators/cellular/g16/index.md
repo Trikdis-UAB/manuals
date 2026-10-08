@@ -143,7 +143,7 @@ This manual is for 2G/3G/4G communicators.
 | Terminal | Description |
 |----------|-------------|
 | +DC | +10 V/​+18 V power supply |
-| -DC | +10 V/​+18 V power supply |
+| -DC | 0 V power supply |
 | CLK | Serial bus terminals for direct connection to control panel |
 | I/​O 1 | 1st input/​output terminal (default setting – OFF) |
 | I/​O 2 | 2nd input/​output terminal (default setting – IN, NO circuit) |

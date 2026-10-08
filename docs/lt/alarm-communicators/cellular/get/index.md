@@ -374,6 +374,11 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
+<!-- terminal-label-note -->
+
+!!! note "Pastaba"
+    Žemiau pateiktose schemose **+DC** ir **−DC** yra komunikatoriaus gnybtai, pažymėti **+12 VDC** ir **−12 VDC**, o **A RS485** / **B RS485** yra gnybtai, pažymėti **A 485** / **B 485**.
+
 #### DSC
 
 <img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="503" height="516" />

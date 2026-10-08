@@ -451,6 +451,11 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
+<!-- terminal-label-note -->
+
+!!! note "Note"
+    In the diagrams below, **+DC** and **−DC** are the terminals marked **+12 VDC** and **−12 VDC** on the communicator, and **A RS485** / **B RS485** are the terminals marked **A 485** / **B 485**.
+
 #### DSC
 
 <img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to GET. RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA." src="./wiring-dsc.webp" width="503" height="516" />

@@ -121,7 +121,7 @@ Este manual se aplica a estos modelos G16T:
 | Terminal | Descripción |
 |----------|-------------|
 | + DC | /​ + 18 V fuente de alimentación |
-| -DC | 10 V /​ + 18 V fuente de alimentación |
+| -DC | 0 V fuente de alimentación |
 | TIP | Terminal para conectar con panel de control TIP terminal |
 | RING | Terminal para conectar con panel de control RING terminal |
 | T-1 /​ IN1 | Terminal para el control de la línea telefónica o un terminal de entrada, el tipo seleccionable: NC;​ NO;​ NC /​ EOL;​ NO /​ EOL;​ NC /​ DEOL;​ NO /​ DEOL |

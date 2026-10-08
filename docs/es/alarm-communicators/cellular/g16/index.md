@@ -141,7 +141,7 @@ Este manual es para comunicadores 2G/3G/4G.
 | Terminal | Descripción |
 |----------|-------------|
 | +DC | +10 V/​+18 V fuente de alimentación |
-| -DC | +10 V/​+18 V fuente de alimentación |
+| -DC | 0 V fuente de alimentación |
 | CLK | Terminal de bus serial para conexión directa al panel de control |
 | I/​O 1 | 1r terminal de entrada/​salida (configuración predeterminada – OFF) |
 | I/​O 2 | 2do terminal de entrada/​ salida (configuración predeterminada - IN, NO circuito) |

@@ -347,6 +347,11 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicador con el panel de control.
 
+<!-- terminal-label-note -->
+
+!!! note "Nota"
+    En los diagramas siguientes, **+DC** y **−DC** son los terminales marcados **+12 VDC** y **−12 VDC** en el comunicador, y **A RS485** / **B RS485** son los terminales marcados **A 485** / **B 485**.
+
 #### DSC
 
 <img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="545" height="481" />

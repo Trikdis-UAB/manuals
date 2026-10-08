@@ -131,7 +131,7 @@ This manual applies to these G16T models:
 | Terminal | Description |
 |----|----|
 | +DC | +10 V/​+18 V power supply |
-| -DC | +10 V/​+18 V power supply |
+| -DC | 0 V power supply |
 | TIP | Terminal to connect with security control panel TIP terminal |
 | RING | Terminal to connect with security control panel RING terminal |
 | T-1 /​ IN1 | Terminal for monitoring the telephone line or an input terminal, selectable type: NC;​ NO;​ NC/​EOL;​ NO/​EOL;​ NC/​DEOL;​ NO/​DEOL |
