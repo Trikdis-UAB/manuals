@@ -4,7 +4,6 @@
   <img src="./image1.webp" alt="Photo of the GET communicator's front panel: TRIKDIS logo, an antenna connector at the top, LED labels NETWORK LTE, NETWORK LAN, DATA, POWER, TROUBLE and INTERFACE, and screw terminals labelled +12 VDC, -12 VDC, CLK, DATA, 1 I/O, 2 I/O, COM, A 485, B 485, plus separate LAN and TIP, RING terminal blocks." width="400">
 </div>
 
-
 ## Description 
 
 The communicator is designed to transmit event messages from the control panel to the CMS (Central Monitoring Station) and the Protegus2 application.
@@ -40,7 +39,6 @@ Sends events to monitoring station receiver:
 - “*Push*” and special sound notifications informing about events.
 
 - Remote system Arm/Disarm.
-
 
 - Remote control of connected devices (lights, gates, ventilation systems, heating, sprinklers, etc.).
 
@@ -194,152 +192,225 @@ This manual is for LTE communicators.
     7.  Particular security control panel\`s installation manual.
     
     Order the necessary components separately from your local distributor.
-## Quick configuration with *TrikdisConfig* software 
-
-1.  Download **TrikdisConfig** configuration software from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it.
-
-2.  Open the casing of the communicator with a flat-head screwdriver as shown below:
-
-    <img alt="Line drawing showing how to open the GT case with a flat-head screwdriver: insert it at the top seam near the antenna and pry outward, then insert it at the bottom seam and pry downward. A detail view shows the USB-C port location on the PCB edge." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
-
-3.  Using a USB-C cable connect the communicator to the computer.
-
-4.  Run TrikdisConfig. The software will automatically recognize the connected communicator and will open a window for configuration.
-
-5.  Click **Read [F4]** to read the communicator’s settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window.
+## Quick configuration
 
 Below we describe what settings need to be set for the communicator to begin sending events to the Central Monitoring Station (CMS) and to allow the security system to be controlled with the Protegus2 app.
 
+You can make these settings in the Protegus app or in TrikdisConfig; each section below gives the steps for both.
+
+=== "Protegus app"
+
+    The communicator must be online and added to your Protegus account (see [Adding the security system to Protegus2 app](#adding-the-security-system-to-protegus2-app)). If it can't connect yet, for example because the SIM card needs a PIN or a different APN, make these settings with TrikdisConfig first.
+
+    1.  In the Protegus app, open the system and go to **Settings → Advanced settings**.
+
+    2.  The first time, the app shows **Proceed with Caution**. Tap **Accept the risk and continue**. Tick **Do not show this again.** to skip it next time.
+
+        ![Protegus app, Advanced settings: 'Proceed with Caution' warning that these settings are for professionals only, with a 'Do not show this again.' checkbox and the 'Accept the risk and continue' button.](./protegus-app/get-advanced-intro-phone.webp){ .trik-mob-img }
+
+    3.  The app reads the communicator's settings. If it asks for the **Service Access code**, enter the communicator's Protegus Cloud access code (default 123456).
+
+    4.  Change the settings described below, then tap **Write** to save them to the communicator.
+
+    !!! note
+        The Protegus app supports GET firmware 1.08 or later.
+
+=== "TrikdisConfig"
+
+    1.  Download **TrikdisConfig** configuration software from [www.trikdis.com](http://www.trikdis.com) (type “TrikdisConfig” in the search field) and install it.
+
+    2.  Open the casing of the communicator with a flat-head screwdriver as shown below:
+
+        <img alt="Line drawing showing how to open the communicator case with a flat-head screwdriver: insert it at the top seam near the antenna and pry outward, then insert it at the bottom seam and pry downward. A detail view shows the USB-C port location on the PCB edge." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+
+    3.  Using a USB-C cable connect the communicator to the computer.
+
+    4.  Run TrikdisConfig. The software will automatically recognize the connected communicator and will open a window for configuration.
+
+    5.  Click **Read [F4]** to read the communicator’s settings. If requested, enter the Administrator or Installer 6-digit code in the pop-up window.
+
 ### Settings for connection with Protegus2 app 
 
-**In “Panel settings” window:**
+=== "Protegus app"
 
-<img alt="TrikdisConfig software, Panel settings window, TLC section. Communication protocol dropdown (highlighted, labelled 1) set to '2. AUTO'." src="./image7.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
+    In the Protegus app, open **Settings → Advanced settings** and set:
 
-1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
+    1.  **Panel settings → TLF** (communicator connected to the TIP/RING terminals of the control panel): set **Security panel model** to **AUTO**.
 
-<img alt="TrikdisConfig software, Panel settings window, Serial Bus section, three highlighted fields: Security panel model (2) set to '6. PARADOX SP+/MG+', Remote Arm/Disarm (3) checkbox ticked, Security panel PC download password (4) set to 1234." src="./image8.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
+    2.  **Panel settings → Serial Bus** (communicator connected to the keypad bus or serial bus): select the **Security panel model**.
 
-The communicator is connected to the keypad bus or serial bus of the control panel.
+    3.  On the same screen, turn on **Remote Arm/Disarm** if users should control the panel in the Protegus app with their keypad code. This setting is only shown for directly controlled panels.
 
-2. Select “**Security panel model”** that will be connected to the communicator.
+    4.  For direct control of Paradox panels, enter the **PC download password**; for Texecom panels, the UDL passcode. It must match the password entered in the control panel.
 
-2.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
+    5.  **User reporting → Cloud**: turn on **Enabled**, and change the **Cloud access code** if users should be asked for it when adding the system to the Protegus app (default 123456).
 
-3.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password”**. It must match the password that is entered in the control panel.
+    6.  **Network settings → LAN** (communicator connected to a LAN network): turn on **Use DHCP**.
+
+    7.  **Network settings → SIM** and **SIM2** (for each inserted SIM card): enter the **SIM card PIN** and the **APN**. Check that **DNS1** and **DNS2** match those supported by your ISP.
+
+    8.  **Reporting to CMS → CMS settings → Reporting mode**: set **Main type**, **Backup type** and **Backup type 2**, the order in which the communicator uses **LAN**, **SIM** (SIM1) and **SIM2**.
+
+    9.  Tap **Write**.
+
+    !!! note
+        For direct panel control to work, you will need to change the panel settings. How to do this is described in chapter 4.1 "Programming of control panels when the communicator is connected to the keypad bus or serial bus".
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, set:
+
+    **In “Panel settings” window:**
+
+    <img alt="TrikdisConfig software, Panel settings window, TLC section. Communication protocol dropdown (highlighted, labelled 1) set to '2. AUTO'." src="./image7.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
+
+    1.  If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
+
+    <img alt="TrikdisConfig software, Panel settings window, Serial Bus section, three highlighted fields: Security panel model (2) set to '6. PARADOX SP+/MG+', Remote Arm/Disarm (3) checkbox ticked, Security panel PC download password (4) set to 1234." src="./image8.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
+
+    The communicator is connected to the keypad bus or serial bus of the control panel.
+
+    2. Select “**Security panel model”** that will be connected to the communicator.
+
+    2.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
+
+    3.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password”**. It must match the password that is entered in the control panel.
+
+    !!! note
+        For the direct panel control to work, you will need to change the panel
+        settings. How to do this is described in chapter 4.1 "Programming of
+        control panels when the communicator is connected to the keypad bus or
+        serial bus". In this section you will find information on how to change
+        the "**PC download/UDL password**".
+    **In “User reporting” window, “PROTEGUS Cloud” tab:**
+
+    <img alt="TrikdisConfig software, User reporting window, PROTEGUS Cloud tab, two highlighted fields: Enable connection (5) checkbox ticked, PROTEGUS Cloud access Code (6) set to 123456." src="./image9.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
+
+    4. Tick the checkbox “**Enable connection”** to the Protegus Cloud.
+
+    2.  Change the “**PROTEGUS Cloud access Code”** for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456).
+
+    **In “Network settings” window:**
+
+    <img alt="TrikdisConfig software, Network settings window, LAN tab, Ethernet settings. Use DHCP checkbox (highlighted, labelled 7) is ticked." src="./image10.webp" style="width:7.086614173228346in;height:1.8070866141732282in" />
+
+    These settings must be made if the communicator is connected to a LAN network.
+
+    3. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+
+    <img alt="TrikdisConfig software, Network settings window, SIM1 tab, four highlighted fields: SIM card PIN (8) set to 1111, APN (9) set to 'internet', DNS 1 (10) and DNS 2 (11) left blank." src="./image11.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
+
+    These settings must be made if the SIM (or two SIM cards) card is inserted into the communicator.
+
+    4. Enter “**SIM card PIN”** code.
+
+    2.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+
+    3.  **DNS1, DNS2**: Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+
+    **In “CMS reporting” window:**
+
+    <img alt="TrikdisConfig software, CMS reporting window, Settings tab, Reporting mode section (highlighted, labelled 12): Main type LAN, Backup type SIM1, Backup type 2 Disable." src="./image12.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
+
+    12. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the Return to main connection type will be attempted after the specified time interval.
+
+    After finishing configuration, click the button **Write [F5]** and disconnect the USB cable.
 
 !!! note
-    For the direct panel control to work, you will need to change the panel
-    settings. How to do this is described in chapter 4.1 "Programming of
-    control panels when the communicator is connected to the keypad bus or
-    serial bus". In this section you will find information on how to change
-    the "**PC download/UDL password**".
-**In “User reporting” window, “PROTEGUS Cloud” tab:**
+    For a description of all GET settings, see [Communicator settings](#communicator-settings).
 
-<img alt="TrikdisConfig software, User reporting window, PROTEGUS Cloud tab, two highlighted fields: Enable connection (5) checkbox ticked, PROTEGUS Cloud access Code (6) set to 123456." src="./image9.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
-
-4. Tick the checkbox “**Enable connection”** to the Protegus Cloud.
-
-2.  Change the “**PROTEGUS Cloud access Code”** for logging in to Protegus2 if you want users to be asked to enter it when adding the system to Protegus2 app (default password – 123456).
-
-**In “Network settings” window:**
-
-<img alt="TrikdisConfig software, Network settings window, LAN tab, Ethernet settings. Use DHCP checkbox (highlighted, labelled 7) is ticked." src="./image10.webp" style="width:7.086614173228346in;height:1.8070866141732282in" />
-
-These settings must be made if the communicator is connected to a LAN network.
-
-3. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
-
-<img alt="TrikdisConfig software, Network settings window, SIM1 tab, four highlighted fields: SIM card PIN (8) set to 1111, APN (9) set to 'internet', DNS 1 (10) and DNS 2 (11) left blank." src="./image11.webp" style="width:7.086614173228346in;height:2.9173228346456694in" />
-
-These settings must be made if the SIM (or two SIM cards) card is inserted into the communicator.
-
-4. Enter “**SIM card PIN”** code.
-
-2.  Change “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
-
-3.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
-
-4.  Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
-
-**In “CMS reporting” window:**
-
-<img alt="TrikdisConfig software, CMS reporting window, Settings tab, Reporting mode section (highlighted, labelled 12): Main type LAN, Backup type SIM1, Backup type 2 Disable." src="./image12.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
-
-12. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the Return to main connection type will be attempted after the specified time interval.
-
-After finishing configuration, click the button **Write [F5]** and disconnect the USB cable.
-
-!!! note
-    For more information about other GET settings in
-    TrikdisConfig, see chapter 6 „**TrikdisConfig window
-    description**".
 ### Settings for connection with Central Monitoring Station 
 
-**In “System settings” window:**
+=== "Protegus app"
 
-<img alt="TrikdisConfig software, System settings window. Object ID field (highlighted, labelled 1) set to 561234. Also visible: Module ID 0123456789, Administrator code 123456, Installer code 654321." src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
+    In the Protegus app, open **Settings → Advanced settings** and set:
 
-1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+    1.  **System options → System general**: enter the **Account No.** provided by the Central Monitoring Station (0-9, A-F; **do not use FFFE, FFFF**). On hardware version x1x1 with firmware 1.31 or later, the account number is set per channel instead: **Reporting to CMS → CMS settings → Primary channel → Primary Account no.** You can tell from the screen: if **System general** shows only **Time set**, use the channel setting.
 
-**In “Panel settings” window:**
+    2.  **Panel settings → TLF** (TIP/RING connection): set **Security panel model** to **AUTO**. Or **Panel settings → Serial Bus** (keypad or serial bus connection): select the **Security panel model**.
 
-<img alt="TrikdisConfig software, Panel settings window, TLC section. Communication protocol dropdown (highlighted, labelled 2) set to '2. AUTO'." src="./image14.webp" style="width:7.086614173228346in;height:1.5866141732283465in" />
+    3.  **Reporting to CMS → CMS settings → Primary channel**: turn on **Enabled**, then set:
+        - **Communication type**: **IP**.
+        - **Domain or IP** and **Port** of the receiver.
+        - **TCP or UDP**.
+        - **Protocol**: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+        - The encryption key that is set in the receiver: **TRK encryption key** for TRK protocols; for DC-09, turn on **Enable encryption key** and enter the **DC-09 encryption key**.
 
-2. If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
+    4.  (Recommended) Set up the **Backup channel** the same way.
 
-<img alt="TrikdisConfig software, Panel settings window, Serial Bus section. Security panel model dropdown (highlighted, labelled 3) set to '6. PARADOX SP+/MG+'." src="./image15.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
+    5.  **Reporting to CMS → CMS settings → Reporting mode**: set **Main type**, **Backup type** and **Backup type 2**.
 
-3. Select “**Security panel model”** that will be connected to the communicator.
+    6.  **Network settings → LAN** (LAN connection): turn on **Use DHCP**. **Network settings → SIM** and **SIM2** (for each SIM card): enter the **SIM card PIN** and the **APN**, and check **DNS1** and **DNS2**.
 
-**In “CMS reporting” window settings for “Primary channel”:**
+    7.  Tap **Write**.
 
-<img alt="TrikdisConfig CMS reporting window, CMS settings tab. Primary channel fields highlighted and numbered 4 to 9: Communication type (Disable), Protocol, Encryption key (0123456789ABCDEF), Domain or IP, Port, TCP or UDP (TCP). The Primary channel Backup group is highlighted as 10. The Parallel channel and Parallel channel Backup show Communication type IP, Protocol TRK8, the same encryption key and TCP." src="./image16.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
+=== "TrikdisConfig"
 
-4. **Communication type** - select the **IP** connection method.
+    In TrikdisConfig, set:
 
-2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+    **In “System settings” window:**
 
-3.  **Encryption key** - enter the encryption key that is set in the receiver.
+    <img alt="TrikdisConfig software, System settings window. Object ID field (highlighted, labelled 1) set to 561234. Also visible: Module ID 0123456789, Administrator code 123456, Installer code 654321." src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
-4.  **Domain or IP** - enter the receiver’s Domain or IP address.
+    1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
-5.  **Port** - enter receiver’s network port number.
+    **In “Panel settings” window:**
 
-6.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
+    <img alt="TrikdisConfig software, Panel settings window, TLC section. Communication protocol dropdown (highlighted, labelled 2) set to '2. AUTO'." src="./image14.webp" style="width:7.086614173228346in;height:1.5866141732283465in" />
 
-7.  (Recommended) Configure “**Primary channel Backup”** settings.
+    2. If the communicator is connected to the TIP/RING terminals of the control panel, then you need to make the “**AUTO**” setting.
 
-<img alt="TrikdisConfig software, CMS reporting window, Settings tab, Reporting mode section (highlighted, labelled 11): Main type LAN, Backup type SIM1, Backup type 2 Disable." src="./image17.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
+    <img alt="TrikdisConfig software, Panel settings window, Serial Bus section. Security panel model dropdown (highlighted, labelled 3) set to '6. PARADOX SP+/MG+'." src="./image15.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
-11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
+    3. Select “**Security panel model”** that will be connected to the communicator.
 
-**In “Network settings” window:**
+    **In “CMS reporting” window settings for “Primary channel”:**
 
-<img alt="TrikdisConfig software, Network settings window, LAN tab, Ethernet settings. Use DHCP checkbox (highlighted, labelled 12) is ticked." src="./image18.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
+    <img alt="TrikdisConfig CMS reporting window, CMS settings tab. Primary channel fields highlighted and numbered 4 to 9: Communication type (Disable), Protocol, Encryption key (0123456789ABCDEF), Domain or IP, Port, TCP or UDP (TCP). The Primary channel Backup group is highlighted as 10. The Parallel channel and Parallel channel Backup show Communication type IP, Protocol TRK8, the same encryption key and TCP." src="./image16.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
 
-These settings must be made if the communicator is connected to a LAN network.
+    The screenshot shows the window before configuration: the **Primary channel** is still disabled.
 
-12. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+    4. **Communication type** - select the **IP** connection method.
 
-<img alt="TrikdisConfig software, Network settings window, SIM tab, four highlighted fields: SIM card PIN (13) set to 1111, APN (14) set to 'internet', DNS 1 (15) and DNS 2 (16) left blank." src="./image19.webp" style="width:7.086614173228346in;height:2.858267716535433in" />
+    2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
-If a SIM card (or two SIM cards) is inserted in the communicator, the following settings must be made.
+    3.  **Encryption key** - enter the encryption key that is set in the receiver.
 
-13. Enter “**SIM card PIN”** code.
+    4.  **Domain or IP** - enter the receiver’s Domain or IP address.
 
-14. Change the “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+    5.  **Port** - enter receiver’s network port number.
 
-15. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+    6.  **TCP or UDP** - choose event transmission protocol (**TCP** or **UDP**) in which events should be sent.
 
-16. Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+    7.  (Recommended) Configure “**Primary channel Backup”** settings.
 
-After finishing configuration, click **Write [F5]** and disconnect the USB cable.
+    <img alt="TrikdisConfig software, CMS reporting window, Settings tab, Reporting mode section (highlighted, labelled 11): Main type LAN, Backup type SIM1, Backup type 2 Disable." src="./image17.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
+
+    11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
+
+    **In “Network settings” window:**
+
+    <img alt="TrikdisConfig software, Network settings window, LAN tab, Ethernet settings. Use DHCP checkbox (highlighted, labelled 12) is ticked." src="./image18.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
+
+    These settings must be made if the communicator is connected to a LAN network.
+
+    12. Check “**Use DHCP”** the box so that the communicator automatically reads the computer network settings (subnet mask, gateway) and is assigned an IP address.
+
+    <img alt="TrikdisConfig software, Network settings window, SIM tab, four highlighted fields: SIM card PIN (13) set to 1111, APN (14) set to 'internet', DNS 1 (15) and DNS 2 (16) left blank." src="./image19.webp" style="width:7.086614173228346in;height:2.858267716535433in" />
+
+    If a SIM card (or two SIM cards) is inserted in the communicator, the following settings must be made.
+
+    13. Enter “**SIM card PIN”** code.
+
+    14. Change the “**APN”** name. “**APN”** can be found on the website of the SIM card operator (“internet” is universal and works in many operator networks).
+
+    15. **DNS1, DNS2**: Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP**.
+
+    After finishing configuration, click **Write [F5]** and disconnect the USB cable.
 
 !!! note
-    For more information about other GET settings in
-    TrikdisConfig, see chapter 6 „**TrikdisConfig window
-    description**".
+    For a description of all GET settings, see [Communicator settings](#communicator-settings).
+
 ## Installation and wiring 
 
 ### Installation process 
@@ -380,13 +451,37 @@ If the host enclosure does not allow secure installation as described above, the
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="Two wiring diagrams. DSC panel keypad bus to GET: RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA. PARADOX panel serial port to GET through the EX-CRP2.4 cable (ordered separately): R (red, +12V) to +DC, B (black) to -DC, Y (yellow) to CLK, G (green) to DATA." src="./image22.webp" style="width:6.743347550306212in;height:2.8466721347331583in" />
+#### DSC
 
-<img alt="Two wiring diagrams. CADDX panel keypad bus to GET: POS to +DC (+12V), COM to -DC, DATA to DATA (CLK not used). TEXECOM panel serial port to GET through the EX-CRP4 cable (ordered separately): R (red, +12V) to +DC, B (black) to -DC, BL (blue) to CLK, W (white) to DATA." src="./image23.webp" style="width:6.803347550306212in;height:2.9000054680664915in" />
+<img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to GET. RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA." src="./wiring-dsc.webp" width="505" height="506" />
 
-<img alt="Two wiring diagrams. Inner Range Inception to GET: VOUT + (+12V) to +DC and VOUT 0V to -DC, and from the panel's USB port through Inner Range cable 993030USB: black wire to the 0V/-DC line, green wire to CLK, white wire to DATA. Inner Range Integriti Port 0 to GET through Inner Range cable INTG-996795: +DET (+13V) to +DC, GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA." src="./image24.webp" style="width:6.996680883639545in;height:2.8066721347331582in" />
+#### PARADOX
 
-<img alt="Two wiring diagrams. Honeywell Vista-15, Vista-20, Vista-48 panel keypad bus to GET: terminal 4 to -DC, terminal 5 to +DC (+12V), terminal 6 to DATA, terminal 7 to CLK. Generic control panel to GET: +AUX to +DC (+12V), -AUX to -DC; telephone line communicator terminals: panel TIP to GET TIP, panel RING to GET RING." src="./image25.webp" style="width:6.996680883639545in;height:3.28000656167979in" />
+<img class="wiring-diagram" alt="Wiring diagram: PARADOX panel serial port to GET through the EX-CRP2.4 cable (ordered separately). R (red, +12V) to +DC, B (black) to -DC, Y (yellow) to CLK, G (green) to DATA." src="./wiring-paradox.webp" width="650" height="506" />
+
+#### CADDX
+
+<img class="wiring-diagram" alt="Wiring diagram: CADDX panel keypad bus to GET. POS to +DC (+12V), COM to -DC, DATA to DATA; CLK is not used." src="./wiring-caddx.webp" width="493" height="509" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="Wiring diagram: TEXECOM panel serial port to GET through the EX-CRP4 cable (ordered separately). R (red, +12V) to +DC, B (black) to -DC, BL (blue) to CLK, W (white) to DATA." src="./wiring-texecom.webp" width="662" height="511" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="Wiring diagram: Inner Range Inception to GET. VOUT + (+12V) to +DC and VOUT 0V to -DC; from the panel's USB port through Inner Range cable 993030USB: black wire to the 0V/-DC line, green wire to CLK, white wire to DATA." src="./wiring-innerrange-inception.webp" width="785" height="616" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="Wiring diagram: Inner Range Integriti Port 0 to GET through Inner Range cable INTG-996795. +DET (+13V) to +DC, GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA." src="./wiring-innerrange-integriti.webp" width="688" height="615" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="Wiring diagram: Honeywell Vista-15, Vista-20, Vista-48 panel keypad bus to GET. Terminal 4 to -DC, terminal 5 to +DC (+12V), terminal 6 to DATA, terminal 7 to CLK." src="./wiring-honeywell-vista.webp" width="540" height="498" />
+
+#### Control panel (telephone line communicator, TIP/RING)
+
+<img class="wiring-diagram" alt="Wiring diagram: control panel to GET over its telephone line communicator. +AUX to +DC (+12 V), -AUX to -DC; telephone line communicator terminals: panel TIP to GET TIP, panel RING to GET RING." src="./wiring-control-panel-tip-ring.webp" width="568" height="560" />
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
@@ -435,7 +530,7 @@ The communicator is connected to the telephone communicator (TIP/RING terminals)
 
 ### Schematics for input connection 
 
-The communicator has 2 universal input / output terminals that can be set to input IN mode. NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL circuits can be connected to the input terminal. The input type can be changed in the TrikdisConfig window „**IN/OUT” -> “Type”.**
+The communicator has 2 universal input / output terminals that can be set to input IN mode. NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL circuits can be connected to the input terminal. The input type can be changed in the TrikdisConfig window „**IN/OUT” -> “Type”**, or in the Protegus app under **Advanced settings → IN/OUT**, terminal **1** or **2** **→ Type**.
 
 Connect the input according to the selected input type (NO, NC, NC/EOL, NO/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
@@ -676,8 +771,7 @@ With Protegus2 users will be able to control their alarm system remotely. They w
 
     2.  Or a LAN cable is connected.
 
-    3.  "Protegus cloud" is enabled. See chapter 6.5 "User
-        reporting" window;
+    3.  "Protegus cloud" is enabled. See [User reporting](#user-reporting);
 
     4.  Power supply is connected ("POWER" LED illuminates green);
 
@@ -723,37 +817,66 @@ Follow the instructions below if the security control panel will be controlled w
 
 <img alt="Protegus2 app System Home Screen for GET, showing Online status with signal strength, '1 Area' with Unknown status, Arm and Disarm buttons, and a PGM2 output button." src="./image44.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
 
-## TrikdisConfig window description 
+## Communicator settings
 
-### *TrikdisConfig* status bar description 
+Most GET settings described below can be changed in the Protegus app or in TrikdisConfig; settings and actions available in only one tool are marked. What each setting does is described once; each section shows where to find it in each tool. Names in brackets are the Protegus app's labels where they differ from TrikdisConfig's.
 
-After connecting the GET communicator and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
+### Connecting to the communicator
 
-<img alt="TrikdisConfig status bar after reading the device: IMEI/Unique ID, Status (reading done), Device (GET_S170), SN, BL, FW, HW, State and access level (Administrator), explained in the table below." src="./image45.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+=== "Protegus app"
 
-| Object | Description |
-|--------|-------------|
-| IMEI/​Unique ID | Device IMEI number |
-| Status | Operating condition |
-| Device | Device type (GET should be shown) |
-| SN | Device serial number |
-| BL | Browser version |
-| FW | Device firmware version |
-| HW | Device hardware version |
-| State | Connection to program type (via USB or remote) |
-| Administrator | Access level (shown after access code is approved) |
+    Open the system in the Protegus app and go to **Settings → Advanced settings** (see [Quick configuration](#quick-configuration)). The top of each screen shows the connected device: **Unique ID** (IMEI), **Serial**, **Firmware** and **Boot** version.
 
-After pressing **Read [F4]**, the program will read and show the settings which are set in the ***GET*.** Set the necessary settings according to the TrikdisConfig window descriptions given below.
+    The settings are grouped in the menu as **System options**, **Panel settings**, **Reporting to CMS**, **User reporting**, **Network settings**, **IN/OUT** and **System events**. After changing settings, tap **Write** to save them to the communicator. **Read** loads the current settings from the communicator again.
 
-### “System settings” window 
+    ![Protegus app, Advanced settings menu for GET: device card with Unique ID, serial number, boot version 1.03 and firmware 1.35; Read and Write buttons; menu items System options, Panel settings, Reporting to CMS, User reporting, Network settings, IN/OUT and System events.](./protegus-app/get-menu-phone.webp){ .trik-mob-img }
 
-<img alt="TrikdisConfig 'System settings' window. General group: Object ID 561234, Module ID 0123456789, Time set First channel. Access group: Administrator code 123456, Installer code 654321, Only an administrator can restore checked; Allow installer to change: Account number, CMS reporting, User reporting, SIM card and Event summary all checked." src="./image46.webp" style="width:7.086614173228346in;height:2.767716535433071in" />
+=== "TrikdisConfig"
+
+    After connecting the GET communicator and clicking **Read [F4], *TrikdisConfig*** will provide information about the connected device in the status bar:
+
+    <img alt="TrikdisConfig status bar after reading the device: IMEI/Unique ID, Status (reading done), Device (GET_S170), SN, BL, FW, HW, State and access level (Administrator), explained in the table below." src="./image45.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+
+    | Object | Description |
+    |--------|-------------|
+    | IMEI/​Unique ID | Device IMEI number |
+    | Status | Operating condition |
+    | Device | Device type (GET should be shown) |
+    | SN | Device serial number |
+    | BL | Bootloader version |
+    | FW | Device firmware version |
+    | HW | Device hardware version |
+    | State | Connection to program type (via USB or remote) |
+    | Administrator | Access level (shown after access code is approved) |
+
+    After pressing **Read [F4]**, the program will read and show the settings which are set in the ***GET*.** Set the necessary settings according to the TrikdisConfig window descriptions given below.
+
+### System settings
+
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → System options → System general** (account numbers, time set) and **System options → Access** (codes and installer permissions).
+
+    Where **Account No.** and **Device account No.** are depends on the hardware version and firmware. On hardware version x1x1 with firmware 1.31 or later they are in **Reporting to CMS → CMS settings → Primary channel** (**Primary Account no.**; **Parallel Account no.** on the parallel channel) and in **Reporting to CMS → Settings** (**Device account No.**), and **System general** shows only **Time set**. Otherwise they are in **System general**.
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, System options, System general on GET hardware x1x1 with firmware 1.35: only Time set (First channel); the account numbers are in the CMS settings." src="./protegus-app/get-systemoptions-general-x1x1-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x1</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, System options, System general on GET hardware x1x0: Account No. 561234, Device account No. 0123456789, Time set First channel." src="./protegus-app/get-systemoptions-general-x1x0-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x0</span></span>
+    </span>
+
+    ![Protegus app, System options, Access: Administrator code and Installer code (masked), Only an administrator can restore on, and under Allow installer to change: Account number, CMS reporting, User reporting, SIM card and Event summary, all on.](./protegus-app/get-systemoptions-access-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **System settings** window.
+
+    <img alt="TrikdisConfig 'System settings' window. General group: Object ID 561234, Module ID 0123456789, Time set First channel. Access group: Administrator code 123456, Installer code 654321, Only an administrator can restore checked; Allow installer to change: Account number, CMS reporting, User reporting, SIM card and Event summary all checked." src="./image46.webp" style="width:7.086614173228346in;height:2.767716535433071in" />
 
 **“General” settings group**
 
-- **Object ID** – if the events will be sent to the CMS (Central Monitoring Station), enter the account number provided by the CMS (6 characters hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+- **Object ID** (**Account No.**) – if the events will be sent to the CMS (Central Monitoring Station), enter the account number provided by the CMS (6 characters hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
-- **Module ID** – enter the identification number of the module.
+- **Module ID** (**Device account No.**) – enter the identification number of the module.
 
 - **Time set** - select which server to use for time synchronization.
 
@@ -767,19 +890,36 @@ When setting up the communicator GET there are two levels of access for, the adm
 
 - **Only an administrator can restore** - if the box is checked, factory settings can be restored only by entering the administrator code.
 
-- **Allow installer to change** – the administrator can specify which settings can be changed by the installer.
+- **Allow installer to change** – the administrator can specify which settings can be changed by the installer: **Account number**, **CMS reporting**, **User reporting**, **SIM card** and **Event summary**.
 
-###  “Panel settings” window 
+!!! note "Installer access in the Protegus app"
+    When the communicator is opened with the installer code, the Protegus app hides **Administrator code** and **Only an administrator can restore**, and shows the settings the administrator did not allow as read-only. In the app, the **SIM card** permission also covers the **LAN** settings, and where the account numbers are in the CMS settings (see above), they follow the **CMS reporting** permission.
 
-<img alt="TrikdisConfig 'Panel settings' window. TLC group: Communication protocol 2. AUTO, First HSK tone Dual Tone, Second HSK tone SIA FSK, Use security panel account ID unchecked, Wait acknowledgment from CMS unchecked, Dial tone frequency enabled at 425 Hz. Serial Bus group (greyed out): Event coding protocol CID, Security panel model 1. DISABLED." src="./image47.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
+### Panel settings
+
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → Panel settings → TLF** (TIP/RING connection) and **Panel settings → Serial Bus** (keypad or serial bus connection).
+
+    ![Protegus app, Panel settings, TLF: Security panel model 2. AUTO, First HSK tone Dual Tone, Second HSK tone SIA FSK, Use security panel account ID off, Wait acknowledgment from CMS off, Dial tone enabled on, Dial tone frequency 425 Hz.](./protegus-app/get-panel-tlf-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, Panel settings, Serial Bus: Protocol CID, Security panel model 6. PARADOX SP+/MG+, Remote Arm/Disarm on, Event on but greyed out, PC download password (masked).](./protegus-app/get-panel-serial-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **Panel settings** window.
+
+    <img alt="TrikdisConfig 'Panel settings' window. TLC group: Communication protocol 2. AUTO, First HSK tone Dual Tone, Second HSK tone SIA FSK, Use security panel account ID unchecked, Wait acknowledgment from CMS unchecked, Dial tone frequency enabled at 425 Hz. Serial Bus group (greyed out): Event coding protocol CID, Security panel model 1. DISABLED." src="./image47.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
+
+    <img alt="TrikdisConfig 'Panel settings' window. TLC group: Communication protocol 1. DISABLED. Serial Bus group: Event coding protocol CID, Security panel model 6. PARADOX SP+/MG+, Remote Arm/Disarm checked, Event checked, Security panel PC download password 1234." src="./image48.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 **“TLC” settings group**
 
 The communicator is connected to the TIP RING terminals of the telephone communicator of the control panel.
 
-- **Communication protocol** – enable/disable DTMF landline interface on the communicator.
+- **Communication protocol** (**Security panel model**) – enable/disable DTMF landline interface on the communicator.
 
-- **First HSK tone / Second HSK tone** – handshake" tone of control panel.
+- **First HSK tone / Second HSK tone** – handshake tone of control panel.
 
 - **Use security panel account ID** – if the box is marked with a check mark, the communicator will not send the value set in the "**Object ID**" field, but the object number entered in the control panel.
 
@@ -787,33 +927,48 @@ The communicator is connected to the TIP RING terminals of the telephone communi
 
 - **Dial tone frequency** - the frequency at which the communicator communicates with the control panel through the telephone communicator.
 
-  <img alt="TrikdisConfig 'Panel settings' window. TLC group: Communication protocol 1. DISABLED. Serial Bus group: Event coding protocol CID, Security panel model 6. PARADOX SP+/MG+, Remote Arm/Disarm checked, Event checked, Security panel PC download password 1234." src="./image48.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+    In the Protegus app, the **TLF** screen also has **Dial tone enabled**, which turns the dial tone on or off; **Dial tone frequency** can only be changed while it is on.
 
 **“Serial bus” settings group**
 
 The communicator is connected to the control panel via a Serial Bus.
 
-- **Event coding protocol** – select the event reporting protocol (CID or SIA).
+- **Event coding protocol** (**Protocol**) – select the event reporting protocol (CID or SIA).
 
 - **Security panel model** – select the control panel model that will be connected to the communicator.
 
 - **Remote Arm/Disarm** – when the checkbox is selected, the GET will directly control the control panel remotely. This setting will be visible only for directly controlled panels. For direct control of the control panels you need to change the panel settings, as described in section 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”.
 
-- **Event** – check the box so that the communicator sends events to the CMS and to Protegus2.
+- **Event** – check the box so that the communicator sends events to the CMS and to Protegus2. In the Protegus app this switch is shown but cannot be changed.
 
-- **Security panel PC download password** - for the direct control of Paradox and Texecom control panels you need to enter the PC/UDL password. It must match the password that was entered in the control panel. How to change this password is described in section 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”*.*
+- **Security panel PC download password** (**PC download password**; for Texecom, the UDL passcode) - for the direct control of Paradox and Texecom control panels you need to enter the PC/UDL password. It must match the password that was entered in the control panel. How to change this password is described in section 4.1 “Programming of control panels when the communicator is connected to the keypad bus or serial bus”*.*
 
-### “CMS reporting” window 
-
-**“CMS settings” tab**
-
-<img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab. Primary channel: Communication type Disable (Protocol and Domain/IP empty); Primary channel Backup: Disable. Parallel channel: Communication type IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP; Parallel channel Backup: IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP." src="./image49.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
+### CMS reporting
 
 Events can be sent over several channels of communication. The primary and parallel communication channels can operate simultaneously, this way the communicator can send events to two receivers at the same time. Backup channels can be assigned for both primary and parallel channels, which will be used when the connection via the primary or parallel channel is interrupted.
 
-Communication is encoded and password protected. A TRIKDIS receiver is required for receiving and sending event information to the monitoring programs:
+Communication is encoded and password protected. With the TRK protocols, a TRIKDIS receiver is required for receiving and sending event information to the monitoring programs (DC-09 and TL150 are for universal and SUR-GUARD receivers, see **Protocol** below):
 
 - **For connection over IP** - software receiver IPcom Windows/Linux, hardware IP/SMS receiver RL14 or multichannel receiver RM14.
+
+#### Receiver channels
+
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → Reporting to CMS → CMS settings**, then **Primary channel**, **Backup channel** or **Parallel channel** (**Parallel primary channel**, **Parallel backup channel**). Turn on **Enabled** to show the channel's settings.
+
+    ![Protegus app, Reporting to CMS, CMS settings: Primary channel, Backup channel, Parallel channel and Reporting mode.](./protegus-app/get-reporting-cms-phone.webp){ .trik-mob-img }
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Primary channel on GET hardware x1x1: Enabled on, Primary Account no. 561234, Communication type IP, Domain or IP receiver.example.com, Port 55555, TCP or UDP TCP/IP; Protocol TRK8 with TRK encryption key (masked)." src="./protegus-app/get-reporting-cms-primary-x1x1-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x1</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Primary channel on GET hardware x1x0: Enabled on, Communication type IP, Domain or IP receiver.example.com, Port 55555, TCP or UDP TCP/IP; Protocol TRK8 with TRK encryption key (masked)." src="./protegus-app/get-reporting-cms-primary-x1x0-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x0</span></span>
+    </span>
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **CMS reporting** window, **CMS settings** tab.
+
+    <img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab. Primary channel: Communication type Disable (Protocol and Domain/IP empty); Primary channel Backup: Disable. Parallel channel: Communication type IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP; Parallel channel Backup: IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP." src="./image49.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
 
 **“Primary channel” settings group**
 
@@ -821,7 +976,7 @@ Communication is encoded and password protected. A TRIKDIS receiver is required 
 
 - **Protocol** - select in which coding the events should be sent: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
 
-- **Encryption key** - 6-digit message encryption key. The key written to the communicator must match the receiver’s key.
+- **Encryption key** (**TRK encryption key**; for DC-09 protocols, **Enable encryption key** and **DC-09 encryption key**, with **HEX** for a key in hexadecimal) - message encryption key. The key written to the communicator must match the receiver’s key. In the Protegus app, the TRK encryption key takes up to 6 characters and the DC-09 encryption key up to 16 (32 in HEX).
 
 - **Domain or IP** - enter the domain or IP address of the receiver.
 
@@ -833,13 +988,32 @@ Communication is encoded and password protected. A TRIKDIS receiver is required 
 
 Enable the backup channel mode to send events via backup channel if connection via primary channel is lost. Backup channel settings are same as described above.
 
-“Parallel channel” settings group
+**“Parallel channel” settings group**
 
 Events are transmitted in parallel with the primary channel through this channel. When the second channel is enabled, events can be sent simultaneously to two receivers (e.g., local and centralized monitoring stations). Parallel channel settings are the same as described above.
 
-<img alt="TrikdisConfig 'CMS reporting' window, Settings tab. Settings group: Test period 24 h 0 min, IP ping period 0 min 30 s, Backup reporting after 2 fails, Return from Backup after 1 min 30 s, Line No. 1, Receiver No. 1. Reporting mode group: Main type LAN, Backup type SIM1, Backup type 2 Disable, Communication path test Disabled." src="./image50.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
+#### Test, ping and reporting mode
 
-**“Settings” tab** **“Settings” settings group**
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → Reporting to CMS → Settings** (test, ping, backup timing, receiver and line numbers) and **Reporting to CMS → CMS settings → Reporting mode** (connection order).
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Reporting to CMS, Settings on GET hardware x1x1: Enable test on, Test period 24 h 0 min, Enable ping on, IP ping period 3 min 0 s, Backup reporting after 3 attempts, Return from Backup after 1 min 0 s, Device account No. 0123456789, Receiver No. 01, Line No. 1." src="./protegus-app/get-reporting-settings-x1x1-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x1</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Reporting to CMS, Settings on GET hardware x1x0: Enable test on, Test period 24 h 0 min, Enable ping on, IP ping period 3 min 0 s, Backup reporting after 3 attempts, Return from Backup after 1 min 0 s, Receiver No. 01, Line No. 1." src="./protegus-app/get-reporting-settings-x1x0-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x0</span></span>
+    </span>
+
+    ![Protegus app, CMS settings, Reporting mode: Main type LAN, Backup type SIM, Backup type 2 Disabled, Test enabled on, Communication path test 1 day(s) 0 h.](./protegus-app/get-reporting-cms-reportingmode-phone.webp){ .trik-mob-img }
+
+    The app has an on/off switch next to each period: **Enable test** for **Test period**, **Enable ping** for **IP ping period**, and **Test enabled** for **Communication path test**. In **Reporting mode**, the connection types are named **LAN**, **SIM** (SIM1) and **SIM2**.
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **CMS reporting** window, **Settings** tab.
+
+    <img alt="TrikdisConfig 'CMS reporting' window, Settings tab. Settings group: Test period 24 h 0 min, IP ping period 0 min 30 s, Backup reporting after 2 fails, Return from Backup after 1 min 30 s, Line No. 1, Receiver No. 1. Reporting mode group: Main type LAN, Backup type SIM1, Backup type 2 Disable, Communication path test Disabled." src="./image50.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
+
+**“Settings” settings group**
 
 - **Test period** - TEST event period for testing the connection. Test events are sent as Contact ID messages and forwarded to the monitoring software.
 
@@ -853,7 +1027,7 @@ Events are transmitted in parallel with the primary channel through this channel
 
 - **Return from backup after** - time after which the communicator GET will attempt to reconnect and transmit messages via the Primary channel.
 
-  - **Line No.** - enter line number of the receiver.
+- **Line No.** - enter line number of the receiver.
 
 - **Receiver No.** - enter the receiver number.
 
@@ -871,29 +1045,47 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 <span id="_Ref526770803"></span>
 
-### “User reporting” window 
-
-**“PROTEGUS cloud” tab**
-
-<img alt="TrikdisConfig 'User reporting' window, PROTEGUS Cloud tab: Enable connection checked, PROTEGUS Cloud access Code 123456, Parallel reporting unchecked." src="./image51.webp" style="width:7.086614173228346in;height:1.9448818897637796in" />
+### User reporting
 
 Protegus2 service allows users to remotely monitor and control the communicator. For more information about Protegus2 service, visit [www.protegus.eu](http://www.protegus.eu).
 
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → User reporting → Cloud**.
+
+    ![Protegus app, User reporting, Cloud: Enabled on, Parallel reporting off, Cloud access code (masked).](./protegus-app/get-userreporting-cloud-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **User reporting** window, **PROTEGUS cloud** tab.
+
+    <img alt="TrikdisConfig 'User reporting' window, PROTEGUS Cloud tab: Enable connection checked, PROTEGUS Cloud access Code 123456, Parallel reporting unchecked." src="./image51.webp" style="width:7.086614173228346in;height:1.9448818897637796in" />
+
 **“Protegus Cloud” settings group**
 
-- **Enable connection** – enable the Protegus2 service, the GET communicator will be able to exchange data with Protegus2 app and to be remotely configured via ***TrikdisConfig*.**
+- **Enable connection** (**Enabled**) – enable the Protegus2 service, the GET communicator will be able to exchange data with Protegus2 app and to be remotely configured via ***TrikdisConfig*.**
 
-- **Protegus Cloud access Code -** 6-digit code for connecting to the Protegus2 app (default - 123456).
+- **Protegus Cloud access Code** (**Cloud access code**) - 6-digit code for connecting to the Protegus2 app (default - 123456).
 
-- **Parallel reporting** – allow parallel report sending using the *primary channel* and to Protegus2. Reports will only be sent to Protegus2 and to users after they’ve been sent to the security company.
+- **Parallel reporting** (shown in the app when the firmware supports it) – allow parallel report sending using the *primary channel* and to Protegus2. Reports will only be sent to Protegus2 and to users after they’ve been sent to the security company.
 
-### “Network settings” window 
+### Network settings
 
-**“LAN” tab**
-
-<img alt="TrikdisConfig 'Network settings' window, LAN tab, Ethernet settings: Use DHCP checked, Static IP 0.0.0.0, Subnet mask 255.255.255.0, Default gateway 0.0.0.0, DNS 1 8.8.8.8, DNS 2 8.8.4.4." src="./image52.webp" style="width:7.086614173228346in;height:2.3188976377952755in" />
+#### LAN
 
 **These settings must be made if the communicator is connected to a LAN network.**
+
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → Network settings → LAN**. **Static IP**, **Subnet mask**, **Default gateway**, **DNS1** and **DNS2** can only be changed while **Use DHCP** is off.
+
+    ![Protegus app, Network settings, LAN (Ethernet screen): Use DHCP on; Static IP 192.168.1.100, Subnet mask 255.255.255.0, Default gateway 192.168.1.1, DNS1 8.8.8.8 and DNS2 8.8.4.4 greyed out.](./protegus-app/get-network-lan-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **Network settings** window, **LAN** tab.
+
+    <img alt="TrikdisConfig 'Network settings' window, LAN tab, Ethernet settings: Use DHCP checked, Static IP 0.0.0.0, Subnet mask 255.255.255.0, Default gateway 0.0.0.0, DNS 1 8.8.8.8, DNS 2 8.8.4.4." src="./image52.webp" style="width:7.086614173228346in;height:2.3188976377952755in" />
 
 **“Ethernet settings” settings group**
 
@@ -905,33 +1097,29 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 - **Default gateway** – gateway address for when manual registering mode is set.
 - **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel “**Domain or IP”** field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
 
-**“SIM1” tab**
+#### SIM1 and SIM2
+
+**These settings must be made for each SIM card inserted into the communicator.** The SIM1 and SIM2 slots have the same settings.
 
 !!! warning "Important"
-    1\. Ensure that the SIM card is activated and working before using
-    it. / 2. Ensure that mobile data service is enabled.
-<img alt="TrikdisConfig 'Network settings' window, SIM1 tab, SIM card group: SIM card PIN 1111, APN internet; Login, Password, SIM ICCID, DNS 1, DNS 2 and Preferred operator left blank." src="./image53.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
+    1. Ensure that the SIM card is activated and working before using it.
+    2. Ensure that mobile data service is enabled.
 
-**These settings must be made if the SIM card is inserted into the SIM1 slot of the communicator.**
+=== "Protegus app"
 
-**“SIM card” settings group**
+    In the Protegus app: **Advanced settings → Network settings → SIM** (SIM1) or **SIM2**.
 
-- **SIM card PIN** - enter the SIM card PIN code. This code can be disabled by inserting the SIM card into a mobile phone and disabling the request. If you disabled the SIM card PIN request, leave the default value in this field.
+    ![Protegus app, Network settings, SIM (SIM card screen): SIM card PIN, APN internet, Login, Password, SIM ICCID, DNS1, DNS2, and Forbid connection when roaming detected off.](./protegus-app/get-network-sim-phone.webp){ .trik-mob-img }
 
-- **APN** - enter APN (Access Point Name). It is required for connecting the communicator to the internet. APN can be found on the website of the SIM card operator (“internet” is universal and works in the networks of many operators).
+    The Protegus app does not show **Preferred operator** for GET; this screen has a **Forbid connection when roaming detected** switch instead. On hardware revision M15 with firmware 1.17 or later, the **SIM** screen also has **Generation** and **Bands**, which limit the mobile network technology and frequency bands the communicator uses.
 
-- **Login, Password** - if required, enter the user name (login) and password for connection to the internet.
+=== "TrikdisConfig"
 
-- **SIM ICCID** - enter the ICCID number of the SIM card if you want the communicator to work only with this SIM card.
+    In TrikdisConfig, open the **Network settings** window, **SIM1** or **SIM2** tab.
 
-- **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel Domain or IP field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
-- **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes.
+    <img alt="TrikdisConfig 'Network settings' window, SIM1 tab, SIM card group: SIM card PIN 1111, APN internet; Login, Password, SIM ICCID, DNS 1, DNS 2 and Preferred operator left blank." src="./image53.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
-**“SIM2” tab**
-
-<img alt="TrikdisConfig 'Network settings' window, SIM2 tab, SIM card group: SIM card PIN 1111, APN internet; Login, Password, SIM ICCID, DNS 1, DNS 2 and Preferred operator left blank." src="./image54.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
-
-**These settings must be made if the SIM card is inserted into the SIM2 slot of the communicator.**
+    <img alt="TrikdisConfig 'Network settings' window, SIM2 tab, SIM card group: SIM card PIN 1111, APN internet; Login, Password, SIM ICCID, DNS 1, DNS 2 and Preferred operator left blank." src="./image54.webp" style="width:7.086614173228346in;height:2.874015748031496in" />
 
 **“SIM card” settings group**
 
@@ -944,33 +1132,53 @@ Protegus2 service allows users to remotely monitor and control the communicator.
 - **SIM ICCID** - enter the ICCID number of the SIM card if you want the communicator to work only with this SIM card.
 
 - **DNS1, DNS2** - (Domain Name System) identifies the server that specifies the IP address of the domain. Used when domain is set in the communication channel Domain or IP field (not IP address). Google DNS server is set by default. **Regardless of IP settings, make sure the DNS addresses match those supported by your ISP.**
-- **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes.
+- **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes. *Only in TrikdisConfig.*
 
-### “IN/OUT” windows 
-
-<img alt="TrikdisConfig 'IN/OUT' window. Terminal table: Terminal 1 Function IN Type NO, Terminal 2 Function OUT. Event table: IN1_ALARM enabled, Event CID 130 SIA BA Part 99 Zone 001, Restore CID 130 SIA BH Part 99 Zone 001; IN1_TAMPER enabled, Event CID 144 SIA TA Part 99 Zone 001, Restore CID 144 SIA TR Part 99 Zone 001." src="./image55.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
+### IN/OUT
 
 The communicator has 2 universal (input / output) terminals. The table can set the terminal operating mode (Disabled, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
 Additional sensors can be connected to the communicator inputs. When the sensor is triggered, the communicator will send an event message. The input is assigned a Contact ID (SIA) code, which will be sent to CMS and Protegus2.
 
-- **Enable** – checked event fields where messages will be sent to CMS and Protegus2.
+=== "Protegus app"
 
-- **E/R** – choose what type of event will be sent when input is triggered – “**Event”** or “**Restore”**.
+    In the Protegus app: **Advanced settings → IN/OUT**, then select terminal **1** or **2**. Set **Function** (**Disabled**, **IN**, **OUT**) and, for an input, **Type**. The **Alarm** and **Tamper** sections hold the event and restore messages sent when the input is triggered.
 
-- **CID** – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
+    ![Protegus app, IN/OUT, terminal 1: Function IN, Type NO; Alarm event: Enabled on, Classificator Event, CID code 130, Sia code BA, Partition number 99, Zone number 001.](./protegus-app/get-inout-terminal-phone.webp){ .trik-mob-img }
 
-- **SIA** - – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
+=== "TrikdisConfig"
 
-- **Part**. – enter the partition (area) number that will be sent when an internal event occurs and the system is restored.
+    In TrikdisConfig, open the **IN/OUT** window.
 
-- **Zone** - enter the zone number that will be sent when an internal event occurs and the system is restored.
+    <img alt="TrikdisConfig 'IN/OUT' window. Terminal table: Terminal 1 Function IN Type NO, Terminal 2 Function OUT. Event table: IN1_ALARM enabled, Event CID 130 SIA BA Part 99 Zone 001, Restore CID 130 SIA BH Part 99 Zone 001; IN1_TAMPER enabled, Event CID 144 SIA TA Part 99 Zone 001, Restore CID 144 SIA TR Part 99 Zone 001." src="./image55.webp" style="width:7.086614173228346in;height:2.4488188976377954in" />
 
-###  “Event summary” window 
+- **Enable** (**Enabled**) – checked event fields where messages will be sent to CMS and Protegus2.
 
-In this window, you can enable, disable and modify internal messages sent by your device. Disabling an internal message in this window will prevent it from being sent regardless of other settings.
+- **E/R** (**Classificator**) – choose what type of event will be sent when input is triggered – “**Event”** or “**Restore”**.
 
-<img alt="TrikdisConfig 'Event summary' window listing default Contact ID/SIA event and restore codes (Partition 99): COMMUNICATION event 350 YC / restore 350 YK, zone 999; LAN_FAILURE event 358 YC / restore 358 YK, zone 903; POWER event 302 YT / restore 302 YR, zone 999; REMOTE_FINISHED event 412 RS, zone 999, no restore; REMOTE_STARTED event 411 RB, zone 999, no restore; SIM1_FAILURE event 358 YC / restore 358 YK, zone 901; SIM2_FAILURE event 358 YC / restore 358 YK, zone 905; TEST event 602 RP, zone 999, no restore." src="./image56.webp" style="width:7.086614173228346in;height:2.1338582677165356in" />
+- **CID** (**CID code**) – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
+
+- **SIA** (**Sia code**) – enter the event code or leave the default value. Upon entering the event, the event code will be sent to Protegus2 and CMS.
+
+- **Part.** (**Partition number**) – enter the partition (area) number that will be sent when an internal event occurs and the system is restored.
+
+- **Zone** (**Zone number**) - enter the zone number that will be sent when an internal event occurs and the system is restored.
+
+### Event summary
+
+Here you can enable, disable and modify internal messages sent by your device. Disabling an internal message here will prevent it from being sent regardless of other settings.
+
+=== "Protegus app"
+
+    In the Protegus app: **Advanced settings → System events**. Events are listed under **Event** and **Restore**; select one to change it.
+
+    ![Protegus app, System events. Event list, all enabled: COMMUNICATION E350, LAN_FAILURE E358, POWER E302, REMOTE_FINISHED E412, REMOTE_STARTED E411, SIM1_FAILURE E358, SIM2_FAILURE E358, TEST E602. Restore list: COMMUNICATION R350, LAN_FAILURE R358, POWER R302, SIM1_FAILURE R358, SIM2_FAILURE R358.](./protegus-app/get-events-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig, open the **Event summary** window.
+
+    <img alt="TrikdisConfig 'Event summary' window listing default Contact ID/SIA event and restore codes (Partition 99): COMMUNICATION event 350 YC / restore 350 YK, zone 999; LAN_FAILURE event 358 YC / restore 358 YK, zone 903; POWER event 302 YT / restore 302 YR, zone 999; REMOTE_FINISHED event 412 RS, zone 999, no restore; REMOTE_STARTED event 411 RB, zone 999, no restore; SIM1_FAILURE event 358 YC / restore 358 YK, zone 901; SIM2_FAILURE event 358 YC / restore 358 YK, zone 905; TEST event 602 RP, zone 999, no restore." src="./image56.webp" style="width:7.086614173228346in;height:2.1338582677165356in" />
 
 - **COMMUNICATION** – message about connection error between the control panel and communicator.
 
@@ -989,13 +1197,14 @@ In this window, you can enable, disable and modify internal messages sent by you
 - **TEST** – periodic test message.
 
 !!! note
-    To enable periodic TEST messages and set their period, go to "**CMS
-    reporting" -> "Settings" -> "Test period"**.
-- **Enable** – when selected, the sending of messages is enabled.
+    To enable periodic TEST messages and set their period, see **Test period** in [Test, ping and reporting mode](#test-ping-and-reporting-mode).
+- **Enable** (**Enabled**) – when selected, the sending of messages is enabled.
 
 You can change the Contact ID (SIA) code for each event, and also the zone and partition number.
 
-### Restoring factory settings 
+### Restoring factory settings
+
+The Protegus app cannot restore factory settings. Use TrikdisConfig or the RESET button.
 
 To restore the communicator's factory settings, you need to click the “**Restore”** button in the TrikdisConfig window.
 

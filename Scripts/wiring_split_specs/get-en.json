@@ -1,0 +1,58 @@
+{
+  "page": "docs/en/alarm-communicators/cellular/get/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image22.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": "Wiring diagram: DSC panel keypad bus to GET. RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA."
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": "Wiring diagram: PARADOX panel serial port to GET through the EX-CRP2.4 cable (ordered separately). R (red, +12V) to +DC, B (black) to -DC, Y (yellow) to CLK, G (green) to DATA."
+      }
+    },
+    {
+      "src": "image23.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": "Wiring diagram: CADDX panel keypad bus to GET. POS to +DC (+12V), COM to -DC, DATA to DATA; CLK is not used."
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": "Wiring diagram: TEXECOM panel serial port to GET through the EX-CRP4 cable (ordered separately). R (red, +12V) to +DC, B (black) to -DC, BL (blue) to CLK, W (white) to DATA."
+      }
+    },
+    {
+      "src": "image24.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": "Wiring diagram: Inner Range Inception to GET. VOUT + (+12V) to +DC and VOUT 0V to -DC; from the panel's USB port through Inner Range cable 993030USB: black wire to the 0V/-DC line, green wire to CLK, white wire to DATA."
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": "Wiring diagram: Inner Range Integriti Port 0 to GET through Inner Range cable INTG-996795. +DET (+13V) to +DC, GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA."
+      }
+    },
+    {
+      "src": "image25.webp",
+      "left": {
+        "file": "wiring-honeywell-vista.webp",
+        "heading": "Honeywell Vista-15, Vista-20, Vista-48",
+        "alt": "Wiring diagram: Honeywell Vista-15, Vista-20, Vista-48 panel keypad bus to GET. Terminal 4 to -DC, terminal 5 to +DC (+12V), terminal 6 to DATA, terminal 7 to CLK."
+      },
+      "right": {
+        "file": "wiring-control-panel-tip-ring.webp",
+        "heading": "Control panel (telephone line communicator, TIP/RING)",
+        "alt": "Wiring diagram: control panel to GET over its telephone line communicator. +AUX to +DC (+12 V), -AUX to -DC; telephone line communicator terminals: panel TIP to GET TIP, panel RING to GET RING."
+      }
+    }
+  ]
+}

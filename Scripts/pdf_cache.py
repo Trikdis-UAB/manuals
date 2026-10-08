@@ -26,6 +26,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _GLOBAL_FILES = [
     "Scripts/pdf-export.css",
     "Scripts/stamp_manual_pdf.py",
+    # The site's own print rules, and the script that labels each tab's block for print.
+    "docs/stylesheets/print.css",
+    "docs/javascripts/tool-switcher.js",
 ]
 _GLOBAL_DIRS = [
     "Scripts/fonts",
