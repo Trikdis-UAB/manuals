@@ -252,7 +252,21 @@ The communicator has two input terminals (IN1, IN2) for connecting NO, NC, EOL t
 
 Connect the input according to the selected input type (NO, NC, EOL), as shown in the schemes below:
 
-<img alt="Four input wiring diagrams from COM to INx, left to right: Normally open (NO), with an NO contact; Normally closed (NC), with an NC contact; Normally closed with End Of Line resistor 2,2k (EOL 2,2k), with the resistor in series with the NC contact; and Normally open with End Of Line resistor 2,2k (EOL 2,2k), with the resistor in parallel with the NO contact." src="./image13.webp" style="width:5.68503937007874in;height:1.625984251968504in" />
+#### Normally open (NO)
+
+<img class="wiring-diagram" alt="Input wiring schematic: normally open (NO) contact between COM and INx." src="./wiring-input-no.webp" width="265" height="231" />
+
+#### Normally closed (NC)
+
+<img class="wiring-diagram" alt="Input wiring schematic: normally closed (NC) contact between COM and INx." src="./wiring-input-nc.webp" width="267" height="231" />
+
+#### Normally closed with 2,2k end-of-line resistor (EOL 2,2k)
+
+<img class="wiring-diagram" alt="Input wiring schematic: NC contact with a 2,2k end of line resistor in series between COM and INx (EOL 2,2k)." src="./wiring-input-nc-eol.webp" width="304" height="282" />
+
+#### Normally open with 2,2k end-of-line resistor (EOL 2,2k)
+
+<img class="wiring-diagram" alt="Input wiring schematic: NO contact with a 2,2k end of line resistor in parallel between COM and INx (EOL 2,2k)." src="./wiring-input-no-eol.webp" width="265" height="339" />
 
 ### Connect LAN cable 
 
@@ -260,7 +274,13 @@ Connect the input according to the selected input type (NO, NC, EOL), as shown i
 
 ### Schematic for wiring a relay and LED 
 
-<img alt="Wiring diagram: E16T to relay and LED. Relay coil: +DC and OUT to the two coil terminals; relay contacts are labelled NC, C and NO. LED: E16T +DC to a 2k2 resistor, then to the LED and back to OUT in series." src="./image15.webp" style="width:4.437007874015748in;height:0.9133858267716536in" />
+#### Relay
+
+<img class="wiring-diagram" alt="Wiring diagram: E16T to a relay. +DC and OUT to the two relay coil terminals; the relay contacts are labelled NC, C and NO." src="./wiring-relay.webp" width="657" height="251" />
+
+#### LED
+
+<img class="wiring-diagram" alt="Wiring diagram: E16T to an LED. +DC through a 2k2 resistor to the LED, and the LED back to OUT." src="./wiring-led.webp" width="538" height="206" />
 
 ## Programming the control panel 
 

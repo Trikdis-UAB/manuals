@@ -1,0 +1,105 @@
+{
+  "page": "docs/ru/alarm-communicators/cellular/g16/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image17.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image18.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image19.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image20.webp",
+      "left": {
+        "file": "wiring-crow-runner.webp",
+        "heading": "Crow Runner 4/8, Runner 8/16",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-pyronix.webp",
+        "heading": "Pyronix",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image21.webp",
+      "single": {
+        "heading": "Honeywell Vista-15, Vista-20, Vista-48",
+        "file": "wiring-honeywell-vista.webp"
+      }
+    },
+    {
+      "src": "image23.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Нормально открытый (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Нормально закрытый (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Нормально закрытая цепь с резистором 2,2к в конце линии (NC/EOL 2,2к)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image24.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Нормально открытая цепь с резистором 2,2к в конце линии (NO/EOL 2,2к)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-deol.webp",
+          "heading": "Нормально открытая цепь с резистором 2,2к в конце линии и распознаванием тампера (NO/DEOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-deol.webp",
+          "heading": "Нормально закрытая цепь с резистором 2,2к в конце линии и распознаванием тампера (NC/DEOL)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

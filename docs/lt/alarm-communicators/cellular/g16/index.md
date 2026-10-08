@@ -348,15 +348,41 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image17.webp" style="width:7.085014216972878in;height:2.840005468066492in" />
+#### DSC
 
-<img alt="" src="./image18.webp" style="width:7.085014216972878in;height:2.862505468066492in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="547" height="480" />
 
-<img alt="" src="./image19.webp" style="width:7.085014216972878in;height:2.8375054680664915in" />
+#### PARADOX
 
-<img alt="" src="./image20.webp" style="width:7.085014216972878in;height:2.8900054680664917in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="652" height="480" />
 
-<img alt="" src="./image21.webp" style="width:3.24500656167979in;height:2.7675054680664917in" />
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="536" height="479" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="663" height="489" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="636" height="480" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="565" height="460" />
+
+#### Crow Runner 4/8, Runner 8/16
+
+<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="573" height="494" />
+
+#### Pyronix
+
+<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="583" height="494" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="563" height="480" />
 
 ### G16 prijungimo schema prie centralės jungiklio (angl. keyswitch) zonos 
 
@@ -379,9 +405,29 @@ Komunikatorius turi 3 universalius įėjimo/išėjimo gnybtus, kuriems galima nu
 
 NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image23.webp" style="width:4.921259842519685in;height:1.5590551181102361in" />
+#### Normaliai atvira (NO)
 
-<img alt="" src="./image24.webp" style="width:4.921259842519685in;height:1.905511811023622in" />
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="305" height="268" />
+
+#### Normaliai uždara (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="315" height="268" />
+
+#### Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (NC/EOL 2,2k)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="353" height="374" />
+
+#### Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (NO/EOL 2,2k)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="308" height="452" />
+
+#### Normaliai atvira grandinė su 2,2k varža linijos gale ir tamperio atpažinimu (NO/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="410" height="464" />
+
+#### Normaliai uždara grandinė su 2,2k varža linijos gale ir tamperio atpažinimu (NC/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="417" height="464" />
 
 !!! note "Pastaba"
     Jei reikia, kad komunikatorius turėtų daugiau įėjimų IN arba išėjimų

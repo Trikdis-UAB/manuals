@@ -253,7 +253,21 @@ Komunikatorius turi 2 įėjimo gnybtus (IN1, IN2) prijungti NC, NO, EOL tipo gra
 
 NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
-<img alt="" src="./image13.webp" style="width:5.586614173228346in;height:1.669291338582677in" />
+#### Normaliai atvira (NO)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="261" height="231" />
+
+#### Normaliai uždara (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="262" height="231" />
+
+#### Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (EOL 2,2k)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="298" height="276" />
+
+#### Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (EOL 2,2k)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="274" height="358" />
 
 ### LAN kabelio prijungimas
 
@@ -261,7 +275,13 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 ### Relės ir LED prijungimo schemos
 
-<img alt="" src="./image15.webp" style="width:4.559055118110236in;height:0.984251968503937in" />
+#### Relė
+
+<img class="wiring-diagram" alt="" src="./wiring-relay.webp" width="647" height="247" />
+
+#### Šviesos diodas (LED)
+
+<img class="wiring-diagram" alt="" src="./wiring-led.webp" width="531" height="203" />
 
 ## Apsaugos centralės programavimas
 

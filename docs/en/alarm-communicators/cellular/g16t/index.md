@@ -332,11 +332,23 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 
 Following one of the schematics provided below, wire the communicator to the control panel.
 
-<img alt="Two wiring diagrams, both titled Control panel connection diagram. Left, no telephone line supervision: panel +AUX to G16T +DC, panel -AUX to -DC, panel TIP to G16T TIP, panel RING to G16T RING. Right, with telephone line supervision: same four, plus panel T-1 to G16T T1/IN1, panel R-1 to R1/IN2. G16T terminals OUT, COM, A RS485, B RS485 are not connected in either diagram." src="./image14.webp" style="width:7.0875in;height:3.4756944444444446in" />
+#### Without telephone line supervision
+
+<img class="wiring-diagram" alt="Wiring diagram: control panel to G16T without telephone line supervision. Panel +AUX to G16T +DC, -AUX to -DC, TIP to TIP, RING to RING. G16T terminals OUT, COM, A RS485, B RS485 are not connected." src="./wiring-tip-ring.webp" width="602" height="600" />
+
+#### With telephone line supervision
+
+<img class="wiring-diagram" alt="Wiring diagram: control panel to G16T with telephone line supervision. Panel +AUX to G16T +DC, -AUX to -DC, TIP to TIP, RING to RING, T-1 to T1/IN1, R-1 to R1/IN2. G16T terminals OUT, COM, A RS485, B RS485 are not connected." src="./wiring-tip-ring-supervised.webp" width="602" height="600" />
 
 ### Schematics for connecting to panel keyswitch zone 
 
-<img alt="Two wiring diagrams, both titled Control panel connection diagram, for arming/disarming via keyswitch zone. Left, no telephone line supervision: panel +AUX to G16T +DC, -AUX to -DC, TIP to TIP, RING to RING, and panel Zone (keyswitch) to G16T OUT. Right, with telephone line supervision: same, plus panel T-1 to T1/IN1, R-1 to R1/IN2. COM, A RS485, B RS485 not connected in either diagram." src="./image15.webp" style="width:7.0875in;height:3.4680555555555554in" />
+#### Without telephone line supervision
+
+<img class="wiring-diagram" alt="Wiring diagram: arming/disarming the control panel via its keyswitch zone, without telephone line supervision. Panel +AUX to G16T +DC, -AUX to -DC, TIP to TIP, RING to RING, and the panel's keyswitch zone to G16T OUT. COM, A RS485, B RS485 are not connected." src="./wiring-keyswitch.webp" width="602" height="599" />
+
+#### With telephone line supervision
+
+<img class="wiring-diagram" alt="Wiring diagram: arming/disarming the control panel via its keyswitch zone, with telephone line supervision. Panel +AUX to G16T +DC, -AUX to -DC, TIP to TIP, RING to RING, T-1 to T1/IN1, R-1 to R1/IN2, and the panel's keyswitch zone to G16T OUT. COM, A RS485, B RS485 are not connected." src="./wiring-keyswitch-supervised.webp" width="603" height="599" />
 
 Follow these schematics if the control panel will be armed/disarmed with the G16T PGM output turning on/off the panel’s keyswitch zone.
 
@@ -351,9 +363,29 @@ The communicator has two input terminals (IN1, IN2) for connecting NO, NC, NO/EO
 
 Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), as shown in the schemes below:
 
-<img alt="Three input wiring schematics, each from COM to INx. Normally open (NO): Short - Alarm, Open - Restore. Normally closed (NC): Short - Restore, Open - Alarm. Normally closed with a 10k end of line resistor in series (NC/EOL): Short - Alarm, Open - Alarm, 10k - Restore." src="./image16.webp" style="width:5.228346456692913in;height:1.720472440944882in" />
+#### Normally open (NO)
 
-<img alt="Three input wiring schematics, each from COM to INx. Normally open with a 10k end of line resistor in parallel (NO/EOL): Short - Alarm, Open - Alarm, 10k - Restore. Normally open with tamper recognition (NO/DEOL): tamper switch and a 10k resistor in series, then the NO contact with a second 10k resistor across it; Short - Tamper, Open - Tamper, 10k - Alarm, 12k-25k - Restore. Normally closed with tamper recognition (NC/DEOL): the same with an NC contact; Short - Tamper, Open - Tamper, 10k - Restore, 15k-25k - Alarm." src="./image17.webp" style="width:5.232283464566929in;height:2.125984251968504in" />
+<img class="wiring-diagram" alt="Input wiring schematic: normally open (NO) contact between COM and INx. Short - Alarm, Open - Restore." src="./wiring-input-no.webp" width="299" height="259" />
+
+#### Normally closed (NC)
+
+<img class="wiring-diagram" alt="Input wiring schematic: normally closed (NC) contact between COM and INx. Short - Restore, Open - Alarm." src="./wiring-input-nc.webp" width="314" height="259" />
+
+#### Normally closed with 10k end-of-line resistor (NC/EOL)
+
+<img class="wiring-diagram" alt="Input wiring schematic: NC contact with a 10k end of line resistor in series between COM and INx (NC/EOL). Short - Alarm, Open - Alarm, 10k - Restore." src="./wiring-input-nc-eol.webp" width="327" height="359" />
+
+#### Normally open with 10k end-of-line resistor (NO/EOL)
+
+<img class="wiring-diagram" alt="Input wiring schematic: NO contact with a 10k end of line resistor in parallel between COM and INx (NO/EOL). Short - Alarm, Open - Alarm, 10k - Restore." src="./wiring-input-no-eol.webp" width="313" height="436" />
+
+#### Normally open with 10k end-of-line resistor and tamper recognition (NO/DEOL)
+
+<img class="wiring-diagram" alt="Input wiring schematic with tamper recognition (NO/DEOL): between COM and INx, a tamper switch and a 10k resistor in series, then the NO contact with a second 10k resistor across it. Short - Tamper, Open - Tamper, 10k - Alarm, 12k-25k - Restore." src="./wiring-input-no-deol.webp" width="398" height="447" />
+
+#### Normally closed with 10k end-of-line resistor and tamper recognition (NC/DEOL)
+
+<img class="wiring-diagram" alt="Input wiring schematic with tamper recognition (NC/DEOL): between COM and INx, a tamper switch and a 10k resistor in series, then the NC contact with a second 10k resistor across it. Short - Tamper, Open - Tamper, 10k - Restore, 15k-25k - Alarm." src="./wiring-input-nc-deol.webp" width="403" height="447" />
 
 !!! note
     If more inputs or outputs need to be connected to the communicator, or

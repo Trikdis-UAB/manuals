@@ -1,0 +1,58 @@
+{
+  "page": "docs/lt/alarm-communicators/cellular/get/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image22.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image23.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image24.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image25.webp",
+      "left": {
+        "file": "wiring-honeywell-vista.webp",
+        "heading": "Honeywell Vista-15, Vista-20, Vista-48",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-control-panel-tip-ring.webp",
+        "heading": "Centralė (telefoninis komunikatorius, TIP/RING)",
+        "alt": ""
+      }
+    }
+  ]
+}

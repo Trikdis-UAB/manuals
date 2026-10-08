@@ -246,7 +246,21 @@
 
 Cхемы типов входных цепей NC, NO, EOL:
 
-<img alt="" src="./image13.webp" style="width:5.830708661417323in;height:1.4606299212598426in" />
+#### Нормально открытый (NO)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="259" height="210" />
+
+#### Нормально закрытый (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="262" height="210" />
+
+#### Нормально закрытая цепь с резистором 2,2к в конце линии (EOL 2,2к)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="321" height="258" />
+
+#### Нормально открытая цепь с резистором 2,2к в конце линии (EOL 2,2к)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="317" height="312" />
 
 ### Подключение LAN кабеля 
 
@@ -254,7 +268,13 @@ Cхемы типов входных цепей NC, NO, EOL:
 
 ### Схема подключения реле и LED индикатора 
 
-<img alt="" src="./image15.webp" style="width:4.862204724409449in;height:0.8937007874015748in" />
+#### Реле
+
+<img class="wiring-diagram" alt="" src="./wiring-relay.webp" width="630" height="229" />
+
+#### Светодиод (LED)
+
+<img class="wiring-diagram" alt="" src="./wiring-led.webp" width="509" height="202" />
 
 ## Программирование охранный панелей 
 

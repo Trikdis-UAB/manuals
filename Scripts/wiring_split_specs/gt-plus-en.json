@@ -1,0 +1,45 @@
+{
+  "page": "docs/en/alarm-communicators/cellular/gt-plus/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image18.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": "Wiring diagram: DSC panel keypad bus to GT+. RED to +DC, BLK to -DC, YEL to CLK, GRN to DATA."
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": "Wiring diagram: PARADOX panel serial port to GT+ through the EX-CRP2.4 cable (ordered separately). Red wire to +DC, black to -DC, yellow to CLK, green to DATA."
+      }
+    },
+    {
+      "src": "image19.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": "Wiring diagram: CADDX panel keypad bus to GT+. POS to +DC, COM to -DC, DATA to DATA (TIP, RING, CLK not connected)."
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": "Wiring diagram: TEXECOM panel serial port to GT+ through the EX-CRP4 cable (ordered separately). Red wire to +DC, black to -DC, blue to CLK, white to DATA."
+      }
+    },
+    {
+      "src": "image20.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": "Wiring diagram: Inner Range Inception to GT+. VOUT + (+12V) to +DC and VOUT 0V to -DC; from the panel's USB port through Inner Range cable 993030USB: black wire to the 0V/-DC line, green wire to CLK, white wire to DATA."
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": "Wiring diagram: Inner Range Integriti Port 0 to GT+ through Inner Range cable INTG-996795. +DET (+13V) to +DC, GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA."
+      }
+    }
+  ]
+}

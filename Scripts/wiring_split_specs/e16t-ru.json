@@ -1,0 +1,44 @@
+{
+  "page": "docs/ru/alarm-communicators/e16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image13.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Нормально открытый (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Нормально закрытый (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Нормально закрытая цепь с резистором 2,2к в конце линии (EOL 2,2к)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Нормально открытая цепь с резистором 2,2к в конце линии (EOL 2,2к)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image15.webp",
+      "left": {
+        "file": "wiring-relay.webp",
+        "heading": "Реле",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-led.webp",
+        "heading": "Светодиод (LED)",
+        "alt": ""
+      }
+    }
+  ]
+}

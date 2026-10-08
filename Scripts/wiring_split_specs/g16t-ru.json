@@ -1,0 +1,72 @@
+{
+  "page": "docs/ru/alarm-communicators/cellular/g16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-tip-ring.webp",
+        "heading": "Без контроля телефонной линии",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-tip-ring-supervised.webp",
+        "heading": "С контролем телефонной линии",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image15.webp",
+      "left": {
+        "file": "wiring-keyswitch.webp",
+        "heading": "Без контроля телефонной линии",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-keyswitch-supervised.webp",
+        "heading": "С контролем телефонной линии",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image16.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Нормально открытый (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Нормально закрытый (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Нормально закрытая цепь с резистором 10к в конце линии (NC/EOL 10к)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image17.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Нормально открытая цепь с резистором 10к в конце линии (NO/EOL 10к)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-deol.webp",
+          "heading": "Нормально открытая цепь с резистором 10к в конце линии и распознаванием тампера (NO/DEOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-deol.webp",
+          "heading": "Нормально закрытая цепь с резистором 10к в конце линии и распознаванием тампера (NC/DEOL)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

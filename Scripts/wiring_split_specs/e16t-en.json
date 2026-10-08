@@ -1,0 +1,44 @@
+{
+  "page": "docs/en/alarm-communicators/e16t/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image13.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normally open (NO)",
+          "alt": "Input wiring schematic: normally open (NO) contact between COM and INx."
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normally closed (NC)",
+          "alt": "Input wiring schematic: normally closed (NC) contact between COM and INx."
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normally closed with 2,2k end-of-line resistor (EOL 2,2k)",
+          "alt": "Input wiring schematic: NC contact with a 2,2k end of line resistor in series between COM and INx (EOL 2,2k)."
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normally open with 2,2k end-of-line resistor (EOL 2,2k)",
+          "alt": "Input wiring schematic: NO contact with a 2,2k end of line resistor in parallel between COM and INx (EOL 2,2k)."
+        }
+      ]
+    },
+    {
+      "src": "image15.webp",
+      "left": {
+        "file": "wiring-relay.webp",
+        "heading": "Relay",
+        "alt": "Wiring diagram: E16T to a relay. +DC and OUT to the two relay coil terminals; the relay contacts are labelled NC, C and NO."
+      },
+      "right": {
+        "file": "wiring-led.webp",
+        "heading": "LED",
+        "alt": "Wiring diagram: E16T to an LED. +DC through a 2k2 resistor to the LED, and the LED back to OUT."
+      }
+    }
+  ]
+}

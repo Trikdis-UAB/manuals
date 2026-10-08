@@ -341,20 +341,37 @@
 
 Подсоедините коммуникатор к охранной панели по одной из ниже указанных схем.
 
-<img alt="" src="./image18.webp" style="width:7.0875in;height:2.7888888888888888in" />
+#### DSC
 
-<img alt="" src="./image19.webp" style="width:7.0875in;height:2.8152777777777778in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="545" height="480" />
 
-<img alt="" src="./image20.webp" style="width:7.0875in;height:2.6659722222222224in" />
+#### PARADOX
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-  <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 100%; height: auto;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 100%; height: auto;" />
-  </figure>
-</div>
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="650" height="480" />
+
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="535" height="485" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="661" height="478" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="634" height="460" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="563" height="460" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="575" height="479" />
+
+#### Охранная панель (телефонный коммуникатор, TIP/RING)
+
+<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="623" height="479" />
 
 ### Схема подключения коммуникатора к шине клавиатуры и телефонному коммуникатору (клеммы TIP/RING) охранной панели PARADOX SP/SP+/MG/MG+ 
 

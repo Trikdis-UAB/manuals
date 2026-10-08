@@ -340,13 +340,37 @@ After finishing configuration, click **Write \[F5\]** and disconnect the USB cab
 
 Following one of the schematics provided below, connect communicator to the control panel.
 
-<img alt="Two wiring diagrams. DSC panel keypad bus to GT: RED to +DC, BLK to -DC, YEL to CLK, GRN to DATA. PARADOX panel serial port to GT through the EX-CRP2.4 cable (ordered separately): red wire to +DC, black to -DC, yellow to CLK, green to DATA." src="./image18.webp" style="width:7.0875in;height:2.7888888888888888in" />
+#### DSC
 
-<img alt="Two wiring diagrams. CADDX panel keypad bus to GT: POS to +DC, COM to -DC, DATA to DATA. TEXECOM panel serial port to GT through the EX-CRP4 cable (ordered separately): red wire to +DC, black to -DC, blue to CLK, white to DATA." src="./image19.webp" style="width:7.0875in;height:2.7756944444444445in" />
+<img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to GT. RED to +DC, BLK to -DC, YEL to CLK, GRN to DATA." src="./wiring-dsc.webp" width="545" height="480" />
 
-<img alt="Two wiring diagrams. Inner Range Inception to GT: VOUT + to +DC and VOUT 0V to -DC, and from the panel's USB port through Inner Range cable 993030USB: black wire to -DC, green wire to CLK, white wire to DATA. Inner Range Integriti Port 0 to GT through Inner Range cable INTG-996795: +DET (+13 V) to +DC, GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA." src="./image20.webp" style="width:7.0875in;height:2.772222222222222in" />
+#### PARADOX
 
-<img alt="Two wiring diagrams. Honeywell Vista-15, Vista-20 or Vista-48 keypad bus to GT: terminal 4 to -DC, 5 to +DC, 6 to DATA, 7 to CLK. Any control panel's telephone line communicator terminals to GT: +AUX to +DC, -AUX to -DC, TIP to TIP, RING to RING." src="./image21.webp" style="width:6.860014216972878in;height:2.713338801399825in" />
+<img class="wiring-diagram" alt="Wiring diagram: PARADOX panel serial port to GT through the EX-CRP2.4 cable (ordered separately). Red wire to +DC, black to -DC, yellow to CLK, green to DATA." src="./wiring-paradox.webp" width="650" height="480" />
+
+#### CADDX
+
+<img class="wiring-diagram" alt="Wiring diagram: CADDX panel keypad bus to GT. POS to +DC, COM to -DC, DATA to DATA." src="./wiring-caddx.webp" width="535" height="479" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="Wiring diagram: TEXECOM panel serial port to GT through the EX-CRP4 cable (ordered separately). Red wire to +DC, black to -DC, blue to CLK, white to DATA." src="./wiring-texecom.webp" width="661" height="479" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="Wiring diagram: Inner Range Inception to GT. VOUT + to +DC and VOUT 0V to -DC; from the panel's USB port through Inner Range cable 993030USB: black wire to -DC, green wire to CLK, white wire to DATA." src="./wiring-innerrange-inception.webp" width="634" height="478" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="Wiring diagram: Inner Range Integriti Port 0 to GT through Inner Range cable INTG-996795. +DET (+13 V) to +DC, GND 5 to -DC, Rx 3 to CLK, Tx 2 to DATA." src="./wiring-innerrange-integriti.webp" width="563" height="460" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="Wiring diagram: Honeywell Vista-15, Vista-20 or Vista-48 keypad bus to GT. Terminal 4 to -DC, 5 to +DC, 6 to DATA, 7 to CLK." src="./wiring-honeywell-vista.webp" width="582" height="485" />
+
+#### Control panel (telephone line communicator, TIP/RING)
+
+<img class="wiring-diagram" alt="Wiring diagram: any control panel's telephone line communicator terminals to GT. +AUX to +DC, -AUX to -DC, TIP to TIP, RING to RING." src="./wiring-control-panel-tip-ring.webp" width="621" height="476" />
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel
 

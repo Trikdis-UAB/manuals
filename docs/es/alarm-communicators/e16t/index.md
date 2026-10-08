@@ -246,7 +246,21 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 El comunicador contiene dos terminales de entrada de tipo seleccionable (IN1, IN2) para la conexión de sensores, pueden ser NC, NO o EOL.
 
-<img alt="" src="./image14.webp" style="width:5.2204724409448815in;height:1.7755905511811023in" />
+#### Normalmente abierto (NA)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="261" height="252" />
+
+#### Normalmente cerrado (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="262" height="252" />
+
+#### Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="326" height="320" />
+
+#### Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="285" height="409" />
 
 ### Conectar el cable LAN 
 

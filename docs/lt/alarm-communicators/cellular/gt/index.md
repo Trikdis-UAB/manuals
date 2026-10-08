@@ -345,13 +345,37 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungimo schemų.
 
-<img alt="" src="./image18.webp" style="width:7.0875in;height:2.86875in" />
+#### DSC
 
-<img alt="" src="./image19.webp" style="width:7.0875in;height:2.842361111111111in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="541" height="480" />
 
-<img alt="" src="./image20.webp" style="width:7.0875in;height:2.6659722222222224in" />
+#### PARADOX
 
-<img alt="" src="./image21.webp" style="width:6.973347550306212in;height:2.893338801399825in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="650" height="491" />
+
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="535" height="479" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="661" height="490" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="634" height="459" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="563" height="459" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="573" height="477" />
+
+#### Centralė (telefoninis komunikatorius, TIP/RING)
+
+<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="596" height="511" />
 
 ### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų) 
 

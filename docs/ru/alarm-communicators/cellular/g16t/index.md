@@ -332,11 +332,23 @@ GSM коммуникатор G16T соответствует стандарту 
 
 Подсоедините коммуникатор к охранной панели по одной из ниже указанных схем.
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:3.2416666666666667in" />
+#### Без контроля телефонной линии
+
+<img class="wiring-diagram" alt="" src="./wiring-tip-ring.webp" width="597" height="556" />
+
+#### С контролем телефонной линии
+
+<img class="wiring-diagram" alt="" src="./wiring-tip-ring-supervised.webp" width="597" height="555" />
 
 ### Схема подсоединения G16Т к зоне выключателя (keyswitch) охранной панели 
 
-<img alt="" src="./image15.webp" style="width:7.0875in;height:3.170138888888889in" />
+#### Без контроля телефонной линии
+
+<img class="wiring-diagram" alt="" src="./wiring-keyswitch.webp" width="597" height="536" />
+
+#### С контролем телефонной линии
+
+<img class="wiring-diagram" alt="" src="./wiring-keyswitch-supervised.webp" width="597" height="536" />
 
 Руководствуйтесь этой схемой, при включении/выключении охранной панели зоной выключателя (keyswitch), которая управляется PGM выходом коммуникатора G16Т.
 
@@ -352,9 +364,29 @@ GSM коммуникатор G16T соответствует стандарту 
 
 Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL:
 
-<img alt="" src="./image16.webp" style="width:4.470008748906387in;height:1.3500021872265966in" />
+#### Нормально открытый (NO)
 
-<img alt="" src="./image17.webp" style="width:5.340010936132983in;height:1.695003280839895in" />
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="310" height="223" />
+
+#### Нормально закрытый (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="304" height="223" />
+
+#### Нормально закрытая цепь с резистором 10к в конце линии (NC/EOL 10к)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="341" height="301" />
+
+#### Нормально открытая цепь с резистором 10к в конце линии (NO/EOL 10к)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="337" height="359" />
+
+#### Нормально открытая цепь с резистором 10к в конце линии и распознаванием тампера (NO/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="397" height="370" />
+
+#### Нормально закрытая цепь с резистором 10к в конце линии и распознаванием тампера (NC/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="397" height="370" />
 
 !!! note "Примечание"
     Подключив к коммуникатору проводные или беспроводные Trikdis iO

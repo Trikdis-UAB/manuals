@@ -199,23 +199,67 @@
 
 **Кабель данных.** Кабель данных соединяющий радиопередатчик и охранную панель должен быть не длиннее 50 см. Если кабель данных длиннее, то следует использовать экранированный кабель. Кабель данных подключается в охранной панели к шине клавиатуры, или к последовательному порту или к телефонному коммуникатору. Избегайте прокладки кабеля параллельно с силовыми кабелями переменного тока, антенными кабелями или другими сильными источниками электромагнитных полей.
 
-<img alt="" src="./image7.webp" style="width:6.900014216972878in;height:2.5675054680664915in" />
+#### DSC
 
-<img alt="" src="./image8.webp" style="width:6.900014216972878in;height:2.7500054680664916in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="518" height="308" />
 
-<img alt="" src="./image9.webp" style="width:6.79251312335958in;height:2.7025054680664917in" />
+#### PARADOX
 
-<img alt="" src="./image10.webp" style="width:6.167512029746281in;height:1.792503280839895in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="676" height="455" />
 
-<img alt="" src="./image11.webp" style="width:6.56501312335958in;height:3.0125054680664918in" />
+#### CADDX
 
-<img alt="" src="./image12.webp" style="width:6.52001312335958in;height:1.837503280839895in" />
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="518" height="314" />
 
-<img alt="" src="./image13.webp" style="width:2.9950054680664917in;height:1.897503280839895in" />
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="674" height="487" />
+
+#### CROW Runner
+
+<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="525" height="320" />
+
+#### SECOLink
+
+<img class="wiring-diagram" alt="" src="./wiring-secolink.webp" width="666" height="483" />
+
+#### ARGUS-SPEKTR STRELEC
+
+<img class="wiring-diagram" alt="" src="./wiring-argus-spektr-strelec.webp" width="576" height="349" />
+
+#### BOLID C2000
+
+<img class="wiring-diagram" alt="" src="./wiring-bolid-c2000.webp" width="610" height="355" />
+
+#### PYRONIX
+
+<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="540" height="360" />
+
+#### ROVALANT A6-06
+
+<img class="wiring-diagram" alt="" src="./wiring-rovalant-a6-06.webp" width="648" height="556" />
+
+#### RISCO LightSYS
+
+<img class="wiring-diagram" alt="" src="./wiring-risco-lightsys.webp" width="546" height="337" />
+
+#### HONEYWELL VISTA
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="643" height="343" />
+
+#### INIM SMARTLINE
+
+<img class="wiring-diagram" alt="" src="./wiring-inim-smartline.webp" width="556" height="352" />
 
 ### Схема подключения телефонного коммуникатора охранной панели 
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:2.7840277777777778in" />
+#### Без мониторинга телефонной линии
+
+<img class="wiring-diagram" alt="" src="./wiring-landline-dialer.webp" width="603" height="383" />
+
+#### С мониторингом телефонной линии
+
+<img class="wiring-diagram" alt="" src="./wiring-landline-dialer-control.webp" width="605" height="483" />
 
 !!! note "Примечание"
     T16 нельзя подключать к городской телефонной линии.
@@ -241,7 +285,21 @@
 
 Схемы подключения зон (входов IN) NO, NC, EOL типов:
 
-<img alt="" src="./image15.webp" style="width:6.051181102362205in;height:1.4566929133858268in" />
+#### Нормально открытый (NO)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="287" height="208" />
+
+#### Нормально закрытый (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="282" height="208" />
+
+#### Нормально закрытая цепь с резистором 2,2к в конце линии (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="303" height="250" />
+
+#### Нормально открытая цепь с резистором 2,2к в конце линии (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="299" height="298" />
 
 ### Схема подключения PGM выходов охранной панели 
 
@@ -257,9 +315,17 @@
 
 ### Схемы подключения модулей RS485 
 
-<img alt="" src="./image18.webp" style="width:6.8075131233595805in;height:3.13250656167979in" />
+#### Wi-Fi модуль W485
 
-<img alt="" src="./image19.webp" style="width:3.50750656167979in;height:2.592505468066492in" />
+<img class="wiring-diagram" alt="" src="./wiring-w485.webp" width="610" height="447" />
+
+#### Считыватель электронных ключей TM17
+
+<img class="wiring-diagram" alt="" src="./wiring-tm17.webp" width="582" height="561" />
+
+#### Модуль Ethernet E485
+
+<img class="wiring-diagram" alt="" src="./wiring-e485.webp" width="683" height="504" />
 
 Используйте кабель витой пары (STP 4x2x0.5) для шины RS485, если длина шины более 1 м. Избегайте прокладки кабеля параллельно с силовыми кабелями переменного тока, антенными кабелями или другими сильными источниками электромагнитных полей.
 

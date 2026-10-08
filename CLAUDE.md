@@ -7,6 +7,8 @@
 
 **Who confirms which product facts** (software vs product/commercial vs hardware — who to ask for an unknown, and why the source usually beats asking): see `NOTES/agent-lessons/who-confirms-product-facts.md`.
 
+**Language versions differ** (image numbers, order and even content are not the same across en/lt/es/ru — never map images by number): see `NOTES/agent-lessons/language-versions-differ.md`.
+
 **Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`.
 
 ## Credentials & API access

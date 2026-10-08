@@ -366,13 +366,37 @@ GSM/Ethernet коммуникатор GET может быть напрямую �
 
 Подсоедините коммуникатор к охранной панели по одной из ниже указанных схем.
 
-<img alt="" src="./image22.webp" style="width:6.743347550306212in;height:2.8466721347331583in" />
+#### DSC
 
-<img alt="" src="./image23.webp" style="width:6.803347550306212in;height:2.97000656167979in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="515" height="516" />
 
-<img alt="" src="./image24.webp" style="width:6.996680883639545in;height:2.8066721347331582in" />
+#### PARADOX
 
-<img alt="" src="./image25.webp" style="width:6.933347550306212in;height:3.2766732283464566in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="655" height="516" />
+
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="492" height="533" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="668" height="533" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="617" height="491" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="545" height="490" />
+
+#### Honeywell Vista-15, Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="545" height="504" />
+
+#### Охранная панель (телефонный коммуникатор, TIP/RING)
+
+<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="617" height="572" />
 
 ### Схема подключения коммуникатора к шине клавиатуры и телефонному коммуникатору (клеммы TIP/RING) охранной панели PARADOX SP/SP+/MG/MG+ 
 

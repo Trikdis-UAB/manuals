@@ -263,15 +263,41 @@
 
 Подсоедините коммуникатор к охранной панели по одной из ниже указанных схем.
 
-<img alt="" src="./image11.webp" style="width:7.0875in;height:2.660416666666667in" />
+#### DSC
 
-<img alt="" src="./image12.webp" style="width:7.0875in;height:2.66875in" />
+<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="571" height="460" />
 
-<img alt="" src="./image13.webp" style="width:7.0875in;height:2.678472222222222in" />
+#### PARADOX
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:2.8229166666666665in" />
+<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="622" height="440" />
 
-<img alt="" src="./image15.webp" style="width:3.25250656167979in;height:2.7125054680664915in" />
+#### CADDX
+
+<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="574" height="463" />
+
+#### TEXECOM
+
+<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="625" height="463" />
+
+#### INNERRANGE INCEPTION
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="651" height="462" />
+
+#### INNERRANGE INTEGRITI
+
+<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="535" height="433" />
+
+#### Crow Runner 4/8, Runner 8/16
+
+<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="575" height="487" />
+
+#### Pyronix
+
+<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="576" height="488" />
+
+#### Honeywell Vista-20, Vista-48
+
+<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="555" height="462" />
 
 ### Схема подсоединения E16 к зоне выключателя (keyswitch) охранной панели 
 
@@ -294,9 +320,29 @@
 
 Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL:
 
-<img alt="" src="./image17.webp" style="width:4.4175087489063865in;height:1.3500021872265966in" />
+#### Нормально открытый (NO)
 
-<img alt="" src="./image18.webp" style="width:5.340010936132983in;height:1.695003280839895in" />
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="377" height="270" />
+
+#### Нормально закрытый (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="370" height="270" />
+
+#### Нормально закрытая цепь с резистором 2,2к в конце линии (NC/EOL 2,2к)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="398" height="366" />
+
+#### Нормально открытая цепь с резистором 2,2к в конце линии (NO/EOL 2,2к)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="330" height="366" />
+
+#### Нормально открытая цепь с резистором 2,2к в конце линии и распознаванием тампера (NO/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="404" height="378" />
+
+#### Нормально закрытая цепь с резистором 2,2к в конце линии и распознаванием тампера (NC/DEOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="404" height="378" />
 
 !!! note "Примечание"
     Подключив к коммуникатору проводные или беспроводные Trikdis iO

@@ -198,23 +198,67 @@ The zones (inputs IN) of ***T16V,** **T16U, T16U5*** transmitters can be connect
 
 **Data cable**. The data cable connecting the RF transmitter and the control panel must be no longer than 50 cm. If the data cable is longer, a shielded cable must be used. The data cable should be connected to the keypad bus, serial port or telephone communicator on the control panel. Avoid mounting the cable in parallel with AC power cables, the antenna cable or other strong sources of electromagnetic field.
 
-<img alt="Two wiring diagrams. DSC panel keypad bus to T16: RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA. PARADOX panel to T16 through the EX-CRP2.4 cable, ordered separately: +AUX (+12V) and red wire R to + DC; -AUX and black wire B to - DC; yellow wire Y to Rx/CLK; green wire G to Tx/DATA." src="./image7.webp" style="width:7.0875in;height:2.566666666666667in" />
+#### DSC
 
-<img alt="Two wiring diagrams. CADDX panel keypad bus to T16: POS (+12V) to + DC, COM to - DC, DATA to Tx/DATA; Rx/CLK is unused. TEXECOM panel to T16 through the EX-CRP4 cable, ordered separately: +DC (+12V) and red wire R to + DC; -DC and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA." src="./image8.webp" style="width:7.0875in;height:2.546527777777778in" />
+<img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to T16. RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA." src="./wiring-dsc.webp" width="523" height="297" />
 
-<img alt="Two wiring diagrams. CROW Runner panel keypad bus to T16: POS (+12V) to + DC, NEG to - DC, CLK to Rx/CLK, DATA to Tx/DATA. SECOLink panel to T16 through the EX-CRP4 cable, ordered separately: +AUX (+12V) and red wire R to + DC; COM and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA." src="./image9.webp" style="width:7.0875in;height:2.588888888888889in" />
+#### PARADOX
 
-<img alt="Two wiring diagrams. ARGUS-SPEKTR STRELEC panel to T16: +PWR (+12V) to + DC, GND to - DC, TD to Rx/CLK, RD to Tx/DATA. BOLID C2000 panel to T16: +U (+12V) to + DC, GND to - DC, Tx to Rx/CLK, Rx to Tx/DATA." src="./image10.webp" style="width:7.0875in;height:1.7743055555555556in" />
+<img class="wiring-diagram" alt="Wiring diagram: PARADOX panel to T16 through the EX-CRP2.4 cable, ordered separately. +AUX (+12V) and red wire R to + DC; -AUX and black wire B to - DC; yellow wire Y to Rx/CLK; green wire G to Tx/DATA." src="./wiring-paradox.webp" width="658" height="444" />
 
-<img alt="Two wiring diagrams. PYRONIX Matrix panel to T16: +AUX (+12V) to + DC, -AUX to - DC, KD to Tx/DATA; Rx/CLK is unused. ROVALANT A6-06 panel: SLOT XP4 connects to the ИС-RF serial module; Rovalant +12V to T16 + DC and -12V to - DC. The ИС-RF serial connector has three leads, to T16 - DC (joined with the -12V line at a dot), Rx/CLK and Tx/DATA; no connector lead goes to + DC." src="./image11.webp" style="width:7.0875in;height:2.91875in" />
+#### CADDX
 
-<img alt="Two wiring diagrams. RISCO LightSYS panel keypad bus to T16: RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA. HONEYWELL VISTA panel keypad bus to T16: terminal 4 to - DC, 5 to + DC, 6 to Tx/DATA, 7 to Rx/CLK; each pair of wires crosses without a junction dot." src="./image12.webp" style="width:7.0875in;height:1.66875in" />
+<img class="wiring-diagram" alt="Wiring diagram: CADDX panel keypad bus to T16. POS (+12V) to + DC, COM to - DC, DATA to Tx/DATA; Rx/CLK is unused." src="./wiring-caddx.webp" width="523" height="292" />
 
-<img alt="Wiring diagram: INIM SMARTLINE panel to T16. +12V to + DC, GND to - DC, -RS485 to Rx/CLK, +RS485 to Tx/DATA." src="./image13.webp" style="width:3.36750656167979in;height:1.830003280839895in" />
+#### TEXECOM
+
+<img class="wiring-diagram" alt="Wiring diagram: TEXECOM panel to T16 through the EX-CRP4 cable, ordered separately. +DC (+12V) and red wire R to + DC; -DC and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA." src="./wiring-texecom.webp" width="656" height="436" />
+
+#### CROW Runner
+
+<img class="wiring-diagram" alt="Wiring diagram: CROW Runner panel keypad bus to T16. POS (+12V) to + DC, NEG to - DC, CLK to Rx/CLK, DATA to Tx/DATA." src="./wiring-crow-runner.webp" width="523" height="292" />
+
+#### SECOLink
+
+<img class="wiring-diagram" alt="Wiring diagram: SECOLink panel to T16 through the EX-CRP4 cable, ordered separately. +AUX (+12V) and red wire R to + DC; COM and black wire B to - DC; blue wire BL to Rx/CLK; white wire W to Tx/DATA." src="./wiring-secolink.webp" width="655" height="446" />
+
+#### ARGUS-SPEKTR STRELEC
+
+<img class="wiring-diagram" alt="Wiring diagram: ARGUS-SPEKTR STRELEC panel to T16. +PWR (+12V) to + DC, GND to - DC, TD to Rx/CLK, RD to Tx/DATA." src="./wiring-argus-spektr-strelec.webp" width="523" height="301" />
+
+#### BOLID C2000
+
+<img class="wiring-diagram" alt="Wiring diagram: BOLID C2000 panel to T16. +U (+12V) to + DC, GND to - DC, Tx to Rx/CLK, Rx to Tx/DATA." src="./wiring-bolid-c2000.webp" width="656" height="306" />
+
+#### PYRONIX
+
+<img class="wiring-diagram" alt="Wiring diagram: PYRONIX Matrix panel to T16. +AUX (+12V) to + DC, -AUX to - DC, KD to Tx/DATA; Rx/CLK is unused." src="./wiring-pyronix.webp" width="523" height="318" />
+
+#### ROVALANT A6-06
+
+<img class="wiring-diagram" alt="Wiring diagram: ROVALANT A6-06 panel to T16. SLOT XP4 connects to the ИС-RF serial module; Rovalant +12V to T16 + DC and -12V to - DC. The ИС-RF serial connector has three leads, to T16 - DC (joined with the -12V line at a dot), Rx/CLK and Tx/DATA; no connector lead goes to + DC." src="./wiring-rovalant-a6-06.webp" width="603" height="499" />
+
+#### RISCO LightSYS
+
+<img class="wiring-diagram" alt="Wiring diagram: RISCO LightSYS panel keypad bus to T16. RED (+12V) to + DC, BLK to - DC, YEL to Rx/CLK, GRN to Tx/DATA." src="./wiring-risco-lightsys.webp" width="523" height="283" />
+
+#### HONEYWELL VISTA
+
+<img class="wiring-diagram" alt="Wiring diagram: HONEYWELL VISTA panel keypad bus to T16. Terminal 4 to - DC, 5 to + DC, 6 to Tx/DATA, 7 to Rx/CLK; each pair of wires crosses without a junction dot." src="./wiring-honeywell-vista.webp" width="656" height="288" />
+
+#### INIM SMARTLINE
+
+<img class="wiring-diagram" alt="Wiring diagram: INIM SMARTLINE panel to T16. +12V to + DC, GND to - DC, -RS485 to Rx/CLK, +RS485 to Tx/DATA." src="./wiring-inim-smartline.webp" width="558" height="304" />
 
 ### Schematic for connecting control panel’s landline dialer 
 
-<img alt="Two wiring diagrams. Control panel landline dialer to T16: +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP. With landline control: the same four connections, plus panel R-1 to T16 IN1/R-1 and T-1 to IN2/T-1." src="./image14.webp" style="width:7.0875in;height:2.286111111111111in" />
+#### Without landline control
+
+<img class="wiring-diagram" alt="Wiring diagram: control panel landline dialer to T16. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP." src="./wiring-landline-dialer.webp" width="575" height="350" />
+
+#### With landline control
+
+<img class="wiring-diagram" alt="Wiring diagram: control panel landline dialer to T16 with landline control. +AUX (+12 V) to + DC, -AUX to - DC, RING to COM/RING, TIP to TIP, plus panel R-1 to T16 IN1/R-1 and T-1 to IN2/T-1." src="./wiring-landline-dialer-control.webp" width="632" height="398" />
 
 !!! warning "Important"
     T16 should not be connected to a working telecom landline.
@@ -240,7 +284,21 @@ The transmitter has 6 (or 5) input terminals (IN1, IN2, IN3, IN4, IN5, IN6) for 
 
 Schematics for connecting NO, NC, EOL type circuits:
 
-<img alt="Four input circuits from COM to INx. Normally open (NO): shorted - alarm; open - restore. Normally closed (NC): shorted - restore; open - alarm. Normally closed with 2.2k end of line resistor (EOL) in series: shorted - alarm; open - alarm; 2.2k - restore. Normally open with 2.2k EOL resistor in parallel: shorted - alarm; open - alarm; 2.2k - restore." src="./image15.webp" style="width:6.4763779527559056in;height:2.2283464566929134in" />
+#### Normally open (NO)
+
+<img class="wiring-diagram" alt="Input circuit: normally open (NO) contact between COM and INx. Shorted - alarm; open - restore." src="./wiring-input-no.webp" width="237" height="200" />
+
+#### Normally closed (NC)
+
+<img class="wiring-diagram" alt="Input circuit: normally closed (NC) contact between COM and INx. Shorted - restore; open - alarm." src="./wiring-input-nc.webp" width="246" height="200" />
+
+#### Normally closed with 2.2k end-of-line resistor (EOL)
+
+<img class="wiring-diagram" alt="Input circuit: NC contact with a 2.2k end of line resistor (EOL) in series between COM and INx. Shorted - alarm; open - alarm; 2.2k - restore." src="./wiring-input-nc-eol.webp" width="260" height="289" />
+
+#### Normally open with 2.2k end-of-line resistor (EOL)
+
+<img class="wiring-diagram" alt="Input circuit: NO contact with a 2.2k end of line resistor (EOL) in parallel between COM and INx. Shorted - alarm; open - alarm; 2.2k - restore." src="./wiring-input-no-eol.webp" width="243" height="334" />
 
 ### Schematic for connecting control panel’s PGMs 
 
@@ -256,9 +314,17 @@ The siren should be connected when the *TM17* is connected to the transmitter. A
 
 ### Schematics for connecting RS485 modules 
 
-<img alt="Two wiring diagrams. Left, panel to T16 and W485: +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals; T16 A 485 to W485 A 485 and B 485 to B 485. RS485 connection up to 100 m. Right, T16 to TM17 reader: 12 V, 1,5 A DC source powers both devices; TM17 red wire to +DC, blue to -DC, black to T16 A 485, white to T16 B 485." src="./image18.webp" style="width:6.807086614173229in;height:2.7086614173228347in" />
+#### Wi-Fi module W485
 
-<img alt="Wiring diagram: panel to T16 and E485 Ethernet module. Power: panel +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals. RS485 connection up to 100 m: T16 A 485 to E485 A 485, B 485 to B 485." src="./image19.webp" style="width:3.783464566929134in;height:2.7086614173228347in" />
+<img class="wiring-diagram" alt="Wiring diagram: panel to T16 and the Wi-Fi module W485. +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals; T16 A 485 to W485 A 485 and B 485 to B 485. RS485 connection up to 100 m." src="./wiring-w485.webp" width="610" height="472" />
+
+#### TM17 reader
+
+<img class="wiring-diagram" alt="Wiring diagram: T16 to the TM17 reader. A 12 V, 1,5 A DC source powers both devices; TM17 red wire to +DC, blue to -DC, black to T16 A 485, white to T16 B 485." src="./wiring-tm17.webp" width="576" height="480" />
+
+#### Ethernet module E485
+
+<img class="wiring-diagram" alt="Wiring diagram: panel to T16 and E485 Ethernet module. Power: panel +AUX (+12 V) to both +DC terminals; -AUX to both -DC terminals. RS485 connection up to 100 m: T16 A 485 to E485 A 485, B 485 to B 485." src="./wiring-e485.webp" width="665" height="476" />
 
 When the RS485 data bus is longer than 1 m, use a twisted-pair cable (STP 4x2x0,5). Avoid mounting the cable in parallel with AC power cables, the antenna cable or other strong sources of electromagnetic field.
 

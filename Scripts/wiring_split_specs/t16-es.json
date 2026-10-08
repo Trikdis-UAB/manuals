@@ -1,0 +1,150 @@
+{
+  "page": "docs/es/alarm-communicators/t16/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image7.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image8.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image9.webp",
+      "left": {
+        "file": "wiring-crow-runner.webp",
+        "heading": "CROW Runner",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-secolink.webp",
+        "heading": "SECOLink",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image10.webp",
+      "left": {
+        "file": "wiring-argus-spektr-strelec.webp",
+        "heading": "ARGUS-SPEKTR STRELEC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-bolid-c2000.webp",
+        "heading": "BOLID C2000",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image11.webp",
+      "left": {
+        "file": "wiring-pyronix.webp",
+        "heading": "PYRONIX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-rovalant-a6-06.webp",
+        "heading": "ROVALANT A6-06",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image12.webp",
+      "left": {
+        "file": "wiring-risco-lightsys.webp",
+        "heading": "RISCO LightSYS",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-honeywell-vista.webp",
+        "heading": "HONEYWELL VISTA",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image13.webp",
+      "single": {
+        "heading": "INIM SMARTLINE",
+        "file": "wiring-inim-smartline.webp"
+      }
+    },
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-landline-dialer.webp",
+        "heading": "Sin control de línea fija",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-landline-dialer-control.webp",
+        "heading": "Con control de línea fija",
+        "alt": ""
+      },
+      "min_gap": 12
+    },
+    {
+      "src": "image15.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normalmente abierto (NA)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normalmente cerrado (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image18.webp",
+      "left": {
+        "file": "wiring-w485.webp",
+        "heading": "Módulo Wi-Fi W485",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-tm17.webp",
+        "heading": "Lector TM17",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image19.webp",
+      "single": {
+        "heading": "Módulo Ethernet E485",
+        "file": "wiring-e485.webp"
+      }
+    }
+  ]
+}

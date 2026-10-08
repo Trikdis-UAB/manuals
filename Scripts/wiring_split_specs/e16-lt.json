@@ -1,0 +1,105 @@
+{
+  "page": "docs/lt/alarm-communicators/e16/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image11.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image12.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image13.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-crow-runner.webp",
+        "heading": "Crow Runner 4/8, Runner 8/16",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-pyronix.webp",
+        "heading": "Pyronix",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image15.webp",
+      "single": {
+        "heading": "Honeywell Vista-20, Vista-48",
+        "file": "wiring-honeywell-vista.webp"
+      }
+    },
+    {
+      "src": "image17.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normaliai atvira (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normaliai uždara (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normaliai uždara grandinė su 2,2k rezistoriumi linijos gale (NC/EOL 2,2k)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image18.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normaliai atvira grandinė su 2,2k rezistoriumi linijos gale (NO/EOL 2,2k)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-deol.webp",
+          "heading": "Normaliai atvira grandinė su 2,2k varža linijos gale ir tamperio atpažinimu (NO/DEOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-deol.webp",
+          "heading": "Normaliai uždara grandinė su 2,2k varža linijos gale ir tamperio atpažinimu (NC/DEOL)",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "page": "docs/es/alarm-communicators/e16/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image11.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image12.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image13.webp",
+      "left": {
+        "file": "wiring-innerrange-inception.webp",
+        "heading": "INNERRANGE INCEPTION",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-innerrange-integriti.webp",
+        "heading": "INNERRANGE INTEGRITI",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-crow-runner.webp",
+        "heading": "Crow Runner 4/8, Runner 8/16",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-pyronix.webp",
+        "heading": "Pyronix",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image15.webp",
+      "single": {
+        "heading": "Honeywell Vista-20, Vista-48",
+        "file": "wiring-honeywell-vista.webp"
+      }
+    },
+    {
+      "src": "image17.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Normalmente abierto (NA)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Normalmente cerrado (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image18.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-deol.webp",
+          "heading": "Normalmente abierto con resistencia de fin de línea y reconocimiento de manipulación",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-deol.webp",
+          "heading": "Normalmente cerrado con resistencia de fin de línea y reconocimiento de manipulación",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

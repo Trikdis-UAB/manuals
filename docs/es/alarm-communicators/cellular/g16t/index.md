@@ -328,11 +328,23 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 Siguiendo uno de los esquemas proporcionados a continuación, conecte el comunicador hacia el panel de control.
 
-<img alt="" src="./image14.webp" style="width:7.0875in;height:3.140277777777778in" />
+#### Sin supervisión de la línea telefónica
+
+<img class="wiring-diagram" alt="" src="./wiring-tip-ring.webp" width="593" height="530" />
+
+#### Con supervisión de la línea telefónica
+
+<img class="wiring-diagram" alt="" src="./wiring-tip-ring-supervised.webp" width="593" height="530" />
 
 ### Esquemas para conectar a la zona del interruptor de llave del panel 
 
-<img alt="" src="./image15.webp" style="width:7.0875in;height:3.0875in" />
+#### Sin supervisión de la línea telefónica
+
+<img class="wiring-diagram" alt="" src="./wiring-keyswitch.webp" width="593" height="532" />
+
+#### Con supervisión de la línea telefónica
+
+<img class="wiring-diagram" alt="" src="./wiring-keyswitch-supervised.webp" width="593" height="532" />
 
 Siga estos esquemas si el panel de control se armará/desarmará con la salida PGM del G16T activando/desactivando la zona de interruptor de llave del panel.
 
@@ -347,9 +359,29 @@ El comunicador tiene dos terminales de entrada (IN1, IN2) para la conexión de c
 
 Conecte la entrada de acuerdo con el tipo de entrada seleccionada (NO, NC, NO / EOL, C / EOL, NO / DEOL, NC / DEOL), como se muestra en los esquemas a continuación:
 
-<img alt="" src="./image16.webp" style="width:5.0in;height:1.5876596675415573in" />
+#### Normalmente abierto (NA)
 
-<img alt="" src="./image17.webp" style="width:5.232283464566929in;height:2.4291338582677167in" />
+<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="286" height="342" />
+
+#### Normalmente cerrado (NC)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="289" height="342" />
+
+#### Normalmente cerrado con resistencia de fin de línea de 10k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="383" height="360" />
+
+#### Normalmente abierto con resistencia de fin de línea de 10k (EOL)
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="311" height="520" />
+
+#### Normalmente abierto con resistencia de fin de línea y reconocimiento de manipulación
+
+<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="408" height="531" />
+
+#### Normalmente cerrado con resistencia de fin de línea y reconocimiento de manipulación
+
+<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="417" height="531" />
 
 !!! note "Nota"
     Si es necesario conectar más entradas o salidas al comunicador, o si

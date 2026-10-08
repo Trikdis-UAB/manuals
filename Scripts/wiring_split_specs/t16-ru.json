@@ -1,0 +1,149 @@
+{
+  "page": "docs/ru/alarm-communicators/t16/index.md",
+  "heading_level": 4,
+  "images": [
+    {
+      "src": "image7.webp",
+      "left": {
+        "file": "wiring-dsc.webp",
+        "heading": "DSC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-paradox.webp",
+        "heading": "PARADOX",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image8.webp",
+      "left": {
+        "file": "wiring-caddx.webp",
+        "heading": "CADDX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-texecom.webp",
+        "heading": "TEXECOM",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image9.webp",
+      "left": {
+        "file": "wiring-crow-runner.webp",
+        "heading": "CROW Runner",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-secolink.webp",
+        "heading": "SECOLink",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image10.webp",
+      "left": {
+        "file": "wiring-argus-spektr-strelec.webp",
+        "heading": "ARGUS-SPEKTR STRELEC",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-bolid-c2000.webp",
+        "heading": "BOLID C2000",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image11.webp",
+      "left": {
+        "file": "wiring-pyronix.webp",
+        "heading": "PYRONIX",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-rovalant-a6-06.webp",
+        "heading": "ROVALANT A6-06",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image12.webp",
+      "left": {
+        "file": "wiring-risco-lightsys.webp",
+        "heading": "RISCO LightSYS",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-honeywell-vista.webp",
+        "heading": "HONEYWELL VISTA",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image13.webp",
+      "single": {
+        "heading": "INIM SMARTLINE",
+        "file": "wiring-inim-smartline.webp"
+      }
+    },
+    {
+      "src": "image14.webp",
+      "left": {
+        "file": "wiring-landline-dialer.webp",
+        "heading": "Без мониторинга телефонной линии",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-landline-dialer-control.webp",
+        "heading": "С мониторингом телефонной линии",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image15.webp",
+      "parts": [
+        {
+          "file": "wiring-input-no.webp",
+          "heading": "Нормально открытый (NO)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc.webp",
+          "heading": "Нормально закрытый (NC)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-nc-eol.webp",
+          "heading": "Нормально закрытая цепь с резистором 2,2к в конце линии (EOL)",
+          "alt": ""
+        },
+        {
+          "file": "wiring-input-no-eol.webp",
+          "heading": "Нормально открытая цепь с резистором 2,2к в конце линии (EOL)",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "src": "image18.webp",
+      "left": {
+        "file": "wiring-w485.webp",
+        "heading": "Wi-Fi модуль W485",
+        "alt": ""
+      },
+      "right": {
+        "file": "wiring-tm17.webp",
+        "heading": "Считыватель электронных ключей TM17",
+        "alt": ""
+      }
+    },
+    {
+      "src": "image19.webp",
+      "single": {
+        "heading": "Модуль Ethernet E485",
+        "file": "wiring-e485.webp"
+      }
+    }
+  ]
+}
