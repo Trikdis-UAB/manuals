@@ -1,7 +1,7 @@
 # PB-LoRa Botón de pánico inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="Frontal del botón de pánico inalámbrico TRIKDIS PB-LORA: una placa frontal roja con un botón metálico central, ALARM impreso debajo y un indicador NETWORK a la izquierda." width="200">
 </div>
 
 ## Description
@@ -38,7 +38,7 @@ Se pueden asignar 8 botones de pánico PB-LORA al panel de control si el panel d
 
 ### Elementos del botón de pánico 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="Botón de pánico PB-LORA. Izquierda, la cubierta frontal: 1, indicador luminoso (NETWORK); 2, ranura de apertura de la cubierta frontal en el borde derecho; un botón grande ALARM en el centro. Derecha, la carcasa abierta con su placa de circuito: 3, batería 3 V (CR123A); 4, botón TAMP para vincular el dispositivo y comprobar la conexión; 5, interruptor DIP SW." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 1. Indicador luminoso.
 2. Ranura de apertura de la cubierta frontal.
@@ -74,7 +74,7 @@ NOTA: Después de insertar la batería, se recomienda esperar al menos 10 segund
 
 1.  Retire la tapa superior.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Dos dibujos de cómo abrir la carcasa del PB-LORA con un destornillador en la ranura superior. Izquierda: una flecha indica que se introduce el destornillador en la ranura. Derecha: una flecha indica que se presiona hacia abajo el mango del destornillador, lo que separa la cubierta frontal de la base." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Retire la placa PCB.
 
@@ -86,7 +86,7 @@ NOTA: Después de insertar la batería, se recomienda esperar al menos 10 segund
 
 6.  Cierre la tapa superior.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="Dos dibujos de fijación del PB-LORA. Izquierda: el clip de retención de la placa PCB está rodeado por un círculo y una flecha indica que se empuja hacia fuera para liberar la placa. Derecha: la base vacía de la carcasa muestra sus orificios de fijación." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Esquema de conexión del botón de pánico inalámbrico PB-LORA 
 
@@ -275,6 +275,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado, que indica que el producto no debe desecharse con los residuos domésticos." src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

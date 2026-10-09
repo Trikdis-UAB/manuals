@@ -1,7 +1,7 @@
 # iO8-LoRa Expansor inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Fotografía de la placa de circuito del expansor iO8-LoRa, con sus bloques de terminales, indicadores LED, botón SW1 e interruptor DIP SW2." width="400">
 </div>
 
 ## Descripción 
@@ -95,7 +95,7 @@ Hay 8 terminales IO1 – IO8 (entradas) en la placa de expansión iO-8-LORA para
     <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="Tabla de valores de resistencias con columnas RT, R1 y R2. Las seis filas son 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; y 2.2k, 4.7k, 8.2k." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -179,6 +179,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado, que indica que el producto no debe desecharse con los residuos domésticos." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

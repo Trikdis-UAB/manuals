@@ -1,7 +1,7 @@
 # Comunicador celular G16T
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Foto en ángulo del comunicador TRIKDIS G16T. Conector SMA de antena en la parte superior; indicadores luminosos etiquetados NETWORK, DATA, POWER, TROUBLE; indicación de alimentación «10-18 V 0.5 A Max»; bloque de terminales etiquetado +DC, -DC, TIP, RING, T-1/IN1, R-1/IN2, OUT, COM, A 485, B 485." width="400">
 </div>
 
 ## Descripción 
@@ -176,7 +176,7 @@ Este manual se aplica a estos modelos G16T:
 
 ### Esquema estructural del uso del dispositivo G16T 
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.995138888888889in" />
+<img alt="Diagrama de bloques del uso del G16T: el panel de control se conecta al comunicador 2G/3G/LTE. El comunicador envía llamadas y SMS por GSM a un teléfono con la app Protegus; por GPRS, se conecta a Internet, desde donde el servidor Protegus llega al mismo teléfono y hay una conexión bidireccional con el receptor; también se conecta directamente al receptor por GSM. En la central receptora de alarmas, el receptor envía los datos al software de monitoreo monas ms." src="./image5.webp" style="width:7.0875in;height:2.995138888888889in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de que usted tiene lo necesario:
@@ -203,7 +203,7 @@ Este manual se aplica a estos modelos G16T:
 
 2.  Abra la carcasa del G16T con el destornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
+<img alt="Tres dibujos lineales muestran cómo abrir la cubierta del G16 con un desatornillador de cabeza plana: hacer palanca en la pestaña frontal de la cubierta, luego en el cierre lateral, y un detalle del conector USB Mini-B interno." src="./image6.webp" style="width:6.7204724409448815in;height:1.779527559055118in" />
 
 1.  Utilizando el cable USB Mini-B G16T conecte al ordenador.
 
@@ -225,7 +225,7 @@ A continuación, se describe qué ajustes deben establecerse para que el comunic
 
 **En la ventana “Tarjeta SIM”:**
 
-<img alt="" src="./image8.webp" style="width:7.078740157480315in;height:2.122047244094488in" />
+<img alt="Ventana Tarjeta SIM de TrikdisConfig para G16T_3210. La llamada 3 señala PIN de la tarjeta SIM, cuyo valor está oculto; la llamada 4 señala APN, con el valor internet." src="./image8.webp" style="width:7.078740157480315in;height:2.122047244094488in" />
 
 3. Introduzca el código **PIN de la tarjeta SIM**.
 
@@ -246,13 +246,13 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:1.9960629921259843in" />
+<img alt="Ventana Ajustes del sistema de TrikdisConfig para G16T_3210. La llamada 1 señala el campo Número de objeto, con el valor 1111." src="./image9.webp" style="width:7.082677165354331in;height:1.9960629921259843in" />
 
 1.  Introduzca **Número de objeto** proporcionado por la Central Receptora de Alarmas (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF**.).
 
 En “Ajustes CRA” configure la ventana para “Canal de comunicación principal”:
 
-<img alt="" src="./image10.webp" style="width:7.078740157480315in;height:3.858267716535433in" />
+<img alt="TrikdisConfig, ventana «CRA informes», pestaña «CRA ajustes», sección «Canal de comunicación principal», con llamadas numeradas: 2, «Modo» en IP; 3, «Protocolo» en TRK; 4, «Clave de cifrado TRK» oculta; 5, «Dominio o IP» vacío; 6, «Puerto» vacío; 7, «TCP o UDP» en TCP; 8, grupo «Modo del canal de reserva» en «Desactivar», junto con sus campos «Protocolo», «Clave de cifrado TRK» oculta, «Dominio o IP», «Puerto» y «TCP o UDP»; 9, «Informe por SMS de reserva» vacío. A la derecha aparecen «Segundo canal» y «Reserva del canal paralelo», sin llamadas." src="./image10.webp" style="width:7.078740157480315in;height:3.858267716535433in" />
 
 2. **Modo** - seleccionar el método de conexión **IP** (no recomendamos SMS como canal primario).
 
@@ -280,7 +280,7 @@ En “Ajustes CRA” configure la ventana para “Canal de comunicación princip
 
 **En la ventana “Tarjeta SIM”:**
 
-<img alt="" src="./image11.webp" style="width:7.078740157480315in;height:2.125984251968504in" />
+<img alt="Ventana Tarjeta SIM de TrikdisConfig para G16T_3210. La llamada 10 señala PIN de la tarjeta SIM, cuyo valor está oculto; la llamada 11 señala APN, con el valor internet." src="./image11.webp" style="width:7.078740157480315in;height:2.125984251968504in" />
 
 10. Introduzca el código **PIN de la tarjeta SIM.**
 
@@ -313,9 +313,9 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 7.  Cierre la cubierta superior.
 
-<img alt="" src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Dibujo lineal: a la izquierda, la placa dentro de la caja, con un cierre rodeado por un círculo en el borde izquierdo y una flecha hacia la izquierda que indica cómo liberarlo; a la derecha, la parte posterior vacía de la caja con dos orificios para tornillos de montaje rodeados por círculos." src="./image12.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image13.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Dibujo lineal de la ranura SIM de la placa PCB, con una flecha que muestra una tarjeta nano-SIM entrando en la ranura." src="./image13.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Nota"
     Asegúrese de que la tarjeta SIM esté activada. / Asegúrese de que el
@@ -361,27 +361,27 @@ Conecte la entrada de acuerdo con el tipo de entrada seleccionada (NO, NC, NO / 
 
 #### Normalmente abierto (NA)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="286" height="342" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada: contacto normalmente abierto NO entre COM e INx. Short - Alarm; Open - Restore." src="./wiring-input-no.webp" width="286" height="342" />
 
 #### Normalmente cerrado (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="289" height="342" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada: contacto normalmente cerrado NC entre COM e INx. Short - Restore; Open - Alarm." src="./wiring-input-nc.webp" width="289" height="342" />
 
 #### Normalmente cerrado con resistencia de fin de línea de 10k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="383" height="360" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada: contacto NC y resistencia de fin de línea de 10k en serie entre COM e INx. Short - Alarm; Open - Alarm; 10k - Restore." src="./wiring-input-nc-eol.webp" width="383" height="360" />
 
 #### Normalmente abierto con resistencia de fin de línea de 10k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="311" height="520" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada: contacto NO y resistencia de fin de línea de 10k en paralelo entre COM e INx. Short - Alarm; Open - Alarm; 10k - Restore." src="./wiring-input-no-eol.webp" width="311" height="520" />
 
 #### Normalmente abierto con resistencia de fin de línea y reconocimiento de manipulación
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="408" height="531" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada con reconocimiento de manipulación NO/DEOL: entre COM e INx, un interruptor Tamper y una resistencia de 10k en serie, seguidos de un contacto NO con una segunda resistencia de 10k en paralelo. Short - Tamper; Open - Tamper; 10k - Alarm; 15k-25k - Restore." src="./wiring-input-no-deol.webp" width="408" height="531" />
 
 #### Normalmente cerrado con resistencia de fin de línea y reconocimiento de manipulación
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="417" height="531" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada con reconocimiento de manipulación NC/DEOL: entre COM e INx, un interruptor Tamper y una resistencia de 10k en serie, seguidos de un contacto NC con una segunda resistencia de 10k en paralelo. Short - Tamper; Open - Tamper; 10k - Restore; 15k-25k - Alarm." src="./wiring-input-nc-deol.webp" width="417" height="531" />
 
 !!! note "Nota"
     Si es necesario conectar más entradas o salidas al comunicador, o si
@@ -391,25 +391,25 @@ Conecte la entrada de acuerdo con el tipo de entrada seleccionada (NO, NC, NO / 
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos electrónicos.
 
-<img alt="" src="./image18.webp" style="width:2.6377952755905514in;height:0.9488188976377953in" />
+<img alt="Diagrama de conexión: +DC del G16T a un terminal de la bobina del relé y OUT al otro. Se muestran los contactos NC, C y NO del relé, sin conexiones a otros dispositivos." src="./image18.webp" style="width:2.6377952755905514in;height:0.9488188976377953in" />
 
 ### Esquemas para la conexión de módulos de expansión de la serie de iO 
 
 Si es necesario conectar más entradas o salidas al comunicador, o si desea conectar un sensor de temperatura, conecte el expansor de salida inalámbrico o por cable de la serie TRIKDIS iO.
 
-<img alt="" src="./image19.webp" style="width:7.0875in;height:3.432638888888889in" />
+<img alt="Diagrama de conexión: G16 con expansores iO, iO-MOD e iO-8 en un mismo bus, alimentados por el panel de control. Alimentación: +AUX (+12 V) del panel a +DC y -AUX a -DC del G16, iO, iO-MOD e iO-8. RS485: A RS485 del G16 a A (RS485) de iO, iO-MOD e iO-8, y B RS485 a B (RS485) de cada uno. Un módulo iO-WL se conecta de forma inalámbrica, hasta 300 m; sus terminales +DC y -DC van a una fuente de alimentación de 12-28 V DC, 0,5 A, y +5 V, 1-Wire y COM van a Vdd+, DQ y COM de un sensor de temperatura DS18B20 o DS18S20." src="./image19.webp" style="width:7.0875in;height:3.432638888888889in" />
 
 ### Esquema para conectar el módulo WiFi W485 
 
 El módulo *W485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a Protegus utilizando un enrutador de Internet WiFi. Cuando la conectividad WiFi está disponible, el *G16T* envía mensajes de evento a través del módulo *W485*. Cuando se interrumpe la conectividad WiFi, el *G16T* envía mensajes a través de GPRS. Cuando se restablece la conectividad WiFi, el *G16T* vuelve a enviar mensajes a través de *W485*. / La configuración *W485* (credenciales de red Wi-Fi) se establece en la configuración *G16T* en la ventana TrikdisConfig ”RS485 modules” del capítulo 6.6. / Inserte la tarjeta SIM en el comunicador *G16T* para que funcione el *W485*.
 
-<img alt="" src="./image20.webp" style="width:2.9525054680664917in;height:2.3000043744531933in" />
+<img alt="Diagrama de conexión: fuente de alimentación de 12 V DC, 0,5 A, al comunicador G16T y al módulo W485. Alimentación: positivo a + DC de ambos dispositivos y negativo a - DC de ambos, unidos en los puntos marcados. Conexión RS485 hasta 100 m: A 485 del G16T a A 485 del W485; B 485 a B 485." src="./image20.webp" style="width:2.9525054680664917in;height:2.3000043744531933in" />
 
 ### Esquema para conectar el módulo ethernet E485 
 
 El módulo *E485* envía mensajes al CRA y a *Protegus* por medio de una conexión a internet por cable. Usando el *E485* con *G16T*, los mensajes de CRA y *Protegus* se envían a través de internet por cable y no se usa internet móvil. Si se interrumpe una conectividad a internet por cable, el *G16T* envía mensajes a través de Internet móvil. Cuando se restablece la conectividad a Internet por cable, el *G16T* comienza a enviar mensajes a través de *E485*. / La configuración del módulo *E485* para funcionar con el *G16T* se describe en la Ventana del capítulo 6.6. „RS485 modules”. / Inserte la tarjeta SIM en el comunicador *G16T* para que funcione el *E485*.
 
-<img alt="" src="./image21.webp" style="width:2.9600054680664916in;height:2.2975043744531933in" />
+<img alt="Diagrama de conexión: fuente de alimentación externa de 12 V DC, 0,5 A a +DC y -DC del G16T, compartida mediante puntos de unión con +DC y -DC del E485. Conexión RS485, hasta 100m: A 485 del G16T a A 485 del E485 y B 485 del G16T a B 485 del E485." src="./image21.webp" style="width:2.9600054680664916in;height:2.2975043744531933in" />
 
 <span id="_Toc74312606"></span>
 
@@ -528,15 +528,15 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
         parpadea amarillo).
 3. Haga clic en **Añadir sistema** e introduzca el número “IMEI/ID Único ” de G16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
 
-<img alt="" src="./image25.webp" style="width:5.826771653543307in;height:2.0984251968503935in" />
+<img alt="Protegus, ventana Añadir sistema: el campo obligatorio IMEI está señalado con una flecha y debajo aparece el botón Siguiente. La indicación dice que el IMEI se encuentra en la caja, en la parte trasera del comunicador o en Trikdis Config como ID único." src="./image25.webp" style="width:5.826771653543307in;height:2.0984251968503935in" />
 
 4. En la nueva ventana, haga clic en **Áreas** en el menú lateral. En la siguiente ventana, especifique cuántas áreas del sistema de alarma hay en el sistema y presione **Siguiente.**
 
-<img alt="" src="./image27.webp" style="width:6.058139763779527in;height:2.2445253718285216in" />
+<img alt="Protegus, ventana Áreas: la pregunta ¿Cuántas áreas hay en el sistema? muestra el valor 1 en el selector; a la derecha está el botón Siguiente." src="./image27.webp" style="width:6.058139763779527in;height:2.2445253718285216in" />
 
 5. En la nueva ventana, identifique cuál es el número para cada una de las áreas especificadas en el sistema de seguridad y pulse **Guardar.**
 
-<img alt="" src="./image28.webp" style="width:6.8858267716535435in;height:2.5078740157480315in" />
+<img alt="Protegus, pantalla «Áreas» de G16T: el campo «Área 1 número» muestra 1 y aparece el botón «Guardar»." src="./image28.webp" style="width:6.8858267716535435in;height:2.5078740157480315in" />
 
 ### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
 
@@ -547,7 +547,7 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 1.  En el menú lateral, presione en la ventana **Configuración**, en la ventana que se abrió recientemente también presione **Configuración**. Seleccione la casilla **de armar/ desarmar con PGM** y especifique el área donde se controlará la salida. Uno de cada salida se puede controlar una sola área.
 
-<img alt="" src="./image29.webp" style="width:6.889763779527559in;height:3.326771653543307in" />
+<img alt="Protegus, ventana Configuración: Armar/Desarmar con PGM 1 está activado para Área 1. El selector ofrece Nivel y Pulso, con Nivel seleccionado; Usar la contraseña de la aplicación para ARMAR/DESARMAR está desactivado y el intervalo del pulso muestra 3 seg. Arriba está el botón Guardar." src="./image29.webp" style="width:6.889763779527559in;height:3.326771653543307in" />
 
 2. Seleccione **Nivel** o **Pulso,** dependiendo del tipo de llave de zona del panel de control. También puede cambiar la duración del intervalo de impulso si es necesario para el panel de control conectado.
 
@@ -561,7 +561,7 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 3.  Si se le pide, introduzca el código de usuario o contraseña Protegus.
 
-<img alt="" src="./image30.webp" style="width:6.889763779527559in;height:3.4921259842519685in" />
+<img alt="Protegus, ventana Áreas: al abrir Área 1 aparece un cuadro con los botones Armar, Desactivar y Cancelar." src="./image30.webp" style="width:6.889763779527559in;height:3.4921259842519685in" />
 
 ### Configuración y control con los mensajes SMS 
 
@@ -651,7 +651,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 **Pestaña “CRA ajustes”**
 
-<img alt="" src="./image33.webp" style="width:7.082677165354331in;height:4.05511811023622in" />
+<img alt="TrikdisConfig, ventana «CRA informes», pestaña «CRA ajustes». «Canal de comunicación principal»: «Modo» IP, «Protocolo» TRK, «TCP o UDP» TCP y «Modo del canal de reserva» Desactivar. «Segundo canal»: «Tipo de comunicación» IP, «Protocolo» TRK y «TCP o UDP» TCP; «Reserva del canal paralelo» IP, «Protocolo» TRK y «TCP o UDP» TCP." src="./image33.webp" style="width:7.082677165354331in;height:4.05511811023622in" />
 
 El comunicador envía eventos a la CRA a través de Internet celular (IP) o con mensajes SMS.
 
@@ -699,7 +699,7 @@ Las notificaciones por SMS serán enviadas a receptor SMS en una CRA: 1) inmedia
 
 **Pestaña “Ajustes”**
 
-<img alt="" src="./image34.webp" style="width:7.078740157480315in;height:2.8858267716535435in" />
+<img alt="TrikdisConfig, ventana «CRA informes», pestaña «Ajustes». En «Ajustes»: «Período de prueba» activado, 24 h y 0 min; «Período de ping IP» activado, 0 min y 30 s; «Número de línea y receptor» 00 RR y 0 L; «Ir al canal de reserva después de» 2 intentos; «Volver a principal después» 1 min y 30 s. En «Configuración de DC-09»: «ID de objeto en DC-09» 123456, «Núm. de línea DC-09» 1 y «Núm. de receptor DC-09» 1." src="./image34.webp" style="width:7.078740157480315in;height:2.8858267716535435in" />
 
 **Grupo de ajustes de “Ajustes”**
 
@@ -782,7 +782,7 @@ Puede enviar un comando SMS al comunicador que controlará la salida o cambiará
     enviar eventos a través del canal IP al receptor de la CRA o para
     Protegus, garantice que el servicio de datos móviles está
     habilitada.
-<img alt="" src="./image38.webp" style="width:7.078740157480315in;height:2.3188976377952755in" />
+<img alt="TrikdisConfig, ventana «Tarjeta SIM». «PIN de la tarjeta SIM» está oculto, «APN» muestra internet, «Usuario» y «Contraseña» están vacíos, y «Prohibir la conexión cuando se detecta roaming» está marcado." src="./image38.webp" style="width:7.078740157480315in;height:2.3188976377952755in" />
 
 **Grupo de ajustes “Tarjeta SIM”**
 
@@ -802,7 +802,7 @@ Puede enviar un comando SMS al comunicador que controlará la salida o cambiará
 
 **Los** expansores de la serie **iO** pueden ser conectados al comunicador para añadir entradas adicionales, salidas y serie bus de sensores de temperatura. Los expansores conectados deben ser añadidos a la tabla de la lista de módulos.
 
-<img alt="" src="./image39.webp" style="width:7.078740157480315in;height:2.3858267716535435in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Modules list». El desplegable «Tipo de módulo» muestra «No disponible», «expansor iO», «expansor iO-WL», «expansor iO-LO», «expansor LO-MOD», «Expansor iO-8», «W17u/W485» y «E485»." src="./image39.webp" style="width:7.078740157480315in;height:2.3858267716535435in" />
 
 - **Tipo de módulo** - seleccione de la lista el módulo que está conectado al comunicador a través de RS485.
 
@@ -974,7 +974,7 @@ Para **Restaurar** la configuración de fábrica del comunicador, es necesario h
         amarillo).
 2. En el campo de acceso remoto, introduzca el número de IMEI / Único ID del comunicador. Este número se encuentra en el dispositivo y la etiqueta del empaque.
 
-<img alt="" src="./image46.webp" style="width:6.5078740157480315in;height:0.9094488188976378in" />
+<img alt="TrikdisConfig, sección Acceso remoto: están resaltados el campo ID único, donde se introduce el identificador del comunicador, y el botón Configuración. Entre ambos aparece el campo Nombre del sistema." src="./image46.webp" style="width:6.5078740157480315in;height:0.9094488188976378in" />
 
 3. (Opcional) En el campo **Nombre del sistema**, introduzca el nombre deseado para el G16T con este Único ID.
 
@@ -1025,7 +1025,7 @@ El firmware G16T se puede actualizar o cambiar también de forma manual. Despué
 
 3.  Pulse **Actualizar [F12].**
 
-    <img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.1692913385826773in" />
+    <img alt="TrikdisConfig, ventana «Firmware»: campo «Abrir el archivo de firmware» vacío, botón «Abrir firmware», botón «Actualizar (F12)» atenuado y barra de progreso al 0%." src="./image47.webp" style="width:7.086614173228346in;height:3.1692913385826773in" />
 
 4.  Espere a que el indicador de actualización se haya completado.
 
@@ -1039,7 +1039,7 @@ Antes de la instalación, por favor lea atentamente este manual con el fin de ev
 
 Desconecte la alimentación eléctrica antes de realizar cualquier conexión.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Cambios, modificaciones o reparaciones no autorizadas por el fabricante anularán sus derechos en virtud de la garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Cambios, modificaciones o reparaciones no autorizadas por el fabricante anularán sus derechos en virtud de la garantía.
 
 Por favor, cumpla con la normativa local y no deseche su sistema de alarma inoperable o sus componentes con otros residuos domésticos.
 

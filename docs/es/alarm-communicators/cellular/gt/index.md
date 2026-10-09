@@ -1,7 +1,7 @@
 # GT Comunicador
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Foto frontal de la cubierta del comunicador celular GT con el logotipo TRIKDIS. Etiquetas de los indicadores, de arriba abajo: NETWORK, DATA, POWER, TROUBLE, BAND. Etiquetas del bloque de terminales: +12 VDC, -12 VDC, TIP, RING, CLK, DATA, 1 I/O, 2 I/O, A 485, B 485." width="400">
 </div>
 
 ## Descripción 
@@ -176,7 +176,7 @@ Este manual es para comunicadores 4G.
 
 ### Esquema estructural del uso del dispositivo GT 
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
+<img alt="Diagrama de conexión: el panel de control se conecta al comunicador LTE. El comunicador envía llamadas y SMS por GSM a un teléfono con la app Protegus y se conecta a Internet por LTE. Desde Internet, el servidor Protegus llega al mismo teléfono; un enlace bidireccional conecta Internet con el receptor de la central receptora de alarmas, que alimenta el software de monitoreo monas ms." src="./image5.webp" style="width:7.0875in;height:3.0104166666666665in" />
 
 !!! note "Nota"
     Antes de la instalación, asegúrese de tener:
@@ -205,7 +205,7 @@ Este manual es para comunicadores 4G.
 
 2.  Abra la cubierta del GT con el desatornillador de cabeza plana como se muestra a continuación:
 
-    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="Dibujo lineal que muestra cómo abrir la cubierta del comunicador con un desatornillador de cabeza plana: introducirlo en la unión superior cerca de la antena y hacer palanca hacia afuera; después, introducirlo en la unión inferior y hacer palanca hacia abajo. Un detalle muestra la ubicación del puerto USB-C en el borde de la placa PCB." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Usando el cable USB-С conecte el GT a la computadora.
 
@@ -219,7 +219,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Configuración del panel”:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. La llamada 1 resalta Protocolo de comunicación en la sección TLC, ajustado a 2. Dual Tone." src="./image7.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**Dual tone**”.
 
@@ -247,7 +247,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de la “Configuración de la red”**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:2.62992125984252in" />
+<img alt="TrikdisConfig, ventana Configuración de la red, pestaña SIM1. Las llamadas 7 a 10 señalan, respectivamente, PIN de la tarjeta SIM con valor 1111, APN con valor internet, DNS 1 vacío y DNS 2 vacío." src="./image10.webp" style="width:7.086614173228346in;height:2.62992125984252in" />
 
 3. Ingrese el código PIN para la tarjeta SIM.
 
@@ -267,15 +267,15 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. La llamada 2 resalta Protocolo de comunicación en la sección TLC, ajustado a 2. Dual Tone." src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  Ingrese el **Número de objeto** (**No utilice números de objeto FFFE, FFFF**.).
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. La llamada 2 resalta Protocolo de comunicación en la sección TLC, ajustado a 2. Dual Tone." src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**Dual tone**”.
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.6181102362204725in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. La llamada 3 resalta Tipo de panel, cuyo valor visible es 5. PARADOX SP/MG se." src="./image12.webp" style="width:7.086614173228346in;height:1.6181102362204725in" />
 
 2. Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
@@ -299,7 +299,7 @@ En la ventana de opciones de “Ajustes CRA” para el “Canal de comunicación
 
 **En la ventana de “Configuración de la red”:**
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:2.6181102362204722in" />
+<img alt="TrikdisConfig, ventana Configuración de la red, pestaña SIM1. Las llamadas 11 a 14 señalan, respectivamente, PIN de la tarjeta SIM con valor 1111, APN con valor internet, DNS 1 vacío y DNS 2 vacío." src="./image14.webp" style="width:7.086614173228346in;height:2.6181102362204722in" />
 
 11. Ingrese el código PIN para la tarjeta SIM.
 
@@ -333,9 +333,9 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 7.  Cierre la cubierta superior.
 
-<img alt="" src="./image15.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Dibujo lineal: a la izquierda, la placa dentro de la caja, con un cierre rodeado por un círculo en el borde izquierdo y una flecha hacia la izquierda que indica cómo liberarlo; a la derecha, la parte posterior vacía de la caja con dos orificios para tornillos de montaje rodeados por círculos." src="./image15.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image16.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Dibujo lineal de la ranura SIM de la placa PCB, con una flecha que muestra una tarjeta nano-SIM entrando en la ranura." src="./image16.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Nota"
     Cheque si la tarjeta SIM ha sido activada. / Asegúrese que el servicio
@@ -354,39 +354,39 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="545" height="481" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel DSC al GT. RED a +DC, BLK a -DC, YEL a CLK y GRN a DATA." src="./wiring-dsc.webp" width="545" height="481" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="650" height="481" />
+<img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel PARADOX al GT mediante el cable EX-CRP2.4. R (rojo) a +DC, B (negro) a -DC, Y (amarillo) a CLK y G (verde) a DATA." src="./wiring-paradox.webp" width="650" height="481" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="535" height="480" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel CADDX al GT. POS a +DC, COM a -DC y DATA a DATA." src="./wiring-caddx.webp" width="535" height="480" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="661" height="484" />
+<img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel TEXECOM al GT mediante el cable EX-CRP4. R (rojo) a +DC, B (negro) a -DC, BL (azul) a CLK y W (blanco) a DATA." src="./wiring-texecom.webp" width="661" height="484" />
 
 #### INNERRANGE INCEPTION
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="634" height="479" />
+<img class="wiring-diagram" alt="Diagrama de conexión: INNERRANGE INCEPTION al GT. VOUT + a +DC y VOUT 0V a -DC; desde el puerto USB del panel, mediante el cable Inner Range 993030USB: cable negro a -DC, verde a CLK y blanco a DATA." src="./wiring-innerrange-inception.webp" width="634" height="479" />
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="564" height="461" />
+<img class="wiring-diagram" alt="Diagrama de conexión: Port 0 de INNERRANGE INTEGRITI al GT mediante el cable Inner Range INTG-996795. +DET (+13V) a +DC, GND 5 a -DC, Rx 3 a CLK y Tx 2 a DATA." src="./wiring-innerrange-integriti.webp" width="564" height="461" />
 
 #### Honeywell Vista-15, Vista-20, Vista-48
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="589" height="486" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel Honeywell Vista-15, Vista-20 o Vista-48 al GT. Terminal 4 a -DC, 5 a +DC, 6 a DATA y 7 a CLK." src="./wiring-honeywell-vista.webp" width="589" height="486" />
 
 #### Panel de control (comunicador telefónico, TIP/RING)
 
-<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="620" height="477" />
+<img class="wiring-diagram" alt="Diagrama de conexión: terminales del comunicador de línea telefónica de un panel de control al GT. +AUX a +DC, -AUX a -DC, TIP a TIP y RING a RING." src="./wiring-control-panel-tip-ring.webp" width="620" height="477" />
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
 
-<img alt="" src="./image21.webp" style="width:3.4666732283464565in;height:2.923338801399825in" />
+<img alt="Diagrama de conexión: panel PARADOX SP/SP+/MG/MG+ al GT. Bus de Datos: +AUX (+12V) a + DC, -AUX a - DC, GRN a DATA, YEL a CLK. Comunicador telefónico: TIP a TIP, RING a RING." src="./image21.webp" style="width:3.4666732283464565in;height:2.923338801399825in" />
 
 Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GT:
 
@@ -411,11 +411,11 @@ El panel de control Paradox debe programarse para transmitir eventos al CMS y pa
 
 El comunicador está conectado al bus del teclado o al bus serie del panel de control. / El Armado/Desarmado del panel de control se realiza a través de la zona del interruptor (keyswitch).
 
-<img alt="" src="./image23.webp" style="width:3.7900076552930884in;height:2.2433377077865266in" />
+<img alt="Diagrama de conexión: panel de control al GT. Bus de Datos o Puerto serial: RED a + DC (+12V), BLK a - DC, YEL a CLK, GRN a DATA. Zona (interruptor de llave): 1 Area a 1 I/O y 2 Area a 2 I/O." src="./image23.webp" style="width:3.7900076552930884in;height:2.2433377077865266in" />
 
 El comunicador está conectado a los terminales TIP/RING del panel de control. / El Armado/Desarmado del panel de control se realiza a través de la zona del interruptor (keyswitch).
 
-<img alt="" src="./image24.webp" style="width:3.726674321959755in;height:2.673338801399825in" />
+<img alt="Diagrama de conexión: panel de control al GT. Alimentación: +AUX (+12 V) a + DC, -AUX a - DC. Terminales de la línea telefónica de comunicador: TIP a TIP, RING a RING. Zona (interruptor de llave): 1 Area a 1 I/O y 2 Area a 2 I/O." src="./image24.webp" style="width:3.726674321959755in;height:2.673338801399825in" />
 
 ### Diagramas para la conexión de entrada 
 
@@ -425,7 +425,7 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
 
 <img alt="" src="./image25.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
 
-<img alt="" src="./image26.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
+<img alt="Diagrama de conexión: tres circuitos de entrada entre COM e INx del comunicador GET. Izquierda, circuito normalmente abierto con resistencia 2,2k de fin de línea: resistencia en paralelo con el contacto NO; Short - Alarm; Open - Alarm; 2,2k - Restore. Centro, circuito normalmente abierto con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NO; Short - Tamper; Open - Tamper; 2,2k - Alarm; 3,3k-5,5k - Restore. Derecha, circuito normalmente cerrado con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NC; Short - Tamper; Open - Tamper; 2,2k - Restore; 3,3k-5,5k - Alarm." src="./image26.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
 
 !!! note "Nota"
     Si necesita que el comunicador tenga más entradas (IN) o salidas (OUT),
@@ -434,13 +434,13 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos eléctricos. El terminal de I/O del comunicador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image27.webp" style="width:2.1775043744531932in;height:0.8850021872265966in" />
+<img alt="Diagrama de conexión: GT a Relé. La bobina del relé se conecta entre + DC y x I/O; los contactos están identificados como NC, C y NO." src="./image27.webp" style="width:2.1775043744531932in;height:0.8850021872265966in" />
 
 ### Diagrama de conexión de un módulo expansor iO-8 
 
 Si necesita que el comunicador tenga más entradas IN o salidas OUT, conecte un expansor de entradas/salidas TRIKDIS iO-8 cableado. La configuración del *GT* con módulos de expansión se describe en la pág. 6.8 “Ventana “RS485 modules”.
 
-<img alt="" src="./image28.webp" style="width:3.6075076552930883in;height:2.0725043744531932in" />
+<img alt="Diagrama de conexión: panel de control al GT y al iO-8. Alimentación: +AUX (+12 V) a + DC de ambos dispositivos, y -AUX a - DC de ambos, con uniones marcadas por puntos. RS485: A RS485 del GT a A (RS485) del iO-8; B RS485 del GT a B (RS485) del iO-8." src="./image28.webp" style="width:3.6075076552930883in;height:2.0725043744531932in" />
 
 ### Encendido del comunicador 
 
@@ -537,7 +537,7 @@ El panel de control debe estar conectado al internet. Conéctese con **Innerrang
 
 Abra la ventana de **Configuration>General>Alarm Reporting**. En el grupo "**3rd Party Device Reporting** ", debe instalar:
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.437007874015748in" />
+<img alt="Inception, ventana Alarm Reporting, sección 3rd Party Device Configuration. Enable 3rd Party Device Reporting está marcada; 3rd Party Device Type tiene el valor Trikdis; Serial Port tiene el valor Serial Port 1 (Plugged In, In Use By 3rd Party Device)." src="./image29.webp" style="width:7.086614173228346in;height:3.437007874015748in" />
 
 1.  **Enable 3rd Party Device Reporting** – seleccione esta casilla.
 
@@ -672,11 +672,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
         amarillo).
 2. De clic en "**Añadir nuevo sistema**" e ingrese el número de GT “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
-<img alt="" src="./image33.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+<img alt="Protegus2, pantalla Escanear código QR. El campo ID único/IMEI está vacío; una indicación dice que el IMEI se encuentra en la caja, en la parte trasera del comunicador o en TrikdisConfig como ID único. Se muestran Escanear código QR y Siguiente." src="./image33.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
 3. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
-<img alt="" src="./image34.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="Pantalla Añadir nuevo sistema de Protegus2: Nombre GT, Fondo azul y Zona horaria Europe/Vilnius. Abajo aparecen Cancelar y Siguiente." src="./image34.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
@@ -687,7 +687,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="" src="./image35.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Protegus2, pantalla El sistema no se controla de forma remota. Indica conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 Europe para habilitar o deshabilitar el sistema. Abajo aparece el botón Continuar." src="./image35.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
@@ -701,7 +701,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="" src="./image37.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
+<img alt="Pantalla Áreas de Protegus2: la partición 1 Area figura como Controlado con: PGM1. Debajo aparecen el botón para agregar una partición y las opciones Saltar y Siguiente." src="./image37.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
 
 ### Control del sistema con Protegus2 
 
@@ -709,7 +709,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
+<img alt="Protegus2, pantalla principal del sistema GT: estado «En línea» con barras de señal; «1 Area» muestra «Desconocido», los botones «Arm» y «Desarm», y el botón de salida «PGM2» abajo a la izquierda." src="./image40.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
 
 ### Lista de comando SMS 
 
@@ -735,7 +735,7 @@ Puede especificar los números de teléfono cuyos comandos recibirá y ejecutar�
 
 ### Barra de Estado 
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="Barra de Estado de TrikdisConfig: muestra los campos IMEI/identificador único y SN, Estado: lectura finalizada, Dispositivo: GT_M150, BL: 1.00, FW: 1.30 y HW: 0.00." src="./image41.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 **Barra de Estado**
 
@@ -755,7 +755,7 @@ Al presionar el botón **Leer [F4]**, el programa TrikdisConfig lee y muestra la
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:2.767716535433071in" />
+<img alt="TrikdisConfig, ventana «Ajustes del sistema»: el grupo «General» contiene «Número de objeto», «ID del módulo» y «Tiempo establecido» en «Primer canal». El grupo «Acceso» contiene los códigos de administrador e instalador; «Sólo un administrador puede restaurar» está marcado. También están marcadas las opciones que permiten al instalador cambiar «Número de cuenta», «CRA informe», «Informes para el usuario», «Tarjeta SIM» y «Resumen del incidente»." src="./image42.webp" style="width:7.086614173228346in;height:2.767716535433071in" />
 
 **Grupo de opciones “General”**
 
@@ -783,7 +783,7 @@ Nota: Si el campo " **Sólo un administrador puede restaurar** " está marcado y
 
 **Grupo de opciones de “TLC”**
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:3.125984251968504in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. En TLC, Protocolo de comunicación muestra 1. DISABLED y la opción 2. Dual Tone; Frecuencia del tono de marcado está marcada en 425 Hz. En Bus de Data, Protocolo de codificación de eventos es CID y Tipo de panel es 1. DISABLED." src="./image43.webp" style="width:7.086614173228346in;height:3.125984251968504in" />
 
 El comunicador se conecta a los terminales TIP/RING del panel de control.
 
@@ -797,7 +797,7 @@ El comunicador se conecta a los terminales TIP/RING del panel de control.
 
 **Grupo de opciones de “Bus de Data”**
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. Protocolo de comunicación: 1. DISABLED; Protocolo de codificación de eventos: CID; Tipo de panel: 5. PARADOX SP/MG se; Control directo y Evento marcados. Aparece el campo Contraseña de descarga de PC." src="./image44.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 El comunicador está conectado al bus del teclado o al bus serie del panel de control.
 
@@ -815,7 +815,7 @@ El comunicador está conectado al bus del teclado o al bus serie del panel de co
 
 **Pestaña de “CRA ajustes”**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:3.338582677165354in" />
+<img alt="TrikdisConfig, ventana CRA informes, pestaña CRA ajustes. El modo del canal de comunicación principal, el modo del canal de reserva y el tipo de comunicación del segundo canal muestran Desactivar. Los campos TCP o UDP muestran TCP." src="./image45.webp" style="width:7.086614173228346in;height:3.338582677165354in" />
 
 Los eventos pueden ser enviados a través de varios canales de comunicación. Los primeros y segundos canales de comunicación pueden ser operados de forma simultánea y el comunicador puede enviar eventos a dos receptores al mismo tiempo. El canal de respaldo puede ser asignado para los primeros y segundos canales, los cuales serán usados cuando la conexión al canal primario es interrumpida.
 
@@ -847,7 +847,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 **Pestaña de “Ajustes”**
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="TrikdisConfig, «CRA informes», pestaña «Ajustes»: «Período de prueba» marcado en 24 h y 0 min; «Período de ping IP» atenuado en 0 min y 30 s; «Ir al canal de reserva después de» 2 intentos; «Volver a principal después» 1 min y 30 s; «Línea Núm.» 1 y «Receptor Núm.» 1." src="./image46.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 **Grupo de opciones de “Ajustes”**
 
@@ -870,7 +870,7 @@ Juntos, los mensajes PING mantienen una sesión de comunicación activa entre el
 
 **Pestaña de “Servicio Protegus”**
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9645669291338583in" />
+<img alt="TrikdisConfig, «Informes para usuario», pestaña «Servicio PROTEGUS»: «Activar conexión» está marcado, aparece el campo «Código de acceso a Protegus» y «Informes paralelos» está desmarcado." src="./image47.webp" style="width:7.086614173228346in;height:1.9645669291338583in" />
 
 El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.app](https://www.protegus.app).
 
@@ -882,7 +882,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar remotamente e
 
 **Pestaña de “Informes por SMS y llamadas”**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:4.05511811023622in" />
+<img alt="TrikdisConfig, «Informes para usuario», pestaña «Informes por SMS y llamadas»: «Nombre del objeto» contiene «Account Name» y «Lenguaje SMS» está en «ENGLISH». Hay tablas de números para informes por SMS y llamadas, nombres de área («01 Area 1», «02 Area 2», «Otros AREA»), nombres de usuario («001 User 1», «002 User 2», «Otros USER») y nombres de zona («001 Zone 1», «002 Zone 2», «Otros ZONE»). La tabla de eventos CID tiene casillas de SMS y llamada por destinatario y muestra, entre otras, las entradas «E100 MEDICAL PANIC ALARM», «E110 FIRE PANIC ALARM», «E120 PANIC ALARM», «E121 DURESS ALARM» y «E130 ALARM !!! ALARM !!! ALARM !!! ALARM !!!»." src="./image48.webp" style="width:7.086614173228346in;height:4.05511811023622in" />
 
 Las notificaciones sobre los eventos del sistema pueden ser transmitidas a los celulares de los usuarios a través de mensajes SMS o llamadas telefónicas.
 
@@ -900,7 +900,7 @@ Puede cambiar los textos por mensajes SMS de eventos base, cambiar el código de
 
 **Pestaña de “Control por SMS”**
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="TrikdisConfig, ventana Informes para usuario, pestaña Control por SMS. La tabla Textos de respuesta SMS muestra Orden realizada: Command OK; Contraseña incorrecta: Wrong Access Code; Orden incorrecta: Wrong Command; Información incorrecta: Wrong Data. A la derecha aparecen cuatro campos para números de teléfono de control remoto." src="./image49.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 Puede enviar comando SMS al comunicador que controlará las funciones básicas del dispositivo.
 
@@ -942,13 +942,13 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
 
 **Pestaña de “Tipo de conexión”**
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:3.5393700787401574in" />
+<img alt="TrikdisConfig, «Configuración de la red», pestaña «Tipo de conexión»: «Tipo de conexión» está en «LTE CAT-M1» y «Seleccionar todo» está marcado. También están marcadas las bandas B1, B2, B3, B4, B5, B8, B12, B13, B18, B19, B20, B25, B26, B27, B28, B66 y B85." src="./image51.webp" style="width:7.086614173228346in;height:3.5393700787401574in" />
 
 Esta configuración es válida para comunicadores con módem CAT-M1. Puede especificar las frecuencias en las que funcionará el módem del comunicador.
 
 ### Ventana de “IN/OUT“ 
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.456692913385827in" />
+<img alt="TrikdisConfig, ventana «IN/OUT»: en la tabla de terminales, el terminal 1 tiene propósito IN y tipo NO, y el terminal 2 tiene propósito OUT. La tabla de ID de contacto muestra IN1_ALARM, activado, con código de incidente CID 130, SIA BA, partición 99 y zona 001, y código de restauración CID 130, SIA BH; e IN1_TAMPER, activado, con código de incidente CID 144, SIA TA, y código de restauración CID 144, SIA TR." src="./image52.webp" style="width:7.086614173228346in;height:2.456692913385827in" />
 
 El comunicador tiene 2 terminales universales (entrada/salida). La tabla puede configurar el modo de funcionamiento del terminal (Apagado, IN, OUT). La entrada debe especificar el tipo de circuito a conectar NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -972,7 +972,7 @@ El comunicador se puede conectar a expansores iO-8 (agregando contraladas entrad
 
 Grupo de opciones de “Modules list”
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="TrikdisConfig, «RS485 modules», pestaña «Modules list»: la tabla muestra los módulos 1 a 4, todos como «No disponible». El desplegable de tipo del módulo 4 está abierto y ofrece «No disponible» y «Expansor iO-8»." src="./image53.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 - **ID** – número del módulo en la lista.
 
@@ -1032,7 +1032,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID (SIA) y código
 
 Esta ventana le permitirá prender, apagar y modificar los mensajes internos enviados por su dispositivo. Deshabilitar el mensaje interno en esta ventana prevendrá que sea enviado a pesar de otras opciones.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.1377952755905514in" />
+<img alt="TrikdisConfig, ventana «Resumen del incidente»: tabla con COMMUNICATION (incidente CID 350, SIA YC; restauración CID 350, SIA YK), POWER (incidente CID 302, SIA YT; restauración CID 302, SIA YR), REMOTE_FINISHED (CID 412, SIA RS), REMOTE_STARTED (CID 411, SIA RB), START (CID 700, SIA RR) y TEST (CID 602, SIA RP). Todos los incidentes tienen Part. 99 y Zona 999 y están activados; la restauración solo está activada para COMMUNICATION y POWER." src="./image55.webp" style="width:7.086614173228346in;height:2.1377952755905514in" />
 
 - **COMMUNICATION** – mensaje de falla de comunicación entre el panel de control y GT.
 
@@ -1056,7 +1056,7 @@ Puede cambiar el código de identificación de contacto para cada evento, así c
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón „**Restaurar**” en ***TrikdisConfig*.**
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:0.9606299212598425in" />
+<img alt="TrikdisConfig: botón «Restaurar» resaltado en «Ajustes por defecto» para restablecer la configuración de fábrica." src="./image56.webp" style="width:7.086614173228346in;height:0.9606299212598425in" />
 
 Otra forma de restaurar la configuración de fábrica.
 
@@ -1083,7 +1083,7 @@ La fuente de alimentación está conectada al comunicador. Mantenga presionado e
 
 2.  En la sección de acceso remoto ingrese el **IMEI/ID único**. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig, pantalla de acceso remoto. El campo ID único está vacío y el botón Configuración está resaltado; a su derecha aparecen el campo Nombre del sistema y el botón Control." src="./image57.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 3. (Opcional) en el espacio del „**Nombre de sistema**” ingrese el nombre deseado para el comunicador.
 
@@ -1128,7 +1128,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de “**Firmware**” del menú.
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.4960629921259843in" />
+<img alt="TrikdisConfig, ventana Firmware. Se muestran el campo Abrir el archivo de firmware, el botón Abrir firmware, el botón Actualizar (F12) y una barra de progreso al 0 %." src="./image58.webp" style="width:7.086614173228346in;height:2.4960629921259843in" />
 
 4. Presione “**Abrir firmware**” y seleccione el archivo de firmware requerido.
 
@@ -1144,7 +1144,7 @@ Antes de la instalación, por favor lea con cuidado este manual, para poder evit
 
 Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
 

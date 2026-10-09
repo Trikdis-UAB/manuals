@@ -1,7 +1,7 @@
 # Comunicador Ethernet E16T
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Parte frontal del comunicador TRIKDIS E16T, con los indicadores NETWORK, DATA, POWER, TROUBLE y LINE. Los terminales inferiores están etiquetados + DC, - DC, TIP, RING, T-1 / IN1, R-1 / IN2, OUT, COM, A 485 y B 485; la etiqueta de alimentación indica 10-18 V, 0.5 A Max." width="400">
 </div>
 
 ## Descripción 
@@ -94,7 +94,7 @@ Funciona con la aplicación Protegus:
 
 5.  Conexión Ethernet zócalo RJ45.
 
-<img alt="" src="./image4.webp" style="width:4.724409448818897in;height:2.838582677165354in" />
+<img alt="Dos vistas del comunicador E16T. En la foto izquierda, 1: Indicaciones de la Luz; 2: Ranura para abrir la carcasa. En la foto derecha, 3: Terminal para conexiones externas; 4: Puerto USB Mini-B para la configuración; 5: Conexión Ethernet zócalo RJ45." src="./image4.webp" style="width:4.724409448818897in;height:2.838582677165354in" />
 
 ### Propósito de las terminales 
 
@@ -126,7 +126,7 @@ Funciona con la aplicación Protegus:
 
 ### Esquema estructural del uso del dispositivo E16T 
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.6942683727034122in" />
+<img alt="Esquema estructural: del panel de control al comunicador Ethernet E16T, de este al router y después a Internet. Desde Internet, una flecha lleva al servidor Protegus y luego a un teléfono con la app Protegus; otra lleva a un receptor y después al software de monitoreo de la central receptora de alarmas." src="./image5.webp" style="width:7.0875in;height:2.6942683727034122in" />
 
 !!! note "Nota"
     Antes de comenzar, asegúrese de tener lo necesario:
@@ -153,7 +153,7 @@ Funciona con la aplicación Protegus:
 
 2.  Abra la cubierta del E16T con el desatornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image6.webp" style="width:5.503937007874016in;height:1.4803149606299213in" />
+<img alt="Dos dibujos muestran un desatornillador de cabeza plana introducido en la pequeña ranura del borde superior de la cubierta del E16T. En el primer dibujo aparece una flecha hacia la izquierda y, en el segundo, una flecha hacia abajo junto al desatornillador. Un detalle separado etiqueta el conector USB Mini-B." src="./image6.webp" style="width:5.503937007874016in;height:1.4803149606299213in" />
 
 1.  Usando el cable USB mini-B conecte el E16T a la computadora.
 
@@ -167,13 +167,13 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
+<img alt="TrikdisConfig, ventana Ajustes del sistema del E16T. Está resaltado Tipo de panel, seleccionado como INTERFACE DTMF." src="./image7.webp" style="width:7.086614173228346in;height:1.8700787401574803in" />
 
 1.  Seleccione el tipo de panel que será conectado al comunicador.
 
 **Ventana de “Informes”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
+<img alt="TrikdisConfig E16T, ventana «Informes», pestaña «Servicio PROTEGUS». La llamada 2 señala la casilla marcada «Habilitar conexión»; la llamada 3 señala el campo «Código de servicio», cuyo contenido está oculto." src="./image8.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
 
 2. Habilitar la conexión al Servicio Protegus.
 
@@ -183,7 +183,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.8818897637795275in" />
+<img alt="TrikdisConfig, ventana Ajustes del sistema del E16T. Están resaltados Núm. de cuenta, con E102, y Tipo de panel, seleccionado como INTERFACE DTMF." src="./image9.webp" style="width:7.086614173228346in;height:1.8818897637795275in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF.**).
 
@@ -191,7 +191,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de opciones de “Informes” para el “Primario”:**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
+<img alt="TrikdisConfig E16T, ventana «Informes», pestaña «Informes de CRA». Las llamadas 3–8 muestran «Primario»: «Habilitar» marcado, «Host remoto» 0.0.0.0, «Puerto remoto» 0, «TCP o UDP» en TCP, «Tiempo de PING» marcado con valor 30 y «Clave de encriptación» con el contenido oculto. La llamada 9 agrupa los ajustes de «Backup»: «Habilitar» marcado, «Host remoto» 0.0.0.0, «Puerto remoto» 0, TCP, «Tiempo de PING» marcado con valor 30 y «Clave de encriptación» con el contenido oculto. Las llamadas 10–14 muestran «Protocolo TCP» en TRK03, «Habilitar cifrado» sin marcar, «Clave de encriptación DC-09» llena de ceros y los campos «Núm. de receptor DC-09» y «Núm. de línea DC-09» vacíos." src="./image10.webp" style="width:7.086614173228346in;height:4.051181102362205in" />
 
 3.  **Habilitar** — habilitar canal de comunicación principal
 
@@ -223,7 +223,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     los números de objeto, línea y receptor.
 **Ventana de “Informes”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.7755905511811023in" />
+<img alt="TrikdisConfig E16T, ventana «Informes», pestaña «Servicio PROTEGUS». La llamada 15 señala la casilla marcada «Habilitar conexión»; la llamada 16 señala el campo «Código de servicio», cuyo contenido está oculto." src="./image11.webp" style="width:7.086614173228346in;height:1.7755905511811023in" />
 
 15. Habilitar la conexión al Servicio Protegus.
 
@@ -238,9 +238,9 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 ### Conectar el comunicador al panel de control utilizando el diagrama de cableado abajo. 
 
-<img alt="" src="./image12.webp" style="width:4.0236220472440944in;height:2.5669291338582676in" />
+<img alt="Diagrama de conexión: terminales del panel al E16T. Alimentación: AUX+ a + DC, AUX- a - DC. Línea telefónica: RING a RING, TIP a TIP. Control: ZNx, rotulado Interruptor de llave, a OUT; tipo de salida Control remoto. Cable LAN conectado al E16T." src="./image12.webp" style="width:4.0236220472440944in;height:2.5669291338582676in" />
 
-<img alt="" src="./image13.webp" style="width:3.877952755905512in;height:2.338582677165354in" />
+<img alt="Diagrama de conexión: SP231 a E16T. Alimentación: AUX+ a + DC y AUX- a - DC. Conexión RS485 de hasta 100 m: A 485 a A RS485 y B 485 a B RS485. Un cable LAN se conecta al E16T." src="./image13.webp" style="width:3.877952755905512in;height:2.338582677165354in" />
 
 ### Conectar sensores (Opcional) 
 
@@ -264,11 +264,11 @@ El comunicador contiene dos terminales de entrada de tipo seleccionable (IN1, IN
 
 ### Conectar el cable LAN 
 
-<img alt="" src="./image15.webp" style="width:2.716535433070866in;height:2.3622047244094486in" />
+<img alt="Diagrama: un cable LAN con conector RJ45 apunta hacia el E16T para conectarse al puerto Ethernet. A la izquierda se muestran los terminales + DC, - DC, RING, TIP, T-1/IN1, R-1/IN2, OUT, COM, A RS485 y B RS485." src="./image15.webp" style="width:2.716535433070866in;height:2.3622047244094486in" />
 
 ### Esquemas de cableado de un relé 
 
-<img alt="" src="./image16.webp" style="width:2.295275590551181in;height:0.8188976377952756in" />
+<img alt="Diagrama de conexión: E16T a un relé. +DC al terminal superior de la bobina; OUT al terminal inferior. Los contactos del relé están marcados NC, C y NO." src="./image16.webp" style="width:2.295275590551181in;height:0.8188976377952756in" />
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos electrónicos.
 
@@ -358,7 +358,7 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
     3.  Registrado en la red ( el LED de "NETWORK" se ilumina en verde).
 3. Haga clic en **Añadir sistema** e introduzca el número “MAC” de E16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
 
-<img alt="" src="./image20.webp" style="width:6.5984251968503935in;height:2.405511811023622in" />
+<img alt="Pantalla Añadir sistema de Protegus: campo obligatorio IMEI y botón Siguiente. Un recuadro señala el campo y pide ingresar la dirección MAC." src="./image20.webp" style="width:6.5984251968503935in;height:2.405511811023622in" />
 
 ### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
 
@@ -369,15 +369,15 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 1.  En la nueva ventana, haga clic en **Áreas** en el menú lateral. En la siguiente ventana, especifique cuántas áreas del sistema de alarma hay en el sistema y presione **Siguiente.**
 
-<img alt="" src="./image21.webp" style="width:7.078740157480315in;height:2.594488188976378in" />
+<img alt="Protegus, configuración de «Áreas» para E16T. El campo «¿Cuántas áreas hay en el sistema?» está en 1 y aparece el botón «Siguiente»." src="./image21.webp" style="width:7.078740157480315in;height:2.594488188976378in" />
 
 2. En la nueva ventana, identifique cuál es el número para cada una de las áreas especificadas en el sistema de seguridad y pulse **Guardar.**
 
-<img alt="" src="./image25.webp" style="width:7.078740157480315in;height:2.5984251968503935in" />
+<img alt="Protegus, configuración de «Áreas» para E16T. El campo «Área 1 número» contiene 1 y aparece el botón «Guardar»." src="./image25.webp" style="width:7.078740157480315in;height:2.5984251968503935in" />
 
 3. En el menú lateral, presione en la ventana **Configuración**, en la ventana que se abrió recientemente también presione **Configuración**. Seleccione la casilla de **Armar/ Desarmar con PGM 1** y especifique el área donde se controlará la salida. Uno de cada salida se puede controlar una sola área.
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:3.456692913385827in" />
+<img alt="Pantalla Configuración de Protegus para E16T: Armar/Desarmar con PGM 1 está activado para Área 1. El menú ofrece Nivel y Pulso, con Nivel seleccionado. Usar la contraseña de la aplicación para ARMAR/DESARMAR está desactivado; Intervalo del pulso en segundos muestra 3 seg." src="./image26.webp" style="width:7.086614173228346in;height:3.456692913385827in" />
 
 4. Seleccione **Nivel** o **Pulso,** dependiendo del tipo de llave de zona keyswitch del panel de control. También puede cambiar la duración del intervalo de impulso si es necesario para el panel de control conectado.
 
@@ -391,7 +391,7 @@ Siga las instrucciones a continuación si el panel de control se controlará con
 
 3.  Si es solicitado, ingrese el código de usuario o la contraseña de Protegus.
 
-<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.5118110236220472in" />
+<img alt="Pantalla Áreas de Protegus para E16T: al abrir Área 1 aparece un cuadro con las acciones Armar, Desactivar y Cancelar. La tarjeta del área muestra el estado Desconocido." src="./image27.webp" style="width:7.082677165354331in;height:3.5118110236220472in" />
 
 ## Configuración remota 
 
@@ -414,7 +414,7 @@ El Communicator E16T puede controlarse de forma remota utilizando el software Tr
 
 3.  (Opcional) En el campo **Nombre del sistema**, ingrese el nombre deseado para el módulo.
 
-<img alt="" src="./image28.webp" style="width:7.070866141732283in;height:1.062992125984252in" />
+<img alt="Ventana Acceso remoto de TrikdisConfig: campo ID único resaltado para introducir el identificador del módulo y botón Configuración resaltado. También aparecen Nombre del sistema y Control." src="./image28.webp" style="width:7.070866141732283in;height:1.062992125984252in" />
 
 4. Pulse Configurar.
 
@@ -542,7 +542,7 @@ Para obtener más información sobre el servicio PROTEGUS, visite [www.protegus.
 
 - Habilite el servicio en la nube en **Informes →** pestaña **Servicio PROTEGUS.**
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
+<img alt="Ventana Informes de TrikdisConfig, pestaña Servicio PROTEGUS: Habilitar conexión está activado y el campo Código de servicio aparece con el valor oculto." src="./image32.webp" style="width:7.086614173228346in;height:1.7913385826771653in" />
 
 - Ingrese el **Código de servicio** (código predeterminado: 123456), para mayor seguridad cámbielo a <u>código de autenticación de 6 símbolos</u>. Este código es utilizado cuando se agrega un nuevo sistema a la aplicación y se controla de forma remota a través del software TrikdisConfig (para más detalles, consulte [5 „Control remoto”](#6-configuracion-remota) ).
 
@@ -584,7 +584,7 @@ Desconectar el dispositivo:
 
 Para **Restaurar** la configuración de fábrica del comunicador, es necesario hacer clic en el botón Restaurar en la ventana TrikdisConfig.
 
-<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:1.0984251968503937in" />
+<img alt="TrikdisConfig, ventana Configuraciones: botón Restaurar resaltado para restablecer la configuración de fábrica." src="./image34.webp" style="width:7.086614173228346in;height:1.0984251968503937in" />
 
 ## Realizar prueba del sistema 
 
@@ -627,7 +627,7 @@ El firmware E16T se puede actualizar o cambiar también de forma manual. Despué
 
 3.  Pulse **Actualizar [F12].**
 
-<img alt="" src="./image35.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="Ventana «Firmware» de TrikdisConfig E16T. Muestra el campo «Abrir el archivo de firmware», el botón «Abrir firmware», la casilla «Guardar la configuración» marcada, el botón «Actualizar (F12)» y la barra de progreso al 0%." src="./image35.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 4. Espere a que el indicador de actualización se haya completado.
 
@@ -639,6 +639,6 @@ Antes de la instalación, lea cuidadosamente este manual para evitar errores que
 
 Desconecte la energía antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" /> Los cambios, modificaciones o reparaciones no autorizadas por el fabricante anularán sus derechos en virtud de la garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" /> Los cambios, modificaciones o reparaciones no autorizadas por el fabricante anularán sus derechos en virtud de la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

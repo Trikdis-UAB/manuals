@@ -1,7 +1,7 @@
 # GSM controlador puede controlar de forma remota puertas automáticas y otros equipos
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Controlador de puertas GATOR con indicadores NETWORK, DATA, POWER y TROUBLE en la parte frontal, un conector de antena arriba y un bloque de terminales de tornillo abajo." width="400">
 </div>
 
 ##  Descripción 
@@ -90,7 +90,7 @@ Entradas y salidas
 
 6.  Conector SMA para antena GSM.
 
-<img alt="" src="./image4.webp" style="width:4.606676509186352in;height:2.7866721347331582in" />
+<img alt="Elementos del controlador GATOR. Foto izquierda: 1 indicadores luminosos; 2 ranura de apertura de la tapa frontal. Foto derecha: 3 puerto USB Mini-B para programar el controlador; 4 terminal para conexiones externas; 5 ranura para tarjeta Nano-SIM; 6 conector SMA para antena celular." src="./image4.webp" style="width:4.606676509186352in;height:2.7866721347331582in" />
 
 ### Descripción del Bloque de Terminales 
 
@@ -177,9 +177,9 @@ Si el indicador LED no está funcionando, compruebe la alimentación y las conex
 
 7.  Cierre la tapa superior.
 
-<img alt="" src="./image5.webp" style="width:3.4606299212598426in;height:1.7716535433070866in" />
+<img alt="Dos dibujos de fijación. Izquierda: la pestaña de retención de la placa PCB está rodeada, con una flecha hacia la izquierda para retirarla. Derecha: dos orificios para tornillos en la base de la caja están rodeados." src="./image5.webp" style="width:3.4606299212598426in;height:1.7716535433070866in" />
 
-<img alt="" src="./image6.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Una tarjeta nano-SIM se muestra entrando, en la dirección de la flecha, en la ranura de la placa PCB del controlador." src="./image6.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 ### Esquema para la conexión de la fuente de alimentación 
 
@@ -565,7 +565,7 @@ Con TrikdisConfig puede cambiar la configuración del controlador (si la configu
 
 2.  Usando un destornillador de cabeza plana, retire la tapa de la controlador como se muestra a continuación:
 
-<img alt="" src="./image47.webp" style="width:5.905511811023622in;height:1.562992125984252in" />
+<img alt="Tres dibujos, de izquierda a derecha: sujetar el controlador e insertar un destornillador de cabeza plana en la ranura de la tapa; mover el destornillador hacia abajo para soltar la tapa; localizar el conector USB Mini-B." src="./image47.webp" style="width:5.905511811023622in;height:1.562992125984252in" />
 
 1.  Conectar el controlador a un ordenador mediante un cable USB Mini-B.
 
@@ -994,7 +994,7 @@ Conecte el colgante RFID (tarjeta) al lector RFID. Se abrirá una nueva ventana 
 
 Los colgantes RFID (tarjetas) se pueden registrar en *TrikdisConfig* ingresando sus números de identificación en el campo Número de teléfono. Dé un nombre al usuario, marque el campo En. y un campo de “Salidas” gestionadas. Presione el botón Escribir [F5] para guardar la lista de colgantes (tarjetas) RFID en el controlador.
 
-<img alt="" src="./image64.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
+<img alt="Tarjeta RFID con el número de identificación impreso resaltado a lo largo del borde inferior." src="./image64.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
 <img alt="" src="./image65.webp" style="width:7.086614173228346in;height:1.9094488188976377in" />
 
@@ -1147,4 +1147,4 @@ Siempre desconecte la fuente de alimentación antes de realizar las conexiones e
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

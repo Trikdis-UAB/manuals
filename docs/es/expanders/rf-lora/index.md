@@ -1,7 +1,7 @@
 # RF-LoRa Expansor Inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Vista frontal de la carcasa blanca del expansor inalámbrico RF-LORA, con un conector de antena SMA en la parte superior, indicadores DATA/TROUBLE y POWER, y un bloque verde de terminales de tornillo etiquetados +DC, -DC, A 485, B 485, IO1, COM, IO2, IO3, COM e IO4." width="200">
 </div>
 
 ## Descripción
@@ -41,7 +41,7 @@ Conexión:
 
 ### Elementos expansores
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Diagrama anotado del frontal y la carcasa abierta del expansor RF-LORA con siete elementos señalados: 1, conector de antena SMA; 2, indicadores DATA/TROUBLE y POWER; 3, pestaña lateral; 4, bloque de terminales; 5, puerto mini-USB; 6, puente etiquetado SW1; y 7, botón junto al conector de antena." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 1. Antena RF conector SMA.
 2. Indicadores de LED.
@@ -86,7 +86,7 @@ Conexión:
 
 1.  Retire la tapa superior.
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Dos ilustraciones de manos usando un destornillador para abrir el lateral de la carcasa haciendo palanca y luego extraer la placa de circuito." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Retire la placa PCB.
 
@@ -100,7 +100,7 @@ Conexión:
 
 ### Conexión del transceptor RF-LORA al panel de control "FLEXi" SP3 
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Diagrama de conexión: los terminales AUX+, AUX-, 485 A y 485 B del panel de control SP3 están conectados, respectivamente, a los terminales +DC, -DC, A RS485 y B RS485 del expansor RF-LORA mediante líneas de +12V/datos etiquetadas." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Esquema de cableado para expansores LORA 
 
@@ -150,6 +150,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado, que indica que el producto no debe desecharse con los residuos domésticos." src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

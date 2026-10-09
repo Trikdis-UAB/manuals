@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Repetidor R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Carcasa rectangular gris del repetidor con cuatro tornillos en las esquinas y dos patas de montaje." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Finalidad del producto

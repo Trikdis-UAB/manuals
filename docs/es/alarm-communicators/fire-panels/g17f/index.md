@@ -174,7 +174,7 @@ Ordene los componentes necesarios por separado en su distribuidor local.
 
 2.  Abra la carcasa del G17F con el destornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
+<img alt="Tres dibujos lineales muestran cómo abrir la cubierta del G16 con un desatornillador de cabeza plana: hacer palanca en la pestaña frontal de la cubierta, luego en el cierre lateral, y un detalle del conector USB Mini-B interno." src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
 
 3\. Utilizando el cable USB Mini-B G17F conecte al ordenador.
 
@@ -204,19 +204,19 @@ En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS"
 
 **En la ventana “Zonas”:**
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
+<img alt="TrikdisConfig G17F, ventana «Zonas». Las casillas «Prot.» están marcadas para las zonas 1 a 6." src="./image8.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
 
 3. Marque las casillas si desea que los usuarios reciban notificaciones de Protegus2 sobre los cambios en los estados de las zonas.
 
 **En la ventana “PGM”:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig G17F, ventana «PGM». PGM 1 usa G17F 4 I/O; PGM 2 y 3 figuran como «Desabilitado». Las casillas «Prot.» están marcadas en las tres filas." src="./image9.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 4. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre los cambios en los estados de salida de PGM.
 
 **En la ventana "Eventos de sistema":**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="TrikdisConfig, ventana Eventos de sistema, pestaña Eventos. La columna Prot. está resaltada y sus casillas aparecen marcadas para Baja potencia, Periodo de prueba, Falla RS485, Jamming GSM y Evento de IP." src="./image10.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 5. Marque las casillas si desea que los usuarios reciban notificaciones a Protegus2 sobre cambios en los estados de eventos internos del comunicador.
 
@@ -313,7 +313,7 @@ Si desea monitorear el estado del panel de alarma contra incendios, conecte sus 
 
 ### Diagrama de conexión del comunicador a la central de incendios ESPA4.4.4 
 
-<img alt="" src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
+<img alt="Diagrama de conexión: G17F a la central de incendios ESPA4.4.4. Alimentación: G17F +DC a ESPA4.4.4 +24V, -DC a 0V. RS485: G17F A a ESPA4.4.4 A, B a B." src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
 
 Configuración del comunicador G17F con TrikdisConfig al conectar el panel de control de alarma contra incendios con el protocolo **ESPA4.4.4**.
 
@@ -323,7 +323,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 3.  El comunicador G17F y el panel de control de incendios deben tener la misma configuración de transmisión de datos.
 
-<img alt="" src="./image17.webp" style="width:7.086614173228346in;height:3.4803149606299213in" />
+<img alt="TrikdisConfig G17F, ventana «Módulos». El módulo RS485 1 está configurado como «ESPA 4.4.4 protocolo». La interfaz «ESPA 4.4.4» muestra «Baudrate» 9600, 8 bits, paridad «Ninguno», 1 bit de parada y «Retraso, mS» 40." src="./image17.webp" style="width:7.086614173228346in;height:3.4803149606299213in" />
 
 4. Ingrese números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
@@ -331,7 +331,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 5. Si desea que el usuario reciba mensajes (y llamadas) sobre eventos, marque la casilla SMS (y Llamada).
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.5826771653543306in" />
+<img alt="TrikdisConfig G17F, ventana «Eventos de sistema», pestaña «SMS y llamadas». Para «Usuario 1», el evento «ESPA 4.4.4 text» tiene «SMS» marcado y «Llam.» sin marcar." src="./image19.webp" style="width:7.086614173228346in;height:2.5826771653543306in" />
 
 6. Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. Los mensajes de eventos se transmiten utilizando el protocolo SIA DC-09.
 
@@ -341,7 +341,7 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 ### Diagrama de conexión del comunicador a la central de incendios NSC Solution 
 
-<img alt="" src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
+<img alt="Diagrama de conexión: G17F a NSC Solution. Alimentación: +DC a +24V (+24 V), -DC a 0V. RS485: A a A, B a B." src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
 Configuración del comunicador G17F con TrikdisConfig al conectar el panel de control de alarma contra incendios **NSC Solution**.
 
@@ -349,7 +349,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 2.  La “**NSC slavе address**” no debe coincidir con la dirección de los módulos del panel de control de incendios conectados.
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:3.078740157480315in" />
+<img alt="TrikdisConfig G17F, ventana «Módulos». La llamada 1 resalta «NSC Solución» en la fila 1 de «Módulos RS485», con el nombre «Expander ID1». La llamada 2 resalta «Dirección de esclavo NSC» con el valor 10." src="./image22.webp" style="width:7.086614173228346in;height:3.078740157480315in" />
 
 3. Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
@@ -357,7 +357,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 4. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes», pestaña «SMS para eventos del Panel». La llamada 4 resalta «Usuario 1»: «SMS» marcado y «Llam.» sin marcar para los primeros 16 eventos, desde E110 «Fire alarm» hasta R373 «Fault restore»; ambas casillas están sin marcar en la fila 17, E000." src="./image24.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 5. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
@@ -369,11 +369,11 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 ### Diagrama de conexión del comunicador a la central de incendios INIM Smartline 
 
-<img alt="" src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
+<img alt="Diagrama de conexión: G17F a INIM Smartline. Alimentación: +DC a 13 +24 (+24 V), -DC a 16 GND. RS485: A a 15 +RS485, B a 14 -RS485. Los cables diagonales se cruzan sin unirse." src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
 
 El modo "**Slave**" debe configurarse para el panel **INIM Smartline** cuando se conecta al comunicador G17F a través del bus RS485.
 
-<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="Ventana «RS485 Bus Programming» de SmartLeague. En «Master/Slave Settings», está seleccionado «Configure as Slave» y «Assign address» tiene el valor 1." src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note "Nota"
     No puede conectar el G17F usando el bus RS485 si los repetidores
@@ -384,7 +384,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 1.  Seleccione el panel de alarma contra incendios **INIM Smartline**.
 
-<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
+<img alt="TrikdisConfig G17F, ventana «Módulos». La llamada 1 resalta «INIM Smartline» en la fila 1 de «Módulos RS485», con el nombre «Expander ID1»." src="./image28.webp" style="width:7.086614173228346in;height:1.5669291338582678in" />
 
 2. Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
@@ -392,7 +392,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes», pestaña «SMS para eventos del Panel». La llamada 3 resalta «Usuario 1»: «SMS» marcado y «Llam.» sin marcar para los primeros 16 eventos, desde E110 «Fire alarm» hasta R373 «Fault restore»; ambas casillas están sin marcar en la fila 17, E000." src="./image30.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
@@ -402,13 +402,13 @@ Pruebe el sistema. Active la alarma contra incendios y verifique que los mensaje
 
 ### Diagrama de conexión del comunicador a la central de incendios C-TEC Cast ZFP 
 
-<img alt="" src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
+<img alt="Diagrama de conexión: G17F a C-TEC Cast ZFP. Alimentación: +DC a +24V (+24 V), -DC a 0V. ABUS RS485: A a A, B a B." src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
 Configuración del comunicador G17F con TrikdisConfig al conectar el panel de alarma contra incendios **C-TEC Cast ZFP.**
 
 1.  Seleccione el panel de control de alarma contra incendios **C-TEC Cast ZFP**.
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="TrikdisConfig G17F, ventana «Módulos». La llamada 1 resalta «C-TEC Cast ZFP» en la fila 1 de «Módulos RS485», con el nombre «Expander ID1»." src="./image33.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 1.  Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
@@ -416,7 +416,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de al
 
 2. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de “**Texto SMS**” junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image35.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="TrikdisConfig, «Usuarios y Reportes», pestaña «SMS para eventos del Panel». Para «Usuario 1», los eventos visibles tienen marcada la casilla «SMS» y sin marcar la casilla «Llam.»; la tabla relaciona códigos CID con «Texto SMS», incluidos E110 y «Fire alarm»." src="./image35.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 3. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
@@ -426,11 +426,11 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 4. Abra la pestaña „**Node View**“.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="Ventana «Site Details» de ZFP Programming Tools. La pestaña «Node View» está resaltada para seleccionarla." src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
 5. Lea la configuración del panel de incendios en la computadora.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="ZFP Programming Tools, «Node View» para «Panel 1». El botón «Retrieve All Data» está resaltado." src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
 6. Ingrese el código (el código de fábrica es 4444).
 
@@ -442,7 +442,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 2.  Haga clic en el icono gratuito.
 
-<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="ZFP Programming Tools, «Node View Devices». «BMS Interface» está seleccionado en «Device Palette» y el botón «Edit Devices» está resaltado." src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
 11. Haga clic en „**Edit Devices**“.
 
@@ -450,7 +450,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 12. En la pestaña " **Device** ", ingrese el nombre del sistema.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="ZFP Programming Tools, «Node View Devices Device Properties» para el dispositivo 16. En la pestaña «Device», «Name» es FIRECOM y «Device Type» es «BMS Interface»." src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
 13. En la pestaña "**Properties**", ingrese el nombre del sistema.
 
@@ -466,7 +466,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 18. Haga clic en „ОК“.
 
-<img alt="" src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="ZFP Programming Tools, ventana Panel Log In. El texto «Enter Access Level 3 Code» aparece sobre cuatro casillas de código vacías; el botón verde con una marca de verificación confirma la entrada." src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 La central de incendios está programada. Desconecte el cable USB2.0 A-B de la central de incendios.
 
@@ -498,13 +498,13 @@ Esquemas de circuitos tipo NO, NC, EOL:
 
 Si el comunicador necesita más entradas IN o salidas OUT, conecte un expansor de entrada y salida de la serie TRIKDIS iO cableado o inalámbrico.
 
-<img alt="" src="./image46.webp" style="width:7.086805555555555in;height:4.6375in" />
+<img alt="Diagrama de conexión: G17F a dos iO-MOD, dos iO-WL e iO. Fuente 12-28V: + a DC+ del G17F y +DC de ambos iO-MOD; - a DC- y -DC. RS485: A RS485 a A RS485 y B RS485 a B RS485 de ambos iO-MOD; cables Rojo, Azul, Negro y Blanco, respectivamente. Cada iO-MOD se enlaza inalámbricamente con un iO-WL hasta 300 m; máximo 4 iO-MOD. iO-WL 1* a iO 8*: A RS485 a A RS485 y B RS485 a B RS485, hasta 300 m. Cada iO-WL y el iO reciben 12-28V en +DC y -DC; hasta 8 módulos de expansión del sistema." src="./image46.webp" style="width:7.086805555555555in;height:4.6375in" />
 
 ### Esquema para conectar un módulo expansor iO-8 
 
 Si necesita que el comunicador tenga más entradas IN o salidas OUT, conecte el expansor cableado *iO-8*.
 
-<img alt="" src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
+<img alt="Diagrama de conexión: G17F a iO-8. G17F +DC a iO-8 +DC, -DC a -DC, A RS485 a A y B RS485 a B." src="./image47.webp" style="width:2.2401574803149606in;height:1.2086614173228347in" />
 
 ### Esquema para conectar los módulos expansores de la serie LORA 
 
@@ -516,13 +516,13 @@ Diagrama de conexión para los módulos expansores LORA.
 
 Versión de firmware del *G17F* desde 1.08*.* / El módulo *W485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a *Protegus2* utilizando un enrutador de internet Wi-Fi. Cuando la conectividad Wi-Fi está disponible, el *G17F* envía mensajes de eventos a través del módulo *W485*. Cuando se interrumpe la conectividad Wi-Fi, el *G17F* envía mensajes a través de GPRS. Cuando se restablece la conectividad Wi-Fi, el *G17F* procede a enviar mensajes a través del *W485*. / La configuración del módulo Wi-Fi *W485* para que funcione con el *G17F* se describe en el capítulo 5.5. “Módulos”. / No necesita una tarjeta SIM cuando usa el *W485* con el *G17F*.
 
-<img alt="" src="./image49.webp" style="width:2.826771653543307in;height:2.141732283464567in" />
+<img alt="Diagrama de conexión: G17F a W485. Fuente de alimentación (12-24 V DC, 0,5 A) a +DC y -DC de ambos, unidos en los puntos de conexión. Conexión RS485 (hasta 100m): A 485 del G17F a A 485 del W485; B 485 a B 485." src="./image49.webp" style="width:2.826771653543307in;height:2.141732283464567in" />
 
 ### Esquema para conectar el módulo E485 “Ethernet” 
 
 Versión de firmware del *G17F* desde 1.08*.* / El *E485* envía mensajes al CRA (Centro de Recepción de Alarmas) y a *Protegus2* usando una conexión a internet por cable. Al utilizar el *E485* con el *GV17*, los mensajes al CRA y *Protegus2* se envían a través de Internet por cable y no se usa el internet móvil. Si se interrumpe una conectividad a internet por cable, el *GV17* envía mensajes a través de internet móvil. Al restablecerse la conectividad a internet por cable, el *G17F* comienza a enviar mensajes a través de *E485*. / La configuración del módulo *E485* para funcionar con el *G17F* se describe en el capítulo 5.5. “Módulos”. / No necesita una tarjeta SIM cuando usa el *E485* con el *G17F*.
 
-<img alt="" src="./image50.webp" style="width:2.826771653543307in;height:2.141732283464567in" />
+<img alt="Diagrama de conexión: G17F a E485. Fuente de alimentación (12-24 V DC, 0,5 A): +DC a +DC y -DC a -DC, cada par unido en un punto de conexión. Conexión RS485 (hasta 100m): A 485 del G17F a A 485 del E485; B 485 a B 485." src="./image50.webp" style="width:2.826771653543307in;height:2.141732283464567in" />
 
 ### Encendido del comunicador 
 
@@ -672,7 +672,7 @@ Realice estas acciones si desea controlar una salida PGM de forma remota:
 
 Después de conectar G17F y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
+<img alt="Barra de Estado de TrikdisConfig tras leer el G17F. Muestra los campos IMEI/ID único, Dispositivo, SN, BL, FW y HW, además de Estado: Listo, Estado USB y Propósito: Administrador." src="./image55.webp" style="width:7.086614173228346in;height:0.5787401574803149in" />
 
 | **Nombre** | **Descripción** |
 |----|----|
@@ -692,7 +692,7 @@ Después de pulsar **Leer [F4]**, el programa leerá y mostrará los ajustes, qu
 
 **Pestaña de la “Sistema General”**
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
+<img alt="TrikdisConfig, ventana Opciones de sistema, pestaña Sistema General. Se ven Objeto ID 0001, Nombre del objeto G17F, Período de test 1 día y 0 h, APN internet y Zona horaria +2 con Horario de verano activado; también aparece el campo PIN de la tarjeta SIM." src="./image56.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
 
 **Grupo de opciones de la "General"**
 
@@ -731,7 +731,7 @@ Después de pulsar **Leer [F4]**, el programa leerá y mostrará los ajustes, qu
 
 **Pestaña de la “Acceso”**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
+<img alt="TrikdisConfig, «Opciones de sistema», pestaña «Acceso». «Códigos de acceso» muestra los campos «Codigo de administrador», «Contraseña SMS» y «Codigo de instalador». En «Permisos de instalador», «Objeto ID» y «Tarjeta SIM» están marcados. «Configuración de área» y los menús de usuarios e informes, módulos, zonas, PGM, informes a CRA y eventos del sistema están configurados como «Editable»." src="./image57.webp" style="width:7.086614173228346in;height:3.1023622047244093in" />
 
 **Grupo de opciones de la “Códigos de acceso”**
 
@@ -747,7 +747,7 @@ El administrador puede establecer qué parámetros puede cambiar el instalador.
 
 ### Ventana de "Informar a CRA" 
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.5354330708661417in" />
+<img alt="TrikdisConfig, ventana Informar a CRA. Canal principal y Canal de respaldo muestran Tipo de comunicación Desabilitado, Dominio o IP 0.0.0.0, Puerto 0 y Protocolo TRK. En Configuraciones aparecen DNS1 8.8.8.8 y DNS2 8.8.4.4; Canal de respaldo 2 tiene un campo Número de teléfono." src="./image58.webp" style="width:7.086614173228346in;height:3.5354330708661417in" />
 
 El comunicador envía mensajes a la Estación Central de Monitoreo usando Internet (IP) o mensajes SMS.
 
@@ -810,7 +810,7 @@ Los siguientes ajustes solo se muestran cuando se elige el protocolo DC-09_2007 
 
 **Pestaña de la “Usuarios”**
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:4.039370078740157in" />
+<img alt="TrikdisConfig, ventana Usuarios y Reportes, pestaña Usuarios. La tabla Usuarios y reportes al usuario tiene columnas ID, Nombre, Núm. de teléfono, ACK y FWD. En Aplicación en la Nube, Activar conexión está marcado, Informes paralelos está desmarcado y Código de acceso a la Nube muestra 123456." src="./image59.webp" style="width:7.086614173228346in;height:4.039370078740157in" />
 
 **Grupo de opciones de la “Usuarios y reportes al usuario”**
 
@@ -836,7 +836,7 @@ Los siguientes ajustes solo se muestran cuando se elige el protocolo DC-09_2007 
 
 **Pestaña de la “SMS textos de respuesta”**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
+<img alt="TrikdisConfig, ventana Usuarios y Reportes, pestaña SMS textos de respuesta. En Texto de respuesta SMS, Comando ejecutado tiene el texto Command done; Contraseña errónea, Wrong password; Datos incorrectos, Wrong data; y Comando erróneo, Wrong command." src="./image60.webp" style="width:7.086614173228346in;height:1.905511811023622in" />
 
 **Grupo de opciones de la “Texto de respuesta SMS”**
 
@@ -844,7 +844,7 @@ Los siguientes ajustes solo se muestran cuando se elige el protocolo DC-09_2007 
 
 **Pestaña de la “SMS para eventos del panel”**
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
+<img alt="TrikdisConfig, «Usuarios y Reportes», pestaña «SMS para eventos del Panel». Para «Usuario 1», «SMS» está marcado y «Llam.» desmarcado en los eventos visibles: E110 Fire alarm, E118 Fire pre-alarm state, E380 Detector fault, E323 Line fault, E301 AC loss, E302 Low battery, E311 Missing battery, E305 Panel reset, E372 Zone short, E371 Zone open, E574 Zone disabled, R574 Zone enabled, E604 Test, E320 Sounder fault, R320 Sounder restore y R373 Fault restore. En la última fila visible, E000, ambos están desmarcados." src="./image61.webp" style="width:7.086614173228346in;height:3.645669291338583in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes".
 
@@ -860,7 +860,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la „RS485 módulos“**
 
-<img alt="" src="./image62.webp" style="width:7.086614173228346in;height:3.3464566929133857in" />
+<img alt="TrikdisConfig, «Módulos», pestaña «RS485 módulos». La tabla tiene ocho filas, con ID del 1 al 8 y nombres Expander ID1 a Expander ID8. Está abierta la lista «Módulo» de la primera fila, con estas opciones visibles: No disponible, Expansor iO, iO-WL expansor inalámbrico, Expansor iO-8, INIM Smartline, E485 módulo, W485 (W17u) módulo, iO-LORA expansor, iO8-LORA expansor, PB-LORA Botón de pánico, REL-LORA expansor, NSC Solución, C-TEC Cast ZFP y ESPA 4.4.4 protocolo." src="./image62.webp" style="width:7.086614173228346in;height:3.3464566929133857in" />
 
 **Grupo de opciones de la “RS485 módulos”**
 
@@ -878,7 +878,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Ventana de configuración del módulo WiFi W485 (W17u)**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:2.673228346456693in" />
+<img alt="TrikdisConfig, «Módulos», pestaña «W485 configuraciones». «DHCP modo» está marcado; «IP estática», «Máscara de subred» y «Por defecto gateway» muestran 0.0.0.0. «Wifi SSID nombre» muestra TRIKDIS. En «Parámetros SIM», está marcada «Utilice marcado y SMS cuando trabaje a través del módulo de Internet»; las otras dos opciones están desmarcadas." src="./image63.webp" style="width:7.086614173228346in;height:2.673228346456693in" />
 
 **Grupo de opciones de la „Parámetros de la red WiFi“**
 
@@ -906,7 +906,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Ventana de configuración del módulo "Ethernet" E485**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña E485 configuraciones. En Configuración de la red del comunicador, DHCP modo está marcado; IP estática, Máscara de subred y Por defecto gateway muestran 0.0.0.0. En Parámetros SIM, está marcada la opción de usar llamadas y SMS a través del módulo de Internet; las otras dos casillas están desmarcadas." src="./image64.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 **Grupo de opciones de la „ Parámetros de la red LAN“**
 
@@ -930,7 +930,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “Configuraciones de zonas”**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig, ventana Zonas, pestaña Configuraciones de zonas. La tabla muestra las zonas 1 a 6, asignadas a G17F 1 IN, G17F 2 IN, G17F 3 I/O, G17F 4 I/O, G17F 5 I/O y G17F 6 IN. Todas tienen Definición 24_horas, Tipo EOL, CRA y Prot. marcados, Retraso 400, Código de C 133, SIA E FA, SIA R FR y LOOP 99." src="./image65.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - **Zona Núm.** – el número de la zona en la lista.
 
@@ -956,7 +956,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “SMS y llamadas”**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:2.3818897637795278in" />
+<img alt="TrikdisConfig, ventana Zonas, pestaña SMS y llamadas. Para Usuario 1, las filas visibles de Evento y Restaurar de las zonas 1 a 3, y Evento de la zona 4, tienen SMS marcado y Llam. desmarcado. Los textos SMS visibles incluyen Zone 1 Alarm, Zone 1 Restore, Zone 2 Alarm, Zone 2 Restore, Zone 3 Alarm y Zone 3 Restore." src="./image66.webp" style="width:7.086614173228346in;height:2.3818897637795278in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes"*.*
 
@@ -970,7 +970,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “Salidas”**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig, ventana PGM, pestaña Salidas. PGM 1 usa G17F 4 I/O; PGM 2 y 3 muestran Desabilitado. Las tres filas tienen Definición de Salida Control remoto, Tiempo de Pulso 20 s, CRA desmarcado, Prot. marcado, SIA E RC y SIA R RO." src="./image67.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 - **PGM Núm.** – especifica el número de salida de PGM en la lista.
 
@@ -990,7 +990,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “SMS y llamadas”**
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.720472440944882in" />
+<img alt="TrikdisConfig, «PGM», pestaña «SMS y llamadas». Para «Usuario 1», el evento de PGM 1 tiene el texto SMS OUT1 ON y su restauración, OUT1 OFF. En ambas filas, «SMS» está marcado y «Llam.» desmarcado." src="./image68.webp" style="width:7.086614173228346in;height:1.720472440944882in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes".
 
@@ -1004,7 +1004,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “Eventos”**
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.8976377952755905in" />
+<img alt="TrikdisConfig G17F, «Eventos de sistema», pestaña «Eventos». Entre los eventos habilitados figuran «Baja potencia» (CID 302), «Periodo de prueba» (602), «Falla RS485» (333), «Jamming GSM» (344) y «Evento de IP» (700). La tabla también muestra las selecciones «CRA» y «Prot.», los códigos SIA, los números LOOP y los textos SMS de evento y restauración." src="./image69.webp" style="width:7.086614173228346in;height:1.8976377952755905in" />
 
 - **ID** – número de evento en la lista.
 
@@ -1030,7 +1030,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña de la “SMS y llamadas”**
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="TrikdisConfig G17F, «Eventos de sistema», pestaña «SMS y llamadas». Para «Usuario 1», «SMS» está marcado en las filas visibles Low power, Power restore, Periodic test, RS485 device fault, RS485 device restore, GSM jamming y NO GSM jamming. «Llam.» está desmarcado en todas las filas visibles; en ESPA 4.4.4 text, tanto «SMS» como «Llam.» están desmarcados." src="./image70.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana "Usuarios y Reportes".
 
@@ -1042,7 +1042,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana de “Registro de eventos” 
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig G17F, ventana «Registro de eventos», con los botones «Leer Registro» y «Borrar Registro». La tabla muestra «Evento Núm.», «Tiempo», «CID» y «Definición de evento». Entre las entradas visibles figuran «Alarma en Entrada IN5», «Inicio del sistema» y «La configuración ha cambiado»." src="./image71.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 - Botón **Leer Registro** – comando para leer el registro de eventos desde la memoria del dispositivo.
 
@@ -1080,7 +1080,7 @@ Para restablecer el comunicador a la configuración de fábrica, presione el bot
 
 2.  En la sección de acceso remoto ingrese el IMEI/número único de ID. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:2.161417322834646in" />
+<img alt="TrikdisConfig, pantalla de acceso remoto. Están resaltados el campo ID único y el botón Configuración; junto al campo aparece Nombre del sistema." src="./image73.webp" style="width:7.086614173228346in;height:2.161417322834646in" />
 
 3. (Opcional) en el espacio del nombre de Sistema ingrese el nombre deseado para el comunicador.
 
@@ -1119,7 +1119,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de **Firmware** del menú.
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:2.909448818897638in" />
+<img alt="TrikdisConfig G17F, ventana «Firmware». El campo «Abrir archivo de firmware» está vacío; aparecen el botón «Abrir firmware», el botón «Actualizar (F12)» deshabilitado y una barra de progreso al 0%." src="./image74.webp" style="width:7.086614173228346in;height:2.909448818897638in" />
 
 4. Presione Abrir firmware y seleccione el archivo de firmware requerido.
 
@@ -1137,4 +1137,4 @@ Siempre que desconecte la fuente de alimentación antes de realizar las conexion
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-<img alt="" src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.39375in;height:0.44513888888888886in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

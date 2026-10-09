@@ -101,17 +101,17 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 2. Presione el botón **5**.
 
-3. Presione el botón **2** para ajustar el volumen y use los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> para configurar el volumen deseado. Confirme su selección presionando el botón **OK**.
+3. Presione el botón **2** para ajustar el volumen y use los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Icono pequeño de flecha en forma de chevrón hacia arriba." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Icono pequeño de flecha en forma de chevrón hacia abajo." /> para configurar el volumen deseado. Confirme su selección presionando el botón **OK**.
 
-4. Presione el botón **4** para ajustar el brillo de la pantalla. Utilice los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> para ajustar el brillo de pantalla deseado. Confirme su selección presionando el botón **OK**.
+4. Presione el botón **4** para ajustar el brillo de la pantalla. Utilice los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Icono pequeño de flecha en forma de chevrón hacia arriba." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Icono pequeño de flecha en forma de chevrón hacia abajo." /> para ajustar el brillo de pantalla deseado. Confirme su selección presionando el botón **OK**.
 
-5. Presione el botón **3** para ajustar el brillo del botón. Utilice los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="" /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="" /> para configurar el brillo del botón deseado. Confirme su selección presionando el botón **OK**.
+5. Presione el botón **3** para ajustar el brillo del botón. Utilice los botones <img src="./image3.webp" style="width:0.2047in;height:0.1220in" alt="Icono pequeño de flecha en forma de chevrón hacia arriba." /> <img src="./image4.webp" style="width:0.2126in;height:0.1260in" alt="Icono pequeño de flecha en forma de chevrón hacia abajo." /> para configurar el brillo del botón deseado. Confirme su selección presionando el botón **OK**.
 
 ## Introducción o cambio de códigos de Usuario o Maestros
 
 ### Para ingresar un código de usuario nuevo o cambiar el existente
 
-1. Presione el botón <img src="./image2.webp" style="width:0.3000in;" />.
+1. Presione el botón <img alt="Botón con un rayo." src="./image2.webp" style="width:0.3000in;" />.
 
 2. Introduzca **[Código de administrador]** (código predeterminado: 123456).
 
@@ -131,7 +131,7 @@ Cuando se desarma, en la pantalla aparecerá el texto **Desarmado: Área**.
 
 ### Para restablecer los detectores de incendios (humo) de dos cables
 
-- Mantenga pulsado el botón <img src="./image2.webp" style="width:0.3000in;" /> durante 3 segundos.
+- Mantenga pulsado el botón <img alt="Botón con un rayo." src="./image2.webp" style="width:0.3000in;" /> durante 3 segundos.
 
 > [!NOTE]
 > Los detectores de incendios de dos cables no se reinician automáticamente después de la detección de emergencia por incendio. Solo se pueden restablecer manualmente.
@@ -160,7 +160,7 @@ Repita las mismas acciones que en la desactivación de la monitorización de una
 
 ### Para eliminar el código de usuario
 
-1. Presione el botón <img src="./image2.webp" style="width:0.3000in;" />.
+1. Presione el botón <img alt="Botón con un rayo." src="./image2.webp" style="width:0.3000in;" />.
 
 2. Introduzca **[Código de administrador]** (código predeterminado: 123456).
 

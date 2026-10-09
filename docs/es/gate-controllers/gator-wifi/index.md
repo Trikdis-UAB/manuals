@@ -1,7 +1,7 @@
 # El controlador GATOR WiFi está diseñado para el control remoto de puertas automáticas (u otros equipos eléctricos)
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Parte frontal del controlador GATOR WiFi con indicadores NETWORK, DATA y STATUS. La carcasa está marcada 9–32 V DC, 0.15 A max. El bloque de terminales inferior está etiquetado +DC, -DC, 1 I/O, 2 I/O, 3 I/O, 4 I/O, +AUX, NC, C, NO, A RS485 y B RS485; NC, C y NO están marcados 5 OUT." width="400">
 </div>
 
 ##  Descripción 
@@ -84,7 +84,7 @@ Entradas y salidas
 
 5.  Botón para ingresar al modo de configuración de Wi-Fi.
 
-<img alt="" src="./image4.webp" style="width:4.853343175853018in;height:2.8366721347331585in" />
+<img alt="Vistas numeradas del controlador GATOR WiFi. Vista frontal izquierda: 1 indicadores luminosos; 2 ranura de apertura de la tapa frontal. Vista derecha sin la tapa: 3 puerto USB Mini-B para programar el controlador; 4 terminal para conexiones externas; 5 botón para activar el modo de configuración de Wi-Fi del módulo." src="./image4.webp" style="width:4.853343175853018in;height:2.8366721347331585in" />
 
 ### Descripción del Bloque de Terminales 
 
@@ -157,7 +157,7 @@ Si el indicador LED no está funcionando, compruebe la alimentación y las conex
 
 5.  Cierre la tapa superior.
 
-<img alt="" src="./image5.webp" style="width:3.937007874015748in;height:2.0551181102362204in" />
+<img alt="Dibujos de fijación: la vista izquierda rodea una pestaña lateral de retención y muestra una flecha hacia fuera; la vista derecha rodea dos orificios de montaje para tornillos en la base de la caja." src="./image5.webp" style="width:3.937007874015748in;height:2.0551181102362204in" />
 
 ### Esquema para la conexión de la fuente de alimentación 
 
@@ -333,7 +333,7 @@ Encuentra Protegus2 en la barra de opciones.
 
 Aparecerá en la pantalla un círculo que indica cuándo se activa el PGM.
 
-<img alt="" src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
+<img alt="Pantalla de inicio del teléfono con el widget gris Output5 junto al icono de la aplicación Protegus 2. Debajo aparece un círculo blanco grande con un botón de encendido gris y un pequeño símbolo de actualización." src="./image41.webp" style="width:2.7559055118110236in;height:2.8818897637795278in" />
 
 5. Cuando el controlador está conectado al portón automático con indicación de estado de portón, el icono mostrará el estado de las puertas abiertas/cerradas.
 
@@ -347,7 +347,7 @@ Con TrikdisConfig puede cambiar la configuración del controlador GATOR WiFi (si
 
 2.  Usando un destornillador de cabeza plana, retire la tapa de la controlador como se muestra a continuación:
 
-<img alt="" src="./image43.webp" style="width:6.881889763779528in;height:1.8503937007874016in" />
+<img alt="Dos dibujos muestran un destornillador de cabeza plana insertado en el borde superior de la tapa del GATOR WiFi. El dibujo derecho muestra el destornillador moviéndose hacia abajo; el izquierdo muestra la tapa moviéndose hacia la izquierda. Junto al dispositivo se indica un conector USB Mini-B." src="./image43.webp" style="width:6.881889763779528in;height:1.8503937007874016in" />
 
 1.  Conectar el controlador a un ordenador mediante un cable USB Mini-B.
 
@@ -743,4 +743,4 @@ Siempre desconecte la fuente de alimentación antes de realizar las conexiones e
 
 Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
-<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

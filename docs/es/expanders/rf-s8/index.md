@@ -1,7 +1,7 @@
 # RF-S8 Transceptor inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Parte frontal del transceptor TRIKDIS RF-S8, con indicadores NETWORK y POWER y terminales etiquetados +DC, -DC, A 485 y B 485. La indicación de alimentación dice 9-26 V, 0.1 A Max." width="200">
 </div>
 
 ## Descripción 

@@ -1,7 +1,7 @@
 # Comunicador Ethernet E16
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Parte frontal del comunicador Ethernet TRIKDIS E16. Los indicadores son NETWORK, DATA, POWER y TROUBLE; los terminales son +DC, -DC, CLK, DATA, I/O 1, I/O 2, I/O 3, COM, A RS485 y B RS485. Etiqueta de alimentación: 10–18 VDC, 0.25 A Max." width="400">
 </div>
 
 ## Descripción
@@ -152,7 +152,7 @@ Funciona con la aplicación Protegus2:
 
 ### Esquema estructural del uso del dispositivo E16
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.923611111111111in" />
+<img alt="Diagrama de bloques: panel de control → comunicador Ethernet E16 → router → internet. Desde internet, una ruta va al servidor Protegus y después a un teléfono con la app Protegus; otra va a un receptor y después al software de monitoreo de una central receptora de alarmas." src="./image5.webp" style="width:7.0875in;height:2.923611111111111in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
@@ -177,7 +177,7 @@ Funciona con la aplicación Protegus2:
 
 2.  Abra la cubierta del E16 con el desatornillador de cabeza plana como se muestra a continuación:
 
-    <img alt="" src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
+    <img alt="Dos dibujos muestran un desatornillador de cabeza plana introducido en la ranura de apertura de la cubierta del E16 y luego movido hacia abajo para liberar la cubierta frontal. Un detalle separado etiqueta el conector USB Mini-B." src="./image6.webp" style="width:6.876680883639545in;height:1.850003280839895in" />
 
 3.  Usando el cable USB mini-B conecte el E16 a la computadora.
 
@@ -231,7 +231,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 En la ventana de opciones de “CRA ajustes” para el “Canal de comunicación principal”:
 
-<img alt="" src="./image10.webp" style="width:7.082677165354331in;height:3.547244094488189in" />
+<img alt="TrikdisConfig, ventana «CRA informes», pestaña «CRA ajustes». Canal de comunicación principal: «Modo» IP, «Protocolo» TRK, «Clave de cifrado TRK» oculta, «Dominio o IP» 155.14.178.152, «Puerto» 55448 y «TCP o UDP» TCP. Modo del canal de reserva: IP, TRK, clave oculta, dominio o IP 160.12.15.180, puerto 44558 y TCP. En «Segundo canal», «Tipo de comunicación» está en «Desactivar»." src="./image10.webp" style="width:7.082677165354331in;height:3.547244094488189in" />
 
 3. **Modo** – seleccione el método de conexión IP.
 
@@ -266,7 +266,7 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="530" height="489" />
+<img class="wiring-diagram" alt="Diagrama de conexión: BUS de Datos del panel DSC al E16. RED (+12 V) a +DC, BLK a -DC, YEL a CLK y GRN a DATA." src="./wiring-dsc.webp" width="530" height="489" />
 
 #### PARADOX
 
@@ -274,7 +274,7 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="530" height="488" />
+<img class="wiring-diagram" alt="Diagrama de conexión: BUS de Datos del panel CADDX al E16. POS (+12 V) a +DC, COM a -DC y DATA a DATA; CLK queda sin usar." src="./wiring-caddx.webp" width="530" height="488" />
 
 #### TEXECOM
 
@@ -282,11 +282,11 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### INNERRANGE INCEPTION
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="648" height="471" />
+<img class="wiring-diagram" alt="Diagrama de conexión: INNERRANGE INCEPTION a E16. VOUT + (+12V) a +DC; VOUT 0V a -DC, unido al cable negro del cable USB 993030USB; cable verde a CLK y cable blanco a DATA." src="./wiring-innerrange-inception.webp" width="648" height="471" />
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="563" height="459" />
+<img class="wiring-diagram" alt="Diagrama de conexión: INNERRANGE INTEGRITI a E16 mediante el cable INTG-996795. +DET (+13V) a +DC, GND 5 del Puerto 0 a -DC, Rx 3 a CLK y Tx 2 a DATA." src="./wiring-innerrange-integriti.webp" width="563" height="459" />
 
 #### Crow Runner 4/8, Runner 8/16
 
@@ -298,13 +298,13 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### Honeywell Vista-20, Vista-48
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="582" height="488" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de teclado del panel Honeywell Vista-20 o Vista-48 a E16. Terminal 5 (+12V) a +DC, terminal 4 a -DC, terminal 7 a CLK y terminal 6 a DATA." src="./wiring-honeywell-vista.webp" width="582" height="488" />
 
 ### **Diagramas de conexión para control el panel de control a través de la zona de keyswitch**
 
 Siga este esquema si el panel de seguridad será controlado, pero no de forma directa, pero con una salida PGM *E16* para prender/apagar la zona de keyswitch del sistema. / El comunicador *E16* tiene tres salidas OUT (PGM) programables que pueden controlar tres áreas del sistema de seguridad. Si usted quiere controlar el sistema de esta forma, no seleccione la casilla de Armado/Desarmado remoto en la ventana de “configuración del sistema” de *TrikdisConfig*.
 
-<img alt="" src="./image16.webp" style="width:4.0350076552930885in;height:2.3800043744531933in" />
+<img alt="Diagrama de conexión: panel de control a E16. Bus de datos o puerto serial: RED (+12V) a + DC, BLK a - DC, YEL a CLK y GRN a DATA. Interruptor de llave: 1-st Area a I/O 1, 2-nd Area a I/O 2 y 3-rd Area a I/O 3." src="./image16.webp" style="width:4.0350076552930885in;height:2.3800043744531933in" />
 
 ### Diagramas para la conexión de entrada
 
@@ -314,27 +314,27 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
 
 #### Normalmente abierto (NA)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="286" height="341" />
+<img class="wiring-diagram" alt="Diagrama de conexión: contacto normalmente abierto (NO) entre COM e INx. Cortocircuito: alarma; circuito abierto: restablecimiento." src="./wiring-input-no.webp" width="286" height="341" />
 
 #### Normalmente cerrado (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="289" height="341" />
+<img class="wiring-diagram" alt="Diagrama de conexión: contacto normalmente cerrado (NC) entre COM e INx. Cortocircuito: restablecimiento; circuito abierto: alarma." src="./wiring-input-nc.webp" width="289" height="341" />
 
 #### Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="387" height="359" />
+<img class="wiring-diagram" alt="Diagrama de conexión: contacto NC con una resistencia de fin de línea de 2,2k en serie entre COM e INx (EOL 2,2k). Cortocircuito: alarma; circuito abierto: alarma; 2,2k: restablecimiento." src="./wiring-input-nc-eol.webp" width="387" height="359" />
 
 #### Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="311" height="519" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada: contacto NO con una resistencia de fin de línea de 2,2k en paralelo entre COM e INx (EOL 2,2k). Cortocircuito: alarma; circuito abierto: alarma; 2,2k: restablecimiento." src="./wiring-input-no-eol.webp" width="311" height="519" />
 
 #### Normalmente abierto con resistencia de fin de línea y reconocimiento de manipulación
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="408" height="530" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada con reconocimiento de manipulación (DEOL): entre COM e INx, un interruptor Tamper y una resistencia de 2,2k en serie; después, el contacto NO con una segunda resistencia de 2,2k en paralelo. Cortocircuito: manipulación; circuito abierto: manipulación; 2,2k: alarma; 3,3k-5,5k: restablecimiento." src="./wiring-input-no-deol.webp" width="408" height="530" />
 
 #### Normalmente cerrado con resistencia de fin de línea y reconocimiento de manipulación
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="417" height="530" />
+<img class="wiring-diagram" alt="Esquema de conexión de entrada con reconocimiento de manipulación (DEOL): entre COM e INx, un interruptor Tamper y una resistencia de 2,2k en serie; después, el contacto NC con una segunda resistencia de 2,2k en paralelo. Cortocircuito: manipulación; circuito abierto: manipulación; 2,2k: restablecimiento; 3,3k-5,5k: alarma." src="./wiring-input-nc-deol.webp" width="417" height="530" />
 
 !!! note "Nota"
     Si más entradas o salidas necesitan ser conectadas al comunicador,
@@ -342,19 +342,19 @@ Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, N
     El método de conexión está descrito en el manual de iO.
 ### Conectar el cable LAN
 
-<img alt="" src="./image19.webp" style="width:2.8250054680664918in;height:2.282504374453193in" />
+<img alt="Diagrama de conexión: conector de un cable LAN dirigido hacia el comunicador E16." src="./image19.webp" style="width:2.8250054680664918in;height:2.282504374453193in" />
 
 ### Esquemas de cableado de un relé
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos electrónicos. El terminal de I/O del comunicador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image20.webp" style="width:2.4775043744531935in;height:0.8950021872265966in" />
+<img alt="Diagrama de conexión: E16 a relé. El terminal +DC se conecta a un extremo de la bobina y el terminal I/O x al otro. Los contactos del relé están identificados como NC, C y NO." src="./image20.webp" style="width:2.4775043744531935in;height:0.8950021872265966in" />
 
 ### Esquemas para la conexión de módulos de expansión de la serie de iO
 
 Si es necesario conectar más entradas o salidas al comunicador, o si desea conectar un sensor de temperatura, conecte el expansor de salida inalámbrico o por cable de la serie TRIKDIS iO. Configuración de los módulos expansores conectados al E16 se describe en el capítulo 6.7 “Ventana “RS485 modules”.
 
-<img alt="" src="./image21.webp" style="width:7.0875in;height:3.5395833333333333in" />
+<img alt="Diagrama de conexión: panel de control, E16 y módulos iO, iO-8, iO-MOD e iO-WL. Alimentación: +AUX del panel a + DC del E16, iO, iO-8 e iO-MOD; -AUX a sus terminales - DC. Bus RS485: A RS485 del E16 a A RS485 de iO, iO-8 e iO-MOD; B RS485 a sus terminales B RS485. iO-MOD se comunica inalámbricamente con iO-WL hasta 300 m. Fuente de 12-28 V DC, 0,5 A a + DC y - DC de iO-WL; sensor DS18B20 o DS18S20: + 5 V a Vdd+, 1 - Wire a DQ y COM a COM." src="./image21.webp" style="width:7.0875in;height:3.5395833333333333in" />
 
 ### Cambiando en la fuente de alimentación para el panel de control
 
@@ -442,7 +442,7 @@ El panel de control debe estar conectado al internet. Conéctese con Innerrange 
 
 Abra la ventana de Configuración > General > Reporte de Alarmas. En la configuración de Reporte de Dispositivos de Terceras partes usted necesita ingresar:
 
-<img alt="" src="./image22.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="Inception, ventana Alarm Reporting, sección 3rd Party Device Configuration. Enable 3rd Party Device Reporting está marcada; 3rd Party Device Type tiene el valor Trikdis; Serial Port tiene el valor Serial Port 1 (Plugged In, In Use By 3rd Party Device)." src="./image22.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  Habilitar Reporte de Dispositivos de Terceras partes – seleccione esta casilla.
 
@@ -495,7 +495,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 2.  Ingrese el nombre del sistema. Haga clic en el botón "Siguiente".
 
-<img alt="" src="./image29.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+<img alt="Pantalla Escanear código QR de Protegus2. Muestra el campo ID único/IMEI, un botón Escanear código QR y una etiqueta de ejemplo con el código QR resaltado. Un recuadro indica introducir la dirección MAC y buscarla en la caja, detrás del comunicador o como ID único en TrikdisConfig." src="./image29.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
 !!! note "Nota"
     Al agregar E16 a Protegus2, revise si:
@@ -518,7 +518,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="" src="./image30.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Protegus2, pantalla El sistema no se controla de forma remota. Indica conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 Europe para habilitar o deshabilitar el sistema. Abajo aparece el botón Continuar." src="./image30.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
@@ -532,7 +532,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="" src="./image32.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
+<img alt="Pantalla Áreas de Protegus2: la partición 1 Area figura como Controlado con: PGM1. Debajo aparecen el botón para agregar una partición y las opciones Saltar y Siguiente." src="./image32.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
 
 ### Control del sistema con Protegus2 
 
@@ -540,7 +540,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="" src="./image33.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
+<img alt="Pantalla principal del sistema E16 en Protegus2: «En línea», «1 Area» con estado «Desconocido», botones «Arm» y «Desarm» y control «PGM2»." src="./image33.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
 
 ## Descripción de la ventana de TrikdisConfig 
 
@@ -599,7 +599,7 @@ Al configurar el comunicador E16 hay dos niveles de acceso para el administrador
     dígitos o caracteres en latín.
 ### Ventana de “CRA informes”
 
-<img alt="" src="./image36.webp" style="width:7.082677165354331in;height:4.02755905511811in" />
+<img alt="TrikdisConfig, ventana «CRA informes», pestaña «CRA ajustes». «Canal de comunicación principal» y «Modo del canal de reserva» están en «Desactivar»; «Segundo canal» y «Reserva del canal paralelo» están en «IP» con protocolo «TRK». Los cuatro grupos muestran «TCP» en «TCP o UDP», claves de cifrado TRK ocultas y los campos «Dominio o IP» y «Puerto» vacíos." src="./image36.webp" style="width:7.082677165354331in;height:4.02755905511811in" />
 
 **Pestaña de parámetros “CRA ajustes”**
 
@@ -633,7 +633,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 **Pestaña de “Ajustes”**
 
-<img alt="" src="./image37.webp" style="width:7.090551181102362in;height:2.377952755905512in" />
+<img alt="TrikdisConfig, CRA informes, pestaña Ajustes. Período de prueba activado: 24 h y 0 min; Período de ping IP activado: 0 min y 30 s; Número de línea y receptor: 00 RR y 0 L; canal de reserva después de 2 intentos; volver a principal después de 1 min y 30 s. Configuración de DC-09: ID de objeto 123456, línea 1 y receptor 1." src="./image37.webp" style="width:7.090551181102362in;height:2.377952755905512in" />
 
 **Grupo “Ajustes”**
 
@@ -663,7 +663,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 **Pestaña de la “Servicio Protegus”**
 
-<img alt="" src="./image38.webp" style="width:7.082677165354331in;height:1.7755905511811023in" />
+<img alt="TrikdisConfig, Informes para usuario, pestaña Servicio PROTEGUS. Activar conexión está seleccionado y Código de acceso a Protegus muestra 123456." src="./image38.webp" style="width:7.082677165354331in;height:1.7755905511811023in" />
 
 - **Activar conexión** – permita que el comunicador se conecte a la nube de Protegus2.
 
@@ -671,7 +671,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 ### Ventana de “Adjustes de Ethernet“ 
 
-<img alt="" src="./image39.webp" style="width:7.082677165354331in;height:2.251968503937008in" />
+<img alt="TrikdisConfig, ventana «Ajustes de Ethernet». «Usar DHCP» está marcado. «IP estática» es 0.0.0.0, «Máscara de subred» 255.255.255.0, «Por defecto gateway» 0.0.0.0, «DNS 1» 8.8.8.8 y «DNS 2» 8.8.4.4." src="./image39.webp" style="width:7.082677165354331in;height:2.251968503937008in" />
 
 **Grupo de opciones de “Adjustes de Ethernet”**
 
@@ -685,7 +685,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 ### Ventana de “IN/OUT“
 
-<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
+<img alt="TrikdisConfig, ventana «IN/OUT». El terminal 1 está en «Apagado»; el terminal 2 está en «IN» con tipo «NO»; el terminal 3 tiene abierto el menú «Propósito» con «OUT» seleccionado. Las filas «IN2_ALARM» e «IN2_TAMPER» tienen activado el informe de incidente y restauración, con códigos Contact ID 130 y 144, respectivamente, «Part.» 99 y «Zona» 002." src="./image40.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 El comunicador tiene 3 terminales universales (entrada/salida). La tabla puede configurar el modo de funcionamiento del terminal (Apagado, IN, OUT). La entrada debe especificar el tipo de circuito a conectar NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -705,7 +705,7 @@ Se pueden conectar sensores adicionales a las entradas del comunicador. Cuando s
 
 El comunicador se puede conectar a un expansor de la serie iO para agregar entradas adicionales, salidas controladas y un bus para sensores de temperatura. Los extensores conectados deben incluirse en la tabla Lista de módulos.
 
-<img alt="" src="./image41.webp" style="width:7.090551181102362in;height:2.141732283464567in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Modules list». La tabla tiene las columnas «ID», «Tipo de módulo» y «Serial Núm.». El menú «Tipo de módulo» está abierto y tiene resaltado «Expansor iO-8»." src="./image41.webp" style="width:7.090551181102362in;height:2.141732283464567in" />
 
 Grupo de opciones de “Modules list”
 
@@ -723,7 +723,7 @@ Después de añadir el expansor al comunicador como se ha descrito en el párraf
 
 #### Ventana de ajustes del expansor iO-8
 
-<img alt="" src="./image42.webp" style="width:7.082677165354331in;height:2.5354330708661417in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1» del «Expansor iO-8». «Recuento de entrada» es 3 y «Mostrar ID de objeto» está desmarcado. «BUS_FAULT» tiene el código Contact ID 333; «INPUT1», «INPUT2» e «INPUT3» tienen el código 130, «Part.» 91 y «Zona» 001, 002 y 003, respectivamente. El informe de incidente y restauración está activado en las cuatro filas; las entradas muestran el tipo «NO»." src="./image42.webp" style="width:7.082677165354331in;height:2.5354330708661417in" />
 
 El expansor iO-8 tiene 8 contactos de terminal universales (entrada/salida). Se pueden conectar hasta cuatro expansores iO-8.
 
@@ -761,7 +761,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID y códigos de r
 
 **Ventana de ajustes del expansor iO**
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:3.216535433070866in" />
+<img alt="TrikdisConfig, RS485 modules, Module 1, ajustes del expansor iO. Tipo de entrada IN: NO; Max °C(T1): 30; Min °C(T2): 15. Control de relé: If TT1 y Ninguno, entonces OFF durante 0 h, 0 min y 0 s. La tabla muestra INPUT, HIGH_TEMPERATURE, LOW_TEMPERATURE y BUS_FAULT con informes de incidente y restauración activados." src="./image43.webp" style="width:7.086614173228346in;height:3.216535433070866in" />
 
 El expansor iO dispone de: terminales para 1 entrada, 1 salida (contactos de relé) y bus serie 1-Wire para la conexión de sensores de temperatura.
 
@@ -781,7 +781,7 @@ En la tabla se pueden asignar entradas de eventos de Contacto ID y códigos de r
 
 Esta ventana le permitirá prender, apagar y modificar los mensajes internos enviados por su dispositivo. Deshabilitar el mensaje interno en esta ventana prevendrá que sea enviado a pesar de otras opciones.
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="TrikdisConfig, ventana «Resumen del incidente». El incidente y la restauración de «COMMUNICATION» están desactivados, con código 350. Los de «POWER» están activados, con código 302. Los incidentes «REMOTE_FINISHED», «REMOTE_STARTED», «START» y «TEST» están activados, con códigos 412, 411, 700 y 602. Los valores mostrados de «Part.» y «Zona» son 99 y 999." src="./image44.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 - **COMMUNICATION** – mensaje de falla de comunicación entre el panel de control y E16.
 
@@ -827,7 +827,7 @@ Para restablecer el comunicador a la configuración de fábrica, presione el bot
 
 2.  En la sección de acceso remoto ingrese la dirección MAC del comunicador. Este dirección puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image46.webp" style="width:7.0078740157480315in;height:1.0393700787401574in" />
+<img alt="TrikdisConfig, sección Acceso remoto. Están resaltados el campo vacío ID único y el botón Configuración; a su lado aparecen Nombre del sistema y Control." src="./image46.webp" style="width:7.0078740157480315in;height:1.0393700787401574in" />
 
 3. (Opcional) en el espacio del nombre de Sistema ingrese el nombre deseado para el comunicador.
 
@@ -882,7 +882,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de Firmware del menú.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:3.1929133858267718in" />
+<img alt="TrikdisConfig, ventana «Firmware» para E16_1000. «Firmware» está seleccionado en el menú; la ruta del archivo está vacía, «Abrir firmware» está disponible, «Actualizar (F12)» está desactivado y el progreso es 0%." src="./image47.webp" style="width:7.086614173228346in;height:3.1929133858267718in" />
 
 4. Presione Abrir firmware y seleccione el archivo de firmware requerido. Si no tiene el archivo, el archivo de la versión más nueva del firmware puede ser descargado por usuario registrado desde [www.trikdis.com](http://www.trikdis.com), bajo la sección de descargar del comunicador E16.
 
@@ -898,7 +898,7 @@ Antes de la instalación, por favor lea con cuidado este manual, para poder evit
 
 Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
 

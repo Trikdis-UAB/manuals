@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Receptor de Radio
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Carcasa blanca del receptor de radio TRIKDIS con un módulo frontal empotrado, indicadores de estado, aberturas para USB y reset, y un conector de antena." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Sobre el receptor de radio

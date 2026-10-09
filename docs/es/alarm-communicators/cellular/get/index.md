@@ -1,7 +1,7 @@
 # Comunicador GET
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Foto del panel frontal del comunicador GET: logotipo TRIKDIS, conector de antena en la parte superior, indicadores etiquetados NETWORK LTE, NETWORK LAN, DATA, POWER, TROUBLE e INTERFACE, y terminales de tornillo etiquetados +12 VDC, -12 VDC, CLK, DATA, 1 I/O, 2 I/O, COM, A 485, B 485, además de bloques de terminales separados para LAN y TIP, RING." width="400">
 </div>
 
 ## Descripción 
@@ -170,7 +170,7 @@ Este manual es para comunicadores LTE.
 
 ### Esquema estructural del uso del dispositivo GET 
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9in" />
+<img alt="Esquema estructural: el panel de control se conecta al comunicador LTE GET. El comunicador llega a INTERNET por LTE o mediante un ROUTER. Desde INTERNET, el SERVIDOR PROTEGUS se conecta a un teléfono con la app Protegus; un enlace bidireccional conecta INTERNET con el RECEPTOR de la CENTRAL RECEPTORA DE ALARMAS, que alimenta el software de monitoreo Monas MS." src="./image5.webp" style="width:7.0875in;height:2.9in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
@@ -200,7 +200,7 @@ Este manual es para comunicadores LTE.
 
 2.  Abra la cubierta del GET con el desatornillador de cabeza plana como se muestra a continuación:
 
-    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="Dibujo lineal que muestra cómo abrir la cubierta del comunicador con un desatornillador de cabeza plana: introducirlo en la unión superior cerca de la antena y hacer palanca hacia afuera; después, introducirlo en la unión inferior y hacer palanca hacia abajo. Un detalle muestra la ubicación del puerto USB-C en el borde de la placa PCB." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Usando el cable USB-С conecte el GET a la computadora.
 
@@ -214,7 +214,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Configuración del panel”:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.6023622047244095in" />
+<img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana Configuración del panel. La llamada 1 destaca Communication protocol: 2. AUTO." src="./image7.webp" style="width:7.086614173228346in;height:1.6023622047244095in" />
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**AUTO**”.
 
@@ -241,7 +241,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de la “Configuración de la red”**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
+<img alt="TrikdisConfig, ventana «Configuración de la red», pestaña «LAN», sección «Ajustes de Ethernet»: la casilla «Usar DHCP», resaltada y señalada con el número 7, está marcada." src="./image10.webp" style="width:7.086614173228346in;height:1.7874015748031495in" />
 
 Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.
 
@@ -261,7 +261,7 @@ Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe 
 
 **En la ventana de la “CRA informes”**
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
+<img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana CRA informes, pestaña Ajustes. La llamada 12 destaca Modo de informe: Tipo principal LAN, Tipo de reserva SIM1 y Tipo de reserva 2 Desactivar." src="./image12.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
 
 12. Se establece el orden preferido para el envío de mensajes a través de los canales de comunicación a la CRA y a Protegus2. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación "**Primario**", se realiza una transición al canal de comunicación "**Respaldo**", etc. Si fue posible enviar un mensaje a través del canal de comunicación "**Respaldo**", luego de un intervalo de tiempo específico, se intentará volver al canal de comunicación "**Primario**".
 
@@ -275,17 +275,17 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Ajustes del sistema”**
 
-<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
+<img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana Ajustes del sistema. La llamada 1 destaca Número de objeto: 561234." src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF**.).
 
 **En la ventana de “Configuración del panel”**
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:1.594488188976378in" />
+<img alt="TrikdisConfig, ventana «Configuración del panel», sección «TLF»: el desplegable «Communication protocol», resaltado y señalado con el número 2, está configurado en «2. AUTO»." src="./image14.webp" style="width:7.086614173228346in;height:1.594488188976378in" />
 
 2. Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**AUTO**”.
 
-<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana Configuración del panel. La llamada 3 destaca Tipo de panel: 6. PARADOX SP+/MG+." src="./image15.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 3. Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
@@ -307,13 +307,13 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 7.  (Recomendado) Configure los ajustes para el “**Modo del canal de reserva**”.
 
-    <img alt="" src="./image17.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
+    <img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana CRA informes, pestaña Ajustes. La llamada 11 destaca Modo de informe: Tipo principal LAN, Tipo de reserva SIM1 y Tipo de reserva 2 Desactivar." src="./image17.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
 8.  Se establece el orden preferido para enviar mensajes a través de los canales de comunicación a la CRA y a Protegus2. Los tipos de canales de comunicación se establecen en orden. Si no es posible establecer una conexión a través del canal de comunicación "**Principal**", se realiza una transición al canal de comunicación "**Reserva**", etc. Si fue posible enviar un mensaje a través del canal de comunicación "**Reserva**", luego de un intervalo de tiempo específico, se intentará volver al canal de comunicación "**Principal**".
 
 **En la ventana de “Configuración de la red”**
 
-<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.7992125984251968in" />
+<img alt="TrikdisConfig, ventana «Configuración de la red», pestaña «LAN», sección «Ajustes de Ethernet»: la casilla «Usar DHCP», resaltada y señalada con el número 12, está marcada." src="./image18.webp" style="width:7.086614173228346in;height:1.7992125984251968in" />
 
 Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.
 
@@ -357,9 +357,9 @@ Cuando la configuración esté lista, de clic en **Escribir [F5]** y desconecte
 
 8.  Si se utilizará una red LAN para transmitir eventos a la CRA, se debe conectar un cable LAN al comunicador.
 
-<img alt="" src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Dibujo lineal: a la izquierda, la placa dentro de la caja, con un cierre rodeado por un círculo en el borde izquierdo y una flecha hacia la izquierda que indica cómo liberarlo; a la derecha, la parte posterior vacía de la caja con dos orificios para tornillos de montaje rodeados por círculos." src="./image20.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image21.webp" style="width:2.5366721347331582in;height:1.4066699475065616in" />
+<img alt="Dibujo lineal de la placa del comunicador GET vista desde arriba que muestra la ubicación de las ranuras para tarjetas SIM: SIM1 cerca del centro y SIM2 en el borde izquierdo, cada una con una flecha que indica la dirección de inserción de la tarjeta." src="./image21.webp" style="width:2.5366721347331582in;height:1.4066699475065616in" />
 
 !!! note "Nota"
     Puede instalar una o dos tarjetas SIM en el comunicador. / Asegúrese de
@@ -380,19 +380,19 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="503" height="517" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel DSC a GET. RED a +DC (+12V), BLK a -DC, YEL a CLK y GRN a DATA." src="./wiring-dsc.webp" width="503" height="517" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="655" height="517" />
+<img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel PARADOX a GET mediante el cable EX-CRP2.4. R (rojo, +12V) a +DC, B (negro) a -DC, Y (amarillo) a CLK y G (verde) a DATA." src="./wiring-paradox.webp" width="655" height="517" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="492" height="512" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel CADDX a GET. POS a +DC (+12V), COM a -DC y DATA a DATA; CLK no se utiliza." src="./wiring-caddx.webp" width="492" height="512" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="668" height="521" />
+<img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel TEXECOM a GET. R (rojo, +12V) a +DC, B (negro) a -DC, BL (azul) a CLK y W (blanco) a DATA." src="./wiring-texecom.webp" width="668" height="521" />
 
 #### INNERRANGE INCEPTION
 
@@ -400,19 +400,19 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="545" height="491" />
+<img class="wiring-diagram" alt="Diagrama de conexión: Puerto 0 de INNERANGE INTEGRITI a GET mediante el cable Inner Range INTG-996795. +DET (+13V) a +DC, GND 5 a -DC, Rx 3 a CLK y Tx 2 a DATA." src="./wiring-innerrange-integriti.webp" width="545" height="491" />
 
 #### Honeywell Vista-15, Vista-20, Vista-48
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="561" height="512" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel Honeywell Vista-15, Vista-20, Vista-48 a GET. Terminal 4 a -DC, terminal 5 a +DC (+12V), terminal 6 a DATA y terminal 7 a CLK." src="./wiring-honeywell-vista.webp" width="561" height="512" />
 
 #### Panel de control (comunicador telefónico, TIP/RING)
 
-<img class="wiring-diagram" alt="" src="./wiring-control-panel-tip-ring.webp" width="605" height="513" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control a GET mediante los terminales de la línea telefónica del comunicador. +AUX a +DC (+12 V) y -AUX a -DC; terminales del comunicador telefónico: TIP del panel a TIP de GET y RING del panel a RING de GET." src="./wiring-control-panel-tip-ring.webp" width="605" height="513" />
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
 
-<img alt="" src="./image26.webp" style="width:3.39000656167979in;height:3.016673228346457in" />
+<img alt="Diagrama de conexión: panel PARADOX SP/SP+/MG/MG+ al GET. Alimentación: +AUX (+12B) a +DC, -AUX a -DC. Bus de Datos: GRN a DATA, YEL a CLK. Comunicador telefónico: TIP del panel a TIP del GET, RING del panel a RING del GET." src="./image26.webp" style="width:3.39000656167979in;height:3.016673228346457in" />
 
 Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GET:
 
@@ -450,11 +450,11 @@ Siga este esquema si el panel de control será controlado, pero no de forma dire
     armar/desarmar el sistema con la zona keyswitch".
 El comunicador está conectado al bus del teclado o al bus serie del panel de control. / El Armado/Desarmado del panel de control se realiza a través de la zona del interruptor (keyswitch).
 
-<img alt="" src="./image28.webp" style="width:3.39000656167979in;height:2.4466721347331584in" />
+<img alt="Diagrama de conexión: panel de control al GET. Bus de Datos o Puerto serial: RED (+12V) a +DC, BLK a -DC, YEL a CLK, GRN a DATA. Zona (interruptor de llave): 1-st Area a I/O 1, 2-nd Area a I/O 2." src="./image28.webp" style="width:3.39000656167979in;height:2.4466721347331584in" />
 
 El comunicador está conectado a los terminales TIP/RING del panel de control. / El Armado/Desarmado del panel de control se realiza a través de la zona del interruptor (keyswitch).
 
-<img alt="" src="./image29.webp" style="width:3.6000076552930884in;height:2.9100054680664917in" />
+<img alt="Diagrama de conexión: panel de control al GET. Alimentación: +AUX (+12 V) a +DC, -AUX a -DC. Terminales de la línea telefónica de comunicador: TIP a TIP, RING a RING. Zona (interruptor de llave): 1-st Area a I/O 1, 2-nd Area a I/O 2." src="./image29.webp" style="width:3.6000076552930884in;height:2.9100054680664917in" />
 
 ### Diagramas para la conexión de entrada 
 
@@ -464,13 +464,13 @@ Diagramas de tipo de circuito de entrada NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEO
 
 <img alt="" src="./image30.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
 
-<img alt="" src="./image31.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
+<img alt="Diagrama de conexión: tres circuitos de entrada entre COM e INx del comunicador GET. Izquierda, circuito normalmente abierto con resistencia 2,2k de fin de línea: resistencia en paralelo con el contacto NO; Short - Alarm; Open - Alarm; 2,2k - Restore. Centro, circuito normalmente abierto con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NO; Short - Tamper; Open - Tamper; 2,2k - Alarm; 3,3k-5,5k - Restore. Derecha, circuito normalmente cerrado con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NC; Short - Tamper; Open - Tamper; 2,2k - Restore; 3,3k-5,5k - Alarm." src="./image31.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
 
 ### Esquema de cableado de un relé 
 
 Con los contactos de relé se puede controlar (encender/ apagar) diversos aparatos eléctricos. El terminal de I/O del comunicador debe configurarse en un modo de salida (OUT).
 
-<img alt="" src="./image32.webp" style="width:2.1133377077865267in;height:0.92333552055993in" />
+<img alt="Diagrama de conexión: GET a relé. Bobina: +DC a un terminal de la bobina e I/O x al otro. Contactos del relé para el aparato conectado: NC, C y NO." src="./image32.webp" style="width:2.1133377077865267in;height:0.92333552055993in" />
 
 ### Encendido del comunicador 
 
@@ -565,7 +565,7 @@ El panel de control debe estar conectado al internet. Conéctese con **Innerrang
 
 Abra la ventana de **Configuration>General>Alarm Reporting**. En el grupo "**3rd Party Device Reporting** ", debe instalar:
 
-<img alt="" src="./image33.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="Inception, ventana Alarm Reporting, sección 3rd Party Device Configuration. Enable 3rd Party Device Reporting está marcada; 3rd Party Device Type tiene el valor Trikdis; Serial Port tiene el valor Serial Port 1 (Plugged In, In Use By 3rd Party Device)." src="./image33.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – seleccione esta casilla.
 
@@ -709,11 +709,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
         amarillo).
 3. De clic en "**Añadir nuevo sistema**" e ingrese el número de GET “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
-<img alt="" src="./image37.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+<img alt="Protegus2, pantalla Escanear código QR. El campo ID único/IMEI está vacío; una indicación dice que el IMEI se encuentra en la caja, en la parte trasera del comunicador o en TrikdisConfig como ID único. Se muestran Escanear código QR y Siguiente." src="./image37.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
 
 4. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
-<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="Aplicación Protegus2, pantalla Añadir nuevo sistema: el campo Nombre contiene GET y Zona horaria muestra Europe/Vilnius. Abajo aparecen los botones Cancelar y Siguiente." src="./image40.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
@@ -724,7 +724,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="" src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Protegus2, pantalla El sistema no se controla de forma remota. Indica conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 Europe para habilitar o deshabilitar el sistema. Abajo aparece el botón Continuar." src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
@@ -738,7 +738,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="" src="./image43.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
+<img alt="Pantalla Áreas de Protegus2: la partición 1 Area figura como Controlado con: PGM1. Debajo aparecen el botón para agregar una partición y las opciones Saltar y Siguiente." src="./image43.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
 
 ### Control del sistema con Protegus2 
 
@@ -746,7 +746,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="" src="./image44.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
+<img alt="Pantalla principal de Protegus2 para GET: estado En línea con intensidad de señal, 1 Area con estado Desconocido, botones Arm y Desarm y botón de salida PGM2." src="./image44.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
 
 ## Configuración con el programa TrikdisConfig 
 
@@ -920,7 +920,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar remotamente e
 
 **Pestaña de la “LAN”**
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
+<img alt="Ventana Configuración de la red de TrikdisConfig, pestaña LAN, grupo Ajustes de Ethernet: Usar DHCP marcado, IP estática 0.0.0.0, Máscara de subred 255.255.255.0, Por defecto gateway 0.0.0.0, DNS 1 8.8.8.8 y DNS 2 8.8.4.4." src="./image52.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
 
 **Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.**
 
@@ -982,7 +982,7 @@ Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM2 d
 
 ### Ventana de “IN/OUT“ 
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
+<img alt="TrikdisConfig para GET_S170, ventana IN/OUT. La tabla muestra el terminal 1 como IN de tipo NO y el terminal 2 como OUT. Para IN1_ALARM e IN1_TAMPER están marcados el incidente y la restauración; sus códigos CID son 130 y 144, y los códigos SIA son BA/BH y TA/TR, respectivamente, con Part. 99 y Zona 001." src="./image55.webp" style="width:7.086614173228346in;height:2.47244094488189in" />
 
 El comunicador tiene 2 terminales universales (entrada/salida). La tabla puede configurar el modo de funcionamiento del terminal (Apagado, IN, OUT). La entrada debe especificar el tipo de circuito a conectar NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
@@ -1004,7 +1004,7 @@ Se pueden conectar sensores adicionales a las entradas del comunicador. Cuando s
 
 Esta ventana le permitirá prender, apagar y modificar los mensajes internos enviados por su dispositivo. Deshabilitar el mensaje interno en esta ventana prevendrá que sea enviado a pesar de otras opciones.
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:2.15748031496063in" />
+<img alt="Ventana Resumen del incidente de TrikdisConfig con códigos de incidente y restauración CID/SIA predeterminados, todos con partición 99: COMMUNICATION, incidente 350 YC y restauración 350 YK, zona 999; LAN_FAILURE, incidente 358 YC y restauración 358 YK, zona 903; POWER, incidente 302 YT y restauración 302 YR, zona 999; REMOTE_FINISHED, incidente 412 RS, zona 999, sin restauración; REMOTE_STARTED, incidente 411 RB, zona 999, sin restauración; SIM1_FAILURE, incidente 358 YC y restauración 358 YK, zona 901; SIM2_FAILURE, incidente 358 YC y restauración 358 YK, zona 905; TEST, incidente 602 RP, zona 999, sin restauración." src="./image56.webp" style="width:7.086614173228346in;height:2.15748031496063in" />
 
 - **COMMUNICATION** – mensaje de falla de comunicación entre el panel de control y comunicador GET.
 
@@ -1033,7 +1033,7 @@ Puede cambiar el código Contact ID (SIA) de cualquier evento, cambiar el númer
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón „**Restaurar”** en ***TrikdisConfig*.**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:1.0in" />
+<img alt="Ventana de TrikdisConfig con el botón «Restaurar» resaltado en «Ajustes por defecto», para restablecer la configuración de fábrica." src="./image57.webp" style="width:7.086614173228346in;height:1.0in" />
 
 Otra forma de restaurar la configuración de fábrica.
 
@@ -1062,7 +1062,7 @@ La fuente de alimentación está conectada al comunicador. Mantenga presionado e
 
 2.  En el campo "**ID único**", ingrese el número IMEI del comunicador GET. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:2.8346456692913384in" />
+<img alt="Ventana principal de TrikdisConfig con «Abrir (F8)» activo. En «Configuración USB» aparecen la lista «El programa de configuración» y el botón «OK». Debajo, en «Acceso remoto», están resaltados el campo «ID único» y el botón «Configuración», junto al campo «Nombre del sistema» y el botón «Control»." src="./image58.webp" style="width:7.086614173228346in;height:2.8346456692913384in" />
 
 3. En el campo "**Nombre del sistema**", escriba el nombre del comunicador.
 
@@ -1109,7 +1109,7 @@ El firmware del comunicador puede ser actualizado o cambiado de forma manual. De
 
 3.  Seleccione la parte de „**Firmware**” del menú.
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.5118110236220472in" />
+<img alt="TrikdisConfig para GET_S170, ventana Firmware. Aparecen el campo Abrir el archivo de firmware, el botón Abrir firmware, el botón Actualizar (F12) y la barra de progreso en 0%." src="./image59.webp" style="width:7.086614173228346in;height:2.5118110236220472in" />
 
 4. Presione “Abrir firmware” y seleccione el archivo de firmware requerido.
 
@@ -1125,7 +1125,7 @@ Antes de la instalación, por favor lea con cuidado este manual, para poder evit
 
 Desconecte la fuente de alimentación antes de hacer cualquier conexión eléctrica.
 
-<img alt="" src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado (WEEE), que indica que el dispositivo debe desecharse por separado de los residuos domésticos." src="./image2.webp" style="width:0.34375in;height:0.38819444444444445in" />Los cambios, modificaciones o reparaciones no están autorizadas por el fabricante, y esto eliminará sus derechos a una garantía.
 
 Por favor actúe de acuerdo a sus reglas locales y no se deshaga de su sistema de alarma sin uso o sus componentes con otro desecho normal de su casa.
 

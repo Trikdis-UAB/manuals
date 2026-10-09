@@ -1,7 +1,7 @@
 # iO-LORA Expansor inalámbrico
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="Frontal del expansor inalámbrico TRIKDIS iO-LORA, con los indicadores NETWORK, OUTPUT y POWER. La carcasa lleva impresos el valor nominal 9-26 V, 0.1 A Max y las etiquetas de terminales +DC, -DC, D0, D1, +5V, 1 Wire/OUT wgd, COM, IN1, NC, C y NO." width="200">
 </div>
 
 ## Descripción 
@@ -51,7 +51,7 @@ Entradas y salidas:
 
 ### Elementos expansores 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="Dos fotos del expansor iO-LORA: cerrado a la izquierda y con la placa de circuito expuesta a la derecha. Izquierda: 1, indicadores luminosos (NETWORK, OUTPUT, POWER); 2, ranura de apertura de la cubierta frontal en el borde derecho. Derecha: 3, terminal para conexiones externas; 4, botón SW2 para vincular el dispositivo y comprobar la conexión; 5, interruptor DIP SW1." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 !!! note "Configuración del interruptor DIP 'SW1'"
     Para la versión HW iO-LO_x30x_7_230418:
@@ -95,7 +95,7 @@ Entradas y salidas:
 
 1.  Retire la tapa superior.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Dos dibujos de cómo retirar la tapa superior del iO-LORA. Izquierda: introducir un destornillador en la ranura del borde superior. Derecha: presionar hacia abajo el mango del destornillador para soltar la tapa." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Retire la placa PCB.
 
@@ -105,11 +105,11 @@ Entradas y salidas:
 
 5.  Cierre la tapa superior.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Dibujo de la carcasa del iO-LORA: la vista de la derecha muestra la base y sus orificios de fijación; la vista de la izquierda muestra la placa PCB en el borde de la carcasa, con un punto de retención rodeado por un círculo y una flecha que apunta hacia fuera." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Esquema para la conexión de la fuente de alimentación 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Diagrama de conexión: fuente de poder a iO-LORA. Alimentación (+12 V): terminal +12V de la fuente a +DC de iO-LORA; terminal 0V a -DC." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Esquema para la entrada de conexión 
 
@@ -117,7 +117,7 @@ iO-LORA tiene una entrada. El tipo de entrada se puede configurar: NC, NO.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Diagrama de conexión: entrada IN y COM a un contacto normalmente abierto (NO). IN a un extremo del contacto NO; COM al otro." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
     <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
@@ -196,6 +196,6 @@ Por favor, lea atentamente este manual antes de la instalación con el fin de ev
 
 Siempre desconecte la fuente de alimentación antes de realizar las conexiones eléctricas.
 
-<img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
+<img alt="Símbolo de un contenedor de basura con ruedas tachado, que indica que el producto no debe desecharse con los residuos domésticos." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Los cambios, modificaciones o reparaciones no autorizadas por el fabricante deberán invalidar la garantía.
 
 Cumpla con la normativa local y no deseche su sistema de alarma inutilizables o sus componentes con los residuos domésticos.

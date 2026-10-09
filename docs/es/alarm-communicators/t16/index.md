@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
 
-<img src="./image1.webp" alt="" width="400">
+<img src="./image1.webp" alt="Parte frontal de un transmisor TRIKDIS T16V, con el conector de antena, los indicadores NETWORK, DATA y POWER, y dos bloques de terminales en la parte inferior." width="400">
 
 </div>
 
@@ -200,65 +200,65 @@ Las zonas (entradas IN) de los tranmisores T16V, T16U, T16U5 se pueden conectar 
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="528" height="284" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel DSC al T16. RED (+12V) a + DC, BLK a - DC, YEL a Rx/CLK y GRN a Tx/DATA." src="./wiring-dsc.webp" width="528" height="284" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="664" height="428" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control PARADOX al T16 mediante el cable EX-CRP2.4, que se pide por separado. +AUX (+12V) y el cable rojo R a + DC; -AUX y el cable negro B a - DC; el cable amarillo Y a Rx/CLK; el cable verde G a Tx/DATA." src="./wiring-paradox.webp" width="664" height="428" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="528" height="284" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel de control CADDX al T16. POS (+12V) a + DC, COM a - DC y DATA a Tx/DATA; Rx/CLK queda sin conectar." src="./wiring-caddx.webp" width="528" height="284" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="662" height="437" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control TEXECOM al T16 mediante el cable EX-CRP4, que se pide por separado. +DC (+12V) y el cable rojo R a + DC; -DC y el cable negro B a - DC; el cable azul BL a Rx/CLK; el cable blanco W a Tx/DATA." src="./wiring-texecom.webp" width="662" height="437" />
 
 #### CROW Runner
 
-<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="529" height="284" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel de control CROW Runner al T16. POS (+12V) a + DC, NEG a - DC, CLK a Rx/CLK y DATA a Tx/DATA." src="./wiring-crow-runner.webp" width="529" height="284" />
 
 #### SECOLink
 
-<img class="wiring-diagram" alt="" src="./wiring-secolink.webp" width="663" height="436" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control SECOLink al T16 mediante el cable EX-CRP4, que se pide por separado. +AUX (+12V) y el cable rojo R a + DC; COM y el cable negro B a - DC; el cable azul BL a Rx/CLK; el cable blanco W a Tx/DATA." src="./wiring-secolink.webp" width="663" height="436" />
 
 #### ARGUS-SPEKTR STRELEC
 
-<img class="wiring-diagram" alt="" src="./wiring-argus-spektr-strelec.webp" width="528" height="304" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control ARGUS-SPEKTR STRELEC al T16. +PWR (+12V) a + DC, GND a - DC, TD a Rx/CLK y RD a Tx/DATA." src="./wiring-argus-spektr-strelec.webp" width="528" height="304" />
 
 #### BOLID C2000
 
-<img class="wiring-diagram" alt="" src="./wiring-bolid-c2000.webp" width="662" height="290" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control BOLID C2000 al T16. +U (+12V) a + DC, GND a - DC, Tx a Rx/CLK y Rx a Tx/DATA." src="./wiring-bolid-c2000.webp" width="662" height="290" />
 
 #### PYRONIX
 
-<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="528" height="311" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control Pyronix Matrix al T16. +AUX (+12V) a + DC, -AUX a - DC y KD a Tx/DATA; Rx/CLK queda sin conectar." src="./wiring-pyronix.webp" width="528" height="311" />
 
 #### ROVALANT A6-06
 
-<img class="wiring-diagram" alt="" src="./wiring-rovalant-a6-06.webp" width="607" height="495" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control Rovalant A6-06 al T16. SLOT XP4 se conecta al módulo serie ИС-RF; +12V de Rovalant a + DC del T16 y -12V a - DC. El conector serie de ИС-RF tiene tres conductores: uno a - DC del T16, unido a la línea -12V en un punto de conexión, otro a Rx/CLK y otro a Tx/DATA; ningún conductor del conector va a + DC." src="./wiring-rovalant-a6-06.webp" width="607" height="495" />
 
 #### RISCO LightSYS
 
-<img class="wiring-diagram" alt="" src="./wiring-risco-lightsys.webp" width="537" height="284" />
+<img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel de control RISCO LightSYS al T16. RED (+12V) a + DC, BLK a - DC, YEL a Rx/CLK y GRN a Tx/DATA." src="./wiring-risco-lightsys.webp" width="537" height="284" />
 
 #### HONEYWELL VISTA
 
-<img class="wiring-diagram" alt="" src="./wiring-honeywell-vista.webp" width="662" height="290" />
+<img class="wiring-diagram" alt="Diagrama de conexión: BUS de Datos del panel HONEYWELL VISTA al T16. Terminal 4 a - DC, 5 a + DC, 6 a Tx/DATA y 7 a Rx/CLK; los dos pares de cables se cruzan sin punto de unión." src="./wiring-honeywell-vista.webp" width="662" height="290" />
 
 #### INIM SMARTLINE
 
-<img class="wiring-diagram" alt="" src="./wiring-inim-smartline.webp" width="536" height="297" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel INIM SMARTLINE al T16. +12V a + DC, GND a - DC, -RS485 a Rx/CLK y +RS485 a Tx/DATA." src="./wiring-inim-smartline.webp" width="536" height="297" />
 
 ### Esquema para conectar el marcador de línea fija del panel de control
 
 #### Sin control de línea fija
 
-<img class="wiring-diagram" alt="" src="./wiring-landline-dialer.webp" width="579" height="379" />
+<img class="wiring-diagram" alt="Diagrama de conexión: marcador de línea fija del panel de control al T16. +AUX (+12 V) a + DC, -AUX a - DC, RING a COM/RING y TIP a TIP." src="./wiring-landline-dialer.webp" width="579" height="379" />
 
 #### Con control de línea fija
 
-<img class="wiring-diagram" alt="" src="./wiring-landline-dialer-control.webp" width="637" height="443" />
+<img class="wiring-diagram" alt="Diagrama de conexión: marcador de línea fija del panel de control al T16 con control de línea fija. +AUX (+12 V) a + DC, -AUX a - DC, RING a COM/RING, TIP a TIP, R-1 del panel a IN1/R-1 del T16 y T-1 a IN2/T-1." src="./wiring-landline-dialer-control.webp" width="637" height="443" />
 
 !!! note "Nota"
     El *T16* no puede ser conectado a una línea telefónica fija. Refiriéndose a las instrucciones de programación del panel de control, configure los siguientes parámetros para el marcador de línea fija del panel de control:
@@ -285,45 +285,45 @@ Esquemas para la conexión de circuitos tipo NO, NC, EOL:
 
 #### Normalmente abierto (NA)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="262" height="259" />
+<img class="wiring-diagram" alt="Circuito de entrada: contacto NO entre COM e INx. Cortocircuito: alarma; circuito abierto: restablecimiento." src="./wiring-input-no.webp" width="262" height="259" />
 
 #### Normalmente cerrado (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="265" height="259" />
+<img class="wiring-diagram" alt="Circuito de entrada: contacto NC entre COM e INx. Cortocircuito: restablecimiento; circuito abierto: alarma." src="./wiring-input-nc.webp" width="265" height="259" />
 
 #### Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="300" height="329" />
+<img class="wiring-diagram" alt="Circuito de entrada: contacto NC con una resistencia de fin de línea (EOL) de 2,2k en serie entre COM e INx. Cortocircuito: alarma; circuito abierto: alarma; 2,2k: restablecimiento." src="./wiring-input-nc-eol.webp" width="300" height="329" />
 
 #### Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="293" height="385" />
+<img class="wiring-diagram" alt="Circuito de entrada: contacto NO con una resistencia de fin de línea (EOL) de 2,2k en paralelo entre COM e INx. Cortocircuito: alarma; circuito abierto: alarma; 2,2k: restablecimiento." src="./wiring-input-no-eol.webp" width="293" height="385" />
 
 ### Esquema para conectar PGM del panel de control
 
 Las entradas del transmisor (IN) deben configurarse en NO o NC.
 
-<img alt="" src="./image16.webp" style="width:3.7874015748031495in;height:2.1850393700787403in" />
+<img alt="Diagrama de conexión: panel de control al T16. Alimentación: +AUX (+12 V) a +DC y -AUX a -DC. Salidas PGM: PGM1 a IN1/R-1, PGM2 a IN2/T-1, PGM3 a IN3 y PGM4 a IN4." src="./image16.webp" style="width:3.7874015748031495in;height:2.1850393700787403in" />
 
 ### Esquema para conectar una sirena
 
 La sirena debe estar conectada cuando el *TM17* esté conectado al transmisor. Una sirena que consume hasta 1 A se puede conectar a la corriente de salida del transmisor OUT1 (o OUT2) *T16*. Se activa si una de las entradas del transmisor (IN) se activa en modo armado. La sirena se apaga después de 3 minutos o después de usar una tecla de contacto.
 
-<img alt="" src="./image17.webp" style="width:3.3818897637795278in;height:1.421259842519685in" />
+<img alt="Diagrama de conexión: T16 a sirena. El cable Negro conecta OUT1 a la sirena; el cable Rojo conecta +DC a la sirena." src="./image17.webp" style="width:3.3818897637795278in;height:1.421259842519685in" />
 
 ### Esquemas de conexión del módulo RS485
 
 #### Módulo Wi-Fi W485
 
-<img class="wiring-diagram" alt="" src="./wiring-w485.webp" width="643" height="489" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control al T16 y al módulo Wi-Fi W485. +AUX (+12 V) a los terminales + DC de ambos dispositivos; -AUX a los terminales - DC de ambos; A 485 del T16 a A 485 del W485 y B 485 a B 485. Conexión RS485 de hasta 100m." src="./wiring-w485.webp" width="643" height="489" />
 
 #### Lector TM17
 
-<img class="wiring-diagram" alt="" src="./wiring-tm17.webp" width="538" height="496" />
+<img class="wiring-diagram" alt="Diagrama de conexión: T16 al lector TM17. Una fuente de alimentación de 12 V DC, 1,5 A alimenta ambos dispositivos; el cable rojo del TM17 va a + DC, el azul a - DC, el negro a A 485 del T16 y el blanco a B 485 del T16." src="./wiring-tm17.webp" width="538" height="496" />
 
 #### Módulo Ethernet E485
 
-<img class="wiring-diagram" alt="" src="./wiring-e485.webp" width="647" height="492" />
+<img class="wiring-diagram" alt="Diagrama de conexión: panel de control, T16 y módulo Ethernet E485. Alimentación: +AUX (+12 V) del panel a los dos terminales +DC; -AUX a los dos terminales -DC. Conexión RS485 de hasta 100 m: A 485 del T16 a A 485 del E485 y B 485 a B 485." src="./wiring-e485.webp" width="647" height="492" />
 
 Cuando el bus de datos RS485 es más largo a 1m, use un cable de par trenzado (STP 4x2x0,5). Evite montar el cable en paralelo con los cables de electricidad de aires acondicionados, el cable de la antena u otras fuentes de campo electromagnético.
 
@@ -337,7 +337,7 @@ El módulo E485 es compatible con el transmisor de radio T16. El *E485* envía m
 
 2.  Retire la tapa frontal del T16 usando un destornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
+<img alt="Tres dibujos muestran un destornillador de punta plana introducido en la ranura de la tapa del T16 y presionado hacia abajo, la tapa frontal retirada hacia la izquierda y el conector USB Mini-B en el lateral de la unidad abierta." src="./image20.webp" style="width:6.208661417322834in;height:1.6456692913385826in" />
 
 1.  Conecte el T16 a una computadora usando un cable USB Mini-B.
 
@@ -406,7 +406,7 @@ Los ajustes son idénticos a **Radiofrecuencia** **1**.
 
 **Pestaña “Accesso”**
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:3.7874015748031495in" />
+<img alt="TrikdisConfig, ventana de configuración del T16, pestaña Acceso. Los códigos de acceso aparecen ocultos. En Permitir que el instalador cambie están marcadas todas las opciones visibles, entre ellas Protocolo, ID de la cuenta, Identificación, Sistema, RF, Potencia, Eventos y Red 2 permitida." src="./image23.webp" style="width:7.086614173228346in;height:3.7874015748031495in" />
 
 **Grupo de configuraciones “Accesso”**
 
@@ -424,7 +424,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Entradas”**
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
+<img alt="TrikdisConfig, ventana Eventos del T16, pestaña Entradas. Número de partición: 99. Las entradas 1 a 6 están habilitadas, numeradas 001 a 006, con Tipo NO, Retraso 0 s y códigos Evento y Restaurar 130 para Radiofrecuencia 1 y Radiofrecuencia 2. El menú Tipo muestra Ninguno, NC, NO y EOL." src="./image24.webp" style="width:7.086614173228346in;height:3.5236220472440944in" />
 
 - **Habilitado -** marque la casilla para enviar eventos cuando la entrada se dispara.
 
@@ -444,7 +444,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Eventos”**
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:3.4960629921259843in" />
+<img alt="TrikdisConfig, ventana Eventos del T16, pestaña Eventos. Número de partición: 99. La tabla permite habilitar eventos internos y asignar códigos de Evento y Restaurar a Radiofrecuencia 1 y Radiofrecuencia 2. Están marcados Batería baja, Modo Sleep, Test y TM17 Abrir/Cerrar; Batería baja usa 311 para evento y restauración en ambos canales, y TM17 Abrir/Cerrar usa 401." src="./image25.webp" style="width:7.086614173228346in;height:3.4960629921259843in" />
 
 - **Habilitado -** marque la casilla para activar el envío de eventos internos:
 
@@ -474,7 +474,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Supervisión”**
 
-<img alt="" src="./image26.webp" style="width:7.086614173228346in;height:2.4291338582677167in" />
+<img alt="TrikdisConfig, ventana Eventos del T16, pestaña Supervisión. Para Radiofrecuencia 1 y Radiofrecuencia 2, Período de prueba es 24 h, Primer test después es 0 h y Período de ping es 0 min. Enviar test solo si no hay evento está marcado únicamente para Radiofrecuencia 1; Enviar ping solo si no hay evento está desmarcado." src="./image26.webp" style="width:7.086614173228346in;height:2.4291338582677167in" />
 
 - **Período de prueba -** especifique el intervalo de tiempo entre dos mensajes de prueba utilizando los canales 1 y 2. El propósito de las pruebas periódicas es inspeccionar periódicamente la funcionalidad de los sistemas de radio. Un periodo de prueba típico es de 24 h. Se puede acortar hasta 1 hora. El software de monitoreo CRA rastrea automáticamente el mensaje de prueba. Se genera una advertencia si no hay mensajes de prueba del objeto.
 
@@ -501,7 +501,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 !!! note "Nota"
     Solo puedes conectar uno de cada uno TM17 y Módulos W485(o E485) al transmisor T16. **Pestaña “Módulo 1”**
 
-<img alt="" src="./image28.webp" style="width:7.086614173228346in;height:2.7283464566929134in" />
+<img alt="TrikdisConfig T16, ventana «Módulos RS485», pestaña «Módulo 1». DKey1 y DKey2 contienen identificadores de llaves de contacto; DKey3 a DKey9 muestran 0. «Nivel de sonido» muestra 25." src="./image28.webp" style="width:7.086614173228346in;height:2.7283464566929134in" />
 
 Es posible conectar un lector TM17 al transmisor T16. Después de conectar el lector TM17, el transmisor se puede utilizar como panel de control. Se pueden asignar hasta 9 teclas de contacto (iButton) al lector (una de las cuales es la “clave maestra”) para controlar el estado del sistema de seguridad (armado/desarmado).
 
@@ -552,7 +552,7 @@ Los indicadores LED parpadeantes en el TM17 informan sobre las entradas activada
 
 **Pestaña “W485”**
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:3.7874015748031495in" />
+<img alt="TrikdisConfig T16, ventana «Módulos RS485», pestaña «W485». «Primario» está habilitado, con «Dominio o IP» 195.15.148.20, «Puerto» 44454 y TCP. «Respaldo» está habilitado, con «Dominio o IP» 195.10.20.30, «Puerto» 6021 y TCP. «Protegus» está habilitado y «DHCP mode» está marcado. Los campos de red muestran «IP estático» 192.168.1.27, «Subnet mask» 255.255.255.0, «Gateway predeterminado» 192.168.1.254, «DNS 1» 8.8.8.8 y «DNS 2» 8.8.4.4. «Wifi SSID nombre» muestra TRIKDIS; aparecen los campos «Clave de cifrado TRK» y «Wifi SSID contraseña»." src="./image29.webp" style="width:7.086614173228346in;height:3.7874015748031495in" />
 
 **Grupo de opciones de “Primario”**
 
@@ -590,7 +590,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 **Pestaña “E485”**
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:3.7598425196850394in" />
+<img alt="TrikdisConfig T16, ventana «Módulos RS485», pestaña «E485». «Primario» está habilitado, con «Dominio o IP» 195.15.148.20, «Puerto» 44454 y TCP. «Respaldo» está habilitado, con «Dominio o IP» 190.10.20.30, «Puerto» 6021 y TCP. «Protegus» está habilitado y «DHCP mode» está marcado. Los campos de red muestran «IP estático» 192.168.1.27, «Subnet mask» 255.255.255.0, «Gateway predeterminado» 192.168.1.254, «DNS 1» 8.8.8.8 y «DNS 2» 8.8.4.4. Aparecen campos «Clave de cifrado TRK»." src="./image30.webp" style="width:7.086614173228346in;height:3.7598425196850394in" />
 
 **Grupo de opciones de “Primario”**
 
@@ -624,7 +624,7 @@ Habilite el modo de respaldo de canal para enviar eventos a través de canales d
 
 ### Ventana de “Opciones”
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
+<img alt="TrikdisConfig, ventana Opciones del T16. La tabla Radiofrecuencias disponibles muestra RF nombre 1+1 con Frecuencia 160 MHz y RF nombre 1+2 con Frecuencia 140 MHz. Debajo aparecen campos para un nuevo nombre y valor de frecuencia, y los botones Añadir y Eliminar." src="./image31.webp" style="width:7.086614173228346in;height:3.6496062992125986in" />
 
 **Grupo de ajustes “Radiofrecuencias disponibles”**
 
@@ -632,7 +632,7 @@ Puede Añadir/Eliminar frecuencias de radio que el transmisor T16 puede usar par
 
 ### Ventana “CID a UNI tabla”
 
-<img alt="" src="./image32.webp" style="width:7.086614173228346in;height:3.267716535433071in" />
+<img alt="TrikdisConfig, ventana CID a UNI tabla del T16. La tabla relaciona códigos CID con códigos RAS-2M y LARS; algunas filas contienen el sufijo +z. A la derecha están los botones Leer datos de T16, Escribir datos en T16, Leer datos del archivo y Guardar datos en archivo." src="./image32.webp" style="width:7.086614173228346in;height:3.267716535433071in" />
 
 Los códigos de Contact ID recibidos desde el panel de control se convierten en códigos del sistema de radio (RAS2M, LARS). Solamente los mensajes de Contact ID descritos en la tabla (columna CID) se convierten a los códigos del sistema de radio y enviado al CRA. El símbolo “?” indica cualquier número en esta posición. El símbolo “z” significa que el número en la posición se agrega al código del sistema de radio principal. La tabla es editable, pero cámbiela de forma responsable y solo si es obligatorio hacerlo, porque si hay errores en la tabla, es posible que el sistema no funcione correctamente.
 
@@ -643,7 +643,7 @@ Los códigos de Contact ID recibidos desde el panel de control se convierten en 
 
 Para restaurar la configuración de fábrica del **transmisor**, haga clic en el botón **Restaurar** en el programa TrikdisConfig.
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:1.2086614173228347in" />
+<img alt="Detalle de la ventana de TrikdisConfig para el T16: el botón Restaurar, bajo Configuración por defecto, está resaltado con un recuadro rojo." src="./image33.webp" style="width:7.086614173228346in;height:1.2086614173228347in" />
 
 ### Prueba del transmisor RF T16
 
@@ -666,7 +666,7 @@ Cuando la configuración y la instalación hayan finalizado, realice una comprob
 
 3.  Escoger **Firmware.**
 
-<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:3.177165354330709in" />
+<img alt="TrikdisConfig, ventana Firmware del T16. Se muestra un archivo seleccionado en Abrir archivo de firmware, el botón Abrir firmware, la casilla Guardar configuraciones marcada y el botón Actualizar (F12). La barra Por favor espera indica 0 %." src="./image34.webp" style="width:7.086614173228346in;height:3.177165354330709in" />
 
 4.  Haga clic en el botón **Abrir firmware** y seleccione el archivo de firmware requerido. Si no tiene el archivo, los <u>usuarios registrados</u> pueden descargar el archivo de firmware más reciente desde www.trikdis.com, en la sección de descarga T16.
 

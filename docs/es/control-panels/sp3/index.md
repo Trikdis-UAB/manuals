@@ -184,7 +184,7 @@ Transmite informes a la estación central de monitoreo (CRA) de la compañía de
 
 ### Uso de terminales externos 
 
-<img alt="" src="./image4.webp" style="width:5.480010936132984in;height:3.806674321959755in" />
+<img alt="Placa FLEXi SP3: 1. Luces indicadoras de conectividad y operación; 2. Bloque de terminales de la fuente de alimentación de respaldo; 3. Bloque de terminales de la fuente de alimentación principal; 4. Bloque de terminales externo; 5. Bloque de terminales del bus de datos 1-WIRE; 6. Conector SMA roscado para antena WiFi; 7. Soporte para tarjeta nano-SIM; 8. Conector SMA roscado para antena GSM; 9. Conector USB Mini-B para configurar los ajustes del panel de control." src="./image4.webp" style="width:5.480010936132984in;height:3.806674321959755in" />
 
 1.  Luces indicadoras de conectividad y operación.
 2.  Bloque de terminales de la fuente de alimentación de respaldo.
@@ -314,13 +314,13 @@ Si ocurriesen problemas con la alimentación del sistema desde la fuente de alim
 
 La placa del panel de control se puede instalar en un marco de montaje que ya cuenta con un transformador reductor con un fusible de 500 mA instalado y espacio destinado a una batería de respaldo. / Instala el panel de control en el marco de plástico o metálico elegido usando separadores de plástico. Si eliges un marco de metal, no olvides colocarla a tierra durante la instalación. El marco elegido debe cumplir con los requerimientos descritas en las normas EN 60950 y EN 50131.
 
-<img alt="" src="./image5.webp" style="width:2.6366721347331583in;height:1.6533366141732284in" />
+<img alt="Vistas frontal y lateral del montaje: un soporte atraviesa la placa SP3 y la carcasa para mantenerlas separadas. El orificio de la placa se indica con Ø 4 y el de la carcasa con Ø 4,8." src="./image5.webp" style="width:2.6366721347331583in;height:1.6533366141732284in" />
 
 **Dimensiones de la placa „FLEXi“ SP3**
 
 La siguiente imagen muestra las dimensiones de la placa y sus orificios de montaje (en milímetros), y la ubicación de los orificios.
 
-<img alt="" src="./image6.webp" style="width:5.223344269466317in;height:3.9800076552930883in" />
+<img alt="Dimensiones de la placa FLEXi SP3 en milímetros: 116,5 de ancho y 78,5 de alto. Se indican cuatro orificios de montaje de Ø 4 mm; sus centros están separados 93 mm horizontalmente y 61 mm verticalmente. Los centros de los orificios izquierdos están a 5 mm del borde izquierdo y los de los orificios inferiores, a 10 mm del borde inferior." src="./image6.webp" style="width:5.223344269466317in;height:3.9800076552930883in" />
 
 #### Orden de conexión de dispositivos 
 
@@ -390,38 +390,38 @@ Hay 10 terminales IO1 – IO10 (entradas) en la placa del panel de control para 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Diagrama de conexión: circuito de sensor normalmente abierto (NO). Un contacto NO inicialmente abierto conecta IOx con C al activarse." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Diagrama de conexión: circuito de sensor normalmente cerrado (NC). Un contacto NC cerrado conecta IOx con C." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="Tabla de resistencias con las columnas RT, R1 y R2. Las siete filas son 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; 2.2k, 4.7k, 8.2k; y 4.7k, 4.7k, 2.2k." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="Diagrama de conexión: IOx a C. Circuito normalmente cerrado con resistencia de fin de línea (EOL): el contacto NO y la resistencia R1 están en paralelo entre IOx y C, unidos en ambos extremos." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="Diagrama de conexión: IOx a C. Circuito normalmente cerrado con resistencia de fin de línea (EOL): el contacto NC y la resistencia R1 están en serie." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="Diagrama de conexión: entrada IOx del SP3 a C, normalmente cerrado con resistencia de fin de línea y reconocimiento de sabotaje y falla de cable (EOL_T). El contacto NC Tamper y RT están en serie; R1 está en paralelo con el otro contacto NC." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image14.webp" alt="Diagrama de conexión: normalmente cerrado sin EOL (ATZ). Dos circuitos de detector están en serie entre IOx y C. El terminal 1 del detector tiene un contacto NC en paralelo con R1; el terminal 2 del detector tiene un contacto NC en paralelo con R2." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image15.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image15.webp" alt="Diagrama de conexión: normalmente cerrado con EOL, con reconocimiento de sabotaje y falla de cable (ATZ_T). Dos circuitos de detectores están en serie entre IOx y C. El terminal 1 del detector tiene un contacto de sabotaje NC y RT en serie, seguidos de un contacto NC en paralelo con R1. El terminal 2 del detector tiene un contacto de sabotaje NC en serie, seguido de un contacto NC en paralelo con R2." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image16.webp" style="width:3.15in;height:auto;" />
+<img alt="Diagrama de conexión: entrada IOx del SP3 a C, normalmente cerrado con resistencia de fin de línea y reconocimiento de sabotaje y falla de cable (3EOL). El contacto NC Tamper y RT están en serie, seguidos de R1 en paralelo con el contacto NC de Alarma y R2 en paralelo con el contacto NC de Antienmascaramiento." src="./image16.webp" style="width:3.15in;height:auto;" />
 
 ### Conexión de detectores de humo
 
@@ -429,7 +429,7 @@ Diagrama para conectar detectores de humo de dos cables.
 
 Diagrama de cableado para detectores de humo de dos cables a salida PGM (LED). Al utilizar este esquema para conectar detectores de incendios, es necesario marcar el campo " **LED out for 2Wire fire sensor**" con una marca de verificación (consulte el capítulo 5.2 “Ventana “Opciones de sistema””).
 
-<img alt="" src="./image17.webp" style="width:4.570009842519685in;height:1.3300021872265966in" />
+<img alt="Diagrama de conexión: SP3 a dos detectores de humo de dos cables. AUX+ al IN superior del primer detector y LED al IN inferior; los OUT del primero continúan a los IN del segundo. Una resistencia de fin de línea de 2.2kΩ une los dos conductores al final del circuito." src="./image17.webp" style="width:4.570009842519685in;height:1.3300021872265966in" />
 
 Diagramas de cableado para detectores de humo de dos hilos con módulo de relé SM1. Para conectar un circuito detector de humo a una entrada (IOx), la entrada debe tener asignada la función Zona de incendio (consulta el capítulo 5.7 Ventana "Zonas").
 
@@ -447,13 +447,13 @@ Para conectar un circuito detector de humo a una entrada (IOx), la entrada debe 
 
 Para conectar un circuito detector de humo de cuatro cables a una salida PGM (IO10) seleccionada, la función de ***Reinicio del Sensor de Fuego** (Fire Sensor Reset)* debe asignarse a la salida (consulta el capítulo 5.8 Ventana "PGM"). El relé (K1) se utiliza para detectar un cable roto y un detector de incendios retirado.
 
-<img alt="" src="./image20.webp" style="width:5.513344269466317in;height:1.4666699475065617in" />
+<img alt="Diagrama de conexión: detectores de humo de cuatro hilos y relé K1. De arriba abajo, AUX+, IOx, C e IO10 de SP3 se conectan a los terminales +, contacto superior, contacto inferior y − IN del primer detector. Cada uno de los cuatro terminales OUT continúa hasta el terminal IN correspondiente del siguiente detector. Después del último detector, el contacto K1 y la resistencia de fin de línea R1 están en serie entre las líneas IOx y C. La bobina del relé K1 se conecta entre las líneas AUX+ e IO10." src="./image20.webp" style="width:5.513344269466317in;height:1.4666699475065617in" />
 
 ### Diagrama para conectar una sirena
 
-<img alt="" src="./image21.webp" style="width:3.083339895013123in;height:1.2166688538932633in" />
+<img alt="Diagrama de conexión: SP3 a la sirena. BELL + va al cable Rojo de la sirena; BELL - va al cable Negro." src="./image21.webp" style="width:3.083339895013123in;height:1.2166688538932633in" />
 
-<img alt="" src="./image22.webp" style="width:4.986676509186352in;height:1.8766699475065616in" />
+<img alt="Diagrama de conexión: SP3 a la sirena exterior MR100. BELL + (+12V) va a Vdd; BELL - va a S y L; AUX - va a GND; C e IO9 van a los dos terminales SAB. Se muestran puentes en PL+, PS+, L-, S-, S1 y 4; las demás posiciones están marcadas PL-, PS-, L+, S+, S2, 1 y 16. JPS1 ON: R_SAB = 0 Ω; JPS1 OFF: R_SAB = 2,2 kΩ." src="./image22.webp" style="width:4.986676509186352in;height:1.8766699475065616in" />
 
 El diagrama muestra la conexión y la configuración de la sirena exterior **MR100**. Si el panel de control utilizará un método diferente para monitorear la EOL (la configuración de fábrica es 2.2 kOhm EOL) del circuito de sabotaje de sirena (terminales SAB), es necesario cerrar los contactos JPS1 y conectar una resistencia de la clasificación correspondiente en serie a El circuito de sabotaje. El tipo de zona de **24_horas** está configurado de fábrica para la entrada IO9.
 
@@ -463,27 +463,27 @@ Se pueden conectar hasta 8 dispositivos al bus de datos del teclado. El tipo de 
 
 Para operar la alarma con teclados Protegus o Paradox, incluidos los códigos de usuario, la anulación, iButton/RFID, llamadas, SMS y salidas PGM, consulta la [guía de usuario de FLEXi SP3 con teclados Protegus y Paradox](paradox-user-guide/index.md).
 
-<img alt="" src="./image23.webp" style="width:7.086805555555555in;height:1.7215277777777778in" />
+<img alt="Dos diagramas de conexión: a la izquierda, SP3 a teclado: AUX+ a RED, AUX- a BLK, GRN a GRN y YEL a YEL; AUX- conecta a ZONE mediante un contacto. Modelos indicados: SK-LED TouchPad, SK-LCD TouchPad, SK LCD Button, SK LED Button, Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 y TM70. A la derecha, SP3 a Crow CR16 o Crow CR-LCD: AUX+ a POS, AUX- a NEG, GRN a DATA y YEL a CLOCK." src="./image23.webp" style="width:7.086805555555555in;height:1.7215277777777778in" />
 
-<img alt="" src="./image24.webp" style="width:3.9200076552930883in;height:3.5133409886264215in" />
+<img alt="Diagrama de conexión: SP3 a teclado y lector RFID con teclado Wiegand 26/34. Teclado: AUX+ a RED, AUX- a BLK, GRN a GRN y YEL a YEL; ZONE queda sin conexión. Lector de entrada: AUX+ a R rojo (+U), AUX- a B negro (GND), IO1 a G verde (D0) e IO2 a W blanco (D1). Teclados indicados: SK-LED TouchPad, SK-LCD TouchPad, SK LCD Button, SK LED Button, Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 y TM70." src="./image24.webp" style="width:3.9200076552930883in;height:3.5133409886264215in" />
 
-<img alt="" src="./image25.webp" style="width:3.866674321959755in;height:3.24000656167979in" />
+<img alt="Diagrama de conexión: SP3 a teclado Crow CR16 o Crow CR-LCD y lector RFID con teclado Wiegand 26/34. Teclado: AUX+ a POS, AUX- a NEG, GRN a DATA y YEL a CLOCK. Lector de entrada: AUX+ a R rojo (+U), AUX- a B negro (GND), IO1 a G verde (D0) e IO2 a W blanco (D1)." src="./image25.webp" style="width:3.866674321959755in;height:3.24000656167979in" />
 
 Se pueden conectar hasta 2 lectores RFID al panel de control. Si cuentan con 2 lectores RFID conectados al panel de control, no se pueden conectar teclados.
 
-<img alt="" src="./image26.webp" style="width:3.853340988626422in;height:1.770003280839895in" />
+<img alt="Diagrama de conexión: SP3 a lector RFID de entrada con teclado Wiegand 26/34. AUX+ a R rojo (+U), AUX- a B negro (GND), GRN a G verde (D0) y YEL a W blanco (D1)." src="./image26.webp" style="width:3.853340988626422in;height:1.770003280839895in" />
 
-<img alt="" src="./image27.webp" style="width:3.853340988626422in;height:3.2433398950131234in" />
+<img alt="Diagrama de conexión: SP3 a dos lectores RFID con teclado Wiegand 26/34. Lector de entrada: AUX+ a R rojo (+U), AUX- a B negro (GND), GRN a G verde (D0) y YEL a W blanco (D1). Lector de salida: AUX+ a R, AUX- a B, IO1 a G e IO2 a W." src="./image27.webp" style="width:3.853340988626422in;height:3.2433398950131234in" />
 
 ### Diagrama para conectar lectores TM17, CZ-Dallas
 
 El lector iButton **CZ-Dallas** se conecta al „FLEXi“ SP3 utilizando el bus de datos *"1 Wire".* La longitud de los cables que se conectan al bus de datos puede ser de hasta 30 m:
 
-<img alt="" src="./image28.webp" style="width:5.000009842519685in;height:2.5966721347331583in" />
+<img alt="Diagrama de conexión: SP3 a CZ-Dallas reader. AUX+ llega por sendas resistencias 1k a Marrón RED LED+ y Verde GREEN LED+; LED se une a Verde después de la resistencia. 1 W conecta a Blanco; C conecta a Amarillo LED- y Gris. Texto de la imagen: salida xOUT en tipo 'Estado del sistema'; con alarma activada, luz roja; con alarma apagada, luz amarilla." src="./image28.webp" style="width:5.000009842519685in;height:2.5966721347331583in" />
 
 El lector **TM17** se conecta al „FLEXi“ SP3 utilizando el bus de datos *RS485*. La longitud de los cables que se conectan al bus de datos *RS485* puede ser de hasta 100 m.
 
-<img alt="" src="./image29.webp" style="width:3.626674321959755in;height:2.043337707786527in" />
+<img alt="Diagrama de conexión: panel SP3 al lector TM17. AUX+ al cable Rojo (+12V), AUX- al Azul, 485 A al Negro y 485 B al Blanco. El TM17 muestra indicadores 1 a 6, State y Trouble." src="./image29.webp" style="width:3.626674321959755in;height:2.043337707786527in" />
 
 ### Diagrama para conectar un sensor de temperatura
 
@@ -495,10 +495,10 @@ La terminal +5V en la placa sirve para alimentar dispositivos conectados al bus 
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image30.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image30.webp" alt="Diagrama de conexión: panel SP3 al sensor de temperatura DS18B20. +5V a +Vdd por el cable Rojo, 1 W a DQ por el Amarillo y C a GND por el Negro." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image31.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image31.webp" alt="Diagrama de conexión: panel SP3 al sensor de temperatura y humedad AM2301. +5V a +Vdd por el cable Rojo, 1 W a DQ por el Amarillo y C a GND por el Negro." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -506,13 +506,13 @@ La terminal +5V en la placa sirve para alimentar dispositivos conectados al bus 
 
 Usando las terminales de relé es posible controlar (encender/apagar) de forma remota varios dispositivos eléctricos. El terminal I/O universal del panel debe configurarse como una salida (OUT) y debe tener asignada la definición de Control remoto.
 
-<img alt="" src="./image32.webp" style="width:4.040008748906387in;height:0.9000021872265966in" />
+<img alt="Dos diagramas de conexión. Izquierda, panel SP3 a Relé: AUX+ e IOx a los dos extremos de la bobina; los contactos del relé están marcados NC, C y NO. Derecha, panel SP3 a LED: AUX+ a una resistencia 2k2 en serie con el LED, que vuelve a IOx." src="./image32.webp" style="width:4.040008748906387in;height:0.9000021872265966in" />
 
 ### Diagrama para conectar el comunicador Ethernet E485 
 
 El módulo *E485* permite que el panel de control envíe y reciba comandos de control utilizando una conexión a internet alámbrica. Si un módulo *E485* está conectado al panel de control, los informes al CRA y a *Protegus2* se enviarán a través de Internet alámbrico y no se utilizará el internet móvil. Si se pierde la conectividad a internet por cable, se utilizará el internet móvil para enviar informes al CRA. Al restablecerse la conectividad a internet por cable, el panel de control dejará de usar el internet móvil y pasará a comunicarse con CRA y la aplicación móvil *Protegus2* a través del *E485*, es decir, internet por cable.
 
-<img alt="" src="./image33.webp" style="width:3.3100065616797902in;height:1.6066699475065618in" />
+<img alt="Diagrama de conexión: panel SP3 al comunicador E485. AUX+ (+12 V) a + DC, AUX- a - DC, 485 A a A 485 y 485 B a B 485. Conexión RS485 hasta 100 m; el E485 se conecta a un Cable LAN." src="./image33.webp" style="width:3.3100065616797902in;height:1.6066699475065618in" />
 
 Consulta el capítulo 5.3 Ventana "Informe al CMS" sobre cómo elegir la prioridad de conectividad (GPRS, LAN, WiFi). La configuración del „FLEXi“ SP3 para el módulo Ethernet E485 se describe en el capítulo 5.5. Ventana "Módulos".
 
@@ -522,7 +522,7 @@ Si el E485 está conectado, no es necesaria una tarjeta SIM para el panel de con
 
 La versión del firmware del panel de seguridad „*FLEXi“ SP3* debe ser SP3_xxx0_0101.fw (versión 1.01 o superior). Al conectar el receptor de sensor inalámbrico *RF-SH*, el *„FLEXi“ SP3* es compatible con sensores inalámbricos (hasta 32 unidades), sirenas inalámbricas (hasta 16 unidades), controles remotos (hasta 42 unidades) y teclados inalámbricos (hasta 8 unidades) de Crow.
 
-<img alt="" src="./image34.webp" style="width:2.453338801399825in;height:1.2566688538932633in" />
+<img alt="Diagrama de conexión: panel SP3 al receptor RF-SH. AUX+ (+12 V) a +DC, AUX- a -DC, 485 A a A RS485 y 485 B a B RS485." src="./image34.webp" style="width:2.453338801399825in;height:1.2566688538932633in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RTX3 
 
@@ -530,25 +530,25 @@ La versión de firmware del panel de seguridad *„FLEXi“ SP3* debe ser: SP3_x
 
 Para el firmware, la conexión y la inscripción o eliminación de dispositivos inalámbricos Paradox con RTX3, consulta [Dispositivos inalámbricos Paradox con FLEXi SP3 (RTX3)](paradox-rtx3/index.md).
 
-<img alt="" src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
+<img alt="Diagrama de conexión: SP3 a RTX3. AUX+ (+12 V) de SP3 va a RED de RTX3, AUX- a BLK, GRN a GRN y YEL a YEL." src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RF-HW 
 
 La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_xxx2_0114.fw (versión 1.14 o superior). Al conectar el receptor de sensor inalámbrico *RF-HW*, el *„FLEXi“ SP3* puede funcionar con sensores inalámbricos, sirenas y controles remotos de Honeywell, (hasta 42).
 
-<img alt="" src="./image36.webp" style="width:2.6100054680664915in;height:1.21333552055993in" />
+<img alt="Diagrama de conexión: SP3 a RF-HW. AUX+ (+12 V) de SP3 va a +DC de RF-HW, AUX- a -DC, 485 A a A 485 y 485 B a B 485." src="./image36.webp" style="width:2.6100054680664915in;height:1.21333552055993in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RF-S8 
 
 La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_xxx4_0122.fw (versión 1.22 o superior). Al conectar el receptor de sensor inalámbrico *RF-S8*, el *„FLEXi“ SP3* podrá funcionar con sensores inalámbricos S8, sirenas y controles remotos, (hasta 42).
 
-<img alt="" src="./image37.webp" style="width:2.6066721347331585in;height:1.2300021872265967in" />
+<img alt="Diagrama de conexión: SP3 a RF-S8. AUX+ (+12 V) de SP3 va a +DC de RF-S8, AUX- a -DC, 485 A a A 485 y 485 B a B 485." src="./image37.webp" style="width:2.6066721347331585in;height:1.2300021872265967in" />
 
 ### Diagrama de cableado para el receptor de sensor inalámbrico RF-LORA 
 
 La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_xxx4_0122.fw (versión 1.22 o superior). Al conectar el receptor de sensor inalámbrico *RF-LORA*, el *„FLEXi“ SP3* es compatible con sensores inalámbricos (hasta 32), sirenas (hasta 16) y llaveros (hasta 32) de Maximum. / La configuración del *„FLEXi“ SP3* mediante módulos de expansión se describe en la sección 5.5 „La ventana "Módulos"“.
 
-<img alt="" src="./image38.webp" style="width:2.8466721347331583in;height:1.2200021872265967in" />
+<img alt="Diagrama de conexión: SP3 a RF-LORA. AUX+ (+12 V) de SP3 va a +DC de RF-LORA, AUX- a -DC, 485 A a A 485 y 485 B a B 485." src="./image38.webp" style="width:2.8466721347331583in;height:1.2200021872265967in" />
 
 ### Diagrama de conexión para expansores de la serie LORA 
 
@@ -560,10 +560,10 @@ Si el panel de control „FLEXi“ SP3 necesita más entradas IN o salidas OUT, 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; max-width: 66%;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image40.webp" alt="Diagrama de conexión: panel SP3 al expansor iO-8. AUX+ (+12 V) a +DC, AUX- a -DC, 485 A a A y 485 B a B." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image41.webp" alt="Diagrama de conexión: panel SP3 al expansor iO-WL. AUX+ (+12 V) a +DC, AUX- a -DC, 485 A a A RS485 y 485 B a B RS485." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -573,19 +573,19 @@ Si el panel de control „FLEXi“ SP3 necesita más entradas IN o salidas OUT, 
 
 El transmisor RF - *T16* utilizado para la transmisión de mensajes de eventos a través del panel de control por medio de redes de radio TRIKDIS. / El transmisor puede enviar sus propios mensajes de eventos y mensajes de eventos recibidos desde los paneles de control al CRA (centro de recepción de alarmas) con la posibilidad de reenviar hasta el usuario final.
 
-<img alt="" src="./image43.webp" style="width:2.2100043744531934in;height:1.2200021872265967in" />
+<img alt="Diagrama de conexión: panel SP3 al transmisor T16. AUX+ (+12 V) a + DC, AUX- a - DC, 485 A a A 485 y 485 B a B 485." src="./image43.webp" style="width:2.2100043744531934in;height:1.2200021872265967in" />
 
 ### Diagrama para conectar módulo SF485 
 
 El *SF485* actúa como un canal de comunicación de respaldo para transmitir eventos del panel de control al CRA (centro de recepción de alarmas) o a la aplicación móvil *Protegus2* a través de la red SigFox cuando los eventos no se pueden transmitir en el canal de comunicación principal. Los mensajes se transmiten en formato Contact ID.
 
-<img alt="" src="./image44.webp" style="width:2.20667104111986in;height:1.2000021872265967in" />
+<img alt="Diagrama de conexión: panel SP3 al módulo SF485. AUX+ (+12 V) a +DC, AUX- a -DC, 485 A a A 485 y 485 B a B 485." src="./image44.webp" style="width:2.20667104111986in;height:1.2000021872265967in" />
 
 ### Medida de tensión con „FLEXi“ SP3 
 
 El *„FLEXi” SP3* se puede utilizar para medir voltaje DC. Se mide el voltaje de 0 V a 30 V (exceder los 30 V causará daños al panel de control *„FLEXI“ SP3*). La tensión medida debe conectarse a los terminales “1IN” y “C”. “1IN” - terminal positivo. “C” - terminal negativo.
 
-<img alt="" src="./image45.webp" style="width:3.506674321959755in;height:0.8966688538932633in" />
+<img alt="Diagrama de conexión: SP3 al equipo cuya tensión se mide. Entrada de tensión: IN1 a +U; C a -U." src="./image45.webp" style="width:3.506674321959755in;height:0.8966688538932633in" />
 
 Conecte el „FLEXI“ SP3 a una computadora con un cable USB Type-C. Ejecute TrikdisConfig. El software reconocerá automáticamente el „FLEXI“ SP3 conectado y abrirá una ventana para la configuración. En la ventana “**Sensor**”, especifique el “**In1 Voltaje**” y también especifique la cantidad de voltaje por encima de la cual se generará un mensaje.
 
@@ -593,15 +593,15 @@ Conecte el „FLEXI“ SP3 a una computadora con un cable USB Type-C. Ejecute Tr
 
 - **Mínimo** - cuando el voltaje es menor que este ajuste, se generará un mensaje de evento. Para que se genere un mensaje de evento, la casilla “**Baja**” debe estar marcada. El voltaje se indica en Voltios.
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
+<img alt="TrikdisConfig, ventana «Sensores». La fila resaltada, ID 1, muestra el tipo de módulo «IN1 Voltaje», el nombre «Sensor 1», «Máximo» 15, «Mínimo» 6, las casillas «Alto» y «Bajo» marcadas y «Retraso, min» 0." src="./image46.webp" style="width:7.086614173228346in;height:2.090551181102362in" />
 
 La salida PGM se puede controlar cuando se mide un voltaje por encima de un valor establecido o por debajo de un valor establecido. En TrikdisConfig, debe seleccionar la salida PGM y configurarla en el modo de funcionamiento del “**Control remoto**”.
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig, ventana «PGM», pestaña «Salidas». La fila resaltada de PGM 3 muestra «PGM 3» como nombre, «SP3 10 I/O» como salida PGM, «Control remoto» como definición de salida y «Tiempo de Pulso, s» 20." src="./image47.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 Vaya a la pestaña “**Establecer acción**”.
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig, PGM, pestaña Establecer acción. La fila 1 está habilitada: PGM Núm. PGM3 - SP3 10 I/O; Acción PGM encendido; Tiempo de Pulso 10; Factor Temperatura; Núm. de factor S1; Inicia cuando Valor mayor; Valor 13." src="./image48.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **Habilitar** – habilita la PGM.
 
@@ -684,7 +684,7 @@ Con Protegus2, los usuarios pueden controlar el sistema de alarma de forma remot
         fijo si está conectado a la red WiFi).
 5. Haga clic en “Agregar nuevo sistema” e ingrese el número “ID único/IMEI” del *“Flexi” SP3*, que encontrará en el producto o en la etiqueta del embalaje. Haga clic en el botón "Siguiente".
 
-<img alt="" src="./image50.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="Protegus2, pantalla Escanear código QR. Permite introducir el ID único/IMEI o escanear el código QR de la etiqueta del producto; la indicación señala que el IMEI se encuentra en la caja, el controlador o Trikdis Config. Abajo aparece Siguiente." src="./image50.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 ### Activar/desactivar el sistema utilizando *Protegus2* 
 
@@ -694,7 +694,7 @@ Con Protegus2, los usuarios pueden controlar el sistema de alarma de forma remot
 
 3.  Si el programa no responde a tus comandos o las vistas de la ventana del programa son completamente diferentes, ingresa a *Configuración* -> *Configuración del sistema* -> ¿Sistema desincronizado? y haz clic en el botón "Sync".
 
-<img alt="" src="./image51.webp" style="width:2.220472440944882in;height:3.279527559055118in" />
+<img alt="Protegus2, pantalla del sistema con dos áreas: «sritis 1» está «Armado» y «SRITIS 2» está «Desarmado». La primera tiene controles «Armado» y «Desarm»; la segunda, «Arm» y «Desarmado»." src="./image51.webp" style="width:2.220472440944882in;height:3.279527559055118in" />
 
 ### Configuración y control vía mensajes SMS 
 
@@ -905,7 +905,7 @@ En esta tabla, puedes organizar escenarios para activar y desactivar automática
 
 **Pestaña "Festivos"**
 
-<img alt="" src="./image56.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+<img alt="TrikdisConfig, Opciones de sistema, pestaña Festivos. En las cuatro filas visibles, Habilitar está marcado, Fecha de inicio y Fecha de finalización muestran 01.01.2000, y Grupo 1 a Grupo 4 están desmarcados." src="./image56.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
 
 - **Habilitar** –marca esta casilla para habilitar los festivos.
 
@@ -917,7 +917,7 @@ En esta tabla, puedes organizar escenarios para activar y desactivar automática
 
 **Pestaña "Problemas de sistema"**
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.984251968503937in" />
+<img alt="TrikdisConfig, ventana «Opciones de sistema», pestaña «Problemas del sistema». La tabla enumera los fallos desde «Fallo de AC» hasta «Fallo Antimasking»; todas las casillas «Restringir ARM» están desmarcadas." src="./image57.webp" style="width:7.086614173228346in;height:2.984251968503937in" />
 
 Si se marca al menos un campo de falla interna del panel de control, entonces el panel de control no podrá armarse si esta falla está presente.
 
@@ -988,7 +988,7 @@ Las notificaciones SMS serán enviadas al CRA del receptor SMS: 1) Inmediatament
 
 **Pestaña "Ajustes"**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
+<img alt="TrikdisConfig, ventana Informes a CRA, pestaña Ajustes. En Configuraciones, Regresar al Primario después: 5 min; Periodo de Ping por IP: 60 s, activado; Ir al canal de reserva después de: 3 intentos; DNS1: 8.8.8.8; DNS2: 1.1.1.1. En Modo de informe, CRA y Protegus usan WiFi como tipo principal y SIM como reserva. En la red del comunicador, DHCP modo está activado y se muestran los campos de nombre y contraseña WiFi." src="./image60.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
 
 **Grupo de configuración "Configuraciones"**
 
@@ -1053,7 +1053,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña "Usuarios"**
 
-<img alt="" src="./image61.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="TrikdisConfig, ventana «Usuarios y Reportes», pestaña «Usuarios». La tabla «Usuarios y reportes al usuario» contiene los campos «Nombre», «Núm. de teléfono», «Correo electrónico», «Código», «Tag código» y «Áreas», seguidos de casillas de opciones de reporte." src="./image61.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 **Grupo de configuración "Usuarios y reportes al usuario"**
 
@@ -1085,7 +1085,7 @@ Puedes agregar llaves (tarjetas) RFID ingresando sus números ID en el campo Tag
 
 --8<-- "es/faq/index.md:sp3-wiegand-reader-door-output"
 
-<img alt="" src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
+<img alt="Tarjeta RFID con su número ID impreso delineado en rojo cerca del borde inferior." src="./image62.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
 #### Vinculación de llaves electrónicas (iButton)
 
@@ -1131,7 +1131,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "SMS Textos de respuesta"**
 
-<img alt="" src="./image64.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="TrikdisConfig, ventana Usuarios y Reportes, pestaña SMS textos de respuesta. La tabla Texto de respuesta SMS permite editar la columna Texto de SMS para respuestas como Comando ejecutado, Contraseña errónea, Alarma de zona y Salida ON." src="./image64.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
 **Grupo de configuración "Textos de respuesta SMS"**
 
@@ -1183,7 +1183,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "RS485 módulos"**
 
-<img alt="" src="./image66.webp" style="width:7.086614173228346in;height:3.6338582677165356in" />
+<img alt="TrikdisConfig, ventana «Módulos», pestaña «RS485 módulos». La lista desplegable «Módulo» está abierta y muestra opciones como «Expansor iO», «E485 módulo» y «RF-LORA receiver»." src="./image66.webp" style="width:7.086614173228346in;height:3.6338582677165356in" />
 
 **Grupo de configuración "Módulos RS485"**
 
@@ -1201,7 +1201,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "E485 configuraciones"**
 
-<img alt="" src="./image67.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
+<img alt="TrikdisConfig, ventana «Módulos», pestaña «E485 configuraciones». En «Configuración de la red del comunicador», «DHCP modo» está marcado; «IP estática», «Máscara de subred» y «Por defecto gateway» muestran 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
 
 **Grupo de configuración "Configuración de la red del comunicador"**
 
@@ -1215,7 +1215,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 ### Ventana "Sensores inalámbricos" 
 
-<img alt="" src="./image68.webp" style="width:7.086614173228346in;height:1.7519685039370079in" />
+<img alt="TrikdisConfig, ventana Sensores inalámbricos, pestaña Sensores. La tabla muestra los campos ID, Tipo de dispositivo, Núm. de serie, Área, Usuario Tecla3, Tecla4 y Configurar; las filas visibles tienen Tipo de dispositivo: Deshabilitado." src="./image68.webp" style="width:7.086614173228346in;height:1.7519685039370079in" />
 
 Con el módulo RF-LORA conectado, el „FLEXi“ SP3 puede utilizar sensores inalámbricos, sirenas y llaveros de "**Maximum**".
 
@@ -1261,7 +1261,7 @@ El panel de seguridad „FLEXi“ SP3 se actualiza a la versión de firmware 4 (
 
 16. Haga clic en **„Desconectar**.
 
-<img alt="" src="./image71.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña RS485 módulos. El botón Desconectar está resaltado en rojo; la tabla inferior muestra el módulo RF-LORA receiver registrado." src="./image71.webp" style="width:7.086614173228346in;height:1.7283464566929134in" />
 
 17. Espere 1 minuto.
 
@@ -1286,7 +1286,7 @@ Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLE
         fijo y amarillo parpadeando).
 En la sección **„Acceso remoto”** ingrese el número **„ID único”** del panel de control. Este número se puede encontrar en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:2.1181102362204722in" />
+<img alt="TrikdisConfig, sección «Удаленный доступ». El campo «Уникальный №» y el botón «Конфигурировать» están resaltados para conectarse a un panel de control." src="./image72.webp" style="width:7.086614173228346in;height:2.1181102362204722in" />
 
 Haga clic en **„Configuración”**.
 
@@ -1294,11 +1294,11 @@ En la ventana recién abierta, haga clic en **Leer [F4]**. Si es necesario, intr
 
 Vaya a la ventana **„Sensores inalámbricos”**.
 
-<img alt="" src="./image73.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig, ventana «Sensores inalámbricos». La tabla «Sensores» muestra dispositivos «Deshabilitado», con los botones «Emparejamiento de sensor» y «Actualizar» encima." src="./image73.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 Haga clic en el botón **„Emparejamiento de sensor”**.
 
-<img alt="" src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig, ventana «Sensores inalámbricos», pestaña «Sensores». La tabla muestra dispositivos «Deshabilitado», con los botones «Emparejamiento de sensor» y «Actualizar» encima." src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la batería (CR2) en el sensor inalámbrico (PIR, contacto magnético, sensor de inundación, sensor de humo (CR123A batería), sirena).
 
@@ -1308,11 +1308,11 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 2.  Módulo RF-LORA: cambia al modo de aprendizaje. TrikdisConfig abrirá la ventana de enlace del sensor.
 
-<img alt="" src="./image75.webp" style="width:3.7401574803149606in;height:2.3031496062992125in" />
+<img alt="TrikdisConfig, ventana Modo de emparejamiento. Un indicador de espera acompaña el mensaje que pide insertar las baterías en el nuevo sensor y esperar a que se complete la inicialización; debajo aparece el botón para dejar de emparejar." src="./image75.webp" style="width:3.7401574803149606in;height:2.3031496062992125in" />
 
 3. Presione el botón „**TAMPER**” en el sensor.
 
-<img alt="" src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
+<img alt="Dibujo de la parte posterior de un sensor inalámbrico abierto. Una flecha roja etiquetada «Tamper» señala el interruptor antisabotaje con resorte situado cerca de la esquina superior izquierda." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
 4. En el módulo RF-LORA, el indicador “**DATA/TROUBLE**” se volverá verde por un corto tiempo (esto significa que el sensor está registrado). Después de unos segundos, el indicador “**DATA/TROUBLE**” comenzará a parpadear en verde/rojo nuevamente.
 
@@ -1332,7 +1332,7 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 10. Haga clic en „**Sí**” para que los sensores se escriban en el panel de control **„*FLEXi” SP3*** o „**No**” si desea ajustar los parámetros de manera adicional.
 
-<img alt="" src="./image79.webp" style="width:2.7559055118110236in;height:1.1929133858267718in" />
+<img alt="TrikdisConfig, ventana Guardar configuración. Pregunta si se quieren guardar nuevos parámetros en el módulo; está resaltado el botón Yes." src="./image79.webp" style="width:2.7559055118110236in;height:1.1929133858267718in" />
 
 Espera unos minutos. Haga clic en **LEER [F4]**.
 
@@ -1379,7 +1379,7 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 6.  Un indicador parpadeante “**DATA/TROUBLE**” indica que el RF-LORA está en modo de registro de dispositivo inalámbrico.
 1.  Presione el botón „TAMPER” en el sensor.
 
-<img alt="" src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
+<img alt="Dibujo de la parte posterior de un sensor inalámbrico abierto. Una flecha roja etiquetada «Tamper» señala el interruptor antisabotaje con resorte situado cerca de la esquina superior izquierda." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
 2. En el módulo RF-LORA, el indicador “**DATA/TROUBLE**” se volverá verde por un corto tiempo (esto significa que el sensor está registrado).
 
@@ -1409,7 +1409,7 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 
 **Pestaña "Configuraciones de zonas"**
 
-<img alt="" src="./image82.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
+<img alt="TrikdisConfig, ventana «Zonas», pestaña «Configuraciones de zonas». La tabla muestra el nombre, la entrada, el área, la definición, el tipo, las opciones de informe, el retraso y el código de cada zona. La zona 1 usa SP3 1 I/O, área 1, definición Entrada y tipo EOL_T." src="./image82.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
 
 - **Zona** – el número de la zona en la lista.
 
@@ -1469,7 +1469,7 @@ Cuando el sistema de alarma está activado en modo STAY, las zonas de "Interior 
 
 **Pestaña "SMS y llamadas"**
 
-<img alt="" src="./image83.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+<img alt="TrikdisConfig, ventana Zonas, pestaña SMS y llamadas. La tabla de Usuario 1 muestra las filas Evento y Restauración de cada zona, con casillas SMS y Llam. sin marcar." src="./image83.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana *"Usuarios y Reportes".*
 
@@ -1483,7 +1483,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "Salidas"**
 
-<img alt="" src="./image84.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig, ventana «PGM», pestaña «Salidas». PGM 1 usa BELL con definición de salida Sirena; PGM 2 usa LED con estado del sistema; PGM 3 usa SP3 10 I/O con restablecimiento del sensor de fuego. Todas las filas visibles tienen un tiempo de pulso de 20 s." src="./image84.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - **PGM Núm.** – especifica el número de salida de PGM en la lista.
 
@@ -1515,7 +1515,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "Establecer acción"**
 
-<img alt="" src="./image85.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
+<img alt="TrikdisConfig, ventana «PGM», pestaña «Establecer acción». La tabla contiene columnas para habilitar, número de PGM, acción, tiempo de pulso, factor, número de factor, inicio y valor. Las filas visibles están deshabilitadas y muestran N/A como número de PGM, PGM apagado como acción y Armar como factor." src="./image85.webp" style="width:7.086614173228346in;height:2.0984251968503935in" />
 
 - **Núm.** – número de salida en la lista.
 - **Habilitar** – activa el algoritmo de operación PGM.
@@ -1550,7 +1550,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "Control"**
 
-<img alt="" src="./image86.webp" style="width:7.086614173228346in;height:2.5236220472440944in" />
+<img alt="TrikdisConfig, ventana PGM, pestaña Control. Control de Entrada/Salida muestra los lectores iButton, Wiegand 1 (G/Y) y Wiegand 2 (I/O), con PGM Ninguno, PGM modo Pulso y acción Desarmar; Control de teclado Paradox muestra Llave de utilidad 1 en Estados de área." src="./image86.webp" style="width:7.086614173228346in;height:2.5236220472440944in" />
 
 **Grupo de configuraciones "Control de Entrada/Salida"**
 
@@ -1572,7 +1572,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "Horario"**
 
-<img alt="" src="./image87.webp" style="width:7.086614173228346in;height:2.1102362204724407in" />
+<img alt="TrikdisConfig, ventana PGM, pestaña Horario. La tabla muestra Núm., Habilitar, Tiempo desde y Tiempo hasta, con casillas para Lun a Dom en ambos horarios; las horas visibles son 00:00 y las casillas están sin marcar." src="./image87.webp" style="width:7.086614173228346in;height:2.1102362204724407in" />
 
 - **Núm.** – número de horario en la lista.
 
@@ -1585,7 +1585,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "Termostato"**
 
-<img alt="" src="./image88.webp" style="width:7.086614173228346in;height:3.4173228346456694in" />
+<img alt="TrikdisConfig, ventana PGM, pestaña Termostato. La tabla muestra Núm., PGM Núm., Acción, Activar, Sensor Núm. y Temperatura; en las filas visibles figuran PGM N/A, Acción Calor, Sensor N/A y Temperatura 0." src="./image88.webp" style="width:7.086614173228346in;height:3.4173228346456694in" />
 
 - **Núm.** – el número del termostato en la lista.
 
@@ -1601,7 +1601,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña "SMS y llamadas"**
 
-<img alt="" src="./image89.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="TrikdisConfig, ventana PGM, pestaña SMS y llamadas. Para Usuario 1, la tabla muestra las filas Evento y Restauración de las salidas PGM, con casillas SMS y Llam. sin marcar." src="./image89.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana *"Usuarios y Reportes"*. Esta configuración solo se puede realizar para los primeros 8 usuarios.
 
@@ -1611,7 +1611,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana "Sensores"
 
-<img alt="" src="./image90.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
+<img alt="TrikdisConfig, ventana «Sensores». La tabla incluye tipo de módulo, número de serie, nombre del sensor, máximo, mínimo, alto, bajo y retraso. El menú abierto «Tipo de sensor» ofrece «Dallas 1-Wire» y «Humedad y Temperatura (AM23xx serie)»." src="./image90.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
 
 - **ID** – número del sensor de temperatura en la lista.
 
@@ -1633,7 +1633,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "Eventos"**
 
-<img alt="" src="./image91.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
+<img alt="TrikdisConfig, ventana Eventos de sistema, pestaña Eventos. La tabla muestra ID, Nombre del evento, Habilitar, CRA, Prot., Código CID, SMS texto del evento y SMS texto de restauración; entre los eventos visibles están Batería baja, Periodo de prueba, Armar/Desarmar y Falla RS485." src="./image91.webp" style="width:7.086614173228346in;height:2.2913385826771653in" />
 
 - **ID** – número de evento en la lista.
 
@@ -1651,7 +1651,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 **Pestaña "SMS y llamadas"**
 
-<img alt="" src="./image92.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
+<img alt="TrikdisConfig, ventana Eventos de sistema, pestaña SMS y llamadas. La tabla muestra ID, Evento de texto SMS y, para Usuario 1, casillas SMS y Llam. sin marcar." src="./image92.webp" style="width:7.086614173228346in;height:2.283464566929134in" />
 
 Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se describe en la ventana *"Usuarios y Reportes"*.
 
@@ -1663,7 +1663,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 ### Ventana "Registro de eventos"
 
-<img alt="" src="./image93.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
+<img alt="TrikdisConfig, ventana Registro de eventos. Sobre la tabla están los botones Leer Registro y Borrar Registro; las columnas son Evento Núm., Tiempo, CID y Definición de evento." src="./image93.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
 - Botón **Leer Registro** – comando para leer el registro de eventos desde la memoria del dispositivo.
 
@@ -1675,7 +1675,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 Para restablecer la configuración predeterminada del panel de control, haz clic en el botón **Restaurar** en TrikdisConfig.
 
-<img alt="" src="./image94.webp" style="width:7.086614173228346in;height:1.078740157480315in" />
+<img alt="TrikdisConfig: botón Restaurar resaltado junto a Configuraciones predeterminadas." src="./image94.webp" style="width:7.086614173228346in;height:1.078740157480315in" />
 
 ### Control remoto con TrikdisConfig 
 
@@ -1697,7 +1697,7 @@ Para restablecer la configuración predeterminada del panel de control, haz clic
 
 2.  En el campo "**ID único**", ingrese el número IMEI del control de panel. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image95.webp" style="width:7.086614173228346in;height:2.1496062992125986in" />
+<img alt="TrikdisConfig, sección «Acceso remoto». El campo «ID único» y el botón «Configuración» están resaltados para conectarse a un panel de control." src="./image95.webp" style="width:7.086614173228346in;height:2.1496062992125986in" />
 
 3. En el campo "**Nombre del sistema**", escriba el nombre del control de panel.
 
@@ -1742,7 +1742,7 @@ Realiza estos pasos:
 
 3.  Abre la ventana **Firmware** de TrikdisConfig.
 
-<img alt="" src="./image96.webp" style="width:7.086614173228346in;height:2.9488188976377954in" />
+<img alt="TrikdisConfig, ventana «Firmware». El campo «Abrir archivo de firmware» está vacío; a su lado aparecen el botón «Abrir firmware» y el botón deshabilitado «Actualizar (F12)». La barra de progreso muestra 0%." src="./image96.webp" style="width:7.086614173228346in;height:2.9488188976377954in" />
 
 4. Haz clic en el botón **Abrir firmware** y elige el archivo de firmware requerido.
 

@@ -1,7 +1,7 @@
 # Manual de usuario de FLEXi SP3 con teclados Protegus y Paradox
 
 <div style="text-align: center;">
-<img src="./image1.png" alt="" width="400">
+<img src="./image1.png" alt="Teclado SK232LED W: el indicador superior muestra las zonas 1–32 y los modos ARM, SLEEP, STAY y OFF para dos áreas. Los botones retroiluminados inferiores permiten configurar los modos de funcionamiento e ingresar números." width="400">
 </div>
 
 
@@ -92,13 +92,13 @@ Se utiliza para proteger contra el desarme accidental de la alarma. Si la alarma
 
 El teclado Trikdis SK232LEDW para control del sistema de alarma muestra los estados de 32 zonas y 2 participaciones.
 
-<img alt="" src="./image1.png" style="width:5.1600in;" />
+<img alt="Teclado SK232LED W: el indicador superior muestra las zonas 1–32 y los modos ARM, SLEEP, STAY y OFF para dos áreas. Los botones retroiluminados inferiores permiten configurar los modos de funcionamiento e ingresar números." src="./image1.png" style="width:5.1600in;" />
 
 **Botones para configurar modos de operación e ingresar números**
 
 | Botón | Descripción |
 |:---|----|
-| <img alt="" src="./image2.png" style="width:0.3000in;" /> | Un brillo constante significa que el sistema de alarma está siendo alimentado desde la red de alimentación CA y si parpadea significa una falla en la batería. Si el botón está apagado significa que el suministro de voltaje está apagado o que el sistema está funcionando con la batería. Este botón también se utiliza para editar códigos de control y para restablecer los sensores de incendios. |
+| <img alt="Indicador de alimentación." src="./image2.png" style="width:0.3000in;" /> | Un brillo constante significa que el sistema de alarma está siendo alimentado desde la red de alimentación CA y si parpadea significa una falla en la batería. Si el botón está apagado significa que el suministro de voltaje está apagado o que el sistema está funcionando con la batería. Este botón también se utiliza para editar códigos de control y para restablecer los sensores de incendios. |
 | MEM | Un brillo constante significa que en la memoria hay nueva información sobre la activación de la alarma, y si parpadea significa que el teclado está funcionando en modo MEM. Este botón también se utiliza para elegir el modo de visualización de la memoria. |
 | BYP | Un brillo constante significa que hay zonas ignoradas temporalmente, y si parpadea significa que el teclado está funcionando en modo BYP. Este botón también se utiliza para seleccionar el modo de ignorar temporalmente. |
 | TRB | Un brillo constante significa que se ha registrado un problema de funcionamiento, y si parpadea significa que el teclado está funcionando en modo TBL. Este botón también se utiliza para seleccionar el modo de visualización de problemas. |
@@ -126,13 +126,13 @@ El teclado Paradox K636 para control del sistema de alarma muestra los estados d
 
 Los teclados Paradox K32LED, K32+, K35 para control de sistema de alarma muestran los estados de 32 zonas y 2 particiones.
 
-<img alt="" src="./image4.png" style="width:5.1567in;" />
+<img alt="Teclados Paradox K32LED y K32+ a la izquierda y K35 a la derecha. Los indicadores superiores muestran los modos de funcionamiento y las zonas; los botones retroiluminados inferiores permiten configurar los modos de funcionamiento e ingresar números." src="./image4.png" style="width:5.1567in;" />
 
 **Botones para configurar los modos de operación e ingresar números**
 
 | **Botón** | **Descripción** |
 |----|----|
-| <img alt="" src="./image5.png" style="width:0.5433in;" /> | Botón para restablecer los sensores de incendio. |
+| <img alt="Botón de encendido." src="./image5.png" style="width:0.5433in;" /> | Botón para restablecer los sensores de incendio. |
 | MEM | Un brillo constante significa que en la memoria hay nueva información sobre la activación de la alarma, y si parpadea significa que el teclado está funcionando en modo MEM. Este botón también se utiliza para elegir el modo de visualización de la memoria. |
 | BYP | Un brillo constante significa que hay zonas ignoradas temporalmente, y si parpadea significa que el teclado está funcionando en modo BYP. Este botón también se utiliza para seleccionar el modo de ignorar temporalmente. |
 | TBL | Un brillo constante significa que se ha registrado un problema de funcionamiento, y si parpadea significa que el teclado está funcionando en modo TBL. Este botón también se utiliza para seleccionar el modo de visualización de problemas. |
@@ -143,7 +143,7 @@ Los teclados Paradox K32LED, K32+, K35 para control de sistema de alarma muestra
 | SLEEP | Botón para activar el modo **SLEEP**. |
 | STAY | Botón para activar el modo **STAY**. |
 | OFF | Botón para activar el modo **OFF** (Desarmar). |
-| <img alt="" src="./image6.png" style="width:0.7087in;" /> | Indicador de voltaje. Brillo constante – el voltaje de alimentación está encendido. Parpadeo – falla de la batería. Apagado – la fuente de voltaje de alimentación está apagada o el sistema está funcionando con la batería. |
+| <img alt="Símbolo de corriente alterna." src="./image6.png" style="width:0.7087in;" /> | Indicador de voltaje. Brillo constante – el voltaje de alimentación está encendido. Parpadeo – falla de la batería. Apagado – la fuente de voltaje de alimentación está apagada o el sistema está funcionando con la batería. |
 
 > [!NOTE]
 >     1. Para apagar el modo de programación o borrar un valor ingresado
@@ -303,7 +303,7 @@ Cuando se activa la alarma, el indicador **MEM** empieza a brillar. Para descubr
 
 Después de la activación de los sensores de fuego (humo), para restablecer los sensores:
 
-1. Mantenga presionado el botón <img alt="" src="./image7.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) durante 3 segundos.
+1. Mantenga presionado el botón <img alt="Botón con un rayo." src="./image7.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) durante 3 segundos.
 
 1. Se activará la salida PGM a la que están conectados los sensores de incendio y que está configurada para operar en el modo de **Restablecimiento del sensor de incendio**.
 
@@ -366,11 +366,11 @@ Si hay algún problema de funcionamiento, el indicador **TRB** del teclado se en
 
 #### Ingresar nuevos códigos de usuario
 
-1. Presione el botón <img alt="" src="./image9.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) en el teclado.
+1. Presione el botón <img alt="Botón con un rayo." src="./image9.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) en el teclado.
 
 2. Ingrese el **Código de administrador** de 6 dígitos.
 
-1. El botón <img alt="" src="./image9.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) empezará a parpadear.
+1. El botón <img alt="Botón con un rayo." src="./image9.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) empezará a parpadear.
 
 3. Ingrese un número de serie de usuario de dos dígitos que no esté en uso.
 
@@ -386,11 +386,11 @@ Si hay algún problema de funcionamiento, el indicador **TRB** del teclado se en
 
 #### Editar códigos de usuario
 
-1. Presione el botón <img alt="" src="./image9.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) en el teclado.
+1. Presione el botón <img alt="Botón con un rayo." src="./image9.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) en el teclado.
 
 2. Ingrese el **Código de administrador** de 6 dígitos.
 
-1. El botón <img alt="" src="./image9.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) empezará a parpadear.
+1. El botón <img alt="Botón con un rayo." src="./image9.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) empezará a parpadear.
 
 3. Ingrese el número de serie de usuario de dos dígitos deseado.
 
@@ -421,11 +421,11 @@ Los indicadores LED enumerados del 1 al 8 mostrarán los estados de las particio
 
 Para eliminar códigos de usuario existentes:
 
-1. Presione el botón <img alt="" src="./image9.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) en el teclado.
+1. Presione el botón <img alt="Botón con un rayo." src="./image9.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) en el teclado.
 
 2. Ingrese el **Código de administrador** de 6 dígitos.
 
-1. El botón <img alt="" src="./image9.png" style="width:0.3000in;" /> (o <img alt="" src="./image8.png" style="width:0.4016in;" />) empezará a parpadear.
+1. El botón <img alt="Botón con un rayo." src="./image9.png" style="width:0.3000in;" /> (o <img alt="Botón de encendido." src="./image8.png" style="width:0.4016in;" />) empezará a parpadear.
 
 3. Ingrese el número de serie de usuario de dos dígitos deseado.
 
