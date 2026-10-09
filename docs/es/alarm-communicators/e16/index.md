@@ -112,7 +112,7 @@ Funciona con la aplicación Protegus2:
 
 5.  Conexión Ethernet zócalo RJ45.
 
-<img alt="" src="./image4.webp" style="width:4.724409448818897in;height:2.838582677165354in" />
+<img alt="Comunicador E16: a la izquierda, vista frontal con 1, luces NETWORK, DATA, POWER y TROUBLE, y 2, ranura para abrir la cubierta. A la derecha, interior con la cubierta retirada: 3, bloque de terminales etiquetados +DC, -DC, CLK, DAT, I/O1, I/O2, I/O3, COM, A RS485 y B RS485; 4, puerto USB Mini-B; 5, zócalo Ethernet RJ45." src="./image4.webp" style="width:4.724409448818897in;height:2.838582677165354in" />
 
 ### Propósito de las terminales
 
@@ -191,7 +191,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="TrikdisConfig, ventana Ajustes del sistema del E16. Los números rojos señalan: 1, Tipo de panel, con una opción PARADOX seleccionada; 2, Control directo, marcado; 3, Contraseña de descarga de PC." src="./image7.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 1.  Seleccione el tipo de panel de control que será conectado al comunicador.
 
@@ -207,7 +207,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     la contraseña de la descarga de la computadora/UDL.
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image8.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="TrikdisConfig, ventana «Informes para usuario», sección «Servicio PROTEGUS». Las llamadas señalan la casilla «Activar conexión» marcada y el campo «Código de acceso a Protegus»." src="./image8.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
 
 4. Habilitar la conexión a la Servicio Protegus.
 
@@ -223,7 +223,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Ajustes del sistema”:**
 
-<img alt="" src="./image9.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
+<img alt="TrikdisConfig, «Ajustes del sistema» del E16. Los números rojos señalan: 1, «Número de objeto», con el valor 1122; 2, «Tipo de panel», cuyo desplegable muestra «4. PARADOX SP4000, S»." src="./image9.webp" style="width:7.082677165354331in;height:1.7834645669291338in" />
 
 1.  Ingrese el número de ID del objeto (**No utilice números de objeto FFFE, FFFF.**).
 
@@ -270,7 +270,7 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="661" height="468" />
+<img class="wiring-diagram" alt="Diagrama de conexión del puerto serial del panel PARADOX al E16 con el cable EX-CRP2.4. R (rojo, +12 V) a +DC, B (negro) a -DC, Y (amarillo) a CLK y G (verde) a DATA." src="./wiring-paradox.webp" width="661" height="468" />
 
 #### CADDX
 
@@ -278,7 +278,7 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="637" height="492" />
+<img class="wiring-diagram" alt="Diagrama de conexión del puerto serial del panel TEXECOM al E16 con el cable EX-CRP4. R (rojo, +12 V) a +DC, B (negro) a -DC, BL (azul) a CLK y W (blanco) a DATA." src="./wiring-texecom.webp" width="637" height="492" />
 
 #### INNERRANGE INCEPTION
 
@@ -290,11 +290,11 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### Crow Runner 4/8, Runner 8/16
 
-<img class="wiring-diagram" alt="" src="./wiring-crow-runner.webp" width="590" height="507" />
+<img class="wiring-diagram" alt="Diagrama de conexión del BUS de Datos del panel Crow Runner 4/8 o Runner 8/16 al E16. POS (+12 V) a +DC, NEG a -DC, CLK a CLK y DATA a DATA." src="./wiring-crow-runner.webp" width="590" height="507" />
 
 #### Pyronix
 
-<img class="wiring-diagram" alt="" src="./wiring-pyronix.webp" width="590" height="508" />
+<img class="wiring-diagram" alt="Diagrama de conexión del BUS de Datos del panel Pyronix al E16. +AUX (+12 V) a +DC, -AUX a -DC y KD a DATA; CLK queda sin conectar." src="./wiring-pyronix.webp" width="590" height="508" />
 
 #### Honeywell Vista-20, Vista-48
 
@@ -526,7 +526,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image31.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image31.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 4. Si hay otra sección de alarmas de seguridad, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
@@ -548,7 +548,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 Después de conectar E16 y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image34.webp" style="width:7.106299212598425in;height:0.6220472440944882in" />
+<img alt="La barra de estado de TrikdisConfig muestra el campo «MAC/ID única», «Estado: lectura finalizada», «Dispositivo E16_1000», «BL: 1.00», «FW:1.10» y «HW: 0.01». También muestra los campos «SN», «Estado», «HID» y «Administrado»." src="./image34.webp" style="width:7.106299212598425in;height:0.6220472440944882in" />
 
 **Barra de Estado**
 
@@ -568,7 +568,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:3.0866141732283463in" />
+<img alt="TrikdisConfig, ventana Ajustes del sistema. En General, Número de objeto: 1122; Tipo de panel: 4. PARADOX SP4000, S; Control directo activado; Tiempo de sincronización: Servicio PROTEGUS. En Acceso aparecen los campos Código de administrador y Código de instalador y los permisos del instalador." src="./image35.webp" style="width:7.082677165354331in;height:3.0866141732283463in" />
 
 **Grupo de opciones “General”**
 
@@ -807,7 +807,7 @@ Puede cambiar el código de identificación de contacto para cada evento, así c
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón **Restaurar** en ***TrikdisConfig*.**
 
-<img alt="" src="./image45.webp" style="width:7.090551181102362in;height:0.952755905511811in" />
+<img alt="TrikdisConfig, sección «Ajustes por defecto», con el botón «Restaurar» enmarcado en rojo. Debajo se muestra la MAC/ID única del dispositivo. La barra inferior indica «Estado: lectura finalizada», dispositivo E16_1000, número de serie, BL 1.00, FW 1.10 y HW 0.01." src="./image45.webp" style="width:7.090551181102362in;height:0.952755905511811in" />
 
 ## Configuración Remota
 

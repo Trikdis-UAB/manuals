@@ -96,7 +96,7 @@ Conexión:
 
 5.  Cierre la tapa superior.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Ilustración de la placa de circuito con una flecha que señala una pestaña de fijación en su borde, junto a otro dibujo de la placa posterior de la carcasa con orificios para tornillos y una ranura de montaje en pared." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Conexión del transceptor RF-LORA al panel de control "FLEXi" SP3 
 

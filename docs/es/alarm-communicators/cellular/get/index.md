@@ -127,7 +127,7 @@ Este manual es para comunicadores LTE.
 
 9.  Conexión Ethernet zócalo RJ45.
 
-<img alt="" src="./image4.webp" style="width:4.926676509186351in;height:3.24000656167979in" />
+<img alt="Elementos del comunicador GET con referencias numeradas. A la izquierda, la cubierta cerrada: 1 conector SMA de la antena celular, 2 luces indicadoras, 3 ranura frontal para abrir la cubierta. A la derecha, la cubierta abierta con la placa de circuito: 4 terminales para conexiones externas, 5 botón RESET, 6 ranura para tarjeta SIM2, 7 ranura para tarjeta SIM1, 8 puerto USB-C para programación, 9 zócalo Ethernet RJ45." src="./image4.webp" style="width:4.926676509186351in;height:3.24000656167979in" />
 
 ### Propósito de las terminales 
 
@@ -218,7 +218,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**AUTO**”.
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:2.0354330708661417in" />
+<img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana Configuración del panel. Las llamadas destacan Tipo de panel: 6. PARADOX SP+/MG+; Control directo: marcado; y el campo Contraseña de descarga de PC." src="./image8.webp" style="width:7.086614173228346in;height:2.0354330708661417in" />
 
 1.  Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
@@ -233,7 +233,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     información de cómo cambiar la "**Contraseña de descarga de PC**".
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
+<img alt="TrikdisConfig, ventana «Informes para usuario», pestaña «Servicio PROTEGUS»: dos controles resaltados, la casilla «Activar conexión» (5) marcada y el campo «Código de acceso a Protegus» (6)." src="./image9.webp" style="width:7.086614173228346in;height:1.9724409448818898in" />
 
 4. Habilitar la conexión a la “**Servicio *Protegus”***.
 
@@ -247,7 +247,7 @@ Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.
 
 3. Marque la casilla "**Usar DHCP**" para que el comunicador lea automáticamente la configuración de red de la computadora (máscara de subred, puerta de enlace) y asigne una dirección IP.
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:2.8818897637795278in" />
+<img alt="TrikdisConfig, ventana «Configuración de la red», pestaña «SIM1»: cuatro campos resaltados. «PIN de la tarjeta SIM» (8), «APN» (9) con el valor «internet», «DNS 1» (10) vacío y «DNS 2» (11) vacío." src="./image11.webp" style="width:7.086614173228346in;height:2.8818897637795278in" />
 
 Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe realizar las siguientes configuraciones:
 
@@ -291,7 +291,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “CRA informes”**
 
-<img alt="" src="./image16.webp" style="width:7.086614173228346in;height:3.358267716535433in" />
+<img alt="TrikdisConfig 1.66.57, configuración del GET_S170, ventana CRA informes, pestaña CRA ajustes. En Canal de comunicación principal, las llamadas 4 a 9 señalan Modo: Desactivar; Protocolo: sin seleccionar; Clave de encriptación: activada; Dominio o IP y Puerto: vacíos; TCP o UDP: TCP. La llamada 10 agrupa los mismos campos del canal de reserva, cuyo modo está en Desactivar." src="./image16.webp" style="width:7.086614173228346in;height:3.358267716535433in" />
 
 4. **Modo** – seleccione el modo de conexión IP.
 
@@ -319,7 +319,7 @@ Estos ajustes deben realizarse si el comunicador está conectado a una red LAN.
 
 12. Marque la casilla "**Usar DHCP**" para que el comunicador lea automáticamente la configuración de red de la computadora (máscara de subred, puerta de enlace) y asigne una dirección IP.
 
-<img alt="" src="./image19.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="TrikdisConfig, ventana «Configuración de la red», pestaña «SIM1»: cuatro campos resaltados. «PIN de la tarjeta SIM» (13), «APN» (14) con el valor «internet», «DNS 1» (15) vacío y «DNS 2» (16) vacío." src="./image19.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Si tiene una tarjeta SIM (o dos tarjetas SIM) insertada en su dispositivo, debe realizar las siguientes configuraciones.
 
@@ -396,7 +396,7 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### INNERRANGE INCEPTION
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="617" height="492" />
+<img class="wiring-diagram" alt="Diagrama de conexión de INNERRANGE INCEPTION con GET. VOUT + (+12 V) va a +DC y VOUT 0V va a -DC. Desde el puerto USB del panel, mediante el cable «Inner Range» número de pieza 993030USB, el conductor negro se une a la línea de 0V/-DC, el verde va a CLK y el blanco a DATA." src="./wiring-innerrange-inception.webp" width="617" height="492" />
 
 #### INNERRANGE INTEGRITI
 
@@ -424,7 +424,7 @@ Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del pa
 
 4.  Para controlar directamente el panel de seguridad, ingrese la “**Contraseña de descarga de PC**”. Debe coincidir con la contraseña ingresada en el panel de seguridad.
 
-<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
+<img alt="TrikdisConfig, ventana «Configuración del panel», con cuatro campos resaltados: «Communication protocol» (1) en «2. AUTO», «Tipo de panel» (2) en «7. PARADOX SP+/MG+», «Control directo» (3) marcado y «Contraseña de descarga de PC» (4)." src="./image27.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
 
 El panel de control Paradox debe programarse para transmitir eventos al CMS y para control remoto desde la aplicación Protegus2.
 
@@ -462,7 +462,7 @@ El comunicador tiene dos terminales de E/S universales que se pueden configurar 
 
 Diagramas de tipo de circuito de entrada NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL:
 
-<img alt="" src="./image30.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
+<img alt="Tres circuitos de entrada entre COM e INx. Izquierda, NA o normalmente abierto: contacto NO; cortocircuito = alarma y circuito abierto = restablecimiento. Centro, NC o normalmente cerrado: contacto NC; cortocircuito = restablecimiento y circuito abierto = alarma. Derecha, contacto NC y resistencia de fin de línea de 2,2 kΩ en serie; cortocircuito o circuito abierto = alarma y 2,2 kΩ = restablecimiento." src="./image30.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
 
 <img alt="Diagrama de conexión: tres circuitos de entrada entre COM e INx del comunicador GET. Izquierda, circuito normalmente abierto con resistencia 2,2k de fin de línea: resistencia en paralelo con el contacto NO; Short - Alarm; Open - Alarm; 2,2k - Restore. Centro, circuito normalmente abierto con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NO; Short - Tamper; Open - Tamper; 2,2k - Alarm; 3,3k-5,5k - Restore. Derecha, circuito normalmente cerrado con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NC; Short - Tamper; Open - Tamper; 2,2k - Restore; 3,3k-5,5k - Alarm." src="./image31.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
 
@@ -732,7 +732,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image42.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image42.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
@@ -754,7 +754,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 Después de conectar el comunicador GET y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
+<img alt="Barra de estado de TrikdisConfig después de leer el dispositivo: Estado: lectura finalizada, Dispositivo GET_S170, BL: 1.00, FW:1.15, HW: 0.00 y nivel de acceso Administrador. Los campos se explican en la tabla siguiente." src="./image45.webp" style="width:7.086614173228346in;height:0.6062992125984252in" />
 
 **Barra de Estado**
 
@@ -774,7 +774,7 @@ Al presionar el botón **Leer [F4]**, el programa TrikdisConfig leerá y mostrar
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image46.webp" style="width:7.086614173228346in;height:2.779527559055118in" />
+<img alt="Ventana Ajustes del sistema de TrikdisConfig. Grupo General: campos Número de objeto e ID del módulo y Tiempo establecido en Primer canal. Grupo Acceso: campos Código de administrador y Código de instalador; Sólo un administrador puede restaurar marcado. En Permitir que el instalador cambie, están marcados Número de cuenta, CRA informe, Informes para el usuario, Tarjeta SIM y Resumen del incidente." src="./image46.webp" style="width:7.086614173228346in;height:2.779527559055118in" />
 
 **Grupo de opciones “General”**
 
@@ -803,7 +803,7 @@ Nota: Si el campo " **Sólo un administrador puede restaurar** " está marcado y
     dígitos o caracteres en latín.
 ### Ventana de “Configuración del panel” 
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="Ventana «Configuración del panel» de TrikdisConfig. En «TLF»: «Communication protocol» está en «2. AUTO», Primer tono HSK en «Dual Tone» y Segundo tono HSK en «SIA FSK». Usar ID de cuenta del panel de control y Esperar confirmación de CRA están sin marcar; Frecuencia del tono de marcado está marcada con 425 Hz. En «Bus de Data»: Protocolo del panel muestra «CID» y Tipo de panel «1. DISABLED»; las casillas Control directo y Evento aparecen atenuadas y sin marcar." src="./image47.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Grupo de opciones “TLF”**
 
@@ -819,7 +819,7 @@ El comunicador se conecta a los terminales TIP RING de la línea telefónica del
 
 - **Frecuencia del tono de marcado** - la frecuencia con la que el comunicador GET se comunica con el comunicador telefónico del panel de control.
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:1.968503937007874in" />
+<img alt="Ventana Configuración del panel de TrikdisConfig. Grupo TLF: Communication protocol en 1. DISABLED. Grupo Bus de Data: Protocolo del panel en CID, Tipo de panel en 6. PARADOX SP+/MG+, Control directo y Evento marcados, y campo Contraseña de descarga de PC." src="./image48.webp" style="width:7.086614173228346in;height:1.968503937007874in" />
 
 **Grupo de opciones “Bus de Data”**
 
@@ -839,7 +839,7 @@ El comunicador está conectado al bus del teclado o al bus serie del panel de co
 
 **Pestaña de parámetros “CRA ajustes”**
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
+<img alt="TrikdisConfig para GET_S170, ventana CRA informes, pestaña CRA ajustes. En Canal de comunicación principal, Modo está en Desactivar y TCP o UDP en TCP; en Segundo canal, Tipo de comunicación está en Desactivar; Modo del canal de reserva también está en Desactivar." src="./image49.webp" style="width:7.086614173228346in;height:3.37007874015748in" />
 
 Los eventos pueden ser enviados a través de varios canales de comunicación. Los primeros y segundos canales de comunicación pueden ser operados de forma simultánea y el comunicador puede enviar eventos a dos receptores al mismo tiempo. El canal de respaldo puede ser asignado para los primeros y segundos canales, los cuales serán usados cuando la conexión al canal primario es interrumpida.
 
@@ -871,7 +871,7 @@ Los eventos de este canal son transmitidos en paralelo con el primer canal. Cuan
 
 **Pestaña de “Ajustes”**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
+<img alt="TrikdisConfig para GET_S170, ventana CRA informes, pestaña Ajustes. Periodo de prueba: 24 h y 0 min; Periodo de ping IP: 0 min y 30 s; Ir al canal de reserva después de: 2 intentos; Volver a principal después: 1 min y 30 s; Línea Núm. y Receptor Núm.: 1. En Modo de informe, Tipo principal: LAN; Tipo de reserva: SIM1; Tipo de reserva 2: Desactivar." src="./image50.webp" style="width:7.086614173228346in;height:2.543307086614173in" />
 
 **Grupo de opciones “Ajustes”**
 
@@ -906,7 +906,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Pestaña de la “Servicio Protegus”**
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="Ventana Informes para usuario de TrikdisConfig, pestaña Servicio PROTEGUS: Activar conexión marcado, campo Código de acceso a Protegus y Parallel reporting sin marcar." src="./image51.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.eu](http://www.protegus.eu).
 
@@ -942,7 +942,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar remotamente e
     
     2.  Asegúrese de que el servicio de Internet móvil de la tarjeta SIM
         esté activado.
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
+<img alt="Ventana Configuración de la red de TrikdisConfig, pestaña SIM1, grupo Tarjeta SIM: campo PIN de la tarjeta SIM, APN en internet; Usuario, Contraseña, SIM ICCID, DNS 1, DNS 2 y Preferred operator en blanco." src="./image53.webp" style="width:7.086614173228346in;height:2.877952755905512in" />
 
 Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM1 del comunicador.
 
@@ -962,7 +962,7 @@ Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM1 d
 
 **Pestaña de la “SIM2”**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.8818897637795278in" />
+<img alt="Ventana Configuración de la red de TrikdisConfig, pestaña SIM2, grupo Tarjeta SIM: campo PIN de la tarjeta SIM, APN en internet; Usuario, Contraseña, SIM ICCID, DNS 1, DNS 2 y Preferred operator en blanco." src="./image54.webp" style="width:7.086614173228346in;height:2.8818897637795278in" />
 
 Estos ajustes deben realizarse si se inserta una tarjeta SIM en la ranura SIM2 del comunicador.
 

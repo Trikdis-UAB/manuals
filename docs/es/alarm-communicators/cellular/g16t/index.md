@@ -114,7 +114,7 @@ Este manual se aplica a estos modelos G16T:
 
 6.  Ranura para tarjetas SIM.
 
-<img alt="" src="./image4.webp" style="width:3.937007874015748in;height:2.4448818897637796in" />
+<img alt="Elementos del comunicador G16T con referencias numeradas. A la izquierda, la cubierta cerrada: 1 conector SMA de la antena celular, 2 indicadores luminosos (NETWORK, DATA, POWER, TROUBLE), 3 ranura frontal para abrir la cubierta. A la derecha, la cubierta abierta con la placa de circuito: 4 terminal para conexiones externas, 5 puerto USB Mini-B para programar el comunicador, 6 ranura para tarjeta SIM." src="./image4.webp" style="width:3.937007874015748in;height:2.4448818897637796in" />
 
 ### Propósito de las terminales 
 
@@ -217,7 +217,7 @@ A continuación, se describe qué ajustes deben establecerse para que el comunic
 
 **En ventana “Informes para usuario” “Servicio PROTEGUS”:**
 
-<img alt="" src="./image7.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
+<img alt="TrikdisConfig 1.66.34 (G16T_3210), ventana «Informes para usuario», pestaña «Servicio PROTEGUS», con llamadas numeradas: 1, casilla «Activar conexión» marcada; 2, campo «Código de acceso a Protegus»." src="./image7.webp" style="width:7.082677165354331in;height:1.7716535433070866in" />
 
 1.  Seleccione la casilla **“Activar conexión”** a la nube de PROTEGUS.
 
@@ -330,21 +330,21 @@ Siguiendo uno de los esquemas proporcionados a continuación, conecte el comunic
 
 #### Sin supervisión de la línea telefónica
 
-<img class="wiring-diagram" alt="" src="./wiring-tip-ring.webp" width="593" height="530" />
+<img class="wiring-diagram" alt="Diagrama de conexión del panel de control al G16T sin supervisión de la línea telefónica. +AUX del panel, marcado (+12 V), se conecta a +DC del G16T; -AUX a -DC, TIP a TIP y RING a RING. T1 / IN1, R1 / IN2, OUT, COM, A RS485 y B RS485 quedan sin conectar." src="./wiring-tip-ring.webp" width="593" height="530" />
 
 #### Con supervisión de la línea telefónica
 
-<img class="wiring-diagram" alt="" src="./wiring-tip-ring-supervised.webp" width="593" height="530" />
+<img class="wiring-diagram" alt="Diagrama de conexión del panel de control al G16T con supervisión de la línea telefónica. +AUX del panel, marcado (+12 V), se conecta a +DC del G16T; -AUX a -DC, TIP a TIP, RING a RING, T-1 a T1 / IN1 y R-1 a R1 / IN2. OUT, COM, A RS485 y B RS485 quedan sin conectar." src="./wiring-tip-ring-supervised.webp" width="593" height="530" />
 
 ### Esquemas para conectar a la zona del interruptor de llave del panel 
 
 #### Sin supervisión de la línea telefónica
 
-<img class="wiring-diagram" alt="" src="./wiring-keyswitch.webp" width="593" height="532" />
+<img class="wiring-diagram" alt="Diagrama de conexión para armar y desarmar el panel mediante su zona de interruptor de llave, sin supervisión de la línea telefónica. +AUX del panel, marcado (+12 V), se conecta a +DC del G16T; -AUX a -DC, TIP a TIP, RING a RING y la zona de interruptor de llave a OUT. T1 / IN1, R1 / IN2, COM, A RS485 y B RS485 quedan sin conectar." src="./wiring-keyswitch.webp" width="593" height="532" />
 
 #### Con supervisión de la línea telefónica
 
-<img class="wiring-diagram" alt="" src="./wiring-keyswitch-supervised.webp" width="593" height="532" />
+<img class="wiring-diagram" alt="Diagrama de conexión para armar y desarmar el panel mediante su zona de interruptor de llave, con supervisión de la línea telefónica. +AUX del panel, marcado (+12 V), se conecta a +DC del G16T; -AUX a -DC, TIP a TIP, RING a RING, T-1 a T1 / IN1, R-1 a R1 / IN2 y la zona de interruptor de llave a OUT. COM, A RS485 y B RS485 quedan sin conectar." src="./wiring-keyswitch-supervised.webp" width="593" height="532" />
 
 Siga estos esquemas si el panel de control se armará/desarmará con la salida PGM del G16T activando/desactivando la zona de interruptor de llave del panel.
 
@@ -597,7 +597,7 @@ Puede restringir los números de teléfono desde los cuales el comunicador acept
 
 Después de conectar G16T y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado:
 
-<img alt="" src="./image31.webp" style="width:7.062992125984252in;height:0.6299212598425197in" />
+<img alt="TrikdisConfig, barra de estado después de pulsar «Leer (F4)»: campo «IMEI/identificador único:», «Estado: reading done», «Dispositivo G16T_3210», campo «SN», «BL: 1.06», «FW:1.41», «HW: 0.01», «Estado HID» y nivel de acceso «Administrador»." src="./image31.webp" style="width:7.062992125984252in;height:0.6299212598425197in" />
 
 | Objeto | Descripción |
 |----|----|
@@ -615,7 +615,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image32.webp" style="width:7.082677165354331in;height:3.059055118110236in" />
+<img alt="TrikdisConfig, ventana Ajustes del sistema: en General se muestran Número de objeto 1111, Tipo de panel 2. INTERFACE DTMF, Frecuencia del tono de marcado 425 Hz, Tipo de entrada IN1-IN2 NO, Salida OUT1 Control remoto y Tiempo de sincronización Servicio PROTEGUS. A la derecha, Acceso incluye los campos Código de administrador y Código de instalador." src="./image32.webp" style="width:7.082677165354331in;height:3.059055118110236in" />
 
 **Grupo de “General”**
 
@@ -731,7 +731,7 @@ Los parámetros se muestran cuando el protocolo **DC-09_2007** o **DC-09_2012** 
 
 **Pestaña “Servicio PROTEGUS”**
 
-<img alt="" src="./image35.webp" style="width:7.082677165354331in;height:1.7755905511811023in" />
+<img alt="TrikdisConfig, ventana Informes para usuario, pestaña Servicio PROTEGUS: la casilla Activar conexión está marcada y debajo aparece el campo Código de acceso a Protegus." src="./image35.webp" style="width:7.082677165354331in;height:1.7755905511811023in" />
 
 El servicio Protegus permite a los usuarios monitorear y controlar de forma remota el comunicador. Para obtener más información sobre el servicio Protegus, visita [www.protegus.app](https://www.protegus.app).
 
@@ -743,7 +743,7 @@ El servicio Protegus permite a los usuarios monitorear y controlar de forma remo
 
 **Pestaña “Informes por SMS y llamadas”**
 
-<img alt="" src="./image36.webp" style="width:7.082677165354331in;height:3.8661417322834644in" />
+<img alt="TrikdisConfig, ventana «Informes para usuario», pestaña «Informes por SMS y llamadas». «Nombre del objeto» muestra Account Name y «Lenguaje SMS» muestra ENGLISH. Hay un número en Tel 1; Tel 2–4 no tienen números completos. Los nombres de áreas son 01 Area 1 y 02 Area 2; los de usuarios, 001 User 1 y 002 User 2; los de zonas, 001 Zone 1 y 002 Zone 2. La tabla de eventos CID incluye casillas de SMS y llamadas por teléfono para E100 MEDICAL PANIC ALARM, E110 FIRE PANIC ALARM, E120 PANIC ALARM, E121 DURESS ALARM, E130 ALARM !!! ALARM !!! ALARM !!! ALARM !!! y E301 AC Power failure on control panel." src="./image36.webp" style="width:7.082677165354331in;height:3.8661417322834644in" />
 
 Puede configurar para que los clientes estén informados de los eventos con mensajes SMS o una llamada.
 
@@ -761,7 +761,7 @@ Puede cambiar los textos de los mensajes SMS de eventos predeterminados, cambiar
 
 **Pestaña “Control por SMS”**
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
+<img alt="TrikdisConfig, ventana Informes para usuario, pestaña Control por SMS: a la izquierda está la tabla Textos de respuesta SMS, con respuestas para orden realizada, contraseña incorrecta, orden incorrecta e información incorrecta; a la derecha está la tabla Números de teléfono para el control remoto, con filas Tel 1 a Tel 4." src="./image37.webp" style="width:7.086614173228346in;height:1.9606299212598426in" />
 
 Puede enviar un comando SMS al comunicador que controlará la salida o cambiará la configuración. Encuentre los comandos de control en el capítulo **5.4 Configuración y control con los mensajes SMS.**
 
@@ -816,7 +816,7 @@ Después de agregar el expansor al comunicador como se describe anteriormente, e
 
 #### Ventana de configuración del expansor iO-8
 
-<img alt="" src="./image40.webp" style="width:7.082677165354331in;height:2.5511811023622046in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1», ajustes de «Expansor iO-8». Aparecen el campo «Serial Núm.», «Recuento de entrada» 3 y «Mostrar ID de objeto» sin marcar. En la tabla de incidentes, BUS_FAULT tiene CID 333; INPUT1, INPUT2 e INPUT3 tienen CID 130 y tipo NO. Todos usan la partición 91; las entradas corresponden a las zonas 001–003 y cada incidente tiene el mismo código CID de restauración." src="./image40.webp" style="width:7.082677165354331in;height:2.5511811023622046in" />
 
 Expansor iO-8 tiene 8 contactos (salida/entrada) terminales universales.
 
@@ -858,7 +858,7 @@ Para que los clientes reciban mensajes SMS o llamadas acerca de detonantes de en
 
 #### Ventana de configuración del Expansor iO
 
-<img alt="" src="./image41.webp" style="width:7.082677165354331in;height:3.236220472440945in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1», ajustes de «expansor iO». Aparecen el campo «Serial Núm.», «Tipo de entrada IN» NO, «Max °C(T1)» 30 y «Min °C(T2)» 15. La tabla de incidentes muestra INPUT con CID 130, HIGH_TEMPERATURE con CID 158, LOW_TEMPERATURE con CID 159 y BUS_FAULT con CID 333; todos usan la partición 91 y la zona 001, con el mismo código CID de restauración para cada incidente." src="./image41.webp" style="width:7.082677165354331in;height:3.236220472440945in" />
 
 Expansor iO tiene: terminales para 1 entrada, 1 salida (contactos de relé) y 1-Wire bus serial para la conexión de sensores de temperatura.
 
@@ -874,7 +874,7 @@ En la tabla de entradas se pueden asignar eventos Contacto ID y recuperar los c�
 
 #### Ventana de configuración del módulo WiFi *W485*
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.1496062992125986in" />
+<img alt="TrikdisConfig, ventana RS485 modules, pestaña Module 1 para W17u/W485: DHCP modo está en DHCP. Se muestran los campos IP estática, Subnet mask, Predeterminado gateway, WiFi SSID nombre y WiFi SSID contraseña; debajo hay una tabla de códigos de incidente y restauración del ID de contacto." src="./image42.webp" style="width:7.086614173228346in;height:3.1496062992125986in" />
 
 - **DHCP Modo** - modo del módulo WiFi para registrarse en la red (manual (Estática) o automático (DHCP)).
 
@@ -898,7 +898,7 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
     funcione el *W485*.**
 **Ventana de configuración del módulo ethernet *E485***
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1», ajustes de E485. Aparecen el campo «Serial Núm.», «DHCP modo» DHCP, «IP estática» 192.168.1.27, «Subnet mask» 255.255.255.0 y «Predeterminado gateway» 192.168.1.254. En la tabla, BUS_FAULT tiene CID 333, partición 91 y zona 001, con el mismo código CID de restauración." src="./image43.webp" style="width:7.086614173228346in;height:3.1377952755905514in" />
 
 - **DHCP Modo** - modo del módulo ethernet para registrarse en la red (manual (Estática) o automático (DHCP)).
 
@@ -918,7 +918,7 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
     funcione el *E485*.**
 ### Ventana “Resumen de incidente” 
 
-<img alt="" src="./image44.webp" style="width:7.082677165354331in;height:2.5708661417322833in" />
+<img alt="TrikdisConfig, ventana «Resumen del incidente»: lista de eventos internos con casillas de activación y códigos CID. COMMUNICATION, CID 350, desactivado; IN1_ALARM, 130; IN1_TAMPER, 144; IN2_ALARM, 130; IN2_TAMPER, 144; PING, 760; POWER, 302; REMOTE_FINISHED, 412; REMOTE_STARTED, 411; START, 700; TEST, 602. La partición es 99 y la zona 999, salvo los eventos IN1 e IN2, cuyas zonas son 001 y 002." src="./image44.webp" style="width:7.082677165354331in;height:2.5708661417322833in" />
 
 En esta ventana, puede activar, desactivar o cambiar los mensajes de eventos internos enviados por el dispositivo. Después de activar el evento interno en esta ventana, no se enviará independientemente de otras configuraciones.
 
@@ -951,7 +951,7 @@ Puede cambiar cada contacto de evento con un código de identificación, y tambi
 
 Para **Restaurar** la configuración de fábrica del comunicador, es necesario hacer clic en el botón Restaurar en la ventana TrikdisConfig.
 
-<img alt="" src="./image45.webp" style="width:7.082677165354331in;height:1.0196850393700787in" />
+<img alt="TrikdisConfig: botón «Restaurar» resaltado en rojo bajo «Ajustes por defecto». Debajo aparecen «IMEI/identificador único», «Estado: reading done», «Dispositivo», «SN», «BL: 1.06», «FW: 1.41», «HW: 0.01», «Estado HID» y el nivel de acceso «Administrator»." src="./image45.webp" style="width:7.082677165354331in;height:1.0196850393700787in" />
 
 ## Configuración remota 
 

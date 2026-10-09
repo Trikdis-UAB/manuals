@@ -126,7 +126,7 @@ Este manual es para comunicadores 4G.
 
 7.  Ranura Tarjeta SIM.
 
-<img alt="" src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
+<img alt="Elementos del comunicador GT con referencias numeradas. A la izquierda, la cubierta cerrada: 1 conector SMA de la antena celular, 2 luces indicadoras, 3 ranura frontal para abrir la cubierta. A la derecha, la cubierta abierta con la placa de circuito: 4 terminal para conexiones externas, 5 puerto USB-C para programación, 6 botón RESET, 7 ranura para tarjeta SIM." src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
 
 ### Propósito de las terminales 
 
@@ -223,7 +223,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**Dual tone**”.
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. La llamada 2 resalta Tipo de panel, cuyo valor visible es 5. PARADOX SP/MG se; la 3 señala la casilla Control directo marcada y la 4 el campo Contraseña de descarga de PC." src="./image8.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 1.  Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
@@ -239,7 +239,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     la contraseña de la descarga de PC/UDL.
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="TrikdisConfig, «Informes para usuario», pestaña «Servicio PROTEGUS»: casilla «Activar conexión» marcada y resaltada; campo «Código de acceso a Protegus» con un código introducido y resaltado." src="./image9.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 4. Habilitar la conexión a la “**Servicio Protegus**”.
 
@@ -281,7 +281,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 En la ventana de opciones de “Ajustes CRA” para el “Canal de comunicación principal”:
 
-<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:3.3503937007874014in" />
+<img alt="TrikdisConfig, «CRA informes», pestaña «CRA ajustes»: en «Canal de comunicación principal», «Modo» muestra «Desactivar», «Protocolo» está vacío, «Clave de encriptación» contiene una clave y la casilla «hex» está desmarcada, «Dominio o IP» y «Puerto» están vacíos, y «TCP o UDP» muestra «TCP»; todos estos campos están resaltados. Debajo, «Modo del canal de reserva» repite los mismos campos, también resaltados. A la derecha, «Segundo canal» muestra «Tipo de comunicación» en «Desactivar», sin resaltar." src="./image13.webp" style="width:7.086614173228346in;height:3.3503937007874014in" />
 
 3. **Modo** – seleccione el método de conexión IP.
 
@@ -397,7 +397,7 @@ Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del pa
 3.  Seleccione “**Control directo**” si desea que los usuarios puedan controlar el panel usando la aplicación Protegus2 usando su propio código de teclado.
 1.  Para controlar directamente el panel de control, ingrese la “**Contraseña de descarga de PC**”. Debe coincidir con la contraseña ingresada en el panel de control.
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:1.968503937007874in" />
+<img alt="TrikdisConfig, Configuración del panel. Las llamadas numeradas señalan: 1, Protocolo de comunicación: 2. Dual Tone; 2, Tipo de panel: 7. PARADOX SP+/MG+; 3, Control directo marcado; 4, Contraseña de descarga de PC." src="./image22.webp" style="width:7.086614173228346in;height:1.968503937007874in" />
 
 El panel de control Paradox debe programarse para transmitir eventos al CMS y para control remoto desde la aplicación Protegus2.
 
@@ -423,7 +423,7 @@ El comunicador tiene 2 terminales de entrada/salida universales que se pueden co
 
 Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), como se muestra en los esquemas de abajo:
 
-<img alt="" src="./image25.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
+<img alt="Tres circuitos de entrada entre COM e INx. Izquierda, NA o normalmente abierto: contacto NO; cortocircuito = alarma y circuito abierto = restablecimiento. Centro, NC o normalmente cerrado: contacto NC; cortocircuito = restablecimiento y circuito abierto = alarma. Derecha, contacto NC y resistencia de fin de línea de 2,2 kΩ en serie; cortocircuito o circuito abierto = alarma y 2,2 kΩ = restablecimiento." src="./image25.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
 
 <img alt="Diagrama de conexión: tres circuitos de entrada entre COM e INx del comunicador GET. Izquierda, circuito normalmente abierto con resistencia 2,2k de fin de línea: resistencia en paralelo con el contacto NO; Short - Alarm; Open - Alarm; 2,2k - Restore. Centro, circuito normalmente abierto con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NO; Short - Tamper; Open - Tamper; 2,2k - Alarm; 3,3k-5,5k - Restore. Derecha, circuito normalmente cerrado con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NC; Short - Tamper; Open - Tamper; 2,2k - Restore; 3,3k-5,5k - Alarm." src="./image26.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
 
@@ -695,7 +695,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image36.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image36.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
@@ -922,7 +922,7 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
     2.  Si se usará internet móvil para enviar notificaciones a través del
         canal IP o a Protegus2, asegúrese de que el servicio de datos
         móviles esté habilitado.
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:3.015748031496063in" />
+<img alt="TrikdisConfig, «Configuración de la red», pestaña «SIM1»: «APN» contiene «internet»; los campos «Usuario», «Contraseña», «SIM ICCID», «DNS 1», «DNS 2» y «Operador preferido» están vacíos. «¡Bloqueo ICCID duro!» está desmarcado." src="./image50.webp" style="width:7.086614173228346in;height:3.015748031496063in" />
 
 **Grupo de opciones de la “Tarjeta SIM”**
 
@@ -988,7 +988,7 @@ Después de añadir el expansor al comunicador como se ha descrito en el párraf
 
 #### Ventana de ajustes del expansor iO-8
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.559055118110236in" />
+<img alt="TrikdisConfig, «RS485 modules», pestaña «Module 1», ajustes del «Expansor iO-8»: «Recuento de entrada» está en 3 y «Mostrar ID de objeto» está desmarcado. La tabla de eventos muestra BUS_FAULT con CID 333, SIA ET/ER, partición 91 y zona 001; INPUT1 con CID 130, SIA BA/BH, zona 001 y tipo NO; INPUT2 en zona 002 e INPUT3 en zona 003. Todos tienen activados los códigos de incidente y restauración." src="./image54.webp" style="width:7.086614173228346in;height:2.559055118110236in" />
 
 El expansor iO-8 tiene 8 contactos de terminal universales (entrada/salida). Se pueden conectar hasta cuatro expansores iO-8.
 

@@ -50,7 +50,7 @@ Conexión:
 
 6.  Botón para activar/desactivar el modo de emparejamiento.
 
-<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
+<img alt="Exterior del RF-S8 a la izquierda y placa de circuito expuesta a la derecha. Foto izquierda: 1 conector SMA para antena RF, 2 indicadores luminosos, 3 ranura de apertura de la tapa frontal. Foto derecha: 4 terminal para conexiones externas, 5 conector USB Mini-B para actualizar el firmware, 6 botón para activar o desactivar el modo de emparejamiento." src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
 
 ### Descripción del Bloque de Terminales 
 

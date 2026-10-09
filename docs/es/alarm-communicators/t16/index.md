@@ -347,7 +347,7 @@ El módulo E485 es compatible con el transmisor de radio T16. El *E485* envía m
 
 Una vez el T16 esté conectado al software TrikdisConfig, el programa mostrará información sobre el dispositivo conectado en la barra de estado:
 
-<img alt="" src="./image21.webp" style="width:7.086614173228346in;height:0.7283464566929134in" />
+<img alt="Barra de estado de TrikdisConfig para el T16. Muestra los campos IMEI/ID Único y SN; Estado: Lectura hecha; Dispositivo: T16; BL: 1.01; FW: 1.10; HW: 1.02; Conexión: USB; Propósito: Admin." src="./image21.webp" style="width:7.086614173228346in;height:0.7283464566929134in" />
 
 | Nombre | Descripción |
 |:---|:---|
@@ -368,7 +368,7 @@ Una vez el T16 esté conectado al software TrikdisConfig, el programa mostrará 
 
 **Pestaña “Ajustes”**
 
-<img alt="" src="./image22.webp" style="width:7.086614173228346in;height:4.248031496062992in" />
+<img alt="TrikdisConfig, ventana de configuración del T16, pestaña Ajustes. Interfaz de Serie marcada, Interfaz de línea telefónica desmarcada y Modelo de panel de alarma: TRIKDIS Cxx. Radiofrecuencia 1 está habilitada con Protocolo de RF RAS-3, ID de la cuenta 1FFF, Sistema 1, RF Nombre/Frecuencia 1+1 y RF Potencia 3W; Radiofrecuencia 2 está deshabilitada." src="./image22.webp" style="width:7.086614173228346in;height:4.248031496062992in" />
 
 **Grupo de configuración “Ajustes principales”**
 
@@ -490,7 +490,7 @@ Administrador puede especificar que opciones pueden ser cambiadas por el instala
 
 **Pestaña “Lista de módulos”**
 
-<img alt="" src="./image27.webp" style="width:7.086614173228346in;height:4.251968503937008in" />
+<img alt="TrikdisConfig, ventana «Módulos RS485» del T16, pestaña «Lista de módulos». La detección automática de dispositivos RS485 está desmarcada. La fila ID 1 muestra un módulo TM17 con su número de serie; en la fila ID 2, el menú abierto tapa el tipo de módulo. El menú ofrece «No disponible», W485, TM17 y E485. «Enviar confirmación al panel de alarma» está desmarcado." src="./image27.webp" style="width:7.086614173228346in;height:4.251968503937008in" />
 
 - **Detectar** **dispositivo** **externo** **RS485 automáticamente -** marque la casilla para habilitar la identificación automática de los módulos conectados al bus RS485.
 

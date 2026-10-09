@@ -210,7 +210,7 @@ Antes de comenzar la instalación, asegúrese de tener los componentes necesario
 
 2.  Abra la cubierta del CG17 con el desatornillador de cabeza plana como se muestra a continuación:
 
-<img alt="" src="./image6.webp" style="width:5.889763779527559in;height:1.5590551181102361in" />
+<img alt="Tres dibujos: un destornillador de cabeza plana se inserta en la ranura del borde superior de la cubierta del CG17. Las flechas indican movimientos hacia la izquierda y hacia abajo para abrirla. El último dibujo señala el conector interno USB Mini-B." src="./image6.webp" style="width:5.889763779527559in;height:1.5590551181102361in" />
 
 1.  Usando el cable USB mini-B conecte el CG17 a la computadora.
 
@@ -306,7 +306,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 7.  Inserte la tarjeta nano-SIM. La tarjeta SIM ya debe estar activada en la red GSM y todos los servicios requeridos deben estar habilitados, es decir, la tarjeta debe poder llamar, enviar y recibir mensajes SMS, usar Internet móvil. Pregunte al operador de red móvil de su tarjeta SIM cómo habilitar los servicios requeridos.
 
-<img alt="" src="./image11.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Dos dibujos lineales muestran la placa de circuito CG17 con una pestaña marcada con un círculo en el borde izquierdo para soltarla de la carcasa, y la parte posterior de la carcasa con dos orificios de montaje para tornillos marcados con círculos." src="./image11.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
 <img alt="Dibujo lineal de una tarjeta nano-SIM que se inserta en la ranura para tarjeta SIM del CG17 en la dirección de la flecha." src="./image12.webp" style="width:2.213337707786527in;height:1.3566699475065618in" />
 
@@ -357,7 +357,7 @@ Asigne una salida PGM a la función “**Sensor de fueg reiniciado**” (consult
 
 1)  usando una zona EOL (o NO, sin resistencia).
 
-<img alt="" src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
+<img alt="Diagrama de conexión: +12 V del CG17 alimenta el terminal +12V del módulo SM1 y una cadena de detectores de humo; R del SM1 alimenta la otra línea de los detectores. x OUT del CG17 se conecta a -12V del SM1. x IN se conecta al contacto C del SM1; NC del SM1 se conecta a COM del CG17 mediante una resistencia de fin de línea de 10k, y NO del SM1 se conecta directamente a COM." src="./image16.webp" style="width:5.273344269466317in;height:1.710003280839895in" />
 
 \* SM1: un módulo de compatibilidad creado por Trikdis que permite reiniciar de forma remota un detector de humo de dos cables después de una alarma activada.
 
@@ -367,7 +367,7 @@ Asigne una salida PGM a la función “**Sensor de fueg reiniciado**” (consult
 
 - Si el cable que conecta el sensor de temperatura es superior a 0,5 m, recomendamos utilizar un cable de par trenzado (UTP4x2x0,5 o STP4x2x0,5).
 
-<img alt="" src="./image17.webp" style="width:3.0in;height:0.9604166666666667in" />
+<img alt="Diagrama de conexión: los tres conductores del sensor de temperatura se conectan a los terminales +5 V, 1 Wire y COM del CG17: +Vdd (rojo), DQ (amarillo) y GND (negro)." src="./image17.webp" style="width:3.0in;height:0.9604166666666667in" />
 
 Color de cable:
 
@@ -431,7 +431,7 @@ Se pueden conectar hasta 8 teclados (Crow CR-16 Runner, Crow LCD Runner, Crow To
 
 ### Esquemas para conectar módulos de extensión de la serie iO 
 
-<img alt="" src="./image26.webp" style="width:7.0875in;height:4.429861111111111in" />
+<img alt="Esquema de expansión del CG17, alimentado por una fuente de 16–24 V: sus terminales DC+, DC−, A RS485 y B RS485 forman un bus cableado con dos iO-MOD y un módulo iO. Cada iO-MOD se comunica de forma inalámbrica, hasta 300 m, con un iO-WL. El iO-WL superior comparte una fuente de 12–28 V y las líneas A y B RS485 con otro módulo iO; el sensor de temperatura DS18B20 o DS18S20 se conecta a +5 V, 1-Wire y COM de ese iO. El iO-WL inferior tiene su propia fuente de 12–28 V y se conecta al lector iButton CZ Dallas: 1-Wire al cable blanco, COM al gris y al amarillo LED−, y NO a «Rojo LED+» y NC a «Verde LED+», cada uno mediante una resistencia de 1 kΩ (cables marrón y verde, respectivamente). La conexión 1-Wire admite hasta 30 m. El dibujo indica hasta cuatro iO-MOD y hasta ocho módulos de expansión del sistema." src="./image26.webp" style="width:7.0875in;height:4.429861111111111in" />
 
 **Nota:**
 
@@ -487,7 +487,7 @@ Es obligatorio calibrar el sensor de nivel de combustible "STRELA S485" (<http:/
 
 11. Una vez que haya terminado de completar la tabla, haga clic en "**OK**".
 
-<img alt="" src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
+<img alt="Captura de pantalla de la vista «Extended» de DUTConfig con una tabla de calibración del nivel de combustible y una gráfica del porcentaje de inmersión frente al volumen de combustible en litros; la tabla de datos, el botón «OK» y el botón «Disconnect» están resaltados y señalados con los números 10, 11 y 12." src="./image33.webp" style="width:5.744094488188976in;height:4.551181102362205in" />
 
 12. Haz clic en el botón “**Disconnect**”.
 
@@ -533,15 +533,15 @@ Conecte el CG17 a una computadora con un cable USB Mini-B. Ejecute TrikdisConfig
 
 - **Mínimo** - cuando el voltaje es menor que este ajuste, se generará un mensaje de evento. Para que se genere un mensaje de evento, la casilla “**Baja**” debe estar marcada.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
+<img alt="TrikdisConfig, ventana «Sensores»: tabla de ocho sensores con la primera fila resaltada en rojo. El sensor 1 tiene «IN1 Voltaje» como «Tipo de módulo», «Máximo» de 15 y «Mínimo» de 10." src="./image37.webp" style="width:7.086614173228346in;height:2.0826771653543306in" />
 
 La salida PGM se puede controlar cuando se mide un voltaje por encima de un valor establecido o por debajo de un valor establecido. En TrikdisConfig, debe seleccionar la salida PGM y configurarla en el modo de funcionamiento del “**Control remoto**”.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
+<img alt="TrikdisConfig, pestaña «Salidas» de «PGM»: tabla de cinco salidas PGM con la primera fila resaltada en rojo. PGM 1 tiene «CG17 5 OUT» como salida y «Control remoto» como «Definición de Salida»." src="./image38.webp" style="width:7.086614173228346in;height:1.9133858267716535in" />
 
 Vaya a la pestaña “**Establecer acción**”.
 
-<img alt="" src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
+<img alt="TrikdisConfig, ventana PGM, pestaña Establecer acción. La fila resaltada habilita PGM1 - CG17 5 OUT con Acción PGM encendido, Factor Temperatura, Núm. de factor S1, Inicia cuando Valor mayor y Valor 13." src="./image39.webp" style="width:7.086614173228346in;height:1.9173228346456692in" />
 
 - **Habilitar** – habilita la PGM.
 
@@ -581,11 +581,11 @@ La versión de firmware del controlador CG17 es 1.18 y superior.
 
 Conecte el transceptor RF-LORA a CG17. Después de esto, podrá utilizar los módulos iO-LORA, iO8-LORA, PB-LORA, REL-LORA. Se puede conectar un transceptor RF-LORA al CG17.
 
-<img alt="" src="./image42.webp" style="width:6.76251312335958in;height:5.862512029746282in" />
+<img alt="Diagrama: el CG17 conecta +12V, COM, A RS485 y B RS485, respectivamente, a +DC, -DC, A RS485 y B RS485 del RF-LORA. Se indica una conexión inalámbrica de hasta 5000 m hacia iO-LORA. Una fuente de 9–16 V alimenta +DC y -DC del iO-LORA. Un lector RFID con teclado Wiegand 26/34 conecta sus cables rojo, negro, verde y blanco a +DC, -DC, D0 y D1, respectivamente. Un sensor de temperatura DS18B20 o DS18S20 conecta Vdd, DQ y GND a +5V, 1-Wire y COM. También se muestran PB-LORA sin cables dibujados e iO8-LORA alimentado por otra fuente de 9–16 V; no se dibujan enlaces hacia ellos." src="./image42.webp" style="width:6.76251312335958in;height:5.862512029746282in" />
 
 Ejecute TrikdisConfig. Conecte el CG17 mediante un cable USB Mini-B a su computadora o de forma remota. Presione el botón **Leer [F4]** en el programa TrikdisConfig para mostrar los valores actuales de los parámetros operativos del controlador. Cuando se le solicite, ingrese el código de administrador o instalador en la ventana emergente. En la lista "**Módulos**", seleccione el módulo LORA que está utilizando. En el campo "**Núm. de serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña RS485 módulos. La tabla muestra los módulos iO-LORA expansor e iO8-LORA expansor; están resaltados sus campos Núm. de Serie." src="./image43.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 Haga clic en **Escribir [F5]** después de realizar cambios. Espere a que se complete la actualización. Haga clic en "**Desconectar**" y desconecte el cable USB.
 
@@ -864,7 +864,7 @@ Haga clic en Escribir [F5] después de realizar cambios. Espere a que se complet
 
 **Ventana de configuración del módulo WiFi *W485***
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña W485 configuraciones. En Configuración de la red del comunicador, DHCP modo está marcado; se muestran IP estática 192.168.1.40, Máscara de subred 255.255.255.0, Por defecto gateway 192.168.1.254 y Wifi SSID nombre TRIKDIS. En Parámetros SIM está marcada la opción de utilizar marcado y SMS a través del módulo de Internet." src="./image53.webp" style="width:7.086614173228346in;height:2.6929133858267718in" />
 
 **Grupo de opciones de “Configuración de la red del comunicador”**
 
@@ -969,7 +969,7 @@ Los mensajes con las coordenadas se envían al programa de monitoreo Monas MS.
 
 Haga clic en **Escribir [F5]**. Espere hasta que se guarden los datos. Retire el cable USB del CG17. Espere aproximadamente 1 minuto. Conecte el cable USB al CG17. Haga clic en **Leer [F4]**. El programa leerá y mostrará la configuración actualmente guardada en el CG17. El número de serie y la “**Versión de firmware**” del sensor de nivel de combustible “**Strela S485**” aparecerá en la ventana del programa “**Módulos**”.
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="Captura de TrikdisConfig en «Módulos», pestaña «RS485 módulos». La tabla muestra «Sensor de combustible FLS» en el ID 1 y «No disponible» en el ID 2, con columnas para número de serie, área, nombre y versión de firmware." src="./image57.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 Abra la ventana de “**Sensores**”**.**
 
@@ -995,7 +995,7 @@ Abra la ventana de “**Sensores**”**.**
 
 El usuario será informado sobre los cambios repentinos de nivel de combustible con un mensaje SMS. El usuario puede editar el texto del mensaje SMS.
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
+<img alt="Captura de TrikdisConfig en «Eventos de sistema», pestaña «Eventos». Un recuadro rojo destaca las filas «Alarma de pérdida de combust», «Bajo nivel de combustible» y «Alto nivel de combustible», junto con sus códigos CID y textos SMS de evento y restauración." src="./image59.webp" style="width:7.086614173228346in;height:3.0866141732283463in" />
 
 Descripción del funcionamiento del sensor de nivel de combustible. El sensor de nivel de combustible “**Strela RS485**” está conectado al CG17 (consulte 3.10 "Esquemas para la conexión del sensor de nivel de combustible “Strela RS485”"). Los parámetros de medición se establecen para el CG17. El sensor de nivel de combustible inicia las mediciones:
 
@@ -1250,7 +1250,7 @@ Todos los sensores inalámbricos se pueden emparejar a la vez.
 
 6.  Un indicador verde de “**LEARN**” parpadeante indica que el **RF-SH** está en modo de registro de sensor inalámbrico.
 
-7.  Inserte la batería en el teclado y espere hasta que la luz roja verde <img alt="" src="./image62.webp" style="width:0.25in;height:0.28000109361329834in" /> en el teclado deje de parpadear. Cuando se complete el proceso de registro, el indicador verde <img alt="" src="./image62.webp" style="width:0.25in;height:0.28000109361329834in" />se iluminará durante 3 segundos en el teclado y se apagará
+7.  Inserte la batería en el teclado y espere hasta que la luz roja verde <img alt="Icono lineal sencillo del contorno de una casa que representa la función «en casa» o «permanencia»." src="./image62.webp" style="width:0.25in;height:0.28000109361329834in" /> en el teclado deje de parpadear. Cuando se complete el proceso de registro, el indicador verde <img alt="Icono lineal sencillo del contorno de una casa que representa la función «en casa» o «permanencia»." src="./image62.webp" style="width:0.25in;height:0.28000109361329834in" />se iluminará durante 3 segundos en el teclado y se apagará
 
 8.  Mantenga presionado el botón “**LEARN**” en el receptor **RF-SH** hasta que el LED “**LEARN**” deje de parpadear en verde. Modo de registro salido del receptor **RF-SH.**.
 
@@ -1533,7 +1533,7 @@ Los usuarios de Protegus2 pueden controlar su sistema de seguridad de forma remo
 
 2.  De clic en agregar un nuevo sistema e ingrese el número de *CG17* “ID únique/IMEI”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image81.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="Aplicación Protegus2, pantalla «Escanear código QR». Se puede introducir el «ID único/IMEI» o escanear el código QR de la etiqueta ilustrada. Una llamada indica que el IMEI se encuentra en la caja, en la controladora o en Trikdis Config como ID único. Abajo aparecen «Cancelar» y «Siguiente»." src="./image81.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 !!! note "Nota"
     Al agregar el CG17 a Protegus2:

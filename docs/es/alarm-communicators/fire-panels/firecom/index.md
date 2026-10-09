@@ -242,7 +242,7 @@ La figura muestra las dimensiones de la placa y sus orificios de montaje. Las di
 
 ### Orden de conexión de dispositivos 
 
-<img alt="" src="./image6.webp" style="width:7.086805555555555in;height:3.709722222222222in" />
+<img alt="Diagrama de la placa FIRECOM con cinco indicaciones numeradas: 1, soporte SIM1 para una nano-SIM; 2, conector del cable LAN; 3, regleta inferior de terminales, incluidos RS485, IO1–IO10 y alimentación auxiliar; 4, fuente de alimentación de CC de 15–32 V y 2,5 A, alimentada desde ~230 V mediante un fusible FU de 500 mA y 250 V, con sus salidas + y − conectadas a las entradas de alimentación de la placa; 5, batería de 12 V y 7 Ah conectada a BAT+ y BAT− con la polaridad indicada." src="./image6.webp" style="width:7.086805555555555in;height:3.709722222222222in" />
 
 1.  Si está utilizando una tarjeta SIM, inserta una tarjeta SIM activada en el soporte de la tarjeta SIM.
 
@@ -328,10 +328,10 @@ Para conectar un circuito de detector de humo a la entrada seleccionada, debe ac
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 4.5in; height:in;" />
+    <img src="./image19.webp" alt="Diagrama de conexión de FIRECOM sin fuente de alimentación a un panel de control de incendios. La salida +24 V del panel va a +DC de FIRECOM y GND va a -DC. Las salidas PGM1, PGM2 y PGM3 del panel se conectan a IO1, IO2 e IO3, respectivamente. Los tres circuitos comparten el terminal C y cada uno tiene una resistencia R1 en paralelo." style="width: 4.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 4.5in; height:in;" />
+    <img src="./image20.webp" alt="Diagrama de conexión de FIRECOM con fuente de alimentación integrada a un panel de control de incendios. Las salidas PGM1, PGM2 y PGM3 del panel se conectan a IO1, IO2 e IO3, respectivamente. Los tres circuitos comparten el terminal C y cada uno tiene una resistencia R1 en paralelo." style="width: 4.5in; height:in;" />
   </figure>
 </div>
 
@@ -364,7 +364,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 4. Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
-<img alt="" src="./image24.webp" style="width:7.0in;height:in" />
+<img alt="Captura de TrikdisConfig, Usuarios y Reportes, pestaña Usuarios. La fila resaltada muestra los campos Nombre, Núm. de teléfono y Correo electrónico; las casillas PGM, ACK y FWD están marcadas." src="./image24.webp" style="width:7.0in;height:in" />
 
 5. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
@@ -372,7 +372,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 6. Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. Los mensajes de eventos se transmiten utilizando el protocolo SIA DC-09.
 
-<img alt="" src="./image26.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, «Informes a CRA»  «Informes». La indicación 6 resalta «Canal principal»: «Tipo de comunicación» TCP/IP, «Dominio o IP» vacío, «Puerto» 0, «Protocolo» TRK y el campo «Clave de encriptación». En «Canal paralelo», «Tipo de comunicación» está en «Desabilitado»." src="./image26.webp" style="width:7.0in;height:in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***.
 
@@ -399,11 +399,11 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 3. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
-<img alt="" src="./image30.webp" style="width:7.0in;height:in" />
+<img alt="Captura de TrikdisConfig, Usuarios y Reportes, pestaña Usuarios. La fila resaltada muestra los campos Nombre, Núm. de teléfono y Correo electrónico; las casillas PGM, ACK y FWD están marcadas." src="./image30.webp" style="width:7.0in;height:in" />
 
 4. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
-<img alt="" src="./image31.webp" style="width:7.0in;height:in" />
+<img alt="Captura de TrikdisConfig, Usuarios y Reportes, pestaña SMS para eventos del Panel. Para Usuario 1 aparecen los códigos CID E110, E118, E380, E323, E301, E302 y E311; en las filas visibles, SMS está marcado y Llam. está desmarcado." src="./image31.webp" style="width:7.0in;height:in" />
 
 5. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
@@ -443,7 +443,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
-<img alt="" src="./image37.webp" style="width:7.0in;height:in" />
+<img alt="Captura de TrikdisConfig, Usuarios y Reportes, pestaña Usuarios. La fila resaltada muestra los campos Nombre, Núm. de teléfono y Correo electrónico; las casillas PGM, ACK y FWD están marcadas." src="./image37.webp" style="width:7.0in;height:in" />
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
@@ -451,7 +451,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, Informes a CRA  Informes. En Canal principal, Tipo de comunicación: TCP/IP; Dominio o IP: vacío; Puerto: 0; Protocolo: TRK. También se muestra el campo Clave de encriptación. En Canal paralelo, Tipo de comunicación: Deshabilitado." src="./image39.webp" style="width:7.0in;height:in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes ***FIRECOM*** se envíen a la CRA (estación central de monitoreo) y a ***Protegus2***.
 
@@ -476,7 +476,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 2. Introduzca los números de teléfono y el correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
-<img alt="" src="./image43.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, Usuarios y Reportes  Usuarios. La fila resaltada muestra los campos Nombre, Núm. de teléfono y Correo electrónico; las casillas PGM, ACK y FWD están marcadas." src="./image43.webp" style="width:7.0in;height:in" />
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de “**Texto SMS**” junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
@@ -484,7 +484,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig*** al conectar
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image45.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, pantalla «Informes a CRA», pestaña «Informes». En «Canal principal», «Tipo de comunicación» es «TCP/IP», «Dominio o IP» está vacío, «Puerto» es 0, «Protocolo» es «TRK» y «Clave de encriptación» está rellenada. En «Canal paralelo», «Tipo de comunicación» es «Desabilitado»." src="./image45.webp" style="width:7.0in;height:in" />
 
 Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtools**. Encienda la alimentación de la central de incendios. Espere mientras se carga el software de la central de incendios. Conecte el cable USB2.0 A-B entre la central de incendios y el ordenador.
 
@@ -500,7 +500,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 4.  Haga clic en „**ОК**“.
 
-<img alt="" src="./image48.webp" style="width:3.5in;height:in" />
+<img alt="Ventana «Panel Log In» de ZFP Programming Tools. «Enter Access Level 3 Code» aparece encima de cuatro casillas de código vacías; el botón verde con una marca de verificación confirma la entrada." src="./image48.webp" style="width:3.5in;height:in" />
 
 5. Seleccione „**BMS Interface**“.
 
@@ -510,7 +510,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 7. Haga clic en „**Edit Devices**“.
 
-<img alt="" src="./image50.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View Devices». Una «BMS Interface» ocupa la posición 16 para dispositivos y el botón «Edit Devices» está resaltado." src="./image50.webp" style="width:7.0in;height:in" />
 
 8. En la pestaña " **Device** ", ingrese el nombre del sistema.
 
@@ -524,7 +524,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 12. Escriba la configuración en la central de incendios.
 
-<img alt="" src="./image52.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Device Properties» de «BMS Interface». «Name» es FIRECOM; «Connection» es ABUS RS485; «BAUD Rate» es 57600; «Response Timeout» es 250; «Max Retries» es 5. «Zone Disablements» muestra Zone; «Input Group Disablements», «Output Group Disablements» y «Group Actions» muestran Group. El botón «Send All Data» está resaltado." src="./image52.webp" style="width:7.0in;height:in" />
 
 13. Ingrese el código (el código de fábrica es 4444).
 
@@ -550,7 +550,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***.
 
 3.	Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***.
 
-<img alt="" src="./image102.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, Usuarios y Reportes  Usuarios. La fila resaltada muestra los campos Nombre, Núm. de teléfono y Correo electrónico; las casillas PGM, ACK y FWD están marcadas." src="./image102.webp" style="width:7.0in;height:in" />
 
 4.	Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**). 
 
@@ -558,7 +558,7 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***.
 
 5.	Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. 
 
-<img alt="" src="./image104.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, «Informes a CRA»  «Informes». En «Canal principal», «Tipo de comunicación» es «Desabilitado»; «Dominio o IP» y «Puerto» están vacíos; «Protocolo» es «TRK» y se muestra el campo «Clave de encriptación». En «Canal paralelo», «Tipo de comunicación» es «Desabilitado»." src="./image104.webp" style="width:7.0in;height:in" />
 
 El panel de control de incendios **Polon-Alfa 3000** con el módulo **MK-30** debe configurarse mediante el programa **Polon Studio** para funcionar utilizando el protocolo Modbus RTU (RS485).
 
@@ -583,11 +583,11 @@ Configuración del comunicador ***FIRECOM*** con ***TrikdisConfig***.
 
 5.	Ingrese números de teléfono y correo electrónico de los usuarios que deben recibir mensajes de ***FIRECOM***. 
 
-<img alt="" src="./image108.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, Usuarios y Reportes  Usuarios: se resalta una fila con los campos Nombre, Núm. de teléfono y Correo electrónico; las tres casillas al final de la fila están marcadas." src="./image108.webp" style="width:7.0in;height:in" />
 
 6.	Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**). 
 
-<img alt="" src="./image109.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, Eventos de sistema  SMS y llamadas. La llamada numerada 6 señala las casillas de Usuario 1: para «10 Evento» están marcadas SMS y Llam.; para «10 Restauración» está marcada SMS y desmarcada Llam." src="./image109.webp" style="width:7.0in;height:in" />
 
 7.	Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. 
 
@@ -722,7 +722,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana de “Opciones de systema”:**
 
-<img alt="" src="./image68.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, ventana «Opciones de sistema», pestaña «Sistema General». La llamada 1 señala «Objeto ID». En «SIM», la llamada 2 señala los dos campos «PIN de la tarjeta SIM», que muestran el mismo código. La llamada 3 señala los dos campos «APN», ambos con «internet»." src="./image68.webp" style="width:7.0in;height:in" />
 
 1.  Introduzca **Objeto ID** proporcionado por la Central Receptora de Alarmas (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF**.).
 
@@ -740,7 +740,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana "Informes a CRA":**
 
-<img alt="" src="./image70.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, ventana «Informes a CRA», pestaña «Informes». Las llamadas 6 a 10 señalan los campos de «Canal principal»: «Tipo de comunicación» en «Desabilitado», «Dominio o IP» vacío, «Puerto» en 0, «Protocolo» en TRK y «Clave de encriptación». La llamada 11 enmarca «Canal de respaldo», con los mismos valores visibles. La llamada 12 enmarca «Canal paralelo»: «Tipo de comunicación» en TCP/IP, «Dominio o IP» vacío, «Puerto» en 0, «Protocolo» en TRK y «Clave de encriptación». «Canal paralelo de reserva» también muestra TCP/IP, un dominio o IP vacío, puerto 0, TRK y el campo de clave de encriptación." src="./image70.webp" style="width:7.0in;height:in" />
 
 6. **Tipo de comunicación** – seleccionar el método de conexión **IP**.
 
@@ -807,7 +807,7 @@ Con ***Protegus2***, los usuarios pueden ver el estado del sistema y recibir not
         verde cuando está conectado a la red LAN).
 3. Haga clic en Agregar nuevo sistema e ingrese el número de "**IMEI/Unique ID**" del ***FIRECOM***. Se puede encontrar en el dispositivo y en la etiqueta del empaque. Después de ingresar la ID única, haga clic en el botón “**Siguiente**”.
 
-<img alt="" src="./image74.webp" style="width:3.5in;height:in" />
+<img alt="Aplicación Protegus2, pantalla «Escanear código QR». Se puede introducir el «ID único/IMEI» o escanear el código QR de la etiqueta ilustrada. Una llamada indica que el IMEI se encuentra en la caja, en la controladora o en Trikdis Config como ID único. Abajo aparecen «Cancelar» y «Siguiente»." src="./image74.webp" style="width:3.5in;height:in" />
 
 ### Configuración y control a través de mensajes SMS 
 
@@ -898,7 +898,7 @@ Realice estas acciones si desea controlar una salida PGM de forma remota:
 
 Después de conectar FIRECOM y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image75.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, barra de estado. Muestra el campo IMEI/ID único y datos del dispositivo, como Estado, Dispositivo, SN, BL, FW, HW, Estado USB y Propósito." src="./image75.webp" style="width:7.0in;height:in" />
 
 | Nombre | Descripción |
 |----|----|
@@ -968,7 +968,7 @@ Puedes configurar la hora haciendo clic en el botón “**Establecer hora de PC*
 
 **Pestaña “Groups”**
 
-<img alt="" src="./image77.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, Opciones de sistema  Grupos. La tabla contiene las columnas ID y Nombre del grupo y muestra un grupo con ID 1." src="./image77.webp" style="width:7.0in;height:in" />
 
 Las zonas se pueden combinar en grupos. El nombre de cada grupo se puede cambiar.
 
@@ -1298,7 +1298,7 @@ El texto del mensaje SMS distingue entre mayúsculas y minúsculas.
 
 **Pestaña “Eventos”**
 
-<img alt="" src="./image94.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, ventana «Eventos de sistema», pestaña «Eventos». La tabla enumera «Batería baja» (CID 302), «Periodo de prueba» (602), «Falta batería» (311), «Falla RS485» (333), «Temperatura alta» (158), «Temperatura baja» (159) y un evento de sensor de temperatura cuyo nombre aparece cortado (380). En las siete filas visibles están marcadas las casillas «Habilitar», «CRA» y «Prot.». También aparecen las columnas «SMS texto del evento» y «SMS texto de restauración»." src="./image94.webp" style="width:7.0in;height:in" />
 
 - **ID** – número de evento en la lista.
 

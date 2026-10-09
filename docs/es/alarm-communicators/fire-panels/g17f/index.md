@@ -1,7 +1,7 @@
 # Comunicador LTE G17F para paneles de alarma contra incendios
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Parte frontal del comunicador TRIKDIS G17F, con un conector de antena en la parte superior y las etiquetas de los indicadores NETWORK, DATA, POWER y TROUBLE. La carcasa lleva la indicación 9–32 VDC, 0.1 A max. Los terminales inferiores están etiquetados, de izquierda a derecha: +DC, −DC, 1 IN, 2 IN, COM, 3 I/O, 4 I/O, COM, 5 I/O, 6 IN, A RS485 y B RS485." width="400">
 </div>
 
 ## Descripción 
@@ -111,7 +111,7 @@ Mensajes a los usuarios
 
 6.  Ranura para tarjetas SIM.
 
-<img alt="" src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
+<img alt="Comunicador G17F, vista frontal a la izquierda y placa de circuito expuesta a la derecha. Izquierda: 1 conector SMA para la antena celular, 2 indicadores luminosos, 3 ranura para retirar la cubierta superior. Derecha: 4 terminales para conectar cables, 5 conector USB Mini-B para programar el comunicador, 6 soporte para tarjeta SIM." src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
 
 ### Purpose of terminals
 
@@ -188,7 +188,7 @@ A continuación, se describe qué ajustes deben establecerse para que el comunic
 
 En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS":
 
-<img alt="" src="./image6.webp" style="width:7.086614173228346in;height:3.574803149606299in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes». En «Aplicación en la Nube», «Activar conexión» está marcado y «Código de acceso a la Nube» contiene un código." src="./image6.webp" style="width:7.086614173228346in;height:3.574803149606299in" />
 
 1.  Seleccione la casilla **“Activar conexión”** a la nube de Protegus.
 
@@ -196,7 +196,7 @@ En la ventana "Usuarios y Reportes", grupo de configuración "Servicio PROTEGUS"
 
 **En la ventana "Opciones de sistema", grupo de configuración "SIM":**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="TrikdisConfig G17F, ventana «Opciones de sistema». En el grupo «SIM», la llamada 3 resalta «PIN de la tarjeta SIM» con un valor introducido, y la llamada 4 resalta «APN» con el valor internet." src="./image7.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 3. Introduzca el código **PIN de la tarjeta SIM**.
 
@@ -230,7 +230,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana de “Opciones de systema”:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="TrikdisConfig G17F, ventana «Opciones de sistema». Están resaltados los campos «Objeto ID», «PIN de la tarjeta SIM» y «APN»; este último muestra internet." src="./image11.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 1.  Introduzca **Objeto ID** proporcionado por la Central Receptora de Alarmas (4 caracteres, 0-9, A-F. **No utilice números de objeto FFFE, FFFF**.).
 
@@ -240,7 +240,7 @@ Después de terminar la configuración, haga clic en el botón **Escribir [F5]**
 
 **En la ventana "Informar a CRA":**
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
+<img alt="TrikdisConfig G17F, ventana «Informar a CRA». El canal principal muestra «Tipo de comunicación» como «Desabilitado», «Dominio o IP» como 0.0.0.0, «Puerto» como 0, «Protocolo» como TRK y el campo «Clave de encriptación» resaltado. El canal de respaldo muestra los mismos valores, con «Clave de encriptación» resaltado. El campo «Número de teléfono» de «Canal de respaldo 2» está vacío." src="./image12.webp" style="width:7.086614173228346in;height:3.52755905511811in" />
 
 4. **Tipo de comunicación** – seleccionar el método de conexión **IP** (no recomendamos SMS como canal primario).
 
@@ -288,9 +288,9 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 7.  Inserte la tarjeta nano-SIM. La tarjeta SIM debe estar registrada en una red GSM y los servicios deben estar habilitados y en funcionamiento, es decir, la tarjeta debe poder llamar, enviar y recibir mensajes SMS, tener habilitados los datos móviles. <u>Pregúntele al operador de red móvil de su tarjeta SIM cómo habilitar los servicios deseados.</u>
 
-<img alt="" src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
+<img alt="Dos dibujos lineales muestran la placa de circuito CG17 con una pestaña marcada con un círculo en el borde izquierdo para soltarla de la carcasa, y la parte posterior de la carcasa con dos orificios de montaje para tornillos marcados con círculos." src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
 
-<img alt="" src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
+<img alt="Dibujo de una tarjeta nano-SIM que se inserta desde la derecha en el soporte para tarjeta SIM de la placa de circuito G17F." src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
 !!! note "Nota"
     Asegúrese de que la tarjeta SIM esté activada. / Asegúrese de que el
@@ -309,7 +309,7 @@ Después de terminar la configuración, haga clic en **Escribir [F5**] y descone
 
 Si desea monitorear el estado del panel de alarma contra incendios, conecte sus salidas correspondientes a las entradas *G17F*. Las salidas (PGM1, PGM2, PGM3) del panel de incendios deben configurarse como salidas de estado del panel (Alarma, Problema, etc.)
 
-<img alt="" src="./image15.webp" style="width:3.2992125984251968in;height:2.8661417322834644in" />
+<img alt="Diagrama de conexión del panel de control de incendios al G17F. La alimentación +24 V va a +DC y GND a -DC. Las señales de PGM1, PGM2 y PGM3 van, respectivamente, a 1 IN, 2 IN y 6 IN. Los bornes inferiores de las tres PGM se conectan a COM. Cada señal tiene una resistencia de 10 kΩ entre la entrada correspondiente y COM." src="./image15.webp" style="width:3.2992125984251968in;height:2.8661417322834644in" />
 
 ### Diagrama de conexión del comunicador a la central de incendios ESPA4.4.4 
 
@@ -327,7 +327,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 4. Ingrese números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image18.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes». La llamada 4 resalta la primera fila de usuario: «Nombre» IT, un número en «Núm. de teléfono» y las casillas «ACK» y «FW» marcadas." src="./image18.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
 
 5. Si desea que el usuario reciba mensajes (y llamadas) sobre eventos, marque la casilla SMS (y Llamada).
 
@@ -335,7 +335,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 6. Configure el canal de comunicación si se deben enviar mensajes al receptor CRA. Los mensajes de eventos se transmiten utilizando el protocolo SIA DC-09.
 
-<img alt="" src="./image20.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
+<img alt="TrikdisConfig G17F, ventana «Informar a CRA». La llamada 6 resalta los campos de «Canal principal»: «Tipo de comunicación» en «Deshabilitado», «Dominio o IP» 0.0.0.0, «Puerto» 0, «Protocolo» TRK, «Número de teléfono» vacío y «Clave de encriptación» rellenada." src="./image20.webp" style="width:7.086614173228346in;height:2.0078740157480315in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes G17F se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
@@ -353,7 +353,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 3. Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image23.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes». La llamada 3 resalta el usuario 1: «Nombre» IT, «Núm. de teléfono» rellenado y las casillas «ACK» y «FW» marcadas." src="./image23.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
 4. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
@@ -361,7 +361,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 5. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image25.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
+<img alt="TrikdisConfig G17F, ventana «Informar a CRA». La llamada 5 resalta los campos de «Canal principal»: «Tipo de comunicación» en «Deshabilitado», «Dominio o IP» 0.0.0.0, «Puerto» 0, «Protocolo» TRK, «Número de teléfono» vacío y «Clave de encriptación» rellenada." src="./image25.webp" style="width:7.086614173228346in;height:1.9960629921259843in" />
 
 Después de configurar el comunicador G17F, encienda la alimentación del panel de control de incendios. Espere a que se cargue el software del panel de control de incendios. Es necesario escanear los módulos conectados al bus RS485 en el panel de control de incendios. En el panel de control de incendios, presione: **PROG.>INSTALLER>(Ingrese el código de instalador) 00000 OK>(Seleccione) SETTINGS>ENTER>(Seleccione) SCAN RS485>ENTER**. Espere a que se complete el escaneo. Regrese a la pantalla principal presionando “**CANCEL**” dos veces.
 
@@ -388,7 +388,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 2. Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:1.5708661417322836in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes». La llamada 2 resalta el usuario 1: «Nombre» IT, «Núm. de teléfono» rellenado y las casillas «ACK» y «FW» marcadas." src="./image29.webp" style="width:7.086614173228346in;height:1.5708661417322836in" />
 
 3. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de **Texto SMS** junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
@@ -396,7 +396,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de co
 
 4. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:2.0in" />
+<img alt="TrikdisConfig G17F, «Informar a CRA». La llamada 4 resalta los campos de «Canal principal»: «Tipo de comunicación» en «Desabilitado», «Dominio o IP» 0.0.0.0, «Puerto» 0, «Protocolo» TRK, «Número de teléfono» vacío y «Clave de encriptación» rellenada." src="./image31.webp" style="width:7.086614173228346in;height:2.0in" />
 
 Pruebe el sistema. Active la alarma contra incendios y verifique que los mensajes G17F se envíen a la CRA (estación central de monitoreo) y a Protegus2.
 
@@ -412,7 +412,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de al
 
 1.  Introduzca los números de teléfono de los usuarios que deben recibir mensajes de G17F.
 
-<img alt="" src="./image34.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
+<img alt="TrikdisConfig G17F, ventana «Usuarios y Reportes». La llamada 2 resalta el usuario 1: «Nombre» IT, un número de teléfono y las casillas ACK y FW marcadas." src="./image34.webp" style="width:7.086614173228346in;height:1.5551181102362204in" />
 
 2. Los usuarios recibirán mensajes SMS y llamadas telefónicas sobre los eventos que estén marcados. Puede agregar códigos de eventos CID adicionales en la columna **CID**. Debe ingresar mensajes de “**Texto SMS**” junto a los nuevos códigos. Si desea que el usuario reciba mensajes (o llamadas) sobre eventos, marque la casilla **SMS** (o **Llamada**).
 
@@ -420,7 +420,7 @@ Configuración del comunicador G17F con TrikdisConfig al conectar el panel de al
 
 3. Configure el canal de comunicación si los mensajes deben enviarse al receptor CRA.
 
-<img alt="" src="./image36.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
+<img alt="TrikdisConfig, «Informar a CRA», sección «Canal principal». La llamada 4 resalta «Tipo de comunicación»: «Desabilitado»; «Dominio o IP»: 0.0.0.0; «Puerto»: 0; «Protocolo»: TRK; «Número de teléfono» vacío; y el campo «Clave de encriptación»." src="./image36.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
 
 Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtools**. Encienda la alimentación de la central de incendios. Espere mientras se carga el software de la central de incendios. Conecte el cable USB2.0 A-B entre la central de incendios y el ordenador.
 
@@ -436,7 +436,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 2.  Haga clic en „ОК“.
 
-<img alt="" src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="Ventana «Panel Log In» de ZFP Programming Tools. «Enter Access Level 3 Code» aparece encima de cuatro casillas de código vacías; el botón verde con una marca de verificación confirma la entrada." src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
 3. Seleccione „BMS Interface“.
 
@@ -446,7 +446,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 11. Haga clic en „**Edit Devices**“.
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="ZFP Programming Tools, «Node View Devices». Una «BMS Interface» ocupa la posición 16 para dispositivos y el botón «Edit Devices» está resaltado." src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 12. En la pestaña " **Device** ", ingrese el nombre del sistema.
 
@@ -460,7 +460,7 @@ Instale el programa **ZFPtools** en su computadora. Inicie el programa **ZFPtool
 
 16. Escriba la configuración en la central de incendios.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="ZFP Programming Tools, «Device Properties» de «BMS Interface». «Name» es FIRECOM; «Connection» es ABUS RS485; «BAUD Rate» es 57600; «Response Timeout» es 250; «Max Retries» es 5. «Zone Disablements» muestra Zone; «Input Group Disablements», «Output Group Disablements» y «Group Actions» muestran Group. El botón «Send All Data» está resaltado." src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
 17. Ingrese el código (el código de fábrica es 4444).
 
@@ -480,19 +480,19 @@ Esquemas de circuitos tipo NO, NC, EOL:
 
 #### Normalmente abierto (NA)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="261" height="233" />
+<img class="wiring-diagram" alt="Contacto normalmente abierto (NO) conectado entre los terminales COM e INx." src="./wiring-input-no.webp" width="261" height="233" />
 
 #### Normalmente cerrado (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="263" height="233" />
+<img class="wiring-diagram" alt="Contacto normalmente cerrado (NC) conectado entre los terminales COM e INx." src="./wiring-input-nc.webp" width="263" height="233" />
 
 #### Normalmente cerrado con resistencia de fin de línea de 10k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="299" height="305" />
+<img class="wiring-diagram" alt="Entre COM e INx, un contacto normalmente cerrado (NC) está en serie con una resistencia de fin de línea de 10k." src="./wiring-input-nc-eol.webp" width="299" height="305" />
 
 #### Normalmente abierto con resistencia de fin de línea de 10k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="290" height="357" />
+<img class="wiring-diagram" alt="Entre COM e INx, un contacto normalmente abierto (NO) está en paralelo con una resistencia de fin de línea de 10k." src="./wiring-input-no-eol.webp" width="290" height="357" />
 
 ### Esquema para conectar los módulos expansores de la serie iO 
 
@@ -510,7 +510,7 @@ Si necesita que el comunicador tenga más entradas IN o salidas OUT, conecte el 
 
 Diagrama de conexión para los módulos expansores LORA.
 
-<img alt="" src="./image48.webp" style="width:5.270010936132984in;height:6.646679790026247in" />
+<img alt="Diagrama de conexión: G17F a RF-LORA. Alimentación: +DC a +DC (+12 V), -DC a -DC. RS485: A del G17F a A RS 485 del RF-LORA; B a B RS485. RF-LORA se conecta de forma inalámbrica, hasta 5000 m, con iO-LORA, iO-8-LORA, PB-LORA y REL-LORA. Los iO-LORA e iO-8-LORA ilustrados tienen cada uno una fuente independiente de 12-26V en +DC y -DC; también se muestran PB-LORA y REL-LORA. REL-LORA recibe 100-230V AC en L y N." src="./image48.webp" style="width:5.270010936132984in;height:6.646679790026247in" />
 
 ### Esquema para conectar el módulo WiFi W485 
 
@@ -580,7 +580,7 @@ Con Protegus2, los usuarios pueden ver el estado del sistema y recibir notificac
         y parpadear en amarillo).
 3. Haga clic en Agregar nuevo sistema e ingrese el número de "IMEI/Unique ID" del *G17F*. Se puede encontrar en el dispositivo y en la etiqueta del empaque. Después de ingresar la ID única, haga clic en el botón „Siguiente”.
 
-<img alt="" src="./image54.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
+<img alt="Aplicación Protegus2, pantalla «Escanear código QR». Se puede introducir el «ID único/IMEI» o escanear el código QR de la etiqueta ilustrada. Una llamada indica que el IMEI se encuentra en la caja, en la controladora o en Trikdis Config como ID único. Abajo aparecen «Cancelar» y «Siguiente»." src="./image54.webp" style="width:2.7244094488188977in;height:3.9330708661417324in" />
 
 ### Configuración y control a través de mensajes SMS 
 
@@ -1054,7 +1054,7 @@ Esta pestaña se mostrará si al menos el número de teléfono de un Usuario se 
 
 Para restablecer el comunicador a la configuración de fábrica, presione el botón **Restaurar** en ***TrikdisConfig*.**
 
-<img alt="" src="./image72.webp" style="width:7.086614173228346in;height:1.0669291338582678in" />
+<img alt="TrikdisConfig, sección «Configuraciones predeterminadas», con el botón «Restaurar» resaltado. Debajo se muestra el IMEI/ID único del dispositivo." src="./image72.webp" style="width:7.086614173228346in;height:1.0669291338582678in" />
 
 ## Configuración Remota 
 

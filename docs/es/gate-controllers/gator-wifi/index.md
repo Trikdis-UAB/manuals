@@ -311,11 +311,11 @@ Encuentra Protegus2 en la barra de opciones.
 
 2. Haga clic en Protegus2.
 
-<img alt="" src="./image36.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="Selector de widgets de Android. La marca 2 destaca el grupo de widgets Protegus 2." src="./image36.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 3. Haga clic en „**Switch Protegus2**“.
 
-<img alt="" src="./image37.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
+<img alt="Selector de widgets de Android con widgets Protegus 2. La marca 3 destaca el widget Switch Protegus 2." src="./image37.webp" style="width:2.7559055118110236in;height:3.0708661417322833in" />
 
 4. Elija controlador „**Gator WiFi Output5**“**.**
 
@@ -325,11 +325,11 @@ Encuentra Protegus2 en la barra de opciones.
 
 3. Aparecerá un icono en la pantalla del teléfono.
 
-<img alt="" src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
+<img alt="La marca 6 señala el widget Output5 con botón de encendido en el selector de widgets Protegus 2. Debajo aparece Switch Protegus 2 como widget de 1 x 1." src="./image39.webp" style="width:2.7559055118110236in;height:3.1141732283464565in" />
 
 4. Regresa a la pantalla de inicio. Presiona el ícono.
 
-<img alt="" src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
+<img alt="Pantalla de inicio del teléfono con la marca 7 alrededor del widget gris Output5 con botón de encendido, junto al icono de la aplicación Protegus 2." src="./image40.webp" style="width:2.7559055118110236in;height:1.6456692913385826in" />
 
 Aparecerá en la pantalla un círculo que indica cuándo se activa el PGM.
 
@@ -337,7 +337,7 @@ Aparecerá en la pantalla un círculo que indica cuándo se activa el PGM.
 
 5. Cuando el controlador está conectado al portón automático con indicación de estado de portón, el icono mostrará el estado de las puertas abiertas/cerradas.
 
-<img alt="" src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
+<img alt="Pantalla de inicio del teléfono con la marca 8 alrededor del widget Output5, cuyo botón de encendido es verde." src="./image42.webp" style="width:2.7559055118110236in;height:1.5393700787401574in" />
 
 ## Definición de los parámetros utilizando el software TrikdisConfig 
 

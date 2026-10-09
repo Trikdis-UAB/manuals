@@ -69,7 +69,7 @@ El indicador de SLEEP se iluminará cuando se encuentre en modo SLEEP.
 El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 > [!NOTE]
-> Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón <img src="./image2.webp" alt="" style="width:0.3500in;" />.
+> Para cambiar el estado del área a la opuesta, basta con ingresar el código de usuario y seleccionar el área preferida. Para borrar símbolos o comandos ingresados, presione el botón <img src="./image2.webp" alt="Tecla C del teclado, mostrada por separado como icono destacado." style="width:0.3500in;" />.
 ## Botones de Emergencia
 
 ### Para enviar un mensaje de emergencia a su servicio de seguridad

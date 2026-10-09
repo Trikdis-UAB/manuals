@@ -324,7 +324,7 @@ La siguiente imagen muestra las dimensiones de la placa y sus orificios de monta
 
 #### Orden de conexión de dispositivos 
 
-<img alt="" src="./image7.webp" style="width:7.086805555555555in;height:3.286111111111111in" />
+<img alt="Diagrama de conexión del FLEXi SP3: 1. Conectar la antena WiFi; 2. Conectar la antena GSM e insertar la tarjeta nano-SIM en el soporte SIM; 3. Conectar los dispositivos a los bornes del borde inferior de la placa; 4. Conectar la alimentación principal a los bornes AC/DC: transformador de ~230 V/16 V, 40 VA, 50 Hz, con fusible FU de 500 mA y 250 V en la entrada de ~230 V, o fuente de CC de 16–24 V y 2,5 A; 5. Conectar la batería de 12 V y 7 Ah, positivo a BAT+ y negativo a BAT–." src="./image7.webp" style="width:7.086805555555555in;height:3.286111111111111in" />
 
 1.  Conecta las antenas GSM y WiFi a los conectores para antena.
 
@@ -435,11 +435,11 @@ Diagramas de cableado para detectores de humo de dos hilos con módulo de relé 
 
 Para conectar un circuito detector de humo a una salida PGM (IO10) seleccionada, la función de ***Reinicio del Sensor de Fuego** (Fire Sensor Reset)* debe asignarse a la salida (consulta el capítulo 5.8 Ventana "PGM"). El relé (K1) se utiliza para detectar un cable roto y un detector de incendios retirado.
 
-<img alt="" src="./image18.webp" style="width:5.843345363079615in;height:2.193337707786527in" />
+<img alt="Diagrama de conexión: SP3 a dos detectores de humo mediante SM1 y relé K1. AUX+ alimenta +12V de SM1 y el IN superior del primer detector; IO10 conecta a -12V de SM1 y a la bobina K1; R de SM1 conecta al IN inferior. Los OUT del primer detector continúan a los IN del segundo. IOx conecta a C de SM1; C del SP3 conecta por la resistencia de fin de línea R1 y el contacto K1 a NC de SM1." src="./image18.webp" style="width:5.843345363079615in;height:2.193337707786527in" />
 
 o
 
-<img alt="" src="./image19.webp" style="width:5.843345363079615in;height:2.00667104111986in" />
+<img alt="Diagrama de conexión: conexión alternativa de SP3 a SM1 y detectores de humo de dos hilos. AUX+ va a +12V de SM1 y a + IN del detector; IO10 va a -12V de SM1 y a la bobina del relé K1; R de SM1 va a - IN del detector. Los terminales IN y OUT de los detectores continúan a lo largo del circuito; el último + OUT se conecta a K1. Circuito de supervisión: IOx va a C de SM1; la resistencia de fin de línea R1 está entre C y NO de SM1; C de SP3 va a NO de SM1 a través del contacto K1." src="./image19.webp" style="width:5.843345363079615in;height:2.00667104111986in" />
 
 Diagrama para conectar detectores de humo de cuatro cables.
 
@@ -552,7 +552,7 @@ La versión del firmware del panel de seguridad *„FLEXi“ SP3* debe ser SP3_x
 
 ### Diagrama de conexión para expansores de la serie LORA 
 
-<img alt="" src="./image39.webp" style="width:7.086805555555555in;height:5.384027777777778in" />
+<img alt="Diagrama de conexión para expansores LORA. SP3 conecta AUX+ (+12 V), AUX-, 485 A y 485 B a +DC, -DC, A 485 y B 485 de RF-LORA, respectivamente. Se indican conexiones inalámbricas de hasta 5000 m con iO-LORA y con la serie de expansores REL-LORA, iO-8-LORA y PB-LORA. L y N de REL-LORA se conectan a 100–230 V AC; +DC y -DC de iO-8-LORA, a una fuente de 12–26 V; PB-LORA aparece sin cableado. iO-LORA recibe 12 V DC en +DC y -DC. Sus terminales D0, D1, -DC y +DC van, respectivamente, a los cables G (verde), W (blanco), B (negro) y R (rojo) del lector de entrada Wiegand 26/34. El terminal 1-Wire va al cable Blanco del lector CZ-Dallas; COM va al cable Gris y se une a LED- por el cable Amarillo. La conexión 1-Wire admite hasta 30 m. C de iO-LORA se conecta a +DC; NO va mediante una resistencia de 1 kΩ y el cable Marrón a Rojo LED+; NC va mediante otra resistencia de 1 kΩ y el cable Verde a Verde LED+. La salida xOUT debe configurarse como «Estado del sistema»: la luz del lector está roja con la alarma activada y verde con la alarma apagada." src="./image39.webp" style="width:7.086805555555555in;height:5.384027777777778in" />
 
 ### Diagramas para conectar módulos expansores de la serie iO 
 
@@ -567,7 +567,7 @@ Si el panel de control „FLEXi“ SP3 necesita más entradas IN o salidas OUT, 
   </figure>
 </div>
 
-<img alt="" src="./image42.webp" style="width:7.086805555555555in;height:4.575694444444444in" />
+<img alt="Diagrama de conexión: SP3 BAT+ y BAT- van a una batería de 12 V. AUX+ y AUX- del SP3, mediante cables rojo y azul, van a +DC y -DC de dos iO-MOD y un iO cableado; 485 A y 485 B, mediante cables negro y blanco, van a A RS485 y B RS485. Cada iO-MOD se enlaza de forma inalámbrica con un iO-WL, hasta 300 m. El iO-WL superior y el iO superior derecho reciben alimentación de 12–28 V en +DC y -DC, y sus terminales A RS485 y B RS485 se conectan entre sí por RS485, hasta 300 m. +5V, 1-Wire y COM del iO superior derecho van a Vdd+, DQ y GND de un sensor de temperatura DS18B20 o DS18S20. El iO-WL inferior recibe una alimentación de 12–28 V. Su terminal 1-Wire va al cable blanco del lector CZ-Dallas; COM va al cable gris y se une al cable amarillo de LED-. La conexión 1-Wire admite hasta 30 m. C del iO-WL inferior se une a +DC; NO va, mediante una resistencia de 1 kΩ y el cable marrón, a Rojo LED+; NC va, mediante otra resistencia de 1 kΩ y el cable verde, a Verde LED+. La salida xOUT debe establecerse en «Estado del sistema»: con la alarma activada, el lector se ilumina en rojo; con la alarma apagada, en verde. El diagrama indica hasta 8 módulos de expansión del sistema y hasta 4 módulos iO-MOD." src="./image42.webp" style="width:7.086805555555555in;height:4.575694444444444in" />
 
 ### Diagrama para conectar el transmisor RF T16
 
@@ -784,7 +784,7 @@ Una señal de audio acompaña al principio y al final de la grabación del archi
 
 Cuando el „FLEXi“ SP3 está conectado, TrikdisConfig mostrará información en la barra de estado sobre el dispositivo conectado.
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:0.5551181102362205in" />
+<img alt="TrikdisConfig, barra de estado del dispositivo conectado. Muestra los campos IMEI/ID único, Dispositivo, SN, BL, FW y HW, además de Estado: La escritura finalizó, Estado USB y Propósito: Administrador." src="./image52.webp" style="width:7.086614173228346in;height:0.5551181102362205in" />
 
 | Nombre | Descripción |
 |----|----|
@@ -804,7 +804,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 **Pestaña "Sistema general"**
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
+<img alt="TrikdisConfig, Opciones de sistema, pestaña Sistema General. En General se muestran Objeto ID: 0001, Período de test: 1 día(s) y 0 h, y Comenzar test en: 13:30; en SIM, APN: internet; en Ajustes de hora, Zona horaria: +2, Horario de verano activado y Retraso por fallo de alimentación, s: 300." src="./image53.webp" style="width:7.086614173228346in;height:4.043307086614173in" />
 
 **Grupo de configuraciones "General"**
 
@@ -859,7 +859,7 @@ Puedes configurar la hora haciendo clic en el botón **Establecer hora de PC**. 
 
 **Pestaña "Particiones"**
 
-<img alt="" src="./image54.webp" style="width:7.086614173228346in;height:2.8070866141732282in" />
+<img alt="TrikdisConfig, Opciones de sistema, pestaña Particiones. Particiones habilitadas: 8. Area 1 tiene Entrada 10, Salir 60 y Sirena 300; Area 2 a Area 8 tienen Entrada 30, Salir 30 y Sirena 120. En Interruptor, Area 3 indica Pulso y las demás, Nivel." src="./image54.webp" style="width:7.086614173228346in;height:2.8070866141732282in" />
 
 - **Particiones habilitadas** – ingresa el número de partes independientes en las que se dividirá el sistema de alarma.
 
@@ -883,7 +883,7 @@ Puedes configurar la hora haciendo clic en el botón **Establecer hora de PC**. 
 
 **Pestaña "Agendario"**
 
-<img alt="" src="./image55.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="TrikdisConfig, Opciones de sistema, pestaña Agendario. Las filas visibles tienen Habilitar desmarcado, Partición 1, Hora 00:00, Acción Desarmar, días de la semana desmarcados, Festivos Deshabilitado y Grupo de festivos Ninguno." src="./image55.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 En esta tabla, puedes organizar escenarios para activar y desactivar automáticamente el sistema de seguridad eligiendo diferentes días de la semana y días festivos.
 
@@ -923,7 +923,7 @@ Si se marca al menos un campo de falla interna del panel de control, entonces el
 
 **Pestaña "Acceso"**
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:3.1102362204724407in" />
+<img alt="TrikdisConfig, Opciones de sistema, pestaña Acceso. Códigos de acceso muestra Código de administrador: 123456, Contraseña SMS y Código de instalador. En Permisos de instalador, Objeto ID y Tarjeta SIM están marcados; Configuración de área y los menús visibles están en Editable." src="./image58.webp" style="width:7.086614173228346in;height:3.1102362204724407in" />
 
 **Grupo de configuración "Códigos de acceso"**
 
@@ -946,7 +946,7 @@ Si se marca al menos un campo de falla interna del panel de control, entonces el
 
 **Pestaña "Informes"**
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:3.838582677165354in" />
+<img alt="TrikdisConfig, Informes a CRA, pestaña Informes. Canal principal y Canal de respaldo tienen Tipo de comunicación Deshabilitado; Canal paralelo y Canal paralelo de reserva tienen TCP/IP. Los cuatro muestran Protocolo TRK, Puerto 0 y los campos Dominio o IP, Número de teléfono y Clave de encriptación." src="./image59.webp" style="width:7.086614173228346in;height:3.838582677165354in" />
 
 Panel de control envía mensajes a la consola de monitoreo a través de Internet (IP) o mensajes SMS.
 
@@ -1119,7 +1119,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
     ACTIVAR/DESACTIVAR, su ejecución tendrá un retraso.
 **Pestaña "Protegus"**
 
-<img alt="" src="./image63.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
+<img alt="TrikdisConfig, ventana Usuarios y Reportes, pestaña Protegus. En Aplicación en la Nube están marcadas Activar conexión e Informes paralelos; Código de acceso a la Nube muestra 123456." src="./image63.webp" style="width:7.086614173228346in;height:1.7440944881889764in" />
 
 **Grupo de configuración "Aplicación en la Nube"**
 
@@ -1141,7 +1141,7 @@ Vinculación de llaves electrónicas con el lector CZ-Dallas.
 
 **Pestaña "Teclados"**
 
-<img alt="" src="./image65.webp" style="width:7.086614173228346in;height:3.688976377952756in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña Teclados. La tabla muestra ocho filas con ID, Serial, Tipo de teclado, Áreas y Eliminar. A la derecha, Parámetros del teclado muestra un tipo cuyo texto visible comienza «Paradox/Proteg…», Rápido ARM activado, 3 códigos incorrectos hasta el bloqueo y Temporizador de bloqueo de 1 min." src="./image65.webp" style="width:7.086614173228346in;height:3.688976377952756in" />
 
 - **Serie (Serial)** – el número de serie del teclado detectado automáticamente por el panel de control. Para eliminar un teclado, ingresa ceros.
 
@@ -1233,13 +1233,13 @@ El panel de seguridad „FLEXi“ SP3 se actualiza a la versión de firmware 4 (
 
 5.  En la lista de módulos debe aparecer “**RF-LORA receiver**”, y también se indicará el número de serie y la versión del firmware. Si ve la versión de firmware del transceptor RF-LORA, puede omitir los pasos 6 a 14.
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña RS485 módulos. La primera fila, resaltada en rojo, muestra un RF-LORA receiver registrado en Expander ID1, área 1, con versión de firmware RF-Lora 433 02.39." src="./image69.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 6. Si “**RF-LORA receiver**” no se indica en la lista, entonces debe seleccionar “**RF-LORA receiver**” en la lista.
 
 2.  En el **„Núm. de Serie”** campo, ingrese el número de serie del dispositivo RF-LORA. El número de serie se puede encontrar en el dispositivo y en la etiqueta del embalaje.
 
-<img alt="" src="./image70.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña RS485 módulos. La primera fila, resaltada en rojo, muestra RF-LORA receiver en Expander ID1, área 1, mientras se edita el campo Núm. de Serie." src="./image70.webp" style="width:7.086614173228346in;height:1.7322834645669292in" />
 
 3. Haga clic en **Escribir [F5]**.
 
@@ -1253,7 +1253,7 @@ El panel de seguridad „FLEXi“ SP3 se actualiza a la versión de firmware 4 (
 
 6.  La versión de firmware del RF-LORA aparecerá en la ventana **„Módulos”**.
 
-<img alt="" src="./image69.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña RS485 módulos. La primera fila, resaltada en rojo, muestra un RF-LORA receiver registrado en Expander ID1, área 1, con versión de firmware RF-Lora 433 02.39." src="./image69.webp" style="width:7.086614173228346in;height:1.7244094488188977in" />
 
 14. El módulo RF-LORA ahora está vinculado al “FLEXi” SP3.
 
@@ -1320,7 +1320,7 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 3.  Haga clic en **„Guardar”**.
 
-<img alt="" src="./image77.webp" style="width:3.0708661417322833in;height:2.1811023622047245in" />
+<img alt="TrikdisConfig, ventana Se encontró un nuevo dispositivo. Se detectó un PIR de esquina; Número de zona está establecido en 1 y Definición de zona en Instantaneo. Los campos y el botón Guardar están resaltados en rojo." src="./image77.webp" style="width:3.0708661417322833in;height:2.1811023622047245in" />
 
 4. El sensor inalámbrico está incluido en la lista de sensores.
 
@@ -1328,7 +1328,7 @@ Al registrar sensores, el módulo *RF-LORA* debe estar al menos a 1 m de los sen
 
 3.  Haga clic en **„Dejar de emparejamiento”** para completar el registro de sensores inalámbricos.
 
-<img alt="" src="./image78.webp" style="width:3.7401574803149606in;height:2.6535433070866143in" />
+<img alt="TrikdisConfig, ventana Modo de emparejamiento. Se encontró un nuevo dispositivo, identificado como PIR de esquina; están resaltados el aviso y el botón Dejar de emparejamiento." src="./image78.webp" style="width:3.7401574803149606in;height:2.6535433070866143in" />
 
 10. Haga clic en „**Sí**” para que los sensores se escriban en el panel de control **„*FLEXi” SP3*** o „**No**” si desea ajustar los parámetros de manera adicional.
 
@@ -1338,11 +1338,11 @@ Espera unos minutos. Haga clic en **LEER [F4]**.
 
 TrikdisConfig mostrará una lista de sensores inalámbricos registrados en la ventana **„Sensores inalámbricos”**. El campo "**Núm. de serie**" contendrá el número de serie.
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="TrikdisConfig, ventana Sensores inalámbricos. La primera fila resaltada muestra ID 1 y Tipo de dispositivo PIR de esquina; la columna Núm. de serie contiene el identificador del sensor." src="./image80.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 Verifique que los sensores estén correctamente asignados a las **„Zonas”** y **„Áreas”** del panel de control (ventana **„Zonas”**).
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig, ventana Zonas, pestaña Configuraciones de zonas. La fila resaltada de Zona 1 muestra Entrada Inalámbrico PIR, Área 1 y Tipo EOL_T." src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 Si establece el tipo de zona **EOL-T**, se habilitará el modo de monitoreo de manipulación del sensor.
 
@@ -1395,11 +1395,11 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 
 7.  TrikdisConfig mostrará una lista de sensores inalámbricos registrados en la ventana **„Sensores inalámbricos”**. El campo "**Núm. de serie**" contendrá el número de serie.
 
-<img alt="" src="./image80.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
+<img alt="TrikdisConfig, ventana Sensores inalámbricos. La primera fila resaltada muestra ID 1 y Tipo de dispositivo PIR de esquina; la columna Núm. de serie contiene el identificador del sensor." src="./image80.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
 15. Verifique que los sensores estén correctamente asignados a las **„Zonas”** y **„Áreas”** del panel de control (ventana **„Zonas”**).
 
-<img alt="" src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+<img alt="TrikdisConfig, ventana Zonas, pestaña Configuraciones de zonas. La fila resaltada de Zona 1 muestra Entrada Inalámbrico PIR, Área 1 y Tipo EOL_T." src="./image81.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 16. Haga clic en **Escribir [F5]** después de realizar los cambios.
 

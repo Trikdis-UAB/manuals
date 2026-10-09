@@ -126,7 +126,7 @@ Este manual es para comunicadores 4G.
 
 7.  Ranura Tarjeta SIM.
 
-<img alt="" src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
+<img alt="Elementos del comunicador GT+ con referencias numeradas. A la izquierda, la cubierta cerrada: 1 conector SMA de la antena celular, 2 luces indicadoras, 3 ranura frontal para abrir la cubierta. A la derecha, la cubierta abierta con la placa de circuito: 4 terminal para conexiones externas, 5 puerto USB-C para programación, 6 botón RESET, 7 ranura para tarjeta SIM." src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
 
 ### Propósito de las terminales 
 
@@ -223,7 +223,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 1.  Si el comunicador está conectado a los terminales TIP/RING del panel de control, entonces debe configurarse en “**AUTO**”.
 
-<img alt="" src="./image8.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
+<img alt="TrikdisConfig para GT+_M150, ventana Configuración del panel. La llamada 2 señala Tipo de panel, cuyo valor visible comienza por 5. PARADOX SP/MG se; la 3 señala Control directo, marcado; la 4 señala el campo Contraseña de descarga de PC." src="./image8.webp" style="width:7.086614173228346in;height:1.9921259842519685in" />
 
 1.  Si el comunicador está conectado al bus del teclado o al bus serie del panel de control, seleccione el modelo de panel de control que se conectará al comunicador.
 
@@ -239,7 +239,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
     la contraseña de la descarga de PC/UDL.
 **Ventana de “Informes para usuario”, pestaña de “Servicio Protegus”:**
 
-<img alt="" src="./image9.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
+<img alt="Ventana de TrikdisConfig «Informes para usuario», pestaña «Servicio PROTEGUS»: la casilla «Activar conexión» está resaltada y marcada, y el campo «Código de acceso a Protegus» está resaltado." src="./image9.webp" style="width:7.086614173228346in;height:1.9803149606299213in" />
 
 4. Habilitar la conexión a la “**Servicio Protegus**”.
 
@@ -247,7 +247,7 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 
 **En la ventana de la “Configuración de la red”**
 
-<img alt="" src="./image10.webp" style="width:7.086614173228346in;height:3.0708661417322833in" />
+<img alt="Ventana de TrikdisConfig «Configuración de la red», pestaña «SIM1»: el campo «PIN de la tarjeta SIM» está resaltado; «APN» está resaltado y contiene «internet»; los campos «DNS 1» y «DNS 2» están resaltados y vacíos." src="./image10.webp" style="width:7.086614173228346in;height:3.0708661417322833in" />
 
 3. Ingrese el código PIN para la tarjeta SIM.
 
@@ -281,7 +281,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de opciones de “Ajustes CRA” para el “Canal de comunicación principal”:**
 
-<img alt="" src="./image14.webp" style="width:7.086614173228346in;height:3.358267716535433in" />
+<img alt="TrikdisConfig, ventana CRA informes, pestaña CRA ajustes. En Canal de comunicación principal se señalan Modo: Desactivar; Protocolo sin seleccionar; Clave de encriptación activada; Dominio o IP y Puerto vacíos; TCP o UDP: TCP. También se señala el bloque Modo del canal de reserva, con Modo: Desactivar y TCP o UDP: TCP." src="./image14.webp" style="width:7.086614173228346in;height:3.358267716535433in" />
 
 3. **Modo** – seleccione el método de conexión IP.
 
@@ -299,7 +299,7 @@ Cuando termine con la configuración, de clic en **Escribir [F5]** y desconecte
 
 **En la ventana de “Configuración de la red”:**
 
-<img alt="" src="./image15.webp" style="width:7.086614173228346in;height:3.02755905511811in" />
+<img alt="Ventana de TrikdisConfig «Configuración de la red», pestaña «SIM1»: el campo «PIN de la tarjeta SIM» está resaltado; «APN» está resaltado y contiene «internet»; los campos «DNS 1» y «DNS 2» están resaltados y vacíos." src="./image15.webp" style="width:7.086614173228346in;height:3.02755905511811in" />
 
 11. Ingrese el código PIN para la tarjeta SIM.
 
@@ -397,7 +397,7 @@ Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del pa
 3.  Seleccione “**Control directo**” si desea que los usuarios puedan controlar el panel usando la aplicación Protegus2 usando su propio código de teclado.
 1.  Para controlar directamente el panel de control, ingrese la “**Contraseña de descarga de PC**”. Debe coincidir con la contraseña ingresada en el panel de control.
 
-<img alt="" src="./image24.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. Las llamadas señalan Protocolo de comunicación: 2. AUTO; Tipo de panel: 7. PARADOX SP+/MG+; Control directo marcado; y el campo Contraseña de descarga de PC." src="./image24.webp" style="width:7.086614173228346in;height:1.9881889763779528in" />
 
 El panel de control Paradox debe programarse para transmitir eventos al CMS y para control remoto desde la aplicación Protegus2.
 
@@ -423,7 +423,7 @@ El comunicador tiene 2 terminales de entrada/salida universales que se pueden co
 
 Conecte la entrada de acuerdo al tipo de entrada seleccionada (NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL), como se muestra en los esquemas de abajo:
 
-<img alt="" src="./image27.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
+<img alt="Tres circuitos de entrada entre COM e INx. Izquierda, NA o normalmente abierto: contacto NO; cortocircuito = alarma y circuito abierto = restablecimiento. Centro, NC o normalmente cerrado: contacto NC; cortocircuito = restablecimiento y circuito abierto = alarma. Derecha, contacto NC y resistencia de fin de línea de 2,2 kΩ en serie; cortocircuito o circuito abierto = alarma y 2,2 kΩ = restablecimiento." src="./image27.webp" style="width:4.389763779527559in;height:1.4448818897637796in" />
 
 <img alt="Diagrama de conexión: tres circuitos de entrada entre COM e INx del comunicador GET. Izquierda, circuito normalmente abierto con resistencia 2,2k de fin de línea: resistencia en paralelo con el contacto NO; Short - Alarm; Open - Alarm; 2,2k - Restore. Centro, circuito normalmente abierto con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NO; Short - Tamper; Open - Tamper; 2,2k - Alarm; 3,3k-5,5k - Restore. Derecha, circuito normalmente cerrado con fin de línea y reconocimiento de manipulación: Tamper y una resistencia 2,2k en serie; otra resistencia 2,2k en paralelo con NC; Short - Tamper; Open - Tamper; 2,2k - Restore; 3,3k-5,5k - Alarm." src="./image28.webp" style="width:4.397637795275591in;height:2.047244094488189in" />
 
@@ -707,7 +707,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
@@ -747,7 +747,7 @@ Puede especificar los números de teléfono cuyos comandos recibirá y ejecutar�
 
 ### Barra de Estado 
 
-<img alt="" src="./image44.webp" style="width:7.086614173228346in;height:0.6023622047244095in" />
+<img alt="TrikdisConfig, barra de estado. Muestra los campos IMEI/identificador único, Estado: lectura finalizada, Dispositivo: GT+_M150, SN, BL: 1.00, FW: 1.30 y HW: 0.00." src="./image44.webp" style="width:7.086614173228346in;height:0.6023622047244095in" />
 
 **Barra de Estado**
 
@@ -767,7 +767,7 @@ Al presionar el botón **Leer [F4]**, el programa TrikdisConfig lee y muestra la
 
 ### Ventana de “Ajustes del sistema” 
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:2.7874015748031495in" />
+<img alt="TrikdisConfig, ventana Ajustes del sistema. En General, Número de objeto: 561234 y Tiempo establecido: Primer canal. En Acceso aparecen los campos Código de administrador y Código de instalador; está marcada la opción Sólo un administrador puede restaurar." src="./image45.webp" style="width:7.086614173228346in;height:2.7874015748031495in" />
 
 **Grupo de opciones “General”**
 
@@ -811,7 +811,7 @@ El comunicador se conecta a los terminales TIP/RING del panel de control.
 
 **Grupo de opciones de “Bus de Data”**
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
+<img alt="TrikdisConfig, ventana Configuración del panel. En TLC, Protocolo de comunicación está en 1. DISABLED. En Bus de Data, Protocolo de codificación de eventos está en CID, Tipo de panel muestra 5. PARADOX SP/MG se y Control directo está marcado." src="./image47.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
 
 El comunicador está conectado al bus del teclado o al bus serie del panel de control.
 
@@ -829,7 +829,7 @@ El comunicador está conectado al bus del teclado o al bus serie del panel de co
 
 **Pestaña de “CRA ajustes”**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:3.354330708661417in" />
+<img alt="TrikdisConfig: ventana «CRA informes», pestaña «CRA ajustes», de GT+_M150. En «Canal de comunicación principal», «Modo» indica «Desactivar», «Clave de encriptación» está configurada, «TCP o UDP» indica «TCP» y «Dominio o IP» y «Puerto» están vacíos. En «Modo del canal de reserva», «Desactivar», «Clave de encriptación» configurada y «TCP o UDP» en «TCP». En «Segundo canal», «Tipo de comunicación» indica «Desactivar»." src="./image48.webp" style="width:7.086614173228346in;height:3.354330708661417in" />
 
 Los eventos pueden ser enviados a través de varios canales de comunicación. Los primeros y segundos canales de comunicación pueden ser operados de forma simultánea y el comunicador puede enviar eventos a dos receptores al mismo tiempo. El canal de respaldo puede ser asignado para los primeros y segundos canales, los cuales serán usados cuando la conexión al canal primario es interrumpida.
 
@@ -884,7 +884,7 @@ Los eventos de este canal son transmitidos en paralelo con el primer canal. Cuan
 
 **Pestaña de “Servicio Protegus”**
 
-<img alt="" src="./image50.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
+<img alt="TrikdisConfig, ventana «Informes para usuario», pestaña «Servicio PROTEGUS» (GT+_M150): «Activar conexión» marcado, campo «Código de acceso a Protegus» rellenado e «Informes paralelos» sin marcar." src="./image50.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
 El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.eu](http://www.protegus.eu).
 
@@ -914,7 +914,7 @@ Puede cambiar los textos por mensajes SMS de eventos base, cambiar el código de
 
 **Pestaña de “Control por SMS”**
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
+<img alt="TrikdisConfig, ventana «Informes para usuario», pestaña «Control por SMS». La tabla «Textos de respuesta SMS» muestra «Orden realizada» → «Command OK», «Contraseña incorrecta» → «Wrong Access Code», «Orden incorrecta» → «Wrong Command» e «Información incorrecta» → «Wrong Data». A la derecha, la tabla «Números de teléfono para el control remoto» contiene las filas «Tel 1» a «Tel 4», cada una con «+» en la columna «Número de teléfono»." src="./image52.webp" style="width:7.086614173228346in;height:1.9763779527559056in" />
 
 Puede enviar comando SMS al comunicador que controlará las funciones básicas del dispositivo.
 
@@ -938,7 +938,7 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
         móviles esté habilitado.
 **Pestaña de “SIM1”**
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.062992125984252in" />
+<img alt="TrikdisConfig, ventana «Configuración de la red», pestaña «SIM1» (GT+_M150): el campo «PIN de la tarjeta SIM» está rellenado y «APN» muestra «internet»; «Usuario», «Contraseña», «SIM ICCID», «DNS 1», «DNS 2» y «Operador preferido» están vacíos. «¡Bloqueo ICCID duro!» está sin marcar." src="./image53.webp" style="width:7.086614173228346in;height:3.062992125984252in" />
 
 **Grupo de opciones de la “Tarjeta SIM”**
 
@@ -1004,7 +1004,7 @@ Después de añadir el expansor al comunicador como se ha descrito en el párraf
 
 #### Ventana de ajustes del expansor iO-8
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="TrikdisConfig, ventana RS485 modules, pestaña Module 1 del Expansor iO-8. Recuento de entrada está ajustado a 3. La tabla muestra los incidentes BUS_FAULT e INPUT1 a INPUT3, con columnas para activar y configurar los códigos CID, particiones y zonas de incidente y restauración." src="./image57.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 El expansor iO-8 tiene 8 contactos de terminal universales (entrada/salida). Se pueden conectar hasta cuatro expansores iO-8.
 

@@ -118,11 +118,11 @@ Este manual es para comunicadores 2G/3G/4G.
 
 **Comunicador G16 (2G)**
 
-<img alt="" src="./image5.webp" style="width:4.7933431758530185in;height:3.19000656167979in" />
+<img alt="Elementos del comunicador G16 (2G) con referencias numeradas. A la izquierda, la cubierta cerrada: 1 conector SMA de la antena celular, 2 luces indicadoras, 3 ranura frontal para abrir la cubierta. A la derecha, la cubierta abierta con la placa de circuito: 4 terminal para conexiones externas, 5 puerto USB Mini-B para programar el comunicador, 6 ranura para tarjeta SIM." src="./image5.webp" style="width:4.7933431758530185in;height:3.19000656167979in" />
 
 **Comunicador G16 (3G/4G)**
 
-<img alt="" src="./image6.webp" style="width:4.44334208223972in;height:3.11000656167979in" />
+<img alt="Elementos del comunicador G16 (3G/4G) con referencias numeradas. A la izquierda, la cubierta cerrada: 1 conector SMA de la antena celular, 2 luces indicadoras, 3 ranura frontal para abrir la cubierta. A la derecha, la cubierta abierta con la placa de circuito: 4 terminal para conexiones externas, 5 puerto USB Mini-B para programar el comunicador, 6 ranura para tarjeta SIM." src="./image6.webp" style="width:4.44334208223972in;height:3.11000656167979in" />
 
 1.  Antena GSM conector SMA.
 
@@ -183,7 +183,7 @@ Este manual es para comunicadores 2G/3G/4G.
 
 ### Esquema estructural del uso del dispositivo G16 
 
-<img alt="" src="./image7.webp" style="width:7.0875in;height:2.995138888888889in" />
+<img alt="Esquema de uso del G16: el panel de control se conecta al comunicador 2G/3G/LTE. Por GSM, el comunicador envía llamadas y SMS al teléfono con la app Protegus y se comunica con el receptor de la central de alarmas. Por GPRS, se conecta a Internet, que enlaza con el servidor Protegus y después con el teléfono. El diagrama muestra una conexión bidireccional entre Internet y el receptor. El receptor se conecta al software de monitoreo monas ms." src="./image7.webp" style="width:7.0875in;height:2.995138888888889in" />
 
 !!! note "Nota"
     Antes de empezar, asegúrese de tener todo lo necesario:
@@ -628,7 +628,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 4.  Haga clic en el botón "**Guardar**".
 
-<img alt="" src="./image38.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image38.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 5.  Si hay otra sección de alarmas de seguridad, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
@@ -806,7 +806,7 @@ Las opciones son mostradas cuando el protocolo DC-09_2007 o DC-09_2012 es establ
 
 **“Pestaña de la “Servicio Protegus”**
 
-<img alt="" src="./image45.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
+<img alt="TrikdisConfig, ventana «Informes para usuario», pestaña «Servicio PROTEGUS»: la casilla «Activar conexión» está marcada y el campo «Código de acceso a Protegus» muestra la contraseña enmascarada con puntos." src="./image45.webp" style="width:7.086614173228346in;height:1.779527559055118in" />
 
 - **Activar conexión** – permita que el comunicador se conecte a la nube de Protegus2.
 
@@ -832,7 +832,7 @@ Puede cambiar los textos por mensajes SMS de eventos base, cambiar el código de
 
 **Pestaña de “Control por SMS”**
 
-<img alt="" src="./image47.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
+<img alt="Ventana Informes para usuario, pestaña Control por SMS, de TrikdisConfig para G16_U110. Textos de respuesta SMS: Orden realizada, Command OK; Contraseña incorrecta, Wrong Access Code; Orden incorrecta, Wrong Command; Información incorrecta, Wrong Data. A la derecha aparece la tabla Números de teléfono para el control remoto." src="./image47.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
 Puede enviar comando SMS al comunicador que controlará las funciones básicas del dispositivo.
 
@@ -854,7 +854,7 @@ Puede enviar comando SMS al comunicador que controlará las funciones básicas d
     2.  Si se usará internet móvil para enviar notificaciones a través del
         canal IP o a Protegus2, asegúrese de que el servicio de datos
         móviles esté habilitado.
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
+<img alt="TrikdisConfig, ventana «Tarjeta SIM»: el PIN aparece enmascarado con cuatro puntos; APN muestra «internet»; Usuario y Contraseña están vacíos; la casilla «Prohibir la conexión cuando se detecta roaming» está marcada." src="./image48.webp" style="width:7.086614173228346in;height:2.322834645669291in" />
 
 **Grupo de opciones de la “Tarjeta SIM”**
 
@@ -908,7 +908,7 @@ Después de añadir el expansor al comunicador como se ha descrito en el párraf
 
 #### Ventana de ajustes del expansor iO-8 (solo para comunicadores 3G/4G)
 
-<img alt="" src="./image51.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1»: «Expansor iO-8», campo «Serial Núm.», «Recuento de entrada» en 3 y casilla «Mostrar ID de objeto» sin marcar. La tabla de Contact ID muestra BUS_FAULT con CID 333, Part. 91 y Zona 001, e INPUT1, INPUT2 e INPUT3 con CID 130, Part. 91 y zonas 001, 002 y 003, respectivamente. Todos los incidentes y sus restauraciones tienen «Activar» marcado y códigos coincidentes; el tipo de entrada de INPUT1–INPUT3 es NO." src="./image51.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
 
 El expansor iO-8 tiene 8 contactos de terminal universales (entrada/salida). Se pueden conectar hasta cuatro expansores iO-8.
 
@@ -950,7 +950,7 @@ Para que los clientes reciban mensajes SMS o llamadas anunciando los activadores
 
 #### Ventana de configuración del módulo WiFi *W485* (solo para comunicadores 3G/4G)
 
-<img alt="" src="./image52.webp" style="width:7.086614173228346in;height:3.141732283464567in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1»: módulo «W17u/W485», campo «Serial Núm.», «DHCP modo» en DHCP, «IP estática» 192.168.1.27, «Subnet mask» 255.255.255.0 y «Predeterminado gateway» 192.168.1.254. También aparecen los campos «WiFi SSID nombre» y «WiFi SSID contraseña». La tabla de Contact ID muestra el incidente BUS_FAULT y su restauración, ambos activados, con CID 333, Part. 91 y Zona 001." src="./image52.webp" style="width:7.086614173228346in;height:3.141732283464567in" />
 
 - **DHCP Modo** - modo del módulo WiFi para registrarse en la red (manual (Estática) o automático (DHCP)).
 
@@ -974,7 +974,7 @@ En la tabla, puede asignar el evento de Contacto ID y códigos de restauración 
     funcione el *W485*.**
 Ventana de configuración del módulo ethernet *E485* (solo para comunicadores 3G/4G)
 
-<img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.1338582677165356in" />
+<img alt="TrikdisConfig, ventana «RS485 modules», pestaña «Module 1»: E485, campo «Serial Núm.», «DHCP modo» en DHCP, «IP estática» 192.168.1.27, «Subnet mask» 255.255.255.0 y «Predeterminado gateway» 192.168.1.254. La tabla de Contact ID muestra el evento BUS_FAULT y su restauración, ambos activados, con CID 333, Part. 91 y Zona 001." src="./image53.webp" style="width:7.086614173228346in;height:3.1338582677165356in" />
 
 - **DHCP Modo** - modo del módulo Ethernet para registrarse en la red (manual (Estática) o automático (DHCP)).
 

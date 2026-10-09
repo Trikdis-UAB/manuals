@@ -136,7 +136,7 @@ Leistina išėjimo srovė iki 0,2 A. Išėjimas apsaugotas nuo perkrovos. Virš
 
 **CZ-Dallas iButton** raktų skaitytuvas prie iO-LORA jungiamas prie "**1 Wire**" magistralės. Magistralės laidų ilgis gali būti iki 30 m.
 
-<img alt="Prijungimo schema: iO-LORA į CZ-Dallas reader. Maitinimas 12-26V: + į +DC, − į -DC. Baltas laidas: 1-Wire į skaitytuvą, jungties ilgis iki 30 m. Pilkas laidas: COM į LED-; ten pat prijungtas geltonas laidas. NO per 1k ir žalią laidą į RED LED+; NC per 1k ir rudą laidą į Green LED+. C sujungtas su +DC. OUT tipas 'Sistemos būsena': apsaugai esant įjungtai skaitytuvas šviečia raudonai, išjungtai – žaliai." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Prijungimo schema: iO-LORA į CZ-Dallas reader. Maitinimas 12-26V: + į +DC, − į -DC. Baltas laidas: 1-Wire į skaitytuvą, jungties ilgis iki 30 m. Pilkas laidas: COM į LED-; ten pat prijungtas geltonas laidas. NO per 1k ir rudą laidą į RED LED+; NC per 1k ir žalią laidą į Green LED+. C sujungtas su +DC. OUT tipas 'Sistemos būsena': apsaugai esant įjungtai skaitytuvas šviečia raudonai, išjungtai – žaliai." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### iO-LORA plėtimo modulių prijungimo schema 
 

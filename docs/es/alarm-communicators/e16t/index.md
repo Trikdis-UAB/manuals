@@ -248,19 +248,19 @@ El comunicador contiene dos terminales de entrada de tipo seleccionable (IN1, IN
 
 #### Normalmente abierto (NA)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no.webp" width="261" height="252" />
+<img class="wiring-diagram" alt="Contacto normalmente abierto (NO) entre COM e INx. Cortocircuito: alarma; circuito abierto: restauración." src="./wiring-input-no.webp" width="261" height="252" />
 
 #### Normalmente cerrado (NC)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc.webp" width="262" height="252" />
+<img class="wiring-diagram" alt="Contacto normalmente cerrado (NC) entre COM e INx. Cortocircuito: restauración; circuito abierto: alarma." src="./wiring-input-nc.webp" width="262" height="252" />
 
 #### Normalmente cerrado con resistencia de fin de línea de 2,2k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="326" height="320" />
+<img class="wiring-diagram" alt="Contacto normalmente cerrado (NC) y resistencia de fin de línea de 2,2 kΩ en serie entre COM e INx. Cortocircuito o circuito abierto: alarma; 2,2 kΩ: restauración." src="./wiring-input-nc-eol.webp" width="326" height="320" />
 
 #### Normalmente abierto con resistencia de fin de línea de 2,2k (EOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="285" height="409" />
+<img class="wiring-diagram" alt="Contacto normalmente abierto (NO) entre COM e INx, con una resistencia de fin de línea de 2,2 kΩ en paralelo. Cortocircuito o circuito abierto: alarma; 2,2 kΩ: restauración." src="./wiring-input-no-eol.webp" width="285" height="409" />
 
 ### Conectar el cable LAN 
 
@@ -428,7 +428,7 @@ El Communicator E16T puede controlarse de forma remota utilizando el software Tr
 
 Después de conectar E16T y haciendo clic en **Leer [F4]**, TrikdisConfig proporcionará información sobre el dispositivo conectado en la barra de estado.
 
-<img alt="" src="./image29.webp" style="width:7.086614173228346in;height:0.7204724409448819in" />
+<img alt="Barra de estado de TrikdisConfig para E16T: muestra los campos ID único, Estado, Dispositivo, SN, BL, FW, HW y Admin role; Estado indica done." src="./image29.webp" style="width:7.086614173228346in;height:0.7204724409448819in" />
 
 **Barra de Estado**
 
@@ -448,7 +448,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 ### Ventana de “Ajustes de sistema” 
 
-<img alt="" src="./image30.webp" style="width:7.086614173228346in;height:4.066929133858268in" />
+<img alt="Ventana Ajustes del sistema de TrikdisConfig para E16T: en General, Núm. de cuenta E102, Período de Test 1440 min y Tipo de panel INTERFACE DTMF. En Configuraciones de Ethernet, Usar DHCP está activado. En Salida, Tipo OUT es Control remoto, Modo OUT es Nivel y Tiempo de pulso es 10 s. Acceso muestra los campos Código de administrador y Código de instalador." src="./image30.webp" style="width:7.086614173228346in;height:4.066929133858268in" />
 
 **Configuraciones → General:**
 
@@ -498,7 +498,7 @@ Después de pulsar **Leér [F4]**, el programa leerá y mostrará los ajustes, 
 
 **Pestaña “Informes de CRA”**
 
-<img alt="" src="./image31.webp" style="width:7.086614173228346in;height:4.078740157480315in" />
+<img alt="Ventana Informes de TrikdisConfig, pestaña Informes de CRA: Primario y Backup tienen Habilitar desactivado, Host remoto 0.0.0.0, Puerto remoto 0, TCP o UDP en TCP y Tiempo de PING 30. En Ajustes, Protocolo TCP es TRK03 y Dirección de MCI es 1; Habilitar cifrado y Usar marca de tiempo están desactivados." src="./image31.webp" style="width:7.086614173228346in;height:4.078740157480315in" />
 
 **Informes → Primario y de respaldo (Backup)**
 
@@ -548,7 +548,7 @@ Para obtener más información sobre el servicio PROTEGUS, visite [www.protegus.
 
 ### Ventana „Resumen de los eventos“ 
 
-<img alt="" src="./image33.webp" style="width:7.086614173228346in;height:3.405511811023622in" />
+<img alt="Ventana «Resumen de los eventos» de TrikdisConfig. En «Descripción de entradas», la partición es FF; IN 1 tiene Contact ID 132, zona 001 y tipo NO, e IN 2 tiene Contact ID 132, zona 002 y tipo NO. Alarma y Restaurar están marcados para ambas entradas. En «Descripción de eventos internos» aparecen: fallo de transmisión del mensaje, código 350; informe de test periódico, 602; reinicio de sistema, 305; batería baja, 302; y restauración de batería, 302." src="./image33.webp" style="width:7.086614173228346in;height:3.405511811023622in" />
 
 **Resumen de los Eventos → Descripción de Entradas**
 
