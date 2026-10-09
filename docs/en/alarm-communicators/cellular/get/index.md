@@ -999,6 +999,9 @@ Events are transmitted in parallel with the primary channel through this channel
 
 #### Test, ping and reporting mode
 
+> [!NOTE]
+> This section describes firmware 1.xx. On firmware 2.00 or later, the reporting mode and the ping period are set differently: see [Reporting modes on firmware 2.00 and later](#reporting-modes-on-firmware-200-and-later).
+
 === "Protegus app"
 
     In the Protegus app: **Advanced settings → Reporting to CMS → Settings** (test, ping, backup timing, receiver and line numbers) and **Reporting to CMS → CMS settings → Reporting mode** (connection order).
@@ -1047,6 +1050,50 @@ For setting parameters on how the control panel will communicate with the CMS ch
 - **Backup type 2** – select a connection type (LAN, SIM1, SIM2) with the CMS receiver and Protegus2.
 
 - **Communication path test** – specify the time period for which the selected connection types should be tested (LAN, SIM1, SIM2).
+
+#### Reporting modes on firmware 2.00 and later
+
+<!-- DRAFT, not for merge until the 2.xx release. Sources: Jira TPPR3I05-67 (TrikdisConfig spec and
+     agreed rules) and AGPR3I05-80 (firmware, design document, FW 2.05 test report). To confirm:
+     released firmware version and hardware (x1x0/x1x1), TrikdisConfig version, Protegus reporting
+     path and swap button in the released TrikdisConfig, Communication path test units.
+     Event codes, EN 50136 categories and per-channel object IDs are left out on purpose. -->
+
+From firmware 2.00, GET sends events to the monitoring station in one of two reporting modes: **Fallback** or **Dual Path**. The mode decides which network types (LAN, SIM1, SIM2) carry the messages. Which receivers get them is still set by the channels described above: **Primary channel**, **Parallel channel** and their backups.
+
+=== "Protegus app"
+
+    These settings are not in the Protegus app yet. Set them in TrikdisConfig.
+
+=== "TrikdisConfig"
+
+    In TrikdisConfig 1.66.70 or later, open the **CMS reporting** window, **CMS settings** tab. The **Reporting mode** group is at the top of the tab, and the panel next to it shows the current mode.
+
+    <!-- Screenshot (Igoris): CMS settings tab, Fallback mode, all four channels with example values. -->
+    <!-- Screenshot (Igoris): CMS settings tab, Dual Path mode, Path 1 LAN, Path 2 SIM1. -->
+    <!-- Screenshot (Igoris): Settings tab. -->
+
+**Fallback** (**Dual path for CMS** turned off)
+
+The communicator uses one network type at a time, in the order you set: **Main type**, then **Backup type**, then **Backup type 2**. Each can be LAN, SIM1 or SIM2.
+
+- After as many failed attempts as set in **Backup reporting after**, the communicator switches to the next network type in the order.
+- When the main type works again, the communicator returns to it after the time set in **Return from Backup after**.
+- **Communication path test** - how often, in hours, the communicator checks the network types it is not using at the moment (up to 720 hours). 0 turns the check off.
+
+**Dual Path** (**Dual path for CMS** turned on)
+
+The communicator sends every event over two network types at the same time. The fields are named **Path 1** and **Path 2**, and **Backup type 2** is hidden.
+
+- Both paths must be set, and they must use different hardware: LAN with SIM1, or LAN with SIM2, in either order. SIM1 and SIM2 cannot be paired, because both SIM cards use the same modem.
+- If one path fails, events keep going over the other one, and the communicator reports the failed path to the monitoring station.
+- If both paths fail, the communicator keeps the events and sends them when a path works again. While events are waiting, the **DATA** LED is lit continuously.
+- **Protegus reporting path** - which of the two paths carries events to Protegus. Protegus reporting uses one path at a time; Path 1 is the default.
+
+**Ping and test on firmware 2.00 and later**
+
+- **IP ping period** is set separately for each channel, in its group on the **CMS settings** tab: **Primary channel**, **Primary channel Backup**, **Parallel channel** and **Parallel channel Backup**. Ping is also sent to the backup receivers, so a receiver that stops working is noticed before it is needed.
+- The **Settings** tab keeps **Test period**, **Backup reporting after**, **Return from Backup after**, **Receiver No.** and **Line No.** The receiver and line numbers apply to all protocols.
 
 <span id="_Ref526770803"></span>
 
