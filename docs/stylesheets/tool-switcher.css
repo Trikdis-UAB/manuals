@@ -4,8 +4,9 @@
 
    It must be noticed at first glance (review feedback: "I didn't realise there is a
    switch at all"), so the selected tool is filled with the brand red and the control
-   has a visible border. Contrast (WCAG AA): border 3.6:1 against the track and 4:1
-   against the page, red against the track 5.1:1, white on red 5.6:1, other labels 13:1.
+   has a dark 2 px border (Aivaras's proposal, 9 Oct). A line under the bar says what
+   it does. Contrast (WCAG AA): border 14:1 against the page, red against the track
+   5.1:1, white on red 5.6:1, other labels 13:1, the hint line 5.8:1.
    ===================================================== */
 
 .trik-tool-bar {
@@ -17,7 +18,7 @@
   gap: 0.75rem;
   /* The shadow shows the bar's edges, so it gets side padding, and reaches out by the
      same amount: the caption stays in line with the text, with room inside the bar. */
-  margin: 0.5rem -0.6rem 1.25rem;
+  margin: 0.5rem -0.6rem 0.35rem;
   padding: 0.5rem 0.6rem;
   background: var(--md-default-bg-color, #fff);
   border-bottom: 1px solid #e3e3e3;
@@ -39,8 +40,8 @@
   max-width: 28rem;
   padding: 3px;
   background: #f5f5f5;
-  border: 1px solid #808080;
-  border-radius: 999px;
+  border: 2px solid #212b36;
+  border-radius: 12px;
 }
 
 .trik-tool-bar__option {
@@ -48,7 +49,7 @@
   min-height: 2.2rem;
   padding: 0.3rem 0.9rem;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 9px;
   background: transparent;
   color: #292929;
   font-family: "Poppins", sans-serif;
@@ -76,6 +77,14 @@
   outline-offset: 2px;
 }
 
+/* The hint scrolls with the text; only the bar above it is sticky. */
+.trik-tool-hint {
+  margin: 0 0 1.1rem;
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: #5b6673;
+}
+
 /* Headings inside a chapter with a switcher must not land under it. */
 .trik-tool-region [id] {
   scroll-margin-top: calc(var(--trik-header-height, 2.4rem) + var(--trik-tool-bar-height, 4rem) + 0.5rem);
@@ -90,7 +99,8 @@
 }
 
 @media print {
-  .trik-tool-bar {
+  .trik-tool-bar,
+  .trik-tool-hint {
     display: none !important;
   }
 }
@@ -101,8 +111,12 @@
 @media screen and (max-width: 44.9375em) {
   .trik-tool-bar {
     display: block;
-    margin: 0.35rem -0.6rem 0.9rem;
+    margin: 0.35rem -0.6rem 0.3rem;
     padding: 0.25rem 0.6rem 0.35rem;
+  }
+
+  .trik-tool-hint {
+    margin-bottom: 0.8rem;
   }
 
   .trik-tool-bar__caption {
@@ -136,7 +150,8 @@ body[data-md-color-scheme="slate"] .trik-tool-bar {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.28);
 }
 
-body[data-md-color-scheme="slate"] .trik-tool-bar__caption {
+body[data-md-color-scheme="slate"] .trik-tool-bar__caption,
+body[data-md-color-scheme="slate"] .trik-tool-hint {
   color: var(--trik-text-muted);
 }
 

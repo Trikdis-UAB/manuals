@@ -477,6 +477,47 @@ body[data-md-color-scheme="slate"] .nav-callout__icon {
   }
 }
 
+/* Quick setup for GT, GT+ and GET: first under Communicators and set apart as a dark
+   bar, with the models lighter (marked by docs/javascripts/communicators-toggle.js).
+   White on #212b36 is 14:1. */
+.md-nav--primary .md-comm-quick-setup > .md-nav__link,
+.md-nav--primary .md-comm-quick-setup > .md-nav__link:hover,
+.md-nav--primary .md-comm-quick-setup > .md-nav__link:focus {
+  margin: 0.2rem 0 0.45rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  background: #212b36;
+  color: #fff;
+  font-weight: 700;
+}
+
+.md-nav--primary .md-comm-quick-setup > .md-nav__link .md-nav__icon {
+  color: #fff;
+}
+
+/* Models on their own line: the sidebar is narrow, and "Greitas paruošimas" is long. */
+.md-comm-quick-setup__models {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+body[data-md-color-scheme="slate"] .md-nav--primary .md-comm-quick-setup > .md-nav__link {
+  background: #394259;
+}
+
+/* Under Cellular: a divider above G16, the first of the previous generation (G16, G16T). */
+.md-nav--primary .md-comm-prev-gen {
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid #c8c8c8;
+}
+
+body[data-md-color-scheme="slate"] .md-nav--primary .md-comm-prev-gen {
+  border-top-color: var(--trik-border);
+}
+
 /* Left navigation depth styling (level 3+) */
 .md-nav--primary .md-nav__list .md-nav__list {
   margin-left: 0.6rem;
@@ -649,6 +690,23 @@ body[data-md-color-scheme="default"] .md-sidebar--secondary a.md-nav__link:hover
 body[data-md-color-scheme="default"] .md-sidebar--secondary a.md-nav__link:focus-visible {
   background: #e4e4e4;
   border-radius: 0.25rem;
+}
+
+/* Right-hand table of contents: only the current chapter is open, and the chapter is
+   marked as well as the section you are in (docs/javascripts/toc-active.js sets the
+   classes; without the script the whole list shows). Red on white 5.6:1, the dark
+   scheme's coral on its sidebar 6.7:1. */
+.trik-toc-collapse .md-sidebar--secondary .md-nav__item:not(.trik-toc-open) > nav.md-nav {
+  display: none;
+}
+
+.md-sidebar--secondary li.trik-toc-open > a.md-nav__link:not(.md-nav__link--active) {
+  color: var(--md-primary-fg-color, #cb2215);
+  font-weight: 600;
+}
+
+body[data-md-color-scheme="slate"] .md-sidebar--secondary li.trik-toc-open > a.md-nav__link:not(.md-nav__link--active) {
+  color: #f18b80;
 }
 
 .md-header,
