@@ -594,6 +594,21 @@
     }
   }
 
+  // Under Cellular, G16 and G16T are the previous generation: a divider above G16
+  // separates them from GT, GT+ and GET. Found by address, so it works in every language.
+  var PREVIOUS_GENERATION_FIRST = "/alarm-communicators/cellular/g16/";
+
+  function markPreviousGeneration(list) {
+    Array.from(list.querySelectorAll("a.md-nav__link")).some(function (link) {
+      var path = resolvePath(link.getAttribute("href") || "");
+      if (path.slice(-PREVIOUS_GENERATION_FIRST.length) !== PREVIOUS_GENERATION_FIRST) {
+        return false;
+      }
+      link.closest("li.md-nav__item").classList.add("md-comm-prev-gen");
+      return true;
+    });
+  }
+
   function applyView(subnav, view) {
     subnav.dataset.commView = view;
   }
@@ -619,6 +634,7 @@
       var azList = buildAzList(subnav, currentPath);
       list.insertAdjacentElement("afterend", azList);
       markQuickSetupSection(list);
+      markPreviousGeneration(list);
 
       var toggle = buildToggle(getStoredView());
       var title = subnav.querySelector(":scope > label.md-nav__title");

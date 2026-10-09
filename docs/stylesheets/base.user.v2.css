@@ -507,6 +507,17 @@ body[data-md-color-scheme="slate"] .md-nav--primary .md-comm-quick-setup > .md-n
   background: #394259;
 }
 
+/* Under Cellular: a divider above G16, the first of the previous generation (G16, G16T). */
+.md-nav--primary .md-comm-prev-gen {
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid #c8c8c8;
+}
+
+body[data-md-color-scheme="slate"] .md-nav--primary .md-comm-prev-gen {
+  border-top-color: var(--trik-border);
+}
+
 /* Left navigation depth styling (level 3+) */
 .md-nav--primary .md-nav__list .md-nav__list {
   margin-left: 0.6rem;
