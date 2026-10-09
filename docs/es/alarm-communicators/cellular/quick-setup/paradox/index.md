@@ -22,6 +22,9 @@ Siga el esquema de abajo para conectar el comunicador al panel:
 | CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | Para control del bus serie. |
 | +DC / -DC | +AUX / -AUX | Alimentación del comunicador. |
 
+!!! note "Nota"
+    **+DC** y **−DC** son los terminales marcados **+12 VDC** y **−12 VDC** en GT y GET, y **+12/24 VDC** y **−12/24 VDC** en GT+.
+
 <style>
 .wiring-diagram {
   max-width: 900px;

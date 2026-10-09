@@ -22,6 +22,9 @@ Vadovaukitės schema žemiau ir prijunkite komunikatorių prie centralės:
 | CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | Serijiniam magistralės valdymui. |
 | +DC / -DC | +AUX / -AUX | Maitinimas komunikatoriui. |
 
+!!! note "Pastaba"
+    **+DC** ir **−DC** yra gnybtai, kurie GT ir GET komunikatoriuose pažymėti **+12 VDC** ir **−12 VDC**, o GT+ – **+12/24 VDC** ir **−12/24 VDC**.
+
 <style>
 .wiring-diagram {
   max-width: 900px;

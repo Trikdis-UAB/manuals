@@ -22,6 +22,9 @@ Follow the schematic below to connect the communicator to the panel:
 | CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | For serial bus control. |
 | +DC / -DC | +AUX / -AUX | Power the communicator. |
 
+!!! note
+    **+DC** and **−DC** are the terminals marked **+12 VDC** and **−12 VDC** on GT and GET, and **+12/24 VDC** and **−12/24 VDC** on GT+.
+
 <style>
 .wiring-diagram {
   max-width: 900px;

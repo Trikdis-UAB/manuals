@@ -22,6 +22,9 @@
 | CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | Управление по серийному BUS. |
 | +DC / -DC | +AUX / -AUX | Питание коммуникатора. |
 
+!!! note "Примечание"
+    **+DC** и **−DC** — это клеммы с маркировкой **+12 VDC** и **−12 VDC** на GT и GET и **+12/24 VDC** и **−12/24 VDC** на GT+.
+
 <style>
 .wiring-diagram {
   max-width: 900px;
