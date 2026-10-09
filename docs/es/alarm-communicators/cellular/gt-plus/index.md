@@ -386,6 +386,9 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
 
+!!! note "Nota"
+    Esta conexión requiere el firmware del comunicador 1.21 o posterior.
+
 <img alt="Diagrama de conexión: panel PARADOX SP, SP+, MG o MG+ con GT+. Bus de datos: +AUX a +DC (+12V), -AUX a -DC, GRN a DATA y YEL a CLK. Terminales de la línea telefónica del comunicador: TIP del panel a TIP de GT+ y RING del panel a RING de GT+." src="./image23.webp" style="width:3.4766732283464568in;height:2.913338801399825in" />
 
 Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GT+:

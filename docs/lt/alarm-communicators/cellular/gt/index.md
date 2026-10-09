@@ -384,6 +384,9 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 ### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų) 
 
+!!! note "Pastaba"
+    Šiam prijungimui komunikatoriaus programinės įrangos versija turi būti ne žemesnė nei 1.21.
+
 <img alt="Prijungimo schema: PARADOX SP/SP+/MG/MG+ centralė prie GT. Klaviatūros magistralė: +AUX (+12V) prie + DC, -AUX prie - DC, GRN prie DATA, YEL prie CLK. Telefono komunikatorius: TIP prie TIP, RING prie RING." src="./image22.webp" style="width:3.550007655293088in;height:2.743338801399825in" />
 
 Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/RING gnybtų, tuomet GT reikia nustatyti:

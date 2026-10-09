@@ -7,7 +7,7 @@ Trumpi pajungimo ir programavimo žingsniai, skirti prijungti GT/GT+/GET komunik
 
 ## Reikalavimai
 
-1. GT/GT+/GET programinės įrangos versija 1.21, įdėta SIM kortelė, PIN išjungtas, aktyvus duomenų planas.
+1. GT/GT+/GET programinės įrangos versija 1.21 arba naujesnė, įdėta SIM kortelė, PIN išjungtas, aktyvus duomenų planas.
 1. Paradox SP/SP+/MG/MG+ centralė su klaviatūros prieiga (yra montuotojo kodas).
 1. CMS paskyros numeris, jei pranešimai siunčiami į CMS.
 1. Protegus2 įmonės/montuotojo paskyra ir komunikatoriaus IMEI.
@@ -20,7 +20,7 @@ Vadovaukitės schema žemiau ir prijunkite komunikatorių prie centralės:
 | --- | --- | --- |
 | TIP / RING | TIP / RING | PSTN linijos emuliacijai (Contact ID). |
 | CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | Serijiniam magistralės valdymui. |
-| +12V / GND | AUX + / GND | Maitinimas komunikatoriui. |
+| +DC / -DC | +AUX / -AUX | Maitinimas komunikatoriui. |
 
 <style>
 .wiring-diagram {

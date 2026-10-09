@@ -490,6 +490,9 @@ Following one of the schematics provided below, connect communicator to the cont
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
+!!! note
+    This connection needs communicator firmware 1.21 or later.
+
 <img alt="Wiring diagram: PARADOX SP, SP+, MG or MG+ panel to GET. Keypad bus: +AUX (+12V) to +DC, -AUX to -DC, GRN to DATA, YEL to CLK. Telephone communicator: panel TIP to GET TIP, panel RING to GET RING." src="./image26.webp" style="width:3.37000656167979in;height:3.0333398950131234in" />
 
 When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
