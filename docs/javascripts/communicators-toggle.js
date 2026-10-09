@@ -566,6 +566,34 @@
     return list;
   }
 
+  // The GT/GT+/GET quick setups come first under Communicators, labelled
+  // "Quick setup (GT, GT+, GET)" in mkdocs.yml. Set that item apart and show the
+  // models in a lighter weight (review proposal, 9 Oct 2026). Runs after the A–Z list
+  // is built, so that list still reads the plain label.
+  function markQuickSetupSection(list) {
+    var first = list.querySelector(":scope > li.md-nav__item");
+    if (!first) {
+      return;
+    }
+    var label = getItemLabelText(first);
+    var isQuickSetup = Array.from(QUICK_SETUP_LABELS).some(function (name) {
+      return label.indexOf(name) === 0;
+    });
+    if (!isQuickSetup) {
+      return;
+    }
+    first.classList.add("md-comm-quick-setup");
+    var text = first.querySelector(":scope > label .md-ellipsis, :scope > a .md-ellipsis");
+    var match = label.match(/^(.*?)\s*\((.+)\)$/);
+    if (text && match) {
+      text.textContent = match[1];
+      var models = document.createElement("span");
+      models.className = "md-comm-quick-setup__models";
+      models.textContent = match[2];
+      text.appendChild(models);
+    }
+  }
+
   function applyView(subnav, view) {
     subnav.dataset.commView = view;
   }
@@ -590,6 +618,7 @@
       var currentPath = window.location.pathname || "";
       var azList = buildAzList(subnav, currentPath);
       list.insertAdjacentElement("afterend", azList);
+      markQuickSetupSection(list);
 
       var toggle = buildToggle(getStoredView());
       var title = subnav.querySelector(":scope > label.md-nav__title");

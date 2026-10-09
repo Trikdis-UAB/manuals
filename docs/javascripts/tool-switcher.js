@@ -19,6 +19,13 @@
     es: "Configurar con",
     ru: "Настройка через"
   };
+  // One line under the switcher, outside its sticky part, saying what it does.
+  var HINT = {
+    en: "The steps below change with your choice.",
+    lt: "Toliau pateikti žingsniai keičiasi pagal jūsų pasirinkimą.",
+    es: "Los pasos siguientes cambian según su elección.",
+    ru: "Шаги ниже меняются в зависимости от вашего выбора."
+  };
 
   var resizeListening = false;
 
@@ -202,6 +209,10 @@
       var bar = buildBar(tools, caption);
       region.insertBefore(bar, chapter.heading.nextSibling);
       bars.push(bar);
+      var hint = document.createElement("p");
+      hint.className = "trik-tool-hint";
+      hint.textContent = HINT[lang] || HINT.en;
+      region.insertBefore(hint, bar.nextSibling);
 
       bar.addEventListener("click", function (event) {
         var button = event.target.closest(".trik-tool-bar__option");
