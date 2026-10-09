@@ -113,10 +113,9 @@ plugins:
           - Innerrange Inception: alarm-communicators/cellular/quick-setup/innerrange inception/GT+ Innerrange Inception ENG 2026 03 24.md
           - Innerrange Integriti: alarm-communicators/cellular/quick-setup/innerrange integriti/GT+ Innerrange Integriti ENG 2026 03 24.md
         - Cellular:
-          - GT/GT+/GET:
-            - GT: alarm-communicators/cellular/gt/index.md
-            - GT+: alarm-communicators/cellular/gt-plus/index.md
-            - GET: alarm-communicators/cellular/get/index.md
+          - GT: alarm-communicators/cellular/gt/index.md
+          - GT+: alarm-communicators/cellular/gt-plus/index.md
+          - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - For Fire Panels:
@@ -204,10 +203,9 @@ plugins:
           - Innerrange Inception: alarm-communicators/cellular/quick-setup/innerrange inception/GT+ Innerrange Inception ENG 2026 03 24.md
           - Innerrange Integriti: alarm-communicators/cellular/quick-setup/innerrange integriti/GT+ Innerrange Integriti ENG 2026 03 24.md
         - Mobilaus ryšio:
-          - GT/GT+/GET:
-            - GT: alarm-communicators/cellular/gt/index.md
-            - GT+: alarm-communicators/cellular/gt-plus/index.md
-            - GET: alarm-communicators/cellular/get/index.md
+          - GT: alarm-communicators/cellular/gt/index.md
+          - GT+: alarm-communicators/cellular/gt-plus/index.md
+          - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - Priešgaisrinėms centralėms:
@@ -294,10 +292,9 @@ plugins:
           - Innerrange Inception: alarm-communicators/cellular/quick-setup/innerrange inception/GT+ Innerrange Inception ENG 2026 03 24.md
           - Innerrange Integriti: alarm-communicators/cellular/quick-setup/innerrange integriti/GT+ Innerrange Integriti ENG 2026 03 24.md
         - Celular:
-          - GT/GT+/GET:
-            - GT: alarm-communicators/cellular/gt/index.md
-            - GT+: alarm-communicators/cellular/gt-plus/index.md
-            - GET: alarm-communicators/cellular/get/index.md
+          - GT: alarm-communicators/cellular/gt/index.md
+          - GT+: alarm-communicators/cellular/gt-plus/index.md
+          - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - Celular para Incendio:
@@ -384,10 +381,9 @@ plugins:
           - Innerrange Inception: alarm-communicators/cellular/quick-setup/innerrange inception/GT+ Innerrange Inception ENG 2026 03 24.md
           - Innerrange Integriti: alarm-communicators/cellular/quick-setup/innerrange integriti/GT+ Innerrange Integriti ENG 2026 03 24.md
         - GSM/GPRS:
-          - GT/GT+/GET:
-            - GT: alarm-communicators/cellular/gt/index.md
-            - GT+: alarm-communicators/cellular/gt-plus/index.md
-            - GET: alarm-communicators/cellular/get/index.md
+          - GT: alarm-communicators/cellular/gt/index.md
+          - GT+: alarm-communicators/cellular/gt-plus/index.md
+          - GET: alarm-communicators/cellular/get/index.md
           - G16: alarm-communicators/cellular/g16/index.md
           - G16T: alarm-communicators/cellular/g16t/index.md
         - Для противопожарной охранной панели:
