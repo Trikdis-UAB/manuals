@@ -1000,7 +1000,7 @@ Events are transmitted in parallel with the primary channel through this channel
 #### Test, ping and reporting mode
 
 > [!NOTE]
-> This section describes firmware 1.xx. On firmware 2.00 or later, the reporting mode and the ping period are set differently: see [Reporting modes on firmware 2.00 and later](#reporting-modes-on-firmware-200-and-later).
+> This section describes firmware 1.xx. On firmware 2.xx, the reporting mode and the ping period are set differently: see [Reporting modes on firmware 2.xx](#reporting-modes-on-firmware-2xx).
 
 === "Protegus app"
 
@@ -1051,15 +1051,16 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - **Communication path test** – specify the time period for which the selected connection types should be tested (LAN, SIM1, SIM2).
 
-#### Reporting modes on firmware 2.00 and later
+#### Reporting modes on firmware 2.xx
 
 <!-- DRAFT, not for merge until the 2.xx release. Sources: Jira TPPR3I05-67 (TrikdisConfig spec and
-     agreed rules) and AGPR3I05-80 (firmware, design document, FW 2.05 test report). To confirm:
-     released firmware version and hardware (x1x0/x1x1), TrikdisConfig version, Protegus reporting
+     agreed rules) and AGPR3I05-80 (firmware, design document, FW 2.05 test report). Written as
+     "2.xx" on purpose, since later 2.x versions will follow; add the first released version number
+     when it is out. To confirm: hardware (x1x0/x1x1), TrikdisConfig version, Protegus reporting
      path and swap button in the released TrikdisConfig, Communication path test units.
      Event codes, EN 50136 categories and per-channel object IDs are left out on purpose. -->
 
-From firmware 2.00, GET sends events to the monitoring station in one of two reporting modes: **Fallback** or **Dual Path**. The mode decides which network types (LAN, SIM1, SIM2) carry the messages. Which receivers get them is still set by the channels described above: **Primary channel**, **Parallel channel** and their backups.
+On firmware 2.xx, GET sends events to the monitoring station in one of two reporting modes: **Fallback** or **Dual Path**. The mode decides which network types (LAN, SIM1, SIM2) carry the messages. Which receivers get them is still set by the channels described above: **Primary channel**, **Parallel channel** and their backups.
 
 === "Protegus app"
 
@@ -1090,7 +1091,7 @@ The communicator sends every event over two network types at the same time. The 
 - If both paths fail, the communicator keeps the events and sends them when a path works again. While events are waiting, the **DATA** LED is lit continuously.
 - **Protegus reporting path** - which of the two paths carries events to Protegus. Protegus reporting uses one path at a time; Path 1 is the default.
 
-**Ping and test on firmware 2.00 and later**
+**Ping and test on firmware 2.xx**
 
 - **IP ping period** is set separately for each channel, in its group on the **CMS settings** tab: **Primary channel**, **Primary channel Backup**, **Parallel channel** and **Parallel channel Backup**. Ping is also sent to the backup receivers, so a receiver that stops working is noticed before it is needed.
 - The **Settings** tab keeps **Test period**, **Backup reporting after**, **Return from Backup after**, **Receiver No.** and **Line No.** The receiver and line numbers apply to all protocols.
