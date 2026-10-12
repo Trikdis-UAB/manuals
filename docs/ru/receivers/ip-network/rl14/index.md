@@ -375,7 +375,7 @@ SMPP – транспортный протокол SMS сообщений по T
 
 ## Права пользователей (карточка „Users“). 
 
-![](./image23.webp)
+![Программа IPcomControl, вкладка Users: две учётные записи, administrator и user. У administrator все показанные разрешения имеют значение Enabled; у user для Settings, Device info и просмотра событий указано Read-only, для остальных показанных действий — Disabled. В Assigned receivers у обеих записей указано All.](./image23.webp)
 
 Права пользователя (англ. User permissions):
 

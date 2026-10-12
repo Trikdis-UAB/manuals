@@ -109,13 +109,13 @@
 
 13. В списке модулей должен появиться **„RF-S8 трансивер“**, так же будет указан серийный номер и версия микропрограммы. Если вы видите версию прошивки трансивера RF-S8, вы можете пропустить шаги 14-22.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. Красной рамкой выделена строка RF-S8 transceiver; в ней показаны поля Серийный № и Версия прошивки со значением RF-S8 01.00." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 14. Если в списке не указан „**RF-S8 трансивер**“, то необходимо в списке выбрать **„RF-S8 трансивер“**.
 
 15. В поле „**Серийный №**“ укажите серийный номер модуля RF-S8. Серийный номер можно найти на изделии и на этикетке упаковки.
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. В строке RF-S8 transceiver красной рамкой выделено поле Серийный № для ввода серийного номера трансивера." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Нажмите кнопку **Записать [F5]**.
 
@@ -129,7 +129,7 @@
 
 21. В окне **„Модули“** в поле **„Версия прошивки“** будет указана версия программного обеспечения модуля RF-S8.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. Красной рамкой выделена строка RF-S8 transceiver; в ней показаны поля Серийный № и Версия прошивки со значением RF-S8 01.00." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 22. „FLEXi“ SP3 зарегистрировала модуль RF-S8.
 
@@ -209,7 +209,7 @@
 
 6.  Нажмите кнопку **„Сохранить“**.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Окно TrikdisConfig 'Найдено новое устройство': обнаружен S8 Door/Window Sensor. Выделены поле 'Номер зоны' со значением 10, поле 'Определение зоны' со значением 'Мгновенная' и кнопка 'Сохранить'." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 7.  Беспроводный датчик включен в список беспроводных устройств.
 
@@ -217,7 +217,7 @@
 
 9.  Нажмите **„Остановить привязку“**, чтобы завершить регистрацию беспроводных устройств.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Окно TrikdisConfig 'Режим привязки': сообщение подтверждает обнаружение S8 Door/Window Sensor; выделена кнопка 'Остановить привязку'." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 10. В открывшемся окне нажмите ***„*Да*“. Зарегистрированные беспроводные датчики будут сохранены в памяти охранной панели „FLEXi“ SP3***. Нажмите "**Нет**", если вы хотите дополнительно настроить параметры.
 
@@ -227,7 +227,7 @@
 
 TrikdisConfig окно **„Беспроводные датчики“** будет содержать список зарегистрированных беспроводных устройств. В поле **„Серийный №“** будут записаны серийные номера датчиков.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Окно TrikdisConfig 'Беспроводные датчики': в первой строке списка указан S8 Door/Window Sensor, рядом поле 'Серийный №'. Доступна кнопка 'Считать (F4)'." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Проверьте правильность назначения датчиков **„Зонам“** и **„Разделам“** охранной cигнализации (окно **„Зоны“**).
 
@@ -282,7 +282,7 @@ TrikdisConfig окно **„Беспроводные датчики“** буд�
 
 14. TrikdisConfig окно **„Беспроводные датчики“** будет содержать список зарегистрированных беспроводных устройств. В поле **„Серийный №“** будут записаны серийные номера датчиков.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Окно TrikdisConfig 'Беспроводные датчики': в первой строке списка указан S8 Door/Window Sensor, рядом поле 'Серийный №'. Доступна кнопка 'Считать (F4)'." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 15. Проверьте правильность назначения датчиков **„Зонам“** и **„Разделам“** охранной cигнализации (окно **„Зоны“**).
 

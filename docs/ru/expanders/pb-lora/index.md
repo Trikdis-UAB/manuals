@@ -213,7 +213,7 @@
 
 12. Подождите, пока произойдет обновление.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Модули» → «RS485 модули». Трансивер «RF-LORA трансивер» указан под ID 1; выделенное поле «Серийный №» заполнено. Также выделены кнопки «Считать (F4)» и «Записать (F5)»." src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Подождите 1 минуту.
 
@@ -251,7 +251,7 @@
 
 25. Нажмите **„Остановить привязку“**, чтобы завершить регистрацию беспроводных кнопок тревоги.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig, окно Режим привязки. Сообщение Найдено новое устройство показывает поля ID и UID; красными рамками выделены это сообщение и кнопка Остановить привязку." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Нажмите ***„*Да*“ в открывшемся окне. Зарегистрированные беспроводные кнопки тревоги PB-LORA будут сохранены в памяти охранной панели „FLEXi“ SP3.***
 

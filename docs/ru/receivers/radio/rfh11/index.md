@@ -61,7 +61,7 @@ pdf: rfh11-original.pdf
 
 ## Конфигурация приемного устройства
 
-<img alt="" src="./image2.PNG" style="width:6.708333333333333in;height:5.264583333333333in" />
+<img alt="Две фотографии корпуса TRIKDIS с маркировкой RF11. На верхней фотографии: 1 — индикаторы NETW, DATA и POWER; 2 — порт USB; 3 — кнопка RESET; 4 — антенный разъём ANT. На нижней фотографии: 5 — порт RS232; 6 — клемма с маркировкой «− 12 V +»; 7 — сетевой разъём с маркировкой «100–240 VAC 50/60 Hz». Над сетевым разъёмом расположен выключатель питания." src="./image2.PNG" style="width:6.708333333333333in;height:5.264583333333333in" />
 
 |  1  | Световая индикация. |  5  | Порт вывода данных RS232.                 |
 |:---:|:--------------------|:---:|:------------------------------------------|
@@ -170,7 +170,7 @@ pdf: rfh11-original.pdf
 
     3.  Установите следующие обязательные параметры: [номер приемного устройства] ([Receiver Number]), [номер линии] ([Line number]), [система] ([System]), [идентификатор учетной записи] ([Account ID]), [период HB] ([HB Period]) и [скорость передачи] ([Baud Rate]) для RS232.
 
-<img alt="" src="./image10.webp" style="width:2.5in;height:1.6993055555555556in" />
+<img alt="Окно R11config, раздел Main: Output Protocol — Surgard; Repeater Mode выключен; Receiver Number — 1, System — 0, Repeater/Line Number — 8, Account ID — F100, HB Period — 3 × 10 с, скорость RS232 — 9600 бод. В таблице Events показаны названия событий, признаки Active и коды событий." src="./image10.webp" style="width:2.5in;height:1.6993055555555556in" />
 
 7.  Укажите, какие сообщения будут отправлены:
 
@@ -188,7 +188,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="Окно R11config, раздел Settings: таблица Radio Frequencies со столбцами RF name и Frequency, Hz содержит записи DR, DV и DZ с их частотами. Справа расположены кнопки Add и Delete." style="width: 100%; height: auto;" />
   </figure>
 </div>
 

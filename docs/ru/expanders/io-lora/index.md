@@ -149,11 +149,11 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 **CZ-Dallas** считыватель контактных (iButton) ключей подключается к шине "**1-Wire**". Длина проводов шины "**1-Wire**" до 30 м.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Схема подключения: iO-LORA к считывателю CZ-Dallas reader. Питание 12–26В: плюс к +DC, минус к -DC. Клемма C соединена с +DC; NO через резистор 1k — с RED LED+ коричневым проводом, NC через резистор 1k — с Green LED+ зелёным проводом. COM соединена с LED- жёлтым проводом и с серым проводом считывателя; 1-Wire — с белым проводом. Длина соединения 1-Wire до 30 м. Выходу OUT назначается тип 'Статус системы': при включённой охране iButton светится красным, при выключенной — зелёным." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### Схема подключения модулей iO-LORA 
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Схема подключения: SP3 к RF-LORA. AUX+ (+12 В) к +DC, AUX- к -DC, 485 A к A RS 485, 485 B к B RS485. Беспроводная связь с iO-LORA — до 5000 м. Каждый iO-LORA: питание 12-26В к +DC и -DC. Датчик температуры DS18B20 или DS18S20: +5V к Vdd+, 1-Wire к DQ, COM к GND. Для CZ-Dallas reader: 1-Wire к белому проводу, COM к серому и жёлтому проводу LED-, +DC к C; NO через 1k к коричневому проводу RED LED+, NC через 1k к зелёному проводу Green LED+. Длина соединения 1-Wire до 30 м. Выходу OUT присваивается тип Статус системы: при включённой охране iButton светится красным, при выключенной — зелёным." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     К охранной панели "FLEXi" SP3 должен быть подключен
