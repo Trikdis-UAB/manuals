@@ -144,8 +144,18 @@
         if (window.$chatwoot && typeof window.$chatwoot.setLocale === "function") {
           window.$chatwoot.setLocale(pageLocale());
         }
+        tagConversation();
         openChatwootIfRequested();
       });
+      window.addEventListener("chatwoot:on-message", countChatStart);
+      // navigation.instant: pages change without reloading this script.
+      if (window.document$ && typeof window.document$.subscribe === "function") {
+        window.document$.subscribe(function () {
+          if (state.widgetReady) {
+            tagConversation();
+          }
+        });
+      }
     }
     window.chatwootSettings = {
       position: "right",
@@ -168,6 +178,47 @@
     };
     document.head.appendChild(script);
     state.scriptRequested = true;
+  }
+
+  // What a chat tells us about where it came from (2026-10-12):
+  // - In Chatwoot, each chat carries the manual page and language the visitor is on
+  //   (conversation attributes docs_page and docs_lang). That is support context, not
+  //   tracking, so it needs no cookie consent. Before the first message the widget holds
+  //   them and sends them with it.
+  // - In Google Analytics, a chat's start is an event, joy_chat_started, with the chat's
+  //   number (chat_id, as Chatwoot shows it) and language. GA adds country, device and how
+  //   the visitor arrived, so a chat can be matched to its visit. Only with the visitor's
+  //   analytics consent: the theme creates window.dataLayer only after that.
+  var CHAT_COUNTED_KEY = "trikdocs-chat-counted";
+
+  function tagConversation() {
+    if (!window.$chatwoot || typeof window.$chatwoot.setConversationCustomAttributes !== "function") {
+      return;
+    }
+    var page = window.location.pathname;
+    if (state.taggedPage === page) {
+      return;
+    }
+    state.taggedPage = page;
+    window.$chatwoot.setConversationCustomAttributes({ docs_page: page, docs_lang: pageLocale() });
+  }
+
+  function countChatStart(event) {
+    var data = event && event.detail;
+    var id = data && data.conversation_id;
+    if (!id || !Array.isArray(window.dataLayer)) {
+      return;
+    }
+    var counted = (storageGet("localStorage", CHAT_COUNTED_KEY) || "").split(",");
+    if (counted.indexOf(String(id)) !== -1) {
+      return;
+    }
+    counted.push(String(id));
+    storageSet("localStorage", CHAT_COUNTED_KEY, counted.slice(-20).join(","));
+    // The same call the theme's gtag makes: dataLayer takes the arguments object.
+    (function () {
+      window.dataLayer.push(arguments);
+    })("event", "joy_chat_started", { chat_id: String(id), chat_lang: pageLocale() });
   }
 
   function openChatwootIfRequested() {
