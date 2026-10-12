@@ -4,7 +4,7 @@
 ## Vista General del Teclado
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="Teclado FLEXi SK-LED TouchPad. Señala los indicadores de estado de las áreas 1 y 2, los indicadores numéricos de las zonas 1 a 32, el indicador de energía, las teclas de función MEM, BYP y TRB, y los botones ARM, SLEEP, STAY y OFF. En los indicadores de zona, iluminado significa alarma; extinguido, zona monitoreada; parpadeo, zona o usuario seleccionado; parpadeo intensivo, zona que fue alarmada." width="600">
 </div>
 
 > [!NOTE]
@@ -111,7 +111,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 5. Presione los números secuenciales de las áreas que deberán ser controladas por el usuario.
 
-6. Presione el botón <img src="./image4.webp" style="width:0.3500in;" />. Para salir, presione el botón **C** dos veces.
+6. Presione el botón <img alt="Botón OK." src="./image4.webp" style="width:0.3500in;" />. Para salir, presione el botón **C** dos veces.
 
 ## Restablecimiento del Detector de Incendios (Humo) de Dos Cables
 
@@ -131,7 +131,7 @@ El indicador STAY se iluminará cuando se encuentre en modo STAY.
 
 3. Ingrese un número secuencial de dos dígitos de una zona en particular para deshabilitar su monitoreo. Para deshabilitar el monitoreo de varias zonas, ingrese números de dos dígitos de tales zonas.
 
-4. Presione el botón <img src="./image4.webp" style="width:0.3500in;" />. El indicador **BYP** se empieza a iluminar.
+4. Presione el botón <img alt="Botón OK." src="./image4.webp" style="width:0.3500in;" />. El indicador **BYP** se empieza a iluminar.
 
 ### Desactivar la función BYPASS
 
@@ -149,4 +149,4 @@ Ingrese un número de secuencia de dos dígitos de una zona en particular para d
 
 4. Presione el botón **SLEEP** del teclado. Una señal Sonora se escuchará y el botón, indicando la secuencia numérica del usuario, cuyo código fue borrado de memoria, se extinguirá.
 
-5. Presione el botón <img src="./image4.webp" style="width:0.3500in;" /> dos veces.
+5. Presione el botón <img alt="Botón OK." src="./image4.webp" style="width:0.3500in;" /> dos veces.

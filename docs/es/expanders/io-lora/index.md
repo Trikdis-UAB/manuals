@@ -120,7 +120,7 @@ iO-LORA tiene una entrada. El tipo de entrada se puede configurar: NC, NO.
     <img src="./image8.webp" alt="Diagrama de conexión: entrada IN y COM a un contacto normalmente abierto (NO). IN a un extremo del contacto NO; COM al otro." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Diagrama de conexión: entrada IN y COM a un contacto normalmente cerrado (NC). IN a un extremo del contacto NC; COM al otro." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -128,7 +128,7 @@ iO-LORA tiene una entrada. El tipo de entrada se puede configurar: NC, NO.
 
 Los sensores de temperatura deben conectarse de acuerdo con el diagrama provisto. Los sensor de temperatura Max®/Dallas® DS18S20, DS18B20 (1 und.) se pueden conectar al expansor *iO- LORA*. Si se utiliza un cable mayor a 0.5 metros para conectar un sensor de temperatura, recomendamos utilizar un cable de par trenzado (UTP4x2x0.5 o STP4x2x0.5). La terminal „+5V” en la placa sirve para alimentar dispositivos conectados al bus de datos "1-Wire" con voltaje de 5 V DC.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Diagrama de conexión: iO-LORA al sensor de temperatura DS18B20. Alimentación: +5V a +Vdd mediante el cable Rojo. Datos: 1 Wire a DQ mediante el cable Amarillo. Común: C a GND mediante el cable Negro." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 La corriente de salida máxima es de 0.2 A. La salida está protegida de sobrecargas. Si se excede la corriente máxima permitida, la alimentación se apagará automáticamente. El panel de control "FLEXi" SP3 reconoce y registra automáticamente el sensor de temperatura conectado.
 
@@ -136,11 +136,11 @@ La corriente de salida máxima es de 0.2 A. La salida está protegida de sobreca
 
 El lector iButton **CZ-Dallas** se conecta al iO-LORA utilizando el bus de datos "**1 Wire**". La longitud de los cables que se conectan al bus de datos puede ser de hasta 30 m.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Diagrama de conexión: iO-LORA y lector CZ-Dallas. Alimentación 12-26V: positivo a +DC y negativo a -DC. El cable Blanco va de 1-Wire al lector; el cable Gris va de COM al lector y se une al cable Amarillo de LED-. C se une a +DC; NO alimenta «Rojo LED+» mediante una resistencia 1k y NC alimenta «Verde LED+» mediante otra resistencia 1k. También se señalan los cables Verde y Marrón. Conexión 1-Wire de hasta 30 m. La salida xOUT debe establecerse en «Estado del sistema»: con la alarma activada, la luz es roja; con la alarma apagada, es verde." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### Esquema de conexión de los módulos iO-LORA 
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Diagrama de conexión: SP3 conectado a RF-LORA y, de forma inalámbrica, a los módulos iO-LORA 1 a 8, hasta 5000 m. AUX+ (+12 V) del SP3 se conecta a +DC de RF-LORA; AUX- a -DC, 485 A a A RS 485 y 485 B a B RS485. Módulo 1: alimentación 12-26V a +DC y -DC; +5V, 1-Wire y COM se conectan respectivamente a Vdd+, DQ y GND del sensor de temperatura DS18B20 o DS18S20. Módulo 8: alimentación 12-26V a +DC y -DC; 1-Wire al cable Blanco del lector CZ-Dallas y COM a los cables Gris y Amarillo de LED-. C se une a +DC; NO alimenta «Rojo LED+» mediante 1k y NC alimenta «Verde LED+» mediante 1k. La conexión 1-Wire del lector alcanza hasta 30 m. La salida xOUT debe establecerse en «Estado del sistema»: luz roja con la alarma activada y verde con la alarma apagada." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Se debe conectar un transceptor RF-LORA al panel de control
@@ -168,19 +168,19 @@ El lector iButton **CZ-Dallas** se conecta al iO-LORA utilizando el bus de datos
 
 8.  En el campo "**Núm. de Serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, ventana «Módulos», pestaña «RS485 módulos». En la fila ID 1, «Módulo» muestra «iO-LORA expansor», el campo «Núm. de Serie» está rellenado, «Área» muestra 1 y «Nombre» muestra «Expander ID1»." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  En la pestaña "**Zonas**", configure la entrada del expansor.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, sección Zonas, pestaña Configuraciones de zonas: la lista desplegable Entrada muestra la opción RS485 Expander ID1, IN1 para la zona seleccionada." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. En la pestaña "**PGM**", realice los ajustes para la salida PGM del expansor.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, ventana «PGM», pestaña «Salidas». En PGM 2, «PGM Salida» muestra «RS485 Expander ID1, OUT1», «Definición de Salida» muestra «Control remoto» y «Tiempo de Pulso, s» muestra 10." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Los sensores de temperatura se incluirán en la lista de "**Sensores**" si se conecta un sensor de temperatura al expansor iO-LORA.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, ventana «Sensores». En la fila ID 1, «Tipo de módulo» muestra «RS485 Expander ID1». Hay campos «Núm. de serie», «Nombre del sensor», «Máximo», «Mínimo», «Alto», «Bajo» y «Delay»; el ejemplo muestra «Máximo» 30, «Mínimo» 20, «Alto» y «Bajo» marcados, y «Delay» 0." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Una vez que se finalice la configuración, haz clic en el botón **Escribir [F5]**.
 
