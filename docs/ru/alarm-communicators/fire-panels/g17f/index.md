@@ -1,7 +1,7 @@
 # LTE коммуникатор G17F для панелей пожарной сигнализации
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Вид спереди коммуникатора TRIKDIS G17F: сверху разъём антенны, индикаторы с надписями NETWORK, DATA, POWER и TROUBLE. На корпусе указано 9–32 VDC, 0.1 A max. Подписи нижних клемм слева направо: +DC, −DC, 1 IN, 2 IN, COM, 3 I/O, 4 I/O, COM, 5 I/O, 6 IN, A RS485 и B RS485." width="400">
 </div>
 
 ## Описание 
@@ -111,7 +111,7 @@
 
 6.  Держатель SIM карты.
 
-<img alt="" src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
+<img alt="Коммуникатор G17F: слева вид спереди, справа открытая плата. Слева: 1 — разъём SMA для GSM антенны, 2 — световые индикаторы, 3 — щель для снятия верхней крышки. Справа: 4 — клеммы для подключения проводов, 5 — разъём USB Mini-B для программирования коммуникатора, 6 — держатель SIM карты." src="./image4.webp" style="width:4.575in;height:2.8722222222222222in" />
 
 ### Клеммы 
 
@@ -174,7 +174,7 @@
 
 2.  Плоской отверткой снимите крышку, как показано на рисунке.
 
-<img alt="" src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
+<img alt="Три рисунка показывают, как открыть корпус G16 плоской отверткой: поддеть язычок передней крышки, затем боковую защелку; отдельно крупным планом показан внутренний разъем USB Mini-B." src="./image5.webp" style="width:6.720138888888889in;height:1.7798611111111111in" />
 
 1.  Кабелем USB Mini-B подключите ***G17F*** к компьютеру.
 
@@ -286,9 +286,9 @@
 
 7.  Вставьте nano-SIM-карту. SIM-карта должна быть зарегистрирована в сети GSM с уже активированными и работающими услугами, например, с возможностью совершать звонки, отправлять и получать SMS, а также иметь мобильный интернет. За информацией о том, как активировать необходимые услуги, обратитесь к оператору мобильной связи вашей SIM-карты.
 
-<img alt="" src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
+<img alt="Два чертежа: плата CG17 с обведённым язычком на левом краю для извлечения из корпуса и задняя часть корпуса с двумя обведёнными отверстиями под крепёжные шурупы." src="./image13.webp" style="width:3.9368055555555554in;height:2.015972222222222in" />
 
-<img alt="" src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
+<img alt="Рисунок: нано-SIM-карту вставляют справа в держатель SIM карты на плате G17F." src="./image14.webp" style="width:2.2868055555555555in;height:0.9833333333333333in" />
 
 !!! note "Примечание"
     Убедитесь, что SIM-карта активирована. / Убедитесь, что включена услуга
@@ -311,7 +311,7 @@
 
 ## Схема подключения пожарной панели ESPA4.4.4 и коммуникатора G17F 
 
-<img alt="" src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
+<img alt="Схема подключения: G17F к пожарной панели ESPA4.4.4. Питание: +DC коммуникатора G17F к +24V панели ESPA4.4.4, -DC к 0V. RS485: A коммуникатора G17F к A панели ESPA4.4.4, B к B." src="./image16.webp" style="width:2.673338801399825in;height:1.350003280839895in" />
 
 Настройки коммуникатора ***G17F*** с помощью ***TrikdisConfig*** при подключении к пожарной панели **ESPA4.4.4**.
 
@@ -339,7 +339,7 @@
 
 ## Схема подключения пожарной панели NSC Solution и коммуникатора G17F 
 
-<img alt="" src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
+<img alt="Схема подключения: G17F к NSC Solution. Питание: +DC к +24V (+24 V), -DC к 0V. RS485: A к A, B к B." src="./image21.webp" style="width:2.9466721347331584in;height:1.3566699475065618in" />
 
 Настройки коммуникатора ***G17F*** с помощью ***TrikdisConfig*** при подключении к пожарной панели **NSC Solution**.
 
@@ -367,11 +367,11 @@
 
 ### Схема подключения пожарной панели INIM Smartline и коммуникатора G17F 
 
-<img alt="" src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
+<img alt="Схема подключения: G17F к INIM Smartline. Питание: +DC к 13 +24 (+24 V), -DC к 16 GND. RS485: A к 15 +RS485, B к 14 -RS485. Диагональные провода пересекаются без соединения." src="./image26.webp" style="width:3.643340988626422in;height:1.1800021872265967in" />
 
 Пожарной панели **INIM Smartline** необходимо установить ведомый (Slave) режим работы, когда коммуникатор ***G17F*** подключен через шину RS485 к пожарной панели.
 
-<img alt="" src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
+<img alt="SmartLeague, окно «RS485 Bus Programming». В разделе «Master/Slave Settings» выбрано «Configure as Slave», значение «Assign address» — 1." src="./image27.webp" style="width:7.082677165354331in;height:3.031496062992126in" />
 
 !!! note "Примечание"
     Если к пожарной панели **INIM Smartline** подключены повторители, то
@@ -405,7 +405,7 @@
 
 ### Схема подключения пожарной панели управления C-TEC Cast ZFP и коммуникатора G17F
 
-<img alt="" src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
+<img alt="Схема подключения: G17F к C-TEC Cast ZFP. Питание: +DC к +24V (+24 V), -DC к 0V. ABUS RS485: A к A, B к B." src="./image32.webp" style="width:3.2266732283464568in;height:1.3566699475065618in" />
 
 Настройки коммуникатора ***G17F*** с помощью ***TrikdisConfig*** при подключении к пожарной панели **C-TEC Cast ZFP**.
 
@@ -429,31 +429,31 @@
 
 4. Откройте вкладку „**Node View**“.
 
-<img alt="" src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
+<img alt="ZFP Programming Tools, окно «Site Details». Вкладка «Node View» выделена для выбора." src="./image37.webp" style="width:7.086614173228346in;height:2.8858267716535435in" />
 
 5. Считайте настройки пожарной панели.
 
-<img alt="" src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
+<img alt="ZFP Programming Tools, «Node View» для «Panel 1». Кнопка «Retrieve All Data» выделена." src="./image38.webp" style="width:7.086614173228346in;height:3.2755905511811023in" />
 
 6. Введите код (заводской код – 4444).
 
 2.  Нажмите „**ОК**“.
 
-<img alt="" src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
+<img alt="ZFP Programming Tools, окно «Panel Log In». Над четырьмя пустыми полями кода надпись «Enter Access Level 3 Code»; зеленая кнопка с галочкой подтверждает ввод." src="./image39.webp" style="width:3.047244094488189in;height:1.8070866141732282in" />
 
 3. Выберите „**BMS Interface**“.
 
 2.  Нажмите на свободную иконку.
 
-<img alt="" src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices». В «Device Palette» выбран «BMS Interface», кнопка «Edit Devices» выделена." src="./image40.webp" style="width:7.086614173228346in;height:4.728346456692913in" />
 
 11. Нажмите „**Edit Devices**“.
 
-<img alt="" src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices». «BMS Interface» занимает ячейку устройства 16; кнопка «Edit Devices» выделена." src="./image41.webp" style="width:7.086614173228346in;height:2.547244094488189in" />
 
 12. Во вкладке „**Device**“ введите название системы.
 
-<img alt="" src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices», «Device Properties» для устройства 16. На вкладке «Device» значение «Name» — FIRECOM, значение «Device Type» — BMS Interface." src="./image42.webp" style="width:7.086614173228346in;height:3.322834645669291in" />
 
 13. Во вкладке „**Properties**“ введите название системы.
 
@@ -463,13 +463,13 @@
 
 16. Сохраните настройки в пожарной панели.
 
-<img alt="" src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
+<img alt="ZFP Programming Tools, «Device Properties» для «BMS Interface». Значение «Name» — FIRECOM; «Connection» — ABUS RS485; «BAUD Rate» — 57600; «Response Timeout» — 250; «Max Retries» — 5. Для «Zone Disablements» указано Zone; для «Input Group Disablements», «Output Group Disablements» и «Group Actions» указано Group. Кнопка «Send All Data» выделена." src="./image43.webp" style="width:7.086614173228346in;height:4.437007874015748in" />
 
 17. Введите код (заводской код – 4444).
 
 18. Нажмите „**OK**“.
 
-<img alt="" src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
+<img alt="ZFP Programming Tools, окно «Panel Log In». Над четырьмя пустыми полями для кода находится надпись «Enter Access Level 3 Code»; зелёная кнопка с галочкой подтверждает ввод." src="./image44.webp" style="width:3.043307086614173in;height:1.7992125984251968in" />
 
 Пожарная панель запрограммирована. Отсоедините кабель USB2.0 A-B от пожарной панели.
 
@@ -1107,4 +1107,4 @@
 
 Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="Перечеркнутый контейнер на колесах (WEEE): изделие следует утилизировать отдельно от бытовых отходов." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.

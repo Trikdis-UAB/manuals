@@ -1,7 +1,7 @@
 # RF-S8 Беспроводной трансивер
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Передняя панель трансивера TRIKDIS RF-S8 с индикаторами NETWORK и POWER и клеммами +DC, -DC, A 485 и B 485. Маркировка питания: 9-26 V, 0.1 A Max." width="200">
 </div>
 
 ## Описание 

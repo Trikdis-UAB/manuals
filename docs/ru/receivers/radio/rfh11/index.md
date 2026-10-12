@@ -5,7 +5,7 @@ pdf: rfh11-original.pdf
 # RFH11 Радиоприёмник
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Белый корпус радиоприёмника TRIKDIS с утопленным передним модулем, индикаторами состояния, отверстиями для USB и сброса, а также разъёмом антенны." style="width: 100%; max-width: 600px;">
 </div>
 
 ## О радиоприемном устройстве
@@ -178,7 +178,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="Окно редактирования событий R11config: поле «Event» содержит код, флажок «Active» установлен, флажок «Hex» снят." style="width: 100%; height: auto;" />
   </figure>
 </div>
 

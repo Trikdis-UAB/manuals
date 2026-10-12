@@ -1,7 +1,7 @@
 # Коммуникатор предназначен для передачи сообщений о событиях охранной панели на ПЦН и приложение Protegus2
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Корпус коммуникатора GT спереди с логотипом TRIKDIS. Надписи индикаторов сверху вниз: NETWORK, DATA, POWER, TROUBLE, BAND. Надписи на клеммной колодке: +12 VDC, -12 VDC, TIP, RING, CLK, DATA, 1 I/O, 2 I/O, A 485, B 485." width="400">
 </div>
 
 ## Описание 
@@ -125,7 +125,7 @@
 
 7.  Держатель SIM карты.
 
-<img alt="" src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
+<img alt="Элементы коммуникатора GT с цифровыми обозначениями. Слева закрытый корпус: 1 — разъем SMA для GSM антенны, 2 — световые индикаторы, 3 — отверстие на передней стороне для снятия крышки. Справа открытый корпус с платой: 4 — клеммы для подключения внешних устройств, 5 — разъем USB-C для программирования, 6 — кнопка RESET, 7 — держатель SIM карты." src="./image4.webp" style="width:4.630009842519685in;height:3.11000656167979in" />
 
 ### Клеммы подключения 
 
@@ -202,7 +202,7 @@
 
 2.  Плоской отверткой снимите крышку, как показано на рисунке:
 
-    <img alt="" src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
+    <img alt="Рисунок открытия корпуса коммуникатора плоской отверткой: вставить ее в верхний шов возле антенны и поддеть крышку наружу, затем вставить в нижний шов и поддеть вниз. Отдельно показано расположение разъема USB-C на краю платы." src="./image6.webp" style="width:6.543346456692913in;height:1.7866699475065617in" />
 
 3.  Кабелем USB-С подключите GT к компьютеру.
 
@@ -216,7 +216,7 @@
 
 **Окно „Panel settings“:**
 
-<img alt="" src="./image7.webp" style="width:7.086614173228346in;height:1.236220472440945in" />
+<img alt="TrikdisConfig, окно GT_M150, раздел 'Panel settings'. В группе TLC красной рамкой выделено поле 'Communication protocol' со значением '2. Dual Tone'." src="./image7.webp" style="width:7.086614173228346in;height:1.236220472440945in" />
 
 1.  Если коммуникатор подключен к клеммам TIP/RING охранной панели, то необходимо установить "**Dual tone**".
 
@@ -262,15 +262,15 @@
 
 **Окно „Системные настройки“:**
 
-<img alt="" src="./image11.webp" style="width:7.086614173228346in;height:1.236220472440945in" />
+<img alt="TrikdisConfig, окно GT_M150, раздел 'Системные настройки'. В группе 'Основные' выделено поле 'Объектовый номер' со значением 561234." src="./image11.webp" style="width:7.086614173228346in;height:1.236220472440945in" />
 
 1.  Введите **Объектовый номер (Не используйте FFFE, FFFF объектовые номера**.**)**.
 
-<img alt="" src="./image12.webp" style="width:7.086614173228346in;height:1.2440944881889764in" />
+<img alt="TrikdisConfig, окно GT_M150, раздел 'Panel settings'. В группе TLC выделено поле 'Communication protocol' со значением '2. Dual Tone'." src="./image12.webp" style="width:7.086614173228346in;height:1.2440944881889764in" />
 
 1.  Если коммуникатор подключен к клеммам TIP/RING охранной панели, то необходимо установить "**Dual tone**".
 
-<img alt="" src="./image13.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
+<img alt="TrikdisConfig, окно GT_M150, раздел 'Panel settings'. В группе 'Serial Bus' выделено поле 'Модель панели' со значением '5. PARADOX SP/MG se'." src="./image13.webp" style="width:7.086614173228346in;height:1.5984251968503937in" />
 
 2. Если коммуникатор подключен к шине клавиатуры или последовательной шине охранной панели, то выберите модель охранной панели, которая будет подключена к коммуникатору.
 
@@ -327,9 +327,9 @@
 
 7.  Закройте верхнюю крышку.
 
-<img alt="" src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
+<img alt="Чертеж: слева плата в корпусе, защелка на ее левом краю обведена кружком, стрелка влево показывает направление ее освобождения; справа задняя часть пустого корпуса с двумя обведенными отверстиями для крепежных шурупов." src="./image16.webp" style="width:3.937007874015748in;height:2.015748031496063in" />
 
-<img alt="" src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
+<img alt="Чертеж разъема SIM карты на плате: стрелка показывает, как вставить карту nano-SIM в разъем." src="./image17.webp" style="width:2.2913385826771653in;height:0.984251968503937in" />
 
 !!! note "Примечание"
     Убедитесь, что SIM карта активирована. / Убедитесь, что включена услуга
@@ -348,27 +348,27 @@
 
 #### DSC
 
-<img class="wiring-diagram" alt="" src="./wiring-dsc.webp" width="545" height="481" />
+<img class="wiring-diagram" alt="Схема подключения: шина клавиатуры охранной панели DSC к GT. RED соединён с +DC, BLK — с -DC, YEL — с CLK, GRN — с DATA." src="./wiring-dsc.webp" width="545" height="481" />
 
 #### PARADOX
 
-<img class="wiring-diagram" alt="" src="./wiring-paradox.webp" width="651" height="481" />
+<img class="wiring-diagram" alt="Схема подключения: последовательный порт охранной панели PARADOX к GT через кабель EX-CRP2.4, заказываемый отдельно. Провод R, красный, соединён с +DC; B, чёрный, — с -DC; Y, жёлтый, — с CLK; G, зелёный, — с DATA." src="./wiring-paradox.webp" width="651" height="481" />
 
 #### CADDX
 
-<img class="wiring-diagram" alt="" src="./wiring-caddx.webp" width="535" height="485" />
+<img class="wiring-diagram" alt="Схема подключения: шина клавиатуры охранной панели CADDX к GT. POS соединён с +DC, COM — с -DC, DATA — с DATA." src="./wiring-caddx.webp" width="535" height="485" />
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="" src="./wiring-texecom.webp" width="662" height="480" />
+<img class="wiring-diagram" alt="Схема подключения: последовательный порт охранной панели TEXECOM к GT через кабель EX-CRP4, заказываемый отдельно. Провод R, красный, соединён с +DC; B, чёрный, — с -DC; BL, синий, — с CLK; W, белый, — с DATA." src="./wiring-texecom.webp" width="662" height="480" />
 
 #### INNERRANGE INCEPTION
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-inception.webp" width="634" height="461" />
+<img class="wiring-diagram" alt="Схема подключения: Inner Range Inception к GT. VOUT + соединён с +DC, VOUT 0V — с -DC; от USB-порта панели через кабель USB чёрный провод соединён с -DC, зелёный — с CLK, белый — с DATA." src="./wiring-innerrange-inception.webp" width="634" height="461" />
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="" src="./wiring-innerrange-integriti.webp" width="564" height="461" />
+<img class="wiring-diagram" alt="Схема подключения: порт 0 Inner Range Integriti соединён с GT кабелем Inner Range INTG-996795. +DET (+13 V) — с +DC, GND 5 — с -DC, Rx 3 — с CLK, Tx 2 — с DATA." src="./wiring-innerrange-integriti.webp" width="564" height="461" />
 
 #### Honeywell Vista-15, Vista-20, Vista-48
 
@@ -383,7 +383,7 @@
 !!! note "Примечание"
     Для этого подключения версия прошивки коммуникатора должна быть не ниже 1.21.
 
-<img alt="" src="./image22.webp" style="width:3.44000656167979in;height:2.9000054680664915in" />
+<img alt="Схема подключения: охранная панель PARADOX SP/SP+/MG/MG+ к GT. Шина клавиатуры: +AUX (+12V) к +DC, -AUX к -DC, GRN к DATA, YEL к CLK. Телефонный коммуникатор: TIP к TIP, RING к RING." src="./image22.webp" style="width:3.44000656167979in;height:2.9000054680664915in" />
 
 При подключении коммуникатора к шине клавиатуры и клеммам TIP/RING охранной панели необходимо сделать следующие настройки коммуникатору GT:
 
@@ -420,11 +420,11 @@
     выключателя".
 Коммуникатор подключен к шине клавиатуры или последовательной шине охранной панели. / Постановка/снятие охранной панели с охраны осуществляется через зону выключателя.
 
-<img alt="" src="./image24.webp" style="width:3.7700076552930883in;height:2.443338801399825in" />
+<img alt="Схема подключения: охранная панель к GT. Шина клавиатуры или последовательный порт: RED (+12В) к +DC, BLK к -DC, YEL к CLK, GRN к DATA. Зона выключателя (keyswitch): 1 Раздел к 1 I/O, 2 Раздел к 2 I/O." src="./image24.webp" style="width:3.7700076552930883in;height:2.443338801399825in" />
 
 Коммуникатор подключен к клеммам TIP/RING охранной панели. / Постановка/снятие охранной панели с охраны осуществляется через зону выключателя.
 
-<img alt="" src="./image25.webp" style="width:3.706674321959755in;height:2.720005468066492in" />
+<img alt="Схема подключения: охранная панель к GT. Питание: +AUX (+12 В) к +DC, -AUX к -DC. Клеммы телефонного коммуникатора: TIP к TIP, RING к RING. Зона выключателя (keyswitch): 1 Раздел к 1 I/O, 2 Раздел к 2 I/O." src="./image25.webp" style="width:3.706674321959755in;height:2.720005468066492in" />
 
 ### Схема подключения входа 
 
@@ -432,9 +432,9 @@
 
 Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, NC/DEOL:
 
-<img alt="" src="./image26.webp" style="width:4.4175087489063865in;height:1.3500021872265966in" />
+<img alt="Три схемы входной цепи между COM и INx, слева направо: Нормально открытый (NO) — контакт NO; Нормально закрытый (NC) — контакт NC; Нормально закрытая цепь с резистором 2,2k в конце линии (NC/EOL 2,2k) — контакт NC и последовательный резистор 2,2k." src="./image26.webp" style="width:4.4175087489063865in;height:1.3500021872265966in" />
 
-<img alt="" src="./image27.webp" style="width:5.340010936132983in;height:1.695003280839895in" />
+<img alt="Три схемы входной цепи между COM и INx, слева направо: Нормально открытая цепь с резистором 2,2k в конце линии (NC/EOL 2,2k) — контакт NO параллельно резистору 2,2k; Нормально открытая цепь с распознаванием тампера (NO/DEOL) — Tamper и резистор 2,2k последовательно, второй резистор 2,2k параллельно контакту NO; Нормально закрытая цепь с распознаванием тампера (NC/DEOL) — такое же соединение с контактом NC." src="./image27.webp" style="width:5.340010936132983in;height:1.695003280839895in" />
 
 !!! note "Примечание"
     Подключив к коммуникатору Trikdis iO-8 расширители, можно
@@ -449,7 +449,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 Для увеличения количества входов (IN), выходов (OUT) необходимо подключить проводной Trikdis *iO-8* расширитель. Конфигурация *GT* с модулем расширения описаны в п. 6.8 „Окно „RS485 модули“.
 
-<img alt="" src="./image29.webp" style="width:3.5133409886264215in;height:2.09667104111986in" />
+<img alt="Схема подключения: охранная панель к GT и iO-8. Питание: +AUX (+12 В) к +DC обоих устройств, -AUX к -DC обоих устройств; ответвления отмечены точками. Связь RS485: GT A 485 к iO-8 A (RS485), GT B 485 к iO-8 B (RS485)." src="./image29.webp" style="width:3.5133409886264215in;height:2.09667104111986in" />
 
 ### Включение коммуникатора 
 
@@ -542,7 +542,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 Войдите в **Configuration>General>Alarm Reporting**. В группе **3rd Party Device Reporting** необходимо установить:
 
-<img alt="" src="./image30.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
+<img alt="Страница Alarm Reporting панели Inception. В разделе 3rd Party Device Configuration отмечено Enable 3rd Party Device Reporting; для 3rd Party Device Type выбрано Trikdis, для Serial Port — Serial Port 1 (Plugged In, In Use By 3rd Party Device). Пункты отмечены цифрами 1, 2 и 3." src="./image30.webp" style="width:6.625984251968504in;height:3.2125984251968505in" />
 
 1.  **Enable 3rd Party Device Reporting** – отметьте поле.
 
@@ -687,11 +687,11 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
         цветом и мигает желтым).
 3. Нажмите „**Add new system“** и введите „Unique ID/IMEI“ номер GT, который найдете на изделии или на упаковке. Нажмите кнопку „**Next“**.
 
-<img alt="" src="./image37.webp" style="width:2.9921259842519685in;height:3.704724409448819in" />
+<img alt="Экран Scan QR code приложения: поле Unique ID/IMEI для ввода номера устройства, кнопка Scan QR code для сканирования кода с этикетки изделия и кнопка Next для продолжения. Выноска указывает, что IMEI можно найти на упаковке, корпусе изделия или в TrikdisConfig." src="./image37.webp" style="width:2.9921259842519685in;height:3.704724409448819in" />
 
 4. Введите название системы. Нажмите кнопку „**Next**“.
 
-<img alt="" src="./image38.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+<img alt="Protegus2, экран «Add new system»: в поле Name указано GT, показаны выбор Background colour и значение Time zone — Europe/Vilnius. Кнопки Cancel и Next." src="./image38.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
 
 ### Дополнительные настройки для включения/выключения системы зоной выключателя 
 
@@ -702,20 +702,20 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 1.  Нажмите кнопку „**Continue**“.
 
-<img alt="" src="./image39.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+<img alt="Экран приложения Protegus2 «The system is not controlled remotely»: рядом с озадаченным человеком изображён коммуникатор с индикаторами NETWORK, DATA, POWER и TROUBLE и клеммами +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2. Ниже текст: «You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system.» Кнопка «Continue»." src="./image39.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
 
 2. Введите “**Area name**“. Включите управление PGM выходом приложением Protegus2.
 3. Выберите „**Pulse“** или „**Level“**, в зависимости от того, как настроен тип зоны выключателя (keyswitch). Если необходимо, можете изменить интервал импульса.
 
 2.  Нажмите кнопку „**Save**“.
 
-<img alt="" src="./image40.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
+<img alt="Экран приложения Protegus2 «Add new area»: в поле «Area number» указано 1, в поле «Area name» — «1 Area». Переключатель «Control with Protegus2 Europe» включён. В поле «Assigned Output» указано PGM1. Выбран вариант «Pulse», в поле «Pulse interval in seconds» указано 3; вариант «Level» не выбран. Кнопки «Cancel» и «Save»." src="./image40.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
 
 3. Если будет еще один раздел охранной сигнализации, то необходимо нажать „**Click to add an area**“. Настройка PGM выхода аналогично описанной выше.
 
 2.  После окончания настроек нажмите кнопку „**Skip**“.
 
-<img alt="" src="./image41.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+<img alt="Экран приложения Protegus2 «Areas»: в списке показано «1 Area» с подписью «Controlled with: PGM1» и кнопкой удаления с крестиком. Ниже — кнопка с плюсом и текст «Click to add an area». Внизу кнопки «Skip» и «Next»." src="./image41.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
 
 ### Включение/выключение охранной системы с *Protegus2* 
 
@@ -723,7 +723,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 2.  В *Protegus2* придет сообщение об изменении статуса системы охраны и икона статуса изменит свое состояние.
 
-<img alt="" src="./image42.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
+<img alt="Protegus2, главный экран системы GT: статус Online с делениями уровня сигнала, раздел «1 Area» со статусом Unknown, кнопки Arm и Disarm и кнопка переключения выхода PGM2 внизу слева." src="./image42.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
 
 ### Управление SMS сообщениями 
 
@@ -862,7 +862,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 **Закладка „Настройки“**
 
-<img alt="" src="./image48.webp" style="width:7.086614173228346in;height:2.559055118110236in" />
+<img alt="TrikdisConfig, окно «Сообщения на ПЦН», вкладка «Настройки»: «Период теста» отмечен и установлен на 24 ч 0 мин; «Период PING по IP» недоступен и показывает 0 мин 30 с; переход на резервный канал — после 2 попыток, возврат на основной — после 1 мин 30 с; «№ линии» — 1, «№ приемника» — 1." src="./image48.webp" style="width:7.086614173228346in;height:2.559055118110236in" />
 
 Группа „Настройки“
 
@@ -886,7 +886,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 **Закладка “Сервис Protegus”**
 
-<img alt="" src="./image49.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
+<img alt="TrikdisConfig, окно Сообщения пользователю, вкладка Сервис PROTEGUS. Поле Разрешить подключиться отмечено; в поле Пароль доступа к PROTEGUS Cloud показан заводской код 123456; Parallel reporting не отмечено." src="./image49.webp" style="width:7.086614173228346in;height:1.9488188976377954in" />
 
 Protegus сервис позволяет пользователям удаленно наблюдать и управлять коммуникатором. Больше информации о Protegus сервисе найдете на [www.protegus.app](https://www.protegus.app).
 
@@ -959,7 +959,7 @@ Protegus сервис позволяет пользователям удален
 
   **Закладка “Connection Type”**
 
-  <img alt="" src="./image53.webp" style="width:7.086614173228346in;height:3.515748031496063in" />
+  <img alt="TrikdisConfig, окно Network settings, вкладка Connection Type. Значение Connection Type — LTE CAT-M1; Select all отмечено. Отмечены диапазоны B1, B2, B3, B4, B5, B8, B12, B13, B18, B19, B20, B25, B26, B27, B28, B66 и B85." src="./image53.webp" style="width:7.086614173228346in;height:3.515748031496063in" />
 
   Эти настройки действительны для коммуникаторов с модемом CAT-M1. Вы можете указать частоты, на которых будет работать модем коммуникатора.
 
@@ -1051,7 +1051,7 @@ Protegus сервис позволяет пользователям удален
 
 В программном окне можно включить, выключить и изменить отправляемые внутренние события коммуникатора. Выключив внутреннее сообщение в этом программном окне, оно не будет отправляться независимо от других настроек.
 
-<img alt="" src="./image57.webp" style="width:7.086614173228346in;height:2.12992125984252in" />
+<img alt="TrikdisConfig, окно «Описание событий»: в таблице перечислены COMMUNICATION (код события CID 350, SIA YC; код восстановления CID 350, SIA YK), POWER (код события CID 302, SIA YT; код восстановления CID 302, SIA YR), REMOTE_FINISHED (CID 412, SIA RS), REMOTE_STARTED (CID 411, SIA RB), START (CID 700, SIA RR) и TEST (CID 602, SIA RP). Для всех указан раздел 99 и зона 999; отправка событий включена для всех, восстановление — только для COMMUNICATION и POWER." src="./image57.webp" style="width:7.086614173228346in;height:2.12992125984252in" />
 
 - **COMMUNICATION** – сообщение о нарушении связи между охранной панелью и коммуникатором GT.
 
@@ -1074,7 +1074,7 @@ Protegus сервис позволяет пользователям удален
 
 Для восстановления заводских настроек коммуникатора GT необходимо в программном окне TrikdisConfig нажать кнопку „**Восстановить“**.
 
-<img alt="" src="./image58.webp" style="width:7.086614173228346in;height:0.9645669291338582in" />
+<img alt="Фрагмент окна TrikdisConfig: в разделе Заводские настройки красной рамкой выделена кнопка Восстановить." src="./image58.webp" style="width:7.086614173228346in;height:0.9645669291338582in" />
 
 Другой способ восстановления заводских настроек.
 
@@ -1098,7 +1098,7 @@ Protegus сервис позволяет пользователям удален
 
 2.  В поле „Уникальный №“ введите IMEI номер GT, который указан на упаковке или на изделии.
 
-<img alt="" src="./image59.webp" style="width:7.086614173228346in;height:2.188976377952756in" />
+<img alt="Стартовое окно TrikdisConfig. В разделе Удаленный доступ красными рамками выделены поле Уникальный № и кнопка Конфигурировать; рядом расположено поле Название системы." src="./image59.webp" style="width:7.086614173228346in;height:2.188976377952756in" />
 
 3. В поле „**Название системы**“ напишите название коммуникатора.
 
@@ -1143,7 +1143,7 @@ Protegus сервис позволяет пользователям удален
 
 3.  В программе TrikdisConfig откройте окно „**Обновление программы**“**.**
 
-<img alt="" src="./image60.webp" style="width:7.086614173228346in;height:2.5039370078740157in" />
+<img alt="TrikdisConfig, окно «Обновление программы», раздел «Прошивка»: пустое поле «Открыть» с кнопкой «Открыть файл», неактивная кнопка «Обновить (F12)» и индикатор выполнения на 0%." src="./image60.webp" style="width:7.086614173228346in;height:2.5039370078740157in" />
 
 4. Нажмите кнопку „**Открыть файл**“ и выберите нужный файл для установки.
 
@@ -1386,6 +1386,6 @@ Protegus сервис позволяет пользователям удален
 
 Выполняя работы по установке оборудования, обязательно должно быть выключено его внешнее питание.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
+<img alt="Перечеркнутый контейнер на колесах (WEEE): изделие следует утилизировать отдельно от бытовых отходов." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
 
 Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.

@@ -1,7 +1,7 @@
 # iO-LORA Беспроводной расширитель
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="Вид спереди беспроводного расширителя TRIKDIS iO-LORA: индикаторы NETWORK, OUTPUT и POWER. На корпусе напечатаны параметры 9-26 V, 0.1 A Max и обозначения клемм +DC, -DC, D0, D1, +5V, 1 Wire/OUT wgd, COM, IN1, NC, C и NO." width="200">
 </div>
 
 ## Требование безопасности
@@ -15,7 +15,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-> <img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+> <img alt="Перечёркнутый контейнер для мусора на колёсах: изделие нельзя выбрасывать вместе с бытовыми отходами." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -64,7 +64,7 @@
 
 ### Элементы расширителя 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="Две фотографии расширителя iO-LORA: слева закрытый корпус, справа открытый с видимой платой. Слева: 1 — световые индикаторы NETWORK, OUTPUT, POWER; 2 — щель для снятия передней крышки на правом краю. Справа: 3 — клеммы для внешних соединений; 4 — кнопка SW2 для привязки устройства и проверки подключения; 5 — DIP-переключатель SW1." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 !!! note "Настройки DIP-выключателя „SW1“"
     Для изделий версии HW iO-LO_x30x_7_230418:
@@ -108,7 +108,7 @@
 
 1.  Снимите верхнюю крышку.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Два рисунка снятия верхней крышки iO-LORA. Слева: вставить отвёртку в щель у верхнего края. Справа: нажать на рукоятку отвёртки вниз, чтобы освободить крышку." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Удалите плату.
 
@@ -118,7 +118,7 @@
 
 5.  Закройте верхнюю крышку.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Рисунок корпуса iO-LORA: справа показано основание с монтажными отверстиями; слева — плата у края корпуса, обведённая точка крепления и стрелка наружу." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Подключение питания 
 

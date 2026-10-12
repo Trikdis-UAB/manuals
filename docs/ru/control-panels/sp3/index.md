@@ -707,7 +707,7 @@
 
 3.  Если программа предоставляет совершенно другое изображение или не выполняет ваши команды, выберите Settings -\> System configuration -\> System out of sync? и нажмите кнопку „Sync“.
 
-<img alt="" src="./image51.webp" style="width:2.220472440944882in;height:3.279527559055118in" />
+<img alt="Экран системы Protegus2: два раздела — Sritis 1 в состоянии Armed и Sritis 2 в состоянии Disarmed. Для каждого раздела есть кнопки Arm и Disarm." src="./image51.webp" style="width:2.220472440944882in;height:3.279527559055118in" />
 
 ### Конфигурация и управление SMS командами
 
@@ -1084,7 +1084,7 @@
 
 --8<-- "ru/faq/index.md:sp3-wiegand-reader-door-output"
 
-<img alt="" src="./image61.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
+<img alt="RFID карточка: напечатанный на ней идентификационный номер у нижнего края обведён красным." src="./image61.webp" style="width:2.3833377077865268in;height:1.5166699475065617in" />
 
 #### Регистрация контактных (iButton) ключей
 

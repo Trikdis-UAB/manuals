@@ -1,7 +1,7 @@
 # Коммуникатор FIRECOM для панелей пожарной сигнализации
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Передняя крышка коммуникатора FIRECOM с местами индикаторов POWER, DATA и TROUBLE на красной панели." width="400">
 </div>
 
 ## Описание 
@@ -275,7 +275,7 @@
     <img src="./image8.webp" alt="" style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 2.0in; height:in;" />
+    <img src="./image9.webp" alt="Таблица номиналов резисторов со столбцами RT, R1 и R2. Строки по порядку: 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; 2.2k, 4.7k, 8.2k; 10k, 10k, 5.6k." style="width: 2.0in; height:in;" />
   </figure>
 </div>
 
@@ -432,7 +432,7 @@
 
 Пожарной панели **INIM Smartline** необходимо установить ведомый (Slave) режим работы, когда коммуникатор ***FIRECOM*** подключен через шину RS485 к пожарной панели.
 
-<img alt="" src="./image35.webp" style="width:7.0in;height:in" />
+<img alt="SmartLeague, окно «RS485 Bus Programming». В разделе «Master/Slave Settings» выбрано «Configure as Slave», значение «Assign address» — 1." src="./image35.webp" style="width:7.0in;height:in" />
 
 !!! note "Примечание"
     Если к пожарной панели **INIM Smartline** подключены повторители, то
@@ -495,31 +495,31 @@
 
 1. Откройте вкладку "**Node View**".
 
-<img alt="" src="./image46.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, окно «Site Details». Вкладка «Node View» выделена для выбора." src="./image46.webp" style="width:7.0in;height:in" />
 
 2. Загрузите настройки пожарной панели на свой компьютер.
 
-<img alt="" src="./image47.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View» для «Panel 1». Кнопка «Retrieve All Data» выделена." src="./image47.webp" style="width:7.0in;height:in" />
 
 3. Введите код (заводской код – 4444).
 
 4.  Нажмите „**OK**“.
 
-<img alt="" src="./image48.webp" style="width:3.5in;height:in" />
+<img alt="ZFP Programming Tools, окно «Panel Log In». Над четырьмя пустыми полями кода надпись «Enter Access Level 3 Code»; зеленая кнопка с галочкой подтверждает ввод." src="./image48.webp" style="width:3.5in;height:in" />
 
 5. Выберите „**BMS Interface**“.
 
 6.  Нажмите на свободную икону.
 
-<img alt="" src="./image49.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices». В «Device Palette» выбран «BMS Interface», кнопка «Edit Devices» выделена." src="./image49.webp" style="width:7.0in;height:in" />
 
 7. Нажмите на „**Edit Devices**“.
 
-<img alt="" src="./image50.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices». «BMS Interface» занимает ячейку устройства 16; кнопка «Edit Devices» выделена." src="./image50.webp" style="width:7.0in;height:in" />
 
 8. Во вкладке “**Device**” введите имя системы.
 
-<img alt="" src="./image51.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices», «Device Properties» для устройства 16. На вкладке «Device» значение «Name» — FIRECOM, значение «Device Type» — BMS Interface." src="./image51.webp" style="width:7.0in;height:in" />
 
 9. Во вкладке “**Properties**” введите имя системы.
 
@@ -529,13 +529,13 @@
 
 12. Запишите настройки в пожарную панель.
 
-<img alt="" src="./image52.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Device Properties» для «BMS Interface». Значение «Name» — FIRECOM; «Connection» — ABUS RS485; «BAUD Rate» — 57600; «Response Timeout» — 250; «Max Retries» — 5. Для «Zone Disablements» указано Zone; для «Input Group Disablements», «Output Group Disablements» и «Group Actions» указано Group. Кнопка «Send All Data» выделена." src="./image52.webp" style="width:7.0in;height:in" />
 
 13. Введите код (заводской код – 4444).
 
 14. Нажмите „**OK**“.
 
-<img alt="" src="./image53.webp" style="width:3.5in;height:in" />
+<img alt="ZFP Programming Tools, окно «Panel Log In». Над четырьмя пустыми полями для кода находится надпись «Enter Access Level 3 Code»; зелёная кнопка с галочкой подтверждает ввод." src="./image53.webp" style="width:3.5in;height:in" />
 
 Пожарная панель запрограммирована. Отсоедините кабель USB2.0 A-B от пожарной панели.
 
@@ -567,7 +567,7 @@
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по протоколу Modbus RTU (RS485). 
 
-<img alt="" src="./image111.webp" style="width:3.0in;height:in" />
+<img alt="Окно модуля MK-30 (1). Значение «Modbus Interface» — RS-485; для «Modbus RTU» указаны «Bitrate» 115200, «Parity» None, «Stop Bits» 1 и «Address» 1." src="./image111.webp" style="width:3.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
@@ -600,7 +600,7 @@
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по LAN сети. IP-адреса локальной сети необходимо вводить в соответствии с настройками вашей сети. 
 
-<img alt="" src="./image112.webp" style="width:3.0in;height:in" />
+<img alt="Окно модуля MK-30 (1). «Modbus TCP IP» — 192.168.1.2, «Modbus TCP Mask» — 255.255.255.0, «Modbus TCP Gate» — 192.168.1.1, «Modbus TCP Port» — 502." src="./image112.webp" style="width:3.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
@@ -1416,4 +1416,4 @@
 
 Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="Перечеркнутый контейнер на колесах (WEEE): изделие следует утилизировать отдельно от бытовых отходов." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
