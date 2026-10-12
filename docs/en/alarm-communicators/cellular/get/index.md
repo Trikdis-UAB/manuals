@@ -1058,9 +1058,11 @@ For setting parameters on how the control panel will communicate with the CMS ch
      "2.xx" on purpose, since later 2.x versions will follow; add the first released version number
      when it is out. To confirm: hardware (x1x0/x1x1), TrikdisConfig version, Protegus reporting
      path and swap button in the released TrikdisConfig, Communication path test units.
-     Event codes, EN 50136 categories and per-channel object IDs are left out on purpose. -->
+     Event codes, EN 50136 categories and per-channel object IDs are left out on purpose.
+     The span with the old "...-200-and-later" id keeps the links in the 9 Oct team emails working;
+     remove it before merge. -->
 
-On firmware 2.xx, GET sends events to the monitoring station in one of two reporting modes: **Fallback** or **Dual Path**. The mode decides which network types (LAN, SIM1, SIM2) carry the messages. Which receivers get them is still set by the channels described above: **Primary channel**, **Parallel channel** and their backups.
+<span id="643-reporting-modes-on-firmware-200-and-later"></span>On firmware 2.xx, GET sends events to the monitoring station in one of two reporting modes: **Fallback** or **Dual Path**. The mode decides which network types (LAN, SIM1, SIM2) carry the messages. Which receivers get them is still set by the channels described above: **Primary channel**, **Parallel channel** and their backups.
 
 === "Protegus app"
 
