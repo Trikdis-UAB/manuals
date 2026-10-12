@@ -187,7 +187,7 @@ GSM коммуникатор G16T соответствует стандарту 
 
 ### Структурная схема применения GSM коммуникатора G16T 
 
-<img alt="" src="./image5.webp" style="width:7.0875in;height:2.9930555555555554in" />
+<img alt="Структурная схема применения G16T: охранная панель соединена с коммуникатором TRIKDIS 2G/3G/LTE. Верхняя ветвь GSM показывает звонки и SMS на телефон с приложением Protegus. Ветвь GPRS ведёт через интернет к серверу Protegus, затем к телефону. От интернета также показана двусторонняя связь с областью пульта централизованного наблюдения. Отдельная ветвь GSM ведёт от коммуникатора к приёмнику, а от приёмника — к программе мониторинга Monas MS." src="./image5.webp" style="width:7.0875in;height:2.9930555555555554in" />
 
 !!! note "Примечание"
     Перед установкой убедитесь, что имеете:
@@ -334,21 +334,21 @@ GSM коммуникатор G16T соответствует стандарту 
 
 #### Без контроля телефонной линии
 
-<img class="wiring-diagram" alt="" src="./wiring-tip-ring.webp" width="597" height="556" />
+<img class="wiring-diagram" alt="Схема подключения охранной панели к G16T без контроля телефонной линии. +AUX панели (+12 В) соединена с +DC коммуникатора, −AUX — с −DC, TIP — с TIP, RING — с RING. Клеммы G16T T1 / IN1, R1 / IN2, OUT, COM, A RS485 и B RS485 не подключены." src="./wiring-tip-ring.webp" width="597" height="556" />
 
 #### С контролем телефонной линии
 
-<img class="wiring-diagram" alt="" src="./wiring-tip-ring-supervised.webp" width="597" height="555" />
+<img class="wiring-diagram" alt="Схема подключения охранной панели к G16T с контролем телефонной линии. +AUX панели (+12 В) соединена с +DC коммуникатора, −AUX — с −DC, TIP — с TIP, RING — с RING, T-1 — с T1 / IN1, R-1 — с R1 / IN2. Клеммы G16T OUT, COM, A RS485 и B RS485 не подключены." src="./wiring-tip-ring-supervised.webp" width="597" height="555" />
 
 ### Схема подсоединения G16Т к зоне выключателя (keyswitch) охранной панели 
 
 #### Без контроля телефонной линии
 
-<img class="wiring-diagram" alt="" src="./wiring-keyswitch.webp" width="597" height="536" />
+<img class="wiring-diagram" alt="Схема подключения G16T к зоне выключателя (keyswitch) охранной панели без контроля телефонной линии. +AUX панели (+12 В) соединена с +DC коммуникатора, −AUX — с −DC, TIP — с TIP, RING — с RING; зона выключателя соединена с OUT. Клеммы G16T T1 / IN1, R1 / IN2, COM, A RS485 и B RS485 не подключены." src="./wiring-keyswitch.webp" width="597" height="536" />
 
 #### С контролем телефонной линии
 
-<img class="wiring-diagram" alt="" src="./wiring-keyswitch-supervised.webp" width="597" height="536" />
+<img class="wiring-diagram" alt="Схема подключения G16T к зоне выключателя (keyswitch) охранной панели с контролем телефонной линии. +AUX панели (+12 В) соединена с +DC коммуникатора, −AUX — с −DC, TIP — с TIP, RING — с RING, T-1 — с T1 / IN1, R-1 — с R1 / IN2; зона выключателя соединена с OUT. Клеммы G16T COM, A RS485 и B RS485 не подключены." src="./wiring-keyswitch-supervised.webp" width="597" height="536" />
 
 Руководствуйтесь этой схемой, при включении/выключении охранной панели зоной выключателя (keyswitch), которая управляется PGM выходом коммуникатора G16Т.
 
@@ -374,19 +374,19 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 #### Нормально закрытая цепь с резистором 10к в конце линии (NC/EOL 10к)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-eol.webp" width="341" height="301" />
+<img class="wiring-diagram" alt="Схема NC/EOL 10к: нормально закрытый контакт NC и резистор 10к соединены последовательно между COM и INx." src="./wiring-input-nc-eol.webp" width="341" height="301" />
 
 #### Нормально открытая цепь с резистором 10к в конце линии (NO/EOL 10к)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-eol.webp" width="337" height="359" />
+<img class="wiring-diagram" alt="Между COM и INx параллельно соединены нормально открытый контакт NO и резистор 10к. При разомкнутом контакте путь проходит через резистор; при замкнутом контакт шунтирует его. В подписи к рисунку цепь названа нормально открытой, но обозначение в скобках — «NC/EOL 10к»." src="./wiring-input-no-eol.webp" width="337" height="359" />
 
 #### Нормально открытая цепь с резистором 10к в конце линии и распознаванием тампера (NO/DEOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-no-deol.webp" width="397" height="370" />
+<img class="wiring-diagram" alt="Схема NO/DEOL: от COM цепь проходит через контакт Tamper и первый резистор 10к. Далее до INx параллельно подключены нормально открытый контакт NO и второй резистор 10к." src="./wiring-input-no-deol.webp" width="397" height="370" />
 
 #### Нормально закрытая цепь с резистором 10к в конце линии и распознаванием тампера (NC/DEOL)
 
-<img class="wiring-diagram" alt="" src="./wiring-input-nc-deol.webp" width="397" height="370" />
+<img class="wiring-diagram" alt="Схема NC/DEOL: от COM цепь проходит через контакт Tamper и первый резистор 10к. Далее до INx параллельно подключены нормально закрытый контакт NC и второй резистор 10к." src="./wiring-input-nc-deol.webp" width="397" height="370" />
 
 !!! note "Примечание"
     Подключив к коммуникатору проводные или беспроводные Trikdis iO
@@ -589,7 +589,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 Подключив G16Т к TrikdisConfig и нажав на кнопку **Считать [F4]**, программа в строке состояния предоставит информацию о подключенном изделии:
 
-<img alt="" src="./image31.webp" style="width:7.094488188976378in;height:0.6811023622047244in" />
+<img alt="Строка состояния TrikdisConfig: показан IMEI/Уникальный № устройства; состояние — «Считывание готово»; устройство — G16T_3210; серийный номер; BL — 1.06; FW — 1.41; HW — 0.01; состояние HID — «Администратор»." src="./image31.webp" style="width:7.094488188976378in;height:0.6811023622047244in" />
 
 | Наименование | Описание |
 |----|----|
