@@ -35,7 +35,7 @@ records and leaves the rest.
 | `--lang` | `en` | comma-separated; any language the app has (`en,lt,es,ru`) |
 | `--layout` | `desktop,phone` | desktop is 1440×900 @2x, phone is 390×844 @3x |
 | `--screen` | all in the model's screen list | comma-separated screen ids |
-| `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (confirmed); the other models are placeholders until confirmed, and the run says so. Both go into the manifest |
+| `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (both confirmed), SP5 to 1.00 (firmware confirmed, revision not); the other models are placeholders, and the run says so. The manifest records `firmwareConfirmed` and `revisionConfirmed` |
 | `--out` | `out` | output folder |
 
 Each g16 desktop capture gives two files: the whole window (`…-desktop.png`) and just the configurator
@@ -137,8 +137,8 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
 - **The device-info header shows "GET_x1x1".** The app shows the version string without its firmware
   part unless the device also sends a separate name (`dr`). Whether a real GET sends one is not known
   from the code; the sample sends none.
-- **SP5 values not checked against a real panel:** the firmware (1.00 is a placeholder, so the
-  dashboard says "Up to date"), the panel-event Contact ID codes (standard codes; the screen's manifest
+- **SP5 values not checked against a real panel:** the hardware revision and bootloader (firmware 1.00
+  is confirmed: every SP5 on the beta server reports it), the panel-event Contact ID codes (standard codes; the screen's manifest
   record carries an `unverified` note), keypad serial-number prefixes (52 = LCD, 51 = LED) and wireless
   device settings. SP5's Cameras page is VideoHub-only and is not captured.
 - **Live-only screens are not captured:** the read and write progress ("Reading… n%", "Writing… n%",

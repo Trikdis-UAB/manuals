@@ -13,21 +13,23 @@ export const SAMPLE = {
 // Hardware models, each with the configurator that serves it, its sample configuration and its
 // screen list. Firmware and hardware revision change which fields the app shows (e.g. account
 // number per CMS channel from fw 1.31, Bands/Generation from fw 1.17 on revision M15), so they must
-// match a current real device. Entries without `confirmed` are PLACEHOLDERS; the run says so and the
-// manifest records it. Override per run with --fw and --revision.
+// match a current real device. `firmwareConfirmed` / `revisionConfirmed` say which values are known;
+// the others are PLACEHOLDERS, the run says so and the manifest records it. Override per run with
+// --fw and --revision (an override counts as confirmed).
 // GET 1.35: released 2026-06-05 as GET_x1x0_0135 and GET_x1x1_0135 (two hardware variants);
 // Andrius chose 1.35 with both variants on 2026-10-02.
 const G16 = { configurator: 'g16', fixture: 'g16-family.json' };
 export const MODELS = {
-  'GET':   { ...G16, hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', confirmed: true },
+  'GET':   { ...G16, hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', firmwareConfirmed: true, revisionConfirmed: true },
   'GT':    { ...G16, hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
   'GT+':   { ...G16, hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
   'G16':   { ...G16, hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
   'G16T':  { ...G16, hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
   'E16':   { ...G16, hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
   'E16T':  { ...G16, hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
-  // SP5 firmware and revision are unknown (2026-10-07): placeholders until confirmed.
-  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: null, bt: '0100' },
+  // SP5 firmware 1.00: every SP5 on the beta server reports it (7 test systems, read 2026-10-12;
+  // it is the value the server stores). Hardware revision and bootloader are not known.
+  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: null, bt: '0100', firmwareConfirmed: true, revisionConfirmed: false },
 };
 
 export function setFirmware(model, { firmware, revision }) {

@@ -24,9 +24,10 @@ if (!MODELS[model]) throw new Error(`Unknown model ${model}. Known: ${Object.key
 const def = readJson(ROOT, 'screens', `${MODELS[model].configurator}.json`);
 setFirmware(model, { firmware: args.fw, revision: args.revision });
 const defaultRevision = MODELS[model].revision;
-if (!MODELS[model].confirmed && !args.fw) {
+if (!MODELS[model].firmwareConfirmed && !args.fw) {
   console.log(`NOTE firmware ${MODELS[model].firmware} for ${model} is a placeholder; pass --fw and --revision with the current release`);
 }
+if (!MODELS[model].revisionConfirmed && !args.revision) console.log(`NOTE the hardware revision for ${model} is not confirmed`);
 const screens = def.screens
   .filter((s) => !args.screen || args.screen.split(',').includes(s.id))
   .filter((s) => !s.onlyModels || s.onlyModels.includes(model));
@@ -212,7 +213,8 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     hwId: MODELS[model].hwId,
     firmware: fw.firmware,
     revision: fw.revision,
-    firmwareConfirmed: Boolean(MODELS[model].confirmed || args.fw),
+    firmwareConfirmed: Boolean(MODELS[model].firmwareConfirmed || args.fw),
+    revisionConfirmed: Boolean(MODELS[model].revisionConfirmed || args.revision),
     ...(revision ? { variantOf: screen.id } : {}),
     ...(screen.unverified ? { unverified: screen.unverified } : {}),
     language: lang,
