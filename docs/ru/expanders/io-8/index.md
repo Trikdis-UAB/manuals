@@ -20,25 +20,25 @@ iO-8 имеет 8 клемм вход/выход, которые могут бы
 
 2.  Подсоедините входы, как показано:
 
-<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Три схемы подключения входа iO-8. Нормально открытый (NO): контакт NO между xIN и C. Нормально закрытый (NC): контакт NC между xIN и C. Нормально закрытый/открытый с резистором в конце линии (EOL): контакт NC последовательно с параллельно соединёнными контактом NO и резистором 2,2k (10k)." src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 Схемы подключения и номинал резистора устанавливает основной модуль, к которому подключен модуль расширения iO-8.
 
 3.  Подсоедините выходы, как показано:
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 530px; height: auto;" />
+<img alt="Схемы подключения: клеммы AUX+ и xOUT расширителя iO-8 подключены к катушке реле с контактами NC, C и NO; на второй схеме эти клеммы подключены к резистору 2к2 и светодиоду, соединённым последовательно." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 530px; height: auto;" />
 
 4.  Подключите USB-кабель к основному устройству **Trikdis** и откройте приложение **TrikdisConfig**. Нажмите **Считать [F4]**.
 
 5.  Перейдите в окно **Модули** и щелкните свободную строку в области **RS485 модули**. Из списка выберите **iO-8 расширитель**, как показано:
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Снимок окна TrikdisConfig: в разделе Модули открыта таблица RS485 модуля. В списке для строки 1 выбран пункт iO-8 расширитель." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 6.  Введите серийный номер iO-8 в поле справа (ввести только цифры). Этот номер находится на наклейке iO-8.
 
 7.  В окнах меню **Зоны** и **PGM выходы** теперь будут отображаться входы и выходы iO-8, которые вы можете включить:
 
-    <img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+    <img alt="Снимок окна TrikdisConfig: в разделе Зоны открыт список поля Вход. Выбран RS485 Expander ID1, IO1; в списке также показаны Отключено и входы RS485 Expander ID1, IO2–IO8. В столбце Раздел указано 1." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Настройки могут отличаться в зависимости от основного устройства **Trikdis**. Настройте параметры **Зон** и **PGM выходов** в соответствии с инструкциями основного устройства.
 

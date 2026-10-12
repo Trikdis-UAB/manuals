@@ -122,7 +122,7 @@
 
 ### Подключение питания 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Схема подключения: источник питания к iO-LORA. Клемма +12В к +DC, клемма 0В к -DC; указано напряжение +12 В." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Схема подключения входа 
 
@@ -130,10 +130,10 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Схема подключения: вход iO-LORA к нормально открытому контакту NO. Контакт соединяет клеммы IN и COM при замыкании." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Схема подключения: вход iO-LORA к нормально закрытому контакту NC. Контакт соединяет клеммы IN и COM в нормальном состоянии." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -141,7 +141,7 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 Датчики температуры подсоединяются по приведенной схеме. К расширителю *iO-LORA* можно подключить один температурный датчик Maxim®/Dallas® DS18S20, DS18B20. Для подключения датчика температуры рекомендуется применять кабель с витой парой (UTP4x2x0.5 или STP4x2x0.5). Клемма „+5 V“ предназначена для питания, устройств подключенных к шине "1-Wire", напряжением постоянного тока. Допустимый ток 0,2 А. Выход защищен от перегрузки.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Схема подключения: iO-LORA к датчику температуры DS18B20. Красный провод: +5V к +Vdd; жёлтый: 1 Wire к DQ; чёрный: C к GND." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 При превышении допустимого тока питание отключается автоматически. Охранная панель "FLEXi" SP3 автоматически распознает и регистрирует подключенный датчик температуры.
 
@@ -181,19 +181,19 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Модули», вкладка «RS485 модули». В строке ID 1 выбран «Расширитель iO-LORA», поле «Серийный №» заполнено, «Раздел» — 1, «Название» — Expander ID1." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входа расширителя.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Скриншот TrikdisConfig 1.66.47 для SP3: раздел Зоны, вкладка Настройки зон. В выпадающем списке поля Вход для Zone 1 показан вариант RS485 Expander ID1, IN1." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходу расширителя.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Скриншот TrikdisConfig 1.66.47 для SP3: раздел PGM выходы, вкладка Выходы. В строке PGM 2 выбран выход RS485 Expander ID1, OUT1; время импульса — 10 с." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. В списке "**Датчики**" будут включены датчики температуры, если к iO-LORA расширителю подсоединен датчик температуры.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Датчики». В строке № 1 выбрано устройство RS485 Expander ID1; показаны поля «Серийный №», «Датчик», «Макс», «Мин» и задержка. Для Sensor 1 указаны «Макс» 30, «Мин» 20, обе соответствующие галочки установлены, задержка — 0." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

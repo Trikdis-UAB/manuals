@@ -59,7 +59,7 @@
 
 ### Элементы расширителя 
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+<img alt="Фотография платы расширителя iO8-LoRa с нумерацией элементов: 1 — световые индикаторы; 2 — клеммы для подключения проводов; 3 — кнопка SW1 для привязки устройства и проверки подключения; 4 — DIP выключатель SW2. Названия элементов перечислены справа." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
 
 !!! note "Настройки DIP-выключателя „SW2“"
     Для изделий версии HW iO8_x5xx_7_230419:
@@ -94,7 +94,7 @@
 
 ### Подключение питания 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Схема подключения: источник питания к iO-8-LORA. Клемма +12В источника соединена с +DC расширителя, клемма 0В — с -DC." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Схемы подключения входов 
 
@@ -102,34 +102,34 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="Схема подключения: Нормально открытый (NO). Между ZNx и C установлен нормально открытый контакт NO без резистора." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="Схема подключения: Нормально закрытый (NC). Между ZNx и C установлен нормально закрытый контакт NC без резистора." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 100%; height: auto;" />
-  </figure>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-  <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image7.webp" alt="Таблица номиналов резисторов с колонками RT, R1 и R2. Шесть строк: 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; 2.2k, 4.7k, 8.2k." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Схема подключения: Нормально открытый с резистором в конце линии (EOL). Между ZNx и C нормально открытый контакт NO подключён параллельно резистору R1." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Схема подключения: Нормально закрытый с резистором в конце линии (EOL). Между ZNx и C нормально закрытый контакт NC соединён последовательно с резистором R1." style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image10.webp" alt="Схема подключения: Нормально закрытый с резистором в конце линии, с контролем тампера и контролем повреждения кабеля (EOL_T). От ZNx последовательно подключены контакт NC тампера и резистор RT; далее контакт NC датчика подключён параллельно резистору R1 между этой точкой и C." style="width: 100%; height: auto;" />
+  </figure>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image11.webp" alt="Схема подключения: Нормально закрытый без EOL (ATZ). От ZNx до промежуточной точки контакт NC датчика 1 подключён параллельно R1; от этой точки до C контакт NC датчика 2 подключён параллельно R2. На схеме обозначены клеммы датчика 1 и клеммы датчика 2." style="width: 100%; height: auto;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image12.webp" alt="Схема подключения: нормально закрытый вход ATZ_T между ZNx и C. Клеммы датчика 1: последовательно соединены нормально закрытый контакт тампера и RT, затем нормально закрытый контакт параллельно R1. Клеммы датчика 2: последовательно подключён нормально закрытый контакт тампера, затем нормально закрытый контакт параллельно R2." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -139,11 +139,11 @@
 
 Различные электрические устройства могут управляться (вкл/выкл) удаленно с помощью контактов реле. Универсальная IO (вход/выход) клемма беспроводного расширителя *iO-8-LORA* должна быть установлена в режим работы „Выход“ (OUT) и назначен тип "Удаленное управление".
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Схема подключения: клеммы AUX+ и IOx расширителя iO-8-LORA подключены к катушке реле. Контакты реле обозначены NC, C и NO." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Схема подключения расширителя iO-8-LORA к охранной панели "FLEXi" SP3 
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="Схема подключения: от SP3 к трансиверу RF-LORA проведены соединения AUX+ (+12 В) — +DC, AUX- — -DC, 485 A — A RS 485 и 485 B — B RS485. RF-LORA связывается по беспроводной связи с расширителями iO-8-LORA на расстоянии до 5000 м; показаны расширители 1* и 8*. Каждый расширитель питается от отдельного источника 12-26В, подключённого к +DC и -DC." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     К охранной панели "FLEXi" SP3 должен быть подключен
@@ -168,15 +168,15 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Модули», вкладка «RS485 модули». В строке ID 1 выбран «расширитель iO8-LORA», поле «Серийный №» заполнено, «Раздел» — 1, «Название» — Expander ID1. В строке ID 2 указано «Недоступен», «Раздел» — 1, «Название» — Expander ID2." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входам расширителя.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Зоны», вкладка «Настройки зон». В раскрытом списке «Вход» видны «Отключено», «SP3 10 I/O» и входы «RS485 Expander ID1, IO1», «IO2» и «IO3»; для зоны выделен «RS485 Expander ID1, IO1»." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «PGM выходы», вкладка «Выходы». В столбце «Выход» для PGM 1 указано BELL, для PGM 222 — «RS485 Expander ID1, IO2». Для PGM 222 в поле «Описание выхода» указано удалённое управление, в поле «Время импульса, с» — 10." src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

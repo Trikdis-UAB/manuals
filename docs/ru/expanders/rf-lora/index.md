@@ -113,11 +113,11 @@
 
 ### Подключение трансивера RF-LORA к охранной панели "FLEXi" SP3 
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Схема подключения: клеммы AUX+, AUX-, 485 A и 485 B охранной панели SP3 соединены соответственно с клеммами +DC, -DC, A RS485 и B RS485 трансивера RF-LORA. Линия AUX+ обозначена «(+12 В)»." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Схема подключения расширителей LORA 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Схема подключения: клеммы AUX+, AUX-, 485 A и 485 B охранной панели SP3 соединены соответственно с клеммами +DC, -DC, A RS485 и B RS485 трансивера RF-LORA. RF-LORA связан по беспроводной связи на расстоянии до 5000 м с расширителями iO-LORA и iO-8-LORA. Клеммы +DC и -DC каждого расширителя подключены к отдельному источнику питания 12–26 В." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Конфигурация с TrikdisConfig
 
@@ -137,15 +137,15 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. В таблице видны строки Расширитель iO-LORA и расширитель iO8-LORA, а также столбец Серийный № для ввода серийного номера модуля." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входам расширителя**.**
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Зоны», вкладка «Настройки зон». Для Zone 1 раскрыт список «Вход» с вариантами «Отключено», «SP3 10 I/O» и входами и выходами «RS485 Expander ID»." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя**.**
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел PGM выходы, вкладка Выходы. Таблица показывает выходы PGM и столбцы Название, Выход, Разделы, Описание выхода и Время импульса, с; среди назначений видны BELL и выходы расширителей RS485." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

@@ -112,7 +112,7 @@ pdf: rfh11-original.pdf
 
 **Примечание:** если пароль неизвестен, вы можете найти тип приемного устройства и версии программного обеспечения/прошивки, нажав кнопку [Device info] ([информация об устройстве]).
 
-![](./image4.webp)
+![Окно программы R11config с пустым полем Password в центре и кнопкой Device info внизу слева. Кнопки Read, Write, Open и Save неактивны.](./image4.webp)
 
 **Примечание:** **на компьютере должны быть установлены драйверы USB** . При первом подключении приемного устройства к компьютеру в ОС MS Windows откроется окно Мастер нового оборудования для установки драйвера USB. Скачайте драйвер для USB \*.*inf* для Вашей ОС MS Windows с сайта http://www.trikdis.com/en/. В окне мастера выберите функцию Да, только в этот раз и нажмите кнопку Далее. В открывшемся окне Выбор параметров поиска и установки нажмите кнопку Обзор и выберите место, где был сохранен файл \*.inf. Следуйте инструкциям мастера для завершения установки драйвера USB.
 
@@ -120,7 +120,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="Окно COM Port программы R11config: раскрыт список COM Port с вариантами COM1 и COM2; флажок COM Port Autodetect не установлен." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -144,7 +144,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Окно R11config, раздел Main: поля Frequency и Transmitter ID пусты; рядом расположена кнопка Read для чтения параметров приёмника." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -196,7 +196,7 @@ pdf: rfh11-original.pdf
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image13.webp" alt="Окно R11config, раздел Main: на верхней панели расположены кнопки Open, Save и Exit для открытия, сохранения параметров и выхода из программы." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
