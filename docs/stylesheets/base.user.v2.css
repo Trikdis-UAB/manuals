@@ -1174,7 +1174,9 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   display: none;
 }
 
-/* Kill Material's JS-driven sliding indicator (::before on the labels container) */
+/* Kill Material's JS-driven sliding indicator (::before on the labels container)
+   and its phone scroll spacer (::after), which would leave a gap at the end */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels::after,
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels::before {
   display: none !important;
   content: none !important;
