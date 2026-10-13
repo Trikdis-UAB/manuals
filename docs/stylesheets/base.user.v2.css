@@ -1244,7 +1244,8 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
 .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(4):focus-visible ~ .tabbed-labels > label:nth-child(4),
 .md-typeset .tabbed-set.tabbed-alternate > input:nth-child(5):focus-visible ~ .tabbed-labels > label:nth-child(5) {
   outline: 3px solid #171717;
-  outline-offset: 2px;
+  /* Inside the label: the bar clips anything drawn outside it on phones */
+  outline-offset: -3px;
 }
 
 /* A tab set inside a tab: the same control, smaller, sized to its labels */
@@ -1320,7 +1321,9 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > in
     max-width: 15rem;
   }
   .md-typeset .tabbed-block .tabbed-set.tabbed-alternate > .tabbed-labels > label {
-    min-height: 1.8rem;
+    /* As tall as the switch's buttons on a phone (a comfortable tap target);
+       still clearly smaller, as it is narrower */
+    min-height: 2rem;
     font-size: clamp(0.52rem, 3vw, 0.66rem);
   }
 }
