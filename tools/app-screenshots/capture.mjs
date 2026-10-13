@@ -21,26 +21,33 @@ const langs = (args.lang ?? 'en').split(',');
 const layouts = (args.layout ?? 'desktop,phone').split(',');
 const outDir = path.resolve(ROOT, args.out ?? 'out');
 if (!MODELS[model]) throw new Error(`Unknown model ${model}. Known: ${Object.keys(MODELS).join(', ')}`);
-const def = readJson(ROOT, 'screens', `${MODELS[model].configurator}.json`);
+const cfg = MODELS[model].configurator;
+// --flow picks a screen list that is not tied to one configurator (e.g. the add-system wizard).
+const def = readJson(ROOT, 'screens', `${args.flow ?? cfg}.json`);
+if (def.models && !def.models.includes(model)) throw new Error(`${args.flow ?? cfg}.json does not cover ${model}`);
 setFirmware(model, { firmware: args.fw, revision: args.revision });
 const defaultRevision = MODELS[model].revision;
 if (!MODELS[model].firmwareConfirmed && !args.fw) {
   console.log(`NOTE firmware ${MODELS[model].firmware} for ${model} is a placeholder; pass --fw and --revision with the current release`);
 }
 if (!MODELS[model].revisionConfirmed && !args.revision) console.log(`NOTE the hardware revision for ${model} is not confirmed`);
-const screens = def.screens
+const screens = (def.screens ?? [])
   .filter((s) => !args.screen || args.screen.split(',').includes(s.id))
   .filter((s) => !s.onlyModels || s.onlyModels.includes(model));
-if (!screens.length) throw new Error(`No screens to capture for ${model}${args.screen ? ` (${args.screen})` : ''}`);
+if (def.flow !== 'walk' && !screens.length) throw new Error(`No screens to capture for ${model}${args.screen ? ` (${args.screen})` : ''}`);
 
 // Public label packs and reference lists are not committed; fetch them if this checkout lacks them.
-const missing = langs.filter((l) => !fs.existsSync(path.join(ROOT, 'fixtures/translations', `${def.configurator}.${l}.json`)));
+const missing = langs.filter((l) => !fs.existsSync(path.join(ROOT, 'fixtures/translations', `${cfg}.${l}.json`)));
 if (missing.length || !fs.existsSync(path.join(ROOT, 'fixtures/public/regions.json'))) {
   execFileSync(process.execPath, [path.join(ROOT, 'fetch-public.mjs'), ...langs], { stdio: 'inherit' });
 }
 
 // The read-only POSTs the app makes on this path (answered locally like everything else).
-const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new']);
+const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new',
+  'POST /get-system-info-new', 'POST /create-system', 'POST /area']); // the last three: the wizard, answered locally
+
+// Tallest page image, in CSS px. SP5 System options on a phone is about 3,100.
+const MAX_CSS_HEIGHT = 5000;
 
 const appBuild = await releasedBuild();
 const modelSlug = model.toLowerCase().replace('+', '-plus');
@@ -48,7 +55,8 @@ const records = [];
 let problems = 0;
 
 for (const lang of langs) {
-  const t = labels(lang, def.configurator);
+  const t = labels(lang, cfg);
+  if (def.flow === 'walk') { await runWalks(lang, t); continue; }
   fs.mkdirSync(path.join(outDir, lang), { recursive: true });
   for (const layout of layouts) {
     for (const screen of screens) {
@@ -139,6 +147,59 @@ async function walkTo(page, t, screen) {
   return appPath;
 }
 
+// A walk is one pass through the app in a fresh browser; each {shot} step saves an image.
+async function runWalks(lang, t) {
+  const perLang = Object.fromEntries(Object.entries(def.values ?? {}).map(([k, v]) => [k, typeof v === 'object' ? (v[lang] ?? v.en) : v]));
+  const values = { imei: SAMPLE.imei, model, ...perLang };
+  const fillIn = (v) => String(v).replace(/\{(\w+)\}/g, (_, k) => values[k] ?? `{${k}}`);
+  const wanted = args.screen ? args.screen.split(',') : null;
+  for (const layout of layouts) {
+    if (def.layouts && !def.layouts.includes(layout)) { console.log(`skip ${layout}: ${args.flow} is captured in ${def.layouts.join(', ')} only`); continue; }
+    for (const walk of def.walks) {
+      if (wanted && !wanted.some((id) => id === walk.id || walk.steps.some((st) => st.shot === id))) continue;
+      const label = `${lang} ${layout} ${model} ${walk.id}`;
+      const { page, browser, guard, errors } = await openApp({ lang, model, layout, timezoneId: def.timezones?.[lang] });
+      const files = [];
+      try {
+        for (const step of walk.steps) {
+          if (step.eval) await page.evaluate(step.eval);
+          if (step.fill) await page.locator(step.fill.css).nth(step.fill.nth ?? 0).fill(fillIn(step.fill.value), { timeout: 10000 });
+          if (step.click) await clickStep(page, t, step.click);
+          if (step.waitUrl) await page.waitForURL((u) => u.pathname.endsWith(step.waitUrl), { timeout: 20000 });
+          await settle(page, step.shot ? 1000 : 400);
+          if (!step.shot) continue;
+          const s = { variant: layout, file: `${modelSlug}-${step.shot}-${layout}.png` };
+          const rec = await shoot(page, { s, layout, screen: { id: step.shot, unverified: step.unverified, fullScreen: step.fullScreen }, id: step.shot, revision: null, lang,
+            appPath: step.title ? [t(step.title)] : [], label: `${label} ${step.shot}` });
+          rec.walk = walk.id;
+          if (step.note) rec.note = step.note;
+          records.push(rec);
+          files.push(s.file);
+        }
+        const issues = [...guard.unmocked.keys()].map((k) => `unmocked ${k}`).concat(errors.map((e) => `pageerror ${e}`));
+        if (issues.length) { problems++; console.log(`WARN ${label}: ${issues.join('; ')}`); }
+        console.log(`ok   ${label} -> ${files.join(', ')}`);
+      } catch (e) {
+        problems++;
+        const file = path.join(outDir, lang, `ERROR-${modelSlug}-${walk.id}-${layout}.png`);
+        await page.screenshot({ path: file }).catch(() => {});
+        console.log(`FAIL ${label} after ${files.length} image(s): ${e.message.split('\n')[0]} (see ${path.relative(ROOT, file)})`);
+      } finally {
+        await browser.close();
+      }
+    }
+  }
+}
+
+async function clickStep(page, t, c) {
+  let loc;
+  if (c.css && c.hasText) loc = page.locator(c.css).filter({ hasText: t(c.hasText) });
+  else if (c.css) loc = page.locator(c.css);
+  else loc = page.getByText(c.label ? t(c.label) : c.text, { exact: c.exact ?? true });
+  if (c.inner) loc = loc.locator(c.inner);
+  await loc.first().click({ timeout: 10000 });
+}
+
 // The newer configurator (SP5): desktop has a sidebar menu and has already read; the phone shows
 // the menu with a Read button. Menu labels are clicked inside the sidebar navigation only.
 async function walkConfiguration(page, t, screen, { desktop, autoRead }) {
@@ -186,6 +247,8 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
   let crop = null;
   if (s.selector) {
     await page.locator(s.selector).first().screenshot(opts);
+  } else if (screen.fullScreen) {
+    await page.screenshot(opts); // pages whose background is part of the design (the system dashboard)
   } else if (layout === 'phone' || def.flow === 'configuration') {
     // Pages longer than the window are rendered whole: the window is made taller, then the image is
     // cut 24 px below the last card. Phone images are always cut there (the manual shows them at
@@ -193,13 +256,13 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     crop = await contentBottom(page);
     const { width, height } = LAYOUTS[layout].viewport;
     if (crop.overflows) {
-      await page.setViewportSize({ width, height: Math.min(crop.bottom + 24, 3000) });
+      await page.setViewportSize({ width, height: Math.min(crop.bottom + 24, MAX_CSS_HEIGHT) });
       await settle(page, 500);
       const again = await contentBottom(page);
       crop = { ...again, overflows: true };
-      console.log(`note ${label}: page is longer than one ${layout} screen; image is ${Math.min(again.bottom + 24, 3000)} CSS px tall`);
+      console.log(`note ${label}: page is longer than one ${layout} screen; image is ${Math.min(again.bottom + 24, MAX_CSS_HEIGHT)} CSS px tall`);
     }
-    crop.height = crop.overflows ? Math.min(crop.bottom + 24, 3000) : layout === 'phone' ? Math.min(height, crop.bottom + 24) : height;
+    crop.height = crop.overflows ? Math.min(crop.bottom + 24, MAX_CSS_HEIGHT) : layout === 'phone' ? Math.min(height, crop.bottom + 24) : height;
     await page.screenshot({ ...opts, clip: { x: 0, y: 0, width, height: crop.height } });
   } else {
     await page.screenshot(opts);

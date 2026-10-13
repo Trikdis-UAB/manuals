@@ -75,6 +75,9 @@ function permissionGrid() {
     const on = INSTALLER_GRANTS.has(a) && !NO_GRANT.has(a);
     grid[a] = { view: on, create: on, edit: on, delete: on, execute: on };
   }
+  // Without a setup-template right the add-system wizard takes the ordinary path (Add new system ->
+  // areas -> dashboard) instead of the device-setup template flow.
+  grid.dev_setup_templates.execute = false;
   return grid;
 }
 
@@ -239,4 +242,52 @@ export function sampleConfigInfo(modelName) {
     srv: 1,
     systemName: 'Sample system',
   };
+}
+
+// --- The add-new-system wizard (GET-family device that is online but not directly controlled) ---
+
+export const NEW_SYSTEM_ID = 900102;
+
+// get-system-info-new: what the device says about itself. `areas: 0` (a number) plus no areas in
+// the status below sends the app down the "not controlled remotely" path; `supported_commands`
+// must contain 3 (outputs) and not 11/18/22.
+export function wizardDeviceInfo(modelName) {
+  const m = MODELS[modelName];
+  return {
+    success: true,
+    data: {
+      zones: 0, outputs: 2, version: deviceVersion(m), hwId: m.hwId, fireReset: false, supports_custom_outputs: false,
+      supported_commands: '3', ns: false, central_panel: 0, uid: SAMPLE.imei, sn: '000123', bt: m.bt, dr: '', areas: 0,
+      supported_wireless: null, ipcom: 1, objectId: 'sample', signalLevel: 80, isInForeignRegion: false, foreignRegion: '',
+    },
+    foreignSystem: null, ownRegion: null, srv: 1, systemName: null,
+  };
+}
+
+export const WIZARD_DEVICE_STATUS = {
+  success: true,
+  data: { newType: true, areas: {}, zones: {}, pgms: { 1: { enabled: true, on: false }, 2: { enabled: true, on: false } }, sensors: {}, signal: '-110 - -54 dBm', troubles: null, error: '' },
+};
+
+const pgm = (id, queueNo, name) => ({
+  id, queue_no: queueNo, name, enabled: 1, on: 0, pgm_as_area_ck: 0, area_to_arm: 0, type: 'level', pulse_time_in_seconds: 3,
+  pulse_start_time: null, icon_number: 0, hw_assigned: false, io_type: 0, io_ability: '', schedule_no: 0, cycles_total: 0,
+  cycles_period: 0, cycles_remaining: null, cycles_reset_timestamp: null, bypass_inputs: [], last_event: null,
+});
+
+// The system create-system answers with, built from what the wizard sent.
+export function wizardCreatedSystem(modelName, body) {
+  const base = sampleSystem(modelName);
+  const sys = {
+    ...base,
+    id: NEW_SYSTEM_ID, name: body?.systemName || modelName, timeZone: body?.systemTimeZone || base.timeZone,
+    imei: SAMPLE.imei, online: true, direct: 0, supported_commands: body?.deviceInfo?.supported_commands || '.3.',
+    areas: [], zones: [], orders: [], rereads: [], protegus_users: [], config_read: 1,
+    // An hour ago: within 80 s of creation the dashboard adds a "may take up to 1 minute" notice.
+    created_at: Math.floor(Date.now() / 1000) - 3600,
+    status: { ...base.status, id: 2, system_id: NEW_SYSTEM_ID },
+    pgms: [pgm(900301, 1, 'PGM1'), pgm(900302, 2, 'PGM2')],
+  };
+  delete sys.assistedById;
+  return sys;
 }

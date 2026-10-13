@@ -22,6 +22,14 @@ node capture.mjs --model GET --lang en --layout phone --screen panel-tlf,events
 node capture.mjs --model SP5 --lang en --layout phone,desktop     # all screens in screens/sp5.json
 ```
 
+Besides configurator screens, the tool walks the **add-new-system wizard** (systems list → "+" →
+Unique ID → Add new system → "The system is not controlled remotely" → Add new area → Areas →
+dashboard) for a GET-family communicator, plus the phone apps' "Scan QR code" first page:
+
+```bash
+node capture.mjs --model GET --flow new-system --lang en,lt,es,ru --layout phone
+```
+
 Two configurators are covered, each with its own screen list and sample configuration:
 
 | Configurator | Models | Screens | Sample configuration |
@@ -97,6 +105,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | `GET /config/info` | sample device info: model, firmware, serial |
 | `POST /config/read` | the model's sample configuration |
 | `POST /error` | swallowed (the app's own error reporting) |
+| Wizard: `GET /online`, `POST /get-system-info-new`, `POST /get-system-status-new`, `POST /create-system`, `POST /area` | device online and not directly controlled; the created system and its area are kept for the session (`lib/mocks-configurators.mjs`) |
 | SP5 only: `GET /system-lite`, `GET /config/get-connection-status`, `GET /config/get-device-status`, `POST /get-system-status-new`, `GET /config/users/read`, `POST /config/time/read` | sample system details, connection state, device and zone status, the user list and the panel clock (`lib/mocks-configurators.mjs`) |
 
 Anything else is answered with `success: false` and reported as `UNMOCKED` with a warning.
@@ -145,6 +154,11 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
   is confirmed: every SP5 on the beta server reports it), the panel-event Contact ID codes (standard codes; the screen's manifest
   record carries an `unverified` note), keypad serial-number prefixes (52 = LCD, 51 = LED) and wireless
   device settings. SP5's Cameras page is VideoHub-only and is not captured.
+- **The wizard's "Scan QR code" page is the phone apps' view.** The QR button exists only in the native
+  apps, which wrap this web app; the tool imitates the Android app's bridge to show it. It was not
+  photographed on a real phone, and the manifest says so.
+- **App texts not translated in the released packs:** the Russian app is in English, and Spanish lacks
+  "Assigned Output". The screenshots show what users of those languages see.
 - **Live-only screens are not captured:** the read and write progress ("Reading… n%", "Writing… n%",
   progress bar) and the write result, which the app drives from its realtime channel. The manifest lists
   them under `liveOnly`.

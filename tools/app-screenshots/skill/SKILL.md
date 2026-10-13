@@ -1,6 +1,6 @@
 ---
 name: protegus-app-screenshots
-description: Take screenshots of the Protegus app's device configurator (Advanced settings) for the TRIKDIS manuals, from the released web.protegus.app with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
+description: Take screenshots of the Protegus app's device configurator (Advanced settings) and its add-new-system wizard for the TRIKDIS manuals, from the released web.protegus.app with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
 ---
 
 # Protegus app screenshots
@@ -31,6 +31,15 @@ record per image (menu path in that language, firmware, `firmwareConfirmed`, `re
 any `unverified` note, the front-end bundle and its deploy date). Each capture is a fresh browser,
 about 12 s per screen and layout; two runs give pixel-identical images. Long runs go in the
 background.
+
+## Walks (wizards and other flows)
+
+A page that only appears partway through a flow, such as the add-new-system wizard, is a *walk*: one
+pass through the app in a fresh browser, with an image at each `shot` step
+(`screens/new-system.json`; run with `--flow new-system`). Steps click by label key so the walk works
+in every language, and sample values can differ per language (area "Home" / "Namai" / "Casa" / "Дом").
+Each call the flow makes needs a sample answer that keeps the app on the path you want (for the
+wizard: online, not directly controlled, so it asks for areas and PGM control).
 
 ## Before capturing: facts that change what the app shows
 
@@ -83,6 +92,13 @@ public, so keep real names, systems and customer data out of fixtures and commit
   own "N. " numbering, as TrikdisConfig shows them. They do not change with the app language.
 - **Beta source vs release.** Before telling anyone "the released app does X", find it in the released
   lazy chunks (`chunk-*.js`, named inside `main-*.js`; download them and grep). The beta source can differ.
+- **Phone-app-only UI** (the wizard's QR button) is drawn when the native bridge `window.jsi` exists.
+  Imitate it with a Proxy that answers every property with a no-op, except `then` and symbols:
+  answering `then` makes it look like a promise and the run hangs.
+- **Defaults come from the server, not the browser.** A new system's default time zone is the
+  `userTimeZone` in `/timezones`; the walk's `timezones` map sets it per language.
+- **Some languages are not fully translated in the app** (Russian is English; Spanish lacks a few
+  labels). Check the label pack before blaming the tool, and report the gap.
 - **Releases.** The manifest records the bundle and its deploy date. When web.protegus.app is
   redeployed, re-capture into a scratch folder and pixel-compare (`magick compare -metric AE`) before
   saying published images are still current. The label packs change too: `node fetch-public.mjs en lt`.
