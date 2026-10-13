@@ -9,7 +9,7 @@
 
 **Language versions differ** (image numbers, order and even content are not the same across en/lt/es/ru — never map images by number): see `NOTES/agent-lessons/language-versions-differ.md`.
 
-**Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`.
+**Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`, and the `protegus-app-screenshots` skill (`tools/app-screenshots/skill/SKILL.md`).
 
 ## Credentials & API access
 

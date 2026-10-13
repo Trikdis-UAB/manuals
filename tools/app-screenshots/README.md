@@ -3,6 +3,10 @@
 Takes screenshots of the Protegus app's device-configurator screens for the manuals' "Protegus app"
 tabs, without a live device or a real account.
 
+How to add a product, the traps and the hand-off are in `skill/SKILL.md`, which is also the
+`protegus-app-screenshots` skill (`~/.claude/skills/protegus-app-screenshots` links to that folder in
+the main checkout, so every session on this Mac can use it).
+
 It opens the **released** web app (`https://web.protegus.app`, the EU production front-end customers
 use) in headless Chrome and answers every API call itself with sample data: a signed-in installer,
 one system and that system's configuration. So the screenshots show exactly the version customers
