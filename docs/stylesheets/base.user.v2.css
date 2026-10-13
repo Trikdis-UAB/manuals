@@ -1165,7 +1165,9 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   border: 2px solid #212b36;
   border-radius: 12px;
   box-shadow: none;
-  margin-bottom: 1.25rem;
+  /* Full shorthand: on phones Material pulls top-level tab bars out to the screen
+     edges (negative side margins); this control keeps the page gutter. */
+  margin: 0 0 1.25rem;
 }
 
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar {
