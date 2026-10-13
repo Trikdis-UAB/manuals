@@ -889,7 +889,7 @@ Los eventos de este canal son transmitidos en paralelo con el primer canal. Cuan
 
 <img alt="TrikdisConfig, ventana «Informes para usuario», pestaña «Servicio PROTEGUS» (GT+_M150): «Activar conexión» marcado, campo «Código de acceso a Protegus» rellenado e «Informes paralelos» sin marcar." src="./image50.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
-El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.eu](http://www.protegus.eu).
+El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [web.protegus.app](https://web.protegus.app).
 
 - **Activar conexión** – marque la casilla para habilitar el servicio Protegus2. El comunicador GT+ podrá intercambiar datos con la aplicación Protegus2. Con el programa TrikdisConfig podrás configurar tu comunicador de forma remota.
 

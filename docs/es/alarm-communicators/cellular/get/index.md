@@ -679,7 +679,7 @@ Programación del panel de control **Interlogix NX-4V2** (**NX-6V2**, **NX-8V2**
 
 Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remota. Podrán ver el estado del sistema y recibir notificaciones sobre eventos del sistema.
 
-1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [<u>www.protegus.eu/login</u>](http://www.protegus.eu/login):
+1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [<u>web.protegus.app</u>](https://web.protegus.app):
 
     <div style="margin: 20px 0; text-align: left;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -911,7 +911,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 <img alt="Ventana Informes para usuario de TrikdisConfig, pestaña Servicio PROTEGUS: Activar conexión marcado, campo Código de acceso a Protegus y Parallel reporting sin marcar." src="./image51.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
-El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.eu](http://www.protegus.eu).
+El servicio Protegus2 permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus2 en [web.protegus.app](https://web.protegus.app).
 
 - **Activar conexión** – marque la casilla para habilitar el servicio Protegus2. El comunicador GET podrá comunicarse con la aplicación Protegus2. Con el programa TrikdisConfig, puede configurar de forma remota su comunicador.
 
