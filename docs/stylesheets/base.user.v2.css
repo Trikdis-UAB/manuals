@@ -1198,6 +1198,15 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
   white-space: nowrap;
 }
 
+/* Linked tabs wrap each name in a link that Material pads to fill the old tab
+   shape; here the label carries the padding, so the link must add none. */
+.md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label > a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
 /* Kill label ::after as well (belt and braces) */
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label::after,
 .md-typeset .tabbed-set.tabbed-alternate > .tabbed-labels > label::before {
@@ -1236,9 +1245,9 @@ body[data-md-color-scheme="slate"] .md-search-result__origin {
 
 /* A tab set inside a tab: the same control, smaller, sized to its labels */
 .md-typeset .tabbed-block .tabbed-set.tabbed-alternate > .tabbed-labels {
-  max-width: 19rem;
+  max-width: 17rem;
   padding: 2px;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
 }
 
 .md-typeset .tabbed-block .tabbed-set.tabbed-alternate > .tabbed-labels > label {
@@ -1304,7 +1313,7 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > in
     hyphens: none;
   }
   .md-typeset .tabbed-block .tabbed-set.tabbed-alternate > .tabbed-labels {
-    max-width: 19rem;
+    max-width: 15rem;
   }
   .md-typeset .tabbed-block .tabbed-set.tabbed-alternate > .tabbed-labels > label {
     min-height: 1.8rem;
