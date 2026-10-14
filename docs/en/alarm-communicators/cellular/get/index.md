@@ -1013,6 +1013,7 @@ Events are transmitted in parallel with the primary channel through this channel
 
 #### Test, ping and reporting mode
 
+<!-- DRAFT: this span keeps the old 6.4.3 links in the 9 Oct team emails working. Remove it before merge. -->
 <span id="643-reporting-modes-on-firmware-200-and-later"></span>
 
 === "Protegus app"
@@ -1045,9 +1046,7 @@ Events are transmitted in parallel with the primary channel through this channel
              "2.xx" on purpose, since later 2.x versions will follow; add the first released version number
              when it is out. To confirm: hardware (x1x0/x1x1), TrikdisConfig version, Protegus reporting
              path and swap button in the released TrikdisConfig, Communication path test units.
-             Event codes, EN 50136 categories and per-channel object IDs are left out on purpose.
-     The span with the old "643-...-200-and-later" id under the 6.4.2 heading keeps the links in
-     the 9 Oct team emails working; remove it before merge. -->
+             Event codes, EN 50136 categories and per-channel object IDs are left out on purpose. -->
 
         In TrikdisConfig 1.66.70 or later, open the **CMS reporting** window, **CMS settings** tab. The **Reporting mode** group is at the top of the tab, and the panel next to it shows the current mode.
 
