@@ -1809,7 +1809,7 @@
     }
     var outcome = state.lastOutcome;
     state.lastOutcome = null;
-    if (!outcome || !Array.isArray(window.dataLayer)) {
+    if (!outcome) {
       return;
     }
     var term = outcome.query.replace(/\s+/g, " ").trim().slice(0, 80);
@@ -1820,10 +1820,17 @@
       return;
     }
     state.lastRecorded = term.toLowerCase();
-    // The same call the theme's gtag makes: dataLayer takes the arguments object.
-    (function () {
-      window.dataLayer.push(arguments);
-    })("event", "search", { search_term: term, search_scope: outcome.scope, search_lang: state.scopes.lang || "" });
+    var props = { search_term: term, search_scope: outcome.scope, search_lang: state.scopes.lang || "" };
+    // The same event in the cookieless analytics (analytics-cookieless.js), which needs no consent.
+    if (window.trikdocsAnalytics) {
+      window.trikdocsAnalytics.cookieless("search", props);
+    }
+    if (Array.isArray(window.dataLayer)) {
+      // The same call the theme's gtag makes: dataLayer takes the arguments object.
+      (function () {
+        window.dataLayer.push(arguments);
+      })("event", "search", props);
+    }
   }
 
   function noteSearchOutcome(query, scope) {

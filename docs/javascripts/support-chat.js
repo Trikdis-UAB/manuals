@@ -203,10 +203,22 @@
     window.$chatwoot.setConversationCustomAttributes({ docs_page: page, docs_lang: pageLocale() });
   }
 
+  // The cookieless analytics (analytics-cookieless.js) get the same event without consent,
+  // so nothing is remembered on the device for them: once per chat per page load here,
+  // and reports count distinct chat_id values.
+  var cookielessCounted = {};
+
   function countChatStart(event) {
     var data = event && event.detail;
     var id = data && data.conversation_id;
-    if (!id || !Array.isArray(window.dataLayer)) {
+    if (!id) {
+      return;
+    }
+    if (!cookielessCounted[id] && window.trikdocsAnalytics) {
+      cookielessCounted[id] = true;
+      window.trikdocsAnalytics.cookieless("joy_chat_started", { chat_id: String(id), chat_lang: pageLocale() });
+    }
+    if (!Array.isArray(window.dataLayer)) {
       return;
     }
     var counted = (storageGet("localStorage", CHAT_COUNTED_KEY) || "").split(",");

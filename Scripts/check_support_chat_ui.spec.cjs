@@ -165,15 +165,21 @@ test.describe("Support chat rollout", () => {
         await page.waitForSelector(LAUNCHER, { state: "visible" });
         await page.click(LAUNCHER);
         await expect.poll(async () => ((await chatState(page)).chatwoot || { calls: [] }).calls.length).toBe(4);
-        const sent = await page.evaluate(() => {
+        const [sent, cookieless] = await page.evaluate(() => {
+          // The cookieless analytics stay off on localhost; record what would reach them.
+          const cookielessSent = [];
+          window.trikdocsAnalytics.cookieless = (name, props) => cookielessSent.push([name, props]);
           for (const id of [42, 42, 43]) {
             window.dispatchEvent(new CustomEvent("chatwoot:on-message", { detail: { conversation_id: id } }));
           }
-          return (window.dataLayer || [])
+          return [(window.dataLayer || [])
             .map((entry) => Array.from(entry))
             .filter((args) => args[0] === "event" && args[1] === "joy_chat_started")
-            .map((args) => args[2]);
+            .map((args) => args[2]), cookielessSent];
         });
+        // 2026-10-19: the cookieless analytics count each chat once too, with or without consent.
+        expect(cookieless).toEqual([["joy_chat_started", { chat_id: "42", chat_lang: "en" }],
+                                    ["joy_chat_started", { chat_id: "43", chat_lang: "en" }]]);
         if (choice === "Accept") {
           expect(sent).toEqual([{ chat_id: "42", chat_lang: "en" }, { chat_id: "43", chat_lang: "en" }]);
         } else {

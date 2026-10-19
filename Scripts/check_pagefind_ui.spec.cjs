@@ -370,6 +370,11 @@ test.describe("Pagefind modal scoped search", () => {
         route.fulfill({ body: "", contentType: "application/javascript", status: 200 }));
       const page = await context.newPage();
       await page.goto(`${BASE_URL}/en/`, { waitUntil: "domcontentloaded" });
+      // The cookieless analytics stay off on localhost; record what would reach them.
+      await page.evaluate(() => {
+        window.__cookieless = [];
+        window.trikdocsAnalytics.cookieless = (name, props) => window.__cookieless.push([name, props]);
+      });
       await ensureModalOpen(page);
       const input = page.locator(".md-search input[name='query']");
       for (const partial of ["s", "sm", "sms"]) {
@@ -386,7 +391,13 @@ test.describe("Pagefind modal scoped search", () => {
         .map((entry) => Array.from(entry))
         .filter((args) => args[0] === "event" && args[1] === "search")
         .map((args) => args[2]));
+      // 2026-10-19: the cookieless analytics get the same searches, with or without consent.
+      const cookieless = await page.evaluate(() => window.__cookieless);
+      expect(cookieless.map(([name, props]) => [name, props.search_term])).toEqual(
+        [["search", "sms command list"], ["search", "qwpzvbkx"]]);
+      expect(cookieless[1][1].search_scope).toBe("none");
       if (consented) {
+        expect(sent).toEqual(cookieless.map(([, props]) => props));
         expect(sent.map((e) => e.search_term)).toEqual(["sms command list", "qwpzvbkx"]);
         expect(sent[1].search_scope).toBe("none");
         expect(sent.every((e) => e.search_lang === "en")).toBeTruthy();
