@@ -101,7 +101,7 @@ Este manual es para comunicadores 4G.
 | Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Voltaje de la fuente de alimentación | 10-18 V DC |
-| Consumo de corriente | 125 mA |
+| Consumo de corriente | Hasta 100 mA (en modo espera) /​ Hasta 200 mA (durante el envío de datos) |
 | Protocolos de Transmisión | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Encriptación del mensaje | AES 128 |
 | Memoria de eventos no enviados | Hasta 60 eventos |
@@ -385,6 +385,9 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 <img class="wiring-diagram" alt="Diagrama de conexión: terminales del comunicador de línea telefónica de un panel de control al GT. +AUX a +DC, -AUX a -DC, TIP a TIP y RING a RING." src="./wiring-control-panel-tip-ring.webp" width="620" height="477" />
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
+
+!!! note "Nota"
+    Esta conexión requiere el firmware del comunicador 1.21 o posterior.
 
 <img alt="Diagrama de conexión: panel PARADOX SP/SP+/MG/MG+ al GT. Bus de Datos: +AUX (+12V) a + DC, -AUX a - DC, GRN a DATA, YEL a CLK. Comunicador telefónico: TIP a TIP, RING a RING." src="./image21.webp" style="width:3.4666732283464565in;height:2.923338801399825in" />
 

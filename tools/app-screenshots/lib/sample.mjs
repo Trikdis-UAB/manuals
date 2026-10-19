@@ -13,21 +13,24 @@ export const SAMPLE = {
 // Hardware models, each with the configurator that serves it, its sample configuration and its
 // screen list. Firmware and hardware revision change which fields the app shows (e.g. account
 // number per CMS channel from fw 1.31, Bands/Generation from fw 1.17 on revision M15), so they must
-// match a current real device. Entries without `confirmed` are PLACEHOLDERS; the run says so and the
-// manifest records it. Override per run with --fw and --revision.
+// match a current real device. `firmwareConfirmed` / `revisionConfirmed` say which values are known;
+// the others are PLACEHOLDERS, the run says so and the manifest records it. Override per run with
+// --fw and --revision (an override counts as confirmed).
 // GET 1.35: released 2026-06-05 as GET_x1x0_0135 and GET_x1x1_0135 (two hardware variants);
 // Andrius chose 1.35 with both variants on 2026-10-02.
 const G16 = { configurator: 'g16', fixture: 'g16-family.json' };
 export const MODELS = {
-  'GET':   { ...G16, hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', confirmed: true },
+  'GET':   { ...G16, hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', firmwareConfirmed: true, revisionConfirmed: true },
   'GT':    { ...G16, hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
   'GT+':   { ...G16, hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
   'G16':   { ...G16, hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
   'G16T':  { ...G16, hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
   'E16':   { ...G16, hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
   'E16T':  { ...G16, hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
-  // SP5 firmware and revision are unknown (2026-10-07): placeholders until confirmed.
-  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: null, bt: '0100' },
+  // SP5 firmware 1.00: every SP5 on the beta server reports it (7 test systems, read 2026-10-12).
+  // Revision 1E7LWB.0 and bootloader 1.00 from a real test panel's config/info (2026-10-19), which
+  // reports its version as "SP5_1E7LWB.0_1.00": the firmware part is dotted, not x100.
+  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: '1E7LWB.0', bt: '1.00', fwFormat: 'dotted', firmwareConfirmed: true, revisionConfirmed: true },
 };
 
 export function setFirmware(model, { firmware, revision }) {
@@ -40,12 +43,13 @@ export function sampleFirmware(model) {
   return { firmware: m.firmware, revision: m.revision };
 }
 
-// How the device reports itself in config/info: "<name>[_<revision>]_<fw x100>". The app shows
-// the last part as firmware (0112 -> 1.12) and takes the revision from the second part.
+// How the device reports itself in config/info: "<name>[_<revision>]_<fw>", the firmware either x100
+// ("0112" -> 1.12, g16 family) or dotted ("1.00", SP5). The app shows the version without its last part
+// as the device name and takes the revision from the second part.
 export function sampleVersion(model) { return deviceVersion(MODELS[model]); }
 
 function deviceVersion(m) {
-  const fw = String(Math.round(parseFloat(m.firmware) * 100)).padStart(4, '0');
+  const fw = m.fwFormat === 'dotted' ? m.firmware : String(Math.round(parseFloat(m.firmware) * 100)).padStart(4, '0');
   return m.revision ? `${m.name}_${m.revision}_${fw}` : `${m.name}_${fw}`;
 }
 
@@ -73,6 +77,9 @@ function permissionGrid() {
     const on = INSTALLER_GRANTS.has(a) && !NO_GRANT.has(a);
     grid[a] = { view: on, create: on, edit: on, delete: on, execute: on };
   }
+  // Without a setup-template right the add-system wizard takes the ordinary path (Add new system ->
+  // areas -> dashboard) instead of the device-setup template flow.
+  grid.dev_setup_templates.execute = false;
   return grid;
 }
 
@@ -237,4 +244,52 @@ export function sampleConfigInfo(modelName) {
     srv: 1,
     systemName: 'Sample system',
   };
+}
+
+// --- The add-new-system wizard (GET-family device that is online but not directly controlled) ---
+
+export const NEW_SYSTEM_ID = 900102;
+
+// get-system-info-new: what the device says about itself. `areas: 0` (a number) plus no areas in
+// the status below sends the app down the "not controlled remotely" path; `supported_commands`
+// must contain 3 (outputs) and not 11/18/22.
+export function wizardDeviceInfo(modelName) {
+  const m = MODELS[modelName];
+  return {
+    success: true,
+    data: {
+      zones: 0, outputs: 2, version: deviceVersion(m), hwId: m.hwId, fireReset: false, supports_custom_outputs: false,
+      supported_commands: '3', ns: false, central_panel: 0, uid: SAMPLE.imei, sn: '000123', bt: m.bt, dr: '', areas: 0,
+      supported_wireless: null, ipcom: 1, objectId: 'sample', signalLevel: 80, isInForeignRegion: false, foreignRegion: '',
+    },
+    foreignSystem: null, ownRegion: null, srv: 1, systemName: null,
+  };
+}
+
+export const WIZARD_DEVICE_STATUS = {
+  success: true,
+  data: { newType: true, areas: {}, zones: {}, pgms: { 1: { enabled: true, on: false }, 2: { enabled: true, on: false } }, sensors: {}, signal: '-110 - -54 dBm', troubles: null, error: '' },
+};
+
+const pgm = (id, queueNo, name) => ({
+  id, queue_no: queueNo, name, enabled: 1, on: 0, pgm_as_area_ck: 0, area_to_arm: 0, type: 'level', pulse_time_in_seconds: 3,
+  pulse_start_time: null, icon_number: 0, hw_assigned: false, io_type: 0, io_ability: '', schedule_no: 0, cycles_total: 0,
+  cycles_period: 0, cycles_remaining: null, cycles_reset_timestamp: null, bypass_inputs: [], last_event: null,
+});
+
+// The system create-system answers with, built from what the wizard sent.
+export function wizardCreatedSystem(modelName, body) {
+  const base = sampleSystem(modelName);
+  const sys = {
+    ...base,
+    id: NEW_SYSTEM_ID, name: body?.systemName || modelName, timeZone: body?.systemTimeZone || base.timeZone,
+    imei: SAMPLE.imei, online: true, direct: 0, supported_commands: body?.deviceInfo?.supported_commands || '.3.',
+    areas: [], zones: [], orders: [], rereads: [], protegus_users: [], config_read: 1,
+    // An hour ago: within 80 s of creation the dashboard adds a "may take up to 1 minute" notice.
+    created_at: Math.floor(Date.now() / 1000) - 3600,
+    status: { ...base.status, id: 2, system_id: NEW_SYSTEM_ID },
+    pgms: [pgm(900301, 1, 'PGM1'), pgm(900302, 2, 'PGM2')],
+  };
+  delete sys.assistedById;
+  return sys;
 }

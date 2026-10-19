@@ -7,7 +7,7 @@ Pasos breves de cableado y programación para conectar el comunicador GT/GT+/GET
 
 ## Requisitos
 
-1. Firmware GT/GT+/GET 1.21, SIM insertada, PIN deshabilitado, plan de datos activo.
+1. Firmware GT/GT+/GET 1.21 o posterior, SIM insertada, PIN deshabilitado, plan de datos activo.
 1. Panel Paradox SP/SP+/MG/MG+ con acceso al teclado (código de instalador disponible).
 1. Número de cuenta CMS si reporta a CMS.
 1. Cuenta de empresa/instalador de Protegus2 y IMEI del comunicador.
@@ -20,7 +20,10 @@ Siga el esquema de abajo para conectar el comunicador al panel:
 | --- | --- | --- |
 | TIP / RING | TIP / RING | Para emulación de línea PSTN (Contact ID). |
 | CLK / DATA (KeyBus) | YEL / GRN (KeyBus) | Para control del bus serie. |
-| +12V / GND | AUX + / GND | Alimentación del comunicador. |
+| +DC / -DC | +AUX / -AUX | Alimentación del comunicador. |
+
+!!! note "Nota"
+    **+DC** y **−DC** son los terminales marcados **+12 VDC** y **−12 VDC** en GT y GET, y **+12/24 VDC** y **−12/24 VDC** en GT+.
 
 <style>
 .wiring-diagram {

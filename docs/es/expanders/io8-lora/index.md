@@ -46,7 +46,7 @@ Entradas y salidas:
 
 ### Elementos expansores 
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
+<img alt="Fotografía numerada de la placa del expansor iO8-LoRa a la izquierda. La llamada 1 señala los indicadores de LED; la 2, los terminales para cableado; la 3, el botón SW1 para emparejar el dispositivo y probar la conexión; y la 4, el interruptor DIP SW2. Los nombres numerados aparecen en una lista a la derecha." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 860px; height: auto;" />
 
 !!! note "Configuración del interruptor DIP 'SW2'"
     Para la versión HW iO8_x5xx_7_230419:
@@ -81,7 +81,7 @@ Entradas y salidas:
 
 ### Esquema para la conexión de la fuente de alimentación 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Diagrama de conexión: Fuente de poder a iO-8-LORA. Alimentación (+12 V): +12V a +DC, 0V a -DC." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Esquemas para la entradas de conexión 
 
@@ -89,10 +89,10 @@ Hay 8 terminales IO1 – IO8 (entradas) en la placa de expansión iO-8-LORA para
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image5.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image5.webp" alt="Diagrama de conexión: circuito de entrada normalmente abierto (NO). Un contacto NO conecta IOx con C al cerrarse. No se muestra ninguna resistencia." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image6.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image6.webp" alt="Diagrama de conexión: circuito de entrada normalmente cerrado (NC). Un contacto NC conecta IOx con C. No se muestra ninguna resistencia." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
     <img src="./image7.webp" alt="Tabla de valores de resistencias con columnas RT, R1 y R2. Las seis filas son 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; y 2.2k, 4.7k, 8.2k." style="width: 100%; height: auto;" />
@@ -101,36 +101,36 @@ Hay 8 terminales IO1 – IO8 (entradas) en la placa de expansión iO-8-LORA para
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Circuito normalmente cerrado con resistencia de fin de línea (EOL): entre IOx y C, el contacto NO está en paralelo con la resistencia R1." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Circuito normalmente cerrado con resistencia de fin de línea (EOL): entre IOx y C, el contacto NC y la resistencia R1 están en serie." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image10.webp" alt="Normalmente cerrado con resistencia de fin de línea, con reconocimiento de sabotaje y falla de cable (EOL_T): de IOx a C, el contacto NC Tamper y RT están en serie con R1; el contacto NC está en paralelo con R1." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image11.webp" alt="Diagrama de conexión: entrada normalmente cerrada sin EOL (ATZ) entre IOx y C. El detector terminal 1 tiene un contacto NC en paralelo con R1; el detector terminal 2 tiene un contacto NC en paralelo con R2. Los dos circuitos de los detectores están en serie." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image12.webp" alt="Diagrama de conexión: entrada normalmente cerrada ATZ_T entre IOx y C. El detector terminal 1 tiene un contacto NC de sabotaje y RT en serie, seguidos de un contacto NC en paralelo con R1. El detector terminal 2 tiene un contacto NC de sabotaje en serie, seguido de un contacto NC en paralelo con R2." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Normalmente cerrado con resistencia de fin de línea, con reconocimiento de sabotaje y falla de cable (3EOL): de IOx a C, el contacto NC Tamper, RT, R1 y R2 están en serie. El contacto NC Alarma está en paralelo con R1; el contacto NC Antienmascaramiento está en paralelo con R2." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Esquema para conectar un relé 
 
 Usando las terminales de relé es posible controlar (encender/apagar) de forma remota varios dispositivos eléctricos. El terminal I/O universal del expansor inalámbrico *iO-8-LORA* debe configurarse como una salida (OUT) y debe tener asignada la definición de *"*Control remoto*"*.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Diagrama de conexión: iO-8-LORA a un relé. AUX+ e IOx se conectan a la bobina del relé. El relé tiene contactos marcados NC, C y NO." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Esquema de conexión del expansor iO-8-LORA al panel de control "FLEXi" SP3 
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
+<img alt="Diagrama de conexión: SP3 a RF-LORA y hasta ocho expansores iO-8-LORA. SP3 AUX+ (+12 V) se conecta a RF-LORA +DC; AUX- a -DC; 485 A a A RS 485; y 485 B a B RS485. RF-LORA se conecta de forma inalámbrica con los expansores hasta 5000 m. Cada iO-8-LORA tiene una fuente de alimentación independiente de 12-26 V conectada a +DC y -DC." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 760px; height: auto;" />
 
 !!! note
     Se debe conectar un transceptor RF-LORA al panel de control
@@ -155,15 +155,15 @@ Usando las terminales de relé es posible controlar (encender/apagar) de forma r
 
 8.  En el campo "**Núm. de Serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, ventana «Módulos», pestaña «RS485 módulos». La fila 1 muestra un expansor iO8-LORA con un número de serie introducido, área 1 y nombre «Expander ID1». La fila 2 muestra «No disponible», área 1 y nombre «Expander ID2»." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  En la pestaña "**Zonas**", configure la entradas del expansor.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, sección «Zonas», pestaña «Configuraciones de zonas». En la zona 1, el campo «Entrada» muestra «SP3 1 I/O» y tiene abierto su menú. Entre las opciones visibles están «Inhabilitar», «SP3 10 I/O» y «RS485 Expander ID1, IO1», «IO2» e «IO3»; la opción «IO1» está resaltada." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. En la pestaña "**PGM**", realice los ajustes para la salidas PGM del expansor.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, ventana «PGM», pestaña «Salidas». La columna «PGM Salida» muestra «BELL» para PGM 1 y «RS485 Expander ID1, IO2» para PGM 222. PGM 222 tiene «Definición de Salida» «Control remoto» y «Tiempo de Pulso, s» de 10." src="./image18.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Una vez que se finalice la configuración, haz clic en el botón **Escribir [F5]**.
 

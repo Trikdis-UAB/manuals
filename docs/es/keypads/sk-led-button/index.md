@@ -3,7 +3,7 @@
 ## Vista General del Teclado
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="Teclado FLEXi SK-LED button. Señala el indicador de energía, la indicación de estado del sistema, los indicadores de estado de las áreas 1 y 2, los indicadores numéricos de las zonas 1 a 16 y tres botones de control de área. En los indicadores de zona, iluminado significa alarma; extinguido, zona monitoreada; parpadeo, zona o usuario seleccionado; parpadeo intensivo, zona que fue alarmada." width="600">
 </div>
 
 > [!NOTE]

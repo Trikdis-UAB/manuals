@@ -1,0 +1,165 @@
+{
+  "flow": "walk",
+  "configurator": "new-system",
+  "models": [
+    "GET",
+    "GT",
+    "GT+",
+    "G16",
+    "G16T",
+    "E16",
+    "E16T"
+  ],
+  "layouts": [
+    "phone"
+  ],
+  "_fields": "A walk is one pass through the app in a fresh browser; each {shot} step saves an image. Step types: click (css, or label = a label key, or text; scope = css to search inside), fill (css, nth, value), eval (JavaScript run in the page), waitUrl (path suffix), shot (id, title = label key of the page title, unverified = note for the manifest, fullScreen = keep the whole screen instead of cutting below the last card). Values in {braces} come from 'values' (per language) or the run: {imei}, {model}. timezones: the browser's time zone per language, which the app offers as the new system's default.",
+  "values": {
+    "area": {
+      "en": "Home",
+      "lt": "Namai",
+      "es": "Casa",
+      "ru": "Дом"
+    }
+  },
+  "timezones": {
+    "en": "Europe/Vilnius",
+    "lt": "Europe/Vilnius",
+    "es": "Europe/Madrid",
+    "ru": "Europe/Vilnius"
+  },
+  "walks": [
+    {
+      "id": "native-app",
+      "note": "The phone apps wrap the same web app and add a QR scanner. Their bridge object is imitated so the page shows what phone users see.",
+      "steps": [
+        {
+          "eval": "void (window.jsi = new Proxy({}, { get: (t, p) => (p === 'then' || typeof p === 'symbol') ? undefined : () => undefined }))"
+        },
+        {
+          "click": {
+            "css": "app-plus-button .pb-button"
+          },
+          "waitUrl": "/new-system/add-system"
+        },
+        {
+          "shot": "add-system-qr",
+          "title": "systems.labels.scanQr",
+          "unverified": "Phone-app view, produced by imitating the Android app's bridge in a browser; not photographed on a real phone."
+        }
+      ]
+    },
+    {
+      "id": "wizard",
+      "steps": [
+        {
+          "click": {
+            "css": "app-plus-button .pb-button"
+          },
+          "waitUrl": "/new-system/add-system"
+        },
+        {
+          "fill": {
+            "css": "input",
+            "value": "{imei}"
+          }
+        },
+        {
+          "shot": "add-system-imei",
+          "title": "systems.labels.imei",
+          "note": "Web app view: the QR button exists only in the phone apps (see add-system-qr)."
+        },
+        {
+          "click": {
+            "label": "auth.buttons.next"
+          },
+          "waitUrl": "/new-system/add-system-details"
+        },
+        {
+          "fill": {
+            "css": "input",
+            "value": "{model}"
+          }
+        },
+        {
+          "shot": "add-system-details",
+          "title": "systems.titles.addSystem"
+        },
+        {
+          "click": {
+            "label": "auth.buttons.next"
+          },
+          "waitUrl": "/new-system/add-system-indirect"
+        },
+        {
+          "shot": "add-system-indirect",
+          "title": "systems.titles.systemIsIndirect"
+        },
+        {
+          "click": {
+            "label": "auth.buttons.continue"
+          },
+          "waitUrl": "/new-system/system-area"
+        },
+        {
+          "fill": {
+            "css": "input",
+            "nth": 1,
+            "value": "{area}"
+          }
+        },
+        {
+          "click": {
+            "css": "app-name-value:has(app-toggle-button)",
+            "hasText": "systems.labels.controlWithCloud",
+            "inner": "app-toggle-button"
+          }
+        },
+        {
+          "click": {
+            "label": "systems.labels.assignOutput",
+            "exact": false
+          }
+        },
+        {
+          "click": {
+            "text": "PGM1"
+          }
+        },
+        {
+          "shot": "add-system-area",
+          "title": "systems.titles.addNewArea"
+        },
+        {
+          "click": {
+            "label": "general.save"
+          },
+          "waitUrl": "/new-system/add-system-area-list"
+        },
+        {
+          "shot": "add-system-area-list",
+          "title": "systems.titles.partitions"
+        },
+        {
+          "click": {
+            "label": "general.skip"
+          },
+          "waitUrl": "/a/900102"
+        },
+        {
+          "shot": "add-system-dashboard",
+          "title": null,
+          "note": "Right after the wizard the area status reads Unknown until the panel reports its state; that is what the user sees at this point.",
+          "fullScreen": true
+        }
+      ]
+    }
+  ],
+  "liveOnly": [
+    {
+      "id": "add-system-offline",
+      "what": "'Check device' page shown when the device is offline",
+      "why": "a separate branch; not part of the manual's sequence"
+    }
+  ]
+}

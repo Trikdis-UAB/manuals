@@ -357,6 +357,58 @@ test.describe("Pagefind modal scoped search", () => {
     await context.close();
   });
 
+  // 2026-10-15: what visitors search for goes to Google Analytics, only the query they
+  // settle on, and only with analytics consent; nothing that looks like a phone number.
+  test("records settled searches in analytics only with consent", async ({ browser, browserName }) => {
+    test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
+    for (const consented of [true, false]) {
+      const context = await browser.newContext();
+      if (consented) {
+        await context.addInitScript(() => localStorage.setItem("/.__consent", JSON.stringify({ analytics: true })));
+      }
+      await context.route(/googletagmanager\.com/, (route) =>
+        route.fulfill({ body: "", contentType: "application/javascript", status: 200 }));
+      const page = await context.newPage();
+      await page.goto(`${BASE_URL}/en/`, { waitUntil: "domcontentloaded" });
+      // The cookieless analytics stay off on localhost; record what would reach them.
+      await page.evaluate(() => {
+        window.__cookieless = [];
+        window.trikdocsAnalytics.cookieless = (name, props) => window.__cookieless.push([name, props]);
+      });
+      await ensureModalOpen(page);
+      const input = page.locator(".md-search input[name='query']");
+      for (const partial of ["s", "sm", "sms"]) {
+        await input.fill(partial);
+        await page.waitForTimeout(400);
+      }
+      // Each search left to settle (recorded after 2.5 s), as a visitor would.
+      for (const settled of ["sms command list", "qwpzvbkx", "+370 616 37 114"]) {
+        await input.fill("");
+        await input.fill(settled);
+        await page.waitForTimeout(3300);
+      }
+      const sent = await page.evaluate(() => (window.dataLayer || [])
+        .map((entry) => Array.from(entry))
+        .filter((args) => args[0] === "event" && args[1] === "search")
+        .map((args) => args[2]));
+      // 2026-10-19: the cookieless analytics get the same searches, with or without consent.
+      const cookieless = await page.evaluate(() => window.__cookieless);
+      expect(cookieless.map(([name, props]) => [name, props.search_term])).toEqual(
+        [["search", "sms command list"], ["search", "qwpzvbkx"]]);
+      expect(cookieless[1][1].search_scope).toBe("none");
+      if (consented) {
+        expect(sent).toEqual(cookieless.map(([, props]) => props));
+        expect(sent.map((e) => e.search_term)).toEqual(["sms command list", "qwpzvbkx"]);
+        expect(sent[1].search_scope).toBe("none");
+        expect(sent.every((e) => e.search_lang === "en")).toBeTruthy();
+      } else {
+        expect(sent).toEqual([]);
+        expect(await page.evaluate(() => typeof window.dataLayer)).toBe("undefined");
+      }
+      await context.close();
+    }
+  });
+
   test("synonym expansion shows hint only when expansion contributes", async ({ page, browserName }) => {
     test.skip(browserName !== "chromium", "Scoped to Chromium runtime.");
     ensureArtifactsDir();

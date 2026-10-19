@@ -99,7 +99,7 @@ This manual is for LTE communicators.
 | Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Power supply voltage | 10-18 V DC |
-| Current consumption | 175 mA |
+| Current consumption | Up to 100 mA (on standby) /​ Up to 300 mA (while sending data) |
 | Transmission protocols | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Message encryption | AES 128 |
 | Buffer memory capacity | 60 events |
@@ -496,6 +496,9 @@ Following one of the schematics provided below, connect communicator to the cont
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
 
+!!! note
+    This connection needs communicator firmware 1.21 or later.
+
 <img alt="Wiring diagram: PARADOX SP, SP+, MG or MG+ panel to GET. Keypad bus: +AUX (+12V) to +DC, -AUX to -DC, GRN to DATA, YEL to CLK. Telephone communicator: panel TIP to GET TIP, panel RING to GET RING." src="./image26.webp" style="width:3.37000656167979in;height:3.0333398950131234in" />
 
 When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
@@ -758,7 +761,7 @@ Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when
 
 With Protegus2 users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
 
-1.  Download and launch the Protegus2 application or use the browser version: [<u>www.protegus.app</u>](https://www.protegus.app/login).
+1.  Download and launch the Protegus2 application or use the browser version: [<u>web.protegus.app</u>](https://web.protegus.app).
 
     <div style="margin: 20px 0; text-align: left;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -790,11 +793,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
         blinks yellow).
 3. Click “**Add new system”** and enter the GET’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
-<img alt="Protegus2 app 'Scan QR code' screen for adding a system, with the Unique ID/IMEI field and a callout reading: Enter the IMEI code, you can find it here - on the package, on the back of the communicator housing, or in TrikdisConfig as a Unique ID. Below, an example product label highlights the QR code next to the IMEI/ID and SN fields. Buttons: Scan QR code, Cancel, Next." src="./image39.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
+![Protegus2 app 'Scan QR code' page for adding a system: empty Unique ID/IMEI field, OR, a Scan QR Code button, the note 'Scan the QR code or fill in the text field.' and a drawing of the product label with its QR code highlighted. Buttons: Cancel, Next.](./protegus-app/get-add-system-qr-phone.webp){ .trik-mob-img }
 
 4. Enter the system „**Name**”. Click "**Next**".
 
-<img alt="Protegus2 app 'Add new system' screen with the Name field set to GET, a Background colour picker, and Time zone set to Europe/Vilnius. Buttons: Cancel, Next." src="./image40.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+![Protegus2 app 'Add new system' page: Name GET, a Background colour circle and Time zone Europe/Vilnius. Buttons: Cancel, Next.](./protegus-app/get-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
@@ -805,20 +808,20 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  Click „**Continue**“.
 
-<img alt="Protegus2 app screen titled 'The system is not controlled remotely': an illustration of a communicator with NETWORK, DATA, POWER and TROUBLE LEDs and terminals +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2, beside a puzzled person. Text below: You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system. Continue button." src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Protegus2 app page 'The system is not controlled remotely': a communicator drawing beside a puzzled person, 'What do you need to know!' and the note that the output must be connected to the security system input terminal and Protegus2 configured to arm or disarm the system. Button: Continue.](./protegus-app/get-add-system-indirect-phone.webp){ .trik-mob-img }
 
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
-<img alt="Protegus2 app 'Add new area' screen: Area number 1, Area name '1 Area', 'Control with Protegus2 Europe' toggle on, Assigned Output PGM1, Pulse option selected with Pulse interval in seconds set to 3, Level option unselected, Cancel and Save buttons." src="./image42.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
+![Protegus2 app 'Add new area' page: Area number 1, Area name Home, 'Autoarm this area when arming area' Not used, 'Autodisarm when disarming area' off, 'Control with Protegus2' on, Assigned Output PGM1, Pulse selected with Pulse interval in seconds 3, Level not selected. Buttons: Cancel, Save.](./protegus-app/get-add-system-area-phone.webp){ .trik-mob-img }
 
 3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 2.  After completing the settings, click the “**Skip**” button.
 
-<img alt="Protegus2 app 'Areas' screen: list showing '1 Area, Controlled with: PGM1' with a remove (X) button, a plus button and 'Click to add an area' text below, and Skip / Next buttons." src="./image43.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+![Protegus2 app 'Areas' page: area Home, 'Controlled with: PGM1', with a remove button; below it a plus button and 'Click to add an area'. Buttons: Skip, Next.](./protegus-app/get-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Arming/disarming the alarm system with Protegus2 
 
@@ -826,7 +829,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="Protegus2 app System Home Screen for GET, showing Online status with signal strength, '1 Area' with Unknown status, Arm and Disarm buttons, and a PGM2 output button." src="./image44.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
+![Protegus2 app home screen of the GET system: Online, area Home with status Unknown and Arm and Disarm buttons, and a PGM2 output button.](./protegus-app/get-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ## Communicator settings
 
@@ -1114,7 +1117,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 ### User reporting
 
-Protegus2 service allows users to remotely monitor and control the communicator. For more information about Protegus2 service, visit [www.protegus.eu](http://www.protegus.eu).
+Protegus2 service allows users to remotely monitor and control the communicator. For more information about Protegus2 service, visit [web.protegus.app](https://web.protegus.app).
 
 === "Protegus app"
 

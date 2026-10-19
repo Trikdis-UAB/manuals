@@ -1,7 +1,7 @@
 # RF-S8 Беспроводной трансивер
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Передняя панель трансивера TRIKDIS RF-S8 с индикаторами NETWORK и POWER и клеммами +DC, -DC, A 485 и B 485. Маркировка питания: 9-26 V, 0.1 A Max." width="200">
 </div>
 
 ## Описание 
@@ -51,7 +51,7 @@
 
 6.  Кнопка для включения/отключения режима привязки беспроводных датчиков.
 
-<img alt="" src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
+<img alt="Слева — корпус RF-S8, справа — плата без крышки. Слева обозначены: 1 — SMA-разъём для RF-антенны, 2 — световые индикаторы, 3 — отверстие для снятия крышки. Справа: 4 — клеммы для внешних подключений, 5 — разъём USB Mini-B для обновления программного обеспечения, 6 — кнопка включения и отключения режима привязки." src="./image2.webp" style="display: block; margin: 1rem auto; max-width: 700px; height: auto;" />
 
 ### Назначение внешних клемм 
 
@@ -89,7 +89,7 @@
 
 5.  В программе TrikdisConfig откройте окно **„Обновление программы“**.
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Обновление программы», раздел «Прошивка». Поле «Открыть файл прошивки» пустое, кнопка «Открыть файл» доступна, кнопка «Обновить (F12)» неактивна, индикатор выполнения показывает 0%." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 6.  Нажмите кнопку **„Открыть файл“** и выберите для установки файл прошивки **SP3_xxx4\_0122.fw**.
 
@@ -105,17 +105,17 @@
 
 12. В строке состояния TrikdisConfig название панели должно иметь цифру 4.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, строка состояния охранной панели. Красной рамкой выделена цифра 4 в названии модуля SP3." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 13. В списке модулей должен появиться **„RF-S8 трансивер“**, так же будет указан серийный номер и версия микропрограммы. Если вы видите версию прошивки трансивера RF-S8, вы можете пропустить шаги 14-22.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. Красной рамкой выделена строка RF-S8 transceiver; в ней показаны поля Серийный № и Версия прошивки со значением RF-S8 01.00." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 14. Если в списке не указан „**RF-S8 трансивер**“, то необходимо в списке выбрать **„RF-S8 трансивер“**.
 
 15. В поле „**Серийный №**“ укажите серийный номер модуля RF-S8. Серийный номер можно найти на изделии и на этикетке упаковки.
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. В строке RF-S8 transceiver красной рамкой выделено поле Серийный № для ввода серийного номера трансивера." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Нажмите кнопку **Записать [F5]**.
 
@@ -129,7 +129,7 @@
 
 21. В окне **„Модули“** в поле **„Версия прошивки“** будет указана версия программного обеспечения модуля RF-S8.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. Красной рамкой выделена строка RF-S8 transceiver; в ней показаны поля Серийный № и Версия прошивки со значением RF-S8 01.00." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 22. „FLEXi“ SP3 зарегистрировала модуль RF-S8.
 
@@ -137,7 +137,7 @@
 
 24. Нажмите кнопку **„Отсоединить“**.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Модули», вкладка «RS485 модули». В первой строке указан RF-S8 transceiver с версией прошивки RF-S8 01.00; выделена кнопка «Отсоединить»." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 25. Подождите 1 минуту.
 
@@ -177,7 +177,7 @@
 
 В поле **„Уникальный №"** введите IMEI номер охранной панели „FLEXi“ SP3, который указан на упаковке или на изделии.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Удаленный доступ». Выделены пустое поле «Уникальный №» и кнопка «Конфигурировать»." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Нажмите кнопку **„Конфигурировать“**.
 
@@ -187,7 +187,7 @@
 
 Нажмите кнопку **„Привязка датчиков“**.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Беспроводные датчики, вкладка Датчики. Красной рамкой выделена кнопка Привязка датчиков над таблицей датчиков." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Регистрация беспроводных датчиков может производиться для всех сразу. Вставьте батарейки в беспроводные датчики (PIR, магнитный контакт, датчик протечки воды, пожарный дымовой извещатель, сирену).
 
@@ -197,11 +197,11 @@
 
 2.  RF-S8 находится в режиме регистрации беспроводных устройств. TrikdisConfig откроет окно привязки датчиков.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Окно TrikdisConfig 'Режим привязки': начат режим привязки; предлагается вставить батарейки в новый датчик и дождаться завершения инициализации. Внизу кнопка 'Остановить привязку'." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 3.  Нажмите и удерживайте кнопку обучения в течение 5 секунд. Когда индикатор четыре раза мигнет зелёным, отпустите кнопку.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="Рисунок датчика: стрелка указывает на кнопку обучения. Надпись предписывает нажать и удерживать её в течение 5 секунд." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 4.  На модуле RF-S8 индикатор **„NETWORK“** на короткое время загорится зеленым (это означает, что датчик зарегистрирован). Через несколько секунд индикатор **„NETWORK“** снова начнет мигать зеленым/красным.
 
@@ -209,7 +209,7 @@
 
 6.  Нажмите кнопку **„Сохранить“**.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Окно TrikdisConfig 'Найдено новое устройство': обнаружен S8 Door/Window Sensor. Выделены поле 'Номер зоны' со значением 10, поле 'Определение зоны' со значением 'Мгновенная' и кнопка 'Сохранить'." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 7.  Беспроводный датчик включен в список беспроводных устройств.
 
@@ -217,21 +217,21 @@
 
 9.  Нажмите **„Остановить привязку“**, чтобы завершить регистрацию беспроводных устройств.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Окно TrikdisConfig 'Режим привязки': сообщение подтверждает обнаружение S8 Door/Window Sensor; выделена кнопка 'Остановить привязку'." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 10. В открывшемся окне нажмите ***„*Да*“. Зарегистрированные беспроводные датчики будут сохранены в памяти охранной панели „FLEXi“ SP3***. Нажмите "**Нет**", если вы хотите дополнительно настроить параметры.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Окно 'Сохранить конфигурацию' спрашивает, сохранить ли новые параметры в модуле. Выделена кнопка 'Yes'; рядом кнопка 'No'." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Подождите несколько минут. Нажмите кнопку **Считать [F4]**.
 
 TrikdisConfig окно **„Беспроводные датчики“** будет содержать список зарегистрированных беспроводных устройств. В поле **„Серийный №“** будут записаны серийные номера датчиков.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Окно TrikdisConfig 'Беспроводные датчики': в первой строке списка указан S8 Door/Window Sensor, рядом поле 'Серийный №'. Доступна кнопка 'Считать (F4)'." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Проверьте правильность назначения датчиков **„Зонам“** и **„Разделам“** охранной cигнализации (окно **„Зоны“**).
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Зоны», вкладка «Настройки зон». Выделенная строка Zone 10 показывает вход «Беспроводные», раздел 1, мгновенное назначение и тип EOL_T." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Если задать „**Тип“** зоны EOL-T, то будет включен режим контроля саботажа датчика.
 
@@ -266,7 +266,7 @@ TrikdisConfig окно **„Беспроводные датчики“** буд�
 6.  Мигающий индикатор **„NETWORK“** указывает, что RF-S8 находится в режиме регистрации беспроводных устройств.
 7.  Нажмите и удерживайте кнопку обучения в течение 5 секунд. Когда индикатор четыре раза мигнет зелёным, отпустите кнопку.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="Рисунок датчика: стрелка указывает на кнопку обучения. Надпись предписывает нажать и удерживать её в течение 5 секунд." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 8.  На модуле RF-S8 индикатор **„NETWORK“** на короткое время загорится зеленым (это означает, что датчик зарегистрирован).
 
@@ -282,11 +282,11 @@ TrikdisConfig окно **„Беспроводные датчики“** буд�
 
 14. TrikdisConfig окно **„Беспроводные датчики“** будет содержать список зарегистрированных беспроводных устройств. В поле **„Серийный №“** будут записаны серийные номера датчиков.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Окно TrikdisConfig 'Беспроводные датчики': в первой строке списка указан S8 Door/Window Sensor, рядом поле 'Серийный №'. Доступна кнопка 'Считать (F4)'." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 15. Проверьте правильность назначения датчиков **„Зонам“** и **„Разделам“** охранной cигнализации (окно **„Зоны“**).
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Зоны», вкладка «Настройки зон». Выделенная строка Zone 10 показывает вход «Беспроводные», раздел 1, мгновенное назначение и тип EOL_T." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. После внесения изменений, нажмите **Записать [F5]**.
 

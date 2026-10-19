@@ -6,7 +6,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readJson } from './guard.mjs';
-import { SAMPLE, MODELS, sampleMe, sampleSystem, sampleConfigInfo, sampleListRow } from './sample.mjs';
+import { SAMPLE, MODELS, NEW_SYSTEM_ID, sampleMe, sampleSystem, sampleConfigInfo, sampleListRow } from './sample.mjs';
 import { configuratorMocks } from './mocks-configurators.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,10 +19,11 @@ export function fakeToken() {
   return `${b64({ typ: 'JWT', alg: 'none' })}.${b64(payload)}.c2FtcGxl`;
 }
 
-export function createMocks({ lang, model, configPatch = null }) {
+export function createMocks({ lang, model, configPatch = null, timezoneId = null }) {
   const routes = [];
   const on = (method, endpoint, fn) => routes.push({ method, endpoint, fn });
   const regions = readJson(FIX, 'public', 'regions.json').regions;
+  const state = {}; // what this session's add-system wizard created
   const token = fakeToken();
 
   // Public, auth-free reference data (saved copies; see README).
@@ -34,7 +35,9 @@ export function createMocks({ lang, model, configPatch = null }) {
   });
   on('GET', '/regions', () => readJson(FIX, 'public', 'regions.json'));
   on('GET', '/languages', () => readJson(FIX, 'public', 'languages.json'));
-  on('GET', '/timezones', () => readJson(FIX, 'public', 'timezones.json'));
+  // The server also names the caller's own zone (it becomes a new system's default); the saved copy
+  // says whatever it said where it was fetched, so the run's chosen zone replaces it.
+  on('GET', '/timezones', () => ({ ...readJson(FIX, 'public', 'timezones.json'), ...(timezoneId ? { userTimeZone: timezoneId } : {}) }));
   // The app reports its own front-end errors here; swallowed so nothing is sent.
   on('POST', '/error', () => ({ success: true }));
 
@@ -53,7 +56,11 @@ export function createMocks({ lang, model, configPatch = null }) {
     success: true,
     list: Number(query.get('systemOffset') || 0) === 0 ? [sampleListRow(model)] : [],
   }));
-  on('*', '/get-system', () => ({ success: true, system: sampleSystem(model), relatedSystems: [] }));
+  on('*', '/get-system', ({ body }) => ({
+    success: true,
+    system: Number(body?.system_id) === NEW_SYSTEM_ID && state.system ? state.system : sampleSystem(model),
+    relatedSystems: [],
+  }));
 
   // Device configuration (what a live read would return).
   on('*', '/config/info', () => sampleConfigInfo(model));
@@ -65,7 +72,7 @@ export function createMocks({ lang, model, configPatch = null }) {
   });
 
   // Calls a particular configurator makes besides config/read (status, keypads, users, ...).
-  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model });
+  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model, state });
 
   return {
     sampleSystem: () => sampleSystem(model),

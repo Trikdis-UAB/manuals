@@ -1274,6 +1274,7 @@
   }
 
   function navigateToResult(urlValue) {
+    recordSearchNow();  // opening a result settles the search
     var parsedUrl = parseResultUrl(urlValue);
     if (!parsedUrl) {
       return;
@@ -1792,6 +1793,54 @@
     setMeta(formatCount(state.texts.other, count));
   }
 
+  // What visitors search for, in Google Analytics (2026-10-15, Andrius): a "search" event
+  // with search_term, search_scope ("manual", "language" or "none": where results were
+  // found) and search_lang. Only the query a visitor settles on: recorded once a search has
+  // stood for SEARCH_RECORD_MS, or at once when they open a result, so typing "g", "ge",
+  // "get" counts as one search. Only with analytics consent (the theme creates
+  // window.dataLayer only after it), and never a query that looks like personal data: an
+  // email address, or a run of 7+ digits (a phone number, an IMEI).
+  var SEARCH_RECORD_MS = 2500;
+
+  function recordSearchNow() {
+    if (state.recordTimer) {
+      clearTimeout(state.recordTimer);
+      state.recordTimer = null;
+    }
+    var outcome = state.lastOutcome;
+    state.lastOutcome = null;
+    if (!outcome) {
+      return;
+    }
+    var term = outcome.query.replace(/\s+/g, " ").trim().slice(0, 80);
+    if (term.length < 2 || term.indexOf("@") !== -1 || /\d{7,}/.test(term.replace(/[\s\-.()+]/g, ""))) {
+      return;
+    }
+    if (term.toLowerCase() === state.lastRecorded) {
+      return;
+    }
+    state.lastRecorded = term.toLowerCase();
+    var props = { search_term: term, search_scope: outcome.scope, search_lang: state.scopes.lang || "" };
+    // The same event in the cookieless analytics (analytics-cookieless.js), which needs no consent.
+    if (window.trikdocsAnalytics) {
+      window.trikdocsAnalytics.cookieless("search", props);
+    }
+    if (Array.isArray(window.dataLayer)) {
+      // The same call the theme's gtag makes: dataLayer takes the arguments object.
+      (function () {
+        window.dataLayer.push(arguments);
+      })("event", "search", props);
+    }
+  }
+
+  function noteSearchOutcome(query, scope) {
+    state.lastOutcome = { query: query, scope: scope };
+    if (state.recordTimer) {
+      clearTimeout(state.recordTimer);
+    }
+    state.recordTimer = setTimeout(recordSearchNow, SEARCH_RECORD_MS);
+  }
+
   async function performSearch() {
     if (!state.input) {
       return;
@@ -1799,6 +1848,12 @@
 
     var query = (state.input.value || "").trim();
     state.currentQuery = query;
+    // A new search replaces one that hasn't been recorded yet.
+    if (state.recordTimer) {
+      clearTimeout(state.recordTimer);
+      state.recordTimer = null;
+    }
+    state.lastOutcome = null;
 
     if (!query) {
       setIdleState();
@@ -1829,6 +1884,7 @@
         renderResultList(manualResults);
         setMatchCount(manualResults.length, { inDocument: isCurrentDocumentScope() });
         renderExpansionHint(manualSearch.expansionTerms);
+        noteSearchOutcome(query, "manual");
         return;
       }
 
@@ -1846,6 +1902,7 @@
       if (languageResults.length) {
         renderResultList(languageResults);
         renderExpansionHint(languageSearch.expansionTerms);
+        noteSearchOutcome(query, "language");
         return;
       }
 
@@ -1853,6 +1910,7 @@
         state.list.innerHTML = "";
       }
       setLanguageFallbackHeader(state.texts.noResultsLanguage);
+      noteSearchOutcome(query, "none");
     } catch (error) {
       if (token !== state.searchToken) {
         return;

@@ -3,6 +3,10 @@
 Takes screenshots of the Protegus app's device-configurator screens for the manuals' "Protegus app"
 tabs, without a live device or a real account.
 
+How to add a product, the traps and the hand-off are in `skill/SKILL.md`, which is also the
+`protegus-app-screenshots` skill (`~/.claude/skills/protegus-app-screenshots` links to that folder in
+the main checkout, so every session on this Mac can use it).
+
 It opens the **released** web app (`https://web.protegus.app`, the EU production front-end customers
 use) in headless Chrome and answers every API call itself with sample data: a signed-in installer,
 one system and that system's configuration. So the screenshots show exactly the version customers
@@ -16,6 +20,14 @@ npm ci                      # Playwright only; it drives the installed Google Ch
 node capture.mjs --model GET --lang en --layout phone,desktop     # all screens in screens/g16.json
 node capture.mjs --model GET --lang en --layout phone --screen panel-tlf,events
 node capture.mjs --model SP5 --lang en --layout phone,desktop     # all screens in screens/sp5.json
+```
+
+Besides configurator screens, the tool walks the **add-new-system wizard** (systems list → "+" →
+Unique ID → Add new system → "The system is not controlled remotely" → Add new area → Areas →
+dashboard) for a GET-family communicator, plus the phone apps' "Scan QR code" first page:
+
+```bash
+node capture.mjs --model GET --flow new-system --lang en,lt,es,ru --layout phone
 ```
 
 Two configurators are covered, each with its own screen list and sample configuration:
@@ -35,7 +47,7 @@ records and leaves the rest.
 | `--lang` | `en` | comma-separated; any language the app has (`en,lt,es,ru`) |
 | `--layout` | `desktop,phone` | desktop is 1440×900 @2x, phone is 390×844 @3x |
 | `--screen` | all in the model's screen list | comma-separated screen ids |
-| `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (confirmed); the other models are placeholders until confirmed, and the run says so. Both go into the manifest |
+| `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (both confirmed), SP5 to 1.00 (firmware confirmed, revision not); the other models are placeholders, and the run says so. The manifest records `firmwareConfirmed` and `revisionConfirmed` |
 | `--out` | `out` | output folder |
 
 Each g16 desktop capture gives two files: the whole window (`…-desktop.png`) and just the configurator
@@ -93,6 +105,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | `GET /config/info` | sample device info: model, firmware, serial |
 | `POST /config/read` | the model's sample configuration |
 | `POST /error` | swallowed (the app's own error reporting) |
+| Wizard: `GET /online`, `POST /get-system-info-new`, `POST /get-system-status-new`, `POST /create-system`, `POST /area` | device online and not directly controlled; the created system and its area are kept for the session (`lib/mocks-configurators.mjs`) |
 | SP5 only: `GET /system-lite`, `GET /config/get-connection-status`, `GET /config/get-device-status`, `POST /get-system-status-new`, `GET /config/users/read`, `POST /config/time/read` | sample system details, connection state, device and zone status, the user list and the panel clock (`lib/mocks-configurators.mjs`) |
 
 Anything else is answered with `success: false` and reported as `UNMOCKED` with a warning.
@@ -137,10 +150,19 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
 - **The device-info header shows "GET_x1x1".** The app shows the version string without its firmware
   part unless the device also sends a separate name (`dr`). Whether a real GET sends one is not known
   from the code; the sample sends none.
-- **SP5 values not checked against a real panel:** the firmware (1.00 is a placeholder, so the
-  dashboard says "Up to date"), the panel-event Contact ID codes (standard codes; the screen's manifest
-  record carries an `unverified` note), keypad serial-number prefixes (52 = LCD, 51 = LED) and wireless
-  device settings. SP5's Cameras page is VideoHub-only and is not captured.
+- **SP5 values from a real panel, and the rest:** firmware 1.00, revision 1E7LWB.0, bootloader 1.00 and
+  the panel-event Contact ID codes come from a real SP5 test panel on the beta server (2026-10-19), so
+  the sidebar title reads "SP5_1E7LWB.0" as on a real panel. Testers may have changed single event codes,
+  and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED)
+  and wireless device settings. SP5's Cameras page is VideoHub-only and is not captured.
+- **The beta server already returns newer SP5 fields** (e.g. `io9To2wire`/`io10To2wire`,
+  `wirelessSupervisionTime`, per-channel `enableEncryption`) that only the beta front-end uses. The
+  sample follows the released front-end; SP5 screens will change when that release ships.
+- **The wizard's "Scan QR code" page is the phone apps' view.** The QR button exists only in the native
+  apps, which wrap this web app; the tool imitates the Android app's bridge to show it. It was not
+  photographed on a real phone, and the manifest says so.
+- **App texts not translated in the released packs:** the Russian app is in English, and Spanish lacks
+  "Assigned Output". The screenshots show what users of those languages see.
 - **Live-only screens are not captured:** the read and write progress ("Reading… n%", "Writing… n%",
   progress bar) and the write result, which the app drives from its realtime channel. The manifest lists
   them under `liveOnly`.

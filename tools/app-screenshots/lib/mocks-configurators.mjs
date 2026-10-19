@@ -1,9 +1,38 @@
 // Sample answers for the calls a configurator makes besides config/read. Invented data only.
 
-import { SAMPLE } from './sample.mjs';
+import { SAMPLE, wizardDeviceInfo, WIZARD_DEVICE_STATUS, wizardCreatedSystem } from './sample.mjs';
 
-export function configuratorMocks(configurator, { on, readJson, FIX, model }) {
+export function configuratorMocks(configurator, { on, readJson, FIX, model, state }) {
   if (configurator === 'sp5') sp5(on, { readJson, FIX, model });
+  if (configurator === 'g16') addSystemWizard(on, { model, state });
+}
+
+// The add-new-system wizard for a g16-family communicator: online, not directly controlled, so the
+// app asks for areas and offers output (PGM) control. Calls in the order the wizard makes them.
+function addSystemWizard(on, { model, state }) {
+  on('GET', '/online', () => ({ success: true, online: true, errorType: '', srv: 1, own_region: true, local_version: 1 }));
+  on('POST', '/get-system-info-new', () => wizardDeviceInfo(model));
+  on('POST', '/get-system-status-new', () => WIZARD_DEVICE_STATUS);
+  on('POST', '/create-system', ({ body }) => {
+    state.system = wizardCreatedSystem(model, body);
+    return { success: true, system: state.system };
+  });
+  // Saving the area: store it, and bind the chosen output to it as the app does.
+  on('POST', '/area', ({ body }) => {
+    const id = 900201;
+    if (state.system) {
+      const a = body?.area ?? {};
+      state.system.areas = [{
+        id, system_id: state.system.id, name: a.name ?? 'Home', queue_no: a.queue_no ?? 1, status: 1, alarm_in_memory: false,
+        status_time: null, last_person_name: '', alarm_time: null, alarm_type: 0, monas_id: null, autoarm_with_area_id: null,
+        disarm_when_autoarmed: false, showKeypad: false, canBypass: false, zones: [],
+      }];
+      const p = body?.pgm && state.system.pgms.find((x) => x.id === body.pgm.id);
+      if (p) Object.assign(p, { pgm_as_area_ck: 1, area_to_arm: id, type: body.pgm.type ?? 'pulse', pulse_time_in_seconds: body.pgm.pulseTime ?? 3 });
+    }
+    return { success: true, area_id: id };
+  });
+  on('POST', '/add/zone', () => ({ success: true, id: 900401 }));
 }
 
 // Fixed sample moment, so captures are repeatable.

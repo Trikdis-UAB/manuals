@@ -1,7 +1,7 @@
 # iO-LORA Беспроводной расширитель
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="Вид спереди беспроводного расширителя TRIKDIS iO-LORA: индикаторы NETWORK, OUTPUT и POWER. На корпусе напечатаны параметры 9-26 V, 0.1 A Max и обозначения клемм +DC, -DC, D0, D1, +5V, 1 Wire/OUT wgd, COM, IN1, NC, C и NO." width="200">
 </div>
 
 ## Требование безопасности
@@ -15,7 +15,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-> <img alt="" src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+> <img alt="Перечёркнутый контейнер для мусора на колёсах: изделие нельзя выбрасывать вместе с бытовыми отходами." src="./image2.webp" style="display: inline; height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -64,7 +64,7 @@
 
 ### Элементы расширителя 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
+<img alt="Две фотографии расширителя iO-LORA: слева закрытый корпус, справа открытый с видимой платой. Слева: 1 — световые индикаторы NETWORK, OUTPUT, POWER; 2 — щель для снятия передней крышки на правом краю. Справа: 3 — клеммы для внешних соединений; 4 — кнопка SW2 для привязки устройства и проверки подключения; 5 — DIP-переключатель SW1." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 600px; height: auto;" />
 
 !!! note "Настройки DIP-выключателя „SW1“"
     Для изделий версии HW iO-LO_x30x_7_230418:
@@ -108,7 +108,7 @@
 
 1.  Снимите верхнюю крышку.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Два рисунка снятия верхней крышки iO-LORA. Слева: вставить отвёртку в щель у верхнего края. Справа: нажать на рукоятку отвёртки вниз, чтобы освободить крышку." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 2.  Удалите плату.
 
@@ -118,11 +118,11 @@
 
 5.  Закройте верхнюю крышку.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Рисунок корпуса iO-LORA: справа показано основание с монтажными отверстиями; слева — плата у края корпуса, обведённая точка крепления и стрелка наружу." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Подключение питания 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Схема подключения: источник питания к iO-LORA. Клемма +12В к +DC, клемма 0В к -DC; указано напряжение +12 В." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 ### Схема подключения входа 
 
@@ -130,10 +130,10 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image8.webp" alt="Схема подключения: вход iO-LORA к нормально открытому контакту NO. Контакт соединяет клеммы IN и COM при замыкании." style="width: 100%; height: auto;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 100%; height: auto;" />
+    <img src="./image9.webp" alt="Схема подключения: вход iO-LORA к нормально закрытому контакту NC. Контакт соединяет клеммы IN и COM в нормальном состоянии." style="width: 100%; height: auto;" />
   </figure>
 </div>
 
@@ -141,7 +141,7 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 Датчики температуры подсоединяются по приведенной схеме. К расширителю *iO-LORA* можно подключить один температурный датчик Maxim®/Dallas® DS18S20, DS18B20. Для подключения датчика температуры рекомендуется применять кабель с витой парой (UTP4x2x0.5 или STP4x2x0.5). Клемма „+5 V“ предназначена для питания, устройств подключенных к шине "1-Wire", напряжением постоянного тока. Допустимый ток 0,2 А. Выход защищен от перегрузки.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Схема подключения: iO-LORA к датчику температуры DS18B20. Красный провод: +5V к +Vdd; жёлтый: 1 Wire к DQ; чёрный: C к GND." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 При превышении допустимого тока питание отключается автоматически. Охранная панель "FLEXi" SP3 автоматически распознает и регистрирует подключенный датчик температуры.
 
@@ -149,11 +149,11 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 **CZ-Dallas** считыватель контактных (iButton) ключей подключается к шине "**1-Wire**". Длина проводов шины "**1-Wire**" до 30 м.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
+<img alt="Схема подключения: iO-LORA к считывателю CZ-Dallas reader. Питание 12–26В: плюс к +DC, минус к -DC. Клемма C соединена с +DC; NO через резистор 1k — с RED LED+ коричневым проводом, NC через резистор 1k — с Green LED+ зелёным проводом. COM соединена с LED- жёлтым проводом и с серым проводом считывателя; 1-Wire — с белым проводом. Длина соединения 1-Wire до 30 м. Выходу OUT назначается тип 'Статус системы': при включённой охране iButton светится красным, при выключенной — зелёным." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 750px; height: auto;" />
 
 ### Схема подключения модулей iO-LORA 
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Схема подключения: SP3 к RF-LORA. AUX+ (+12 В) к +DC, AUX- к -DC, 485 A к A RS 485, 485 B к B RS485. Беспроводная связь с iO-LORA — до 5000 м. Каждый iO-LORA: питание 12-26В к +DC и -DC. Датчик температуры DS18B20 или DS18S20: +5V к Vdd+, 1-Wire к DQ, COM к GND. Для CZ-Dallas reader: 1-Wire к белому проводу, COM к серому и жёлтому проводу LED-, +DC к C; NO через 1k к коричневому проводу RED LED+, NC через 1k к зелёному проводу Green LED+. Длина соединения 1-Wire до 30 м. Выходу OUT присваивается тип Статус системы: при включённой охране iButton светится красным, при выключенной — зелёным." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     К охранной панели "FLEXi" SP3 должен быть подключен
@@ -181,19 +181,19 @@ iO-LORA имеет один вход. Тип входа можно устано�
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Модули», вкладка «RS485 модули». В строке ID 1 выбран «Расширитель iO-LORA», поле «Серийный №» заполнено, «Раздел» — 1, «Название» — Expander ID1." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входа расширителя.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Скриншот TrikdisConfig 1.66.47 для SP3: раздел Зоны, вкладка Настройки зон. В выпадающем списке поля Вход для Zone 1 показан вариант RS485 Expander ID1, IN1." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходу расширителя.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Скриншот TrikdisConfig 1.66.47 для SP3: раздел PGM выходы, вкладка Выходы. В строке PGM 2 выбран выход RS485 Expander ID1, OUT1; время импульса — 10 с." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. В списке "**Датчики**" будут включены датчики температуры, если к iO-LORA расширителю подсоединен датчик температуры.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Датчики». В строке № 1 выбрано устройство RS485 Expander ID1; показаны поля «Серийный №», «Датчик», «Макс», «Мин» и задержка. Для Sensor 1 указаны «Макс» 30, «Мин» 20, обе соответствующие галочки установлены, задержка — 0." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 12. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

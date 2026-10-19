@@ -103,7 +103,7 @@ This manual is for 4G communicators.
 | Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Power supply voltage | 10-18 V DC |
-| Current consumption | 125 mA |
+| Current consumption | Up to 100 mA (on standby) /​ Up to 200 mA (while sending data) |
 | Transmission protocols | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Message encryption | AES 128 |
 | Changing settings | With TrikdisConfig computer program remotely or locally via USB-С port |
@@ -378,6 +378,9 @@ Following one of the schematics provided below, connect communicator to the cont
 <img class="wiring-diagram" alt="Wiring diagram: any control panel's telephone line communicator terminals to GT. +AUX to +DC, -AUX to -DC, TIP to TIP, RING to RING." src="./wiring-control-panel-tip-ring.webp" width="621" height="476" />
 
 ### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel
+
+!!! note
+    This connection needs communicator firmware 1.21 or later.
 
 <img alt="Wiring diagram: PARADOX SP, SP+, MG or MG+ panel to GT. Keypad bus: +AUX (+12 V) to +DC, -AUX to -DC, GRN to DATA, YEL to CLK. Telephone communicator: panel TIP to GT TIP, panel RING to GT RING." src="./image22.webp" style="width:3.4666732283464565in;height:2.8900054680664917in" />
 

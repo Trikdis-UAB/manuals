@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Receptor de Línea Telefónica
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Vista frontal de un receptor TRIKDIS con cuatro indicadores LED, un orificio RESET, un conector LINE y la etiqueta RT2." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Sobre el receptor de línea telefónica

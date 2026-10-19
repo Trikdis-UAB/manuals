@@ -98,7 +98,7 @@ Este manual es para comunicadores LTE.
 | Módem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Módem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Voltaje de la fuente de alimentación | 10-18 V DC |
-| Consumo de Energía | 175 mA |
+| Consumo de corriente | Hasta 100 mA (en modo espera) /​ Hasta 300 mA (durante el envío de datos) |
 | Protocolos de Transmisión | TRK, DC-09_2007, DC-09_2012, TL150 |
 | Encriptación del mensaje | AES 128 |
 | Memoria de eventos no enviados | Hasta 60 eventos |
@@ -412,6 +412,9 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 ### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
 
+!!! note "Nota"
+    Esta conexión requiere el firmware del comunicador 1.21 o posterior.
+
 <img alt="Diagrama de conexión: panel PARADOX SP/SP+/MG/MG+ al GET. Alimentación: +AUX (+12B) a +DC, -AUX a -DC. Bus de Datos: GRN a DATA, YEL a CLK. Comunicador telefónico: TIP del panel a TIP del GET, RING del panel a RING del GET." src="./image26.webp" style="width:3.39000656167979in;height:3.016673228346457in" />
 
 Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GET:
@@ -676,7 +679,7 @@ Programación del panel de control **Interlogix NX-4V2** (**NX-6V2**, **NX-8V2**
 
 Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remota. Podrán ver el estado del sistema y recibir notificaciones sobre eventos del sistema.
 
-1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [<u>www.protegus.eu/login</u>](http://www.protegus.eu/login):
+1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [<u>web.protegus.app</u>](https://web.protegus.app):
 
     <div style="margin: 20px 0; text-align: left;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -709,11 +712,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
         amarillo).
 3. De clic en "**Añadir nuevo sistema**" e ingrese el número de GET “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
-<img alt="Protegus2, pantalla Escanear código QR. El campo ID único/IMEI está vacío; una indicación dice que el IMEI se encuentra en la caja, en la parte trasera del comunicador o en TrikdisConfig como ID único. Se muestran Escanear código QR y Siguiente." src="./image37.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+![Pantalla Escanear código QR de Protegus2 para añadir un sistema: campo ID único/IMEI vacío, «O», botón Escanear Código QR, el texto «Escanee el código QR o complete el campo de texto.» y un dibujo de la etiqueta del producto con el código QR resaltado. Botones Cancelar y Siguiente.](./protegus-app/get-add-system-qr-phone.webp){ .trik-mob-img }
 
 4. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
-<img alt="Aplicación Protegus2, pantalla Añadir nuevo sistema: el campo Nombre contiene GET y Zona horaria muestra Europe/Vilnius. Abajo aparecen los botones Cancelar y Siguiente." src="./image40.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+![Pantalla Añadir nuevo sistema de Protegus2: Nombre GET, círculo de color Fondo y Zona horaria Europe/Madrid. Botones Cancelar y Siguiente.](./protegus-app/get-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
@@ -724,21 +727,21 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="Protegus2, pantalla El sistema no se controla de forma remota. Indica conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 Europe para habilitar o deshabilitar el sistema. Abajo aparece el botón Continuar." src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Pantalla de Protegus2 «El sistema no se controla de forma remota»: dibujo de un comunicador junto a una persona pensativa, «¡Qué necesita saber!» y la indicación de conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 para armar o desarmar el sistema. Botón Continuar.](./protegus-app/get-add-system-indirect-phone.webp){ .trik-mob-img }
 
-2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
+2. Ingrese "**Nombre del área**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
 2.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image42.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Pantalla Agregar nueva área de Protegus2: Número de área 1, Nombre del área Casa, armado automático «No ut…» (texto cortado), desarmado automático desactivado, «Control con Protegus2» activado, Assigned Output PGM1 (sin traducir en la app), Pulso seleccionado con intervalo de 3 segundos, Nivel sin seleccionar. Botones Cancelar y Guardar.](./protegus-app/get-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
+4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="Pantalla Áreas de Protegus2: la partición 1 Area figura como Controlado con: PGM1. Debajo aparecen el botón para agregar una partición y las opciones Saltar y Siguiente." src="./image43.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
+![Pantalla Áreas de Protegus2: área Casa, «Controlado con: PGM1», con botón para eliminar; debajo, botón con signo más y «Haga clic para agregar un área». Botones Saltar y Siguiente.](./protegus-app/get-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Control del sistema con Protegus2 
 
@@ -746,7 +749,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="Pantalla principal de Protegus2 para GET: estado En línea con intensidad de señal, 1 Area con estado Desconocido, botones Arm y Desarm y botón de salida PGM2." src="./image44.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
+![Pantalla principal del sistema GET en Protegus2: En línea, área Casa con estado Desconocido, botones Arm y Desarm, y botón de la salida PGM2.](./protegus-app/get-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ## Configuración con el programa TrikdisConfig 
 
@@ -908,7 +911,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 <img alt="Ventana Informes para usuario de TrikdisConfig, pestaña Servicio PROTEGUS: Activar conexión marcado, campo Código de acceso a Protegus y Parallel reporting sin marcar." src="./image51.webp" style="width:7.086614173228346in;height:1.952755905511811in" />
 
-El servicio Protegus permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus en [www.protegus.eu](http://www.protegus.eu).
+El servicio Protegus2 permite a los usuarios monitorear y controlar remotamente el comunicador. Puede encontrar más información sobre el servicio de Protegus2 en [web.protegus.app](https://web.protegus.app).
 
 - **Activar conexión** – marque la casilla para habilitar el servicio Protegus2. El comunicador GET podrá comunicarse con la aplicación Protegus2. Con el programa TrikdisConfig, puede configurar de forma remota su comunicador.
 

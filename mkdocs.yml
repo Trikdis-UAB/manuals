@@ -73,6 +73,7 @@ extra_css:
 - stylesheets/tool-switcher.css
 - stylesheets/print.css
 extra_javascript:
+- javascripts/analytics-cookieless.js
 - javascripts/redirect-trailing-slash.js
 - javascripts/close-language-select.js
 - javascripts/language-ui.js

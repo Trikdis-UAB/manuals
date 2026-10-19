@@ -101,7 +101,7 @@ Veikia su Protegus2 programėle:
 | Modemas BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modemas BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Maitinimo įtampa | 10-18 V nuolatinės srovės |
-| Naudojama srovė | 125 mA |
+| Naudojama srovė | Iki 100 mA (budėjimo režime) /​ Iki 200 mA (duomenų siuntimo metu) |
 | Perdavimo protokolai | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Pranešimo šifravimas | AES 128 |
 | Atmintis | Iki 60 pranešimų |
@@ -383,6 +383,9 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 <img class="wiring-diagram" alt="Prijungimo schema: centralės telefoninio komunikatoriaus gnybtai prijungti prie GT: +AUX prie +DC, -AUX prie -DC, TIP prie TIP, RING prie RING." src="./wiring-control-panel-tip-ring.webp" width="596" height="511" />
 
 ### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų) 
+
+!!! note "Pastaba"
+    Šiam prijungimui komunikatoriaus programinės įrangos versija turi būti ne žemesnė nei 1.21.
 
 <img alt="Prijungimo schema: PARADOX SP/SP+/MG/MG+ centralė prie GT. Klaviatūros magistralė: +AUX (+12V) prie + DC, -AUX prie - DC, GRN prie DATA, YEL prie CLK. Telefono komunikatorius: TIP prie TIP, RING prie RING." src="./image22.webp" style="width:3.550007655293088in;height:2.743338801399825in" />
 
