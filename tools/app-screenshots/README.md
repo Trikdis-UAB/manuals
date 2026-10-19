@@ -150,10 +150,14 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
 - **The device-info header shows "GET_x1x1".** The app shows the version string without its firmware
   part unless the device also sends a separate name (`dr`). Whether a real GET sends one is not known
   from the code; the sample sends none.
-- **SP5 values not checked against a real panel:** the hardware revision and bootloader (firmware 1.00
-  is confirmed: every SP5 on the beta server reports it), the panel-event Contact ID codes (standard codes; the screen's manifest
-  record carries an `unverified` note), keypad serial-number prefixes (52 = LCD, 51 = LED) and wireless
-  device settings. SP5's Cameras page is VideoHub-only and is not captured.
+- **SP5 values from a real panel, and the rest:** firmware 1.00, revision 1E7LWB.0, bootloader 1.00 and
+  the panel-event Contact ID codes come from a real SP5 test panel on the beta server (2026-10-19), so
+  the sidebar title reads "SP5_1E7LWB.0" as on a real panel. Testers may have changed single event codes,
+  and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED)
+  and wireless device settings. SP5's Cameras page is VideoHub-only and is not captured.
+- **The beta server already returns newer SP5 fields** (e.g. `io9To2wire`/`io10To2wire`,
+  `wirelessSupervisionTime`, per-channel `enableEncryption`) that only the beta front-end uses. The
+  sample follows the released front-end; SP5 screens will change when that release ships.
 - **The wizard's "Scan QR code" page is the phone apps' view.** The QR button exists only in the native
   apps, which wrap this web app; the tool imitates the Android app's bridge to show it. It was not
   photographed on a real phone, and the manifest says so.

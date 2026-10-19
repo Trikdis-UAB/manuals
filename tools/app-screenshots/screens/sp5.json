@@ -146,7 +146,7 @@
         "configurators.navigation.panelEvents"
       ],
       "route": "panelEvents",
-      "unverified": "Contact ID codes are standard codes, not checked against a real SP5's defaults."
+      "unverified": "Contact ID codes and on/off states are a real SP5 test panel's (beta, 2026-10-19); testers may have changed single codes. lowBattery is shown enabled with 0302 (the test panel had it disabled with 0000)."
     }
   ],
   "notShown": [

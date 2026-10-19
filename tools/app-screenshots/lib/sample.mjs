@@ -27,9 +27,10 @@ export const MODELS = {
   'G16T':  { ...G16, hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
   'E16':   { ...G16, hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
   'E16T':  { ...G16, hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
-  // SP5 firmware 1.00: every SP5 on the beta server reports it (7 test systems, read 2026-10-12;
-  // it is the value the server stores). Hardware revision and bootloader are not known.
-  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: null, bt: '0100', firmwareConfirmed: true, revisionConfirmed: false },
+  // SP5 firmware 1.00: every SP5 on the beta server reports it (7 test systems, read 2026-10-12).
+  // Revision 1E7LWB.0 and bootloader 1.00 from a real test panel's config/info (2026-10-19), which
+  // reports its version as "SP5_1E7LWB.0_1.00": the firmware part is dotted, not x100.
+  'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: '1E7LWB.0', bt: '1.00', fwFormat: 'dotted', firmwareConfirmed: true, revisionConfirmed: true },
 };
 
 export function setFirmware(model, { firmware, revision }) {
@@ -42,12 +43,13 @@ export function sampleFirmware(model) {
   return { firmware: m.firmware, revision: m.revision };
 }
 
-// How the device reports itself in config/info: "<name>[_<revision>]_<fw x100>". The app shows
-// the last part as firmware (0112 -> 1.12) and takes the revision from the second part.
+// How the device reports itself in config/info: "<name>[_<revision>]_<fw>", the firmware either x100
+// ("0112" -> 1.12, g16 family) or dotted ("1.00", SP5). The app shows the version without its last part
+// as the device name and takes the revision from the second part.
 export function sampleVersion(model) { return deviceVersion(MODELS[model]); }
 
 function deviceVersion(m) {
-  const fw = String(Math.round(parseFloat(m.firmware) * 100)).padStart(4, '0');
+  const fw = m.fwFormat === 'dotted' ? m.firmware : String(Math.round(parseFloat(m.firmware) * 100)).padStart(4, '0');
   return m.revision ? `${m.name}_${m.revision}_${fw}` : `${m.name}_${fw}`;
 }
 
