@@ -687,11 +687,11 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
         цветом и мигает желтым).
 3. Нажмите „**Add new system“** и введите „Unique ID/IMEI“ номер GT, который найдете на изделии или на упаковке. Нажмите кнопку „**Next“**.
 
-<img alt="Экран Scan QR code приложения: поле Unique ID/IMEI для ввода номера устройства, кнопка Scan QR code для сканирования кода с этикетки изделия и кнопка Next для продолжения. Выноска указывает, что IMEI можно найти на упаковке, корпусе изделия или в TrikdisConfig." src="./image37.webp" style="width:2.9921259842519685in;height:3.704724409448819in" />
+![Экран приложения Protegus2 «Scan QR code» для добавления системы: пустое поле Unique ID/IMEI, «OR», кнопка Scan QR Code, подсказка «Scan the QR code or fill in the text field.» и рисунок наклейки изделия с выделенным QR-кодом. Кнопки Cancel и Next.](./protegus-app/gt-add-system-qr-phone.webp){ .trik-mob-img }
 
 4. Введите название системы. Нажмите кнопку „**Next**“.
 
-<img alt="Protegus2, экран «Add new system»: в поле Name указано GT, показаны выбор Background colour и значение Time zone — Europe/Vilnius. Кнопки Cancel и Next." src="./image38.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+![Экран Protegus2 «Add new system»: в поле Name указано GT, круг выбора цвета Background, Time zone — Europe/Vilnius. Кнопки Cancel и Next.](./protegus-app/gt-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Дополнительные настройки для включения/выключения системы зоной выключателя 
 
@@ -702,20 +702,20 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 1.  Нажмите кнопку „**Continue**“.
 
-<img alt="Экран приложения Protegus2 «The system is not controlled remotely»: рядом с озадаченным человеком изображён коммуникатор с индикаторами NETWORK, DATA, POWER и TROUBLE и клеммами +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2. Ниже текст: «You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system.» Кнопка «Continue»." src="./image39.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Экран Protegus2 «The system is not controlled remotely»: рисунок коммуникатора рядом с озадаченным человеком, «What do you need to know!» и пояснение, что выход нужно подключить к входу охранной системы и настроить Protegus2 для постановки на охрану и снятия с охраны. Кнопка Continue.](./protegus-app/gt-add-system-indirect-phone.webp){ .trik-mob-img }
 
 2. Введите “**Area name**“. Включите управление PGM выходом приложением Protegus2.
 3. Выберите „**Pulse“** или „**Level“**, в зависимости от того, как настроен тип зоны выключателя (keyswitch). Если необходимо, можете изменить интервал импульса.
 
 2.  Нажмите кнопку „**Save**“.
 
-<img alt="Экран приложения Protegus2 «Add new area»: в поле «Area number» указано 1, в поле «Area name» — «1 Area». Переключатель «Control with Protegus2 Europe» включён. В поле «Assigned Output» указано PGM1. Выбран вариант «Pulse», в поле «Pulse interval in seconds» указано 3; вариант «Level» не выбран. Кнопки «Cancel» и «Save»." src="./image40.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
+![Экран Protegus2 «Add new area»: Area number 1, Area name «Дом», «Autoarm this area when arming area» — Not used, «Autodisarm when disarming area» выключено, «Control with Protegus2» включено, Assigned Output PGM1, выбран Pulse с интервалом 3 с, Level не выбран. Кнопки Cancel и Save.](./protegus-app/gt-add-system-area-phone.webp){ .trik-mob-img }
 
 3. Если будет еще один раздел охранной сигнализации, то необходимо нажать „**Click to add an area**“. Настройка PGM выхода аналогично описанной выше.
 
 2.  После окончания настроек нажмите кнопку „**Skip**“.
 
-<img alt="Экран приложения Protegus2 «Areas»: в списке показано «1 Area» с подписью «Controlled with: PGM1» и кнопкой удаления с крестиком. Ниже — кнопка с плюсом и текст «Click to add an area». Внизу кнопки «Skip» и «Next»." src="./image41.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+![Экран Protegus2 «Areas»: область «Дом», «Controlled with: PGM1», с кнопкой удаления; ниже кнопка с плюсом и «Click to add an area». Кнопки Skip и Next.](./protegus-app/gt-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Включение/выключение охранной системы с *Protegus2* 
 
@@ -723,7 +723,7 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 
 2.  В *Protegus2* придет сообщение об изменении статуса системы охраны и икона статуса изменит свое состояние.
 
-<img alt="Protegus2, главный экран системы GT: статус Online с делениями уровня сигнала, раздел «1 Area» со статусом Unknown, кнопки Arm и Disarm и кнопка переключения выхода PGM2 внизу слева." src="./image42.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
+![Главный экран системы GT в Protegus2: Online, область «Дом» со статусом Unknown, кнопки Arm и Disarm и кнопка выхода PGM2.](./protegus-app/gt-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Управление SMS сообщениями 
 

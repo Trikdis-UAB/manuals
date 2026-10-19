@@ -239,8 +239,8 @@ Veikia su Protegus2 programėle:
 !!! note "Pastaba"
     Kad veiktų tiesioginis centralės valdymas, reikės pakeisti centralės
     nustatymus. Kaip tai padaryti aprašyta skyriuje
-    **[4](#apsaugos-centralių-programavimas) „[Apsaugos centralių
-    programavimas](#apsaugos-centralių-programavimas)"**. Šiame skyriuje
+    **[4](#4-apsaugos-centraliu-programavimas) „[Apsaugos centralių
+    programavimas](#4-apsaugos-centraliu-programavimas)"**. Šiame skyriuje
     aprašyta ir kaip pakeisti centralės PC download/UDL slaptažodį.
 **Lango „Pranešimai vartotojui“ kortelėje „PROTEGUS servisas“:**
 
@@ -262,8 +262,8 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB 
 
 !!! note "Pastaba"
     Plačiau apie kitus G16 nustatymus TrikdisConfig žr.
-    **[6](#trikdisconfig-langų-aprašymas) „[TrikdisConfig langų
-    aprašymas](#trikdisconfig-langų-aprašymas)".**
+    **[6](#6-trikdisconfig-langu-aprasymas) „[TrikdisConfig langų
+    aprašymas](#6-trikdisconfig-langu-aprasymas)".**
 ### Nustatymai ryšiui su Stebėjimo pultu 
 
 **Lange „Sistemos parinktys“:**
@@ -314,8 +314,8 @@ Baigę konfigūravimą paspauskite mygtuką **Įrašyti [F5]** ir atjunkite USB
 
 !!! note "Pastaba"
     Plačiau apie kitus G16 nustatymus TrikdisConfig žr. skyrių
-    **[6](#trikdisconfig-langų-aprašymas) „[TrikdisConfig langų
-    aprašymas](#trikdisconfig-langų-aprašymas)"**.
+    **[6](#6-trikdisconfig-langu-aprasymas) „[TrikdisConfig langų
+    aprašymas](#6-trikdisconfig-langu-aprasymas)"**.
 ## Sujungimų schemos, įrengimas ir paleidimas veikti 
 
 ### Tvirtinimas 
@@ -473,8 +473,8 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
     Rekomenduojame arba pasirinkti kitą komunikatoriaus įrengimo vietą, arba
     naudoti jautresnę GSM anteną. / Jei šviesinė indikacija kitokia, kad
     nustatytumėte, kas nutikę žiūrėkite skyrių
-    **[1.6](#šviesinė-veikimo-indikacija) „[Šviesinė veikimo
-    indikacija](#šviesinė-veikimo-indikacija)".** / Jei G16 indikacija
+    **[1.6](#16-sviesine-veikimo-indikacija) „[Šviesinė veikimo
+    indikacija](#16-sviesine-veikimo-indikacija)".** / Jei G16 indikacija
     visai nešviečia, patikrinkite maitinimo šaltinį ir sujungimus.
 ## Apsaugos centralių programavimas 
 
@@ -595,7 +595,6 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
       </a>
     </div>
 
-![Google Play programėlių parduotuvės ženklelis.](./image33.webp)
 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
@@ -605,8 +604,8 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas;
     
     2.  Įjungta Protegus servisas paslauga. Žr.
-        **[6.4](#langas-pranešimai-vartotojui) [Langas „Pranešimai
-        vartotojui"](#langas-pranešimai-vartotojui)**;
+        **[6.4](#64-langas-pranesimai-vartotojui) [Langas „Pranešimai
+        vartotojui"](#64-langas-pranesimai-vartotojui)**;
     
     3.  Įjungtas maitinimas („POWER" LED šviečia žaliai);
     
@@ -614,9 +613,11 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
         geltonai).
 3.  Paspauskite “Pridėti sistemą” ir įveskite *G16* „*IMEI/Unikalus ID*“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
 
+![Protegus2 programėlės langas „Nuskaityti QR kodą“ sistemai pridėti: tuščias laukas „Unikalus ID“, „ARBA“, mygtukas „Nuskaityti QR kodą“, užrašas „Nuskaitykite QR kodą arba užpildykite teksto lauką.“ ir gaminio lipduko piešinys su pažymėtu QR kodu. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/g16-add-system-qr-phone.webp){ .trik-mob-img }
+
 4.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau".
 
-<img alt="Protegus2 ekranas „Nuskaityti QR kodą“: įveskite IMEI į lauką „Unikalus ID“ arba spauskite „Nuskaityti QR kodą“. Paaiškinime nurodyta, kad kodą galima rasti ant pakuotės, valdiklio plokštės arba programoje TrikdisConfig kaip Unikalų ID; apačioje yra „Toliau“." src="./image36.webp" style="width:3.0in;height:3.673228346456693in" />
+![Protegus2 langas „Pridėti sistemą“: pavadinimas G16, fono spalvos apskritimas „Fonas“ ir laiko juosta Europe/Vilnius. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/g16-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
 
@@ -627,27 +628,27 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16 PGM išėjim
 
 1.  Paspauskite „**Tęsti**“.
 
-<img alt="Protegus2 pranešimas „Sistema nėra valdoma nuotoliniu būdu“. Paaiškinime nurodyta prijungti išvestį prie apsaugos sistemos įvesties terminalo ir sukonfigūruoti Protegus2 Europe, kad būtų galima įjungti arba išjungti apsaugos sistemą; apačioje yra „Tęsti“." src="./image37.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
+![Protegus2 langas „Sistema nėra valdoma nuotoliniu būdu“: komunikatoriaus piešinys šalia susimąsčiusio žmogaus, „Ką reikia žinoti!“ ir paaiškinimas, kad išėjimą reikia prijungti prie apsaugos sistemos įvesties ir sukonfigūruoti Protegus2, kad būtų galima įjungti arba išjungti apsaugą. Mygtukas „Tęsti“.](./protegus-app/g16-add-system-indirect-phone.webp){ .trik-mob-img }
 
 2.  Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
 3.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
 4.  Paspauskite „**Išsaugoti**“.
 
-<img alt="Protegus2 ekranas „Pridėti naują sritį“: srities numeris 1, pavadinimas „Sritis1“, įjungta „Valdyti naudojant Protegus2 Europe“, priskirtas išėjimas PGM1. Pasirinktas „Impulsas“, jo trukmė 3 sekundės; apačioje yra „Išsaugoti“." src="./image38.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
+![Protegus2 langas „Pridėti naują sritį“: srities numeris 1, srities pavadinimas „Namai“, automatinio apsaugos įjungimo eilutė (reikšmė nukirpta: „Nena…“), automatinis išjungimas išjungtas, „Valdyti naudojant Protegus2“ įjungta, priskirtas išėjimas PGM1, pasirinktas „Impulsas“ su 3 s trukme, „Lygis“ nepasirinktas. Mygtukai „Atšaukti“ ir „Išsaugoti“.](./protegus-app/g16-add-system-area-phone.webp){ .trik-mob-img }
 
 5.  Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
 6.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-<img alt="Protegus2 ekranas „Sritys“: pridėta „Sritis1“, valdoma su PGM1. Po sričių sąrašu yra pridėjimo mygtukas su pliusu, o apačioje – „Praleisti“ ir „Toliau“." src="./image39.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
+![Protegus2 langas „Sritys“: sritis „Namai“, „Valdoma su: PGM1“, su pašalinimo mygtuku; žemiau pliuso mygtukas ir „Spustelėkite, kad pridėtumėte sritį“. Mygtukai „Praleisti“ ir „Toliau“.](./protegus-app/g16-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Sistemos įjungimas/išjungimas su *Protegus2* 
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 2.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-<img alt="Protegus2 pagrindinis G16 langas: būsena „Prijungtas“ su signalo juostomis; „Sritis1“ būsena „Nežinoma“, mygtukai „Įjungti“ ir „Išjungti“, apačioje – PGM2 išėjimo mygtukas." src="./image40.webp" style="width:2.220472440944882in;height:2.688976377952756in" />
+![Protegus2 pagrindinis G16 sistemos langas: „Prijungta“, sritis „Namai“ su būsena „Nežinoma“ ir mygtukais „Įjungti“ ir „Išjungti“, PGM2 išėjimo mygtukas.](./protegus-app/g16-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Konfigūravimas ir valdymas SMS žinutėmis 
 
@@ -677,7 +678,7 @@ Kaip slaptažodį naudokite **Administratoriaus kodą** (gali įvykdyti *INFO, R
 | CONNECT | CP= | Iš sąrašo pasirinkite centralės modelį. Pvz. (pasirinkite centralę Paradox SP6000, kuri G16 sąraše yra 4). Pvz. 123456 CONNECT CP=4 |
 | CONNECT | DIR= | Tiesioginio valdymo 4 skaitmenų slaptažodis arba OFF, kad jį išjungtumėte. / Pvz. (įveskite tiesioginio valdymo 4 skaitmenų slaptažodį 1122): / 123456 CONNECT DIR=1122 |
 
-Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys priims ir vykdys. Kaip tai atlikti aprašyta skyriuje **[6.4](#langas-pranešimai-vartotojui) [Langas „Pranešimai vartotojui”](#langas-pranešimai-vartotojui)**, skirtuke **“Valdymas SMS žinutėmis”.**
+Galite apriboti, iš kurių telefono numerių siunčiamas komandas įrenginys priims ir vykdys. Kaip tai atlikti aprašyta skyriuje **[6.4](#64-langas-pranesimai-vartotojui) [Langas „Pranešimai vartotojui”](#64-langas-pranesimai-vartotojui)**, skirtuke **“Valdymas SMS žinutėmis”.**
 
 ## TrikdisConfig langų aprašymas 
 
@@ -711,7 +712,7 @@ Parinkčių grupė „Pagrindinės“
 
 - Pasirinkite **Centralės modelį**, kurį jungsite prie komunikatoriaus.
 
-- **Nuotolinis centralės valdymas** – kai langelį pažymėsite varnele, G16 centralę valdys tiesiogiai nuotoliniu būdu. Šis nustatymas rodomas tiesiogiai valdomoms centralėms. Tiesioginiam centralės valdymui reikia pakeisti apsaugos centralės nustatymus, tai aprašyta skyriuje **[4](#apsaugos-centralių-programavimas) „[Apsaugos centralių programavimas](#apsaugos-centralių-programavimas)*“***.
+- **Nuotolinis centralės valdymas** – kai langelį pažymėsite varnele, G16 centralę valdys tiesiogiai nuotoliniu būdu. Šis nustatymas rodomas tiesiogiai valdomoms centralėms. Tiesioginiam centralės valdymui reikia pakeisti apsaugos centralės nustatymus, tai aprašyta skyriuje **[4](#4-apsaugos-centraliu-programavimas) „[Apsaugos centralių programavimas](#4-apsaugos-centraliu-programavimas)*“***.
 
   - **Centralės PC download slaptažodis** – Paradox ir Texecom centralių tiesioginiam valdymui reikia suvesti PC/UDL slaptažodį. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje. Kaip pakeisti šį slaptažodį centralėje aprašyta skyriuje **4* „*Apsaugos centralių programavimas*“****.*
 
@@ -847,7 +848,7 @@ Galite nustatyti, kad vartotojai apie įvykius būtų informuojami SMS pranešim
 
 <img alt="TrikdisConfig lango „Pranešimai vartotojui“ skirtukas „Valdymas SMS žinutėmis“. Kairėje „SMS atsakymo žinutės tekstas“ su atsakymais apie įvykdytą komandą, neteisingą slaptažodį, komandą ir duomenis; dešinėje „Telefonų numeriai nuotoliniam valdymui“ su Tel 1–Tel 4 laukais." src="./image47.webp" style="width:7.086614173228346in;height:1.9566929133858268in" />
 
-Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba pakeis nustatymus. Valdymo SMS komandas rasite skyriuje **[5.4](#konfigūravimas-ir-valdymas-sms-žinutėmis) „[Konfigūravimas ir valdymas SMS žinutėmis](#konfigūravimas-ir-valdymas-sms-žinutėmis)“**.
+Galite į komunikatorių nusiųsti SMS komandą, kuri suvaldys išėjimą arba pakeis nustatymus. Valdymo SMS komandas rasite skyriuje **[5.4](#54-konfiguravimas-ir-valdymas-sms-zinutemis) „[Konfigūravimas ir valdymas SMS žinutėmis](#54-konfiguravimas-ir-valdymas-sms-zinutemis)“**.
 
 - **SMS atsakymo žinutės tekstas** – SMS tekstas, kurį vartotojas gauna po SMS komandos išsiuntimo. SMS žinutės tekstą galima redaguoti.
 
@@ -954,7 +955,7 @@ Lentelėje įėjimams (INPUT) galima priskirti Contact ID įvykių ir atsistaty
 
 - **Įėjimo tipas** – nurodomas įėjimo tipas (NO arba NC).
 
-Kad vartotojams apie įėjimų suveikimus būtų siunčiami SMS pranešimai arba skambinama, įrašykite įėjimui priskirtą Contact ID įvykio kodą į lentelę lange [**Langas „Pranešimai vartotojui”**](#langas-pranešimai-vartotojui) **→ SMS ir skambučiai**.
+Kad vartotojams apie įėjimų suveikimus būtų siunčiami SMS pranešimai arba skambinama, įrašykite įėjimui priskirtą Contact ID įvykio kodą į lentelę lange [**Langas „Pranešimai vartotojui”**](#64-langas-pranesimai-vartotojui) **→ SMS ir skambučiai**.
 
 #### WiFi modulio W485 nustatymų langas (tik 3G ir 4G modeliams)
 
@@ -1041,8 +1042,8 @@ Norint atkurti komunikatoriaus gamyklinius nustatymus, reikia nuspausti programo
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
     
     2.  Įjungta Protegus servisas paslauga. Žr.
-        **[6.4](#langas-pranešimai-vartotojui) [Langas „Pranešimai
-        vartotojui"](#langas-pranešimai-vartotojui).**
+        **[6.4](#64-langas-pranesimai-vartotojui) [Langas „Pranešimai
+        vartotojui"](#64-langas-pranesimai-vartotojui).**
     
     3.  Įjungtas maitinimas („POWER" LED šviečia žaliai).
     

@@ -261,8 +261,8 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 !!! note
     For more information about other G16 settings in
     TrikdisConfig, see chapter
-    **[6](#trikdisconfig-window-description) "[TrikdisConfig window
-    description](#trikdisconfig-window-description)"**.
+    **[6](#6-trikdisconfig-window-description) "[TrikdisConfig window
+    description](#6-trikdisconfig-window-description)"**.
 ### Settings for connection with Central Monitoring Station 
 
 **In “System settings” window:**
@@ -313,8 +313,8 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
 !!! note
     For more information about other G16 settings in
     TrikdisConfig, see chapter
-    **[6](#trikdisconfig-window-description) "[TrikdisConfig window
-    description](#trikdisconfig-window-description)"**.
+    **[6](#6-trikdisconfig-window-description) "[TrikdisConfig window
+    description](#6-trikdisconfig-window-description)"**.
 ## Installation and wiring 
 
 ### Installation process 
@@ -475,8 +475,8 @@ To start the communicator, turn on the security control panel’s power supply. 
     communicator, or to use a more sensitive cellular antenna. / If you see
     a different LED indication, it indicates a certain malfunction. Diagnose
     it by following the LED indication table in chapter
-    [1.6](#led-indication-of-operation) "[LED indication of
-    operation](#led-indication-of-operation)". / If the G16 indication
+    [1.6](#17-led-indication-of-operation) "[LED indication of
+    operation](#17-led-indication-of-operation)". / If the G16 indication
     does not illuminate at all, check the power supply and connections.
 ## Programming the control panel 
 
@@ -597,7 +597,6 @@ With Protegus2 users will be able to control their alarm system remotely. They w
       </a>
     </div>
 
-![Google Play store badge reading 'GET IT ON Google Play'.](./image32.webp)
 
 2.  Log in with your user name and password or register and create new account.
 
@@ -608,8 +607,8 @@ With Protegus2 users will be able to control their alarm system remotely. They w
         entered or disabled;
 
     2.  Protegus cloud is enabled. See chapter
-        **[6.4](#user-reporting-window) ["User reporting"
-        window](#user-reporting-window)**;
+        **[6.4](#64-user-reporting-window) ["User reporting"
+        window](#64-user-reporting-window)**;
 
     3.  Power supply is connected ("POWER" LED illuminates green);
 
@@ -617,9 +616,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
         blinks yellow).
 3.  Click “Add new system” and enter the *G16* “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “Next”.
 
+![Protegus2 app 'Scan QR code' page for adding a system: empty Unique ID/IMEI field, OR, a Scan QR Code button, the note 'Scan the QR code or fill in the text field.' and a drawing of the product label with its QR code highlighted. Buttons: Cancel, Next.](./protegus-app/g16-add-system-qr-phone.webp){ .trik-mob-img }
+
 4.  Enter the system „Name”. Click "Next".
 
-<img alt="Protegus2 app, Scan QR code screen: a callout points to the 'Unique ID/IMEI' field, with text explaining the IMEI code can be found on the package, on the PCB board, or in TrikdisConfig as the Unique ID; below, a 'Scan QR code' button and an example product label with the QR-code area highlighted." src="./image35.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
+![Protegus2 app 'Add new system' page: Name G16, a Background colour circle and Time zone Europe/Vilnius. Buttons: Cancel, Next.](./protegus-app/g16-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
@@ -630,20 +631,20 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  Click „**Continue**“.
 
-<img alt="Protegus2 app screen titled 'The system is not controlled remotely': an illustration of a communicator with NETWORK, DATA, POWER and TROUBLE LEDs and terminals +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2, beside a puzzled person. Text below: You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system. Continue button." src="./image36.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Protegus2 app page 'The system is not controlled remotely': a communicator drawing beside a puzzled person, 'What do you need to know!' and the note that the output must be connected to the security system input terminal and Protegus2 configured to arm or disarm the system. Button: Continue.](./protegus-app/g16-add-system-indirect-phone.webp){ .trik-mob-img }
 
 2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 4.  Click „**Save**“.
 
-<img alt="Protegus2 app 'Add new area' screen: Area number 1, Area name '1 Area', 'Control with Protegus2 Europe' toggle on, Assigned Output PGM1, Pulse option selected with Pulse interval in seconds set to 3, Level option unselected, Cancel and Save buttons." src="./image37.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
+![Protegus2 app 'Add new area' page: Area number 1, Area name Home, 'Autoarm this area when arming area' Not used, 'Autodisarm when disarming area' off, 'Control with Protegus2' on, Assigned Output PGM1, Pulse selected with Pulse interval in seconds 3, Level not selected. Buttons: Cancel, Save.](./protegus-app/g16-add-system-area-phone.webp){ .trik-mob-img }
 
 5.  If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 6.  After completing the settings, click the “**Skip**” button.
 
-<img alt="Protegus2 app 'Areas' screen: list showing '1 Area, Controlled with: PGM1' with a remove (X) button, a plus button and 'Click to add an area' text below, and Skip / Next buttons." src="./image38.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+![Protegus2 app 'Areas' page: area Home, 'Controlled with: PGM1', with a remove button; below it a plus button and 'Click to add an area'. Buttons: Skip, Next.](./protegus-app/g16-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Arming/disarming the alarm system with Protegus2 
 
@@ -651,7 +652,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="Protegus2 app System Home Screen for G16: status 'Online' with signal bars, '1 Area' showing state 'Unknown', Arm and Disarm buttons, and a PGM2 output button below." src="./image39.webp" style="width:2.220472440944882in;height:2.6535433070866143in" />
+![Protegus2 app home screen of the G16 system: Online, area Home with status Unknown and Arm and Disarm buttons, and a PGM2 output button.](./protegus-app/g16-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Configuration and control with SMS messages 
 
@@ -1043,8 +1044,8 @@ To restore the communicator's factory settings, you need to click the **Restore*
         entered or disabled;
 
     2.  Protegus cloud is enabled. How to enable cloud is
-        described in section [6.4](#user-reporting-window) ["User reporting"
-        window](#user-reporting-window);
+        described in section [6.4](#64-user-reporting-window) ["User reporting"
+        window](#64-user-reporting-window);
 
     3.  Power supply is connected ("POWER" LED illuminates green);
 

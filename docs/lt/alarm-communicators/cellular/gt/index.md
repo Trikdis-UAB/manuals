@@ -692,11 +692,11 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
         geltonai).
 3. Paspauskite “**Pridėti sistemą**” ir įveskite GT „IMEI/Unikalus ID“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
-<img alt="Protegus2 langas Nuskaityti QR kodą. Galima įvesti IMEI į lauką Unikalus ID arba paspausti Nuskaityti QR kodą; pavyzdinėje etiketėje pažymėtas QR kodas. Paaiškinime nurodyta, kad IMEI yra ant pakuotės, valdiklio korpuso arba TrikdisConfig programoje kaip Unikalus ID." src="./image37.webp" style="width:2.9921259842519685in;height:3.661417322834646in" />
+![Protegus2 programėlės langas „Nuskaityti QR kodą“ sistemai pridėti: tuščias laukas „Unikalus ID“, „ARBA“, mygtukas „Nuskaityti QR kodą“, užrašas „Nuskaitykite QR kodą arba užpildykite teksto lauką.“ ir gaminio lipduko piešinys su pažymėtu QR kodu. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/gt-add-system-qr-phone.webp){ .trik-mob-img }
 
 4. Įveskite sistemos „**Pavadinimą**“. Spustelėkite „**Toliau**".
 
-<img alt="Protegus2 langas „Pridėti sistemą“: lauke „Pavadinimas“ įrašyta GT, matomas „Fonas“ spalvos pasirinkimas, „Laiko juosta“ nustatyta Europe/Vilnius; apačioje mygtukai „Atšaukti“ ir „Toliau“." src="./image38.webp" style="width:2.2007874015748032in;height:2.2559055118110236in" />
+![Protegus2 langas „Pridėti sistemą“: pavadinimas GT, fono spalvos apskritimas „Fonas“ ir laiko juosta Europe/Vilnius. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/gt-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
 
@@ -707,27 +707,27 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GT PGM išėjimu
 
 1.  Paspauskite „**Tęsti**“.
 
-<img alt="Protegus2 pranešimas „Sistema nėra valdoma nuotoliniu būdu“. Paaiškinime nurodyta prijungti išvestį prie apsaugos sistemos įvesties terminalo ir sukonfigūruoti Protegus2 Europe, kad būtų galima įjungti arba išjungti apsaugos sistemą; apačioje yra „Tęsti“." src="./image39.webp" style="width:2.220472440944882in;height:3.559055118110236in" />
+![Protegus2 langas „Sistema nėra valdoma nuotoliniu būdu“: komunikatoriaus piešinys šalia susimąsčiusio žmogaus, „Ką reikia žinoti!“ ir paaiškinimas, kad išėjimą reikia prijungti prie apsaugos sistemos įvesties ir sukonfigūruoti Protegus2, kad būtų galima įjungti arba išjungti apsaugą. Mygtukas „Tęsti“.](./protegus-app/gt-add-system-indirect-phone.webp){ .trik-mob-img }
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
 2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
 3. Paspauskite „**Išsaugoti**“.
 
-<img alt="Protegus2 ekranas „Pridėti naują sritį“: srities numeris 1, pavadinimas „Sritis1“, įjungta „Valdyti naudojant Protegus2 Europe“, priskirtas išėjimas PGM1. Pasirinktas „Impulsas“, jo trukmė 3 sekundės; apačioje yra „Išsaugoti“." src="./image40.webp" style="width:2.220472440944882in;height:3.4960629921259843in" />
+![Protegus2 langas „Pridėti naują sritį“: srities numeris 1, srities pavadinimas „Namai“, automatinio apsaugos įjungimo eilutė (reikšmė nukirpta: „Nena…“), automatinis išjungimas išjungtas, „Valdyti naudojant Protegus2“ įjungta, priskirtas išėjimas PGM1, pasirinktas „Impulsas“ su 3 s trukme, „Lygis“ nepasirinktas. Mygtukai „Atšaukti“ ir „Išsaugoti“.](./protegus-app/gt-add-system-area-phone.webp){ .trik-mob-img }
 
 4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
 2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-<img alt="Protegus2 ekranas „Sritys“: pridėta „Sritis1“, valdoma su PGM1. Po sričių sąrašu yra pridėjimo mygtukas su pliusu, o apačioje – „Praleisti“ ir „Toliau“." src="./image41.webp" style="width:2.220472440944882in;height:2.031496062992126in" />
+![Protegus2 langas „Sritys“: sritis „Namai“, „Valdoma su: PGM1“, su pašalinimo mygtuku; žemiau pliuso mygtukas ir „Spustelėkite, kad pridėtumėte sritį“. Mygtukai „Praleisti“ ir „Toliau“.](./protegus-app/gt-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Sistemos įjungimas/išjungimas su *Protegus2* 
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
 1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-<img alt="Protegus2 pagrindinis langas: GT prijungtas, Sritis1 būsena – Nežinoma. Matomi mygtukai Įjungti, Išjungti ir PGM2." src="./image42.webp" style="width:2.2007874015748032in;height:2.6850393700787403in" />
+![Protegus2 pagrindinis GT sistemos langas: „Prijungta“, sritis „Namai“ su būsena „Nežinoma“ ir mygtukais „Įjungti“ ir „Išjungti“, PGM2 išėjimo mygtukas.](./protegus-app/gt-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Komunikatoriaus valdymas SMS žinutėmis 
 
