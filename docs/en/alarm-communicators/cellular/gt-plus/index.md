@@ -102,7 +102,7 @@ This manual is for 4G communicators.
 | Modem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Power supply voltage | 10-32 V DC |
-| Current consumption | 125 mA |
+| Current consumption | Up to 100 mA (on standby) /​ Up to 200 mA (while sending data) |
 | Transmission protocols | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Message encryption | AES 128 |
 | Changing settings | With TrikdisConfig computer program remotely or locally via USB-С port |

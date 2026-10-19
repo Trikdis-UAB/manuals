@@ -98,7 +98,7 @@ Este manual es para comunicadores LTE.
 | Módem BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Módem BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Voltaje de la fuente de alimentación | 10-18 V DC |
-| Consumo de Energía | 175 mA |
+| Consumo de corriente | Hasta 100 mA (en modo espera) /​ Hasta 300 mA (durante el envío de datos) |
 | Protocolos de Transmisión | TRK, DC-09_2007, DC-09_2012, TL150 |
 | Encriptación del mensaje | AES 128 |
 | Memoria de eventos no enviados | Hasta 60 eventos |
