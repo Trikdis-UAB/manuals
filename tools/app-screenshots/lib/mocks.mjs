@@ -6,6 +6,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readJson } from './guard.mjs';
+import { FRONTENDS, configFixture } from './frontends.mjs';
 import { SAMPLE, MODELS, NEW_SYSTEM_ID, sampleMe, sampleSystem, sampleConfigInfo, sampleListRow } from './sample.mjs';
 import { configuratorMocks } from './mocks-configurators.mjs';
 
@@ -19,27 +20,30 @@ export function fakeToken() {
   return `${b64({ typ: 'JWT', alg: 'none' })}.${b64(payload)}.c2FtcGxl`;
 }
 
-export function createMocks({ lang, model, configPatch = null, timezoneId = null }) {
+export function createMocks({ lang, model, configPatch = null, timezoneId = null, frontend = FRONTENDS.released }) {
   const routes = [];
   const on = (method, endpoint, fn) => routes.push({ method, endpoint, fn });
   const regions = readJson(FIX, 'public', 'regions.json').regions;
   const state = {}; // what this session's add-system wizard created
   const token = fakeToken();
+  const fixture = configFixture(path.join(FIX, 'config'), MODELS[model].fixture, frontend).file;
 
   // Public, auth-free reference data (saved copies; see README).
   on('*', '/translations', ({ query, body }) => {
     const p = { ...Object.fromEntries(query ?? []), ...(body ?? {}) };
     const l = p.language || lang;
     const pack = p.config ? p.config : 'app';
-    return readJson(FIX, 'translations', `${pack}.${l}.json`);
+    return readJson(FIX, frontend.labelsDir, `${pack}.${l}.json`);
   });
   on('GET', '/regions', () => readJson(FIX, 'public', 'regions.json'));
   on('GET', '/languages', () => readJson(FIX, 'public', 'languages.json'));
   // The server also names the caller's own zone (it becomes a new system's default); the saved copy
   // says whatever it said where it was fetched, so the run's chosen zone replaces it.
   on('GET', '/timezones', () => ({ ...readJson(FIX, 'public', 'timezones.json'), ...(timezoneId ? { userTimeZone: timezoneId } : {}) }));
-  // The app reports its own front-end errors here; swallowed so nothing is sent.
-  on('POST', '/error', () => ({ success: true }));
+  // The app reports its own front-end errors here. Nothing is sent; the run reports them as problems,
+  // because they usually mean the sample data is shaped differently from the server's.
+  const appErrors = [];
+  on('POST', '/error', ({ body }) => { appErrors.push(String(body?.msg ?? body?.message ?? JSON.stringify(body)).slice(0, 200)); return { success: true }; });
 
   // The signed-in sample installer.
   on('*', '/me', ({ query }) => {
@@ -65,16 +69,17 @@ export function createMocks({ lang, model, configPatch = null, timezoneId = null
   // Device configuration (what a live read would return).
   on('*', '/config/info', () => sampleConfigInfo(model));
   on('*', '/config/read', () => {
-    const data = deepMerge(readJson(FIX, 'config', MODELS[model].fixture), configPatch ?? {});
+    const data = deepMerge(readJson(FIX, 'config', fixture), configPatch ?? {});
     for (const k of Object.keys(data)) if (k.startsWith('_')) delete data[k]; // notes and side data, not config
     data.isInstaller = false;
     return { success: true, data };
   });
 
   // Calls a particular configurator makes besides config/read (status, keypads, users, ...).
-  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model, state });
+  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model, state, fixture });
 
   return {
+    appErrors,
     sampleSystem: () => sampleSystem(model),
     resolve(method, endpoint) {
       const r = routes.find((x) => (x.method === '*' || x.method === method) && x.endpoint === endpoint);

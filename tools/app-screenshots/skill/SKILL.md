@@ -1,6 +1,6 @@
 ---
 name: protegus-app-screenshots
-description: Take screenshots of the Protegus app's device configurator (Advanced settings) and its add-new-system wizard for the TRIKDIS manuals, from the released web.protegus.app with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
+description: Take screenshots of the Protegus app's device configurator (Advanced settings) and its add-new-system wizard for the TRIKDIS manuals, from the released web.protegus.app (or the beta front-end, beta2.protegus.app) with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
 ---
 
 # Protegus app screenshots
@@ -31,6 +31,16 @@ record per image (menu path in that language, firmware, `firmwareConfirmed`, `re
 any `unverified` note, the front-end bundle and its deploy date). Each capture is a fresh browser,
 about 12 s per screen and layout; two runs give pixel-identical images. Long runs go in the
 background.
+
+**Beta front-end:** `--app beta` photographs beta2.protegus.app instead (SP5 follows the beta, Andrius
+2026-10-19). Images and their own manifest go to `out/beta/`, every record says `frontend: "beta"`,
+and the sample configuration is `fixtures/config/<name>-beta.json` when the beta server's answer is
+shaped differently. A model without one falls back to the released shape, and the run prints a NOTE
+saying so. Labels: `node fetch-public.mjs en --app beta` takes the EU server's pack and adds only the
+keys the beta server has that the EU server lacks. Never use the beta server's own wording: it is the
+North America region and says "Via Protegus2 North America cloud" in about 25 labels. Desktop pages of
+the newer configurator also get `…-desktop-content.png`, cut below the app's top bar, which on the beta
+shows the β logo and the region name.
 
 ## Walks (wizards and other flows)
 
@@ -84,6 +94,14 @@ public, so keep real names, systems and customer data out of fixtures and commit
 - **A system that will not open** usually means the sample system object makes the app's converter
   throw silently (e.g. `eventConfiguration` must be a JSON string, `events` must be `{events: []}`).
   `dev/catch.mjs` shows it.
+- **A field the server leaves out must be left out, not `null`.** The released app forgave
+  `installerAccess: null`; the beta threw on every render of the system page. The server's API reference
+  (`~/Projects/TRIKDIS/worktrees/protegus_internal_api/endpoints/`) says which fields are "only present
+  when…". The run now reports what the app sends to its own error endpoint as `app error …`; treat one as
+  a sample-data bug, not app noise.
+- **The beta calls the API through a region router** (`region-router.trikdis.workers.dev`, with an
+  `X-Home-Region` header) and sometimes the region's host directly. The guard answers `/v3/api/*` on every
+  host and the CORS preflight too; `guard-selftest.mjs` proves it for both front-ends.
 - **Keep menu clicks inside the configurator**: on desktop "Settings" is also a top-bar item.
 - **The newer configurator (SP5)**: desktop reads by itself and opens the Dashboard; on a phone (the
   app switches below 1150 px) the menu page has a Read button. The device must be recorded as a cloud
@@ -95,6 +113,11 @@ public, so keep real names, systems and customer data out of fixtures and commit
 - **Phone-app-only UI** (the wizard's QR button) is drawn when the native bridge `window.jsi` exists.
   Imitate it with a Proxy that answers every property with a no-op, except `then` and symbols:
   answering `then` makes it look like a promise and the run hangs.
+- **Model details show up in the pictures.** The dashboard draws the connection next to "Online"
+  (cellular bars or an Ethernet port), and Ethernet-only models (E16, E16T) are added by MAC address,
+  not IMEI. The number of outputs shows too (output tiles on the dashboard): G16T and E16T have one.
+  Set `comType`, `uid` and `outputs` per model in `lib/sample.mjs` before capturing a new model, from its
+  manual's specifications; the first GT+ dashboard went out with an Ethernet icon.
 - **Defaults come from the server, not the browser.** A new system's default time zone is the
   `userTimeZone` in `/timezones`; the walk's `timezones` map sets it per language.
 - **Some languages are not fully translated in the app** (Russian is English; Spanish lacks a few
@@ -102,6 +125,13 @@ public, so keep real names, systems and customer data out of fixtures and commit
 - **Releases.** The manifest records the bundle and its deploy date. When web.protegus.app is
   redeployed, re-capture into a scratch folder and pixel-compare (`magick compare -metric AE`) before
   saying published images are still current. The label packs change too: `node fetch-public.mjs en lt`.
+  The beta is redeployed often (main-WF7OQQHA on 2026-10-19); re-capture beta images before handing them
+  over, not from an older run. To say which screens changed between two front-ends or releases, capture
+  both with `--text` into scratch folders and `diff` the `.txt` files: the beta's theme makes every image
+  differ in pixels, so a pixel diff cannot answer it.
+- **After changing a shared sample** (`lib/sample.mjs`, the mocks), re-capture a few released images
+  into a scratch folder and pixel-compare them with `out/`, so a fix for one front-end or model does not
+  silently change published pictures of another.
 
 ## Check before handing over
 

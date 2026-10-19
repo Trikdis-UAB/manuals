@@ -21,17 +21,24 @@ export const SAMPLE = {
 const G16 = { configurator: 'g16', fixture: 'g16-family.json' };
 export const MODELS = {
   'GET':   { ...G16, hwId: '4E', deviceId: 0x4e, hwType: 'GET',  name: 'GET',  firmware: '1.35', revision: 'x1x1', bt: '0103', firmwareConfirmed: true, revisionConfirmed: true },
-  'GT':    { ...G16, hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103' },
-  'GT+':   { ...G16, hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103' },
-  'G16':   { ...G16, hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103' },
-  'G16T':  { ...G16, hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103' },
-  'E16':   { ...G16, hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103' },
-  'E16T':  { ...G16, hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103' },
+  'GT':    { ...G16, hwId: '53', deviceId: 0x53, hwType: 'GT',   name: 'GT',   firmware: '1.30', revision: null, bt: '0103', comType: 1 },
+  'GT+':   { ...G16, hwId: '52', deviceId: 0x52, hwType: 'GT+',  name: 'GT+',  firmware: '1.30', revision: null, bt: '0103', comType: 1 },
+  'G16':   { ...G16, hwId: '42', deviceId: 0x42, hwType: 'G16',  name: 'G16',  firmware: '1.12', revision: null, bt: '0103', comType: 1 },
+  // G16T and E16T have one output (OUT); the others have 2-3 I/O terminals, two of them outputs in the sample.
+  'G16T':  { ...G16, hwId: '45', deviceId: 0x45, hwType: 'G16T', name: 'G16T', firmware: '1.12', revision: null, bt: '0103', comType: 1, outputs: 1 },
+  'E16':   { ...G16, hwId: '3A', deviceId: 0x3a, hwType: 'E16',  name: 'E16',  firmware: '1.12', revision: null, bt: '0103', comType: 2, uid: '001A2B3C4D5E' },
+  'E16T':  { ...G16, hwId: '3C', deviceId: 0x3c, hwType: 'E16T', name: 'E16T', firmware: '1.12', revision: null, bt: '0103', comType: 2, uid: '001A2B3C4D5E', outputs: 1 },
   // SP5 firmware 1.00: every SP5 on the beta server reports it (7 test systems, read 2026-10-12).
   // Revision 1E7LWB.0 and bootloader 1.00 from a real test panel's config/info (2026-10-19), which
   // reports its version as "SP5_1E7LWB.0_1.00": the firmware part is dotted, not x100.
   'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: '1E7LWB.0', bt: '1.00', fwFormat: 'dotted', firmwareConfirmed: true, revisionConfirmed: true },
 };
+
+// How the device connects, which the dashboard draws next to "Online": 1 = cellular (signal bars),
+// 2 = Ethernet (port icon). Models without `comType` use 2.
+// The Unique ID a person types when adding the device: the IMEI, or the MAC address on Ethernet-only
+// models (their manuals say so). Models without `uid` use the sample IMEI.
+export function sampleUid(model) { return MODELS[model].uid ?? SAMPLE.imei; }
 
 export function setFirmware(model, { firmware, revision }) {
   if (firmware) MODELS[model].firmware = firmware;
@@ -140,12 +147,13 @@ export function sampleSystem(modelName) {
     created_at: 1767225600,
     related_permissions: [],
     tags: [],
-    installerAccess: null,
+    // No installerAccess: the server leaves it out unless an assisting installer has a grant, and the
+    // beta reads .transferred whenever it is not undefined (null throws).
     showSosButton: false,
     status: {
       id: 1, system_id: SAMPLE.systemId, system_status: 'online', subscription_status: '', signal_level: 8,
       cellular: null, operator: null, lte_band: null, frequency: null, registration_id: null, person: null,
-      activated_at: 1767225600, com_type: 2, discovering_cameras: false, cam_discovery_started_at: null,
+      activated_at: 1767225600, com_type: m.comType ?? 2, discovering_cameras: false, cam_discovery_started_at: null,
     },
     stabilityScore: 0,
     stabilityScoreDate: null,
@@ -258,8 +266,8 @@ export function wizardDeviceInfo(modelName) {
   return {
     success: true,
     data: {
-      zones: 0, outputs: 2, version: deviceVersion(m), hwId: m.hwId, fireReset: false, supports_custom_outputs: false,
-      supported_commands: '3', ns: false, central_panel: 0, uid: SAMPLE.imei, sn: '000123', bt: m.bt, dr: '', areas: 0,
+      zones: 0, outputs: m.outputs ?? 2, version: deviceVersion(m), hwId: m.hwId, fireReset: false, supports_custom_outputs: false,
+      supported_commands: '3', ns: false, central_panel: 0, uid: sampleUid(modelName), sn: '000123', bt: m.bt, dr: '', areas: 0,
       supported_wireless: null, ipcom: 1, objectId: 'sample', signalLevel: 80, isInForeignRegion: false, foreignRegion: '',
     },
     foreignSystem: null, ownRegion: null, srv: 1, systemName: null,
@@ -270,6 +278,13 @@ export const WIZARD_DEVICE_STATUS = {
   success: true,
   data: { newType: true, areas: {}, zones: {}, pgms: { 1: { enabled: true, on: false }, 2: { enabled: true, on: false } }, sensors: {}, signal: '-110 - -54 dBm', troubles: null, error: '' },
 };
+
+// get-system-status-new during the wizard: no areas, and one enabled output per output the model has.
+export function wizardDeviceStatus(modelName) {
+  const n = MODELS[modelName].outputs ?? 2;
+  const pgms = Object.fromEntries(Array.from({ length: n }, (_, i) => [i + 1, { enabled: true, on: false }]));
+  return { success: true, data: { ...WIZARD_DEVICE_STATUS.data, pgms } };
+}
 
 const pgm = (id, queueNo, name) => ({
   id, queue_no: queueNo, name, enabled: 1, on: 0, pgm_as_area_ck: 0, area_to_arm: 0, type: 'level', pulse_time_in_seconds: 3,
@@ -283,12 +298,12 @@ export function wizardCreatedSystem(modelName, body) {
   const sys = {
     ...base,
     id: NEW_SYSTEM_ID, name: body?.systemName || modelName, timeZone: body?.systemTimeZone || base.timeZone,
-    imei: SAMPLE.imei, online: true, direct: 0, supported_commands: body?.deviceInfo?.supported_commands || '.3.',
+    imei: sampleUid(modelName), online: true, direct: 0, supported_commands: body?.deviceInfo?.supported_commands || '.3.',
     areas: [], zones: [], orders: [], rereads: [], protegus_users: [], config_read: 1,
     // An hour ago: within 80 s of creation the dashboard adds a "may take up to 1 minute" notice.
     created_at: Math.floor(Date.now() / 1000) - 3600,
     status: { ...base.status, id: 2, system_id: NEW_SYSTEM_ID },
-    pgms: [pgm(900301, 1, 'PGM1'), pgm(900302, 2, 'PGM2')],
+    pgms: [pgm(900301, 1, 'PGM1'), pgm(900302, 2, 'PGM2')].slice(0, MODELS[modelName].outputs ?? 2),
   };
   delete sys.assistedById;
   return sys;

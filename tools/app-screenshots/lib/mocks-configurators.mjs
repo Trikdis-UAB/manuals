@@ -1,9 +1,9 @@
 // Sample answers for the calls a configurator makes besides config/read. Invented data only.
 
-import { SAMPLE, wizardDeviceInfo, WIZARD_DEVICE_STATUS, wizardCreatedSystem } from './sample.mjs';
+import { SAMPLE, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
 
-export function configuratorMocks(configurator, { on, readJson, FIX, model, state }) {
-  if (configurator === 'sp5') sp5(on, { readJson, FIX, model });
+export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture }) {
+  if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture });
   if (configurator === 'g16') addSystemWizard(on, { model, state });
 }
 
@@ -12,7 +12,7 @@ export function configuratorMocks(configurator, { on, readJson, FIX, model, stat
 function addSystemWizard(on, { model, state }) {
   on('GET', '/online', () => ({ success: true, online: true, errorType: '', srv: 1, own_region: true, local_version: 1 }));
   on('POST', '/get-system-info-new', () => wizardDeviceInfo(model));
-  on('POST', '/get-system-status-new', () => WIZARD_DEVICE_STATUS);
+  on('POST', '/get-system-status-new', () => wizardDeviceStatus(model));
   on('POST', '/create-system', ({ body }) => {
     state.system = wizardCreatedSystem(model, body);
     return { success: true, system: state.system };
@@ -38,8 +38,8 @@ function addSystemWizard(on, { model, state }) {
 // Fixed sample moment, so captures are repeatable.
 export const SAMPLE_TIME = '2026-10-07 12:00:00';
 
-function sp5(on, { readJson, FIX }) {
-  const fixture = () => readJson(FIX, 'config', 'sp5.json');
+function sp5(on, { readJson, FIX, fixture: file }) {
+  const fixture = () => readJson(FIX, 'config', file);
 
   // The dashboard's System information card and the "recent devices" list.
   on('GET', '/system-lite', () => ({

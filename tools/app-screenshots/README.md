@@ -12,6 +12,10 @@ use) in headless Chrome and answers every API call itself with sample data: a si
 one system and that system's configuration. So the screenshots show exactly the version customers
 have, filled with invented values.
 
+With `--app beta` it opens the beta front-end (`https://beta2.protegus.app`) instead, under the same
+guard. Beta images go to `out/beta/` with their own manifest, which says on every record that they come
+from the beta front-end. Used for SP5, whose manual follows the beta (Andrius, 2026-10-19).
+
 ## Run
 
 ```bash
@@ -48,10 +52,13 @@ records and leaves the rest.
 | `--layout` | `desktop,phone` | desktop is 1440×900 @2x, phone is 390×844 @3x |
 | `--screen` | all in the model's screen list | comma-separated screen ids |
 | `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (both confirmed), SP5 to 1.00 (firmware confirmed, revision not); the other models are placeholders, and the run says so. The manifest records `firmwareConfirmed` and `revisionConfirmed` |
-| `--out` | `out` | output folder |
+| `--out` | `out` (`out/beta` with `--app beta`) | output folder |
+| `--text` | off | also save each page's visible text and field values as `<image>.txt` (top bar and menu left out, passwords never read). For comparing front-ends or releases screen by screen, where the images differ in theme alone, and for writing alt text |
+| `--app` | `released` | `beta` photographs beta2.protegus.app, with the beta server's label packs and, where one exists, a sample configuration shaped like the beta server's answer (`fixtures/config/<name>-beta.json`) |
 
 Each g16 desktop capture gives two files: the whole window (`…-desktop.png`) and just the configurator
-column (`…-desktop-panel.png`). The newer configurator fills the window, so it gives the window only. The phone layout is what the native apps show, since they wrap the same
+column (`…-desktop-panel.png`). The newer configurator fills the window, so it gives the window and the
+same page cut below the app's top bar (`…-desktop-content.png`, no logo, region or account name). The phone layout is what the native apps show, since they wrap the same
 web app; phone images are cut 24 px below the last card, so short pages don't carry empty grey. If a
 page is longer than one phone screen, the phone screen is made taller so the whole page renders, and
 the manifest says `tallerThanPhoneScreen`. Desktop pages of the newer configurator grow the same way
@@ -63,7 +70,12 @@ per revision, with the revision in the file name: `get-systemoptions-general-x1x
 
 The label packs are fetched from the public translations endpoint on first use and cached in
 `fixtures/translations/` (not committed). Run `node fetch-public.mjs en lt es ru` before a batch to pick
-up label changes.
+up label changes. The beta's packs go to `fixtures/translations-beta/` (`node fetch-public.mjs en --app
+beta`): the EU server's pack plus only the keys the beta server (`api.beta2.protegus.app`) has and the
+EU server does not yet, such as the new SP5 labels (2-wire fire, Need code in keypad, Message format,
+Sensor lost after). The beta server is the P2B North America region and its own wording names it in
+about 25 labels ("Via Protegus2 North America cloud"), so its values are not used where the EU server
+has the key. The pack records what was added (`_merged`).
 
 Each capture starts a fresh browser and walks the app from the start, about 12 seconds per screen and
 layout. Two runs give pixel-identical images.
@@ -72,18 +84,24 @@ layout. Two runs give pixel-identical images.
 
 The guard in `lib/guard.mjs` is the only thing between this tool and production. It:
 
-- answers **every** `/v3/api/*` request locally, whatever the method. Nothing under `/v3/api` reaches
-  the server, so the fake token can never cause a server-side effect and no real account data can come
-  back. That includes the translations call: it is served from the saved public copy.
-- fetches the front-end itself (HTML, JS, CSS, images, fonts) live, **GET only**.
+- answers **every** `/v3/api/*` request locally, whatever the method and whatever host it is addressed
+  to. Nothing under `/v3/api` reaches any server, so the fake token can never cause a server-side effect
+  and no real account data can come back. That includes the translations call: it is served from the
+  saved public copy. The beta sends its calls through a region router
+  (`region-router.trikdis.workers.dev`) and some straight to the region's host; both are answered
+  locally, and so is the CORS preflight a cross-origin call needs.
+- fetches the front-end itself (HTML, JS, CSS, images, fonts) live, **GET only**, from its own host
+  (`lib/frontends.mjs`; the beta also loads icons from web.protegus.app).
 - answers the operator list the SP5 SIM card reads from `mcc-mnc.com` locally, with one sample entry.
 - refuses everything else: analytics (`/ingest/`), error reporting (GlitchTip), the realtime socket,
   every other host and every non-GET request. Google Sign-In gets a local no-op script, because the app
   waits for it to load before it opens a system.
 
-`node guard-selftest.mjs` is the positive control: from inside a guarded page it tries an API
-`DELETE`, a configuration write, a POST to the app host, an analytics call, another host and a
-WebSocket, and fails if any gets through. Run it after changing the guard. Each capture also prints
+`node guard-selftest.mjs` is the positive control, run once per front-end: from inside a guarded page it
+tries an API `DELETE`, configuration writes to the app host, the region router, the beta server and a
+host that cannot resolve (an answer from there proves neither the call nor its preflight left the
+machine), a POST to the app host, an analytics call, another host and a WebSocket, and fails if any
+gets through or anything but the front-end's own files was fetched live. Run it after changing the guard. Each capture also prints
 what was answered locally, fetched live and refused. Never log in with real
 credentials and never point the mocks at real data. `fetch-public.mjs` calls only auth-free read
 endpoints (translations, regions, languages, timezones, output icons) and sends no token.
@@ -104,7 +122,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | `GET /dashboard/widget-data` | empty |
 | `GET /config/info` | sample device info: model, firmware, serial |
 | `POST /config/read` | the model's sample configuration |
-| `POST /error` | swallowed (the app's own error reporting) |
+| `POST /error` | not sent; the message is reported as a run problem (`app error …`), since it usually means the sample is shaped differently from the server's answer |
 | Wizard: `GET /online`, `POST /get-system-info-new`, `POST /get-system-status-new`, `POST /create-system`, `POST /area` | device online and not directly controlled; the created system and its area are kept for the session (`lib/mocks-configurators.mjs`) |
 | SP5 only: `GET /system-lite`, `GET /config/get-connection-status`, `GET /config/get-device-status`, `POST /get-system-status-new`, `GET /config/users/read`, `POST /config/time/read` | sample system details, connection state, device and zone status, the user list and the panel clock (`lib/mocks-configurators.mjs`) |
 
@@ -155,9 +173,11 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
   the sidebar title reads "SP5_1E7LWB.0" as on a real panel. Testers may have changed single event codes,
   and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED)
   and wireless device settings. SP5's Cameras page is VideoHub-only and is not captured.
-- **The beta server already returns newer SP5 fields** (e.g. `io9To2wire`/`io10To2wire`,
-  `wirelessSupervisionTime`, per-channel `enableEncryption`) that only the beta front-end uses. The
-  sample follows the released front-end; SP5 screens will change when that release ships.
+- **The beta server returns a newer SP5 shape** (`io9To2wire`/`io10To2wire`, `wirelessSupervisionTime`,
+  `needCodeInKeypad` per output, `enableEncryption`/`isHexMode` per CMS channel, no output zone control or
+  thermostat hysteresis, live status inside the configuration). `sp5.json` keeps the released shape for
+  `--app released`; `sp5-beta.json`, built by the same script, has the beta shape for `--app beta`.
+  Both were checked key by key against a real SP5 read from the beta server (2026-10-19).
 - **The wizard's "Scan QR code" page is the phone apps' view.** The QR button exists only in the native
   apps, which wrap this web app; the tool imitates the Android app's bridge to show it. It was not
   photographed on a real phone, and the manifest says so.
@@ -167,4 +187,4 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
   progress bar) and the write result, which the app drives from its realtime channel. The manifest lists
   them under `liveOnly`.
 - The front-end source used to learn the data shapes and routes is the beta line. The screenshots
-  themselves come from the released build named in the manifest.
+  themselves come from the build named in the manifest (`appBuild`, `frontend`).

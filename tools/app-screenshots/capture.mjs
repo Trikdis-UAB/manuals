@@ -1,9 +1,11 @@
-// Screenshots of Protegus app configurator screens, from the released web app, with sample data.
+// Screenshots of Protegus app configurator screens, from the released web app (or the beta with
+// --app beta), with sample data.
 //
 //   node capture.mjs --model GET --lang en --layout phone [--screen panel-tlf,events] [--out out]
-//                    [--fw 1.35 --revision x1x1]
+//                    [--fw 1.35 --revision x1x1] [--app beta]
 //
-// Writes PNGs to <out>/<lang>/ and merges one record per image into <out>/manifest.json.
+// Writes PNGs to <out>/<lang>/ and merges one record per image into <out>/manifest.json. Beta images
+// go to out/beta/ unless --out says otherwise, so they never replace released ones.
 // See README.md for the safety rules and for adding screens.
 
 import fs from 'node:fs';
@@ -11,15 +13,17 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { openApp, routerGo, settle, contentBottom, LAYOUTS } from './lib/app.mjs';
-import { MODELS, SAMPLE, sampleFirmware, setFirmware, sampleVersion } from './lib/sample.mjs';
-import { readJson, APP_ORIGIN } from './lib/guard.mjs';
+import { MODELS, SAMPLE, sampleFirmware, setFirmware, sampleVersion, sampleUid } from './lib/sample.mjs';
+import { readJson } from './lib/guard.mjs';
+import { frontend, configFixture } from './lib/frontends.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const args = parseArgs(process.argv.slice(2));
 const model = args.model ?? 'GET';
 const langs = (args.lang ?? 'en').split(',');
 const layouts = (args.layout ?? 'desktop,phone').split(',');
-const outDir = path.resolve(ROOT, args.out ?? 'out');
+const fe = frontend(args.app ?? 'released');
+const outDir = path.resolve(ROOT, args.out ?? (fe.id === 'released' ? 'out' : `out/${fe.id}`));
 if (!MODELS[model]) throw new Error(`Unknown model ${model}. Known: ${Object.keys(MODELS).join(', ')}`);
 const cfg = MODELS[model].configurator;
 // --flow picks a screen list that is not tied to one configurator (e.g. the add-system wizard).
@@ -37,10 +41,12 @@ const screens = (def.screens ?? [])
 if (def.flow !== 'walk' && !screens.length) throw new Error(`No screens to capture for ${model}${args.screen ? ` (${args.screen})` : ''}`);
 
 // Public label packs and reference lists are not committed; fetch them if this checkout lacks them.
-const missing = langs.filter((l) => !fs.existsSync(path.join(ROOT, 'fixtures/translations', `${cfg}.${l}.json`)));
+const missing = langs.filter((l) => !fs.existsSync(path.join(ROOT, 'fixtures', fe.labelsDir, `${cfg}.${l}.json`)));
 if (missing.length || !fs.existsSync(path.join(ROOT, 'fixtures/public/regions.json'))) {
-  execFileSync(process.execPath, [path.join(ROOT, 'fetch-public.mjs'), ...langs], { stdio: 'inherit' });
+  execFileSync(process.execPath, [path.join(ROOT, 'fetch-public.mjs'), ...langs, '--app', fe.id], { stdio: 'inherit' });
 }
+const fixture = configFixture(path.join(ROOT, 'fixtures/config'), MODELS[model].fixture, fe);
+if (!fixture.own) console.log(`NOTE no ${fe.id}-shaped sample for ${model}; using ${fixture.file}, shaped like the released server's answer`);
 
 // The read-only POSTs the app makes on this path (answered locally like everything else).
 const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new',
@@ -49,7 +55,7 @@ const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'P
 // Tallest page image, in CSS px. SP5 System options on a phone is about 3,100.
 const MAX_CSS_HEIGHT = 5000;
 
-const appBuild = await releasedBuild();
+const appBuild = await deployedBuild(fe.origin);
 const modelSlug = model.toLowerCase().replace('+', '-plus');
 const records = [];
 let problems = 0;
@@ -67,8 +73,9 @@ for (const lang of langs) {
         setFirmware(model, { revision: revision ?? defaultRevision });
         const id = revision ? `${screen.id}-${revision}` : screen.id;
         const label = `${lang} ${layout} ${model} ${id}`;
-        const app = await openApp({ lang, model, layout, skipAdvancedIntro: screen.kind !== 'intro', configPatch: screen.config, storage: seedStorage() });
-        const { page, browser, guard, errors } = app;
+        const app = await openOrFail(label, { lang, model, layout, skipAdvancedIntro: screen.kind !== 'intro', configPatch: screen.config, storage: seedStorage(), frontend: fe });
+        if (!app) continue;
+        const { page, browser, guard, errors, mocks } = app;
         try {
           const appPath = await walkTo(page, t, screen);
           await settle(page, 800);
@@ -76,8 +83,11 @@ for (const lang of langs) {
           const shots = [{ variant: layout, file: `${base}-${layout}.png` }];
           // g16 opens in the right-hand column of the desktop layout, so that column is also cut out.
           if (layout === 'desktop' && def.flow !== 'configuration') shots.push({ variant: 'desktop-panel', file: `${base}-desktop-panel.png`, selector: 'app-company-mobile-host' });
+          // The newer configurator fills the window under the app's top bar (logo, region, account);
+          // the same page without that bar, for manuals that should not show it (e.g. the beta's logo).
+          if (layout === 'desktop' && def.flow === 'configuration' && screen.kind !== 'intro') shots.push({ variant: 'desktop-content', file: `${base}-desktop-content.png`, below: 'app-company-header' });
           for (const s of shots) records.push(await shoot(page, { s, layout, screen, id, revision, lang, appPath, label }));
-          const issues = [...guard.unmocked.keys()].map((k) => `unmocked ${k}`).concat(errors.map((e) => `pageerror ${e}`));
+          const issues = runIssues(guard, errors, mocks);
           if (issues.length) { problems++; console.log(`WARN ${label}: ${issues.join('; ')}`); }
           console.log(`ok   ${label} -> ${shots.map((s) => s.file).join(', ')}`);
           if (args.verbose) printSafety(guard);
@@ -150,7 +160,7 @@ async function walkTo(page, t, screen) {
 // A walk is one pass through the app in a fresh browser; each {shot} step saves an image.
 async function runWalks(lang, t) {
   const perLang = Object.fromEntries(Object.entries(def.values ?? {}).map(([k, v]) => [k, typeof v === 'object' ? (v[lang] ?? v.en) : v]));
-  const values = { imei: SAMPLE.imei, model, ...perLang };
+  const values = { imei: sampleUid(model), model, ...perLang };
   const fillIn = (v) => String(v).replace(/\{(\w+)\}/g, (_, k) => values[k] ?? `{${k}}`);
   const wanted = args.screen ? args.screen.split(',') : null;
   for (const layout of layouts) {
@@ -158,7 +168,9 @@ async function runWalks(lang, t) {
     for (const walk of def.walks) {
       if (wanted && !wanted.some((id) => id === walk.id || walk.steps.some((st) => st.shot === id))) continue;
       const label = `${lang} ${layout} ${model} ${walk.id}`;
-      const { page, browser, guard, errors } = await openApp({ lang, model, layout, timezoneId: def.timezones?.[lang] });
+      const app = await openOrFail(label, { lang, model, layout, timezoneId: def.timezones?.[lang], frontend: fe });
+      if (!app) continue;
+      const { page, browser, guard, errors, mocks } = app;
       const files = [];
       try {
         for (const step of walk.steps) {
@@ -176,7 +188,7 @@ async function runWalks(lang, t) {
           records.push(rec);
           files.push(s.file);
         }
-        const issues = [...guard.unmocked.keys()].map((k) => `unmocked ${k}`).concat(errors.map((e) => `pageerror ${e}`));
+        const issues = runIssues(guard, errors, mocks);
         if (issues.length) { problems++; console.log(`WARN ${label}: ${issues.join('; ')}`); }
         console.log(`ok   ${label} -> ${files.join(', ')}`);
       } catch (e) {
@@ -263,10 +275,14 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
       console.log(`note ${label}: page is longer than one ${layout} screen; image is ${Math.min(again.bottom + 24, MAX_CSS_HEIGHT)} CSS px tall`);
     }
     crop.height = crop.overflows ? Math.min(crop.bottom + 24, MAX_CSS_HEIGHT) : layout === 'phone' ? Math.min(height, crop.bottom + 24) : height;
-    await page.screenshot({ ...opts, clip: { x: 0, y: 0, width, height: crop.height } });
+    crop.top = s.below ? Math.ceil(await page.locator(s.below).first().evaluate((e) => e.getBoundingClientRect().bottom)) : 0;
+    await page.screenshot({ ...opts, clip: { x: 0, y: crop.top, width, height: crop.height - crop.top } });
+    // Back to the normal window, so the next image of this page is measured the same way.
+    if (crop.overflows) { await page.setViewportSize(LAYOUTS[layout].viewport); await settle(page, 500); }
   } else {
     await page.screenshot(opts);
   }
+  if (args.text && s.variant === layout) fs.writeFileSync(file.replace(/\.png$/, '.txt'), await pageText(page));
   const fw = sampleFirmware(model);
   return {
     screen: id,
@@ -285,9 +301,12 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     file: path.relative(outDir, file),
     viewport: LAYOUTS[layout].viewport,
     deviceScaleFactor: LAYOUTS[layout].deviceScaleFactor,
-    ...(crop ? { croppedToCss: { width: LAYOUTS[layout].viewport.width, height: crop.height }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
+    ...(crop ? { croppedToCss: { ...(crop.top ? { top: crop.top } : {}), width: LAYOUTS[layout].viewport.width, height: crop.height - crop.top }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
     appUrl: new URL(page.url()).pathname,
+    frontend: fe.id,
     appBuild,
+    labels: labelsInfo(lang),
+    sampleConfig: fixture.file,
     sampleData: true,
     capturedAt: new Date().toISOString(),
   };
@@ -295,10 +314,55 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
 
 // --- helpers -----------------------------------------------------------------------------
 
+// --text: the page's visible text and field values, one per line, beside the image. For comparing two
+// front-ends or releases screen by screen (images differ in theme alone) and for writing alt text.
+// The app's top bar and the configurator menu are left out; password fields are never read.
+async function pageText(page) {
+  return page.evaluate(() => {
+    const skip = new Set(['APP-COMPANY-HEADER', 'APP-CONFIGURATION-LAYOUT-SIDEBAR']);
+    const out = [];
+    const walk = (el) => {
+      if (skip.has(el.tagName)) return;
+      const cs = getComputedStyle(el);
+      if (cs.display === 'none' || cs.visibility === 'hidden') return;
+      if (el.matches('input, textarea, select')) {
+        if (el.type === 'checkbox' || el.type === 'radio') out.push(el.checked ? '[on]' : '[off]');
+        else if (el.type !== 'password') out.push(`[${el.value}]`);
+        return;
+      }
+      for (const n of el.childNodes) {
+        if (n.nodeType === 3) { const t = n.textContent.replace(/\s+/g, ' ').trim(); if (t) out.push(t); }
+        else if (n.nodeType === 1) walk(n);
+      }
+    };
+    walk(document.body);
+    return out.join('\n') + '\n';
+  });
+}
+
+// A browser on the app, or null when the app would not load (counted as a problem; the run goes on).
+async function openOrFail(label, opts) {
+  try {
+    return await openApp(opts);
+  } catch (e) {
+    problems++;
+    console.log(`FAIL ${label}: the app did not load: ${e.message.split('\n')[0]}`);
+    return null;
+  }
+}
+
+// Calls with no sample answer, uncaught exceptions, and errors the app reported to its own error
+// endpoint (answered locally, never sent).
+function runIssues(guard, errors, mocks) {
+  return [...guard.unmocked.keys()].map((k) => `unmocked ${k}`)
+    .concat(errors.map((e) => `pageerror ${e}`))
+    .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`));
+}
+
 function labels(lang, configurator) {
   const load = (pack) => {
-    const f = path.join(ROOT, 'fixtures/translations', `${pack}.${lang}.json`);
-    if (!fs.existsSync(f)) throw new Error(`Missing ${path.relative(ROOT, f)}. Run: node fetch-public.mjs ${lang}`);
+    const f = path.join(ROOT, 'fixtures', fe.labelsDir, `${pack}.${lang}.json`);
+    if (!fs.existsSync(f)) throw new Error(`Missing ${path.relative(ROOT, f)}. Run: node fetch-public.mjs ${lang} --app ${fe.id}`);
     return JSON.parse(readJson(f).translations);
   };
   const all = { ...load('app'), ...load(configurator) };
@@ -308,17 +372,27 @@ function labels(lang, configurator) {
   };
 }
 
-async function releasedBuild() {
+// Where the label pack came from; a beta pack is the EU server's plus keys only the beta server has.
+function labelsInfo(lang) {
+  const read = (pack) => readJson(ROOT, 'fixtures', fe.labelsDir, `${pack}.${lang}.json`);
+  const app = read('app');
+  const info = { server: app._merged?.base ?? new URL(fe.labelsApi).host, version: app._merged?.baseVersion ?? app.version ?? null };
+  if (!app._merged) return info;
+  const added = [...new Set([...app._merged.addedKeys, ...read(cfg)._merged.addedKeys])];
+  return { ...info, addedFrom: app._merged.addedFrom, addedVersion: app._merged.addedVersion, addedKeys: added.length };
+}
+
+async function deployedBuild(origin) {
   // The web build has no version number of its own (appVersion is 0.0(0); it is set only for the
   // native apps), so the bundle hash and its deploy date are the identifiers.
-  const html = await (await fetch(APP_ORIGIN + '/')).text();
+  const html = await (await fetch(origin + '/')).text();
   const main = html.match(/main[-.][0-9A-Za-z]+\.js/)?.[0] ?? 'unknown';
   let deployed = null;
   if (main !== 'unknown') {
-    const lm = (await fetch(`${APP_ORIGIN}/${main}`, { method: 'HEAD' })).headers.get('last-modified');
+    const lm = (await fetch(`${origin}/${main}`, { method: 'HEAD' })).headers.get('last-modified');
     deployed = lm ? new Date(lm).toISOString().slice(0, 10) : null;
   }
-  return { bundle: main, deployed };
+  return { origin, bundle: main, deployed };
 }
 
 function writeManifest(newRecords) {
@@ -332,7 +406,9 @@ function writeManifest(newRecords) {
   const images = [...old.filter((r) => !fresh.has(key(r))), ...newRecords]
     .sort((a, b) => key(a).localeCompare(key(b)));
   const manifest = {
-    about: 'Protegus app screenshots with sample data, from the released web app (web.protegus.app). Generated by tools/app-screenshots/capture.mjs.',
+    about: fe.id === 'released'
+      ? 'Protegus app screenshots with sample data, from the released web app (web.protegus.app). Generated by tools/app-screenshots/capture.mjs.'
+      : `Protegus app screenshots with sample data, from the ${fe.id} front-end (${new URL(fe.origin).host}), not the released app. Generated by tools/app-screenshots/capture.mjs --app ${fe.id}.`,
     liveOnly: { ...byConfigurator(prev.liveOnly), [def.configurator]: def.liveOnly },
     notShown: { ...byConfigurator(prev.notShown), [def.configurator]: def.notShown ?? [] },
     images,

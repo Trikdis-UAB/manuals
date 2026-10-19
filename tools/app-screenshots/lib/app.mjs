@@ -1,8 +1,9 @@
-// Drives the released Protegus web app the way a person does: boot, open the system, open
-// Advanced settings, press Read, then walk the configurator menu.
+// Drives the Protegus web app (released, or the beta with --app beta) the way a person does: boot,
+// open the system, open Advanced settings, press Read, then walk the configurator menu.
 
 import { chromium } from 'playwright';
-import { installGuard, APP_ORIGIN } from './guard.mjs';
+import { installGuard } from './guard.mjs';
+import { FRONTENDS } from './frontends.mjs';
 import { createMocks, fakeToken } from './mocks.mjs';
 import { SAMPLE } from './sample.mjs';
 import { readJson } from './guard.mjs';
@@ -17,7 +18,7 @@ export const LAYOUTS = {
   phone: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true },
 };
 
-export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {}, timezoneId = 'Europe/Vilnius' }) {
+export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {}, timezoneId = 'Europe/Vilnius', frontend = FRONTENDS.released }) {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   const context = await browser.newContext({
     ...LAYOUTS[layout],
@@ -26,13 +27,13 @@ export async function openApp({ lang, model, layout, log = () => {}, skipAdvance
     timezoneId, // the browser's zone; the app shows it as the new system's default time zone
     colorScheme: 'light',
   });
-  const mocks = createMocks({ lang, model, configPatch, timezoneId });
+  const mocks = createMocks({ lang, model, configPatch, timezoneId, frontend });
   // Start as a returning user whose label pack is already cached. On a browser's very first visit
   // some configurator pages build their option lists before the labels arrive and show raw keys.
-  const pack = readJson(ROOT, 'fixtures', 'translations', `app.${lang}.json`);
-  const guard = await installGuard(context, { mocks, log });
-  await context.addInitScript(({ token, lang, userId, systemId, skipAdvancedIntro, storage, labels, labelsVersion }) => {
-    if (location.origin !== 'https://web.protegus.app' || localStorage.getItem('token')) return;
+  const pack = readJson(ROOT, 'fixtures', frontend.labelsDir, `app.${lang}.json`);
+  const guard = await installGuard(context, { mocks, log, frontend });
+  await context.addInitScript(({ origin, token, lang, userId, systemId, skipAdvancedIntro, storage, labels, labelsVersion }) => {
+    if (location.origin !== origin || localStorage.getItem('token')) return;
     for (const [k, v] of Object.entries(JSON.parse(labels))) localStorage.setItem(k, v.replace(/&apos;/g, "'").replace(/&quot;/g, '"'));
     localStorage.setItem('lang_version', JSON.stringify(labelsVersion));
     localStorage.setItem('token', JSON.stringify(token));
@@ -41,15 +42,32 @@ export async function openApp({ lang, model, layout, log = () => {}, skipAdvance
     // Skip the Advanced-settings warning page ("don't show again") and go straight to the configurator.
     if (skipAdvancedIntro) localStorage.setItem(`do_not_show_adv_${userId}_${systemId}`, '1');
     for (const [k, v] of Object.entries(storage)) localStorage.setItem(k, JSON.stringify(v));
-  }, { token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId, skipAdvancedIntro, storage, labels: pack.translations, labelsVersion: pack.version });
+  }, { origin: frontend.origin, token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId, skipAdvancedIntro, storage, labels: pack.translations, labelsVersion: pack.version });
 
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
-  await page.goto(APP_ORIGIN + '/', { waitUntil: 'domcontentloaded' });
-  // Booting at "/" runs the app's global resolver, which loads the label pack.
-  await page.waitForURL((u) => !['/', '/login/email'].includes(u.pathname), { timeout: 30000 });
-  await page.waitForLoadState('networkidle');
+  // A front-end file that did not arrive (icons, scripts) leaves gaps in the picture. Not counted: the
+  // guard's own refusals, and requests the page cancelled itself (ERR_ABORTED, e.g. on navigation).
+  page.on('requestfailed', (r) => {
+    const why = r.failure()?.errorText ?? '';
+    if (!/ERR_BLOCKED_BY_CLIENT|ERR_ABORTED/.test(why)) errors.push(`failed to load ${r.url().split('?')[0]} (${why})`);
+  });
+  page.on('response', (r) => { if (r.status() >= 400 && r.request().method() === 'GET') errors.push(`HTTP ${r.status()} for ${r.url().split('?')[0]}`); });
+  try {
+    // One retry: a slow moment on the host (30 s+ for the first byte) should not cost the screen.
+    await page.goto(frontend.origin + '/', { waitUntil: 'domcontentloaded' }).catch((e) => {
+      if (e.name !== 'TimeoutError') throw e;
+      log(`retrying the first load of ${frontend.origin}`);
+      return page.goto(frontend.origin + '/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    });
+    // Booting at "/" runs the app's global resolver, which loads the label pack.
+    await page.waitForURL((u) => !['/', '/login/email'].includes(u.pathname), { timeout: 30000 });
+    await page.waitForLoadState('networkidle');
+  } catch (e) {
+    await browser.close();
+    throw e;
+  }
   return { browser, context, page, guard, errors, mocks };
 }
 
