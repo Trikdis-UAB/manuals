@@ -11,6 +11,8 @@
 
 **Committing while other sessions have work in this tree** (only your lines, even inside a file someone else is editing; rebasing without stash or autostash): see `NOTES/agent-lessons/commit-in-shared-tree.md`.
 
+**Checking PDFs before a print-affecting change ships** (staging builds no PDFs; local export with system Chrome; labels print in capitals; where the check helpers live): see `NOTES/agent-lessons/pdf-print-check.md`.
+
 **Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`, and the `protegus-app-screenshots` skill (`tools/app-screenshots/skill/SKILL.md`).
 
 ## Credentials & API access
