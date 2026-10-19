@@ -687,11 +687,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
         amarillo).
 3. De clic en "**Añadir nuevo sistema**" e ingrese el número de GT+ “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
-<img alt="Protegus2, pantalla Escanear código QR. El campo ID único/IMEI está vacío; una indicación dice que el IMEI se encuentra en la caja, en la parte trasera del comunicador o en TrikdisConfig como ID único. Se muestran Escanear código QR y Siguiente." src="./image38.webp" style="width:2.9606299212598426in;height:3.7401574803149606in" />
+![Pantalla Escanear código QR de Protegus2 para añadir un sistema: campo ID único/IMEI vacío, «O», botón Escanear Código QR, el texto «Escanee el código QR o complete el campo de texto.» y un dibujo de la etiqueta del producto con el código QR resaltado. Botones Cancelar y Siguiente.](./protegus-app/gt-plus-add-system-qr-phone.webp){ .trik-mob-img }
 
 4. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
-<img alt="Protegus2, pantalla Añadir nuevo sistema. El campo Nombre contiene GT+, la zona horaria es Europe/Vilnius y aparecen los botones Cancelar y Siguiente." src="./image39.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+![Pantalla Añadir nuevo sistema de Protegus2: Nombre GT+, círculo de color Fondo y Zona horaria Europe/Madrid. Botones Cancelar y Siguiente.](./protegus-app/gt-plus-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
@@ -702,21 +702,21 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 1.  Haga clic en el botón "**Continuar**".
 
-<img alt="Protegus2, pantalla El sistema no se controla de forma remota. Indica conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 Europe para habilitar o deshabilitar el sistema. Abajo aparece el botón Continuar." src="./image40.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Pantalla de Protegus2 «El sistema no se controla de forma remota»: dibujo de un comunicador junto a una persona pensativa, «¡Qué necesita saber!» y la indicación de conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 para armar o desarmar el sistema. Botón Continuar.](./protegus-app/gt-plus-add-system-indirect-phone.webp){ .trik-mob-img }
 
-2. Ingrese "**Nombre de partición**". Habilite el control de salida PGM mediante la aplicación Protegus2.
+2. Ingrese "**Nombre del área**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
 2.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
 
 3.  Haga clic en el botón "**Guardar**".
 
-<img alt="Pantalla Agregar nueva partición de Protegus2: Número de partición 1 y Nombre de partición «1 Area». El interruptor «Control con Protegus2 Europe» está activado. La salida asignada es PGM1; Pulso está seleccionado con un intervalo de 3 segundos. También aparecen Nivel y los botones Cancelar y Guardar." src="./image41.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Pantalla Agregar nueva área de Protegus2: Número de área 1, Nombre del área Casa, armado automático «No ut…» (texto cortado), desarmado automático desactivado, «Control con Protegus2» activado, Assigned Output PGM1 (sin traducir en la app), Pulso seleccionado con intervalo de 3 segundos, Nivel sin seleccionar. Botones Cancelar y Guardar.](./protegus-app/gt-plus-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar una partición**”. La configuración de la salida PGM es similar a la descrita anteriormente.
+4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
 2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-<img alt="Pantalla Áreas de Protegus2: la partición 1 Area figura como Controlado con: PGM1. Debajo aparecen el botón para agregar una partición y las opciones Saltar y Siguiente." src="./image42.webp" style="width:2.216535433070866in;height:1.9921259842519685in" />
+![Pantalla Áreas de Protegus2: área Casa, «Controlado con: PGM1», con botón para eliminar; debajo, botón con signo más y «Haga clic para agregar un área». Botones Saltar y Siguiente.](./protegus-app/gt-plus-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Control del sistema con Protegus2 
 
@@ -724,7 +724,7 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="Protegus2: pantalla principal del sistema GT+ con estado «En línea». La sección «1 Area» muestra «Desconocido» y los botones «Arm» y «Desarm»; debajo aparece el botón de control de salida «PGM2»." src="./image43.webp" style="width:2.220472440944882in;height:2.6968503937007875in" />
+![Pantalla principal del sistema GT+ en Protegus2: En línea, área Casa con estado Desconocido, botones Arm y Desarm, y botón de la salida PGM2.](./protegus-app/gt-plus-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Lista de comando SMS 
 

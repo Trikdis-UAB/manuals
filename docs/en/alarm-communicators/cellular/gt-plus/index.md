@@ -689,11 +689,11 @@ With Protegus2 users will be able to control their alarm system remotely. They w
         blinks yellow).
 3. Click “**Add new system”** and enter the GT+’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “**Next”**.
 
-<img alt="Protegus2 app, Scan QR code screen: a callout points to the 'Unique ID/IMEI' field, with text explaining the IMEI code can be found on the package, on the PCB board, or in TrikdisConfig as the Unique ID; below, a 'Scan QR code' button and an example product label with the QR-code area highlighted." src="./image37.webp" style="width:2.858267716535433in;height:3.704724409448819in" />
+![Protegus2 app 'Scan QR code' page for adding a system: empty Unique ID/IMEI field, OR, a Scan QR Code button, the note 'Scan the QR code or fill in the text field.' and a drawing of the product label with its QR code highlighted. Buttons: Cancel, Next.](./protegus-app/gt-plus-add-system-qr-phone.webp){ .trik-mob-img }
 
 4. Enter the system „**Name**”. Click "**Next**".
 
-<img alt="Protegus2 app screenshot: Add new system screen, with Name field set to GT+, a Background colour picker, and Time zone set to Europe/Vilnius, below Cancel and Next buttons." src="./image38.webp" style="width:2.220472440944882in;height:2.220472440944882in" />
+![Protegus2 app 'Add new system' page: Name GT+, a Background colour circle and Time zone Europe/Vilnius. Buttons: Cancel, Next.](./protegus-app/gt-plus-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
@@ -704,20 +704,20 @@ Follow the instructions below if the security control panel will be controlled w
 
 1.  Click „**Continue**“.
 
-<img alt="Protegus2 app screen titled 'The system is not controlled remotely': an illustration of a communicator with NETWORK, DATA, POWER and TROUBLE LEDs and terminals +DC, -DC, CLK, DATA, A485, B485, COM, IN, OUT1, OUT2, beside a puzzled person. Text below: You must connect the output to the security system input terminal and configure Protegus2 Europe to enable or disable your security system. Continue button." src="./image39.webp" style="width:2.220472440944882in;height:3.4803149606299213in" />
+![Protegus2 app page 'The system is not controlled remotely': a communicator drawing beside a puzzled person, 'What do you need to know!' and the note that the output must be connected to the security system input terminal and Protegus2 configured to arm or disarm the system. Button: Continue.](./protegus-app/gt-plus-add-system-indirect-phone.webp){ .trik-mob-img }
 
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
 2.  Click „**Save**“.
 
-<img alt="Protegus2 app 'Add new area' screen: Area number 1, Area name '1 Area', 'Control with Protegus2 Europe' toggle on, Assigned Output PGM1, Pulse option selected with Pulse interval in seconds set to 3, Level option unselected, Cancel and Save buttons." src="./image40.webp" style="width:2.220472440944882in;height:3.5118110236220472in" />
+![Protegus2 app 'Add new area' page: Area number 1, Area name Home, 'Autoarm this area when arming area' Not used, 'Autodisarm when disarming area' off, 'Control with Protegus2' on, Assigned Output PGM1, Pulse selected with Pulse interval in seconds 3, Level not selected. Buttons: Cancel, Save.](./protegus-app/gt-plus-add-system-area-phone.webp){ .trik-mob-img }
 
 3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
 2.  After completing the settings, click the “**Skip**” button.
 
-<img alt="Protegus2 app 'Areas' screen: list showing '1 Area, Controlled with: PGM1' with a remove (X) button, a plus button and 'Click to add an area' text below, and Skip / Next buttons." src="./image41.webp" style="width:2.2244094488188977in;height:2.0078740157480315in" />
+![Protegus2 app 'Areas' page: area Home, 'Controlled with: PGM1', with a remove button; below it a plus button and 'Click to add an area'. Buttons: Skip, Next.](./protegus-app/gt-plus-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Arming/disarming the alarm system with Protegus2 
 
@@ -725,7 +725,7 @@ Follow the instructions below if the security control panel will be controlled w
 
 2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
 
-<img alt="Protegus2 app screenshot: GT+ system home screen showing status Online. The 1 Area section shows status Unknown with Arm and Disarm buttons; a PGM2 output control button is shown below." src="./image42.webp" style="width:2.220472440944882in;height:2.661417322834646in" />
+![Protegus2 app home screen of the GT+ system: Online, area Home with status Unknown and Arm and Disarm buttons, and a PGM2 output button.](./protegus-app/gt-plus-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Control with SMS messages 
 
