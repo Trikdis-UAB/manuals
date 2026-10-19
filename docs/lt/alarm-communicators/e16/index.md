@@ -514,7 +514,7 @@ Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. 
 3. Paspauskite **Pridėti sistemą** ir įveskite E16 MAC adresą. MAC adresą rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
 ![Protegus2 programėlės langas „Nuskaityti QR kodą“ sistemai pridėti: tuščias laukas „Unikalus ID“, „ARBA“, mygtukas „Nuskaityti QR kodą“, užrašas „Nuskaitykite QR kodą arba užpildykite teksto lauką.“ ir gaminio lipduko piešinys su pažymėtu QR kodu. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/e16-add-system-qr-phone.webp){ .trik-mob-img }
-4. Paspauskite “Pridėti sistemą” ir įveskite *E16* MAC adresą. MAC adresą rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
+
 4.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau“.
 
 ![Protegus2 langas „Pridėti sistemą“: pavadinimas E16, fono spalvos apskritimas „Fonas“ ir laiko juosta Europe/Vilnius. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/e16-add-system-details-phone.webp){ .trik-mob-img }
@@ -532,21 +532,21 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16 PGM išėjim
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
-2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
-3. Paspauskite „**Išsaugoti**“.
+3.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
+4. Paspauskite „**Išsaugoti**“.
 
 ![Protegus2 langas „Pridėti naują sritį“: srities numeris 1, srities pavadinimas „Namai“, automatinio apsaugos įjungimo eilutė (reikšmė nukirpta: „Nena…“), automatinis išjungimas išjungtas, „Valdyti naudojant Protegus2“ įjungta, priskirtas išėjimas PGM1, pasirinktas „Impulsas“ su 3 s trukme, „Lygis“ nepasirinktas. Mygtukai „Atšaukti“ ir „Išsaugoti“.](./protegus-app/e16-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
+5. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
-2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
+6.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
 ![Protegus2 langas „Sritys“: sritis „Namai“, „Valdoma su: PGM1“, su pašalinimo mygtuku; žemiau pliuso mygtukas ir „Spustelėkite, kad pridėtumėte sritį“. Mygtukai „Praleisti“ ir „Toliau“.](./protegus-app/e16-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
-1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
+2.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
 ![Protegus2 pagrindinis E16 sistemos langas: „Prijungta“, sritis „Namai“ su būsena „Nežinoma“ ir mygtukais „Įjungti“ ir „Išjungti“, PGM2 išėjimo mygtukas.](./protegus-app/e16-add-system-dashboard-phone.webp){ .trik-mob-img }
 

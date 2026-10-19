@@ -807,13 +807,13 @@ Follow the instructions below if the security control panel will be controlled w
 2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
 3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
-2.  Click „**Save**“.
+4.  Click „**Save**“.
 
 ![Protegus2 app 'Add new area' page: Area number 1, Area name Home, 'Autoarm this area when arming area' Not used, 'Autodisarm when disarming area' off, 'Control with Protegus2' on, Assigned Output PGM1, Pulse selected with Pulse interval in seconds 3, Level not selected. Buttons: Cancel, Save.](./protegus-app/get-add-system-area-phone.webp){ .trik-mob-img }
 
-3. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
+5. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
 
-2.  After completing the settings, click the “**Skip**” button.
+6.  After completing the settings, click the “**Skip**” button.
 
 ![Protegus2 app 'Areas' page: area Home, 'Controlled with: PGM1', with a remove button; below it a plus button and 'Click to add an area'. Buttons: Skip, Next.](./protegus-app/get-add-system-area-list-phone.webp){ .trik-mob-img }
 

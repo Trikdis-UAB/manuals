@@ -706,15 +706,15 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2. Ingrese "**Nombre del área**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
-2.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
+3.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
 
-3.  Haga clic en el botón "**Guardar**".
+4.  Haga clic en el botón "**Guardar**".
 
 ![Pantalla Agregar nueva área de Protegus2: Número de área 1, Nombre del área Casa, armado automático «No ut…» (texto cortado), desarmado automático desactivado, «Control con Protegus2» activado, Assigned Output PGM1 (sin traducir en la app), Pulso seleccionado con intervalo de 3 segundos, Nivel sin seleccionar. Botones Cancelar y Guardar.](./protegus-app/gt-plus-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
+5. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
-2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
+6.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
 ![Pantalla Áreas de Protegus2: área Casa, «Controlado con: PGM1», con botón para eliminar; debajo, botón con signo más y «Haga clic para agregar un área». Botones Saltar y Siguiente.](./protegus-app/gt-plus-add-system-area-list-phone.webp){ .trik-mob-img }
 

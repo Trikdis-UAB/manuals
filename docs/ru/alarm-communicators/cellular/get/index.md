@@ -725,13 +725,13 @@ Cхемы типов входных цепей NC, NO, NO/EOL, NC/EOL, NO/DEOL, 
 2. Введите “**Area name**“. Включите управление PGM выходом приложением Protegus2.
 3. Выберите „**Pulse“** или „**Level“**, в зависимости от того как настроен тип зоны выключателя (keyswitch). Если необходимо, можете изменить интервал импульса.
 
-2.  Нажмите кнопку „**Save**“.
+4.  Нажмите кнопку „**Save**“.
 
 ![Экран Protegus2 «Add new area»: Area number 1, Area name «Дом», «Autoarm this area when arming area» — Not used, «Autodisarm when disarming area» выключено, «Control with Protegus2» включено, Assigned Output PGM1, выбран Pulse с интервалом 3 с, Level не выбран. Кнопки Cancel и Save.](./protegus-app/get-add-system-area-phone.webp){ .trik-mob-img }
 
-3. Если будет еще один раздел охранной сигнализации, то необходимо нажать „**Click to add an area**“. Настройка PGM выхода аналогично описанной выше.
+5. Если будет еще один раздел охранной сигнализации, то необходимо нажать „**Click to add an area**“. Настройка PGM выхода аналогично описанной выше.
 
-2.  После окончания настроек нажмите кнопку „**Skip**“.
+6.  После окончания настроек нажмите кнопку „**Skip**“.
 
 ![Экран Protegus2 «Areas»: область «Дом», «Controlled with: PGM1», с кнопкой удаления; ниже кнопка с плюсом и «Click to add an area». Кнопки Skip и Next.](./protegus-app/get-add-system-area-list-phone.webp){ .trik-mob-img }
 

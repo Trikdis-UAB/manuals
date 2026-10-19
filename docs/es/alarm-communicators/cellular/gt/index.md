@@ -655,7 +655,7 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
 
 1\. Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: www.protegus.app:
 
-1.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
+2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
 
 !!! note "Nota"
     Al agregar GT a Protegus2, revise si:
@@ -673,11 +673,11 @@ Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remo
     4.  El comunicador GT está conectado a la red móvil (el LED de
         "NETWORK" de iluminarse de color verde y parpadear de color
         amarillo).
-2. De clic en "**Añadir nuevo sistema**" e ingrese el número de GT “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
+3. De clic en "**Añadir nuevo sistema**" e ingrese el número de GT “**IMEI/Unique ID**”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "**Siguiente**".
 
 ![Pantalla Escanear código QR de Protegus2 para añadir un sistema: campo ID único/IMEI vacío, «O», botón Escanear Código QR, el texto «Escanee el código QR o complete el campo de texto.» y un dibujo de la etiqueta del producto con el código QR resaltado. Botones Cancelar y Siguiente.](./protegus-app/gt-add-system-qr-phone.webp){ .trik-mob-img }
 
-3. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
+4. Ingrese el nombre del sistema. Haga clic en el botón "**Siguiente**".
 
 ![Pantalla Añadir nuevo sistema de Protegus2: Nombre GT, círculo de color Fondo y Zona horaria Europe/Madrid. Botones Cancelar y Siguiente.](./protegus-app/gt-add-system-details-phone.webp){ .trik-mob-img }
 
@@ -694,15 +694,15 @@ Siga las instrucciones de abajo si el panel de control no será controlado de fo
 
 2. Ingrese "**Nombre del área**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
-2.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
+3.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
 
-3.  Haga clic en el botón "**Guardar**".
+4.  Haga clic en el botón "**Guardar**".
 
 ![Pantalla Agregar nueva área de Protegus2: Número de área 1, Nombre del área Casa, armado automático «No ut…» (texto cortado), desarmado automático desactivado, «Control con Protegus2» activado, Assigned Output PGM1 (sin traducir en la app), Pulso seleccionado con intervalo de 3 segundos, Nivel sin seleccionar. Botones Cancelar y Guardar.](./protegus-app/gt-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
+5. Si hay otra sección área, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
-2.  Después de completar la configuración, haga clic en el botón "**Saltar**".
+6.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
 ![Pantalla Áreas de Protegus2: área Casa, «Controlado con: PGM1», con botón para eliminar; debajo, botón con signo más y «Haga clic para agregar un área». Botones Saltar y Siguiente.](./protegus-app/gt-add-system-area-list-phone.webp){ .trik-mob-img }
 

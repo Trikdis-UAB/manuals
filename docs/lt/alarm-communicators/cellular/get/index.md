@@ -726,21 +726,21 @@ Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su GET PGM išėjim
 
 2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programėlę.
 
-2.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
-3. Paspauskite „**Išsaugoti**“.
+3.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
+4. Paspauskite „**Išsaugoti**“.
 
 ![Protegus2 langas „Pridėti naują sritį“: srities numeris 1, srities pavadinimas „Namai“, automatinio apsaugos įjungimo eilutė (reikšmė nukirpta: „Nena…“), automatinis išjungimas išjungtas, „Valdyti naudojant Protegus2“ įjungta, priskirtas išėjimas PGM1, pasirinktas „Impulsas“ su 3 s trukme, „Lygis“ nepasirinktas. Mygtukai „Atšaukti“ ir „Išsaugoti“.](./protegus-app/get-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
+5. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
-2.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
+6.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
 ![Protegus2 langas „Sritys“: sritis „Namai“, „Valdoma su: PGM1“, su pašalinimo mygtuku; žemiau pliuso mygtukas ir „Spustelėkite, kad pridėtumėte sritį“. Mygtukai „Praleisti“ ir „Toliau“.](./protegus-app/get-add-system-area-list-phone.webp){ .trik-mob-img }
 
 ### Sistemos įjungimas/išjungimas su *Protegus2*
 
 1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
-1.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
+2.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
 ![Protegus2 pagrindinis GET sistemos langas: „Prijungta“, sritis „Namai“ su būsena „Nežinoma“ ir mygtukais „Įjungti“ ir „Išjungti“, PGM2 išėjimo mygtukas.](./protegus-app/get-add-system-dashboard-phone.webp){ .trik-mob-img }
 
