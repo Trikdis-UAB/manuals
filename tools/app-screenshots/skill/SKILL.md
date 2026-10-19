@@ -110,6 +110,19 @@ raw keys, statuses plausible, nothing cut off. The run must end with 0 problems,
 self-test must pass after any change to the guard. Values you could not confirm stay flagged in the
 manifest (`firmwareConfirmed`, `revisionConfirmed`, `unverified`), and you name them in the hand-off.
 
+## When the tool cannot produce the real screen
+
+Some screens cannot be captured from the released web app at all, or only imitated: phone-only UI
+such as the QR scanner page, states that need a live device, anything that looks different on a real
+phone. Andrius's rule (2026-10-19): *"Jeigu mums reikia screenshotų, kurių mes patys negalim padaryt,
+arba sugeneruoti beveik tinkamu su mūsų frontendo prieiga, tai mes tada turim jų paprašyti Igorio."*
+
+So ask Igoris Šimkevič (igoris@trikdis.lt, documentation) for real phone screenshots. Write in
+Lithuanian, from joy@trikdis.lt, with the `gmail-draft` skill, naming the exact screens and languages
+you need; the draft waits for Andrius's yes. Until the real screenshots arrive, the imitated image may
+be used, marked `unverified` in the manifest, and the session that owns the manual swaps it when they
+come. Check first whether a request for the same screens is already out.
+
 ## Hand-off
 
 The images serve a manual another session owns. Send that session the manifest path, the image folder
