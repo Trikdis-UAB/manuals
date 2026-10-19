@@ -17,16 +17,16 @@ export const LAYOUTS = {
   phone: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true },
 };
 
-export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {} }) {
+export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {}, timezoneId = 'Europe/Vilnius' }) {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   const context = await browser.newContext({
     ...LAYOUTS[layout],
     serviceWorkers: 'block', // a service worker could fetch around page.route
     locale: lang === 'en' ? 'en-GB' : lang,
-    timezoneId: 'Europe/Vilnius',
+    timezoneId, // the browser's zone; the app shows it as the new system's default time zone
     colorScheme: 'light',
   });
-  const mocks = createMocks({ lang, model, configPatch });
+  const mocks = createMocks({ lang, model, configPatch, timezoneId });
   // Start as a returning user whose label pack is already cached. On a browser's very first visit
   // some configurator pages build their option lists before the labels arrive and show raw keys.
   const pack = readJson(ROOT, 'fixtures', 'translations', `app.${lang}.json`);

@@ -1,7 +1,7 @@
 # PB-LoRa Беспроводная кнопка тревоги
 
 <div style="text-align: center;">
-  <img src="./image3.webp" alt="" width="200">
+  <img src="./image3.webp" alt="Вид спереди беспроводной кнопки тревоги TRIKDIS PB-LORA: красная передняя панель с металлической кнопкой в центре, надписью ALARM под ней и индикатором NETWORK слева." width="200">
 </div>
 
 ## Требование безопасности
@@ -14,7 +14,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-<img alt="" src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="Перечёркнутый контейнер для мусора на колёсах: изделие нельзя выбрасывать вместе с бытовыми отходами." src="./image2.webp" style="width:24px;height:auto;vertical-align:middle" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -50,7 +50,7 @@
 
 ### Элементы кнопки тревоги 
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="Кнопка тревоги PB-LORA. Слева передняя крышка: 1 — световой индикатор NETWORK; 2 — щель для снятия крышки на правом краю; в центре — большая кнопка ALARM. Справа открытый корпус с платой: 3 — батарейка 3 V (CR123A); 4 — кнопка TAMP для привязки устройства и проверки подключения; 5 — DIP-переключатель SW." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 1. Световой индикатор.
 2. Щель для снятия крышки.
@@ -86,7 +86,7 @@
 
 1.  Снимите верхнюю крышку.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Два рисунка открытия корпуса PB-LORA отвёрткой, вставленной в щель сверху. Слева стрелка показывает, как вставить отвёртку в щель. Справа стрелка показывает нажатие на рукоятку отвёртки вниз, при котором передняя крышка отделяется от основания." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 2.  Удалите плату.
 
@@ -98,11 +98,11 @@
 
 6.  Закройте верхнюю крышку.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="Два рисунка крепления PB-LORA. Слева обведён фиксатор платы; стрелка показывает, что его нужно отжать наружу, чтобы освободить плату. Справа показано пустое основание корпуса с монтажными отверстиями." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 ### Подсоединение беспроводной кнопки тревоги PB-LORA 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Схема подключения: SP3 соединена с трансивером RF-LORA. Питание и RS485: AUX+ (+12 В) соединена с +DC, AUX- с -DC, 485 A с A RS 485, 485 B с B RS485. Трансивер связывается по беспроводной связи с кнопками тревоги PB-LORA на расстоянии до 5000 м; кнопки обозначены от 1* до 250*." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     Трансивер RF-LORA должен быть подключен к охранной панели
@@ -131,11 +131,11 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля PB-LORA.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Модули» → «RS485 модули». В выделенной первой строке указаны ID 1 и модуль «PB-LORA Кнопка тревоги»; поле «Серийный №» заполнено." src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки кнопке тревоги.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Зоны» → «Настройки зон». В выделенной строке «Zone 10» в поле «Вход» указано «RS485 Expander», в поле «Назначение» — «24-х час». Кнопка «Записать (F5)» также выделена." src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 
@@ -151,7 +151,7 @@
 
 16. В списке "**Модули**" в строке "**PB-LORA кнопка тревоги**" будет указана версия прошивки.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Модули» → «RS485 модули». В выделенной строке «PB-LORA Кнопка тревоги» в поле «Версия прошивки» указано «PB-LORA 00.00»." src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Нажмите кнопку "**Отсоединить**" и отсоедините USB кабель.
 
@@ -199,7 +199,7 @@
         желтым).
 6.  В поле **„Уникальный №"** введите IMEI номер охранной панели „FLEXi“ SP3, который указан на упаковке или на изделии.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел «Удаленный доступ». Выделены пустое поле «Уникальный №» и кнопка «Конфигурировать»." src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Нажмите кнопку **„Конфигурировать“**.
 
@@ -213,7 +213,7 @@
 
 12. Подождите, пока произойдет обновление.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Модули» → «RS485 модули». Трансивер «RF-LORA трансивер» указан под ID 1; выделенное поле «Серийный №» заполнено. Также выделены кнопки «Считать (F4)» и «Записать (F5)»." src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Подождите 1 минуту.
 
@@ -221,13 +221,13 @@
 
 15. В окне **„Модули“** в поле **„Версия прошивки“** будет указана версия программного обеспечения модуля RF-LORA.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Модули» → «RS485 модули». В выделенной строке «RF-LORA трансивер» в поле «Версия прошивки» указано «RF-LORA 433 02.21»." src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Перейдите к окну **„Беспроводные датчики“**.
 
 17. Нажмите кнопку **„Привязка датчиков“**.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Беспроводные датчики» → «Тревожные кнопки». Над списком со столбцами «№» и «Серийный №» выделена кнопка «Привязка датчиков»." src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 Регистрация беспроводных кнопок тревоги может производиться для всех сразу.
 
@@ -241,7 +241,7 @@
 
 21. Индикатор **„DATA/TROUBLE“** на модуле RF-LORA загорится зеленым цветом на несколько секунд. После этого светодиод **„DATA/TROUBLE“** на модуле RF-LORA снова начнет мигать красным/зеленым цветом.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig, окно Режим привязки. Показано сообщение о начале привязки с указанием вставить батарейки в новый датчик и дождаться завершения инициализации; внизу находится кнопка Остановить привязку." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. Через несколько секунд беспроводная кнопка тревоги PB-LORA добавится в список датчиков.
 
@@ -251,17 +251,17 @@
 
 25. Нажмите **„Остановить привязку“**, чтобы завершить регистрацию беспроводных кнопок тревоги.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig, окно Режим привязки. Сообщение Найдено новое устройство показывает поля ID и UID; красными рамками выделены это сообщение и кнопка Остановить привязку." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Нажмите ***„*Да*“ в открывшемся окне. Зарегистрированные беспроводные кнопки тревоги PB-LORA будут сохранены в памяти охранной панели „FLEXi“ SP3.***
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="TrikdisConfig, окно Сохранить конфигурацию. Диалог спрашивает, сохранить ли новые параметры в модуле; красной рамкой выделена кнопка Yes." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Подождите несколько минут. Нажмите кнопку **Считать [F4]**.
 
 В TrikdisConfig программном окне **„Беспроводные датчики“** будет содержаться список зарегистрированных беспроводных кнопок тревоги PB-LORA. В поле **„Серийный №“** будут написаны 6-значные серийные номера кнопок тревоги, которые должны совпадать с серийными номерами PB-LORA, написанными на задней стороне корпуса.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, окно «Беспроводные датчики», вкладка «Тревожные кнопки». Выделены кнопка «Считать (F4)» и серийный номер первого устройства в столбце «Серийный №»." src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Удаление PB-LORA беспроводных кнопок тревоги из памяти

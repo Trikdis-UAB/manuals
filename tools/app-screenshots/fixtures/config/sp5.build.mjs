@@ -3,8 +3,8 @@
 // Shapes and array lengths follow the app's USB parser (configurators/wired/sp5-communication.service.ts):
 // 16 areas, 192 zones, 64 outputs and RS485 modules, 16 keypads, 96 wireless devices, 20 sensors,
 // 8 thermostats, 32 groups, 40 blacklist slots, 37 panel events. All values are invented.
-// Inferred and unverified against a real SP5: panel-event Contact ID codes (standard codes where one
-// exists), keypad serial-number prefixes (52 = LCD, 51 = LED), wireless device settings.
+// Inferred and unverified against a real SP5: keypad serial-number prefixes (52 = LCD, 51 = LED) and
+// wireless device settings. Panel-event codes come from a real test panel (see below).
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -78,19 +78,21 @@ devices[1] = { queueNo: 1, id: 50, sn: 8412590, type: 20, group: 1, user: 0, are
 devices[2] = { queueNo: 2, id: 0, sn: 9017344, type: 81, group: 2, user: 0, area: 3, key3: 0, key4: 0, config: { ...noCfg, sirenSoundness: 3 } };      // Siren Wireless LV
 devices[3] = { queueNo: 3, id: 0x14, sn: 2712847380, type: 8, group: 9, user: 0, area: 0, key3: 0, key4: 0, config: null };                            // Heyi water leakage
 
-// --- panel events (names and order from the parser; Contact ID codes are standard codes, unverified for SP5)
+// --- panel events (names and order from the parser). Contact ID codes and on/off states are those of a
+// real SP5 test panel (revision 1E7LWB.0, read from the beta server 2026-10-19; testers may have changed
+// single codes). One exception: that panel had lowBattery disabled with 0000, which looks edited, so the
+// sample keeps it enabled with the standard code 0302.
 const NO_RESTORE = ['periodicTest', 'medicalAlarm', 'panicAlarm', 'keyswStay', 'keyswSleep', 'partialArm', 'automaticArm', 'stayArm', 'sleepArm', 'remoteArm', 'duressAlarm', 'autoArmFailed'];
 const EVENT_CIDS = {
   lowBattery: '0302', batteryMissing: '0311', aacFault: '0301', periodicTest: '0602', auxOverCurrent: '0312', bellOverCurrent: '0321',
-  bellMissing: '0320', tamper: '0137', zoneBypass: '0570', rs485fault: '0333', comPathTrouble: '0350', fireLoopTrouble: '0373',
-  fireAlarm: '0110', medicalAlarm: '0100', panicAlarm: '0120', antimaskAlarm: '0380', keyswArm: '0409', keyswStay: '0409',
-  keyswSleep: '0409', armDisarm: '0401', partialArm: '0456', automaticArm: '0403', stayArm: '0441', sleepArm: '0441', remoteArm: '0407',
-  duressAlarm: '0121', wlLowBat: '0384', wlDeviceLost: '0381', highTemp: '0158', lowTemp: '0159', sensorFault: '0380', lowVolt: '0302',
-  highVolt: '0150', lowHumidity: '0150', highHumidity: '0150', autoArmFailed: '0455', zoneOpened: '0130',
+  bellMissing: '0321', tamper: '0144', zoneBypass: '0570', rs485fault: '0333', comPathTrouble: '0358', fireLoopTrouble: '0370',
+  fireAlarm: '0110', medicalAlarm: '0100', panicAlarm: '0120', antimaskAlarm: '0389', keyswArm: '0409', keyswStay: '0442',
+  keyswSleep: '0442', armDisarm: '0401', partialArm: '0456', automaticArm: '0403', stayArm: '0441', sleepArm: '0480', remoteArm: '0407',
+  duressAlarm: '0121', wlLowBat: '0384', wlDeviceLost: '0381', highTemp: '0158', lowTemp: '0159', sensorFault: '0380', lowVolt: '0784',
+  highVolt: '0785', lowHumidity: '0169', highHumidity: '0168', autoArmFailed: '0455', zoneOpened: '0426',
 };
-const DISABLED = new Set(['bellMissing', 'zoneBypass', 'lowHumidity', 'highHumidity', 'lowVolt', 'highVolt']);
 const events = Object.keys(EVENT_CIDS).map((name, q) => ({
-  queueNo: q, name, enabled: !DISABLED.has(name), partition: 0, cid: EVENT_CIDS[name], cms: true, protegus: name !== 'periodicTest',
+  queueNo: q, name, enabled: true, partition: 0, cid: EVENT_CIDS[name], cms: true, protegus: true,
   smsForUsersE: ['lowBattery', 'aacFault', 'tamper', 'fireAlarm'].includes(name) ? ADMIN() : F(8),
   smsForUsersR: name === 'lowBattery' ? ADMIN() : F(8), callForUsersE: F(8), callForUsersR: F(8), siaE: 0, siaR: 0, text: '',
   hasRestore: !NO_RESTORE.includes(name),

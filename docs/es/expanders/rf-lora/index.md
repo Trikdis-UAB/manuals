@@ -104,7 +104,7 @@ Conexión:
 
 ### Esquema de cableado para expansores LORA 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Diagrama de conexión: los terminales AUX+, AUX-, 485 A y 485 B de SP3 se conectan, respectivamente, a +DC, -DC, A RS 485 y B RS485 de RF-LORA. RF-LORA se conecta de forma inalámbrica, hasta 5000 m, con los módulos iO-LORA e iO-8-LORA, indicados como 1* y 8*. Los terminales +DC y -DC de cada módulo se conectan a una fuente de alimentación independiente de 12-26V." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Configuración con TrikdisConfig
 
@@ -124,15 +124,15 @@ Conexión:
 
 8.  En el campo "**Núm. de Serie**", ingrese el número de serie del módulo.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, pestaña «RS485 módulos» de «Módulos»: la tabla muestra un expansor iO-LORA y un expansor iO8-LORA, con columnas de ID, módulo, «Núm. de Serie», área y nombre." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  En la pestaña "**Zonas**", configure la entradas del expansor.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, «Configuraciones de zonas»: el menú «Entrada» de la zona 1 está abierto y muestra «Inhabilitar», «SP3 10 I/O» y opciones de entradas de expansores RS485." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. En la pestaña "**PGM**", realice los ajustes para la salidas PGM del expansor**.**
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, pestaña «Salidas» de «PGM»: la tabla enumera las PGM, incluidas salidas asignadas a expansores RS485, con definición de salida, tiempo de pulso y casillas «CRA» y «Prot.»." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Una vez que se finalice la configuración, haz clic en el botón **Escribir [F5]**.
 

@@ -88,7 +88,7 @@ Siga los pasos a continuación para reemplazar el firmware:
 
 5.  Abre la ventana **„Firmware”** de TrikdisConfig.
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, ventana «Firmware»: el campo «Abrir archivo de firmware» está vacío, el botón «Abrir firmware» está disponible, «Actualizar (F12)» está deshabilitado y la barra de progreso marca 0%." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 6.  Haga clic en el botón **„Abrir firmware”** y seleccione el archivo de firmware **SP3_xxx4\_0122.fw**.
 
@@ -104,17 +104,17 @@ Siga los pasos a continuación para reemplazar el firmware:
 
 12. La barra de estado de TrikdisConfig debe contener el número 4 en el nombre del panel de control.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="Barra de estado de TrikdisConfig: el nombre del dispositivo SP3 termina en un 4 resaltado. También aparece el campo IMEI/ID único." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 13. En la lista de módulos debe aparecer “**RF-S8 módulo**”, y también se indicará el número de serie y la versión del firmware. Si ve la versión de firmware del transceptor RF-S8, puede omitir los pasos 14 a 22.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, «Módulos», pestaña «RS485 módulos»: la primera fila muestra «RF-S8 módulo» y la versión de firmware RF-S8 01.00; el campo «Núm. de Serie» contiene un valor." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 14. Si “**RF-S8 módulo**” no se indica en la lista, entonces debe seleccionar “**RF-S8 módulo**” en la lista.
 
 15. En el **„Núm. de Serie”** campo, ingrese el número de serie del dispositivo RF-S8. El número de serie se puede encontrar en el dispositivo y en la etiqueta del embalaje.
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, Módulos  RS485 módulos: en la fila con ID 1 se resaltan Módulo: RF-S8 módulo y el campo Núm. de Serie. La celda Versión de firmware está vacía." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Haga clic en **Escribir [F5]**.
 
@@ -128,7 +128,7 @@ Siga los pasos a continuación para reemplazar el firmware:
 
 21. La versión de firmware del RF-S8 aparecerá en la ventana **„Módulos”**.
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, «Módulos», pestaña «RS485 módulos»: la primera fila muestra «RF-S8 módulo» y la versión de firmware RF-S8 01.00; el campo «Núm. de Serie» contiene un valor." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 22. El módulo RF-S8 ahora está vinculado al “FLEXi” SP3.
 
@@ -136,7 +136,7 @@ Siga los pasos a continuación para reemplazar el firmware:
 
 24. Haga clic en **„Desconectar”**.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, ventana Módulos, pestaña RS485 módulos. La lista muestra RF-S8 módulo y su versión de firmware; está resaltado el botón Desconectar." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 25. Espere 1 minuto.
 
@@ -177,7 +177,7 @@ Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLE
 
 En la sección **„Acceso remoto”** ingrese el número **„ID único”** del panel de control. Este número se puede encontrar en el dispositivo y en la etiqueta del empaque.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, sección «Acceso remoto»: están resaltados el campo vacío «ID único» y el botón «Configuración»." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Haga clic en **„Configuración”**.
 
@@ -187,7 +187,7 @@ Vaya a la ventana **„Sensores inalámbricos”**.
 
 Haga clic en el botón **„Emparejamiento de sensor”**.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, ventana Sensores inalámbricos. Está resaltado el botón Emparejamiento de sensor, situado sobre la lista de sensores." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la batería en el sensor inalámbrico (PIR, contacto magnético, sensor de inundación, sensor de humo, sirena).
 
@@ -197,11 +197,11 @@ Al registrar sensores, el módulo *RF-S8* debe estar al menos a 1 m de los senso
 
 2.  Módulo RF-S8: cambia al modo de aprendizaje. TrikdisConfig abrirá la ventana de enlace del sensor.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="TrikdisConfig, ventana Modo de emparejamiento. Indica que se inició el modo, pide insertar las baterías en el nuevo sensor y esperar a que termine la inicialización. Abajo aparece Dejar de emparejamiento." src="./image11.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 3.  Mantenga presionado el botón de aprendizaje durante 5 segundos. Cuando la luz indicadora parpadee en verde cuatro veces, suelte el botón.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="Dibujo de un sensor: una línea sale del pequeño botón lateral hacia un rombo señalado por una flecha roja. El texto indica mantener presionado el botón de aprendizaje durante 5 segundos." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 4.  En el módulo RF-S8, el indicador “**NETWORK**” se volverá verde por un corto tiempo (esto significa que el sensor está registrado). Después de unos segundos, el indicador “**NETWORK**” comenzará a parpadear en verde/rojo nuevamente.
 
@@ -209,7 +209,7 @@ Al registrar sensores, el módulo *RF-S8* debe estar al menos a 1 m de los senso
 
 6.  Haga clic en **„Guardar”**.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="TrikdisConfig, ventana Se encontró un nuevo dispositivo. Identifica un S8 Sensor de puerta/ventana; los campos resaltados muestran Número de zona: 10 y Definición de zona: Instantaneo. También está resaltado Guardar." src="./image13.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 7.  El sensor inalámbrico está incluido en la lista de sensores.
 
@@ -217,21 +217,21 @@ Al registrar sensores, el módulo *RF-S8* debe estar al menos a 1 m de los senso
 
 9.  Haga clic en **„Dejar de emparejamiento”** para completar el registro de sensores inalámbricos.
 
-<img alt="" src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="TrikdisConfig, ventana Modo de emparejamiento. El aviso resaltado indica que se encontró un S8 Sensor de puerta/ventana; también está resaltado el botón Dejar de emparejamiento." src="./image14.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 10. Haga clic en „**Sí**” para que los sensores se escriban en el panel de control **„*FLEXi” SP3*** o „**No**” si desea ajustar los parámetros de manera adicional.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="TrikdisConfig, cuadro Guardar configuración. Pregunta si se quieren guardar los nuevos parámetros en el módulo; está resaltado el botón Yes, junto a No." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Espera unos minutos. Haga clic en **LEER [F4]**.
 
 TrikdisConfig mostrará una lista de sensores inalámbricos registrados en la ventana **„Sensores inalámbricos”**. El campo "**Núm. de serie**" contendrá el número de serie.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, ventana Sensores inalámbricos. La primera fila resaltada muestra un S8 Sensor de puerta/ventana registrado y el campo Núm. de serie cumplimentado." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Verifique que los sensores estén correctamente asignados a las **„Zonas”** y **„Áreas”** del panel de control (ventana **„Zonas”**).
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, «Configuraciones de zonas»: la fila resaltada de la zona 10 muestra un sensor inalámbrico S8 de puerta o ventana como entrada, área 1, definición instantánea y tipo EOL_T." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 Si establece el tipo de zona **EOL-T**, se habilitará el modo de monitoreo de manipulación del sensor.
 
@@ -268,7 +268,7 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 6.  Un indicador parpadeante “**NETWORK**” indica que el RF-S8 está en modo de registro de dispositivo inalámbrico.
 7.  Mantenga presionado el botón de aprendizaje durante 5 segundos. Cuando la luz indicadora parpadee en verde cuatro veces, suelte el botón.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
+<img alt="Dibujo de un sensor: una línea sale del pequeño botón lateral hacia un rombo señalado por una flecha roja. El texto indica mantener presionado el botón de aprendizaje durante 5 segundos." src="./image12.webp" style="display: block; margin: 1rem auto; max-width: 250px; height: auto;" />
 
 8.  En el módulo RF-S8, el indicador “**NETWORK**” se volverá verde por un corto tiempo (esto significa que el sensor está registrado).
 
@@ -284,11 +284,11 @@ Todos los sensores inalámbricos se pueden vincular simultáneamente. Inserte la
 
 14. TrikdisConfig mostrará una lista de sensores inalámbricos registrados en la ventana **„Sensores inalámbricos”**. El campo "**Núm. de serie**" contendrá el número de serie.
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, ventana Sensores inalámbricos. La primera fila resaltada muestra un S8 Sensor de puerta/ventana registrado y el campo Núm. de serie cumplimentado." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 15. Verifique que los sensores estén correctamente asignados a las **„Zonas”** y **„Áreas”** del panel de control (ventana **„Zonas”**).
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, «Configuraciones de zonas»: la fila resaltada de la zona 10 muestra un sensor inalámbrico S8 de puerta o ventana como entrada, área 1, definición instantánea y tipo EOL_T." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 16. Haga clic en **Escribir [F5]** después de realizar los cambios.
 

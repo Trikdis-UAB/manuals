@@ -1,7 +1,7 @@
 # Коммуникатор FIRECOM для панелей пожарной сигнализации
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="400">
+  <img src="./image1.webp" alt="Передняя крышка коммуникатора FIRECOM с местами индикаторов POWER, DATA и TROUBLE на красной панели." width="400">
 </div>
 
 ## Описание 
@@ -240,11 +240,11 @@
 
 На рисунке представлены размеры платы и отверстия ее крепления. Размеры указаны в миллиметрах.
 
-<img alt="" src="./image5.webp" style="width:6.0in;height:in" />
+<img alt="Расположение элементов и размеры платы FIRECOM в миллиметрах. Размер платы — 138 × 78,5 мм; четыре крепёжных отверстия Ø 4 мм расположены на расстоянии 93 мм по горизонтали и 61 мм по вертикали. Нижнее левое отверстие находится в 5 мм от левого края и в 10 мм от нижнего. Подписаны SIM1, SIM2, USB, GSM ANT, LAN, питание, RS485, IO1–IO10 и три реле." src="./image5.webp" style="width:6.0in;height:in" />
 
 ### Последовательность подключения 
 
-<img alt="" src="./image6.webp" style="width:7.0in;height:in" />
+<img alt="Схема подключения: FIRECOM к SIM карте, LAN, источнику питания постоянного тока и резервному аккумулятору. Выноски: 1 — установить активированную nano-SIM в SIM1; 2 — подключить кабель LAN; 3 — использовать клеммную колодку для пожарных извещателей, сигнализаторов и управляемых устройств; 4 — подключить ~230 В через FU 500 мА, 250 В к источнику питания 15-32 В, 2,5 А, затем его + и − к соответствующим клеммам платы; 5 — подключить резервный аккумулятор 12 В, 7 Ач к разъему аккумулятора с показанной полярностью." src="./image6.webp" style="width:7.0in;height:in" />
 
 1.  Если используете SIM карту, установите SIM карту, которая активирована в мобильной сети, в держатель.
 
@@ -269,34 +269,34 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image7.webp" alt="" style="width: 2.0in; height:in;" />
+    <img src="./image7.webp" alt="Схема подключения: нормально открытый (NO) контакт датчика между клеммами IOx и C коммуникатора FIRECOM; резистора нет." style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image8.webp" alt="" style="width: 2.0in; height:in;" />
+    <img src="./image8.webp" alt="Схема подключения: нормально закрытый (NC) контакт датчика между клеммами IOx и C коммуникатора FIRECOM; резистора нет." style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image9.webp" alt="" style="width: 2.0in; height:in;" />
-  </figure>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-  <figure style="margin: 0;">
-    <img src="./image10.webp" alt="" style="width: 2.0in; height:in;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image11.webp" alt="" style="width: 2.5in; height:in;" />
-  </figure>
-  <figure style="margin: 0;">
-    <img src="./image12.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image9.webp" alt="Таблица номиналов резисторов со столбцами RT, R1 и R2. Строки по порядку: 2.2k, 2.2k, 4.7k; 1k, 1k, 2.2k; 5.6k, 5.6k, 3.3k; 5.6k, 3.3k, 5.6k; 3.3k, 6.8k, 3.3k; 2.2k, 4.7k, 8.2k; 10k, 10k, 5.6k." style="width: 2.0in; height:in;" />
   </figure>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image13.webp" alt="" style="width: 3.0in; height:in;" />
+    <img src="./image10.webp" alt="Схема подключения: нормально открытый контакт с резистором в конце линии (EOL) между клеммами IOx и C. Контакт NO и резистор R1 подключены параллельно." style="width: 2.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image14.webp" alt="" style="width: 5.0in; height:in;" />
+    <img src="./image11.webp" alt="Схема подключения: нормально закрытый контакт с резистором в конце линии (EOL) между клеммами IOx и C. Контакт NC и резистор R1 соединены последовательно." style="width: 2.5in; height:in;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image12.webp" alt="Схема подключения: нормально закрытый контакт с резистором в конце линии, контролем тампера и повреждения кабеля (EOL_T). От клеммы IOx последовательно идут контакт NC Tamper и резистор RT; далее контакт NC соединён параллельно резистору R1 между точкой разветвления и клеммой C." style="width: 4.0in; height:in;" />
+  </figure>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+  <figure style="margin: 0;">
+    <img src="./image13.webp" alt="Схема подключения: нормально закрытые контакты без EOL (ATZ) двух датчиков между клеммами IOx и C. На клеммах датчика 1 контакт NC подключён параллельно резистору R1; на клеммах датчика 2 контакт NC подключён параллельно резистору R2. Цепи датчиков соединены последовательно." style="width: 3.0in; height:in;" />
+  </figure>
+  <figure style="margin: 0;">
+    <img src="./image14.webp" alt="Схема подключения: нормально закрытые контакты с EOL, контролем тампера и повреждения кабеля (ATZ_T) двух датчиков между клеммами IOx и C. Последовательно идут NC Tamper датчика 1, RT, участок с NC параллельно R1, NC Tamper датчика 2 и участок с NC параллельно R2." style="width: 5.0in; height:in;" />
   </figure>
 </div>
 
@@ -308,17 +308,17 @@
 
 Подключение двухпроводных пожарных извещателей к выходу „**FLOOP**“. Если применяется эта схема подключения, то необходимо в окне „**Зоны**“ входу (IOx) указать вход „**2-Wire loop (FLOOP)**“. Ток срабатывания пожарного извещателя должен быть больше 10 мА. К „**FLOOP**“ выходу можно подсоединить до 8 пожарных извещателей.
 
-<img alt="" src="./image15.webp" style="width:5.5in;height:in" />
+<img alt="Схема подключения: FIRECOM к двум двухпроводным пожарным извещателям. AUX+ к верхней клемме IN первого извещателя, FLOOP к нижней клемме IN; клеммы OUT первого извещателя соединены с соответствующими клеммами IN второго. Между верхней и нижней клеммами OUT второго извещателя установлен резистор в конце линии (EOL) 2.2kΩ." src="./image15.webp" style="width:5.5in;height:in" />
 
 Схема подключения двухпроводных пожарных извещателей с релейным модулем **SM1**. Для подключения цепи датчика дыма к выбранному входу необходимо активировать вход (**IOx**) и установить тип цепи (NO, NC, EOL, EOL_T, ATZ, ATZ_T) (см. п.6.6 „„Окно „Зоны““). Выходу (**IO10**) должен быть установлен режим работы „**Сброс пожарного датчика**“ (см. п.6.7 „Окно „PGM выходы““).
 
 \* Реле (К1) используется для обнаружения обрыва провода и снятия пожарного извещателя. Если не используете реле (К1), то контакт К1 необходимо закоротить.
 
-<img alt="" src="./image16.webp" style="width:6.0in;height:in" />
+<img alt="Схема подключения: FIRECOM, два дымовых извещателя, релейный модуль SM1 и реле K1. AUX+ соединён с клеммой SM1 +12V и + IN первого извещателя; IO10 — с клеммой SM1 -12V и одной стороной катушки K1. Клемма SM1 R соединена с - IN первого извещателя. Обе линии OUT идут от первого извещателя ко второму. Клемма + OUT второго извещателя соединена с другой стороной катушки K1; от его - OUT провод дальше не идёт. Для контролируемого входа IOx соединён с SM1 C, а SM1 NC — с FIRECOM C последовательно через контакт K1 и резистор R1 в конце линии (EOL)." src="./image16.webp" style="width:6.0in;height:in" />
 
 или
 
-<img alt="" src="./image17.webp" style="width:6.0in;height:in" />
+<img alt="Схема подключения: альтернативное соединение FIRECOM с двумя дымовыми извещателями, релейным модулем SM1 и реле K1. AUX+ соединён с клеммой SM1 +12V и + IN первого извещателя; IO10 — с клеммой SM1 -12V и одной стороной катушки K1. Клемма SM1 R соединена с - IN первого извещателя. Обе линии OUT идут ко второму извещателю. Его + OUT соединён с другой стороной катушки K1; от - OUT провод дальше не идёт. IOx соединён с SM1 C, а SM1 NO — с FIRECOM C. Контакт K1 и резистор R1 в конце линии (EOL) образуют последовательную ветвь между IOx и C." src="./image17.webp" style="width:6.0in;height:in" />
 
 Подключение четырехпроводных пожарных извещателей.
 
@@ -326,16 +326,16 @@
 
 \* Реле (К1) используется для обнаружения обрыва провода и снятия пожарного извещателя. Если не используете реле (К1), то контакт К1 необходимо закоротить.
 
-<img alt="" src="./image18.webp" style="width:6.0in;height:in" />
+<img alt="Схема подключения: FIRECOM, два четырёхпроводных дымовых извещателя и реле K1. Питание: AUX+ соединён с + IN первого извещателя, IO10 — с его - IN; их клеммы OUT питают второй извещатель, конечные + OUT и - OUT которого подключены к катушке K1. Цепь тревоги: IOx и C соединены с контактными клеммами IN первого извещателя и продолжаются ко второму. Контакт каждого извещателя соединяет пару проводов цепи тревоги; резистор R1 в конце линии (EOL) и контакт K1 образуют последовательную ветвь между конечными клеммами OUT этой пары." src="./image18.webp" style="width:6.0in;height:in" />
 
 ### Схема подключения пожарной панели и коммуникатора 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image19.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image19.webp" alt="Схема подключения: пожарная панель к FIRECOM без блока питания. Питание: +24 V к +DC, GND к -DC. Выходы панели: верхняя клемма PGM1 к IO1, PGM2 к IO2, PGM3 к IO3; нижние клеммы всех трёх PGM к C. Резистор R1 подключён между верхней и нижней клеммами каждого PGM." style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image20.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image20.webp" alt="Схема подключения: пожарная панель к FIRECOM со встроенным блоком питания. Верхняя клемма PGM1 подключена к IO1, PGM2 к IO2, PGM3 к IO3; нижние клеммы всех трёх PGM подключены к C. Резистор R1 подключён между верхней и нижней клеммами каждого PGM." style="width: 4.0in; height:in;" />
   </figure>
 </div>
 
@@ -347,10 +347,10 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image21.webp" alt="" style="width: 3.5in; height:in;" />
+    <img src="./image21.webp" alt="Схема подключения: FIRECOM без блока питания к пожарной панели ESPA4.4.4. Питание: +DC к +24V, -DC к 0V; на линии указано +24 В. RS485: A2 к A, B2 к B." style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image22.webp" alt="" style="width: 3.5in; height:in;" />
+    <img src="./image22.webp" alt="Схема подключения: FIRECOM со встроенным блоком питания к пожарной панели ESPA4.4.4. Общий провод: C к 0V. RS485: A2 к A, B2 к B." style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
@@ -364,19 +364,19 @@
 
 3.  Коммуникатор ***FIRECOM*** и пожарная панель должны иметь одинаковые настройки передачи данных.
 
-<img alt="" src="./image23.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig 1.66.60: слева выбран раздел «Модули», открыт блок «RS485 2 interface». Выноска 1 указывает на Interface type — ESPA 4.4.4; выноска 2 — Connection — RS485; выноска 3 — Baudrate 9600, 8 бит, чётность None, 1 стоп-бит и Delay, mS 40." src="./image23.webp" style="width:7.0in;height:in" />
 
 4. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image24.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Пользователи и сообщения пользователю, вкладка Пользователи. Выделена строка пользователя с полями Имя, Номер телефона и E-mail; справа в трёх столбцах установлены галочки." src="./image24.webp" style="width:7.0in;height:in" />
 
 5. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./image25.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, «Список событий» → «Сообщения SMS и звонком». Выделены цифрой 5 настройки «Польз. 1» для события 19 с текстом «ESPA 4.4.4 text»: флажки SMS и звонка не установлены." src="./image25.webp" style="width:7.0in;height:in" />
 
 6. Настройте канал связи, если сообщения должны отправляться на приемник ПЦН. Сообщения о событиях передаются с использованием протокола SIA DC-09.
 
-<img alt="" src="./image26.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Сообщения на ПЦН, вкладка Сообщения. В выделенных настройках Основного канала: Протокол — Выключено, Домен или IP — пусто, Порт — 0, второй Протокол — TRK; значение поля Ключ шифрования скрыто." src="./image26.webp" style="width:7.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
@@ -384,10 +384,10 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image27.webp" alt="" style="width: 3.5in; height:in;" />
+    <img src="./image27.webp" alt="Схема подключения: FIRECOM без блока питания к пожарной панели NSC Solution. Питание: +DC к +24V, -DC к 0V; на линии указано +24 В. RS485: A2 к A, B2 к B." style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image28.webp" alt="" style="width: 3.5in; height:in;" />
+    <img src="./image28.webp" alt="Схема подключения: FIRECOM со встроенным блоком питания к пожарной панели NSC Solution. Общий провод: C к 0V. RS485: A2 к A, B2 к B." style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
@@ -399,19 +399,19 @@
 
 2.  “**NSC slave addres**” не должен совпадать с адресом подключенных модулей пожарной панели.
 
-<img alt="" src="./image29.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Модули, блок RS485 2 interface. Выделены поля Interface type со значением NSC solution и NSC slave address со значением 10." src="./image29.webp" style="width:7.0in;height:in" />
 
 3. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image30.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Пользователи и сообщения», вкладка «Пользователи». Выделена строка пользователя с полями «Имя», «Номер телефона», «E-mail» и отмеченными флажками «Вых.», «Отв.», «Пер.»; выноска 3 указывает, где вводить контактные данные получателя сообщений FIRECOM." src="./image30.webp" style="width:7.0in;height:in" />
 
 4. Пользователи будут получать SMS-сообщения и телефонные звонки о событиях, отмеченных галочкой. Вы можете добавить дополнительные коды событий CID в столбце CID. Вы должны ввести текстовые SMS-сообщения рядом с новыми кодами. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте поле **SMS** (или **Звонок**).
 
-<img alt="" src="./image31.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Пользователи и сообщения», вкладка «SMS для INIM панели». Выноска 4 выделяет столбцы «SMS» и «Звонок»: для показанных событий флажки «SMS» отмечены, а флажки «Звонок» пусты; рядом показаны «CID» и «Текст в SMS»." src="./image31.webp" style="width:7.0in;height:in" />
 
 5. Настройте канал связи, если сообщения должны отправляться на приемник ПЦН.
 
-<img alt="" src="./image32.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Сообщения на ПЦН», вкладка «Сообщения». Выноска 5 выделяет настройки «Основной канал»: первый «Протокол» — «Выключено», «Домен или IP» пуст, «Порт» — 0, второй «Протокол» — TRK, поле «Ключ шифрования» заполнено скрытым значением. В «Параллельный канал связи» протокол выключен." src="./image32.webp" style="width:7.0in;height:in" />
 
 После настройки коммуникатора ***FIRECOM*** включите питание пожарной панели. Дождитесь загрузки программного обеспечения пожарной панели. Необходимо выполнить сканирование модулей, подключенных к шине RS485 пожарной панели. На пожарной панели нажмите: **PROG.>INSTALLER>(Введите код установщика) 00000 OK>(Выберите) SETTINGS>ENTER>(Выберите) SCAN RS485>ENTER**. Дождитесь завершения сканирования. Вернитесь на главный экран, дважды нажав “**CANCEL**”.
 
@@ -421,10 +421,10 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image33.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image33.webp" alt="Схема подключения: коммуникатор FIRECOM без блока питания к пожарной панели INIM Smartline. Питание: +DC к 13 +24, -DC к 16 GND; на верхнем проводе указано +24 В. RS485: A2 к 15 +RS485, B2 к 14 -RS485. Пересекающиеся провода не соединены." style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image34.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image34.webp" alt="Схема подключения: коммуникатор FIRECOM со встроенным блоком питания к пожарной панели INIM Smartline. RS485: C к 16 GND, A2 к 15 +RS485, B2 к 14 -RS485. Пересекающиеся провода не соединены." style="width: 4.0in; height:in;" />
   </figure>
 </div>
 
@@ -432,7 +432,7 @@
 
 Пожарной панели **INIM Smartline** необходимо установить ведомый (Slave) режим работы, когда коммуникатор ***FIRECOM*** подключен через шину RS485 к пожарной панели.
 
-<img alt="" src="./image35.webp" style="width:7.0in;height:in" />
+<img alt="SmartLeague, окно «RS485 Bus Programming». В разделе «Master/Slave Settings» выбрано «Configure as Slave», значение «Assign address» — 1." src="./image35.webp" style="width:7.0in;height:in" />
 
 !!! note "Примечание"
     Если к пожарной панели **INIM Smartline** подключены повторители, то
@@ -444,19 +444,19 @@
 
 1.  Выберите пожарную панель **INIM Smartline**.
 
-<img alt="" src="./image36.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Модули», вкладка «RS485 модули». Выноска 1 выделяет поле «Interface type» в блоке «RS485 2 interface» со значением «INIM smartline»." src="./image36.webp" style="width:7.0in;height:in" />
 
 2. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image37.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Пользователи и сообщения», вкладка «Пользователи». Выноска 2 выделяет строку пользователя с полями «Имя», «Номер телефона» и «E-mail», куда вводят контактные данные получателя сообщений FIRECOM; в строке также отмечены флажки «Вых.», «Отв.» и «Пер.»." src="./image37.webp" style="width:7.0in;height:in" />
 
 3. Пользователи будут получать SMS-сообщения и телефонные звонки о событиях, отмеченных галочкой. Вы можете добавить дополнительные коды событий CID в столбце CID. Вы должны ввести текстовые SMS-сообщения рядом с новыми кодами. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте поле **SMS** (или **Звонок)**.
 
-<img alt="" src="./image38.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Пользователи и сообщения», вкладка «SMS для INIM панели». Выноска 3 выделяет столбцы «SMS» и «Звонок»: для показанных событий флажки «SMS» отмечены, а флажки «Звонок» пусты; рядом показаны «CID» и «Текст в SMS»." src="./image38.webp" style="width:7.0in;height:in" />
 
 4. Настройте канал связи, если сообщения должны отправляться в приемник ПЦН.
 
-<img alt="" src="./image39.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig 1.66.60, окно FC_E170, раздел «Сообщения на ПЦН», вкладка «Сообщения». Выноска 4 выделяет настройки «Основной канал»: первый «Протокол» — «Выключено», «Домен или IP» пуст, «Порт» — 0, второй «Протокол» — TRK, поле «Ключ шифрования» заполнено скрытым значением. В «Параллельный канал связи» протокол выключен." src="./image39.webp" style="width:7.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения в приемник ПЦН и в ***Protegus2***.
 
@@ -464,10 +464,10 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image40.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image40.webp" alt="Схема подключения: коммуникатор FIRECOM без блока питания к пожарной панели C-TEC Cast ZFP. Питание: +DC к +24V, -DC к 0V; на верхнем проводе указано +24 В. Шина RS485: A2 к A, B2 к B." style="width: 4.0in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image41.webp" alt="" style="width: 4.0in; height:in;" />
+    <img src="./image41.webp" alt="Схема подключения: FIRECOM со встроенным блоком питания к пожарной панели C-TEC Cast ZFP. RS485 к ABUS RS485: C к 0V, A2 к A, B2 к B." style="width: 4.0in; height:in;" />
   </figure>
 </div>
 
@@ -477,49 +477,49 @@
 
 1.  Выберите пожарную панель **C-TEC Cast ZFP**.
 
-<img alt="" src="./image42.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Модули. Выделенное поле 1: Interface type — C-TEC Cast ZFP." src="./image42.webp" style="width:7.0in;height:in" />
 
 2. Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***.
 
-<img alt="" src="./image43.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Пользователи и сообщения пользователю, вкладка Пользователи. Выделенная строка 2 показывает поля Имя, Номер телефона и E-mail; флажки Вых., Отв. и Пер. установлены." src="./image43.webp" style="width:7.0in;height:in" />
 
 3. Пользователи будут получать SMS-сообщения и телефонные звонки о событиях, отмеченных галочкой. Вы можете добавить дополнительные коды событий CID в столбце CID. Вы должны ввести текстовые SMS-сообщения рядом с новыми кодами. Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте поле **SMS** (или **Звонок)**.
 
-<img alt="" src="./image44.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел «Пользователи и сообщения пользователю», вкладка «SMS для INIM панели». Красной рамкой с выноской 3 выделены столбцы SMS и «Звонок» для событий E110, E118, E380, E323, E301, E302 и E311. Во всех показанных строках флажки SMS установлены, флажки «Звонок» пусты." src="./image44.webp" style="width:7.0in;height:in" />
 
 4. Настройте канал связи, если сообщения должны отправляться в приемник ПЦН.
 
-<img alt="" src="./image45.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Сообщения на ПЦН, вкладка Сообщения. Выделенные настройки 4 основного канала: первое поле Протокол — Выключено, Домен или IP пуст, Порт — 0, второе поле Протокол — TRK, Ключ шифрования скрыт." src="./image45.webp" style="width:7.0in;height:in" />
 
 Установите программу **ZFPtools** на свой компьютер. Запустите программу **ZFPtools**. Включите питание пожарной панели сигнализации. Дождитесь загрузки программного обеспечения пожарной панели. Подключите пожарную панель к компьютеру с помощью кабеля USB2.0 A-B.
 
 1. Откройте вкладку "**Node View**".
 
-<img alt="" src="./image46.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, окно «Site Details». Вкладка «Node View» выделена для выбора." src="./image46.webp" style="width:7.0in;height:in" />
 
 2. Загрузите настройки пожарной панели на свой компьютер.
 
-<img alt="" src="./image47.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View» для «Panel 1». Кнопка «Retrieve All Data» выделена." src="./image47.webp" style="width:7.0in;height:in" />
 
 3. Введите код (заводской код – 4444).
 
 4.  Нажмите „**OK**“.
 
-<img alt="" src="./image48.webp" style="width:3.5in;height:in" />
+<img alt="ZFP Programming Tools, окно «Panel Log In». Над четырьмя пустыми полями кода надпись «Enter Access Level 3 Code»; зеленая кнопка с галочкой подтверждает ввод." src="./image48.webp" style="width:3.5in;height:in" />
 
 5. Выберите „**BMS Interface**“.
 
 6.  Нажмите на свободную икону.
 
-<img alt="" src="./image49.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices». В «Device Palette» выбран «BMS Interface», кнопка «Edit Devices» выделена." src="./image49.webp" style="width:7.0in;height:in" />
 
 7. Нажмите на „**Edit Devices**“.
 
-<img alt="" src="./image50.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices». «BMS Interface» занимает ячейку устройства 16; кнопка «Edit Devices» выделена." src="./image50.webp" style="width:7.0in;height:in" />
 
 8. Во вкладке “**Device**” введите имя системы.
 
-<img alt="" src="./image51.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Node View», «Devices», «Device Properties» для устройства 16. На вкладке «Device» значение «Name» — FIRECOM, значение «Device Type» — BMS Interface." src="./image51.webp" style="width:7.0in;height:in" />
 
 9. Во вкладке “**Properties**” введите имя системы.
 
@@ -529,13 +529,13 @@
 
 12. Запишите настройки в пожарную панель.
 
-<img alt="" src="./image52.webp" style="width:7.0in;height:in" />
+<img alt="ZFP Programming Tools, «Device Properties» для «BMS Interface». Значение «Name» — FIRECOM; «Connection» — ABUS RS485; «BAUD Rate» — 57600; «Response Timeout» — 250; «Max Retries» — 5. Для «Zone Disablements» указано Zone; для «Input Group Disablements», «Output Group Disablements» и «Group Actions» указано Group. Кнопка «Send All Data» выделена." src="./image52.webp" style="width:7.0in;height:in" />
 
 13. Введите код (заводской код – 4444).
 
 14. Нажмите „**OK**“.
 
-<img alt="" src="./image53.webp" style="width:3.5in;height:in" />
+<img alt="ZFP Programming Tools, окно «Panel Log In». Над четырьмя пустыми полями для кода находится надпись «Enter Access Level 3 Code»; зелёная кнопка с галочкой подтверждает ввод." src="./image53.webp" style="width:3.5in;height:in" />
 
 Пожарная панель запрограммирована. Отсоедините кабель USB2.0 A-B от пожарной панели.
 
@@ -545,68 +545,68 @@
 
 **Коммуникатор FIRECOM подключен к пожарной панели Polon-Alfa 3000 через шину RS485**
 
-<img alt="" src="./image100.webp" style="width:7.0in;height:in" />
+<img alt="Схема подключения: POLON-ALFA 3000 с модулями MSO-30 и MK-30 к FIRECOM. Питание: клемма + выхода MSO-30 Z1 24V ZEW соединена с + входа FIRECOM 15-32V/DC 2,5A, клемма - — с -. RS485: клемма A интерфейса MK-30 Z1 RS485 соединена с FIRECOM RS485 A2, клемма B — с B2. Клемма MK-30 GND показана неподключённой." src="./image100.webp" style="width:7.0in;height:in" />
 
 Настройка коммуникатора ***FIRECOM*** с ***TrikdisConfig***. 
 1.	Выберите пожарную панель **Polon-Alfa 3000**. 
 2.	Выберите тип подключения **RS485**. 
 
-<img alt="" src="./image101.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Модули. В блоке RS485 2 interface выделены поля 1 Interface type — Polon-Alfa 3000 и 2 Connection — RS485." src="./image101.webp" style="width:7.0in;height:in" />
 
 3.	Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***. 
 
-<img alt="" src="./image102.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел «Пользователи и сообщения пользователю», вкладка «Пользователи». Красной рамкой с выноской 3 выделена строка пользователя 1A с заполненными именем, номером телефона и адресом электронной почты. В этой строке установлены флажки «Вых», «Отв» и «Пер»." src="./image102.webp" style="width:7.0in;height:in" />
 
 4.	Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./image103.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig FC, «Список событий» → «Сообщения SMS и звонком». Выделено цифрой 4: для «Польз. 1» у события 10 установлены флажки SMS и звонка; у восстановления 10 установлен флажок SMS, а флажок звонка снят." src="./image103.webp" style="width:7.0in;height:in" />
 
 5.	Настройте канал связи, если сообщения должны отправляться на приемник ПЦН. 
 
-<img alt="" src="./image104.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Сообщения на ПЦН, вкладка Сообщения. В выделенных настройках 5 основного канала первое поле Протокол — Выключено, поля Домен или IP и Порт пусты, второе поле Протокол — TRK." src="./image104.webp" style="width:7.0in;height:in" />
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по протоколу Modbus RTU (RS485). 
 
-<img alt="" src="./image111.webp" style="width:3.0in;height:in" />
+<img alt="Окно модуля MK-30 (1). Значение «Modbus Interface» — RS-485; для «Modbus RTU» указаны «Bitrate» 115200, «Parity» None, «Stop Bits» 1 и «Address» 1." src="./image111.webp" style="width:3.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
 **Коммуникатор FIRECOM и пожарная панель POLON-ALFA 3000 подключены к одной локальной сети** 
 
-<img alt="" src="./image105.webp" style="width:7.0in;height:in" />
+<img alt="Схема подключения: POLON-ALFA 3000 с модулями MSO-30 и MK-30 соединена с FIRECOM через маршрутизатор. Порт MK-30 LAN соединён с портом LAN маршрутизатора, а второй порт LAN маршрутизатора — с портом FIRECOM LAN; используются LAN-кабели." src="./image105.webp" style="width:7.0in;height:in" />
 
 Настройка коммуникатора ***FIRECOM*** с ***TrikdisConfig***. 
 1.	Выберите пожарную панель **Polon-Alfa 3000**. 
 2.	Выберите тип подключения **TCP**. 
 3.	Введите IP-адрес пожарной панели **Polon-Alfa 3000**. 
 
-<img alt="" src="./image106.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Модули. В блоке RS485 2 interface выделены поля 1 Interface type — Polon-Alfa 3000, 2 Connection — TCP и 3 IP address — 192.168.1.2." src="./image106.webp" style="width:7.0in;height:in" />
 
 4.	Установите флажок „**DHCP**“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес. 
 
-<img alt="" src="./image107.webp" style="width:7.0in;height:in" />
+<img alt="Окно TrikdisConfig, раздел Сообщения на ПЦН, вкладка Настройки. В блоке Параметры сети LAN флажок 4 DHCP установлен; поля Статический IP, Маска подсети и Шлюз по умолчанию пусты." src="./image107.webp" style="width:7.0in;height:in" />
 
 5.	Введите номера телефонов, адреса электронной почты пользователей, которым должны приходить сообщения от ***FIRECOM***. 
 
-<img alt="" src="./image108.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, раздел «Пользователи и сообщения», вкладка «Пользователи». Выделена строка 1A, заполненная данными пользователя: имя, номер телефона и адрес электронной почты. Три флажка справа установлены." src="./image108.webp" style="width:7.0in;height:in" />
 
 6.	Если вы хотите, чтобы пользователь получал сообщения (или звонки) о событиях, отметьте галочкой поле **SMS** (или **Звонок**).
 
-<img alt="" src="./image109.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig FC, «Список событий» → «Сообщения SMS и звонком». Выделено цифрой 6: для «Польз. 1» у события 10 установлены флажки SMS и звонка; у восстановления 10 установлен флажок SMS, а флажок звонка снят." src="./image109.webp" style="width:7.0in;height:in" />
 
 7.	Настройте канал связи, если сообщения должны отправляться на приемник ПЦН.
 
-<img alt="" src="./image110.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно ‘Сообщения на ПЦН’, вкладка ‘Сообщения’. Выделены настройки основного канала связи: верхний ‘Протокол’ — ‘Выключено’, поля ‘Домен или IP’ и ‘Порт’ пусты, нижний ‘Протокол’ — ‘TRK’, поле ‘Ключ шифрования’ пусто. Протокол параллельного канала связи — ‘Выключено’." src="./image110.webp" style="width:7.0in;height:in" />
 
 Пожарная панель **Polon-Alfa 3000** с модулем **MK-30** должна быть настроена с помощью программы **Polon Studio** для работы по LAN сети. IP-адреса локальной сети необходимо вводить в соответствии с настройками вашей сети. 
 
-<img alt="" src="./image112.webp" style="width:3.0in;height:in" />
+<img alt="Окно модуля MK-30 (1). «Modbus TCP IP» — 192.168.1.2, «Modbus TCP Mask» — 255.255.255.0, «Modbus TCP Gate» — 192.168.1.1, «Modbus TCP Port» — 502." src="./image112.webp" style="width:3.0in;height:in" />
 
 Протестируйте систему. Активируйте пожарные извещатели пожарной сигнализации и проверьте, что ***FIRECOM*** отправляет сообщения на приемник ПЦН и в ***Protegus2***.
 
 ### Схема подключения датчика температуры 
 
-<img alt="" src="./image54.webp" style="width:3.5in;height:in" />  <img alt="" src="./image55.webp" style="width:3.5in;height:in" />
+<img alt="Схема подключения: коммуникатор FIRECOM к датчику температуры DS18B20. Красный провод: +5V к +Vdd; желтый: 1 W к DQ; черный: C к GND." src="./image54.webp" style="width:3.5in;height:in" />  <img alt="Схема подключения: коммуникатор FIRECOM к датчику температуры и влажности AM2301. Красный провод: +5V к +Vdd; желтый: 1 W к DQ; черный: C к GND." src="./image55.webp" style="width:3.5in;height:in" />
 
 Датчики температуры подсоединяются по приведенной схеме. К коммуникатору ***FIRECOM*** можно подключить температурные датчики Maxim®/Dallas® DS18S20, DS18B20 (до 8 шт.) или датчик влажности и температуры АМ2301 (1 шт.). 
 Коммуникатор автоматически определяет подключенные датчики и регистрирует их.
@@ -615,7 +615,7 @@
 
 ### Схема подключения реле и LED индикатора 
 
-<img alt="" src="./image56.webp" style="width:3.0in;height:in" />  <img alt="" src="./image57.webp" style="width:2.5in;height:in" />
+<img alt="Схема подключения: FIRECOM к внешнему реле. Клемма AUX+ соединена с одной клеммой катушки реле, IOx — с другой. Контакты реле обозначены NC, C и NO." src="./image56.webp" style="width:3.0in;height:in" />  <img alt="Схема подключения: коммуникатор FIRECOM к LED индикатору. От клеммы AUX+ цепь проходит последовательно через резистор 2k2 и LED к клемме IOx." src="./image57.webp" style="width:2.5in;height:in" />
 
 Различные электрические устройства могут управляться (вкл/выкл) удаленно с помощью контактов реле. Универсальная IO (вход/выход) клемма коммуникатора должна быть установлена в режим работы Выход (OUT) и назначен тип „**Удаленное управление**“. 
 
@@ -623,7 +623,7 @@
 
 Согласно стандарта EN54, пожарная панель от коммуникатора должна получать информацию о нарушении связи с ПЦН, а так же об успешном отправлении сообщений на ПЦН. К специальным входам пожарной панели подключитe ПГМ выходы (например: „**Relay1**“ и „**Relay2**“) коммуникатора. ПГМ выходу „**Relay1**“ должен быть устанавлен режим „**CMS fail**“. ПГМ выходу „**Relay2**“ должен быть устанавлен режим „**ACK received**“. Выход „**Relay1**“ активируется при нарушении канала связи с ПЦН. Выход „**Relay2**” активируется на 5 сек. при отправленном сообщении на ПЦН.
 
-<img alt="" src="./image58.webp" style="width:4.0in;height:in" />
+<img alt="Схема подключения: пожарная панель к FIRECOM. Relay1: клемма C панели соединена с C1, IN1 — с NO1; резистор R1 подключен параллельно между C1 и NO1. Relay2: клемма C панели соединена с C2, IN2 — с NO2; второй резистор R1 подключен параллельно между C2 и NO2. Для IN3, NC1 и NC2 соединения не показаны." src="./image58.webp" style="width:4.0in;height:in" />
 
 ### Схема подключения расширителей серии iO 
 
@@ -631,17 +631,17 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
-    <img src="./image59.webp" alt="" style="width: 3.5in; height:in;" />
+    <img src="./image59.webp" alt="Схема подключения: коммуникатор FIRECOM к расширителю iO-8. Питание (+12 В): AUX+ к +DC, AUX- к -DC. RS485: A1 к A, B1 к B." style="width: 3.5in; height:in;" />
   </figure>
   <figure style="margin: 0;">
-    <img src="./image60.webp" alt="" style="width: 3.5in; height:in;" />
+    <img src="./image60.webp" alt="Схема подключения: коммуникатор FIRECOM к расширителю iO-MO. Питание (+12 В): AUX+ к +DC, AUX- к -DC. RS485: A1 к A RS485, B1 к B RS485." style="width: 3.5in; height:in;" />
   </figure>
 </div>
 
 
 Схема подключения модулей расширения **LORA**.
 
-<img alt="" src="./image61.webp" style="width:6.0in;height:in" />
+<img alt="Схема подключения модулей LORA: FIRECOM соединён с RF-LORA четырьмя проводами — AUX+ (+12 В) с +DC, AUX− с −DC, RS485 A1 с A RS485, B1 с B RS485. Между RF-LORA и модулями показана беспроводная связь до 5000 м. Справа изображены модули с метками 1* iO-LORA, 2* iO-8-LORA, 3* PB-LORA и, после многоточия, 8* REL-LORA. Для iO-LORA и iO-8-LORA показано отдельное питание 12–26 В через +DC и −DC; для REL-LORA — питание 100–230 В AC через L и N. Подключение питания PB-LORA не показано." src="./image61.webp" style="width:6.0in;height:in" />
 
 ### Включение коммуникатора 
 
@@ -676,7 +676,7 @@
 
 **Окно „Системные параметры“:**
 
-<img alt="" src="./image62.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно ‘Системные параметры’, вкладка ‘Основные’, раздел ‘SIM’. Выделены поля ‘PIN SIM карты’ для двух SIM-карт и ‘APN’; в обоих полях APN указано ‘internet’." src="./image62.webp" style="width:7.0in;height:in" />
 
 1.  Введите „**PIN SIM карты**“.
 
@@ -684,7 +684,7 @@
 
 **Окно „Пользователи и сообщения“:**
 
-<img alt="" src="./image63.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно ‘Пользователи и сообщения’, вкладка ‘Protegus’, раздел ‘Облачное приложение’. Флажок ‘Разрешить подключиться’ установлен; поле ‘Код доступа к Облаку’ содержит 123456." src="./image63.webp" style="width:7.0in;height:in" />
 
 3. Отметьте поле „**Разрешить подключиться**“, чтобы разрешить доступ к серверу ***Protegus2***.
 
@@ -692,7 +692,7 @@
 
 **Окно „Сообщения на ПЦН“:**
 
-<img alt="" src="./image64.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно ‘Сообщения на ПЦН’, вкладка ‘Настройки’. В ‘Параметры сети LAN’ флажок ‘DHCP’ установлен. В ‘Приоритет отправки сообщений’ для Protegus: ‘Основной’ — Ethernet (LAN), ‘Запасной’ — SIM, ‘Запасной 2’ — Выключено." src="./image64.webp" style="width:7.0in;height:in" />
 
 5. Если к коммуникатору подключен кабель LAN, установите флажок „DHCP“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес.
 
@@ -700,19 +700,19 @@
 
 **Окно „Зоны“:**
 
-<img alt="" src="./image65.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Зоны, вкладка Настройки зон. Выделен столбец Прот.: у видимых зон 1–4 флажки установлены." src="./image65.webp" style="width:7.0in;height:in" />
 
 7. Отметьте поле, если хотите, чтобы пользователь получал сообщения в ***Protegus2*** об изменениях состояния зон.
 
 **Окно „PGM выходы“:**
 
-<img alt="" src="./image66.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно PGM выходы, вкладка Выходы. Выделен столбец Прот.: у видимых выходов PGM 1–4 флажки не установлены." src="./image66.webp" style="width:7.0in;height:in" />
 
 8. Отметьте поле, если хотите, чтобы пользователь получал сообщения в ***Protegus2*** об изменениях состояния PGM выходов.
 
 **Окно „Список событий“:**
 
-<img alt="" src="./image67.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Список событий, вкладка Внутренние события. Выделен столбец Прот.: у видимых событий 1–7 флажки установлены." src="./image67.webp" style="width:7.0in;height:in" />
 
 9. Отметьте поле, если хотите, чтобы пользователь получал сообщения в ***Protegus2*** об изменениях внутренних событий коммуникатора.
 
@@ -725,7 +725,7 @@
 
 **Окно „Системные параметры“:**
 
-<img alt="" src="./image68.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Системные параметры, вкладка Основные. Выделены поля Объектовый номер со значением 0001, два поля PIN SIM карты и два поля APN со значением internet." src="./image68.webp" style="width:7.0in;height:in" />
 
 1.  Введите „**Объектовый номер“** (4-значный шестнадцатеричный номер. 0-9, А-F. **Не используйте FFFE, FFFF объектовые номера**).
 
@@ -735,7 +735,7 @@
 
 **Окно „Сообщения на ПЦН“:**
 
-<img alt="" src="./image69.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Сообщения на ПЦН, вкладка Настройки. В разделе Параметры сети LAN установлен флажок DHCP. В разделе Приоритет отправки сообщений для ПЦН выбраны каналы: Основной — Ethernet (LAN), Запасной — SIM, Запасной 2 — Выключено." src="./image69.webp" style="width:7.0in;height:in" />
 
 4. Если к коммуникатору подключен кабель LAN, установите флажок „**DHCP**“ (режим автоматической регистрации), чтобы коммуникатор ***FIRECOM*** автоматически считал сетевые настройки (маску подсети, шлюз) и ему был присвоен IP-адрес.
 
@@ -743,7 +743,7 @@
 
 **Окно „Сообщения на ПЦН“:**
 
-<img alt="" src="./image70.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Сообщения на ПЦН, вкладка Сообщения. Для Основного канала выделены поля Протокол — Выключено, Домен или IP — пусто, Порт — 0 и второй Протокол — TRK; также выделено поле Ключ шифрования. Для Резервного канала выделен тот же набор полей. Для Параллельного канала связи выделены поля Протокол — TCP/IP, Домен или IP — пусто, Порт — 0, второй Протокол — TRK и Ключ шифрования." src="./image70.webp" style="width:7.0in;height:in" />
 
 6. **Протокол** – выберите режим связи (TCP или UDP).
 
@@ -796,7 +796,7 @@
 
 Нажмите „**ADD NEW SYSTEM**“ и введите „**IMEI**“ номер ***FIRECOM***, который найдете на изделии или на упаковке. Нажмите кнопку „**NEXT**“. 
 
- <img alt="" src="./image74.webp" style="width:3.5in;height:in" /> 
+ <img alt="Экран «Scan QR code» приложения Protegus2: поле «Unique ID/IMEI» и кнопка сканирования QR-кода на этикетке изделия. Выноска предлагает ввести IMEI и указывает, что его можно найти на упаковке, на панели контроллера или в TrikdisConfig в поле «IMEI/Уникальный №»." src="./image74.webp" style="width:3.5in;height:in" /> 
 
 ### Конфигурация и управление SMS сообщениями 
 
@@ -888,7 +888,7 @@
 
 После подключения коммуникатора к программе ***TrikdisConfig***, в строке состояния программы появится информация о подключенном коммуникаторе.
 
-<img alt="" src="./image75.webp" style="width:7.0in;height:in" />
+<img alt="Фрагмент строки состояния TrikdisConfig: поле IMEI/Уникальный № и сведения о подключенном модуле FC_E170, его состоянии, версиях и USB-соединении." src="./image75.webp" style="width:7.0in;height:in" />
 
 | Наименование | Описание |
 |----|----|
@@ -908,7 +908,7 @@
 
 **Закладка „Основные“**
 
-<img alt="" src="./image76.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Системные параметры, вкладка Основные. Видны группы Основные, SIM и Настройки времени: поля Объектовый номер — 0001, Название объекта — Fire communicator, APN — internet, Язык текста — Кириллица, Тип EOL — 10k+10k+5k6 и Часовой пояс — +2." src="./image76.webp" style="width:7.0in;height:in" />
 
 **Группа „Основные“**
 
@@ -956,13 +956,13 @@
 
 **Закладка „Группы“**
 
-<img alt="" src="./image77.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Системные параметры, вкладка Groups. В таблице групп показана одна запись: № 1, Group name — Group 1." src="./image77.webp" style="width:7.0in;height:in" />
 
 Зоны могут быть объединены в группы. Название каждой группы можно изменить.
 
 **Закладка „Подсоединение“**
 
-<img alt="" src="./image78.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Системные параметры, вкладка Подсоединение. В группе Коды доступа показаны поля Код администратора, SMS пароль и Код инсталлятора. В группе Права инсталлятора отмечены Объектовый номер и SIM карта; для остальных видимых разделов выбрано Редактируется." src="./image78.webp" style="width:7.0in;height:in" />
 
 **Группа „Коды доступа“**
 
@@ -985,7 +985,7 @@
 
 **Закладка „Сообщения“**
 
-<img alt="" src="./image79.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig FC_E170, окно «Сообщения на ПЦН», закладка «Сообщения». В «Основной канал» и «Резервный канал» первый параметр «Протокол» установлен на «Выключено»; в «Параллельный канал связи» и «Параллельный резервный канал» — на «TCP/IP». Во всех четырех каналах «Порт» равен 0, второй параметр «Протокол» установлен на «TRK», поля «Домен или IP» пусты." src="./image79.webp" style="width:7.0in;height:in" />
 
 Коммуникатор отправляет сообщения на ПЦН через мобильный (и/или LAN) интернет.
 
@@ -1011,7 +1011,7 @@
 
 **Закладка „Настройки“**
 
-<img alt="" src="./image80.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Сообщения на ПЦН, вкладка Настройки. Вернуться к Основному после — 5 мин.; Период PING включен, 60 с; Перейти к Резервному через — 3 попыток; DNS1 — 8.8.8.8, DNS2 — 1.1.1.1. В параметрах сети LAN включен DHCP. Основной канал для ПЦН и Protegus — Ethernet (LAN), запасной — SIM." src="./image80.webp" style="width:7.0in;height:in" />
 
 **Группа „Настройки“**
 
@@ -1074,7 +1074,7 @@
 
 **Закладка „Пользователи“**
 
-<img alt="" src="./image81.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Пользователи и сообщения, вкладка Пользователи. Таблица Пользователи и сообщения пользователю содержит столбцы №, Имя, Номер телефона, E-mail, Вых., Отв. и Пер.; в первой примерной строке отмечены все три флажка." src="./image81.webp" style="width:7.0in;height:in" />
 
 Группа „Пользователи и сообщения пользователю“
 
@@ -1094,7 +1094,7 @@
 
 **Закладка „Protegus“**
 
-<img alt="" src="./image82.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Пользователи и сообщения, вкладка Protegus. В группе Облачное приложение отмечены Разрешить подключиться и Передача параллельно; ниже находится поле Код доступа к Облаку." src="./image82.webp" style="width:7.0in;height:in" />
 
 **Группа „Облачное приложение“**
 
@@ -1106,7 +1106,7 @@
 
 **Закладка „Тексты SMS ответов“**
 
-<img alt="" src="./image83.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Пользователи и сообщения, вкладка Тексты SMS ответов. Таблица Текст ответа по SMS сопоставляет ответы с редактируемым столбцом Текст SMS: Команда исполнена — Command done, Ошибка пароля — Wrong password, Ошибка данных — Wrong data, Ошибка команды — Wrong command; ниже показаны ответы для тревоги, восстановления и выходов." src="./image83.webp" style="width:7.0in;height:in" />
 
 **Группа „Текст SMS ответов“**
 
@@ -1116,7 +1116,7 @@
 
 **Закладка „RS485 модули“**
 
-<img alt="" src="./image84.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Модули, вкладка RS485 модули. В таблице RS485 модуля для ID 1 раскрыт список Модуль: Недоступен, iO-8 расширитель, Расширитель iO-MO, Расширитель iO-LORA, расширитель iO8-LORA, PB-LORA Кнопка тревоги и REL-LORA расширитель. Также видны столбцы Серийный №, Название и Версия прошивки." src="./image84.webp" style="width:7.0in;height:in" />
 
 **Группа „RS485 модули“**
 
@@ -1130,7 +1130,7 @@
 
 - **Версия прошивки** – будет показана версия прошивки модуля, когда коммуникатор ***FIRECOM*** идентифицирует подсоединенный модуль.
 
-<img alt="" src="./image85.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Модули, вкладка RS485 модули. В группе RS485 2 interface раскрыт список Interface type: Disabled, ESPA 4.4.4, NSC solution, INIM smartline, C-TEC Cast ZFP и Polon-Alfa 3000." src="./image85.webp" style="width:7.0in;height:in" />
 
 **Группа "RS485 2 interface"**
 
@@ -1140,7 +1140,7 @@
 
 **Закладка „Настройки зон“**
 
-<img alt="" src="./image86.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Зоны, вкладка Настройки зон. Таблица содержит столбцы №, Название, Вход, Group, Тип, ПЦН, Прот. и Реакция. Для видимых зон Zone 1–Zone 4 указаны входы FC 1 I/O–FC 4 I/O, Group 1, тип EOL и реакция 800; флажки ПЦН и Прот. отмечены." src="./image86.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер зоны.
 
@@ -1160,7 +1160,7 @@
 
 **Закладка „Сообщения SMS и звонком“**
 
-<img alt="" src="./image87.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Зоны, вкладка Сообщения SMS и звонком. Для Пользо. 1 таблица показывает отдельные строки Событие и Восстановление для каждой зоны и столбцы SMS и Звонок; у видимых строк флажки не отмечены." src="./image87.webp" style="width:7.0in;height:in" />
 
 Закладка „**Сообщения SMS и звонком**“, появится если хоть один номер телефона пользователя будет описан в окне „**Пользователи и сообщения**“. Только для восьми первых пользователей можно сделать эти настройки.
 
@@ -1170,7 +1170,7 @@
 
 **Закладка „Коды зон“**
 
-<img alt="" src="./image88.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно Зоны, вкладка Zone's codes. Таблица разделена на Zone alarm reporting code и Zone restore reporting code; у Zone 1–Zone 3 включена отправка обоих кодов. Для тревоги показаны E/R E, CID 110, SIA TA для Zone 1 и FA для Zone 2–3; для восстановления — E/R R, CID 110, SIA TR для Zone 1 и FH для Zone 2–3. Номера зон: 001, 002, 003." src="./image88.webp" style="width:7.0in;height:in" />
 
 При активации зоны коммуникатор отправит сообщение о событии. Входу назначается код Contact ID (SIA), который будет отправлен ПЦН и ***Protegus2***.
 
@@ -1192,7 +1192,7 @@
 
 **Закладка „Выходы“**
 
-<img alt="" src="./image89.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'PGM выходы', вкладка 'Выходы'. В таблице показаны PGM 1–3 с выходами RELAY 1–3 и временем импульса 20 с; для PGM 4 в поле 'Выход' указано 'Отключена'." src="./image89.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер выхода.
 
@@ -1210,7 +1210,7 @@
 
 **Закладка „Действия“**
 
-<img alt="" src="./image90.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно «PGM выходы», закладка «Действия». В видимых строках поля «Вкл» не отмечены, «№ PGM.» имеет значение «N/A», «Действие» — «Выкл PGM», «Время актив...» — 0, «Фактор» — «SMS получен», «№ фактора.» и «Начать, если» — «N/A», «Значение» показывает «Текст SMS»." src="./image90.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер строчки.
 - **Вкл.** – отметьте поле и будет включен алгоритм срабатывания выхода OUT.
@@ -1245,7 +1245,7 @@
 
 **Закладка „График“**
 
-<img alt="" src="./image91.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'PGM выходы', вкладка 'График'. Для каждого графика доступны 'Вкл', время 'Дата от' и 'Дата до' и дни недели Пн–Вс; в видимых строках время установлено на 00:00, флажки не отмечены." src="./image91.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер графика.
 
@@ -1259,7 +1259,7 @@
 
 **Закладка „Сообщения SMS и звонком“**
 
-<img alt="" src="./image92.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'PGM выходы', вкладка 'Сообщения SMS и звонком'. Таблица для 'Пользо. 1' содержит строки событий и восстановлений PGM с отдельными флажками 'SMS' и 'Звонок'; видимые флажки не отмечены." src="./image92.webp" style="width:7.0in;height:in" />
 
 Закладка „**Сообщения SMS и звонком**“, появится если хоть один номер телефона пользователя будет описан в окне „**Пользователи и сообщения**“. Только для восьми первых пользователей можно сделать эти настройки.
 
@@ -1269,7 +1269,7 @@
 
 ### Окно „Датчики“ 
 
-<img alt="" src="./image93.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'Датчики'. Показаны восемь строк датчиков: в поле 'Устройство' указано 'Отключена', значения 'Макс' — 30 и 'Мин' — 2. Раскрытый список 'Тип датчика' предлагает 'Dallas 1-Wire' и 'Влажности и температуры (тип AM23xx)'." src="./image93.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер датчика температуры.
 
@@ -1291,7 +1291,7 @@
 
 **Закладка „Внутренние события“**
 
-<img alt="" src="./image94.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'Список событий', вкладка 'Внутренние события'. Таблица содержит название события, флажки 'Включить', 'ПЦН' и 'Прот.', 'CID код', текст SMS о событии и при восстановлении; среди видимых событий — низкое напряжение батареи с кодом 302 и периодический тест с кодом 602." src="./image94.webp" style="width:7.0in;height:in" />
 
 - **№** – порядковый номер события.
 
@@ -1311,7 +1311,7 @@
 
 **Закладка „Сообщения SMS и звонком“**
 
-<img alt="" src="./image95.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'Список событий', вкладка 'Сообщения SMS и звонком'. Для 'Пользо. 1' таблица показывает текст SMS для события и восстановления и отдельные флажки 'SMS' и 'Звонок'; видимые флажки не отмечены." src="./image95.webp" style="width:7.0in;height:in" />
 
 Закладка „**Сообщения SMS и звонком**“, появится если хоть один номер телефона пользователя будет описан в окне „**Пользователи и сообщения**“. Только для восьми первых пользователей можно сделать эти настройки.
 
@@ -1323,7 +1323,7 @@
 
 ### Окно „Журнал событий“ 
 
-<img alt="" src="./image96.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно 'Журнал событий'. Над таблицей расположены кнопки 'Считать' и 'Очистить'; таблица содержит столбцы '№', 'Время', 'CID' и 'Описание события' с записями о сбое питания, низком напряжении батареи и старте системы." src="./image96.webp" style="width:7.0in;height:in" />
 
 - Нажать кнопку „**Считать**“ – будет считан журнал событий из памяти ***FIRECOM***.
 
@@ -1335,7 +1335,7 @@
 
 Для восстановления заводских настроек коммуникатора ***FIRECOM*** необходимо в программном окне ***TrikdisConfig*** нажать кнопку „**Восстановить**“.
 
-<img alt="" src="./image97.webp" style="width:7.0in;height:in" />
+<img alt="Фрагмент окна TrikdisConfig: в разделе «Заводские настройки» красной рамкой выделена кнопка восстановления. Ниже показаны подпись «IMEI/Уникальный №» и номер устройства." src="./image97.webp" style="width:7.0in;height:in" />
 
 ## Удаленная настройка параметров 
 
@@ -1361,7 +1361,7 @@
 
 2.  В поле „**Уникальный №“** введите IMEI номер ***FIRECOM***, который указан на упаковке или на изделии.
 
-<img alt="" src="./image98.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, начальное окно, раздел «Удаленный доступ». Пустое поле «Уникальный №» и кнопка «Конфигурировать» обведены красным; рядом находятся поле «Название системы» и кнопка «Управление»." src="./image98.webp" style="width:7.0in;height:in" />
 
 3. В поле „**Название системы“** напишите название объекта.
 
@@ -1400,7 +1400,7 @@
 
 4.  Нажмите кнопку „**Открыть файл**“ и выберите нужный файл для установки.
 
-<img alt="" src="./image99.webp" style="width:7.0in;height:in" />
+<img alt="TrikdisConfig, окно «Обновление программы», раздел «Прошивка». Поле «Открыть файл прошивки» пусто, кнопка «Открыть файл» доступна, кнопка «Обновить (F12)» неактивна, индикатор выполнения показывает 0%." src="./image99.webp" style="width:7.0in;height:in" />
 
 5. Нажмите кнопку **Обновить [F12]**.
 
@@ -1416,4 +1416,4 @@
 
 Изменения внесенные в конструкцию изделия, самостоятельный ремонт лишают изделие гарантии производителя.
 
-<img alt="" src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="Перечеркнутый контейнер на колесах (WEEE): изделие следует утилизировать отдельно от бытовых отходов." src="./image2.webp" style="width:0.3937007874015748in;height:0.4448818897637795in" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.

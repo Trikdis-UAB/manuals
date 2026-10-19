@@ -1,7 +1,7 @@
 # RF-LoRa Беспроводной расширитель
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" width="200">
+  <img src="./image1.webp" alt="Вид спереди белого корпуса беспроводного расширителя RF-LORA: сверху антенный разъём SMA, световые индикаторы DATA/TROUBLE и POWER, зелёная винтовая клеммная колодка с обозначениями +DC, -DC, A 485, B 485, IO1, COM, IO2, IO3, COM, IO4." width="200">
 </div>
 
 ## Требование безопасности 
@@ -15,7 +15,7 @@
 
 Изменения, модификации или ремонт контроллера, произведенные не производителем, аннулируют гарантию производителя.
 
-<img alt="" src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
+<img alt="Перечёркнутый контейнер для мусора на колёсах: изделие нельзя выбрасывать вместе с бытовыми отходами." src="./image2.webp" style="height: 1.2em; vertical-align: middle;" />Соблюдайте нормы местного законодательства и не утилизируйте изделие или его компоненты вместе с другими бытовыми отходами.
 
 ## Описание 
 
@@ -54,7 +54,7 @@
 
 ### Элементы расширителя
 
-<img alt="" src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="Схема с подписями семи элементов расширителя RF-LORA на передней панели и в открытом корпусе: 1 — антенный разъём SMA; 2 — световые индикаторы DATA/TROUBLE и POWER; 3 — боковая защёлка; 4 — клеммная колодка; 5 — порт mini-USB; 6 — перемычка с обозначением SW1; 7 — кнопка рядом с антенным разъёмом." src="./image3.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 1. SMA разъем для RF антенны.
 2. Световые индикаторы.
@@ -99,7 +99,7 @@
 
 1.  Снимите верхнюю крышку.
 
-<img alt="" src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Два схематичных рисунка: руки с помощью отвертки поддевают боковую часть корпуса, затем извлекают плату." src="./image4.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 2.  Удалите плату.
 
@@ -109,15 +109,15 @@
 
 5.  Закройте верхнюю крышку.
 
-<img alt="" src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
+<img alt="Схематичный рисунок платы со стрелкой, указывающей на крепежный выступ на ее краю; рядом отдельно показана задняя часть корпуса с отверстиями для шурупов и пазом для крепления на стене." src="./image5.webp" style="display: block; margin: 1rem auto; max-width: 520px; height: auto;" />
 
 ### Подключение трансивера RF-LORA к охранной панели "FLEXi" SP3 
 
-<img alt="" src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
+<img alt="Схема подключения: клеммы AUX+, AUX-, 485 A и 485 B охранной панели SP3 соединены соответственно с клеммами +DC, -DC, A RS485 и B RS485 трансивера RF-LORA. Линия AUX+ обозначена «(+12 В)»." src="./image6.webp" style="display: block; margin: 1rem auto; max-width: 400px; height: auto;" />
 
 ### Схема подключения расширителей LORA 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
+<img alt="Схема подключения: клеммы AUX+, AUX-, 485 A и 485 B охранной панели SP3 соединены соответственно с клеммами +DC, -DC, A RS485 и B RS485 трансивера RF-LORA. RF-LORA связан по беспроводной связи на расстоянии до 5000 м с расширителями iO-LORA и iO-8-LORA. Клеммы +DC и -DC каждого расширителя подключены к отдельному источнику питания 12–26 В." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 780px; height: auto;" />
 
 ## Конфигурация с TrikdisConfig
 
@@ -137,15 +137,15 @@
 
 8.  В поле "**Серийный №**" впишите серийный номер модуля.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел Модули, вкладка RS485 модули. В таблице видны строки Расширитель iO-LORA и расширитель iO8-LORA, а также столбец Серийный № для ввода серийного номера модуля." src="./image8.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 9.  В закладке "**Зоны**" сделайте настройки входам расширителя**.**
 
-<img alt="" src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, окно «Зоны», вкладка «Настройки зон». Для Zone 1 раскрыт список «Вход» с вариантами «Отключено», «SP3 10 I/O» и входами и выходами «RS485 Expander ID»." src="./image9.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 10. В закладке "**PGM выходы**" сделайте настройки PGM выходам расширителя**.**
 
-<img alt="" src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, раздел PGM выходы, вкладка Выходы. Таблица показывает выходы PGM и столбцы Название, Выход, Разделы, Описание выхода и Время импульса, с; среди назначений видны BELL и выходы расширителей RS485." src="./image10.webp" style="display: block; margin: 1rem auto; max-width: 100%; height: auto;" />
 
 11. Окончив конфигурацию, нажмите кнопку **Записать [F5].**
 

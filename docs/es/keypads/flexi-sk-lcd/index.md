@@ -3,7 +3,7 @@
 ## Descripción general del teclado
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="Teclado FLEXi SK-LCD TouchPad. La pantalla señala fecha, tiempo, temperatura, estado de la batería y estado del área; muestra Armado: Área 1. Las flechas indican los botones de navegación y los botones de control de área ARM, SLEEP, STAY y OFF." width="600">
 </div>
 
 > [!NOTE]

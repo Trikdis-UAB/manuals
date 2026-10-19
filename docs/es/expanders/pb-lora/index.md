@@ -90,7 +90,7 @@ NOTA: Después de insertar la batería, se recomienda esperar al menos 10 segund
 
 ### Esquema de conexión del botón de pánico inalámbrico PB-LORA 
 
-<img alt="" src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
+<img alt="Diagrama de conexión: SP3 conectado al transceptor RF-LORA. AUX+ (+12 V) a +DC, AUX- a -DC, 485 A a A RS 485 y 485 B a B RS485. El transceptor se conecta de forma inalámbrica a botones de pánico PB-LORA hasta 5000 m; aparecen los botones 1* y 250*." src="./image7.webp" style="display: block; margin: 1rem auto; max-width: 800px; height: auto;" />
 
 !!! note
     El transceptor RF-LORA debe estar conectado al panel de control
@@ -120,11 +120,11 @@ El panel de control "FLEXi" SP3 debe tener instalada la versión de firmware 1.1
 
 8.  En el campo "**Núm. de Serie**" introduzca el número de serie del módulo PB-LORA.
 
-<img alt="" src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Módulos»  «RS485 módulos». La primera fila resaltada muestra ID 1, el módulo «PB-LORA Botón de pánico» y un número de serie en el campo «Núm. de Serie»." src="./image8.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 9.  En la lista **"Zonas",** configure el botón de pánico.
 
-<img alt="" src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, configuración de «Zonas». La zona 10 resaltada tiene «RS485 Expander» en «Entrada» y «24 horas» en «Definición». También está resaltado el botón «Escribir (F5)»." src="./image9.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 10. Presione **Escribir [F5]** después de realizar los cambios.
 
@@ -140,7 +140,7 @@ El panel de control "FLEXi" SP3 debe tener instalada la versión de firmware 1.1
 
 16. En la lista de "**Módulos**", la línea " **PB-LORA Botón de pánico**" indicará la versión de Firmware.
 
-<img alt="" src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Módulos»  «RS485 módulos». La fila resaltada de «PB-LORA Botón de pánico» muestra «PB-LORA 00.00» en «Versión de firmware»." src="./image10.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 17. Haga clic en "**Desconectar**" y desconecte el cable USB.
 
@@ -189,7 +189,7 @@ En el panel de control "FLEXi" SP3, se debe instalar la 2ª revisión de firmwar
         amarillo).
 6.  En el campo "**Acceso remoto**" de TrikdisConfig, ingrese el número de "**ID único**" del panel de control "FLEXi" SP3. Encontrará este número en el embalaje del dispositivo y en el panel de control.
 
-<img alt="" src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig, sección «Acceso remoto». Están resaltados el campo vacío «ID único» y el botón «Configuración»." src="./image11.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 7.  Pulse "**Configuración**".
 
@@ -203,7 +203,7 @@ En el panel de control "FLEXi" SP3, se debe instalar la 2ª revisión de firmwar
 
 12. Espere a que se completen las actualizaciones.
 
-<img alt="" src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Módulos»  «RS485 módulos». «RF-LORA transceiver» figura con ID 1 y un número de serie introducido en el campo resaltado «Núm. de Serie». También están resaltados «Leer (F4)» y «Escribir (F5)»." src="./image12.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 13. Espere 1 minuto.
 
@@ -211,13 +211,13 @@ En el panel de control "FLEXi" SP3, se debe instalar la 2ª revisión de firmwar
 
 15. En la lista "**Módulos**", la línea "**RF-LORA transceiver**" indicará la versión de firmware.
 
-<img alt="" src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Módulos»  «RS485 módulos». La fila resaltada de «RF-LORA transceiver» muestra «RF-LORA 433 02.21» en «Versión de firmware»." src="./image13.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 16. Vaya a la ventana "**Sensores inalámbricos**".
 
 17. Pulse "**Emparejamiento de sensores**".
 
-<img alt="" src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Wireless sensors»  «Panic buttons». El botón «Emparejamiento de sensor» está resaltado sobre la lista con las columnas «ID» y «Núm. de serie»." src="./image14.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 El registro de los botones de pánico inalámbricos se puede hacer para todos a la vez.
 
@@ -231,7 +231,7 @@ Al registrar botones de pánico PB-LORA, el módulo RF-LORA debe estar al menos 
 
 21. En el módulo RF-LORA, el indicador "**DATA/TROUBLE**" se iluminará en verde durante unos segundos. Después de eso, el LED "**DATA/TROUBLE**" en el módulo RF-LORA comenzará a parpadear en rojo/verde.
 
-<img alt="" src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig, ventana Modo de emparejamiento: indica que se inició el modo y pide insertar las baterías en el nuevo sensor y esperar la inicialización. Abajo aparece el botón Dejar de emparejar." src="./image15.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 22. Después de unos segundos, el botón de pánico PB-LORA se agregará a la lista de sensores.
 
@@ -241,17 +241,17 @@ Al registrar botones de pánico PB-LORA, el módulo RF-LORA debe estar al menos 
 
 25. Si la carga de los sensores ha terminado, presione " **Dejar de emparejamiento**".
 
-<img alt="" src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
+<img alt="TrikdisConfig, ventana Modo de emparejamiento: aparece el aviso Se encontró un nuevo dispositivo con los campos ID y UID resaltados; también está resaltado el botón Dejar de emparejar." src="./image16.webp" style="display: block; margin: 1rem auto; max-width: 560px; height: auto;" />
 
 26. Presiona "**Sí**" en la ventana que se abre. Los registrados botones de pánico PB-LORA se almacenarán en la memoria del panel de control "FLEXi" SP3.
 
-<img alt="" src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
+<img alt="TrikdisConfig, ventana Guardar configuración: pregunta si se quieren guardar nuevos parámetros en el módulo. El botón Yes está resaltado; también aparece No." src="./image17.webp" style="display: block; margin: 1rem auto; max-width: 480px; height: auto;" />
 
 Espera unos minutos. Pulse el botón **Leer [F4].**
 
 En TrikdisConfig, la ventana "**Sensores inalámbricos**" contendrá una lista de botones de pánico PB-LORA registrados. El campo "**Núm. de Serie**" contendrá los números de serie de 6 dígitos de los botones de pánico, que deben coincidir con los números de serie de PB-LORA impresos en la parte posterior de la caja.
 
-<img alt="" src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
+<img alt="TrikdisConfig SP3, «Wireless sensors»  «Panic buttons». Están resaltados «Leer (F4)» y el número de serie del primer dispositivo en la columna «Núm. de serie»." src="./image18.webp" style="display: block; margin: 0.5rem auto; max-width: 100%; height: auto;" />
 
 !!! note
     Eliminación de botones de pánico PB-LORA de la memoria del

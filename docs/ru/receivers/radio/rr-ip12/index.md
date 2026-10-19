@@ -5,7 +5,7 @@ pdf: rr-ip12-original.pdf
 # Ретранслятор R-IP12
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Серый прямоугольный корпус ретранслятора с четырьмя винтами по углам и двумя монтажными лапками." style="width: 100%; max-width: 600px;">
 </div>
 
 ## Назначение изделия

@@ -3,7 +3,7 @@
 ## Vista General del Teclado
 
 <div style="text-align: center;">
-<img src="./image1.webp" alt="" width="600">
+<img src="./image1.webp" alt="Teclado FLEXi SK-LCD button. La pantalla señala la fecha 12.09, la hora 12:03 y el indicador de estado de área, mostrado como un candado abierto. A la derecha se señalan tres botones de control de área y el botón MENÚ." width="600">
 </div>
 
 > [!NOTE]
@@ -66,7 +66,7 @@ El indicador de <img alt="Indicador del modo SLEEP del área 3." src="./image7.w
 
 5. El modo STAY se activará inmediatamente, sin retardo de salida.
 
-El indicador <img src="./image9.webp" style="width:0.3500in;" /> se iluminará cuando se encuentre en modo STAY.
+El indicador <img alt="Icono de una casa con una Z encima y una barra horizontal en su interior." src="./image9.webp" style="width:0.3500in;" /> se iluminará cuando se encuentre en modo STAY.
 
 > [!NOTE]
 > Para cambiar el estado del área al contrario, basta con ingresar el código de usuario y seleccionar el área deseada. Presione el botón <img src="./image10.webp" alt="Botón con flecha curva hacia la izquierda." style="width:0.3500in;" /> para eliminar los caracteres combinados o el comando.

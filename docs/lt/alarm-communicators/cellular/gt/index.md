@@ -101,7 +101,7 @@ Veikia su Protegus2 programėle:
 | Modemas BG95-M5 (Cat M1) | LTE-FDD: B1/​B2/​B3/​B4/​B5/​B8/​B12/​B13/​B18/​B19/​B20/​B25/​B26/​B27/​B28/​B66/​B85 |
 | Modemas BG95-M5 (Cat M1) | EGPRS: 850/​900/​1800/​1900 MHz |
 | Maitinimo įtampa | 10-18 V nuolatinės srovės |
-| Naudojama srovė | 125 mA |
+| Naudojama srovė | Iki 100 mA (budėjimo režime) /​ Iki 200 mA (duomenų siuntimo metu) |
 | Perdavimo protokolai | TRK8, DC-09_2007, DC-09_2012, TL150 |
 | Pranešimo šifravimas | AES 128 |
 | Atmintis | Iki 60 pranešimų |

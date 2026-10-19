@@ -32,7 +32,10 @@ function chatwootStubScript() {
               calls.push("toggle:" + state);
               bubble.setAttribute("data-open", state === "open" ? "true" : "false");
             },
-            setLocale: function (locale) { calls.push("setLocale:" + locale); }
+            setLocale: function (locale) { calls.push("setLocale:" + locale); },
+            setConversationCustomAttributes: function (attrs) {
+              calls.push("attrs:" + attrs.docs_page + ":" + attrs.docs_lang);
+            }
           };
           setTimeout(function () { window.dispatchEvent(new Event("chatwoot:ready")); }, 300);
         }
@@ -130,7 +133,7 @@ test.describe("Support chat rollout", () => {
         }))
         .toBe("true");
       state = await chatState(page);
-      expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:en", "toggle:open"]);
+      expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:en", "attrs:/en/:en", "toggle:open"]);
       expect(requests).toEqual([CHATWOOT_SDK_URL]);
       expect(await page.evaluate(() => window.chatwootSettings.showPopoutButton)).toBe(true);
       expect(state.launcher).toBeFalsy();
@@ -138,13 +141,53 @@ test.describe("Support chat rollout", () => {
 
       // A later full page load restores the widget (closed), in the page's language.
       await page.goto(`${BASE_URL}/lt/`, { waitUntil: "domcontentloaded" });
-      await expect.poll(async () => ((await chatState(page)).chatwoot || { calls: [] }).calls.length).toBe(2);
+      await expect.poll(async () => ((await chatState(page)).chatwoot || { calls: [] }).calls.length).toBe(3);
       state = await chatState(page);
       expect(state.chat.restored).toBeTruthy();
-      expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:lt"]);
+      expect(state.chatwoot.calls).toEqual(["run:https://chat.trikdis.com:token", "setLocale:lt", "attrs:/lt/:lt"]);
       expect(state.launcher).toBeFalsy();
       expect(requests.filter((url) => url.startsWith("UNEXPECTED"))).toEqual([]);
     });
+  });
+
+  // 2026-10-12: a chat's start goes to Google Analytics (joy_chat_started, with the chat's
+  // number) only when the visitor accepted the analytics cookies, and only once per chat.
+  test("counts a chat's start in analytics only with consent, and only once", async () => {
+    for (const choice of ["Accept", "Reject"]) {
+      await withPage(async ({ page }) => {
+        await page.route(/googletagmanager\.com/, (route) =>
+          route.fulfill({ body: "", contentType: "application/javascript", status: 200 }));
+        await page.goto(`${BASE_URL}/en/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+        const button = page.locator(".md-consent button", { hasText: choice });
+        await button.waitFor({ state: "visible", timeout: 5000 });
+        await button.click();
+        await page.waitForLoadState("domcontentloaded");
+        await page.waitForSelector(LAUNCHER, { state: "visible" });
+        await page.click(LAUNCHER);
+        await expect.poll(async () => ((await chatState(page)).chatwoot || { calls: [] }).calls.length).toBe(4);
+        const [sent, cookieless] = await page.evaluate(() => {
+          // The cookieless analytics stay off on localhost; record what would reach them.
+          const cookielessSent = [];
+          window.trikdocsAnalytics.cookieless = (name, props) => cookielessSent.push([name, props]);
+          for (const id of [42, 42, 43]) {
+            window.dispatchEvent(new CustomEvent("chatwoot:on-message", { detail: { conversation_id: id } }));
+          }
+          return [(window.dataLayer || [])
+            .map((entry) => Array.from(entry))
+            .filter((args) => args[0] === "event" && args[1] === "joy_chat_started")
+            .map((args) => args[2]), cookielessSent];
+        });
+        // 2026-10-19: the cookieless analytics count each chat once too, with or without consent.
+        expect(cookieless).toEqual([["joy_chat_started", { chat_id: "42", chat_lang: "en" }],
+                                    ["joy_chat_started", { chat_id: "43", chat_lang: "en" }]]);
+        if (choice === "Accept") {
+          expect(sent).toEqual([{ chat_id: "42", chat_lang: "en" }, { chat_id: "43", chat_lang: "en" }]);
+        } else {
+          expect(sent).toEqual([]);
+          expect(await page.evaluate(() => typeof window.dataLayer)).toBe("undefined");
+        }
+      });
+    }
   });
 
   test("the pop-up stays closed once dismissed, and speaks the page language", async () => {

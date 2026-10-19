@@ -5,7 +5,7 @@ pdf: rth2-original.pdf
 # RTH2 Телефонный Линейный Приёмник
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Передняя панель телефонного линейного приёмника RT2 в корпусе TRIKDIS: световые индикаторы, кнопка RESET и разъём LINE." style="width: 100%; max-width: 600px;">
 </div>
 
 ## О телефонном линейном приемном устройстве

@@ -5,7 +5,7 @@ pdf: rt2-original.pdf
 # ПРИЁМНЫЙ МОДУЛЬ RT2
 
 <div style="text-align: center;">
-  <img src="./image1.webp" alt="" style="width: 100%; max-width: 600px;">
+  <img src="./image1.webp" alt="Логотип TRIKDIS с надписью UŽDAROJI AKCINĖ BENDROVĖ." style="width: 100%; max-width: 600px;">
 </div>
 
 
@@ -19,7 +19,7 @@ pdf: rt2-original.pdf
 
 • pulse 3/1, 4/1, 4/2.
 
-<img alt="" src="./image2.webp" style="width:6.375in;height:3.7708333333333335in" />
+<img alt="Приёмный модуль RT2 с пронумерованными элементами: 1 — жёлтый световой индикатор контроля телефонной линии; 2 — красный световой индикатор поднятия трубки; 3 — жёлтый световой индикатор приёма данных; 4 — зелёный световой индикатор питания и действия; 5 — кнопка RESET; 6 — разъём внешних соединений; 7 — разъём питания; 8 — разъём программирования; 9 — разъём подключения концентратора." src="./image2.webp" style="width:6.375in;height:3.7708333333333335in" />
 
 1 – жёлтый световой индикатор контроля телефонной линии;
 
@@ -228,25 +228,25 @@ MODULE RESET – служебное сообщение;
 >
 > Установка эксплуатационных параметров производится программатором SPROG-1 и программой GProg Соедините порт программирования модуля с программатором и включите программу установки параметров GProg.
 >
-> <img alt="" src="./image4.webp" style="width:6.416666666666667in;height:4.8125in" />
+> <img alt="Главное окно программы GProg (Trikdis) с меню Setup. В нижнем журнале показаны сообщения Change in the CTS line, Change in the DSR line, Change in the RLSD и COM4 is opened." src="./image4.webp" style="width:6.416666666666667in;height:4.8125in" />
 >
 > Выберите команду Setup→Serial port и установите номер порта компьютера, к которому подключён программатор.
 >
-> <img alt="" src="./image5.webp" style="width:3.5833333333333335in;height:2.6770833333333335in" />
+> <img alt="Окно Serial Port Setup программы GProg: в списке Select COM port выбран Com3, установлен флажок COM enable; справа кнопка OK." src="./image5.webp" style="width:3.5833333333333335in;height:2.6770833333333335in" />
 >
 > Выберите команду Devices→RI4010 и установите тип модуля RT2. Кнопкой
 >
 > [Read] считайте ранее установленные параметры.
 >
-> <img alt="" src="./image6.webp" style="width:4.0in;height:3.0in" />
+> <img alt="Окно RT2 Configuration программы GProg, раздел Main window: Account Number — 0000 hex, Receiver Number — 40 hex, Line Number — 1 hex, Output Protocol — Surgard; рядом указано UART 9600,8,N,1." src="./image6.webp" style="width:4.0in;height:3.0in" />
 >
 > При работе в составе многоканального приёмника должен быть установлен выходной формат Surgard.
 >
 > Другие параметры, при необходимости, можно изменить. Новые параметры запишите в память модуля нажатием кнопки [Write].
 >
-> <img alt="" src="./image7.webp" style="width:4.083333333333333in;height:3.0625in" />
+> <img alt="Окно RT2 Configuration программы GProg, раздел Communication settings: Number of rings to answer — 2; Billing delay — 2000 ms; Kisoff duration — 900 ms; HSK Interval/Answer — 4 s; Word receive timeout — 2 s; SIA HSK lenght — 900 ms; Call limiting, hold up time — 60 s; Sia block receive timeout — 8 s. Line check enable отмечен. Handshake priority: 01 — SIA FSK handshake, 02 — Dual tone handshake (1400+2300, 03 — 2300Hz, 04 — 1400Hz." src="./image7.webp" style="width:4.083333333333333in;height:3.0625in" />
 >
-> <img alt="" src="./image8.webp" style="width:4.083333333333333in;height:3.0625in" />
+> <img alt="Окно RT2 Configuration программы GProg, раздел Status Event Summary. В таблице Status Events указаны ID, Name of Status Event и Event Code: 1 — Receiver Reset — E0; 2 — Line error — 20; 3 — Line OK — 30." src="./image8.webp" style="width:4.083333333333333in;height:3.0625in" />
 >
 > Приложение 1
 

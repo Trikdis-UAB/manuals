@@ -21,6 +21,8 @@ for (const s of steps) {
     if (s.go) await routerGo(page, s.go);
     if (s.text) await page.getByText(s.text, { exact: s.exact ?? true }).first().click({ timeout: 8000 });
     if (s.css) await page.locator(s.css).first().click({ timeout: 8000 });
+    if (s.fill) await page.locator(s.fill).nth(s.nth ?? 0).fill(s.value ?? '', { timeout: 8000 });
+    if (s.eval) await page.evaluate(s.eval);
     await settle(page, s.wait ?? 800);
   } catch (e) {
     console.log('ERROR at', JSON.stringify(s), e.message.split('\n')[0]);
