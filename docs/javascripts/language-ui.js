@@ -3,7 +3,7 @@
     en: "English",
     lt: "Lietuvių",
     es: "Español",
-    ru: "Русский"
+    ru: "Кириллица"
   };
   var MOBILE_BREAKPOINT = 960;
   var HOME_LABELS = new Set(["Home", "Pagrindinis", "Inicio", "Главная"]);

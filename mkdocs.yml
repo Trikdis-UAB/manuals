@@ -57,7 +57,7 @@ extra:
   - name: Español
     link: /es/
     lang: es
-  - name: Русский
+  - name: Кириллица
     link: /ru/
     lang: ru
   social:
@@ -365,7 +365,7 @@ plugins:
           - RR-IP12: receivers/radio/rr-ip12/index.md
         - Línea telefónica RTH2: receivers/landline/rth2/index.md
     - locale: ru
-      name: Русский
+      name: Кириллица
       build: true
       nav:
       - Home: index.md
