@@ -22,7 +22,11 @@ const args = parseArgs(process.argv.slice(2));
 const model = args.model ?? 'GET';
 const langs = (args.lang ?? 'en').split(',');
 const layouts = (args.layout ?? 'desktop,phone').split(',');
-const fe = frontend(args.app ?? 'released');
+const fe0 = frontend(args.app ?? 'released');
+// --theme released: the beta build in the released app's colours (lib/frontends.mjs); --theme own: its own skin.
+const theme = args.theme ?? fe0.defaultTheme ?? 'own';
+if (!['own', 'released'].includes(theme)) throw new Error(`Unknown --theme ${theme}. Known: own, released`);
+const fe = theme === 'released' && fe0.releasedColours ? { ...fe0, recolour: fe0.releasedColours } : fe0;
 const outDir = path.resolve(ROOT, args.out ?? (fe.id === 'released' ? 'out' : `out/${fe.id}`));
 if (!MODELS[model]) throw new Error(`Unknown model ${model}. Known: ${Object.keys(MODELS).join(', ')}`);
 const cfg = MODELS[model].configurator;
@@ -304,6 +308,7 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     ...(crop ? { croppedToCss: { ...(crop.top ? { top: crop.top } : {}), width: LAYOUTS[layout].viewport.width, height: crop.height - crop.top }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
     appUrl: new URL(page.url()).pathname,
     frontend: fe.id,
+    ...(fe.releasedColours ? { theme: fe.recolour ? 'released colours on this build' : `${fe.id} colours` } : {}),
     appBuild,
     labels: labelsInfo(lang),
     sampleConfig: fixture.file,
@@ -356,7 +361,8 @@ async function openOrFail(label, opts) {
 function runIssues(guard, errors, mocks) {
   return [...guard.unmocked.keys()].map((k) => `unmocked ${k}`)
     .concat(errors.map((e) => `pageerror ${e}`))
-    .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`));
+    .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`))
+    .concat(fe.recolour && !guard.recoloured.size ? ['no theme colour was found to swap; the build\'s colours may have changed (lib/frontends.mjs)'] : []);
 }
 
 function labels(lang, configurator) {

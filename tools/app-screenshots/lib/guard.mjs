@@ -35,6 +35,7 @@ const LOCAL_STUBS = {
 export async function installGuard(context, { mocks, log, frontend = FRONTENDS.released }) {
   const staticHosts = new Set([...frontend.staticHosts, ...FONT_HOSTS]);
   const stats = {
+    recoloured: new Map(), // colour -> replacements made in the front-end's own files (--theme released)
     mocked: new Map(),    // "METHOD /endpoint" -> count, answered locally
     unmocked: new Map(),  // API calls with no sample answer (answered locally with success:false)
     fetched: new Map(),   // host -> count of live static GETs
@@ -77,6 +78,7 @@ export async function installGuard(context, { mocks, log, frontend = FRONTENDS.r
     const blockedPath = BLOCKED_PATH_PREFIXES.some((p) => url.pathname.startsWith(p));
     if (method === 'GET' && staticHosts.has(url.host) && !blockedPath) {
       bump(stats.fetched, url.host);
+      if (frontend.recolour && url.origin === frontend.origin) return recolour(route, frontend.recolour, stats);
       return route.continue();
     }
 
@@ -91,6 +93,19 @@ function parseBody(req) {
   const raw = req.postData();
   if (!raw) return null;
   try { return JSON.parse(raw); } catch { return Object.fromEntries(new URLSearchParams(raw)); }
+}
+
+// Serves a front-end file with its theme colours swapped (lib/frontends.mjs, releasedColours): the file
+// is fetched as usual (GET, own host) and only those colour values change; code and layout do not.
+async function recolour(route, pairs, stats) {
+  const response = await route.fetch();
+  const type = response.headers()['content-type'] ?? '';
+  if (!/javascript|css|svg|html/.test(type)) return route.fulfill({ response });
+  let body = await response.text();
+  for (const [from, to] of pairs) {
+    body = body.replace(new RegExp(from, 'gi'), () => { stats.recoloured.set(from, (stats.recoloured.get(from) ?? 0) + 1); return to; });
+  }
+  return route.fulfill({ response, body });
 }
 
 // Lets the page read a local answer to a cross-origin call, as the real API's CORS headers would.

@@ -40,7 +40,12 @@ saying so. Labels: `node fetch-public.mjs en --app beta` takes the EU server's p
 keys the beta server has that the EU server lacks. Never use the beta server's own wording: it is the
 North America region and says "Via Protegus2 North America cloud" in about 25 labels. Desktop pages of
 the newer configurator also get `…-desktop-content.png`, cut below the app's top bar, which on the beta
-shows the β logo and the region name.
+shows the β logo and the region name. Colours: by default the beta is shown in the released app's
+colours (`--theme released`; `--theme own` for its indigo/orange skin), because customers get the
+released theme when the features ship. The swap changes only the theme's colour values; when the beta
+is redeployed, re-verify it: pages with the same `--text` in both front-ends must pixel-match the
+released images (desktop below the top bar). If a run says "no theme colour was found to swap", the
+beta's palette changed: find the new pairs as `lib/frontends.mjs` describes.
 
 ## Walks (wizards and other flows)
 

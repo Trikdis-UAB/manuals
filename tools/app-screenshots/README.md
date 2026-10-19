@@ -53,6 +53,7 @@ records and leaves the rest.
 | `--screen` | all in the model's screen list | comma-separated screen ids |
 | `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (both confirmed), SP5 to 1.00 (firmware confirmed, revision not); the other models are placeholders, and the run says so. The manifest records `firmwareConfirmed` and `revisionConfirmed` |
 | `--out` | `out` (`out/beta` with `--app beta`) | output folder |
+| `--theme` | `released` with `--app beta` | the beta build in the released app's colours (blue, pink), or `own` for the beta's skin (indigo, orange). Only the theme's colour values change (`lib/frontends.mjs`); pages with the same text in both front-ends came out pixel-identical to the released app. The β logo in the desktop top bar stays: use the `-desktop-content` images |
 | `--text` | off | also save each page's visible text and field values as `<image>.txt` (top bar and menu left out, passwords never read). For comparing front-ends or releases screen by screen, where the images differ in theme alone, and for writing alt text |
 | `--app` | `released` | `beta` photographs beta2.protegus.app, with the beta server's label packs and, where one exists, a sample configuration shaped like the beta server's answer (`fixtures/config/<name>-beta.json`) |
 
