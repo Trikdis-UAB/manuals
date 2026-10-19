@@ -497,11 +497,11 @@ Kai visi reikalingi nustatymai padaryti, būtina išeiti iš programavimo režim
 
 ## Nuotolinis valdymas 
 
-### Apsaugos sistemos pridėjimas *Protegus* programėlėje 
+### Apsaugos sistemos pridėjimas Protegus2 programėlėje 
 
-Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
+Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
-1.  Parsisiųskite ir paleiskite Protegus programėlę arba naudokite versiją naršyklėje <u>www.protegus.app.</u>
+1.  Parsisiųskite ir paleiskite Protegus2 programėlę arba naudokite versiją naršyklėje [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -515,56 +515,60 @@ Su Protegus vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. J
       </a>
     </div>
 
+
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
-!!! note "Pastaba"
-    Pridėjimo prie Protegus metu G16T turi būti:
+!!! warning "Svarbu"
+    Pridėjimo prie Protegus2 metu G16T turi būti:
     
     1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas;
     
-    2.  Įjungta Protegus servisas paslauga. Žr. **6.4 Langas
-        "Pranešimai vartotojui"**.
+    2.  Įjungta Protegus servisas paslauga. Žr.
+        **[6.4](#64-langas-pranesimai-vartotojui) [Langas „Pranešimai
+        vartotojui"](#64-langas-pranesimai-vartotojui)**;
     
-    3.  Įjungtas maitinimas („POWER" LED mirksi žaliai);
+    3.  Įjungtas maitinimas („POWER" LED šviečia žaliai);
     
     4.  Prisiregistravęs prie tinklo („NETWORK" LED šviečia žaliai ir mirksi
         geltonai).
-3. Paspauskite **Pridėti sistemą** ir įveskite G16T IMEI/Unikalus ID numerį. Jį rasite ant gaminio arba pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
+3.  Paspauskite “Pridėti sistemą” ir įveskite *G16T* „*IMEI/Unikalus ID*“ numerį. Jį rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „Toliau“.
 
-    <img alt="Protegus langas Pridėti sistemą. Laukas Unikalus ID skirtas IMEI numeriui įvesti; paaiškinime nurodyta, kad jį galima rasti ant pakuotės, komunikatoriaus korpuso nugarėlės arba programoje TrikdisConfig. Apačioje yra mygtukas Toliau." src="./image25.webp" style="width:6.035433070866142in;height:1.6299212598425197in" />
+![Protegus2 programėlės langas „Nuskaityti QR kodą“ sistemai pridėti: tuščias laukas „Unikalus ID“, „ARBA“, mygtukas „Nuskaityti QR kodą“, užrašas „Nuskaitykite QR kodą arba užpildykite teksto lauką.“ ir gaminio lipduko piešinys su pažymėtu QR kodu. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/g16t-add-system-qr-phone.webp){ .trik-mob-img }
+
+4.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau".
+
+![Protegus2 langas „Pridėti sistemą“: pavadinimas G16T, fono spalvos apskritimas „Fonas“ ir laiko juosta Europe/Vilnius. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/g16t-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną 
 
-!!! note "Pastaba"
+!!! warning "Svarbu"
     Centralės zonai, prie kurios prijungtas G16T išėjimas OUT, turi
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
-Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną:
+Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su G16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-1.  Naujame lange šoniniame meniu spustelėkite „**Sritys**“. Atsidariusiame lange nurodykite, kiek signalizacijos sričių yra sistemoje ir paspauskite „**Toliau**“.
+1.  Paspauskite „**Tęsti**“.
 
-    <img alt="Protegus langas Sritys. Lauke Kiek sričių yra sistemoje? pasirinktas 1; išskleidžiamajame sąraše matomi pasirinkimai 2 ir 1. Viršuje yra mygtukas Toliau." src="./image27.webp" style="width:6.381889763779528in;height:2.3976377952755907in" />
+![Protegus2 langas „Sistema nėra valdoma nuotoliniu būdu“: komunikatoriaus piešinys šalia susimąsčiusio žmogaus, „Ką reikia žinoti!“ ir paaiškinimas, kad išėjimą reikia prijungti prie apsaugos sistemos įvesties ir sukonfigūruoti Protegus2, kad būtų galima įjungti arba išjungti apsaugą. Mygtukas „Tęsti“.](./protegus-app/g16t-add-system-indirect-phone.webp){ .trik-mob-img }
 
-2.  Naujame lange nurodykite, koks yra kiekvienos iš nurodytų sričių numeris apsaugos sistemoje, ir spustelėkite „**Išsaugoti**“.
+2.  Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
-    <img alt="Protegus langas Sritys. Lauke Sritis 1 Numeris įrašyta 1; viršuje yra mygtukas Išsaugoti." src="./image28.webp" style="width:6.374015748031496in;height:2.2874015748031495in" />
+3.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
+4.  Paspauskite „**Išsaugoti**“.
 
-3.  Šoniniame meniu paspauskite „Nustatymai“ ir atsidariusiame lange paspauskite „Nustatymai“. Pažymėkite varnele „**Naudoti PGM sistemos Įjungimui/išjungimui**“ ir nurodykite, kurią sritį valdys išėjimas. Vienas G16T OUT išėjimas gali būti skirtas tik vienai sričiai valdyti.
+![Protegus2 langas „Pridėti naują sritį“: srities numeris 1, srities pavadinimas „Namai“, automatinio apsaugos įjungimo eilutė (reikšmė nukirpta: „Nena…“), automatinis išjungimas išjungtas, „Valdyti naudojant Protegus2“ įjungta, priskirtas išėjimas PGM1, pasirinktas „Impulsas“ su 3 s trukme, „Lygis“ nepasirinktas. Mygtukai „Atšaukti“ ir „Išsaugoti“.](./protegus-app/g16t-add-system-area-phone.webp){ .trik-mob-img }
 
-<img alt="Protegus langas Nustatymai. Pažymėta Naudoti PGM sistemos Įjungimui/Išjungimui, pasirinkta Sritis 1 ir Impulsas. Naudoti programėlės slaptažodį Įjungimui/Išjungimui nepažymėta; Pulso intervalas sekundėmis nustatytas 3 sek." src="./image29.webp" style="width:6.374015748031496in;height:3.1141732283464565in" />
+5.  Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
-4. Pasirinkite **Lygis** arba **Impulsas**, priklausomai nuo to, koks centralės jungiklio zonos (angl. keyswitch) tipas. Taip pat galite pakeisti impulso intervalo trukmę, jei tai reikalinga prijungiamai centralei.
+6.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-2.  Papildomam saugumui, galite pasirinkti „**Naudoti programėlės slaptažodį įjungimui/išjungimui**”. Tuomet paspaudus mygtuką įjungti/išjungti apsaugos sistemą, atsivers programėlės slaptažodžio įvedimo užklausos langas.
+![Protegus2 langas „Sritys“: sritis „Namai“, „Valdoma su: PGM1“, su pašalinimo mygtuku; žemiau pliuso mygtukas ir „Spustelėkite, kad pridėtumėte sritį“. Mygtukai „Praleisti“ ir „Toliau“.](./protegus-app/g16t-add-system-area-list-phone.webp){ .trik-mob-img }
 
-### Sistemos įjungimas/išjungimas su Protegus 
+### Sistemos įjungimas/išjungimas su *Protegus2* 
 
-1.  Kad suvaldytumėte sistemą, eikite į Protegus langą „**Sritys**“.
+1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
+2.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-2.  „**Sritys**“ lange paspauskite ant srities mygtuko. Atsivėrusiame lange pasirinkite veiksmą (įjungti arba išjungti apsaugos sistemos sritį).
-
-3.  Paprašius, įveskite vartotojo kodą arba Protegus slaptažodį.
-
-<img alt="Protegus langas „Sritys“: pasirinkus sritį „Area 1“, atsiveria „Sritis 1“ langas su mygtukais „Įjungti“, „Išjungti“ ir „Atšaukti“." src="./image30.webp" style="width:6.381889763779528in;height:3.594488188976378in" />
+![Protegus2 pagrindinis G16T sistemos langas: „Prijungta“, sritis „Namai“ su būsena „Nežinoma“ ir mygtukais „Įjungti“ ir „Išjungti“.](./protegus-app/g16t-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Konfigūravimas ir valdymas SMS žinutėmis 
 

@@ -336,11 +336,11 @@ When all required settings are set, it is necessary to exit programming mode. En
 
 ## Remote control 
 
-### Adding the security system to Protegus app 
+### Adding the security system to Protegus2 app 
 
-With Protegus users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
+With Protegus2 users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
 
-1.  Download and launch the Protegus application or use the browser version: [www.protegus.app](https://www.protegus.app)
+1.  Download and launch the Protegus2 application or use the browser version: [www.protegus.app](https://www.protegus.app).
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -354,54 +354,55 @@ With Protegus users will be able to control their alarm system remotely. They wi
       </a>
     </div>
 
-2.  Log in with your user name and password or register and create a new account.
-
-!!! note
-    When adding the E16T to Protegus check if :
-    
-    1.  Protegus cloud is enabled. See chapter **6.3 "Reporting"
-        window**;
-    
-    2.  Power supply is connected ("POWER" LED illuminates green);
-    
-    3.  E16T connected to the Internet (LAN cable connected). The
-        "NETWORK" indicator lights up green when there is a connection.
-3. Click **Add new system** and enter the E16T’s „*MAC*” number. This number can be found on the device and the packaging sticker. After entering press **Next**.
-
-    <img alt="Protegus Add new system window. Enter the communicator MAC in the required Unique ID field, then select Next. The callout says the MAC is on the packing box, the back of the communicator housing, or in TrikdisConfig as Unique ID." src="./image19.webp" style="width:5.818897637795276in;height:2.0196850393700787in" />
-
-### Additional settings to arm/disarm the alarm system using control panel’s keyswitch zone 
+2.  Log in with your user name and password or register and create new account.
 
 !!! warning "Important"
-    The control panel zone to which the E16T output OUT is connected
-    to has to be set to keyswitch mode.
-Follow the instructions below if the security control panel will be controlled with the E16T output OUT, turning on/off the control panel keyswitch zone.
+    When adding the E16T to Protegus2 check if:
 
-1.  In the new window, click "Areas" in the side menu. In the window that opens, specify the area of the alarm system 1 (communicator has one OUT output) and press "Next.
+    1.  Protegus cloud is enabled. See chapter 6.4 "User reporting" window;
 
-    <img alt="Protegus Areas setup for E16T. The How many Areas are in the system? field is set to 1, with a Next button." src="./image23.webp" style="width:6.446679790026247in;height:2.2500043744531935in" />
+    2.  Power supply is connected ("POWER" LED illuminates green);
 
-2.  In the new window, identify what is the number for each of the specified areas in the security system and press **Save**.
+    3.  Registered to the network ("NETWORK" LED illuminates green).
+3. Click “Add new system” and enter the *E16T*’s “*MAC*” number. This number can be found on the device and the packaging sticker. Click “Next”.
 
-    <img alt="Protegus Areas setup for E16T. The Area 1 number field contains 1, with a Save button." src="./image24.webp" style="width:6.446679790026247in;height:2.2600043744531932in" />
+![Protegus2 app 'Scan QR code' page for adding a system: empty Unique ID/IMEI field, OR, a Scan QR Code button, the note 'Scan the QR code or fill in the text field.' and a drawing of the product label with its QR code highlighted. Buttons: Cancel, Next.](./protegus-app/e16t-add-system-qr-phone.webp){ .trik-mob-img }
 
-3.  In the side menu press **Settings** and in the newly opened window press **Settings**. Select the box **Arm/Disarm** **with** **PGM** and specify which area the output will control. One output OUT can control only one area.
+4.  Enter the system „Name”. Click "Next".
 
-4.  Select **Level** or **Pulse**, depending on the type of control panel keyswitch zone. You can also change the duration of the pulse interval if it is required for the connected control panel.
+![Protegus2 app 'Add new system' page: Name E16T, a Background colour circle and Time zone Europe/Vilnius. Buttons: Cancel, Next.](./protegus-app/e16t-add-system-details-phone.webp){ .trik-mob-img }
 
-5.  For additional security, you can select **Use Application password for ARM/DISARM**. Then after pressing the button to arm/disarm the alarm system, a window for entering the app password will open.
+### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
-    <img alt="Protegus Settings for E16T. Arm/Disarm with PGM Output 1 is checked, with Area 1 and Pulse selected. Use Application password for ARM/DISARM is unchecked; Pulse interval in seconds is set to 3 sec." src="./image25.webp" style="width:6.353346456692913in;height:2.853338801399825in" />
+!!! warning "Important"
+    The control panel zone to which the E16T output OUT is connected to
+    has to be set to keyswitch mode.
+Follow the instructions below if the security control panel will be controlled with a E16T PGM output, turning on/off the control panel keyswitch zone.
 
-### Arming/disarming the alarm system with Protegus 
+1.  Click „**Continue**“.
 
-1.  To arm/disarm the alarm system, open the Protegus window **Areas**.
+![Protegus2 app page 'The system is not controlled remotely': a communicator drawing beside a puzzled person, 'What do you need to know!' and the note that the output must be connected to the security system input terminal and Protegus2 configured to arm or disarm the system. Button: Continue.](./protegus-app/e16t-add-system-indirect-phone.webp){ .trik-mob-img }
 
-2.  In the **Areas** window press the Area button. In the opened window select the action (to arm or to disarm the alarm system).
+2. Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
+3. Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
 
-3.  If asked, enter the user code or Protegus password.
+4.  Click „**Save**“.
 
-    <img alt="Protegus Areas window for E16T. Selecting Area 1 opens a dialog with Arm, Disarm and Cancel buttons." src="./image26.webp" style="width:6.353346456692913in;height:3.5200076552930883in" />
+![Protegus2 app 'Add new area' page: Area number 1, Area name Home, 'Autoarm this area when arming area' Not used, 'Autodisarm when disarming area' off, 'Control with Protegus2' on, Assigned Output PGM1, Pulse selected with Pulse interval in seconds 3, Level not selected. Buttons: Cancel, Save.](./protegus-app/e16t-add-system-area-phone.webp){ .trik-mob-img }
+
+5. If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
+
+6.  After completing the settings, click the “**Skip**” button.
+
+![Protegus2 app 'Areas' page: area Home, 'Controlled with: PGM1', with a remove button; below it a plus button and 'Click to add an area'. Buttons: Skip, Next.](./protegus-app/e16t-add-system-area-list-phone.webp){ .trik-mob-img }
+
+### Arming/disarming the alarm system with Protegus2
+
+1.  In the “System Home Screen” window, click on the “Disarm” status icon.
+
+2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
+
+![Protegus2 app home screen of the E16T system: Online, area Home with status Unknown and Arm and Disarm buttons.](./protegus-app/e16t-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ## Remote configuration 
 

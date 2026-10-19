@@ -492,11 +492,11 @@ Cuando todos los ajustes necesarios están configurados, es necesario salir del 
 
 ## Control remoto 
 
-### Añadiendo el sistema de seguridad a la aplicación Protegus 
+### Añadiendo el sistema de seguridad a la aplicación Protegus2 
 
-Con Protegus los usuarios serán capaces de controlar su sistema de alarma de forma remota. Ellos verán el estado del sistema y recibirán notificaciones acerca de los eventos del sistema.
+Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remota. Podrán ver el estado del sistema y recibir notificaciones sobre eventos del sistema. Protegus2 funciona con sistemas de seguridad de otras marcas, que soportan el comunicador G16T.
 
-1.  Descargue e inicie la aplicación Protegus o utiliza la versión del navegador: [www.protegus.app](https://www.protegus.app)<u>.</u>
+1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -510,58 +510,69 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
       </a>
     </div>
 
-2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una cuenta nueva.
 
-!!! note "Nota"
-    Al agregar G16T al Protegus, compruebe si:
+2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
+
+!!! warning "Importante"
+    Al agregar G16T a Protegus2, revise si:
     
-    1.  La tarjeta SIM insertada está activada y el código PIN se introduce
-        o se inhabilita;
+    1.  La tarjeta SIM insertada ha sido activada y el código PIN ha sido
+        ingresado o deshabilitado;
     
-    2.  La Nube Protegus está habilitada. Véase el capítulo **6.4 en
-        la ventana "Informes para usuario"**;
+    2.  La fuente de alimentación está conectada (el LED de "PODER" debe
+        iluminarse de color verde);
     
-    3.  La fuente de alimentación está conectada ( el LED de "POWER" se
-        ilumina en verde);
+    3.  Estar registrado en la red (el LED de "NETWORK de iluminarse de
+        color verde y parpadear de color amarillo);
     
-    4.  Registrado en la red ( el LED de "NETWORK" se ilumina en verde y
-        parpadea amarillo).
-3. Haga clic en **Añadir sistema** e introduzca el número “IMEI/ID Único ” de G16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
+    4.  La servicio Protegus2 está activada. Podrá encontrar
+        información sobre como activar la nube en la sección 6.4 Ventana de
+        "Informes para Usuario". O un mensaje SMS enviado a G16T:
+        **xxxxxx  CONNECT  PROTEGUS=ON,  APN=INTERNET**.
+    
+    Si el LED de "NETWORK" o "DATA" se ilumina de color amarillo, el
+    producto a fallado en su intento de conexión con la red celular y/o
+    Protegus2.
+3.  De clic en "Añadir nuevo sistema" e ingrese el número de *G16T* “IMEI/Unique ID”. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "Siguiente".
 
-<img alt="Protegus, ventana Añadir sistema: el campo obligatorio IMEI está señalado con una flecha y debajo aparece el botón Siguiente. La indicación dice que el IMEI se encuentra en la caja, en la parte trasera del comunicador o en Trikdis Config como ID único." src="./image25.webp" style="width:5.826771653543307in;height:2.0984251968503935in" />
+![Pantalla Escanear código QR de Protegus2 para añadir un sistema: campo ID único/IMEI vacío, «O», botón Escanear Código QR, el texto «Escanee el código QR o complete el campo de texto.» y un dibujo de la etiqueta del producto con el código QR resaltado. Botones Cancelar y Siguiente.](./protegus-app/g16t-add-system-qr-phone.webp){ .trik-mob-img }
 
-4. En la nueva ventana, haga clic en **Áreas** en el menú lateral. En la siguiente ventana, especifique cuántas áreas del sistema de alarma hay en el sistema y presione **Siguiente.**
+4.  Ingrese el nombre del sistema. Haga clic en el botón "Siguiente".
 
-<img alt="Protegus, ventana Áreas: la pregunta ¿Cuántas áreas hay en el sistema? muestra el valor 1 en el selector; a la derecha está el botón Siguiente." src="./image27.webp" style="width:6.058139763779527in;height:2.2445253718285216in" />
+![Pantalla Añadir nuevo sistema de Protegus2: Nombre G16T, círculo de color Fondo y Zona horaria Europe/Madrid. Botones Cancelar y Siguiente.](./protegus-app/g16t-add-system-details-phone.webp){ .trik-mob-img }
 
-5. En la nueva ventana, identifique cuál es el número para cada una de las áreas especificadas en el sistema de seguridad y pulse **Guardar.**
+### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch 
 
-<img alt="Protegus, pantalla «Áreas» de G16T: el campo «Área 1 número» muestra 1 y aparece el botón «Guardar»." src="./image28.webp" style="width:6.8858267716535435in;height:2.5078740157480315in" />
+!!! warning "Importante"
+    La zona de panel de control, donde la salida del G16T se encuentra
+    conectada, tiene que ser establecida a modo de keyswitch.
+Siga las instrucciones de abajo si el panel de control no será controlado de forma directa, pero con la salida del G16T PGM, prendiendo/apagando el panel de control de la zona de keyswitch.
 
-### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
+1.  Haga clic en el botón "**Continuar**".
 
-!!! note "Nota"
-    La zona del panel de control, a la que está conectada la salida
-    G16T OUT, debe configurarse en el modo de interruptor de llave.
-Siga las instrucciones a continuación si el panel de control se controlará con la salida G16T, activación/desactivación de la zona de interruptor de llave de panel de control.
+![Pantalla de Protegus2 «El sistema no se controla de forma remota»: dibujo de un comunicador junto a una persona pensativa, «¡Qué necesita saber!» y la indicación de conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 para armar o desarmar el sistema. Botón Continuar.](./protegus-app/g16t-add-system-indirect-phone.webp){ .trik-mob-img }
 
-1.  En el menú lateral, presione en la ventana **Configuración**, en la ventana que se abrió recientemente también presione **Configuración**. Seleccione la casilla **de armar/ desarmar con PGM** y especifique el área donde se controlará la salida. Uno de cada salida se puede controlar una sola área.
+2.  Ingrese "**Nombre del área**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
-<img alt="Protegus, ventana Configuración: Armar/Desarmar con PGM 1 está activado para Área 1. El selector ofrece Nivel y Pulso, con Nivel seleccionado; Usar la contraseña de la aplicación para ARMAR/DESARMAR está desactivado y el intervalo del pulso muestra 3 seg. Arriba está el botón Guardar." src="./image29.webp" style="width:6.889763779527559in;height:3.326771653543307in" />
+3.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
 
-2. Seleccione **Nivel** o **Pulso,** dependiendo del tipo de llave de zona del panel de control. También puede cambiar la duración del intervalo de impulso si es necesario para el panel de control conectado.
+4.  Haga clic en el botón "**Guardar**".
 
-2.  Para mayor seguridad, puede seleccionar una contraseña de uso de aplicaciones para **ARMADO/DESARMADO**. A continuación, después de pulsar el botón para activar/desactivar el sistema de alarma, la ventana para introducir la contraseña de la aplicación se abrirá.
+![Pantalla Agregar nueva área de Protegus2: Número de área 1, Nombre del área Casa, armado automático «No ut…» (texto cortado), desarmado automático desactivado, «Control con Protegus2» activado, Assigned Output PGM1 (sin traducir en la app), Pulso seleccionado con intervalo de 3 segundos, Nivel sin seleccionar. Botones Cancelar y Guardar.](./protegus-app/g16t-add-system-area-phone.webp){ .trik-mob-img }
 
-### Armar/desarmar el sistema de alarma con Protegus 
+5.  Si hay otra sección de alarmas de seguridad, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
-1.  Para armar/desarmar el sistema de alarma, vaya a **Áreas** de la ventana Protegus.
+6.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-2.  En la ventana de **Áreas**, presione el botón de **Área**. En la ventana abierta, seleccione la acción (para armar o desarmar el sistema de alarma).
+![Pantalla Áreas de Protegus2: área Casa, «Controlado con: PGM1», con botón para eliminar; debajo, botón con signo más y «Haga clic para agregar un área». Botones Saltar y Siguiente.](./protegus-app/g16t-add-system-area-list-phone.webp){ .trik-mob-img }
 
-3.  Si se le pide, introduzca el código de usuario o contraseña Protegus.
+### Control del sistema con Protegus2 
 
-<img alt="Protegus, ventana Áreas: al abrir Área 1 aparece un cuadro con los botones Armar, Desactivar y Cancelar." src="./image30.webp" style="width:6.889763779527559in;height:3.4921259842519685in" />
+1.  Haga clic en el icono de estado del sistema "Desarm".
+
+2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
+
+![Pantalla principal del sistema G16T en Protegus2: En línea, área Casa con estado Desconocido y botones Arm y Desarm.](./protegus-app/g16t-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Configuración y control con los mensajes SMS 
 

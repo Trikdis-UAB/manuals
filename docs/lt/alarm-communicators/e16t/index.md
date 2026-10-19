@@ -337,11 +337,11 @@ Kai visi reikalingi nustatymai padaryti būtina išeiti iš programavimo režimo
 
 ## Nuotolinis valdymas
 
-### Valdymas per *Protegus* debesiją
+### Valdymas per Protegus2 debesiją
 
-Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
+Su Protegus2 vartotojai galės valdyti savo apsaugos sistemą nuotoliniu būdu. Jie taip pat matys sistemos būseną ir gaus pranešimus apie sistemos įvykius.
 
-1.  Parsisiųskite ir paleiskite Protegus programėlę arba naudokite versiją naršyklėje <u>www.protegus.app.</u>
+1.  Parsisiųskite ir paleiskite Protegus2 programėlę arba naudokite versiją naršyklėje [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -358,18 +358,21 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
 2.  Registruokitės ir susikurkite naują paskyrą arba prisijunkite savo vartotojo vardu ir slaptažodžiu.
 
 !!! note "Pastaba"
-    Pridėjimo prie Protegus metu E16T turi būti:
+    Pridėjimo prie Protegus2 metu E16T turi būti:
     
-    1.  Įjungta Protegus servisas paslauga. Paslaugos įjungimas
-        aprašytas skyriuje **7.3 Langas "Pranešimai"**;
+    1.  Įjungta Protegus servisas paslauga. Žr. **6.4 Langas
+        „Pranešimai vartotojui"**;
     
-    2.  Įjungtas maitinimas („POWER" LED mirksi žaliai);
+    2.  Įjungtas maitinimas („POWER" LED šviečia žaliai);
     
-    3.  E16T prijungtas prie interneto (prijungtas LAN kabelis).
-        Indikatorius "NETWORK" šviečia žaliai, kai yra ryšys.
-3. Paspauskite **Pridėti sistemą** ir įveskite E16T MAC adresą. MAC adresą rasite ant gaminio arba pakuotės lipduko.
+    3.  Prisiregistravęs prie tinklo („NETWORK" LED šviečia žaliai ).
+3. Paspauskite **Pridėti sistemą** ir įveskite E16T MAC adresą. MAC adresą rasite ant gaminio ir pakuotės lipduko. Įvedę, paspauskite „**Toliau**“.
 
-    <img alt="Protegus langas 'Pridėti sistemą': laukelyje 'Unikalus ID' reikia įvesti MAC adresą ir spausti 'Toliau'. Paaiškinime nurodyta, kad MAC adresas yra ant pakuotės, komunikatoriaus korpuso nugarėlės arba programoje TrikdisConfig kaip unikalus ID." src="./image19.webp" style="width:6.535433070866142in;height:1.9448818897637796in" />
+![Protegus2 programėlės langas „Nuskaityti QR kodą“ sistemai pridėti: tuščias laukas „Unikalus ID“, „ARBA“, mygtukas „Nuskaityti QR kodą“, užrašas „Nuskaitykite QR kodą arba užpildykite teksto lauką.“ ir gaminio lipduko piešinys su pažymėtu QR kodu. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/e16t-add-system-qr-phone.webp){ .trik-mob-img }
+
+4.  Įveskite sistemos „Pavadinimą“. Spustelėkite „Toliau“.
+
+![Protegus2 langas „Pridėti sistemą“: pavadinimas E16T, fono spalvos apskritimas „Fonas“ ir laiko juosta Europe/Vilnius. Mygtukai „Atšaukti“ ir „Toliau“.](./protegus-app/e16t-add-system-details-phone.webp){ .trik-mob-img }
 
 ### Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio zoną
 
@@ -378,31 +381,29 @@ Su Protegus vartotojai galės valdyti savo signalizaciją nuotoliniu būdu. Jie 
     būti nustatytas zonos tipas - jungiklis (angl. keyswitch).
 Sekite nurodymus žemiau, jei apsaugos centralė bus valdoma su E16T PGM išėjimu įjungiant/išjungiant centralės jungiklio (angl. keyswitch) zoną.
 
-1.  Įvedus „*IMEI/UnikalusID*“ numerį spustelėkite „**Toliau**“. Naujame lange šoniniame meniu spustelėkite „**Sritys**“. Atsidariusiame lange nurodykite 1 signalizacijos sistemos sritį (komunikatorius turi viena OUT išėjimą) ir paspauskite „**Toliau**“.
+1.  Paspauskite „**Tęsti**“.
 
-    <img alt="Protegus srities pridėjimo langas: klausimui 'Kiek sričių yra sistemoje?' pasirinkta 1; dešinėje yra mygtukas 'Toliau'." src="./image23.webp" style="width:5.826771653543307in;height:2.559055118110236in" />
+![Protegus2 langas „Sistema nėra valdoma nuotoliniu būdu“: komunikatoriaus piešinys šalia susimąsčiusio žmogaus, „Ką reikia žinoti!“ ir paaiškinimas, kad išėjimą reikia prijungti prie apsaugos sistemos įvesties ir sukonfigūruoti Protegus2, kad būtų galima įjungti arba išjungti apsaugą. Mygtukas „Tęsti“.](./protegus-app/e16t-add-system-indirect-phone.webp){ .trik-mob-img }
 
-2.  Naujame lange nurodykite, koks yra srities numeris sistemoje ir spustelėkite „**Išsaugoti**“.
+2. Įveskite „**Srities pavadinimas**“. Įgalinkite PGM išėjimo valdymą naudodami Protegus2 programą.
 
-    <img alt="Protegus srities nustatymo langas: laukelyje 'Sritis 1 Numeris' įrašyta 1; dešinėje yra mygtukas 'Išsaugoti'." src="./image24.webp" style="width:5.826771653543307in;height:2.0354330708661417in" />
+3.  Pasirinkite "**Impulsas**" arba "**Lygis**", priklausomai nuo to, kaip sukonfigūruotas centralės jungiklio zonos tipas. Jei reikia, galite pakeisti „**Impulso**“ intervalą.
+4. Paspauskite „**Išsaugoti**“.
 
-3.  Šoniniame meniu paspauskite „Nustatymai“ ir atsidariusiame lange paspauskite „Nustatymai“. Pažymėkite varnele „**Naudoti PGM sistemos Įjungimui/išjungimui**“ ir nurodykite, kurią sritį valdys išėjimas. Vienas E16T OUT išėjimas gali būti skirtas vienos srities valdymui (1 PGM - 1 sritis).
+![Protegus2 langas „Pridėti naują sritį“: srities numeris 1, srities pavadinimas „Namai“, automatinio apsaugos įjungimo eilutė (reikšmė nukirpta: „Nena…“), automatinis išjungimas išjungtas, „Valdyti naudojant Protegus2“ įjungta, priskirtas išėjimas PGM1, pasirinktas „Impulsas“ su 3 s trukme, „Lygis“ nepasirinktas. Mygtukai „Atšaukti“ ir „Išsaugoti“.](./protegus-app/e16t-add-system-area-phone.webp){ .trik-mob-img }
 
-4.  Pasirinkite **Lygis** arba **Impulsas**, priklausomai nuo to, koks centralės jungiklio zonos (angl. keyswitch) tipas. Taip pat galite pakeisti impulso intervalo trukmę, jei tai reikalinga prijungiamai centralei.
+5. Jei apsaugos sistemoje yra kita sritis, tuomet reikia spustelėti „**Spustelėkite, kad pridėtumėte sritį**“. PGM išvesties nustatymas yra panašus į aprašytą aukščiau.
 
-5.  Papildomam saugumui, galite pasirinkti „**Naudoti programėlės slaptažodį įjungimui/išjungimui**”. Tuomet paspaudus mygtuką įjungti/išjungti apsaugos sistemą, atsivers programėlės slaptažodžio įvedimo užklausos langas.
+6.  Atlikę nustatymus, spustelėkite mygtuką „**Praleisti**“.
 
-    <img alt="Protegus langas 'Nustatymai': pažymėta 'Naudoti PGM sistemos Įjungimui/Išjungimui', pasirinkta 'Sritis 1'. Atvertame režimo sąraše pasirinkta 'Lygis', galima rinktis ir 'Impulsas'. Laukelyje 'Pulso intervalas sekundėmis' rodoma '3 sek.'; viršuje yra 'Išsaugoti'." src="./image25.webp" style="width:5.830708661417323in;height:2.6496062992125986in" />
+![Protegus2 langas „Sritys“: sritis „Namai“, „Valdoma su: PGM1“, su pašalinimo mygtuku; žemiau pliuso mygtukas ir „Spustelėkite, kad pridėtumėte sritį“. Mygtukai „Praleisti“ ir „Toliau“.](./protegus-app/e16t-add-system-area-list-phone.webp){ .trik-mob-img }
 
-### Sistemos įjungimas/išjungimas su *Protegus*
+### Sistemos įjungimas/išjungimas su *Protegus2*
 
-1.  Kad suvaldytumėte sistemą, eikite į langą „**Sritys**“.
+1.  Pagrindiniame lange spustelėkite būsenos piktogramą „Išjungti“.
+2.  *Protegus2* gaus pranešimą apie pasikeitusią apsaugos sistemos būseną ir būsenos piktograma pakeis jos būseną.
 
-2.  „**Sritys**“ lange paspauskite ant srities mygtuko. Atsivėrusiame lange pasirinkite veiksmą (įjungti arba išjungti signalizacijos sritį).
-
-3.  Paprašius, įveskite vartotojo kodą arba Protegus slaptažodį.
-
-    <img alt="Protegus langas 'Sritys': pasirinkus 'Sritis 1', atveriami veiksmai 'Įjungti', 'Išjungti' ir 'Atšaukti'." src="./image26.webp" style="width:5.826771653543307in;height:3.1023622047244093in" />
+![Protegus2 pagrindinis E16T sistemos langas: „Prijungta“, sritis „Namai“ su būsena „Nežinoma“ ir mygtukais „Įjungti“ ir „Išjungti“.](./protegus-app/e16t-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ## Nuotolinis veikimo parametrų nustatymas
 

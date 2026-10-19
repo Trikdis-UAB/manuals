@@ -326,11 +326,11 @@ Cuando todos los ajustes necesarios están configurados, es necesario salir del 
 
 ## Control remoto 
 
-### Añadiendo el sistema de seguridad a la aplicación Protegus 
+### Añadiendo el sistema de seguridad a la aplicación Protegus2 
 
-Con Protegus los usuarios serán capaces de controlar su sistema de alarma de forma remota. Ver el estado del sistema y recibir notificaciones acerca de los eventos del sistema.
+Con Protegus2, los usuarios podrán controlar su sistema de alamas de forma remota. Podrán ver el estado del sistema y recibir notificaciones sobre eventos del sistema. Protegus2 funciona con sistemas de seguridad de otras marcas, que soportan el comunicador E16T.
 
-1.  Descargue e inicie la aplicación Protegus o utiliza la versión del navegador: [www.protegus.app](https://www.protegus.app)<u>.</u>
+1.  Descargue y abra la aplicación Protegus2 o utilice la versión de navegador de internet: [www.protegus.app](https://www.protegus.app):
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -344,54 +344,59 @@ Con Protegus los usuarios serán capaces de controlar su sistema de alarma de fo
       </a>
     </div>
 
-2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una cuenta nueva.
+2.  Inicie sesión con su nombre de usuario y contraseña o regístrese para crear una nueva cuenta.
+3. De clic en "Añadir nuevo sistema" un nuevo sistema e ingrese la dirección MAC *E16T*. Este número puede ser encontrado en el dispositivo y en la etiqueta del empaque. Haga clic en "Siguiente".
+
+![Pantalla Escanear código QR de Protegus2 para añadir un sistema: campo ID único/IMEI vacío, «O», botón Escanear Código QR, el texto «Escanee el código QR o complete el campo de texto.» y un dibujo de la etiqueta del producto con el código QR resaltado. Botones Cancelar y Siguiente.](./protegus-app/e16t-add-system-qr-phone.webp){ .trik-mob-img }
+
+4.  Ingrese el nombre del sistema. Haga clic en el botón "Siguiente".
+
+![Pantalla Añadir nuevo sistema de Protegus2: Nombre E16T, círculo de color Fondo y Zona horaria Europe/Madrid. Botones Cancelar y Siguiente.](./protegus-app/e16t-add-system-details-phone.webp){ .trik-mob-img }
 
 !!! note "Nota"
-    Al agregar E16T al Protegus, compruebe si:
+    Al agregar E16T a Protegus2, revise si:
     
-    1.  La Nube Protegus está habilitada. Véase el capítulo **7.3 en
-        la ventana "Informes"**;
+    1.  La servicio Protegus está activada. Podrá encontrar
+        información sobre como activar la nube en la sección 6.4 Ventana de
+        "Informes para Usuario".
     
-    2.  La fuente de alimentación está conectada ( el LED de "POWER" se
-        ilumina en verde);
+    2.  La fuente de alimentación está conectada (el LED de "POWER" debe
+        iluminarse de color verde);
     
-    3.  Registrado en la red ( el LED de "NETWORK" se ilumina en verde).
-3. Haga clic en **Añadir sistema** e introduzca el número “MAC” de E16T. Este número se encuentra en el dispositivo y la etiqueta de la caja. Después de introducir, presione el botón **Siguiente.**
-
-<img alt="Pantalla Añadir sistema de Protegus: campo obligatorio IMEI y botón Siguiente. Un recuadro señala el campo y pide ingresar la dirección MAC." src="./image20.webp" style="width:6.5984251968503935in;height:2.405511811023622in" />
-
-### Ajustes adicionales para habilitar/deshabilitar el sistema de alarma usando la llave de zona del panel de control 
+    3.  Estar registrado en la red (el LED de "NETWORK de iluminarse de
+        color verde).
+### Configuraciones adicionales para armar/desarmar el sistema con la zona keyswitch
 
 !!! note "Nota"
-    La zona del panel de control, a la que está conectada la salida
-    E16T OUT, debe configurarse en el modo de interruptor de llave.
-Siga las instrucciones a continuación si el panel de control se controlará con la salida E16T, activación/desactivación de la zona de interruptor de llave de panel de control.
+    La zona de panel de control, donde la salida del E16T se encuentra
+    conectada, tiene que ser establecida a modo de keyswitch.
+Siga las instrucciones de abajo si el panel de control no será controlado de forma directa, pero con la salida del E16T PGM, prendiendo/apagando el panel de control de la zona de keyswitch.
 
-1.  En la nueva ventana, haga clic en **Áreas** en el menú lateral. En la siguiente ventana, especifique cuántas áreas del sistema de alarma hay en el sistema y presione **Siguiente.**
+1.  Haga clic en el botón "**Continuar**".
 
-<img alt="Protegus, configuración de «Áreas» para E16T. El campo «¿Cuántas áreas hay en el sistema?» está en 1 y aparece el botón «Siguiente»." src="./image21.webp" style="width:7.078740157480315in;height:2.594488188976378in" />
+![Pantalla de Protegus2 «El sistema no se controla de forma remota»: dibujo de un comunicador junto a una persona pensativa, «¡Qué necesita saber!» y la indicación de conectar la salida al terminal de entrada del sistema de seguridad y configurar Protegus2 para armar o desarmar el sistema. Botón Continuar.](./protegus-app/e16t-add-system-indirect-phone.webp){ .trik-mob-img }
 
-2. En la nueva ventana, identifique cuál es el número para cada una de las áreas especificadas en el sistema de seguridad y pulse **Guardar.**
+2. Ingrese "**Nombre del área**". Habilite el control de salida PGM mediante la aplicación Protegus2.
 
-<img alt="Protegus, configuración de «Áreas» para E16T. El campo «Área 1 número» contiene 1 y aparece el botón «Guardar»." src="./image25.webp" style="width:7.078740157480315in;height:2.5984251968503935in" />
+3.  Seleccione “**Pulso**” o “**Nivel**”, dependiendo de cómo esté configurado el tipo de zona del interruptor de llave. Si es necesario, puede cambiar el intervalo de pulso.
 
-3. En el menú lateral, presione en la ventana **Configuración**, en la ventana que se abrió recientemente también presione **Configuración**. Seleccione la casilla de **Armar/ Desarmar con PGM 1** y especifique el área donde se controlará la salida. Uno de cada salida se puede controlar una sola área.
+4.  Haga clic en el botón "**Guardar**".
 
-<img alt="Pantalla Configuración de Protegus para E16T: Armar/Desarmar con PGM 1 está activado para Área 1. El menú ofrece Nivel y Pulso, con Nivel seleccionado. Usar la contraseña de la aplicación para ARMAR/DESARMAR está desactivado; Intervalo del pulso en segundos muestra 3 seg." src="./image26.webp" style="width:7.086614173228346in;height:3.456692913385827in" />
+![Pantalla Agregar nueva área de Protegus2: Número de área 1, Nombre del área Casa, armado automático «No ut…» (texto cortado), desarmado automático desactivado, «Control con Protegus2» activado, Assigned Output PGM1 (sin traducir en la app), Pulso seleccionado con intervalo de 3 segundos, Nivel sin seleccionar. Botones Cancelar y Guardar.](./protegus-app/e16t-add-system-area-phone.webp){ .trik-mob-img }
 
-4. Seleccione **Nivel** o **Pulso,** dependiendo del tipo de llave de zona keyswitch del panel de control. También puede cambiar la duración del intervalo de impulso si es necesario para el panel de control conectado.
+5. Si hay otra sección de alarmas de seguridad, debes hacer clic en “**Haga clic para agregar un área**”. La configuración de la salida PGM es similar a la descrita anteriormente.
 
-2.  Para mayor seguridad, puede seleccionar **Usar la contraseña de la aplicación para ARMAR/DESARMAR**. A continuación, después de pulsar el botón para activar/desactivar el sistema de alarma, la ventana para introducir la contraseña de la aplicación se abrirá.
+6.  Después de completar la configuración, haga clic en el botón "**Saltar**".
 
-### Armar/Desarmar el sistema de alarma con Protegus 
+![Pantalla Áreas de Protegus2: área Casa, «Controlado con: PGM1», con botón para eliminar; debajo, botón con signo más y «Haga clic para agregar un área». Botones Saltar y Siguiente.](./protegus-app/e16t-add-system-area-list-phone.webp){ .trik-mob-img }
 
-1.  Para armar/desarmar el sistema de alarma, vaya a **Áreas** de la ventana Protegus.
+### Control del sistema con Protegus2 
 
-2.  En la ventana de **Áreas**, presione el botón de **Área**. En la ventana abierta, seleccione la acción (para armar o desarmar el sistema de alarma).
+1.  Haga clic en el icono de estado del sistema "Desarm".
 
-3.  Si es solicitado, ingrese el código de usuario o la contraseña de Protegus.
+2.  *Protegus2* recibirá un mensaje sobre el cambio en el estado del sistema de seguridad y el ícono de estado cambiará de estado.
 
-<img alt="Pantalla Áreas de Protegus para E16T: al abrir Área 1 aparece un cuadro con las acciones Armar, Desactivar y Cancelar. La tarjeta del área muestra el estado Desconocido." src="./image27.webp" style="width:7.082677165354331in;height:3.5118110236220472in" />
+![Pantalla principal del sistema E16T en Protegus2: En línea, área Casa con estado Desconocido y botones Arm y Desarm.](./protegus-app/e16t-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ## Configuración remota 
 

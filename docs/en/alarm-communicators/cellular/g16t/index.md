@@ -492,11 +492,11 @@ When all required settings are set, it is necessary to exit programming mode. En
 
 ## Remote control 
 
-### Adding the security system to Protegus app 
+### Adding the security system to Protegus2 app 
 
-With Protegus users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
+With Protegus2 users will be able to control their alarm system remotely. They will see the status of the system and receive notifications about system events.
 
-1.  Download and launch the Protegus application or use the browser version: [www.protegus.app](https://www.protegus.app)<u>.</u>
+1.  Download and launch the Protegus2 application or use the browser version: [www.protegus.app](https://www.protegus.app).
 
     <div style="margin: 20px 0; text-align: center;">
       <a href="https://play.google.com/store/apps/details?id=lt.apps.protegus2" target="_blank" style="display: inline-block; margin-right: 10px;">
@@ -510,57 +510,62 @@ With Protegus users will be able to control their alarm system remotely. They wi
       </a>
     </div>
 
-2.  Log in with your user name and password or register and create a new account.
 
-!!! note
-    When adding the G16T to Protegus check if:
-    
-    1.  The inserted SIM card is activated and the PIN code is either
-        entered or disabled;
-    
-    2.  Protegus cloud is enabled. See chapter **6.4 "User
-        reporting" window**;
-    
-    3.  Power supply is connected ("POWER" LED illuminates green);
-    
-    4.  Registered to the network ("NETWORK" LED illuminates green and
-        flashes yellow).
-3. Click **Add new system** and enter the G16T’s “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. After entering press **Next**.
-
-<img alt="Protegus Add new system screen, Unique ID field empty, Next button, with a callout box: Enter the IMEI code, found on the package, on the back of the controller housing, or in TrikdisConfig as a Unique ID." src="./image25.webp" style="width:6.52755905511811in;height:1.9015748031496063in" />
-
-4. In the new window, click **Areas** in the side menu. In the next window specify how many alarm system areas are in the system and press **Next**.
-
-<img alt="Protegus Areas setup screen for G16T_3, asking How many Areas are in the system, with value 1 entered, and a Next button." src="./image27.webp" style="width:7.066929133858268in;height:2.5118110236220472in" />
-
-5. In the new window, identify what is the number for each of the specified areas in the security system and press **Save**.
-
-<img alt="Protegus Areas setup screen for G16T_3, Area 1 number field showing 1, and a Save button." src="./image28.webp" style="width:7.070866141732283in;height:2.531496062992126in" />
-
-### Additional settings to arm/disarm the alarm system using control panel’s keyswitch zone 
+2.  Log in with your user name and password or register and create new account.
 
 !!! warning "Important"
-    The control panel zone to which the G16T output OUT is connected
-    to has to be set to keyswitch mode.
-Follow the instructions below if the security control panel will be controlled with the G16T output OUT, turning on/off the control panel keyswitch zone.
+    When adding the G16T to Protegus2 check if:
 
-1.  In the side menu press **Settings** and in the newly opened window press **Settings**. Select the box **Arm/Disarm** **with** **PGM** and specify which area the output will control. One output OUT can control only one area.
+    1.  The inserted SIM card is activated and the PIN code is either
+        entered or disabled;
 
-<img alt="Protegus Settings screen for G16T_3: Arm/Disarm with PGM 1 checkbox checked, set to Area 1 and Pulse, Use Application password for ARM/DISARM unchecked, Pulse interval in seconds set to 3 sec." src="./image29.webp" style="width:7.0in;height:3.177165354330709in" />
+    2.  Protegus cloud is enabled. See chapter
+        **[6.4](#64-user-reporting-window) ["User reporting"
+        window](#64-user-reporting-window)**;
 
-2. Select **Level** or **Pulse**, depending on the type of control panel keyswitch zone. You can also change the duration of the pulse interval if it is required for the connected control panel.
+    3.  Power supply is connected ("POWER" LED illuminates green);
 
-2.  For additional security, you can select **Use Application password for ARM/DISARM**. Then after pressing the button to arm/disarm the alarm system, a window for entering the app password will open.
+    4.  Registered to the network ("NETWORK" LED illuminates green and
+        blinks yellow).
+3.  Click “Add new system” and enter the *G16T* “*IMEI/Unique ID*” number. This number can be found on the device and the packaging sticker. Click “Next”.
 
-### Arming/disarming the alarm system with Protegus 
+![Protegus2 app 'Scan QR code' page for adding a system: empty Unique ID/IMEI field, OR, a Scan QR Code button, the note 'Scan the QR code or fill in the text field.' and a drawing of the product label with its QR code highlighted. Buttons: Cancel, Next.](./protegus-app/g16t-add-system-qr-phone.webp){ .trik-mob-img }
 
-1.  To arm/disarm the alarm system, open the Protegus window **Areas**.
+4.  Enter the system „Name”. Click "Next".
 
-2.  In the **Areas** window press the Area button. In the opened window select the action (to arm or to disarm the alarm system).
+![Protegus2 app 'Add new system' page: Name G16T, a Background colour circle and Time zone Europe/Vilnius. Buttons: Cancel, Next.](./protegus-app/g16t-add-system-details-phone.webp){ .trik-mob-img }
 
-3.  If asked, enter the user code or Protegus password.
+### Additional settings to arm/disarm the system using the control panel’s keyswitch zone 
 
-<img alt="Protegus Areas screen for G16T_3 with the Area 1 popup open, showing Arm, Off and Cancel buttons." src="./image30.webp" style="width:6.377952755905512in;height:3.062992125984252in" />
+!!! warning "Important"
+    The control panel zone to which the G16T output OUT is connected to
+    has to be set to keyswitch mode.
+Follow the instructions below if the security control panel will be controlled with a G16T PGM output, turning on/off the control panel keyswitch zone.
+
+1.  Click „**Continue**“.
+
+![Protegus2 app page 'The system is not controlled remotely': a communicator drawing beside a puzzled person, 'What do you need to know!' and the note that the output must be connected to the security system input terminal and Protegus2 configured to arm or disarm the system. Button: Continue.](./protegus-app/g16t-add-system-indirect-phone.webp){ .trik-mob-img }
+
+2.  Enter “**Area name**”. Enable PGM output control using the Protegus2 application.
+3.  Select “**Pulse**” or “**Level**”, depending on how the keyswitch zone type is configured. If necessary, you can change the "**Pulse**" interval.
+
+4.  Click „**Save**“.
+
+![Protegus2 app 'Add new area' page: Area number 1, Area name Home, 'Autoarm this area when arming area' Not used, 'Autodisarm when disarming area' off, 'Control with Protegus2' on, Assigned Output PGM1, Pulse selected with Pulse interval in seconds 3, Level not selected. Buttons: Cancel, Save.](./protegus-app/g16t-add-system-area-phone.webp){ .trik-mob-img }
+
+5.  If there is another Area for the security system, then you need to click “**Click to add an area**”. Setting up the PGM output is similar to that described above.
+
+6.  After completing the settings, click the “**Skip**” button.
+
+![Protegus2 app 'Areas' page: area Home, 'Controlled with: PGM1', with a remove button; below it a plus button and 'Click to add an area'. Buttons: Skip, Next.](./protegus-app/g16t-add-system-area-list-phone.webp){ .trik-mob-img }
+
+### Arming/disarming the alarm system with Protegus2 
+
+1.  In the “System Home Screen” window, click on the “Disarm” status icon.
+
+2.  *Protegus2* will receive a message about a change in the status of the security system and the status icon will change its state.
+
+![Protegus2 app home screen of the G16T system: Online, area Home with status Unknown and Arm and Disarm buttons.](./protegus-app/g16t-add-system-dashboard-phone.webp){ .trik-mob-img }
 
 ### Configuration and control with SMS messages 
 
