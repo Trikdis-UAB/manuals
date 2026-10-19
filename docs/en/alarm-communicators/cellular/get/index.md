@@ -352,7 +352,7 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
 
     <img alt="TrikdisConfig software, System settings window. Object ID field (highlighted, labelled 1) set to 561234. Also visible: Module ID 0123456789, Administrator code 123456, Installer code 654321." src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
-    1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+    1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**). On firmware 2.xx, enter it with the channels in the “**CMS reporting**” window instead.
 
     **In “Panel settings” window:**
 
@@ -988,7 +988,7 @@ Communication is encoded and password protected. With the TRK protocols, a TRIKD
 
     === "Firmware 2.xx"
 
-        On firmware 2.xx, this tab also holds the **Reporting mode** group (see [Test, ping and reporting mode](#test-ping-and-reporting-mode)), and each channel group has its own **IP ping period**.
+        On firmware 2.xx, this tab also holds the **Reporting mode** group (see [Test, ping and reporting mode](#test-ping-and-reporting-mode)), each channel group has its own **IP ping period**, and the **Object ID** is entered with the channels on both hardware versions. In Dual Path, enter it in the first field: the second gets the same value and cannot be changed.
 
         <!-- Screenshot (Igoris): CMS settings tab, Fallback mode, all four channels with example values. -->
 
@@ -1016,7 +1016,7 @@ Events are transmitted in parallel with the primary channel through this channel
 
 #### Test, ping and reporting mode
 
-<!-- DRAFT: this span keeps the old 6.4.3 links in the 9 Oct team emails working. Remove it before merge. -->
+<!-- DRAFT (PR #28), not for merge until the 2.xx release. Sources: Jira TPPR3I05-67 (TrikdisConfig spec and agreed rules; 15 Oct: Object ID with the channels, and in Dual Path the second copies the first) and AGPR3I05-80 (firmware design document, FW 2.05 test report). Written as "2.xx" on purpose; the first official firmware is 2.05 (Jira, 15 Oct), for both hardware versions. To confirm: TrikdisConfig version, Protegus reporting path and swap button, Communication path test units, Object ID fields. Event codes and EN 50136 categories are left out on purpose. The span below keeps the old 6.4.3 links in the 9 Oct team emails working; remove it before merge. -->
 <span id="643-reporting-modes-on-firmware-200-and-later"></span>
 
 === "Protegus app"
@@ -1044,12 +1044,6 @@ Events are transmitted in parallel with the primary channel through this channel
 
     === "Firmware 2.xx"
 
-        <!-- DRAFT, not for merge until the 2.xx release. Sources: Jira TPPR3I05-67 (TrikdisConfig spec and
-             agreed rules) and AGPR3I05-80 (firmware, design document, FW 2.05 test report). Written as
-             "2.xx" on purpose, since later 2.x versions will follow; add the first released version number
-             when it is out. To confirm: hardware (x1x0/x1x1), TrikdisConfig version, Protegus reporting
-             path and swap button in the released TrikdisConfig, Communication path test units.
-             Event codes, EN 50136 categories and per-channel object IDs are left out on purpose. -->
 
         In TrikdisConfig 1.66.70 or later, open the **CMS reporting** window, **CMS settings** tab. The **Reporting mode** group is at the top of the tab, and the panel next to it shows the current mode.
 
