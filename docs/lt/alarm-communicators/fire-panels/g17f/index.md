@@ -717,7 +717,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 **Parinkčių grupė „Laiko juosta“**
 
-- **Laiko juosta (min)** – nurodykite savo šalies laiko juostą. Jei komunikatorių montuosite Lietuvoje, nustatykite „**+3“** reikšmę.
+- **Laiko juosta (min)** – nurodykite savo šalies laiko juostą. Jei komunikatorių montuosite Lietuvoje, nustatykite „**+2“** reikšmę.
 
 - **Vasaros laiko persukimas** – pažymėjus lauką varnele, komunikatoriaus vidinis laikrodis bus automatiškai pervestas į vasaros arba į žiemos laiką.
 

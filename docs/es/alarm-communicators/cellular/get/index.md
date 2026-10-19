@@ -392,7 +392,7 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### TEXECOM
 
-<img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel TEXECOM a GET. R (rojo, +12V) a +DC, B (negro) a -DC, BL (azul) a CLK y W (blanco) a DATA." src="./wiring-texecom.webp" width="668" height="521" />
+<img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel TEXECOM a GET mediante el cable EX-CRP4. R (rojo, +12V) a +DC, B (negro) a -DC, BL (azul) a CLK y W (blanco) a DATA." src="./wiring-texecom.webp" width="668" height="519" />
 
 #### INNERRANGE INCEPTION
 

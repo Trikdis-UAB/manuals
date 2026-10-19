@@ -849,7 +849,7 @@ Cuando se hace clic en el botón **Leer [F4]**, el programa leerá y mostrará l
 
 Puedes configurar la hora haciendo clic en el botón **Establecer hora de PC**. Si se elige **Desactivado** en el campo **Tiempo de Sincronización**, se configurará la hora de la computadora para el panel de control. Si se elige un módem o un servidor en el campo **Tiempo de Sincronización**, el panel de control sincronizará su hora de acuerdo con ese módem o servidor.
 
-- **Zona horaria (horas)** – especifica la zona horaria de tu país. Por ejemplo, si el panel de control se instalará en Lituania, ingresa **+3**.
+- **Zona horaria (horas)** – especifica la zona horaria de tu país. Por ejemplo, si el panel de control se instalará en Lituania, ingresa **+2**.
 
 - **Tiempo establecido** – especifica un servidor para sincronizar el reloj interno del „FLEXi“ SP3. La sincronización se produce después de encender el panel de control.
 

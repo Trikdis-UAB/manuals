@@ -961,7 +961,7 @@ When the **Read [F4]** button is clicked, the program will read and show setting
 
 You can set the time by clicking the “**Set PC time”** button. If “**Disabled”** is chosen in the “**Time set”** field, the computer’s time will be set for the communicator. If a modem or a server is chosen in the “**Time set”** field, the communicator will synchronize its time according to that modem or server.
 
-- **Time zone (hours)** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+3**.
+- **Time zone (hours)** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+2**.
 
 - **Time set** – specify a server to synchronize the ***FIRECOM***’s internal clock with. Synchronization occurs after the communicator is powered on.
 

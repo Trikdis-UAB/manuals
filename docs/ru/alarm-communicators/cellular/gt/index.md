@@ -368,7 +368,7 @@
 
 #### INNERRANGE INTEGRITI
 
-<img class="wiring-diagram" alt="Схема подключения: порт 0 Inner Range Integriti соединён с GT кабелем Inner Range INTG-996795. +DET (+13 V) — с +DC, GND 5 — с -DC, Rx 3 — с CLK, Tx 2 — с DATA." src="./wiring-innerrange-integriti.webp" width="564" height="461" />
+<img class="wiring-diagram" alt="Схема подключения: порт 0 Inner Range Integriti соединён с GT кабелем Inner Range INTG-996795. +DET (+13 V) — с +DC, GND 5 — с -DC, Rx 3 — с CLK, Tx 2 — с DATA." src="./wiring-innerrange-integriti.webp" width="564" height="458" />
 
 #### Honeywell Vista-15, Vista-20, Vista-48
 

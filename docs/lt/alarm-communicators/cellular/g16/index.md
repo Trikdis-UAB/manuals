@@ -397,7 +397,7 @@ Vadovaukitės šia schema, jei apsaugos centralė bus valdoma su G16 PGM išėji
     Protegus2 reikia padaryti nustatymus, kurie aprašyti
     p. 5.2 „Papildomi nustatymai sistemos įjungimui/išjungimui su jungiklio
     zoną".
-<img alt="Prijungimo schema: centralė prie G16. Klaviatūros magistralė arba nuoseklioji jungtis: RED į +DC (+12 V), BLK į -DC, YEL į CLK, GRN į DATA. Zonos jungiklio tipo jungtys: centralės 3-ia Sritis į G16 I/O 1, 2-a Sritis į I/O 2, 1-a Sritis į I/O 3. G16 COM, A RS485 ir B RS485 neprijungti." src="./image22.webp" style="width:3.42750656167979in;height:2.5825054680664916in" />
+<img alt="Prijungimo schema: centralė prie G16. Klaviatūros magistralė arba nuoseklioji jungtis: RED į +DC (+12 V), BLK į -DC, YEL į CLK, GRN į DATA. Zonos jungiklio tipo jungtys: centralės 1-a Sritis į G16 I/O 1, 2-a Sritis į I/O 2, 3-ia Sritis į I/O 3. G16 COM, A RS485 ir B RS485 neprijungti." src="./image22.webp" style="width:3.42750656167979in;height:2.5825054680664916in" />
 
 ### Įėjimo prijungimo schemos 
 

@@ -949,7 +949,7 @@ Paspaudus mygtuką **Skaityti [F4]**, programa nuskaitys ir parodys nustatymus, 
 
 Nustatyti laiką galima paspaudus mygtuką „**Nustatyti PK**“. Jei „**Laiko nustatymas**“ lauke nurodyta „**Išjungta**“, tai komunikatoriuje bus nustatytas kompiuterio laikas. Jei „**Laiko nustatymas**“ lauke nurodytas serveris arba modemas, tai komunikatorius sinchronizuos savo laiką pagal nurodytą serverį arba modemą.
 
-- **Laiko juosta (min)** – nurodykite savo šalies laiko juostą. Jei komunikatorių montuosite Lietuvoje, nustatykite „**+3**“ reikšmę.
+- **Laiko juosta (min)** – nurodykite savo šalies laiko juostą. Jei komunikatorių montuosite Lietuvoje, nustatykite „**+2**“ reikšmę.
 
 - **Laiko nustatymas** – nurodykite, su kuriuo serveriu ***FIRECOM*** sinchronizuos vidinį laikrodį. Sinchronizacija vyksta kai komunikatorius įjungiamas.
 

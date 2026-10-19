@@ -717,7 +717,7 @@ When the **Read [F4]** button is clicked, the program will read and show setting
 
 **“Time zone” settings group**
 
-- **Time zone** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+3.**
+- **Time zone** – specify your country’s time zone. For example, if the communicator will be installed in Lithuania, enter **+2.**
 
 - **Daylight saving time** – if you check the box, the communicator's internal clock will be automatically switched to summer or winter time.
 
