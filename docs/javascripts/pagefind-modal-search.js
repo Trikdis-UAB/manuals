@@ -32,7 +32,7 @@
         en: "English",
         lt: "Lithuanian",
         es: "Spanish",
-        ru: "Russian"
+        ru: "Cyrillic"
       }
     },
     lt: {
@@ -52,7 +52,7 @@
         en: "anglų",
         lt: "lietuvių",
         es: "ispanų",
-        ru: "rusų"
+        ru: "kirilica"
       }
     },
     es: {
@@ -72,7 +72,7 @@
         en: "inglés",
         lt: "lituano",
         es: "español",
-        ru: "ruso"
+        ru: "cirílico"
       }
     },
     ru: {
@@ -92,7 +92,7 @@
         en: "английском",
         lt: "литовском",
         es: "испанском",
-        ru: "русском"
+        ru: "кириллице"
       }
     }
   };
