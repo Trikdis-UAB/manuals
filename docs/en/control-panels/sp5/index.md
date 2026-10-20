@@ -44,14 +44,14 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 | LAN | Built in; DHCP or manual IP |
 | Event reporting channels | LTE, LAN, WiFi, SMS |
 | Report destinations | Two monitoring stations (primary and parallel), each with a backup channel and an SMS fallback; Protegus cloud and app; SMS to users |
-| Protocols to the CMS | TRK8, SIA DC-09, TL150; TCP/IP, UDP/IP; SMS |
+| Protocols to the CMS | TRK, TRK8, SIA DC-09 (also its IPcom variant), TL150; TCP/IP, UDP/IP; SMS |
 | Event encoding | Contact ID, SIA |
 | Report encryption | TRK8 AES 128, SIA DC-09 AES 128 |
 | Account (object) number | Up to 6 characters, hexadecimal |
 | Internal clock | Yes, with time synchronization (SIM, LAN, NTP server) |
 | Event buffer | 256 events |
 | Event log | Up to 5000 events; the oldest are deleted automatically |
-| Users | Up to 999 |
+| Users | Up to 999 **[the app allows 1000: to confirm]** |
 | On-board I/O terminals | 10 (IO1–IO10, marked IN1–IN10 on the board) |
 | Areas | 16 |
 | Zones | Up to 192 |
@@ -78,7 +78,7 @@ The app enforces these maximums:
 | Wireless devices | 42 |
 | Sensors (temperature, voltage, resistance) | 20 |
 | Thermostats | 8 |
-| Users | 1000 **[spec says 999; to confirm]** |
+| Users | 1000 |
 | Supervisors | 8 |
 | User groups | 32 |
 | Schedules | 64 |
@@ -105,14 +105,14 @@ Additional markings on the I/O terminals:
 | Terminals | Additional function |
 |---|---|
 | IO9 (FL1), IO10 (FL2) | 2-wire fire loop. Both can be used at the same time; they work independently |
-| IO8 (HIN) | **[what HIN means: to confirm]** |
+| IO8 (HIN) | Voltage input up to 30 V; the other terminals measure 0–12 V **[that HIN marks this: to confirm]** |
 
 Other parts of the board:
 
 - **ANT GSM** and **ANT WIFI:** connectors for the cellular and WiFi antennas.
 - **SIM:** the nano-SIM card holder.
 - **LAN:** the Ethernet port.
-- **USB:** USB-C connector **[what it is used for: to confirm]**.
+- **USB:** USB-C connector for configuring the panel over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows the connection **Via USB**. **[how to open the USB configuration in the app: to confirm]**
 - **SIM, ETH, WIFI, DAT, PWR:** LEDs (see [LED indication](#led-indication)).
 - **F1 button** next to the relay: turns on the WiFi setup mode, for setting the WiFi network name (SSID). **[how the setup mode is used, and how to restore the factory settings: to confirm]**
 
@@ -252,7 +252,7 @@ Choose the resistor set in **System options → Wired Zone Resistor Values (EOL 
 | 4k7+4k7+2k2 | 4.7 kΩ | 4.7 kΩ | 2.2 kΩ |
 
 !!! question "To confirm"
-    The order of the values follows the SP3 resistor table (RT, R1, R2). Check it for SP5, especially for the 10k+10k+5k6 set, which SP3 does not have.
+    The setting names list the resistors in the order RT + R1 + R2, as on "FLEXi" SP3. Check with the firmware that the app's numbering of the **10k+10k+5k6** and **4k7+4k7+2k2** sets matches the panel's: the app numbers these two the other way round from "FLEXi" SP3.
 
 **Tamper triggers trouble only (zone not activated).** When this is on, a tamper alarm on a zone reports a trouble but does not also trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire.
 
@@ -285,7 +285,7 @@ Connect RS485 devices in parallel to **AUX+**, **AUX−**, **A** and **B**; the 
 Any terminal IO1–IO10 can measure:
 
 - **Temperature:** an NTC 10K resistive sensor.
-- **Voltage:** an external DC voltage, 0–12 V **[the app also mentions 0–30 V "if IO8": the IO8 terminal or the iO-8 expander? to confirm]**.
+- **Voltage:** an external DC voltage, 0–12 V; up to 30 V on IO8 (marked HIN).
 - **Resistance:** the resistance of an external element.
 
 Assign the function in **Terminals** and set the alarm limits in **Devices & Interfaces → Sensors**.
@@ -355,7 +355,7 @@ Do this first, before you add zones and users.
 6.  Tap **Write**.
 
 !!! question "To confirm"
-    The factory settings: the default access codes, Account ID, areas, zones, outputs and reporting. Until they are confirmed, check every page before you hand over the system.
+    The factory settings: the default access codes, Account ID, areas, zones, outputs and reporting. Until they are confirmed, check every page before you hand over the system. When it reads a panel, the app first tries the access code 123456, the factory administrator code of "FLEXi" SP3.
 
 ### Reporting to a monitoring station (CMS)
 
@@ -448,7 +448,7 @@ Do this first, before you add zones and users.
 1.  In **Users → User list**, tap **+ Add user**.
 2.  On the **General** tab, enter the **Name** and, as needed:
     - **Keypad code** for keypads;
-    - **RFID / Card number** for a card or tag **[which reader reads it: to confirm]**;
+    - **RFID / Card number** for a card or tag **[no card reader works with firmware 1.00 yet: keep this line?]**;
     - **Phone number** for SMS and call control;
     - **Email** for the Protegus2 app.
 
@@ -505,7 +505,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 1.  Wire the 2-wire smoke detectors to IO9, IO10 or both (see [Connecting fire detectors](#connecting-fire-detectors)).
 2.  In **System options → System Behavior**, turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both.
 3.  In **Zones**, add a zone on the terminal **SP5 9 I/O - 2-wire fire zone** (or IO10) with the **Fire** definition. The app sets **Delay** to 2000 ms.
-4.  Check the zone's **CID code**: Contact ID 110 is the fire alarm code. **[to confirm: whether the code changes to 110 by itself]**
+4.  Check the zone's **CID code**. When you choose **Fire** in the zone popup, the app sets it to 110 (fire alarm) and **Delay** to 2000 ms, unless you changed them by hand. Changing the definition in the **Zones** list leaves the CID code as it was.
 5.  In **System options → Arming Restrictions**, decide whether **Fire Loop Trouble** blocks arming.
 6.  Tap **Write**.
 
@@ -643,11 +643,11 @@ System options holds the panel's identity and general behaviour, the access code
 |---|---|---|
 | Account ID | The object's account number at the monitoring station (CMS). For **Limited access** it is read-only unless the **Account ID** permission is on. | up to 6 characters |
 | Object Name | The system's name. Every SMS from the panel starts with it. | up to 31 characters |
-| Clear buffer events after reboot | Deletes events not yet sent when the panel restarts. **[to confirm: meaning taken from the label only]** | on / off |
-| 2-wire fire on IO9 | Turns terminal IO9 into a 2-wire fire loop input. IO9 can then only be a zone and is listed as **SP5 9 I/O - 2-wire fire zone**. A zone already on IO9 stays on it; if its type was ATZ, it changes to EOL and the second ATZ zone is released. **[to confirm: whether both IO9 and IO10 support the 2-wire fire loop]** | on / off |
+| Clear buffer events after reboot | When the panel restarts, it deletes the events in its buffer that have not been sent yet (as on "FLEXi" SP3). | on / off |
+| 2-wire fire on IO9 | Turns terminal IO9 into a 2-wire fire loop input. IO9 can then only be a zone and is listed as **SP5 9 I/O - 2-wire fire zone**. A zone already on IO9 stays on it; if its type was ATZ, it changes to EOL and the second ATZ zone is released. An output or sensor on IO9 stays assigned: remove it before you turn this on. | on / off |
 | 2-wire fire on IO10 | The same for terminal IO10 (**SP5 10 I/O - 2-wire fire zone**). Set independently of IO9. | on / off |
-| Power failure delay | How long mains (AC) power must be missing before the panel reports a power failure. **[to confirm: meaning taken from the label only]** | 0–999 s |
-| Call attempts to user | How many times the panel calls a user. **[to confirm: meaning taken from the label only]** | 0–99 |
+| Power failure delay | How long mains (AC) power must be missing before the panel reports a power failure (as on "FLEXi" SP3). | 0–999 s |
+| Call attempts to user | How many times the panel calls a user about an event. It stops when the user answers or rejects the call (as on "FLEXi" SP3). **[which events make the panel call can't be set in the app yet]** | 0–99 |
 | Text encoding | The character set the panel uses for object, area and zone names. Choose the one that matches the language of your names. | English, Baltic, Cyrillic alphabet, Central European, Greek, Turkish, Hebrew, Arabic, Vietnamese |
 | Hang-up call after | Under **Incomming Call Handling**. How long the panel keeps an incoming call before it hangs up. **[to confirm: meaning taken from the label only]** | 0–99 s |
 | Prevent event flooding (Suspend reporting) | Stops reporting an event that repeats too often. The next two settings set the limits. | on / off |
@@ -679,7 +679,7 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 
 | Setting | What it does | Values |
 |---|---|---|
-| Time zone | The panel's time zone. | UTC -12:00 to UTC +14:00, 38 zones including half-hour offsets |
+| Time zone | The panel's time zone. | UTC -12:00 to UTC +14:00, 38 zones including half-hour and 45-minute offsets |
 | Time synchronization | Where the panel takes the time from. Select one or more sources. | WiFi, SIM, LAN, Cloud application, CMS1, CMS2 |
 | Daylight saving time | Applies daylight saving time to the panel's clock. | on / off |
 | NTP Server Address (LAN or WiFi) | The time server used when the time is synchronised over LAN or WiFi. | up to 31 characters |
@@ -737,7 +737,7 @@ A read-only table, one row per connection. On a narrow screen it becomes a card 
 | Main path | The connection the panel uses first to reach the monitoring station. | OFF / SIM / Ethernet / WiFi |
 | Back up | The connection used when the main path fails. | OFF / SIM / Ethernet / WiFi |
 | Fallback back up | The connection used when the backup path also fails. | OFF / SIM / Ethernet / WiFi |
-| Switch back to Main path after … min. | How long the panel stays on a backup path before it returns to the main path. | 0–999 min **[to confirm: the panel may accept only up to 255 min]** |
+| Switch back to Main path after … min. | How long the panel stays on a backup path before it returns to the main path. | 0–255 min |
 
 #### Reporting to Cloud
 
@@ -775,14 +775,14 @@ The same paths for reporting to Protegus2. The card is greyed out while **Enable
 | Preferred network | The preferred mobile network, as MCC (country code) and MNC (network code), for example 246 and 01. The operator's name is shown beside the boxes. | MCC 0–999, MNC 0–999 |
 | Network database | Opens mcc-mnc.com, where you can look up the codes. | link |
 | Hide SIM warning | Turns off the SIM trouble indication. | on / off |
-| Use SMS/Calls with internet | **[to confirm: meaning not yet described]** | on / off |
+| Use SMS/Calls with internet | On: the panel takes SMS and call commands and sends SMS even while it has an internet connection. Off: it uses SMS and calls only when it has no internet connection (as on "FLEXi" SP3). | on / off |
 | Disable SIM data | The panel does not use mobile data. | on / off |
 
 #### WiFi
 
 | Setting | What it does | Values |
 |---|---|---|
-| SSID | The WiFi network name. The panel works with 2.4 GHz networks. | up to 40 characters **[to confirm: the panel may store only 39]** |
+| SSID | The WiFi network name. The panel works with 2.4 GHz networks. | up to 32 characters |
 | Password | The WiFi password. | up to 55 characters |
 | DNS | DNS server for WiFi. | IPv4 address |
 | DHCP | On: the panel gets its address from the router. Off: enter the three settings below. | on / off |
@@ -813,7 +813,7 @@ Menu **Communication → CMS Reporting**. The panel can report to two monitoring
 | Setting | What it does | Values |
 |---|---|---|
 | (switch in the card header) | Turns the channel on or off. Off greys out the card. | on / off |
-| Communication method: | How the panel reports to this CMS. **SMS** replaces the network settings with **Phone number** and **Encryption key**. **[to confirm: how the panel works with SMS as the channel method]** | Network / SMS |
+| Communication method: | How the panel reports to this CMS. **SMS** sends every report as an SMS to the station's **Phone number**, for a TRIKDIS SMS receiver. The number and key are shared with the channel's SMS fallback, and no backup channel can be set. | Network / SMS |
 | Communication type | The transport. Choosing **SMS** here is the same as the SMS method. With protocol **TL150**, only **UDP/IP** is offered. | TCP/IP, UDP/IP, SMS |
 | Domain or IP | The CMS receiver's address. | up to 36 characters |
 | Port | The receiver's port. | 0–65535 |
@@ -923,7 +923,7 @@ Menu **Areas and zones → Areas (Partitions)**. An area is a part of the site t
 | (tick box per area) | Tick an area to enable it; untick it to disable it. The list shows all 16 areas with their ID and name. | on / off |
 
 !!! note
-    If you disable or remove an area that is still in use, the app asks you to confirm. It then removes the area from every zone, output, keypad, wireless device, user, group and from other areas' **Conditional arming**.
+    If you disable or remove an area that is still in use, the app asks you to confirm. It then removes the area from every zone, output, keypad, wireless device, user, group and from other areas' **Conditional arming**. Users' rights are cleared only if the user list has been read in this session.
 
 #### Area popup
 
@@ -932,7 +932,7 @@ Opens from **Edit**. The title shows the area's name and number. **Remove area**
 | Setting | What it does | Values |
 |---|---|---|
 | Number | The area number. Changing it opens that area's settings and discards unsaved changes. | 1–16 |
-| Area name | The area's name. Required. | up to 19 characters **[to confirm: the panel stores 19 characters; the app accepts more]** |
+| Area name | The area's name. Required. | up to 19 characters (the app accepts more, but longer names are cut) |
 | Assigned zone | The zones in this area. Ticking a zone adds this area to that zone. **+ Add new zone** creates a zone in this area when a free zone and a free terminal exist. | zones with a terminal |
 | Entry delay 1 | Time to disarm after a **Delay** zone is triggered. | 1–999 s |
 | Entry delay 2 | Time to disarm after a **Delay 2** zone is triggered. | 1–999 s |
@@ -948,12 +948,12 @@ The collapsed section at the bottom of the area popup.
 | Setting | What it does | Values |
 |---|---|---|
 | Re-ARM | Arms the area again automatically after it was disarmed from the app or by phone, if no zone was violated. | on / off |
-| Auto-arm | Arms the area automatically after the **Auto-arm time**, regardless of any conditions. **[to confirm: it may instead re-arm the area after a disarm if no door was opened]** | on / off |
-| Auto-arm time | The time for **Auto-arm**. 0 means off. Editable while **Auto-arm** is on. | 0–999 min |
+| Auto-arm | Arms the area automatically after the **Auto-arm time**, regardless of any conditions. **[to confirm: what the Auto-arm time is counted from]** | on / off |
+| Auto-arm time | The time for **Auto-arm**. Editable while **Auto-arm** is on; turning **Auto-arm** on sets it to 1 min. | 1–999 min |
 | Arm mode if no exit | If nobody leaves during the exit delay, the area arms in this mode instead of away. | Arm away / Stay / Sleep |
-| Intellizone delay | For zones with **Intelli zone** on: an alarm needs at least two such zones to trigger within this time. | 0–999 s **[to confirm: the panel may accept only 1–255 s]** |
+| Intellizone delay | For zones with **Intelli zone** on: an alarm needs at least two such zones to trigger within this time. | 0–999 s |
 | Squawk | The siren chirps briefly when the area is armed or disarmed. | on / off |
-| Conditional arming | Other areas that must be armed for this area to be armed automatically. If they are not armed, this area stays disarmed. **[to confirm: how the panel applies this]** | the other enabled areas |
+| Conditional arming | Other areas that must be armed for this area to be armed automatically. If they are not armed, this area stays disarmed. **[to confirm: whether all or any of the selected areas must be armed]** | the other enabled areas |
 
 When you remove an area, the app resets it to: **Entry delay 1** 30 s, **Entry delay 2** 45 s, **Exit delay** 30 s, **Bell time** 120 s, **Intellizone delay** 20 s, **Tamper action** No area alarm, **Keyswitch mode** Level, **Arm mode if no exit** Stay, and the other options off. An area you add again starts from these values.
 
@@ -993,7 +993,7 @@ Opens from **Edit**, from **+ Add**, from **Terminals → Assign function → As
 | Assign area | The areas the zone belongs to. **+ Add new area** opens **Add areas**. | enabled areas |
 | Definition | How the zone reacts. Changing it also sets **Delay** and **CID code** to the new definition's values, unless you changed them by hand. | 12 definitions |
 | Type | The circuit type. See **Zone types** below. | the types the terminal allows |
-| Delay | The zone's response time: how long the input must be violated before the zone triggers. | 0–9999 milliseconds **[to confirm: the app shows milliseconds; the panel may use a different unit]** |
+| Delay | The zone's response time: how long the input must be violated before the zone triggers. | 0–9999 ms |
 | Intelli zone | An alarm needs at least two zones with this option to trigger within the area's **Intellizone delay**. | on / off |
 | Inactivity time | How long the zone ignores repeated triggers. Shown only if the panel supplies the value. | 0–65535 min |
 
@@ -1047,7 +1047,7 @@ Creates several zones at once with the same settings. When it opens, the app set
 
 #### Zone definitions
 
-The descriptions follow "FLEXi" SP3 **[to confirm for SP5]**. The last column shows the **Delay** and **CID code** the app sets when you choose the definition in a popup.
+The descriptions follow "FLEXi" SP3, except **Delay 2** and **Mimic**, which SP3 doesn't have. The last column shows the **Delay** and **CID code** the app sets when you choose the definition in a popup.
 
 | Definition | What it does | Delay, CID code |
 |---|---|---|
@@ -1114,7 +1114,7 @@ The popup offers only the functions the terminal supports. The sensor functions 
 | Zone input | The terminal becomes a detector input. Opens the zone popup on the first free zone. | button **Assign zone input** |
 | PGM output | The terminal drives an external device: a relay, lock, gate motor or indicator light. Opens the output popup on the first free output. If an on-board terminal is measured by a sensor, the app first asks to remove it from the sensor. | button **Assign PGM output** |
 | Temperature | Measures temperature with an NTC 10K sensor. Opens the sensor popup. | button **Assign temperature input** |
-| Voltage | Measures an external DC voltage, 0–12 V **[to confirm: the app also mentions 0–30 V on IO8]**. Opens the sensor popup. | button **Assign voltage input** |
+| Voltage | Measures an external DC voltage, 0–12 V; up to 30 V on IO8. Opens the sensor popup. | button **Assign voltage input** |
 
 #### Which terminals offer which functions
 
@@ -1191,13 +1191,13 @@ How the system reacts to the emergency key combinations on a keypad.
 
 | Setting | What it does | Values |
 |---|---|---|
-| Custom Entry Beep | **[to confirm: meaning not yet described]** | on / off |
-| Enable Fingerprint Support | **[to confirm: meaning not yet described]** | on / off |
-| Do Not Change Charset | **[to confirm: meaning not yet described]** | on / off |
+| Custom Entry Beep | The keypad sounds the entry delay beep intermittently (as on "FLEXi" SP3). | on / off |
+| Enable Fingerprint Support | For a fingerprint reader with the Wiegand 26/34 protocol (as on "FLEXi" SP3). Wiegand readers don't work in firmware 1.00. | on / off |
+| Do Not Change Charset | The panel doesn't change the character set of zone and area names sent to SK-LCD TouchPad keypads (as on "FLEXi" SP3). | on / off |
 
 #### Keypad serial prefixes
 
-The app shows only a keypad's serial; the first two characters decide what it allows. **[to confirm: the model names for each prefix]**
+The app shows only a keypad's serial; the first two characters decide what it allows. The model names are those the app uses for "FLEXi" SP3.
 
 | Serial starts with | Keypad | Areas | Utility key 1 | Zone types on its input |
 |---|---|---|---|---|
@@ -1240,7 +1240,7 @@ Use it only when the scan does not find a module. A module added here connects o
 | Setting | What it does | Values |
 |---|---|---|
 | Device type | The module type. Required. RF-Lora, RF-SH, RF-S8, T16 communicator and T16v2 communicator can be added only once per system. | iO-LO expander, iO8 expander, T16 communicator, RF-Lora, RF-SH, iO8-Lora expander, PB-Lora, T16v2 communicator, RF-S8 |
-| Serial number | Printed on the device label. Required. | hex, e.g. A3F012 **[to confirm: the app accepts up to 16 characters; the panel uses 6 hex characters]** |
+| Serial number | Printed on the device label. Required. | 6 hex characters, as on the label, e.g. A3F012 |
 | Name | The module's name. If left empty, the slot keeps its current name. | up to 24 characters |
 
 #### RS485 module types
@@ -1357,7 +1357,7 @@ For Maximum Security detectors and sirens only. Each setting appears only on mod
 | Setting | What it does | Values |
 |---|---|---|
 | Enable LED | Turns the detector's LED on or off. | on / off |
-| Sleep time | **[to confirm: meaning and unit]** | 0–9999 s |
+| Sleep time | **[to confirm: meaning]** | 0–255 s; 10 s when the device is learned |
 | PIR1 sensitivity | Sensitivity of the first PIR sensor. | 0–20 |
 | PIR1 pulses count | How many pulses the first PIR sensor counts before an alarm. | 0–10 |
 | PIR2 sensitivity | Sensitivity of the second PIR sensor, on dual-PIR models. | 0–20 |
@@ -1484,7 +1484,7 @@ The title shows the output's name. **Reset I/O terminal** at the bottom (existin
 
 #### Output definitions
 
-The descriptions follow "FLEXi" SP3 **[to confirm for SP5]**.
+The descriptions of **Siren**, **Remote control**, **Fire sensor reset**, **System state**, **Flash**, **Thermostat** and **Buzzer** follow "FLEXi" SP3. **Fire reset (inverted)**, **Siren (security)**, **Siren (fire)** and **Strobe** are new on SP5 and described from their labels.
 
 | Definition | What it does | Extra settings |
 |---|---|---|
@@ -1513,7 +1513,7 @@ Menu **Users → User list**. The panel's users: their codes, cards, phone numbe
 
 | Field | Shows |
 |---|---|
-| Total users | Users in the panel, out of 1000. **[to confirm: the specification says 999 users]** |
+| Total users | Users in the panel, out of 1000. |
 | Supervisors | Supervisors, out of 8, and how many are still available. |
 | App users | Users with an email, connected to Protegus2. |
 | Inactive users | Users switched to **Inactive**. |
