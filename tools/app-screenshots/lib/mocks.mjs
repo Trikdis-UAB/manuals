@@ -76,7 +76,7 @@ export function createMocks({ lang, model, configPatch = null, timezoneId = null
   });
 
   // Calls a particular configurator makes besides config/read (status, keypads, users, ...).
-  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model, state, fixture });
+  configuratorMocks(MODELS[model].configurator, { on, readJson, FIX, model, state, fixture, configPatch });
 
   return {
     appErrors,

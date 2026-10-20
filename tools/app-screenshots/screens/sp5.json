@@ -5,7 +5,7 @@
   "models": [
     "SP5"
   ],
-  "_fields": "As in g16.json, plus: layouts (capture only in these layouts), unverified (a caveat copied into the manifest). flow 'configuration': the newer configurator; desktop reads on its own after Advanced settings, the phone menu has a Read button; menu labels are clicked inside the sidebar navigation.",
+  "_fields": "As in g16.json, plus: layouts (capture only in these layouts), unverified (a caveat copied into the manifest). flow 'configuration': the newer configurator; desktop reads on its own after Advanced settings, the phone menu has a Read button; menu labels are clicked inside the sidebar navigation. Pop-ups (popup-*): steps after the page opens (capture.mjs runSteps), crop (the element cut out), isolate (only the element painted, transparent around it), onlyApps (front-ends they are captured for), config (sample patch; _users patches single users). Their click texts are English.",
   "screens": [
     {
       "id": "advanced-intro",
@@ -147,6 +147,498 @@
       ],
       "route": "panelEvents",
       "unverified": "Contact ID codes and on/off states are a real SP5 test panel's (beta, 2026-10-19); testers may have changed single codes. lowBattery is shown enabled with 0302 (the test panel had it disabled with 0000)."
+    },
+    {
+      "id": "popup-cms-sia",
+      "menu": [
+        "configurators.navigation.communication",
+        "configurators.navigation.communicationChildren.cmsReporting"
+      ],
+      "route": "communication/cmsReporting",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [],
+      "crop": "app-configuration-communication-cms-reporting-channel-card",
+      "config": {
+        "reportingCms": {
+          "reporting": {
+            "primaryChannel": {
+              "protocol": 1,
+              "siaDcsMode": false,
+              "isHexMode": true,
+              "enableEncryption": true,
+              "key": "00112233445566778899AABBCCDDEEFF"
+            }
+          }
+        }
+      },
+      "isolate": true
+    },
+    {
+      "id": "popup-zone-edit",
+      "menu": [
+        "configurators.navigation.areasAndZones",
+        "configurators.navigation.areasAndZonesChildren.zones"
+      ],
+      "route": "areasAndZones/zones",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Front door",
+          "text": "Edit"
+        },
+        {
+          "text": "Zone Behavior",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-zone-atz",
+      "menu": [
+        "configurators.navigation.areasAndZones",
+        "configurators.navigation.areasAndZonesChildren.zones"
+      ],
+      "route": "areasAndZones/zones",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "css": ".button-paddings-icon"
+        },
+        {
+          "text": "Add ATZ zone"
+        },
+        {
+          "css": "section.overlay input",
+          "nth": 0
+        },
+        {
+          "css": "section.overlay .item",
+          "hasText": "SP5 6 I/O"
+        },
+        {
+          "fill": "section.overlay input[placeholder=\"Enter zone name\"]",
+          "nth": 0,
+          "value": "Office door"
+        },
+        {
+          "fill": "section.overlay input[placeholder=\"Enter zone name\"]",
+          "nth": 1,
+          "value": "Office PIR"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-terminal-assign",
+      "menu": [
+        "configurators.navigation.terminals"
+      ],
+      "route": "terminals",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "SP5 6 I/O",
+          "text": "Assign function"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-keypad-edit",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.keypads"
+      ],
+      "route": "devicesAndInterfaces/keypads",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Hall keypad",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-expander-add",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.expanders"
+      ],
+      "route": "devicesAndInterfaces/expanders",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "css": ".button-paddings-icon"
+        },
+        {
+          "text": "Add manually"
+        },
+        {
+          "css": "section.overlay input",
+          "nth": 0
+        },
+        {
+          "css": "section.overlay .item",
+          "hasText": "iO8 expander"
+        },
+        {
+          "fill": "section.overlay input[placeholder=\"e.g. A3F012\"]",
+          "value": "0C2D3E"
+        },
+        {
+          "fill": "section.overlay input[placeholder=\"e.g. Garage expander\"]",
+          "value": "Hall iO8"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-wireless-scan",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.wireless"
+      ],
+      "route": "devicesAndInterfaces/wireless",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "text": "Scan for new devices",
+          "settle": false,
+          "wait": 2500
+        },
+        {
+          "text": "Done",
+          "within": "section.overlay",
+          "wait": 1500
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-wireless-config",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.wireless"
+      ],
+      "route": "devicesAndInterfaces/wireless",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Terrace door",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-user-general",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.userList"
+      ],
+      "route": "users/usersList",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Sample user 1",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true,
+      "config": {
+        "_users": [
+          {
+            "queueNo": 2,
+            "groupAssign": [
+              0,
+              0
+            ],
+            "areaControl": 1,
+            "pgmControl": [
+              2,
+              0
+            ],
+            "pgmDial": [
+              2,
+              0
+            ],
+            "rights": {
+              "forwardUnknownSms": false,
+              "arm": true,
+              "disarm": true,
+              "sleep": false,
+              "stay": true,
+              "smsACK": true,
+              "canEditUser": false,
+              "canSeeEvents": false,
+              "greetings": false,
+              "pgmControl": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "popup-user-permissions",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.userList"
+      ],
+      "route": "users/usersList",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Sample user 1",
+          "text": "Edit"
+        },
+        {
+          "text": "Permissions",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true,
+      "config": {
+        "_users": [
+          {
+            "queueNo": 2,
+            "groupAssign": [
+              0,
+              0
+            ],
+            "areaControl": 1,
+            "pgmControl": [
+              2,
+              0
+            ],
+            "pgmDial": [
+              2,
+              0
+            ],
+            "rights": {
+              "forwardUnknownSms": false,
+              "arm": true,
+              "disarm": true,
+              "sleep": false,
+              "stay": true,
+              "smsACK": true,
+              "canEditUser": false,
+              "canSeeEvents": false,
+              "greetings": false,
+              "pgmControl": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "popup-user-sms",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.userList"
+      ],
+      "route": "users/usersList",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Sample user 1",
+          "text": "Edit"
+        },
+        {
+          "text": "Call and SMS",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true,
+      "config": {
+        "_users": [
+          {
+            "queueNo": 2,
+            "groupAssign": [
+              0,
+              0
+            ],
+            "areaControl": 1,
+            "pgmControl": [
+              2,
+              0
+            ],
+            "pgmDial": [
+              2,
+              0
+            ],
+            "rights": {
+              "forwardUnknownSms": false,
+              "arm": true,
+              "disarm": true,
+              "sleep": false,
+              "stay": true,
+              "smsACK": true,
+              "canEditUser": false,
+              "canSeeEvents": false,
+              "greetings": false,
+              "pgmControl": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "popup-output-remote",
+      "menu": [
+        "configurators.navigation.terminals"
+      ],
+      "route": "terminals",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Garage gate",
+          "text": "Output settings"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-area-edit",
+      "menu": [
+        "configurators.navigation.areasAndZones",
+        "configurators.navigation.areasAndZonesChildren.areas"
+      ],
+      "route": "areasAndZones/partitions",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Home",
+          "text": "Edit"
+        },
+        {
+          "text": "Advanced",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-sensor-ntc",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.temperatureSensors"
+      ],
+      "route": "devicesAndInterfaces/sensors",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Living room temperature",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-thermostat",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.thermostats"
+      ],
+      "route": "devicesAndInterfaces/thermostats",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Living room heating",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
     }
   ],
   "notShown": [

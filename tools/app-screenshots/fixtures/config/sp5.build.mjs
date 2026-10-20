@@ -57,7 +57,8 @@ sensors[0] = sensor(0, { hwType: 201, seqNumber: 9, alarmLow: true, alarmHigh: t
 sensors[1] = sensor(1, { hwType: 204, seqNumber: 1, alarmHigh: true, delay: 60, minTemp: 0, maxTemp: 40, name: 'Hall PIR temperature' });
 
 const thermostats = Array.from({ length: 8 }, (_, i) => ({ enabled: false, outputNumber: 0, mode: 0, hysteresis: 0, activeSensor: 0, assignedSensors: [0], assignedTemperatures: [0], name: `Thermostat ${i + 1}` }));
-thermostats[0] = { enabled: true, outputNumber: 7, mode: 0, hysteresis: 1, activeSensor: 1, assignedSensors: [1], assignedTemperatures: [21.5], name: 'Living room heating' };
+// outputNumber is the output's queueNo + 1 (the app's thermostat pop-up): 5 = "Heating" (outSettings[4]).
+thermostats[0] = { enabled: true, outputNumber: 5, mode: 0, hysteresis: 1, activeSensor: 1, assignedSensors: [1], assignedTemperatures: [21.5], name: 'Living room heating' };
 
 // --- RS485 modules: iO8 expander and the RF-S8 wireless receiver
 const rs485 = Array.from({ length: 64 }, (_, i) => ({ queueNo: i === 63 ? 0 : i + 1, id: 0, group: 0, area: 0, sn: '', name: '', fw: '' }));

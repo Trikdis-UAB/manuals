@@ -157,6 +157,19 @@ object from the device's own memory.
 Debug a new path with `node dev/step.mjs desktop '[{"text":"Sample system"}, …]'` (a screenshot after
 each step) and `node dev/catch.mjs` (reports every exception, including ones the app swallows).
 
+### Pop-ups and single cards
+
+A screen with `steps` goes on after its page opens: click a row's link (`{"row": "Front door", "text":
+"Edit"}`; rows are `div.table-row`), a tab or section (`"within": "section.overlay"`), a dropdown (its
+`input`, then `{"css": "section.overlay .item", "hasText": "SP5 6 I/O"}`) or type into a field
+(`{"fill": "<css>", "value": "…"}`); `capture.mjs` `runSteps` lists every form. `crop` cuts one element out
+(a pop-up is `section.overlay > div.content`); the window is made taller first if the element scrolls,
+and `isolate` paints only that element on a transparent background, so the pop-up's rounded corners do
+not carry the dimmed page. `onlyApps` limits a screen to a front-end. The SP5 pop-ups (`popup-*` in
+`screens/sp5.json`) click English texts, so they are captured in English only. A state that needs data
+the sample lacks is set with `config`; `"_users": [{"queueNo": 2, …}]` changes single users of the panel
+user list. "Scan for new devices" finds one invented door contact (`lib/mocks-configurators.mjs`).
+
 ## Known limits
 
 - **Device-stored option texts are partly inferred.** On GET/GT/GT+ the panel lists ("2. AUTO",

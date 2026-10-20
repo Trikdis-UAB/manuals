@@ -98,14 +98,18 @@ function parseBody(req) {
 // Serves a front-end file with its theme colours swapped (lib/frontends.mjs, releasedColours): the file
 // is fetched as usual (GET, own host) and only those colour values change; code and layout do not.
 async function recolour(route, pairs, stats) {
-  const response = await route.fetch();
+  // A browser closing while a file is still on its way ends the fetch with an error; that file is no
+  // longer needed, so the error is dropped instead of ending the run.
+  let response;
+  try { response = await route.fetch(); } catch { return route.abort().catch(() => {}); }
   const type = response.headers()['content-type'] ?? '';
-  if (!/javascript|css|svg|html/.test(type)) return route.fulfill({ response });
-  let body = await response.text();
+  if (!/javascript|css|svg|html/.test(type)) return route.fulfill({ response }).catch(() => {});
+  let body;
+  try { body = await response.text(); } catch { return route.abort().catch(() => {}); }
   for (const [from, to] of pairs) {
     body = body.replace(new RegExp(from, 'gi'), () => { stats.recoloured.set(from, (stats.recoloured.get(from) ?? 0) + 1); return to; });
   }
-  return route.fulfill({ response, body });
+  return route.fulfill({ response, body }).catch(() => {});
 }
 
 // Lets the page read a local answer to a cross-origin call, as the real API's CORS headers would.

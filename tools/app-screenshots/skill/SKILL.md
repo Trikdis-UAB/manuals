@@ -108,6 +108,11 @@ public, so keep real names, systems and customer data out of fixtures and commit
   `X-Home-Region` header) and sometimes the region's host directly. The guard answers `/v3/api/*` on every
   host and the CORS preflight too; `guard-selftest.mjs` proves it for both front-ends.
 - **Keep menu clicks inside the configurator**: on desktop "Settings" is also a top-bar item.
+- **Pop-ups** (README, "Pop-ups and single cards"): find a row by its text in `div.table-row` and only
+  among visible ones, because each list is also laid out as phone cards hidden on desktop. A dropdown
+  shows its value inside an `input`, so it is opened by that input, not by its text. A pop-up that polls
+  (the wireless scan) never lets the network go quiet: give that step `settle: false` and stop the
+  polling with the next click before the image.
 - **The newer configurator (SP5)**: desktop reads by itself and opens the Dashboard; on a phone (the
   app switches below 1150 px) the menu page has a Read button. The device must be recorded as a cloud
   device in local storage or the pages never ask for live status.

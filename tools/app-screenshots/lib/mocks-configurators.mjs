@@ -2,8 +2,8 @@
 
 import { SAMPLE, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
 
-export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture }) {
-  if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture });
+export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch }) {
+  if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
   if (configurator === 'g16') addSystemWizard(on, { model, state });
 }
 
@@ -38,7 +38,7 @@ function addSystemWizard(on, { model, state }) {
 // Fixed sample moment, so captures are repeatable.
 export const SAMPLE_TIME = '2026-10-07 12:00:00';
 
-function sp5(on, { readJson, FIX, fixture: file }) {
+function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
   const fixture = () => readJson(FIX, 'config', file);
 
   // The dashboard's System information card and the "recent devices" list.
@@ -63,8 +63,20 @@ function sp5(on, { readJson, FIX, fixture: file }) {
   // Area, zone and output state (Areas, Terminals): Home disarmed, Garage armed, all zones calm.
   on('POST', '/get-system-status-new', () => ({ success: true, data: fixture()._systemStatus }));
 
-  // The panel's user list (Users, Groups); it is not part of config/read.
-  on('GET', '/config/users/read', () => { const u = fixture()._users; return { success: true, data: u, total: u.length }; });
+  // The panel's user list (Users, Groups); it is not part of config/read. A screen's config patch can
+  // change single users: "_users": [{ "queueNo": 2, ...fields }].
+  on('GET', '/config/users/read', () => {
+    const u = fixture()._users;
+    for (const p of configPatch?._users ?? []) Object.assign(u.find((x) => x.queueNo === p.queueNo) ?? {}, p);
+    return { success: true, data: u, total: u.length };
+  });
+
+  // "Scan for new devices": the first check finds one new door contact in free slot 5; later checks
+  // find nothing more. The app polls without pause on the cloud path until the scan is stopped.
+  let checks = 0;
+  on('POST', '/config/learn-sensors', ({ body }) => (body?.action === 'check'
+    ? { success: true, data: checks++ === 0 ? [SCAN_FOUND] : [] }
+    : { success: true }));
 
   // Panel clock (System options).
   on('*', '/config/time/read', () => ({ success: true, time: SAMPLE_TIME }));
@@ -85,6 +97,9 @@ function sp5(on, { readJson, FIX, fixture: file }) {
     return { success: true, data: Object.fromEntries(letters.map((l) => [l, status[l] ?? {}])) };
   });
 }
+
+// A Maximum Security Magnet Wireless LV door contact, as the panel reports a newly learned device.
+const SCAN_FOUND = { group: 1, type: 19, name: '', model: '', isNew: true, sn: '8412999', queueNo: 5, registered: false, failed: false, rssi: '82', voltage: '3.1' };
 
 function st(status, temperature, rssi, voltage) {
   return { status, temperature, rssi, voltage };

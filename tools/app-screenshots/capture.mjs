@@ -41,7 +41,8 @@ if (!MODELS[model].firmwareConfirmed && !args.fw) {
 if (!MODELS[model].revisionConfirmed && !args.revision) console.log(`NOTE the hardware revision for ${model} is not confirmed`);
 const screens = (def.screens ?? [])
   .filter((s) => !args.screen || args.screen.split(',').includes(s.id))
-  .filter((s) => !s.onlyModels || s.onlyModels.includes(model));
+  .filter((s) => !s.onlyModels || s.onlyModels.includes(model))
+  .filter((s) => !s.onlyApps || s.onlyApps.includes(args.app ?? 'released'));
 if (def.flow !== 'walk' && !screens.length) throw new Error(`No screens to capture for ${model}${args.screen ? ` (${args.screen})` : ''}`);
 
 // Public label packs and reference lists are not committed; fetch them if this checkout lacks them.
@@ -83,13 +84,15 @@ for (const lang of langs) {
         try {
           const appPath = await walkTo(page, t, screen);
           await settle(page, 800);
+          if (screen.steps) appPath.push(...await runSteps(page, t, screen.steps));
           const base = `${modelSlug}-${id}`;
-          const shots = [{ variant: layout, file: `${base}-${layout}.png` }];
+          // A pop-up or a single card is cut out of the page (screen.crop: its CSS selector).
+          const shots = [{ variant: layout, file: `${base}-${layout}.png`, ...(screen.crop ? { crop: screen.crop, isolate: screen.isolate } : {}) }];
           // g16 opens in the right-hand column of the desktop layout, so that column is also cut out.
           if (layout === 'desktop' && def.flow !== 'configuration') shots.push({ variant: 'desktop-panel', file: `${base}-desktop-panel.png`, selector: 'app-company-mobile-host' });
           // The newer configurator fills the window under the app's top bar (logo, region, account);
           // the same page without that bar, for manuals that should not show it (e.g. the beta's logo).
-          if (layout === 'desktop' && def.flow === 'configuration' && screen.kind !== 'intro') shots.push({ variant: 'desktop-content', file: `${base}-desktop-content.png`, below: 'app-company-header' });
+          if (layout === 'desktop' && def.flow === 'configuration' && screen.kind !== 'intro' && !screen.crop) shots.push({ variant: 'desktop-content', file: `${base}-desktop-content.png`, below: 'app-company-header' });
           for (const s of shots) records.push(await shoot(page, { s, layout, screen, id, revision, lang, appPath, label }));
           const issues = runIssues(guard, errors, mocks);
           if (issues.length) { problems++; console.log(`WARN ${label}: ${issues.join('; ')}`); }
@@ -207,6 +210,60 @@ async function runWalks(lang, t) {
   }
 }
 
+// Steps after a page has opened, to reach a pop-up and set its state. Each step is one of:
+//   {text|label|css, within?, row?, nth?, exact?}  click (label = a label key; row = a table row's text;
+//                                                  css + hasText: the match containing that text)
+//   {fill: css, value, within?, nth?}             type into a field
+// plus wait (ms, default 600) and settle: false for screens that never go quiet (polling).
+// Returns the texts clicked, for the manifest's appPath.
+async function runSteps(page, t, steps) {
+  const path = [];
+  for (const st of steps) {
+    let scope = st.within ? page.locator(st.within).last() : page;
+    // Table rows are div.table-row; the same data is also laid out as phone cards, hidden on desktop.
+    if (st.row) scope = scope.locator('div.table-row, tr').filter({ hasText: st.row, visible: true }).first();
+    if (st.fill) {
+      await scope.locator(st.fill).nth(st.nth ?? 0).fill(String(st.value), { timeout: 10000 });
+    } else {
+      const text = st.label ? t(st.label) : st.text;
+      let loc = st.css ? scope.locator(st.css) : scope.getByText(text, { exact: st.exact ?? true });
+      if (st.css && st.hasText) loc = loc.filter({ hasText: st.hasText }); // e.g. a dropdown's .item
+      await loc.nth(st.nth ?? 0).click({ timeout: 10000 });
+      if (text && !st.hidden) path.push(text);
+    }
+    if (st.settle === false) await page.waitForTimeout(st.wait ?? 1000);
+    else await settle(page, st.wait ?? 600);
+  }
+  return path;
+}
+
+// A pop-up or card on its own. The window is made taller first when the element scrolls inside or
+// runs past the window, so the whole element is drawn. isolate: only the element is painted, on a
+// transparent background, so a pop-up's rounded corners do not carry the dimmed page behind it.
+async function shootElement(page, s, layout, opts) {
+  const el = page.locator(s.crop).first();
+  await el.waitFor({ timeout: 10000 });
+  const need = await el.evaluate((e) => {
+    let extra = 0;
+    for (const x of [e, ...e.querySelectorAll('*')]) {
+      if (/(auto|scroll)/.test(getComputedStyle(x).overflowY) && x.scrollHeight > x.clientHeight + 1) extra = Math.max(extra, x.scrollHeight - x.clientHeight);
+    }
+    return { extra, bottom: e.getBoundingClientRect().bottom };
+  });
+  const { width, height } = LAYOUTS[layout].viewport;
+  if (need.extra > 0 || need.bottom > height) {
+    await page.setViewportSize({ width, height: Math.min(Math.max(height + need.extra, need.bottom) + 120, MAX_CSS_HEIGHT) });
+    await settle(page, 500);
+  }
+  // No focus ring on the last field typed into.
+  await page.evaluate(() => document.activeElement?.blur());
+  if (s.isolate) {
+    await page.addStyleTag({ content: `html, body { background: transparent !important; } body * { visibility: hidden !important; }
+      ${s.crop}, ${s.crop} * { visibility: visible !important; }` });
+  }
+  await el.screenshot({ ...opts, omitBackground: Boolean(s.isolate) });
+}
+
 async function clickStep(page, t, c) {
   let loc;
   if (c.css && c.hasText) loc = page.locator(c.css).filter({ hasText: t(c.hasText) });
@@ -263,6 +320,8 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
   let crop = null;
   if (s.selector) {
     await page.locator(s.selector).first().screenshot(opts);
+  } else if (s.crop) {
+    await shootElement(page, s, layout, opts);
   } else if (screen.fullScreen) {
     await page.screenshot(opts); // pages whose background is part of the design (the system dashboard)
   } else if (layout === 'phone' || def.flow === 'configuration') {
@@ -305,6 +364,7 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     file: path.relative(outDir, file),
     viewport: LAYOUTS[layout].viewport,
     deviceScaleFactor: LAYOUTS[layout].deviceScaleFactor,
+    ...(s.crop ? { croppedTo: s.crop } : {}),
     ...(crop ? { croppedToCss: { ...(crop.top ? { top: crop.top } : {}), width: LAYOUTS[layout].viewport.width, height: crop.height - crop.top }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
     appUrl: new URL(page.url()).pathname,
     frontend: fe.id,
