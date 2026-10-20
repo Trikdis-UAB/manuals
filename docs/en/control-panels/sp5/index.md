@@ -37,7 +37,7 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 | Power output for external devices [AUX] | 12 V DC, up to 2 A |
 | Siren output [BELL] | 1 A |
 | Open-collector output on an I/O terminal | 0.1 A |
-| Relay output [REL] | Changeover contacts NC, C, NO **[ratings to confirm]** |
+| Relay output [REL] | Changeover contacts NC, C, NO; up to 1 A at 30 V DC or 0.3 A at 125 V AC, resistive load **[from the datasheet of the relay fitted on the board (FTR-B4GA012Z); product rating to confirm]** |
 | Cellular modem | 4G LTE, EU version (EG915) **[bands to confirm]** |
 | SIM card | 1, nano-SIM |
 | WiFi | 2.4 GHz; DHCP or manual IP |
@@ -269,7 +269,7 @@ Connect the siren between **BELL+** and **BELL−**. The BELL output is supervis
 
 ### Connecting outputs
 
-- **Relay (NC, C, NO; REL in the app):** changeover contacts, for example for a door lock or a gate. **[contact ratings to confirm]**
+- **Relay (NC, C, NO; REL in the app):** changeover contacts for low-voltage loads, up to 1 A at 30 V DC, for example a door lock or a gate controller input. Don't switch mains voltage with it: use an external relay or contactor. **[product rating to confirm]**
 - **IO1–IO10 as outputs:** open-collector outputs, up to 0.1 A each. Use an external relay for larger loads.
 
 ### Connecting keypads
@@ -470,7 +470,7 @@ For many users with the same rights, create a group in **Users → Groups** and 
 
 The relay on the board (contacts **NC**, **C**, **NO**; **REL** in the app) can drive a door lock.
 
-1.  Connect the lock's supply through the relay contacts: **C** and **NO** for a lock that opens when powered, **C** and **NC** for a lock that holds while powered. **[contact ratings to confirm]**
+1.  Connect the lock's supply through the relay contacts: **C** and **NO** for a lock that opens when powered, **C** and **NC** for a lock that holds while powered. The lock may draw up to 1 A at 30 V DC; for a larger lock, switch it through an external relay. **[product rating to confirm]**
 2.  In **Terminals**, open **Output settings** on **REL** (or **Assign function → Assign PGM output** if it is free).
 3.  Set **Definition** to **Remote control**, **Type** to **Pulse** and a **Pulse time**, for example 3 seconds.
 4.  Give the users who may open the door the right: **Permissions** tab → **Allow control** → choose this output.
@@ -482,7 +482,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 ### Controlling a gate or lights from Protegus and by phone call
 
-1.  Connect the device to a free I/O terminal (through an external relay; I/O outputs give up to 0.1 A) or to **REL**.
+1.  Connect the device to a free I/O terminal (through an external relay; I/O outputs give up to 0.1 A) or to the relay contacts (**REL**, up to 1 A at 30 V DC). Switch mains-powered lights through an external relay or contactor.
 2.  In **Terminals**, open **Assign function → Assign PGM output** on that terminal.
 
     ![Protegus app, SP5 Assign terminal function popup for SP5 6 I/O with two choices: Zone input, which makes the terminal a detector input, with an Assign zone input button, and PGM output, which drives a relay lock, gate motor or light, with an Assign PGM output button. A More functions link is below them.](./protegus-app/sp5-popup-terminal-assign.webp){ .trik-popup-img }
