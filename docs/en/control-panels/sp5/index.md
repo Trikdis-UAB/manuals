@@ -336,17 +336,170 @@ The **Dashboard → Connectivity** card shows the state of each connection.
 | LAN: DNS problem | The DNS servers in the LAN settings |
 | WiFi: not connected | SSID and password in **Communication → Connection → WiFi**; 2.4 GHz network |
 
-## Quick configuration
+## Common tasks
 
-Do these steps in order. Each links to its page in the settings reference.
+Each task below is a complete procedure in the Protegus app. Do the tasks you need in this order: the first one on every new system, then the others as the site requires. All settings are saved to the panel only when you tap **Write**. Every setting mentioned is explained in [Settings in the Protegus app](#settings-in-the-protegus-app).
 
-1.  **System options:** set the **Account ID**, the **Object Name**, the **EOL Resistor Configuration** and the time zone.
-2.  **Areas (Partitions):** add the areas and set their entry and exit times.
-3.  **Zones:** add a zone for each detector: terminal, area, definition and type.
-4.  **Users:** add the users, their codes and the areas they can control.
-5.  **Communication → CMS reporting:** set the monitoring station's address, protocol, account number and encryption key.
-6.  **Communication → Connection:** set which connection (SIM, LAN, WiFi) carries the reports to the monitoring station and to Protegus.
-7.  Tap **Write**, then test: trigger each zone, arm and disarm, and check that the events reach the monitoring station.
+### First start-up: settings to change on every new system
+
+Do this first, before you add zones and users.
+
+1.  Open the configurator (see [Opening the configurator](#opening-the-configurator)).
+2.  In **System options → Access & Permissions**, change the **Full access** and **Limited access** codes. Give the **Limited access** code to installers and set what it allows with the **Limited access permissions**.
+3.  In **System options → System Identity & Behavior**, enter the **Account ID** you got from the monitoring station and an **Object Name**. The Object Name starts every SMS the panel sends.
+4.  Choose the **EOL Resistor Configuration** that matches the resistors in the detectors (see [Resistor values](#resistor-values)).
+5.  In **Time Settings**, set the **Time zone**, **Daylight saving time** and the **Time synchronization** sources, or press **Set from PC**.
+6.  Tap **Write**.
+
+!!! question "To confirm"
+    The factory settings: the default access codes, Account ID, areas, zones, outputs and reporting. Until they are confirmed, check every page before you hand over the system.
+
+### Reporting to a monitoring station (CMS)
+
+**You need:** the receiver's address and port, its protocol, the encryption key and the object's account number, all from the monitoring station.
+
+1.  In **System options**, check the **Account ID**.
+2.  In **Communication → Connection → Reporting to CMS**, choose the **Main path** (Ethernet, SIM or WiFi) and a **Back up** path. If you use the SIM, enter its **APN** (and **SIM PIN**, if the card asks for one) in **SIM**.
+3.  In **Communication → CMS Reporting**, turn on **Primary channel** and set:
+    - **Communication method:** Network.
+    - **Communication type:** TCP/IP or UDP/IP, as the receiver requires.
+    - **Domain or IP** and **Port** of the receiver.
+    - **Protocol**: the one the receiver uses. **[to confirm: TRK8 for TRIKDIS receivers]** For **SIA DC-09_2012** or **SIA DC-09_2007**, also choose the **Message format** (CID or SIA).
+    - **Encryption key**. For SIA DC-09, an empty key means no encryption; turn on **Key is HEX** if you got a 32-digit hexadecimal key.
+4.  In **Receiver**, enter the **Number** and **Line**, if the monitoring station uses them.
+5.  For a backup receiver, open **Backup channel**, turn on **Enable backup channel** and set it the same way. To send the reports by SMS when the network fails, turn on **Enable fallback SMS channel** and enter the station's **Phone number**.
+6.  To report to a second monitoring station at the same time, set up the **Parallel channel** the same way.
+7.  Under **Testing**, turn on **Periodic test** and set the **Test period** the station expects.
+8.  Tap **Write**.
+
+**Check:** the **Dashboard → Connectivity** status of the path you chose shows **CMS** or **Active**. Trigger a zone and ask the station to confirm the event and its account number.
+
+### Adding wired zones
+
+1.  Wire the detectors to IO1–IO10 or to an iO-8 / iO8-LORA expander (see [Connecting detectors](#connecting-detectors)).
+2.  If you use an expander, connect it to the RS485 bus, then in **Devices & Interfaces → Expanders** choose **Expanders → Scan for new expanders**. Its inputs then appear as terminals, for example **RS485 Garage iO8, 1 I/O**.
+3.  In **Areas and zones → Areas (Partitions)**, tap **+ Add areas** and tick the areas you need. Set their **Entry delay**, **Exit delay** and **Bell time** in the area popup.
+4.  In **Areas and zones → Zones**, tap **+ Add**, then:
+    - enter the zone's **Name**;
+    - choose the terminal in **Assign terminal**;
+    - choose the area in **Assign area**;
+    - choose the **Definition**, for example **Delay** for the entrance door, **Interior** for motion detectors, **Instant** for windows;
+    - choose the **Type** (circuit) that matches the wiring.
+5.  For two detectors on one terminal, use the arrow next to **+ Add** and choose **Add ATZ zone**.
+6.  To create many zones with the same settings, use **Add multiple zones**.
+7.  Tap **Write**.
+
+**Check:** on **Zones**, each zone shows **OK**. Open the detector or walk past it: the status changes to **Violated**, then back to **OK**.
+
+### Adding keypads
+
+1.  Connect the keypads to AUX and the keypad bus (GRN, YEL) (see [Connecting keypads](#connecting-keypads)).
+2.  In **Devices & Interfaces → Keypads**, tap **Scan for new keypads**.
+3.  For each keypad, choose the areas it controls in **Assign area**. Keypads with a serial number starting 51 or 1E control up to 2 areas.
+4.  Optionally, tap **Edit** to name the keypad and assign outputs to its utility keys.
+5.  Under **Global Keypad Parameters**, choose 4- or 6-digit user codes (**6-digit user code**), the lockout after wrong codes, the duress code type and the emergency key alarms.
+6.  To use the keypad's own zone input, add a zone on the terminal **Keypad *n* IN** (types NO, NC or EOL).
+7.  Tap **Write**.
+
+**Check:** each keypad shows **Online**.
+
+### Adding wireless devices
+
+1.  Connect the wireless receiver (RF-LORA for Maximum Security devices, RF-S8 for HEYI devices) to AUX and the RS485 bus.
+2.  In **Devices & Interfaces → Expanders**, choose **Expanders → Scan for new expanders**. The receiver must appear in the list.
+3.  In **Devices & Interfaces → Wireless**, tap the gear button and set **Sensor lost after**: how long a silent device is reported as lost.
+4.  Disarm all areas and clear any faults. Tap **Scan for new devices**.
+5.  Press the pairing key on the device, as its own instructions describe, until its green light stays on for 2 seconds. The device appears in the list marked **NEW**. Repeat for the other devices, then tap **Done**.
+6.  Tap a new device and set its zone **Name**, **Assign area** and **Definition**. The app gives detectors a free zone with the **24 Hour** definition, so change it to what the device protects.
+7.  For a keyfob, choose its area and **Assigned user**, and what keys 3 and 4 do.
+8.  Tap **Write**.
+
+**Check:** each device shows **Online**, with its signal (**RSSI, %**) and battery voltage.
+
+!!! question "To confirm"
+    Which wireless device families SP5 supports (Maximum Security and HEYI; Crow is listed in the app but not confirmed for SP5).
+
+### Adding users, codes and cards
+
+1.  In **Users → User list**, tap **+ Add user**.
+2.  On the **General** tab, enter the **Name** and, as needed:
+    - **Keypad code** for keypads;
+    - **RFID / Card number** for a card or tag;
+    - **Phone number** for SMS and call control;
+    - **Email** for the Protegus2 app.
+3.  Keep the **System profile** at **Standard** for ordinary users. Make a user **Supervisor** only if they need SMS and call control of the system and user management (up to 8).
+4.  On the **Permissions** tab, turn on **Allow arm** and **Allow disarm** and choose the **Assigned areas**. To let the user open doors or gates, turn on **Allow control** and choose the outputs.
+5.  For a temporary user, such as a cleaner, turn on **Limit access to a time period** on the **Validity** tab.
+6.  Tap **Save**, then **Write**.
+
+For many users with the same rights, create a group in **Users → Groups** and assign users to it: the group's permissions then apply instead of the individual ones.
+
+**Check:** the user appears in the list with status **Active** and the right **Credentials** (Code, RFID, App).
+
+### Controlling a door with a reader and the relay
+
+The on-board relay (**REL**) can drive a door lock.
+
+1.  Connect the lock's supply through the **REL** contacts. **[contact ratings to confirm]**
+2.  In **Terminals**, open **Output settings** on **REL** (or **Assign function → Assign PGM output** if it is free).
+3.  Set **Definition** to **Remote control**, **Type** to **Pulse** and a **Pulse time**, for example 3 seconds.
+4.  Give the users who may open the door the right: **Permissions** tab → **Allow control** → choose this output.
+5.  Tap **Write**.
+
+The door can then be opened from the Protegus app and from a keypad utility key (see **Keypads**).
+
+!!! question "To confirm"
+    How a Wiegand reader on IO1–IO2 or IO3–IO4 is enabled, and whether a user's card at the reader opens the door. The app has no reader settings yet.
+
+### Controlling a gate or lights from Protegus and by phone call
+
+1.  Connect the device to a free I/O terminal (through an external relay; I/O outputs give up to 0.1 A) or to **REL**.
+2.  In **Terminals**, open **Assign function → Assign PGM output** on that terminal.
+3.  Set **Definition** to **Remote control**. Choose **Type**: **Pulse** for a gate (one press opens or closes it) or **Level** for lights (on until switched off).
+4.  Give the users the right to control it: **Permissions** tab → **Allow control**.
+5.  To open the gate by calling the panel, enter the user's **Phone number** and choose the output in **Call and SMS → Automatic control targets**.
+6.  Tap **Write**.
+
+**Check:** the output appears on the system's main screen in the Protegus app and switches when you tap it.
+
+### Setting up a fire zone
+
+1.  Wire the 2-wire smoke detectors to IO9 or IO10 (see [Connecting fire detectors](#connecting-fire-detectors)).
+2.  In **System options → System Behavior**, turn on **2-wire fire on IO9** or **2-wire fire on IO10**.
+3.  In **Zones**, add a zone on the terminal **SP5 9 I/O - 2-wire fire zone** (or IO10) with the **Fire** definition. The app sets **Delay** to 2000 ms.
+4.  Check the zone's **CID code**: Contact ID 110 is the fire alarm code. **[to confirm: whether the code changes to 110 by itself]**
+5.  In **System options → Arming Restrictions**, decide whether **Fire Loop Trouble** blocks arming.
+6.  Tap **Write**.
+
+### Temperature sensor and thermostat
+
+1.  Connect an NTC 10K sensor between a free I/O terminal and the common terminal.
+2.  In **Terminals**, open **Assign function → Assign temperature input** on that terminal.
+3.  In the sensor popup, enter the **Name**, the sensor's **B Constant** (usually 3950) and **NTC R0** (10000 for a 10K sensor).
+4.  For an alarm on temperature, set **Min** and **Max** and turn on **Notify when below** and **Notify when above**.
+5.  For heating or cooling, create an output with the **Remote control** or **Thermostat** definition for the heater, then in **Devices & Interfaces → Thermostats** tap **+ Add**: choose the sensor in **When**, the temperature, the **Mode** (**Heating** or **Cooling**) and the **Output**.
+6.  Tap **Write**.
+
+**Check:** the sensor's **Live Reading** shows a plausible temperature.
+
+### Stay and Sleep arming and entry delays
+
+1.  In **Areas (Partitions)**, open the area and set **Entry delay 1** (main entrance), **Entry delay 2** (a second entrance), and **Exit delay**.
+2.  For zones that should stay active while people are inside, use the **Instant**, **Delay** or **24 Hour** definitions. For zones that should be off in Stay mode, use **Interior Stay** or **Instant Stay**.
+3.  Under **Advanced**, set **Arm mode if no exit**: if nobody leaves during the exit delay, the area arms in **Stay** or **Sleep** instead of away.
+4.  Optionally turn on **Re-ARM** (arms the area again if it was disarmed remotely and no zone was violated) or **Auto-arm**. **[to confirm: how Auto-arm works]**
+5.  Tap **Write**.
+
+### SMS messages and calls to users
+
+1.  Make the user a **Supervisor** (**General** tab) and enter their **Phone number**. Only supervisors receive event SMS (up to 8).
+2.  On the **SMS reporting** tab, choose **Notify about** (all events, events only or restores only) and which zones, outputs and system events to send.
+3.  On the **Call and SMS** tab, turn on **Command replies (ACK)** to confirm commands by SMS, and **Greeting SMS on new user** if wanted.
+4.  In **System events → SMS texts**, check the words used in the messages. Each SMS starts with the **Object Name**.
+5.  To block a phone number, email or card, add it in **Users → Black list**.
+6.  Tap **Write**.
+
+**Check:** trigger a zone and confirm the supervisor gets the SMS.
 
 ## Commissioning and handover
 
