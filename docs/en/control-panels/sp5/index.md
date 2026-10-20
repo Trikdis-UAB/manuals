@@ -366,6 +366,9 @@ Do this first, before you add zones and users.
     - **Domain or IP** and **Port** of the receiver.
     - **Protocol**: the one the receiver uses. **[to confirm: TRK8 for TRIKDIS receivers]** For **SIA DC-09_2012** or **SIA DC-09_2007**, also choose the **Message format** (CID or SIA).
     - **Encryption key**. For SIA DC-09, an empty key means no encryption; turn on **Key is HEX** if you got a 32-digit hexadecimal key.
+
+    ![Protegus app, SP5 Primary channel card: Primary channel on, Communication method Network (SMS is the other choice), Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol SIA DC-09_2012, Message format CID, a masked Encryption key, Key is HEX on, and a Backup channel link.](./protegus-app/sp5-popup-cms-sia.webp){ .trik-popup-img }
+
 4.  In **Receiver**, enter the **Number** and **Line**, if the monitoring station uses them.
 5.  For a backup receiver, open **Backup channel**, turn on **Enable backup channel** and set it the same way. To send the reports by SMS when the network fails, turn on **Enable fallback SMS channel** and enter the station's **Phone number**.
 6.  To report to a second monitoring station at the same time, set up the **Parallel channel** the same way.
@@ -377,7 +380,10 @@ Do this first, before you add zones and users.
 ### Adding wired zones
 
 1.  Wire the detectors to IO1–IO10 or to an iO-8 / iO8-LORA expander (see [Connecting detectors](#connecting-detectors)).
-2.  If you use an expander, connect it to the RS485 bus, then in **Devices & Interfaces → Expanders** choose **Expanders → Scan for new expanders**. Its inputs then appear as terminals, for example **RS485 Garage iO8, 1 I/O**.
+2.  If you use an expander, connect it to the RS485 bus, then in **Devices & Interfaces → Expanders** choose **Expanders → Scan for new expanders**. Its inputs then appear as terminals, for example **RS485 Garage iO8, 1 I/O**. If the scan does not find the module, choose **Expanders → Add manually** and enter its **Device type**, **Serial number** and **Name**.
+
+    ![Protegus app, SP5 Add manually popup, with a note to use it only when the automatic scan does not find the module: Device type iO8 expander, Serial number 0C2D3E, Name Hall iO8, and the Cancel and Add expander buttons.](./protegus-app/sp5-popup-expander-add.webp){ .trik-popup-img }
+
 3.  In **Areas and zones → Areas (Partitions)**, tap **+ Add areas** and tick the areas you need. Set their **Entry delay**, **Exit delay** and **Bell time** in the area popup.
 4.  In **Areas and zones → Zones**, tap **+ Add**, then:
     - enter the zone's **Name**;
@@ -385,7 +391,13 @@ Do this first, before you add zones and users.
     - choose the area in **Assign area**;
     - choose the **Definition**, for example **Delay** for the entrance door, **Interior** for motion detectors, **Instant** for windows;
     - choose the **Type** (circuit) that matches the wiring.
+
+    ![Protegus app, SP5 zone popup Front door properties: Name Front door, Assign terminal SP5 1 I/O, Assign area Home, Definition Delay, Type EOL, Delay 400 ms, Intelli zone off, Inactivity time 0. Under Zone Behavior: Chime (Entry alert) and Can be bypassed on, Auto bypass on arm (force arm) and Violation reminder off, CID code 134, Report on with CMS and Protegus2 ticked. Reset I/O terminal, Cancel and Save at the bottom.](./protegus-app/sp5-popup-zone-edit.webp){ .trik-popup-img }
+
 5.  For two detectors on one terminal, use the arrow next to **+ Add** and choose **Add ATZ zone**.
+
+    ![Protegus app, SP5 ATZ Zone properties popup, which sets up two zones on one terminal: Assign terminal SP5 6 I/O, Type ATZ. Zone A (Zone 9) Office door and Zone B (Zone 10) Office PIR, both in area Home with Definition Instant, Delay 400 and Inactivity time 0, each with its own Zone Behavior link. Reset I/O terminal, Cancel and Save at the bottom.](./protegus-app/sp5-popup-zone-atz.webp){ .trik-popup-img }
+
 6.  To create many zones with the same settings, use **Add multiple zones**.
 7.  Tap **Write**.
 
@@ -397,6 +409,9 @@ Do this first, before you add zones and users.
 2.  In **Devices & Interfaces → Keypads**, tap **Scan for new keypads**.
 3.  For each keypad, choose the areas it controls in **Assign area**. Keypads with a serial number starting 51 or 1E control up to 2 areas.
 4.  Optionally, tap **Edit** to name the keypad and assign outputs to its utility keys.
+
+    ![Protegus app, SP5 keypad popup Hall keypad, serial 52A1C3F0: Name Hall keypad, Assign area Home and Garage, and Utility key outputs K1 to K6, all Not assigned, with the note that each utility key can trigger one PGM output and only outputs of type Remote control can be assigned.](./protegus-app/sp5-popup-keypad-edit.webp){ .trik-popup-img }
+
 5.  Under **Global Keypad Parameters**, choose 4- or 6-digit user codes (**6-digit user code**), the lockout after wrong codes, the duress code type and the emergency key alarms.
 6.  To use the keypad's own zone input, add a zone on the terminal **Keypad *n* IN** (types NO, NC or EOL).
 7.  Tap **Write**.
@@ -409,8 +424,14 @@ Do this first, before you add zones and users.
 2.  In **Devices & Interfaces → Expanders**, choose **Expanders → Scan for new expanders**. The receiver must appear in the list.
 3.  In **Devices & Interfaces → Wireless**, tap the gear button and set **Sensor lost after**: how long a silent device is reported as lost.
 4.  Disarm all areas and clear any faults. Tap **Scan for new devices**.
-5.  Press the pairing key on the device, as its own instructions describe, until its green light stays on for 2 seconds. The device appears in the list marked **NEW**. Repeat for the other devices, then tap **Done**.
+5.  Press the pairing key on the device, as its own instructions describe, until its green light stays on for 2 seconds. The device appears in the list marked **NEW**. Repeat for the other devices. When the scan ends, the app lists the paired devices as **Not Configured**; tap **Done**.
+
+    ![Protegus app, SP5 popup Scan Complete: 1 New Device(s) Added, listing Magnet Wireless LV, SN 8412999, marked Not Configured, with a Done button.](./protegus-app/sp5-popup-wireless-scan.webp){ .trik-popup-img }
+
 6.  Tap a new device and set its zone **Name**, **Assign area** and **Definition**. The app gives detectors a free zone with the **24 Hour** definition, so change it to what the device protects.
+
+    ![Protegus app, SP5 wireless device Configuration popup for Magnet Wireless LV, serial 8412173, signal 86 %, 3.1 V: Name Terrace door, Assign area Home, Definition Delay, Delay 400, a Zone Behavior link, and Delete Sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-wireless-config.webp){ .trik-popup-img }
+
 7.  For a keyfob, choose its area and **Assigned user**, and what keys 3 and 4 do.
 8.  Tap **Write**.
 
@@ -427,8 +448,14 @@ Do this first, before you add zones and users.
     - **RFID / Card number** for a card or tag;
     - **Phone number** for SMS and call control;
     - **Email** for the Protegus2 app.
+
+    ![Protegus app, SP5 Edit user: Sample user 1 popup on the General tab, with the Active switch on and the tabs General, Permissions, Groups, Validity and Call and SMS. System profile Standard - Regular user, Name Sample user 1, User number 2 (auto-assigned) with a Change number link, Phone number +447700900002, an empty Email, a masked Keypad code and RFID / Card number 4A3B2C1D.](./protegus-app/sp5-popup-user-general.webp){ .trik-popup-img }
+
 3.  Keep the **System profile** at **Standard** for ordinary users. Make a user **Supervisor** only if they need SMS and call control of the system and user management (up to 8).
 4.  On the **Permissions** tab, turn on **Allow arm** and **Allow disarm** and choose the **Assigned areas**. To let the user open doors or gates, turn on **Allow control** and choose the outputs.
+
+    ![Protegus app, SP5 Edit user: Sample user 1 popup on the Permissions tab. Areas: Allow arm and Allow disarm on, assigned area Home. Outputs: Allow control on, assigned output Garage gate.](./protegus-app/sp5-popup-user-permissions.webp){ .trik-popup-img }
+
 5.  For a temporary user, such as a cleaner, turn on **Limit access to a time period** on the **Validity** tab.
 6.  Tap **Save**, then **Write**.
 
@@ -455,9 +482,18 @@ The door can then be opened from the Protegus app and from a keypad utility key 
 
 1.  Connect the device to a free I/O terminal (through an external relay; I/O outputs give up to 0.1 A) or to **REL**.
 2.  In **Terminals**, open **Assign function → Assign PGM output** on that terminal.
+
+    ![Protegus app, SP5 Assign terminal function popup for SP5 6 I/O with two choices: Zone input, which makes the terminal a detector input, with an Assign zone input button, and PGM output, which drives a relay lock, gate motor or light, with an Assign PGM output button. A More functions link is below them.](./protegus-app/sp5-popup-terminal-assign.webp){ .trik-popup-img }
+
 3.  Set **Definition** to **Remote control**. Choose **Type**: **Pulse** for a gate (one press opens or closes it) or **Level** for lights (on until switched off).
+
+    ![Protegus app, SP5 output popup Garage gate properties: Name Garage gate, Definition Remote control, Type Pulse, Pulse time 3, Need code in Keypad off, Report on with Protegus2 ticked and CMS not ticked, and Reset I/O terminal, Cancel and Save at the bottom.](./protegus-app/sp5-popup-output-remote.webp){ .trik-popup-img }
+
 4.  Give the users the right to control it: **Permissions** tab → **Allow control**.
 5.  To open the gate by calling the panel, enter the user's **Phone number** and choose the output in **Call and SMS → Automatic control targets**.
+
+    ![Protegus app, SP5 Edit user: Sample user 1 popup on the Call and SMS tab. Dial / call control: Automatic control targets Garage gate, with a note that control by call needs the user's phone number and that with no target chosen the panel waits for a DTMF code. Notifications: Command replies (ACK) on, Greeting SMS on new user off.](./protegus-app/sp5-popup-user-sms.webp){ .trik-popup-img }
+
 6.  Tap **Write**.
 
 **Check:** the output appears on the system's main screen in the Protegus app and switches when you tap it.
@@ -474,10 +510,16 @@ The door can then be opened from the Protegus app and from a keypad utility key 
 ### Temperature sensor and thermostat
 
 1.  Connect an NTC 10K sensor between a free I/O terminal and the common terminal.
-2.  In **Terminals**, open **Assign function → Assign temperature input** on that terminal.
+2.  In **Terminals**, open **Assign function** on that terminal and choose **Assign temperature input** (under **More functions** when the zone and output functions are offered too).
 3.  In the sensor popup, enter the **Name**, the sensor's **B Constant** (usually 3950) and **NTC R0** (10000 for a 10K sensor).
 4.  For an alarm on temperature, set **Min** and **Max** and turn on **Notify when below** and **Notify when above**.
+
+    ![Protegus app, SP5 Sensor popup: Type Temperature (Voltage and Resistance are the other choices), Name Living room temperature, Terminal Temperature (zone) - IN 9, Assign thermostat Living room heating. Min temperature 5 °C and Max temperature 30 °C, each with its Notify switch on. Delay 60 min, B Constant 3950, NTC R0 10000. Reset sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-sensor-ntc.webp){ .trik-popup-img }
+
 5.  For heating or cooling, create an output with the **Remote control** or **Thermostat** definition for the heater, then in **Devices & Interfaces → Thermostats** tap **+ Add**: choose the sensor in **When**, the temperature, the **Mode** (**Heating** or **Cooling**) and the **Output**.
+
+    ![Protegus app, SP5 Thermostat popup, switched on: Name Living room heating. IF: when Living room temperature is below 21.5. THEN HEATING: Mode Heating, Output Heating. Remove thermostat, Cancel and Save at the bottom.](./protegus-app/sp5-popup-thermostat.webp){ .trik-popup-img }
+
 6.  Tap **Write**.
 
 **Check:** the sensor's **Live Reading** shows a plausible temperature.
@@ -487,6 +529,9 @@ The door can then be opened from the Protegus app and from a keypad utility key 
 1.  In **Areas (Partitions)**, open the area and set **Entry delay 1** (main entrance), **Entry delay 2** (a second entrance), and **Exit delay**.
 2.  For zones that should stay active while people are inside, use the **Instant**, **Delay** or **24 Hour** definitions. For zones that should be off in Stay mode, use **Interior Stay** or **Instant Stay**.
 3.  Under **Advanced**, set **Arm mode if no exit**: if nobody leaves during the exit delay, the area arms in **Stay** or **Sleep** instead of away.
+
+    ![Protegus app, SP5 area popup Home properties | Area 1: Number 1, Area name Home, ten assigned zones from Front door to Boiler room leak, Entry delay 1 30, Entry delay 2 15, Exit delay 45, Tamper action Alarm when armed, Keyswitch mode Level, Bell time 180. Under Advanced: Re-ARM on, Intellizone delay 20, Auto-arm and Squawk off, Arm mode if no exit Stay, Conditional arming Not assigned. Remove area, Cancel and Save at the bottom.](./protegus-app/sp5-popup-area-edit.webp){ .trik-popup-img }
+
 4.  Optionally turn on **Re-ARM** (arms the area again if it was disarmed remotely and no zone was violated) or **Auto-arm**. **[to confirm: how Auto-arm works]**
 5.  Tap **Write**.
 
@@ -1384,7 +1429,7 @@ Menu **Devices & Interfaces → Temperature sensors**. Lists up to 20 sensors me
 
 Menu **Devices & Interfaces → Thermostats**. A thermostat switches an output when a sensor's temperature crosses a threshold. Up to 8 thermostats; only those switched on are listed.
 
-![Protegus app, SP5 Thermostats page in a desktop browser: a Refresh status link, a + Add button and one thermostat: Living room heating, mode Heating, sensor Living room temperature, Target temp. < 21.5 °C, with the Active sensor switch on and an Edit link.](./protegus-app/sp5-thermostats-desktop-content.webp)
+![Protegus app, SP5 Thermostats page in a desktop browser: a Refresh status link, a + Add button and one thermostat: Living room heating, mode Heating, sensor Living room temperature, Target temp. < 21.5 °C, output Heating, with the Active sensor switch on and an Edit link.](./protegus-app/sp5-thermostats-desktop-content.webp)
 
 #### Thermostat list
 
