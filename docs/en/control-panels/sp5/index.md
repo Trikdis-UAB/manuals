@@ -1,12 +1,12 @@
 # Security control panel "FLEXi" SP5
 
 !!! warning "Draft for internal review, not published"
-    This page is a working draft. It is built from the SP5 specification, the firmware designer's terminal notes, the test log, the Protegus app (beta front-end, firmware 1.00, hardware revision 1E7LWB.0) and the settings read from a test panel.
+    This page is a working draft. It is built from the SP5 specification, the firmware designer's terminal notes, the test log, the Protegus app (beta front-end, firmware 1.00, hardware revision 1E7LWB.0), the settings read from a test panel, and the test team's answers and board photo.
     Items marked **[to confirm]** come from the specification or are inferred, and need a check against a production board before publishing. The product name may change to SP10.
 
 ## About the control panel
 
-The "FLEXi" SP5 is an intrusion and access control panel for small and medium sites: shops, offices, warehouses, service centres, schools and gyms. It has a built-in 4G LTE modem, a LAN port and a 2.4 GHz WiFi module. It reports events to monitoring stations (CMS) and to the Protegus cloud, and it is configured in the Protegus app.
+The "FLEXi" SP5 is an intrusion alarm control panel for small and medium sites: shops, offices, warehouses, service centres, schools and gyms. It has a built-in 4G LTE modem, a LAN port and a 2.4 GHz WiFi module. It reports events to monitoring stations (CMS) and to the Protegus cloud, and it is configured in the Protegus app.
 
 The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus. With keypads, RS485 expanders and wireless devices it supports up to 192 zones in 16 areas.
 
@@ -30,14 +30,14 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 
 | Parameter | Value |
 |---|---|
-| Power supply voltage [AC / DC] | 16 V AC or 12–24 V DC |
-| Current consumption | **[to confirm]** |
-| Backup power source [BAT] | 12 V lead-acid battery **[capacity to confirm]** |
+| Power supply voltage [AC / DC] | 16 V AC or 16–24 V DC, 2.5 A, as marked on the board **[the specification says 12–24 V DC: to confirm]** |
+| Current consumption | **[to confirm: not measured yet]** |
+| Backup power source [BAT] | 12 V lead-acid battery, usually 7 Ah; choose the capacity for the connected equipment (see [Power budget](#power-budget)) |
 | Battery charge current | Up to 500 mA |
 | Power output for external devices [AUX] | 12 V DC, up to 2 A |
 | Siren output [BELL] | 1 A |
 | Open-collector output on an I/O terminal | 0.1 A |
-| Relay output [REL] | **[ratings to confirm]** |
+| Relay output [REL] | Changeover contacts NC, C, NO **[ratings to confirm]** |
 | Cellular modem | 4G LTE, EU version (EG915) **[bands to confirm]** |
 | SIM card | 1, nano-SIM |
 | WiFi | 2.4 GHz; DHCP or manual IP |
@@ -52,17 +52,17 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 | Event buffer | 256 events |
 | Event log | Up to 5000 events; the oldest are deleted automatically |
 | Users | Up to 999 |
-| On-board I/O terminals | 10 (IO1–IO10) |
+| On-board I/O terminals | 10 (IO1–IO10, marked IN1–IN10 on the board) |
 | Areas | 16 |
 | Zones | Up to 192 |
 | PGM outputs | Up to 64 |
 | Keypads | Up to 16 |
-| RFID readers (Wiegand 26/34) | Up to 2, on IO1–IO2 and IO3–IO4 |
 | Temperature, voltage and resistance inputs | Up to 20 sensors |
 | Devices on the RS485 bus | Up to 64 |
+| Cable length | RS485 bus and keypad bus: up to 100 m each |
 | Wireless devices | Up to 42 |
 | Operating environment | −10 °C to +50 °C, relative humidity up to 80 % at +20 °C, no condensation |
-| Dimensions, weight | **[to confirm]** |
+| Board dimensions, weight | 161 × 75 × 30 mm, 0.12 kg |
 
 ### System limits in the Protegus app
 
@@ -86,42 +86,50 @@ The app enforces these maximums:
 
 ### Board and terminals
 
-!!! question "To confirm"
-    Board photo with numbered callouts, the position of the USB connector, SIM holder, antenna connectors and the F1 button. Requested from the test team.
+![Photo of the SP5 board from above. Along the bottom edge, left to right: the 12V −BAT+ battery plug, then the screw terminals + DC − (marked 2,5A, 16V/AC, 16-24V/DC), +BELL−, +AUX−, GRN YEL, A 485 B, IN1 IN2 C IN3 IN4 C IN5 IN6 C IN7 IN8 C IN9 IN10 and AUX + −, with HIN marked above IN8 and FL1 and FL2 above IN9 and IN10. The LAN port is at the bottom right. Along the top edge, left to right: the ANT GSM antenna connector, the USB connector, five LEDs marked SIM, ETH, WIFI, DAT and PWR, the ANT WIFI antenna connector, a push button, and the relay with its NC, C, NO screw terminals. The SIM card holder is on the left.](./sp5-board.webp)
 
-| Terminal | Purpose |
+| Marked on the board | Purpose |
 |---|---|
-| Power terminals | Power supply input, 16 V AC or 12–24 V DC **[labels to confirm]** |
-| BAT+ / BAT− | 12 V backup battery **[labels to confirm]** |
-| AUX+ / AUX− | 12 V DC output for external devices, up to 2 A **[labels to confirm]** |
-| BELL+ | Siren supply, always on |
-| BELL− | Siren output. Default function **Siren**; can be changed to other output functions, such as **Remote control** |
+| + DC − | Power supply input: 16 V AC or 16–24 V DC, 2.5 A |
+| 12V −BAT+ | 12 V backup battery (plug-in lead) |
+| +BELL− | Siren output. BELL+ is the siren supply, always on. BELL− is switched; its default function is **Siren** and it can be changed, for example to **Remote control** |
+| +AUX− | 12 V DC output for external devices, up to 2 A. A second AUX pair is at the right end of the terminal strip |
 | GRN, YEL | Keypad data bus |
-| A, B | RS485 data bus for expanders and wireless receivers |
-| IO1–IO10 | Input/output terminals. Each can be a zone input, a PGM output (open collector), a temperature input (NTC 10K), a voltage input or a resistance input |
-| REL | Relay output; its function can be changed |
-| C | Common terminal **[label to confirm]** |
+| A 485 B | RS485 data bus for expanders and wireless receivers |
+| IN1–IN10 | Input/output terminals, called IO1–IO10 in this manual and **SP5 1 I/O** to **SP5 10 I/O** in the app. Each can be a zone input, a PGM output (open collector), a temperature input (NTC 10K), a voltage input or a resistance input |
+| C | Common terminals for IN1–IN10, one after each pair |
+| NC, C, NO | Relay contacts, at the top right. The app calls this output **REL**; its function can be changed |
 
-Additional functions of the I/O terminals:
+Additional markings on the I/O terminals:
 
 | Terminals | Additional function |
 |---|---|
-| IO1, IO2 | RFID reader 1 (Wiegand 26/34) |
-| IO3, IO4 | RFID reader 2 (Wiegand 26/34) |
-| IO9, IO10 | 2-wire fire loop **[IO9 and IO10, or IO10 only: to confirm]** |
+| IO9 (FL1), IO10 (FL2) | 2-wire fire loop. Both can be used at the same time; they work independently |
+| IO8 (HIN) | **[what HIN means: to confirm]** |
+
+Other parts of the board:
+
+- **ANT GSM** and **ANT WIFI:** connectors for the cellular and WiFi antennas.
+- **SIM:** the nano-SIM card holder.
+- **LAN:** the Ethernet port.
+- **USB:** USB-C connector **[what it is used for: to confirm]**.
+- **SIM, ETH, WIFI, DAT, PWR:** LEDs (see [LED indication](#led-indication)).
+- **F1 button** next to the relay: turns on the WiFi setup mode, for setting the WiFi network name (SSID). **[how the setup mode is used, and how to restore the factory settings: to confirm]**
 
 A terminal can have only one function at a time. When you assign a terminal as a zone, it is removed from the output and sensor lists, and the other way round. The exception is resistance measurement: a terminal used as a zone can also be measured as a resistance sensor.
 
 ### LED indication
 
+The board has five LEDs along the top edge, marked **SIM**, **ETH**, **WIFI**, **DAT** and **PWR**.
+
 !!! question "To confirm"
-    Which LEDs the board has and what each colour and blink pattern means. Requested from the test team.
+    What each LED's colour and blink pattern means. The test team will send it.
 
 ## Planning the system
 
 ### How the devices connect
 
-- **On-board terminals (IO1–IO10):** wired detectors, sirens, relays, readers and sensors.
+- **On-board terminals (IO1–IO10):** wired detectors, sirens, relays and sensors.
 - **Keypad bus (GRN, YEL):** up to 16 keypads. Each keypad also gives one zone input.
 - **RS485 bus (A, B):** up to 64 devices: input/output expanders and wireless receivers.
 - **Wireless:** detectors, sirens and key fobs through an RF-LORA or RF-S8 receiver on the RS485 bus, up to 42 devices.
@@ -137,7 +145,7 @@ The panel has up to 192 logical zones. Each zone takes its input from one of the
 | RS485 expanders (iO, iO-8, iO-LORA, iO8-LORA) | 1 or 8 per expander; ATZ on iO-8 doubles them | All on iO-8 |
 | Keypad inputs | 1 per keypad, up to 16 | NO, NC, EOL; also EOL_T on keypads with serial numbers starting 1D, 1E, 51 or 52 |
 | Wireless devices | 1 per device, up to 42 | Set by the device |
-| 2-wire fire loop | IO9 or IO10 | Fire |
+| 2-wire fire loops | IO9, IO10 or both | Fire |
 
 ### Supported keypads
 
@@ -155,15 +163,17 @@ The backup battery must keep the system running after a mains failure. EN 50131 
 
 Battery capacity (Ah) ≥ standby current (A) × required hours + alarm current (A) × alarm time (h)
 
+A 7 Ah battery is the usual choice; a system with many devices on AUX may need a larger one.
+
 !!! question "To confirm"
-    The panel's own current in standby and while transmitting, and the recommended battery capacity.
+    The panel's own current in standby and while transmitting. It has not been measured yet.
 
 ### Choosing the installation site
 
 - Install the panel indoors, in a dry place, within −10 °C to +50 °C and up to 80 % relative humidity.
 - Check the cellular signal where the antenna will be before fixing the enclosure.
 - Keep the panel and its cables away from mains cables and strong sources of interference.
-- Plan the cable routes for the keypad bus and the RS485 bus before mounting. **[Maximum cable lengths to confirm]**
+- Plan the cable routes for the keypad bus and the RS485 bus before mounting. Each bus can be up to 100 m long.
 
 ## Installation and wiring
 
@@ -181,7 +191,7 @@ Battery capacity (Ah) ≥ standby current (A) × required hours + alarm current 
 
 ### Connecting detectors
 
-Any of the terminals IO1–IO10 can be a zone input. Set the circuit type of each zone in the app (**Areas and zones → Zones**, column **Type**). With the ATZ types, one terminal carries two zones.
+Any of the terminals IO1–IO10 (marked IN1–IN10 on the board) can be a zone input. Set the circuit type of each zone in the app (**Areas and zones → Zones**, column **Type**). With the ATZ types, one terminal carries two zones.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
   <figure style="margin: 0;">
@@ -248,10 +258,10 @@ Choose the resistor set in **System options → Wired Zone Resistor Values (EOL 
 
 ### Connecting fire detectors
 
-A 2-wire fire loop can be connected to IO9 or IO10. Turn on **2-wire fire on IO9** or **2-wire fire on IO10** in **System options → System Behavior**. The terminal then becomes a Fire zone and can't be used for anything else. A zone set to **Fire** gets a response time of 2000 ms.
+A 2-wire fire loop can be connected to IO9, IO10 or both (marked FL1 and FL2 on the board); the two loops work independently. Turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both in **System options → System Behavior**. The terminal then becomes a Fire zone and can't be used for anything else. A zone set to **Fire** gets a response time of 2000 ms.
 
 !!! question "To confirm"
-    Whether both IO9 and IO10 support the 2-wire fire loop (the app's terminal page says IO10 only), the end-of-line resistor and wiring for SP5, and how 4-wire detectors and fire sensor reset are wired.
+    The end-of-line resistor and wiring of the 2-wire loop for SP5, and how 4-wire detectors and fire sensor reset are wired.
 
 ### Connecting a siren
 
@@ -259,23 +269,16 @@ Connect the siren between **BELL+** and **BELL−**. The BELL output is supervis
 
 ### Connecting outputs
 
-- **REL:** relay output on the board, for example for a door lock or a gate. **[contact ratings to confirm]**
+- **Relay (NC, C, NO; REL in the app):** changeover contacts, for example for a door lock or a gate. **[contact ratings to confirm]**
 - **IO1–IO10 as outputs:** open-collector outputs, up to 0.1 A each. Use an external relay for larger loads.
 
 ### Connecting keypads
 
-Connect keypads in parallel to the keypad bus: **AUX+**, **AUX−**, **GRN** and **YEL** **[as on "FLEXi" SP3; to confirm]**. Up to 16 keypads. Each keypad has one zone input; set its type in **Zones** (NO, NC or EOL).
+Connect keypads in parallel to **AUX+**, **AUX−**, **GRN** and **YEL**. Up to 16 keypads; the bus can be up to 100 m long. Each keypad has one zone input; set its type in **Zones** (NO, NC or EOL).
 
 ### Connecting RS485 expanders and wireless receivers
 
-Connect RS485 devices in parallel to **AUX+**, **AUX−**, **A** and **B**. Each device must have a unique RS485 address (1–64). The panel recognises the modules; you then configure them in **Devices & Interfaces → Expanders** or **Wireless**.
-
-### Connecting RFID readers (Wiegand 26/34)
-
-Up to 2 readers. Reader 1 connects to IO1 and IO2, reader 2 to IO3 and IO4. Power the readers from AUX. **[D0/D1 order to confirm; on SP3, D0 goes to IO1 and D1 to IO2]**
-
-!!! question "To confirm"
-    Whether Wiegand readers work in firmware 1.00 and how they are enabled in the app.
+Connect RS485 devices in parallel to **AUX+**, **AUX−**, **A** and **B**; the bus can be up to 100 m long. Each device must have a unique RS485 address (1–64). The panel recognises the modules; you then configure them in **Devices & Interfaces → Expanders** or **Wireless**.
 
 ### Connecting temperature, voltage and resistance sensors
 
@@ -289,7 +292,7 @@ Assign the function in **Terminals** and set the alarm limits in **Devices & Int
 
 ### SIM card, antennas and LAN
 
-Insert an activated nano-SIM card with the PIN code disabled, or enter the PIN in **Communication → Connection → SIM**. Connect the cellular and WiFi antennas **[connector positions to confirm]** and, if used, the LAN cable.
+Insert an activated nano-SIM card with the PIN code disabled, or enter the PIN in **Communication → Connection → SIM**. Connect the cellular antenna to **ANT GSM** and the WiFi antenna to **ANT WIFI**, at the top edge of the board, and, if used, the LAN cable.
 
 ## First power-up and adding the panel to Protegus
 
@@ -445,7 +448,7 @@ Do this first, before you add zones and users.
 1.  In **Users → User list**, tap **+ Add user**.
 2.  On the **General** tab, enter the **Name** and, as needed:
     - **Keypad code** for keypads;
-    - **RFID / Card number** for a card or tag;
+    - **RFID / Card number** for a card or tag **[which reader reads it: to confirm]**;
     - **Phone number** for SMS and call control;
     - **Email** for the Protegus2 app.
 
@@ -463,11 +466,11 @@ For many users with the same rights, create a group in **Users → Groups** and 
 
 **Check:** the user appears in the list with status **Active** and the right **Credentials** (Code, RFID, App).
 
-### Controlling a door with a reader and the relay
+### Controlling a door lock with the relay
 
-The on-board relay (**REL**) can drive a door lock.
+The relay on the board (contacts **NC**, **C**, **NO**; **REL** in the app) can drive a door lock.
 
-1.  Connect the lock's supply through the **REL** contacts. **[contact ratings to confirm]**
+1.  Connect the lock's supply through the relay contacts: **C** and **NO** for a lock that opens when powered, **C** and **NC** for a lock that holds while powered. **[contact ratings to confirm]**
 2.  In **Terminals**, open **Output settings** on **REL** (or **Assign function → Assign PGM output** if it is free).
 3.  Set **Definition** to **Remote control**, **Type** to **Pulse** and a **Pulse time**, for example 3 seconds.
 4.  Give the users who may open the door the right: **Permissions** tab → **Allow control** → choose this output.
@@ -475,8 +478,7 @@ The on-board relay (**REL**) can drive a door lock.
 
 The door can then be opened from the Protegus app and from a keypad utility key (see **Keypads**).
 
-!!! question "To confirm"
-    How a Wiegand reader on IO1–IO2 or IO3–IO4 is enabled, and whether a user's card at the reader opens the door. The app has no reader settings yet.
+The panel has no access control functions yet: Wiegand readers don't work in firmware 1.00.
 
 ### Controlling a gate or lights from Protegus and by phone call
 
@@ -500,8 +502,8 @@ The door can then be opened from the Protegus app and from a keypad utility key 
 
 ### Setting up a fire zone
 
-1.  Wire the 2-wire smoke detectors to IO9 or IO10 (see [Connecting fire detectors](#connecting-fire-detectors)).
-2.  In **System options → System Behavior**, turn on **2-wire fire on IO9** or **2-wire fire on IO10**.
+1.  Wire the 2-wire smoke detectors to IO9, IO10 or both (see [Connecting fire detectors](#connecting-fire-detectors)).
+2.  In **System options → System Behavior**, turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both.
 3.  In **Zones**, add a zone on the terminal **SP5 9 I/O - 2-wire fire zone** (or IO10) with the **Fire** definition. The app sets **Delay** to 2000 ms.
 4.  Check the zone's **CID code**: Contact ID 110 is the fire alarm code. **[to confirm: whether the code changes to 110 by itself]**
 5.  In **System options → Arming Restrictions**, decide whether **Fire Loop Trouble** blocks arming.
@@ -509,7 +511,7 @@ The door can then be opened from the Protegus app and from a keypad utility key 
 
 ### Temperature sensor and thermostat
 
-1.  Connect an NTC 10K sensor between a free I/O terminal and the common terminal.
+1.  Connect an NTC 10K sensor between a free I/O terminal and a **C** terminal.
 2.  In **Terminals**, open **Assign function** on that terminal and choose **Assign temperature input** (under **More functions** when the zone and output functions are offered too).
 3.  In the sensor popup, enter the **Name**, the sensor's **B Constant** (usually 3950) and **NTC R0** (10000 for a 10K sensor).
 4.  For an alarm on temperature, set **Min** and **Max** and turn on **Notify when below** and **Notify when above**.
