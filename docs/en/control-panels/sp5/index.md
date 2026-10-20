@@ -18,7 +18,7 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 | Areas (partitions) | 8 | 16 |
 | Keypads | up to 8 | up to 16 |
 | Devices on the RS485 bus | up to 8 | up to 64 |
-| Users | 40 | up to 999 |
+| Users | 40 | up to 1000 |
 | Event log | 1000 events | 5000 events |
 | Event buffer | 60 events | 256 events |
 | LAN | with the E485 module | built in |
@@ -51,7 +51,7 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 | Internal clock | Yes, with time synchronization (SIM, LAN, NTP server) |
 | Event buffer | 256 events |
 | Event log | Up to 5000 events; the oldest are deleted automatically |
-| Users | Up to 999 **[the app allows 1000: to confirm]** |
+| Users | Up to 1000 |
 | On-board I/O terminals | 10 (IO1–IO10, marked IN1–IN10 on the board) |
 | Areas | 16 |
 | Zones | Up to 192 |
@@ -112,7 +112,7 @@ Other parts of the board:
 - **ANT GSM** and **ANT WIFI:** connectors for the cellular and WiFi antennas.
 - **SIM:** the nano-SIM card holder.
 - **LAN:** the Ethernet port.
-- **USB:** USB-C connector for configuring the panel over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows the connection **Via USB**. **[how to open the USB configuration in the app: to confirm]**
+- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows the connection **Via USB**. **[how to open the USB configuration in the app: to confirm]**
 - **SIM, ETH, WIFI, DAT, PWR:** LEDs (see [LED indication](#led-indication)).
 - **F1 button** next to the relay: turns on the WiFi setup mode, for setting the WiFi network name (SSID). **[how the setup mode is used, and how to restore the factory settings: to confirm]**
 
@@ -149,11 +149,11 @@ The panel has up to 192 logical zones. Each zone takes its input from one of the
 
 ### Supported keypads
 
-Protegus SK232 LED W (SK-LED TouchPad), FLEXi SK232 LCD (SK-LCD TouchPad), SK LCD Button, SK LED Button, Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 and TM70 **[final list to confirm]**.
+Tested with firmware 1.00: FLEXi SK232 LCD (SK-LCD TouchPad), SK LCD Button, and Paradox TM50 and TM70. Support for Protegus SK232 LED W (SK-LED TouchPad) is in progress. The specification also lists SK LED Button and Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+ and K35 **[to confirm]**.
 
 ### Supported RS485 modules
 
-iO, iO-8, iO-LORA, iO8-LORA expanders and RF-LORA and RF-S8 wireless receivers **[full list to confirm, including T16]**. The panel recognises connected RS485 modules automatically.
+iO-8, iO-LO and iO8-LORA expanders, RF-LORA and RF-S8 wireless receivers, and T16 and T16v2 **[PB-LORA and other modules: to confirm]**. Only one of RF-LORA, RF-S8, T16 and T16v2 can be connected. The panel recognises connected RS485 modules automatically.
 
 ### Power budget
 
@@ -441,7 +441,7 @@ Do this first, before you add zones and users.
 **Check:** each device shows **Online**, with its signal (**RSSI, %**) and battery voltage.
 
 !!! question "To confirm"
-    Which wireless device families SP5 supports (Maximum Security and HEYI; Crow is listed in the app but not confirmed for SP5).
+    Which wireless device families SP5 supports. HEYI devices through RF-S8 are done. The firmware notes also name Maximum Security through RF-LORA, but the 2026 work list says Maximum support was dropped. Crow devices through RF-SH are being integrated.
 
 ### Adding users, codes and cards
 
@@ -534,7 +534,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
     ![Protegus app, SP5 area popup Home properties | Area 1: Number 1, Area name Home, ten assigned zones from Front door to Boiler room leak, Entry delay 1 30, Entry delay 2 15, Exit delay 45, Tamper action Alarm when armed, Keyswitch mode Level, Bell time 180. Under Advanced: Re-ARM on, Intellizone delay 20, Auto-arm and Squawk off, Arm mode if no exit Stay, Conditional arming Not assigned. Remove area, Cancel and Save at the bottom.](./protegus-app/sp5-popup-area-edit.webp){ .trik-popup-img }
 
-4.  Optionally turn on **Re-ARM** (arms the area again if it was disarmed remotely and no zone was violated) or **Auto-arm**. **[to confirm: how Auto-arm works]**
+4.  Optionally turn on **Re-ARM** (arms the area again if it was disarmed remotely and no zone was violated) or **Auto-arm** (after a disarm, arms the area again if the door wasn't opened within the **Auto-arm time**).
 5.  Tap **Write**.
 
 ### SMS messages and calls to users
@@ -558,8 +558,10 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 ## Maintenance
 
+**Firmware updates.** The firmware can be updated from the Protegus app over USB or remotely. The panel restarts after an update over USB (in about 5 seconds) and reconnects after a remote update. **[the update function is not in the app yet: to confirm when it is released]**
+
 !!! question "To confirm"
-    Firmware update procedure (USB, Protegus or both), factory reset, and the recommended battery replacement interval.
+    Factory reset, and the recommended battery replacement interval.
 
 ## Troubleshooting
 
@@ -948,10 +950,10 @@ The collapsed section at the bottom of the area popup.
 | Setting | What it does | Values |
 |---|---|---|
 | Re-ARM | Arms the area again automatically after it was disarmed from the app or by phone, if no zone was violated. | on / off |
-| Auto-arm | Arms the area automatically after the **Auto-arm time**, regardless of any conditions. **[to confirm: what the Auto-arm time is counted from]** | on / off |
+| Auto-arm | After the area is disarmed, arms it again if the door wasn't opened within the **Auto-arm time**. If arming fails, the panel reports **Auto arm failed**. | on / off |
 | Auto-arm time | The time for **Auto-arm**. Editable while **Auto-arm** is on; turning **Auto-arm** on sets it to 1 min. | 1–999 min |
 | Arm mode if no exit | If nobody leaves during the exit delay, the area arms in this mode instead of away. | Arm away / Stay / Sleep |
-| Intellizone delay | For zones with **Intelli zone** on: an alarm needs at least two such zones to trigger within this time. | 0–999 s |
+| Intellizone delay | For zones with **Intelli zone** on: an alarm needs at least two such zones to trigger within this time. | 1–255 s |
 | Squawk | The siren chirps briefly when the area is armed or disarmed. | on / off |
 | Conditional arming | Other areas that must be armed for this area to be armed automatically. If they are not armed, this area stays disarmed. **[to confirm: whether all or any of the selected areas must be armed]** | the other enabled areas |
 
@@ -1007,7 +1009,7 @@ The collapsed section at the bottom of the zone popup.
 | Can be bypassed | Users can bypass the zone. | on / off |
 | Auto bypass on arm (force arm) | A zone that is violated when the area is armed is bypassed automatically. | on / off |
 | Violation reminder | Gives a reminder while the zone stays violated. Turning it on sets **Reminder interval** to 10. | on / off |
-| Reminder interval | How often the reminder repeats. 0 turns the reminder off. | 0–9999 s **[to confirm: the app shows seconds; may be minutes]** |
+| Reminder interval | How often the reminder repeats. 0 turns the reminder off. | 0–9999 **[the app shows seconds; the firmware notes say minutes: to confirm]** |
 | CID code | The Contact ID event code the zone reports. | 3 hex characters |
 | Report | Turns reporting of this zone on or off. Sets both boxes below. | on / off |
 | CMS (Central monitoring station) | Reports the zone's alarm and restore to the CMS. | on / off |
@@ -1062,7 +1064,7 @@ The descriptions follow "FLEXi" SP3, except **Delay 2** and **Mimic**, which SP3
 | Interior Stay | As **Interior**, but not protected when the area is armed in Stay mode. | 400, 132 |
 | Instant Stay | As **Instant**, but not protected when the area is armed in Stay mode. | 400, 130 |
 | Delay 2 | As **Delay**, using **Entry delay 2**. | 400, 134 |
-| Mimic | **[to confirm: what this definition does]** | 400, CID code unchanged |
+| Mimic | For monitoring only: the zone's state is shown, but it raises no alarm, sends no reports and is skipped when the panel checks for open zones before arming. | 400, CID code unchanged |
 
 #### Zone types
 
@@ -1473,7 +1475,7 @@ The title shows the output's name. **Reset I/O terminal** at the bottom (existin
 | Definition | What drives the output. See **Output definitions** below. | 11 definitions |
 | Type | **Level**: the output stays on until it is switched off. **Pulse**: it switches off after **Pulse time**. Shown for **Remote control** only; other definitions work as Level. | Level / Pulse |
 | Pulse time | How long a pulse lasts. Shown for **Pulse**. | 0–9999 seconds |
-| Need code in Keypad | Shown for **Remote control** only. **[to confirm: meaning not yet described]** | on / off |
+| Need code in Keypad | A keypad asks for a user code before it switches this output. Shown for **Remote control** only. | on / off |
 | Assign area | The areas the output follows. One area for **System state** and **Flash**; several for the sirens and **Strobe**. | enabled areas |
 | Report | Turns reporting of this output on or off. Sets both boxes below. | on / off |
 | CMS (Central monitoring station) | Reports the output switching on and off to the CMS. | on / off |
@@ -1688,7 +1690,7 @@ The events and their codes on a test panel are listed in the [appendix](#appendi
 | Enable event | Turns the event on or off. | on / off |
 | Report to CMS | Reports the event and its restore to the CMS. | on / off |
 | Report to Protegus2 | Reports the event and its restore to Protegus2. | on / off |
-| Event text | A text for the event. **[to confirm: whether the panel uses this text]** | up to 28 characters |
+| Event text | A text for the event. Firmware 1.00 doesn't use it. | up to 28 characters |
 
 !!! note
     The **Periodic test** event is the same setting as the **Periodic test** switch on **CMS Reporting**. Which supervisors receive an event by SMS is set in **User list → Edit user → SMS reporting**.
@@ -1712,7 +1714,7 @@ The panel builds every SMS as the system name, an event word and the name of the
 
 ## Appendix: system events and Contact ID codes
 
-Event codes read from a test panel. Each event can be turned on or off and have its code changed in **System events**.
+Factory default event codes, from the firmware design notes; a test panel showed the same codes. Each event can be turned on or off and have its code changed in **System events**.
 
 | Event | Contact ID |
 |---|---|
@@ -1753,6 +1755,3 @@ Event codes read from a test panel. Each event can be turned on or off and have 
 | High humidity | 168 |
 | Auto arm failed | 455 |
 | Zone/door opened | 426 |
-
-!!! question "To confirm"
-    Factory default codes. These are the values on a test panel; testers may have changed some (on the test panel, Low battery was off with code 0000).
