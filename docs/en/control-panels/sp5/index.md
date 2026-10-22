@@ -30,14 +30,14 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 
 | Parameter | Value |
 |---|---|
-| Power supply voltage [AC / DC] | 16 V AC or 16–24 V DC, 2.5 A, as marked on the board **[the specification says 12–24 V DC: to confirm]** |
+| Power supply voltage [AC / DC] | 16 V AC or 16–24 V DC, 2.5 A. At 12 V DC the panel can't charge the battery |
 | Current consumption | **[to confirm: not measured yet]** |
 | Backup power source [BAT] | 12 V lead-acid battery, usually 7 Ah; choose the capacity for the connected equipment (see [Power budget](#power-budget)) |
 | Battery charge current | Up to 500 mA |
 | Power output for external devices [AUX] | 12 V DC, up to 2 A |
 | Siren output [BELL] | 1 A |
 | Open-collector output on an I/O terminal | 0.1 A |
-| Relay output [REL] | Changeover contacts NC, C, NO; up to 1 A at 30 V DC or 0.3 A at 125 V AC, resistive load **[from the datasheet of the relay fitted on the board (FTR-B4GA012Z); product rating to confirm]** |
+| Relay output [REL] | Changeover contacts NC, C, NO; up to 1 A at 30 V DC or 0.3 A at 125 V AC, resistive load |
 | Cellular modem | 4G LTE, EU version (EG915) **[bands to confirm]** |
 | SIM card | 1, nano-SIM |
 | WiFi | 2.4 GHz; DHCP or manual IP |
@@ -105,7 +105,7 @@ Additional markings on the I/O terminals:
 | Terminals | Additional function |
 |---|---|
 | IO9 (FL1), IO10 (FL2) | 2-wire fire loop. Both can be used at the same time; they work independently |
-| IO8 (HIN) | Voltage input up to 30 V; the other terminals measure 0–12 V **[that HIN marks this: to confirm]** |
+| IO8 (HIN) | Voltage input up to 30 V; the other terminals measure 0–12 V |
 
 Other parts of the board:
 
@@ -149,7 +149,7 @@ The panel has up to 192 logical zones. Each zone takes its input from one of the
 
 ### Supported keypads
 
-Tested with firmware 1.00: FLEXi SK232 LCD (SK-LCD TouchPad), SK LCD Button, and Paradox TM50 and TM70. Support for Protegus SK232 LED W (SK-LED TouchPad) is in progress. The specification also lists SK LED Button and Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+ and K35 **[to confirm]**.
+Protegus SK232 LED W (SK-LED TouchPad), FLEXi SK232 LCD (SK-LCD TouchPad), SK LCD Button, SK LED Button, and Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 and TM70. Paradox keypads work with limitations: they don't show all zones, users and areas.
 
 ### Supported RS485 modules
 
@@ -251,17 +251,18 @@ Choose the resistor set in **System options → Wired Zone Resistor Values (EOL 
 | 10k+10k+5k6 | 10 kΩ | 10 kΩ | 5.6 kΩ |
 | 4k7+4k7+2k2 | 4.7 kΩ | 4.7 kΩ | 2.2 kΩ |
 
-!!! question "To confirm"
-    The setting names list the resistors in the order RT + R1 + R2, as on "FLEXi" SP3. Check with the firmware that the app's numbering of the **10k+10k+5k6** and **4k7+4k7+2k2** sets matches the panel's: the app numbers these two the other way round from "FLEXi" SP3.
+The setting names list the resistors in the order RT + R1 + R2, as on "FLEXi" SP3.
 
 **Tamper triggers trouble only (zone not activated).** When this is on, a tamper alarm on a zone reports a trouble but does not also trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire.
 
 ### Connecting fire detectors
 
-A 2-wire fire loop can be connected to IO9, IO10 or both (marked FL1 and FL2 on the board); the two loops work independently. Turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both in **System options → System Behavior**. The terminal then becomes a Fire zone and can't be used for anything else. A zone set to **Fire** gets a response time of 2000 ms.
+A 2-wire fire loop can be connected to IO9, IO10 or both (marked FL1 and FL2 on the board); the two loops work independently. Wire it as on "FLEXi" SP3: connect **AUX+** to the first detector's **+ IN** and **IO9** (or **IO10**) to its **− IN**, connect each detector's **+ OUT** and **− OUT** to the next detector's inputs, and fit a 2.2 kΩ end-of-line resistor between the + and − wires after the last detector.
+
+Turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both in **System options → System Behavior**. The terminal then becomes a Fire zone and can't be used for anything else. A zone set to **Fire** gets a response time of 2000 ms.
 
 !!! question "To confirm"
-    The end-of-line resistor and wiring of the 2-wire loop for SP5, and how 4-wire detectors and fire sensor reset are wired.
+    How 4-wire detectors and fire sensor reset are wired for SP5.
 
 ### Connecting a siren
 
@@ -269,7 +270,7 @@ Connect the siren between **BELL+** and **BELL−**. The BELL output is supervis
 
 ### Connecting outputs
 
-- **Relay (NC, C, NO; REL in the app):** changeover contacts for low-voltage loads, up to 1 A at 30 V DC, for example a door lock or a gate controller input. Don't switch mains voltage with it: use an external relay or contactor. **[product rating to confirm]**
+- **Relay (NC, C, NO; REL in the app):** changeover contacts, up to 1 A at 30 V DC or 0.3 A at 125 V AC (resistive load), for example for a door lock or a gate controller input. Don't switch 230 V mains with it: use an external relay or contactor.
 - **IO1–IO10 as outputs:** open-collector outputs, up to 0.1 A each. Use an external relay for larger loads.
 
 ### Connecting keypads
@@ -354,8 +355,7 @@ Do this first, before you add zones and users.
 5.  In **Time Settings**, set the **Time zone**, **Daylight saving time** and the **Time synchronization** sources, or press **Set from PC**.
 6.  Tap **Write**.
 
-!!! question "To confirm"
-    The factory settings: the default access codes, Account ID, areas, zones, outputs and reporting. Until they are confirmed, check every page before you hand over the system. When it reads a panel, the app first tries the access code 123456, the factory administrator code of "FLEXi" SP3.
+**Factory settings:** Account ID 0001; **Full access**, **SMS programming** and cloud access codes 123456; **Limited access** (installer) code 654321; the first user's keypad code 1234. The panel has no factory reset, so change these codes and keep the new ones.
 
 ### Reporting to a monitoring station (CMS)
 
@@ -367,7 +367,7 @@ Do this first, before you add zones and users.
     - **Communication method:** Network.
     - **Communication type:** TCP/IP or UDP/IP, as the receiver requires.
     - **Domain or IP** and **Port** of the receiver.
-    - **Protocol**: the one the receiver uses. **[to confirm: TRK8 for TRIKDIS receivers]** For **SIA DC-09_2012** or **SIA DC-09_2007**, also choose the **Message format** (CID or SIA).
+    - **Protocol**: the one the receiver uses. For **SIA DC-09_2012** or **SIA DC-09_2007**, also choose the **Message format** (CID or SIA).
     - **Encryption key**. For SIA DC-09, an empty key means no encryption; turn on **Key is HEX** if you got a 32-digit hexadecimal key.
 
     ![Protegus app, SP5 Primary channel card: Primary channel on, Communication method Network (SMS is the other choice), Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol SIA DC-09_2012, Message format CID, a masked Encryption key, Key is HEX on, and a Backup channel link.](./protegus-app/sp5-popup-cms-sia.webp){ .trik-popup-img }
@@ -423,11 +423,11 @@ Do this first, before you add zones and users.
 
 ### Adding wireless devices
 
-1.  Connect the wireless receiver (RF-LORA for Maximum Security devices, RF-S8 for HEYI devices) to AUX and the RS485 bus.
+1.  Connect the wireless receiver (RF-S8 for HEYI devices, RF-SH for Crow devices) to AUX and the RS485 bus.
 2.  In **Devices & Interfaces → Expanders**, choose **Expanders → Scan for new expanders**. The receiver must appear in the list.
 3.  In **Devices & Interfaces → Wireless**, tap the gear button and set **Sensor lost after**: how long a silent device is reported as lost.
 4.  Disarm all areas and clear any faults. Tap **Scan for new devices**.
-5.  Press the pairing key on the device, as its own instructions describe, until its green light stays on for 2 seconds. The device appears in the list marked **NEW**. Repeat for the other devices. When the scan ends, the app lists the paired devices as **Not Configured**; tap **Done**.
+5.  Put the device into pairing mode, as its own instructions describe. The device appears in the list marked **NEW**. Repeat for the other devices. When the scan ends, the app lists the paired devices as **Not Configured**; tap **Done**.
 
     ![Protegus app, SP5 popup Scan Complete: 1 New Device(s) Added, listing Magnet Wireless LV, SN 8412999, marked Not Configured, with a Done button.](./protegus-app/sp5-popup-wireless-scan.webp){ .trik-popup-img }
 
@@ -440,8 +440,6 @@ Do this first, before you add zones and users.
 
 **Check:** each device shows **Online**, with its signal (**RSSI, %**) and battery voltage.
 
-!!! question "To confirm"
-    Which wireless device families SP5 supports. HEYI devices through RF-S8 are done. The firmware notes also name Maximum Security through RF-LORA, but the 2026 work list says Maximum support was dropped. Crow devices through RF-SH are being integrated.
 
 ### Adding users, codes and cards
 
@@ -470,7 +468,7 @@ For many users with the same rights, create a group in **Users → Groups** and 
 
 The relay on the board (contacts **NC**, **C**, **NO**; **REL** in the app) can drive a door lock.
 
-1.  Connect the lock's supply through the relay contacts: **C** and **NO** for a lock that opens when powered, **C** and **NC** for a lock that holds while powered. The lock may draw up to 1 A at 30 V DC; for a larger lock, switch it through an external relay. **[product rating to confirm]**
+1.  Connect the lock's supply through the relay contacts: **C** and **NO** for a lock that opens when powered, **C** and **NC** for a lock that holds while powered. The lock may draw up to 1 A at 30 V DC; for a larger lock, switch it through an external relay.
 2.  In **Terminals**, open **Output settings** on **REL** (or **Assign function → Assign PGM output** if it is free).
 3.  Set **Definition** to **Remote control**, **Type** to **Pulse** and a **Pulse time**, for example 3 seconds.
 4.  Give the users who may open the door the right: **Permissions** tab → **Allow control** → choose this output.
@@ -534,7 +532,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
     ![Protegus app, SP5 area popup Home properties | Area 1: Number 1, Area name Home, ten assigned zones from Front door to Boiler room leak, Entry delay 1 30, Entry delay 2 15, Exit delay 45, Tamper action Alarm when armed, Keyswitch mode Level, Bell time 180. Under Advanced: Re-ARM on, Intellizone delay 20, Auto-arm and Squawk off, Arm mode if no exit Stay, Conditional arming Not assigned. Remove area, Cancel and Save at the bottom.](./protegus-app/sp5-popup-area-edit.webp){ .trik-popup-img }
 
-4.  Optionally turn on **Re-ARM** (arms the area again if it was disarmed remotely and no zone was violated) or **Auto-arm** (after a disarm, arms the area again if the door wasn't opened within the **Auto-arm time**).
+4.  Optionally turn on **Re-ARM** (after a disarm, arms the area again when the entry delay has passed, if no zone was violated) or **Auto-arm** (arms the area after the **Auto-arm time**, whatever the state of its zones).
 5.  Tap **Write**.
 
 ### SMS messages and calls to users
@@ -560,8 +558,10 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 **Firmware updates.** The firmware can be updated from the Protegus app over USB or remotely. The panel restarts after an update over USB (in about 5 seconds) and reconnects after a remote update. **[the update function is not in the app yet: to confirm when it is released]**
 
+The panel has no factory reset. Its factory codes are listed under **First start-up** in [Common tasks](#common-tasks).
+
 !!! question "To confirm"
-    Factory reset, and the recommended battery replacement interval.
+    The recommended battery replacement interval, and how to regain access if the access codes are lost.
 
 ## Troubleshooting
 
@@ -651,7 +651,7 @@ System options holds the panel's identity and general behaviour, the access code
 | Power failure delay | How long mains (AC) power must be missing before the panel reports a power failure (as on "FLEXi" SP3). | 0–999 s |
 | Call attempts to user | How many times the panel calls a user about an event. It stops when the user answers or rejects the call (as on "FLEXi" SP3). **[which events make the panel call can't be set in the app yet]** | 0–99 |
 | Text encoding | The character set the panel uses for object, area and zone names. Choose the one that matches the language of your names. | English, Baltic, Cyrillic alphabet, Central European, Greek, Turkish, Hebrew, Arabic, Vietnamese |
-| Hang-up call after | Under **Incomming Call Handling**. How long the panel keeps an incoming call before it hangs up. **[to confirm: meaning taken from the label only]** | 0–99 s |
+| Hang-up call after | Under **Incomming Call Handling**. When a user calls to switch an output, the panel answers and holds the call for this time before it hangs up and switches the output, so the call shows in the mobile operator's call records. | 0–99 s |
 | Prevent event flooding (Suspend reporting) | Stops reporting an event that repeats too often. The next two settings set the limits. | on / off |
 | Suspend if the same event repeats more than … within … | Reporting of an event is suspended when it repeats more than this many times within this time. | 0–99 times; 0–99 s |
 | Resume reporting automatically after | When reporting of a suspended event starts again. | 0–99 min |
@@ -949,13 +949,13 @@ The collapsed section at the bottom of the area popup.
 
 | Setting | What it does | Values |
 |---|---|---|
-| Re-ARM | Arms the area again automatically after it was disarmed from the app or by phone, if no zone was violated. | on / off |
-| Auto-arm | After the area is disarmed, arms it again if the door wasn't opened within the **Auto-arm time**. If arming fails, the panel reports **Auto arm failed**. | on / off |
+| Re-ARM | After the area is disarmed, arms it again when the entry delay has passed, if no zone was violated. | on / off |
+| Auto-arm | Arms the area automatically after the **Auto-arm time**, regardless of any conditions. If arming fails, the panel reports **Auto arm failed**. | on / off |
 | Auto-arm time | The time for **Auto-arm**. Editable while **Auto-arm** is on; turning **Auto-arm** on sets it to 1 min. | 1–999 min |
 | Arm mode if no exit | If nobody leaves during the exit delay, the area arms in this mode instead of away. | Arm away / Stay / Sleep |
-| Intellizone delay | For zones with **Intelli zone** on: an alarm needs at least two such zones to trigger within this time. | 1–255 s |
+| Intellizone delay | For zones with **Intelli zone** on: an alarm needs at least two such zones to trigger within this time. | 0–999 s **[to confirm: the firmware notes say 1–255 s; being checked]** |
 | Squawk | The siren chirps briefly when the area is armed or disarmed. | on / off |
-| Conditional arming | Other areas that must be armed for this area to be armed automatically. If they are not armed, this area stays disarmed. **[to confirm: whether all or any of the selected areas must be armed]** | the other enabled areas |
+| Conditional arming | This area is armed automatically when all the selected areas are armed. If any of them isn't armed, this area stays disarmed. | the other enabled areas |
 
 When you remove an area, the app resets it to: **Entry delay 1** 30 s, **Entry delay 2** 45 s, **Exit delay** 30 s, **Bell time** 120 s, **Intellizone delay** 20 s, **Tamper action** No area alarm, **Keyswitch mode** Level, **Arm mode if no exit** Stay, and the other options off. An area you add again starts from these values.
 
@@ -1077,7 +1077,7 @@ The wiring of each type is shown under [Connecting detectors](#connecting-detect
 | IO9 or IO10 as a 2-wire fire loop | SP5 9 I/O - 2-wire fire zone, SP5 10 I/O - 2-wire fire zone | NO, NC, EOL, EOL_T, 3EOL |
 | iO8 and iO8-Lora expanders, I/O 1–8 | RS485 *expander name*, *n* I/O (second ATZ zone: … - ATZ) | NO, NC, EOL, EOL_T, ATZ, ATZ_T, 3EOL |
 | iO, iO-WL, iO-MO and iO-LO expanders | RS485 *expander name* IN | NO, NC, EOL, EOL_T, 3EOL |
-| Wireless devices | e.g. Magnet Wireless LV ID1, Wireless siren tamper ID3, Wireless keypad tamper ID5 | NO, NC, EOL, EOL_T, 3EOL **[to confirm: the panel may allow fewer EOL types on wireless and keypad inputs]** |
+| Wireless devices | e.g. Magnet Wireless LV ID1, Wireless siren tamper ID3, Wireless keypad tamper ID5 | NO, NC, EOL or EOL_T. The first three work the same; EOL_T also monitors the detector's tamper |
 | Keypad inputs | Keypad *n* IN | NO, NC, EOL; also EOL_T on keypads with a serial starting 1D, 1E, 51 or 52 |
 
 ### Terminals
@@ -1359,7 +1359,7 @@ For Maximum Security detectors and sirens only. Each setting appears only on mod
 | Setting | What it does | Values |
 |---|---|---|
 | Enable LED | Turns the detector's LED on or off. | on / off |
-| Sleep time | **[to confirm: meaning]** | 0–255 s; 10 s when the device is learned |
+| Sleep time | After a detection, the detector ignores motion for this time, to save its battery. | 0–255 s; 10 s when the device is learned |
 | PIR1 sensitivity | Sensitivity of the first PIR sensor. | 0–20 |
 | PIR1 pulses count | How many pulses the first PIR sensor counts before an alarm. | 0–10 |
 | PIR2 sensitivity | Sensitivity of the second PIR sensor, on dual-PIR models. | 0–20 |
@@ -1372,7 +1372,7 @@ For Maximum Security detectors and sirens only. Each setting appears only on mod
 
 #### Receivers and device families
 
-**[to confirm: which device families are supported with SP5; the RF-SH family is not yet confirmed for SP5]**
+SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH). **[to confirm: the app also lists Maximum Security devices (RF-LORA); whether SP5 supports them]**
 
 | Receiver | Device family | Devices |
 |---|---|---|
