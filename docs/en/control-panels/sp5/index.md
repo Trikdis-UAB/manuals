@@ -132,7 +132,7 @@ The board has five LEDs along the top edge, marked **SIM**, **ETH**, **WIFI**, *
 - **On-board terminals (IO1–IO10):** wired detectors, sirens, relays and sensors.
 - **Keypad bus (GRN, YEL):** up to 16 keypads. Each keypad also gives one zone input.
 - **RS485 bus (A, B):** up to 64 devices: input/output expanders and wireless receivers.
-- **Wireless:** detectors, sirens and key fobs through an RF-LORA or RF-S8 receiver on the RS485 bus, up to 42 devices.
+- **Wireless:** detectors, sirens and key fobs through an RF-S8 (HEYI) or RF-SH (Crow) receiver on the RS485 bus, up to 42 devices.
 - **Reporting:** 4G LTE (nano-SIM), LAN and WiFi to monitoring stations and to the Protegus cloud.
 
 ### Where zones come from
@@ -153,7 +153,7 @@ Protegus SK232 LED W (SK-LED TouchPad), FLEXi SK232 LCD (SK-LCD TouchPad), SK LC
 
 ### Supported RS485 modules
 
-iO-8, iO-LO and iO8-LORA expanders, RF-LORA and RF-S8 wireless receivers, and T16 and T16v2 **[PB-LORA and other modules: to confirm]**. Only one of RF-LORA, RF-S8, T16 and T16v2 can be connected. The panel recognises connected RS485 modules automatically.
+iO-8, iO-LO and iO8-LORA expanders, the RF-LORA receiver for the LoRa expanders, RF-S8 (HEYI) and RF-SH (Crow) wireless receivers, and T16 and T16v2 **[PB-LORA and other modules: to confirm]**. Only one of RF-LORA, RF-S8, T16 and T16v2 can be connected. The panel recognises connected RS485 modules automatically.
 
 ### Power budget
 
@@ -261,8 +261,7 @@ A 2-wire fire loop can be connected to IO9, IO10 or both (marked FL1 and FL2 on 
 
 Turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both in **System options → System Behavior**. The terminal then becomes a Fire zone and can't be used for anything else. A zone set to **Fire** gets a response time of 2000 ms.
 
-!!! question "To confirm"
-    How 4-wire detectors and fire sensor reset are wired for SP5.
+Wire 4-wire detectors as on "FLEXi" SP3: the alarm contacts to a zone with the **Fire** definition, and the detectors' power through an output with the **Fire sensor reset** definition, which cuts their power to reset them.
 
 ### Connecting a siren
 
@@ -535,7 +534,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 4.  Optionally turn on **Re-ARM** (after a disarm, arms the area again when the entry delay has passed, if no zone was violated) or **Auto-arm** (arms the area after the **Auto-arm time**, whatever the state of its zones).
 5.  Tap **Write**.
 
-### SMS messages and calls to users
+### SMS messages to users
 
 1.  Make the user a **Supervisor** (**General** tab) and enter their **Phone number**. Only supervisors receive event SMS (up to 8).
 2.  On the **SMS reporting** tab, choose **Notify about** (all events, events only or restores only) and which zones, outputs and system events to send.
@@ -560,8 +559,10 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 The panel has no factory reset. Its factory codes are listed under **First start-up** in [Common tasks](#common-tasks).
 
+If the access codes are lost, access will be restored from the Protegus app. **[this function is not in the app yet]**
+
 !!! question "To confirm"
-    The recommended battery replacement interval, and how to regain access if the access codes are lost.
+    The recommended battery replacement interval.
 
 ## Troubleshooting
 
@@ -649,7 +650,7 @@ System options holds the panel's identity and general behaviour, the access code
 | 2-wire fire on IO9 | Turns terminal IO9 into a 2-wire fire loop input. IO9 can then only be a zone and is listed as **SP5 9 I/O - 2-wire fire zone**. A zone already on IO9 stays on it; if its type was ATZ, it changes to EOL and the second ATZ zone is released. An output or sensor on IO9 stays assigned: remove it before you turn this on. | on / off |
 | 2-wire fire on IO10 | The same for terminal IO10 (**SP5 10 I/O - 2-wire fire zone**). Set independently of IO9. | on / off |
 | Power failure delay | How long mains (AC) power must be missing before the panel reports a power failure (as on "FLEXi" SP3). | 0–999 s |
-| Call attempts to user | How many times the panel calls a user about an event. It stops when the user answers or rejects the call (as on "FLEXi" SP3). **[which events make the panel call can't be set in the app yet]** | 0–99 |
+| Call attempts to user | How many times the panel calls a user about an event (as on "FLEXi" SP3). SP5 doesn't make event calls: users get event SMS only, so this setting isn't used. | 0–99 |
 | Text encoding | The character set the panel uses for object, area and zone names. Choose the one that matches the language of your names. | English, Baltic, Cyrillic alphabet, Central European, Greek, Turkish, Hebrew, Arabic, Vietnamese |
 | Hang-up call after | Under **Incomming Call Handling**. When a user calls to switch an output, the panel answers and holds the call for this time before it hangs up and switches the output, so the call shows in the mobile operator's call records. | 0–99 s |
 | Prevent event flooding (Suspend reporting) | Stops reporting an event that repeats too often. The next two settings set the limits. | on / off |
@@ -1257,8 +1258,8 @@ Modules marked "—" under **Add manually** are recognised when the panel report
 | iO-MO expander | — | — | IN, OUT |
 | iO8 expander | yes | — | 8 I/O, each a zone or an output; ATZ possible |
 | iO8-Lora expander | yes | — | as iO8 expander |
-| RF-Lora | yes | yes | none; enables **Wireless** |
-| RF-Lora_PIN | — | — | none; enables **Wireless** |
+| RF-Lora | yes | yes | none; used for the iO-LORA and iO8-LORA expanders |
+| RF-Lora_PIN | — | — | none; used for the iO-LORA and iO8-LORA expanders |
 | RF-SH | yes | yes | none; enables **Wireless** |
 | RF-SH_PIN | — | — | none; enables **Wireless** |
 | RF-S8 | yes | yes | none; enables **Wireless** |
@@ -1308,7 +1309,7 @@ The panel listens for new devices. Press the device's pairing key as its instruc
 
 When a device is learned, the app sets it up:
 
-- A detector or siren gets the first free zone that is not a Fire zone. The definition is **24 Hour** for Maximum Security and HEYI devices, **Fire** for Crow smoke detectors and **Instant** for other Crow devices. The zone gets area 1 if it had none.
+- A detector or siren gets the first free zone that is not a Fire zone. The definition is **24 Hour** for HEYI devices, **Fire** for Crow smoke detectors and **Instant** for other Crow devices. The zone gets area 1 if it had none.
 - The HEYI Smart Socket and Crow SH AC plug get the first free output with the **Remote control** definition.
 - Keyfobs get area 1 and user 1. The HEYI Smart SOS button also gets **Key 4 action** set to **Panic**.
 
@@ -1352,31 +1353,12 @@ For sirens, keyfobs, the HEYI Smart SOS button and the Crow wireless keypad.
 
 Key actions: **None**; **Disarm**, **Arm**, **Stay** and **Sleep** for each enabled area; **Panic**; **Silent panic**; **Output level:** and **Output pulse:** for each output with the **Remote control** definition. **[to confirm: whether Output level toggles the output on and off]**
 
-#### Device settings
-
-For Maximum Security detectors and sirens only. Each setting appears only on models that have it. At 0 a slider shows **Disabled**. If the device's DIP switch 2 is off, the app shows a warning and the settings are greyed out; set the switch to ON to configure the device.
-
-| Setting | What it does | Values |
-|---|---|---|
-| Enable LED | Turns the detector's LED on or off. | on / off |
-| Sleep time | After a detection, the detector ignores motion for this time, to save its battery. | 0–255 s; 10 s when the device is learned |
-| PIR1 sensitivity | Sensitivity of the first PIR sensor. | 0–20 |
-| PIR1 pulses count | How many pulses the first PIR sensor counts before an alarm. | 0–10 |
-| PIR2 sensitivity | Sensitivity of the second PIR sensor, on dual-PIR models. | 0–20 |
-| PIR2 pulses count | How many pulses the second PIR sensor counts before an alarm. | 0–10 |
-| Sensitivity | Sensitivity of the Vibration LV detector. | 0–20 |
-| Microwave sensitivity | Sensitivity of the microwave sensor, on models that have one. | 0–20 |
-| Microwave pulses count | How many pulses the microwave sensor counts before an alarm. | 0–20 |
-| Antimask sensitivity | Sensitivity of the anti-masking function. | 0–10 |
-| Siren soundness | Siren loudness (Siren, Siren Wireless LV). | 0–4 |
-
 #### Receivers and device families
 
-SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH). **[to confirm: the app also lists Maximum Security devices (RF-LORA); whether SP5 supports them]**
+SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH). It doesn't support Maximum Security wireless devices; the RF-LORA receiver is used only for the iO-LORA and iO8-LORA expanders.
 
 | Receiver | Device family | Devices |
 |---|---|---|
-| RF-Lora, RF-Lora_PIN | Maximum Security | Curtain Pir, Curtain Pir mini, Magnet, VIP PIR, Curtain Slim, Curtain Pro Pir, GUARD, Corner Pir, OUT Smart PIR, Curtain Pro MW Pir, Flood, Smoke, Curtain Wireless LV, Curtain Wireless mini LV, Magnet Wireless LV, VIP Wireless LV, Curtain Slim Wireless LV, Corner AM LV, Guard Wireless LV, Corner Wireless LV, Flood Wireless LV, Vibration LV, Remote control, Remote control LV, Siren, Siren Wireless LV |
 | RF-S8 | HEYI | Smart Keyfob, Smart SOS button, Smart Door/Window sensor, Smart PIR detector, Smart Smoke detector, Smart Water leakage sensor, Smart Indoor siren, Smart Outdoor siren, Smart Vibration detector, Smart Socket, Smart PET PIR detector, Smart Curtain PIR detector, Smart Repeater |
 | RF-SH, RF-SH_PIN | Crow / ShockSensor (SH) | PIR detector, Magnetic contact, Smoke detector, Glass detector, Flood detector, Vibration detector, SH Magnetic Gate, SH Smoke and heat detector, Smoke SFW2, SH Smoke H, SH Emergency button, SH PIR2, SH Siren2, Siren, ShockSensor siren, SH AC plug, Keyfob, Wireless keypad, SH Repeater |
 
