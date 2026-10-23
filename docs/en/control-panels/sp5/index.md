@@ -112,7 +112,7 @@ Other parts of the board:
 - **ANT GSM** and **ANT WIFI:** connectors for the cellular and WiFi antennas.
 - **SIM:** the nano-SIM card holder.
 - **LAN:** the Ethernet port.
-- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows the connection **Via USB**. **[how to open the USB configuration in the app: to confirm]**
+- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows **Networks: Via USB**. **[how to open the USB configuration in the app: to confirm]**
 - **SIM, ETH, WIFI, DAT, PWR:** LEDs (see [LED indication](#led-indication)).
 - **F1 button** next to the relay: turns on the WiFi setup mode, for setting the WiFi network name (SSID). **[how the setup mode is used, and how to restore the factory settings: to confirm]**
 
@@ -292,7 +292,7 @@ Assign the function in **Terminals** and set the alarm limits in **Devices & Int
 
 ### SIM card, antennas and LAN
 
-Insert an activated nano-SIM card with the PIN code disabled, or enter the PIN in **Communication → Connection → SIM**. Connect the cellular antenna to **ANT GSM** and the WiFi antenna to **ANT WIFI**, at the top edge of the board, and, if used, the LAN cable.
+Insert an activated nano-SIM card with the PIN code disabled, or enter the PIN in **Communication → Networks → SIM**. Connect the cellular antenna to **ANT GSM** and the WiFi antenna to **ANT WIFI**, at the top edge of the board, and, if used, the LAN cable.
 
 ## First power-up and adding the panel to Protegus
 
@@ -318,7 +318,7 @@ Connect the backup battery, then switch on the main power supply.
 
 3.  In a desktop browser the configurator reads the panel's settings by itself and opens the **Dashboard**. On a phone, tap **Read**.
 
-    ![Protegus app, SP5 configurator menu on a phone: the panel name SP5_1E7LWB.0, Write and Read buttons, Programming mode: Full access, and the menu items System options, Communication, Areas and zones, Terminals, Devices & Interfaces, Users and System events.](./protegus-app/sp5-menu-phone.webp){ .trik-mob-img }
+    ![Protegus app, SP5 configurator menu on a phone: the panel name SP5_1E7LWB.0, Write and Read buttons, Programming mode: Full access, and the menu items System options, Communication, Areas and zones, Terminals, Devices & Interfaces, Users, System events and Automation.](./protegus-app/sp5-menu-phone.webp){ .trik-mob-img }
 
 4.  Change the settings, then tap **Write** to save them to the panel.
 
@@ -326,18 +326,18 @@ Every page of the configurator is described in [Settings in the Protegus app](#s
 
 ### If the panel does not connect
 
-The **Dashboard → Connectivity** card shows the state of each connection.
+The **Dashboard → Connection states** card shows the state of each connection.
 
 | What you see | What to check |
 |---|---|
 | SIM: no SIM card | The nano-SIM is inserted the right way and is activated |
-| SIM: PIN error | Disable the SIM PIN, or enter it in **Communication → Connection → SIM** |
+| SIM: PIN error | Disable the SIM PIN, or enter it in **Communication → Networks → SIM** |
 | SIM: cannot register on the network | Signal strength and antenna; operator coverage |
-| SIM: no mobile data | The APN in **Communication → Connection → SIM**; the data plan |
+| SIM: no mobile data | The APN in **Communication → Networks → SIM**; the data plan |
 | LAN: no cable | The LAN cable and the switch port |
 | LAN: DHCP problem | DHCP on the router, or set a static IP address |
 | LAN: DNS problem | The DNS servers in the LAN settings |
-| WiFi: not connected | SSID and password in **Communication → Connection → WiFi**; 2.4 GHz network |
+| WiFi: not connected | SSID and password in **Communication → Networks → WiFi**; 2.4 GHz network |
 
 ## Common tasks
 
@@ -361,7 +361,7 @@ Do this first, before you add zones and users.
 **You need:** the receiver's address and port, its protocol, the encryption key and the object's account number, all from the monitoring station.
 
 1.  In **System options**, check the **Account ID**.
-2.  In **Communication → Connection → Reporting to CMS**, choose the **Main path** (Ethernet, SIM or WiFi) and a **Back up** path. If you use the SIM, enter its **APN** (and **SIM PIN**, if the card asks for one) in **SIM**.
+2.  In **Communication → Networks → Reporting to CMS**, choose the **Main path** (Ethernet, SIM or WiFi) and a **Back up** path. If you use the SIM, enter its **APN** (and **SIM PIN**, if the card asks for one) in **SIM**.
 3.  In **Communication → CMS Reporting**, turn on **Primary channel** and set:
     - **Communication method:** Network.
     - **Communication type:** TCP/IP or UDP/IP, as the receiver requires.
@@ -377,7 +377,7 @@ Do this first, before you add zones and users.
 7.  Under **Testing**, turn on **Periodic test** and set the **Test period** the station expects.
 8.  Tap **Write**.
 
-**Check:** the **Dashboard → Connectivity** status of the path you chose shows **CMS** or **Active**. Trigger a zone and ask the station to confirm the event and its account number.
+**Check:** the **Dashboard → Connection states** status of the path you chose shows **CMS** or **Active**. Trigger a zone and ask the station to confirm the event and its account number.
 
 ### Adding wired zones
 
@@ -428,11 +428,11 @@ Do this first, before you add zones and users.
 4.  Disarm all areas and clear any faults. Tap **Scan for new devices**.
 5.  Put the device into pairing mode, as its own instructions describe. The device appears in the list marked **NEW**. Repeat for the other devices. When the scan ends, the app lists the paired devices as **Not Configured**; tap **Done**.
 
-    ![Protegus app, SP5 popup Scan Complete: 1 New Device(s) Added, listing Magnet Wireless LV, SN 8412999, marked Not Configured, with a Done button.](./protegus-app/sp5-popup-wireless-scan.webp){ .trik-popup-img }
+    ![Protegus app, SP5 popup Scan Complete: 1 New Device(s) Added, listing Smart Door/Window sensor, SN 2712847390, marked Not Configured, with a Done button.](./protegus-app/sp5-popup-wireless-scan.webp){ .trik-popup-img }
 
 6.  Tap a new device and set its zone **Name**, **Assign area** and **Definition**. The app gives detectors a free zone with the **24 Hour** definition, so change it to what the device protects.
 
-    ![Protegus app, SP5 wireless device Configuration popup for Magnet Wireless LV, serial 8412173, signal 86 %, 3.1 V: Name Terrace door, Assign area Home, Definition Delay, Delay 400, a Zone Behavior link, and Delete Sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-wireless-config.webp){ .trik-popup-img }
+    ![Protegus app, SP5 wireless device Configuration popup for Smart Door/Window sensor, serial 2712847361, signal 86 %, 3.1 V: Name Terrace door, Assign area Home, Definition Delay, Delay 400 ms, a Zone Behavior link, and Delete Sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-wireless-config.webp){ .trik-popup-img }
 
 7.  For a keyfob, choose its area and **Assigned user**, and what keys 3 and 4 do.
 8.  Tap **Write**.
@@ -587,14 +587,14 @@ This section describes every page of the SP5 configurator in the Protegus app, i
 
 The Dashboard shows the panel's identity, owner and connection state at a glance. It is available in the desktop view only. You can drag the cards into a different order, and the browser remembers it.
 
-![Protegus app, SP5 configurator in a desktop browser with the menu on the left and the Dashboard open. Panel info card: Programming mode, Connection Via Protegus2 cloud, Last configured 2026-10-06 12:30, Unique ID/IMEI, Serial number 000123, Firmware v1.00 Up to date, Bootloader 1.00. System information card: Account ID 1234, Address Sample street 1, Owner Sample Owner, a phone number and an e-mail address. Connectivity card with an Edit link: LAN Active, SIM Standby with 80 % signal, WiFi Disabled.](./protegus-app/sp5-dashboard-desktop-content.webp)
+![Protegus app, SP5 configurator in a desktop browser with the menu on the left and the Dashboard open. Panel info card: Programming mode, Networks Via Protegus2 cloud, Last configured 2026-10-06 12:30, Unique ID/IMEI, Serial number 000123, Firmware v1.00 Up to date, Bootloader 1.00. System information card: Account ID 1234, Address Sample street 1, Owner Sample Owner, a phone number and an e-mail address. Connection states card with an Edit link: LAN Active, SIM Standby with 80 % signal, WiFi Disabled.](./protegus-app/sp5-dashboard-desktop-content.webp)
 
 #### Panel info
 
 | Field | Shows |
 |---|---|
 | Programming mode | That the configurator is connected to the panel in programming mode. |
-| Connection | How the app reaches the panel: **Via Protegus2 cloud** or **Via USB**. |
+| Networks | How the app reaches the panel: **Via Protegus2 cloud** or **Via USB**. |
 | Last configured | The date and time of the last **Write**. Shown when you are signed in to Protegus and the panel holds this time. |
 | Unique ID/IMEI | The panel's Unique ID. Click it to copy it. |
 | Serial number | The panel's serial number. |
@@ -613,21 +613,21 @@ The Dashboard shows the panel's identity, owner and connection state at a glance
 
 **Address**, **Owner**, **Phone number** and **E-mail address** appear only when the system has been added to Protegus. Otherwise the card shows **This system is not added to Protegus2.**
 
-#### Connectivity
+#### Connection states
 
 | Field | Shows |
 |---|---|
 | LAN | The status of the LAN connection. |
 | SIM | The status of the cellular connection and its signal strength in %. |
 | WiFi | The status of the WiFi connection and its signal strength in %. |
-| Edit | Opens **Communication → Connection**. |
+| Edit | Opens **Communication → Networks**. |
 
-The status is read from the panel when you open the Dashboard or the Connection page. The same status values are used on both pages:
+The status is read from the panel when you open the Dashboard or the Networks page. The same status values are used on both pages:
 
 | Status | Meaning |
 |---|---|
 | Disabled | The connection is switched off in the settings. |
-| Fault | The connection is not working. The **Fault** column on the Connection page says why. |
+| Fault | The connection is not working. The **Fault** column on the Networks page says why. |
 | Active | Working, and carrying reports to both Protegus and the CMS. |
 | CMS | Working, and carrying reports to the CMS. |
 | Cloud | Working, and carrying reports to Protegus. |
@@ -669,7 +669,7 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 | Limited access | The installer code. What it allows is set by the permissions below. | up to 6 characters |
 | SMS programming | The code for configuring the panel by SMS commands. | up to 6 characters |
 | Account ID | Lets **Limited access** change the **Account ID**. | on / off |
-| Communication | Access to **Connection** and **CMS Reporting**. | Editable / Visible / Hidden |
+| Communication | Access to **Networks** and **CMS Reporting**. | Editable / Visible / Hidden |
 | Areas and zones | Access to **Areas (Partitions)** and **Zones**. **Visible** also makes **Terminals** read-only. | Editable / Visible / Hidden |
 | Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Temperature sensors** and **Thermostats**. | Editable / Visible / Hidden |
 | Users | Access to **User list**, **Groups** and **Black list**. | Editable / Visible / Hidden |
@@ -712,19 +712,19 @@ Turn on each trouble that should prevent the system from being armed.
 | 2-Wire Fire Sensors in Alarm | A 2-wire fire loop is in alarm. | on / off |
 | Antimasking fault | A detector reports masking. | on / off |
 
-### Connection
+### Networks
 
-Menu **Communication → Connection**. Here you choose which connections carry the reports to the monitoring station and to Protegus, and set up the SIM, WiFi and Ethernet connections.
+Menu **Communication → Networks**. Here you choose which connections carry the reports to the monitoring station and to Protegus, and set up the SIM, WiFi and Ethernet connections.
 
-![Protegus app, SP5 Connection page in a desktop browser. Status table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, both with Main path Ethernet, Back up SIM, Fallback back up OFF and Switch back to Main path after 10 min. Cloud settings card with Enable cloud service and Report in parallel with CMS on and a masked Cloud access code. SIM card with APN internet, an empty SIM PIN and an Advanced settings link. WiFi card with SSID Sample-WiFi, a masked password, DNS 8.8.8.8 and DHCP on. Ethernet card with DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on and DHCP on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
+![Protegus app, SP5 Networks page in a desktop browser. Status table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, both with Main path Ethernet, Back up SIM, Fallback back up OFF and Switch back to Main path after 10 min. Cloud settings card with Enable cloud service and Report in parallel with CMS on and a masked Cloud access code. SIM card with APN internet, an empty SIM PIN and an Advanced settings link. WiFi card with SSID Sample-WiFi, a masked password, DNS 8.8.8.8 and DHCP on. Ethernet card with DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on and DHCP on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
 
-#### Connectivity
+#### Connection states
 
 A read-only table, one row per connection. On a narrow screen it becomes a card with one block per connection.
 
 | Field | Shows |
 |---|---|
-| Connectivity | The connection: **LAN**, **SIM** or **WiFi**. |
+| Connection states | The connection: **LAN**, **SIM** or **WiFi**. |
 | Status | The connection's status. See the status values under **Dashboard**. |
 | IP Address | The current IP address; 0.0.0.0 when there is none. |
 | DHCP | **Enabled** (address obtained by DHCP), **No IP obtained**, or **Disabled** (static IP). |
@@ -859,7 +859,7 @@ Under **Behavior**.
 | Setting | What it does | Values |
 |---|---|---|
 | Switch to backup after | How many failed attempts on a channel before the panel moves to its backup channel. | 0–9 attempts |
-| Switch back to primary after | How long the panel stays on the backup channel before it returns to the primary. Not to be confused with **Switch back to Main path** on the Connection page, which is about SIM, Ethernet and WiFi. | 0–99 minutes |
+| Switch back to primary after | How long the panel stays on the backup channel before it returns to the primary. Not to be confused with **Switch back to Main path** on the Networks page, which is about SIM, Ethernet and WiFi. | 0–99 minutes |
 
 #### Periodic test
 
@@ -964,7 +964,7 @@ When you remove an area, the app resets it to: **Entry delay 1** 30 s, **Entry d
 
 Menu **Areas and zones → Zones**. A zone is one detector input with its area, definition and circuit type. The panel has up to 192 zones; only zones with a terminal are listed.
 
-![Protegus app, SP5 Zones page in a desktop browser: a Refresh status link, a search box, a + Add button with a drop-down arrow, and a table of 12 zones, all OK. Examples: 01 Front door, area Home, definition Delay, input SP5 1 I/O, type EOL; 03 Kitchen smoke, Fire, SP5 3 I/O; 06 Garage door, area Garage, input RS485 Garage iO8, 1 I/O; 08 Back door on Keypad 1 IN; 13 Terrace door on Magnet Wireless LV ID1; 15 Outdoor siren tamper, areas Home and Garage, 24 Hour, Wireless siren tamper ID3; 16 Boiler room leak, Smart Water leakage sensor ID4. Each row has an Edit link.](./protegus-app/sp5-zones-desktop-content.webp)
+![Protegus app, SP5 Zones page in a desktop browser: a Refresh status link, a search box, a + Add button with a drop-down arrow, and a table of 12 zones, all OK. Examples: 01 Front door, area Home, definition Delay, input SP5 1 I/O, type EOL; 03 Kitchen smoke, Fire, SP5 3 I/O; 06 Garage door, area Garage, input RS485 Garage iO8, 1 I/O; 08 Back door on Keypad 1 IN; 13 Terrace door on Smart Door/Window sensor ID1; 15 Outdoor siren tamper, areas Home and Garage, 24 Hour, Smart Outdoor siren ID3; 16 Boiler room leak, Smart Water leakage sensor ID4. Each row has an Edit link.](./protegus-app/sp5-zones-desktop-content.webp)
 
 #### Zone list
 
@@ -1078,7 +1078,7 @@ The wiring of each type is shown under [Connecting detectors](#connecting-detect
 | IO9 or IO10 as a 2-wire fire loop | SP5 9 I/O - 2-wire fire zone, SP5 10 I/O - 2-wire fire zone | NO, NC, EOL, EOL_T, 3EOL |
 | iO8 and iO8-Lora expanders, I/O 1–8 | RS485 *expander name*, *n* I/O (second ATZ zone: … - ATZ) | NO, NC, EOL, EOL_T, ATZ, ATZ_T, 3EOL |
 | iO, iO-WL, iO-MO and iO-LO expanders | RS485 *expander name* IN | NO, NC, EOL, EOL_T, 3EOL |
-| Wireless devices | e.g. Magnet Wireless LV ID1, Wireless siren tamper ID3, Wireless keypad tamper ID5 | NO, NC, EOL or EOL_T. The first three work the same; EOL_T also monitors the detector's tamper |
+| Wireless devices | e.g. Smart Door/Window sensor ID1, Smart Outdoor siren ID3 | NO, NC, EOL or EOL_T. The first three work the same; EOL_T also monitors the detector's tamper |
 | Keypad inputs | Keypad *n* IN | NO, NC, EOL; also EOL_T on keypads with a serial starting 1D, 1E, 51 or 52 |
 
 ### Terminals
@@ -1271,7 +1271,7 @@ Modules marked "—" under **Add manually** are recognised when the panel report
 
 Menu **Devices & Interfaces → Wireless** (page heading **Wireless devices**). Lists the wireless devices learned by the panel, up to 42. The page works only with a wireless receiver on the RS485 bus (RF-Lora, RF-SH, RF-S8, RF-SH_PIN or RF-Lora_PIN); without one it shows **There is no wireless sensor receiver in the system**.
 
-![Protegus app, SP5 Wireless devices page in a desktop browser: a Refresh status link, a gear button, a Scan for new devices button and four online devices, each with a zone. 1 Magnet Wireless LV, Terrace door, area Home, 86 %, 3.1 V. 2 VIP Wireless LV, Living room PIR, area Home, 72 %, 3.05 V. 3 Siren Wireless LV, Outdoor siren tamper, areas Home and Garage, 64 %, 3.2 V. 4 Smart Water leakage sensor, Boiler room leak, area Home, 78 %, 2.9 V. Each row shows a serial number, a device picture and an Edit link.](./protegus-app/sp5-wireless-desktop-content.webp)
+![Protegus app, SP5 Wireless devices page in a desktop browser: a Refresh status link, a gear button, a Scan for new devices button and four online HEYI devices, each with a zone. 1 Smart Door/Window sensor, Terrace door, area Home, 86 %, 3.1 V. 2 Smart PIR detector, Living room PIR, area Home, 72 %, 3.05 V. 3 Smart Outdoor siren, Outdoor siren tamper, areas Home and Garage, 64 %, 3.2 V. 4 Smart Water leakage sensor, Boiler room leak, area Home, 78 %, 2.9 V. Each row shows a serial number, a device picture and an Edit link.](./protegus-app/sp5-wireless-desktop-content.webp)
 
 #### Wireless device list
 
@@ -1281,7 +1281,7 @@ Menu **Devices & Interfaces → Wireless** (page heading **Wireless devices**). 
 | (gear icon) | Opens **Wireless settings**. | button |
 | Scan for new devices | Puts the panel into learning mode to add devices. | button |
 | Status | The device's live state. | Online, Lost, Alarm, Unknown, N/A |
-| ID | The device's number, used in its terminal name (e.g. Magnet Wireless LV ID1). | number |
+| ID | The device's number, used in its terminal name (e.g. Smart Door/Window sensor ID1). | number |
 | Type | The device model. | see **Receivers and device families** |
 | Name | The name of the zone or output assigned to the device. Edit it in the cell. | text |
 | Serial number | The device's serial number. | — |
@@ -1366,7 +1366,7 @@ SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH). It doesn't support M
 
 Menu **Devices & Interfaces → Temperature sensors**. Lists up to 20 sensors measuring temperature, voltage or resistance, with their alarm limits. A temperature sensor can also drive a thermostat.
 
-![Protegus app, SP5 Temperature sensors page in a desktop browser: a Refresh status link, a + Add button and two sensors with status Ok. Living room temperature, type Temperature (zone), 21.5 °C, assigned to SP5 9 I/O. Hall PIR temperature, type Wireless Living room PIR, 22.0 °C, assigned to VIP Wireless LV ID2. Each row has an Edit link.](./protegus-app/sp5-sensors-desktop-content.webp)
+![Protegus app, SP5 Temperature sensors page in a desktop browser: a Refresh status link, a + Add button and one sensor: Living room temperature, type Temperature (zone), status Ok, 21.5 °C, assigned to SP5 9 I/O, with an Edit link.](./protegus-app/sp5-sensors-desktop-content.webp)
 
 #### Sensor list
 
