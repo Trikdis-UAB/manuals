@@ -652,7 +652,7 @@ System options holds the panel's identity and general behaviour, the access code
 | Power failure delay | How long mains (AC) power must be missing before the panel reports a power failure (as on "FLEXi" SP3). | 0–999 s |
 | Call attempts to user | How many times the panel calls a user about an event (as on "FLEXi" SP3). SP5 doesn't make event calls: users get event SMS only, so this setting isn't used. | 0–99 |
 | Text encoding | The character set the panel uses for object, area and zone names. Choose the one that matches the language of your names. | English, Baltic, Cyrillic alphabet, Central European, Greek, Turkish, Hebrew, Arabic, Vietnamese |
-| Hang-up call after | Under **Incomming Call Handling**. When a user calls to switch an output, the panel answers and holds the call for this time before it hangs up and switches the output, so the call shows in the mobile operator's call records. | 0–99 s |
+| Hang-up call after | Under **Incoming Call Handling**. When a user calls to switch an output, the panel answers and holds the call for this time before it hangs up and switches the output, so the call shows in the mobile operator's call records. | 0–99 s |
 | Prevent event flooding (Suspend reporting) | Stops reporting an event that repeats too often. The next two settings set the limits. | on / off |
 | Suspend if the same event repeats more than … within … | Reporting of an event is suspended when it repeats more than this many times within this time. | 0–99 times; 0–99 s |
 | Resume reporting automatically after | When reporting of a suspended event starts again. | 0–99 min |
