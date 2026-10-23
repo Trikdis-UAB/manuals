@@ -107,6 +107,12 @@ public, so keep real names, systems and customer data out of fixtures and commit
 - **The beta calls the API through a region router** (`region-router.trikdis.workers.dev`, with an
   `X-Home-Region` header) and sometimes the region's host directly. The guard answers `/v3/api/*` on every
   host and the CORS preflight too; `guard-selftest.mjs` proves it for both front-ends.
+- **Waiting for a page is done by counting its requests** (`settle` in `lib/app.mjs`). Playwright's
+  `networkidle` is reached once per document and the app changes pages without a new one, so it stopped
+  waiting after the first page; on a slow morning (2026-10-23) icons the app fetches after opening a
+  page were missing from the pictures, and the run said 0 problems. Never wait with `networkidle` after
+  the first load. A page still loading after 20 s now fails its screen. When pictures from two runs
+  differ, look for missing icons before blaming the app.
 - **Keep menu clicks inside the configurator**: on desktop "Settings" is also a top-bar item.
 - **Pop-ups** (README, "Pop-ups and single cards"): find a row by its text in `div.table-row` and only
   among visible ones, because each list is also laid out as phone cards hidden on desktop. A dropdown
@@ -127,7 +133,10 @@ public, so keep real names, systems and customer data out of fixtures and commit
   (cellular bars or an Ethernet port), and Ethernet-only models (E16, E16T) are added by MAC address,
   not IMEI. The number of outputs shows too (output tiles on the dashboard): G16T and E16T have one.
   Set `comType`, `uid` and `outputs` per model in `lib/sample.mjs` before capturing a new model, from its
-  manual's specifications; the first GT+ dashboard went out with an Ethernet icon.
+  manual's specifications; the first GT+ dashboard went out with an Ethernet icon. The same goes for
+  device families: SP5's sample wireless devices are HEYI (group 9) because SP5 does not support Maximum
+  Security devices (firmware team, 2026-10-23), even though the app's catalog still lists them; HEYI
+  devices measure no temperature. Ask the manual's session what the product supports before picking.
 - **Defaults come from the server, not the browser.** A new system's default time zone is the
   `userTimeZone` in `/timezones`; the walk's `timezones` map sets it per language.
 - **Some languages are not fully translated in the app** (Russian is English; Spanish lacks a few

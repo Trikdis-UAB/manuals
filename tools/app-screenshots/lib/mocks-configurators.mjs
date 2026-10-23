@@ -71,7 +71,7 @@ function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
     return { success: true, data: u, total: u.length };
   });
 
-  // "Scan for new devices": the first check finds one new door contact in free slot 5; later checks
+  // "Scan for new devices": the first check finds one new HEYI door/window sensor in free slot 5; later checks
   // find nothing more. The app polls without pause on the cloud path until the scan is stopped.
   let checks = 0;
   on('POST', '/config/learn-sensors', ({ body }) => (body?.action === 'check'
@@ -88,8 +88,8 @@ function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
     Z: zonesOk,
     K: { 1: st(1, null, null, 13.6), 2: st(1, null, null, 13.5) },
     E: { 1: st(1, null, null, 13.7), 2: st(1, null, null, 13.6) },
-    W: { 1: st(1, null, 86, 3.1), 2: st(1, 22.0, 72, 3.05), 3: st(1, null, 64, 3.2), 4: st(1, null, 78, 2.9) },
-    S: { 1: st(1, 21.5, null, null), 2: st(1, 22.0, 72, null) },
+    W: { 1: st(1, null, 86, 3.1), 2: st(1, null, 72, 3.05), 3: st(1, null, 64, 3.2), 4: st(1, null, 78, 2.9) },
+    S: { 1: st(1, 21.5, null, null) },
     T: { 1: st(1, 21.5, null, null) },
   };
   on('GET', '/config/get-device-status', ({ query }) => {
@@ -98,8 +98,8 @@ function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
   });
 }
 
-// A Maximum Security Magnet Wireless LV door contact, as the panel reports a newly learned device.
-const SCAN_FOUND = { group: 1, type: 19, name: '', model: '', isNew: true, sn: '8412999', queueNo: 5, registered: false, failed: false, rssi: '82', voltage: '3.1' };
+// A HEYI Smart Door/Window sensor, as the panel reports a newly learned device (serial 0xA1B2C41E).
+const SCAN_FOUND = { group: 9, type: 3, name: '', model: '', isNew: true, sn: '2712847390', queueNo: 5, registered: false, failed: false, rssi: '82', voltage: '3.1' };
 
 function st(status, temperature, rssi, voltage) {
   return { status, temperature, rssi, voltage };

@@ -3,8 +3,9 @@
 // Shapes and array lengths follow the app's USB parser (configurators/wired/sp5-communication.service.ts):
 // 16 areas, 192 zones, 64 outputs and RS485 modules, 16 keypads, 96 wireless devices, 20 sensors,
 // 8 thermostats, 32 groups, 40 blacklist slots, 37 panel events. All values are invented.
-// Inferred and unverified against a real SP5: keypad serial-number prefixes (52 = LCD, 51 = LED) and
-// wireless device settings. Panel-event codes come from a real test panel (see below).
+// Inferred and unverified against a real SP5: keypad serial-number prefixes (52 = LCD, 51 = LED).
+// Panel-event codes come from a real test panel (see below). Wireless devices are HEYI ones on the RF-S8
+// receiver: SP5 does not support Maximum Security devices (firmware team, 2026-10-23).
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -54,7 +55,7 @@ outSettings[4] = out(4, { hwNumber: 7, definition: 6, protegus: true, name: 'Hea
 const sensor = (q, o = {}) => ({ queueNo: q, hwType: 0, seqNumber: 0, alarmLow: false, alarmHigh: false, port: 0, name: '', delay: 0, minTemp: 0, maxTemp: 0, bConst: 0, ntcR0: 0, ...o });
 const sensors = Array.from({ length: 20 }, (_, q) => sensor(q));
 sensors[0] = sensor(0, { hwType: 201, seqNumber: 9, alarmLow: true, alarmHigh: true, delay: 60, minTemp: 5, maxTemp: 30, bConst: 3950, ntcR0: 10000, name: 'Living room temperature' });
-sensors[1] = sensor(1, { hwType: 204, seqNumber: 1, alarmHigh: true, delay: 60, minTemp: 0, maxTemp: 40, name: 'Hall PIR temperature' });
+// No wireless temperature sensor: only device groups 1-5 measure temperature, and HEYI (group 9) is not one.
 
 const thermostats = Array.from({ length: 8 }, (_, i) => ({ enabled: false, outputNumber: 0, mode: 0, hysteresis: 0, activeSensor: 0, assignedSensors: [0], assignedTemperatures: [0], name: `Thermostat ${i + 1}` }));
 // outputNumber is the output's queueNo + 1 (the app's thermostat pop-up): 5 = "Heating" (outSettings[4]).
@@ -71,13 +72,15 @@ const keypads = Array.from({ length: 16 }, (_, i) => kp('00000000', `Keypad ${i 
 keypads[0] = kp('52A1C3F0', 'Hall keypad', BOTH());
 keypads[1] = kp('51B20417', 'Garage keypad', GARAGE());
 
-// --- wireless devices (group:type pairs from the app's catalog; icons exist in the release)
+// --- wireless devices: HEYI (group 9) types from the app's catalog. A HEYI device stores no settings
+// block (config null) and its id is the low byte of its 32-bit serial number, as the panel reports it.
 const noCfg = { warning: false, led: false, antimaskingSensitivity: 0, microwaveSensitivity: 0, microwavePulses: 0, sleepTime: 0, pir1Sensitivity: 0, pir2Sensitivity: 0, pir1Pulses: 0, pir2Pulses: 0, sirenSoundness: 0, sensitivity: 0 };
 const devices = Array.from({ length: 96 }, (_, q) => ({ queueNo: q, id: 0, sn: 0, type: 0, group: 0, user: 0, area: 0, key3: 0, key4: 0, config: { ...noCfg } }));
-devices[0] = { queueNo: 0, id: 2, sn: 8412173, type: 19, group: 1, user: 0, area: 0, key3: 0, key4: 0, config: { ...noCfg, led: true } };            // Maximum Security Magnet Wireless LV
-devices[1] = { queueNo: 1, id: 50, sn: 8412590, type: 20, group: 1, user: 0, area: 0, key3: 0, key4: 0, config: { ...noCfg, led: true, antimaskingSensitivity: 3, microwaveSensitivity: 12, microwavePulses: 2, sleepTime: 180, pir1Sensitivity: 14, pir2Sensitivity: 14, pir1Pulses: 2, pir2Pulses: 2 } }; // VIP Wireless LV
-devices[2] = { queueNo: 2, id: 0, sn: 9017344, type: 81, group: 2, user: 0, area: 3, key3: 0, key4: 0, config: { ...noCfg, sirenSoundness: 3 } };      // Siren Wireless LV
-devices[3] = { queueNo: 3, id: 0x14, sn: 2712847380, type: 8, group: 9, user: 0, area: 0, key3: 0, key4: 0, config: null };                            // Heyi water leakage
+const heyi = (queueNo, sn, type, area = 0) => ({ queueNo, id: sn & 0xff, sn, type, group: 9, user: 0, area, key3: 0, key4: 0, config: null });
+devices[0] = heyi(0, 0xA1B2C401, 3);    // Smart Door/Window sensor
+devices[1] = heyi(1, 0xA1B2C40B, 4);    // Smart PIR detector
+devices[2] = heyi(2, 0xA1B2C40E, 12, 3); // Smart Outdoor siren (areas Home and Garage)
+devices[3] = heyi(3, 0xA1B2C414, 8);    // Smart Water leakage sensor (sn 2712847380, unchanged)
 
 // --- panel events (names and order from the parser). Contact ID codes and on/off states are those of a
 // real SP5 test panel (revision 1E7LWB.0, read from the beta server 2026-10-19; testers may have changed
@@ -209,7 +212,6 @@ const betaStatus = () => ({
   zones: Object.fromEntries(Object.entries(systemStatus.zones).map(([k, z]) => [k, { ...z, mimic: false }])),
   sensors: {
     1: { enabled: true, active: true, alarm_high: false, alarm_low: false, temperature: 21.5 },
-    2: { enabled: true, active: true, alarm_high: false, alarm_low: false, temperature: 22.0 },
   },
 });
 

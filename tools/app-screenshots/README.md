@@ -168,7 +168,7 @@ and `isolate` paints only that element on a transparent background, so the pop-u
 not carry the dimmed page. `onlyApps` limits a screen to a front-end. The SP5 pop-ups (`popup-*` in
 `screens/sp5.json`) click English texts, so they are captured in English only. A state that needs data
 the sample lacks is set with `config`; `"_users": [{"queueNo": 2, …}]` changes single users of the panel
-user list. "Scan for new devices" finds one invented door contact (`lib/mocks-configurators.mjs`).
+user list. "Scan for new devices" finds one invented HEYI door/window sensor (`lib/mocks-configurators.mjs`).
 
 ## Known limits
 
@@ -185,8 +185,10 @@ user list. "Scan for new devices" finds one invented door contact (`lib/mocks-co
 - **SP5 values from a real panel, and the rest:** firmware 1.00, revision 1E7LWB.0, bootloader 1.00 and
   the panel-event Contact ID codes come from a real SP5 test panel on the beta server (2026-10-19), so
   the sidebar title reads "SP5_1E7LWB.0" as on a real panel. Testers may have changed single event codes,
-  and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED)
-  and wireless device settings. SP5's Cameras page is VideoHub-only and is not captured.
+  and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED).
+  The wireless devices are HEYI ones on the RF-S8 receiver, because SP5 does not support Maximum
+  Security devices (firmware team, 2026-10-23); HEYI devices measure no temperature, so the sample has
+  no wireless temperature sensor. SP5's Cameras page is VideoHub-only and is not captured.
 - **The beta server returns a newer SP5 shape** (`io9To2wire`/`io10To2wire`, `wirelessSupervisionTime`,
   `needCodeInKeypad` per output, `enableEncryption`/`isHexMode` per CMS channel, no output zone control or
   thermostat hysteresis, live status inside the configuration). `sp5.json` keeps the released shape for
