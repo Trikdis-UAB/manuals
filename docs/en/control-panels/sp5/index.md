@@ -674,6 +674,7 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 | Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Temperature sensors** and **Thermostats**. | Editable / Visible / Hidden |
 | Users | Access to **User list**, **Groups** and **Black list**. | Editable / Visible / Hidden |
 | System events | Access to **System events**. With **Hidden**, the **Periodic test** switch on **CMS Reporting** is not shown either. | Editable / Visible / Hidden |
+| Automation | Access to **Automation**. | Editable / Visible / Hidden |
 
 !!! note
     **Editable**: the installer can change the page. **Visible**: the page is read-only. **Hidden**: the page is removed from the menu and its settings are not read.
@@ -1693,6 +1694,13 @@ The panel builds every SMS as the system name, an event word and the name of the
 | Disarm | The word for disarming, followed by the user's name. | up to 23 characters |
 | Arm | The word for arming, followed by the user's name. | up to 23 characters |
 | Greeting SMS | One message for the whole system, sent once to a new user if **Greeting SMS on new user** is on for them. No name is added. | up to 63 characters |
+
+### Automation
+
+Menu **Automation**, with three pages: **Schedules**, **Scenes** and **Holidays**.
+
+!!! question "To describe"
+    This part of the app is still being developed: in the October 2026 beta it shows in the phone menu only. Describe it, with screenshots, when it is finished.
 
 ## Appendix: system events and Contact ID codes
 
