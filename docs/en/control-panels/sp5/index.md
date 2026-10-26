@@ -82,6 +82,8 @@ The app enforces these maximums:
 | Supervisors | 8 |
 | User groups | 32 |
 | Schedules | 64 |
+| Scenes | 32 |
+| Holidays | 32 |
 | Blacklisted numbers | 40 |
 
 ### Board and terminals
@@ -1547,7 +1549,7 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 | Setting | What it does | Values |
 |---|---|---|
 | Assigned groups | The user's groups. The permissions of all groups combine: if any group allows an action, the user has it. Remove the user from all groups to set permissions individually. | enabled groups, up to 32 |
-| Base permissions | The areas and outputs combined from the groups. | read-only |
+| Base permissions | The areas, outputs and schedules combined from the groups. **No restriction — always allowed** if no group has a schedule. | read-only |
 | Edit groups | Opens **Users → Groups**. The user popup closes **without saving**. | link |
 
 #### Edit user: Validity tab
@@ -1557,6 +1559,9 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 | Limit access to a time period | Off: permanent access. On: the user is active only between the dates below. | on / off |
 | Valid from | The start of the user's access. | date and time |
 | Valid until | The end of the user's access. The user's profile then shows **Temporary**. | date and time |
+| Assigned to this user | Under **Access schedule**. The schedules that set when the user may control the system. With none, control is allowed at any time. Lists the schedules in use. While the user is in a group, this is locked and shows the groups' schedules. | schedules |
+| During schedule | **Allow control** or **Deny control** while an assigned schedule is active. Applies to the areas, doors and outputs on the **Permissions** tab **[to confirm: what applies outside the schedule]**. | Allow control / Deny control |
+| Open Schedules | Opens **Automation → Schedules**. The user popup closes without saving. | link |
 
 #### Edit user: Call and SMS tab
 
@@ -1620,6 +1625,9 @@ The popup title is **Edit group:** and the group's name. Enter the **Group name*
 | Limit access to a time period | Optional, for temporary groups. Off: permanent access. On: members are active only between the dates below. | on / off |
 | Valid from | The start of access. A user in several groups gets the earliest start. | date and time |
 | Valid until | The end of access. A user in several groups gets the latest end. | date and time |
+| Assigned to this group | Under **Access schedule**. The schedules that set when members may control the system; they apply to every member. A user in several groups gets the schedules of all of them. With none, control is allowed at any time. | schedules |
+| During schedule | **Allow control** or **Deny control** while an assigned schedule is active, for the group's areas, doors and outputs. A user in several groups is shown **Deny control** only if every group denies **[to confirm: the panel combines groups the same way]**. | Allow control / Deny control |
+| Open Schedules | Opens **Automation → Schedules**. The group popup closes without saving. | link |
 
 #### Edit group: Call control tab
 
@@ -1694,12 +1702,184 @@ The panel builds every SMS as the system name, an event word and the name of the
 | Arm | The word for arming, followed by the user's name. | up to 23 characters |
 | Greeting SMS | One message for the whole system, sent once to a new user if **Greeting SMS on new user** is on for them. No name is added. | up to 63 characters |
 
-### Automation
+### Schedules
 
-Menu **Automation**, with three pages: **Schedules**, **Scenes** and **Holidays**.
+Menu **Automation → Schedules**. A schedule defines only a time: the days and hours when it is active, with optional holiday exceptions and a date range. What it does is set where it is used: **Access schedule** on users and groups, and the **Schedule** condition in **Scenes**. Up to 64 schedules.
 
-!!! question "To describe"
-    This part of the app is still being developed: in the October 2026 beta it shows in the phone menu only. Describe it, with screenshots, when it is finished.
+Schedules follow the panel's clock, so set **Time Settings** in **System options** first **[to confirm: the panel uses its own clock, time zone and daylight saving setting for schedules]**.
+
+#### Schedule list
+
+Only schedules in use are listed. A schedule still at its factory settings counts as free.
+
+| Setting | What it does | Values |
+|---|---|---|
+| Search | Filters the list by name. | text |
+| + Add schedule | Opens the schedule popup on the first free schedule. If none is free, the app shows **All 64 schedules are in use. Remove a schedule first.** | button |
+| Name | The schedule's name. Click the header to sort by name. | — |
+| Schedule time | The days and the time, for example **Mon–Fri, 09:00 – 17:00** or **Every day, all day**. | — |
+| Enable | Turns the schedule on or off **[to confirm: a disabled schedule is never active, for users, groups and scenes alike]**. | on / off |
+| Edit | Opens the schedule popup. | link |
+
+#### Schedule popup
+
+Opens from **Edit** and **+ Add schedule**. The title is **Schedule**, with the schedule's on/off switch beside it. A new schedule starts switched on, **Weekly**, Monday to Friday, 09:00 – 17:00, with no name. **Remove schedule** at the bottom (existing schedules only) asks to confirm, resets the schedule to its factory settings and removes it from every user, group and scene. The **Users / Groups** and **Scenes** links in the note open those pages; the popup closes without saving.
+
+| Setting | What it does | Values |
+|---|---|---|
+| (switch in the popup header) | Turns the schedule on or off. | on / off |
+| Schedule name | Required. | up to 23 characters |
+| Repeat | Under **Time & recurrence**. **Weekly**: on the selected days. **Daily**: every day. | Weekly / Daily |
+| Days | The days of the week. Shown for **Weekly**; select at least one. | M T W T F S S |
+| All day | Active all day. Hides **Time** and **End time**. | on / off |
+| Time | When the schedule starts. | hh:mm |
+| End time | When it stops. The app accepts an end time earlier than the start **[to confirm: whether such a schedule, e.g. 22:00 – 06:00, runs over midnight]**. | hh:mm |
+| Holidays | Under **Holiday exceptions**. The holidays on which this schedule works differently, from **Automation → Holidays**, including disabled ones. If there are none, **Set up holidays** opens that page and the popup closes without saving. | holidays |
+| Holiday rule | What the schedule does on the selected holidays. See **Holiday rules** below. Available once a holiday is selected. Selecting the first holiday sets **Skip when holiday**; removing them all sets **Holiday not used** and turns **Set custom time** off. | 5 rules |
+| Set custom time | Shows a second **Time** and **End time** for the selected holidays **[to confirm: used instead of the normal time on those days]**. Available once a holiday is selected. | on / off; hh:mm |
+
+**Schedule condition** is the collapsed section at the bottom.
+
+| Setting | What it does | Values |
+|---|---|---|
+| Limit by date range | Restricts the schedule to the dates below. Outside them it is inactive even if enabled. | on / off |
+| Start date | The first day. Required when the range is on. | date |
+| End date | The last day **[to confirm: the end date itself is included]**. Required when the range is on; it can't be earlier than **Start date**. | date |
+
+#### Holiday rules
+
+The meanings below are taken from the rule names **[to confirm: all five]**. A holiday switched off on **Holidays** is ignored by every schedule.
+
+| Holiday rule | On the selected holidays, the schedule… |
+|---|---|
+| Holiday not used | Works as on any other day. |
+| Skip when holiday | Is not active. |
+| Additional when holidays | Is active as well as on its normal days. |
+| Only on holidays | Is active on the selected holidays only, not on its normal days. |
+| Only holidays and selected days | **[to confirm: how this differs from Additional when holidays]** |
+
+#### Where schedules are used
+
+| Where | What the schedule does there |
+|---|---|
+| **User list → Edit user → Validity**, under **Access schedule** | Sets when the user may control the system. |
+| **Groups → Edit group → Validity**, under **Access schedule** | The same, for every member of the group. |
+| **Scenes**, condition **Schedule** | Runs a scene when the schedule starts or stops. |
+
+### Scenes
+
+Menu **Automation → Scenes**. A scene lets the panel act on its own: **IF** its conditions are met, **THEN** it switches outputs or arms and disarms areas. Up to 32 scenes, each with up to 4 conditions and 3 actions.
+
+#### Scene list
+
+| Setting | What it does | Values |
+|---|---|---|
+| Search | Filters the list by name. | text |
+| + Add scene | Opens the scene popup on the first free scene. If none is free, the app shows **All 32 scenes are in use. Remove a scene first.** | button |
+| Name | The scene's name. Click the header to sort by name. | — |
+| Trigger (IF) | The first condition, with **+1 more** and so on if there are more. | — |
+| Action (THEN) | The first action, with **+1 more** and so on. | — |
+| Enable | Turns the scene on or off. | on / off |
+| Edit | Opens the scene popup. | link |
+
+#### Scene popup
+
+Opens from **Edit** and **+ Add scene**. The title is **Scene**, with the scene's on/off switch beside it. A new scene starts switched on, with one condition (**Zone**, **Alarm (when area alarm)**, no zone selected yet) and one action (the first output, **Turn ON**). **Remove scene** at the bottom (existing scenes only) asks to confirm and clears the scene.
+
+| Setting | What it does | Values |
+|---|---|---|
+| (switch in the popup header) | Turns the scene on or off. | on / off |
+| Name | The scene's name. Required. | up to 23 characters |
+| Trigger when | Under **IF**. **ALL**: the scene runs when all the conditions are met. **ANY**: when any one of them is. The conditions are joined by **AND** or **OR** to match **[to confirm: how ALL, and **All of** under **Match**, work with momentary events such as **Arm**, as opposed to states such as **Not armed**]**. | ALL / ANY |
+| + Add condition | Adds a condition. Each condition has **Remove**. | up to 4 |
+| + Add action | Under **THEN**. Adds an action. All actions run, joined by **AND**. Each action has **Remove**. | up to 3 |
+
+The app won't save a scene without a name, a condition and an action, or with a condition or action left incomplete. The message names it, for example **Condition 1: select at least one element or choose "Any (no filter)".**
+
+A condition or action the app does not recognise is shown as **Unsupported condition (type …)** or **Unsupported action (mode …)** and is kept unchanged; you can only remove it.
+
+#### Conditions
+
+A condition reads as a sentence: **When** the source, **Match** and the elements, **is** the event, then a value if the event needs one.
+
+| Setting | What it does | Values |
+|---|---|---|
+| When | The source of the condition. | Zone, Area, Output, Schedule, Sensors, User, System, SMS received |
+| Match | For Zone, Area, Output, Schedule and Sensors. **Any one of** the selected elements, **All of** them, or **Any (no filter)**: any element, with no list to select. | Any one of / All of / Any (no filter) |
+| Zones, Areas, Outputs, Schedules, Sensors | The elements to watch. Lists zones with a terminal, enabled areas, outputs with a terminal, schedules in use and the sensors on **Temperature sensors**. An element that is no longer available shows **(not available)**. | one or more |
+| Event | What must happen. See **Condition events** below. Not shown for **SMS received**. | depends on **When** |
+| Value | For **Value more than** and **Value lower than**: the threshold, in the same unit as the sensor's **Min** and **Max**. | one decimal, −3276.7 to 3276.7; default 20 |
+| Time, min | For **No movement more than** and **No movement less than**. | 1–32767 min; default 30 |
+| Match | For **RFID tag**: **Specific user** or **Any user**. | Specific user / Any user |
+| User | For **Specific user**: the user, from the active users. If the users haven't been read yet, a **User number** box is shown instead. | 1–1000 |
+| SMS text | For **SMS received**: the text that runs the scene **[to confirm: which senders count, and whether upper and lower case matter]**. | up to 23 characters |
+
+#### Condition events
+
+| When | Events |
+|---|---|
+| Zone | Alarm (when area alarm), OK (restored), Open, Tamper alarm, Tamper restore, Bypass, Unbypass |
+| Area | Arm, Disarm, Sleep, Stay, Not armed, Not disarmed, Not sleep, Not stay, AutoArm, AutoDisarm, Auto arm failed, No movement more than, No movement less than **[to confirm: which zones count as movement]** |
+| Output | Output on, Output off |
+| Schedule | Schedule starts, Schedule stops |
+| Sensors | Alarm start, Alarm stop, Low value start, Low value ends, High value starts, High value restored, Value more than, Value lower than, Sensor lost, Sensor restore **[to confirm: the alarm and low/high events follow the sensor's **Min** and **Max**]** |
+| User | RFID tag, Unauthorized call **[to confirm: what counts as an unauthorized call]** |
+| System | AC lost, AC restore, Battery lost, Battery restore, Bell missing, Bell restore, Wi-Fi fail, Wi-Fi restore, LAN fail, LAN restore, SIM fail, SIM restore |
+| SMS received | no events; enter the **SMS text** |
+
+#### Actions
+
+| Setting | What it does | Values |
+|---|---|---|
+| Type | What the action controls. | Output / Area |
+| Output / Area | The output or area. Any output with a terminal can be chosen, whatever its definition **[to confirm: the panel also switches outputs that are not Remote control, such as Siren]**; only enabled areas are listed. | an output or area |
+| Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away** **[to confirm: how Arm and Force arm Away differ]**. | see left |
+| Pulse time, s | For **Pulse**. | 1–65535 s; default 5 |
+| When ends | What to do when the scene ends **[to confirm: when its conditions are no longer met]**. For an output: **Do nothing** or **Invert / repeat pulse**. For an area: **Do nothing** or one of the area actions. | see left |
+
+#### When something a scene uses is removed
+
+The app updates the scenes by itself:
+
+| Change | Effect on scenes |
+|---|---|
+| A zone's terminal is reset (**Reset I/O terminal**, removing an ATZ pair, a wireless device or a keypad) | The zone is removed from conditions. |
+| An area is disabled | The area is removed from conditions and its actions are removed. |
+| An output's terminal is reset | The output is removed from conditions and its actions are removed. Changing its definition does not affect scenes. |
+| A sensor is reset or detached | The sensor is removed from conditions. |
+| A schedule is removed | The schedule is removed from conditions. |
+| A user is deleted | An **RFID tag** condition for that user shows the user as not available. A user whose number changes is followed. |
+
+!!! note
+    A condition left with no elements stays in the scene **[to confirm: and never matches]**. The scene can't be saved again until you select an element or remove the condition.
+
+### Holidays
+
+Menu **Automation → Holidays**. A holiday is a day or a range of days, once or every year, that schedules can treat differently (see **Holiday rules**). Up to 32 holidays.
+
+#### Holiday list
+
+| Setting | What it does | Values |
+|---|---|---|
+| Search | Filters the list by name. | text |
+| + Add | Opens the holiday popup on the first free holiday. If none is free, the app shows **All 32 holidays are in use. Remove a holiday first.** | button |
+| Name | The holiday's name. Click the header to sort by name. | — |
+| Details | The dates, with **Annual** if the holiday repeats every year. | e.g. 24 Dec – 26 Dec |
+| Assigned to | The schedules that use the holiday. | schedule names, or — |
+| Enable | Turns the holiday on or off. Off: it stays in the list and in its schedules, but they ignore it. | on / off |
+| Edit | Opens the holiday popup. | link |
+
+#### Holiday popup
+
+Opens from **Edit** and **+ Add**. The title is **Holiday**. A new holiday starts enabled and not annual. **Remove holiday** at the bottom (existing holidays only) asks to confirm, clears the holiday and removes it from all schedules. A schedule left with no holidays gets **Holiday not used** and **Set custom time** off.
+
+| Setting | What it does | Values |
+|---|---|---|
+| Name | The holiday's name. Required. | up to 23 characters |
+| Enabled | Active in schedules. Turn it off to keep the holiday but pause it. | on / off |
+| Annual | Repeats every year; the year is not used. **Start date** and **End date** are then set as **Month** and **Day**. | on / off |
+| Start date | The first day. Required. | a date from 2000 to 2255, or Month and Day |
+| End date | The last day. Leave it empty for a one-day holiday. It can't be earlier than **Start date**, except for an annual holiday **[to confirm: an annual range across New Year, e.g. 24 Dec – 2 Jan, works on the panel]**. | as Start date |
 
 ## Appendix: system events and Contact ID codes
 
