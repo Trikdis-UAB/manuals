@@ -261,7 +261,7 @@ A 2-wire fire loop can be connected to IO9, IO10 or both (marked FL1 and FL2 on 
 
 Turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both in **System options → System Behavior**. The terminal then becomes a Fire zone and can't be used for anything else. A zone set to **Fire** gets a response time of 2000 ms.
 
-Wire 4-wire detectors as on "FLEXi" SP3: the alarm contacts to a zone with the **Fire** definition, and the detectors' power through an output with the **Fire sensor reset** definition, which cuts their power to reset them.
+Wire 4-wire detectors as on "FLEXi" SP3: the alarm contacts to a zone with the **Fire** definition, and the detectors' power through an output with the **Fire sensor reset** definition, which cuts their power to reset them. Choosing **Fire** sets the zone's **CID code** to 110 and **Delay** to 2000 ms.
 
 ### Connecting a siren
 
@@ -501,10 +501,9 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 1.  Wire the 2-wire smoke detectors to IO9, IO10 or both (see [Connecting fire detectors](#connecting-fire-detectors)).
 2.  In **System options → System Behavior**, turn on **2-wire fire on IO9**, **2-wire fire on IO10** or both.
-3.  In **Zones**, add a zone on the terminal **SP5 9 I/O - 2-wire fire zone** (or IO10) with the **Fire** definition. The app sets **Delay** to 2000 ms.
-4.  Check the zone's **CID code**. When you choose **Fire** in the zone popup, the app sets it to 110 (fire alarm) and **Delay** to 2000 ms, unless you changed them by hand. Changing the definition in the **Zones** list leaves the CID code as it was.
-5.  In **System options → Arming Restrictions**, decide whether **Fire Loop Trouble** blocks arming.
-6.  Tap **Write**.
+3.  In **Zones**, add a zone on the terminal **SP5 9 I/O - 2-wire fire zone** (or IO10). For a 2-wire fire loop the popup shows only **Name**, **Assign terminal** and **Assign area**; the panel handles the rest.
+4.  In **System options → Arming Restrictions**, decide whether **Fire Loop Trouble** blocks arming.
+5.  Tap **Write**.
 
 ### Temperature sensor and thermostat
 
@@ -759,7 +758,7 @@ The same paths for reporting to Protegus2. The card is greyed out while **Enable
 | Setting | What it does | Values |
 |---|---|---|
 | Enable cloud service | Turns on reporting to Protegus2. Off greys out **Reporting to Cloud**. | on / off |
-| Cloud access code | The panel's access code for the Protegus2 cloud. | up to 8 characters |
+| Cloud access code | The panel's access code for the Protegus2 cloud. | 6 digits |
 | Report in parallel with CMS | Sends events to Protegus2 at the same time as to the CMS, not only after the CMS has received them. | on / off |
 
 #### SIM
@@ -927,7 +926,7 @@ Menu **Areas and zones → Areas (Partitions)**. An area is a part of the site t
 | (tick box per area) | Tick an area to enable it; untick it to disable it. The list shows all 16 areas with their ID and name. | on / off |
 
 !!! note
-    If you disable or remove an area that is still in use, the app asks you to confirm. It then removes the area from every zone, output, keypad, wireless device, user, group and from other areas' **Conditional arming**. Users' rights are cleared only if the user list has been read in this session.
+    If you disable or remove an area that is still in use, the app asks you to confirm. It then removes the area from every zone, output, keypad, wireless device, user, group and from other areas' **Conditional arming**.
 
 #### Area popup
 
@@ -988,14 +987,14 @@ Menu **Areas and zones → Zones**. A zone is one detector input with its area, 
 
 #### Zone popup
 
-Opens from **Edit**, from **+ Add**, from **Terminals → Assign function → Assign zone input**, and from **+ Add new zone** in the area popup. **Reset I/O terminal** at the bottom frees the terminal.
+Opens from **Edit**, from **+ Add**, from **Terminals → Assign function → Assign zone input**, and from **+ Add new zone** in the area popup. **Reset I/O terminal** at the bottom frees the terminal. For a zone on a 2-wire fire terminal, the popup shows only **Name**, **Assign terminal** and **Assign area**.
 
 | Setting | What it does | Values |
 |---|---|---|
 | Name | The zone's name. Required. | up to 23 characters |
 | Assign terminal | The input the zone uses. Only free input terminals are listed: not used by another zone, not used as an output, and not measuring temperature or voltage. If the terminal doesn't support the current **Type**, Type changes to EOL. | free input terminals |
 | Assign area | The areas the zone belongs to. **+ Add new area** opens **Add areas**. | enabled areas |
-| Definition | How the zone reacts. Changing it also sets **Delay** and **CID code** to the new definition's values, unless you changed them by hand. | 12 definitions |
+| Definition | How the zone reacts. Changing it, here or in the **Zones** list, also sets **Delay** and **CID code** to the new definition's values, replacing any values set before. | 12 definitions |
 | Type | The circuit type. See **Zone types** below. | the types the terminal allows |
 | Delay | The zone's response time: how long the input must be violated before the zone triggers. | 0–9999 ms |
 | Intelli zone | An alarm needs at least two zones with this option to trigger within the area's **Intellizone delay**. | on / off |
@@ -1051,7 +1050,7 @@ Creates several zones at once with the same settings. When it opens, the app set
 
 #### Zone definitions
 
-The descriptions follow "FLEXi" SP3, except **Delay 2** and **Mimic**, which SP3 doesn't have. The last column shows the **Delay** and **CID code** the app sets when you choose the definition in a popup.
+The descriptions follow "FLEXi" SP3, except **Delay 2** and **Mimic**, which SP3 doesn't have. The last column shows the **Delay** and **CID code** the app sets when you choose the definition, in the popup or in the **Zones** list.
 
 | Definition | What it does | Delay, CID code |
 |---|---|---|
