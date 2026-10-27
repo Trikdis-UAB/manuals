@@ -1,6 +1,6 @@
 # GT/GT+/GET universalus TIP/RING prijungimas prie apsaugos centralės
 
-Naudokite šį vadovą, kai apsaugos centralė įvykius perduoda per PSTN telefoninį komunikatorių. GT/GT+/GET komunikatorius jungiamas prie centralės `TIP` / `RING` gnybtų, automatiškai priima Contact ID įvykius ir, jei reikia, gali nuotoliniu būdu įjungti / išjungti sistemą per Protegus2 valdomą jungiklio (keyswitch) zoną. Naudokite kartu su pilnu komunikatoriaus vadovu ir apsaugos centralės programavimo vadovu.
+Naudokite šią instrukciją, kai apsaugos centralė įvykius perduoda per PSTN telefoninį komunikatorių. GT/GT+/GET komunikatorius jungiamas prie centralės `TIP` / `RING` gnybtų, automatiškai priima Contact ID įvykius ir, jei reikia, gali nuotoliniu būdu įjungti / išjungti sistemą per Protegus2 valdomą jungiklio (keyswitch) zoną. Naudokite kartu su pilna komunikatoriaus instrukcija ir apsaugos centralės programavimo instrukcija.
 
 !!! caution "Atsargiai"
     Montavimą ir aptarnavimą gali atlikti tik kvalifikuoti specialistai. Prieš jungdami laidus atjunkite maitinimą. Neautorizuoti pakeitimai panaikina garantiją.
@@ -10,7 +10,7 @@ Naudokite šį vadovą, kai apsaugos centralė įvykius perduoda per PSTN telefo
 - GT/GT+/GET programinės įrangos versija 1.21, įdėta SIM kortelė, PIN išjungtas, aktyvus duomenų planas.
 - Apsaugos centralė, kurioje yra PSTN telefoninis komunikatorius, palaikantis Contact ID per DTMF tonus.
 - Protegus2 įmonės / montuotojo paskyra ir komunikatoriaus IMEI.
-- Centralės montuotojo kodas ir centralės programavimo vadovas reikalingi tik tada, jei centralė dar neperduoda pranešimų per telefoninį komunikatorių, jei reikia pakeisti komunikatoriaus nustatymus arba jei bus pridedamas nuotolinis įjungimas / išjungimas per jungiklio (keyswitch) zoną.
+- Centralės montuotojo kodas ir centralės programavimo instrukcija reikalingi tik tada, jei centralė dar neperduoda pranešimų per telefoninį komunikatorių, jei reikia pakeisti komunikatoriaus nustatymus arba jei bus pridedamas nuotolinis įjungimas / išjungimas per jungiklio (keyswitch) zoną.
 - Laisva centralės zona reikalinga tik tada, jei reikia nuotolinio įjungimo / išjungimo. Ji turi būti programuojama kaip jungiklio (keyswitch) zona.
 
 !!! note "Pastaba"
@@ -30,16 +30,16 @@ Prieš jungdami laidus atjunkite centralės ir komunikatoriaus maitinimą. Priju
 ![Universali TIP/RING ir jungiklio zonos pajungimo schema](../../../../../images/quick-setup/generic-dial-capture.svg)
 
 !!! warning "Įspėjimas"
-    Jungiklio (keyswitch) zoną junkite tiksliai taip, kaip nurodyta centralės vadove. Kai kurios centralės naudoja normaliai atvirą įėjimą, normaliai uždarą įėjimą, EOL rezistorių, dvigubą EOL rezistorių arba atskirą bendrą gnybtą.
+    Jungiklio (keyswitch) zoną junkite tiksliai taip, kaip nurodyta centralės instrukcijoje. Kai kurios centralės naudoja normaliai atvirą įėjimą, normaliai uždarą įėjimą, EOL rezistorių, dvigubą EOL rezistorių arba atskirą bendrą gnybtą.
 
 ## Apsaugos centralės programavimas
 
-Praleiskite šį skyrių, jei centralės PSTN telefoninis komunikatorius jau perduoda pranešimus ir nuotolinis įjungimas / išjungimas nereikalingas. Programavimo kodai skiriasi pagal gamintoją ir modelį. Naudokite apsaugos centralės programavimo vadovą tik tiems punktams, kuriuos reikia pakeisti.
+Praleiskite šį skyrių, jei centralės PSTN telefoninis komunikatorius jau perduoda pranešimus ir nuotolinis įjungimas / išjungimas nereikalingas. Programavimo kodai skiriasi pagal gamintoją ir modelį. Naudokite apsaugos centralės programavimo instrukciją tik tiems punktams, kuriuos reikia pakeisti.
 
 1. Įjunkite centralės PSTN telefoninį komunikatorių.
 2. Pasirinkite toninį / DTMF rinkimą.
 3. Pasirinkite Contact ID pranešimų formatą.
-4. Nustatykite imtuvo telefono numerį. Jei centralė jau siuntė pranešimus į stebėjimo pultą per telefono liniją, esamą numerį paprastai galima palikti nepakeistą. Naujam TIP/RING signalų priėmimui įveskite bet kokį imtuvo numerį, ilgesnį nei 4 skaitmenys, nebent centralės vadovas reikalauja kito formato.
+4. Nustatykite imtuvo telefono numerį. Jei centralė jau siuntė pranešimus į stebėjimo pultą per telefono liniją, esamą numerį paprastai galima palikti nepakeistą. Naujam TIP/RING signalų priėmimui įveskite bet kokį imtuvo numerį, ilgesnį nei 4 skaitmenys, nebent centralės instrukcija reikalauja kito formato.
 5. Jei reikalingas perdavimas į CSP/CMS, centralės objekto numeris turi būti nustatytas pagal stebėjimo pulto pateiktą reikšmę. Bazinis TIP/RING signalų priėmimas nereikalauja atskiro komunikatoriaus Object ID, nes komunikatorius gali perduoti centralės siunčiamą objekto numerį.
 6. Įjunkite įvykius, kurie turi būti perduodami: aliarmus, atsistatymus, gedimus, sabotažus ir įjungimo / išjungimo įvykius, kai jų reikia.
 7. Zoną, prijungtą prie komunikatoriaus išėjimo, suprogramuokite kaip jungiklio (keyswitch) zoną tik tada, jei reikalingas nuotolinis įjungimas / išjungimas iš Protegus2.

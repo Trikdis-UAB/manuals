@@ -41,7 +41,7 @@
       loadError: "Paieška nepasiekiama. Nepavyko įkelti paieškos indekso.",
       one: "1 atitinkantis dokumentas",
       other: "# atitinkantys dokumentai",
-      noResultsManual: "Šiame vadove atitinkančių dokumentų nerasta.",
+      noResultsManual: "Šioje instrukcijoje atitinkančių dokumentų nerasta.",
       noResultsDocument: "Šiame puslapyje atitikmenų nerasta.",
       oneInDocument: "1 atitiktis šiame puslapyje",
       otherInDocument: "# atitiktys šiame puslapyje",

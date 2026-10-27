@@ -229,8 +229,8 @@ plugins:
           - T16: alarm-communicators/t16/index.md
       - Apsaugos centrelės:
         - FLEXi SP3:
-          - FLEXi SP3 vadovas: control-panels/sp3/index.md
-          - Protegus ir Paradox klaviatūrų vartotojo vadovas: control-panels/sp3/paradox-user-guide/index.md
+          - FLEXi SP3 instrukcija: control-panels/sp3/index.md
+          - Protegus ir Paradox klaviatūrų vartotojo instrukcija: control-panels/sp3/paradox-user-guide/index.md
           - S8/S9 belaidžių jutiklių pridėjimas: control-panels/sp3/add-s8-sensors.md
           - Paradox belaidžiai įrenginiai (RTX3): control-panels/sp3/paradox-rtx3/index.md
         - CG17: control-panels/cg17/index.md

@@ -477,7 +477,7 @@ Lauko sirenos MR100 pajungimas ir nustatymai pavaizduoti schemoje. Jei apsaugos 
 
 Prie klaviatūros magistralės galima prijungti iki 8 įrenginių. Programoje TrikdisConfig reikia nurodyti prijungiamos klaviatūros tipą (žr. 5.5 „Langas „Moduliai““). Centralė automatiškai atpažins ir užregistruos prijungtus įrenginius.
 
-Kaip valdyti apsaugos sistemą Protegus arba Paradox klaviatūra, programuoti vartotojų kodus, naudoti Bypass, iButton/RFID, skambučius, SMS ir PGM išėjimus, aprašyta [„FLEXi“ SP3 vartotojo vadove su Protegus ir Paradox klaviatūromis](paradox-user-guide/index.md).
+Kaip valdyti apsaugos sistemą Protegus arba Paradox klaviatūra, programuoti vartotojų kodus, naudoti Bypass, iButton/RFID, skambučius, SMS ir PGM išėjimus, aprašyta [„FLEXi“ SP3 vartotojo instrukcijoje su Protegus ir Paradox klaviatūromis](paradox-user-guide/index.md).
 
 <img alt="Dvi prijungimo schemos: SP3 prie klaviatūrų. Kairėje AUX+ (+12V) į RED, AUX- į BLK, GRN į GRN, YEL į YEL; klaviatūros ZONE per kontaktą jungiamas su AUX-. Tinka SK-LED TouchPad, SK-LCD TouchPad, SK LCD Button, SK LED Button, Paradox K636, K10H(V), K32 LED, K32+ LED, K32LCD+, K35, TM50 ir TM70. Dešinėje AUX+ (+12V) į POS, AUX- į NEG, GRN į DATA, YEL į CLOCK; tinka Crow CR16 ir Crow CR-LCD." src="./image23.webp" style="width:7.086805555555555in;height:1.875in" />
 
@@ -544,7 +544,7 @@ Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 0 revizijos pr
 
 Centralės *„FLEXi“ SP3* veikimo programą reikia pakeisti į 1 revizijos programą SP3_xxx1_0112.fw (veikimo programos versija 1.12 arba aukštesnė. Prijungus belaidžių jutiklių imtuvą *RTX3*, centralė *„FLEXi“ SP3* gali dirbti su firmos Paradox belaidžiais jutikliais (magnetiniais kontaktais, PIR jutikliais, stiklo dūžio jutikliais(G550), dūmų jutikliais (SD360), nuotolinio valdymo pulteliais (REM2, REM25), sirenomis (SR230, SR250), klaviatūromis (K37), PGM ir zonos išplėtimo moduliu (2WPGM), kartotuvu (RPT1)).
 
-RTX3 veikimo programos, prijungimo ir Paradox belaidžių įrenginių registravimo arba šalinimo instrukcijos pateiktos vadove [Paradox belaidžiai įrenginiai su „FLEXi“ SP3 (RTX3)](paradox-rtx3/index.md).
+RTX3 veikimo programos, prijungimo ir Paradox belaidžių įrenginių registravimo arba šalinimo nurodymai pateikti instrukcijoje [Paradox belaidžiai įrenginiai su „FLEXi“ SP3 (RTX3)](paradox-rtx3/index.md).
 
 <img alt="Prijungimo schema: SP3 ir RTX3. SP3 AUX+ (+12V) jungiamas prie RTX3 RED, AUX- – prie BLK, GRN – prie GRN, YEL – prie YEL." src="./image35.webp" style="width:2.2233377077865266in;height:1.20333552055993in" />
 

@@ -92,7 +92,7 @@ Editor entry points (start here when editing):
     - [T16](lt/alarm-communicators/t16/index.md)
 - Apsaugos centrelės
   - [FLEXi SP3](lt/control-panels/sp3/index.md)
-    - [Protegus ir Paradox klaviatūrų vartotojo vadovas](lt/control-panels/sp3/paradox-user-guide/index.md)
+    - [Protegus ir Paradox klaviatūrų vartotojo instrukcija](lt/control-panels/sp3/paradox-user-guide/index.md)
     - [S8/S9 belaidžių jutiklių pridėjimas](lt/control-panels/sp3/add-s8-sensors.md)
     - [Paradox belaidžiai įrenginiai (RTX3)](lt/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](lt/control-panels/cg17/index.md)

@@ -1,6 +1,6 @@
 # DSC PowerSeries su E16 greitas paruošimas
 
-Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie DSC PowerSeries centralių (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.
+Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie DSC PowerSeries centralių (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.
 
 !!! caution "Atsargiai"
     Montavimą ir aptarnavimą gali atlikti tik kvalifikuoti specialistai. Prieš jungdami laidus atjunkite maitinimą. Neautorizuoti pakeitimai panaikina garantiją.

@@ -285,7 +285,7 @@ NO, NC, EOL tipo grandinių laidinių sujungimų schemos:
 
 ## Apsaugos centralės programavimas
 
-Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis turi būti įjungtas ir tinkamai sukonfigūruotas. Vadovaudamiesi tam tikros apsaugos centralės programavimo vadovu, nustatykite centralės telefoninį komunikatorių:
+Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis turi būti įjungtas ir tinkamai sukonfigūruotas. Vadovaudamiesi tam tikros apsaugos centralės programavimo instrukcija, nustatykite centralės telefoninį komunikatorių:
 
 1.  Įjunkite centralės PSTN telefoninį komunikatorių.
 
@@ -661,7 +661,7 @@ E16T veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po atnau
 
 „Ethernet“ komunikatorių įrengti ir aptarnauti gali tik kvalifikuoti asmenys.
 
-Prieš įrengdami, atidžiai perskaitykite šį vadovą, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
+Prieš įrengdami, atidžiai perskaitykite šią instrukciją, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
 
 Visada išjunkite el. energijos tiekimą prieš atliekant prietaiso pajungimą.
 

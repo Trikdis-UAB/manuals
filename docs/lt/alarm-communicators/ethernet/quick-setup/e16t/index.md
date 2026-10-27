@@ -1,6 +1,6 @@
 # E16T greitas paruošimas
 
-Trumpi žingsniai, skirti prijungti E16T komunikatorių prie apsaugos centralės telefoninio komunikatoriaus, sukonfigūruoti IP ryšį ir pridėti sistemą į Protegus. Naudokite kartu su pilnu E16T vadovu kitiems nustatymams.
+Trumpi žingsniai, skirti prijungti E16T komunikatorių prie apsaugos centralės telefoninio komunikatoriaus, sukonfigūruoti IP ryšį ir pridėti sistemą į Protegus. Naudokite kartu su pilna E16T instrukcija kitiems nustatymams.
 
 !!! caution "Atsargiai"
     Montavimą ir aptarnavimą gali atlikti tik kvalifikuoti specialistai. Prieš jungdami laidus atjunkite maitinimą. Neautorizuoti pakeitimai panaikina garantiją.

@@ -1831,7 +1831,7 @@ Atlikite šiuos žingsnius:
 
 Patalpų elektroninės apsaugos nuo įsibrovimo sistemą įrengti ir aptarnauti gali tik kvalifikuoti asmenys.
 
-Prieš įrengdami, atidžiai perskaitykite šį vadovą, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
+Prieš įrengdami, atidžiai perskaitykite šią instrukciją, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
 
 Prieš prijungdami prie elektros tinklo, visada išjunkite el. energijos tiekimą.
 

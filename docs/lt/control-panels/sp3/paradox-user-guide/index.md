@@ -1,4 +1,4 @@
-# „FLEXi“ SP3 apsaugos centralės su Protegus ir Paradox klaviatūromis vartotojo vadovas
+# „FLEXi“ SP3 apsaugos centralės su Protegus ir Paradox klaviatūromis vartotojo instrukcija
 
 <div style="text-align: center;">
 <img src="./image1.png" alt="Klaviatūra SK232LED W: viršutiniai saugojimo režimų ir zonų būsenos indikatoriai rodo 1–32 zonas ir ARM, SLEEP, STAY bei OFF režimus dviem sritims. Apatiniai šviečiantys mygtukai skirti veikimo režimams nustatyti ir skaičiams įvesti." width="400">

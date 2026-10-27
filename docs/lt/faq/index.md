@@ -20,4 +20,4 @@ Atsakymai į realius klausimus, kilusius instaliacijos metu – surinkti iš kli
 <!-- --8<-- [end:sp3-wiegand-reader-door-output-body] -->
 <!-- --8<-- [end:sp3-wiegand-reader-door-output] -->
 
-Žr. [„FLEXi“ SP3 vadovą](../control-panels/sp3/index.md) – ten rasite pilnas prijungimo schemas ir TrikdisConfig nustatymus.
+Žr. [„FLEXi“ SP3 instrukciją](../control-panels/sp3/index.md) – ten rasite pilnas prijungimo schemas ir TrikdisConfig nustatymus.

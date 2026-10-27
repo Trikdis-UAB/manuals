@@ -1,6 +1,6 @@
 # Interlogix NX-8V2 su GT/GT+/GET greitas paruošimas
 
-Trumpi pajungimo ir programavimo žingsniai, skirti prijungti GT/GT+/GET komunikatorių prie Interlogix NX-8V2 centralės naudojant KeyBus, tada pridėti sistemą į Protegus2. Naudokite kartu su pilnais vadovais kitiems nustatymams. (Gnybtų pavadinimai GT/GT+/GET gali nežymiai skirtis, tačiau jungtys yra tokios pačios.)
+Trumpi pajungimo ir programavimo žingsniai, skirti prijungti GT/GT+/GET komunikatorių prie Interlogix NX-8V2 centralės naudojant KeyBus, tada pridėti sistemą į Protegus2. Naudokite kartu su pilnomis instrukcijomis kitiems nustatymams. (Gnybtų pavadinimai GT/GT+/GET gali nežymiai skirtis, tačiau jungtys yra tokios pačios.)
 
 !!! caution "Atsargiai"
     Montavimą ir aptarnavimą gali atlikti tik kvalifikuoti specialistai. Prieš jungdami laidus atjunkite maitinimą. Neautorizuoti pakeitimai panaikina garantiją.
