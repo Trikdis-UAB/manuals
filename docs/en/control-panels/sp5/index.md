@@ -1560,7 +1560,7 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 | Valid from | The start of the user's access. | date and time |
 | Valid until | The end of the user's access. The user's profile then shows **Temporary**. | date and time |
 | Assigned to this user | Under **Access schedule**. The schedules that set when the user may control the system. With none, control is allowed at any time. Lists the schedules in use. While the user is in a group, this is locked and shows the groups' schedules. | schedules |
-| During schedule | **Allow control** or **Deny control** while an assigned schedule is active. Applies to the areas, doors and outputs on the **Permissions** tab **[to confirm: what applies outside the schedule]**. | Allow control / Deny control |
+| During schedule | **Allow control**: the user may control the system only while an assigned schedule is active. **Deny control**: the user may not control it while the schedule is active. Applies to the areas, doors and outputs on the **Permissions** tab, wherever the panel identifies the user: a keypad or Protegus code, the phone number, a card or tag, an assigned keyfob. Control that doesn't identify the user, such as a keypad utility key used without a code, is not limited. | Allow control / Deny control |
 | Open Schedules | Opens **Automation → Schedules**. The user popup closes without saving. | link |
 
 #### Edit user: Call and SMS tab
@@ -1733,10 +1733,10 @@ Opens from **Edit** and **+ Add schedule**. The title is **Schedule**, with the 
 | Days | The days of the week. Shown for **Weekly**; select at least one. | M T W T F S S |
 | All day | Active all day. Hides **Time** and **End time**. | on / off |
 | Time | When the schedule starts. | hh:mm |
-| End time | When it stops. The app accepts an end time earlier than the start **[to confirm: whether such a schedule, e.g. 22:00 – 06:00, runs over midnight]**. | hh:mm |
+| End time | When it stops. It must be later than **Time**: a schedule can't run over midnight, and with an earlier end time, such as 22:00 – 06:00, it stays off. The app doesn't warn about this. | hh:mm |
 | Holidays | Under **Holiday exceptions**. The holidays on which this schedule works differently, from **Automation → Holidays**, including disabled ones. If there are none, **Set up holidays** opens that page and the popup closes without saving. | holidays |
 | Holiday rule | What the schedule does on the selected holidays. See **Holiday rules** below. Available once a holiday is selected. Selecting the first holiday sets **Skip when holiday**; removing them all sets **Holiday not used** and turns **Set custom time** off. | 5 rules |
-| Set custom time | Shows a second **Time** and **End time** for the selected holidays **[to confirm: used instead of the normal time on those days]**. Available once a holiday is selected. | on / off; hh:mm |
+| Set custom time | Shows a second **Time** and **End time**. On the selected holidays the schedule uses this time instead of its normal time. Available once a holiday is selected. | on / off; hh:mm |
 
 **Schedule condition** is the collapsed section at the bottom.
 
@@ -1748,15 +1748,15 @@ Opens from **Edit** and **+ Add schedule**. The title is **Schedule**, with the 
 
 #### Holiday rules
 
-The meanings below are taken from the rule names **[to confirm: all five]**. A holiday switched off on **Holidays** is ignored by every schedule.
+A holiday switched off on **Holidays** is ignored by every schedule.
 
 | Holiday rule | On the selected holidays, the schedule… |
 |---|---|
 | Holiday not used | Works as on any other day. |
 | Skip when holiday | Is not active. |
-| Additional when holidays | Is active as well as on its normal days. |
+| Additional when holidays | Is active on every selected holiday, as well as on its normal days. |
 | Only on holidays | Is active on the selected holidays only, not on its normal days. |
-| Only holidays and selected days | **[to confirm: how this differs from Additional when holidays]** |
+| Only holidays and selected days | Is active only on the selected holidays that fall on its selected days of the week. |
 
 #### Where schedules are used
 
@@ -1790,7 +1790,7 @@ Opens from **Edit** and **+ Add scene**. The title is **Scene**, with the scene'
 |---|---|---|
 | (switch in the popup header) | Turns the scene on or off. | on / off |
 | Name | The scene's name. Required. | up to 23 characters |
-| Trigger when | Under **IF**. **ALL**: the scene runs when all the conditions are met. **ANY**: when any one of them is. The conditions are joined by **AND** or **OR** to match **[to confirm: how ALL, and **All of** under **Match**, work with momentary events such as **Arm**, as opposed to states such as **Not armed**]**. | ALL / ANY |
+| Trigger when | Under **IF**. **ALL**: the scene runs when all the conditions are met. **ANY**: when any one of them is. The conditions are joined by **AND** or **OR** to match. See **Momentary conditions** below. | ALL / ANY |
 | + Add condition | Adds a condition. Each condition has **Remove**. | up to 4 |
 | + Add action | Under **THEN**. Adds an action. All actions run, joined by **AND**. Each action has **Remove**. | up to 3 |
 
@@ -1814,6 +1814,8 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | User | For **Specific user**: the user, from the active users. If the users haven't been read yet, a **User number** box is shown instead. | 1–1000 |
 | SMS text | For **SMS received**: the text that runs the scene **[to confirm: which senders count, and whether upper and lower case matter]**. | up to 23 characters |
 
+**Momentary conditions.** Most conditions are states that last, such as **Not armed** or a zone in alarm. Six are momentary events: Area **AutoArm**, **AutoDisarm** and **Auto arm failed**, User **RFID tag** and **Unauthorized call**, and **SMS received**. A scene with a momentary condition runs when that event happens while its other conditions are already met. A scene with more than one momentary condition will most likely never run.
+
 #### Condition events
 
 | When | Events |
@@ -1833,9 +1835,9 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 |---|---|---|
 | Type | What the action controls. | Output / Area |
 | Output / Area | The output or area. Any output with a terminal can be chosen, whatever its definition **[to confirm: the panel also switches outputs that are not Remote control, such as Siren]**; only enabled areas are listed. | an output or area |
-| Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away** **[to confirm: how Arm and Force arm Away differ]**. | see left |
+| Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away**. **Arm** works as a normal arming: if the area has Stay zones and no door is opened during the delay, it arms in Stay or Sleep. **Force arm Away** arms the area in Away whatever the other conditions. | see left |
 | Pulse time, s | For **Pulse**. | 1–65535 s; default 5 |
-| When ends | What to do when the scene ends **[to confirm: when its conditions are no longer met]**. For an output: **Do nothing** or **Invert / repeat pulse**. For an area: **Do nothing** or one of the area actions. | see left |
+| When ends | What to do when the scene ends, which is when its conditions are no longer met. A scene started by a momentary condition ends at once, so use **Pulse** or an area action with it. For an output: **Do nothing** or **Invert / repeat pulse**: after **Turn ON**, **Turn OFF** or **Toggle** the output goes to the opposite state; after **Pulse** the pulse is repeated. For an area: **Do nothing** or one of the area actions. | see left |
 
 #### When something a scene uses is removed
 
@@ -1879,7 +1881,7 @@ Opens from **Edit** and **+ Add**. The title is **Holiday**. A new holiday start
 | Enabled | Active in schedules. Turn it off to keep the holiday but pause it. | on / off |
 | Annual | Repeats every year; the year is not used. **Start date** and **End date** are then set as **Month** and **Day**. | on / off |
 | Start date | The first day. Required. | a date from 2000 to 2255, or Month and Day |
-| End date | The last day. Leave it empty for a one-day holiday. It can't be earlier than **Start date**, except for an annual holiday **[to confirm: an annual range across New Year, e.g. 24 Dec – 2 Jan, works on the panel]**. | as Start date |
+| End date | The last day. Leave it empty for a one-day holiday. It can't be earlier than **Start date**, except for an annual holiday: its range may cross New Year, for example 24 Dec – 2 Jan. | as Start date |
 
 ## Appendix: system events and Contact ID codes
 
