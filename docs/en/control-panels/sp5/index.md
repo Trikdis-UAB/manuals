@@ -74,7 +74,7 @@ The app enforces these maximums:
 | Zones | 192 |
 | Areas | 16 |
 | Keypads | 16 |
-| RS485 expanders | 64 |
+| RS485 expanders | 64 (the Protegus app shows 32 for now) |
 | Wireless devices | 42 |
 | Sensors (temperature, voltage, resistance) | 20 |
 | Thermostats | 8 |
@@ -255,7 +255,7 @@ Choose the resistor set in **System options → Wired Zone Resistor Values (EOL 
 
 The setting names list the resistors in the order RT + R1 + R2, as on "FLEXi" SP3.
 
-**Tamper triggers trouble only (zone not activated).** When this is on, a tamper alarm on a zone reports a trouble but does not also trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire.
+**Tamper activation triggers zone.** When this is on, a tamper alarm on a zone reports a trouble but does not also trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire. **[to confirm: the label says the opposite of what the switch does in the app]**
 
 ### Connecting fire detectors
 
@@ -280,7 +280,7 @@ Connect keypads in parallel to **AUX+**, **AUX−**, **GRN** and **YEL**. Up to 
 
 ### Connecting RS485 expanders and wireless receivers
 
-Connect RS485 devices in parallel to **AUX+**, **AUX−**, **A** and **B**; the bus can be up to 100 m long. Each device must have a unique RS485 address (1–64). The panel recognises the modules; you then configure them in **Devices & Interfaces → Expanders** or **Wireless**.
+Connect RS485 devices in parallel to **AUX+**, **AUX−**, **A** and **B**; the bus can be up to 100 m long. Each device must have a unique RS485 address (1–64; the Protegus app shows addresses 1–32 for now). The panel recognises the modules; you then configure them in **Devices & Interfaces → Expanders** or **Wireless**.
 
 ### Connecting temperature, voltage and resistance sensors
 
@@ -328,7 +328,7 @@ Every page of the configurator is described in [Settings in the Protegus app](#s
 
 ### If the panel does not connect
 
-The **Dashboard → Connection states** card shows the state of each connection.
+The **Dashboard → Connectivity** card shows the state of each connection.
 
 | What you see | What to check |
 |---|---|
@@ -369,9 +369,9 @@ Do this first, before you add zones and users.
     - **Communication type:** TCP/IP or UDP/IP, as the receiver requires.
     - **Domain or IP** and **Port** of the receiver.
     - **Protocol**: the one the receiver uses. For **SIA DC-09_2012** or **SIA DC-09_2007**, also choose the **Message format** (CID or SIA).
-    - **Encryption key**. For SIA DC-09, an empty key means no encryption; turn on **Key is HEX** if you got a 32-digit hexadecimal key.
+    - **Encryption key**. For SIA DC-09, turn on the switch at the left of the key box to encrypt the reports, and tick **HEX** if you got a 32-digit hexadecimal key.
 
-    ![Protegus app, SP5 Primary channel card: Primary channel on, Communication method Network (SMS is the other choice), Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol SIA DC-09_2012, Message format CID, a masked Encryption key, Key is HEX on, and a Backup channel link.](./protegus-app/sp5-popup-cms-sia.webp){ .trik-popup-img }
+    ![Protegus app, SP5 Primary channel card: Primary channel on, Communication method Network (SMS is the other choice), Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol SIA DC-09_2012, Message format CID, Encryption key switched on with a masked key and HEX ticked, and a Backup channel link.](./protegus-app/sp5-popup-cms-sia.webp){ .trik-popup-img }
 
 4.  In **Receiver**, enter the **Number** and **Line**, if the monitoring station uses them.
 5.  For a backup receiver, open **Backup channel**, turn on **Enable backup channel** and set it the same way. To send the reports by SMS when the network fails, turn on **Enable fallback SMS channel** and enter the station's **Phone number**.
@@ -379,7 +379,7 @@ Do this first, before you add zones and users.
 7.  Under **Testing**, turn on **Periodic test** and set the **Test period** the station expects.
 8.  Tap **Write**.
 
-**Check:** the **Dashboard → Connection states** status of the path you chose shows **CMS** or **Active**. Trigger a zone and ask the station to confirm the event and its account number.
+**Check:** the **Dashboard → Connectivity** status of the path you chose shows **CMS** or **Active**. Trigger a zone and ask the station to confirm the event and its account number.
 
 ### Adding wired zones
 
@@ -512,9 +512,9 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 1.  Connect an NTC 10K sensor between a free I/O terminal and a **C** terminal.
 2.  In **Terminals**, open **Assign function** on that terminal and choose **Assign temperature input** (under **More functions** when the zone and output functions are offered too).
 3.  In the sensor popup, enter the **Name**, the sensor's **B Constant** (usually 3950) and **NTC R0** (10000 for a 10K sensor).
-4.  For an alarm on temperature, set **Min** and **Max** and turn on **Notify when below** and **Notify when above**.
+4.  For an alarm on temperature, set the **Value** under **Min** and **Max** and turn on **Notify when below** and **Notify when above**.
 
-    ![Protegus app, SP5 Sensor popup: Type Temperature (Voltage and Resistance are the other choices), Name Living room temperature, Terminal Temperature (zone) - IN 9, Assign thermostat Living room heating. Min temperature 5 °C and Max temperature 30 °C, each with its Notify switch on. Delay 60 min, B Constant 3950, NTC R0 10000. Reset sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-sensor-ntc.webp){ .trik-popup-img }
+    ![Protegus app, SP5 Sensor popup: Type Temperature (Voltage and Resistance are the other choices), Name Living room temperature, Terminal Temperature (zone) - IN 9, Assign thermostat Living room heating. Min: Value 5 °C, Notify when below on. Max: Value 30 °C, Notify when above on. Delay 60 min, B Constant 3950, NTC R0 10000. Reset sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-sensor-ntc.webp){ .trik-popup-img }
 
 5.  For heating or cooling, create an output with the **Remote control** or **Thermostat** definition for the heater, then in **Devices & Interfaces → Thermostats** tap **+ Add**: choose the sensor in **When**, the temperature, the **Mode** (**Heating** or **Cooling**) and the **Output**.
 
@@ -570,7 +570,7 @@ If the access codes are lost, access will be restored from the Protegus app. **[
 | What you see | Likely cause | What to do |
 |---|---|---|
 | Keypad zone does not work with EOL_T, ATZ, ATZ_T or 3EOL | Keypad inputs support only NO, NC and EOL (EOL_T on some keypads) | Change the zone type |
-| A tamper on a fire zone is reported as a fire | Tamper also triggers the zone | Turn on **Tamper triggers trouble only (zone not activated)** |
+| A tamper on a fire zone is reported as a fire | Tamper also triggers the zone | Turn on **Tamper activation triggers zone** in **System options** **[to confirm: on or off, see System options]** |
 | A terminal can't be assigned to a zone | It is already used as an output or a sensor | Remove it from **Terminals** or **Sensors** first |
 | The CMS receives no events | Channel, protocol, account number or encryption key | Check **Communication → CMS reporting**, then the connection |
 | Changes are not saved | The settings were not written | Tap **Write** after changing settings |
@@ -588,7 +588,7 @@ This section describes every page of the SP5 configurator in the Protegus app, i
 
 The Dashboard shows the panel's identity, owner and connection state at a glance. It is available in the desktop view only. You can drag the cards into a different order, and the browser remembers it.
 
-![Protegus app, SP5 configurator in a desktop browser with the menu on the left and the Dashboard open. Panel info card: Programming mode, Networks Via Protegus2 cloud, Last configured 2026-10-06 12:30, Unique ID/IMEI, Serial number 000123, Firmware v1.00 Up to date, Bootloader 1.00. System information card: Account ID 1234, Address Sample street 1, Owner Sample Owner, a phone number and an e-mail address. Connection states card with an Edit link: LAN Active, SIM Standby with 80 % signal, WiFi Disabled.](./protegus-app/sp5-dashboard-desktop-content.webp)
+![Protegus app, SP5 configurator in a desktop browser with the menu on the left and the Dashboard open. Panel info card: Programming mode, Networks Via Protegus2 cloud, Last configured 2026-10-06 12:30, Unique ID/IMEI, Serial number 000123, Firmware v1.00 Up to date, Bootloader 1.00. System information card: Account ID 1234, Address Sample street 1, Owner Sample Owner, a phone number and an e-mail address. Connectivity card with an Edit link: LAN Active, SIM Standby with 80 % signal, WiFi Disabled.](./protegus-app/sp5-dashboard-desktop-content.webp)
 
 #### Panel info
 
@@ -614,7 +614,7 @@ The Dashboard shows the panel's identity, owner and connection state at a glance
 
 **Address**, **Owner**, **Phone number** and **E-mail address** appear only when the system has been added to Protegus. Otherwise the card shows **This system is not added to Protegus2.**
 
-#### Connection states
+#### Connectivity
 
 | Field | Shows |
 |---|---|
@@ -639,7 +639,7 @@ The status is read from the panel when you open the Dashboard or the Networks pa
 
 System options holds the panel's identity and general behaviour, the access codes, the clock and the troubles that block arming. On desktop the page heading reads **System Options**.
 
-![Protegus app, SP5 System Options page in a desktop browser, with four cards. System Identity & Behavior: Account ID 1234, Object Name Sample system, Clear buffer events after reboot and the two 2-wire fire switches off, Power failure delay 300, Call attempts to user 3, Text encoding English, Hang-up call after 30, Prevent event flooding on with 3 repeats within 30 s and resume after 30 min, EOL Resistor Configuration 2k2+2k2+4k7. Access & Permissions: masked Full access, Limited access and SMS programming codes, Account ID permission on, and the other Limited access permissions set to Editable. Time Settings: Time zone UTC +02:00, Time synchronization SIM and LAN, Daylight saving time on, NTP server pool.ntp.org, Panel current time 2026-10-07 12:00:00 and a Set from PC button. Arming Restrictions: 13 trouble switches, some on.](./protegus-app/sp5-systemoptions-desktop-content.webp)
+![Protegus app, SP5 System Options page in a desktop browser, with four cards. System Identity & Behavior: Account ID 1234, Object Name Sample system, Clear buffer events after reboot and the two 2-wire fire switches off, Power failure delay 300, Call attempts to user 3, Text encoding English, Hang-up call after 30, Prevent event flooding on with 3 repeats within 30 s and resume after 30 min, EOL Resistor Configuration 2k2+2k2+4k7, Tamper activation triggers zone off. Access & Permissions: masked Full access, Limited access and SMS programming codes, Account ID permission on, and the other Limited access permissions, Automation included, set to Editable. Time Settings: Time zone UTC +02:00, Time synchronization SIM and LAN, Daylight saving time on, NTP server pool.ntp.org, Panel current time 2026-10-07 12:00:00 and a Set from PC button. Arming Restrictions: 13 trouble switches, some on.](./protegus-app/sp5-systemoptions-desktop-content.webp)
 
 #### System Identity & Behavior
 
@@ -658,7 +658,7 @@ System options holds the panel's identity and general behaviour, the access code
 | Suspend if the same event repeats more than … within … | Reporting of an event is suspended when it repeats more than this many times within this time. | 0–99 times; 0–99 s |
 | Resume reporting automatically after | When reporting of a suspended event starts again. | 0–99 min |
 | EOL Resistor Configuration | The resistor set for all wired zones with EOL types. See [Resistor values](#resistor-values) for each resistor. | 2k2+2k2+4k7, 1k+1k+2k2, 5k6+5k6+3k3, 5k6+3k3+5k6, 3k3+6k8+3k3, 2k2+4k7+8k2, 10k+10k+5k6, 4k7+4k7+2k2 |
-| Tamper triggers trouble only (zone not activated) | A tamper on a zone reports a trouble but does not trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire. | on / off |
+| Tamper activation triggers zone | On: a tamper on a zone reports a trouble but does not trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire. **[to confirm: the label says the opposite of what the switch does in the app]** | on / off |
 
 #### Access & Permissions
 
@@ -671,8 +671,9 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 | SMS programming | The code for configuring the panel by SMS commands. | up to 6 characters |
 | Account ID | Lets **Limited access** change the **Account ID**. | on / off |
 | Communication | Access to **Networks** and **CMS Reporting**. | Editable / Visible / Hidden |
-| Areas and zones | Access to **Areas (Partitions)** and **Zones**. **Visible** also makes **Terminals** read-only. | Editable / Visible / Hidden |
-| Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Temperature sensors** and **Thermostats**. | Editable / Visible / Hidden |
+| Areas and zones | Access to **Areas (Partitions)** and **Zones**. | Editable / Visible / Hidden |
+| Terminals | Access to **Terminals**. | Editable / Visible / Hidden |
+| Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Sensors** and **Thermostats**. | Editable / Visible / Hidden |
 | Users | Access to **User list**, **Groups** and **Black list**. | Editable / Visible / Hidden |
 | System events | Access to **System events**. With **Hidden**, the **Periodic test** switch on **CMS Reporting** is not shown either. | Editable / Visible / Hidden |
 | Automation | Access to **Automation**. | Editable / Visible / Hidden |
@@ -688,6 +689,8 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 | Time synchronization | Where the panel takes the time from. Select one or more sources. | WiFi, SIM, LAN, Cloud application, CMS1, CMS2 |
 | Daylight saving time | Applies daylight saving time to the panel's clock. | on / off |
 | NTP Server Address (LAN or WiFi) | The time server used when the time is synchronised over LAN or WiFi. | up to 31 characters |
+| Periodic time update | The panel updates its clock at the interval below **[to confirm: from the sources in **Time synchronization**]**. Turning it on sets **Update interval** to 10 h. | on / off |
+| Update interval | How often the panel updates its clock. Shown while **Periodic time update** is on. | 1–255 h |
 | Panel current time | Shows the panel's clock, read when the page opens. **N/A** if it can't be read. | read-only |
 | Set from PC | Sets the panel's clock to your computer's time. | button |
 
@@ -718,15 +721,15 @@ Turn on each trouble that should prevent the system from being armed.
 
 Menu **Communication → Networks**. Here you choose which connections carry the reports to the monitoring station and to Protegus, and set up the SIM, WiFi and Ethernet connections.
 
-![Protegus app, SP5 Networks page in a desktop browser. Status table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, both with Main path Ethernet, Back up SIM, Fallback back up OFF and Switch back to Main path after 10 min. Cloud settings card with Enable cloud service and Report in parallel with CMS on and a masked Cloud access code. SIM card with APN internet, an empty SIM PIN and an Advanced settings link. WiFi card with SSID Sample-WiFi, a masked password, DNS 8.8.8.8 and DHCP on. Ethernet card with DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on and DHCP on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
+![Protegus app, SP5 Networks page in a desktop browser. Connectivity table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, both with Main path Ethernet, Back up SIM, Fallback back up OFF and Switch back to Main path after 10 min. Cloud settings card with Enable cloud service and Report in parallel with CMS on and a masked Cloud access code. SIM card with APN internet, an empty SIM PIN and an Advanced settings link. WiFi card with SSID Sample-WiFi, a masked password, DNS 8.8.8.8 and DHCP on. Ethernet card with DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on and DHCP on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
 
-#### Connection states
+#### Connectivity
 
 A read-only table, one row per connection. On a narrow screen it becomes a card with one block per connection.
 
 | Field | Shows |
 |---|---|
-| Connection states | The connection: **LAN**, **SIM** or **WiFi**. |
+| Connectivity | The connection: **LAN**, **SIM** or **WiFi**. |
 | Status | The connection's status. See the status values under **Dashboard**. |
 | IP Address | The current IP address; 0.0.0.0 when there is none. |
 | DHCP | **Enabled** (address obtained by DHCP), **No IP obtained**, or **Disabled** (static IP). |
@@ -775,9 +778,9 @@ The same paths for reporting to Protegus2. The card is greyed out while **Enable
 | Password | The APN password. | up to 28 characters |
 | DNS 1 | DNS server for the mobile connection. | IPv4 address |
 | DNS 2 | Second DNS server for the mobile connection. | IPv4 address |
-| SIM ICCID Lock | Locks the panel to the SIM card whose ICCID is shown below. Off removes the lock. | on / off |
-| ICCID | The SIM card's ICCID. The **Edit** link to change it appears while **SIM ICCID Lock** is on. | up to 24 characters |
-| Preferred network | The preferred mobile network, as MCC (country code) and MNC (network code), for example 246 and 01. The operator's name is shown beside the boxes. | MCC 0–999, MNC 0–999 |
+| SIM ICCID Lock | Locks the panel to the SIM card with the ICCID below. Turning it on with no ICCID stored takes the ICCID of the SIM now in the panel. Off removes the lock. | on / off |
+| ICCID | The locked ICCID or, if none is stored, the ICCID of the SIM in the panel. The **Edit** link to change it appears while **SIM ICCID Lock** is on. | up to 24 characters |
+| Preferred network | The preferred mobile network, as MCC (country code) and MNC (network code), for example 246 and 01. The operator's name is shown beside the boxes. | MCC and MNC: up to 3 digits each |
 | Network database | Opens mcc-mnc.com, where you can look up the codes. | link |
 | Hide SIM warning | Turns off the SIM trouble indication. | on / off |
 | Use SMS/Calls with internet | On: the panel takes SMS and call commands and sends SMS even while it has an internet connection. Off: it uses SMS and calls only when it has no internet connection (as on "FLEXi" SP3). | on / off |
@@ -824,13 +827,13 @@ Menu **Communication → CMS Reporting**. The panel can report to two monitoring
 | Port | The receiver's port. | 0–65535 |
 | Protocol | The reporting protocol. Choosing **TL150** switches the type to UDP/IP. | TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom, TL150, TRK8 |
 | Message format | The event code format inside SIA DC-09 messages. Shown for **SIA DC-09_2012** and **SIA DC-09_2007** only. | CID / SIA |
-| Encryption key | The key the receiver uses to decrypt the reports. For **SIA DC-09_2012** and **SIA DC-09_2007**, an empty key means no encryption. | TRK: up to 6 characters. Other protocols: up to 16 characters, or exactly 32 hex digits with **Key is HEX** |
-| Key is HEX | Enter the key as hexadecimal digits (0–9, A–F). Shown for **SIA DC-09_2012** and **SIA DC-09_2007** only. | on / off |
+| Encryption key | The key the receiver uses to decrypt the reports. For **SIA DC-09_2012** and **SIA DC-09_2007**, the switch at the left of the box turns encryption on or off; while it is off, the box and **HEX** are greyed out. **SIA DC-09_IPcom** is always encrypted. | TRK: up to 6 characters. Other protocols: up to 16 characters, or exactly 32 hex digits with **HEX** |
+| HEX | Enter the key as hexadecimal digits (0–9, A–F). Shown for **SIA DC-09_2012**, **SIA DC-09_2007** and **SIA DC-09_IPcom**. | tick box |
 | Phone number | SMS method only. The CMS phone number for SMS reports. It is the same number as the SMS fallback number of this channel. | digits with an optional leading +, up to 23 |
 | Encryption key | SMS method only. The key for SMS reports, shared with the SMS fallback. | up to 16 characters |
 | Backup channel | Opens the backup channel settings. Not available while the channel is off or set to SMS. | — |
 | Enable backup channel | Turns on the backup channel, which has its own address, port and protocol. Off greys out its settings. | on / off |
-| Communication method:, Communication type, Domain or IP, Port, Protocol, Message format, Encryption key, Key is HEX | The backup channel's settings. They work as described above. | as above |
+| Communication method:, Communication type, Domain or IP, Port, Protocol, Message format, Encryption key, HEX | The backup channel's settings. They work as described above. | as above |
 | Enable fallback SMS channel | Sends the reports by SMS when the network channels fail. Shown when the backup channel's method is **Network**. | on / off |
 | Phone number | The phone number for SMS fallback reports. If the backup channel's method is **SMS**, this is the backup channel's number. | digits with an optional leading +, up to 23 |
 | Encryption key | The key for SMS fallback reports. | up to 16 characters |
@@ -851,8 +854,8 @@ The parallel channel reports the same events to a second CMS, at the same time a
 
 | Setting | What it does | Values |
 |---|---|---|
-| Number | The receiver number at the CMS. | up to 6 digits |
-| Line | The receiver line number at the CMS. | up to 6 digits |
+| Number | The receiver number at the CMS. | up to 6 hex characters (0–9, A–F) |
+| Line | The receiver line number at the CMS. | up to 6 hex characters (0–9, A–F) |
 
 #### Fallback
 
@@ -875,7 +878,7 @@ Under **Testing**.
 | h, min (two boxes) | The time of day for the test. Editable only with **Start test** on. | 0–23 h, 0–59 min |
 
 !!! note
-    Turning on **Start test** changes the **Test period** unit to days and rounds the period down to whole days: 30 hours becomes 1 day, and less than 24 hours becomes 0.
+    Turning on **Start test** changes the **Test period** unit to days and rounds the period up to whole days: 30 hours becomes 2 days, and 1–24 hours becomes 1 day. 0 stays 0, and more than 10 days becomes 10.
 
 #### Network (IP) Ping
 
@@ -889,7 +892,7 @@ Under **Testing**.
 | Setting | What it does | Values |
 |---|---|---|
 | (switch in the card header) | Turns the SMS ping to the CMS on or off. | on / off |
-| Period | How often the panel sends an SMS ping. | 0–4095 minutes; 1 minute is the shortest useful period |
+| Period | How often the panel sends an SMS ping. | 1–4095 minutes |
 
 #### Communication path test
 
@@ -928,7 +931,7 @@ Menu **Areas and zones → Areas (Partitions)**. An area is a part of the site t
 | (tick box per area) | Tick an area to enable it; untick it to disable it. The list shows all 16 areas with their ID and name. | on / off |
 
 !!! note
-    If you disable or remove an area that is still in use, the app asks you to confirm. It then removes the area from every zone, output, keypad, wireless device, user, group and from other areas' **Conditional arming**.
+    If you disable or remove an area that is still in use, the app asks you to confirm. It then removes the area from every zone, output, keypad, wireless device, user, group, scene and from other areas' **Conditional arming**.
 
 #### Area popup
 
@@ -937,7 +940,7 @@ Opens from **Edit**. The title shows the area's name and number. **Remove area**
 | Setting | What it does | Values |
 |---|---|---|
 | Number | The area number. Changing it opens that area's settings and discards unsaved changes. | 1–16 |
-| Area name | The area's name. Required. | up to 19 characters (the app accepts more, but longer names are cut) |
+| Area name | The area's name. Required. | up to 19 characters |
 | Assigned zone | The zones in this area. Ticking a zone adds this area to that zone. **+ Add new zone** creates a zone in this area when a free zone and a free terminal exist. | zones with a terminal |
 | Entry delay 1 | Time to disarm after a **Delay** zone is triggered. | 1–999 s |
 | Entry delay 2 | Time to disarm after a **Delay 2** zone is triggered. | 1–999 s |
@@ -1012,7 +1015,7 @@ The collapsed section at the bottom of the zone popup.
 | Can be bypassed | Users can bypass the zone. | on / off |
 | Auto bypass on arm (force arm) | A zone that is violated when the area is armed is bypassed automatically. | on / off |
 | Violation reminder | Gives a reminder while the zone stays violated. Turning it on sets **Reminder interval** to 10. | on / off |
-| Reminder interval | How often the reminder repeats. 0 turns the reminder off. | 0–9999 **[the app shows seconds; the firmware notes say minutes: to confirm]** |
+| Reminder interval | How often the reminder repeats while the zone stays violated. To stop it, turn off **Violation reminder**. | 1–9999 min |
 | CID code | The Contact ID event code the zone reports. | 3 hex characters |
 | Report | Turns reporting of this zone on or off. Sets both boxes below. | on / off |
 | CMS (Central monitoring station) | Reports the zone's alarm and restore to the CMS. | on / off |
@@ -1021,7 +1024,7 @@ The collapsed section at the bottom of the zone popup.
 Which supervisors receive a zone's alarms by SMS is set in **User list → Edit user → SMS reporting**.
 
 !!! note
-    To free a zone's terminal, use **Reset I/O terminal**: **Not assigned** can't be picked in **Assign terminal**. The reset also returns the zone to basic settings (name Zone *n*, **Instant**, **NO**, the first enabled area, CID code 130, **Delay** 400, **Can be bypassed** on). Press **Save** to apply it.
+    To free a zone's terminal, use **Reset I/O terminal**: **Not assigned** can't be picked in **Assign terminal**. The reset also returns the zone to basic settings (name Zone *n*, **Instant**, **NO**, the first enabled area, CID code 130, **Delay** 400, **Can be bypassed** on, no SMS reporting to supervisors). Press **Save** to apply it.
 
 #### ATZ Zone properties (popup)
 
@@ -1104,7 +1107,7 @@ The on-board terminals come first, then a group for each RS485 expander, the wir
 | Status | Zone: its state. Output: whether it is on. Otherwise --. | OK, Trouble, Violated, Bypassed; ON, OFF |
 | Zone settings | Opens the zone popup (see **Zones**). | link |
 | Output settings | Opens the output popup (see **Outputs (PGM)**). | link |
-| Sensor settings | Opens the sensor popup (see **Temperature sensors**). | link |
+| Sensor settings | Opens the sensor popup (see **Sensors**). | link |
 | Assign function | Shown for a free terminal. Opens **Assign terminal function**. | link |
 
 !!! note
@@ -1112,7 +1115,7 @@ The on-board terminals come first, then a group for each RS485 expander, the wir
 
 #### Assign terminal function (popup)
 
-The popup offers only the functions the terminal supports. The sensor functions are under **More functions** when a zone or output is also offered. A resistance sensor is assigned on **Temperature sensors**, because it can share a terminal with a zone.
+The popup offers only the functions the terminal supports. The sensor functions are under **More functions** when a zone or output is also offered. A resistance sensor is assigned on **Sensors**, because it can share a terminal with a zone.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1154,7 +1157,7 @@ Menu **Devices & Interfaces → Keypads**. Lists the keypads on the keypad bus (
 | Refresh status | Reads the keypads' online status again. | button |
 | Scan for new keypads | Reads the keypads connected to the keypad bus and updates the list. | button |
 | Status | The keypad's live state. | Online, Lost, Alarm, Unknown, N/A |
-| Name | The keypad's name, used by the app only. Edit it in the cell. | up to 20 characters |
+| Name | The keypad's name, used by the app only. Edit it in the cell. | up to 19 characters |
 | Serial | The keypad's serial number. The first two characters identify the model (see **Keypad serial prefixes**). | 8 hex characters |
 | Assign area | The areas the keypad controls. | enabled areas: up to 2 on keypads with a serial starting 51 or 1E, up to 16 on others |
 | Edit | Opens the keypad popup. | link |
@@ -1166,7 +1169,7 @@ Opens from **Edit**. The header shows the keypad's name and serial.
 
 | Setting | What it does | Values |
 |---|---|---|
-| Name | The keypad's name. Required. | up to 20 characters |
+| Name | The keypad's name. Required. | up to 19 characters |
 | Assign area | As in the list. | as in the list |
 | Utility key 1 | On keypads with a serial starting 1D, 1B or 52, it switches an output like keys 2–6. On all other keypads it shows **Area status (fixed)** and can't be changed. | Not assigned, or an output |
 | Utility key 2 … Utility key 6 | Each key switches one output. Only outputs with the **Remote control** definition are listed, with their terminal. | Not assigned, or an output |
@@ -1229,9 +1232,9 @@ Menu **Devices & Interfaces → Expanders**. Lists the modules on the RS485 bus:
 | Expanders → Scan for new expanders | Reads the RS485 modules the panel has detected. | menu item |
 | Expanders → Add manually | Opens **Add manually**. | menu item |
 | Status | The module's live state. | Online, Lost, Alarm, Unknown, N/A |
-| ID | The module's RS485 address. | 1–64 |
+| ID | The module's RS485 address. | 1–32 |
 | Type | The module type. | see **RS485 module types** |
-| Name | The module's name. Edit it in the cell. | up to 24 characters |
+| Name | The module's name. Edit it in the cell. | up to 23 characters |
 | Serial number | The module's serial number. | hex |
 | Firmware | The module's firmware version. | — |
 | RSSI, % | Signal strength of radio modules. | 1–100 %, or N/A |
@@ -1246,7 +1249,7 @@ Use it only when the scan does not find a module. A module added here connects o
 |---|---|---|
 | Device type | The module type. Required. RF-Lora, RF-SH, RF-S8, T16 communicator and T16v2 communicator can be added only once per system. | iO-LO expander, iO8 expander, T16 communicator, RF-Lora, RF-SH, iO8-Lora expander, PB-Lora, T16v2 communicator, RF-S8 |
 | Serial number | Printed on the device label. Required. | 6 hex characters, as on the label, e.g. A3F012 |
-| Name | The module's name. If left empty, the slot keeps its current name. | up to 24 characters |
+| Name | The module's name. If left empty, the slot keeps its current name. | up to 23 characters |
 
 #### RS485 module types
 
@@ -1364,11 +1367,11 @@ SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH). It doesn't support M
 | RF-S8 | HEYI | Smart Keyfob, Smart SOS button, Smart Door/Window sensor, Smart PIR detector, Smart Smoke detector, Smart Water leakage sensor, Smart Indoor siren, Smart Outdoor siren, Smart Vibration detector, Smart Socket, Smart PET PIR detector, Smart Curtain PIR detector, Smart Repeater |
 | RF-SH, RF-SH_PIN | Crow / ShockSensor (SH) | PIR detector, Magnetic contact, Smoke detector, Glass detector, Flood detector, Vibration detector, SH Magnetic Gate, SH Smoke and heat detector, Smoke SFW2, SH Smoke H, SH Emergency button, SH PIR2, SH Siren2, Siren, ShockSensor siren, SH AC plug, Keyfob, Wireless keypad, SH Repeater |
 
-### Temperature sensors
+### Sensors
 
-Menu **Devices & Interfaces → Temperature sensors**. Lists up to 20 sensors measuring temperature, voltage or resistance, with their alarm limits. A temperature sensor can also drive a thermostat.
+Menu **Devices & Interfaces → Sensors**. Lists up to 20 sensors measuring temperature, voltage or resistance, with their alarm limits. A temperature sensor can also drive a thermostat.
 
-![Protegus app, SP5 Temperature sensors page in a desktop browser: a Refresh status link, a + Add button and one sensor: Living room temperature, type Temperature (zone), status Ok, 21.5 °C, assigned to SP5 9 I/O, with an Edit link.](./protegus-app/sp5-sensors-desktop-content.webp)
+![Protegus app, SP5 Sensors page in a desktop browser: a Refresh status link, a + Add button and one sensor: status Ok, Living room temperature, type Temperature (zone), live reading 21.5 °C, assigned to SP5 9 I/O, with an Edit link.](./protegus-app/sp5-sensors-desktop-content.webp)
 
 #### Sensor list
 
@@ -1393,9 +1396,9 @@ Menu **Devices & Interfaces → Temperature sensors**. Lists up to 20 sensors me
 | Name | The sensor's name. Required. | up to 23 characters |
 | Terminal | The source to measure. A source used by another sensor is not listed. | Disabled, or a free source (see **Sensor sources**) |
 | Assign thermostat | Makes this sensor the trigger of a thermostat. | Disabled, or a thermostat |
-| Min | The lower limit. | one decimal **[to confirm: the unit for voltage and resistance sensors; the app shows °C for every type]** |
+| Value | Under **Min**. The lower limit. | °C, V or Ω (follows **Type**), one decimal |
 | Notify when below | Alarm when the value falls below **Min**. | on / off |
-| Max | The upper limit. | one decimal |
+| Value | Under **Max**. The upper limit. | °C, V or Ω (follows **Type**), one decimal |
 | Notify when above | Alarm when the value rises above **Max**. | on / off |
 | Delay | The delay before the alarm. | 0 min or more |
 | B Constant | The NTC thermistor's B constant, usually 3950 or 4000. Shown for **Temperature (zone)** only. | whole number |
@@ -1415,9 +1418,9 @@ Menu **Devices & Interfaces → Temperature sensors**. Lists up to 20 sensors me
 
 ### Thermostats
 
-Menu **Devices & Interfaces → Thermostats**. A thermostat switches an output when a sensor's temperature crosses a threshold. Up to 8 thermostats; only those switched on are listed.
+Menu **Devices & Interfaces → Thermostats**. A thermostat switches an output when a sensor's temperature crosses a threshold. Up to 8 thermostats. A thermostat is listed while it is switched on or has a sensor or an output set.
 
-![Protegus app, SP5 Thermostats page in a desktop browser: a Refresh status link, a + Add button and one thermostat: Living room heating, mode Heating, sensor Living room temperature, Target temp. < 21.5 °C, output Heating, with the Active sensor switch on and an Edit link.](./protegus-app/sp5-thermostats-desktop-content.webp)
+![Protegus app, SP5 Thermostats page in a desktop browser: a Refresh status link, a + Add button and one thermostat: status Normal, Living room heating, mode Heating, sensor Living room temperature, Target temp. < 21.5 °C, output Heating, with the Enabled switch on and an Edit link.](./protegus-app/sp5-thermostats-desktop-content.webp)
 
 #### Thermostat list
 
@@ -1425,23 +1428,25 @@ Menu **Devices & Interfaces → Thermostats**. A thermostat switches an output w
 |---|---|---|
 | Refresh status | Reads the thermostat states again. | button |
 | + Add | Opens the thermostat popup on the first free thermostat. | button |
-| Name | The thermostat's name. Edit it in the cell. | up to 24 characters |
+| Status | The thermostat's state, read from the panel **[to confirm: Activated means the output is switched on]**. | Normal, Activated, Lost, Unknown, N/A |
+| Name | The thermostat's name. Edit it in the cell. | up to 23 characters |
 | Mode | Heating or cooling. | Heating / Cooling |
 | Details | The sensor, the target temperature (< for heating, > for cooling) and the output. | — |
-| Active sensor | Switches the thermostat on or off. A thermostat switched off leaves the list after the next refresh; open it again with **+ Add**. | on / off |
+| Enabled | Switches the thermostat on or off. A thermostat switched off stays in the list while it has a sensor or an output. | on / off |
 | Edit | Opens the thermostat popup. | link |
 
 #### Thermostat (popup)
 
-**Remove thermostat** at the bottom clears the thermostat. Saving the popup always switches the thermostat on; to switch it off, use **Active sensor** in the list.
+**Remove thermostat** at the bottom clears the thermostat, unlinks its sensor and output and removes it from the list. A new thermostat starts switched on.
 
 | Setting | What it does | Values |
 |---|---|---|
-| Name | The thermostat's name. Required. | up to 24 characters |
+| (switch in the popup header) | Turns the thermostat on or off. | on / off |
+| Name | The thermostat's name. Required. | up to 23 characters |
 | When | Under **IF**: the sensor that triggers the thermostat. | Not set, or a sensor |
 | is below / is above | The threshold temperature. **is below** for Heating, **is above** for Cooling. | °C, one decimal |
 | Mode: | Under **THEN**. **Heating**: switches the output on when the temperature falls below the threshold. **Cooling**: when it rises above it. | Heating / Cooling |
-| Output: | The output to switch. Only outputs with the **Remote control** or **Thermostat** definition are listed. | Not set, or an output |
+| Output: | The output to switch. Only outputs with the **Remote control** or **Thermostat** definition are listed. Saving changes a **Remote control** output to **Thermostat** (Level), which removes it from users, groups, keypad utility keys and keyfob keys. When no thermostat uses it any more, it returns to **Remote control**. | Not set, or an output |
 
 ### Outputs (PGM)
 
@@ -1466,7 +1471,7 @@ The title shows the output's name. **Reset I/O terminal** at the bottom (existin
 | Protegus2 | Reports the output switching on and off to Protegus2. | on / off |
 
 !!! note
-    Users, groups, call control, keypad utility keys and keyfob keys can switch only outputs with the **Remote control** definition. Thermostats accept **Remote control** and **Thermostat**. If you change an output's definition, the app removes it from the places where it no longer fits.
+    Users, groups, call control, keypad utility keys and keyfob keys can switch only outputs with the **Remote control** definition. Thermostats accept **Remote control** and **Thermostat**; a thermostat changes a **Remote control** output to **Thermostat**. If you change an output's definition, the app removes it from the places where it no longer fits.
 
 #### Output definitions
 
@@ -1493,7 +1498,7 @@ Menu **Users → User list**. The panel's users: their codes, cards, phone numbe
 ![Protegus app, SP5 User list page in a desktop browser. Summary cards: Total users 4/1000, Supervisors 1/8 with 7 of 8 available, App users 1, Inactive users 1. Below, a search box, a + Add user button, filter chips All, Supervisor, Standard, Temporary and Inactive, and four users. 1 Admin, Supervisor, Code and App, Not assigned, All areas, Active. 2 Sample user 1, Standard, Code and RFID, group Family, All areas, Active. 3 Sample user 2, Temporary, valid until 2026-12-31 14:00, Code, group Cleaning staff, area Home, Active. 4 Sample user 3, Standard, Code, group Family, Inactive. Each row has an Edit link.](./protegus-app/sp5-users-list-desktop-content.webp)
 
 !!! note
-    The panel keeps only users who have at least one of a keypad code, an RFID card, a phone number or an email.
+    The app won't save a user without at least one of a keypad code, an RFID card, a phone number or an email. It shows **Enter at least one authorization method: keypad code, RFID tag, phone number or email.**
 
 #### Summary cards
 
@@ -1526,7 +1531,7 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 
 | Setting | What it does | Values |
 |---|---|---|
-| System profile | **Supervisor**: SMS and call control and user management, up to 8 users. **Standard**: access follows the assigned permissions. When you add a user, the app sets **Standard**. | Supervisor - SMS/call & user management / Standard - Regular user |
+| System profile | **Supervisor**: SMS and call control and user management, up to 8 users. **Standard**: access follows the assigned permissions. When you add a user, the app sets **Standard**. Changing a supervisor to **Standard**, or deleting them, turns off **Forward unknown SMS** and clears their **SMS reporting**. | Supervisor - SMS/call & user management / Standard - Regular user |
 | Name | The user's name. | up to 51 characters |
 | User number | Assigned automatically. **Change number** lets you pick any free number. | 1–1000 |
 | Phone number | Used for call control and SMS. | up to 19 characters |
@@ -1545,6 +1550,8 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 | Assigned outputs | The outputs the user can control. Only outputs with the **Remote control** definition are listed. | outputs |
 
 #### Edit user: Groups tab
+
+![Protegus app, SP5 Edit user: Sample user 2 popup on the Groups tab, Active on. A note: Groups: Cleaning staff; permissions are inherited from the assigned groups and individual editing is locked. Assigned groups Cleaning staff, and a note that the permissions of all groups combine. Base permissions combined from all assigned groups: Areas Home, Outputs None, Schedule Cleaning, with an Edit groups link. Delete user, Cancel and Save at the bottom.](./protegus-app/sp5-popup-user-groups.webp){ .trik-popup-img }
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1575,6 +1582,8 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 #### Edit user: SMS reporting tab
 
 Supervisors only. Choose which events this user receives by SMS. The words used in each SMS are set in **System events → SMS texts**.
+
+With **Limited access**, a group of switches can be changed only if its page is **Editable**: **Zone alarms** follow **Areas and zones**, **PGM / outputs** follow **Devices & Interfaces**, **System events** follow **System events**.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1619,6 +1628,8 @@ The popup title is **Edit group:** and the group's name. Enter the **Group name*
 | Assigned outputs | The outputs members can control. Only outputs with the **Remote control** definition are listed. | outputs |
 
 #### Edit group: Validity tab
+
+![Protegus app, SP5 Edit group: Cleaning staff popup on the Validity tab. Validity period, optional for temporary groups: Limit access to a time period off, Valid from and Valid until empty. Access schedule: Assigned to this group Cleaning, Tue, Thu, 09:00 – 12:00; During schedule Allow control; a note that schedules are edited on the Schedules page and apply to every member of the group, with an Open Schedules link. Delete group, Cancel and Save at the bottom.](./protegus-app/sp5-popup-group-validity.webp){ .trik-popup-img }
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1665,7 +1676,7 @@ Menu **Users → Black list**. Phone numbers, emails and RFID cards the panel re
 
 Menu **System events**. Turn each panel event on or off, set its Contact ID code and where it is reported, and edit the words used in SMS messages.
 
-![Protegus app, SP5 System events page in a desktop browser, Events tab: a search box and a table of 37 events, from 01 Low battery with CID code 302 to 37 Zone/door opened with 426. Each event has its Enable event, Report to CMS and Report to Protegus2 switches on, and Add text in the Event text column. An SMS texts tab is next to the Events tab.](./protegus-app/sp5-panel-events-desktop-content.webp)
+![Protegus app, SP5 System events page in a desktop browser, Events tab: a search box and a table of 37 events sorted by CID code, from 14 Medical alarm with code 100 to 33 High voltage with 785. Each event has its Enable event, Report to CMS and Report to Protegus2 switches on, and Add text in the Event text column. An SMS texts tab is next to the Events tab.](./protegus-app/sp5-panel-events-desktop-content.webp)
 
 #### Events tab
 
@@ -1674,6 +1685,7 @@ The events and their codes on a test panel are listed in the [appendix](#appendi
 | Setting | What it does | Values |
 |---|---|---|
 | Search | Finds events by name. | text |
+| Number, Event name, CID code | The list is sorted by **CID code**. Click a header to sort by that column. | — |
 | Number | The event number. | 01–37 |
 | Event name | The event. | — |
 | CID code | The Contact ID code reported for the event. Edit it in the cell. | 3 hex characters |
@@ -1708,6 +1720,8 @@ Menu **Automation → Schedules**. A schedule defines only a time: the days and 
 
 Schedules follow the panel's clock, so set **Time Settings** in **System options** first **[to confirm: the panel uses its own clock, time zone and daylight saving setting for schedules]**.
 
+![Protegus app, SP5 Schedules page in a desktop browser, with the Automation menu open on the left. A note: a schedule defines time only, when it is active; you assign it and set what it does in Users / Groups and Scenes. A search box, a + Add schedule button and three schedules: Cleaning, Tue, Thu, 09:00 – 12:00, on; Evening lights, Every day, 19:00 – 23:00, on; Weekend, Sat–Sun, all day, off. Each has an Edit link.](./protegus-app/sp5-automation-schedules-desktop-content.webp)
+
 #### Schedule list
 
 Only schedules in use are listed. A schedule still at its factory settings counts as free.
@@ -1724,6 +1738,8 @@ Only schedules in use are listed. A schedule still at its factory settings count
 #### Schedule popup
 
 Opens from **Edit** and **+ Add schedule**. The title is **Schedule**, with the schedule's on/off switch beside it. A new schedule starts switched on, **Weekly**, Monday to Friday, 09:00 – 17:00, with no name. **Remove schedule** at the bottom (existing schedules only) asks to confirm, resets the schedule to its factory settings and removes it from every user, group and scene. The **Users / Groups** and **Scenes** links in the note open those pages; the popup closes without saving.
+
+![Protegus app, SP5 Schedule popup, switched on, with a note that a schedule defines time only and links to Users / Groups and Scenes. Schedule name Cleaning. Time & recurrence: Repeat Weekly, Days Tuesday and Thursday, All day off, Time 09:00, End time 12:00. Holiday exceptions: Holidays Christmas 24 Dec – 26 Dec and New Year's Day 1 Jan, Holiday rule Skip when holiday, Set custom time off. Schedule condition open: Limit by date range on, Start date 01/09/2026, End date 30/06/2027. Remove schedule, Cancel and Save at the bottom.](./protegus-app/sp5-popup-schedule-daterange.webp){ .trik-popup-img }
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1770,6 +1786,8 @@ A holiday switched off on **Holidays** is ignored by every schedule.
 
 Menu **Automation → Scenes**. A scene lets the panel act on its own: **IF** its conditions are met, **THEN** it switches outputs or arms and disarms areas. Up to 32 scenes, each with up to 4 conditions and 3 actions.
 
+![Protegus app, SP5 Scenes page in a desktop browser: a search box, a + Add scene button and five scenes, each with its first trigger and action. Leak: warning light: Alarm (when area alarm) · Boiler room leak, then Turn ON · Garage light. Frost warning, switched off: Value lower than 5.0 · Living room temperature, then Turn ON · Garden lights. Evening lights: Schedule starts · Evening lights, then Turn ON · Garden lights. Garage follows Home: Arm · Home, then Arm · Garage. Gate by tag or SMS: RFID tag · 2. Sample user 1 and one more, then Pulse 5 s · Garage gate and one more. Each has an Enable switch and an Edit link.](./protegus-app/sp5-automation-scenes-desktop-content.webp)
+
 #### Scene list
 
 | Setting | What it does | Values |
@@ -1785,6 +1803,8 @@ Menu **Automation → Scenes**. A scene lets the panel act on its own: **IF** it
 #### Scene popup
 
 Opens from **Edit** and **+ Add scene**. The title is **Scene**, with the scene's on/off switch beside it. A new scene starts switched on, with one condition (**Zone**, **Alarm (when area alarm)**, no zone selected yet) and one action (the first output, **Turn ON**). **Remove scene** at the bottom (existing scenes only) asks to confirm and clears the scene.
+
+![Protegus app, SP5 Scene popup, switched on: Name Gate by tag or SMS. IF, Trigger when ANY of these conditions are met: When User is RFID tag, Specific user, 2. Sample user 1; OR When SMS received, OPEN GATE. THEN: Output Garage gate, Pulse, 5 s, When ends Do nothing; AND Output Garden lights, Turn ON, When ends Do nothing. + Add condition and + Add action buttons. Remove scene, Cancel and Save at the bottom.](./protegus-app/sp5-popup-scene-gate.webp){ .trik-popup-img }
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1806,7 +1826,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 |---|---|---|
 | When | The source of the condition. | Zone, Area, Output, Schedule, Sensors, User, System, SMS received |
 | Match | For Zone, Area, Output, Schedule and Sensors. **Any one of** the selected elements, **All of** them, or **Any (no filter)**: any element, with no list to select. | Any one of / All of / Any (no filter) |
-| Zones, Areas, Outputs, Schedules, Sensors | The elements to watch. Lists zones with a terminal, enabled areas, outputs with a terminal, schedules in use and the sensors on **Temperature sensors**. An element that is no longer available shows **(not available)**. | one or more |
+| Zones, Areas, Outputs, Schedules, Sensors | The elements to watch. Lists zones with a terminal, enabled areas, outputs with a terminal, schedules in use and the sensors on **Sensors**. An element that is no longer available shows **(not available)**, except an area: a disabled area is dropped from the condition when the scene opens. | one or more |
 | Event | What must happen. See **Condition events** below. Not shown for **SMS received**. | depends on **When** |
 | Value | For **Value more than** and **Value lower than**: the threshold, in the same unit as the sensor's **Min** and **Max**. | one decimal, −3276.7 to 3276.7; default 20 |
 | Time, min | For **No movement more than** and **No movement less than**. | 1–32767 min; default 30 |
@@ -1814,7 +1834,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | User | For **Specific user**: the user, from the active users. If the users haven't been read yet, a **User number** box is shown instead. | 1–1000 |
 | SMS text | For **SMS received**: the text that runs the scene **[to confirm: which senders count, and whether upper and lower case matter]**. | up to 23 characters |
 
-**Momentary conditions.** Most conditions are states that last, such as **Not armed** or a zone in alarm. Six are momentary events: Area **AutoArm**, **AutoDisarm** and **Auto arm failed**, User **RFID tag** and **Unauthorized call**, and **SMS received**. A scene with a momentary condition runs when that event happens while its other conditions are already met. A scene with more than one momentary condition will most likely never run.
+**Momentary conditions.** Most conditions are states that last, such as **Not armed** or a zone in alarm. Six are momentary events: Area **AutoArm**, **AutoDisarm** and **Auto arm failed**, User **RFID tag** and **Unauthorized call**, and **SMS received**. With **ALL**, a scene with a momentary condition runs when that event happens while its other conditions are already met, and a scene with more than one momentary condition will most likely never run. With **ANY**, each condition runs the scene on its own **[to confirm: momentary conditions too, as in the example below]**.
 
 #### Condition events
 
@@ -1831,10 +1851,12 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 
 #### Actions
 
+![Protegus app, SP5 Scene popup Garage follows Home: Trigger when ALL; When Area, Any one of, Home, is Arm. THEN Area Garage, Arm, with the When ends list open: Do nothing, Disarm (selected), Arm, Arm Sleep, Arm Stay, Force arm Away.](./protegus-app/sp5-popup-scene-area-ends.webp){ .trik-popup-img }
+
 | Setting | What it does | Values |
 |---|---|---|
 | Type | What the action controls. | Output / Area |
-| Output / Area | The output or area. A scene can switch only outputs with the **Remote control** definition, not sirens or other outputs **[the app still lists every output with a terminal; to be fixed]**. Only enabled areas are listed. | an output or area |
+| Output / Area | The output or area. A scene can switch only outputs with the **Remote control** definition, not sirens or other outputs **[the app still lists every output with a terminal; to be fixed]**. Only enabled areas are listed. If an action still names a disabled area, for example in settings read from the panel, the area box is left empty: choose an area, or the app won't save the scene. | an output or area |
 | Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away**. **Arm** works as a normal arming: if the area has Stay zones and no door is opened during the delay, it arms in Stay or Sleep. **Force arm Away** arms the area in Away whatever the other conditions. | see left |
 | Pulse time, s | For **Pulse**. | 1–65535 s; default 5 |
 | When ends | What to do when the scene ends, which is when its conditions are no longer met. A scene started by a momentary condition ends at once, so use **Pulse** or an area action with it. For an output: **Do nothing** or **Invert / repeat pulse**: after **Turn ON**, **Turn OFF** or **Toggle** the output goes to the opposite state; after **Pulse** the pulse is repeated. For an area: **Do nothing** or one of the area actions. | see left |
@@ -1859,6 +1881,8 @@ The app updates the scenes by itself:
 
 Menu **Automation → Holidays**. A holiday is a day or a range of days, once or every year, that schedules can treat differently (see **Holiday rules**). Up to 32 holidays.
 
+![Protegus app, SP5 Holidays page in a desktop browser: a search box, a + Add button and three enabled holidays. Christmas, 24 Dec – 26 Dec, Annual, assigned to Cleaning. New Year's Day, 1 Jan, Annual, assigned to Cleaning. Family trip, 3 Aug – 14 Aug 2026, not assigned. Each has an Edit link.](./protegus-app/sp5-automation-holidays-desktop-content.webp)
+
 #### Holiday list
 
 | Setting | What it does | Values |
@@ -1874,6 +1898,10 @@ Menu **Automation → Holidays**. A holiday is a day or a range of days, once or
 #### Holiday popup
 
 Opens from **Edit** and **+ Add**. The title is **Holiday**. A new holiday starts enabled and not annual. **Remove holiday** at the bottom (existing holidays only) asks to confirm, clears the holiday and removes it from all schedules. A schedule left with no holidays gets **Holiday not used** and **Set custom time** off.
+
+![Protegus app, SP5 Holiday popup: Name Christmas, Enabled on (Active in schedules, turn off to keep the entry but pause it), Annual on (Repeats every year, year is not stored), Start date December 24 and End date December 26, set as Month and Day. Remove holiday, Cancel and Save at the bottom.](./protegus-app/sp5-popup-holiday-annual.webp){ .trik-popup-img }
+
+![Protegus app, SP5 Holiday popup: Name Family trip, Enabled on, Annual off, Start date 03/08/2026, End date 14/08/2026. Remove holiday, Cancel and Save at the bottom.](./protegus-app/sp5-popup-holiday-dates.webp){ .trik-popup-img }
 
 | Setting | What it does | Values |
 |---|---|---|
