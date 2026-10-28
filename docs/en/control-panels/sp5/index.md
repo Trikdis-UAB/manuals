@@ -1834,7 +1834,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | Setting | What it does | Values |
 |---|---|---|
 | Type | What the action controls. | Output / Area |
-| Output / Area | The output or area. Any output with a terminal can be chosen, whatever its definition **[to confirm: the panel also switches outputs that are not Remote control, such as Siren]**; only enabled areas are listed. | an output or area |
+| Output / Area | The output or area. A scene can switch only outputs with the **Remote control** definition, not sirens or other outputs **[the app still lists every output with a terminal; to be fixed]**. Only enabled areas are listed. | an output or area |
 | Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away**. **Arm** works as a normal arming: if the area has Stay zones and no door is opened during the delay, it arms in Stay or Sleep. **Force arm Away** arms the area in Away whatever the other conditions. | see left |
 | Pulse time, s | For **Pulse**. | 1–65535 s; default 5 |
 | When ends | What to do when the scene ends, which is when its conditions are no longer met. A scene started by a momentary condition ends at once, so use **Pulse** or an area action with it. For an output: **Do nothing** or **Invert / repeat pulse**: after **Turn ON**, **Turn OFF** or **Toggle** the output goes to the opposite state; after **Pulse** the pulse is repeated. For an area: **Do nothing** or one of the area actions. | see left |
