@@ -9,6 +9,8 @@
 
 **Language versions differ** (image numbers, order and even content are not the same across en/lt/es/ru — never map images by number): see `NOTES/agent-lessons/language-versions-differ.md`.
 
+**What the site stores in visitors' browsers** (every cookie, localStorage and sessionStorage key and the cookieless PostHog events, for the cookie/privacy policy; update it with any script that adds a key): see `NOTES/browser-storage.md`.
+
 **Committing while other sessions have work in this tree** (only your lines, even inside a file someone else is editing; rebasing without stash or autostash): see `NOTES/agent-lessons/commit-in-shared-tree.md`.
 
 **Checking PDFs before a print-affecting change ships** (staging builds no PDFs; local export with system Chrome; labels print in capitals; where the check helpers live): see `NOTES/agent-lessons/pdf-print-check.md`.
