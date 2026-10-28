@@ -167,8 +167,10 @@ A screen with `steps` goes on after its page opens: click a row's link (`{"row":
 and `isolate` paints only that element on a transparent background, so the pop-up's rounded corners do
 not carry the dimmed page. `onlyApps` limits a screen to a front-end. The SP5 pop-ups (`popup-*` in
 `screens/sp5.json`) click English texts, so they are captured in English only. A state that needs data
-the sample lacks is set with `config`; `"_users": [{"queueNo": 2, …}]` changes single users of the panel
-user list. "Scan for new devices" finds one invented HEYI door/window sensor (`lib/mocks-configurators.mjs`).
+the sample lacks is set with `config`; an object with index keys patches single array items
+(`{"automation": {"schedules": {"0": {"validity": true}}}}`), and `"_users": [{"queueNo": 2, …}]` changes
+single users of the panel user list. `keepFocus` leaves the last field focused, for an open dropdown.
+"Scan for new devices" finds one invented HEYI door/window sensor (`lib/mocks-configurators.mjs`).
 
 ## Known limits
 
@@ -189,6 +191,12 @@ user list. "Scan for new devices" finds one invented HEYI door/window sensor (`l
   The wireless devices are HEYI ones on the RF-S8 receiver, because SP5 does not support Maximum
   Security devices (firmware team, 2026-10-23); HEYI devices measure no temperature, so the sample has
   no wireless temperature sensor. SP5's Cameras page is VideoHub-only and is not captured.
+- **SP5 Automation (beta only):** `sp5-beta.json` has three schedules, three holidays and five scenes,
+  and the Cleaning staff group uses the Cleaning schedule (built in `sp5.build.mjs`, `automation()`). The
+  menu shows Automation only when the configuration has an `automation` block, so every beta desktop
+  image has it in the sidebar. Unused slots keep the factory defaults exactly, or the lists count them as
+  in use. Scenes act only on outputs defined as Remote control: the panel cannot drive a siren or a
+  thermostat output from a scene (firmware team, 2026-10-28). The sample has no overnight schedule.
 - **The beta server returns a newer SP5 shape** (`io9To2wire`/`io10To2wire`, `wirelessSupervisionTime`,
   `needCodeInKeypad` per output, `enableEncryption`/`isHexMode` per CMS channel, no output zone control or
   thermostat hysteresis, live status inside the configuration). `sp5.json` keeps the released shape for

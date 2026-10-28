@@ -5,7 +5,7 @@
   "models": [
     "SP5"
   ],
-  "_fields": "As in g16.json, plus: layouts (capture only in these layouts), unverified (a caveat copied into the manifest). flow 'configuration': the newer configurator; desktop reads on its own after Advanced settings, the phone menu has a Read button; menu labels are clicked inside the sidebar navigation. Pop-ups (popup-*): steps after the page opens (capture.mjs runSteps), crop (the element cut out), isolate (only the element painted, transparent around it), onlyApps (front-ends they are captured for), config (sample patch; _users patches single users). Their click texts are English.",
+  "_fields": "As in g16.json, plus: layouts (capture only in these layouts), unverified (a caveat copied into the manifest). flow 'configuration': the newer configurator; desktop reads on its own after Advanced settings, the phone menu has a Read button; menu labels are clicked inside the sidebar navigation. Pop-ups (popup-*): steps after the page opens (capture.mjs runSteps), crop (the element cut out), isolate (only the element painted, transparent around it), keepFocus (leave the last field focused, e.g. an open dropdown), onlyApps (front-ends they are captured for), config (sample patch; _users patches single users). Their click texts are English.",
   "screens": [
     {
       "id": "advanced-intro",
@@ -147,6 +147,39 @@
       ],
       "route": "panelEvents",
       "unverified": "Contact ID codes and on/off states are a real SP5 test panel's (beta, 2026-10-19); testers may have changed single codes. lowBattery is shown enabled with 0302 (the test panel had it disabled with 0000)."
+    },
+    {
+      "id": "automation-schedules",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.schedules"
+      ],
+      "route": "automation/schedules",
+      "onlyApps": [
+        "beta"
+      ]
+    },
+    {
+      "id": "automation-scenes",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.scenes"
+      ],
+      "route": "automation/scenes",
+      "onlyApps": [
+        "beta"
+      ]
+    },
+    {
+      "id": "automation-holidays",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.holidays"
+      ],
+      "route": "automation/holidays",
+      "onlyApps": [
+        "beta"
+      ]
     },
     {
       "id": "popup-cms-sia",
@@ -635,6 +668,232 @@
         {
           "row": "Living room heating",
           "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-schedule-edit",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.schedules"
+      ],
+      "route": "automation/schedules",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Cleaning",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-schedule-daterange",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.schedules"
+      ],
+      "route": "automation/schedules",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Cleaning",
+          "text": "Edit"
+        },
+        {
+          "text": "Schedule condition",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true,
+      "config": {
+        "automation": {
+          "schedules": {
+            "0": {
+              "validity": true,
+              "startEpoch": 331430400,
+              "stopEpoch": 357523200
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "popup-scene-gate",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.scenes"
+      ],
+      "route": "automation/scenes",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Gate by tag or SMS",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-scene-area",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.scenes"
+      ],
+      "route": "automation/scenes",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Garage follows Home",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-scene-area-ends",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.scenes"
+      ],
+      "route": "automation/scenes",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Garage follows Home",
+          "text": "Edit"
+        },
+        {
+          "css": "section.overlay input",
+          "nth": 9
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true,
+      "keepFocus": true
+    },
+    {
+      "id": "popup-holiday-annual",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.holidays"
+      ],
+      "route": "automation/holidays",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Christmas",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-holiday-dates",
+      "menu": [
+        "configurators.navigation.automation",
+        "configurators.navigation.automationChildren.holidays"
+      ],
+      "route": "automation/holidays",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Family trip",
+          "text": "Edit"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-group-validity",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.groups"
+      ],
+      "route": "users/groups",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Cleaning staff",
+          "text": "Edit"
+        },
+        {
+          "text": "Validity",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-user-groups",
+      "menu": [
+        "configurators.navigation.users",
+        "configurators.navigation.usersChildren.userList"
+      ],
+      "route": "users/usersList",
+      "layouts": [
+        "desktop"
+      ],
+      "onlyApps": [
+        "beta"
+      ],
+      "steps": [
+        {
+          "row": "Sample user 2",
+          "text": "Edit"
+        },
+        {
+          "text": "Groups",
+          "within": "section.overlay"
         }
       ],
       "crop": "section.overlay > div.content",

@@ -205,8 +205,61 @@ export function betaShape(d) {
   b.outputs.outSettings = b.outputs.outSettings.map(({ zoneInControl, ...o }) => ({ ...o, needCodeInKeypad: false }));
   b.outputs.thermostats = b.outputs.thermostats.map(({ hysteresis, ...t }) => t);
   b.systemStatus = betaStatus();
+  b.automation = automation();
+  b.users.groups[1] = { ...b.users.groups[1], schedules: [1 << CLEANING, 0], scheduleDeny: false }; // Cleaning staff: access by "Cleaning"
   return b;
 }
+
+// --- Automation (beta): schedules, holidays and scenes, shaped as the app's USB parser builds them
+// (configurators/wired/sp5-communication.service.ts; meanings in configurators/utils/scene.utils.ts and
+// schedule.utils.ts). Unused slots keep the factory defaults exactly, or the lists count them as in use.
+// No overnight schedule. Scene actions only drive outputs defined as Remote control (definition 1): the
+// panel cannot drive a siren or a thermostat output from a scene (firmware team, 2026-10-28).
+const CLEANING = 0, EVENING = 1;                     // schedule queueNo
+const CHRISTMAS = 0, NEW_YEAR = 1;                   // holiday queueNo
+const EPOCH0 = Date.UTC(2016, 2, 1) / 1000;          // schedule dates: seconds since 2016-03-01 00:00 UTC
+const day = (y, m, d) => Date.UTC(y, m - 1, d) / 1000 - EPOCH0;
+const WEEK = { mon: 1, tue: 2, wed: 4, thu: 8, fri: 16, sat: 32, sun: 64 };
+const scheduleDefault = (q) => ({ queueNo: q, enabled: false, validity: false, holidayTime: false, allDay: false, repeat: 1, weekDays: 0,
+  startHour: 8, startMinute: 0, stopHour: 17, stopMinute: 0, startEpoch: 0, stopEpoch: 0, holidays: 0,
+  holidayStartHour: 9, holidayStartMinute: 0, holidayStopHour: 15, holidayStopMinute: 0, holidayMode: 0, name: `Schedule ${q + 1}` });
+const holidayDefault = (q) => ({ queueNo: q, enabled: false, annual: true, startYear: 24, startMonth: 0, startDay: 0, stopYear: 24, stopMonth: 0, stopDay: 0, name: '' });
+const bits = (...indexes) => { const b = Array(24).fill(0); for (const i of indexes) b[i >> 3] |= 1 << (i & 7); return b; };
+const factor = (o = {}) => ({ id: 0, logic: 0, when: 0, temp: 0, bits: bits(), text: '', ...o });
+const action = (o = {}) => ({ outId: 0, mode: 0, end: 0, pulseTime: 0, ...o });
+const sceneDefault = (q) => ({ queueNo: q, enabled: false, triggerAny: false, factors: Array.from({ length: 4 }, () => factor()), actions: Array.from({ length: 3 }, () => action()), name: '' });
+const scene = (q, name, enabled, factors, actions, triggerAny = false) => {
+  const s = sceneDefault(q);
+  factors.forEach((f, i) => { s.factors[i] = factor(f); });
+  actions.forEach((a, i) => { s.actions[i] = action(a); });
+  return { ...s, name, enabled, triggerAny };
+};
+// Factor sources and events, and action modes (scene.utils.ts): zone 1 / sensor 2 / area 3 / user 4 /
+// SMS 6 / schedule 7; output ON 0, OFF 1, pulse 3; area arm 22, disarm 21. Outputs and areas in actions
+// are numbered from 1 (output queueNo + 1); zones, sensors, areas and schedules in factors are bits by queueNo.
+const OUT = { garageGate: 2, gardenLights: 3, garageLight: 4 }, AREA = { home: 0, garage: 2 }; // all Remote control
+function automation() {
+  const schedules = Array.from({ length: 64 }, (_, q) => scheduleDefault(q));
+  schedules[CLEANING] = { ...scheduleDefault(CLEANING), enabled: true, repeat: 1, weekDays: WEEK.tue | WEEK.thu, startHour: 9, stopHour: 12,
+    holidays: (1 << CHRISTMAS) | (1 << NEW_YEAR), holidayMode: 1, name: 'Cleaning' };          // skip on holidays
+  schedules[EVENING] = { ...scheduleDefault(EVENING), enabled: true, repeat: 0, startHour: 19, stopHour: 23, name: 'Evening lights' };
+  schedules[2] = { ...scheduleDefault(2), enabled: false, repeat: 1, weekDays: WEEK.sat | WEEK.sun, allDay: true, name: 'Weekend' };
+  const holidays = Array.from({ length: 32 }, (_, q) => holidayDefault(q));
+  holidays[CHRISTMAS] = { ...holidayDefault(CHRISTMAS), enabled: true, annual: true, startYear: 26, startMonth: 12, startDay: 24, stopYear: 26, stopMonth: 12, stopDay: 26, name: 'Christmas' };
+  holidays[NEW_YEAR] = { ...holidayDefault(NEW_YEAR), enabled: true, annual: true, startYear: 27, startMonth: 1, startDay: 1, stopYear: 27, stopMonth: 1, stopDay: 1, name: "New Year's Day" };
+  holidays[2] = { ...holidayDefault(2), enabled: true, annual: false, startYear: 26, startMonth: 8, startDay: 3, stopYear: 26, stopMonth: 8, stopDay: 14, name: 'Family trip' };
+  const scenes = Array.from({ length: 32 }, (_, q) => sceneDefault(q));
+  scenes[0] = scene(0, 'Leak: warning light', true, [{ id: 1, when: 0, bits: bits(15) }], [{ outId: OUT.garageLight, mode: 0 }]);  // zone 16 Boiler room leak, alarm
+  scenes[1] = scene(1, 'Frost warning', false, [{ id: 2, when: 7, temp: 50, bits: bits(0) }], [{ outId: OUT.gardenLights, mode: 0 }]); // below 5.0 °C
+  scenes[2] = scene(2, 'Evening lights', true, [{ id: 7, when: 0, bits: bits(EVENING) }], [{ outId: OUT.gardenLights, mode: 0 }]);
+  scenes[3] = scene(3, 'Garage follows Home', true, [{ id: 3, when: 0, bits: bits(AREA.home) }], [{ outId: AREA.garage, mode: 22, end: 21 }]);
+  scenes[4] = scene(4, 'Gate by tag or SMS', true,
+    [{ id: 4, when: 0, logic: 0, temp: 2 }, { id: 6, when: 0, text: 'OPEN GATE' }],      // tag of user 2 (Sample user 1), or this SMS
+    [{ outId: OUT.garageGate, mode: 3, pulseTime: 5 }, { outId: OUT.gardenLights, mode: 0 }], true);
+  return { schedules, holidays, scenes };
+}
+// The date-range state of the Cleaning schedule (pop-up screen): 1 Sep 2026 to 30 Jun 2027.
+export const CLEANING_DATE_RANGE = { validity: true, startEpoch: day(2026, 9, 1), stopEpoch: day(2027, 6, 30) };
 const betaStatus = () => ({
   ...structuredClone(systemStatus),
   zones: Object.fromEntries(Object.entries(systemStatus.zones).map(([k, z]) => [k, { ...z, mimic: false }])),

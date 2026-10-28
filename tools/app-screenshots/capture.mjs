@@ -87,7 +87,7 @@ for (const lang of langs) {
           if (screen.steps) appPath.push(...await runSteps(page, t, screen.steps));
           const base = `${modelSlug}-${id}`;
           // A pop-up or a single card is cut out of the page (screen.crop: its CSS selector).
-          const shots = [{ variant: layout, file: `${base}-${layout}.png`, ...(screen.crop ? { crop: screen.crop, isolate: screen.isolate } : {}) }];
+          const shots = [{ variant: layout, file: `${base}-${layout}.png`, ...(screen.crop ? { crop: screen.crop, isolate: screen.isolate, keepFocus: screen.keepFocus } : {}) }];
           // g16 opens in the right-hand column of the desktop layout, so that column is also cut out.
           if (layout === 'desktop' && def.flow !== 'configuration') shots.push({ variant: 'desktop-panel', file: `${base}-desktop-panel.png`, selector: 'app-company-mobile-host' });
           // The newer configurator fills the window under the app's top bar (logo, region, account);
@@ -255,8 +255,8 @@ async function shootElement(page, s, layout, opts) {
     await page.setViewportSize({ width, height: Math.min(Math.max(height + need.extra, need.bottom) + 120, MAX_CSS_HEIGHT) });
     await settle(page, 500);
   }
-  // No focus ring on the last field typed into.
-  await page.evaluate(() => document.activeElement?.blur());
+  // No focus ring on the last field typed into (keepFocus: an open dropdown would close).
+  if (!s.keepFocus) await page.evaluate(() => document.activeElement?.blur());
   if (s.isolate) {
     await page.addStyleTag({ content: `html, body { background: transparent !important; } body * { visibility: hidden !important; }
       ${s.crop}, ${s.crop} * { visibility: visible !important; }` });

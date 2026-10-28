@@ -30,7 +30,10 @@ Output: `out/<lang>/<model>-<screen>[-<revision>]-<layout>.png` and `out/manifes
 record per image (menu path in that language, firmware, `firmwareConfirmed`, `revisionConfirmed`,
 any `unverified` note, the front-end bundle and its deploy date). Each capture is a fresh browser,
 about 12 s per screen and layout; two runs give pixel-identical images. Long runs go in the
-background.
+background, under `caffeinate -i`: when the Mac sleeps midway every screen after that fails with
+`ERR_NETWORK_CHANGED` (2026-10-26, 35 of 65 lost). That stops idle sleep only; a lid closed on
+battery still sleeps it (2026-10-28, 10 lost), so read the run's FAIL lines and rerun just those
+with `--screen` (the manifest merges).
 
 **Beta front-end:** `--app beta` photographs beta2.protegus.app instead (SP5 follows the beta, Andrius
 2026-10-19). Images and their own manifest go to `out/beta/`, every record says `frontend: "beta"`,
@@ -113,6 +116,10 @@ public, so keep real names, systems and customer data out of fixtures and commit
   page were missing from the pictures, and the run said 0 problems. Never wait with `networkidle` after
   the first load. A page still loading after 20 s now fails its screen. When pictures from two runs
   differ, look for missing icons before blaming the app.
+- **A menu item can depend on the sample having its data.** SP5's Automation appears only when the
+  configuration has an `automation` block (the configurator's `navigation.service.ts`); adding it put a
+  new item in every desktop sidebar, so the whole beta set was recaptured (2026-10-26). Before adding
+  data a page needs, check what else it changes.
 - **Keep menu clicks inside the configurator**: on desktop "Settings" is also a top-bar item.
 - **Pop-ups** (README, "Pop-ups and single cards"): find a row by its text in `div.table-row` and only
   among visible ones, because each list is also laid out as phone cards hidden on desktop. A dropdown

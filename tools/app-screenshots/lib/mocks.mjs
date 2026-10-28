@@ -88,11 +88,16 @@ export function createMocks({ lang, model, configPatch = null, timezoneId = null
   };
 }
 
-// Objects merge key by key; arrays and values in the patch replace what is there.
+// Objects merge key by key; arrays and values in the patch replace what is there, except that an
+// object with index keys patches single items of an array: { "schedules": { "0": { "validity": true } } }.
 function deepMerge(base, patch) {
+  const isObj = (x) => x && typeof x === 'object' && !Array.isArray(x);
   for (const [k, v] of Object.entries(patch)) {
-    const isObj = (x) => x && typeof x === 'object' && !Array.isArray(x);
-    base[k] = isObj(v) && isObj(base[k]) ? deepMerge(base[k], v) : v;
+    if (Array.isArray(base[k]) && isObj(v) && Object.keys(v).every((i) => /^\d+$/.test(i))) {
+      for (const [i, item] of Object.entries(v)) base[k][i] = isObj(item) && isObj(base[k][i]) ? deepMerge(base[k][i], item) : item;
+    } else {
+      base[k] = isObj(v) && isObj(base[k]) ? deepMerge(base[k], v) : v;
+    }
   }
   return base;
 }
