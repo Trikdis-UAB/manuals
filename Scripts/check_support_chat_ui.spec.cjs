@@ -121,7 +121,7 @@ test.describe("Support chat rollout", () => {
       expect(await page.evaluate(() => document.querySelector("#trikdocs-chat-launcher img").getAttribute("src")))
         .toMatch(/\/images\/joy-avatar\.svg$/);
       await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
-      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("AI assistant");
+      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("wiring or settings");
       await page.screenshot({ path: path.join(ARTIFACT_DIR, "chatwoot-launcher.png"), fullPage: false });
 
       await page.click(LAUNCHER);
@@ -195,7 +195,7 @@ test.describe("Support chat rollout", () => {
       await page.goto(`${BASE_URL}/lt/?chat_preview=1`, { waitUntil: "domcontentloaded" });
       await answerConsent(page);
       await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
-      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("dirbtinio intelekto asistentė");
+      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("prijungimo ar nustatymų");
       await page.click("#trikdocs-chat-teaser .trikdocs-chat-teaser-close");
       expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
       expect((await chatState(page)).launcher).toBe(true);

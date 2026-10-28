@@ -19,15 +19,17 @@
   var TEASER_DELAY_MS = 1200;
   // Joy's face, next to this script: /javascripts/ -> /images/.
   var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || "";
+  // The teaser only invites: Joy introduces herself as an AI assistant in the chat's first message,
+  // so the bubble doesn't say the same thing first (Codex review, Andrius 2026-10-28).
   var LABELS = {
     en: { launcher: "Chat with Joy, TRIKDIS AI assistant", close: "Close",
-          teaser: "Hi, I’m Joy, TRIKDIS’s AI assistant 👋 Ask me about wiring and settings for any TRIKDIS product." },
+          teaser: "Need help with wiring or settings for a TRIKDIS product? Ask here." },
     lt: { launcher: "Pokalbis su Joy, TRIKDIS DI asistente", close: "Uždaryti",
-          teaser: "Sveiki, aš Joy, TRIKDIS dirbtinio intelekto asistentė 👋 Klauskite apie bet kurio TRIKDIS gaminio prijungimą ir nustatymus." },
+          teaser: "Reikia pagalbos dėl TRIKDIS gaminio prijungimo ar nustatymų? Klauskite čia." },
     es: { launcher: "Chatea con Joy, la asistente de IA de TRIKDIS", close: "Cerrar",
-          teaser: "Hola, soy Joy, la asistente de IA de TRIKDIS 👋 Pregúntame sobre la conexión y la configuración de cualquier producto TRIKDIS." },
+          teaser: "¿Necesitas ayuda con la conexión o la configuración de un producto TRIKDIS? Pregunta aquí." },
     ru: { launcher: "Чат с Joy, ИИ-ассистентом TRIKDIS", close: "Закрыть",
-          teaser: "Здравствуйте, я Joy, ИИ-ассистент TRIKDIS 👋 Спросите о подключении и настройке любого устройства TRIKDIS." }
+          teaser: "Нужна помощь с подключением или настройкой устройства TRIKDIS? Спросите здесь." }
   };
   var DEFAULT_PREVIEW_QUERY = "chat_preview";
 

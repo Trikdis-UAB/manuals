@@ -195,7 +195,7 @@ Production builds disable the hook-based auto-indexer with `MKDOCS_PAGEFIND_AUTO
 - **Nothing from the chat provider loads until a visitor clicks the chat button.** The widget stores a visitor id as soon as it loads, so loading it on every page view would need cookie consent. After a visitor has opened the chat once, later page loads restore the widget so the conversation stays reachable.
 - Default rollout behavior:
   - only boot on the hosts in `TRIKDOCS_CHAT_HOSTS` (default: the `site_url` host, `docs.trikdis.com`)
-  - preview-only gate enabled by default
+  - preview-only gate enabled by default, except in production: `netlify.toml` sets `TRIKDOCS_CHAT_PREVIEW_ONLY = "0"` there, so every docs.trikdis.com visitor sees the chat
   - session gate query parameter: `?chat_preview=1`
   - clear the session gate with `?chat_preview=0`
 - Build/deploy env vars:
