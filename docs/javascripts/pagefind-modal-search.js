@@ -1275,6 +1275,7 @@
 
   function navigateToResult(urlValue) {
     recordSearchNow();  // opening a result settles the search
+    window.dispatchEvent(new CustomEvent("trikdocs:search-result-opened"));
     var parsedUrl = parseResultUrl(urlValue);
     if (!parsedUrl) {
       return;
@@ -1820,6 +1821,9 @@
       return;
     }
     state.lastRecorded = term.toLowerCase();
+    // For the chat's invitation (support-chat.js): a search with no results, or two different ones
+    // without opening a result. In the page only; the term is never stored or sent from there.
+    window.dispatchEvent(new CustomEvent("trikdocs:search-settled", { detail: { scope: outcome.scope, term: term.toLowerCase() } }));
     var props = { search_term: term, search_scope: outcome.scope, search_lang: state.scopes.lang || "" };
     // The same event in the cookieless analytics (analytics-cookieless.js), which needs no consent.
     if (window.trikdocsAnalytics) {

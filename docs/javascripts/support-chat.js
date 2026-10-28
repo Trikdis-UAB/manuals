@@ -16,20 +16,57 @@
   var CHATWOOT_SCRIPT_ID = "trikdocs-chatwoot-sdk";
   var TEASER_ID = "trikdocs-chat-teaser";
   var TEASER_DISMISSED_KEY = "trikdocs-chat-teaser-dismissed";
-  var TEASER_DELAY_MS = 1200;
+  var TEASER_SHOWN_KEY = "trikdocs-chat-teaser-shown";
+  var TEASER_PDF_KEY = "trikdocs-chat-pdf-downloaded";
+  // The teaser invites only when the page suggests the visitor would welcome help (Andrius and
+  // Codex, 2026-10-28: time on a page alone says nothing; half the visits to a manual last 40 s+):
+  // - a settled search with no results, or two different settled searches within 2 min without
+  //   opening a result;
+  // - or, after 2 min of reading, coming back twice to the same wiring or LED/fault section after
+  //   15 s+ elsewhere.
+  // Only on a product's pages, once a visit, never after that product's PDF was downloaded in this
+  // visit, and only 5 s after the search, cookie or picture overlay closed. The text is about the
+  // page ("Questions about GET wiring?"), never about what the visitor did.
+  // Tests shorten the timings with window.__trikdocsTeaserTiming = { dwellMs, returnGapMs, quietMs }.
+  var TEASER_DWELL_MS = 120000;
+  var TEASER_RETURN_GAP_MS = 15000;
+  var TEASER_QUIET_MS = 5000;
+  var TEASER_SEARCH_WINDOW_MS = 120000;
+  // The product a page is about, from its path.
+  var PRODUCT_NAMES = {
+    "g16": "G16", "g16t": "G16T", "get": "GET", "gt": "GT", "gt-plus": "GT+", "e16": "E16",
+    "e16t": "E16T", "t16": "T16", "firecom": "FIRECOM", "g17f": "G17F", "cg17": "CG17",
+    "sp3": "SP3", "io-8": "iO-8", "io-lora": "iO-LORA", "io8-lora": "iO8-LoRa",
+    "pb-lora": "PB-LoRa", "rf-lora": "RF-LoRa", "rf-s8": "RF-S8", "gator": "GATOR",
+    "gator-io4r": "GATOR", "gator-wifi": "GATOR WiFi", "flexi-sk-lcd": "SK-LCD TouchPad",
+    "flexi-sk-led": "SK-LED TouchPad", "sk-lcd-button": "SK-LCD", "sk-lcd-touchpad": "SK-LCD TouchPad",
+    "sk-led-button": "SK-LED", "sk-led-touchpad": "SK-LED TouchPad", "rl14": "RL14",
+    "ipcom": "IPcom", "rt2": "RT2", "rth2": "RTH2", "r11": "R11", "rfh11": "RFH11", "rr-ip12": "R-IP12"
+  };
+  // Sections worth coming back to: wiring, and LED indication or faults.
+  var WIRING_RE = /wiring|connect|schematic|terminal|prijung|jungim|schem|gnybt|conexi|esquema|подключ|схем/i;
+  var TROUBLE_RE = /\bLED|indicat|trouble|fault|troubleshoot|indikac|gedim|šviesos|indicaci|fallo|averí|индикац|неисправ/i;
   // Joy's face, next to this script: /javascripts/ -> /images/.
   var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || "";
-  // The teaser only invites: Joy introduces herself as an AI assistant in the chat's first message,
-  // so the bubble doesn't say the same thing first (Codex review, Andrius 2026-10-28).
+  // The teaser says in a few words that Joy is an AI assistant, so "Ask Joy" doesn't read as a person;
+  // her full introduction comes in the chat's first message (Codex review, Andrius 2026-10-28).
   var LABELS = {
     en: { launcher: "Chat with Joy, TRIKDIS AI assistant", close: "Close",
-          teaser: "Need help with wiring or settings for a TRIKDIS product? Ask here." },
+          wiring: "Questions about {p} wiring? Ask Joy, our AI assistant.",
+          trouble: "Questions about the {p}'s indications or faults? Ask Joy, our AI assistant.",
+          product: "Questions about the {p}? Ask Joy, our AI assistant." },
     lt: { launcher: "Pokalbis su Joy, TRIKDIS DI asistente", close: "Uždaryti",
-          teaser: "Reikia pagalbos dėl TRIKDIS gaminio prijungimo ar nustatymų? Klauskite čia." },
+          wiring: "Klausimų apie {p} prijungimą? Klauskite Joy, mūsų DI asistentės.",
+          trouble: "Klausimų apie {p} indikaciją ar gedimus? Klauskite Joy, mūsų DI asistentės.",
+          product: "Klausimų apie {p}? Klauskite Joy, mūsų DI asistentės." },
     es: { launcher: "Chatea con Joy, la asistente de IA de TRIKDIS", close: "Cerrar",
-          teaser: "¿Necesitas ayuda con la conexión o la configuración de un producto TRIKDIS? Pregunta aquí." },
+          wiring: "¿Preguntas sobre la conexión del {p}? Pregunta a Joy, nuestra asistente de IA.",
+          trouble: "¿Preguntas sobre las indicaciones o fallos del {p}? Pregunta a Joy, nuestra asistente de IA.",
+          product: "¿Preguntas sobre el {p}? Pregunta a Joy, nuestra asistente de IA." },
     ru: { launcher: "Чат с Joy, ИИ-ассистентом TRIKDIS", close: "Закрыть",
-          teaser: "Нужна помощь с подключением или настройкой устройства TRIKDIS? Спросите здесь." }
+          wiring: "Вопросы о подключении {p}? Спросите Joy, нашего ИИ-ассистента.",
+          trouble: "Вопросы об индикации или неисправностях {p}? Спросите Joy, нашего ИИ-ассистента.",
+          product: "Вопросы о {p}? Спросите Joy, нашего ИИ-ассистента." }
   };
   var DEFAULT_PREVIEW_QUERY = "chat_preview";
 
@@ -218,7 +255,8 @@
     }
     if (!cookielessCounted[id] && window.trikdocsAnalytics) {
       cookielessCounted[id] = true;
-      window.trikdocsAnalytics.cookieless("joy_chat_started", { chat_id: String(id), chat_lang: pageLocale() });
+      window.trikdocsAnalytics.cookieless("joy_chat_started", { chat_id: String(id), chat_lang: pageLocale(),
+                                                               via: state.openedVia || (state.restored ? "restored" : "launcher") });
     }
     if (!Array.isArray(window.dataLayer)) {
       return;
@@ -270,44 +308,221 @@
     }
   }
 
-  // "Hi, I'm Joy" next to the launcher, once a visit until dismissed. It also says
-  // she's an AI before anyone types (EU AI Act Art. 50).
-  function scheduleTeaser(open) {
-    if (storageGet("sessionStorage", TEASER_DISMISSED_KEY) === "1") {
+  function pageProduct() {
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    for (var i = parts.length - 1; i >= 0; i -= 1) {
+      if (Object.prototype.hasOwnProperty.call(PRODUCT_NAMES, parts[i])) {
+        return PRODUCT_NAMES[parts[i]];
+      }
+    }
+    return null;
+  }
+
+  // The section being read: the last chapter (h2) above the middle of the screen, with its
+  // subsection (h3); both texts count ("Mounting" sits inside "Installation and wiring").
+  function sectionInView() {
+    var headings = document.querySelectorAll(".md-content h2, .md-content h3");
+    var chapter = null;
+    var sub = "";
+    for (var i = 0; i < headings.length; i += 1) {
+      if (headings[i].getBoundingClientRect().top > window.innerHeight / 2) {
+        break;
+      }
+      if (headings[i].tagName === "H2") {
+        chapter = headings[i];
+        sub = "";
+      } else {
+        sub = headings[i].textContent || "";
+      }
+    }
+    if (!chapter) {
+      return null;
+    }
+    var text = sub + " " + (chapter.textContent || "");
+    var kind = WIRING_RE.test(text) ? "wiring" : (TROUBLE_RE.test(text) ? "trouble" : null);
+    return { key: chapter.id || chapter.textContent, kind: kind };
+  }
+
+  function pdfDownloaded(product) {
+    return (storageGet("sessionStorage", TEASER_PDF_KEY) || "").split("|").indexOf(product) !== -1;
+  }
+
+  // Who downloads a product's PDF has what they came for.
+  document.addEventListener("click", function (event) {
+    var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+    var product = pageProduct();
+    if (!link || !product || !/\.pdf(\?|#|$)/i.test(link.getAttribute("href") || "")) {
       return;
     }
-    window.clearTimeout(state.teaserTimer);
-    state.teaserTimer = window.setTimeout(function () {
-      if (document.getElementById(TEASER_ID) || !document.getElementById(LAUNCHER_ID)) {
+    var done = (storageGet("sessionStorage", TEASER_PDF_KEY) || "").split("|").filter(Boolean);
+    if (done.indexOf(product) === -1) {
+      done.push(product);
+      storageSet("sessionStorage", TEASER_PDF_KEY, done.join("|"));
+    }
+  }, true);
+
+  // Searches, from pagefind-modal-search.js. They live through page changes (a search often
+  // ends on another page); opening a result means the visitor found something.
+  var searches = { noResult: false, recent: [] };
+  window.addEventListener("trikdocs:search-settled", function (event) {
+    var detail = (event && event.detail) || {};
+    var now = Date.now();
+    if (detail.scope === "none") {
+      searches.noResult = true;
+    }
+    searches.recent = searches.recent.filter(function (item) {
+      return now - item.at < TEASER_SEARCH_WINDOW_MS && item.term !== detail.term;
+    });
+    searches.recent.push({ term: detail.term, at: now });
+  });
+  window.addEventListener("trikdocs:search-result-opened", function () {
+    searches.noResult = false;
+    searches.recent = [];
+  });
+
+  function searchSignal() {
+    return searches.noResult || searches.recent.length >= 2;
+  }
+
+  function cookieless(name, props) {
+    if (window.trikdocsAnalytics && typeof window.trikdocsAnalytics.cookieless === "function") {
+      window.trikdocsAnalytics.cookieless(name, props);
+    }
+  }
+
+  function overlayOpen() {
+    var consent = document.getElementById("__consent");
+    var search = document.getElementById("__search");
+    return (consent && !consent.hidden) || (search && search.checked)
+      || !!document.querySelector(".glightbox-open, .gslide.current, dialog[open]");
+  }
+
+  // Watches the page for a reason to invite; starts again on every page (navigation.instant
+  // swaps pages without reloading this script).
+  function scheduleTeaser(open) {
+    window.clearInterval(state.teaserTimer);
+    state.teaserPage = window.location.pathname;
+    if (storageGet("sessionStorage", TEASER_DISMISSED_KEY) === "1"
+        || storageGet("sessionStorage", TEASER_SHOWN_KEY) === "1") {
+      return;
+    }
+    var product = pageProduct();
+    if (!product) {
+      return;  // home, categories, FAQ: no invitation
+    }
+    var timing = window.__trikdocsTeaserTiming || {};
+    var dwellMs = typeof timing.dwellMs === "number" ? timing.dwellMs : TEASER_DWELL_MS;
+    var returnGapMs = typeof timing.returnGapMs === "number" ? timing.returnGapMs : TEASER_RETURN_GAP_MS;
+    var quietMs = typeof timing.quietMs === "number" ? timing.quietMs : TEASER_QUIET_MS;
+    var page = window.location.pathname;
+    var reading = 0;            // ms with the tab visible and no overlay
+    var last = Date.now();
+    var busyAt = 0;             // when an overlay was last open
+    var current = null;         // the section in view now
+    var seen = {};              // section key -> { leftAt, returns, kind }
+    var eligibleSent = false;
+    state.teaserTimer = window.setInterval(function () {
+      var now = Date.now();
+      var step = Math.min(now - last, 2000);  // a throttled timer must not count a long gap
+      last = now;
+      if (window.location.pathname !== page || state.openRequested) {
+        window.clearInterval(state.teaserTimer);
         return;
       }
-      var text = labels();
-      var teaser = document.createElement("div");
-      teaser.id = TEASER_ID;
-      teaser.className = "trikdocs-chat-teaser";
-      teaser.setAttribute("role", "status");
-      var body = document.createElement("span");
-      body.textContent = text.teaser;
-      var close = document.createElement("button");
-      close.type = "button";
-      close.className = "trikdocs-chat-teaser-close";
-      close.setAttribute("aria-label", text.close);
-      close.textContent = "×";
-      close.addEventListener("click", function (event) {
-        event.stopPropagation();
-        storageSet("sessionStorage", TEASER_DISMISSED_KEY, "1");
-        removeTeaser();
-      });
-      teaser.appendChild(body);
-      teaser.appendChild(close);
-      teaser.addEventListener("click", open);
-      document.body.appendChild(teaser);
-      state.teaserShown = true;
-    }, TEASER_DELAY_MS);
+      if (document.visibilityState !== "visible" || overlayOpen()) {
+        busyAt = now;
+        return;
+      }
+      reading += step;
+      var section = sectionInView();
+      var key = section ? section.key : null;
+      if (key !== (current && current.key)) {
+        if (current && seen[current.key]) {
+          seen[current.key].leftAt = reading;
+        }
+        if (section && section.kind) {
+          var item = seen[key];
+          if (!item) {
+            seen[key] = { leftAt: null, returns: 0, kind: section.kind };
+          } else if (item.leftAt !== null && reading - item.leftAt >= returnGapMs) {
+            item.returns += 1;
+          }
+        }
+        current = section;
+      }
+      var trigger = null;
+      var kind = "product";
+      if (searchSignal()) {
+        trigger = "search";
+      } else if (reading >= dwellMs) {
+        for (var k in seen) {
+          if (Object.prototype.hasOwnProperty.call(seen, k) && seen[k].returns >= 2) {
+            trigger = "reread";
+            kind = seen[k].kind;
+            break;
+          }
+        }
+      }
+      if (!trigger || now - busyAt < quietMs) {
+        return;
+      }
+      window.clearInterval(state.teaserTimer);
+      var props = { trigger: trigger, product: product, chat_lang: pageLocale(),
+                    reading_band: reading < 120000 ? "<2m" : (reading < 300000 ? "2-5m" : "5m+") };
+      if (pdfDownloaded(product)) {
+        if (!eligibleSent) {
+          cookieless("joy_teaser_eligible", Object.assign({ suppressed: "pdf" }, props));
+        }
+        return;
+      }
+      cookieless("joy_teaser_eligible", props);
+      eligibleSent = true;
+      showTeaser(open, (labels()[kind] || labels().product).replace("{p}", product), props);
+    }, 250);
+  }
+
+  function showTeaser(open, line, props) {
+    if (state.openRequested || document.getElementById(TEASER_ID) || !document.getElementById(LAUNCHER_ID)) {
+      return;
+    }
+    var text = labels();
+    var teaser = document.createElement("div");
+    teaser.id = TEASER_ID;
+    teaser.className = "trikdocs-chat-teaser";
+    teaser.setAttribute("role", "status");
+    var body = document.createElement("span");
+    body.textContent = line;
+    var close = document.createElement("button");
+    close.type = "button";
+    close.className = "trikdocs-chat-teaser-close";
+    close.setAttribute("aria-label", text.close);
+    close.textContent = "×";
+    close.addEventListener("click", function (event) {
+      event.stopPropagation();
+      storageSet("sessionStorage", TEASER_DISMISSED_KEY, "1");
+      cookieless("joy_teaser_action", Object.assign({ action: "dismiss" }, props));
+      removeTeaser();
+    });
+    teaser.appendChild(body);
+    teaser.appendChild(close);
+    teaser.addEventListener("click", function () {
+      state.openedVia = "teaser";
+      cookieless("joy_teaser_action", Object.assign({ action: "open" }, props));
+      open();
+    });
+    document.body.appendChild(teaser);
+    storageSet("sessionStorage", TEASER_SHOWN_KEY, "1");
+    cookieless("joy_teaser_shown", props);
+    state.teaserShown = true;
   }
 
   function renderLauncher(config) {
     if (document.getElementById(LAUNCHER_ID)) {
+      // a new page (sync also runs again for the same page: document$, pageshow)
+      if (state.teaserOpen && state.teaserPage !== window.location.pathname) {
+        removeTeaser();  // a bubble about the previous page
+        scheduleTeaser(state.teaserOpen);
+      }
       return;
     }
 
@@ -336,6 +551,7 @@
     };
     button.addEventListener("click", open);
     document.body.appendChild(button);
+    state.teaserOpen = open;
     scheduleTeaser(open);
   }
 

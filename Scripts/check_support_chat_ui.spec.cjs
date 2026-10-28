@@ -44,12 +44,17 @@ function chatwootStubScript() {
   `;
 }
 
-async function withPage(run) {
+// The teaser's waits (2 min of reading, 15 s between returns, 5 s after an overlay) are shortened
+// in tests; null keeps the real ones.
+async function withPage(run, teaserTiming = { dwellMs: 0, returnGapMs: 300, quietMs: 300 }) {
   const browser = await chromium.launch({
     channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
     args: [`--host-resolver-rules=${HOST_RULE}`]
   });
   const context = await browser.newContext();
+  if (teaserTiming) {
+    await context.addInitScript((timing) => { window.__trikdocsTeaserTiming = timing; }, teaserTiming);
+  }
   const page = await context.newPage();
   const requests = [];
 
@@ -85,6 +90,23 @@ async function answerConsent(page) {
   await page.waitForLoadState("domcontentloaded");
 }
 
+// What would reach the cookieless analytics (they stay off on the test host).
+async function recordCookieless(page) {
+  await page.evaluate(() => {
+    window.__cookielessSent = [];
+    window.trikdocsAnalytics = window.trikdocsAnalytics || {};
+    window.trikdocsAnalytics.cookieless = (name, props) => window.__cookielessSent.push([name, props]);
+  });
+  return () => page.evaluate(() => window.__cookielessSent.filter(([name]) => name.startsWith("joy_teaser")));
+}
+
+// A search the visitor settled on, as pagefind-modal-search.js announces it.
+async function searchSettled(page, scope, term) {
+  await page.evaluate(([s, t]) => {
+    window.dispatchEvent(new CustomEvent("trikdocs:search-settled", { detail: { scope: s, term: t } }));
+  }, [scope, term]);
+}
+
 async function chatState(page) {
   return page.evaluate(() => ({
     chat: window.__TRIKDOCS_CHAT__ || null,
@@ -117,11 +139,9 @@ test.describe("Support chat rollout", () => {
       await answerConsent(page);
       await page.waitForSelector(LAUNCHER, { state: "visible" });
       expect(requests).toEqual([]);
-      // Joy's face on the launcher, and her "Hi, I'm Joy" pop-up a moment later.
+      // Joy's face on the launcher; no invitation on the home page.
       expect(await page.evaluate(() => document.querySelector("#trikdocs-chat-launcher img").getAttribute("src")))
         .toMatch(/\/images\/joy-avatar\.svg$/);
-      await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
-      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("wiring or settings");
       await page.screenshot({ path: path.join(ARTIFACT_DIR, "chatwoot-launcher.png"), fullPage: false });
 
       await page.click(LAUNCHER);
@@ -178,8 +198,8 @@ test.describe("Support chat rollout", () => {
             .map((args) => args[2]), cookielessSent];
         });
         // 2026-10-19: the cookieless analytics count each chat once too, with or without consent.
-        expect(cookieless).toEqual([["joy_chat_started", { chat_id: "42", chat_lang: "en" }],
-                                    ["joy_chat_started", { chat_id: "43", chat_lang: "en" }]]);
+        expect(cookieless).toEqual([["joy_chat_started", { chat_id: "42", chat_lang: "en", via: "launcher" }],
+                                    ["joy_chat_started", { chat_id: "43", chat_lang: "en", via: "launcher" }]]);
         if (choice === "Accept") {
           expect(sent).toEqual([{ chat_id: "42", chat_lang: "en" }, { chat_id: "43", chat_lang: "en" }]);
         } else {
@@ -190,19 +210,30 @@ test.describe("Support chat rollout", () => {
     }
   });
 
-  test("the pop-up stays closed once dismissed, and speaks the page language", async () => {
+  test("a search with no results invites once the search closes, in the page language; dismissed stays closed", async () => {
     await withPage(async ({ page, requests }) => {
-      await page.goto(`${BASE_URL}/lt/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+      await page.goto(`${BASE_URL}/lt/alarm-communicators/cellular/get/?chat_preview=1`, { waitUntil: "domcontentloaded" });
       await answerConsent(page);
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      const sent = await recordCookieless(page);
+      await page.evaluate(() => { document.getElementById("__search").checked = true; });
+      await searchSettled(page, "none", "gnybtas x9");
+      await page.waitForTimeout(1500);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();  // not while the search is open
+      await page.evaluate(() => { document.getElementById("__search").checked = false; });
       await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
-      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("prijungimo ar nustatymų");
+      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("Klausimų apie GET? Klauskite Joy, mūsų DI asistentės.");
       await page.click("#trikdocs-chat-teaser .trikdocs-chat-teaser-close");
       expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
       expect((await chatState(page)).launcher).toBe(true);
+      const names = (await sent()).map(([name]) => name);
+      expect(names).toEqual(["joy_teaser_eligible", "joy_teaser_shown", "joy_teaser_action"]);
+      expect(JSON.stringify(await sent())).not.toContain("gnybtas");  // the search term never leaves the page
 
-      await page.goto(`${BASE_URL}/lt/`, { waitUntil: "domcontentloaded" });
+      await page.goto(`${BASE_URL}/lt/alarm-communicators/cellular/gt/`, { waitUntil: "domcontentloaded" });
       await page.waitForSelector(LAUNCHER, { state: "visible" });
-      await page.waitForTimeout(2000);
+      await searchSettled(page, "none", "kitas");
+      await page.waitForTimeout(1500);
       expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
       expect(requests).toEqual([]);
     });
@@ -240,6 +271,73 @@ test.describe("Support chat rollout", () => {
       expect(state.chat.hostMatched).toBeFalsy();
       expect(state.chat.reason).toBe("host-mismatch");
       expect(state.launcher).toBeFalsy();
+      expect(requests).toEqual([]);
+    });
+  });
+
+  test("no invitation for time on a page alone, on the home page, or after the PDF", async () => {
+    await withPage(async ({ page }) => {
+      await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/get/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+      await answerConsent(page);
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      await page.evaluate(() => window.scrollTo(0, 3000));
+      await page.waitForTimeout(3000);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
+    }, null);
+    await withPage(async ({ page }) => {
+      await page.goto(`${BASE_URL}/en/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+      await answerConsent(page);
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      await searchSettled(page, "none", "x");
+      await page.waitForTimeout(1500);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
+
+      await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/get/`, { waitUntil: "domcontentloaded" });
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      await page.evaluate(() => {
+        const link = document.createElement("a");
+        link.href = "/en/alarm-communicators/cellular/get/GET.pdf";
+        link.addEventListener("click", (event) => event.preventDefault());
+        document.querySelector(".md-content").appendChild(link);
+        link.click();
+      });
+      await searchSettled(page, "none", "y");
+      await page.waitForTimeout(1500);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
+    });
+  });
+
+  test("coming back twice to the wiring section invites about wiring, once a visit", async () => {
+    await withPage(async ({ page, requests }) => {
+      await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/get/?chat_preview=1`, { waitUntil: "domcontentloaded" });
+      await answerConsent(page);
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      // answering the cookie banner reloads the page: scroll only the page that stays
+      await page.waitForLoadState("load");
+      await page.waitForTimeout(1000);
+      // "instant": the theme scrolls smoothly, and a long smooth scroll would still be running
+      const toWiring = () => page.evaluate(() => {
+        const heading = [...document.querySelectorAll(".md-content h2")].find((h) => /wiring/i.test(h.textContent));
+        window.scrollTo({ top: heading.getBoundingClientRect().top + window.scrollY - 100, behavior: "instant" });
+      });
+      const toTop = () => page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+      await toWiring(); await page.waitForTimeout(600);
+      await toTop(); await page.waitForTimeout(600);
+      await toWiring(); await page.waitForTimeout(600);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();  // one return isn't enough
+      await toTop(); await page.waitForTimeout(600);
+      await toWiring();
+      await page.waitForSelector("#trikdocs-chat-teaser", { state: "visible" });
+      expect(await page.textContent("#trikdocs-chat-teaser")).toContain("Questions about GET wiring? Ask Joy, our AI assistant.");
+      ensureArtifactsDir();
+      await page.waitForTimeout(800);  // after its fade-in
+      await page.screenshot({ path: path.join(ARTIFACT_DIR, "teaser-wiring.png"), fullPage: false });
+
+      await page.goto(`${BASE_URL}/en/alarm-communicators/cellular/gt/`, { waitUntil: "domcontentloaded" });
+      await page.waitForSelector(LAUNCHER, { state: "visible" });
+      await page.evaluate(() => window.scrollTo(0, 1500));
+      await page.waitForTimeout(2000);
+      expect(await page.$("#trikdocs-chat-teaser")).toBeNull();
       expect(requests).toEqual([]);
     });
   });
