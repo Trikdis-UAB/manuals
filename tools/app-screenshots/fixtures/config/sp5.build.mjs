@@ -197,7 +197,9 @@ export const systemStatus = {
 export function betaShape(d) {
   const b = structuredClone(d);
   const { ioTo2wire, ...general } = b.systemOptions.systemGeneral;
-  b.systemOptions.systemGeneral = { ...general, io9To2wire: false, io10To2wire: false, wirelessSupervisionTime: 60 };
+  // timeUpdatePeriod (hours, 0 = off): the beta shows "Periodic time update" only when the field is there
+  // (Protegus_v3 17bb2c2b, 2026-10-26); 10 is what the app sets when the switch is turned on.
+  b.systemOptions.systemGeneral = { ...general, io9To2wire: false, io10To2wire: false, wirelessSupervisionTime: 60, timeUpdatePeriod: 10 };
   for (const c of ['primaryChannel', 'backupChannel', 'parallelChannel', 'parallelBackupChannel']) {
     const ch = b.reportingCms.reporting[c];
     Object.assign(ch, { enableEncryption: ch.key !== '', isHexMode: false }); // the app sets it from the key

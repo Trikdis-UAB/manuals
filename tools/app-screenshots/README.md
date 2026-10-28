@@ -201,7 +201,8 @@ single users of the panel user list. `keepFocus` leaves the last field focused, 
   `needCodeInKeypad` per output, `enableEncryption`/`isHexMode` per CMS channel, no output zone control or
   thermostat hysteresis, live status inside the configuration). `sp5.json` keeps the released shape for
   `--app released`; `sp5-beta.json`, built by the same script, has the beta shape for `--app beta`.
-  Both were checked key by key against a real SP5 read from the beta server (2026-10-19).
+  Both were checked key by key against a real SP5 read from the beta server (2026-10-19). Fields added
+  since then come from the beta source: `timeUpdatePeriod` (Periodic time update, 2026-10-26).
 - **The wizard's "Scan QR code" page is the phone apps' view.** The QR button exists only in the native
   apps, which wrap this web app; the tool imitates the Android app's bridge to show it. It was not
   photographed on a real phone, and the manifest says so.
