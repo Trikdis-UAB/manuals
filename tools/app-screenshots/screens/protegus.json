@@ -52,6 +52,14 @@
         { "click": { "css": "#av-zones-button" }, "waitUrl": "/zone-status-list" },
         { "shot": "zone-status-list", "note": "Back door is open, Garage window is bypassed, the other Garage zones are closed." }
       ]
+    },
+    {
+      "id": "transfer",
+      "steps": [
+        { "click": { "text": "Sample system" }, "waitUrl": "/900101" },
+        { "eval": "history.pushState(null, '', location.pathname + '/settings/transfer-type'); dispatchEvent(new PopStateEvent('popstate', { state: null }))", "waitUrl": "/settings/system-transfer" },
+        { "shot": "system-transfer", "title": "systems.menu.transferSystem", "fullScreen": true, "note": "Opened as Transfer system; the sample system has no device transfer, so the app goes straight to this screen. Names appear under Email only while typing." }
+      ]
     }
   ]
 }
