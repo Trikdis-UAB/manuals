@@ -34,6 +34,15 @@ dashboard) for a GET-family communicator, plus the phone apps' "Scan QR code" fi
 node capture.mjs --model GET --flow new-system --lang en,lt,es,ru --layout phone
 ```
 
+The **Protegus app manual** flow uses the app as a user does: the home screen with two areas, an area,
+the keypad, the "Bypass failed zones" dialog, Forget PIN and the zone status list. The sample is a GET
+that controls a Paradox SP panel directly (`sampleAreaSystem` in `lib/sample.mjs`). The screens do not
+depend on the device, so the files are named `protegus-<screen>-phone.png`:
+
+```bash
+node capture.mjs --model GET --flow protegus --lang en --layout phone
+```
+
 Two configurators are covered, each with its own screen list and sample configuration:
 
 | Configurator | Models | Screens | Sample configuration |
@@ -125,6 +134,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | `POST /config/read` | the model's sample configuration |
 | `POST /error` | not sent; the message is reported as a run problem (`app error …`), since it usually means the sample is shaped differently from the server's answer |
 | Wizard: `GET /online`, `POST /get-system-info-new`, `POST /get-system-status-new`, `POST /create-system`, `POST /area` | device online and not directly controlled; the created system and its area are kept for the session (`lib/mocks-configurators.mjs`) |
+| Protegus flow: `GET /area-zones`, `POST /set-area-status` | the area's zones with the walk's `zoneStatus`; arming is not sent, and with the walk's `openZones` the made-up answer is the panel's refusal naming those zones (the manifest note says so) |
 | SP5 only: `GET /system-lite`, `GET /config/get-connection-status`, `GET /config/get-device-status`, `POST /get-system-status-new`, `GET /config/users/read`, `POST /config/time/read` | sample system details, connection state, device and zone status, the user list and the panel clock (`lib/mocks-configurators.mjs`) |
 
 Anything else is answered with `success: false` and reported as `UNMOCKED` with a warning.
@@ -174,6 +184,13 @@ single users of the panel user list. `keepFocus` leaves the last field focused, 
 
 ## Known limits
 
+- **Protegus app manual screens (`--flow protegus`):** the panel's refusal to arm is made up in the
+  browser, and the zone titles in the "Bypass failed zones" dialog are the sample's zone names (the
+  server's exact title format is not known). Behind that dialog the Arm button is blank: it shows
+  moving dots while arming, and the capture stops animations. A disarmed area that is ready to arm
+  (status 7) lights no button on the area screen, as the app draws it. The area screens have no
+  events, so the Events card is empty. The offline "Check device" page imitates the Android app
+  (Wi-Fi setup options); a phone browser shows only Retry.
 - **Device-stored option texts are partly inferred.** On GET/GT/GT+ the panel lists ("2. AUTO",
   "Dual Tone", "6. PARADOX SP+/MG+") and the CMS protocol names are strings stored on the device, not
   app labels, so they stay in English in every language, as on a real device. The device strings

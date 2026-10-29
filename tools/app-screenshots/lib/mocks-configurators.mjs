@@ -2,15 +2,16 @@
 
 import { SAMPLE, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
 
-export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch }) {
+export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch, scenario = {} }) {
   if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
-  if (configurator === 'g16') addSystemWizard(on, { model, state });
+  if (configurator === 'g16') addSystemWizard(on, { model, state, offline: Boolean(scenario.deviceOffline) });
 }
 
 // The add-new-system wizard for a g16-family communicator: online, not directly controlled, so the
 // app asks for areas and offers output (PGM) control. Calls in the order the wizard makes them.
-function addSystemWizard(on, { model, state }) {
-  on('GET', '/online', () => ({ success: true, online: true, errorType: '', srv: 1, own_region: true, local_version: 1 }));
+// offline: the device is not connected, so the wizard stops at its "Check device" page.
+function addSystemWizard(on, { model, state, offline }) {
+  on('GET', '/online', () => ({ success: true, online: !offline, errorType: '', srv: 1, own_region: true, local_version: 1 }));
   on('POST', '/get-system-info-new', () => wizardDeviceInfo(model));
   on('POST', '/get-system-status-new', () => wizardDeviceStatus(model));
   on('POST', '/create-system', ({ body }) => {

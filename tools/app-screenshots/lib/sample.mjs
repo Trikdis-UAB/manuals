@@ -174,7 +174,33 @@ export function sampleSystem(modelName) {
   };
 }
 
-export function sampleMe({ regions, modelName, withSystem }) {
+// The panel code a GET reports for a Paradox SP4000-SP7000 (the app's panel list). Not DSC (0x10-0x1F),
+// so the third arming button reads "Sleep", not "Away".
+export const PARADOX_SP = 0x21;
+
+// What a user arms from the app: a communicator wired to a panel it controls directly (Arm, Disarm, Sleep,
+// Stay, area PIN codes, zone bypass), two areas and six zones. Area status is the app's AreaState:
+// 2 armed, 7 disarmed and ready to arm. `showKeypad: true` means no PIN is remembered for the area.
+export function sampleAreaSystem(modelName) {
+  const s = sampleSystem(modelName);
+  const area = (id, queueNo, name, status) => ({
+    id, system_id: s.id, name, queue_no: queueNo, status, status_time: null, alarm_in_memory: false, last_person_name: '',
+    alarm_time: null, alarm_type: 0, monas_id: null, autoarm_with_area_id: null, disarm_when_autoarmed: false,
+    showKeypad: true, canBypass: true, zones: [],
+  });
+  const zone = (id, queueNo, name, areaId) => ({ id, queue_no: queueNo, name, native: true, visible: true, area_id: areaId, icon_id: 0 });
+  return {
+    ...s, direct: 1, centralPanel: PARADOX_SP, supported_commands: '.3.9.', canBypassZone: true, canUnbypassZone: true,
+    areas: [area(900201, 1, 'Home', 2), area(900202, 2, 'Garage', 7)],
+    zones: [
+      zone(900401, 1, 'Front door', 900201), zone(900402, 2, 'Hall motion', 900201),
+      zone(900403, 3, 'Garage door', 900202), zone(900404, 4, 'Back door', 900202),
+      zone(900405, 5, 'Garage window', 900202), zone(900406, 6, 'Garage motion', 900202),
+    ],
+  };
+}
+
+export function sampleMe({ regions, modelName, withSystem, system = null }) {
   const me = {
     success: true,
     id: SAMPLE.userId,
@@ -215,7 +241,7 @@ export function sampleMe({ regions, modelName, withSystem }) {
     regions,
   };
   if (withSystem) {
-    me.lastSystem = sampleSystem(modelName);
+    me.lastSystem = system ?? sampleSystem(modelName);
     me.lastSystemStatus = false;
     me.relatedSystems = [];
   }

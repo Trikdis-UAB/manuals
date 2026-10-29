@@ -175,7 +175,9 @@ async function runWalks(lang, t) {
     for (const walk of def.walks) {
       if (wanted && !wanted.some((id) => id === walk.id || walk.steps.some((st) => st.shot === id))) continue;
       const label = `${lang} ${layout} ${model} ${walk.id}`;
-      const app = await openOrFail(label, { lang, model, layout, timezoneId: def.timezones?.[lang], frontend: fe });
+      // The sample state this walk needs (lib/mocks.mjs, createMocks): the flow's system plus the walk's changes.
+      const scenario = { sampleSystem: def.sampleSystem, system: walk.system, zoneStatus: walk.zoneStatus, openZones: walk.openZones, deviceOffline: walk.deviceOffline };
+      const app = await openOrFail(label, { lang, model, layout, timezoneId: def.timezones?.[lang], frontend: fe, scenario });
       if (!app) continue;
       const { page, browser, guard, errors, mocks } = app;
       const files = [];
@@ -187,10 +189,12 @@ async function runWalks(lang, t) {
           if (step.waitUrl) await page.waitForURL((u) => u.pathname.endsWith(step.waitUrl), { timeout: 20000 });
           await settle(page, step.shot ? 1000 : 400);
           if (!step.shot) continue;
-          const s = { variant: layout, file: `${modelSlug}-${step.shot}-${layout}.png` };
+          // Screens that do not depend on the device are named by the flow (filePrefix), not the model.
+          const s = { variant: layout, file: `${def.filePrefix ?? modelSlug}-${step.shot}-${layout}.png` };
           const rec = await shoot(page, { s, layout, screen: { id: step.shot, unverified: step.unverified, fullScreen: step.fullScreen }, id: step.shot, revision: null, lang,
             appPath: step.title ? [t(step.title)] : [], label: `${label} ${step.shot}` });
           rec.walk = walk.id;
+          if (def.sampleNote) rec.sample = def.sampleNote;
           if (step.note) rec.note = step.note;
           records.push(rec);
           files.push(s.file);
@@ -200,7 +204,7 @@ async function runWalks(lang, t) {
         console.log(`ok   ${label} -> ${files.join(', ')}`);
       } catch (e) {
         problems++;
-        const file = path.join(outDir, lang, `ERROR-${modelSlug}-${walk.id}-${layout}.png`);
+        const file = path.join(outDir, lang, `ERROR-${def.filePrefix ?? modelSlug}-${walk.id}-${layout}.png`);
         await page.screenshot({ path: file }).catch(() => {});
         console.log(`FAIL ${label} after ${files.length} image(s): ${e.message.split('\n')[0]} (see ${path.relative(ROOT, file)})`);
       } finally {
@@ -267,6 +271,7 @@ async function shootElement(page, s, layout, opts) {
 async function clickStep(page, t, c) {
   let loc;
   if (c.css && c.hasText) loc = page.locator(c.css).filter({ hasText: t(c.hasText) });
+  else if (c.css && c.text) loc = page.locator(c.css).filter({ hasText: c.text }); // text from the sample data, e.g. an area name
   else if (c.css) loc = page.locator(c.css);
   else loc = page.getByText(c.label ? t(c.label) : c.text, { exact: c.exact ?? true });
   if (c.inner) loc = loc.locator(c.inner);

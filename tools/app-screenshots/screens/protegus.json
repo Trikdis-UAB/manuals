@@ -1,0 +1,57 @@
+{
+  "flow": "walk",
+  "configurator": null,
+  "models": ["GET"],
+  "layouts": ["phone"],
+  "filePrefix": "protegus",
+  "sampleSystem": "areas",
+  "sampleNote": "GET wired to a Paradox SP-series panel (code 0x21) it controls directly; areas Home (armed) and Garage (disarmed, ready to arm); zones 1-2 in Home, 3-6 in Garage. Invented data.",
+  "_fields": "The Protegus app as a user uses it, for the Protegus app manual: screens that do not depend on the device, so files are named protegus-<shot>-<layout>.png (filePrefix). Step types as in new-system.json, plus click {css, text}: the match containing that text from the sample data. The sample system is sampleSystem 'areas' (lib/sample.mjs, sampleAreaSystem); a walk changes it with system (a patch; index keys change single areas or zones), zoneStatus (zone number -> alarm/failure/bypass) and openZones (zone numbers the panel names when it refuses to arm). Nothing a walk does is sent: arming is answered in the browser.",
+  "walks": [
+    {
+      "id": "arming",
+      "steps": [
+        { "click": { "text": "Sample system" }, "waitUrl": "/900101" },
+        { "shot": "home-areas" },
+        { "click": { "css": ".hai-header", "text": "Garage" }, "waitUrl": "/area-view" },
+        { "shot": "area-view" },
+        { "click": { "css": ".av-state-arm" } },
+        { "shot": "area-keypad", "fullScreen": true, "note": "Arm was pressed; no PIN is remembered for the area, so the app asks for one. Nothing has been sent yet." }
+      ]
+    },
+    {
+      "id": "bypass",
+      "openZones": [4, 5],
+      "steps": [
+        { "click": { "text": "Sample system" }, "waitUrl": "/900101" },
+        { "click": { "css": ".hai-header", "text": "Garage" }, "waitUrl": "/area-view" },
+        { "click": { "css": ".av-state-arm" } },
+        { "click": { "css": "#numpad-row1 .numButton:nth-child(1)" } },
+        { "click": { "css": "#numpad-row1 .numButton:nth-child(2)" } },
+        { "click": { "css": "#numpad-row1 .numButton:nth-child(3)" } },
+        { "click": { "css": "#numpad-row2 .numButton:nth-child(1)" } },
+        { "click": { "css": "#numpad-row4 .enterIcon" } },
+        { "shot": "area-bypass-zones", "fullScreen": true, "note": "The panel's answer (zones 4 and 5 open, so the area cannot arm) is simulated in the browser; nothing was sent to Protegus. The zone titles are the sample's zone names." }
+      ]
+    },
+    {
+      "id": "forget-pin",
+      "system": { "areas": { "1": { "showKeypad": false } } },
+      "steps": [
+        { "click": { "text": "Sample system" }, "waitUrl": "/900101" },
+        { "click": { "css": ".hai-header", "text": "Garage" }, "waitUrl": "/area-view" },
+        { "shot": "area-forget-pin", "note": "A PIN is remembered for Garage, so the area offers Forget PIN." }
+      ]
+    },
+    {
+      "id": "zone-status",
+      "zoneStatus": { "4": { "alarm": true }, "5": { "bypass": true } },
+      "steps": [
+        { "click": { "text": "Sample system" }, "waitUrl": "/900101" },
+        { "click": { "css": ".hai-header", "text": "Garage" }, "waitUrl": "/area-view" },
+        { "click": { "css": "#av-zones-button" }, "waitUrl": "/zone-status-list" },
+        { "shot": "zone-status-list", "note": "Back door is open, Garage window is bypassed, the other Garage zones are closed." }
+      ]
+    }
+  ]
+}
