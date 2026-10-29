@@ -255,7 +255,7 @@ Choose the resistor set in **System options → Wired Zone Resistor Values (EOL 
 
 The setting names list the resistors in the order RT + R1 + R2, as on "FLEXi" SP3.
 
-**Tamper activation triggers zone.** When this is on, a tamper alarm on a zone reports a trouble but does not also trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire. **[to confirm: the label says the opposite of what the switch does in the app]**
+**Tamper activation triggers zone.** When this is on, a tamper alarm on a zone also triggers the zone. Leave it off so that a tamper on a fire zone reports only a trouble and is not reported as a fire.
 
 ### Connecting fire detectors
 
@@ -570,7 +570,7 @@ If the access codes are lost, access will be restored from the Protegus app. **[
 | What you see | Likely cause | What to do |
 |---|---|---|
 | Keypad zone does not work with EOL_T, ATZ, ATZ_T or 3EOL | Keypad inputs support only NO, NC and EOL (EOL_T on some keypads) | Change the zone type |
-| A tamper on a fire zone is reported as a fire | Tamper also triggers the zone | Turn on **Tamper activation triggers zone** in **System options** **[to confirm: on or off, see System options]** |
+| A tamper on a fire zone is reported as a fire | **Tamper activation triggers zone** is on | Turn off **Tamper activation triggers zone** in **System options** |
 | A terminal can't be assigned to a zone | It is already used as an output or a sensor | Remove it from **Terminals** or **Sensors** first |
 | The CMS receives no events | Channel, protocol, account number or encryption key | Check **Communication → CMS reporting**, then the connection |
 | Changes are not saved | The settings were not written | Tap **Write** after changing settings |
@@ -658,7 +658,7 @@ System options holds the panel's identity and general behaviour, the access code
 | Suspend if the same event repeats more than … within … | Reporting of an event is suspended when it repeats more than this many times within this time. | 0–99 times; 0–99 s |
 | Resume reporting automatically after | When reporting of a suspended event starts again. | 0–99 min |
 | EOL Resistor Configuration | The resistor set for all wired zones with EOL types. See [Resistor values](#resistor-values) for each resistor. | 2k2+2k2+4k7, 1k+1k+2k2, 5k6+5k6+3k3, 5k6+3k3+5k6, 3k3+6k8+3k3, 2k2+4k7+8k2, 10k+10k+5k6, 4k7+4k7+2k2 |
-| Tamper activation triggers zone | On: a tamper on a zone reports a trouble but does not trigger the zone. Use it so that a tamper on a fire zone is not reported as a fire. **[to confirm: the label says the opposite of what the switch does in the app]** | on / off |
+| Tamper activation triggers zone | On: a tamper on a zone also triggers the zone. Off: the tamper reports only a trouble, so a tamper on a fire zone is not reported as a fire. | on / off |
 
 #### Access & Permissions
 
@@ -1834,7 +1834,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | User | For **Specific user**: the user, from the active users. If the users haven't been read yet, a **User number** box is shown instead. | 1–1000 |
 | SMS text | For **SMS received**: the text that runs the scene **[to confirm: which senders count, and whether upper and lower case matter]**. | up to 23 characters |
 
-**Momentary conditions.** Most conditions are states that last, such as **Not armed** or a zone in alarm. Six are momentary events: Area **AutoArm**, **AutoDisarm** and **Auto arm failed**, User **RFID tag** and **Unauthorized call**, and **SMS received**. With **ALL**, a scene with a momentary condition runs when that event happens while its other conditions are already met, and a scene with more than one momentary condition will most likely never run. With **ANY**, each condition runs the scene on its own **[to confirm: momentary conditions too, as in the example below]**.
+**Momentary conditions.** Most conditions are states that last, such as **Not armed** or a zone in alarm. Six are momentary events: Area **AutoArm**, **AutoDisarm** and **Auto arm failed**, User **RFID tag** and **Unauthorized call**, and **SMS received**. With **ALL**, a scene with a momentary condition runs when that event happens while its other conditions are already met. A scene with two momentary conditions would need both events at the same moment, so in practice it never runs. With **ANY**, any one condition runs the scene, a momentary one included, as in the example below.
 
 #### Condition events
 
