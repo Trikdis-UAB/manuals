@@ -1,6 +1,6 @@
 ---
 name: protegus-app-screenshots
-description: Take screenshots of the Protegus app's device configurator (Advanced settings) and its add-new-system wizard for the TRIKDIS manuals, from the released web.protegus.app (or the beta front-end, beta2.protegus.app) with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
+description: Take screenshots of the Protegus app's device configurator (Advanced settings), its add-new-system wizard and the everyday user screens (home with areas, arming, PIN keypad, zone bypass, zone statuses) for the TRIKDIS manuals and the Protegus app manual, from the released web.protegus.app (or the beta front-end, beta2.protegus.app) with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "arming screenshots", "Protegus app manual pictures", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
 ---
 
 # Protegus app screenshots
@@ -24,7 +24,13 @@ cd tools/app-screenshots && npm ci
 node guard-selftest.mjs                                   # must say "all guard checks passed"
 node capture.mjs --model GET --lang en --layout phone,desktop
 node capture.mjs --model SP5 --lang en --layout phone --screen zones,users-list
+node capture.mjs --model GET --flow protegus --lang en --layout phone   # user screens: protegus-*-phone.png
 ```
+
+A user-screen walk sets its sample state in `screens/protegus.json` (system patch, zone status, zones
+the panel names when it refuses to arm). Read the released source first (`origin/master_eu` in
+`~/Projects/TRIKDIS/worktrees/Protegus_v3`, read with `git show`, never checked out): which buttons a
+screen shows depends on the system's capabilities (`systemHelper().supports` in `systems.service.ts`).
 
 Output: `out/<lang>/<model>-<screen>[-<revision>]-<layout>.png` and `out/manifest.json`, one
 record per image (menu path in that language, firmware, `firmwareConfirmed`, `revisionConfirmed`,
