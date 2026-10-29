@@ -197,6 +197,9 @@ single users of the panel user list. `keepFocus` leaves the last field focused, 
   image has it in the sidebar. Unused slots keep the factory defaults exactly, or the lists count them as
   in use. Scenes act only on outputs defined as Remote control: the panel cannot drive a siren or a
   thermostat output from a scene (firmware team, 2026-10-28). The sample has no overnight schedule.
+  A scene with ANY runs on any one condition, momentary ones included ("Gate by tag or SMS"); never give
+  a sample scene ALL with two momentary conditions (an RFID tag and an SMS, say), which will most likely
+  never run (Alvaras, 2026-10-28).
 - **The beta server returns a newer SP5 shape** (`io9To2wire`/`io10To2wire`, `wirelessSupervisionTime`,
   `needCodeInKeypad` per output, `enableEncryption`/`isHexMode` per CMS channel, no output zone control or
   thermostat hysteresis, live status inside the configuration). `sp5.json` keeps the released shape for
