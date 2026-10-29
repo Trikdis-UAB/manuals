@@ -3,7 +3,7 @@
 //   node fetch-public.mjs [en lt es ru ...] [--app beta]
 // Only read-only, unauthenticated endpoints are called. No token is sent.
 // --app beta saves label packs for the beta front-end (fixtures/translations-beta, see pack() below);
-// the reference lists (regions, languages, time zones, output icons) always come from the released server.
+// the reference lists (regions, languages, time zones, output icons, event types) always come from the released server.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -33,6 +33,8 @@ for (const name of ['regions', 'languages', 'timezones']) {
   await save(path.join(ROOT, 'fixtures/public', `${name}.json`), await fetch(`${REF}/${name}`));
 }
 await save(path.join(ROOT, 'fixtures/public/pgm-icons.json'), await fetch(`${REF}/get-pgm-icon-paths`));
+// Event types and their icons (front-end assets); the app asks with an empty POST, auth only if it has one.
+await save(path.join(ROOT, 'fixtures/public/reactions.json'), await post(REF, '/get-reactions', {}));
 
 // The beta server is the P2B North America region, and its pack names the region in ~25 labels
 // ("Via Protegus2 North America cloud"). So a beta pack is the released (EU) pack plus only the keys the

@@ -114,7 +114,7 @@ machine), a POST to the app host, an analytics call, another host and a WebSocke
 gets through or anything but the front-end's own files was fetched live. Run it after changing the guard. Each capture also prints
 what was answered locally, fetched live and refused. Never log in with real
 credentials and never point the mocks at real data. `fetch-public.mjs` calls only auth-free read
-endpoints (translations, regions, languages, timezones, output icons) and sends no token.
+endpoints (translations, regions, languages, timezones, output icons, event types) and sends no token.
 
 All sample values are in `lib/sample.mjs`, `lib/mocks-configurators.mjs` and `fixtures/config/`. They
 are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample Installer",
@@ -125,7 +125,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | Call | Answer |
 |---|---|
 | `POST /translations` (app pack and the g16 pack) | saved public copy |
-| `GET /regions`, `/languages`, `/timezones`, `POST /get-pgm-icon-paths` | saved public copy |
+| `GET /regions`, `/languages`, `/timezones`, `POST /get-pgm-icon-paths`, `POST /get-reactions` | saved public copy |
 | `GET /me` | sample installer (role 3, no company) |
 | `GET /systems-with-devices` | one row: the sample system |
 | `POST /get-system` | the sample system |
@@ -186,10 +186,11 @@ single users of the panel user list. `keepFocus` leaves the last field focused, 
 
 - **Protegus app manual screens (`--flow protegus`):** the panel's refusal to arm is made up in the
   browser, and the zone titles in the "Bypass failed zones" dialog are the sample's zone names (the
-  server's exact title format is not known). Behind that dialog the Arm button is blank: it shows
-  moving dots while arming, and the capture stops animations. A disarmed area that is ready to arm
-  (status 7) lights no button on the area screen, as the app draws it. The area screens have no
-  events, so the Events card is empty. The offline "Check device" page imitates the Android app
+  server's exact title format is not known). That image is the bottom sheet and a strip above it
+  (`sheet`): behind the dialog the Arm button shows moving dots while arming, and a capture with
+  animations stopped draws it blank. A disarmed area that is ready to arm (status 7) lights no button
+  on the area screen, as the app draws it. Garage's two events are at fixed times of the capture day,
+  so the day title always reads "Today". The offline "Check device" page imitates the Android app
   (Wi-Fi setup options); a phone browser shows only Retry.
 - **Device-stored option texts are partly inferred.** On GET/GT/GT+ the panel lists ("2. AUTO",
   "Dual Tone", "6. PARADOX SP+/MG+") and the CMS protocol names are strings stored on the device, not

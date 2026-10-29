@@ -47,14 +47,14 @@ if (def.flow !== 'walk' && !screens.length) throw new Error(`No screens to captu
 
 // Public label packs and reference lists are not committed; fetch them if this checkout lacks them.
 const missing = langs.filter((l) => !fs.existsSync(path.join(ROOT, 'fixtures', fe.labelsDir, `${cfg}.${l}.json`)));
-if (missing.length || !fs.existsSync(path.join(ROOT, 'fixtures/public/regions.json'))) {
+if (missing.length || ['regions', 'reactions'].some((n) => !fs.existsSync(path.join(ROOT, `fixtures/public/${n}.json`)))) {
   execFileSync(process.execPath, [path.join(ROOT, 'fetch-public.mjs'), ...langs, '--app', fe.id], { stdio: 'inherit' });
 }
 const fixture = configFixture(path.join(ROOT, 'fixtures/config'), MODELS[model].fixture, fe);
 if (!fixture.own) console.log(`NOTE no ${fe.id}-shaped sample for ${model}; using ${fixture.file}, shaped like the released server's answer`);
 
 // The read-only POSTs the app makes on this path (answered locally like everything else).
-const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new',
+const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-reactions', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new',
   'POST /get-system-info-new', 'POST /create-system', 'POST /area']); // the last three: the wizard, answered locally
 
 // Tallest page image, in CSS px. SP5 System options on a phone is about 3,100.
@@ -191,7 +191,7 @@ async function runWalks(lang, t) {
           if (!step.shot) continue;
           // Screens that do not depend on the device are named by the flow (filePrefix), not the model.
           const s = { variant: layout, file: `${def.filePrefix ?? modelSlug}-${step.shot}-${layout}.png` };
-          const rec = await shoot(page, { s, layout, screen: { id: step.shot, unverified: step.unverified, fullScreen: step.fullScreen }, id: step.shot, revision: null, lang,
+          const rec = await shoot(page, { s, layout, screen: { id: step.shot, unverified: step.unverified, fullScreen: step.fullScreen, sheet: step.sheet }, id: step.shot, revision: null, lang,
             appPath: step.title ? [t(step.title)] : [], label: `${label} ${step.shot}` });
           rec.walk = walk.id;
           if (def.sampleNote) rec.sample = def.sampleNote;
@@ -329,6 +329,13 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     await shootElement(page, s, layout, opts);
   } else if (screen.fullScreen) {
     await page.screenshot(opts); // pages whose background is part of the design (the system dashboard)
+  } else if (screen.sheet) {
+    // A bottom sheet and a strip of the dimmed screen above it (sheet: its CSS selector and the strip in CSS px).
+    const { width, height } = LAYOUTS[layout].viewport;
+    const top = await page.locator(screen.sheet.css).first().evaluate((e) => e.getBoundingClientRect().top);
+    const y = Math.max(0, Math.floor(top - (screen.sheet.above ?? 120)));
+    await page.screenshot({ ...opts, clip: { x: 0, y, width, height: height - y } });
+    crop = { top: y, height };
   } else if (layout === 'phone' || def.flow === 'configuration') {
     // Pages longer than the window are rendered whole: the window is made taller, then the image is
     // cut 24 px below the last card. Phone images are always cut there (the manual shows them at

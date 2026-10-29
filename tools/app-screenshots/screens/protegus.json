@@ -5,7 +5,7 @@
   "layouts": ["phone"],
   "filePrefix": "protegus",
   "sampleSystem": "areas",
-  "sampleNote": "GET wired to a Paradox SP-series panel (code 0x21) it controls directly; areas Home (armed) and Garage (disarmed, ready to arm); zones 1-2 in Home, 3-6 in Garage. Invented data.",
+  "sampleNote": "GET wired to a Paradox SP-series panel (code 0x21) it controls directly; areas Home (armed) and Garage (disarmed, ready to arm); zones 1-2 in Home, 3-6 in Garage; Garage armed 07:42 and disarmed 17:18 today by Sample user. Invented data.",
   "_fields": "The Protegus app as a user uses it, for the Protegus app manual: screens that do not depend on the device, so files are named protegus-<shot>-<layout>.png (filePrefix). Step types as in new-system.json, plus click {css, text}: the match containing that text from the sample data. The sample system is sampleSystem 'areas' (lib/sample.mjs, sampleAreaSystem); a walk changes it with system (a patch; index keys change single areas or zones), zoneStatus (zone number -> alarm/failure/bypass) and openZones (zone numbers the panel names when it refuses to arm). Nothing a walk does is sent: arming is answered in the browser.",
   "walks": [
     {
@@ -31,7 +31,7 @@
         { "click": { "css": "#numpad-row1 .numButton:nth-child(3)" } },
         { "click": { "css": "#numpad-row2 .numButton:nth-child(1)" } },
         { "click": { "css": "#numpad-row4 .enterIcon" } },
-        { "shot": "area-bypass-zones", "fullScreen": true, "note": "The panel's answer (zones 4 and 5 open, so the area cannot arm) is simulated in the browser; nothing was sent to Protegus. The zone titles are the sample's zone names." }
+        { "shot": "area-bypass-zones", "sheet": { "css": "#bpz-grid", "above": 90 }, "note": "The panel's answer (zones 4 and 5 open, so the area cannot arm) is simulated in the browser; nothing was sent to Protegus. The zone titles are the sample's zone names." }
       ]
     },
     {

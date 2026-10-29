@@ -60,6 +60,7 @@ export function createMocks({ lang, model, configPatch = null, timezoneId = null
   });
 
   on('*', '/get-pgm-icon-paths', () => readJson(FIX, 'public', 'pgm-icons.json'));
+  on('POST', '/get-reactions', () => readJson(FIX, 'public', 'reactions.json'));
   on('GET', '/dashboard/widget-data', () => ({ success: true, data: {} }));
   on('GET', '/systems-with-devices', ({ query }) => ({
     success: true,
