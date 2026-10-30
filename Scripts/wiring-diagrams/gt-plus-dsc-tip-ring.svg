@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="600" viewBox="0 0 760 600">
+  <!-- Source for docs/en/alarm-communicators/cellular/gt-plus/wiring-dsc-tip-ring.webp.
+       Render with Scripts/wiring-diagrams/render.sh. Drawn to match wiring-dsc.webp and image23.webp. -->
+  <style>
+    text { font-family: Calibri, Carlito, "Helvetica Neue", Arial, sans-serif; fill: #000; }
+    .title { font-size: 26px; font-weight: 700; text-anchor: middle; }
+    .brand { font-size: 46px; font-weight: 700; }
+    .lbl { font-size: 23px; }
+    .lbl-r { font-size: 23px; text-anchor: end; }
+    .box { fill: #fff; stroke: #000; stroke-width: 2.5; }
+    .cell { fill: #fff; stroke: #000; stroke-width: 2; }
+    .screw { fill: none; stroke: #000; stroke-width: 2; }
+    .wire { fill: none; stroke: #000; stroke-width: 5; stroke-linejoin: miter; stroke-linecap: butt; }
+  </style>
+  <rect width="760" height="600" fill="#fff"/>
+
+  <text class="title" x="380" y="36">DSC panel connection diagram</text>
+  <text class="title" x="380" y="68">keypad bus and TIP/RING</text>
+
+  <!-- DSC panel -->
+  <rect class="box" x="10" y="100" width="270" height="420" rx="16"/>
+  <text class="brand" x="30" y="150">DSC</text>
+  <text class="lbl" transform="translate(66 235) rotate(-90)" text-anchor="middle">Keypad bus</text>
+  <line x1="228" y1="155" x2="228" y2="315" stroke="#000" stroke-width="2"/>
+  <line x1="228" y1="415" x2="228" y2="495" stroke="#000" stroke-width="2"/>
+  <g id="panel-terminals">
+    <text class="lbl-r" x="218" y="183">RED</text>
+    <text class="lbl-r" x="218" y="223">BLK</text>
+    <text class="lbl-r" x="218" y="263">YEL</text>
+    <text class="lbl-r" x="218" y="303">GRN</text>
+    <text class="lbl-r" x="218" y="443">TIP</text>
+    <text class="lbl-r" x="218" y="483">RING</text>
+  </g>
+
+  <!-- GT+ -->
+  <rect class="box" x="540" y="150" width="210" height="420" rx="16"/>
+  <text class="brand" transform="translate(728 232) rotate(-90)" text-anchor="middle">GT+</text>
+  <line x1="487" y1="155" x2="487" y2="555" stroke="#000" stroke-width="2"/>
+  <g id="gt-labels">
+    <text class="lbl" x="548" y="183">&lt; + DC</text>
+    <text class="lbl" x="548" y="223">&lt; - DC</text>
+    <text class="lbl" x="548" y="263">&lt; TIP</text>
+    <text class="lbl" x="548" y="303">&lt; RING</text>
+    <text class="lbl" x="548" y="343">&lt; CLK</text>
+    <text class="lbl" x="548" y="383">&lt; DATA</text>
+    <text class="lbl" x="548" y="423">&lt; 1 I/O</text>
+    <text class="lbl" x="548" y="463">&lt; 2 I/O</text>
+    <text class="lbl" x="548" y="503">&lt; A RS485</text>
+    <text class="lbl" x="548" y="543">&lt; B RS485</text>
+  </g>
+
+  <!-- Wires: drawn before the terminals so the terminal cells sit on top of the wire ends -->
+  <text class="lbl" x="296" y="164">(+12V)</text>
+  <polyline class="wire" points="276,175 495,175"/>                       <!-- RED  -> +DC  -->
+  <polyline class="wire" points="276,215 495,215"/>                       <!-- BLK  -> -DC  -->
+  <polyline class="wire" points="276,255 357,255 357,335 495,335"/>       <!-- YEL  -> CLK  -->
+  <polyline class="wire" points="276,295 320,295 320,375 495,375"/>       <!-- GRN  -> DATA -->
+  <polyline class="wire" points="276,435 405,435 405,255 495,255"/>       <!-- TIP  -> TIP  -->
+  <polyline class="wire" points="276,475 448,475 448,295 495,295"/>       <!-- RING -> RING -->
+
+  <!-- Terminal cells: 40 x 40, a screw drawn as a circle with a slash -->
+  <defs>
+    <g id="t">
+      <rect class="cell" x="-20" y="-20" width="40" height="40"/>
+      <circle class="screw" cx="0" cy="0" r="12"/>
+      <line class="screw" x1="-8.5" y1="8.5" x2="8.5" y2="-8.5"/>
+    </g>
+  </defs>
+  <use href="#t" x="256" y="175"/>
+  <use href="#t" x="256" y="215"/>
+  <use href="#t" x="256" y="255"/>
+  <use href="#t" x="256" y="295"/>
+  <use href="#t" x="256" y="435"/>
+  <use href="#t" x="256" y="475"/>
+
+  <use href="#t" x="515" y="175"/>
+  <use href="#t" x="515" y="215"/>
+  <use href="#t" x="515" y="255"/>
+  <use href="#t" x="515" y="295"/>
+  <use href="#t" x="515" y="335"/>
+  <use href="#t" x="515" y="375"/>
+  <use href="#t" x="515" y="415"/>
+  <use href="#t" x="515" y="455"/>
+  <use href="#t" x="515" y="495"/>
+  <use href="#t" x="515" y="535"/>
+</svg>
