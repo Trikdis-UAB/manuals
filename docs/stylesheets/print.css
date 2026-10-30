@@ -121,7 +121,9 @@
     margin: 0 auto 12px;
   }
 
-  .md-typeset h4:has(+ p > img.wiring-diagram) {
+  .md-typeset h4:has(+ p > img.wiring-diagram),
+  .md-typeset h5:has(+ p > img.wiring-diagram),
+  .md-typeset h4:has(+ h5) {
     break-after: avoid;
     page-break-after: avoid;
   }
