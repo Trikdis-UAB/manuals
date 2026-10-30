@@ -511,17 +511,17 @@ To enable remote control of the security panel, make sure that the checkbox “*
 
 **Keypad bus and TIP/RING.** Program the panel's landline dialer so that it sends the events. The table is for **DSC PowerSeries PC1616** (**PC1832, PC1864**). With the keypad connected to the panel, enter programming mode: [\*][8][installer code], then enter the section number.
 
-| Section | Setting | Value |
-|---------|---------|-------|
-| [301] | First telephone number | Any number longer than four digits, without D at the start (for example 5555555). D makes the panel wait for a dial tone; without it the number is dialed faster. The communicator answers every call |
-| [310] | System account number | Four-digit account number followed by FF (for example 1234FF). Use HEX A in place of any digit 0 |
-| [311] | Partition 1 account number | Four-digit account number. Use HEX A in place of any digit 0 |
-| [350] | Communicator format | 03 (Contact ID) for telephone number 1 |
-| [351]–[376] | Communicator call directions | Enable the required event groups for telephone number 1: Alarm/Restore, Opening/Closing, Tamper Alarm/Restore, System Maintenance, Test Transmissions. Check Opening/Closing in particular: some DSC panels have it turned off by default |
-| [380] | First communicator option | Option 1 ON (communicator enabled). Option 3 OFF (DTMF dialing) |
-| [381] | Second communicator option | Option 7 OFF (Contact ID reporting codes are generated automatically) |
-| [320]–[349] | Reporting codes | Any value other than 00 for the events to be reported |
-| [015] | Third system option | Option 7 OFF (telephone line monitoring, TLM, disabled) |
+| Section | Value |
+|---------|-------|
+| [301] First telephone number | Any number longer than four digits, without D at the start (for example 5555555). D makes the panel wait for a dial tone; without it the number is dialed faster. The communicator answers every call |
+| [310] System account number | Four-digit account number followed by FF (for example 1234FF). Use HEX A in place of any digit 0 |
+| [311] Partition 1 account number | Four-digit account number. Use HEX A in place of any digit 0 |
+| [350] Communicator format | 03 (Contact ID) for telephone number 1 |
+| [351]–[376] Communicator call directions | Enable the required event groups for telephone number 1: Alarm/Restore, Opening/Closing, Tamper Alarm/Restore, System Maintenance, Test Transmissions. Check Opening/Closing in particular: some DSC panels have it turned off by default |
+| [380] First communicator option | Option 1 ON (communicator enabled). Option 3 OFF (DTMF dialing) |
+| [381] Second communicator option | Option 7 OFF (Contact ID reporting codes are generated automatically) |
+| [320]–[349] Reporting codes | Any value other than 00 for the events to be reported |
+| [015] Third system option | Option 7 OFF (telephone line monitoring, TLM, disabled) |
 
 !!! note
     Disable telephone line monitoring. If TLM stays enabled, the panel may show a telephone line trouble. The TLM trouble delay is set in section [377].
@@ -1164,19 +1164,19 @@ When the configuration and installation is complete, perform a system check:
 
 1.  Generate an event:
 
-- by arming/disarming the system with the control panel’s keypad;
+    - by arming/disarming the system with the control panel’s keypad;
 
-- by triggering a zone alarm when the security system is armed.
+    - by triggering a zone alarm when the security system is armed.
 
-1.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
+2.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
 
-2.  To test communicator input, trigger it and make sure to receive the correct event.
+3.  To test communicator input, trigger it and make sure to receive the correct event.
 
-3.  To test the communicator outputs, activate them remotely and check their operation.
+4.  To test the communicator outputs, activate them remotely and check their operation.
 
-4.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
+5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
 
-5.  If a DSC panel is connected to the keypad bus and the TIP/RING terminals, arm the system and trigger a fire zone alarm. The monitoring station must receive the event with the Contact ID code of the zone type (for example E110), not as general alarm E130.
+6.  If a DSC panel is connected to the keypad bus and the TIP/RING terminals, arm the system and trigger a fire zone alarm. The monitoring station must receive the event with the Contact ID code of the zone type (for example E110), not as general alarm E130.
 
 ## Firmware update 
 
