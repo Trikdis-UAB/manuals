@@ -1439,6 +1439,19 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > in
   color: var(--md-default-fg-color--light, #666);
 }
 
+/* =====================================================
+   Popup screenshots cropped from the desktop configurator — a white dialog
+   needs a frame, or it merges into the page around it
+   ===================================================== */
+.md-typeset img.trik-popup-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
 /* Support chat launcher (docs/javascripts/support-chat.js): Joy's face, with a
    green "online" dot. It sits where the chat widget's own launcher appears, so
    nothing jumps when the widget takes over. */
