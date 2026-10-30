@@ -338,7 +338,7 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
 
     4.  (Recommended) Set up the **Backup channel** the same way.
 
-    5.  **Reporting to CMS → CMS settings → Reporting mode**: set **Main type**, **Backup type** and **Backup type 2**.
+    5.  **Reporting to CMS → CMS settings → Reporting mode**: set **Main type**, **Backup type** and **Backup type 2**. This is for firmware 1.xx; on firmware 2.xx, set the reporting mode in TrikdisConfig.
 
     6.  **Network settings → LAN** (LAN connection): turn on **Use DHCP**. **Network settings → SIM** and **SIM2** (for each SIM card): enter the **SIM card PIN** and the **APN**, and check **DNS1** and **DNS2**.
 
@@ -352,7 +352,7 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
 
     <img alt="TrikdisConfig software, System settings window. Object ID field (highlighted, labelled 1) set to 561234. Also visible: Module ID 0123456789, Administrator code 123456, Installer code 654321." src="./image13.webp" style="width:7.086614173228346in;height:1.4173228346456692in" />
 
-    1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+    1.  Enter “**Object ID”** (account) number provided by the Central Monitoring Station (characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**). On firmware 2.xx, enter it with the channels in the “**CMS reporting**” window instead.
 
     **In “Panel settings” window:**
 
@@ -384,9 +384,15 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
 
     7.  (Recommended) Configure “**Primary channel Backup”** settings.
 
-    <img alt="TrikdisConfig software, CMS reporting window, Settings tab, Reporting mode section (highlighted, labelled 11): Main type LAN, Backup type SIM1, Backup type 2 Disable." src="./image17.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
+    === "Firmware 1.xx"
 
-    11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
+        <img alt="TrikdisConfig software, CMS reporting window, Settings tab, Reporting mode section (highlighted, labelled 11): Main type LAN, Backup type SIM1, Backup type 2 Disable." src="./image17.webp" style="width:7.086614173228346in;height:2.5511811023622046in" />
+
+        11. In the group of options "**Reporting mode**", the order of communication channels is set, how the communicator will send messages to CMS and to Protegus2. The connection types are specified in order. If the communicator fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the return to main connection type will be attempted after the specified time interval.
+
+    === "Firmware 2.xx"
+
+        11. On the **CMS settings** tab, in the **Reporting mode** group at the top, choose how events reach the monitoring station: **Fallback** (one network type at a time, in the order you set) or **Dual Path** (every event over two network types at once). See [Test, ping and reporting mode](#test-ping-and-reporting-mode).
 
     **In “Network settings” window:**
 
@@ -976,7 +982,15 @@ Communication is encoded and password protected. With the TRK protocols, a TRIKD
 
     In TrikdisConfig, open the **CMS reporting** window, **CMS settings** tab.
 
-    <img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab. Primary channel: Communication type Disable (Protocol and Domain/IP empty); Primary channel Backup: Disable. Parallel channel: Communication type IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP; Parallel channel Backup: IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP." src="./image49.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
+    === "Firmware 1.xx"
+
+        <img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab. Primary channel: Communication type Disable (Protocol and Domain/IP empty); Primary channel Backup: Disable. Parallel channel: Communication type IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP; Parallel channel Backup: IP, Protocol TRK8, Encryption key 0123456789ABCDEF, TCP or UDP TCP." src="./image49.webp" style="width:7.086614173228346in;height:3.3976377952755907in" />
+
+    === "Firmware 2.xx"
+
+        On firmware 2.xx, this tab also holds the **Reporting mode** group (see [Test, ping and reporting mode](#test-ping-and-reporting-mode)), each channel group has its own **IP ping period**, and the **Object ID** is entered with the channels on both hardware versions. In Dual Path, enter it in the first field: the second gets the same value and cannot be changed.
+
+        <!-- Screenshot (Igoris): CMS settings tab, Fallback mode, all four channels with example values. -->
 
 **“Primary channel” settings group**
 
@@ -1002,9 +1016,14 @@ Events are transmitted in parallel with the primary channel through this channel
 
 #### Test, ping and reporting mode
 
+<!-- DRAFT (PR #28), not for merge until the 2.xx release. Sources: Jira TPPR3I05-67 (TrikdisConfig spec and agreed rules; 15 Oct: Object ID with the channels, and in Dual Path the second copies the first) and AGPR3I05-80 (firmware design document, FW 2.05 test report). Written as "2.xx" on purpose; the first official firmware is 2.05 (Jira, 15 Oct), for both hardware versions. To confirm: TrikdisConfig version, Protegus reporting path and swap button, Communication path test units, Object ID fields. Event codes and EN 50136 categories are left out on purpose. The span below keeps the old 6.4.3 links in the 9 Oct team emails working; remove it before merge. -->
+<span id="643-reporting-modes-on-firmware-200-and-later"></span>
+
 === "Protegus app"
 
     In the Protegus app: **Advanced settings → Reporting to CMS → Settings** (test, ping, backup timing, receiver and line numbers) and **Reporting to CMS → CMS settings → Reporting mode** (connection order).
+
+    This is for firmware 1.xx. The reporting modes of firmware 2.xx are not in the Protegus app yet: set them in TrikdisConfig.
 
     <span class="trik-mob-pair">
     <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Reporting to CMS, Settings on GET hardware x1x1: Enable test on, Test period 24 h 0 min, Enable ping on, IP ping period 3 min 0 s, Backup reporting after 3 attempts, Return from Backup after 1 min 0 s, Device account No. 0123456789, Receiver No. 01, Line No. 1." src="./protegus-app/get-reporting-settings-x1x1-phone.webp" /><span class="trik-mob-pair__caption">Hardware x1x1</span></span>
@@ -1017,9 +1036,44 @@ Events are transmitted in parallel with the primary channel through this channel
 
 === "TrikdisConfig"
 
-    In TrikdisConfig, open the **CMS reporting** window, **Settings** tab.
+    === "Firmware 1.xx"
 
-    <img alt="TrikdisConfig 'CMS reporting' window, Settings tab. Settings group: Test period 24 h 0 min, IP ping period 0 min 30 s, Backup reporting after 2 fails, Return from Backup after 1 min 30 s, Line No. 1, Receiver No. 1. Reporting mode group: Main type LAN, Backup type SIM1, Backup type 2 Disable, Communication path test Disabled." src="./image50.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
+        In TrikdisConfig, open the **CMS reporting** window, **Settings** tab.
+
+        <img alt="TrikdisConfig 'CMS reporting' window, Settings tab. Settings group: Test period 24 h 0 min, IP ping period 0 min 30 s, Backup reporting after 2 fails, Return from Backup after 1 min 30 s, Line No. 1, Receiver No. 1. Reporting mode group: Main type LAN, Backup type SIM1, Backup type 2 Disable, Communication path test Disabled." src="./image50.webp" style="width:7.086614173228346in;height:2.562992125984252in" />
+
+    === "Firmware 2.xx"
+
+
+        In TrikdisConfig 1.66.70 or later, open the **CMS reporting** window, **CMS settings** tab. The **Reporting mode** group is at the top of the tab, and the panel next to it shows the current mode.
+
+        <!-- Screenshot (Igoris): CMS settings tab, Fallback mode, all four channels with example values. -->
+        <!-- Screenshot (Igoris): CMS settings tab, Dual Path mode, Path 1 LAN, Path 2 SIM1. -->
+        <!-- Screenshot (Igoris): Settings tab. -->
+
+        On firmware 2.xx, GET sends events to the monitoring station in one of two reporting modes: **Fallback** or **Dual Path**. The mode decides which network types (LAN, SIM1, SIM2) carry the messages. Which receivers get them is still set by the channels described above: **Primary channel**, **Parallel channel** and their backups.
+
+        **Fallback** (**Dual path for CMS** turned off)
+
+        The communicator uses one network type at a time, in the order you set: **Main type**, then **Backup type**, then **Backup type 2**. Each can be LAN, SIM1 or SIM2.
+
+        - After as many failed attempts as set in **Backup reporting after**, the communicator switches to the next network type in the order.
+        - When the main type works again, the communicator returns to it after the time set in **Return from Backup after**.
+        - **Communication path test** - how often, in hours, the communicator checks the network types it is not using at the moment (up to 720 hours). 0 turns the check off.
+
+        **Dual Path** (**Dual path for CMS** turned on)
+
+        The communicator sends every event over two network types at the same time. The fields are named **Path 1** and **Path 2**, and **Backup type 2** is hidden.
+
+        - Both paths must be set, and they must use different hardware: LAN with SIM1, or LAN with SIM2, in either order. SIM1 and SIM2 cannot be paired, because both SIM cards use the same modem.
+        - If one path fails, events keep going over the other one, and the communicator reports the failed path to the monitoring station.
+        - If both paths fail, the communicator keeps the events and sends them when a path works again. While events are waiting, the **DATA** LED is lit continuously.
+        - **Protegus reporting path** - which of the two paths carries events to Protegus. Protegus reporting uses one path at a time; Path 1 is the default.
+
+        **Ping and test**
+
+        - **IP ping period** is set separately for each channel, in its group on the **CMS settings** tab: **Primary channel**, **Primary channel Backup**, **Parallel channel** and **Parallel channel Backup**. Ping is also sent to the backup receivers, so a receiver that stops working is noticed before it is needed.
+        - The **Settings** tab keeps **Test period**, **Backup reporting after**, **Return from Backup after**, **Receiver No.** and **Line No.** The receiver and line numbers apply to all protocols.
 
 **“Settings” settings group**
 
@@ -1031,6 +1085,8 @@ Events are transmitted in parallel with the primary channel through this channel
 
   PING messages keep the active communication session between the device and the receiver. An active session is required for remote connection, control and configuration of the device. We recommend setting the PING period for no more than 5 minutes.
 
+  On firmware 2.xx, **IP ping period** is set for each channel on the **CMS settings** tab instead.
+
 - **Backup reporting after** - indicates the number of unsuccessful attempts to send the message via “**Primary**” channel. If device fails to transmit specified number of times, the device will connect to transmit the messages via “**Backup**” channel.
 
 - **Return from backup after** - time after which the communicator GET will attempt to reconnect and transmit messages via the Primary channel.
@@ -1039,7 +1095,7 @@ Events are transmitted in parallel with the primary channel through this channel
 
 - **Receiver No.** - enter the receiver number.
 
-**“Reporting mode” settings group**
+**“Reporting mode” settings group** (firmware 1.xx)
 
 For setting parameters on how the control panel will communicate with the CMS channels and with Protegus2. The connection types are specified in order. If the control panel fails to connect using the “**Main type”** connection , it switches to the “**Backup type”**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the “**Return to main”** connection type will be attempted after the specified time interval.
 
