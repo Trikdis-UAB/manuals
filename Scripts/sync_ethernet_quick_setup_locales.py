@@ -501,7 +501,7 @@ E16_PAGES = {
             "ru": "DSC PowerSeries с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie DSC PowerSeries centralių (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie DSC PowerSeries centralių (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a paneles DSC PowerSeries (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панелям DSC PowerSeries (PC585, PC1404, PC1565, PC1616, PC1832, PC1864, PC5020), настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -622,7 +622,7 @@ E16_PAGES = {
             "ru": "Paradox SP(+)/MG(+) с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Paradox SP/SP+/MG/MG+ centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Paradox SP/SP+/MG/MG+ centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a paneles Paradox SP/SP+/MG/MG+, configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панелям Paradox SP/SP+/MG/MG+, настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -752,7 +752,7 @@ E16_PAGES = {
             "ru": "Honeywell Vista с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Honeywell Vista centralių (Ademco Vista-48, Vista-20, Vista-15), sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Honeywell Vista centralių (Ademco Vista-48, Vista-20, Vista-15), sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a paneles Honeywell Vista (Ademco Vista-48, Vista-20, Vista-15), configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панелям Honeywell Vista (Ademco Vista-48, Vista-20, Vista-15), настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -903,7 +903,7 @@ E16_PAGES = {
             "ru": "Interlogix NX-4v2 / NX-6v2 с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Interlogix NX-4v2 / NX-6v2 centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Interlogix NX-4v2 / NX-6v2 centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a paneles Interlogix NX-4v2 / NX-6v2, configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панелям Interlogix NX-4v2 / NX-6v2, настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -1273,7 +1273,7 @@ E16_PAGES = {
             "ru": "Interlogix NX-8v2 с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Interlogix NX-8v2 centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Interlogix NX-8v2 centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a paneles Interlogix NX-8v2, configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панелям Interlogix NX-8v2, настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -1643,7 +1643,7 @@ E16_PAGES = {
             "ru": "Texecom с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Texecom Premier ir Premier Elite centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Texecom Premier ir Premier Elite centralių, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a paneles Texecom Premier y Premier Elite, configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панелям Texecom Premier и Premier Elite, настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -1800,7 +1800,7 @@ E16_PAGES = {
             "ru": "Innerrange Inception с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Innerrange Inception centralės, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Innerrange Inception centralės, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a un panel Innerrange Inception, configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панели Innerrange Inception, настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -1966,7 +1966,7 @@ E16_PAGES = {
             "ru": "Innerrange Integriti с E16 быстрая настройка",
         },
         "intro": {
-            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Innerrange Integriti centralės, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilnu E16 vadovu kitiems nustatymams.",
+            "lt": "Trumpi prijungimo ir programavimo žingsniai, skirti prijungti E16 komunikatorių prie Innerrange Integriti centralės, sukonfigūruoti E16 IP ryšiui ir pridėti sistemą į Protegus2. Naudokite kartu su pilna E16 instrukcija kitiems nustatymams.",
             "es": "Pasos breves para conectar el comunicador E16 a un panel Innerrange Integriti, configurar E16 para reportes IP y añadir el sistema a Protegus2. Utilice esta guía junto con el manual completo de E16 para el resto de los ajustes.",
             "ru": "Краткие шаги по подключению коммуникатора E16 к панели Innerrange Integriti, настройке E16 для передачи по IP и добавлению системы в Protegus2. Используйте эту инструкцию вместе с полным руководством E16 для остальных настроек.",
         },
@@ -2120,7 +2120,7 @@ E16T_PAGE = {
         "ru": "E16T быстрая настройка",
     },
     "intro": {
-        "lt": "Trumpi žingsniai, skirti prijungti E16T komunikatorių prie apsaugos centralės telefoninio komunikatoriaus, sukonfigūruoti IP ryšį ir pridėti sistemą į Protegus. Naudokite kartu su pilnu E16T vadovu kitiems nustatymams.",
+        "lt": "Trumpi žingsniai, skirti prijungti E16T komunikatorių prie apsaugos centralės telefoninio komunikatoriaus, sukonfigūruoti IP ryšį ir pridėti sistemą į Protegus. Naudokite kartu su pilna E16T instrukcija kitiems nustatymams.",
         "es": "Pasos breves para conectar el comunicador E16T al comunicador telefónico del panel, configurar el reporte IP y añadir el sistema a Protegus. Utilice esta guía junto con el manual completo de E16T para el resto de los ajustes.",
         "ru": "Краткие шаги по подключению коммуникатора E16T к телефонному коммуникатору панели, настройке передачи по IP и добавлению системы в Protegus. Используйте эту инструкцию вместе с полным руководством E16T для остальных настроек.",
     },
