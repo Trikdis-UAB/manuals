@@ -90,7 +90,7 @@ Editor entry points (start here when editing):
     - [E16T](lt/alarm-communicators/e16t/index.md)
   - UHF radijo bangomis
     - [T16](lt/alarm-communicators/t16/index.md)
-- Apsaugos centrelės
+- Apsaugos centralės
   - [FLEXi SP3](lt/control-panels/sp3/index.md)
     - [Protegus ir Paradox klaviatūrų vartotojo instrukcija](lt/control-panels/sp3/paradox-user-guide/index.md)
     - [S8/S9 belaidžių jutiklių pridėjimas](lt/control-panels/sp3/add-s8-sensors.md)

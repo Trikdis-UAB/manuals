@@ -227,7 +227,7 @@ plugins:
           - E16T: alarm-communicators/e16t/index.md
         - UHF radijo bangomis:
           - T16: alarm-communicators/t16/index.md
-      - Apsaugos centrelės:
+      - Apsaugos centralės:
         - FLEXi SP3:
           - FLEXi SP3 instrukcija: control-panels/sp3/index.md
           - Protegus ir Paradox klaviatūrų vartotojo instrukcija: control-panels/sp3/paradox-user-guide/index.md
