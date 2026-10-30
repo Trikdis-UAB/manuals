@@ -19,6 +19,8 @@ Communicator also works with Protegus2 application. With Protegus2 users can con
 
 **Connects to the control panel's serial or keyboard bus or telephone line (TIP/RING).**
 
+DSC panels can be connected to the keypad bus and the panel's TIP/RING terminals together. The keypad bus is used for control and panel status, and events are reported with the panel's own Contact ID codes.
+
 Sends events to monitoring station receiver:
 
 - Sends events to TRIKDIS software or hardware receivers that work with any monitoring software.
@@ -82,6 +84,8 @@ Sends events to monitoring station receiver:
 | Honeywell® | <u>Ademco Vista-15</u>, <u>Ademco Vista-20</u>, <u>Ademco Vista-48</u> |
 
 **<u>Underlined</u>** - Control panels directly controlled by GT+. Firmware PARADOX security panels, which are directly controlled, must be V.4 or higher.
+
+DSC panels can be connected to the keypad bus only, or to the keypad bus and the TIP/RING terminals together (see 3.4).
 
 \*Other manufacturers' control panels connect to the GT+ communicator via the control panel's TIP/RING terminals (which supports the Contact ID communication protocol transmitted by DTMF tones) of the control panel.
 
@@ -232,6 +236,8 @@ The communicator is connected to the keypad bus or serial bus of the control pan
 
 3.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password**”. It must match the password that is entered in the control panel.
 
+When a DSC panel is connected to both the keypad bus and the TIP/RING terminals, set “**Communication protocol**” to “**AUTO**” and select the DSC panel model in “**Security panel model**”. Select “**Remote Arm/Disarm**” to control the panel from Protegus2. See 3.4.
+
 !!! note
     For the direct panel control to work, you will need to change the panel
     settings. How to do this is described in chapter 4 "Programming the
@@ -353,6 +359,9 @@ Following one of the schematics provided below, connect communicator to the cont
 
 <img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to GT+. RED to +DC, BLK to -DC, YEL to CLK, GRN to DATA." src="./wiring-dsc.webp" width="545" height="480" />
 
+!!! note
+    With the keypad bus only, the communicator receives general zone states from the panel and cannot tell the zone type (fire, burglary, water leak, etc.). All alarms are reported as a general alarm, Contact ID E130, and some monitoring stations handle these events differently from the zone type that was actually triggered. To report events with the panel's own Contact ID codes (for example E110 for a fire alarm), connect the TIP/RING terminals as well, see 3.4.
+
 #### PARADOX
 
 <img class="wiring-diagram" alt="Wiring diagram: PARADOX panel serial port to GT+ through the EX-CRP2.4 cable (ordered separately). Red wire to +DC, black to -DC, yellow to CLK, green to DATA." src="./wiring-paradox.webp" width="650" height="481" />
@@ -408,6 +417,22 @@ The Paradox control panel must be programmed to transmit events to the CMS and f
 |   811    |       1111       |   911    |   1234   |
 |   812    |       2222       |          |          |
 
+### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the DSC control panel
+
+The keypad bus is used for control and panel status: remote arm/disarm, partition and zone states. Events are reported through the panel's dialer connected to the TIP/RING terminals, so they are sent with the panel's own Contact ID codes. Events from the keypad bus are not sent a second time while TIP/RING is used.
+
+<img class="wiring-diagram" alt="Wiring diagram: DSC panel to GT+. Keypad bus: RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA. Telephone line communicator terminals: panel TIP to GT+ TIP, panel RING to GT+ RING." src="./wiring-dsc-tip-ring.webp" width="650" height="513" />
+
+When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GT+ communicator in the “**Panel settings**” window:
+
+1.  Set “**Communication protocol**” to “**AUTO**”.
+
+2.  Select the DSC panel model in “**Security panel model**”.
+
+3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the Protegus2 app.
+
+The DSC panel's landline dialer must be programmed to send events, as described in 4.2.4 "DSC PowerSeries landline dialer".
+
 ### Schematic for connecting to panel keyswitch zone 
 
 Follow this schematic if the control panel will be armed/disarmed with a GT+ PGM output turning on/off the panel’s keyswitch zone.
@@ -440,7 +465,7 @@ Connect the input according to the selected input type (NO, NC, NO/EOL, NC/EOL, 
 !!! note
     If more inputs or outputs need to be connected to the communicator,
     connect the TRIKDIS iO-8 expander. Connection method is described
-    in the [iO-8 manual](../../../expanders/io-8/index.md) and chapter 3.7 "Schematics for connecting iO-8
+    in the [iO-8 manual](../../../expanders/io-8/index.md) and chapter 3.8 "Schematics for connecting iO-8
     expansion modules".
 ### Schematics for wiring a relay 
 
@@ -482,7 +507,7 @@ To enable remote control of the security panel, make sure that the checkbox “*
 
 #### DSC
 
-DSC panels do not need to be programmed.
+DSC panels do not need to be programmed when only the keypad bus is connected. When the TIP/RING terminals are connected as well, program the panel's landline dialer as described in 4.2.4 "DSC PowerSeries landline dialer".
 
 #### PARADOX
 
@@ -651,6 +676,30 @@ Programming of the **Interlogix NX-4V2** (**NX-6V2, NX-8V2**) control panel when
 | Location 37 | 12345678* |  |
 | Location 37 | 12345678*# |  |
 |  | EXIT EXIT | Exit programming mode |
+
+#### DSC PowerSeries landline dialer
+
+Programming of the **DSC PowerSeries PC1616** (**PC1832, PC1864**) control panel when the communicator is connected to the keypad bus and the TIP/RING terminals of the control panel (see 3.4).
+
+With the keypad connected to the panel, enter programming mode: [\*][8][installer code], then enter the section number.
+
+| Section | Setting | Value |
+|---------|---------|-------|
+| [301] | First telephone number | Any number longer than four digits, without D at the start (for example 5555555). D makes the panel wait for a dial tone; without it the number is dialed faster. The communicator answers every call |
+| [310] | System account number | Four-digit account number followed by FF (for example 1234FF). Use HEX A in place of any digit 0 |
+| [311] | Partition 1 account number | Four-digit account number. Use HEX A in place of any digit 0 |
+| [350] | Communicator format | 03 (Contact ID) for telephone number 1 |
+| [351]–[376] | Communicator call directions | Enable the required event groups for telephone number 1: Alarm/Restore, Opening/Closing, Tamper Alarm/Restore, System Maintenance, Test Transmissions. Check Opening/Closing in particular: some DSC panels have it turned off by default |
+| [380] | First communicator option | Option 1 ON (communicator enabled). Option 3 OFF (DTMF dialing) |
+| [381] | Second communicator option | Option 7 OFF (Contact ID reporting codes are generated automatically) |
+| [320]–[349] | Reporting codes | Any value other than 00 for the events to be reported |
+| [015] | Third system option | Option 7 OFF (telephone line monitoring, TLM, disabled) |
+
+!!! note
+    Disable telephone line monitoring. If TLM stays enabled, the panel may show a telephone line trouble. The TLM trouble delay is set in section [377].
+
+!!! note
+    The section numbers above are for PC1616, PC1832 and PC1864 (installation guide v4.x). Other DSC models may use different section numbers; see the panel's programming manual.
 
 ## Remote control 
 
@@ -1122,6 +1171,8 @@ When the configuration and installation is complete, perform a system check:
 3.  To test the communicator outputs, activate them remotely and check their operation.
 
 4.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
+
+5.  If a DSC panel is connected to the keypad bus and the TIP/RING terminals, arm the system and trigger a fire zone alarm. The monitoring station must receive the event with the Contact ID code of the zone type (for example E110), not as general alarm E130.
 
 ## Firmware update 
 
