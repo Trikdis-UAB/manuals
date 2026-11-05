@@ -329,7 +329,7 @@ Paveikslėlyje pateiktos centralės plokštės ir jos tvirtinimo kiaurymių matm
 
 1.  Prie antenos jungčių prijunkite GSM ir WiFi antenas.
 
-2.  Į SIM kortelės laikiklį įdėkite prie mobiliojo tinklo jau priregistruotą SIM kortelę.
+2.  Į SIM kortelės laikiklį įdėkite prie mobiliojo tinklo jau priregistruotą SIM kortelę. SIM kortelė nebūtina, jei centralė jungiasi per WiFi arba per modulį E485; tuomet pažymėkite **Išjungti SIM kortelės nebuvimo indikaciją** (žr. 5.3 „Langas „Pranešimai į ST pultą““).
 
 3.  Vadovaudamiesi pateiktomis schemomis ir kiekvieno norimo prijungti gaminio prijungimo schemomis prijunkite durų ir langų magnetinius kontaktus, judesio, gaisro ir kitus jutiklius, signalizatorius, klaviatūras, valdomus įtaisus. Prie centralės išvadų prijunkite korpuso durelių ir tvirtinimo prie sienos sabotažo (angl. tamper) jutiklius.
 
@@ -679,7 +679,7 @@ Su Protegus2 vartotojai galės valdyti apsaugos sistemą nuotoliniu būdu. Jie t
     Pridėjimo prie Protegus2 metu „FLEXi” SP3 turi būti:
 
     1.  Įstatyta aktyvuota SIM kortelė su įvestu PIN arba išjungtu PIN kodo
-        reikalavimu;
+        reikalavimu arba prijungtas prie WiFi tinklo;
 
     2.  Įjungta Protegus servisas paslauga. Žr.5.4 „Vartotojai
         ir pranešimai" skiltyje **Protegus**;
@@ -1265,9 +1265,10 @@ Dabar atliksime nuotolinį prisijungimą su TrikdisConfig prie centralės „FLE
 !!! note
     Nuotolinis konfigūravimas veiks tik tuomet, kai „FLEXi” SP3:
 
-    1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas.
+    1.  Įstatyta aktyvuota SIM kortelė ir įvestas arba išjungtas PIN kodas
+        arba prijungtas prie WiFi tinklo.
 
-    2.  SIM kortelėje įjungtas mobilus internetas.
+    2.  Jei naudojama SIM kortelė, joje įjungtas mobilusis internetas.
 
     3.  Įjungta „Protegus servisas" paslauga.
 

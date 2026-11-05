@@ -328,7 +328,7 @@ La siguiente imagen muestra las dimensiones de la placa y sus orificios de monta
 
 1.  Conecta las antenas GSM y WiFi a los conectores para antena.
 
-2.  Inserta una tarjeta SIM activada en el soporte de la tarjeta SIM.
+2.  Inserta una tarjeta SIM activada en el soporte de la tarjeta SIM. La tarjeta SIM no es necesaria si el panel de control se conecta por WiFi o a través del módulo E485; en ese caso, marca **Desactivar la indicación de la ausencia de una tarjeta SIM** (ver capítulo 5.3 Ventana "Informes a CRA").
 
 3.  Usando los diagramas de conexión entregados y los diagramas de conexión de cada dispositivo a conectar, conecta los contactos magnéticos de puertas y ventanas, sensores de movimiento, fuego y otros sensores, señalizadores, teclados y dispositivos controlados. Conecta los sensores de manipulación del marco y de montaje en pared a los terminales del panel.
 
@@ -670,7 +670,8 @@ Con Protegus2, los usuarios pueden controlar el sistema de alarma de forma remot
     Al agregar un „FLEXi" SP3 a Protegus2:
     
     1.  Se debe insertar una tarjeta SIM activada y se debe ingresar el
-        código PIN;
+        código PIN, o el panel de control debe estar conectado a una red
+        WiFi;
     
     2.  El servicio en la nube de Protegus debe estar habilitado.
         Consulta el capítulo 5.4 "Usuarios e Informes" (pestaña
@@ -1042,7 +1043,7 @@ Se establece el orden preferido de envío de mensajes a través de los canales C
 
 **Grupo de configuración "Parámetros SIM"**
 
-- **Desactivar la indicación de la ausencia de una tarjeta SIM** – cuando se marca la casilla, el panel de control „FLEXi“ SP3 no mostrará una indicación de que no hay una tarjeta SIM insertada.
+- **Desactivar la indicación de la ausencia de una tarjeta SIM** – cuando se marca la casilla, el panel de control „FLEXi“ SP3 no mostrará una indicación de que no hay una tarjeta SIM insertada. Márcala cuando el panel de control funcione sin tarjeta SIM.
 
 - **Utilice el marcado y SMS cuando trabaje a través del módulo de Internet** – marcar esta casilla permitirá controlar el panel mediante llamadas telefónicas y mensajes SMS. Si la casilla no está marcada y hay una red WiFi disponible, no se utilizarán SMS ni llamadas telefónicas. Si la casilla no está marcada y no hay red WiFi, el „FLEXi“ SP3 aún podrá controlarse mediante llamadas telefónicas y mensajes SMS. El *„FLEXi“ SP3* enviará mensajes SMS al usuario.
 
@@ -1273,9 +1274,10 @@ Mediante TrikdisConfig, conéctese de forma remota al panel de control **„*FLE
     La configuración remota solo funcionará cuando **„*FLEXi" SP3***:
     
     1.  Se debe insertar una tarjeta SIM activada y se debe ingresar o
-        deshabilitar el código PIN.
+        deshabilitar el código PIN, o el panel de control debe estar
+        conectado a una red WiFi.
     
-    2.  Internet móvil está activado en la tarjeta SIM.
+    2.  Si se usa una tarjeta SIM, el internet móvil está activado en ella.
     
     3.  El servicio en la nube de Protegus debe estar habilitado.
     
