@@ -262,11 +262,17 @@ After finishing configuration, click the button **Write \[F5\]** and disconnect 
 
 ### Settings for connection with Central Monitoring Station
 
-**In “System settings” window:**
+=== "Firmware 1.xx"
 
-<img alt="TrikdisConfig software, System settings tab, General group: 'Object ID' set to 561234 (highlighted); Access group shows Administrator code 123456 and Installer code 654321." src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+    **In “System settings” window:**
 
-1.  Enter “**Object ID**” (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+    <img alt="TrikdisConfig software, System settings tab, General group: 'Object ID' set to 561234 (highlighted); Access group shows Administrator code 123456 and Installer code 654321." src="./image11.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
+
+    1.  Enter “**Object ID**” (account) number provided by the Central Monitoring Station (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+
+=== "Firmware 2.xx"
+
+    1.  Skip the “**System settings**” window for this: on firmware 2.xx, the **Object ID** (account) number provided by the Central Monitoring Station is entered with the channels, in the “**CMS reporting**” window, “**CMS settings**” tab (6 characters, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
 
 <img alt="TrikdisConfig software, Panel settings tab, TLC group: Communication protocol dropdown set to '2. Dual Tone' (highlighted)." src="./image12.webp" style="width:7.086614173228346in;height:1.2401574803149606in" />
 
@@ -746,7 +752,7 @@ After pressing **Read \[F4\]**, the program will read and show the settings whic
 
 **“General” settings group**
 
-- **Object ID** – if the events will be sent to the CMS (Central Monitoring Station), enter the account number provided by the CMS (6 characters hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID**).
+- **Object ID** – if the events will be sent to the CMS (Central Monitoring Station), enter the account number provided by the CMS (6 characters hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID**). On firmware 2.xx, the Object ID is entered with the channels in the “CMS reporting” window, “CMS settings” tab.
 
 - **Module ID** - enter module ID number.
 
@@ -796,9 +802,19 @@ When the communicator is connected to keypad bus or serial bus of the control pa
 
 ### “CMS reporting” window
 
+<!-- DRAFT (PR #28), not for merge until the 2.xx release. Source: Jira TPPR3I05-67: from firmware 2.00, GT works like GET in Fallback mode but without a choice of network type, with the IP ping period set for each channel (18 Sep), and the Object ID entered with the channels (15 Oct). The first official firmware is 2.05. To confirm with Igoris's screenshots: the layout, and which channel groups carry the Object ID. -->
+
 **“CMS settings” tab**
 
-<img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab: Primary channel with Communication type Disable, Encryption key 1234567890ABCDEF (hex unchecked), TCP or UDP set to TCP, empty Domain/IP and Port fields; Primary channel Backup with the same Disable type and encryption key; Parallel channel Communication type Disable." src="./image46.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
+=== "Firmware 1.xx"
+
+    <img alt="TrikdisConfig 'CMS reporting' window, CMS settings tab: Primary channel with Communication type Disable, Encryption key 1234567890ABCDEF (hex unchecked), TCP or UDP set to TCP, empty Domain/IP and Port fields; Primary channel Backup with the same Disable type and encryption key; Parallel channel Communication type Disable." src="./image46.webp" style="width:7.086614173228346in;height:3.3661417322834644in" />
+
+=== "Firmware 2.xx"
+
+    On firmware 2.xx, each channel group (**Primary channel**, **Primary channel Backup**, **Parallel channel** and **Parallel channel Backup**) also has its own **IP ping period**, and the **Object ID** is entered with the channels.
+
+    <!-- Screenshot (Igoris): CMS settings tab on GT 2.xx, channels with example values. -->
 
 The communicator sends events to the monitoring station via cellular internet (IP).
 
@@ -830,9 +846,19 @@ Events are transmitted in parallel with the first channel through this channel. 
 
 Enable the backup channel mode to send events via backup channel if connection via primary channel is lost. Backup channel settings are same as described above.
 
-<img alt="TrikdisConfig 'CMS reporting'  Settings tab: Test period checked at 24h 0min, IP ping period 0min 30s (greyed), Backup reporting after 2 fails, Return from Backup after 1min 30s, Line No. 1, Receiver No. 1." src="./image47.webp" style="width:7.086614173228346in;height:2.578740157480315in" />
+**“Settings” tab**
 
-\*\*\*\*“Settings” tab\*\* “Settings” settings group\*\*
+=== "Firmware 1.xx"
+
+    <img alt="TrikdisConfig 'CMS reporting'  Settings tab: Test period checked at 24h 0min, IP ping period 0min 30s (greyed), Backup reporting after 2 fails, Return from Backup after 1min 30s, Line No. 1, Receiver No. 1." src="./image47.webp" style="width:7.086614173228346in;height:2.578740157480315in" />
+
+=== "Firmware 2.xx"
+
+    On firmware 2.xx, the **IP ping period** is not on this tab: it is set for each channel on the **CMS settings** tab. The other settings below are the same.
+
+    <!-- Screenshot (Igoris): Settings tab on GT 2.xx. -->
+
+**“Settings” settings group**
 
 - **Test period** - TEST event period for testing the connection. Test events are sent as Contact ID messages and forwarded to the monitoring software.
 
@@ -841,6 +867,8 @@ Enable the backup channel mode to send events via backup channel if connection v
   By default, the “*Connection lost”* notification will be transmitted to the monitoring software if the PING message is not received by the receiver over a time period three times longer than set in the device. E.g. if the PING period is set for 3 minutes, the receiver will transfer the *“Connection lost”* notification if a PING message is not received within 9 minutes.
 
   PING heartbeats keep the active communication session between the device and the receiver. An active session is required for remote connection, control and configuration of the device. We recommend setting the PING period for no more than 5 minutes.
+
+  On firmware 2.xx, **IP ping period** is set for each channel on the **CMS settings** tab instead.
 
 - **Backup reporting after** - indicates the number of unsuccessful attempts to send the message via Primary channel. If device fails to transmit specified number of times, the device will connect to transmit the messages via Backup channel.
 
