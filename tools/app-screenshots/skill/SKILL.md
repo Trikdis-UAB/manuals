@@ -13,11 +13,16 @@ product, the traps, and how to hand the result over.
 It opens the released front-end in headless Chrome and answers every `/v3/api/*` call locally with
 sample data, so the images show exactly what customers have, filled with invented values.
 
+Steps marked **TRIKDIS Mac** apply only on the documentation Mac where Andrius's sessions run. On
+any other computer, skip them; what to do instead is next to each one. Setup for another computer
+(Node, Chrome, a clone) is in the README, "Running it on your own computer".
+
 ## Run
 
-Work in your own worktree, never in Andrius's main checkout:
+**TRIKDIS Mac:** work in your own worktree, never in Andrius's main checkout:
 `~/.claude/tools/agent-worktree.sh ~/Projects/TRIKDIS/manuals app-screenshots origin/main`
 (it is reused if it exists; `out/` there may hold images other sessions are waiting for).
+**Elsewhere:** your own clone of `Trikdis-UAB/manuals`, on a branch of your own.
 
 ```bash
 cd tools/app-screenshots && npm ci
@@ -28,18 +33,21 @@ node capture.mjs --model GET --flow protegus --lang en --layout phone   # user s
 ```
 
 A user-screen walk sets its sample state in `screens/protegus.json` (system patch, zone status, zones
-the panel names when it refuses to arm). Read the released source first (`origin/master_eu` in
-`~/Projects/TRIKDIS/worktrees/Protegus_v3`, read with `git show`, never checked out): which buttons a
-screen shows depends on the system's capabilities (`systemHelper().supports` in `systems.service.ts`).
+the panel names when it refuses to arm). Capturing the existing walks needs nothing more. To add one,
+first find out what decides which buttons a screen shows: the system's capabilities
+(`systemHelper().supports` in `systems.service.ts`). **TRIKDIS Mac:** read the released source,
+`origin/master_eu` in `~/Projects/TRIKDIS/worktrees/Protegus_v3`, with `git show`, never checked out.
+**Elsewhere:** search the released app's public JavaScript for the same names (see "Adding a product
+or a screen").
 
 Output: `out/<lang>/<model>-<screen>[-<revision>]-<layout>.png` and `out/manifest.json`, one
 record per image (menu path in that language, firmware, `firmwareConfirmed`, `revisionConfirmed`,
 any `unverified` note, the front-end bundle and its deploy date). Each capture is a fresh browser,
 about 12 s per screen and layout; two runs give pixel-identical images. Long runs go in the
-background, under `caffeinate -i`: when the Mac sleeps midway every screen after that fails with
-`ERR_NETWORK_CHANGED` (2026-10-26, 35 of 65 lost). That stops idle sleep only; a lid closed on
-battery still sleeps it (2026-10-28, 10 lost), so read the run's FAIL lines and rerun just those
-with `--screen` (the manifest merges).
+background, with the computer kept awake: when it sleeps midway every screen after that fails with
+`ERR_NETWORK_CHANGED` (2026-10-26, 35 of 65 lost). On a Mac, `caffeinate -i` stops idle sleep only; a
+lid closed on battery still sleeps it (2026-10-28, 10 lost). So read the run's FAIL lines and rerun
+just those with `--screen` (the manifest merges).
 
 **Beta front-end:** `--app beta` photographs beta2.protegus.app instead (SP5 follows the beta, Andrius
 2026-10-19). Images and their own manifest go to `out/beta/`, every record says `frontend: "beta"`,
@@ -69,19 +77,25 @@ wizard: online, not directly controlled, so it asks for areas and PGM control).
 
 Firmware and hardware revision decide which fields appear (on GET, firmware 1.31+ on an `x1x1`
 board moves the account number into each CMS channel). They are set per model in `lib/sample.mjs`
-or with `--fw` / `--revision`. Never guess them. Look first in the Workspace
+or with `--fw` / `--revision`. Never guess them. **TRIKDIS Mac:** look first in the Workspace
 (`~/Projects/TRIKDIS/Workspace/Products/`, e.g. the firmware-release notes in Open-Questions), then
-ask Andrius. Until confirmed, capture with the placeholder and leave the manifest saying so.
+ask Andrius. **Elsewhere:** ask whoever asked for the images. Until confirmed, capture with the
+placeholder and leave the manifest saying so.
 
 When the manual already shows TrikdisConfig screenshots for the same settings, use their values in
 the sample so the two tabs agree (GET: Object ID 561234, TLF AUTO / Dual Tone / SIA FSK, 425 Hz).
 
 ## Adding a product or a screen
 
-1. Find the configurator in the front-end source, `~/Projects/TRIKDIS/worktrees/Protegus_v3`
-   (beta line, reference only): `general/advanced-settings/advanced-settings.routes.ts` (which
-   configurator a model opens), `configurators/configuration.routes.ts` (the newer one's pages), and
-   the configurator's `navigation.service.ts` (which menu items each model shows).
+1. Find the configurator in the front-end source (**TRIKDIS Mac:** `~/Projects/TRIKDIS/worktrees/Protegus_v3`,
+   reference only; the source is TRIKDIS-internal): `general/advanced-settings/advanced-settings.routes.ts`
+   (which configurator a model opens), `configurators/configuration.routes.ts` (the newer one's pages),
+   and the configurator's `navigation.service.ts` (which menu items each model shows). **Elsewhere:**
+   the released app's JavaScript is public. Download `https://web.protegus.app/` and the `main-*.js` it
+   loads, then the `chunk-*.js` files named inside it, and the chunks those name in turn (three rounds
+   reached all 97 on 2026-11-09). Search them for a label key the screen shows
+   (e.g. `systems.titles.zoneStatuses`). Names are shortened, but label keys, API paths
+   (`/v3/api/...`) and field names survive, and those are what the steps below need.
 2. Get each page's data shape from the app's USB parser, `configurators/wired/<x>-communication.service.ts`:
    it builds the same object `config/read` returns, with the real field types and array lengths.
    For many pages, split the reading between parallel read-only research agents (one per menu group)
@@ -110,8 +124,8 @@ public, so keep real names, systems and customer data out of fixtures and commit
   `dev/catch.mjs` shows it.
 - **A field the server leaves out must be left out, not `null`.** The released app forgave
   `installerAccess: null`; the beta threw on every render of the system page. The server's API reference
-  (`~/Projects/TRIKDIS/worktrees/protegus_internal_api/endpoints/`) says which fields are "only present
-  when…". The run now reports what the app sends to its own error endpoint as `app error …`; treat one as
+  (**TRIKDIS Mac:** `~/Projects/TRIKDIS/worktrees/protegus_internal_api/endpoints/`, internal) says which
+  fields are "only present when…"; elsewhere, look at how the app's code tests the field. The run now reports what the app sends to its own error endpoint as `app error …`; treat one as
   a sample-data bug, not app noise.
 - **The beta calls the API through a region router** (`region-router.trikdis.workers.dev`, with an
   `X-Home-Region` header) and sometimes the region's host directly. The guard answers `/v3/api/*` on every
@@ -179,16 +193,22 @@ such as the QR scanner page, states that need a live device, anything that looks
 phone. Andrius's rule (2026-10-19): *"Jeigu mums reikia screenshotų, kurių mes patys negalim padaryt,
 arba sugeneruoti beveik tinkamu su mūsų frontendo prieiga, tai mes tada turim jų paprašyti Igorio."*
 
-So ask Igoris Šimkevič (igoris@trikdis.lt, documentation) for real phone screenshots. Write in
-Lithuanian, from joy@trikdis.lt, with the `gmail-draft` skill, naming the exact screens and languages
-you need; the draft waits for Andrius's yes. Until the real screenshots arrive, the imitated image may
-be used, marked `unverified` in the manifest, and the session that owns the manual swaps it when they
-come. Check first whether a request for the same screens is already out.
+So ask Igoris Šimkevič (igoris@trikdis.lt, documentation) for real phone screenshots, in Lithuanian,
+naming the exact screens and languages you need. **TRIKDIS Mac:** write from joy@trikdis.lt with the
+`gmail-draft` skill; the draft waits for Andrius's yes. **Elsewhere:** write to him yourself. Until the
+real screenshots arrive, the imitated image may be used, marked `unverified` in the manifest, and
+whoever owns the manual swaps it when they come. Check first whether a request for the same screens
+is already out.
 
 ## Hand-off
 
-The images serve a manual another session owns. Send that session the manifest path, the image folder
-and the list of unconfirmed values by message (the hand-off rule in the global CLAUDE.md, §1.2).
-Do not write into its `docs/` files or its PR. The GET app tabs use the phone images, cut to content;
-desktop images are masters. If no session owns the manual yet, report to Andrius and leave the images
-in `out/`.
+The images usually serve a manual someone else owns. Send them the manifest path, the image folder and
+the list of unconfirmed values. **TRIKDIS Mac:** the owner is often another Claude session; message it
+(the hand-off rule in the global CLAUDE.md, §1.2). Do not write into the owner's `docs/` files or PR.
+The GET app tabs use the phone images, cut to content; desktop images are masters. If nobody owns the
+manual yet, tell whoever asked for the images and leave them in `out/`.
+
+**Changes to the tool itself** (a new screen, a fix) go to `Trikdis-UAB/manuals` as a pull request from
+your own branch. Before opening it, run `node guard-selftest.mjs` if the guard changed, re-capture a few
+existing images to show nothing else moved (see "After changing a shared sample"), and keep every
+sample value invented.

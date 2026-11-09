@@ -4,8 +4,9 @@ Takes screenshots of the Protegus app's device-configurator screens for the manu
 tabs, without a live device or a real account.
 
 How to add a product, the traps and the hand-off are in `skill/SKILL.md`, which is also the
-`protegus-app-screenshots` skill (`~/.claude/skills/protegus-app-screenshots` links to that folder in
-the main checkout, so every session on this Mac can use it).
+`protegus-app-screenshots` skill for Claude Code. On the TRIKDIS documentation Mac,
+`~/.claude/skills/protegus-app-screenshots` links to that folder in the main checkout; on any other
+computer, see "Running it on your own computer" below.
 
 It opens the **released** web app (`https://web.protegus.app`, the EU production front-end customers
 use) in headless Chrome and answers every API call itself with sample data: a signed-in installer,
@@ -15,6 +16,47 @@ have, filled with invented values.
 With `--app beta` it opens the beta front-end (`https://beta2.protegus.app`) instead, under the same
 guard. Beta images go to `out/beta/` with their own manifest, which says on every record that they come
 from the beta front-end. Used for SP5, whose manual follows the beta (Andrius, 2026-10-19).
+
+## Running it on your own computer
+
+Anyone can run it: Windows, macOS or Linux. You need **Node.js 18 or newer** (the current LTS is
+fine), **Google Chrome** installed as usual (the tool drives it; nothing else is downloaded), and
+**git**. No Protegus account, device or password is needed or used.
+
+```bash
+git clone https://github.com/Trikdis-UAB/manuals.git
+cd manuals/tools/app-screenshots
+npm ci                                  # installs Playwright, the library that drives Chrome
+node guard-selftest.mjs                 # must end with "all guard checks passed"
+node fetch-public.mjs en                # the app's public labels and reference lists (also fetched on first capture)
+node capture.mjs --model GET --lang en --layout phone --screen panel-tlf   # one screen, to try it
+node capture.mjs --model GET --flow protegus --lang en --layout phone      # the Protegus app manual's user screens
+```
+
+The same commands work in PowerShell on Windows. Images go to `out/en/` and each one has a record in
+`out/manifest.json`. The options are in the next section. `out/` and the fetched data stay on your
+computer, because git ignores them.
+
+- **Existing screens** need nothing more: every screen in `screens/*.json` can be captured as is, in any
+  language the app has (`--lang en,lt,es,ru`).
+- **Keep the computer awake** during a long run. If it sleeps, every screen after that fails with a
+  network error. Rerun just the failed ones with `--screen`, and the manifest merges them. On a Mac,
+  `caffeinate -i node capture.mjs …` stops idle sleep, but not a closed lid on battery.
+- **Pictures for one manual page come from one computer.** Text can be drawn a pixel differently on
+  another operating system, so recapture a page's whole set rather than mixing.
+- **With Claude Code:** open the clone and ask Claude to read this README and `skill/SKILL.md` first.
+  To have the skill load by itself, copy the `skill` folder to `~/.claude/skills/protegus-app-screenshots`
+  (on Windows `%USERPROFILE%\.claude\skills\protegus-app-screenshots`), and copy it again after a
+  `git pull`. On macOS or Linux, a link (`ln -s`) avoids the re-copy. The skill's TRIKDIS-Mac steps
+  (worktree script, internal paths, Joy's email) are marked as such: skip them.
+- **New screens or products** need to know when the app shows each field. The front-end source and the
+  API reference are TRIKDIS-internal. Without them, use the released app's own JavaScript, which is
+  public (`web.protegus.app`: `main-*.js`, the `chunk-*.js` files it names and the ones those name;
+  download and search them). The steps are in `skill/SKILL.md`, "Adding a product or a screen".
+- **Improvements come back as a pull request** to `Trikdis-UAB/manuals`, from a branch of your own.
+  Run `node guard-selftest.mjs` after any change to the guard. The repo is public, so sample data stays
+  invented: no real names, systems, addresses or customer text in fixtures, screens or commit messages.
+  Never log in with real credentials or point the tool at real data (see Safety).
 
 ## Run
 
