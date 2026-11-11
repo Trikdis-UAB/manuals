@@ -93,6 +93,9 @@ Connect the panel to E16 as shown below:
 
 DSC panels do not need additional panel programming for E16.
 
+!!! note
+    Over the keypad bus, E16 receives general zone states from the panel and cannot tell the zone type, so all alarms reach the monitoring station as a general alarm, Contact ID E130. E16 has no TIP/RING terminals. To report events with the panel's own Contact ID codes (for example E110 for a fire alarm), use a communicator that connects to the keypad bus and the panel's TIP/RING terminals together: GT, GT+ or GET.
+
 ## Add system to Protegus2
 
 1. Open [Protegus2](https://www.protegus.app) and click **Add new system**.
