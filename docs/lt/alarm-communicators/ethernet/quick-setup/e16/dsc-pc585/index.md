@@ -93,6 +93,9 @@ Prijunkite centralę prie E16, kaip parodyta žemiau:
 
 DSC centralių papildomai programuoti E16 darbui nereikia.
 
+!!! note "Pastaba"
+    Per klaviatūros magistralę komunikatorius gauna iš centralės bendras zonų būsenas ir negali atskirti zonos tipo (gaisro, įsilaužimo, vandens nuotėkio ir kt.). Visi aliarmai perduodami kaip bendras aliarmas, Contact ID E130, o kai kurie stebėjimo pultai tokius įvykius apdoroja kitaip nei iš tikrųjų suveikusios zonos tipo įvykius. E16 neturi TIP/RING gnybtų. Kad įvykiai būtų perduodami su pačios centralės Contact ID kodais (pvz., E110 gaisro aliarmui), naudokite komunikatorių, kuris jungiamas kartu prie klaviatūros magistralės ir centralės TIP/RING gnybtų: GT, GT+ arba GET.
+
 ## Sistemos pridėjimas į Protegus2
 
 1. Atidarykite [Protegus2](https://www.protegus.app) ir paspauskite **Pridėti naują sistemą**.

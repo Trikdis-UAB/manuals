@@ -16,6 +16,8 @@ Comunicador funciona con la aplicación Protegus2. Con Protegus2 los usuarios pu
 
 El comunicador GET se puede conectar al bus serie (Serial bus) o al bus de teclado (Keypad bus) o al comunicador telefónico (TIP/RING) del panel de control.
 
+Los paneles DSC se pueden conectar al mismo tiempo al bus de teclado y a los terminales TIP/RING del panel. El bus de teclado se utiliza para el control y el estado del panel, y los eventos se envían con los códigos Contact ID propios del panel.
+
 Envía eventos al receptor en una CRA:
 
 - Envía eventos a los receptores de hardware o software TRIKDIS que funcionan con cualquier software de monitoreo.
@@ -77,6 +79,8 @@ Funciona con la aplicación Protegus2:
 | Honeywell® | <u>Ademco Vista-15</u>, <u>Ademco Vista-20</u>, <u>Ademco Vista-48</u> |
 
 > **<u>Subrayado</u>** - paneles de control controlados directamente por GET. Paneles de control Paradox, que se controlan directamente, debe contener la versión de firmware V.4 o superior.
+>
+> Los paneles DSC se pueden conectar solo al bus de teclado, o al bus de teclado y a los terminales TIP/RING al mismo tiempo (consulte la sección 3.2.1).
 >
 > \* Los paneles de control de otros fabricantes se conectan al comunicador GET mediante los terminales TIP RING de la línea telefónica del panel de control.
 
@@ -225,6 +229,8 @@ A continuación, habrá una descripción de las opciones que necesitan ser confi
 2.  Marque la casilla “**Control directo**” si desea que el usuario pueda controlar el panel de control con un código (código de usuario del panel de seguridad) y la aplicación Protegus2. Esta configuración se especifica para paneles de seguridad con control directo.
 
 3.  Para controlar directamente los paneles de control de Paradox y Texecom, ingrese la “**Contraseña de descarga de PC**”. El código debe coincidir con el código ingresado en el panel de control.
+
+Si un panel DSC está conectado al bus de teclado y a los terminales TIP/RING, configure “**Protocolo de comunicación**” en “**AUTO**” y seleccione el modelo del panel DSC en “**Tipo de panel**”. Marque “**Control directo**” para controlar el panel desde Protegus2. Consulte la sección 3.2.1.2.
 
 !!! note "Nota"
     Para que funcione el control directo del panel, usted necesitará cambiar
@@ -380,11 +386,57 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 #### DSC
 
+##### Bus de teclado
+
 <img class="wiring-diagram" alt="Diagrama de conexión: bus de datos del panel DSC a GET. RED a +DC (+12V), BLK a -DC, YEL a CLK y GRN a DATA." src="./wiring-dsc.webp" width="503" height="517" />
+
+!!! note "Nota"
+    Solo con el bus de teclado, el comunicador recibe del panel los estados generales de las zonas y no puede distinguir el tipo de zona (incendio, robo, fuga de agua, etc.). Todas las alarmas se envían como alarma general, Contact ID E130, y algunas CRA gestionan estos eventos de forma distinta a la del tipo de zona que realmente se activó. Para enviar los eventos con los códigos Contact ID propios del panel (por ejemplo, E110 para una alarma de incendio), conecte también los terminales TIP/RING; consulte la sección 3.2.1.2.
+
+##### Bus de teclado y TIP/RING
+
+<img class="wiring-diagram" alt="Diagrama de conexión: panel DSC a GET. Bus de datos: RED a +DC (+12V), BLK a -DC, YEL a CLK y GRN a DATA. Terminales del comunicador telefónico: TIP del panel a TIP de GET y RING del panel a RING de GET." src="./wiring-dsc-tip-ring.webp" width="650" height="547" />
+
+El bus de teclado se utiliza para el control y el estado del panel: armado/desarmado remoto y estados de las particiones y las zonas. Los eventos se envían a través del comunicador telefónico del panel conectado a los terminales TIP/RING, por lo que llegan con los códigos Contact ID propios del panel. Mientras se utiliza TIP/RING, los eventos del bus de teclado no se envían por segunda vez.
+
+Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GET en la ventana “**Configuración del panel**”:
+
+1.  Configure “**Protocolo de comunicación**” en “**AUTO**”.
+
+2.  Seleccione el modelo del panel DSC en “**Tipo de panel**”.
+
+3.  Seleccione “**Control directo**” si desea que los usuarios puedan controlar el panel usando la aplicación Protegus2.
+
+El comunicador telefónico del panel DSC debe programarse para enviar los eventos, como se describe en la sección 4.1.1 "DSC".
 
 #### PARADOX
 
+##### Puerto serie
+
 <img class="wiring-diagram" alt="Diagrama de conexión: puerto serial del panel PARADOX a GET mediante el cable EX-CRP2.4. R (rojo, +12V) a +DC, B (negro) a -DC, Y (amarillo) a CLK y G (verde) a DATA." src="./wiring-paradox.webp" width="655" height="517" />
+
+##### Bus de teclado y TIP/RING (SP/SP+/MG/MG+)
+
+<img class="wiring-diagram" alt="Diagrama de conexión: panel PARADOX SP/SP+/MG/MG+ al GET. Alimentación: +AUX (+12B) a +DC, -AUX a -DC. Bus de Datos: GRN a DATA, YEL a CLK. Comunicador telefónico: TIP del panel a TIP del GET, RING del panel a RING del GET." src="./image26.webp" width="650" height="579" />
+
+Esta conexión utiliza el bus de teclado del panel en lugar de su puerto serie, por lo que no se necesita el desbloqueo de pago del puerto serie de Paradox.
+
+!!! note "Nota"
+    Esta conexión requiere el firmware del comunicador 1.21 o posterior.
+
+Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GET:
+
+1.  Seleccione “**AUTO**”.
+
+2.  Seleccione el modelo de panel de control “**7. Paradox SP+/MG+ series KeyBus**”.
+
+3.  Seleccione “**Control directo**” si desea que los usuarios puedan controlar el panel usando la aplicación Protegus2 usando su propio código de teclado.
+
+4.  Para controlar directamente el panel de seguridad, ingrese la “**Contraseña de descarga de PC**”. Debe coincidir con la contraseña ingresada en el panel de seguridad.
+
+<img alt="TrikdisConfig, ventana «Configuración del panel», con cuatro campos resaltados: «Communication protocol» (1) en «2. AUTO», «Tipo de panel» (2) en «7. PARADOX SP+/MG+», «Control directo» (3) marcado y «Contraseña de descarga de PC» (4)." src="./image27.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
+
+El panel de control Paradox debe programarse para transmitir eventos al CMS y para control remoto desde la aplicación Protegus2, como se describe en la sección 4.1.2 "PARADOX".
 
 #### CADDX
 
@@ -409,33 +461,6 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 #### Panel de control (comunicador telefónico, TIP/RING)
 
 <img class="wiring-diagram" alt="Diagrama de conexión: panel de control a GET mediante los terminales de la línea telefónica del comunicador. +AUX a +DC (+12 V) y -AUX a -DC; terminales del comunicador telefónico: TIP del panel a TIP de GET y RING del panel a RING de GET." src="./wiring-control-panel-tip-ring.webp" width="605" height="513" />
-
-### Diagrama para conectar el comunicador al bus de teclado y comunicador telefónico (terminales TIP/RING) del panel PARADOX SP/SP+/MG/MG+ 
-
-!!! note "Nota"
-    Esta conexión requiere el firmware del comunicador 1.21 o posterior.
-
-<img alt="Diagrama de conexión: panel PARADOX SP/SP+/MG/MG+ al GET. Alimentación: +AUX (+12B) a +DC, -AUX a -DC. Bus de Datos: GRN a DATA, YEL a CLK. Comunicador telefónico: TIP del panel a TIP del GET, RING del panel a RING del GET." src="./image26.webp" style="width:3.39000656167979in;height:3.016673228346457in" />
-
-Al conectar el comunicador al bus del teclado y a los terminales TIP/RING del panel de control, debe realizar las siguientes configuraciones para el comunicador GET:
-
-1.  Seleccione “**AUTO**”.
-
-2.  Seleccione el modelo de panel de control “**7. Paradox SP+/MG+ series KeyBus**”.
-
-3.  Seleccione “**Control directo**” si desea que los usuarios puedan controlar el panel usando la aplicación Protegus2 usando su propio código de teclado.
-
-4.  Para controlar directamente el panel de seguridad, ingrese la “**Contraseña de descarga de PC**”. Debe coincidir con la contraseña ingresada en el panel de seguridad.
-
-<img alt="TrikdisConfig, ventana «Configuración del panel», con cuatro campos resaltados: «Communication protocol» (1) en «2. AUTO», «Tipo de panel» (2) en «7. PARADOX SP+/MG+», «Control directo» (3) marcado y «Contraseña de descarga de PC» (4)." src="./image27.webp" style="width:7.086614173228346in;height:2.0118110236220472in" />
-
-El panel de control Paradox debe programarse para transmitir eventos al CMS y para control remoto desde la aplicación Protegus2.
-
-| **Celda** |    **Datos**     | **Celda** | **Datos** |
-|:---------:|:----------------:|:---------:|:---------:|
-|    801    | \*\*\*\*\*\*\*\* |    815    |  123456   |
-|    811    |       1111       |    911    |   1234    |
-|    812    |       2222       |           |           |
 
 ### Diagrama de conexión para control el panel de control a través de la zona de keyswitch 
 
@@ -503,7 +528,27 @@ Para habilitar el control remoto del panel de control, asegúrese que la casilla
 
 #### DSC
 
-Los paneles DSC no necesitan ser programados.
+**Bus de teclado.** Los paneles DSC no necesitan ser programados.
+
+**Bus de teclado y TIP/RING.** Programe el comunicador telefónico del panel para que envíe los eventos. La tabla corresponde a **DSC PowerSeries PC1616** (**PC1832, PC1864**). Con el teclado conectado al panel, entre en el modo de programación: [\*][8][código de instalador], y luego introduzca el número de sección.
+
+| Sección | Valor |
+|---------|-------|
+| [301] Primer número de teléfono | Cualquier número de más de cuatro dígitos, sin D al principio (por ejemplo, 5555555). La D hace que el panel espere el tono de marcación; sin ella, el número se marca más rápido. El comunicador responde a todas las llamadas |
+| [310] Número de cuenta del sistema | Número de cuenta de cuatro dígitos seguido de FF (por ejemplo, 1234FF). Use HEX A en lugar de cualquier dígito 0 |
+| [311] Número de cuenta de la partición 1 | Número de cuenta de cuatro dígitos. Use HEX A en lugar de cualquier dígito 0 |
+| [350] Formato del comunicador | 03 (Contact ID) para el número de teléfono 1 |
+| [351]–[376] Direcciones de llamada del comunicador | Active los grupos de eventos necesarios para el número de teléfono 1: Alarma/Restauración, Apertura/Cierre, Alarma/Restauración de sabotaje, Mantenimiento del sistema, Transmisiones de prueba. Revise especialmente Apertura/Cierre: en algunos paneles DSC viene desactivado de fábrica |
+| [380] Primera opción del comunicador | Opción 1 ON (comunicador habilitado). Opción 3 OFF (marcación DTMF) |
+| [381] Segunda opción del comunicador | Opción 7 OFF (los códigos de reporte Contact ID se generan automáticamente) |
+| [320]–[349] Códigos de reporte | Cualquier valor distinto de 00 para los eventos que se deben enviar |
+| [015] Tercera opción del sistema | Opción 7 OFF (supervisión de la línea telefónica, TLM, desactivada) |
+
+!!! note "Nota"
+    Desactive la supervisión de la línea telefónica. Si TLM queda activada, el panel puede indicar un problema de línea telefónica. El retardo del problema de TLM se configura en la sección [377].
+
+!!! note "Nota"
+    Los números de sección anteriores corresponden a PC1616, PC1832 y PC1864 (guía de instalación v4.x). Otros modelos DSC pueden usar números de sección distintos; consulte el manual de programación del panel.
 
 #### PARADOX
 
@@ -516,6 +561,14 @@ Para establecer esta contraseña, con el teclado conectado al panel de control:
 - Para las series MAGELLAN, SPECTRA: vaya a la celda 911 e ingrese la contraseña de cuatro dígitos de la descarga de computadora.
 
 - Para las series DIGIPLEX EVO: vaya a la celda 3012 e ingrese la contraseña de cuatro dígitos de la descarga de computadora.
+
+**Bus de teclado y TIP/RING (SP/SP+/MG/MG+).** El panel también debe programarse para transmitir eventos a la CRA y para el control remoto desde la aplicación Protegus2:
+
+| **Celda** |    **Datos**     | **Celda** | **Datos** |
+|:---------:|:----------------:|:---------:|:---------:|
+|    801    | \*\*\*\*\*\*\*\* |    815    |  123456   |
+|    811    |       1111       |    911    |   1234    |
+|    812    |       2222       |           |           |
 
 #### TEXECOM
 
@@ -1083,17 +1136,19 @@ Genere un evento:
 
 1.  Generar un evento:
 
-- Armando y desarmando sistemas de seguridad.
+    - Armando y desarmando sistemas de seguridad.
 
-- Activando una alarma de zona cuando el sistema de seguridad esté armado.
+    - Activando una alarma de zona cuando el sistema de seguridad esté armado.
 
-1.  Asegúrese de que el evento llegue al CRA y/o sea recibido en la aplicación de Protegus2.
+2.  Asegúrese de que el evento llegue al CRA y/o sea recibido en la aplicación de Protegus2.
 
-2.  Active la entrada del comunicador y verifique que los usuarios reciban mensajes de eventos.
+3.  Active la entrada del comunicador y verifique que los usuarios reciban mensajes de eventos.
 
-3.  Active las salidas del comunicador de forma remota y asegúrese de que las salidas se activen y que los usuarios reciban mensajes de eventos.
+4.  Active las salidas del comunicador de forma remota y asegúrese de que las salidas se activen y que los usuarios reciban mensajes de eventos.
 
-4.  Si el panel de control será controlado de forma remota, arme/desarme el sistema de seguridad de forma remota al usar la app Protegus2.
+5.  Si el panel de control será controlado de forma remota, arme/desarme el sistema de seguridad de forma remota al usar la app Protegus2.
+
+6.  Si un panel DSC está conectado al bus de teclado y a los terminales TIP/RING, arme el sistema y active una alarma en una zona de incendio. La CRA debe recibir el evento con el código Contact ID del tipo de zona (por ejemplo, E110), no como alarma general E130.
 
 ## Actualización del firmware 
 
