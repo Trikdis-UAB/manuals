@@ -44,7 +44,7 @@ description lists these by owner.
 1. **The app, for every setting.** Labels: `POST https://api.beta2.protegus.app/v3/api/translations`
    with `{"language":"en","version":"-1","config":"sp5"}` (`"sp3"` for SP3; released app:
    `api.protegus.app`). Behaviour (ranges, which items a list offers, what a switch writes): the
-   front-end source is TRIKDIS-internal (ask Dovydas for read access). Without it, use the app's
+   front-end source (Protegus_v3) is TRIKDIS-internal: it is on the office git server, reachable from the office network only, and read with the shared AI key (Andrius or Valdas gives it; clone with git, read-only use). Without it, use the app's
    public JavaScript, as `tools/app-screenshots/skill/SKILL.md` describes ("Adding a product or a
    screen").
 2. **The firmware designer's notes and Jira**: behaviour inside the panel, defaults, limits.
