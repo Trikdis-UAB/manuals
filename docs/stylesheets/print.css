@@ -127,4 +127,34 @@
     break-after: avoid;
     page-break-after: avoid;
   }
+
+  /* Quick setup step cards (.steps-grid, base.user.v2.css): tall phone screenshots, two to a
+     row on screen. In print Chrome split the grid rows across pages: 28 of 32 images were cut
+     in the DSC PowerSeries PDF (2026-11-12). Three cards to a row, each screenshot capped so
+     two rows fit on a page, and a card is never split. */
+  .md-typeset .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .md-typeset .step-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .md-typeset .step-card img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100mm;
+    margin: 6px auto 0;
+  }
+
+  /* No image taller than most of a page: one that is (e.g. the portrait wiring drawings on the
+     LT Honeywell Vista and Interlogix NX-8V2 quick setups) can't be kept whole and gets
+     split wherever it lands, or leaves the page before it empty. object-fit keeps the
+     proportions if the width is fixed. */
+  .md-typeset img {
+    max-height: 200mm;
+    object-fit: contain;
+  }
 }
