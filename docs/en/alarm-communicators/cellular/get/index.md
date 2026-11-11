@@ -18,6 +18,8 @@ Communicator works with Protegus2 application. With Protegus2 users can control 
 
 **Connects to the control panel's serial or keyboard bus or telephone line (TIP/RING).**
 
+DSC panels can be connected to the keypad bus and the panel's TIP/RING terminals together. The keypad bus is used for control and panel status, and events are reported with the panel's own Contact ID codes.
+
 Sends events to monitoring station receiver:
 
 - Sends events to *TRIKDIS* software or hardware receivers that work with any monitoring software.
@@ -78,6 +80,8 @@ Sends events to monitoring station receiver:
 | Honeywell® | <u>Ademco Vista-15</u>, <u>Ademco Vista-20</u>, <u>Ademco Vista-48</u> |
 
 **<u>Underlined</u>** - Control panels directly controlled by communicator***.*** Firmware PARADOX control panels, which are directly controlled, must be V.4 or higher.
+
+DSC panels can be connected to the keypad bus only, or to the keypad bus and the TIP/RING terminals together (see 3.3.1).
 
 \* Connect control panels from other manufacturers to the GET communicator using the TIP RING terminals of the control panel.
 
@@ -253,6 +257,8 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
 
     9.  Tap **Write**.
 
+    When a DSC panel is connected to both the keypad bus and the TIP/RING terminals, set **Panel settings → TLF → Security panel model** to **AUTO** and select the DSC panel model under **Panel settings → Serial Bus**. Turn on **Remote Arm/Disarm** to control the panel from the Protegus app. See 3.3.1.2.
+
     !!! note
         For direct panel control to work, you will need to change the panel settings. How to do this is described in chapter 4.1 "Programming of control panels when the communicator is connected to the keypad bus or serial bus".
 
@@ -275,6 +281,8 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
     2.  Select “**Remote Arm/Disarm”** if you want users to be able to control the panel in Protegus2 app with their keypad code. This setting is only shown for directly controlled panels.
 
     3.  For the direct control of Paradox and Texecom panels enter “**Security panel PC download password”**. It must match the password that is entered in the control panel.
+
+    When a DSC panel is connected to both the keypad bus and the TIP/RING terminals, set “**Communication protocol**” to “**AUTO**” and select the DSC panel model in “**Security panel model**”. Select “**Remote Arm/Disarm**” to control the panel from Protegus2. See 3.3.1.2.
 
     !!! note
         For the direct panel control to work, you will need to change the panel
@@ -458,11 +466,58 @@ Following one of the schematics provided below, connect communicator to the cont
 
 #### DSC
 
+##### Keypad bus
+
 <img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to GET. RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA." src="./wiring-dsc.webp" width="503" height="516" />
+
+!!! note
+    With the keypad bus only, the communicator receives general zone states from the panel and cannot tell the zone type (fire, burglary, water leak, etc.). All alarms are reported as a general alarm, Contact ID E130, and some monitoring stations handle these events differently from the zone type that was actually triggered. To report events with the panel's own Contact ID codes (for example E110 for a fire alarm), connect the TIP/RING terminals as well, see 3.3.1.2.
+
+##### Keypad bus and TIP/RING
+
+<img class="wiring-diagram" alt="Wiring diagram: DSC panel to GET. Keypad bus: RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA. Telephone line communicator terminals: panel TIP to GET TIP, panel RING to GET RING." src="./wiring-dsc-tip-ring.webp" width="650" height="547" />
+
+The keypad bus is used for control and panel status: remote arm/disarm, partition and zone states. Events are reported through the panel's dialer connected to the TIP/RING terminals, so they are sent with the panel's own Contact ID codes. Events from the keypad bus are not sent a second time while TIP/RING is used.
+
+When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator in the “**Panel settings**” window:
+
+1.  Set “**Communication protocol**” to “**AUTO**”.
+
+2.  Select the DSC panel model in “**Security panel model**”.
+
+3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the Protegus2 app.
+
+The DSC panel's landline dialer must be programmed to send events, as described in 4.1.1 "DSC".
 
 #### PARADOX
 
+##### Serial port
+
 <img class="wiring-diagram" alt="Wiring diagram: PARADOX panel serial port to GET through the EX-CRP2.4 cable (ordered separately). R (red, +12V) to +DC, B (black) to -DC, Y (yellow) to CLK, G (green) to DATA." src="./wiring-paradox.webp" width="655" height="516" />
+
+##### Keypad bus and TIP/RING (SP/SP+/MG/MG+)
+
+<img class="wiring-diagram" alt="Wiring diagram: PARADOX SP, SP+, MG or MG+ panel to GET. Keypad bus: +AUX (+12V) to +DC, -AUX to -DC, GRN to DATA, YEL to CLK. Telephone communicator: panel TIP to GET TIP, panel RING to GET RING." src="./image26.webp" width="650" height="585" />
+
+This connection uses the panel's keypad bus instead of its serial port, so the paid Paradox serial port unlock is not needed.
+
+!!! note
+    This connection needs communicator firmware 1.21 or later.
+
+
+When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
+
+1.  Select “**AUTO**”.
+
+2.  Select the control panel model “**7. Paradox SP+/MG+ series KeyBus**“.
+
+3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the Protegus2 app using their own keypad code.
+
+4.  To directly control the security panel, enter the “**Security panel PC download password**”. It must match the password entered in the security panel.
+
+<img alt="TrikdisConfig software, Panel settings window, four highlighted fields: Communication protocol (1) set to '2. AUTO', Security panel model (2) set to '7. PARADOX SP+/MG+', Remote Arm/Disarm (3) checkbox ticked, Security panel PC download password (4) set to 1234." src="./image27.webp" style="width:7.086614173228346in;height:2.0196850393700787in" />
+
+The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the Protegus2 application, as described in 4.1.2 "PARADOX".
 
 #### CADDX
 
@@ -487,33 +542,6 @@ Following one of the schematics provided below, connect communicator to the cont
 #### Control panel (telephone line communicator, TIP/RING)
 
 <img class="wiring-diagram" alt="Wiring diagram: control panel to GET over its telephone line communicator. +AUX to +DC (+12 V), -AUX to -DC; telephone line communicator terminals: panel TIP to GET TIP, panel RING to GET RING." src="./wiring-control-panel-tip-ring.webp" width="572" height="566" />
-
-### Schematic for wiring of the communicator to the keypad bus and telephone communicator (TIP/RING terminals) of the PARADOX SP/SP+/MG/MG+ control panel 
-
-!!! note
-    This connection needs communicator firmware 1.21 or later.
-
-<img alt="Wiring diagram: PARADOX SP, SP+, MG or MG+ panel to GET. Keypad bus: +AUX (+12V) to +DC, -AUX to -DC, GRN to DATA, YEL to CLK. Telephone communicator: panel TIP to GET TIP, panel RING to GET RING." src="./image26.webp" style="width:3.37000656167979in;height:3.0333398950131234in" />
-
-When connecting the communicator to the keypad bus and the TIP/RING terminals of the control panel, you must make the following settings for the GET communicator:
-
-1.  Select “**AUTO**”.
-
-2.  Select the control panel model “**7. Paradox SP+/MG+ series KeyBus**“.
-
-3.  Select “**Remote Arm/Disarm**” if you want users to be able to control the panel using the Protegus2 app using their own keypad code.
-
-4.  To directly control the security panel, enter the “**Security panel PC download password**”. It must match the password entered in the security panel.
-
-<img alt="TrikdisConfig software, Panel settings window, four highlighted fields: Communication protocol (1) set to '2. AUTO', Security panel model (2) set to '7. PARADOX SP+/MG+', Remote Arm/Disarm (3) checkbox ticked, Security panel PC download password (4) set to 1234." src="./image27.webp" style="width:7.086614173228346in;height:2.0196850393700787in" />
-
-The Paradox control panel must be programmed to transmit events to the CMS and for remote control from the Protegus2 application.
-
-| **Cell** |     **Data**     | **Cell** | **Data** |
-|:--------:|:----------------:|:--------:|:--------:|
-|   801    | \*\*\*\*\*\*\*\* |   815    |  123456  |
-|   811    |       1111       |   911    |   1234   |
-|   812    |       2222       |          |          |
 
 ### Schematic for wiring the communicator to the control panel keyswitch zone 
 
@@ -578,7 +606,27 @@ To enable remote control of the security panel, make sure that the checkbox “*
 
 #### DSC
 
-DSC panels do not need to be programmed.
+**Keypad bus.** DSC panels do not need to be programmed.
+
+**Keypad bus and TIP/RING.** Program the panel's landline dialer so that it sends the events. The table is for **DSC PowerSeries PC1616** (**PC1832, PC1864**). With the keypad connected to the panel, enter programming mode: [\*][8][installer code], then enter the section number.
+
+| Section | Value |
+|---------|-------|
+| [301] First telephone number | Any number longer than four digits, without D at the start (for example 5555555). D makes the panel wait for a dial tone; without it the number is dialed faster. The communicator answers every call |
+| [310] System account number | Four-digit account number followed by FF (for example 1234FF). Use HEX A in place of any digit 0 |
+| [311] Partition 1 account number | Four-digit account number. Use HEX A in place of any digit 0 |
+| [350] Communicator format | 03 (Contact ID) for telephone number 1 |
+| [351]–[376] Communicator call directions | Enable the required event groups for telephone number 1: Alarm/Restore, Opening/Closing, Tamper Alarm/Restore, System Maintenance, Test Transmissions. Check Opening/Closing in particular: some DSC panels have it turned off by default |
+| [380] First communicator option | Option 1 ON (communicator enabled). Option 3 OFF (DTMF dialing) |
+| [381] Second communicator option | Option 7 OFF (Contact ID reporting codes are generated automatically) |
+| [320]–[349] Reporting codes | Any value other than 00 for the events to be reported |
+| [015] Third system option | Option 7 OFF (telephone line monitoring, TLM, disabled) |
+
+!!! note
+    Disable telephone line monitoring. If TLM stays enabled, the panel may show a telephone line trouble. The TLM trouble delay is set in section [377].
+
+!!! note
+    The section numbers above are for PC1616, PC1832 and PC1864 (installation guide v4.x). Other DSC models may use different section numbers; see the panel's programming manual.
 
 #### PARADOX
 
@@ -591,6 +639,14 @@ To set this password, with the keyboard connected to the security control panel:
 - For MAGELLAN, SPECTRA series: go to cell 911 and enter 4-digit PC download password.
 
 - For DIGIPLEX EVO series: go to cell 3012 and enter 4-digit PC download password.
+
+**Keypad bus and TIP/RING (SP/SP+/MG/MG+).** The panel must also be programmed to transmit events to the CMS and for remote control from the Protegus2 application:
+
+| **Cell** |     **Data**     | **Cell** | **Data** |
+|:--------:|:----------------:|:--------:|:--------:|
+|   801    | \*\*\*\*\*\*\*\* |   815    |  123456  |
+|   811    |       1111       |   911    |   1234   |
+|   812    |       2222       |          |          |
 
 #### TEXECOM
 
@@ -1259,17 +1315,19 @@ When the configuration and installation is complete, perform a system check:
 
 1.  Generate an event:
 
-- by arming/disarming the system with the control panel’s keypad;
+    - by arming/disarming the system with the control panel’s keypad;
 
-- by triggering a zone alarm when the security system is armed.
+    - by triggering a zone alarm when the security system is armed.
 
-1.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
+2.  Make sure that the event arrives to the CMS (Central Monitoring Station) and/or is received in the Protegus2 application.
 
-2.  To test communicator input, trigger it and make sure to receive the correct event.
+3.  To test communicator input, trigger it and make sure to receive the correct event.
 
-3.  To test the communicator outputs, activate them remotely and check their operation.
+4.  To test the communicator outputs, activate them remotely and check their operation.
 
-4.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
+5.  If the security control panel will be controlled remotely, arm/disarm the security system remotely by using the Protegus2 app.
+
+6.  If a DSC panel is connected to the keypad bus and the TIP/RING terminals, arm the system and trigger a fire zone alarm. The monitoring station must receive the event with the Contact ID code of the zone type (for example E110), not as general alarm E130.
 
 ## Firmware update 
 
