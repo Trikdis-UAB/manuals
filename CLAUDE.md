@@ -5,6 +5,8 @@
 
 **FAQ system** (support-case-sourced Q&A: entry format, the numbering-exclusion gotcha, nav visibility, how to add an entry): see `agents.md` §13.
 
+**Control-panel manuals** (how the SP5 page was built and how to do SP3 the same way: structure, where facts come from, screenshots, checks): see the `control-panel-manual` skill, `.claude/skills/control-panel-manual/SKILL.md`.
+
 **Who confirms which product facts** (software vs product/commercial vs hardware — who to ask for an unknown, and why the source usually beats asking): see `NOTES/agent-lessons/who-confirms-product-facts.md`.
 
 **Language versions differ** (image numbers, order and even content are not the same across en/lt/es/ru — never map images by number): see `NOTES/agent-lessons/language-versions-differ.md`.
