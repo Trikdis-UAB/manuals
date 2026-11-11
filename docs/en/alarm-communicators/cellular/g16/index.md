@@ -352,6 +352,9 @@ Following one of the schematics provided below, connect communicator to the cont
 
 <img class="wiring-diagram" alt="Wiring diagram: DSC panel keypad bus to G16. RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA. G16 I/O 1-3, COM, A 485, B 485 are not connected." src="./wiring-dsc.webp" width="546" height="475" />
 
+!!! note
+    Over the keypad bus, the communicator receives general zone states from the panel and cannot tell the zone type (fire, burglary, water leak, etc.). All alarms are reported as a general alarm, Contact ID E130, and some monitoring stations handle these events differently from the zone type that was actually triggered. G16 has no TIP/RING terminals. To report events with the panel's own Contact ID codes (for example E110 for a fire alarm), use a communicator that connects to the keypad bus and the panel's TIP/RING terminals together: GT, GT+ or GET.
+
 #### PARADOX
 
 <img class="wiring-diagram" alt="Wiring diagram: PARADOX panel serial port to G16 through the EX-CRP2.4 cable (ordered separately). R (red) to +DC (+12V), B (black) to -DC, Y (yellow) to CLK, G (green) to DATA. G16 I/O 1-3, COM, A 485, B 485 are not connected." src="./wiring-paradox.webp" width="651" height="475" />
