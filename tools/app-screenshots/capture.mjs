@@ -22,7 +22,11 @@ const args = parseArgs(process.argv.slice(2));
 const model = args.model ?? 'GET';
 const langs = (args.lang ?? 'en').split(',');
 const layouts = (args.layout ?? 'desktop,phone').split(',');
-const fe = frontend(args.app ?? 'released');
+const fe0 = frontend(args.app ?? 'released');
+// --theme released: the beta build in the released app's colours (lib/frontends.mjs); --theme own: its own skin.
+const theme = args.theme ?? fe0.defaultTheme ?? 'own';
+if (!['own', 'released'].includes(theme)) throw new Error(`Unknown --theme ${theme}. Known: own, released`);
+const fe = theme === 'released' && fe0.releasedColours ? { ...fe0, recolour: fe0.releasedColours } : fe0;
 const outDir = path.resolve(ROOT, args.out ?? (fe.id === 'released' ? 'out' : `out/${fe.id}`));
 if (!MODELS[model]) throw new Error(`Unknown model ${model}. Known: ${Object.keys(MODELS).join(', ')}`);
 const cfg = MODELS[model].configurator;
@@ -37,19 +41,20 @@ if (!MODELS[model].firmwareConfirmed && !args.fw) {
 if (!MODELS[model].revisionConfirmed && !args.revision) console.log(`NOTE the hardware revision for ${model} is not confirmed`);
 const screens = (def.screens ?? [])
   .filter((s) => !args.screen || args.screen.split(',').includes(s.id))
-  .filter((s) => !s.onlyModels || s.onlyModels.includes(model));
+  .filter((s) => !s.onlyModels || s.onlyModels.includes(model))
+  .filter((s) => !s.onlyApps || s.onlyApps.includes(args.app ?? 'released'));
 if (def.flow !== 'walk' && !screens.length) throw new Error(`No screens to capture for ${model}${args.screen ? ` (${args.screen})` : ''}`);
 
 // Public label packs and reference lists are not committed; fetch them if this checkout lacks them.
 const missing = langs.filter((l) => !fs.existsSync(path.join(ROOT, 'fixtures', fe.labelsDir, `${cfg}.${l}.json`)));
-if (missing.length || !fs.existsSync(path.join(ROOT, 'fixtures/public/regions.json'))) {
+if (missing.length || ['regions', 'reactions'].some((n) => !fs.existsSync(path.join(ROOT, `fixtures/public/${n}.json`)))) {
   execFileSync(process.execPath, [path.join(ROOT, 'fetch-public.mjs'), ...langs, '--app', fe.id], { stdio: 'inherit' });
 }
 const fixture = configFixture(path.join(ROOT, 'fixtures/config'), MODELS[model].fixture, fe);
 if (!fixture.own) console.log(`NOTE no ${fe.id}-shaped sample for ${model}; using ${fixture.file}, shaped like the released server's answer`);
 
 // The read-only POSTs the app makes on this path (answered locally like everything else).
-const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new',
+const SAFE_POSTS = new Set(['POST /translations', 'POST /get-pgm-icon-paths', 'POST /get-reactions', 'POST /get-system', 'POST /config/read', 'POST /config/time/read', 'POST /get-system-status-new',
   'POST /get-system-info-new', 'POST /create-system', 'POST /area']); // the last three: the wizard, answered locally
 
 // Tallest page image, in CSS px. SP5 System options on a phone is about 3,100.
@@ -79,13 +84,15 @@ for (const lang of langs) {
         try {
           const appPath = await walkTo(page, t, screen);
           await settle(page, 800);
+          if (screen.steps) appPath.push(...await runSteps(page, t, screen.steps));
           const base = `${modelSlug}-${id}`;
-          const shots = [{ variant: layout, file: `${base}-${layout}.png` }];
+          // A pop-up or a single card is cut out of the page (screen.crop: its CSS selector).
+          const shots = [{ variant: layout, file: `${base}-${layout}.png`, ...(screen.crop ? { crop: screen.crop, isolate: screen.isolate, keepFocus: screen.keepFocus } : {}) }];
           // g16 opens in the right-hand column of the desktop layout, so that column is also cut out.
           if (layout === 'desktop' && def.flow !== 'configuration') shots.push({ variant: 'desktop-panel', file: `${base}-desktop-panel.png`, selector: 'app-company-mobile-host' });
           // The newer configurator fills the window under the app's top bar (logo, region, account);
           // the same page without that bar, for manuals that should not show it (e.g. the beta's logo).
-          if (layout === 'desktop' && def.flow === 'configuration' && screen.kind !== 'intro') shots.push({ variant: 'desktop-content', file: `${base}-desktop-content.png`, below: 'app-company-header' });
+          if (layout === 'desktop' && def.flow === 'configuration' && screen.kind !== 'intro' && !screen.crop) shots.push({ variant: 'desktop-content', file: `${base}-desktop-content.png`, below: 'app-company-header' });
           for (const s of shots) records.push(await shoot(page, { s, layout, screen, id, revision, lang, appPath, label }));
           const issues = runIssues(guard, errors, mocks);
           if (issues.length) { problems++; console.log(`WARN ${label}: ${issues.join('; ')}`); }
@@ -168,7 +175,9 @@ async function runWalks(lang, t) {
     for (const walk of def.walks) {
       if (wanted && !wanted.some((id) => id === walk.id || walk.steps.some((st) => st.shot === id))) continue;
       const label = `${lang} ${layout} ${model} ${walk.id}`;
-      const app = await openOrFail(label, { lang, model, layout, timezoneId: def.timezones?.[lang], frontend: fe });
+      // The sample state this walk needs (lib/mocks.mjs, createMocks): the flow's system plus the walk's changes.
+      const scenario = { sampleSystem: def.sampleSystem, system: walk.system, zoneStatus: walk.zoneStatus, openZones: walk.openZones, deviceOffline: walk.deviceOffline };
+      const app = await openOrFail(label, { lang, model, layout, timezoneId: def.timezones?.[lang], frontend: fe, scenario });
       if (!app) continue;
       const { page, browser, guard, errors, mocks } = app;
       const files = [];
@@ -180,10 +189,12 @@ async function runWalks(lang, t) {
           if (step.waitUrl) await page.waitForURL((u) => u.pathname.endsWith(step.waitUrl), { timeout: 20000 });
           await settle(page, step.shot ? 1000 : 400);
           if (!step.shot) continue;
-          const s = { variant: layout, file: `${modelSlug}-${step.shot}-${layout}.png` };
-          const rec = await shoot(page, { s, layout, screen: { id: step.shot, unverified: step.unverified, fullScreen: step.fullScreen }, id: step.shot, revision: null, lang,
+          // Screens that do not depend on the device are named by the flow (filePrefix), not the model.
+          const s = { variant: layout, file: `${def.filePrefix ?? modelSlug}-${step.shot}-${layout}.png` };
+          const rec = await shoot(page, { s, layout, screen: { id: step.shot, unverified: step.unverified, fullScreen: step.fullScreen, sheet: step.sheet }, id: step.shot, revision: null, lang,
             appPath: step.title ? [t(step.title)] : [], label: `${label} ${step.shot}` });
           rec.walk = walk.id;
+          if (def.sampleNote) rec.sample = def.sampleNote;
           if (step.note) rec.note = step.note;
           records.push(rec);
           files.push(s.file);
@@ -193,7 +204,7 @@ async function runWalks(lang, t) {
         console.log(`ok   ${label} -> ${files.join(', ')}`);
       } catch (e) {
         problems++;
-        const file = path.join(outDir, lang, `ERROR-${modelSlug}-${walk.id}-${layout}.png`);
+        const file = path.join(outDir, lang, `ERROR-${def.filePrefix ?? modelSlug}-${walk.id}-${layout}.png`);
         await page.screenshot({ path: file }).catch(() => {});
         console.log(`FAIL ${label} after ${files.length} image(s): ${e.message.split('\n')[0]} (see ${path.relative(ROOT, file)})`);
       } finally {
@@ -203,9 +214,64 @@ async function runWalks(lang, t) {
   }
 }
 
+// Steps after a page has opened, to reach a pop-up and set its state. Each step is one of:
+//   {text|label|css, within?, row?, nth?, exact?}  click (label = a label key; row = a table row's text;
+//                                                  css + hasText: the match containing that text)
+//   {fill: css, value, within?, nth?}             type into a field
+// plus wait (ms, default 600) and settle: false for screens that never go quiet (polling).
+// Returns the texts clicked, for the manifest's appPath.
+async function runSteps(page, t, steps) {
+  const path = [];
+  for (const st of steps) {
+    let scope = st.within ? page.locator(st.within).last() : page;
+    // Table rows are div.table-row; the same data is also laid out as phone cards, hidden on desktop.
+    if (st.row) scope = scope.locator('div.table-row, tr').filter({ hasText: st.row, visible: true }).first();
+    if (st.fill) {
+      await scope.locator(st.fill).nth(st.nth ?? 0).fill(String(st.value), { timeout: 10000 });
+    } else {
+      const text = st.label ? t(st.label) : st.text;
+      let loc = st.css ? scope.locator(st.css) : scope.getByText(text, { exact: st.exact ?? true });
+      if (st.css && st.hasText) loc = loc.filter({ hasText: st.hasText }); // e.g. a dropdown's .item
+      await loc.nth(st.nth ?? 0).click({ timeout: 10000 });
+      if (text && !st.hidden) path.push(text);
+    }
+    if (st.settle === false) await page.waitForTimeout(st.wait ?? 1000);
+    else await settle(page, st.wait ?? 600);
+  }
+  return path;
+}
+
+// A pop-up or card on its own. The window is made taller first when the element scrolls inside or
+// runs past the window, so the whole element is drawn. isolate: only the element is painted, on a
+// transparent background, so a pop-up's rounded corners do not carry the dimmed page behind it.
+async function shootElement(page, s, layout, opts) {
+  const el = page.locator(s.crop).first();
+  await el.waitFor({ timeout: 10000 });
+  const need = await el.evaluate((e) => {
+    let extra = 0;
+    for (const x of [e, ...e.querySelectorAll('*')]) {
+      if (/(auto|scroll)/.test(getComputedStyle(x).overflowY) && x.scrollHeight > x.clientHeight + 1) extra = Math.max(extra, x.scrollHeight - x.clientHeight);
+    }
+    return { extra, bottom: e.getBoundingClientRect().bottom };
+  });
+  const { width, height } = LAYOUTS[layout].viewport;
+  if (need.extra > 0 || need.bottom > height) {
+    await page.setViewportSize({ width, height: Math.min(Math.max(height + need.extra, need.bottom) + 120, MAX_CSS_HEIGHT) });
+    await settle(page, 500);
+  }
+  // No focus ring on the last field typed into (keepFocus: an open dropdown would close).
+  if (!s.keepFocus) await page.evaluate(() => document.activeElement?.blur());
+  if (s.isolate) {
+    await page.addStyleTag({ content: `html, body { background: transparent !important; } body * { visibility: hidden !important; }
+      ${s.crop}, ${s.crop} * { visibility: visible !important; }` });
+  }
+  await el.screenshot({ ...opts, omitBackground: Boolean(s.isolate) });
+}
+
 async function clickStep(page, t, c) {
   let loc;
   if (c.css && c.hasText) loc = page.locator(c.css).filter({ hasText: t(c.hasText) });
+  else if (c.css && c.text) loc = page.locator(c.css).filter({ hasText: c.text }); // text from the sample data, e.g. an area name
   else if (c.css) loc = page.locator(c.css);
   else loc = page.getByText(c.label ? t(c.label) : c.text, { exact: c.exact ?? true });
   if (c.inner) loc = loc.locator(c.inner);
@@ -259,8 +325,17 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
   let crop = null;
   if (s.selector) {
     await page.locator(s.selector).first().screenshot(opts);
+  } else if (s.crop) {
+    await shootElement(page, s, layout, opts);
   } else if (screen.fullScreen) {
     await page.screenshot(opts); // pages whose background is part of the design (the system dashboard)
+  } else if (screen.sheet) {
+    // A bottom sheet and a strip of the dimmed screen above it (sheet: its CSS selector and the strip in CSS px).
+    const { width, height } = LAYOUTS[layout].viewport;
+    const top = await page.locator(screen.sheet.css).first().evaluate((e) => e.getBoundingClientRect().top);
+    const y = Math.max(0, Math.floor(top - (screen.sheet.above ?? 120)));
+    await page.screenshot({ ...opts, clip: { x: 0, y, width, height: height - y } });
+    crop = { top: y, height };
   } else if (layout === 'phone' || def.flow === 'configuration') {
     // Pages longer than the window are rendered whole: the window is made taller, then the image is
     // cut 24 px below the last card. Phone images are always cut there (the manual shows them at
@@ -301,9 +376,11 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     file: path.relative(outDir, file),
     viewport: LAYOUTS[layout].viewport,
     deviceScaleFactor: LAYOUTS[layout].deviceScaleFactor,
+    ...(s.crop ? { croppedTo: s.crop } : {}),
     ...(crop ? { croppedToCss: { ...(crop.top ? { top: crop.top } : {}), width: LAYOUTS[layout].viewport.width, height: crop.height - crop.top }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
     appUrl: new URL(page.url()).pathname,
     frontend: fe.id,
+    ...(fe.releasedColours ? { theme: fe.recolour ? 'released colours on this build' : `${fe.id} colours` } : {}),
     appBuild,
     labels: labelsInfo(lang),
     sampleConfig: fixture.file,
@@ -356,7 +433,8 @@ async function openOrFail(label, opts) {
 function runIssues(guard, errors, mocks) {
   return [...guard.unmocked.keys()].map((k) => `unmocked ${k}`)
     .concat(errors.map((e) => `pageerror ${e}`))
-    .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`));
+    .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`))
+    .concat(fe.recolour && !guard.recoloured.size ? ['no theme colour was found to swap; the build\'s colours may have changed (lib/frontends.mjs)'] : []);
 }
 
 function labels(lang, configurator) {

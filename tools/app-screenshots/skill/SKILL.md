@@ -1,6 +1,6 @@
 ---
 name: protegus-app-screenshots
-description: Take screenshots of the Protegus app's device configurator (Advanced settings) and its add-new-system wizard for the TRIKDIS manuals, from the released web.protegus.app (or the beta front-end, beta2.protegus.app) with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
+description: Take screenshots of the Protegus app's device configurator (Advanced settings), its add-new-system wizard and the everyday user screens (home with areas, arming, PIN keypad, zone bypass, zone statuses) for the TRIKDIS manuals and the Protegus app manual, from the released web.protegus.app (or the beta front-end, beta2.protegus.app) with invented sample data - no device, no real account, nothing sent to Protegus. Use this whenever someone wants Protegus app images for a manual or a "Protegus app" tab, says "build the screenshots as we did for GET", "app tab images", "configurator screenshots", "arming screenshots", "Protegus app manual pictures", "capture the SP5 / GT / GET settings pages in the app", wants the same screens in LT, ES or RU, or wants app screenshots recaptured after a release, firmware or label change, or wants the "Adding the security system to Protegus2 app" pictures redone. Also use it before adding a new product (GT, GT+, G16, SP3, FC, ...) or a new screen to the screenshot tool. Not for TrikdisConfig screenshots, and not for reading live data from a real system.
 ---
 
 # Protegus app screenshots
@@ -13,24 +13,41 @@ product, the traps, and how to hand the result over.
 It opens the released front-end in headless Chrome and answers every `/v3/api/*` call locally with
 sample data, so the images show exactly what customers have, filled with invented values.
 
+Steps marked **TRIKDIS Mac** apply only on the documentation Mac where Andrius's sessions run. On
+any other computer, skip them; what to do instead is next to each one. Setup for another computer
+(Node, Chrome, a clone) is in the README, "Running it on your own computer".
+
 ## Run
 
-Work in your own worktree, never in Andrius's main checkout:
+**TRIKDIS Mac:** work in your own worktree, never in Andrius's main checkout:
 `~/.claude/tools/agent-worktree.sh ~/Projects/TRIKDIS/manuals app-screenshots origin/main`
 (it is reused if it exists; `out/` there may hold images other sessions are waiting for).
+**Elsewhere:** your own clone of `Trikdis-UAB/manuals`, on a branch of your own.
 
 ```bash
 cd tools/app-screenshots && npm ci
 node guard-selftest.mjs                                   # must say "all guard checks passed"
 node capture.mjs --model GET --lang en --layout phone,desktop
 node capture.mjs --model SP5 --lang en --layout phone --screen zones,users-list
+node capture.mjs --model GET --flow protegus --lang en --layout phone   # user screens: protegus-*-phone.png
 ```
+
+A user-screen walk sets its sample state in `screens/protegus.json` (system patch, zone status, zones
+the panel names when it refuses to arm). Capturing the existing walks needs nothing more. To add one,
+first find out what decides which buttons a screen shows: the system's capabilities
+(`systemHelper().supports` in `systems.service.ts`). **TRIKDIS Mac:** read the released source,
+`origin/master_eu` in `~/Projects/TRIKDIS/worktrees/Protegus_v3`, with `git show`, never checked out.
+**Elsewhere:** search the released app's public JavaScript for the same names (see "Adding a product
+or a screen").
 
 Output: `out/<lang>/<model>-<screen>[-<revision>]-<layout>.png` and `out/manifest.json`, one
 record per image (menu path in that language, firmware, `firmwareConfirmed`, `revisionConfirmed`,
 any `unverified` note, the front-end bundle and its deploy date). Each capture is a fresh browser,
 about 12 s per screen and layout; two runs give pixel-identical images. Long runs go in the
-background.
+background, with the computer kept awake: when it sleeps midway every screen after that fails with
+`ERR_NETWORK_CHANGED` (2026-10-26, 35 of 65 lost). On a Mac, `caffeinate -i` stops idle sleep only; a
+lid closed on battery still sleeps it (2026-10-28, 10 lost). So read the run's FAIL lines and rerun
+just those with `--screen` (the manifest merges).
 
 **Beta front-end:** `--app beta` photographs beta2.protegus.app instead (SP5 follows the beta, Andrius
 2026-10-19). Images and their own manifest go to `out/beta/`, every record says `frontend: "beta"`,
@@ -40,7 +57,12 @@ saying so. Labels: `node fetch-public.mjs en --app beta` takes the EU server's p
 keys the beta server has that the EU server lacks. Never use the beta server's own wording: it is the
 North America region and says "Via Protegus2 North America cloud" in about 25 labels. Desktop pages of
 the newer configurator also get `…-desktop-content.png`, cut below the app's top bar, which on the beta
-shows the β logo and the region name.
+shows the β logo and the region name. Colours: by default the beta is shown in the released app's
+colours (`--theme released`; `--theme own` for its indigo/orange skin), because customers get the
+released theme when the features ship. The swap changes only the theme's colour values; when the beta
+is redeployed, re-verify it: pages with the same `--text` in both front-ends must pixel-match the
+released images (desktop below the top bar). If a run says "no theme colour was found to swap", the
+beta's palette changed: find the new pairs as `lib/frontends.mjs` describes.
 
 ## Walks (wizards and other flows)
 
@@ -55,19 +77,25 @@ wizard: online, not directly controlled, so it asks for areas and PGM control).
 
 Firmware and hardware revision decide which fields appear (on GET, firmware 1.31+ on an `x1x1`
 board moves the account number into each CMS channel). They are set per model in `lib/sample.mjs`
-or with `--fw` / `--revision`. Never guess them. Look first in the Workspace
+or with `--fw` / `--revision`. Never guess them. **TRIKDIS Mac:** look first in the Workspace
 (`~/Projects/TRIKDIS/Workspace/Products/`, e.g. the firmware-release notes in Open-Questions), then
-ask Andrius. Until confirmed, capture with the placeholder and leave the manifest saying so.
+ask Andrius. **Elsewhere:** ask whoever asked for the images. Until confirmed, capture with the
+placeholder and leave the manifest saying so.
 
 When the manual already shows TrikdisConfig screenshots for the same settings, use their values in
 the sample so the two tabs agree (GET: Object ID 561234, TLF AUTO / Dual Tone / SIA FSK, 425 Hz).
 
 ## Adding a product or a screen
 
-1. Find the configurator in the front-end source, `~/Projects/TRIKDIS/worktrees/Protegus_v3`
-   (beta line, reference only): `general/advanced-settings/advanced-settings.routes.ts` (which
-   configurator a model opens), `configurators/configuration.routes.ts` (the newer one's pages), and
-   the configurator's `navigation.service.ts` (which menu items each model shows).
+1. Find the configurator in the front-end source (**TRIKDIS Mac:** `~/Projects/TRIKDIS/worktrees/Protegus_v3`,
+   reference only; the source is TRIKDIS-internal): `general/advanced-settings/advanced-settings.routes.ts`
+   (which configurator a model opens), `configurators/configuration.routes.ts` (the newer one's pages),
+   and the configurator's `navigation.service.ts` (which menu items each model shows). **Elsewhere:**
+   the released app's JavaScript is public. Download `https://web.protegus.app/` and the `main-*.js` it
+   loads, then the `chunk-*.js` files named inside it, and the chunks those name in turn (three rounds
+   reached all 97 on 2026-11-09). Search them for a label key the screen shows
+   (e.g. `systems.titles.zoneStatuses`). Names are shortened, but label keys, API paths
+   (`/v3/api/...`) and field names survive, and those are what the steps below need.
 2. Get each page's data shape from the app's USB parser, `configurators/wired/<x>-communication.service.ts`:
    it builds the same object `config/read` returns, with the real field types and array lengths.
    For many pages, split the reading between parallel read-only research agents (one per menu group)
@@ -96,13 +124,28 @@ public, so keep real names, systems and customer data out of fixtures and commit
   `dev/catch.mjs` shows it.
 - **A field the server leaves out must be left out, not `null`.** The released app forgave
   `installerAccess: null`; the beta threw on every render of the system page. The server's API reference
-  (`~/Projects/TRIKDIS/worktrees/protegus_internal_api/endpoints/`) says which fields are "only present
-  when…". The run now reports what the app sends to its own error endpoint as `app error …`; treat one as
+  (**TRIKDIS Mac:** `~/Projects/TRIKDIS/worktrees/protegus_internal_api/endpoints/`, internal) says which
+  fields are "only present when…"; elsewhere, look at how the app's code tests the field. The run now reports what the app sends to its own error endpoint as `app error …`; treat one as
   a sample-data bug, not app noise.
 - **The beta calls the API through a region router** (`region-router.trikdis.workers.dev`, with an
   `X-Home-Region` header) and sometimes the region's host directly. The guard answers `/v3/api/*` on every
   host and the CORS preflight too; `guard-selftest.mjs` proves it for both front-ends.
+- **Waiting for a page is done by counting its requests** (`settle` in `lib/app.mjs`). Playwright's
+  `networkidle` is reached once per document and the app changes pages without a new one, so it stopped
+  waiting after the first page; on a slow morning (2026-10-23) icons the app fetches after opening a
+  page were missing from the pictures, and the run said 0 problems. Never wait with `networkidle` after
+  the first load. A page still loading after 20 s now fails its screen. When pictures from two runs
+  differ, look for missing icons before blaming the app.
+- **A menu item can depend on the sample having its data.** SP5's Automation appears only when the
+  configuration has an `automation` block (the configurator's `navigation.service.ts`); adding it put a
+  new item in every desktop sidebar, so the whole beta set was recaptured (2026-10-26). Before adding
+  data a page needs, check what else it changes.
 - **Keep menu clicks inside the configurator**: on desktop "Settings" is also a top-bar item.
+- **Pop-ups** (README, "Pop-ups and single cards"): find a row by its text in `div.table-row` and only
+  among visible ones, because each list is also laid out as phone cards hidden on desktop. A dropdown
+  shows its value inside an `input`, so it is opened by that input, not by its text. A pop-up that polls
+  (the wireless scan) never lets the network go quiet: give that step `settle: false` and stop the
+  polling with the next click before the image.
 - **The newer configurator (SP5)**: desktop reads by itself and opens the Dashboard; on a phone (the
   app switches below 1150 px) the menu page has a Read button. The device must be recorded as a cloud
   device in local storage or the pages never ask for live status.
@@ -117,7 +160,10 @@ public, so keep real names, systems and customer data out of fixtures and commit
   (cellular bars or an Ethernet port), and Ethernet-only models (E16, E16T) are added by MAC address,
   not IMEI. The number of outputs shows too (output tiles on the dashboard): G16T and E16T have one.
   Set `comType`, `uid` and `outputs` per model in `lib/sample.mjs` before capturing a new model, from its
-  manual's specifications; the first GT+ dashboard went out with an Ethernet icon.
+  manual's specifications; the first GT+ dashboard went out with an Ethernet icon. The same goes for
+  device families: SP5's sample wireless devices are HEYI (group 9) because SP5 does not support Maximum
+  Security devices (firmware team, 2026-10-23), even though the app's catalog still lists them; HEYI
+  devices measure no temperature. Ask the manual's session what the product supports before picking.
 - **Defaults come from the server, not the browser.** A new system's default time zone is the
   `userTimeZone` in `/timezones`; the walk's `timezones` map sets it per language.
 - **Some languages are not fully translated in the app** (Russian is English; Spanish lacks a few
@@ -147,16 +193,22 @@ such as the QR scanner page, states that need a live device, anything that looks
 phone. Andrius's rule (2026-10-19): *"Jeigu mums reikia screenshotų, kurių mes patys negalim padaryt,
 arba sugeneruoti beveik tinkamu su mūsų frontendo prieiga, tai mes tada turim jų paprašyti Igorio."*
 
-So ask Igoris Šimkevič (igoris@trikdis.lt, documentation) for real phone screenshots. Write in
-Lithuanian, from joy@trikdis.lt, with the `gmail-draft` skill, naming the exact screens and languages
-you need; the draft waits for Andrius's yes. Until the real screenshots arrive, the imitated image may
-be used, marked `unverified` in the manifest, and the session that owns the manual swaps it when they
-come. Check first whether a request for the same screens is already out.
+So ask Igoris Šimkevič (igoris@trikdis.lt, documentation) for real phone screenshots, in Lithuanian,
+naming the exact screens and languages you need. **TRIKDIS Mac:** write from joy@trikdis.lt with the
+`gmail-draft` skill; the draft waits for Andrius's yes. **Elsewhere:** write to him yourself. Until the
+real screenshots arrive, the imitated image may be used, marked `unverified` in the manifest, and
+whoever owns the manual swaps it when they come. Check first whether a request for the same screens
+is already out.
 
 ## Hand-off
 
-The images serve a manual another session owns. Send that session the manifest path, the image folder
-and the list of unconfirmed values by message (the hand-off rule in the global CLAUDE.md, §1.2).
-Do not write into its `docs/` files or its PR. The GET app tabs use the phone images, cut to content;
-desktop images are masters. If no session owns the manual yet, report to Andrius and leave the images
-in `out/`.
+The images usually serve a manual someone else owns. Send them the manifest path, the image folder and
+the list of unconfirmed values. **TRIKDIS Mac:** the owner is often another Claude session; message it
+(the hand-off rule in the global CLAUDE.md, §1.2). Do not write into the owner's `docs/` files or PR.
+The GET app tabs use the phone images, cut to content; desktop images are masters. If nobody owns the
+manual yet, tell whoever asked for the images and leave them in `out/`.
+
+**Changes to the tool itself** (a new screen, a fix) go to `Trikdis-UAB/manuals` as a pull request from
+your own branch. Before opening it, run `node guard-selftest.mjs` if the guard changed, re-capture a few
+existing images to show nothing else moved (see "After changing a shared sample"), and keep every
+sample value invented.

@@ -23,6 +23,8 @@ dimensions, weight, rack units, connectors, operating temperature, materials, wh
 actually fitted inside. If a fact is about the object rather than the software or the
 commercial offer, it is his. Both of the others will point at him for these.
 
+**Igoris — the Protegus app as installers and users meet it.** Facts in the Protegus app manual and its FAQ entries (screens, settings, what a user can and can't do) go to him, not to Aleksejus (Andrius, 2026-10-29). Aleksejus stays the owner of IPcom and its web interface.
+
 Account ids are one `lookupJiraAccountId` call away — look them up rather than storing them
 here, and use a real mention so the person is actually notified.
 

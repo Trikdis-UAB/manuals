@@ -3,8 +3,9 @@
 // Shapes and array lengths follow the app's USB parser (configurators/wired/sp5-communication.service.ts):
 // 16 areas, 192 zones, 64 outputs and RS485 modules, 16 keypads, 96 wireless devices, 20 sensors,
 // 8 thermostats, 32 groups, 40 blacklist slots, 37 panel events. All values are invented.
-// Inferred and unverified against a real SP5: keypad serial-number prefixes (52 = LCD, 51 = LED) and
-// wireless device settings. Panel-event codes come from a real test panel (see below).
+// Inferred and unverified against a real SP5: keypad serial-number prefixes (52 = LCD, 51 = LED).
+// Panel-event codes come from a real test panel (see below). Wireless devices are HEYI ones on the RF-S8
+// receiver: SP5 does not support Maximum Security devices (firmware team, 2026-10-23).
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -54,10 +55,11 @@ outSettings[4] = out(4, { hwNumber: 7, definition: 6, protegus: true, name: 'Hea
 const sensor = (q, o = {}) => ({ queueNo: q, hwType: 0, seqNumber: 0, alarmLow: false, alarmHigh: false, port: 0, name: '', delay: 0, minTemp: 0, maxTemp: 0, bConst: 0, ntcR0: 0, ...o });
 const sensors = Array.from({ length: 20 }, (_, q) => sensor(q));
 sensors[0] = sensor(0, { hwType: 201, seqNumber: 9, alarmLow: true, alarmHigh: true, delay: 60, minTemp: 5, maxTemp: 30, bConst: 3950, ntcR0: 10000, name: 'Living room temperature' });
-sensors[1] = sensor(1, { hwType: 204, seqNumber: 1, alarmHigh: true, delay: 60, minTemp: 0, maxTemp: 40, name: 'Hall PIR temperature' });
+// No wireless temperature sensor: only device groups 1-5 measure temperature, and HEYI (group 9) is not one.
 
 const thermostats = Array.from({ length: 8 }, (_, i) => ({ enabled: false, outputNumber: 0, mode: 0, hysteresis: 0, activeSensor: 0, assignedSensors: [0], assignedTemperatures: [0], name: `Thermostat ${i + 1}` }));
-thermostats[0] = { enabled: true, outputNumber: 7, mode: 0, hysteresis: 1, activeSensor: 1, assignedSensors: [1], assignedTemperatures: [21.5], name: 'Living room heating' };
+// outputNumber is the output's queueNo + 1 (the app's thermostat pop-up): 5 = "Heating" (outSettings[4]).
+thermostats[0] = { enabled: true, outputNumber: 5, mode: 0, hysteresis: 1, activeSensor: 1, assignedSensors: [1], assignedTemperatures: [21.5], name: 'Living room heating' };
 
 // --- RS485 modules: iO8 expander and the RF-S8 wireless receiver
 const rs485 = Array.from({ length: 64 }, (_, i) => ({ queueNo: i === 63 ? 0 : i + 1, id: 0, group: 0, area: 0, sn: '', name: '', fw: '' }));
@@ -70,13 +72,15 @@ const keypads = Array.from({ length: 16 }, (_, i) => kp('00000000', `Keypad ${i 
 keypads[0] = kp('52A1C3F0', 'Hall keypad', BOTH());
 keypads[1] = kp('51B20417', 'Garage keypad', GARAGE());
 
-// --- wireless devices (group:type pairs from the app's catalog; icons exist in the release)
+// --- wireless devices: HEYI (group 9) types from the app's catalog. A HEYI device stores no settings
+// block (config null) and its id is the low byte of its 32-bit serial number, as the panel reports it.
 const noCfg = { warning: false, led: false, antimaskingSensitivity: 0, microwaveSensitivity: 0, microwavePulses: 0, sleepTime: 0, pir1Sensitivity: 0, pir2Sensitivity: 0, pir1Pulses: 0, pir2Pulses: 0, sirenSoundness: 0, sensitivity: 0 };
 const devices = Array.from({ length: 96 }, (_, q) => ({ queueNo: q, id: 0, sn: 0, type: 0, group: 0, user: 0, area: 0, key3: 0, key4: 0, config: { ...noCfg } }));
-devices[0] = { queueNo: 0, id: 2, sn: 8412173, type: 19, group: 1, user: 0, area: 0, key3: 0, key4: 0, config: { ...noCfg, led: true } };            // Maximum Security Magnet Wireless LV
-devices[1] = { queueNo: 1, id: 50, sn: 8412590, type: 20, group: 1, user: 0, area: 0, key3: 0, key4: 0, config: { ...noCfg, led: true, antimaskingSensitivity: 3, microwaveSensitivity: 12, microwavePulses: 2, sleepTime: 180, pir1Sensitivity: 14, pir2Sensitivity: 14, pir1Pulses: 2, pir2Pulses: 2 } }; // VIP Wireless LV
-devices[2] = { queueNo: 2, id: 0, sn: 9017344, type: 81, group: 2, user: 0, area: 3, key3: 0, key4: 0, config: { ...noCfg, sirenSoundness: 3 } };      // Siren Wireless LV
-devices[3] = { queueNo: 3, id: 0x14, sn: 2712847380, type: 8, group: 9, user: 0, area: 0, key3: 0, key4: 0, config: null };                            // Heyi water leakage
+const heyi = (queueNo, sn, type, area = 0) => ({ queueNo, id: sn & 0xff, sn, type, group: 9, user: 0, area, key3: 0, key4: 0, config: null });
+devices[0] = heyi(0, 0xA1B2C401, 3);    // Smart Door/Window sensor
+devices[1] = heyi(1, 0xA1B2C40B, 4);    // Smart PIR detector
+devices[2] = heyi(2, 0xA1B2C40E, 12, 3); // Smart Outdoor siren (areas Home and Garage)
+devices[3] = heyi(3, 0xA1B2C414, 8);    // Smart Water leakage sensor (sn 2712847380, unchanged)
 
 // --- panel events (names and order from the parser). Contact ID codes and on/off states are those of a
 // real SP5 test panel (revision 1E7LWB.0, read from the beta server 2026-10-19; testers may have changed
@@ -193,7 +197,9 @@ export const systemStatus = {
 export function betaShape(d) {
   const b = structuredClone(d);
   const { ioTo2wire, ...general } = b.systemOptions.systemGeneral;
-  b.systemOptions.systemGeneral = { ...general, io9To2wire: false, io10To2wire: false, wirelessSupervisionTime: 60 };
+  // timeUpdatePeriod (hours, 0 = off): the beta shows "Periodic time update" only when the field is there
+  // (Protegus_v3 17bb2c2b, 2026-10-26); 10 is what the app sets when the switch is turned on.
+  b.systemOptions.systemGeneral = { ...general, io9To2wire: false, io10To2wire: false, wirelessSupervisionTime: 60, timeUpdatePeriod: 10 };
   for (const c of ['primaryChannel', 'backupChannel', 'parallelChannel', 'parallelBackupChannel']) {
     const ch = b.reportingCms.reporting[c];
     Object.assign(ch, { enableEncryption: ch.key !== '', isHexMode: false }); // the app sets it from the key
@@ -201,14 +207,66 @@ export function betaShape(d) {
   b.outputs.outSettings = b.outputs.outSettings.map(({ zoneInControl, ...o }) => ({ ...o, needCodeInKeypad: false }));
   b.outputs.thermostats = b.outputs.thermostats.map(({ hysteresis, ...t }) => t);
   b.systemStatus = betaStatus();
+  b.automation = automation();
+  b.users.groups[1] = { ...b.users.groups[1], schedules: [1 << CLEANING, 0], scheduleDeny: false }; // Cleaning staff: access by "Cleaning"
   return b;
 }
+
+// --- Automation (beta): schedules, holidays and scenes, shaped as the app's USB parser builds them
+// (configurators/wired/sp5-communication.service.ts; meanings in configurators/utils/scene.utils.ts and
+// schedule.utils.ts). Unused slots keep the factory defaults exactly, or the lists count them as in use.
+// No overnight schedule. Scene actions only drive outputs defined as Remote control (definition 1): the
+// panel cannot drive a siren or a thermostat output from a scene (firmware team, 2026-10-28).
+const CLEANING = 0, EVENING = 1;                     // schedule queueNo
+const CHRISTMAS = 0, NEW_YEAR = 1;                   // holiday queueNo
+const EPOCH0 = Date.UTC(2016, 2, 1) / 1000;          // schedule dates: seconds since 2016-03-01 00:00 UTC
+const day = (y, m, d) => Date.UTC(y, m - 1, d) / 1000 - EPOCH0;
+const WEEK = { mon: 1, tue: 2, wed: 4, thu: 8, fri: 16, sat: 32, sun: 64 };
+const scheduleDefault = (q) => ({ queueNo: q, enabled: false, validity: false, holidayTime: false, allDay: false, repeat: 1, weekDays: 0,
+  startHour: 8, startMinute: 0, stopHour: 17, stopMinute: 0, startEpoch: 0, stopEpoch: 0, holidays: 0,
+  holidayStartHour: 9, holidayStartMinute: 0, holidayStopHour: 15, holidayStopMinute: 0, holidayMode: 0, name: `Schedule ${q + 1}` });
+const holidayDefault = (q) => ({ queueNo: q, enabled: false, annual: true, startYear: 24, startMonth: 0, startDay: 0, stopYear: 24, stopMonth: 0, stopDay: 0, name: '' });
+const bits = (...indexes) => { const b = Array(24).fill(0); for (const i of indexes) b[i >> 3] |= 1 << (i & 7); return b; };
+const factor = (o = {}) => ({ id: 0, logic: 0, when: 0, temp: 0, bits: bits(), text: '', ...o });
+const action = (o = {}) => ({ outId: 0, mode: 0, end: 0, pulseTime: 0, ...o });
+const sceneDefault = (q) => ({ queueNo: q, enabled: false, triggerAny: false, factors: Array.from({ length: 4 }, () => factor()), actions: Array.from({ length: 3 }, () => action()), name: '' });
+const scene = (q, name, enabled, factors, actions, triggerAny = false) => {
+  const s = sceneDefault(q);
+  factors.forEach((f, i) => { s.factors[i] = factor(f); });
+  actions.forEach((a, i) => { s.actions[i] = action(a); });
+  return { ...s, name, enabled, triggerAny };
+};
+// Factor sources and events, and action modes (scene.utils.ts): zone 1 / sensor 2 / area 3 / user 4 /
+// SMS 6 / schedule 7; output ON 0, OFF 1, pulse 3; area arm 22, disarm 21. Outputs and areas in actions
+// are numbered from 1 (output queueNo + 1); zones, sensors, areas and schedules in factors are bits by queueNo.
+const OUT = { garageGate: 2, gardenLights: 3, garageLight: 4 }, AREA = { home: 0, garage: 2 }; // all Remote control
+function automation() {
+  const schedules = Array.from({ length: 64 }, (_, q) => scheduleDefault(q));
+  schedules[CLEANING] = { ...scheduleDefault(CLEANING), enabled: true, repeat: 1, weekDays: WEEK.tue | WEEK.thu, startHour: 9, stopHour: 12,
+    holidays: (1 << CHRISTMAS) | (1 << NEW_YEAR), holidayMode: 1, name: 'Cleaning' };          // skip on holidays
+  schedules[EVENING] = { ...scheduleDefault(EVENING), enabled: true, repeat: 0, startHour: 19, stopHour: 23, name: 'Evening lights' };
+  schedules[2] = { ...scheduleDefault(2), enabled: false, repeat: 1, weekDays: WEEK.sat | WEEK.sun, allDay: true, name: 'Weekend' };
+  const holidays = Array.from({ length: 32 }, (_, q) => holidayDefault(q));
+  holidays[CHRISTMAS] = { ...holidayDefault(CHRISTMAS), enabled: true, annual: true, startYear: 26, startMonth: 12, startDay: 24, stopYear: 26, stopMonth: 12, stopDay: 26, name: 'Christmas' };
+  holidays[NEW_YEAR] = { ...holidayDefault(NEW_YEAR), enabled: true, annual: true, startYear: 27, startMonth: 1, startDay: 1, stopYear: 27, stopMonth: 1, stopDay: 1, name: "New Year's Day" };
+  holidays[2] = { ...holidayDefault(2), enabled: true, annual: false, startYear: 26, startMonth: 8, startDay: 3, stopYear: 26, stopMonth: 8, stopDay: 14, name: 'Family trip' };
+  const scenes = Array.from({ length: 32 }, (_, q) => sceneDefault(q));
+  scenes[0] = scene(0, 'Leak: warning light', true, [{ id: 1, when: 0, bits: bits(15) }], [{ outId: OUT.garageLight, mode: 0 }]);  // zone 16 Boiler room leak, alarm
+  scenes[1] = scene(1, 'Frost warning', false, [{ id: 2, when: 7, temp: 50, bits: bits(0) }], [{ outId: OUT.gardenLights, mode: 0 }]); // below 5.0 °C
+  scenes[2] = scene(2, 'Evening lights', true, [{ id: 7, when: 0, bits: bits(EVENING) }], [{ outId: OUT.gardenLights, mode: 0 }]);
+  scenes[3] = scene(3, 'Garage follows Home', true, [{ id: 3, when: 0, bits: bits(AREA.home) }], [{ outId: AREA.garage, mode: 22, end: 21 }]);
+  scenes[4] = scene(4, 'Gate by tag or SMS', true,
+    [{ id: 4, when: 0, logic: 0, temp: 2 }, { id: 6, when: 0, text: 'OPEN GATE' }],      // tag of user 2 (Sample user 1), or this SMS
+    [{ outId: OUT.garageGate, mode: 3, pulseTime: 5 }, { outId: OUT.gardenLights, mode: 0 }], true);
+  return { schedules, holidays, scenes };
+}
+// The date-range state of the Cleaning schedule (pop-up screen): 1 Sep 2026 to 30 Jun 2027.
+export const CLEANING_DATE_RANGE = { validity: true, startEpoch: day(2026, 9, 1), stopEpoch: day(2027, 6, 30) };
 const betaStatus = () => ({
   ...structuredClone(systemStatus),
   zones: Object.fromEntries(Object.entries(systemStatus.zones).map(([k, z]) => [k, { ...z, mimic: false }])),
   sensors: {
     1: { enabled: true, active: true, alarm_high: false, alarm_low: false, temperature: 21.5 },
-    2: { enabled: true, active: true, alarm_high: false, alarm_low: false, temperature: 22.0 },
   },
 });
 

@@ -4,8 +4,9 @@ Takes screenshots of the Protegus app's device-configurator screens for the manu
 tabs, without a live device or a real account.
 
 How to add a product, the traps and the hand-off are in `skill/SKILL.md`, which is also the
-`protegus-app-screenshots` skill (`~/.claude/skills/protegus-app-screenshots` links to that folder in
-the main checkout, so every session on this Mac can use it).
+`protegus-app-screenshots` skill for Claude Code. On the TRIKDIS documentation Mac,
+`~/.claude/skills/protegus-app-screenshots` links to that folder in the main checkout; on any other
+computer, see "Running it on your own computer" below.
 
 It opens the **released** web app (`https://web.protegus.app`, the EU production front-end customers
 use) in headless Chrome and answers every API call itself with sample data: a signed-in installer,
@@ -15,6 +16,47 @@ have, filled with invented values.
 With `--app beta` it opens the beta front-end (`https://beta2.protegus.app`) instead, under the same
 guard. Beta images go to `out/beta/` with their own manifest, which says on every record that they come
 from the beta front-end. Used for SP5, whose manual follows the beta (Andrius, 2026-10-19).
+
+## Running it on your own computer
+
+Anyone can run it: Windows, macOS or Linux. You need **Node.js 18 or newer** (the current LTS is
+fine), **Google Chrome** installed as usual (the tool drives it; nothing else is downloaded), and
+**git**. No Protegus account, device or password is needed or used.
+
+```bash
+git clone https://github.com/Trikdis-UAB/manuals.git
+cd manuals/tools/app-screenshots
+npm ci                                  # installs Playwright, the library that drives Chrome
+node guard-selftest.mjs                 # must end with "all guard checks passed"
+node fetch-public.mjs en                # the app's public labels and reference lists (also fetched on first capture)
+node capture.mjs --model GET --lang en --layout phone --screen panel-tlf   # one screen, to try it
+node capture.mjs --model GET --flow protegus --lang en --layout phone      # the Protegus app manual's user screens
+```
+
+The same commands work in PowerShell on Windows. Images go to `out/en/` and each one has a record in
+`out/manifest.json`. The options are in the next section. `out/` and the fetched data stay on your
+computer, because git ignores them.
+
+- **Existing screens** need nothing more: every screen in `screens/*.json` can be captured as is, in any
+  language the app has (`--lang en,lt,es,ru`).
+- **Keep the computer awake** during a long run. If it sleeps, every screen after that fails with a
+  network error. Rerun just the failed ones with `--screen`, and the manifest merges them. On a Mac,
+  `caffeinate -i node capture.mjs …` stops idle sleep, but not a closed lid on battery.
+- **Pictures for one manual page come from one computer.** Text can be drawn a pixel differently on
+  another operating system, so recapture a page's whole set rather than mixing.
+- **With Claude Code:** open the clone and ask Claude to read this README and `skill/SKILL.md` first.
+  To have the skill load by itself, copy the `skill` folder to `~/.claude/skills/protegus-app-screenshots`
+  (on Windows `%USERPROFILE%\.claude\skills\protegus-app-screenshots`), and copy it again after a
+  `git pull`. On macOS or Linux, a link (`ln -s`) avoids the re-copy. The skill's TRIKDIS-Mac steps
+  (worktree script, internal paths, Joy's email) are marked as such: skip them.
+- **New screens or products** need to know when the app shows each field. The front-end source and the
+  API reference are TRIKDIS-internal. Without them, use the released app's own JavaScript, which is
+  public (`web.protegus.app`: `main-*.js`, the `chunk-*.js` files it names and the ones those name;
+  download and search them). The steps are in `skill/SKILL.md`, "Adding a product or a screen".
+- **Improvements come back as a pull request** to `Trikdis-UAB/manuals`, from a branch of your own.
+  Run `node guard-selftest.mjs` after any change to the guard. The repo is public, so sample data stays
+  invented: no real names, systems, addresses or customer text in fixtures, screens or commit messages.
+  Never log in with real credentials or point the tool at real data (see Safety).
 
 ## Run
 
@@ -32,6 +74,15 @@ dashboard) for a GET-family communicator, plus the phone apps' "Scan QR code" fi
 
 ```bash
 node capture.mjs --model GET --flow new-system --lang en,lt,es,ru --layout phone
+```
+
+The **Protegus app manual** flow uses the app as a user does: the home screen with two areas, an area,
+the keypad, the "Bypass failed zones" dialog, Forget PIN and the zone status list. The sample is a GET
+that controls a Paradox SP panel directly (`sampleAreaSystem` in `lib/sample.mjs`). The screens do not
+depend on the device, so the files are named `protegus-<screen>-phone.png`:
+
+```bash
+node capture.mjs --model GET --flow protegus --lang en --layout phone
 ```
 
 Two configurators are covered, each with its own screen list and sample configuration:
@@ -53,6 +104,7 @@ records and leaves the rest.
 | `--screen` | all in the model's screen list | comma-separated screen ids |
 | `--fw`, `--revision` | per model in `lib/sample.mjs` | firmware and hardware revision the sample device reports. They change which fields the app shows. GET defaults to 1.35 / `x1x1` (both confirmed), SP5 to 1.00 (firmware confirmed, revision not); the other models are placeholders, and the run says so. The manifest records `firmwareConfirmed` and `revisionConfirmed` |
 | `--out` | `out` (`out/beta` with `--app beta`) | output folder |
+| `--theme` | `released` with `--app beta` | the beta build in the released app's colours (blue, pink), or `own` for the beta's skin (indigo, orange). Only the theme's colour values change (`lib/frontends.mjs`); pages with the same text in both front-ends came out pixel-identical to the released app. The β logo in the desktop top bar stays: use the `-desktop-content` images |
 | `--text` | off | also save each page's visible text and field values as `<image>.txt` (top bar and menu left out, passwords never read). For comparing front-ends or releases screen by screen, where the images differ in theme alone, and for writing alt text |
 | `--app` | `released` | `beta` photographs beta2.protegus.app, with the beta server's label packs and, where one exists, a sample configuration shaped like the beta server's answer (`fixtures/config/<name>-beta.json`) |
 
@@ -104,7 +156,7 @@ machine), a POST to the app host, an analytics call, another host and a WebSocke
 gets through or anything but the front-end's own files was fetched live. Run it after changing the guard. Each capture also prints
 what was answered locally, fetched live and refused. Never log in with real
 credentials and never point the mocks at real data. `fetch-public.mjs` calls only auth-free read
-endpoints (translations, regions, languages, timezones, output icons) and sends no token.
+endpoints (translations, regions, languages, timezones, output icons, event types) and sends no token.
 
 All sample values are in `lib/sample.mjs`, `lib/mocks-configurators.mjs` and `fixtures/config/`. They
 are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample Installer",
@@ -115,7 +167,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | Call | Answer |
 |---|---|
 | `POST /translations` (app pack and the g16 pack) | saved public copy |
-| `GET /regions`, `/languages`, `/timezones`, `POST /get-pgm-icon-paths` | saved public copy |
+| `GET /regions`, `/languages`, `/timezones`, `POST /get-pgm-icon-paths`, `POST /get-reactions` | saved public copy |
 | `GET /me` | sample installer (role 3, no company) |
 | `GET /systems-with-devices` | one row: the sample system |
 | `POST /get-system` | the sample system |
@@ -124,6 +176,7 @@ are invented and recognisable: IMEI `123456789012345`, "Sample system", "Sample 
 | `POST /config/read` | the model's sample configuration |
 | `POST /error` | not sent; the message is reported as a run problem (`app error …`), since it usually means the sample is shaped differently from the server's answer |
 | Wizard: `GET /online`, `POST /get-system-info-new`, `POST /get-system-status-new`, `POST /create-system`, `POST /area` | device online and not directly controlled; the created system and its area are kept for the session (`lib/mocks-configurators.mjs`) |
+| Protegus flow: `GET /area-zones`, `POST /set-area-status` | the area's zones with the walk's `zoneStatus`; arming is not sent, and with the walk's `openZones` the made-up answer is the panel's refusal naming those zones (the manifest note says so) |
 | SP5 only: `GET /system-lite`, `GET /config/get-connection-status`, `GET /config/get-device-status`, `POST /get-system-status-new`, `GET /config/users/read`, `POST /config/time/read` | sample system details, connection state, device and zone status, the user list and the panel clock (`lib/mocks-configurators.mjs`) |
 
 Anything else is answered with `success: false` and reported as `UNMOCKED` with a warning.
@@ -156,8 +209,31 @@ object from the device's own memory.
 Debug a new path with `node dev/step.mjs desktop '[{"text":"Sample system"}, …]'` (a screenshot after
 each step) and `node dev/catch.mjs` (reports every exception, including ones the app swallows).
 
+### Pop-ups and single cards
+
+A screen with `steps` goes on after its page opens: click a row's link (`{"row": "Front door", "text":
+"Edit"}`; rows are `div.table-row`), a tab or section (`"within": "section.overlay"`), a dropdown (its
+`input`, then `{"css": "section.overlay .item", "hasText": "SP5 6 I/O"}`) or type into a field
+(`{"fill": "<css>", "value": "…"}`); `capture.mjs` `runSteps` lists every form. `crop` cuts one element out
+(a pop-up is `section.overlay > div.content`); the window is made taller first if the element scrolls,
+and `isolate` paints only that element on a transparent background, so the pop-up's rounded corners do
+not carry the dimmed page. `onlyApps` limits a screen to a front-end. The SP5 pop-ups (`popup-*` in
+`screens/sp5.json`) click English texts, so they are captured in English only. A state that needs data
+the sample lacks is set with `config`; an object with index keys patches single array items
+(`{"automation": {"schedules": {"0": {"validity": true}}}}`), and `"_users": [{"queueNo": 2, …}]` changes
+single users of the panel user list. `keepFocus` leaves the last field focused, for an open dropdown.
+"Scan for new devices" finds one invented HEYI door/window sensor (`lib/mocks-configurators.mjs`).
+
 ## Known limits
 
+- **Protegus app manual screens (`--flow protegus`):** the panel's refusal to arm is made up in the
+  browser, and the zone titles in the "Bypass failed zones" dialog are the sample's zone names (the
+  server's exact title format is not known). That image is the bottom sheet and a strip above it
+  (`sheet`): behind the dialog the Arm button shows moving dots while arming, and a capture with
+  animations stopped draws it blank. A disarmed area that is ready to arm (status 7) lights no button
+  on the area screen, as the app draws it. Garage's two events are at fixed times of the capture day,
+  so the day title always reads "Today". The offline "Check device" page imitates the Android app
+  (Wi-Fi setup options); a phone browser shows only Retry.
 - **Device-stored option texts are partly inferred.** On GET/GT/GT+ the panel lists ("2. AUTO",
   "Dual Tone", "6. PARADOX SP+/MG+") and the CMS protocol names are strings stored on the device, not
   app labels, so they stay in English in every language, as on a real device. The device strings
@@ -171,13 +247,25 @@ each step) and `node dev/catch.mjs` (reports every exception, including ones the
 - **SP5 values from a real panel, and the rest:** firmware 1.00, revision 1E7LWB.0, bootloader 1.00 and
   the panel-event Contact ID codes come from a real SP5 test panel on the beta server (2026-10-19), so
   the sidebar title reads "SP5_1E7LWB.0" as on a real panel. Testers may have changed single event codes,
-  and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED)
-  and wireless device settings. SP5's Cameras page is VideoHub-only and is not captured.
+  and the System events record says so. Still inferred: keypad serial-number prefixes (52 = LCD, 51 = LED).
+  The wireless devices are HEYI ones on the RF-S8 receiver, because SP5 does not support Maximum
+  Security devices (firmware team, 2026-10-23); HEYI devices measure no temperature, so the sample has
+  no wireless temperature sensor. SP5's Cameras page is VideoHub-only and is not captured.
+- **SP5 Automation (beta only):** `sp5-beta.json` has three schedules, three holidays and five scenes,
+  and the Cleaning staff group uses the Cleaning schedule (built in `sp5.build.mjs`, `automation()`). The
+  menu shows Automation only when the configuration has an `automation` block, so every beta desktop
+  image has it in the sidebar. Unused slots keep the factory defaults exactly, or the lists count them as
+  in use. Scenes act only on outputs defined as Remote control: the panel cannot drive a siren or a
+  thermostat output from a scene (firmware team, 2026-10-28). The sample has no overnight schedule.
+  A scene with ANY runs on any one condition, momentary ones included ("Gate by tag or SMS"); never give
+  a sample scene ALL with two momentary conditions (an RFID tag and an SMS, say), which will most likely
+  never run (Alvaras, 2026-10-28).
 - **The beta server returns a newer SP5 shape** (`io9To2wire`/`io10To2wire`, `wirelessSupervisionTime`,
   `needCodeInKeypad` per output, `enableEncryption`/`isHexMode` per CMS channel, no output zone control or
   thermostat hysteresis, live status inside the configuration). `sp5.json` keeps the released shape for
   `--app released`; `sp5-beta.json`, built by the same script, has the beta shape for `--app beta`.
-  Both were checked key by key against a real SP5 read from the beta server (2026-10-19).
+  Both were checked key by key against a real SP5 read from the beta server (2026-10-19). Fields added
+  since then come from the beta source: `timeUpdatePeriod` (Periodic time update, 2026-10-26).
 - **The wizard's "Scan QR code" page is the phone apps' view.** The QR button exists only in the native
   apps, which wrap this web app; the tool imitates the Android app's bridge to show it. It was not
   photographed on a real phone, and the manifest says so.

@@ -696,7 +696,7 @@ T16 veikimo programą galima atnaujinti ar pakeisti rankiniu būdu. Po atnaujini
 
 Radijo siųstuvą turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 
-Prieš įrengdami, atidžiai perskaitykite šį vadovą, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
+Prieš įrengdami, atidžiai perskaitykite šią instrukciją, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
 
 Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 

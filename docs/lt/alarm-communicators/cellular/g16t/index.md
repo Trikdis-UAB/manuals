@@ -437,7 +437,7 @@ Norint paleisti veikti komunikatorių, reikia įjungti apsaugos centralės maiti
     sujungimus.
 ## Apsaugos centralės programavimas 
 
-Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis turi būti įjungtas ir tinkamai sukonfigūruotas. Vadovaudamiesi tam tikros apsaugos centralės programavimo vadovu, nustatykite centralės telefoninį komunikatorių:
+Kad apsaugos centralė siųstų įvykius per telefoninį komunikatorių, jis turi būti įjungtas ir tinkamai sukonfigūruotas. Vadovaudamiesi tam tikros apsaugos centralės programavimo instrukcija, nustatykite centralės telefoninį komunikatorių:
 
 1.  Įjunkite centralės PSTN telefoninį komunikatorių.
 
@@ -1036,7 +1036,7 @@ Komunikatoriaus veikimo programą galima atnaujinti ar pakeisti ir rankiniu būd
 
 Komunikatorių turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 
-Prieš instaliavimą prašome atidžiai perskaityti šį vadovą, kad išvengtumėte klaidų, dėl kurių galimi įrangos darbo sutrikimai ar net rimti gedimai.
+Prieš instaliavimą prašome atidžiai perskaityti šią instrukciją, kad išvengtumėte klaidų, dėl kurių galimi įrangos darbo sutrikimai ar net rimti gedimai.
 
 Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 

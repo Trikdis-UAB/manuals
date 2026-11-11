@@ -1133,7 +1133,7 @@ Valdiklio veikimo programą galima atnaujinti ar pakeisti ir rankiniu būdu. Po 
 
 GSM vartų valdiklį įrengti ir aptarnauti gali tik kvalifikuoti asmenys.
 
-Prieš įrengdami, atidžiai perskaitykite šį vadovą, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
+Prieš įrengdami, atidžiai perskaitykite šią instrukciją, kad išvengtumėte klaidų, dėl kurių prietaisas gali blogai veikti ar net būti sugadintas.
 
 Visada išjunkite el. energijos tiekimą prieš atliekant prietaiso pajungimą.
 

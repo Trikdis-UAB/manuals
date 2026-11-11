@@ -3,7 +3,7 @@
 ![FLEXi SP3 apsaugos centralė, RF-S8 imtuvas ir per Protegus susieti S8 jutikliai](./sp3-s8-hero.jpg){ .trik-hero-img }
 
 > [!NOTE]
-> **Ekrano vaizdų kalba:** šiame vadove „Protegus“ ir „TrikdisConfig“ sąsajos rodomos anglų kalba. Veiksmuose paryškinti mygtukų ir meniu pavadinimai atitinka ekrane rodomus angliškus užrašus.
+> **Ekrano vaizdų kalba:** šioje instrukcijoje „Protegus“ ir „TrikdisConfig“ sąsajos rodomos anglų kalba. Veiksmuose paryškinti mygtukų ir meniu pavadinimai atitinka ekrane rodomus angliškus užrašus.
 
 Susiekite S8 belaidžius jutiklius (PIR, durų ir langų magnetinius kontaktus, dūmų jutiklius, sirenas ir pultelius) su apsaugos centrale FLEXi SP3. Pasirinkite konfigūravimo būdą.
 
@@ -11,7 +11,7 @@ Susiekite S8 belaidžius jutiklius (PIR, durų ir langų magnetinius kontaktus, 
 > **Programinės įrangos reikalavimas:** norint naudoti S8 belaidžius jutiklius, FLEXi SP3 turi veikti su 4 redakcijos programine įranga (`SP3_xxx4_0122.fw`, 1.22 ar naujesne versija).
 
 > [!NOTE]
-> **Aparatinės įrangos reikalavimas:** prieš susiedami jutiklius prijunkite RF-S8 imtuvą prie SP3 RS485 magistralės – žr. [FLEXi SP3 vadovo 3.13 skyrių „RF-S8 prijungimo schema“](index.md) – ir programos TrikdisConfig lange „Moduliai“ jį užregistruokite.
+> **Aparatinės įrangos reikalavimas:** prieš susiedami jutiklius prijunkite RF-S8 imtuvą prie SP3 RS485 magistralės – žr. [FLEXi SP3 instrukcijos 3.13 skyrių „RF-S8 prijungimo schema“](index.md) – ir programos TrikdisConfig lange „Moduliai“ jį užregistruokite.
 
 **Prieš pradedant – paruoškite jutiklius** (taikoma visiems būdams):
 

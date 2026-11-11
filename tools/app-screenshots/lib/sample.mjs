@@ -174,7 +174,52 @@ export function sampleSystem(modelName) {
   };
 }
 
-export function sampleMe({ regions, modelName, withSystem }) {
+// The panel code a GET reports for a Paradox SP4000-SP7000 (the app's panel list). Not DSC (0x10-0x1F),
+// so the third arming button reads "Sleep", not "Away".
+export const PARADOX_SP = 0x21;
+
+// What a user arms from the app: a communicator wired to a panel it controls directly (Arm, Disarm, Sleep,
+// Stay, area PIN codes, zone bypass), two areas and six zones. Area status is the app's AreaState:
+// 2 armed, 7 disarmed and ready to arm. `showKeypad: true` means no PIN is remembered for the area.
+export function sampleAreaSystem(modelName) {
+  const s = sampleSystem(modelName);
+  const area = (id, queueNo, name, status) => ({
+    id, system_id: s.id, name, queue_no: queueNo, status, status_time: null, alarm_in_memory: false, last_person_name: '',
+    alarm_time: null, alarm_type: 0, monas_id: null, autoarm_with_area_id: null, disarm_when_autoarmed: false,
+    showKeypad: true, canBypass: true, zones: [],
+  });
+  const zone = (id, queueNo, name, areaId) => ({ id, queue_no: queueNo, name, native: true, visible: true, area_id: areaId, icon_id: 0 });
+  // Garage's events today, in the documented shape and wording (GET /v3/api/events); reactions 5 arm, 6 disarm.
+  const event = (id, title, reaction, hh, mm) => ({
+    id, title, subTitle: 'Garage', time: todayAt(hh, mm, s.timeZone), area: 900202, reaction, area_event: true, system_id: s.id,
+    event_id: 0, zone_id: 0, qualifier: 'E', type: '401', area_info: '2', pgm_info: null, user_id: null, user_name: 'Sample user',
+    tags: [], latitude: null, longitude: null, alarm_type: 0, related_event_id: null, parent_system_id: null, verification_url: null,
+  });
+  return {
+    ...s, direct: 1, centralPanel: PARADOX_SP, supported_commands: '.3.9.', canBypassZone: true, canUnbypassZone: true,
+    events: { events: [event(900502, 'Area disarmed', 6, 17, 18), event(900501, 'Area armed', 5, 7, 42)] },
+    areas: [area(900201, 1, 'Home', 2), area(900202, 2, 'Garage', 7)],
+    zones: [
+      zone(900401, 1, 'Front door', 900201), zone(900402, 2, 'Hall motion', 900201),
+      zone(900403, 3, 'Garage door', 900202), zone(900404, 4, 'Back door', 900202),
+      zone(900405, 5, 'Garage window', 900202), zone(900406, 6, 'Garage motion', 900202),
+    ],
+  };
+}
+
+// Unix time of hh:mm today in a time zone. Events at fixed times of today keep the app's day title
+// ("Today") and the times the same whatever day the capture runs.
+function todayAt(hh, mm, timeZone) {
+  const now = new Date();
+  const [y, m, d] = new Intl.DateTimeFormat('en-CA', { timeZone }).format(now).split('-').map(Number);
+  const asUtc = Date.UTC(y, m - 1, d, hh, mm);
+  const offset = new Intl.DateTimeFormat('en', { timeZone, timeZoneName: 'longOffset' }).formatToParts(new Date(asUtc))
+    .find((p) => p.type === 'timeZoneName').value.match(/([+-])(\d\d):(\d\d)/);
+  const minutes = offset ? (offset[1] === '-' ? -1 : 1) * (Number(offset[2]) * 60 + Number(offset[3])) : 0;
+  return Math.floor((asUtc - minutes * 60000) / 1000);
+}
+
+export function sampleMe({ regions, modelName, withSystem, system = null }) {
   const me = {
     success: true,
     id: SAMPLE.userId,
@@ -215,7 +260,7 @@ export function sampleMe({ regions, modelName, withSystem }) {
     regions,
   };
   if (withSystem) {
-    me.lastSystem = sampleSystem(modelName);
+    me.lastSystem = system ?? sampleSystem(modelName);
     me.lastSystemStatus = false;
     me.relatedSystems = [];
   }

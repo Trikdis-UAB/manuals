@@ -4,7 +4,7 @@
   <img src="./io4r-cover.webp" alt="iO4R plėtiklis" style="width: 100%; max-width: 420px;">
 </div>
 
-Trumpi prijungimo ir Protegus2 programavimo žingsniai, kaip prijungti iO4R plėtiklį prie GATOR LTE arba GATOR WiFi vartų valdiklio. Kitus montavimo ir konfigūravimo nustatymus rasite pilnuose [GATOR](../gator/index.md) ir [GATOR WiFi](../gator-wifi/index.md) vadovuose.
+Trumpi prijungimo ir Protegus2 programavimo žingsniai, kaip prijungti iO4R plėtiklį prie GATOR LTE arba GATOR WiFi vartų valdiklio. Kitus montavimo ir konfigūravimo nustatymus rasite pilnose [GATOR](../gator/index.md) ir [GATOR WiFi](../gator-wifi/index.md) instrukcijose.
 
 iO4R naudojamas pažangesniam vartų stebėjimui. Jis prideda stebimus apsaugos jutiklių Guard įėjimus ir leidžia įgaliotam specialistui laikinai apeiti jutiklio gedimą, kol bus atlikta techninė priežiūra. Protegus2 taip pat skaičiuoja pilnus vartų atidarymo ir uždarymo ciklus ir įspėja, kai reikia atlikti techninę priežiūrą. Tai padeda neplanuotus iškvietimus pakeisti suplanuotais aptarnavimo vizitais ir pasikartojančiomis priežiūros sutartimis.
 
@@ -24,7 +24,7 @@ iO4R naudojamas pažangesniam vartų stebėjimui. Jis prideda stebimus apsaugos 
 Prijunkite iO4R plėtiklį prie valdiklio RS485 magistralės ir maitinimo gnybtų, kaip parodyta žemiau.
 
 !!! note "Pastaba"
-    Schemoje parodyti GATOR LTE gnybtų pavadinimai. GATOR WiFi valdiklyje naudokite atitinkamus `+DC`, `-DC`, `A RS485` ir `B RS485` gnybtus iš GATOR WiFi vadovo.
+    Schemoje parodyti GATOR LTE gnybtų pavadinimai. GATOR WiFi valdiklyje naudokite atitinkamus `+DC`, `-DC`, `A RS485` ir `B RS485` gnybtus iš GATOR WiFi instrukcijos.
 
 <img src="./wiring-gator-io4r.webp" alt="GATOR LTE ir iO4R prijungimo schema">
 

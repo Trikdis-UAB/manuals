@@ -25,6 +25,19 @@ export const FRONTENDS = {
     labelsApi: 'https://api.beta2.protegus.app/v3/api',
     labelsDir: 'translations-beta',
     fixtureSuffix: '-beta', // e.g. sp5-beta.json, when the beta server's config/read is shaped differently
+    // The beta's skin, and the released colour for each shade (--theme released). The beta build sets
+    // two theme colours (indigo #6067cd, orange #f96432) where the released one has blue #0070a7 and
+    // pink #ef476f, and its compiled styles carry their hover, pressed and disabled shades. Each pair
+    // was found by reading the same CSS rule in both builds (main-WF7OQQHA vs main-AJDMRO5K,
+    // 2026-10-19); every derived shade occurs equally often in both. Beta-only colours that are not the
+    // theme (the camera zones' yellow, a warning's brown) are left alone. Verified: pages whose text is
+    // the same in both front-ends came out pixel-identical to the released app (desktop below the top
+    // bar, and phone), so this is the default; customers get these colours when the features ship.
+    defaultTheme: 'released',
+    releasedColours: [
+      ['#f96432', '#ef476f'], ['#f84e14', '#ed2b59'], ['#bf3406', '#bf113a'], ['#d29d8c', '#ce9ba7'], ['#fb9c7c', '#f58da6'],
+      ['#baa9a4', '#b7b2b3'], ['#6067cd', '#0070a7'], ['#4951c6', '#005b88'], ['#303697', '#002c41'], ['#aeafb2', '#3780a4'],
+    ],
   },
 };
 

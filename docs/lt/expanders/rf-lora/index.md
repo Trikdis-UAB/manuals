@@ -146,7 +146,7 @@ Prijungimas:
 
 Apsaugos signalizacijos sistemos modulius turi įrengti ir prižiūrėti kvalifikuoti specialistai.
 
-Prieš instaliavimą prašome atidžiai perskaityti šį vadovą, kad išvengtumėte klaidų, dėl kurių galimi įrangos darbo sutrikimai ar net rimti gedimai.
+Prieš instaliavimą prašome atidžiai perskaityti šią instrukciją, kad išvengtumėte klaidų, dėl kurių galimi įrangos darbo sutrikimai ar net rimti gedimai.
 
 Prieš jungdami bet kokius elektros kontaktus atjunkite elektros tiekimą.
 

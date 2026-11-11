@@ -2,15 +2,16 @@
 
 import { SAMPLE, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
 
-export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture }) {
-  if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture });
-  if (configurator === 'g16') addSystemWizard(on, { model, state });
+export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch, scenario = {} }) {
+  if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
+  if (configurator === 'g16') addSystemWizard(on, { model, state, offline: Boolean(scenario.deviceOffline) });
 }
 
 // The add-new-system wizard for a g16-family communicator: online, not directly controlled, so the
 // app asks for areas and offers output (PGM) control. Calls in the order the wizard makes them.
-function addSystemWizard(on, { model, state }) {
-  on('GET', '/online', () => ({ success: true, online: true, errorType: '', srv: 1, own_region: true, local_version: 1 }));
+// offline: the device is not connected, so the wizard stops at its "Check device" page.
+function addSystemWizard(on, { model, state, offline }) {
+  on('GET', '/online', () => ({ success: true, online: !offline, errorType: '', srv: 1, own_region: true, local_version: 1 }));
   on('POST', '/get-system-info-new', () => wizardDeviceInfo(model));
   on('POST', '/get-system-status-new', () => wizardDeviceStatus(model));
   on('POST', '/create-system', ({ body }) => {
@@ -38,7 +39,7 @@ function addSystemWizard(on, { model, state }) {
 // Fixed sample moment, so captures are repeatable.
 export const SAMPLE_TIME = '2026-10-07 12:00:00';
 
-function sp5(on, { readJson, FIX, fixture: file }) {
+function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
   const fixture = () => readJson(FIX, 'config', file);
 
   // The dashboard's System information card and the "recent devices" list.
@@ -63,8 +64,20 @@ function sp5(on, { readJson, FIX, fixture: file }) {
   // Area, zone and output state (Areas, Terminals): Home disarmed, Garage armed, all zones calm.
   on('POST', '/get-system-status-new', () => ({ success: true, data: fixture()._systemStatus }));
 
-  // The panel's user list (Users, Groups); it is not part of config/read.
-  on('GET', '/config/users/read', () => { const u = fixture()._users; return { success: true, data: u, total: u.length }; });
+  // The panel's user list (Users, Groups); it is not part of config/read. A screen's config patch can
+  // change single users: "_users": [{ "queueNo": 2, ...fields }].
+  on('GET', '/config/users/read', () => {
+    const u = fixture()._users;
+    for (const p of configPatch?._users ?? []) Object.assign(u.find((x) => x.queueNo === p.queueNo) ?? {}, p);
+    return { success: true, data: u, total: u.length };
+  });
+
+  // "Scan for new devices": the first check finds one new HEYI door/window sensor in free slot 5; later checks
+  // find nothing more. The app polls without pause on the cloud path until the scan is stopped.
+  let checks = 0;
+  on('POST', '/config/learn-sensors', ({ body }) => (body?.action === 'check'
+    ? { success: true, data: checks++ === 0 ? [SCAN_FOUND] : [] }
+    : { success: true }));
 
   // Panel clock (System options).
   on('*', '/config/time/read', () => ({ success: true, time: SAMPLE_TIME }));
@@ -76,8 +89,8 @@ function sp5(on, { readJson, FIX, fixture: file }) {
     Z: zonesOk,
     K: { 1: st(1, null, null, 13.6), 2: st(1, null, null, 13.5) },
     E: { 1: st(1, null, null, 13.7), 2: st(1, null, null, 13.6) },
-    W: { 1: st(1, null, 86, 3.1), 2: st(1, 22.0, 72, 3.05), 3: st(1, null, 64, 3.2), 4: st(1, null, 78, 2.9) },
-    S: { 1: st(1, 21.5, null, null), 2: st(1, 22.0, 72, null) },
+    W: { 1: st(1, null, 86, 3.1), 2: st(1, null, 72, 3.05), 3: st(1, null, 64, 3.2), 4: st(1, null, 78, 2.9) },
+    S: { 1: st(1, 21.5, null, null) },
     T: { 1: st(1, 21.5, null, null) },
   };
   on('GET', '/config/get-device-status', ({ query }) => {
@@ -85,6 +98,9 @@ function sp5(on, { readJson, FIX, fixture: file }) {
     return { success: true, data: Object.fromEntries(letters.map((l) => [l, status[l] ?? {}])) };
   });
 }
+
+// A HEYI Smart Door/Window sensor, as the panel reports a newly learned device (serial 0xA1B2C41E).
+const SCAN_FOUND = { group: 9, type: 3, name: '', model: '', isNew: true, sn: '2712847390', queueNo: 5, registered: false, failed: false, rssi: '82', voltage: '3.1' };
 
 function st(status, temperature, rssi, voltage) {
   return { status, temperature, rssi, voltage };

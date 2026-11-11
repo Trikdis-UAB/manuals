@@ -18,7 +18,7 @@ export const LAYOUTS = {
   phone: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true },
 };
 
-export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {}, timezoneId = 'Europe/Vilnius', frontend = FRONTENDS.released }) {
+export async function openApp({ lang, model, layout, log = () => {}, skipAdvancedIntro = true, configPatch = null, storage = {}, timezoneId = 'Europe/Vilnius', frontend = FRONTENDS.released, scenario = {} }) {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   const context = await browser.newContext({
     ...LAYOUTS[layout],
@@ -27,7 +27,7 @@ export async function openApp({ lang, model, layout, log = () => {}, skipAdvance
     timezoneId, // the browser's zone; the app shows it as the new system's default time zone
     colorScheme: 'light',
   });
-  const mocks = createMocks({ lang, model, configPatch, timezoneId, frontend });
+  const mocks = createMocks({ lang, model, configPatch, timezoneId, frontend, scenario });
   // Start as a returning user whose label pack is already cached. On a browser's very first visit
   // some configurator pages build their option lists before the labels arrive and show raw keys.
   const pack = readJson(ROOT, 'fixtures', frontend.labelsDir, `app.${lang}.json`);
@@ -45,6 +45,7 @@ export async function openApp({ lang, model, layout, log = () => {}, skipAdvance
   }, { origin: frontend.origin, token: fakeToken(), lang, userId: SAMPLE.userId, systemId: SAMPLE.systemId, skipAdvancedIntro, storage, labels: pack.translations, labelsVersion: pack.version });
 
   const page = await context.newPage();
+  trackRequests(page);
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   // A front-end file that did not arrive (icons, scripts) leaves gaps in the picture. Not counted: the
@@ -77,7 +78,7 @@ export async function routerGo(page, path) {
     history.pushState(null, '', p);
     dispatchEvent(new PopStateEvent('popstate', { state: null }));
   }, path);
-  await page.waitForLoadState('networkidle');
+  await networkQuiet(page);
 }
 
 // Bottom edge (CSS px) of the last painted content: cards, text, icons. Ignores the empty page
@@ -108,8 +109,39 @@ export async function contentBottom(page) {
   });
 }
 
+// Waits until the page has loaded what it asked for, then lets enter animations finish. Playwright's
+// 'networkidle' is reached once per document, and the app changes pages without a new document, so
+// after the first page it no longer waited for anything: on a slow network, icons the app fetches after
+// opening a page arrived after the picture (2026-10-23). So the page's requests are counted here.
 export async function settle(page, ms = 600) {
-  await page.waitForLoadState('networkidle');
+  await networkQuiet(page);
   await page.evaluate(() => document.fonts.ready);
-  await page.waitForTimeout(ms); // let enter animations finish
+  await page.waitForTimeout(ms);
+  await networkQuiet(page); // anything the animations started
+}
+
+const INFLIGHT = new WeakMap();
+
+function trackRequests(page) {
+  const inflight = new Set();
+  INFLIGHT.set(page, inflight);
+  page.on('request', (r) => inflight.add(r));
+  page.on('requestfinished', (r) => inflight.delete(r));
+  page.on('requestfailed', (r) => inflight.delete(r));
+}
+
+// Nothing in flight for quietMs. A page still loading after maxMs fails its screen rather than
+// giving an incomplete picture.
+async function networkQuiet(page, { quietMs = 500, maxMs = 20000 } = {}) {
+  const inflight = INFLIGHT.get(page);
+  if (!inflight) return page.waitForLoadState('networkidle');
+  const start = Date.now();
+  let quietSince = null;
+  while (Date.now() - start < maxMs) {
+    if (inflight.size) quietSince = null;
+    else if (quietSince === null) quietSince = Date.now();
+    else if (Date.now() - quietSince >= quietMs) return;
+    await page.waitForTimeout(50);
+  }
+  throw new Error(`the page was still loading after ${maxMs / 1000} s: ${[...inflight].slice(0, 3).map((r) => r.url().split('?')[0]).join(', ')}`);
 }

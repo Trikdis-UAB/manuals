@@ -17,6 +17,14 @@
   font-family: "Poppins", sans-serif !important;
 }
 
+/* H5 holds the connection options under one control panel (3.2.1.1 Keypad bus, 3.2.1.2 Keypad
+   bus and TIP/RING). Material's default H5 is small grey capitals, which reads as a caption. */
+.md-typeset h5 {
+  font-size: 0.9375em;
+  color: var(--md-default-fg-color);
+  text-transform: none;
+}
+
 /* Center H1 title (manual title) */
 .md-typeset h1 {
   text-align: center;
@@ -301,7 +309,8 @@ body[data-md-color-scheme="slate"] .md-typeset h1 {
 
 body[data-md-color-scheme="slate"] .md-typeset h2,
 body[data-md-color-scheme="slate"] .md-typeset h3,
-body[data-md-color-scheme="slate"] .md-typeset h4 {
+body[data-md-color-scheme="slate"] .md-typeset h4,
+body[data-md-color-scheme="slate"] .md-typeset h5 {
   color: var(--trik-text);
 }
 

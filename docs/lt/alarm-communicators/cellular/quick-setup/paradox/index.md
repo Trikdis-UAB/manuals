@@ -1,6 +1,6 @@
 # Paradox SP(+)/MG(+) su GT/GT+/GET greitas paruošimas
 
-Trumpi pajungimo ir programavimo žingsniai, skirti prijungti GT/GT+/GET komunikatorių prie Paradox SP/SP+/MG/MG+ centralės naudojant TIP/RING ir KeyBus, tada pridėti sistemą į Protegus2. Naudokite kartu su pilnais vadovais kitiems nustatymams. (Gnybtų pavadinimai GT/GT+/GET gali nežymiai skirtis, tačiau jungtys yra tokios pačios.)
+Trumpi pajungimo ir programavimo žingsniai, skirti prijungti GT/GT+/GET komunikatorių prie Paradox SP/SP+/MG/MG+ centralės naudojant TIP/RING ir KeyBus, tada pridėti sistemą į Protegus2. Naudokite kartu su pilnomis instrukcijomis kitiems nustatymams. (Gnybtų pavadinimai GT/GT+/GET gali nežymiai skirtis, tačiau jungtys yra tokios pačios.)
 
 !!! caution "Atsargiai"
     Montavimą ir aptarnavimą gali atlikti tik kvalifikuoti specialistai. Prieš jungdami laidus atjunkite maitinimą. Neautorizuoti pakeitimai panaikina garantiją.
@@ -49,7 +49,7 @@ Naudokite panelės klaviatūrą, kad įjungtumėte Contact ID ir nustatytumėte 
 6. Skiltis 911: nustatykite PC slaptažodį (pavyzdys `1234`; nustatykite pagal politiką).
 7. Paspauskite `[CLEAR]`, kad išeitumėte iš programavimo.
 
-Jei jūsų klaviatūros kodai skiriasi, vadovaukitės pilnu Paradox vadovu.
+Jei jūsų klaviatūros kodai skiriasi, vadovaukitės pilna Paradox instrukcija.
 
 ## Sistemos pridėjimas į Protegus2 (mobiliajame įrenginyje arba naršyklėje)
 

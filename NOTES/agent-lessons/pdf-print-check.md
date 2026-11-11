@@ -13,8 +13,9 @@ merging anything that touches `docs/stylesheets/print.css`, `Scripts/pdf-export.
 2. Cut that manifest down to the pages you changed (match on `src_path`), and save it as a small JSON list.
 3. Export. `Scripts/export_manual_pdfs.mjs` launches Playwright's own Chromium, which is **not installed
    on this Mac**, so it fails. Use a copy whose only change is
-   `chromium.launch({ headless: true, channel: "chrome" })`, and run it from the worktree's `Scripts/` so it
-   picks up that branch's print files:
+   `chromium.launch({ headless: true, channel: "chrome" })`. Put the copy in the worktree's `Scripts/` and run
+   it from the worktree root, so it picks up that branch's print files (from inside `Scripts/` it looks for
+   `Scripts/Scripts/pdf-export.css` and stops):
    `TRIKDOCS_PYTHON_BIN=<main tree>/.venv/bin/python node Scripts/<copy>.mjs --site <scratch>/site-pdf --manifest <small manifest>`.
    The venv Python is needed because stamping uses pikepdf. Delete the copy afterwards.
    - It needs `node_modules`. A symlink from the main tree works, but `node_modules/` in `.gitignore` only matches

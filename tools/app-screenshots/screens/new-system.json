@@ -153,13 +153,39 @@
           "fullScreen": true
         }
       ]
-    }
-  ],
-  "liveOnly": [
+    },
     {
-      "id": "add-system-offline",
-      "what": "'Check device' page shown when the device is offline",
-      "why": "a separate branch; not part of the manual's sequence"
+      "id": "offline",
+      "deviceOffline": true,
+      "steps": [
+        {
+          "eval": "void (window.jsi = new Proxy({}, { get: (t, p) => (p === 'then' || typeof p === 'symbol') ? undefined : () => undefined }))"
+        },
+        {
+          "click": {
+            "css": "app-plus-button .pb-button"
+          },
+          "waitUrl": "/new-system/add-system"
+        },
+        {
+          "fill": {
+            "css": "input",
+            "value": "{imei}"
+          }
+        },
+        {
+          "click": {
+            "label": "auth.buttons.next"
+          },
+          "waitUrl": "/new-system/new-system-offline"
+        },
+        {
+          "shot": "add-system-offline",
+          "title": "systems.titles.checkDevice",
+          "note": "The device does not answer, so the wizard stops at Check device. In a phone browser the page ends at Retry; the phone apps add the Wi-Fi setup options shown here, and Bluetooth setup (VideoHub) where the phone supports it.",
+          "unverified": "Phone-app view, produced by imitating the Android app's bridge in a browser; not photographed on a real phone."
+        }
+      ]
     }
   ]
 }

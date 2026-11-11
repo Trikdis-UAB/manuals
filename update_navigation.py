@@ -86,7 +86,7 @@ TOP_LEVEL_LABELS = {
     },
     'lt': {
         'alarm-communicators': 'Komunikatoriai',
-        'control-panels': 'Apsaugos centrelės',
+        'control-panels': 'Apsaugos centralės',
         'gate-controllers': 'Valdikliai',
         'keypads': 'Klaviatūros',
     },
