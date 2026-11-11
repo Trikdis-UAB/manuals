@@ -323,6 +323,7 @@ Connect the backup battery, then switch on the main power supply.
     ![Protegus app, SP5 configurator menu on a phone: the panel name SP5_1E7LWB.0, Write and Read buttons, Programming mode: Full access, and the menu items System options, Communication, Areas and zones, Terminals, Devices & Interfaces, Users, System events and Automation.](./protegus-app/sp5-menu-phone.webp){ .trik-mob-img }
 
 4.  Change the settings, then tap **Write** to save them to the panel.
+5.  To close the panel in a desktop browser, click **Disconnect from module** at the top of the menu. If there are unsaved changes, the app asks **Leave configuration?**: **Write and leave**, or leave without saving.
 
 Every page of the configurator is described in [Settings in the Protegus app](#settings-in-the-protegus-app).
 
@@ -363,13 +364,13 @@ Do this first, before you add zones and users.
 **You need:** the receiver's address and port, its protocol, the encryption key and the object's account number, all from the monitoring station.
 
 1.  In **System options**, check the **Account ID**.
-2.  In **Communication → Networks → Reporting to CMS**, choose the **Main path** (Ethernet, SIM or WiFi) and a **Back up** path. If you use the SIM, enter its **APN** (and **SIM PIN**, if the card asks for one) in **SIM**.
+2.  In **Communication → Networks → Reporting to CMS**, choose the connection for **Main path** (SIM, WiFi or Ethernet), then turn on **Back up** and choose its connection. If you use the SIM, enter its **APN** (and **SIM PIN**, if the card asks for one) in **SIM**.
 3.  In **Communication → CMS Reporting**, turn on **Primary channel** and set:
     - **Communication method:** Network.
     - **Communication type:** TCP/IP or UDP/IP, as the receiver requires.
     - **Domain or IP** and **Port** of the receiver.
     - **Protocol**: the one the receiver uses. For **SIA DC-09_2012** or **SIA DC-09_2007**, also choose the **Message format** (CID or SIA).
-    - **Encryption key**. For SIA DC-09, turn on the switch at the left of the key box to encrypt the reports, and tick **HEX** if you got a 32-digit hexadecimal key.
+    - **Encryption key**. For SIA DC-09 and TL150, turn on the switch at the left of the key box to encrypt the reports, and tick **HEX** if you got a 32-digit hexadecimal key.
 
     ![Protegus app, SP5 Primary channel card: Primary channel on, Communication method Network (SMS is the other choice), Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol SIA DC-09_2012, Message format CID, Encryption key switched on with a masked key and HEX ticked, and a Backup channel link.](./protegus-app/sp5-popup-cms-sia.webp){ .trik-popup-img }
 
@@ -556,7 +557,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 ## Maintenance
 
-**Firmware updates.** The firmware can be updated from the Protegus app over USB or remotely. The panel restarts after an update over USB (in about 5 seconds) and reconnects after a remote update. **[the update function is not in the app yet: to confirm when it is released]**
+**Firmware updates.** When newer firmware is available, **Dashboard → Panel info** shows **Update to** and the version. Click it, then **Start update**. The update works over the cloud and over USB, not over Bluetooth, and you must be signed in to Protegus. The **Firmware Update** window shows each step: downloading, checking, writing the firmware and restarting the panel. Don't power off the panel or close the window until it finishes; configuration changes not yet written are lost. After an update over USB, if the panel doesn't reconnect by itself, click **Select device** and choose it again. When the update is done, the app offers to read the configuration from the panel.
 
 The panel has no factory reset. Its factory codes are listed under **First start-up** in [Common tasks](#common-tasks).
 
@@ -599,7 +600,7 @@ The Dashboard shows the panel's identity, owner and connection state at a glance
 | Last configured | The date and time of the last **Write**. Shown when you are signed in to Protegus and the panel holds this time. |
 | Unique ID/IMEI | The panel's Unique ID. Click it to copy it. |
 | Serial number | The panel's serial number. |
-| Firmware v… | The firmware version, and **Up to date** or the newer version available. |
+| Firmware | The firmware version and, when a newer one is available, **Update to** and its version, which starts the update (see **Maintenance**). Over Bluetooth the app shows **Firmware can be updated via USB or cloud connection only**. |
 | Bootloader | The bootloader version, if the panel reports one. |
 
 #### System information
@@ -649,7 +650,7 @@ System options holds the panel's identity and general behaviour, the access code
 | Object Name | The system's name. Every SMS from the panel starts with it. | up to 31 characters |
 | Clear buffer events after reboot | When the panel restarts, it deletes the events in its buffer that have not been sent yet (as on "FLEXi" SP3). | on / off |
 | 2-wire fire on IO9 | Turns terminal IO9 into a 2-wire fire loop input. IO9 can then only be a zone and is listed as **SP5 9 I/O - 2-wire fire zone**. A zone already on IO9 stays on it; if its type was ATZ, it changes to EOL and the second ATZ zone is released. An output or sensor on IO9 stays assigned: remove it before you turn this on. | on / off |
-| 2-wire fire on IO10 | The same for terminal IO10 (**SP5 10 I/O - 2-wire fire zone**). Set independently of IO9. | on / off |
+| 2-wire fire on IO10 | The same for terminal IO10 (**SP5 10 I/O - 2-wire fire zone**). Set independently of IO9. With **Limited access**, neither can be changed while a zone is on the terminal unless **Areas and zones** and **Terminals** are both **Read/Write**. | on / off |
 | Power failure delay | How long mains (AC) power must be missing before the panel reports a power failure (as on "FLEXi" SP3). | 0–999 s |
 | Call attempts to user | How many times the panel calls a user about an event (as on "FLEXi" SP3). SP5 doesn't make event calls: users get event SMS only, so this setting isn't used. | 0–99 |
 | Text encoding | The character set the panel uses for object, area and zone names. Choose the one that matches the language of your names. | English, Baltic, Cyrillic alphabet, Central European, Greek, Turkish, Hebrew, Arabic, Vietnamese |
@@ -668,18 +669,20 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 |---|---|---|
 | Full access | The administrator code. Gives access to every setting. Hidden when you are signed in with **Limited access**. | up to 6 characters |
 | Limited access | The installer code. What it allows is set by the permissions below. | up to 6 characters |
-| SMS programming | The code for configuring the panel by SMS commands. | up to 6 characters |
+| SMS programming | The code for configuring the panel by SMS commands. Not read from the panel when you are signed in with **Limited access**. | up to 6 characters |
 | Account ID | Lets **Limited access** change the **Account ID**. | on / off |
-| Communication | Access to **Networks** and **CMS Reporting**. | Editable / Visible / Hidden |
-| Areas and zones | Access to **Areas (Partitions)** and **Zones**. | Editable / Visible / Hidden |
-| Terminals | Access to **Terminals**. | Editable / Visible / Hidden |
-| Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Sensors** and **Thermostats**. | Editable / Visible / Hidden |
-| Users | Access to **User list**, **Groups** and **Black list**. | Editable / Visible / Hidden |
-| System events | Access to **System events**. With **Hidden**, the **Periodic test** switch on **CMS Reporting** is not shown either. | Editable / Visible / Hidden |
-| Automation | Access to **Automation**. | Editable / Visible / Hidden |
+| Communication | Access to **Networks**, **CMS Reporting** and **Protegus 2B reporting**. | Read/Write / Read only / Hidden |
+| Areas and zones | Access to **Areas (Partitions)** and **Zones**. | Read/Write / Read only |
+| Terminals | Access to **Terminals**, and to the terminal of each zone and sensor. | Read/Write / Read only |
+| Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Sensors** and **Thermostats**. | Read/Write / Read only |
+| Users | Access to **User list**, **Groups** and **Black list**. The users are always read from the panel. | Read/Write / Read only |
+| System events | Access to **System events**. With **Hidden**, the **System events** group on the **SMS reporting** tab and the **Periodic test** switch on **CMS Reporting** are not shown either. | Read/Write / Read only / Hidden |
+| Automation | Access to **Schedules**, **Scenes** and **Holidays**. | Read/Write / Read only |
 
 !!! note
-    **Editable**: the installer can change the page. **Visible**: the page is read-only. **Hidden**: the page is removed from the menu and its settings are not read.
+    **Read/Write**: the installer can change the page. **Read only**: the page is read-only. **Hidden** (Communication and System events only): the pages are removed from the menu; with Communication hidden, its settings are not read from the panel at all. A **Hidden** set earlier for another part works as **Read only**.
+
+Some changes also change other pages. With **Limited access**, the app cancels a change that would alter a page you can't edit, and names that page, for example **This change would also affect Automation, which you are not allowed to edit. The change was cancelled.** Deleting a zone used in a scene needs **Automation**; disabling an area, or removing an output or schedule, that users or groups use needs **Users**.
 
 #### Time Settings
 
@@ -719,7 +722,7 @@ Turn on each trouble that should prevent the system from being armed.
 
 ### Networks
 
-Menu **Communication → Networks**. Here you choose which connections carry the reports to the monitoring station and to Protegus, and set up the SIM, WiFi and Ethernet connections.
+Menu **Communication → Networks**. Here you choose which connections carry the reports to the monitoring station and to Protegus, and set up the SIM, WiFi and Ethernet connections. A line at the top names the connections the panel can use: SIM, WiFi and Ethernet.
 
 ![Protegus app, SP5 Networks page in a desktop browser. Connectivity table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, both with Main path Ethernet, Back up SIM, Fallback back up OFF and Switch back to Main path after 10 min. Cloud settings card with Enable cloud service and Report in parallel with CMS on and a masked Cloud access code. SIM card with APN internet, an empty SIM PIN and an Advanced settings link. WiFi card with SSID Sample-WiFi, a masked password, DNS 8.8.8.8 and DHCP on. Ethernet card with DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on and DHCP on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
 
@@ -740,35 +743,24 @@ A read-only table, one row per connection. On a narrow screen it becomes a card 
 
 #### Reporting to CMS
 
+The card lists the connections in the order the panel tries them: **Main path**, then **Back up**, then **Fallback back up**. Each step has a switch and a connection list. A connection can be used in one step only: if you choose one that another step uses, the two are swapped and the app says so, for example **Back up is now SIM: Main path took Ethernet, so the two were swapped.**
+
 | Setting | What it does | Values |
 |---|---|---|
-| Main path | The connection the panel uses first to reach the monitoring station. | OFF / SIM / Ethernet / WiFi |
-| Back up | The connection used when the main path fails. | OFF / SIM / Ethernet / WiFi |
-| Fallback back up | The connection used when the backup path also fails. | OFF / SIM / Ethernet / WiFi |
-| Switch back to Main path after … min. | How long the panel stays on a backup path before it returns to the main path. | 0–255 min |
+| Main path | The connection the panel uses first to reach the monitoring station. With its switch off, the app warns **Main path is off. CMS will not receive any reports.** | on / off; SIM / WiFi / Ethernet |
+| Back up | Used when the main path fails. Turning it off also turns off **Fallback back up**; turning it on again restores it. | on / off; SIM / WiFi / Ethernet |
+| Fallback back up | Used when the backup path also fails. Available only while **Back up** is on. | on / off; SIM / WiFi / Ethernet |
+| Switch back to Main path after … min. | How long the panel stays on a backup path before it returns to the main path. Greyed out while **Main path** is off. | 0–255 min |
 
 #### Reporting to Cloud
 
-The same paths for reporting to Protegus2. The card is greyed out while **Enable cloud service** is off.
-
-| Setting | What it does | Values |
-|---|---|---|
-| Main path | The connection the panel uses first to reach Protegus2. | OFF / SIM / Ethernet / WiFi |
-| Back up | The connection used when the main path fails. | OFF / SIM / Ethernet / WiFi |
-| Fallback back up | The connection used when the backup path also fails. | OFF / SIM / Ethernet / WiFi |
-| Switch back to Main path after … min. | How long the panel stays on a backup path before it returns to the main path. | as in **Reporting to CMS** |
-
-#### Cloud settings
-
-| Setting | What it does | Values |
-|---|---|---|
-| Enable cloud service | Turns on reporting to Protegus2. Off greys out **Reporting to Cloud**. | on / off |
-| Cloud access code | The panel's access code for the Protegus2 cloud. | 6 digits |
-| Report in parallel with CMS | Sends events to Protegus2 at the same time as to the CMS, not only after the CMS has received them. | on / off |
+The same, for reporting to Protegus. The card is greyed out while **Enable cloud service** is off (see **Protegus 2B reporting**). With **Main path** off, the app warns that the Protegus app will not receive any reports.
 
 #### SIM
 
-**APN** and **SIM PIN** are always shown; the other settings are under **Advanced settings**.
+**APN** and **SIM PIN** are always shown; the other settings are under **Advanced settings**. While closed, **Advanced settings** lists what is set, for example **DNS 1 8.8.8.8 · Hide SIM warning**, and it opens by itself when anything in it is set.
+
+On panels with a built-in eSIM, **SIM to use** comes first: **Built-in SIM (eSIM)** sets up access and network selection by itself, so **APN**, **SIM PIN**, **User**, **Password**, **SIM ICCID Lock**, **ICCID** and **Preferred network** are hidden; **External SIM card** uses the nano-SIM in the holder, and with no card inserted the panel uses the eSIM **[to confirm: which SP5 versions have a built-in eSIM]**.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -792,23 +784,23 @@ The same paths for reporting to Protegus2. The card is greyed out while **Enable
 |---|---|---|
 | SSID | The WiFi network name. The panel works with 2.4 GHz networks. | up to 32 characters |
 | Password | The WiFi password. | up to 55 characters |
-| DNS | DNS server for WiFi. | IPv4 address |
 | DHCP | On: the panel gets its address from the router. Off: enter the three settings below. | on / off |
 | IP Address | The panel's static IP address. Shown when **DHCP** is off. | IPv4 address |
 | Subnet mask | Shown when **DHCP** is off. | IPv4 address |
 | Gateway address | Shown when **DHCP** is off. | IPv4 address |
+| DNS | DNS server for WiFi. | IPv4 address |
 
 #### Ethernet
 
 | Setting | What it does | Values |
 |---|---|---|
-| DNS 1 | DNS server for the LAN connection. | IPv4 address |
-| DNS 2 | Second DNS server for the LAN connection. | IPv4 address |
-| Show trouble if any | Indicates LAN connection troubles. | on / off |
 | DHCP | On: the panel gets its address from the router. Off: enter the three settings below. | on / off |
 | IP Address | The panel's static IP address. Shown when **DHCP** is off. | IPv4 address |
 | Subnet mask | Shown when **DHCP** is off. | IPv4 address |
 | Gateway address | Shown when **DHCP** is off. | IPv4 address |
+| DNS 1 | DNS server for the LAN connection. | IPv4 address |
+| DNS 2 | Second DNS server for the LAN connection. | IPv4 address |
+| Show trouble if any | Indicates LAN connection troubles. | on / off |
 
 ### CMS Reporting
 
@@ -827,11 +819,11 @@ Menu **Communication → CMS Reporting**. The panel can report to two monitoring
 | Port | The receiver's port. | 0–65535 |
 | Protocol | The reporting protocol. Choosing **TL150** switches the type to UDP/IP. | TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom, TL150, TRK8 |
 | Message format | The event code format inside SIA DC-09 messages. Shown for **SIA DC-09_2012** and **SIA DC-09_2007** only. | CID / SIA |
-| Encryption key | The key the receiver uses to decrypt the reports. For **SIA DC-09_2012** and **SIA DC-09_2007**, the switch at the left of the box turns encryption on or off; while it is off, the box and **HEX** are greyed out. **SIA DC-09_IPcom** is always encrypted. | TRK: up to 6 characters. Other protocols: up to 16 characters, or exactly 32 hex digits with **HEX** |
-| HEX | Enter the key as hexadecimal digits (0–9, A–F). Shown for **SIA DC-09_2012**, **SIA DC-09_2007** and **SIA DC-09_IPcom**. | tick box |
+| Encryption key | The key the receiver uses to decrypt the reports. For **SIA DC-09_2012**, **SIA DC-09_2007** and **TL150**, the switch at the left of the box turns encryption on or off; while it is off, the box and **HEX** are greyed out. **SIA DC-09_IPcom** is always encrypted. | TRK: up to 6 characters. Other protocols: up to 16 characters, or exactly 32 hex digits with **HEX** |
+| HEX | Enter the key as hexadecimal digits (0–9, A–F). Shown for **SIA DC-09_2012**, **SIA DC-09_2007**, **SIA DC-09_IPcom** and **TL150**. | tick box |
 | Phone number | SMS method only. The CMS phone number for SMS reports. It is the same number as the SMS fallback number of this channel. | digits with an optional leading +, up to 23 |
 | Encryption key | SMS method only. The key for SMS reports, shared with the SMS fallback. | up to 16 characters |
-| Backup channel | Opens the backup channel settings. Not available while the channel is off or set to SMS. | — |
+| Backup channel | Opens the backup channel settings. Not available while the channel is off or set to SMS. While closed, it shows a summary: **Off**, or the type, protocol and address, for example **TCP/IP · TRK8 · backup.example.com:55555**. | — |
 | Enable backup channel | Turns on the backup channel, which has its own address, port and protocol. Off greys out its settings. | on / off |
 | Communication method:, Communication type, Domain or IP, Port, Protocol, Message format, Encryption key, HEX | The backup channel's settings. They work as described above. | as above |
 | Enable fallback SMS channel | Sends the reports by SMS when the network channels fail. Shown when the backup channel's method is **Network**. | on / off |
@@ -857,9 +849,9 @@ The parallel channel reports the same events to a second CMS, at the same time a
 | Number | The receiver number at the CMS. | up to 6 hex characters (0–9, A–F) |
 | Line | The receiver line number at the CMS. | up to 6 hex characters (0–9, A–F) |
 
-#### Fallback
+#### Behavior
 
-Under **Behavior**.
+The **Behavior** card.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -868,11 +860,11 @@ Under **Behavior**.
 
 #### Periodic test
 
-Under **Testing**.
+The **Testing** card holds **Periodic test**, **Network (IP) Ping**, **SMS Ping** and **Communication path test**, each with its own switch.
 
 | Setting | What it does | Values |
 |---|---|---|
-| (switch in the card header) | Turns the periodic test report on or off. It is the same setting as the **Periodic test** event on **System events**. | on / off |
+| (switch beside the test's name) | Turns the periodic test report on or off. It is the same setting as the **Periodic test** event on **System events**. With **Limited access**, it can be changed only when **System events** is **Read/Write**, and it isn't shown when **System events** is **Hidden**. | on / off |
 | Test period | How often the panel sends a test report. | 0–255 hours; with **Start test** on, 0–10 day(s) |
 | Start test | Sends the test at a fixed time of day. Off: no fixed time. | on / off |
 | h, min (two boxes) | The time of day for the test. Editable only with **Start test** on. | 0–23 h, 0–59 min |
@@ -884,23 +876,39 @@ Under **Testing**.
 
 | Setting | What it does | Values |
 |---|---|---|
-| (switch in the card header) | Turns the network ping to the CMS on or off. | on / off |
+| (switch beside the test's name) | Turns the network ping to the CMS on or off. | on / off |
 | Period | How often the panel pings the CMS over the network. | 0–990 seconds, in steps of 10 |
 
 #### SMS Ping
 
 | Setting | What it does | Values |
 |---|---|---|
-| (switch in the card header) | Turns the SMS ping to the CMS on or off. | on / off |
+| (switch beside the test's name) | Turns the SMS ping to the CMS on or off. | on / off |
 | Period | How often the panel sends an SMS ping. | 1–4095 minutes |
 
 #### Communication path test
 
 | Setting | What it does | Values |
 |---|---|---|
-| (switch in the card header) | Turns the communication path test on or off. | on / off |
+| (switch beside the test's name) | Turns the communication path test on or off. | on / off |
 | Test every | How often the test runs, in the unit chosen beside it. | 0–99 |
 | (unit) | The unit of **Test every**. | hours / day(s) |
+
+### Protegus 2B reporting
+
+Menu **Communication → Protegus 2B reporting** **[beta name; to confirm the released name]**. Reporting to the Protegus cloud.
+
+#### Cloud settings
+
+| Setting | What it does | Values |
+|---|---|---|
+| (switch in the card header) | **Enable cloud service**: turns on reporting to Protegus. Off greys out this page and **Reporting to Cloud** on **Networks**. It can be turned off only over USB: over the cloud the app shows **The cloud service can't be turned off remotely. Connect over USB to turn it off.** Over USB it asks **Turn off the cloud service?** first, because the panel can then no longer be reached from the app. | on / off |
+| Cloud access code | The panel's access code for the Protegus cloud. | 6 digits |
+| Report in parallel with CMS | Sends events to Protegus at the same time as to the CMS, not only after the CMS has received them. | on / off |
+
+#### Network order
+
+Shows the order of connections for Protegus, as set in **Networks → Reporting to Cloud**, for example SIM → Ethernet, or **No active path**. It is read-only; **Networks →** opens that page.
 
 ### Areas (Partitions)
 
@@ -977,7 +985,7 @@ Menu **Areas and zones → Zones**. A zone is one detector input with its area, 
 |---|---|---|
 | Refresh status | Reads the zone states from the panel again. | button |
 | Search | Filters the list by zone name. | text |
-| + Add | Opens the zone popup on the first free zone. The arrow beside it opens **Add ATZ zone** (needs two free zones) and **Add multiple zones**. | button |
+| + Add | Opens the zone popup on the first free zone. The arrow beside it opens **Add ATZ zone** (needs two free zones) and **Add multiple zones**. With **Limited access**, shown only when **Terminals** is **Read/Write**. | button |
 | Status | The zone's live state. | OK, Trouble, Violated, Bypassed, -- |
 | Number | The zone number. | 01–192 |
 | Name | The zone's name. Edit it in the cell. | up to 23 characters |
@@ -997,7 +1005,7 @@ Opens from **Edit**, from **+ Add**, from **Terminals → Assign function → As
 | Setting | What it does | Values |
 |---|---|---|
 | Name | The zone's name. Required. | up to 23 characters |
-| Assign terminal | The input the zone uses. Only free input terminals are listed: not used by another zone, not used as an output, and not measuring temperature or voltage. If the terminal doesn't support the current **Type**, Type changes to EOL. | free input terminals |
+| Assign terminal | The input the zone uses. Only free input terminals are listed: not used by another zone, not used as an output, and not measuring temperature or voltage. If the terminal doesn't support the current **Type**, Type changes to EOL. With **Limited access**, it can be changed only when **Terminals** is **Read/Write**. | free input terminals |
 | Assign area | The areas the zone belongs to. **+ Add new area** opens **Add areas**. | enabled areas |
 | Definition | How the zone reacts. Changing it, here or in the **Zones** list, also sets **Delay** and **CID code** to the new definition's values, replacing any values set before. | 12 definitions |
 | Type | The circuit type. See **Zone types** below. | the types the terminal allows |
@@ -1083,7 +1091,7 @@ The wiring of each type is shown under [Connecting detectors](#connecting-detect
 | IO9 or IO10 as a 2-wire fire loop | SP5 9 I/O - 2-wire fire zone, SP5 10 I/O - 2-wire fire zone | NO, NC, EOL, EOL_T, 3EOL |
 | iO8 and iO8-Lora expanders, I/O 1–8 | RS485 *expander name*, *n* I/O (second ATZ zone: … - ATZ) | NO, NC, EOL, EOL_T, ATZ, ATZ_T, 3EOL |
 | iO, iO-WL, iO-MO and iO-LO expanders | RS485 *expander name* IN | NO, NC, EOL, EOL_T, 3EOL |
-| Wireless devices | e.g. Smart Door/Window sensor ID1, Smart Outdoor siren ID3 | NO, NC, EOL or EOL_T. The first three work the same; EOL_T also monitors the detector's tamper |
+| Wireless devices | e.g. Smart Door/Window sensor ID1, Smart Outdoor siren ID3 | NO, NC, EOL or EOL_T. The first three work the same; EOL_T also monitors the detector's tamper. A device learned in the app gets **EOL_T** |
 | Keypad inputs | Keypad *n* IN | NO, NC, EOL; also EOL_T on keypads with a serial starting 1D, 1E, 51 or 52 |
 
 ### Terminals
@@ -1109,6 +1117,9 @@ The on-board terminals come first, then a group for each RS485 expander, the wir
 | Output settings | Opens the output popup (see **Outputs (PGM)**). | link |
 | Sensor settings | Opens the sensor popup (see **Sensors**). | link |
 | Assign function | Shown for a free terminal. Opens **Assign terminal function**. | link |
+
+!!! note
+    With **Limited access**, a terminal's function can be assigned, changed or reset only when **Terminals** and the part that owns the function are both **Read/Write**: **Areas and zones** for a zone, **Devices & Interfaces** for an output or sensor. With **Terminals** set to **Read only**, this page is read-only, and on **Zones** and **Sensors** the terminal is shown but can't be changed. Wireless devices' zones and outputs don't depend on **Terminals**.
 
 !!! note
     A terminal can have only one function: zone, output or sensor. The exception is a resistance sensor, which can measure a terminal that is also a zone. To reuse a terminal, free it first: **Reset I/O terminal** in the zone or output popup, or **Reset sensor** in the sensor popup.
@@ -1161,7 +1172,7 @@ Menu **Devices & Interfaces → Keypads**. Lists the keypads on the keypad bus (
 | Serial | The keypad's serial number. The first two characters identify the model (see **Keypad serial prefixes**). | 8 hex characters |
 | Assign area | The areas the keypad controls. | enabled areas: up to 2 on keypads with a serial starting 51 or 1E, up to 16 on others |
 | Edit | Opens the keypad popup. | link |
-| (bin icon) | Removes the keypad at once, without asking. The zone on its input is reset, and its temperature sensor is reset and unlinked from thermostats. | button |
+| (bin icon) | Removes the keypad after asking: **This item will be removed from other settings that can no longer use it, such as scenes. Do you want to continue?** The zone on its input is reset, and its temperature sensor is reset and unlinked from thermostats and scenes. | button |
 
 #### Keypad popup
 
@@ -1314,13 +1325,14 @@ The panel listens for new devices. Press the device's pairing key as its instruc
 
 When a device is learned, the app sets it up:
 
-- A detector or siren gets the first free zone that is not a Fire zone. The definition is **24 Hour** for HEYI devices, **Fire** for Crow smoke detectors and **Instant** for other Crow devices. The zone gets area 1 if it had none.
+- A detector or siren gets the first free zone that is not a Fire zone, with type **EOL_T**. The definition is **24 Hour** for HEYI devices, **Fire** for Crow smoke detectors and **Instant** for other Crow devices. The zone gets area 1 if it had none.
 - The HEYI Smart Socket and Crow SH AC plug get the first free output with the **Remote control** definition.
 - Keyfobs get area 1 and user 1. The HEYI Smart SOS button also gets **Key 4 action** set to **Panic**.
+- With **Limited access** and **Areas and zones** not **Read/Write**, the device is added without a zone, and the app shows **The device was added without a zone because you do not have the following permission: Areas and zones.**
 
 #### Configuration: zone
 
-Opens from **Edit**, or from a device in the scan result. The header shows the device type, serial number, signal and battery. Which sections appear depends on the device. **Delete Sensor** at the bottom removes the device, resets its zone and releases its output.
+Opens from **Edit**, or from a device in the scan result. The header shows the device type, serial number, signal and battery. Which sections appear depends on the device. **Delete Sensor** at the bottom asks to confirm, then removes the device, resets its zone and releases its output. With **Limited access**, it is cancelled if it would change a page you can't edit.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1378,7 +1390,7 @@ Menu **Devices & Interfaces → Sensors**. Lists up to 20 sensors measuring temp
 | Setting | What it does | Values |
 |---|---|---|
 | Refresh status | Reads the live readings again. | button |
-| + Add | Opens the sensor popup on the first free sensor. | button |
+| + Add | Opens the sensor popup on the first free sensor. With **Limited access**, shown only when **Terminals** is **Read/Write**. | button |
 | Status | The sensor's state. **Alarm**: the reading is outside the limits. | Ok, Lost, Alarm, Unknown, N/A |
 | Name | The sensor's name. Edit it in the cell. | up to 23 characters |
 | Type | The sensor's source. | Temperature (zone), Voltage (IN), Resistance (IN), RS485 *expander name*, Wireless *zone name*, Keypad *keypad name* |
@@ -1388,19 +1400,19 @@ Menu **Devices & Interfaces → Sensors**. Lists up to 20 sensors measuring temp
 
 #### Sensor (popup)
 
-**Reset sensor** at the bottom clears the sensor and unlinks it from its thermostat.
+**Reset sensor** at the bottom asks to confirm, then clears the sensor and unlinks it from its thermostat and scenes. With **Limited access**, it is shown only when **Terminals** is **Read/Write**.
 
 | Setting | What it does | Values |
 |---|---|---|
 | Type | What the sensor measures. Changing it clears **Terminal**. | Temperature / Voltage / Resistance |
 | Name | The sensor's name. Required. | up to 23 characters |
-| Terminal | The source to measure. A source used by another sensor is not listed. | Disabled, or a free source (see **Sensor sources**) |
+| Terminal | The source to measure. A source used by another sensor is not listed. With **Limited access**, it can be changed only when **Terminals** is **Read/Write**. | Disabled, or a free source (see **Sensor sources**) |
 | Assign thermostat | Makes this sensor the trigger of a thermostat. | Disabled, or a thermostat |
 | Value | Under **Min**. The lower limit. | °C, V or Ω (follows **Type**), one decimal |
 | Notify when below | Alarm when the value falls below **Min**. | on / off |
 | Value | Under **Max**. The upper limit. | °C, V or Ω (follows **Type**), one decimal |
 | Notify when above | Alarm when the value rises above **Max**. | on / off |
-| Delay | The delay before the alarm. | 0 min or more |
+| Delay | How long the value must stay below **Min** or above **Max** before the alarm. It applies to both limits; seconds are not possible. | 1 min or more |
 | B Constant | The NTC thermistor's B constant, usually 3950 or 4000. Shown for **Temperature (zone)** only. | whole number |
 | NTC R0 | The NTC thermistor's nominal resistance, e.g. 10000 or 4700. Shown for **Temperature (zone)** only. | Ω, in steps of 100 |
 
@@ -1456,7 +1468,7 @@ Terminals that can be outputs: IO1–IO10 (except a 2-wire fire zone), BELL-, RE
 
 #### Output popup
 
-The title shows the output's name. **Reset I/O terminal** at the bottom (existing outputs only) frees the terminal. When you add an output, the app sets **Siren**, **Level**, a pulse time of 10, the first enabled area, and **CMS** and **Protegus2** on.
+The title shows the output's name. **Reset I/O terminal** at the bottom (existing outputs only) asks to confirm, then frees the terminal. When you add an output, the app sets **Siren**, **Level**, a pulse time of 10, the first enabled area, and **CMS** and **Protegus2** on.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1471,7 +1483,7 @@ The title shows the output's name. **Reset I/O terminal** at the bottom (existin
 | Protegus2 | Reports the output switching on and off to Protegus2. | on / off |
 
 !!! note
-    Users, groups, call control, keypad utility keys and keyfob keys can switch only outputs with the **Remote control** definition. Thermostats accept **Remote control** and **Thermostat**; a thermostat changes a **Remote control** output to **Thermostat**. If you change an output's definition, the app removes it from the places where it no longer fits.
+    Users, groups, call control, keypad utility keys and keyfob keys can switch only outputs with the **Remote control** definition. Thermostats accept **Remote control** and **Thermostat**; a thermostat changes a **Remote control** output to **Thermostat**. If you change an output's definition away from **Remote control**, the app asks to confirm, then removes it from the places where it no longer fits, scene actions included.
 
 #### Output definitions
 
@@ -1583,7 +1595,7 @@ The popup title is **Edit user:** and the user's name. The switch at the top mak
 
 Supervisors only. Choose which events this user receives by SMS. The words used in each SMS are set in **System events → SMS texts**.
 
-With **Limited access**, a group of switches can be changed only if its page is **Editable**: **Zone alarms** follow **Areas and zones**, **PGM / outputs** follow **Devices & Interfaces**, **System events** follow **System events**.
+With **Limited access**, a group of switches can be changed only if its page is **Read/Write**: **Zone alarms** follow **Areas and zones**, **PGM / outputs** follow **Devices & Interfaces**, **System events** follow **System events**. With **System events** set to **Hidden**, that group isn't shown and **SMS texts** is not a link.
 
 | Setting | What it does | Values |
 |---|---|---|
@@ -1749,10 +1761,10 @@ Opens from **Edit** and **+ Add schedule**. The title is **Schedule**, with the 
 | Days | The days of the week. Shown for **Weekly**; select at least one. | M T W T F S S |
 | All day | Active all day. Hides **Time** and **End time**. | on / off |
 | Time | When the schedule starts. | hh:mm |
-| End time | When it stops. It must be later than **Time**: a schedule can't run over midnight, and with an earlier end time, such as 22:00 – 06:00, it stays off. The app doesn't warn about this. | hh:mm |
+| End time | When it stops. It must be later than **Time**: a schedule can't run over midnight. Otherwise the app shows **The end time must be later than the start time. For an overnight period, use two schedules, e.g. 22:00–23:59 and 00:00–06:00.** and won't save. | hh:mm |
 | Holidays | Under **Holiday exceptions**. The holidays on which this schedule works differently, from **Automation → Holidays**, including disabled ones. If there are none, **Set up holidays** opens that page and the popup closes without saving. | holidays |
 | Holiday rule | What the schedule does on the selected holidays. See **Holiday rules** below. Available once a holiday is selected. Selecting the first holiday sets **Skip when holiday**; removing them all sets **Holiday not used** and turns **Set custom time** off. | 5 rules |
-| Set custom time | Shows a second **Time** and **End time**. On the selected holidays the schedule uses this time instead of its normal time. Available once a holiday is selected. | on / off; hh:mm |
+| Set custom time | Shows a second **Time** and **End time**. On the selected holidays the schedule uses this time instead of its normal time; the same rule for **End time** applies. Available once a holiday is selected. | on / off; hh:mm |
 
 **Schedule condition** is the collapsed section at the bottom.
 
@@ -1802,7 +1814,7 @@ Menu **Automation → Scenes**. A scene lets the panel act on its own: **IF** it
 
 #### Scene popup
 
-Opens from **Edit** and **+ Add scene**. The title is **Scene**, with the scene's on/off switch beside it. A new scene starts switched on, with one condition (**Zone**, **Alarm (when area alarm)**, no zone selected yet) and one action (the first output, **Turn ON**). **Remove scene** at the bottom (existing scenes only) asks to confirm and clears the scene.
+Opens from **Edit** and **+ Add scene**. The title is **Scene**, with the scene's on/off switch beside it. A new scene starts switched on, with one condition (**Zone**, **Alarm (when area alarm)**, no zone selected yet) and one action (the first **Remote control** output, **Turn ON**). **Remove scene** at the bottom (existing scenes only) asks to confirm and clears the scene.
 
 ![Protegus app, SP5 Scene popup, switched on: Name Gate by tag or SMS. IF, Trigger when ANY of these conditions are met: When User is RFID tag, Specific user, 2. Sample user 1; OR When SMS received, OPEN GATE. THEN: Output Garage gate, Pulse, 5 s, When ends Do nothing; AND Output Garden lights, Turn ON, When ends Do nothing. + Add condition and + Add action buttons. Remove scene, Cancel and Save at the bottom.](./protegus-app/sp5-popup-scene-gate.webp){ .trik-popup-img }
 
@@ -1828,7 +1840,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | Match | For Zone, Area, Output, Schedule and Sensors. **Any one of** the selected elements, **All of** them, or **Any (no filter)**: any element, with no list to select. | Any one of / All of / Any (no filter) |
 | Zones, Areas, Outputs, Schedules, Sensors | The elements to watch. Lists zones with a terminal, enabled areas, outputs with a terminal, schedules in use and the sensors on **Sensors**. An element that is no longer available shows **(not available)**, except an area: a disabled area is dropped from the condition when the scene opens. | one or more |
 | Event | What must happen. See **Condition events** below. Not shown for **SMS received**. | depends on **When** |
-| Value | For **Value more than** and **Value lower than**: the threshold, in the same unit as the sensor's **Min** and **Max**. | one decimal, −3276.7 to 3276.7; default 20 |
+| Value | For **Value more than** and **Value lower than**: the threshold, in the same unit as the sensor's **Min** and **Max**. These conditions react at once, without the sensor's **Delay**. For a delayed trigger, use **Low value start** or **High value starts**: they are the sensor's own **Min** and **Max** alarms, with its **Delay**. | one decimal, −3276.7 to 3276.7; default 20 |
 | Time, min | For **No movement more than** and **No movement less than**. | 1–32767 min; default 30 |
 | Match | For **RFID tag**: **Specific user** or **Any user**. | Specific user / Any user |
 | User | For **Specific user**: the user, from the active users. If the users haven't been read yet, a **User number** box is shown instead. | 1–1000 |
@@ -1844,7 +1856,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | Area | Arm, Disarm, Sleep, Stay, Not armed, Not disarmed, Not sleep, Not stay, AutoArm, AutoDisarm, Auto arm failed, No movement more than, No movement less than **[to confirm: which zones count as movement]** |
 | Output | Output on, Output off |
 | Schedule | Schedule starts, Schedule stops |
-| Sensors | Alarm start, Alarm stop, Low value start, Low value ends, High value starts, High value restored, Value more than, Value lower than, Sensor lost, Sensor restore **[to confirm: the alarm and low/high events follow the sensor's **Min** and **Max**]** |
+| Sensors | Alarm start, Alarm stop, Low value start, Low value ends, High value starts, High value restored, Value more than, Value lower than, Sensor lost, Sensor restore. The low and high events are the sensor's **Min** and **Max** alarms **[to confirm: what Alarm start and Alarm stop follow]** |
 | User | RFID tag, Unauthorized call **[to confirm: what counts as an unauthorized call]** |
 | System | AC lost, AC restore, Battery lost, Battery restore, Bell missing, Bell restore, Wi-Fi fail, Wi-Fi restore, LAN fail, LAN restore, SIM fail, SIM restore |
 | SMS received | no events; enter the **SMS text** |
@@ -1856,7 +1868,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 | Setting | What it does | Values |
 |---|---|---|
 | Type | What the action controls. | Output / Area |
-| Output / Area | The output or area. A scene can switch only outputs with the **Remote control** definition, not sirens or other outputs **[the app still lists every output with a terminal; to be fixed]**. Only enabled areas are listed. If an action still names a disabled area, for example in settings read from the panel, the area box is left empty: choose an area, or the app won't save the scene. | an output or area |
+| Output / Area | The output or area. A scene can switch only outputs with the **Remote control** definition, not sirens or other outputs, and only those are listed. Only enabled areas are listed. If an action still names another output or a disabled area, for example in settings read from the panel, the box is left empty: choose one, or the app won't save the scene. | an output or area |
 | Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away**. **Arm** works as a normal arming: if the area has Stay zones and no door is opened during the delay, it arms in Stay or Sleep. **Force arm Away** arms the area in Away whatever the other conditions. | see left |
 | Pulse time, s | For **Pulse**. | 1–65535 s; default 5 |
 | When ends | What to do when the scene ends, which is when its conditions are no longer met. A scene started by a momentary condition ends at once, so use **Pulse** or an area action with it. For an output: **Do nothing** or **Invert / repeat pulse**: after **Turn ON**, **Turn OFF** or **Toggle** the output goes to the opposite state; after **Pulse** the pulse is repeated. For an area: **Do nothing** or one of the area actions. | see left |
@@ -1869,7 +1881,7 @@ The app updates the scenes by itself:
 |---|---|
 | A zone's terminal is reset (**Reset I/O terminal**, removing an ATZ pair, a wireless device or a keypad) | The zone is removed from conditions. |
 | An area is disabled | The area is removed from conditions and its actions are removed. |
-| An output's terminal is reset | The output is removed from conditions and its actions are removed. Changing its definition does not affect scenes. |
+| An output's terminal is reset, or its definition is changed from **Remote control** | Its actions are removed. A reset terminal also removes it from conditions; a changed definition doesn't. |
 | A sensor is reset or detached | The sensor is removed from conditions. |
 | A schedule is removed | The schedule is removed from conditions. |
 | A user is deleted | An **RFID tag** condition for that user shows the user as not available. A user whose number changes is followed. |
