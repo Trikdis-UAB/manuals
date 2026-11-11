@@ -268,6 +268,9 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 <img class="wiring-diagram" alt="Prijungimo schema: DSC centralės klaviatūros magistralė jungiama prie E16. RED (+12V) jungiamas prie +DC, BLK – prie -DC, YEL – prie CLK, GRN – prie DATA." src="./wiring-dsc.webp" width="545" height="479" />
 
+!!! note "Pastaba"
+    Per klaviatūros magistralę komunikatorius gauna iš centralės bendras zonų būsenas ir negali atskirti zonos tipo (gaisro, įsilaužimo, vandens nuotėkio ir kt.). Visi aliarmai perduodami kaip bendras aliarmas, Contact ID E130, o kai kurie stebėjimo pultai tokius įvykius apdoroja kitaip nei iš tikrųjų suveikusios zonos tipo įvykius. E16 neturi TIP/RING gnybtų. Kad įvykiai būtų perduodami su pačios centralės Contact ID kodais (pvz., E110 gaisro aliarmui), naudokite komunikatorių, kuris jungiamas kartu prie klaviatūros magistralės ir centralės TIP/RING gnybtų: GT, GT+ arba GET.
+
 #### PARADOX
 
 <img class="wiring-diagram" alt="Prijungimo schema: PARADOX centralės nuoseklioji jungtis jungiama prie E16 atskirai užsakomu kabeliu EX-CRP2.4. R (raudona, +12V) jungiamas prie +DC, B (juoda) – prie -DC, Y (geltona) – prie CLK, G (žalia) – prie DATA." src="./wiring-paradox.webp" width="646" height="464" />
