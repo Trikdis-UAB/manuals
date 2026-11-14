@@ -168,11 +168,14 @@ DSC centrales galima prijungti tik prie klaviatūros magistralės arba kartu pri
 | POWER | Šviečia žalia ir mirksi geltona | (Konfigūravimo režimas) komunikatorius parengtas konfigūravimui. |
 | POWER | Šviečia geltona | (Konfigūravimo režimas) nėra ryšio su kompiuteriu. |
 | TROUBLE | Nešviečia | Komunikatorius veikia gerai, be nesklandumų. |
-| TROUBLE | 1 raudonas mirksnis | Prisijungimo klaida „fiziniame“ lygmenyje (PHY Link status error), patikrinti LAN kabelį |
-| TROUBLE | 2 raudoni mirksniai | SIM1 kortelės klaida |
-| TROUBLE | 3 raudoni mirksniai | SIM2 kortelės klaida |
-| TROUBLE | 7 raudoni mirksniai | Nėra ryšio su centrale (tik serial šynai) |
+| TROUBLE | 1 geltonas arba raudonas mirksnis | Prisijungimo klaida „fiziniame“ lygmenyje (PHY Link status error), patikrinti LAN kabelį |
+| TROUBLE | 2 geltoni arba raudoni mirksniai | SIM1 kortelės klaida |
+| TROUBLE | 3 geltoni arba raudoni mirksniai | SIM2 kortelės klaida |
+| TROUBLE | 7 geltoni arba raudoni mirksniai | Nėra ryšio su centrale (tik serial šynai) |
 | INTERFACE | - | Nenaudojama |
+
+!!! note "Pastaba"
+    Ankstesnės gamybos GET komunikatoriuose indikatorius TROUBLE yra geltonas, o naujesnės gamybos komunikatoriuose raudonas. Mirksnių skaičius abiem atvejais reiškia tą patį.
 
 ### Komunikatoriaus GET panaudojimo struktūrinė schema
 
