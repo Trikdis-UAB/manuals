@@ -166,14 +166,14 @@ Este manual es para comunicadores LTE.
 | POWER | Verde sólido y parpadeo amarillo | (Modo de configuración) Comunicador está listo para la configuración |
 | POWER | Amarillo sólido | (Modo de configuración) No hay conexión con la computadora |
 | TROUBLE | Off | No hay problemas de operación |
-| TROUBLE | 1 parpadeo amarillo o rojo | Error de conexión en el nivel "físico" (PHY Link status error), revisa el cable LAN |
-| TROUBLE | 2 parpadeos amarillos o rojos | Error de tarjeta SIM1 |
-| TROUBLE | 3 parpadeos amarillos o rojos | Error de tarjeta SIM2 |
-| TROUBLE | 7 parpadeos amarillos o rojos | Conexión perdida con el panel de control (serial bus) |
+| TROUBLE | 1 parpadeo naranja o rojo | Error de conexión en el nivel "físico" (PHY Link status error), revisa el cable LAN |
+| TROUBLE | 2 parpadeos naranjas o rojos | Error de tarjeta SIM1 |
+| TROUBLE | 3 parpadeos naranjas o rojos | Error de tarjeta SIM2 |
+| TROUBLE | 7 parpadeos naranjas o rojos | Conexión perdida con el panel de control (serial bus) |
 | INTERFACE | - | No utilizado |
 
 !!! note "Nota"
-    El indicador TROUBLE es amarillo en las unidades GET anteriores y rojo en las de producción más reciente. El número de parpadeos significa lo mismo en ambos casos.
+    El indicador TROUBLE es naranja en las unidades GET anteriores y rojo en las de producción más reciente. El número de parpadeos significa lo mismo en ambos casos.
 
 ### Esquema estructural del uso del dispositivo GET 
 

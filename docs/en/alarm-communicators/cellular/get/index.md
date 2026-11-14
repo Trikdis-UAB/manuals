@@ -167,14 +167,14 @@ This manual is for LTE communicators.
 | POWER | Green solid and yellow blinking | (Configuration mode) Communicator is ready for configuration |
 | POWER | Yellow solid | (Configuration mode) No connection with computer |
 | TROUBLE | OFF | No operation problems |
-| TROUBLE | 1 yellow or red blink | Connection error at the "physical" level (PHY Link status error), check LAN cable |
-| TROUBLE | 2 yellow or red blinks | SIM1 card error |
-| TROUBLE | 3 yellow or red blinks | SIM2 card error |
-| TROUBLE | 7 yellow or red blinks | Lost connection with control panel (serial bus) |
+| TROUBLE | 1 orange or red blink | Connection error at the "physical" level (PHY Link status error), check LAN cable |
+| TROUBLE | 2 orange or red blinks | SIM1 card error |
+| TROUBLE | 3 orange or red blinks | SIM2 card error |
+| TROUBLE | 7 orange or red blinks | Lost connection with control panel (serial bus) |
 | INTERFACE | - | Not used |
 
 !!! note
-    The TROUBLE indicator is yellow on earlier GET units and red on units from newer production. The number of blinks means the same in both cases.
+    The TROUBLE indicator is orange on earlier GET units and red on units from newer production. The number of blinks means the same in both cases.
 
 ### Structural schematic of using the GET communicator 
 
