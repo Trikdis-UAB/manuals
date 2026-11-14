@@ -161,22 +161,25 @@ DSC centrales galima prijungti tik prie klaviatūros magistralės arba kartu pri
 | POWER | Šviečia žalia ir mirksi geltona | (konfigūravimo režimas) komunikatorius parengtas konfigūravimui. |
 | POWER | Šviečia geltona | (konfigūravimo režimas) nėra ryšio su kompiuteriu. |
 | TROUBLE | Nešviečia | Komunikatorius veikia gerai, be nesklandumų. |
-| TROUBLE | 1 raudonas mirksnis | SIM kortelė neaptikta. |
-| TROUBLE | 2 raudoni mirksniai | Problemos su SIM kortelės PIN kodu (neteisingas PIN kodas). |
-| TROUBLE | 3 raudoni mirksniai | Programavimo problemos (nėra APN). |
-| TROUBLE | 4 raudoni mirksniai | Prisijungimo prie GSM tinklo problemos. |
-| TROUBLE | 5 raudoni mirksniai | Prisijungimo prie mobiliojo duomenų tinklo problemos. |
-| TROUBLE | 6 raudoni mirksniai | Nėra ryšio su imtuvu. |
-| TROUBLE | 7 raudoni mirksniai | Dingo ryšys su centrale. |
-| TROUBLE | 8 raudoni mirksniai | Įvestas ICCID numeris nesutampa su SIM kortelės ICCID numeriu |
-| TROUBLE | Mirksi raudona | (konfigūravimo režimas) atminties klaida. |
-| TROUBLE | Šviečia raudona | (konfigūravimo režimas) programinės įrangos klaida. |
+| TROUBLE | 1 oranžinis arba raudonas mirksnis | SIM kortelė neaptikta. |
+| TROUBLE | 2 oranžiniai arba raudoni mirksniai | Problemos su SIM kortelės PIN kodu (neteisingas PIN kodas). |
+| TROUBLE | 3 oranžiniai arba raudoni mirksniai | Programavimo problemos (nėra APN). |
+| TROUBLE | 4 oranžiniai arba raudoni mirksniai | Prisijungimo prie GSM tinklo problemos. |
+| TROUBLE | 5 oranžiniai arba raudoni mirksniai | Prisijungimo prie mobiliojo duomenų tinklo problemos. |
+| TROUBLE | 6 oranžiniai arba raudoni mirksniai | Nėra ryšio su imtuvu. |
+| TROUBLE | 7 oranžiniai arba raudoni mirksniai | Dingo ryšys su centrale. |
+| TROUBLE | 8 oranžiniai arba raudoni mirksniai | Įvestas ICCID numeris nesutampa su SIM kortelės ICCID numeriu |
+| TROUBLE | Mirksi oranžinė arba raudona | (konfigūravimo režimas) atminties klaida. |
+| TROUBLE | Šviečia oranžinė arba raudona | (konfigūravimo režimas) programinės įrangos klaida. |
 | BAND | 1 žalias mirksnis | Nėra ryšio |
 | BAND | 2 žali mirksniai | Ryšys GSM |
 | BAND | 3 žali mirksniai | Ryšys GPRS |
 | BAND | 4 žali mirksniai | Ryšys EDGE |
 | BAND | 5 žali mirksniai | Ryšys HSDPA, HSUPA, HSPA+, WCDMA |
 | BAND | 6 žali mirksniai | Ryšys LTE TDD, LTE FDD |
+
+!!! note "Pastaba"
+    Ankstesnės gamybos GT+ komunikatoriuose indikatorius TROUBLE yra oranžinis, o naujesnės gamybos komunikatoriuose raudonas. Mirksnių skaičius abiem atvejais reiškia tą patį.
 
 ### GSM komunikatoriaus GT+ panaudojimo struktūrinė schema
 

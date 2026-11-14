@@ -162,22 +162,25 @@ This manual is for 4G communicators.
 | POWER | Green solid and yellow blinking | (Configuration mode) Communicator is ready for configuration |
 | POWER | Yellow solid | (Configuration mode) No connection with computer |
 | TROUBLE | Off | No operation problems |
-| TROUBLE | 1 red blink | SIM card not found |
-| TROUBLE | 2 red blinks | SIM card PIN code problem (incorrect PIN code) |
-| TROUBLE | 3 red blinks | Programming problem (No APN) |
-| TROUBLE | 4 red blinks | Registration to Cellular network problem |
-| TROUBLE | 5 red blinks | Registration to GPRS/UMTS network problem |
-| TROUBLE | 6 red blinks | No connection with the receiver |
-| TROUBLE | 7 red blinks | Lost connection with control panel |
-| TROUBLE | 8 red blinks | The entered ICCID number does not match the ICCID number of the SIM card |
-| TROUBLE | Red blinking | (Configuration mode) Memory fault |
-| TROUBLE | Red solid | (Configuration mode) Firmware is corrupted |
+| TROUBLE | 1 orange or red blink | SIM card not found |
+| TROUBLE | 2 orange or red blinks | SIM card PIN code problem (incorrect PIN code) |
+| TROUBLE | 3 orange or red blinks | Programming problem (No APN) |
+| TROUBLE | 4 orange or red blinks | Registration to Cellular network problem |
+| TROUBLE | 5 orange or red blinks | Registration to GPRS/UMTS network problem |
+| TROUBLE | 6 orange or red blinks | No connection with the receiver |
+| TROUBLE | 7 orange or red blinks | Lost connection with control panel |
+| TROUBLE | 8 orange or red blinks | The entered ICCID number does not match the ICCID number of the SIM card |
+| TROUBLE | Orange or red blinking | (Configuration mode) Memory fault |
+| TROUBLE | Orange or red solid | (Configuration mode) Firmware is corrupted |
 | BAND | 1 green blink | None |
 | BAND | 2 green blinks | GSM |
 | BAND | 3 green blinks | GPRS |
 | BAND | 4 green blinks | EDGE |
 | BAND | 5 green blinks | HSDPA, HSUPA, HSPA+, WCDMA |
 | BAND | 6 green blinks | LTE TDD, LTE FDD |
+
+!!! note
+    The TROUBLE indicator is orange on earlier GT+ units and red on units from newer production. The number of blinks means the same in both cases.
 
 ### Structural schematic with *GT+* usage 
 

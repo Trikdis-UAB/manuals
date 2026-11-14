@@ -161,22 +161,25 @@ Este manual es para comunicadores 4G.
 | POWER | Verde sólido y parpadeo amarillo | (Modo de configuración) Comunicador está listo para la configuración |
 | POWER | Amarillo sólido | (Modo de configuración) No hay conexión con la computadora |
 | TROUBLE | Off | No hay problemas de operación |
-| TROUBLE | 1 parpadeo rojo | Tarjeta SIM no encontrada |
-| TROUBLE | 2 parpadeos rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto) |
-| TROUBLE | 3 parpadeos rojos | Problema de programación (No APN) |
-| TROUBLE | 4 parpadeos rojos | Problema con el registro a la red GSM |
-| TROUBLE | 5 parpadeos rojos | Problemas con el registro a la red GPRS/UMTS |
-| TROUBLE | 6 parpadeos rojos | No hay conexión con el receptor |
-| TROUBLE | 7 parpadeos rojos | Conexión perdida con el panel de control |
-| TROUBLE | 8 parpadeos rojos | El número ICCID ingresado no coincide con el número ICCID de la tarjeta SIM |
-| TROUBLE | Parpadeo rojo | (Modo de configuración) Fallo de memoria |
-| TROUBLE | Rojo sólido | (Modo de configuración) El firmware está dañado |
+| TROUBLE | 1 parpadeo naranja o rojo | Tarjeta SIM no encontrada |
+| TROUBLE | 2 parpadeos naranjas o rojos | Problema con el código PIN de la tarjeta SIM (código PIN incorrecto) |
+| TROUBLE | 3 parpadeos naranjas o rojos | Problema de programación (No APN) |
+| TROUBLE | 4 parpadeos naranjas o rojos | Problema con el registro a la red GSM |
+| TROUBLE | 5 parpadeos naranjas o rojos | Problemas con el registro a la red GPRS/UMTS |
+| TROUBLE | 6 parpadeos naranjas o rojos | No hay conexión con el receptor |
+| TROUBLE | 7 parpadeos naranjas o rojos | Conexión perdida con el panel de control |
+| TROUBLE | 8 parpadeos naranjas o rojos | El número ICCID ingresado no coincide con el número ICCID de la tarjeta SIM |
+| TROUBLE | Parpadeo naranja o rojo | (Modo de configuración) Fallo de memoria |
+| TROUBLE | Naranja o rojo sólido | (Modo de configuración) El firmware está dañado |
 | BAND | 1 parpadeo verde | Ninguna |
 | BAND | 2 parpadeos verdes | GSM |
 | BAND | 3 parpadeos verdes | GPRS |
 | BAND | 4 parpadeos verdes | EDGE |
 | BAND | 5 parpadeos verdes | HSDPA, HSUPA, HSPA+, WCDMA |
 | BAND | 6 parpadeos verdes | LTE TDD, LTE FDD |
+
+!!! note "Nota"
+    El indicador TROUBLE es naranja en las unidades GT anteriores y rojo en las de producción más reciente. El número de parpadeos significa lo mismo en ambos casos.
 
 ### Esquema estructural del uso del dispositivo GT 
 
