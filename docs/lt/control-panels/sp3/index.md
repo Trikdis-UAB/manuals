@@ -445,6 +445,8 @@ Centralės plokštėje yra 10 kontaktų IO1–IO10 (įėjimai) jutiklių grandin
 
 ### Dūmų jutiklių jungimas
 
+Prie „FLEXi“ SP3 galima prijungti iki 5 dvilaidžių gaisro daviklių.
+
 Dvilaidžių dūmų jutiklių prijungimo schemos.
 
 Dvilaidžių dūmų jutiklių prijungimo schema prie PGM (LED) išėjimo. Kai yra naudojama šia jungimo schema, reikia **Gaisro kilpa naudoja LED išėjimą** lauką pažymėti varnele (žr. 5.2 „Langas „Sistemos parinktys““).
