@@ -18,6 +18,8 @@ Komunikatorius GT+ taip pat veikia su Protegus2 programėle. Su Protegus2 vartot
 
 Komunikatorius gali būti prijungtas prie centralės duomenų magistralės arba klaviatūros magistralės arba prie centralės telefono komunikatoriaus.
 
+DSC centrales galima prijungti kartu prie klaviatūros magistralės ir prie centralės TIP/RING gnybtų. Klaviatūros magistralė naudojama centralei valdyti ir jos būsenai stebėti, o įvykiai siunčiami su pačios centralės Contact ID kodais.
+
 Siunčia įvykius į stebėjimo pulto imtuvą:
 
 - Siunčia įvykius į TRIKDIS programinius arba aparatūrinius imtuvus, kurie dirba su bet kuria stebėjimo programa.
@@ -81,6 +83,8 @@ Veikia su Protegus2 programėle:
 | Honeywell® | <u>Ademco Vista-15</u>, <u>Ademco Vista-20</u>, <u>Ademco Vista-48</u> |
 
 \***<u>Pabraukta</u>** – centralės, tiesiogiai valdomos su GT+. Tiesiogiai valdomų PARADOX centralių veikimo programos versija turi būti ne žemesnė nei V.4.
+
+DSC centrales galima prijungti tik prie klaviatūros magistralės arba kartu prie klaviatūros magistralės ir TIP/RING gnybtų (žr. p. 3.2.1).
 
 \*Kitų gamintojų centralės prie GT+ komunikatoriaus jungiasi per centralės TIP/RING gnybtus (kuris palaiko DTMF tonais perduodamą Contact ID ryšio protokolą).
 
@@ -232,6 +236,8 @@ Komunikatorius yra prijungtas prie centralės klaviatūros magistralės arba nuo
 
 3.  Paradox ir Texecom centralių tiesioginiam valdymui įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, kuris įvestas centralėje.
 
+Kai DSC centralė prijungta ir prie klaviatūros magistralės, ir prie TIP/RING gnybtų, lauke „**Komunikacijos protokolas**“ nustatykite „**AUTO**“, o lauke „**Centralės modelis**“ pasirinkite DSC centralės modelį. Pažymėkite „**Nuotolinis centralės valdymas**“, kad centralę būtų galima valdyti su Protegus2. Žr. p. 3.2.1.2.
+
 !!! note "Pastaba"
     Kad veiktų tiesioginis centralės valdymas, reikės pakeisti centralės
     nustatymus. Kaip tai padaryti aprašyta skyriuje **4 „Apsaugos centralių
@@ -352,11 +358,57 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 
 #### DSC
 
+##### Klaviatūros magistralė
+
 <img class="wiring-diagram" alt="Prijungimo schema: DSC centralės klaviatūros magistralė prijungta prie GT+. RED jungiamas prie +DC, BLK – prie -DC, YEL – prie CLK, GRN – prie DATA." src="./wiring-dsc.webp" width="541" height="480" />
+
+!!! note "Pastaba"
+    Kai prijungta tik klaviatūros magistralė, komunikatorius gauna iš centralės bendras zonų būsenas ir negali atskirti zonos tipo (gaisro, įsilaužimo, vandens nuotėkio ir kt.). Visi aliarmai perduodami kaip bendras aliarmas, Contact ID E130, o kai kurie stebėjimo pultai tokius įvykius apdoroja kitaip nei iš tikrųjų suveikusios zonos tipo įvykius. Kad įvykiai būtų perduodami su pačios centralės Contact ID kodais (pvz., E110 gaisro aliarmui), prijunkite ir TIP/RING gnybtus, žr. p. 3.2.1.2.
+
+##### Klaviatūros magistralė ir TIP/RING
+
+<img class="wiring-diagram" alt="Prijungimo schema: DSC centralė prijungta prie GT+. Klaviatūros magistralė: RED jungiamas prie +DC (+12V), BLK – prie -DC, YEL – prie CLK, GRN – prie DATA. Telefoninio komunikatoriaus gnybtai: centralės TIP jungiamas prie GT+ TIP, centralės RING – prie GT+ RING." src="./wiring-dsc-tip-ring.webp" width="650" height="513" />
+
+Klaviatūros magistralė naudojama centralei valdyti ir jos būsenai stebėti: per ją nuotoliniu būdu įjungiama ir išjungiama apsauga, gaunamos sričių ir zonų būsenos. Įvykiai perduodami per centralės telefoninį komunikatorių, prijungtą prie TIP/RING gnybtų, todėl jie siunčiami su pačios centralės Contact ID kodais. Kol naudojami TIP/RING gnybtai, įvykiai iš klaviatūros magistralės antrą kartą nesiunčiami.
+
+Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/RING gnybtų, tuomet lange „**Centralės sąsaja**“ GT+ reikia nustatyti:
+
+1.  Lauke „**Komunikacijos protokolas**“ nustatykite „**AUTO**“.
+
+2.  Lauke „**Centralės modelis**“ pasirinkite DSC centralės modelį.
+
+3.  Pažymėkite „**Nuotolinis centralės valdymas**“, jei norite, kad vartotojai galėtų valdyti centralę su programėle Protegus2.
+
+DSC centralės telefoninis komunikatorius turi būti užprogramuotas siųsti įvykius, kaip aprašyta p. 4.1.1 „DSC“.
 
 #### PARADOX
 
+##### Nuoseklioji jungtis
+
 <img class="wiring-diagram" alt="Prijungimo schema: PARADOX centralės nuoseklusis jungtis prijungta prie GT+ atskirai užsakomu kabeliu EX-CRP2.4. R (raudonas) laidas jungiamas prie +DC, B (juodas) – prie -DC, Y (geltonas) – prie CLK, G (žalias) – prie DATA." src="./wiring-paradox.webp" width="650" height="480" />
+
+##### Klaviatūros magistralė ir TIP/RING (SP/SP+/MG/MG+)
+
+<img class="wiring-diagram" alt="Prijungimo schema: PARADOX SP/SP+/MG/MG+ centralė prie GT+. Klaviatūros magistralė: +AUX (+12V) į + DC, -AUX į - DC, GRN į DATA, YEL į CLK. Telefoninio komunikatoriaus gnybtai: TIP į TIP, RING į RING. Susikertantys laidai ties susikirtimais nesujungti." src="./image23.webp" width="650" height="514" />
+
+Šiuo būdu jungiamasi prie centralės klaviatūros magistralės, o ne prie nuosekliosios jungties, todėl mokamas Paradox nuosekliosios jungties atrakinimas nereikalingas.
+
+!!! note "Pastaba"
+    Šiam prijungimui komunikatoriaus programinės įrangos versija turi būti ne žemesnė nei 1.21.
+
+Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/RING gnybtų, tuomet GT+ reikia nustatyti:
+
+1.  Pasirinkite „**AUTO**“.
+
+2.  Pasirinkite „**7. Paradox SP+/MG+ series KeyBus**“ apsaugos centralės modelį.
+
+3.  Pasirinkite „**Nuotolinis centralės valdymas**“, jei norite, kad vartotojai galėtų valdyti centralę su programėle Protegus2 naudodami savo klaviatūros kodą.
+
+4.  Norėdami tiesiogiai valdyti centralę, įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, įvestu centralėje.
+
+<img alt="TrikdisConfig langas „Centralės sąsaja“: pažymėtas laukas „Komunikacijos protokolas“, pasirinkta „2. AUTO“; pažymėtas laukas „Centralės modelis“, kuriame matoma „5. PARADOX SP/MG se“; pažymėtas pasirinkimas „Nuotolinis centralės valdymas“ su varnele; pažymėtas laukas „Centralės PC download slaptažodis“." src="./image24.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
+
+Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pultui ir nuotoliniam valdymui iš Protegus2, kaip aprašyta p. 4.1.2 „PARADOX“.
 
 #### CADDX
 
@@ -381,33 +433,6 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 #### Centralė (telefoninis komunikatorius, TIP/RING)
 
 <img class="wiring-diagram" alt="Prijungimo schema: centralė prijungta prie GT+. +AUX prijungtas prie +DC (+12 V), -AUX – prie -DC, TIP – prie TIP, RING – prie RING (telefoninio komunikatoriaus gnybtai)." src="./wiring-control-panel-tip-ring.webp" width="675" height="479" />
-
-### Komunikatoriaus prijungimo schema su PARADOX SP/SP+/MG/MG+ centralemis prie klaviatūros magistralės ir centralės telefono komunikatoriaus (TIP/RING gnybtų)
-
-!!! note "Pastaba"
-    Šiam prijungimui komunikatoriaus programinės įrangos versija turi būti ne žemesnė nei 1.21.
-
-<img alt="Prijungimo schema: PARADOX SP/SP+/MG/MG+ centralė prie GT+. Klaviatūros magistralė: +AUX (+12V) į + DC, -AUX į - DC, GRN į DATA, YEL į CLK. Telefoninio komunikatoriaus gnybtai: TIP į TIP, RING į RING. Susikertantys laidai ties susikirtimais nesujungti." src="./image23.webp" style="width:3.4766732283464568in;height:2.746672134733158in" />
-
-Kai komunikatorius prijungtas prie centralės klaviatūros magistralės ir TIP/RING gnybtų, tuomet GT+ reikia nustatyti:
-
-1.  Pasirinkite „**AUTO**“.
-
-2.  Pasirinkite „**7. Paradox SP+/MG+ series KeyBus**“ apsaugos centralės modelį.
-
-3.  Pasirinkite „**Nuotolinis centralės valdymas**“, jei norite, kad vartotojai galėtų valdyti centralę su programėle Protegus2 naudodami savo klaviatūros kodą.
-
-4.  Norėdami tiesiogiai valdyti centralę, įveskite „**Centralės PC download slaptažodį**“. Jis turi sutapti su slaptažodžiu, įvestu centralėje.
-
-<img alt="TrikdisConfig langas „Centralės sąsaja“: pažymėtas laukas „Komunikacijos protokolas“, pasirinkta „2. AUTO“; pažymėtas laukas „Centralės modelis“, kuriame matoma „5. PARADOX SP/MG se“; pažymėtas pasirinkimas „Nuotolinis centralės valdymas“ su varnele; pažymėtas laukas „Centralės PC download slaptažodis“." src="./image24.webp" style="width:7.086614173228346in;height:1.984251968503937in" />
-
-Centralė Paradox turi būti užprogramuota perduoti pranešimus stebėjimo pultui ir nuotoliniam valdymui iš Protegus2.
-
-| **Ląstelė** |   **Duomenys**   | **Ląstelė** | **Duomenys** |
-|:-----------:|:----------------:|:-----------:|:------------:|
-|     801     | \*\*\*\*\*\*\*\* |     815     |    123456    |
-|     811     |       1111       |     911     |     1234     |
-|     812     |       2222       |             |              |
 
 ### GT+ prijungimo schema prie centralės jungiklio (angl. keyswitch) zonos
 
@@ -482,7 +507,27 @@ Jei norite įgalinti nuotolinį centralės valdymą, įsitikinkite, kad yra užd
 
 #### DSC
 
-DSC centralių programuoti nereikia.
+**Klaviatūros magistralė.** DSC centralių programuoti nereikia.
+
+**Klaviatūros magistralė ir TIP/RING.** Užprogramuokite centralės telefoninį komunikatorių, kad jis siųstų įvykius. Lentelė skirta **DSC PowerSeries PC1616** (**PC1832, PC1864**) centralėms. Prie centralės prijungtoje klaviatūroje įeikite į programavimo režimą: [\*][8][montuotojo kodas], tada įveskite skyriaus numerį.
+
+| Skyrius | Reikšmė |
+|---------|---------|
+| [301] Pirmasis telefono numeris | Bet koks ilgesnis nei keturių skaitmenų numeris be D pradžioje (pvz., 5555555). Su D centralė laukia numerio rinkimo signalo; be D numeris surenkamas greičiau. Komunikatorius atsiliepia į kiekvieną skambutį |
+| [310] Sistemos objekto numeris | Keturių skaitmenų objekto numeris ir FF (pvz., 1234FF). Vietoj kiekvieno skaitmens 0 naudokite HEX A |
+| [311] 1 srities objekto numeris | Keturių skaitmenų objekto numeris. Vietoj kiekvieno skaitmens 0 naudokite HEX A |
+| [350] Komunikatoriaus formatas | 03 (Contact ID) 1-ajam telefono numeriui |
+| [351]–[376] Komunikatoriaus skambučių kryptys | Įjunkite reikiamas įvykių grupes 1-ajam telefono numeriui: Alarm/Restore, Opening/Closing, Tamper Alarm/Restore, System Maintenance, Test Transmissions. Ypač patikrinkite Opening/Closing: kai kuriose DSC centralėse ši grupė pagal nutylėjimą išjungta |
+| [380] Pirmoji komunikatoriaus parinktis | 1 parinktis ON (komunikatorius įjungtas). 3 parinktis OFF (DTMF rinkimas) |
+| [381] Antroji komunikatoriaus parinktis | 7 parinktis OFF (Contact ID pranešimų kodai generuojami automatiškai) |
+| [320]–[349] Pranešimų kodai | Bet kokia reikšmė, išskyrus 00, tiems įvykiams, apie kuriuos turi būti pranešama |
+| [015] Trečioji sistemos parinktis | 7 parinktis OFF (telefono linijos stebėjimas, TLM, išjungtas) |
+
+!!! note "Pastaba"
+    Išjunkite telefono linijos stebėjimą. Jei TLM liks įjungtas, centralė gali rodyti telefono linijos gedimą. TLM gedimo delsa nustatoma skyriuje [377].
+
+!!! note "Pastaba"
+    Aukščiau nurodyti skyrių numeriai tinka PC1616, PC1832 ir PC1864 centralėms (įrengimo instrukcija v4.x). Kitų DSC modelių skyrių numeriai gali skirtis; žr. centralės programavimo instrukciją.
 
 #### PARADOX
 
@@ -496,6 +541,13 @@ Norėdami nustatyti šį slaptažodį, su prie apsaugos centralės prijungta kla
 
 - DIGIPLEX EVO serijai: eikite į ląstelę 3012 ir įveskite 4 skaičių PC prisijungimo slaptažodį.
 
+**Klaviatūros magistralė ir TIP/RING (SP/SP+/MG/MG+).** Centralė taip pat turi būti užprogramuota perduoti pranešimus stebėjimo pultui ir nuotoliniam valdymui iš Protegus2:
+
+| **Ląstelė** |   **Duomenys**   | **Ląstelė** | **Duomenys** |
+|:-----------:|:----------------:|:-----------:|:------------:|
+|     801     | \*\*\*\*\*\*\*\* |     815     |    123456    |
+|     811     |       1111       |     911     |     1234     |
+|     812     |       2222       |             |              |
 
 #### TEXECOM
 
@@ -1115,17 +1167,19 @@ Kai konfigūravimas ir instaliavimas baigtas, atlikite sistemos patikrą:
 
 1.  Sugeneruokite įvykį:
 
-- įjungdami/išjungdami saugojimo režimą su apsaugos centralės klaviatūra;
+    - įjungdami/išjungdami saugojimo režimą su apsaugos centralės klaviatūra;
 
-- suveiksmindami centralės zoną esant įjungtam saugojimo režimui.
+    - suveiksmindami centralės zoną esant įjungtam saugojimo režimui.
 
-1.  Patikrinkite, ar įvykiai buvo gauti Centriniame stebėjimo pulte ir/arba Protegus2 programėlėje.
+2.  Patikrinkite, ar įvykiai buvo gauti Centriniame stebėjimo pulte ir/arba Protegus2 programėlėje.
 
-2.  Norėdami išbandyti komunikatoriaus įėjimą, suveiksminkite jį ir patikrinkite, ar gavėjai gauna teisingus pranešimus.
+3.  Norėdami išbandyti komunikatoriaus įėjimą, suveiksminkite jį ir patikrinkite, ar gavėjai gauna teisingus pranešimus.
 
-3.  Norėdami išbandyti komunikatoriaus išėjimus, juos įjunkite nuotoliniu būdu ir patikrinkite jų veikimą.
+4.  Norėdami išbandyti komunikatoriaus išėjimus, juos įjunkite nuotoliniu būdu ir patikrinkite jų veikimą.
 
-4.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus2 programėle.
+5.  Jei bus naudojamas nuotolinis centralės valdymas, įjunkite bei išjunkite centralės saugojimo režimą nuotoliniu būdu su Protegus2 programėle.
+
+6.  Jei DSC centralė prijungta prie klaviatūros magistralės ir TIP/RING gnybtų, įjunkite saugojimo režimą ir suveiksminkite gaisro zoną. Stebėjimo pultas turi gauti įvykį su zonos tipo Contact ID kodu (pvz., E110), o ne kaip bendrą aliarmą E130.
 
 ## Programinės įrangos atnaujinimas
 

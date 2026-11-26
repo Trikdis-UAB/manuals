@@ -93,6 +93,9 @@ Conecte el panel al E16 como se muestra a continuación:
 
 Los paneles DSC no requieren programación adicional para E16.
 
+!!! note "Nota"
+    A través del bus de teclado, el comunicador recibe del panel los estados generales de las zonas y no puede distinguir el tipo de zona (incendio, robo, fuga de agua, etc.). Todas las alarmas se envían como alarma general, Contact ID E130, y algunas CRA gestionan estos eventos de forma distinta a la del tipo de zona que realmente se activó. E16 no tiene terminales TIP/RING. Para enviar los eventos con los códigos Contact ID propios del panel (por ejemplo, E110 para una alarma de incendio), utilice un comunicador que se conecte al mismo tiempo al bus de teclado y a los terminales TIP/RING del panel: GT, GT+ o GET.
+
 ## Añadir sistema a Protegus2
 
 1. Abra [Protegus2](https://www.protegus.app) y pulse **Agregar nuevo sistema**.

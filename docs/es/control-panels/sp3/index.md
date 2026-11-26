@@ -425,6 +425,8 @@ Hay 10 terminales IO1 – IO10 (entradas) en la placa del panel de control para 
 
 ### Conexión de detectores de humo
 
+Al „FLEXi“ SP3 se pueden conectar hasta 5 detectores de incendio de dos hilos.
+
 Diagrama para conectar detectores de humo de dos cables.
 
 Diagrama de cableado para detectores de humo de dos cables a salida PGM (LED). Al utilizar este esquema para conectar detectores de incendios, es necesario marcar el campo " **LED out for 2Wire fire sensor**" con una marca de verificación (consulte el capítulo 5.2 “Ventana “Opciones de sistema””).

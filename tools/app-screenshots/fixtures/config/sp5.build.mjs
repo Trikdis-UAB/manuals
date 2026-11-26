@@ -206,6 +206,8 @@ export function betaShape(d) {
   }
   b.outputs.outSettings = b.outputs.outSettings.map(({ zoneInControl, ...o }) => ({ ...o, needCodeInKeypad: false }));
   b.outputs.thermostats = b.outputs.thermostats.map(({ hysteresis, ...t }) => t);
+  // Sensors: temperature unit (0 °C, 1 K, 2 °F) and a value offset replace the port (Protegus_v3 ef78f6d3, 2026-11).
+  b.sensors = b.sensors.map(({ port, ...s }) => ({ ...s, temperatureUnit: 0, offset: 0 }));
   b.systemStatus = betaStatus();
   b.automation = automation();
   b.users.groups[1] = { ...b.users.groups[1], schedules: [1 << CLEANING, 0], scheduleDeny: false }; // Cleaning staff: access by "Cleaning"
@@ -237,7 +239,8 @@ const scene = (q, name, enabled, factors, actions, triggerAny = false) => {
   return { ...s, name, enabled, triggerAny };
 };
 // Factor sources and events, and action modes (scene.utils.ts): zone 1 / sensor 2 / area 3 / user 4 /
-// SMS 6 / schedule 7; output ON 0, OFF 1, pulse 3; area arm 22, disarm 21. Outputs and areas in actions
+// SMS 6 / schedule 7; output ON 1, OFF 0, pulse 3 (the app had ON and OFF the wrong way round until
+// Protegus_v3 9e09e794, 2026-11-05); area arm 22, disarm 21. Outputs and areas in actions
 // are numbered from 1 (output queueNo + 1); zones, sensors, areas and schedules in factors are bits by queueNo.
 const OUT = { garageGate: 2, gardenLights: 3, garageLight: 4 }, AREA = { home: 0, garage: 2 }; // all Remote control
 function automation() {
@@ -251,13 +254,13 @@ function automation() {
   holidays[NEW_YEAR] = { ...holidayDefault(NEW_YEAR), enabled: true, annual: true, startYear: 27, startMonth: 1, startDay: 1, stopYear: 27, stopMonth: 1, stopDay: 1, name: "New Year's Day" };
   holidays[2] = { ...holidayDefault(2), enabled: true, annual: false, startYear: 26, startMonth: 8, startDay: 3, stopYear: 26, stopMonth: 8, stopDay: 14, name: 'Family trip' };
   const scenes = Array.from({ length: 32 }, (_, q) => sceneDefault(q));
-  scenes[0] = scene(0, 'Leak: warning light', true, [{ id: 1, when: 0, bits: bits(15) }], [{ outId: OUT.garageLight, mode: 0 }]);  // zone 16 Boiler room leak, alarm
-  scenes[1] = scene(1, 'Frost warning', false, [{ id: 2, when: 7, temp: 50, bits: bits(0) }], [{ outId: OUT.gardenLights, mode: 0 }]); // below 5.0 °C
-  scenes[2] = scene(2, 'Evening lights', true, [{ id: 7, when: 0, bits: bits(EVENING) }], [{ outId: OUT.gardenLights, mode: 0 }]);
+  scenes[0] = scene(0, 'Leak: warning light', true, [{ id: 1, when: 0, bits: bits(15) }], [{ outId: OUT.garageLight, mode: 1 }]);  // zone 16 Boiler room leak, alarm
+  scenes[1] = scene(1, 'Frost warning', false, [{ id: 2, when: 7, temp: 50, bits: bits(0) }], [{ outId: OUT.gardenLights, mode: 1 }]); // below 5.0 °C
+  scenes[2] = scene(2, 'Evening lights', true, [{ id: 7, when: 0, bits: bits(EVENING) }], [{ outId: OUT.gardenLights, mode: 1 }]);
   scenes[3] = scene(3, 'Garage follows Home', true, [{ id: 3, when: 0, bits: bits(AREA.home) }], [{ outId: AREA.garage, mode: 22, end: 21 }]);
   scenes[4] = scene(4, 'Gate by tag or SMS', true,
     [{ id: 4, when: 0, logic: 0, temp: 2 }, { id: 6, when: 0, text: 'OPEN GATE' }],      // tag of user 2 (Sample user 1), or this SMS
-    [{ outId: OUT.garageGate, mode: 3, pulseTime: 5 }, { outId: OUT.gardenLights, mode: 0 }], true);
+    [{ outId: OUT.garageGate, mode: 3, pulseTime: 5 }, { outId: OUT.gardenLights, mode: 1 }], true);
   return { schedules, holidays, scenes };
 }
 // The date-range state of the Cleaning schedule (pop-up screen): 1 Sep 2026 to 30 Jun 2027.

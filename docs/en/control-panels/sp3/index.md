@@ -421,6 +421,8 @@ There are 10 terminals IO1–IO10 (inputs) on the control panel board for connec
 
 ### Connecting smoke detectors 
 
+Up to 5 two-wire fire detectors can be connected to the „FLEXi“ SP3.
+
 Schematic for connecting two-wire smoke detectors to PGM (LED) outputs. When using this scheme for connecting fire detectors, it is necessary to mark the "**LED out as 2Wire fire**" field with a tick (see chapter5.2 “Window “System options””).
 
 <img alt="Wiring diagram: SP3 to two-wire smoke detectors. AUX+ to the first detector + IN and LED to its − IN; each detector’s + OUT and − OUT continue to the next detector’s corresponding IN terminals. A 2.2kΩ End of line resistor bridges the + and − wires after the last detector." src="./image17.webp" style="width:4.6266765091863515in;height:1.3666699475065618in" />

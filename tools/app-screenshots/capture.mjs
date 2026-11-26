@@ -64,6 +64,9 @@ const appBuild = await deployedBuild(fe.origin);
 const modelSlug = model.toLowerCase().replace('+', '-plus');
 const records = [];
 let problems = 0;
+// A label key as the app prints it when the label is missing: one of the label packs' first segments, then
+// dotted parts ("configurators.settings.sections.scenes.disarmNote"). Segments from fixtures/translations*/ (2026-11-26).
+const RAW_LABEL_KEY = String.raw`\b(?:auth|companies|config_[a-z0-9]+|configurators|dashboard|events|general|help|invoice|language|mobileapp|payments|permissions|privacyPolicyFE|reactionNames|sensors|settings|setup|systems|tags|users|validation)(?:\.[A-Za-z0-9_]+)+`;
 
 for (const lang of langs) {
   const t = labels(lang, cfg);
@@ -146,9 +149,12 @@ async function walkTo(page, t, screen) {
   const appPath = [t('systems.menu.advancedSettings')];
   // Menu labels are clicked inside the configurator only: on desktop "Settings" is also a top-bar item.
   const configurator = page.locator('app-ui-container').first();
-  for (const key of screen.menu ?? []) {
+  for (const item of screen.menu ?? []) {
+    // { key, last: true } when an earlier item shows the same text, e.g. SP3's Wireless subtitle "Sensors".
+    const { key, last } = typeof item === 'string' ? { key: item } : item;
     const text = t(key);
-    await configurator.getByText(text, { exact: true }).first().click({ timeout: 10000 });
+    const match = configurator.getByText(text, { exact: true });
+    await (last ? match.last() : match.first()).click({ timeout: 10000 });
     appPath.push(text);
     await settle(page, 300);
   }
@@ -350,6 +356,8 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
       console.log(`note ${label}: page is longer than one ${layout} screen; image is ${Math.min(again.bottom + 24, MAX_CSS_HEIGHT)} CSS px tall`);
     }
     crop.height = crop.overflows ? Math.min(crop.bottom + 24, MAX_CSS_HEIGHT) : layout === 'phone' ? Math.min(height, crop.bottom + 24) : height;
+    // A long list (64 zones, 16 schedules) is cut after its first rows: screen.maxHeight in CSS px.
+    if (screen.maxHeight && crop.height > screen.maxHeight) { crop.height = screen.maxHeight; crop.cutAt = screen.maxHeight; }
     crop.top = s.below ? Math.ceil(await page.locator(s.below).first().evaluate((e) => e.getBoundingClientRect().bottom)) : 0;
     await page.screenshot({ ...opts, clip: { x: 0, y: crop.top, width, height: crop.height - crop.top } });
     // Back to the normal window, so the next image of this page is measured the same way.
@@ -358,8 +366,13 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     await page.screenshot(opts);
   }
   if (args.text && s.variant === layout) fs.writeFileSync(file.replace(/\.png$/, '.txt'), await pageText(page));
+  // A label key shown instead of its text means the label packs lack it (the beta, 2026-11-26: three keys
+  // in the sensor and scene pop-ups, and the run still said "0 problems"). Such an image cannot go in a manual.
+  const rawLabelKeys = await page.evaluate((re) => [...new Set(document.body.innerText.match(new RegExp(re, 'g')) ?? [])], RAW_LABEL_KEY);
+  if (rawLabelKeys.length) { problems++; console.log(`WARN ${label} ${s.file}: label key(s) shown instead of text: ${rawLabelKeys.join(', ')}`); }
   const fw = sampleFirmware(model);
   return {
+    ...(rawLabelKeys.length ? { rawLabelKeys } : {}),
     screen: id,
     configurator: def.configurator,
     appPath,
@@ -378,6 +391,7 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     deviceScaleFactor: LAYOUTS[layout].deviceScaleFactor,
     ...(s.crop ? { croppedTo: s.crop } : {}),
     ...(crop ? { croppedToCss: { ...(crop.top ? { top: crop.top } : {}), width: LAYOUTS[layout].viewport.width, height: crop.height - crop.top }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
+    ...(crop?.cutAt ? { cutAfterCss: crop.cutAt, note: `List cut after the first rows (screen.maxHeight ${crop.cutAt} CSS px); the page goes on.` } : {}),
     appUrl: new URL(page.url()).pathname,
     frontend: fe.id,
     ...(fe.releasedColours ? { theme: fe.recolour ? 'released colours on this build' : `${fe.id} colours` } : {}),
@@ -432,9 +446,13 @@ async function openOrFail(label, opts) {
 // endpoint (answered locally, never sent).
 function runIssues(guard, errors, mocks) {
   return [...guard.unmocked.keys()].map((k) => `unmocked ${k}`)
+    .concat([...guard.fetchFailed].map(([p, e]) => `could not fetch ${p}: ${e}`))
     .concat(errors.map((e) => `pageerror ${e}`))
     .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`))
-    .concat(fe.recolour && !guard.recoloured.size ? ['no theme colour was found to swap; the build\'s colours may have changed (lib/frontends.mjs)'] : []);
+    // The main colour must be among those swapped: on 2026-11-25 the beta's indigo changed, its orange
+    // still swapped, and a whole set came out indigo with "0 problems".
+    .concat(fe.recolour && !fe.recolour.some(([from, to]) => to.toLowerCase() === '#0070a7' && guard.recoloured.has(from))
+      ? ['the beta\'s main colour was not swapped to the released blue; its theme colours may have changed (lib/frontends.mjs)'] : []);
 }
 
 function labels(lang, configurator) {
@@ -501,8 +519,16 @@ function printSafety(g) {
   console.log(`     refused: ${fmt(g.refused)}`);
 }
 
+// An unknown flag stops the run: on 2026-11-26 "--help" was ignored and a full capture started.
+// (The list is inside the function: parseArgs runs before the module's own constants are set.)
 function parseArgs(a) {
+  const KNOWN_FLAGS = ['app', 'flow', 'fw', 'lang', 'layout', 'model', 'out', 'revision', 'screen', 'text', 'theme', 'verbose'];
   const o = {};
   for (let i = 0; i < a.length; i++) if (a[i].startsWith('--')) o[a[i].slice(2)] = a[i + 1]?.startsWith('--') || a[i + 1] === undefined ? true : a[++i];
+  const unknown = Object.keys(o).filter((k) => !KNOWN_FLAGS.includes(k));
+  if (unknown.length) {
+    console.error(`Unknown flag(s): ${unknown.map((k) => `--${k}`).join(', ')}. Known: ${KNOWN_FLAGS.map((k) => `--${k}`).join(' ')}. See README.md, "Run".`);
+    process.exit(2);
+  }
   return o;
 }

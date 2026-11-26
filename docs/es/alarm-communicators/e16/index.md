@@ -268,6 +268,9 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 
 <img class="wiring-diagram" alt="Diagrama de conexión: BUS de Datos del panel DSC al E16. RED (+12 V) a +DC, BLK a -DC, YEL a CLK y GRN a DATA." src="./wiring-dsc.webp" width="530" height="489" />
 
+!!! note "Nota"
+    A través del bus de teclado, el comunicador recibe del panel los estados generales de las zonas y no puede distinguir el tipo de zona (incendio, robo, fuga de agua, etc.). Todas las alarmas se envían como alarma general, Contact ID E130, y algunas CRA gestionan estos eventos de forma distinta a la del tipo de zona que realmente se activó. E16 no tiene terminales TIP/RING. Para enviar los eventos con los códigos Contact ID propios del panel (por ejemplo, E110 para una alarma de incendio), utilice un comunicador que se conecte al mismo tiempo al bus de teclado y a los terminales TIP/RING del panel: GT, GT+ o GET.
+
 #### PARADOX
 
 <img class="wiring-diagram" alt="Diagrama de conexión del puerto serial del panel PARADOX al E16 con el cable EX-CRP2.4. R (rojo, +12 V) a +DC, B (negro) a -DC, Y (amarillo) a CLK y G (verde) a DATA." src="./wiring-paradox.webp" width="661" height="468" />
