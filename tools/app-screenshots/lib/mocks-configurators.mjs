@@ -24,7 +24,7 @@ function sp3(on) {
   ] }));
   on('POST', '/config/eventlog/clear', () => ({ success: true }));
   // Modules → RS485 modules → Update, and Wireless → Update: signal and battery of each module and device.
-  on('GET', '/config/update-rs485-sensors', () => ({ success: true, data: { rssi: [92, 78, 0, 0, 0, 0, 0, 0], voltage: [12.1, 12.0, 0, 0, 0, 0, 0, 0] } }));
+  on('GET', '/config/update-rs485-sensors', () => ({ success: true, data: { rssi: [92, 78, 0, 0, 0, 0, 0, 0], voltage: [12.1, 12.0, 12.0, 0, 0, 0, 0, 0] } }));
   on('POST', '/config/update-sensors', () => ({ success: true, data: 'V:3.05,L:86|V:3.10,L:72|V:3.00,L:64|V:2.95,L:78' }));
 }
 

@@ -180,6 +180,17 @@
       ]
     },
     {
+      "id": "rs485-e485",
+      "menu": [
+        "config_sp3.navigation.modules",
+        "config_sp3.navigation.modulesTree.rs485"
+      ],
+      "route": "modules/rs485/2",
+      "click": [
+        "E485 communicator"
+      ]
+    },
+    {
       "id": "wireless",
       "menu": [
         "config_sp3.navigation.wireless"

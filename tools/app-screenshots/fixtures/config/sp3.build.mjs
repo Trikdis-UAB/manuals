@@ -116,9 +116,11 @@ const modules = {
   rs485: [
     { id: 0x28, sn: '0A13F7', fw: '1.04', name: 'RF-LORA', area: 0, rssi: 92, voltage: 12.1 },
     { id: 0x29, sn: '0B2C51', fw: '1.10', name: 'Garage', area: 0, rssi: 78, voltage: 12.0 },
-    ...Array.from({ length: 6 }, () => ({ id: 0, sn: '', fw: '', name: '', area: 0 })),
+    // An E485 Ethernet communicator, so its network settings (shown on its own module screen) can be captured.
+    { id: 0x36, sn: '0C3D82', fw: '1.02', name: 'E485', area: 0, rssi: 0, voltage: 12.0 },
+    ...Array.from({ length: 5 }, () => ({ id: 0, sn: '', fw: '', name: '', area: 0 })),
   ],
-  rs485lan: { dhcpMode: true, staticIp: '', subnetMask: '', gateway: '' },
+  rs485lan: { dhcpMode: true, staticIp: '0.0.0.0', subnetMask: '0.0.0.0', gateway: '0.0.0.0' },
   rs485pstn: null,
 };
 
