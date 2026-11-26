@@ -1042,7 +1042,7 @@ If arming is restricted for a fault, the control panel cannot be armed while tha
     </span>
 
 
-    **Communication type** offers TCP/IP and UDP/IP; with the **TL150** protocol, only UDP/IP. **Protocol** offers TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom and, from firmware 1.14, TL150. With TRK, the **Encryption key** has 6 characters. With a SIA DC-09 protocol, the app also shows **SIA DCS** [to confirm: what it does] and **Enable encryption**; when encryption is on, the **Encryption key** has 16 characters, or 32 hexadecimal characters when **Key is HEX** is on, and a shorter key is filled up with zeros. SMS reporting to the CMS and the **Backup channel 2** numbers are set only in TrikdisConfig.
+    **Communication type** offers TCP/IP and UDP/IP; with the **TL150** protocol, only UDP/IP. **Protocol** offers TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom and, from firmware 1.14, TL150. With TRK, the **Encryption key** has 6 characters. With any other protocol, the app shows **Enable encryption**, **Encryption key** and **Key is HEX**: when encryption is on, the key has 16 characters, or 32 hexadecimal characters when **Key is HEX** is on, and a shorter key is filled up with zeros. With a SIA DC-09 protocol, the app also shows **SIA DCS** [to confirm: what it does]. SMS reporting to the CMS and the **Backup channel 2** numbers are set only in TrikdisConfig.
 
 === "TrikdisConfig"
 
@@ -1050,11 +1050,11 @@ If arming is restricted for a fault, the control panel cannot be armed while tha
 
     <img alt="TrikdisConfig Reporting to CMS window on the Reporting tab. Primary and backup channels have Communication type set to Disabled; parallel and parallel backup channels show TCP/IP. These four panels have Domain or IP, Port, Protocol, Phone number and Encryption Key fields. Separate Backup channel 2 and Parallel backup channel 2 panels show only Phone number fields." src="./image59.webp" style="width:7.086614173228346in;height:3.87007874015748in" />
 
-The control panel sends events to the monitoring station via cellular internet (IP) or with SMS messages.
+The control panel sends events to the monitoring station over an IP connection (mobile data, WiFi or Ethernet, depending on the revision) or by SMS (set only in TrikdisConfig).
 
 Events can be sent over several channels of communication. The primary and parallel communication channels can operate simultaneously, this way the control panel can send events to two receivers at the same time. Backup channels can be assigned for both primary and parallel channels, which will be used when the connection via the primary or parallel channel is interrupted.
 
-Communication is encoded and password protected. A TRIKDIS receiver is required for receiving and sending event information to the monitoring programs:
+With the **TRK** protocol, communication is encrypted and password protected, and a TRIKDIS receiver is required to receive the events and pass them on to the monitoring software:
 
 • For connection over IP - software receiver IPcom Windows/Linux, hardware IP/SMS receiver RL14 or multichannel receiver RM14.
 
@@ -1074,7 +1074,7 @@ SMS communication is particularly useful as a backup channel, because it works e
 
 - **Phone number** – (only for SMS messages; *only in TrikdisConfig*) enter the phone number of a TRIKDIS SMS receiver. The telephone number must start with the international country code (e.g. 370xxxxxxxx).
 
-- **Encryption key** – 6-digit encryption key that must match the encryption key of the CMS receiver.
+- **Encryption key** – with **TRK**, a 6-digit key that must match the encryption key of the CMS receiver.
 
 If parameters are set for the parallel channel, reports will be sent using both channels simultaneously. Both channels cannot be configured for the same receiver. When the parallel channel is enabled, events can be sent simultaneously to two receivers (e.g., local and centralized monitoring stations).
 
@@ -1100,7 +1100,13 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
     </span>
 
 
-    In **Reporting mode**, the E485 connection is called **LAN (RS485)**. The choices depend on the panel’s revision: revisions starting with 10 or 20 have no SIM, and on revisions starting with 3E, 3L, 4 or 6 the wired network connection is shown as **LAN (ethernet)**. The “Communicator network settings” group is called **WiFi network parameters** (revisions starting with 1, 2, 3E or 5); revisions starting with 3E, 3L, 4 or 6 have a **LAN parameters** group with the same settings for the wired network, and a **LAN trouble indication** switch in the **Settings** group [to confirm: what it does]. **SMS Ping period** and the **SIM parameters** are not in the app.
+    **IP Ping enabled** turns the ping on. In **Reporting mode**, the choices depend on the panel’s revision:
+
+    - 10 and 20: no SIM.
+    - 3E and 3L: **LAN (ethernet)** instead of SIM; 3E has no **LAN (RS485)**, and 3L no WiFi.
+    - 4 and 6: **LAN (ethernet)** instead of WiFi.
+
+    The WiFi name and password are in **WiFi network parameters** (revisions starting with 1, 2, 3E or 5), together with the DHCP and IP settings. Revisions starting with 3E, 3L, 4 or 6 have a **LAN parameters** group with the DHCP and IP settings of the wired network, and a **LAN trouble indication** switch in the **Settings** group [to confirm: what it does]. **SMS Ping period** and the **SIM parameters** are not in the app.
 
 === "TrikdisConfig"
 
@@ -1112,7 +1118,7 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 
 - **Return to primary after** – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, in minutes.
 
-- **IP Ping period** – period for sending PING signals for checking connectivity on the GPRS channel, in seconds. To send these signals, turn them on.
+- **IP Ping period** – period for sending PING signals for checking the IP connection (mobile data, WiFi or Ethernet), in seconds. To send these signals, turn them on.
 
 - **SMS Ping period** – period for sending PING signals for checking connectivity on the SMS channel, in minutes. To send these signals, turn them on. *Only in TrikdisConfig.*
 
@@ -1124,7 +1130,7 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 
 - **SIA DC-09 receiver No.** – specify the receiver number.
 
-- **SIA DC-09 line No.** – specify the line number.
+- <span class="trik-term"><span class="trik-term-app"><strong>SIA DC-09 line No.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Line No.</strong><span class="trik-term-note">)</span></span></span> – specify the line number.
 
 - **Local time in SIA** – when it is on, the messages sent to the CMS (central monitoring station) will indicate the time set in the module.
 
@@ -1135,13 +1141,13 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 
 For setting parameters on how the control panel will communicate with the CMS channels and with Protegus2. The connection types are specified in order. If the control panel fails to connect using the **Main type** connection , it switches to the **Backup type**, and so on. If the backup connection type was successful in transmitting the message to the CMS, then the **Return to main** connection type will be attempted after the specified time interval.
 
-- **Main type** – select a connection type (SIM, WiFi, LAN(E485)) with the CMS receiver and Protegus2.
+- **Main type** – select a connection type (SIM, WiFi, <span class="trik-term"><span class="trik-term-app"><strong>LAN (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>LAN(E485)</strong><span class="trik-term-note">)</span></span></span>) with the CMS receiver and Protegus2.
 
-- **Backup type** – select a connection type (SIM, WiFi, LAN(E485)) with the CMS receiver and Protegus2.
+- **Backup type** – select a connection type (SIM, WiFi, <span class="trik-term"><span class="trik-term-app"><strong>LAN (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>LAN(E485)</strong><span class="trik-term-note">)</span></span></span>) with the CMS receiver and Protegus2.
 
-- **Backup type 2** – select a connection type (SIM, WiFi, LAN(E485)) with the CMS receiver and Protegus2.
+- **Backup type 2** – select a connection type (SIM, WiFi, <span class="trik-term"><span class="trik-term-app"><strong>LAN (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>LAN(E485)</strong><span class="trik-term-note">)</span></span></span>) with the CMS receiver and Protegus2.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Radio T16 (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Radio T16 (SF485)</strong><span class="trik-term-note">)</span></span></span> – turn it on when the T16 transmitter is used for transmitting information. The T16 transmitter operates as a backup connectivity channel if at least one of the other connection methods (SIM, WiFi, LAN(E485)) is used. If there are no other connection methods, it is the main one. The T16 can only be used to send reports to the CMS.
+- <span class="trik-term"><span class="trik-term-app"><strong>Radio T16 (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Radio T16/SF485</strong><span class="trik-term-note">)</span></span></span> – turn it on when the T16 transmitter is used for transmitting information. The T16 transmitter operates as a backup connectivity channel if at least one of the other connection methods (SIM, WiFi, <span class="trik-term"><span class="trik-term-app"><strong>LAN (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>LAN(E485)</strong><span class="trik-term-note">)</span></span></span>) is used. If there are no other connection methods, it is the main one. The T16 can only be used to send reports to the CMS.
 - <span class="trik-term"><span class="trik-term-app"><strong>Return to main (both channels)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Return to main (both channel)</strong><span class="trik-term-note">)</span></span></span> – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
 
 **Settings group “Communicator network settings”**
@@ -1181,7 +1187,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
     ![Protegus app, User John Smith with a Delete button: Name John Smith, Phone number +447700900123, Email john.smith@example.com, Keypad code masked, Tag code 000000000000, Can control areas 1,2, and Can ARM system, Can DISARM system, Can remotely control PGM, User get response messages from module and Readdress SMS messages from unknown sender all on.](./protegus-app/sp3-user-phone.webp){ .trik-mob-img }
 
 
-    **Name** takes up to 18 characters and **Tag code** up to 12 hexadecimal characters. **Keypad code** has 4 digits; with firmware 1.24 or later and **6-digit user code** turned on in **Modules → Keypads**, it has 6. If the email is already used by another user, the app says so. **Delete** clears the user’s name, phone number, email, codes, areas and permissions.
+    **Name** takes up to 18 characters and **Tag code** up to 12 hexadecimal characters. **Keypad code** has 4 digits; with firmware 1.24 or later and **6-digit user code** turned on in **Modules → Keypads**, it has 6. If the email is already used by another user, the app says so. **Delete** clears the user’s name, phone number, email, keypad code, tag code and areas, and turns off **Can ARM system**, **Can DISARM system** and **Can remotely control PGM**. **User get response messages from module** and **Readdress SMS messages from unknown sender** keep their values: check them when you reuse the slot.
 
 === "TrikdisConfig"
 
@@ -1215,7 +1221,14 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 #### Linking RFID key fobs (cards) 
 
-You can add RFID key fobs (cards) by entering their ID numbers into the Tag code field in *TrikdisConfig*. Click the Write [F5] button to write the RFID key fob (card) list into the control panel.
+=== "Protegus app"
+
+    Enter the ID number of the RFID key fob (card) in the user’s **Tag code** (**Users & Reporting → Users**, then the user), then tap **Advanced settings → Write**.
+
+=== "TrikdisConfig"
+
+    You can add RFID key fobs (cards) by entering their ID numbers into the Tag code field in *TrikdisConfig*. Click the Write [F5] button to write the RFID key fob (card) list into the control panel.
+
 
 --8<-- "en/faq/index.md:sp3-wiegand-reader-door-output"
 
@@ -1310,7 +1323,7 @@ Linking electronic keys using the CZ-Dallas reader.
     ![Protegus app, Keypad FLEXi LCD Button with a Delete button: Serial 52001A3C, Area 1 and Area 2 on, Areas 3 to 8 off, and an Ok button.](./protegus-app/sp3-keypad-phone.webp){ .trik-mob-img }
 
 
-    In the app, the keypad types are **Paradox/Protegus**, **Wiegand reader** and **Crow CR Icon/LCD (ST)**. **6-digit user code** needs firmware 1.24 or later; **Low voltage reader (1IO/2IO)**, **Use fingerprint** and **Do not change charset** need 1.15, and **Custom entry beep** 1.17. **Low voltage reader (1IO/2IO)** can be changed only when **Additional Wiegand on 1IO/2IO** is on.
+    In the app, the keypad types are **Disabled**, **Paradox/Protegus**, **Wiegand reader** and **Crow CR Icon/LCD (ST)**; Crow is not offered on revisions ending in 4 with firmware 1.18 or later. A keypad’s area switches are shown when the keypad type is Crow, or, on revisions ending in 4 with firmware 1.19 or later, for keypads whose serial starts with 52, 51, 1E or 1D. **6-digit user code** needs firmware 1.24 or later; **Low voltage reader (1IO/2IO)**, **Use fingerprint** and **Do not change charset** need 1.15, and **Custom entry beep** 1.17. **Low voltage reader (1IO/2IO)** can be changed only when **Additional Wiegand on 1IO/2IO** is on.
 
 === "TrikdisConfig"
 
@@ -1318,7 +1331,9 @@ Linking electronic keys using the CZ-Dallas reader.
 
     <img alt="TrikdisConfig Modules window, Keypads tab. The keypad table has Serial, Keypad type, Areas and Remove columns. The Keypad parameters panel shows Quick ARM checked, Incorrect codes until lockout set to 3 and Lockout timer set to 1 min." src="./image65.webp" style="width:7.086614173228346in;height:3.716535433070866in" />
 
-- **Serial** – the keypad’s serial number automatically detected by the control panel. To delete a keypad, use <span class="trik-term"><span class="trik-term-app"><strong>Delete</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Remove</strong><span class="trik-term-note">)</span></span></span>; in TrikdisConfig you can also enter zeros.
+    To delete a keypad, you can also enter zeros in **Serial**.
+
+- **Serial** – the keypad’s serial number automatically detected by the control panel. To delete a keypad, use <span class="trik-term"><span class="trik-term-app"><strong>Delete</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Remove</strong><span class="trik-term-note">)</span></span></span>.
 
 - **Keypad type** – keypad type, automatically detected by the control panel.
 
@@ -1326,7 +1341,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Delete</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Remove</strong><span class="trik-term-note">)</span></span></span> – pressing the button will remove the keypad from the list.
 
-**Settings group “Keypad parameters”**
+<strong>Settings group “</strong><span class="trik-term"><span class="trik-term-app"><strong>Keypad settings</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Keypad parameters</strong><span class="trik-term-note">)</span></span></span><strong>”</strong>
 
 - **Keypad type** – specify the keypad type (Crow CR16, Paradox LED, Wiegand reader) connected to the control panel (GRN, YEL terminals).
 
@@ -1360,9 +1375,9 @@ Linking electronic keys using the CZ-Dallas reader.
 
 === "Protegus app"
 
-    Open **Modules → RS485 modules**, then tap a module, or **<Add module>** for a free slot. With firmware 1.23 or later, tap **Update** to show each module’s signal strength and supply voltage.
+    Open **Modules → RS485 modules**, then tap a module, or **&lt;Add module&gt;** for a free slot. With firmware 1.23 or later, tap **Update** to show each module’s signal strength and supply voltage.
 
-    ![Protegus app, Modules, RS485 modules: Update button; RF-LORA 0A13F7 with 92 % signal and 12.1 V; iO-8 expander 0B2C51 with 78 % and 12 V; six free slots marked Add module.](./protegus-app/sp3-rs485-phone.webp){ .trik-mob-img }
+    ![Protegus app, Modules, RS485 modules: Update button; RF-LORA 0A13F7 with 92 % signal and 12.1 V; iO-8 expander 0B2C51 with 78 % and 12 V; E485 communicator 0C3D82 with signal N/A and 12 V; five free slots marked Add module.](./protegus-app/sp3-rs485-phone.webp){ .trik-mob-img }
 
     ![Protegus app, Module 2: Module iO-8 expander, Firmware version 1.10, Serial number 0B2C51, Expander name Garage, and an Ok button.](./protegus-app/sp3-rs485-module-phone.webp){ .trik-mob-img }
 
@@ -1381,7 +1396,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Module** – choose the module being used (modules iO, iO-WL, TM17, iO-8, RF-SH, E485 T16, SF485, iO-MO, iO-LORA, iO8-LORA, PB-LORA, REL-LORA, RF-LORA, RF-HW, RF-S8) from the module list.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Serial number</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Serial No.</strong><span class="trik-term-note">)</span></span></span> – mandatory 6-digit number that is given on stickers on the module’s casing and packaging.
+- <span class="trik-term"><span class="trik-term-app"><strong>Serial number</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Serial No.</strong><span class="trik-term-note">)</span></span></span> – mandatory serial number in hexadecimal (0–9, A–F), given on stickers on the module’s casing and packaging.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Assigned area</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Area</strong><span class="trik-term-note">)</span></span></span> – assign the module to an area (the TM17 will display the status of the area it is assigned to, and also the states of the zones assigned to the same area).
 
@@ -1395,13 +1410,15 @@ Linking electronic keys using the CZ-Dallas reader.
 
     In the app, the E485 network settings are on the E485 communicator’s own screen: open **Modules → RS485 modules** and tap the E485.
 
+    ![Protegus app, Module 3: Module E485 communicator, Firmware version 1.02, Serial number 0C3D82, Expander name E485, DHCP mode on, Static IP, Subnet mask and Default gateway 0.0.0.0, and an Ok button.](./protegus-app/sp3-rs485-e485-phone.webp){ .trik-mob-img }
+
 === "TrikdisConfig"
 
     **“E485 settings” tab**
 
     <img alt="TrikdisConfig Modules window, E485 settings tab. Under Communicator network settings, DHCP mode is checked; Static IP, Subnet mask and Default gateway each show 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
-- **DHCP mode** – mode for registering on the LAN network (manual or automatic). When it is on, the „FLEXi“ SP3_3E control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
+- **DHCP mode** – mode for registering on the LAN network (manual or automatic). When it is on, the „FLEXi“ SP3 control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
 
 - **Static IP** – static IP address for manual registration mode.
 
@@ -1415,14 +1432,14 @@ Linking electronic keys using the CZ-Dallas reader.
 
 === "Protegus app"
 
-    Open **Wireless**. The list shows each wireless device with its battery voltage and signal strength; tap a device to see its settings. With firmware 1.23 or later, tap **Update** to read the current battery and signal levels.
+    Open **Wireless**. The list shows each wireless device with its battery voltage and signal strength; tap a device to see its settings. Tap **Update** to read the current battery and signal levels (not on revisions ending in 1).
 
     ![Protegus app, Wireless, Sensors: a note “Settings have been changed press Write to save them.”, Learn and Update buttons, then 1 Corner Pir 403117 3.05 V 86 %, 2 Magnet 403542 3.10 V 72 %, 3 Smoke 404018 3.00 V 64 %, 4 Remote control 405233 2.95 V 78 %, and slots 5 to 11 Disabled.](./protegus-app/sp3-wireless-phone.webp){ .trik-mob-img }
 
     ![Protegus app, Corner Pir device: Device Corner Pir, Serial number 403117, RSSI 86 %, Battery 3.05 V, Enable LED on, Sleep time 10 s, PIR1 sensitivity 10, PIR1 pulses count 3, and an Ok button.](./protegus-app/sp3-wireless-device-phone.webp){ .trik-mob-img }
 
 
-    After **Update**, the app says the settings have changed and asks you to press **Write** [to confirm: whether anything needs writing after Update]. Which settings a device has depends on its type. On revisions ending in 4 with firmware 1.19 or later, the app also shows **Supervision time (min)** [to confirm: what it does on the SP3].
+    **Update** only reads these levels. The app may then say the settings have changed, but nothing needs writing. Which settings a device has depends on its type. On revisions ending in 4 with firmware 1.19 or later, the app also shows **Supervision time (min)**, 30 to 2,880 minutes [to confirm: when the SP3 treats a device as lost].
 
 === "TrikdisConfig"
 
@@ -1438,44 +1455,45 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
     1.  Switch on the power supply to the „FLEXi“ SP3 and wait 1 minute.
     2.  In the Protegus app, open **Settings → Advanced settings** and tap **Read**.
-    3.  Open **Modules → RS485 modules**. If **RF-LORA** is in the list with a firmware version, it is already linked; skip the remaining steps.
-    4.  Tap **<Add module>**, choose **RF-LORA** under **Module**, enter the RF-LORA’s **Serial number** (on the device and the packaging sticker) and tap **Ok**.
-    5.  Go back to **Advanced settings** and tap **Write**.
-    6.  Wait 1 minute for the „FLEXi“ SP3 and the RF-LORA to link together, then tap **Read**. The RF-LORA now shows its **Firmware version** in **Modules → RS485 modules**.
+    3.  Open **Modules → RS485 modules**. If **RF-LORA** is in the list, tap it: if it shows a **Firmware version**, it is already linked and you can stop here.
+    4.  Tap **&lt;Add module&gt;**, choose **RF-LORA** under **Module**, enter the RF-LORA’s **Serial number** (on the device and the packaging sticker) and tap **Ok**.
+    5.  Tap **Advanced settings → Write**.
+    6.  Wait 1 minute for the „FLEXi“ SP3 and the RF-LORA to link together, then tap **Read**.
+    7.  In **Modules → RS485 modules**, tap the RF-LORA row: a **Firmware version** shows that it is linked.
 
 === "TrikdisConfig"
 
-    1.  Switch on the power supply to the “FLEXi” SP3 control panel.
+    1. Switch on the power supply to the “FLEXi” SP3 control panel.
 
-    2.  Wait 1 minute.
+    2. Wait 1 minute.
 
-    3.  Launch ***TrikdisConfig**.*
+    3. Launch ***TrikdisConfig**.*
 
-    4.  Connect the “FLEXi” SP3 to a computer using a USB Mini-B cable.
+    4. Connect the “FLEXi” SP3 to a computer using a USB Mini-B cable.
 
-    5.  The list of modules should show "**RF-LORA transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-LORA transceiver, you can skip steps 6-13.
+    5. The list of modules should show "**RF-LORA transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-LORA transceiver, it is already linked: go on from “Disconnect the USB Mini-B cable”.
 
-    <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+        <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
     6. If the list does not indicate "**RF-LORA transceiver**", then you must select "**RF-LORA transceiver**" from the list.
 
-    2.  In the “**Serial No.**” field, enter the serial number of the RF-LORA module. This serial number can be found on the device and the packaging sticker.
+    7. In the “**Serial No.**” field, enter the serial number of the RF-LORA module. This serial number can be found on the device and the packaging sticker.
 
-    <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted RF-LORA transceiver row has a populated Serial No. field and an empty Firmware version field." src="./image70.webp" style="width:7.086614173228346in;height:1.5826771653543308in" />
+        <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted RF-LORA transceiver row has a populated Serial No. field and an empty Firmware version field." src="./image70.webp" style="width:7.086614173228346in;height:1.5826771653543308in" />
 
-    3. Click **Write [F5]**.
+    8. Click **Write [F5]**.
 
-    2.  Disconnect the USB Mini-B cable.
+    9. Disconnect the USB Mini-B cable.
 
-    3.  Wait 1 minute for the “FLEXi” SP3 and RF-LORA to link together.
+    10. Wait 1 minute for the “FLEXi” SP3 and RF-LORA to link together.
 
-    4.  Connect a USB Mini-B cable to the “FLEXi” SP3.
+    11. Connect a USB Mini-B cable to the “FLEXi” SP3.
 
-    5.  Click **Read [F4]**.
+    12. Click **Read [F4]**.
 
-    6.  The firmware version of the RF-LORA will appear in the “**Modules**” window.
+    13. The firmware version of the RF-LORA will appear in the “**Modules**” window.
 
-    <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+        <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
     14. The RF-LORA module is now linked to the “FLEXi” SP3.
 
@@ -1483,7 +1501,7 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
     16. Click “**Disconnect**”.
 
-    <img alt="TrikdisConfig Modules window, RS485 modules tab. The RF-LORA transceiver row shows a firmware version, and the Disconnect button is highlighted." src="./image71.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+        <img alt="TrikdisConfig Modules window, RS485 modules tab. The RF-LORA transceiver row shows a firmware version, and the Disconnect button is highlighted." src="./image71.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
     17. Wait 1 minute.
 
@@ -1499,12 +1517,12 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
         <img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
-    4.  When the app finds the sensor (“New device was found”), choose its zone in **Select zone** and its definition in **Select zone definition**.
+    4.  When the app finds the sensor (“New device was found”), choose an unused zone in **Select zone** and the zone’s definition in **Select zone definition**. Other devices, such as a siren or a remote control, may ask for an output, an area or a user instead.
     5.  To add the next sensor, press its “**TAMPER**” button and choose its zone and definition the same way.
-    6.  Tap **Stop learning**, go back to **Advanced settings** and tap **Write**.
+    6.  Tap **Stop learning**, then **Advanced settings → Write**.
     7.  Check in **Zones** that the sensors are assigned to the right zones and areas.
 
-    To delete a wireless device, open it in **Wireless**, set **Device** to **Disabled** and tap **Write**.
+    To delete a wireless device, open it in **Wireless**, set **Device** to **Disabled**, tap **Ok**, then **Advanced settings → Write**.
 
 === "TrikdisConfig"
 
@@ -1546,35 +1564,35 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
     When enrolling sensors, the *RF-LORA* module must be at least 1 m from the sensors.
 
-    1.  The “**DATA/TROUBLE**” LED on the RF-LORA module will flash green/red.
+    1. The “**DATA/TROUBLE**” LED on the RF-LORA module will flash green/red.
 
-    2.  RF-LORA module - switches to learning mode. TrikdisConfig will open the sensor binding window.
+    2. RF-LORA module - switches to learning mode. TrikdisConfig will open the sensor binding window.
 
-    <img alt="TrikdisConfig Learning mode window. It instructs the user to insert batteries into the new sensor and wait for initialization; a Stop learning button is below." src="./image75.webp" style="width:3.7401574803149606in;height:2.322834645669291in" />
+        <img alt="TrikdisConfig Learning mode window. It instructs the user to insert batteries into the new sensor and wait for initialization; a Stop learning button is below." src="./image75.webp" style="width:3.7401574803149606in;height:2.322834645669291in" />
 
     3. Press the "**TAMPER**" button on the sensor.
 
-    <img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
+        <img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
     4. On the RF-LORA module, the “**DATA/TROUBLE**” LED will flash green for a short time (this indicates that the sensor is enrolled). After a few seconds, the “**DATA/TROUBLE**” indicator will start flashing green/red again.
 
-    2.  TrikdisConfig will open a new window in which you need to assign a “**Zone Number**” and “**Zone Definition**” to the wireless sensor.
+    5. TrikdisConfig will open a new window in which you need to assign a “**Zone Number**” and “**Zone Definition**” to the wireless sensor.
 
-    3.  Click “**Save**”.
+    6. Click “**Save**”.
 
-    <img alt="TrikdisConfig New device was found window for a Corner PIR sensor. The highlighted settings are Zone number 1 and Zone definition Instant, followed by the highlighted Save button." src="./image77.webp" style="width:3.0708661417322833in;height:1.9724409448818898in" />
+        <img alt="TrikdisConfig New device was found window for a Corner PIR sensor. The highlighted settings are Zone number 1 and Zone definition Instant, followed by the highlighted Save button." src="./image77.webp" style="width:3.0708661417322833in;height:1.9724409448818898in" />
 
-    4. Wireless sensor is included in the list of sensors.
+    7. Wireless sensor is included in the list of sensors.
 
-    2.  If you need to add the next sensor, you need to press the “**TAMPER**” button on the sensor. And make the settings described above.
+    8. If you need to add the next sensor, you need to press the “**TAMPER**” button on the sensor. And make the settings described above.
 
-    3.  Click “**Stop learning**” to complete the registration of wireless sensors.
+    9. Click “**Stop learning**” to complete the registration of wireless sensors.
 
-    <img alt="Learning mode window instructs the user to insert the batteries into the new sensor and wait for initialization. A highlighted message reports: New device was found: ID 1 Corner PIR. The Stop learning button is highlighted." src="./image78.webp" style="width:3.7401574803149606in;height:2.645669291338583in" />
+        <img alt="Learning mode window instructs the user to insert the batteries into the new sensor and wait for initialization. A highlighted message reports: New device was found: ID 1 Corner PIR. The Stop learning button is highlighted." src="./image78.webp" style="width:3.7401574803149606in;height:2.645669291338583in" />
 
     10. Click “**Yes**” for the sensors to be written to the “FLEXi” SP3 control panel or "**No**" if you want to adjust the parameters additionally.
 
-    <img alt="Save configuration dialog asks whether to save new parameters to the module. The Yes button is highlighted; No is also available." src="./image79.webp" style="width:2.7559055118110236in;height:1.1614173228346456in" />
+        <img alt="Save configuration dialog asks whether to save new parameters to the module. The Yes button is highlighted; No is also available." src="./image79.webp" style="width:2.7559055118110236in;height:1.1614173228346456in" />
 
     Wait a few minutes. Click **Read [F4].**
 
@@ -1609,44 +1627,57 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
 All wireless sensors can be linked simultaneously. Insert batteries into the wireless sensors (PIR, magnetic contact, flood detector, smoke detector, siren). **When enrolling sensors, the *RF-LORA* module must be at least 1 m from the sensors.**
 
-1.  Make sure that the RF-LORA transceiver is registered with the „FLEXi“ SP3 security panel.
+1. Make sure that the RF-LORA transceiver is registered with the „FLEXi“ SP3 security panel.
 
-2.  Switch on the power supply to the “FLEXi” SP3 control panel.
+2. Switch on the power supply to the “FLEXi” SP3 control panel.
 
-3.  Remove the cover from the RF-LORA transceiver.
+3. Remove the cover from the RF-LORA transceiver.
 
-4.  Press and hold the "**LEARN**" button on the RF-LORA module until the "**DATA/TROUBLE**" indicator starts flashing green/red.
+4. Press and hold the "**LEARN**" button on the RF-LORA module until the "**DATA/TROUBLE**" indicator starts flashing green/red.
 
-5.  Release the "**LEARN**" button.
+5. Release the "**LEARN**" button.
 
-6.  The flashing "**DATA/TROUBLE**" indicator indicates that the RF-LORA is in the wireless device registration mode.
-1.  Press the "TAMPER" button on the sensor.
+6. The flashing "**DATA/TROUBLE**" indicator indicates that the RF-LORA is in the wireless device registration mode.
 
-<img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
+7. Press the "TAMPER" button on the sensor.
 
-2. On the RF-LORA module, the “**DATA/TROUBLE**” LED will flash green for a short time (this indicates that the sensor is enrolled).
+    <img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
-2.  After a few seconds, the “**DATA/TROUBLE**” indicator will start flashing green/red again.
+8. On the RF-LORA module, the “**DATA/TROUBLE**” LED will flash green for a short time (this indicates that the sensor is enrolled).
 
-3.  If you need to add the next sensor, you need to press the “**TAMPER**” button on the sensor.
+9. After a few seconds, the “**DATA/TROUBLE**” indicator will start flashing green/red again.
 
-4.  To complete the registration of wireless sensors, press and hold the "**LEARN**" button until the "**DATA/TROUBLE**" indicator stops flashing green/red. Release the "**LEARN**" button. The RF-LORA transceiver has exited the registration mode.
+10. If you need to add the next sensor, you need to press the “**TAMPER**” button on the sensor.
 
-5.  Connect a USB Mini-B cable to the “FLEXi” SP3.
+11. To complete the registration of wireless sensors, press and hold the "**LEARN**" button until the "**DATA/TROUBLE**" indicator stops flashing green/red. Release the "**LEARN**" button. The RF-LORA transceiver has exited the registration mode.
 
-6.  Launch TrikdisConfig. Press the **Read [F4]** button.
+Then check the result:
 
-7.  TrikdisConfig window "**Wireless sensors**" will contain a list of registered wireless devices. In the field "**Serial No.**" 7- digit serial numbers will be written.
+=== "Protegus app"
 
-<img alt="TrikdisConfig Wireless sensors window, Sensors tab. A registered Corner PIR row is highlighted, including its Serial No. field; the serial number is omitted." src="./image80.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+    1. Tap **Advanced settings → Read** (the panel must be online).
+    2. Open **Wireless**: the registered devices are in the list.
+    3. Check in **Zones** that the sensors are assigned to the right zones and areas.
+    4. After making changes, tap **Advanced settings → Write**.
 
-15. Check that the sensors are correctly assigned to the “**Zones”** and “**Areas**” of the control panel (“**Zones**” window).
+=== "TrikdisConfig"
 
-<img alt="TrikdisConfig Zones window, Zones settings tab. The highlighted Zone 1 row has an Input beginning Wireless Corner, Area 1, Definition Instant and Type EOL_T." src="./image81.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+    1. Connect a USB Mini-B cable to the “FLEXi” SP3.
 
-16. After making changes, press **Write [F5]**.
+    2. Launch TrikdisConfig. Press the **Read [F4]** button.
 
-17. Wireless sensors registered.
+    3. TrikdisConfig window "**Wireless sensors**" will contain a list of registered wireless devices. In the field "**Serial No.**" 7- digit serial numbers will be written.
+
+        <img alt="TrikdisConfig Wireless sensors window, Sensors tab. A registered Corner PIR row is highlighted, including its Serial No. field; the serial number is omitted." src="./image80.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+
+    4. Check that the sensors are correctly assigned to the “**Zones”** and “**Areas**” of the control panel (“**Zones**” window).
+
+        <img alt="TrikdisConfig Zones window, Zones settings tab. The highlighted Zone 1 row has an Input beginning Wireless Corner, Area 1, Definition Instant and Type EOL_T." src="./image81.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+
+    5. After making changes, press **Write [F5]**.
+
+    6. Wireless sensors registered.
+
 
 ### Zones <span id="57-zones-window"></span>
 
@@ -1661,7 +1692,7 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
     ![Protegus app, Zone settings for Zone 1: Input SP3 1 I/O, Assigned areas Area 1, Definition Instant, Type EOL_T, Enable chime off, Can be bypassed on, Force ARM off, Report to CMS on, Report to Protegus2 cloud on, Reaction time 400 ms, Zone event CID code 130.](./protegus-app/sp3-zone-phone.webp){ .trik-mob-img }
 
 
-    In the app, expander module inputs offer only the NO and NC types. **Sound** is not in the app.
+    In the app, inputs of iO, iO-WL, iO-MO, iO-LORA and PB-LORA expanders offer only the NO and NC types.
 
 === "TrikdisConfig"
 
@@ -1707,7 +1738,7 @@ When the alarm system is armed in STAY mode, “Interior Stay” zones are not p
 
   - **Keyswitch** – for connecting a keypad or other switch. If the switch triggers this zone the security alarm will be armed or disarmed. The alarm will be armed after the set **Exit time** passes.
 
-  - **24_hour** – for connecting glass break and tamper detectors. If this zone is violated, OUT outputs “Siren” and “Flash” are turned on immediately and an event report is sent.
+  - <span class="trik-term"><span class="trik-term-app"><strong>24 hours</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>24_hour</strong><span class="trik-term-note">)</span></span></span> – for connecting glass break and tamper detectors. If this zone is violated, OUT outputs “Siren” and “Flash” are turned on immediately and an event report is sent.
 
   - **Silent** – if the alarm is armed and this zone is violated, an event report will immediately be sent, but “Siren” and “Flash” output signals will not be generated.
 
@@ -1727,7 +1758,7 @@ When the alarm system is armed in STAY mode, “Interior Stay” zones are not p
 - <span class="trik-term"><span class="trik-term-app"><strong>Reaction time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Delay</strong><span class="trik-term-note">)</span></span></span> – input IN zone reaction time, in milliseconds.
 - <span class="trik-term"><span class="trik-term-app"><strong>Zone event CID code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CID code</strong><span class="trik-term-note">)</span></span></span> – event contact ID codes. This code will be filled in automatically after selecting a definition for the zone.
 
-- **Sound** – specify the number of the voice recording that will be played back to the user when the „FLEXi“ SP3 control panel calls during an alarm (this function is valid for SP3_12xx control panel with firmware version up to 1.13 inclusive).
+- **Sound** – specify the number of the voice recording that will be played back to the user when the „FLEXi“ SP3 control panel calls during an alarm (this function is valid for SP3_12xx control panel with firmware version up to 1.13 inclusive). *Only in TrikdisConfig.*
 
 **“SMS & Call reporting” tab** *Only in TrikdisConfig.*
 
@@ -1747,12 +1778,12 @@ This tab will only be shown if there is at least one user phone number in the *[
 
     Open **PGM → Outputs**, then tap an output.
 
-    ![Protegus app, PGM, Outputs list: 1 PGM 1 BELL, Siren, Area 1; 2 PGM 2 LED, System state, Area 1; 3 PGM 3 SP3 10 I/O, Fire sensor reset; 4 Garden lights SP3 9 I/O, Remote control; 5 Heating SP3 8 I/O, Thermostat; PGM 6 to PGM 15 Disabled.](./protegus-app/sp3-outputs-phone.webp){ .trik-mob-img }
+    ![Protegus app, PGM, Outputs list: 1 PGM 1 BELL, Siren, Area 1; 2 PGM 2 LED, System state, Area 1; 3 PGM 3 SP3 10 I/O, Fire sensor reset; 4 Garden lights SP3 9 I/O, Remote control; 5 Heating SP3 8 I/O, Thermostat; the other visible rows, PGM 6 to PGM 15, Disabled.](./protegus-app/sp3-outputs-phone.webp){ .trik-mob-img }
 
     ![Protegus app, output Garden lights: Name Garden lights, Output SP3 9 I/O, Definition Remote control, Pulse time 20 s, Report to CMS off, Report to Protegus2 cloud on, and an Ok button.](./protegus-app/sp3-output-phone.webp){ .trik-mob-img }
 
 
-    **Pulse time** is shown for **Remote control** outputs. The app also lists the definition **Fire reset (inverted)** [to confirm: what it does, and which firmware has it].
+    **Pulse time** is shown for **Remote control** outputs. With firmware 1.19 or later, the app also lists the definition **Fire reset (inverted)** [to confirm: what it does].
 
 === "TrikdisConfig"
 
@@ -1766,7 +1797,7 @@ This tab will only be shown if there is at least one user phone number in the *[
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Output</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM output</strong><span class="trik-term-note">)</span></span></span> – assign the outputs OUT of the „FLEXi“ SP3 or an external device to the PGM.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Assigned areas</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Area</strong><span class="trik-term-note">)</span></span></span> – assign the output OUT to an area.
+- <span class="trik-term"><span class="trik-term-app"><strong>Assigned area(s)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Area</strong><span class="trik-term-note">)</span></span></span> – assign the output OUT to an area.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Definition</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Output definition</strong><span class="trik-term-note">)</span></span></span> – choose the operational mode of the output OUT.
 - **Siren** – for connecting a siren.
@@ -1797,7 +1828,7 @@ This tab will only be shown if there is at least one user phone number in the *[
     ![Protegus app, PGM, Set action: Garden lights - SP3 9 I/O ON, If Arm Area 1, on; Garden lights - SP3 9 I/O OFF, If Disarm Area 1, on; the other rows N/A and off.](./protegus-app/sp3-actions-phone.webp){ .trik-mob-img }
 
 
-    The app’s actions are **OFF**, **ON**, **Pulse OFF**, **Pulse ON** and **Toggle** [to confirm: what Toggle does, and whether TrikdisConfig has it].
+    Under **If**, the condition also covers when it applies (for example alarm or restore) and any value. The actions are **OFF**, **ON**, **Pulse OFF**, **Pulse ON** and, with firmware 1.20 or later, **Toggle** [to confirm: what Toggle does, and whether TrikdisConfig has it]. The conditions **AC lost**, **Low battery** and **Zone tamper** need firmware 1.20 or later.
 
 === "TrikdisConfig"
 
@@ -1824,7 +1855,7 @@ This tab will only be shown if there is at least one user phone number in the *[
 
   - Schedules can be assign to an output OUT. The schedule shows when the output should be turned on. Up to 10 different schedules can be prepared in <span class="trik-term"><span class="trik-term-app"><strong>Schedulers</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Scheduler tab</strong><span class="trik-term-note">)</span></span></span>.
 
-- **Start when** – an additional condition for turning on the output OUT, depending on the event; in the app it is chosen with the condition (for example alarm or restore).
+- **Start when** – an additional condition for turning on the output OUT, depending on the event.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Value</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Set value</strong><span class="trik-term-note">)</span></span></span> – depending on the condition (SMS received, Temperature) a value (text of received SMS message, voltage or temperature) can be specified. If this value is identified, the action will be performed. The text of the SMS message can be separated by using % symbols. % symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
 
@@ -1878,9 +1909,9 @@ The SMS message text is case-sensitive.
 
 === "Protegus app"
 
-    Open **PGM → Schedulers**. Tap a schedule’s time to change it, its switch to turn it on, and its arrow to choose the days.
+    Open **PGM → Schedulers**. Tap a schedule’s time to change it, its switch to turn it on, and its arrow to choose the days. The start days and the stop days are chosen separately.
 
-    ![Protegus app, PGM, Schedulers: first schedule 19:00 to 23:00, on, Mon to Sun; the other schedules 00:00 to 00:00, off, days None.](./protegus-app/sp3-output-schedulers-phone.webp){ .trik-mob-img }
+    ![Protegus app, PGM, Schedulers: first schedule 19:00 to 23:00, on, Mon to Sun; the other visible schedules 00:00 to 00:00, off, days None.](./protegus-app/sp3-output-schedulers-phone.webp){ .trik-mob-img }
 
 === "TrikdisConfig"
 
@@ -1904,6 +1935,9 @@ The SMS message text is case-sensitive.
     Open **PGM → Thermostats**, then tap a thermostat.
 
     ![Protegus app, PGM, Thermostats: Heating - SP3 8 I/O, Living room - Heat - Temperature 21.50; three rows None.](./protegus-app/sp3-thermostats-phone.webp){ .trik-mob-img }
+
+
+    A thermostat’s other settings appear when **Active** is on.
 
 === "TrikdisConfig"
 
@@ -1946,7 +1980,7 @@ The SMS message text is case-sensitive.
     ![Protegus app, Sensor: Name Living room, Module type Sensor on 1W input, Serial No. 28FF6A1B3C160452, Max. temp. 30, Send event when max reached off, Min. temp. 5, Send event when min reached off, Delay 0 min.](./protegus-app/sp3-sensor-phone.webp){ .trik-mob-img }
 
 
-    In the app, the sensor types are **Dallas 1-Wire** and **Humidity and temperature (AM23xx series)**. **Delay** needs firmware 1.15 or later.
+    **Delay** needs firmware 1.15 or later.
 
 === "TrikdisConfig"
 
@@ -1960,13 +1994,13 @@ The SMS message text is case-sensitive.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Sensor name</strong><span class="trik-term-note">)</span></span></span> – give the temperature sensor a name.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Max. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Max</strong><span class="trik-term-note">)</span></span></span> – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when max reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>High</strong><span class="trik-term-note">)</span></span></span> must be on.
+- <span class="trik-term"><span class="trik-term-app"><strong>Max. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Max</strong><span class="trik-term-note">)</span></span></span> – when the measured value (temperature, humidity or voltage) is higher than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when max reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>High</strong><span class="trik-term-note">)</span></span></span> must be on.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Min. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Min</strong><span class="trik-term-note">)</span></span></span> – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when min reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Low</strong><span class="trik-term-note">)</span></span></span> must be on.
+- <span class="trik-term"><span class="trik-term-app"><strong>Min. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Min</strong><span class="trik-term-note">)</span></span></span> – when the measured value is lower than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when min reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Low</strong><span class="trik-term-note">)</span></span></span> must be on.
 
-- **Delay** - an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
+- <span class="trik-term"><span class="trik-term-app"><strong>Delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Delay, min</strong><span class="trik-term-note">)</span></span></span> – an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
 
-- **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in **Module type**).
+- **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; <span class="trik-term"><span class="trik-term-app"><strong>Humidity and temperature (AM23xx series)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Humidity & Temperature</strong><span class="trik-term-note">)</span></span></span> – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in **Module type**).
 
 ### System events <span id="510-system-events-window"></span>
 
@@ -2016,7 +2050,7 @@ This tab will only be shown if there is at least one user phone number in the �
 
 === "Protegus app"
 
-    Open **Events log** and tap **Read log**. The newest event is at the top, with its code and time.
+    Open **Events log** and tap **Read log**. The newest event is at the top, with its code and time. If the panel does not use the default administrator code, the app asks for it. **Clear log** is shown only to users who may change the settings.
 
     ![Protegus app, Events log: Read log and Clear log buttons; events 8 to 1, newest first: System 1 disarmed. User No.1 at 2026-10-07 07:40:55, Periodic test, Input restore. IN3, Alarm in input IN3, System 1 armed. User No.1, AC restore, AC fault, and System 1 disarmed. User No.2 at 2026-10-06 07:45:12.](./protegus-app/sp3-eventlog-phone.webp){ .trik-mob-img }
 
@@ -2028,7 +2062,7 @@ This tab will only be shown if there is at least one user phone number in the �
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Clear log</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Clear Log</strong><span class="trik-term-note">)</span></span></span> – command for clearing the events log entries from the device’s memory.
 
-- In the table, you can find the **Event No.**, **Time**, **CID** code, **Event definition**. The events log can show up to 1000 events stored in the „FLEXi“ SP3’s memory.
+- Each entry shows its number, the event, its code and the time. The events log can show up to 1000 events stored in the „FLEXi“ SP3’s memory.
 
 ### Restore default settings 
 
