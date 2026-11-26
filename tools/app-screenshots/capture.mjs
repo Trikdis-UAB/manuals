@@ -519,8 +519,16 @@ function printSafety(g) {
   console.log(`     refused: ${fmt(g.refused)}`);
 }
 
+// An unknown flag stops the run: on 2026-11-26 "--help" was ignored and a full capture started.
+// (The list is inside the function: parseArgs runs before the module's own constants are set.)
 function parseArgs(a) {
+  const KNOWN_FLAGS = ['app', 'flow', 'fw', 'lang', 'layout', 'model', 'out', 'revision', 'screen', 'text', 'theme', 'verbose'];
   const o = {};
   for (let i = 0; i < a.length; i++) if (a[i].startsWith('--')) o[a[i].slice(2)] = a[i + 1]?.startsWith('--') || a[i + 1] === undefined ? true : a[++i];
+  const unknown = Object.keys(o).filter((k) => !KNOWN_FLAGS.includes(k));
+  if (unknown.length) {
+    console.error(`Unknown flag(s): ${unknown.map((k) => `--${k}`).join(', ')}. Known: ${KNOWN_FLAGS.map((k) => `--${k}`).join(' ')}. See README.md, "Run".`);
+    process.exit(2);
+  }
   return o;
 }
