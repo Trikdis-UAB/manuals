@@ -1739,41 +1739,69 @@ This tab will only be shown if there is at least one user phone number in the *[
 
 ### PGM <span id="58-pgm-window"></span>
 
-**“Outputs tab”**
+**Outputs**
 
-<img alt="TrikdisConfig PGM window, Outputs tab. PGM 1 uses BELL with output definition Siren; PGM 2 uses LED with System State; PGM 3 uses SP3 10 I/O with Fire Sensor Reset. Each visible row has Pulse Time 20 s." src="./image84.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
+=== "Protegus app"
+
+    Open **PGM → Outputs**, then tap an output.
+
+    ![Protegus app, PGM, Outputs list: 1 PGM 1 BELL, Siren, Area 1; 2 PGM 2 LED, System state, Area 1; 3 PGM 3 SP3 10 I/O, Fire sensor reset; 4 Garden lights SP3 9 I/O, Remote control; 5 Heating SP3 8 I/O, Thermostat; PGM 6 to PGM 15 Disabled.](./protegus-app/sp3-outputs-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, output Garden lights: Name Garden lights, Output SP3 9 I/O, Definition Remote control, Pulse time 20 s, Report to CMS off, Report to Protegus2 cloud on, and an Ok button.](./protegus-app/sp3-output-phone.webp){ .trik-mob-img }
+
+
+    **Pulse time** is shown for **Remote control** outputs. The app also lists the definition **Fire reset (inverted)** [to confirm: what it does, and which firmware has it].
+
+=== "TrikdisConfig"
+
+    **“Outputs tab”**
+
+    <img alt="TrikdisConfig PGM window, Outputs tab. PGM 1 uses BELL with output definition Siren; PGM 2 uses LED with System State; PGM 3 uses SP3 10 I/O with Fire Sensor Reset. Each visible row has Pulse Time 20 s." src="./image84.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
 - **PGM No** – specifies the PGM output’s number on the list.
 
 - **Name** - enter PGM output name.
 
-- **PGM output** – assign the outputs OUT of the „FLEXi“ SP3 or an external device to the PGM.
+- <span class="trik-term"><span class="trik-term-app"><strong>Output</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM output</strong><span class="trik-term-note">)</span></span></span> – assign the outputs OUT of the „FLEXi“ SP3 or an external device to the PGM.
 
-- **Area** – assign the output OUT to an area.
+- <span class="trik-term"><span class="trik-term-app"><strong>Assigned areas</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Area</strong><span class="trik-term-note">)</span></span></span> – assign the output OUT to an area.
 
-- **Output definition** – choose the operational mode of the output OUT.
+- <span class="trik-term"><span class="trik-term-app"><strong>Definition</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Output definition</strong><span class="trik-term-note">)</span></span></span> – choose the operational mode of the output OUT.
 - **Siren** – for connecting a siren.
 
 - **Remote control** – for controlling external electric devices.
 
-- **Fire Sensor Reset** – for resetting a fire sensor after triggering.
+- <span class="trik-term"><span class="trik-term-app"><strong>Fire sensor reset</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Fire Sensor Reset</strong><span class="trik-term-note">)</span></span></span> – for resetting a fire sensor after triggering.
 
-- **System State** – for connecting a security system state indicator. E.g., an LED can display when the alarm is armed / disarmed.
+- <span class="trik-term"><span class="trik-term-app"><strong>System state</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>System State</strong><span class="trik-term-note">)</span></span></span> – for connecting a security system state indicator. E.g., an LED can display when the alarm is armed / disarmed.
 
 - **Flash** – if the alarm is armed a line signal is generated, if it is triggered – a pulse type signal. The signal is cut off when the alarm is disarmed.
 
 - **Thermostat** – this setting will make the PGM output operate in thermostat mode. A temperature sensor must be connected to the „FLEXi“ SP3. The PGM output must have thermostat mode set and the temperature that it must maintain has to be specified.
 
 - **Buzzer** – for repeating the sound signals from a keypad.
-- **Pulse time, s** – you can set the desired OUT turn on duration from 0 to 9999 seconds.
+- <span class="trik-term"><span class="trik-term-app"><strong>Pulse time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Pulse time, s</strong><span class="trik-term-note">)</span></span></span> – you can set the desired OUT turn on duration from 0 to 9999 seconds.
 
-- **CMS** – if this box is ticked, PGM output turn on/off reports will be sent to the central monitoring station (CMS).
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS</strong><span class="trik-term-note">)</span></span></span> – if this box is ticked, PGM output turn on/off reports will be sent to the central monitoring station (CMS).
 
-- **Prot.** – if the box is ticked, PGM output turn on/off reports will be sent to Protegus cloud.
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to Protegus2 cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Prot.</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, PGM output turn on/off reports will be sent to Protegus cloud.
 
-**“Set Action” tab**
+**Set action**
 
-<img alt="TrikdisConfig PGM window, Set Action tab. The table has Enable, PGM No., Action, Pulse Time, Factor, Factor No., Start when and Set value columns. Visible rows are disabled and show PGM No. N/A, Action PGM OFF and Factor Arm." src="./image85.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
+=== "Protegus app"
+
+    Open **PGM → Set action**. Each row has a switch that turns it on, the output and its action, and the condition under it. Tap a row to set the condition (**If**) and the output and action (**Then**).
+
+    ![Protegus app, PGM, Set action: Garden lights - SP3 9 I/O ON, If Arm Area 1, on; Garden lights - SP3 9 I/O OFF, If Disarm Area 1, on; the other rows N/A and off.](./protegus-app/sp3-actions-phone.webp){ .trik-mob-img }
+
+
+    The app’s actions are **OFF**, **ON**, **Pulse OFF**, **Pulse ON** and **Toggle** [to confirm: what Toggle does, and whether TrikdisConfig has it].
+
+=== "TrikdisConfig"
+
+    **“Set Action” tab**
+
+    <img alt="TrikdisConfig PGM window, Set Action tab. The table has Enable, PGM No., Action, Pulse Time, Factor, Factor No., Start when and Set value columns. Visible rows are disabled and show PGM No. N/A, Action PGM OFF and Factor Arm." src="./image85.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
 
 - **ID** – output’s number on the list.
 - **Enable** – enables the PGM operation algorithm.
@@ -1806,15 +1834,31 @@ This tab will only be shown if there is at least one user phone number in the *[
 
 The SMS message text is case-sensitive.
 
-**“Control” tab**
+**Control**
 
-<img alt="TrikdisConfig PGM window, Control tab. Entry/Exit control lists iButton, Wiegand 1 (G/Y) and Wiegand 2 (IO) readers. Paradox keypad control shows Utility key 1 (1+2) set to Area statuses; the other visible utility keys are set to None and Pulse." src="./image86.webp" style="width:7.086614173228346in;height:2.5118110236220472in" />
+=== "Protegus app"
+
+    Open **PGM → Control**.
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, PGM, Control, top: device card; Entry/Exit control with iButton enabled, PGM Garden lights - SP3 9 I/O, PGM mode Pulse, Area action Arm/Disarm; Wiegand 1 and Wiegand 2 with Enabled and Code off, PGM None, PGM mode Pulse, Area action None." src="./protegus-app/sp3-control-1-phone.webp" /><span class="trik-mob-pair__caption">Entry/Exit control</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Control, bottom: Paradox keypad control with Utility key 1 set to Area statuses; Utility key 2 with PGM Garden lights - SP3 9 I/O, PGM mode Pulse; Utility keys 3 to 6 with PGM None, PGM mode Pulse." src="./protegus-app/sp3-control-2-phone.webp" /><span class="trik-mob-pair__caption">Paradox keypad control</span></span>
+    </span>
+
+
+    With a Crow keypad, the app shows **Crow keypad output control** instead of the Paradox keys.
+
+=== "TrikdisConfig"
+
+    **“Control” tab**
+
+    <img alt="TrikdisConfig PGM window, Control tab. Entry/Exit control lists iButton, Wiegand 1 (G/Y) and Wiegand 2 (IO) readers. Paradox keypad control shows Utility key 1 (1+2) set to Area statuses; the other visible utility keys are set to None and Pulse." src="./image86.webp" style="width:7.086614173228346in;height:2.5118110236220472in" />
 
 **Settings group “Entry/Exit control”**
 
 - **Reader** – the readers that can be connected to the security panel are indicated.
 
-- **En –** check the box to enable the reader to control the PGM output.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enabled</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>En</strong><span class="trik-term-note">)</span></span></span> – check the box to enable the reader to control the PGM output.
 
 - **Code -** by checking the field, you will be able to perform an action (activate PGM output or control the control panel) with the user code.
 
@@ -1828,9 +1872,19 @@ The SMS message text is case-sensitive.
 
 - **Utility key** – pressing and holding the utility keys for 3 seconds will trigger the PGM output. The PGM output will activate for the duration of the pulse (if the operating mode is **Pulse**) or the level of the PGM output signal will change (if the operating mode is **Level**).
 
-**“Scheduler” tab**
+**Schedulers**
 
-<img alt="TrikdisConfig PGM window, Scheduler tab. Each schedule has Enable, Start time and Stop time fields with separate Monday through Sunday checkboxes. The visible times are 00:00 and the checkboxes are clear." src="./image87.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
+=== "Protegus app"
+
+    Open **PGM → Schedulers**. Tap a schedule’s time to change it, its switch to turn it on, and its arrow to choose the days.
+
+    ![Protegus app, PGM, Schedulers: first schedule 19:00 to 23:00, on, Mon to Sun; the other schedules 00:00 to 00:00, off, days None.](./protegus-app/sp3-output-schedulers-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    **“Scheduler” tab**
+
+    <img alt="TrikdisConfig PGM window, Scheduler tab. Each schedule has Enable, Start time and Stop time fields with separate Monday through Sunday checkboxes. The visible times are 00:00 and the checkboxes are clear." src="./image87.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
 - **ID** – schedule’s number on the list.
 
@@ -1841,23 +1895,33 @@ The SMS message text is case-sensitive.
 - **Stop time** – set the time when OUT will be turned off (schedule end time).
 - **Mon – Sun** – you can mark the days of the week when OUT will have to be turned on/off.
 
-**“Thermostat” tab**
+**Thermostats**
 
-<img alt="TrikdisConfig PGM window, Thermostat tab. The table shows ID, PGM No., Action, Active, Sensor No. and Temperature. Visible thermostats have PGM No. N/A, Action Heat, no active sensors and Temperature 0." src="./image88.webp" style="width:7.086614173228346in;height:3.4173228346456694in" />
+=== "Protegus app"
+
+    Open **PGM → Thermostats**, then tap a thermostat.
+
+    ![Protegus app, PGM, Thermostats: Heating - SP3 8 I/O, Living room - Heat - Temperature 21.50; three rows None.](./protegus-app/sp3-thermostats-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    **“Thermostat” tab**
+
+    <img alt="TrikdisConfig PGM window, Thermostat tab. The table shows ID, PGM No., Action, Active, Sensor No. and Temperature. Visible thermostats have PGM No. N/A, Action Heat, no active sensors and Temperature 0." src="./image88.webp" style="width:7.086614173228346in;height:3.4173228346456694in" />
 
 - **ID** – thermostat’s number on the list.
 
-- **PGM No.** – specify the number of the PGM output that the thermostat will control.
+- <span class="trik-term"><span class="trik-term-app"><strong>Assigned output</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM No.</strong><span class="trik-term-note">)</span></span></span> – specify the number of the PGM output that the thermostat will control.
 
 - **Action** – set the thermostat’s operation mode: heating or cooling.
 
 - **Active** – if the box is ticked, the thermostat will work with the selected temperature sensor according to the set temperature.
 
-- **Sensor No –** assign a temperature sensor to the thermostat.
+- <span class="trik-term"><span class="trik-term-app"><strong>Assigned sensor</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Sensor No</strong><span class="trik-term-note">)</span></span></span> – assign a temperature sensor to the thermostat.
 
 - **Temperature –** set the temperature that the thermostat will maintain.
 
-**“SMS & Call reporting” tab**
+**“SMS & Call reporting” tab** *Only in TrikdisConfig.*
 
 <img alt="TrikdisConfig PGM window, SMS & Call reporting tab. PGM 1 Event, PGM 1 Restore and subsequent output events have SMS and Call checkboxes for User 1; the visible boxes are clear." src="./image89.webp" style="width:7.086614173228346in;height:2.1023622047244093in" />
 
