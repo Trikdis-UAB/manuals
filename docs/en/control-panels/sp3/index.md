@@ -768,7 +768,7 @@ Most settings described below can be changed in the Protegus app or in TrikdisCo
 
 === "Protegus app"
 
-    **Before you configure in the app.** The control panel must be online and added to a Protegus2 account (see [Linking the „FLEXi“ SP3 to a user’s Protegus2 account](#41-linking-the-flexi-sp3-to-a-users-protegus2-account)), and its firmware must be 1.12 or later: with older firmware the app says the version is not supported and shows no **Read** button. A panel that is not yet online is set up first over USB in TrikdisConfig. When a panel is added in the phone app and the app cannot find it online, it offers to set up the panel’s WiFi from the phone only for revisions starting with 1, 2, 3E or 52.
+    **Before you configure in the app.** The control panel must be online and added to a Protegus2 account (see [Linking the „FLEXi“ SP3 to a user’s Protegus2 account](#41-linking-the-flexi-sp3-to-a-users-protegus2-account)), and its firmware must be 1.12 or later: with older firmware the app says the version is not supported and shows no **Read** button. On SP3_8xx boards, the app does not show the **SIM** group yet: set the **SIM card PIN** and **APN** in TrikdisConfig. A panel that is not yet online is set up first over USB in TrikdisConfig. When a panel is added in the phone app and the app cannot find it online, it offers to set up the panel’s WiFi from the phone only for revisions starting with 1, 2, 3E or 52.
 
     1. Open the system in the Protegus app and go to **Settings → Advanced settings**. The first time, the app warns that wrong settings can stop the system working; confirm to go on.
     2. Tap **Read** to load the panel’s settings. If the panel does not use the default administrator code, the app asks for the access code.
@@ -897,7 +897,7 @@ You can set the time with the <span class="trik-term"><span class="trik-term-app
     ![Protegus app, Area screen: Area name Area 1, Entry delay 10, Exit delay 45, Bell time 300, Squawk off, Re-ARM off, Force-ARM off, Keyswitch mode Level, Tamper action Always audible.](./protegus-app/sp3-systemoptions-area-phone.webp){ .trik-mob-img }
 
 
-    On revisions starting with 4 or 6, with firmware 1.15 or later, the app also shows **Arm after**<!-- to confirm with Igoris: what it does -->.
+    On revisions starting with 4 or 6, with firmware 1.15 or later, the app also shows **Arm after**, a time in minutes: the system arms itself that many minutes after it is disarmed (with 2, two minutes later). 0 means it never arms itself.
 
 === "TrikdisConfig"
 
@@ -1048,7 +1048,7 @@ If arming is restricted for a fault, the control panel cannot be armed while tha
     </span>
 
 
-    **Communication type** offers TCP/IP and UDP/IP; with the **TL150** protocol, only UDP/IP. **Protocol** offers TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom and, from firmware 1.14, TL150. With TRK, the **Encryption key** has 6 characters. With any other protocol, the app shows **Enable encryption**, **Encryption key** and **Key is HEX**: when encryption is on, the key has 16 characters, or 32 hexadecimal characters when **Key is HEX** is on, and a shorter key is filled up with zeros. With a SIA DC-09 protocol, the app also shows **SIA DCS**<!-- to confirm with Igoris: what it does -->. SMS reporting to the CMS and the **Backup channel 2** numbers are set only in TrikdisConfig.
+    **Communication type** offers TCP/IP and UDP/IP; with the **TL150** protocol, only UDP/IP. **Protocol** offers TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom and, from firmware 1.14, TL150. With TRK, the **Encryption key** has 6 characters. With any other protocol, the app shows **Enable encryption**, **Encryption key** and **Key is HEX**: when encryption is on, the key has 16 characters, or 32 hexadecimal characters when **Key is HEX** is on, and a shorter key is filled up with zeros. With a SIA DC-09 protocol, the app also shows **SIA DCS**: when it is on, the panel sends SIA messages to the CMS. It needs a SIA or IPcom receiver. SMS reporting to the CMS and the **Backup channel 2** numbers are set only in TrikdisConfig.
 
 === "TrikdisConfig"
 
@@ -1113,7 +1113,7 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
     - 3E and 3L: **LAN (ethernet)** instead of SIM; 3E has no **LAN (RS485)**, and 3L no WiFi.
     - 4 and 6: **LAN (ethernet)** instead of WiFi.
 
-    The WiFi name and password are in **WiFi network parameters** (revisions starting with 1, 2, 3E or 5), together with the DHCP and IP settings. Revisions starting with 3E, 3L, 4 or 6 have a **LAN parameters** group with the DHCP and IP settings of the wired network, and a **LAN trouble indication** switch in the **Settings** group<!-- to confirm with Igoris: what it does -->. **SMS Ping period** and the **SIM parameters** are not in the app.
+    The WiFi name and password are in **WiFi network parameters** (revisions starting with 1, 2, 3E or 5), together with the DHCP and IP settings. Revisions starting with 3E, 3L, 4 or 6 have a **LAN parameters** group with the DHCP and IP settings of the wired network, and a **LAN trouble indication** switch in the **Settings** group. When it is on, an LED on the panel’s board shows a LAN trouble. The LAN trouble event is sent whether the switch is on or off. **SMS Ping period** and the **SIM parameters** are not in the app.
 
 === "TrikdisConfig"
 
@@ -1453,7 +1453,7 @@ Linking electronic keys using the CZ-Dallas reader.
     ![Protegus app, Corner Pir device: Device Corner Pir, Serial number 403117, RSSI 86 %, Battery 3.05 V, Enable LED on, Sleep time 10 s, PIR1 sensitivity 10, PIR1 pulses count 3, and an Ok button.](./protegus-app/sp3-wireless-device-phone.webp){ .trik-mob-img }
 
 
-    **Update** only reads these levels. The app may then say the settings have changed, but nothing needs writing. Which settings a device has depends on its type. On revisions ending in 4 with firmware 1.19 or later, the app also shows **Supervision time (min)**, 30 to 2,880 minutes<!-- to confirm with Igoris: when the SP3 treats a device as lost -->.
+    **Update** only reads these levels. The app may then say the settings have changed, but nothing needs writing. Which settings a device has depends on its type. On revisions ending in 4 with firmware 1.19 or later, the app also shows **Supervision time (min)**, 30 to 2,880 minutes. If the panel hears nothing from a wireless sensor for this time, it sends the trouble event *RF device lost* (Contact ID 381), and *RF device restore* when the sensor is back.
 
 === "TrikdisConfig"
 
@@ -1798,7 +1798,7 @@ This tab will only be shown if there is at least one user phone number in the *[
     ![Protegus app, output Garden lights: Name Garden lights, Output SP3 9 I/O, Definition Remote control, Pulse time 20 s, Report to CMS off, Report to Protegus2 cloud on, and an Ok button.](./protegus-app/sp3-output-phone.webp){ .trik-mob-img }
 
 
-    **Pulse time** is shown for **Remote control** outputs. With firmware 1.19 or later, the app also lists the definition **Fire reset (inverted)**<!-- to confirm with Igoris: what it does -->.
+    **Pulse time** is shown for **Remote control** outputs. With firmware 1.19 or later, the app also lists the definition **Fire reset (inverted)**, which works the opposite way to **Fire sensor reset**.
 
 === "TrikdisConfig"
 
@@ -1844,7 +1844,7 @@ This tab will only be shown if there is at least one user phone number in the *[
     ![Protegus app, PGM, Set action: Garden lights - SP3 9 I/O ON, If Arm Area 1, on; Garden lights - SP3 9 I/O OFF, If Disarm Area 1, on; the other rows N/A and off.](./protegus-app/sp3-actions-phone.webp){ .trik-mob-img }
 
 
-    Under **If**, the condition also covers when it applies (for example alarm or restore) and any value. The actions are **OFF**, **ON**, **Pulse OFF**, **Pulse ON** and, with firmware 1.20 or later, **Toggle**<!-- to confirm with Igoris: what Toggle does, and whether TrikdisConfig has it -->. The conditions **AC lost**, **Low battery** and **Zone tamper** need firmware 1.20 or later.
+    Under **If**, the condition also covers when it applies (for example alarm or restore) and any value. The actions are **OFF**, **ON**, **Pulse OFF**, **Pulse ON** and, with firmware 1.20 or later, **Toggle**. The conditions **AC lost**, **Low battery** and **Zone tamper** need firmware 1.20 or later.
 
 === "TrikdisConfig"
 
@@ -1866,6 +1866,8 @@ This tab will only be shown if there is at least one user phone number in the *[
 - **Pulse OFF** – initial state of output OUT – “On”. After the command the OUT state will become “Off” for the duration of the **Pulse time**, and later it will automatically return to the initial “On” state**.**
 
 - **Pulse ON** – initial state of output OUT – “Off”. After the command the OUT state will become “On” for the duration of the **Pulse time**, and later it will automatically return to the initial “Off” state**.**
+
+- **Toggle** – when the condition is met, the output OUT changes to the opposite state.
 - <span class="trik-term"><span class="trik-term-app"><strong>Pulse time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Pulse time, s</strong><span class="trik-term-note">)</span></span></span> – you can set the pulse time anywhere from 0 to 9999 seconds.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>If</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Factor/Factor No.</strong><span class="trik-term-note">)</span></span></span> – choose what event (Zone, Sensor, Jamming, Sensor lost, iButton, Arm, Disarm, SMS received, Zone(follow), Stay, Sleep, AC lost, Low battery, Zone tamper) will turn on the output OUT.
