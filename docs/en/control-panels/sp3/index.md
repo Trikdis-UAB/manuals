@@ -1030,9 +1030,25 @@ If at least one control panel internal fault field is checked, then the control 
 
 ### Reporting to CMS <span id="53-reporting-to-cms-window"></span>
 
-**“Reporting” tab**
+**Reporting**
 
-<img alt="TrikdisConfig Reporting to CMS window on the Reporting tab. Primary and backup channels have Communication type set to Disabled; parallel and parallel backup channels show TCP/IP. These four panels have Domain or IP, Port, Protocol, Phone number and Encryption Key fields. Separate Backup channel 2 and Parallel backup channel 2 panels show only Phone number fields." src="./image59.webp" style="width:7.086614173228346in;height:3.87007874015748in" />
+=== "Protegus app"
+
+    Open **Reporting to CMS → Reporting**. Turn a channel on with its **Enabled** switch. The **Backup channel** group appears when the primary channel is on, and **Parallel backup channel** when the parallel channel is on.
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Reporting to CMS, Reporting, top: device card; Primary channel enabled, Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol SIA DC-09_2012, SIA DCS on, Enable encryption on, Encryption key masked, Key is HEX off." src="./protegus-app/sp3-reporting-1-phone.webp" /><span class="trik-mob-pair__caption">Primary channel</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Reporting, bottom: Backup channel and Parallel channel, both with Enabled off, Port 0, Protocol TRK and the Encryption key masked." src="./protegus-app/sp3-reporting-2-phone.webp" /><span class="trik-mob-pair__caption">Backup and parallel channels</span></span>
+    </span>
+
+
+    **Communication type** offers TCP/IP and UDP/IP; with the **TL150** protocol, only UDP/IP. **Protocol** offers TRK, SIA DC-09_2012, SIA DC-09_2007, SIA DC-09_IPcom and, from firmware 1.14, TL150. With TRK, the **Encryption key** has 6 characters. With a SIA DC-09 protocol, the app also shows **SIA DCS** [to confirm: what it does] and **Enable encryption**; when encryption is on, the **Encryption key** has 16 characters, or 32 hexadecimal characters when **Key is HEX** is on, and a shorter key is filled up with zeros. SMS reporting to the CMS and the **Backup channel 2** numbers are set only in TrikdisConfig.
+
+=== "TrikdisConfig"
+
+    **“Reporting” tab**
+
+    <img alt="TrikdisConfig Reporting to CMS window on the Reporting tab. Primary and backup channels have Communication type set to Disabled; parallel and parallel backup channels show TCP/IP. These four panels have Domain or IP, Port, Protocol, Phone number and Encryption Key fields. Separate Backup channel 2 and Parallel backup channel 2 panels show only Phone number fields." src="./image59.webp" style="width:7.086614173228346in;height:3.87007874015748in" />
 
 The control panel sends events to the monitoring station via cellular internet (IP) or with SMS messages.
 
@@ -1048,7 +1064,7 @@ SMS communication is particularly useful as a backup channel, because it works e
 
 **Settings groups “Primary channel” and “Backup channel”**
 
-- **Communication type** – choose a protocol for communicating with the receiver (TCP/IP, UDP/IP, SMS).
+- **Communication type** – choose a protocol for communicating with the receiver (TCP/IP, UDP/IP, or SMS in TrikdisConfig).
 
 - **Domain or IP** - enter the receiver’s domain or IP address.
 
@@ -1056,13 +1072,13 @@ SMS communication is particularly useful as a backup channel, because it works e
 
 - **Protocol** – **TRK** for data transfer using Trikdis receivers, **SIA DC-09** for IP receivers capable of receiving event reports transmitted in SIA DC-09 protocols.
 
-- **Phone number** – (only for SMS messages) enter the phone number of a TRIKDIS SMS receiver. The telephone number must start with the international country code (e.g. 370xxxxxxxx).
+- **Phone number** – (only for SMS messages; *only in TrikdisConfig*) enter the phone number of a TRIKDIS SMS receiver. The telephone number must start with the international country code (e.g. 370xxxxxxxx).
 
 - **Encryption key** – 6-digit encryption key that must match the encryption key of the CMS receiver.
 
 If parameters are set for the parallel channel, reports will be sent using both channels simultaneously. Both channels cannot be configured for the same receiver. When the parallel channel is enabled, events can be sent simultaneously to two receivers (e.g., local and centralized monitoring stations).
 
-**“Backup channel 2” and “Parallel backup channel 2” SMS reporting number**
+**“Backup channel 2” and “Parallel backup channel 2” SMS reporting number** *Only in TrikdisConfig.*
 
 Backup SMS messages are sent when they cannot be transmitted via the primary, parallel and backup channels. It is especially useful because it works even when there is no IP connection in the mobile operator network.
 
@@ -1072,23 +1088,39 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 
 - **Phone number** - enter the phone number for TRIKDIS CMS (Central Monitoring Station) SMS receiver. Phone number must begin with the country code (e.g., 370xxxxxxxx).
 
-**“Settings” tab**
+**Settings**
 
-<img alt="TrikdisConfig Reporting to CMS window on the Settings tab. Return to Primary after is 5 minutes, IP Ping period is enabled at 60 seconds, DHCP mode is checked, and both CMS and Protegus use WiFi as Main type and SIM as Backup type." src="./image60.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
+=== "Protegus app"
+
+    Open **Reporting to CMS → Settings**.
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Reporting to CMS, Settings, top: device card; Settings group with Return to primary after 5 min, IP Ping enabled on, IP Ping period 60 s, Backup reporting after 3 attempts, DNS1 8.8.8.8, DNS2 1.1.1.1, Account No. in SIA DC-09 0001, SIA DC-09 receiver No. 1, SIA DC-09 line No. 1, Local time in SIA off." src="./protegus-app/sp3-reporting-settings-1-phone.webp" /><span class="trik-mob-pair__caption">Settings</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Settings, bottom: Reporting mode with CMS and Protegus2 each Main type WiFi, Backup type SIM, Backup type 2 Disabled; Radio T16 (RS485) off; Return to main (both channels) 10 min; WiFi network parameters with WiFi SSID name Sample-WiFi, password, DHCP mode on, Static IP, Subnet mask and Default gateway 0.0.0.0." src="./protegus-app/sp3-reporting-settings-2-phone.webp" /><span class="trik-mob-pair__caption">Reporting mode, WiFi network parameters</span></span>
+    </span>
+
+
+    In **Reporting mode**, the E485 connection is called **LAN (RS485)**. The choices depend on the panel’s revision: revisions starting with 10 or 20 have no SIM, and on revisions starting with 3E, 3L, 4 or 6 the wired network connection is shown as **LAN (ethernet)**. The “Communicator network settings” group is called **WiFi network parameters** (revisions starting with 1, 2, 3E or 5); revisions starting with 3E, 3L, 4 or 6 have a **LAN parameters** group with the same settings for the wired network, and a **LAN trouble indication** switch in the **Settings** group [to confirm: what it does]. **SMS Ping period** and the **SIM parameters** are not in the app.
+
+=== "TrikdisConfig"
+
+    **“Settings” tab**
+
+    <img alt="TrikdisConfig Reporting to CMS window on the Settings tab. Return to Primary after is 5 minutes, IP Ping period is enabled at 60 seconds, DHCP mode is checked, and both CMS and Protegus use WiFi as Main type and SIM as Backup type." src="./image60.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
 
 **Settings group “Settings”**
 
 - **Return to primary after** – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, in minutes.
 
-- **IP Ping period** – period for sending PING signals for checking connectivity on the GPRS channel, in seconds. To enable these signals, tick the box.
+- **IP Ping period** – period for sending PING signals for checking connectivity on the GPRS channel, in seconds. To enable these signals, tick the box (in the app, turn on **IP Ping enabled**).
 
-- **SMS Ping period** – period for sending PING signals for checking connectivity on the SMS channel, in minutes. To enable these signals, tick the box.
+- **SMS Ping period** – period for sending PING signals for checking connectivity on the SMS channel, in minutes. To enable these signals, tick the box. *Only in TrikdisConfig.*
 
 - **Backup reporting after** – enter how many failed attempts to send messages using the *primary* channel should take place before switching to the *backup* channel.
 
 - **DNS1, DNS2** – DNS server addresses.
 
-- **Object ID in SIA DC-09** –specify the object number.
+- <span class="trik-term"><span class="trik-term-app"><strong>Account No. in SIA DC-09</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID in SIA DC-09</strong><span class="trik-term-note">)</span></span></span> –specify the object number.
 
 - **SIA DC-09 receiver No.** – specify the receiver number.
 
@@ -1109,8 +1141,8 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - **Backup type 2** – select a connection type (SIM, WiFi, LAN(E485)) with the CMS receiver and Protegus2.
 
-- **Radio T16 (SF485)** – tick this box, when the T16 transmitter will be used for transmitting information. The T16 transmitter operates as a backup connectivity channel if at least one of the other connection methods (SIM, WiFi, LAN(E485)) is used. If there are no other connection methods, it is the main one. The T16 can only be used to send reports to the CMS.
-- **Return to main (both channel)** – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
+- <span class="trik-term"><span class="trik-term-app"><strong>Radio T16 (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Radio T16 (SF485)</strong><span class="trik-term-note">)</span></span></span> – tick this box, when the T16 transmitter will be used for transmitting information. The T16 transmitter operates as a backup connectivity channel if at least one of the other connection methods (SIM, WiFi, LAN(E485)) is used. If there are no other connection methods, it is the main one. The T16 can only be used to send reports to the CMS.
+- <span class="trik-term"><span class="trik-term-app"><strong>Return to main (both channels)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Return to main (both channel)</strong><span class="trik-term-note">)</span></span></span> – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
 
 **Settings group “Communicator network settings”**
 
@@ -1126,7 +1158,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - **WiFi SSID password** – WiFi network password.
 
-**Settings group “SIM parameters”**
+**Settings group “SIM parameters”** *Only in TrikdisConfig.*
 
 - **Disable indication of the absence of a SIM card** – when the box is ticked, the „FLEXi“ SP3 control panel will not display an indication that there is no SIM card inserted. Tick it when the control panel works without a SIM card.
 
@@ -1135,6 +1167,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 - **Disable the use of SIM card mobile data** – ticking the box will disable the usage of the SIM card’s mobile data. Data will only be sent using WiFi. If a WiFi network is temporarily unavailable, the „FLEXi“ SP3 will store data in memory. When the WiFi network is restored, the „FLEXi“ SP3 will send data using WiFi.
 
 <a id="Users_window"></a>
+
 ### Users & Reporting <span id="54-users-reporting-window"></span>
 
 **“Users” tab**
