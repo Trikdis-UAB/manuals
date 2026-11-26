@@ -762,7 +762,9 @@ Controlling outputs OUT and alarm system partitions using phone calls:
 
 An audio signal accompanies the beginning and end of the audio file recording. Audio file recording time 15 sec. An audio signal accompanies the end of audio playback. Recording is complete when you hear a beep. Other actions can only be taken when the beep is heard.
 
-## Setting parameters using TrikdisConfig software 
+## Setting parameters <span id="5-setting-parameters-using-trikdisconfig-software"></span>
+
+Most settings described below can be changed in the Protegus app or in TrikdisConfig. What each setting does is described once; each section gives the steps for both tools, with the app’s names where they differ. Settings and actions available in only one tool are marked; only TrikdisConfig can restore default settings, update the firmware, test the panel, set SMS and call reporting to users for zones, PGM outputs and events, edit the events’ SMS texts, and set the SMS ping.
 
 === "Protegus app"
 
@@ -771,8 +773,6 @@ An audio signal accompanies the beginning and end of the audio file recording. A
     Open the system in the Protegus app and go to **Settings → Advanced settings**. Tap **Read** to load the panel’s settings, change what you need, then tap **Write** to save them to the panel. The top of each screen shows the connected panel: **Unique ID** (IMEI), the version (**SP3_1E74**: revision 1E74), **Serial**, **Boot** and **Firmware**.
 
     ![Protegus app, Advanced settings for the FLEXi SP3: device card with Unique ID, SP3_1E74, serial 000123, boot 1.02 and firmware 1.23; Read and Write buttons; menu items System options, Reporting to CMS, Users & Reporting, Modules, Wireless, Zones, PGM, Sensors, System events and Events log.](./protegus-app/sp3-menu-phone.webp){ .trik-mob-img }
-
-    Some settings can be changed only in TrikdisConfig: restoring default settings, updating firmware, the panel test, SMS and call reporting to users for zones, PGM outputs and events, the events’ SMS texts, and the SMS ping. Each window below says which.
 
 === "TrikdisConfig"
 
@@ -806,109 +806,27 @@ When the „FLEXI“ SP3 is connected, TrikdisConfig will show information about
 
 When the **Read [F4]** button is clicked, the program will read and display the settings currently stored inside the „FLEXi“ SP3. With TrikdisConfig, alter the desired settings according to the program window descriptions given below.
 
-### “System Options” window 
+### System options <span id="52-system-options-window"></span>
+
+**System general**
 
 === "Protegus app"
 
-    In the Protegus app: **Advanced settings → System options**, then **System general**, **Areas**, **Schedulers**, **Holidays**, **System troubles** or **Access**.
-
-    **System general**
+    Open **System options → System general**.
 
     ![Protegus app, System options, System general for the FLEXi SP3. General: Account No. 0001, System name SP3 security77, Test period 1 day(s) 0 h, Start test at 13:30, Clear events after reset on, Text language Cyrillic alphabet, Suspend event reporting 10 same events per 10 s, Restore event reporting after 1 min, EOL type 2k2+2k2+4k7, Communication path test 1 day(s), LED out for 2Wire fire sensor off, AC failure delay 300 s. SIM: SIM card PIN 1234, APN internet. Time settings: Read time and Set time buttons, Time zone +2 h 0 min, Update time through GSM modem, Daylight saving time on.](./protegus-app/sp3-systemoptions-general-phone.webp){ .trik-mob-img }
 
-    | Setting | What it does | Values |
-    |---|---|---|
-    | **Account No.** | Account number the CMS gave for this system; sent in every report to the CMS. | 4 hexadecimal characters (0–9, A–F). Do not use FFFE or FFFF. |
-    | **System name** | Included in reports sent by SMS. | Up to 20 letters and numbers. |
-    | **Test period** | How often a periodic test report is sent. | Days and hours. |
-    | **Start test at** | Time of day at which the test report is sent. | hh:mm |
-    | **Clear events after reset** | Deletes reports not yet sent when the panel restarts. | On, off |
-    | **Text language** | Character set of SMS messages. | English, Baltic, Cyrillic alphabet, Central European, Greek, Turkish, Hebrew, Arabic, Vietnamese |
-    | **Suspend event reporting** | Stops reporting an event that repeats too often: so many same events within so many seconds. | Number of events, seconds |
-    | **Restore event reporting** | Time after which suspended reporting resumes. | 0–999 min |
-    | **EOL type** | Resistor values on zones wired with end-of-line resistors (tamper + sensor 1 + sensor 2). | 2k2+2k2+4k7, 1k+1k+2k2, 5k6+5k6+3k3, 5k6+3k3+5k6, 3k3+6k8+3k3, 2k2+4k7+8k2; 4k7+4k7+2k2 from firmware 1.19 |
-    | **Communication path test** | How often the panel tests the backup channels by sending a message to the CMS over them, then returns to the primary channel. | Disabled, every so many hours or days |
-    | **LED out for 2Wire fire sensor** | Uses the LED output for a two-wire fire detector. | On, off |
-    | **AC failure delay** | Delay before a mains failure, and its restore, is reported. | Seconds |
-    | **Preferred carrier** | The panel connects only to this mobile operator’s network (MCC and MNC code). | Firmware 1.21 or later |
-    | **SIM card PIN** | PIN of the SIM card. Leave the default if the SIM card has no PIN. | 4 digits |
-    | **APN**, **Login**, **Password** | Mobile internet access point, and its login if the operator requires one. Needed for reports to Protegus2 or to the CMS over mobile data. | As given by the operator |
-    | **Locked ICCID** | The panel works only with the SIM card that has this ICCID. | ICCID, or empty |
-    | **Read time**, **Set time**, **Module time** | Reads the panel’s clock and shows it; sets it from the phone or computer. | — |
-    | **Time zone** | The panel’s time zone. | Hours and minutes from UTC, e.g. +2 h 0 min |
-    | **Update time through** | Where the panel takes the time after it is powered on. | Disabled, CMS server, GSM modem, Cloud application, CMS1, CMS2 |
-    | **Daylight saving time** | Switches the clock to summer and winter time. | On, off |
+    | In TrikdisConfig | In the Protegus app |
+    |---|---|
+    | **Object ID** | **Account No.** |
+    | **Object name** | **System name** |
+    | **Preferred operator** | **Preferred carrier** |
+    | **Set PC time** | **Set time** |
+    | **Time zone (Hours)** | **Time zone** |
+    | **Time set** | **Update time through** |
+    | Module's time | **Module time** |
 
-    The SIM group appears on models with a mobile modem. **Areas in test SMS** and **Call** (how many times the panel calls a user) are set in TrikdisConfig.
-
-    **Areas**
-
-    ![Protegus app, System options, Areas: Areas enabled 8, and the list Area 1 to Area 8.](./protegus-app/sp3-systemoptions-areas-phone.webp){ .trik-mob-img }
-
-    ![Protegus app, Area 1: Area name Area 1, Entry delay 10, Exit delay 45, Bell time 300, Squawk off, Re-ARM off, Force-ARM off, Keyswitch mode Level, Tamper action Always audible.](./protegus-app/sp3-systemoptions-area-phone.webp){ .trik-mob-img }
-
-    | Setting | What it does | Values |
-    |---|---|---|
-    | **Areas enabled** | Into how many independent areas the system is divided. Tap an area to set it. | 1–8 |
-    | **Area name** | Name of the area in the app and in SMS reports. | Text |
-    | **Entry delay** | Time to reach a keypad and disarm after a Delay zone is violated. | 0–999 s |
-    | **Exit delay** | Time to leave through a Delay zone after arming. An area armed remotely, e.g. from the Protegus app, arms at once. | 0–999 s |
-    | **Bell time** | How long the siren sounds after an alarm. | 0–999 s |
-    | **Squawk** | The siren sounds once when the area is armed and twice when it is disarmed. | On, off |
-    | **Re-ARM** | Arms the area again if it was disarmed remotely and no Delay zone was violated within the entry time. | On, off |
-    | **Force-ARM** | Allows arming with Stay zones open, as long as the entry zone is closed. | On, off |
-    | **Keyswitch mode** | How a Keyswitch zone must change to arm or disarm the area. | Level, Pulse |
-    | **Tamper action** | What a sensor tamper does: Silent sends reports without the siren; Audible when armed also sounds the siren when the area is armed; Always audible sounds it always. | Silent, Audible when armed, Always audible |
-    | **Arm after** | Shown on revisions starting with 4 or 6, with firmware 1.15 or later. | [to confirm] |
-
-    **Schedulers**
-
-    ![Protegus app, System options, Schedulers: the first schedule at 22:00, on, Mon to Fri, Arm; the second at 07:00, on, Mon to Fri, Disarm; the others at 00:00, off, Disarm.](./protegus-app/sp3-systemoptions-schedulers-phone.webp){ .trik-mob-img }
-
-    Each scheduler arms or disarms an area at a set time on the chosen days. Tap a scheduler to open its settings.
-
-    | Setting | What it does | Values |
-    |---|---|---|
-    | Switch | Turns the scheduler on. | On, off |
-    | **Time** | When the action is done. | hh:mm |
-    | Days | The days of the week on which it is done. | Monday to Sunday |
-    | **Area** | The area it arms or disarms. | One of the enabled areas |
-    | **Action** | The mode the area is switched to. | Disarm, Arm, Sleep, Stay |
-    | **Holiday** | What the scheduler does on holidays: nothing different (Disabled), skip them, act additionally on them, or act only on them. | Disabled, Ignore on holidays, Additional when holidays, Only on holidays |
-    | **Holiday group** | Which holidays count. | Any, 1–4 |
-    | **Enabled only when not armed** | The action is done only if the area is not armed in Away mode. | On, off. Firmware 1.15 or later |
-
-    **Holidays**
-
-    ![Protegus app, System options, Holidays: the first holiday 26-12-24 to 26-12-26, on, Group 1; the others 00-01-01 to 00-01-01, on, no group.](./protegus-app/sp3-systemoptions-holidays-phone.webp){ .trik-mob-img }
-
-    | Setting | What it does | Values |
-    |---|---|---|
-    | Switch | Turns the holiday on. | On, off |
-    | **Start date**, **Stop date** | First and last day of the holiday. For a one-day holiday they are the same. | Dates |
-    | **Group** | Holiday groups the holiday belongs to, used by the schedulers. | 1–4 |
-
-    **System troubles**
-
-    ![Protegus app, System options, System troubles: troubles 1 to 13 from AC Fault to Antimasking Fault, each with a Restrict ARM switch, all off.](./protegus-app/sp3-systemoptions-troubles-phone.webp){ .trik-mob-img }
-
-    | Setting | What it does | Values |
-    |---|---|---|
-    | **Restrict ARM** | The system cannot be armed while this trouble is present. | On, off per trouble |
-
-    **Access**
-
-    ![Protegus app, System options, Access: Administrator code, SMS code and Installer code (hidden); Installer permissions: Can change Account No. on; Area settings and the menus Users & Reporting, Modules, Zones, PGM, Reporting to CMS and System events all Editable.](./protegus-app/sp3-systemoptions-access-phone.webp){ .trik-mob-img }
-
-    | Setting | What it does | Values |
-    |---|---|---|
-    | **Administrator code** | Full access to the configuration. Shown only to the administrator. | 6 characters, letters and numbers. Default 123456 |
-    | **SMS code** | Password for controlling the system by SMS. | 6 characters. Default 123456 |
-    | **Installer code** | Installer access to the configuration. | 6 characters. Default 654321 |
-    | **Can change Account No.** | Whether the installer may change the account number. | On, off |
-    | **Area settings**, **Menu ‘Users & Reporting’**, **‘Modules’**, **‘Zones’**, **‘PGM’**, **‘Reporting to CMS’**, **‘System events’** | What the installer may do in each part. | Editable, Visible (read only), Hidden |
-
-    The installer’s **SIM card** permission is set in TrikdisConfig.
+    The **SIM** group appears on models with a mobile modem. **Areas in test SMS** and **Call** are not in the app.
 
 === "TrikdisConfig"
 
@@ -916,142 +834,224 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
     <img alt="TrikdisConfig System Options window on the System general tab. The General, SIM and Time settings groups show fields including Object ID, APN set to internet, EOL Type set to 2k2+2k2+4k7, time zone set to +2 and Power failure delay set to 300 seconds." src="./image53.webp" style="width:7.086614173228346in;height:4.062992125984252in" />
 
-    **Settings group “General”**
+**Settings group “General”**
 
-    - If reports will be sent to CMS, enter the **Object ID** (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**) given by the CMS.
+- If reports will be sent to CMS, enter the **Object ID** (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**) given by the CMS.
 
-    - **Object name** – will be included in reports sent via SMS messages (up to 20 symbols, letters and numbers can be used).
+- **Object name** – will be included in reports sent via SMS messages (up to 20 symbols, letters and numbers can be used).
 
-    - **Test period** – if the box is ticked, periodic test reports will be sent every set period, unless **Start test at** is ticked and a time is set.
+- **Test period** – if the box is ticked, periodic test reports will be sent every set period, unless **Start test at** is ticked and a time is set.
 
-    - **Start test at** – tick the box and specify a time when test reports should be sent.
+- **Start test at** – tick the box and specify a time when test reports should be sent.
 
-    - **Areas in test SMS** – the current protection modes of the specified areas will be included into the periodic test report.
+- **Areas in test SMS** – the current protection modes of the specified areas will be included into the periodic test report. *Only in TrikdisConfig.*
 
-    - **Clear Events after reset** – if the box is ticked, all unsent event reports in buffer memory will be deleted if the control panel is reset.
+- **Clear Events after reset** – if the box is ticked, all unsent event reports in buffer memory will be deleted if the control panel is reset.
 
-    - **Text language** – specific symbols of the selected language will be used in SMS messages.
+- **Text language** – specific symbols of the selected language will be used in SMS messages.
 
-    - It is possible to **Suspend event reporting when ...** a number of **same events per ... s** happen**.**
+- It is possible to **Suspend event reporting when ...** a number of **same events per ... s** happen**.**
 
-    - **Restore event reporting after** – set the time after which suspending of event reporting will be cancelled. The time can be anywhere from 0 to 999 minutes.
+- **Restore event reporting after** – set the time after which suspending of event reporting will be cancelled. The time can be anywhere from 0 to 999 minutes.
 
-    - **Call** – when an event occurs, the „FLEXi“ SP3 will call user(-s) as many times as is set. If the call is declined or answered, the „FLEXi“ SP3 will stop calling. Duration of a call is 20 seconds.
+- **Call** – when an event occurs, the „FLEXi“ SP3 will call user(-s) as many times as is set. If the call is declined or answered, the „FLEXi“ SP3 will stop calling. Duration of a call is 20 seconds. *Only in TrikdisConfig.*
 
-    - **EOL Type** – specify the nominals of the resistors connected to the sensors (EOL – End Of Line. RT + R1 + R2. Resistor RT - tamper; resistor R1 - sensor No 1; resistor R2 - sensor No 2).
+- **EOL Type** – specify the nominals of the resistors connected to the sensors (EOL – End Of Line. RT + R1 + R2. Resistor RT - tamper; resistor R1 - sensor No 1; resistor R2 - sensor No 2). The choices are 2k2+2k2+4k7, 1k+1k+2k2, 5k6+5k6+3k3, 5k6+3k3+5k6, 3k3+6k8+3k3 and 2k2+4k7+8k2, and from firmware 1.19 also 4k7+4k7+2k2.
 
-    - **Communication path test** – specify the time interval after which the control panel will check the Backup communication channels by sending messages to the CMS. After sending the messages on the Backup communication channels, the control panel will return to the Primary communication channel.
+- **Communication path test** – specify the time interval after which the control panel will check the Backup communication channels by sending messages to the CMS. After sending the messages on the Backup communication channels, the control panel will return to the Primary communication channel.
 
-    - **LED out as 2Wire fire** - check the box when you connect the two-wire fire detector to the LED output.
+- **LED out as 2Wire fire** - check the box when you connect the two-wire fire detector to the LED output.
 
-    **Settings group “SIM”**
+**Settings group “SIM”**
 
-    - Enter the **SIM card PIN.** If the PIN code is disabled for the specific SIM card, do not change the the default code.
+- Enter the **SIM card PIN.** If the PIN code is disabled for the specific SIM card, do not change the the default code.
 
-      - **APN** – network service provider’s mobile internet access point name. You must enter the APN if event messages will have to be sent to Protegus cloud or to the CMS using mobile internet.
-    - If required by the GPRS network service provider, enter the APN username and password in the fields **Login** and **Password**.
+  - **APN** – network service provider’s mobile internet access point name. You must enter the APN if event messages will have to be sent to Protegus cloud or to the CMS using mobile internet.
+- If required by the GPRS network service provider, enter the APN username and password in the fields **Login** and **Password**.
 
-    - **Locked ICCID** - enter the ICCID number of the SIM card if you want the control panel to work only with this SIM card.
+- **Locked ICCID** - enter the ICCID number of the SIM card if you want the control panel to work only with this SIM card.
 
-    - **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNS codes.
+- **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNC codes. Firmware 1.21 or later.
 
-    **Settings group “Time settings”**
+**Settings group “Time settings”**
 
-    You can set the time by clicking the **Set PC time** button. If **Disabled** is chosen in the **Time synchronization** field, the computer’s time will be set for the control panel. If a modem or a server is chosen in the **Time synchronization** field, the control panel will synchronize its time according to that modem or server.
+You can set the time by clicking the **Set PC time** button. If **Disabled** is chosen in the **Time synchronization** field, the computer’s time will be set for the control panel. If a modem or a server is chosen in the **Time synchronization** field, the control panel will synchronize its time according to that modem or server.
 
-    - **Time zone (Hours)** – specify your country’s time zone. For example, if the control panel will be installed in Lithuania, enter **+2**.
+- **Time zone (Hours)** – specify your country’s time zone. For example, if the control panel will be installed in Lithuania, enter **+2**.
 
-    - **Time set** – specify a server to synchronize the ***„FLEXi“ SP3**’s* internal clock with. Synchronization occurs after the control panel is powered on.
+- **Time set** – specify a server to synchronize the ***„FLEXi“ SP3**’s* internal clock with. Synchronization occurs after the control panel is powered on.
 
-    - **Daylight saving time** – if you check the box, the control panel's internal clock will be automatically switched to summer or winter time.
+- **Daylight saving time** – if you check the box, the control panel's internal clock will be automatically switched to summer or winter time.
 
-    - **AC failure delay** - in the event of a power failure in the main power supply, a power failure notification will be sent after the specified time delay. When the supply voltage is restored, a notification of the supply voltage recovery will be sent after the specified time delay.
+- **AC failure delay** - in the event of a power failure in the main power supply, a power failure notification will be sent after the specified time delay. When the supply voltage is restored, a notification of the supply voltage recovery will be sent after the specified time delay.
+
+**Areas**
+
+=== "Protegus app"
+
+    Open **System options → Areas**, then tap an area.
+
+    ![Protegus app, System options, Areas: Areas enabled 8, and the list Area 1 to Area 8.](./protegus-app/sp3-systemoptions-areas-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, Area 1: Area name Area 1, Entry delay 10, Exit delay 45, Bell time 300, Squawk off, Re-ARM off, Force-ARM off, Keyswitch mode Level, Tamper action Always audible.](./protegus-app/sp3-systemoptions-area-phone.webp){ .trik-mob-img }
+
+    | In TrikdisConfig | In the Protegus app |
+    |---|---|
+    | **Partitions enabled** | **Areas enabled** |
+    | **Partition name** | **Area name** |
+    | **Entry**, **Exit**, **Bell** | **Entry delay**, **Exit delay**, **Bell time** |
+    | **Keyswitch** | **Keyswitch mode** |
+    | **Tamper** | **Tamper action** |
+
+    On revisions starting with 4 or 6, with firmware 1.15 or later, the app also shows **Arm after** [to confirm: what it does].
+
+=== "TrikdisConfig"
 
     **“Partitions” tab**
 
     <img alt="TrikdisConfig System Options window on the Partitions tab, with Partitions enabled set to 8. The table lists Areas 1–8 with Entry, Exit, Bell, Squawk, Re-ARM, Force-ARM, Keyswitch and Tamper settings." src="./image54.webp" style="width:7.086614173228346in;height:2.8070866141732282in" />
 
-    - **Partitions enabled** – enter the number of independent parts that the alarm system will be divided into.
+- **Partitions enabled** – enter the number of independent parts that the alarm system will be divided into.
 
-    - **Partition name** – enter the partition name.
+- **Partition name** – enter the partition name.
 
-    - **Entry** – time for entering through a *Delay* zone, walking to a keypad and disarming the alarm system. Time can be anywhere between 0 and 999 seconds.
+- **Entry** – time for entering through a *Delay* zone, walking to a keypad and disarming the alarm system. Time can be anywhere between 0 and 999 seconds.
 
-    - **Exit** – time for leaving the premises through a *Delay* zone after entering the alarm system arm code using a keypad. Time can be anywhere between 0 and 999 seconds. If the alarm system is armed remotely, e.g. via Protegus2 mobile app, the system will not count **Exit time** and will arm immediately.
+- **Exit** – time for leaving the premises through a *Delay* zone after entering the alarm system arm code using a keypad. Time can be anywhere between 0 and 999 seconds. If the alarm system is armed remotely, e.g. via Protegus2 mobile app, the system will not count **Exit time** and will arm immediately.
 
-    - **Bell** – duration of siren operation once the alarm is triggered. Time can be anywhere between 0 and 999 seconds.
+- **Bell** – duration of siren operation once the alarm is triggered. Time can be anywhere between 0 and 999 seconds.
 
-    - **Squawk** - the siren will make a short sound once when the alarm is armed and twice when it is disarmed.
+- **Squawk** - the siren will make a short sound once when the alarm is armed and twice when it is disarmed.
 
-    - **Re-ARM** – tick this box if you want the system to automatically re-arm the alarm system after the system was disarmed remotely, but the *Delay* zone was not violated during the set entry time.
+- **Re-ARM** – tick this box if you want the system to automatically re-arm the alarm system after the system was disarmed remotely, but the *Delay* zone was not violated during the set entry time.
 
-    - **Force-ARM** – tick this box to allow to switch the system to protection (ARM) mode even if *Stay* zones are violated, as long as the *Entry* zone is not violated.
+- **Force-ARM** – tick this box to allow to switch the system to protection (ARM) mode even if *Stay* zones are violated, as long as the *Entry* zone is not violated.
 
-    - **Keyswitch** – choose in what way – *Pulse* or *Level* – a Keyswitch zone must be triggered for the system to enable or disable premise protection*.*
+- **Keyswitch** – choose in what way – *Pulse* or *Level* – a Keyswitch zone must be triggered for the system to enable or disable premise protection*.*
 
-    - **Tamper** – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when protected“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will will switch on even when the alarm system is disarmed.
+- **Tamper** – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when protected“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will will switch on even when the alarm system is disarmed.
+
+**Schedulers**
+
+=== "Protegus app"
+
+    Open **System options → Schedulers**, then tap a scheduler to open its settings.
+
+    ![Protegus app, System options, Schedulers: the first schedule at 22:00, on, Mon to Fri, Arm; the second at 07:00, on, Mon to Fri, Disarm; the others at 00:00, off, Disarm.](./protegus-app/sp3-systemoptions-schedulers-phone.webp){ .trik-mob-img }
+
+    | In TrikdisConfig | In the Protegus app |
+    |---|---|
+    | **Enable** | the switch on each scheduler |
+    | **Partition** | **Area** |
+    | **Not Armed** | **Enabled only when not armed** |
+    | **Holiday**: Only holidays | **Holiday**: Only on holidays |
+
+=== "TrikdisConfig"
 
     **“Scheduler” tab**
 
     <img alt="TrikdisConfig System Options window on the Scheduler tab. The schedule table has columns for Enable, Partition, Time, Not Armed, Action, days of the week, Holiday and Holiday group; visible rows show partition 1, 00:00, Disarm, Holiday Disabled and group Any." src="./image55.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
-    In this table, you can arrange scenarios for automatically arming and disarming the security system by choosing different days of the week and including public holidays.
+In this table, you can arrange scenarios for automatically arming and disarming the security system by choosing different days of the week and including public holidays.
 
-    - **Enable** – enable the schedule for when the system will automatically arm and disarm.
+- **Enable** – enable the schedule for when the system will automatically arm and disarm.
 
-    - **Partition** – specify the partition affected by the specific schedule.
+- **Partition** – specify the partition affected by the specific schedule.
 
-    - **Time** – set the time when the specific action must be done.
+- **Time** – set the time when the specific action must be done.
 
-    - **Not Armed** - check the box and the schedule action will be performed only if the control panel is not armed in AWAY mode.
+- **Not Armed** - check the box and the schedule action will be performed only if the control panel is not armed in AWAY mode. Firmware 1.15 or later.
 
-    - **Action** – set the protection mode (Disarm/Arm/Sleep/Stay) that the system will switch to automatically at the specified time.
+- **Action** – set the protection mode (Disarm/Arm/Sleep/Stay) that the system will switch to automatically at the specified time.
 
-    - **Monday, ... Sunday** – tick the days of the week that the set protection mode and time will be valid on.
+- **Monday, ... Sunday** – tick the days of the week that the set protection mode and time will be valid on.
 
-    - **Holiday** – set how the schedule behaves during holidays (Disabled/Ignore on holidays/Additional when holidays/Only holidays). Disabled – there are no holidays. Ignore on holidays – do not carry out the schedule during holidays. Additional when holidays – perform an additional action during holidays. Only holidays – carry out the schedule during holidays.
+- **Holiday** – set how the schedule behaves during holidays (Disabled/Ignore on holidays/Additional when holidays/Only holidays). Disabled – there are no holidays. Ignore on holidays – do not carry out the schedule during holidays. Additional when holidays – perform an additional action during holidays. Only holidays – carry out the schedule during holidays.
 
-    - **Holiday group** – specify a holiday group (Any/1/2/3/4) that the schedule will consider to be holidays. If “Any” is chosen, the schedule will operate in holiday mode during any active holiday.
+- **Holiday group** – specify a holiday group (Any/1/2/3/4) that the schedule will consider to be holidays. If “Any” is chosen, the schedule will operate in holiday mode during any active holiday.
+
+**Holidays**
+
+=== "Protegus app"
+
+    Open **System options → Holidays**.
+
+    ![Protegus app, System options, Holidays: the first holiday 26-12-24 to 26-12-26, on, Group 1; the others 00-01-01 to 00-01-01, on, no group.](./protegus-app/sp3-systemoptions-holidays-phone.webp){ .trik-mob-img }
+
+    | In TrikdisConfig | In the Protegus app |
+    |---|---|
+    | **Enable** | the switch on each holiday |
+    | **Group 1** to **Group 4** | **Group** |
+
+=== "TrikdisConfig"
 
     **“Holidays” tab**
 
     <img alt="TrikdisConfig System Options window on the Holidays tab. The visible holiday rows are enabled, show matching start and stop dates of 01.01.2000, and have unchecked boxes for Groups 1–4." src="./image56.webp" style="width:7.086614173228346in;height:1.9291338582677164in" />
 
-    - **Enable** – Tick this box to enable the holiday.
+- **Enable** – Tick this box to enable the holiday.
 
-    - **Start date** – set the start date of the holiday.
+- **Start date** – set the start date of the holiday.
 
-    - **Stop date** – set the end date of the holiday. If the holiday is only one day long, this date should match the **Start date**.
+- **Stop date** – set the end date of the holiday. If the holiday is only one day long, this date should match the **Start date**.
 
-    - **Group 1, Group 2, Group 3, Group 4** – combine holidays into groups.
+- **Group 1, Group 2, Group 3, Group 4** – combine holidays into groups.
+
+**System troubles**
+
+=== "Protegus app"
+
+    Open **System options → System troubles**.
+
+    ![Protegus app, System options, System troubles: troubles 1 to 13 from AC Fault to Antimasking Fault, each with a Restrict ARM switch, all off.](./protegus-app/sp3-systemoptions-troubles-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
 
     **“System troubles” tab**
 
     <img alt="TrikdisConfig System Options window on the System troubles tab. A table lists faults from AC Fault through Antimasking Fault, each with an unchecked Restrict ARM box." src="./image57.webp" style="width:7.086614173228346in;height:2.9881889763779528in" />
 
-    If at least one control panel internal fault field is checked, then the control panel will not be able to be Armed if this fault is present.
+If at least one control panel internal fault field is checked, then the control panel will not be able to be Armed if this fault is present.
+
+**Access**
+
+=== "Protegus app"
+
+    Open **System options → Access**.
+
+    ![Protegus app, System options, Access: Administrator code, SMS code and Installer code (hidden); Installer permissions: Can change Account No. on; Area settings and the menus Users & Reporting, Modules, Zones, PGM, Reporting to CMS and System events all Editable.](./protegus-app/sp3-systemoptions-access-phone.webp){ .trik-mob-img }
+
+    | In TrikdisConfig | In the Protegus app |
+    |---|---|
+    | **SMS password** | **SMS code** |
+    | Installer permission **Object ID** | **Can change Account No.** |
+    | Installer permission **SIM card** | not in the app |
+
+    The app shows **Administrator code** only to the administrator. Each permission is **Editable**, **Visible** (read only) or **Hidden**.
+
+=== "TrikdisConfig"
 
     **“Access” tab**
 
     <img alt="TrikdisConfig System Options window on the Access tab. Access codes include Administrator Code 123456, SMS password and Installer Code fields; Installer permissions show Object ID and SIM card checked, with Area Settings and the visible menus set to Editable." src="./image58.webp" style="width:7.086614173228346in;height:3.1102362204724407in" />
 
-    **Settings group “Access codes”**
+**Settings group “Access codes”**
 
-    - **Administrator Code** – *(default code - 123456)* gives full access to configuration (the code must be 6 symbols long; it can consist of latin letters and/or numbers).
+- **Administrator Code** – *(default code - 123456)* gives full access to configuration (the code must be 6 symbols long; it can consist of latin letters and/or numbers).
 
-    - **SMS password** – *(default password - 123456)* is used for controlling the system safely using SMS messages. For safety purposes, change it into a 6-symbol password only You know.
+- **SMS password** – *(default password - 123456)* is used for controlling the system safely using SMS messages. For safety purposes, change it into a 6-symbol password only You know.
 
-    - **Installer Code** – (*default code - 654321*) gives installers access to configuring the system. For safety purposes, change it into a 6-symbol code only You know.
+- **Installer Code** – (*default code - 654321*) gives installers access to configuring the system. For safety purposes, change it into a 6-symbol code only You know.
 
-    !!! note
-        If the default *administrator code* is set (123456), after pressing
-        **Read [F4]** the program will immediately show the current
-        operational parameters of the device without asking for the code.
-    **Settings group “Installer permissions”**
+!!! note
+    If the default *administrator code* is set (123456), after pressing
+    **Read [F4]** the program will immediately show the current
+    operational parameters of the device without asking for the code.
+**Settings group “Installer permissions”**
 
-    - Specifies the installer’s permissions.
+- Specifies what the installer may change: **Object ID**, the **SIM card** settings (*only in TrikdisConfig*), and each area or menu, which can be editable, read only or hidden.
 
-### “Reporting to CMS” window 
+### Reporting to CMS <span id="53-reporting-to-cms-window"></span>
 
 **“Reporting” tab**
 
@@ -1158,7 +1158,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 - **Disable the use of SIM card mobile data** – ticking the box will disable the usage of the SIM card’s mobile data. Data will only be sent using WiFi. If a WiFi network is temporarily unavailable, the „FLEXi“ SP3 will store data in memory. When the WiFi network is restored, the „FLEXi“ SP3 will send data using WiFi.
 
 <a id="Users_window"></a>
-### “Users & Reporting” window 
+### Users & Reporting <span id="54-users-reporting-window"></span>
 
 **“Users” tab**
 
@@ -1246,7 +1246,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - The text for answers to commands sent using SMS messages can be customized in the column **SMS text**.
 
-### “Modules” window
+### Modules <span id="55-modules-window"></span>
 
 **“Keypads” tab**
 
@@ -1320,7 +1320,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Default gateway** – gateway for manual registration mode.
 
-### “Wireless” window 
+### Wireless <span id="56-wireless-window"></span>
 
 <img alt="TrikdisConfig Wireless sensors window. The Sensors table shows Device type as Disabled in the visible rows, with columns for Serial No., Area, User, Key 3, Key 4 and Configure." src="./image68.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
 
@@ -1513,32 +1513,31 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 17. Wireless sensors registered.
 
-### “Zones” window 
+### Zones <span id="57-zones-window"></span>
+
+**Zones settings**
 
 === "Protegus app"
 
-    In the Protegus app: **Advanced settings → Zones**. The list shows each zone with its input, areas, definition and type; a zone with no input shows **Disabled**. Tap a zone to set it.
+    Open **Zones**, then tap a zone. The list shows each zone with its input, areas, definition and type; a zone with no input shows **Disabled**.
 
     ![Protegus app, Zones settings list for the FLEXi SP3: Zone 1 SP3 1 I/O, Area 1, Instant, EOL_T; Zone 2 SP3 2 I/O, Area 1, Interior, EOL; Zones 3 to 10 SP3 3 to 10 I/O, Area 1, Instant, EOL; Zone 11 and the following Disabled.](./protegus-app/sp3-zones-phone.webp){ .trik-mob-img }
 
     ![Protegus app, Zone settings for Zone 1: Input SP3 1 I/O, Assigned areas Area 1, Definition Instant, Type EOL_T, Enable chime off, Can be bypassed on, Force ARM off, Report to CMS on, Report to Protegus2 cloud on, Reaction time 400 ms, Zone event CID code 130.](./protegus-app/sp3-zone-phone.webp){ .trik-mob-img }
 
-    | Setting | What it does | Values |
-    |---|---|---|
-    | **Zone name** | Name of the zone in the app and in reports. | Text |
-    | **Input** | The input the zone uses: a panel terminal, an expander module input, a keypad or a wireless device. | Inputs of the connected devices; Disabled |
-    | **Assigned areas** | The areas the zone belongs to. | Enabled areas |
-    | **Definition** | How the zone reacts; see “Zone definitions” below the tabs. | 24 hours, Keyswitch, Instant, Fire, Delay, Interior, Silent, Silent 24h, Interior stay, Instant stay |
-    | **Type** | The circuit wired to the input. Expander module inputs offer NO and NC only; 3EOL is for some wireless sensors. | NO, NC, EOL, EOL_T, ATZ, ATZ_T, 3EOL |
-    | **Enable chime** | A keypad beeps when the zone is activated. | On, off |
-    | **Can be bypassed** | The zone may be bypassed and ignored when it is open. | On, off |
-    | **Force ARM** | The system may be armed with this zone open; the zone is ignored until it closes, then monitored again. | On, off |
-    | **Report to CMS** | Zone events are sent to the central monitoring station. | On, off |
-    | **Report to Protegus2 cloud** | Zone events are sent to Protegus2. Shown when cloud reporting is on. | On, off |
-    | **Reaction time** | How long the input must stay violated before the zone reacts. | Milliseconds |
-    | **Zone event CID code** | Contact ID code of the zone’s events. Filled in when the definition is chosen. | 3 digits |
+    | In TrikdisConfig | In the Protegus app |
+    |---|---|
+    | **Name** | **Zone name** |
+    | **Area** | **Assigned areas** |
+    | **Chime** | **Enable chime** |
+    | **Bypass** | **Can be bypassed** |
+    | **Force** | **Force ARM** |
+    | **CMS** | **Report to CMS** |
+    | **Prot.** | **Report to Protegus2 cloud** |
+    | **Delay** | **Reaction time** |
+    | **CID code** | **Zone event CID code** |
 
-    SMS and call reporting to users for each zone is set in TrikdisConfig (“SMS & Call reporting” tab).
+    In the app, expander module inputs offer only the NO and NC types. **Sound** is not in the app.
 
 === "TrikdisConfig"
 
@@ -1546,46 +1545,17 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
     <img alt="TrikdisConfig Zones window, Zones settings tab. The table lists each zone’s Name, Input, Area, Definition, Type, reporting options, Delay and CID Code; Zone 1 uses SP3 1 I/O, Area 1, Instant and EOL_T." src="./image82.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
 
-    - **Zone No** – the zone’s number on the list.
+- **Zone No** – the zone’s number on the list.
 
-    - **Name** - enter the name of the zone.
+- **Name** - enter the name of the zone.
 
-    - **Input** – you can select which „FLEXi“ SP3 or expander module input IN to assign to the zone.
+- **Input** – you can select which „FLEXi“ SP3 or expander module input IN to assign to the zone.
 
-    - **Area** – assign the zone to an area.
+- **Area** – assign the zone to an area.
 
-    - **Definition** – every zone can be assigned one of these zone functions: See “Zone definitions” below the tabs.
+- **Definition** – every zone can be assigned one of these zone functions:
 
-    - **Type** – choose the type of circuit connected to the zone input IN from a list: NC – normally closed; NO – normally open; EOL – with an end of line resistor; EOL_T – with an end of line resistor and tamper monitoring; ATZ – two zone normally closed circuit with end of line resistors, without tamper monitoring function (to use this type, choose the second ATZ zone in the input list); ATZ_T – two zone normally closed circuit with end of line resistors, with tamper monitoring function (to use this type, choose the second ATZ zone in the input list); 3EOL - with an end of line resistor and tamper monitoring (this setting is for when motion detection with anti masking function is used).
-
-    - **Chime** - checking the box will enable the zone chime feature. When the zone is activated, the keypad will beep.
-
-    - **Bypass** – tick this box if you want to allow this zone to be bypassed and ignored when it is triggered.
-
-    - **Force** – tick this box if you want to allow arming the security system with the zone open. When the alarm is armed, open zones set to “Force” mode will be temporarily disconnected. After zone restore, they will be turned on and monitored again. A violation of this zone will trigger an alarm.
-
-    - **CMS** – if the box is ticked, zone event reports will be sent to the central monitoring station (CMS).
-
-    - **Prot.** – if the box is ticked, zone event reports will be sent to Protegus cloud.
-
-    - **Delay** – input IN zone reaction time, in milliseconds.
-    - **CID code** – event contact ID codes. This code will be filled in automatically after selecting a definition for the zone.
-
-    - **Sound** – specify the number of the voice recording that will be played back to the user when the „FLEXi“ SP3 control panel calls during an alarm (this function is valid for SP3_12xx control panel with firmware version up to 1.13 inclusive).
-
-    **“SMS & Call reporting” tab**
-
-    <img alt="TrikdisConfig Zones window, SMS & Call reporting tab. A table lists zone Event and Restore rows with SMS and Call checkboxes under User 1; the visible boxes are clear." src="./image83.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
-
-    This tab will only be shown if there is at least one user phone number in the *[„Users & Reporting"](#Users_window)* window*.*
-
-    - **Zn** – zone number with the event identification word. Can be *“Event”* or “Restore”.
-
-    - **User / SMS and Call** – choose how users will be informed about events in every individual zone – using SMS messages or/and phone calls.
-
-**Zone definitions**
-
-- **Delay** – for connecting a magnetic entrance door contact. You can set entry and exit times for this type of zone.
+  - **Delay** – for connecting a magnetic entrance door contact. You can set entry and exit times for this type of zone.
 
 After the alarm is armed, the violation of the “Delay” zone is allowed within the exit time. If the zone is still violated when the time is up, outputs OUT “Siren” and “Flash” are turned on and alarm reports are sent.
 
@@ -1611,15 +1581,41 @@ When the alarm system is armed in STAY mode, “Interior Stay” zones are not p
 
 - **Fire** – for connecting fire sensors. If this zone is violated, OUT outputs “Siren” and “Flash” are turned on immediately and an event report is sent.
 
-- **Keyswitch** – for connecting a keypad or other switch. If the switch triggers this zone the security alarm will be armed or disarmed. The alarm will be armed after the set **Exit time** passes.
+  - **Keyswitch** – for connecting a keypad or other switch. If the switch triggers this zone the security alarm will be armed or disarmed. The alarm will be armed after the set **Exit time** passes.
 
-- **24_hour** – for connecting glass break and tamper detectors. If this zone is violated, OUT outputs “Siren” and “Flash” are turned on immediately and an event report is sent.
+  - **24_hour** – for connecting glass break and tamper detectors. If this zone is violated, OUT outputs “Siren” and “Flash” are turned on immediately and an event report is sent.
 
-- **Silent** – if the alarm is armed and this zone is violated, an event report will immediately be sent, but “Siren” and “Flash” output signals will not be generated.
+  - **Silent** – if the alarm is armed and this zone is violated, an event report will immediately be sent, but “Siren” and “Flash” output signals will not be generated.
 
-- **Silent 24h** – for connecting panic buttons. If this zone is violated, an event report will immediately be sent regardless of the state of the security system, but “Siren” and “Flash” output signals will not be formed.
+  - **Silent 24h** – for connecting panic buttons. If this zone is violated, an event report will immediately be sent regardless of the state of the security system, but “Siren” and “Flash” output signals will not be formed.
+- **Type** – choose the type of circuit connected to the zone input IN from a list: NC – normally closed; NO – normally open; EOL – with an end of line resistor; EOL_T – with an end of line resistor and tamper monitoring; ATZ – two zone normally closed circuit with end of line resistors, without tamper monitoring function (to use this type, choose the second ATZ zone in the input list); ATZ_T – two zone normally closed circuit with end of line resistors, with tamper monitoring function (to use this type, choose the second ATZ zone in the input list); 3EOL - with an end of line resistor and tamper monitoring (this setting is for when motion detection with anti masking function is used).
 
-### “PGM” window
+- **Chime** - checking the box will enable the zone chime feature. When the zone is activated, the keypad will beep.
+
+- **Bypass** – tick this box if you want to allow this zone to be bypassed and ignored when it is triggered.
+
+- **Force** – tick this box if you want to allow arming the security system with the zone open. When the alarm is armed, open zones set to “Force” mode will be temporarily disconnected. After zone restore, they will be turned on and monitored again. A violation of this zone will trigger an alarm.
+
+- **CMS** – if the box is ticked, zone event reports will be sent to the central monitoring station (CMS).
+
+- **Prot.** – if the box is ticked, zone event reports will be sent to Protegus cloud.
+
+- **Delay** – input IN zone reaction time, in milliseconds.
+- **CID code** – event contact ID codes. This code will be filled in automatically after selecting a definition for the zone.
+
+- **Sound** – specify the number of the voice recording that will be played back to the user when the „FLEXi“ SP3 control panel calls during an alarm (this function is valid for SP3_12xx control panel with firmware version up to 1.13 inclusive).
+
+**“SMS & Call reporting” tab** *Only in TrikdisConfig.*
+
+<img alt="TrikdisConfig Zones window, SMS & Call reporting tab. A table lists zone Event and Restore rows with SMS and Call checkboxes under User 1; the visible boxes are clear." src="./image83.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
+
+This tab will only be shown if there is at least one user phone number in the *[„Users & Reporting"](#Users_window)* window*.*
+
+- **Zn** – zone number with the event identification word. Can be *“Event”* or “Restore”.
+
+- **User / SMS and Call** – choose how users will be informed about events in every individual zone – using SMS messages or/and phone calls.
+
+### PGM <span id="58-pgm-window"></span>
 
 **“Outputs tab”**
 
@@ -1749,7 +1745,7 @@ The SMS message text is case-sensitive.
 
 - **User / SMS and Call** – choose which users to inform using SMS messages and/or phone calls when the output OUT is turned on/off.
 
-### “Sensors” window 
+### Sensors <span id="59-sensors-window"></span>
 
 <img alt="TrikdisConfig Sensors window. The sensor table includes Module type, Serial No., Sensor name, Max, Min, High, Low and Delay. The open Sensor type menu offers Dallas 1-Wire and Humidity & Temperature (AM23xx series)." src="./image90.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
 
@@ -1769,7 +1765,7 @@ The SMS message text is case-sensitive.
 
 - **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in the **Module type** column).
 
-### “System events” window 
+### System events <span id="510-system-events-window"></span>
 
 **“Events” tab**
 
@@ -1801,7 +1797,7 @@ This tab will only be shown if there is at least one user phone number in the �
 
 - **User / SMS and Call** – choose the ways users will be informed about each event – SMS message and/or phone call.
 
-### “Events log” window
+### Events log <span id="511-events-log-window"></span>
 
 <img alt="TrikdisConfig Events Log window. Read Log and Clear Log buttons sit above a table with Event No., Time, CID and Event definition columns. Visible entries include WiFi trouble, AC fault, SIM trouble and input alarms." src="./image93.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
 
