@@ -114,7 +114,7 @@ Other parts of the board:
 - **ANT GSM** and **ANT WIFI:** connectors for the cellular and WiFi antennas.
 - **SIM:** the nano-SIM card holder.
 - **LAN:** the Ethernet port.
-- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows **Networks: Via USB**. **[how to open the USB configuration in the app: to confirm]**
+- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows **Connection: Via USB**. **[how to open the USB configuration in the app: to confirm]**
 - **SIM, ETH, WIFI, DAT, PWR:** LEDs (see [LED indication](#led-indication)).
 - **F1 button** next to the relay: turns on the WiFi setup mode, for setting the WiFi network name (SSID). **[how the setup mode is used, and how to restore the factory settings: to confirm]**
 
@@ -320,7 +320,7 @@ Connect the backup battery, then switch on the main power supply.
 
 3.  In a desktop browser the configurator reads the panel's settings by itself and opens the **Dashboard**. On a phone, tap **Read**.
 
-    ![Protegus app, SP5 configurator menu on a phone: the panel name SP5_1E7LWB.0, Write and Read buttons, Programming mode: Full access, and the menu items System options, Communication, Areas and zones, Terminals, Devices & Interfaces, Users, System events and Automation.](./protegus-app/sp5-menu-phone.webp){ .trik-mob-img }
+    ![Protegus app, SP5 configurator menu on a phone: the panel name SP5_1E7LWB.0, Write and Read buttons, Programming mode: Full access, and the menu items System options, Communication, Areas and zones, Terminals, Devices & Interfaces, Users, System events, Automation and Diagnostics.](./protegus-app/sp5-menu-phone.webp){ .trik-mob-img }
 
 4.  Change the settings, then tap **Write** to save them to the panel.
 5.  To close the panel in a desktop browser, click **Disconnect from module** at the top of the menu. If there are unsaved changes, the app asks **Leave configuration?**: **Write and leave**, or leave without saving.
@@ -589,18 +589,18 @@ This section describes every page of the SP5 configurator in the Protegus app, i
 
 The Dashboard shows the panel's identity, owner and connection state at a glance. It is available in the desktop view only. You can drag the cards into a different order, and the browser remembers it.
 
-![Protegus app, SP5 configurator in a desktop browser with the menu on the left and the Dashboard open. Panel info card: Programming mode, Networks Via Protegus2 cloud, Last configured 2026-10-06 12:30, Unique ID/IMEI, Serial number 000123, Firmware v1.00 Up to date, Bootloader 1.00. System information card: Account ID 1234, Address Sample street 1, Owner Sample Owner, a phone number and an e-mail address. Connectivity card with an Edit link: LAN Active, SIM Standby with 80 % signal, WiFi Disabled.](./protegus-app/sp5-dashboard-desktop-content.webp)
+![Protegus app, SP5 configurator in a desktop browser with the menu on the left, ending with Automation and Diagnostics, and the Dashboard open. Panel info card: Programming mode, Connection Via Protegus2 cloud, Last configured 2026-10-06 12:30, Unique ID/IMEI, Serial number 000123, Firmware 1.00 Latest, Bootloader 1.00. System information card: Account ID 1234, Address Sample street 1, Owner Sample Owner, a phone number and an e-mail address. Connectivity card with an Edit link: LAN Active, SIM Standby with 80 % signal, WiFi Disabled.](./protegus-app/sp5-dashboard-desktop-content.webp)
 
 #### Panel info
 
 | Field | Shows |
 |---|---|
 | Programming mode | That the configurator is connected to the panel in programming mode. |
-| Networks | How the app reaches the panel: **Via Protegus2 cloud** or **Via USB**. |
+| Connection | How the app reaches the panel: **Via Protegus2 cloud** or **Via USB**. |
 | Last configured | The date and time of the last **Write**. Shown when you are signed in to Protegus and the panel holds this time. |
 | Unique ID/IMEI | The panel's Unique ID. Click it to copy it. |
 | Serial number | The panel's serial number. |
-| Firmware | The firmware version and, when a newer one is available, **Update to** and its version, which starts the update (see **Maintenance**). Over Bluetooth the app shows **Firmware can be updated via USB or cloud connection only**. |
+| Firmware | The firmware version, with **Latest** when it is up to date or, when a newer one is available, **Update to** and its version, which starts the update (see **Maintenance**). Over Bluetooth the app shows **Firmware can be updated via USB or cloud connection only**. |
 | Bootloader | The bootloader version, if the panel reports one. |
 
 #### System information
@@ -640,7 +640,7 @@ The status is read from the panel when you open the Dashboard or the Networks pa
 
 System options holds the panel's identity and general behaviour, the access codes, the clock and the troubles that block arming. On desktop the page heading reads **System Options**.
 
-![Protegus app, SP5 System Options page in a desktop browser, with four cards. System Identity & Behavior: Account ID 1234, Object Name Sample system, Clear buffer events after reboot and the two 2-wire fire switches off, Power failure delay 300, Call attempts to user 3, Text encoding English, Hang-up call after 30, Prevent event flooding on with 3 repeats within 30 s and resume after 30 min, EOL Resistor Configuration 2k2+2k2+4k7, Tamper activation triggers zone off. Access & Permissions: masked Full access, Limited access and SMS programming codes, Account ID permission on, and the other Limited access permissions, Automation included, set to Editable. Time Settings: Time zone UTC +02:00, Time synchronization SIM and LAN, Daylight saving time on, NTP server pool.ntp.org, Periodic time update on with Update interval 10 h, Panel current time 2026-10-07 12:00:00 and a Set from PC button. Arming Restrictions: 13 trouble switches, some on.](./protegus-app/sp5-systemoptions-desktop-content.webp)
+![Protegus app, SP5 System Options page in a desktop browser, with four cards. System Identity & Behavior: Account ID 1234, Object Name Sample system, Clear buffer events after reboot and the two 2-wire fire switches off, Power failure delay 300, Call attempts to user 3, Text encoding English, Hang-up call after 30, Prevent event flooding on with 3 repeats within 30 s and resume after 30 min, EOL Resistor Configuration 2k2+2k2+4k7, Tamper activation triggers zone off. Access & Permissions: masked Full access, Limited access and SMS programming codes, Account ID permission on, and the other Limited access permissions, Automation included, set to Read/Write. Time Settings: Time zone UTC +02:00, Time synchronization SIM and LAN, Daylight saving time on, NTP server pool.ntp.org, Periodic time update on with Update interval 10 h, Panel current time 2026-10-07 12:00:00 and a Set from PC button. Arming Restrictions: 13 trouble switches, some on.](./protegus-app/sp5-systemoptions-desktop-content.webp)
 
 #### System Identity & Behavior
 
@@ -671,7 +671,7 @@ These codes protect direct configuration of the panel over USB, Bluetooth and Pr
 | Limited access | The installer code. What it allows is set by the permissions below. | up to 6 characters |
 | SMS programming | The code for configuring the panel by SMS commands. Not read from the panel when you are signed in with **Limited access**. | up to 6 characters |
 | Account ID | Lets **Limited access** change the **Account ID**. | on / off |
-| Communication | Access to **Networks**, **CMS Reporting** and **Protegus 2B reporting**. | Read/Write / Read only / Hidden |
+| Communication | Access to **Networks**, **CMS Reporting** and **Protegus2 reporting**. | Read/Write / Read only / Hidden |
 | Areas and zones | Access to **Areas (Partitions)** and **Zones**. | Read/Write / Read only |
 | Terminals | Access to **Terminals**, and to the terminal of each zone and sensor. | Read/Write / Read only |
 | Devices & Interfaces | Access to **Keypads**, **Expanders**, **Wireless**, **Sensors** and **Thermostats**. | Read/Write / Read only |
@@ -724,7 +724,7 @@ Turn on each trouble that should prevent the system from being armed.
 
 Menu **Communication → Networks**. Here you choose which connections carry the reports to the monitoring station and to Protegus, and set up the SIM, WiFi and Ethernet connections. A line at the top names the connections the panel can use: SIM, WiFi and Ethernet.
 
-![Protegus app, SP5 Networks page in a desktop browser. Connectivity table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, both with Main path Ethernet, Back up SIM, Fallback back up OFF and Switch back to Main path after 10 min. Cloud settings card with Enable cloud service and Report in parallel with CMS on and a masked Cloud access code. SIM card with APN internet, an empty SIM PIN and an Advanced settings link. WiFi card with SSID Sample-WiFi, a masked password, DNS 8.8.8.8 and DHCP on. Ethernet card with DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on and DHCP on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
+![Protegus app, SP5 Networks page in a desktop browser. An intro line: the device can use SIM, WiFi and Ethernet, and the order for CMS and Protegus2 reporting is set below. Connectivity table: LAN Active, IP 192.168.1.50, DHCP Enabled, gateway 192.168.1.1; SIM Standby, IP 10.64.12.7, operator Sample Mobile, 80 % signal; WiFi Disabled. Reporting to CMS and Reporting to Cloud cards, each with numbered steps: 1 Main path Ethernet on, 2 Back up SIM on, 3 Fallback back up WiFi off, and Switch back to Main path after 10 min. SIM card with APN internet, an empty SIM PIN and Advanced settings open: User, Password, DNS 1 8.8.8.8, DNS 2 8.8.4.4, SIM ICCID Lock off, ICCID, Preferred network MCC and MNC empty with the hint to leave them blank for automatic selection, a Network database link, and Hide SIM warning, Use SMS/Calls with internet and Disable SIM data off. WiFi card: SSID Sample-WiFi, a masked password, DHCP on, DNS 8.8.8.8. Ethernet card: DHCP on, DNS 1 8.8.8.8, DNS 2 1.1.1.1, Show trouble if any on.](./protegus-app/sp5-communication-connection-desktop-content.webp)
 
 #### Connectivity
 
@@ -754,7 +754,7 @@ The card lists the connections in the order the panel tries them: **Main path**,
 
 #### Reporting to Cloud
 
-The same, for reporting to Protegus. The card is greyed out while **Enable cloud service** is off (see **Protegus 2B reporting**). With **Main path** off, the app warns that the Protegus app will not receive any reports.
+The same, for reporting to Protegus. The card is greyed out while **Enable cloud service** is off (see **Protegus2 reporting**). With **Main path** off, the app warns that the Protegus app will not receive any reports.
 
 #### SIM
 
@@ -806,7 +806,7 @@ On panels with a built-in eSIM, **SIM to use** comes first: **Built-in SIM (eSIM
 
 Menu **Communication → CMS Reporting**. The panel can report to two monitoring stations at the same time, through the **Primary channel** and the **Parallel channel**. Each channel has its own backup channel and SMS fallback.
 
-![Protegus app, SP5 CMS Reporting page in a desktop browser. Primary channel on: Communication method Network, Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol TRK8, a masked Encryption key and a Backup channel link. Parallel channel off and greyed out. Receiver card: Number 1, Line 1. Under Behavior, the Fallback card: Switch to backup after 3 attempts, Switch back to primary after 5 minutes. Under Testing: Periodic test on with Test period 1 day and Start test on at 12 h 0 min; Network (IP) Ping on with Period 120 seconds; SMS Ping off; Communication path test on, every 24 hours.](./protegus-app/sp5-communication-cmsreporting-desktop-content.webp)
+![Protegus app, SP5 CMS Reporting page in a desktop browser. Primary channel on: Communication method Network, Communication type TCP/IP, Domain or IP receiver.example.com, Port 55555, Protocol TRK8, a masked Encryption key, and Backup channel off. Parallel channel off and greyed out. Below, three groups that open and close: Receiver, Number 1 and Line 1; Behavior, Switch to backup after 3 attempts and Switch back to primary after 5 minutes; Testing, Periodic test on with Test period 1 day and Start test at 12 h 0 min, Network (IP) Ping on with Period 120 seconds, SMS Ping off, and Communication path test on, every 24 hours.](./protegus-app/sp5-communication-cmsreporting-desktop-content.webp)
 
 #### Primary channel
 
@@ -823,7 +823,7 @@ Menu **Communication → CMS Reporting**. The panel can report to two monitoring
 | HEX | Enter the key as hexadecimal digits (0–9, A–F). Shown for **SIA DC-09_2012**, **SIA DC-09_2007**, **SIA DC-09_IPcom** and **TL150**. | tick box |
 | Phone number | SMS method only. The CMS phone number for SMS reports. It is the same number as the SMS fallback number of this channel. | digits with an optional leading +, up to 23 |
 | Encryption key | SMS method only. The key for SMS reports, shared with the SMS fallback. | up to 16 characters |
-| Backup channel | Opens the backup channel settings. Not available while the channel is off or set to SMS. While closed, it shows a summary: **Off**, or the type, protocol and address, for example **TCP/IP · TRK8 · backup.example.com:55555**. | — |
+| Backup channel | Opens the backup channel settings. Not available while the channel is off or set to SMS. While closed, it shows a summary: **off**, or the type, protocol and address, for example **TCP/IP · TRK8 · backup.example.com:55555**. | — |
 | Enable backup channel | Turns on the backup channel, which has its own address, port and protocol. Off greys out its settings. | on / off |
 | Communication method:, Communication type, Domain or IP, Port, Protocol, Message format, Encryption key, HEX | The backup channel's settings. They work as described above. | as above |
 | Enable fallback SMS channel | Sends the reports by SMS when the network channels fail. Shown when the backup channel's method is **Network**. | on / off |
@@ -894,9 +894,11 @@ The **Testing** card holds **Periodic test**, **Network (IP) Ping**, **SMS Ping*
 | Test every | How often the test runs, in the unit chosen beside it. | 0–99 |
 | (unit) | The unit of **Test every**. | hours / day(s) |
 
-### Protegus 2B reporting
+### Protegus2 reporting
 
-Menu **Communication → Protegus 2B reporting** **[beta name; to confirm the released name]**. Reporting to the Protegus cloud.
+Menu **Communication → Protegus2 reporting**. Reporting to the Protegus cloud.
+
+![Protegus app, SP5 Protegus2 reporting page in a desktop browser. Cloud settings card, switched on: a masked Cloud access code and Report in parallel with CMS on. Network order card: Ethernet, then SIM, with the note that the order for the Protegus2 app is set on the Networks page, and a Networks link.](./protegus-app/sp5-communication-cloudreporting-desktop-content.webp)
 
 #### Cloud settings
 
