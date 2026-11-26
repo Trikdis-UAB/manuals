@@ -365,6 +365,8 @@ Sujunkite komunikatorių su centrale pagal vieną iš žemiau pateiktų prijungi
 !!! note "Pastaba"
     Kai prijungta tik klaviatūros magistralė, komunikatorius gauna iš centralės bendras zonų būsenas ir negali atskirti zonos tipo (gaisro, įsilaužimo, vandens nuotėkio ir kt.). Visi aliarmai perduodami kaip bendras aliarmas, Contact ID E130, o kai kurie stebėjimo pultai tokius įvykius apdoroja kitaip nei iš tikrųjų suveikusios zonos tipo įvykius. Kad įvykiai būtų perduodami su pačios centralės Contact ID kodais (pvz., E110 gaisro aliarmui), prijunkite ir TIP/RING gnybtus, žr. p. 3.2.1.2.
 
+    Dvilaidis dūmų daviklis, prijungtas prie centralės PGM2 gnybto (PGM2 parinktis 04), perduodamas kaip Contact ID E140, bendras aliarmas, o ne kaip gaisro aliarmas E111. Kad jis būtų perduodamas kaip gaisras, prijunkite ir TIP/RING gnybtus.
+
 ##### Klaviatūros magistralė ir TIP/RING
 
 <img class="wiring-diagram" alt="Prijungimo schema: DSC centralė prijungta prie GT+. Klaviatūros magistralė: RED jungiamas prie +DC (+12V), BLK – prie -DC, YEL – prie CLK, GRN – prie DATA. Telefoninio komunikatoriaus gnybtai: centralės TIP jungiamas prie GT+ TIP, centralės RING – prie GT+ RING." src="./wiring-dsc-tip-ring.webp" width="650" height="513" />
