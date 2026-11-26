@@ -32,6 +32,10 @@ export const MODELS = {
   // Revision 1E7LWB.0 and bootloader 1.00 from a real test panel's config/info (2026-10-19), which
   // reports its version as "SP5_1E7LWB.0_1.00": the firmware part is dotted, not x100.
   'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: '1E7LWB.0', bt: '1.00', fwFormat: 'dotted', firmwareConfirmed: true, revisionConfirmed: true },
+  // FLEXi SP3: the panel in the manual's TrikdisConfig screenshots reports SP3_1E74, firmware 1.23,
+  // bootloader 1.02 (revision ends in 4: RF-LORA and RF-S8 receivers, up to 64 zones). Whether 1.23 is
+  // the current release is not confirmed.
+  'SP3':   { configurator: 'sp3', fixture: 'sp3.json', hwId: '3B', deviceId: 0x3b, hwType: 'SP3', name: 'SP3', firmware: '1.23', revision: '1E74', bt: '1.02', fwFormat: 'dotted', comType: 1, revisionConfirmed: true },
 };
 
 // How the device connects, which the dashboard draws next to "Online": 1 = cellular (signal bars),

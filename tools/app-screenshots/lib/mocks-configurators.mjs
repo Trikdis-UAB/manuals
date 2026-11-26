@@ -1,6 +1,6 @@
 // Sample answers for the calls a configurator makes besides config/read. Invented data only.
 
-import { SAMPLE, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
+import { SAMPLE, sampleFirmware, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
 
 export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch, scenario = {} }) {
   if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
@@ -39,8 +39,14 @@ function addSystemWizard(on, { model, state, offline }) {
 // Fixed sample moment, so captures are repeatable.
 export const SAMPLE_TIME = '2026-10-07 12:00:00';
 
-function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
+function sp5(on, { readJson, FIX, model, fixture: file, configPatch }) {
   const fixture = () => readJson(FIX, 'config', file);
+
+  // Firmware the server offers for the device (beta, from 2026-11): only the version the sample runs,
+  // so the app says it is up to date and never offers an update.
+  on('GET', '/firmware', () => ({ success: true, data: [{ fw_version: sampleFirmware(model).firmware, fw_date: Date.UTC(2026, 8, 1) / 1000 }] }));
+  // The SIM card's operator list (beta, from 2026-11; the released app reads it from mcc-mnc.com, see the guard).
+  on('GET', '/mobile-networks', () => ({ success: true, data: [{ mcc: '246', mnc: '01', network: 'Sample Mobile' }] }));
 
   // The dashboard's System information card and the "recent devices" list.
   on('GET', '/system-lite', () => ({

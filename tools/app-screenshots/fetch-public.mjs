@@ -17,7 +17,7 @@ const fe = frontend(appAt >= 0 ? argv.splice(appAt, 2)[1] : 'released');
 const langs = argv.length ? argv : ['en'];
 // 'sp5' has no pack of its own: the endpoint returns the shared configurator labels, which the
 // newer configurator pages use alongside the main app pack.
-const CONFIG_PACKS = ['g16', 'sp5'];
+const CONFIG_PACKS = ['g16', 'sp5', 'sp3'];
 
 async function save(file, res) {
   const body = await res.json();
@@ -36,9 +36,10 @@ await save(path.join(ROOT, 'fixtures/public/pgm-icons.json'), await fetch(`${REF
 // Event types and their icons (front-end assets); the app asks with an empty POST, auth only if it has one.
 await save(path.join(ROOT, 'fixtures/public/reactions.json'), await post(REF, '/get-reactions', {}));
 
-// The beta server is the P2B North America region, and its pack names the region in ~25 labels
-// ("Via Protegus2 North America cloud"). So a beta pack is the released (EU) pack plus only the keys the
-// EU server does not have yet: what an EU user sees once those labels reach the EU server.
+// The beta now uses the EU server's packs (lib/frontends.mjs). If a front-end's labels come from another
+// server, as the beta's did until November 2026 (the P2B North America region, whose pack names the region
+// in ~25 labels), its pack is the EU pack plus only the keys the EU server does not have yet: what an EU
+// user sees once those labels reach the EU server.
 async function pack(lang, config) {
   const body = { language: lang, version: '-1', ...(config ? { config } : {}) };
   const eu = await (await post(REF, '/translations', body)).json();

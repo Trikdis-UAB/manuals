@@ -350,6 +350,8 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
       console.log(`note ${label}: page is longer than one ${layout} screen; image is ${Math.min(again.bottom + 24, MAX_CSS_HEIGHT)} CSS px tall`);
     }
     crop.height = crop.overflows ? Math.min(crop.bottom + 24, MAX_CSS_HEIGHT) : layout === 'phone' ? Math.min(height, crop.bottom + 24) : height;
+    // A long list (64 zones, 16 schedules) is cut after its first rows: screen.maxHeight in CSS px.
+    if (screen.maxHeight && crop.height > screen.maxHeight) { crop.height = screen.maxHeight; crop.cutAt = screen.maxHeight; }
     crop.top = s.below ? Math.ceil(await page.locator(s.below).first().evaluate((e) => e.getBoundingClientRect().bottom)) : 0;
     await page.screenshot({ ...opts, clip: { x: 0, y: crop.top, width, height: crop.height - crop.top } });
     // Back to the normal window, so the next image of this page is measured the same way.
@@ -378,6 +380,7 @@ async function shoot(page, { s, layout, screen, id, revision, lang, appPath, lab
     deviceScaleFactor: LAYOUTS[layout].deviceScaleFactor,
     ...(s.crop ? { croppedTo: s.crop } : {}),
     ...(crop ? { croppedToCss: { ...(crop.top ? { top: crop.top } : {}), width: LAYOUTS[layout].viewport.width, height: crop.height - crop.top }, [layout === 'phone' ? 'tallerThanPhoneScreen' : 'tallerThanWindow']: crop.overflows } : {}),
+    ...(crop?.cutAt ? { cutAfterCss: crop.cutAt, note: `List cut after the first rows (screen.maxHeight ${crop.cutAt} CSS px); the page goes on.` } : {}),
     appUrl: new URL(page.url()).pathname,
     frontend: fe.id,
     ...(fe.releasedColours ? { theme: fe.recolour ? 'released colours on this build' : `${fe.id} colours` } : {}),
@@ -432,6 +435,7 @@ async function openOrFail(label, opts) {
 // endpoint (answered locally, never sent).
 function runIssues(guard, errors, mocks) {
   return [...guard.unmocked.keys()].map((k) => `unmocked ${k}`)
+    .concat([...guard.fetchFailed].map(([p, e]) => `could not fetch ${p}: ${e}`))
     .concat(errors.map((e) => `pageerror ${e}`))
     .concat([...new Set(mocks.appErrors)].map((e) => `app error ${e}`))
     .concat(fe.recolour && !guard.recoloured.size ? ['no theme colour was found to swap; the build\'s colours may have changed (lib/frontends.mjs)'] : []);

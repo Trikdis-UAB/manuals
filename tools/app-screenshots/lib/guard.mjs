@@ -40,6 +40,7 @@ export async function installGuard(context, { mocks, log, frontend = FRONTENDS.r
     unmocked: new Map(),  // API calls with no sample answer (answered locally with success:false)
     fetched: new Map(),   // host -> count of live static GETs
     refused: new Map(),   // "METHOD origin/path" -> count
+    fetchFailed: new Map(), // path -> error, for front-end files that could not be fetched to recolour
   };
   const bump = (m, k) => m.set(k, (m.get(k) ?? 0) + 1);
 
@@ -98,10 +99,19 @@ function parseBody(req) {
 // Serves a front-end file with its theme colours swapped (lib/frontends.mjs, releasedColours): the file
 // is fetched as usual (GET, own host) and only those colour values change; code and layout do not.
 async function recolour(route, pairs, stats) {
-  // A browser closing while a file is still on its way ends the fetch with an error; that file is no
-  // longer needed, so the error is dropped instead of ending the run.
+  // On a slow connection a fetch can fail or time out (2026-11-11: 3-5 s per request, scripts and icons
+  // missing from the page), so it is tried three times. A browser closing while a file is still on its
+  // way also ends the fetch with an error; that file is no longer needed, so the run goes on.
   let response;
-  try { response = await route.fetch(); } catch { return route.abort().catch(() => {}); }
+  for (let attempt = 1; !response; attempt++) {
+    try {
+      response = await route.fetch({ timeout: 60000 });
+    } catch (e) {
+      if (attempt < 3 && !/disposed|closed/i.test(e.message)) continue;
+      if (!/disposed|closed/i.test(e.message)) stats.fetchFailed.set(new URL(route.request().url()).pathname, e.message.split('\n')[0].slice(0, 120));
+      return route.abort().catch(() => {});
+    }
+  }
   const type = response.headers()['content-type'] ?? '';
   if (!/javascript|css|svg|html/.test(type)) return route.fulfill({ response }).catch(() => {});
   let body;

@@ -1,0 +1,17 @@
+{
+  "configurator": "sp3",
+  "models": ["SP3"],
+  "_fields": "As in g16.json: id is the file-name part; menu is the label keys clicked from the configurator root (System options opens its submenu in place); route is where the app lands, relative to configure/sp3; config is a patch merged into fixtures/config/sp3.json for this screen only. Sample values follow the manual's TrikdisConfig screenshots, so the two tabs agree.",
+  "screens": [
+    { "id": "menu", "menu": [], "route": "" },
+    { "id": "systemoptions-general", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.systemGeneral"], "route": "systemOptions/systemGeneral" },
+    { "id": "systemoptions-areas", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.partitions"], "route": "systemOptions/partitions" },
+    { "id": "systemoptions-area", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.partitions"], "click": ["Area 1"], "route": "systemOptions/partitions/0" },
+    { "id": "systemoptions-schedulers", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.scheduler"], "route": "systemOptions/scheduler", "maxHeight": 760 },
+    { "id": "systemoptions-holidays", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.holidays"], "route": "systemOptions/holidays", "maxHeight": 760 },
+    { "id": "systemoptions-troubles", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.systemTroubles"], "route": "systemOptions/systemTroubles" },
+    { "id": "systemoptions-access", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.access"], "route": "systemOptions/access" },
+    { "id": "zones", "menu": ["config_sp3.navigation.zones"], "route": "zones", "maxHeight": 900 },
+    { "id": "zone", "menu": ["config_sp3.navigation.zones"], "click": ["Zone 1"], "route": "zones/0" }
+  ]
+}

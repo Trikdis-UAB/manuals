@@ -13,16 +13,17 @@ export const FRONTENDS = {
     labelsApi: 'https://web.protegus.app/v3/api', // public label packs, read-only, no token
     labelsDir: 'translations',
   },
-  // The beta line. Its newer API client sends every call through a region router
-  // (region-router.trikdis.workers.dev); the older one, and icon URLs, use the region's own host
-  // (web.protegus.app for the sample's EU region). Label packs are the EU server's plus the keys only the
-  // beta server has yet (labels for fields only the beta shows); the beta server's own wording names its
-  // region, North America, so it is not used for keys the EU server has (fetch-public.mjs).
+  // The beta line. Since November 2026 it talks to the EU server (web.protegus.app), and its label packs
+  // are that server's; the separate beta server (api.beta2.protegus.app, the P2B North America region)
+  // no longer resolves (2026-11-25). Until then the packs were the EU server's plus the keys only the beta
+  // server had, because its own wording named its region ("Protegus 2B reporting" where the EU server says
+  // "Protegus2 reporting"). Calls may also go through the region router (region-router.trikdis.workers.dev);
+  // the guard answers them all locally either way.
   beta: {
     id: 'beta',
     origin: 'https://beta2.protegus.app',
     staticHosts: ['beta2.protegus.app', 'web.protegus.app'],
-    labelsApi: 'https://api.beta2.protegus.app/v3/api',
+    labelsApi: 'https://web.protegus.app/v3/api',
     labelsDir: 'translations-beta',
     fixtureSuffix: '-beta', // e.g. sp5-beta.json, when the beta server's config/read is shaped differently
     // The beta's skin, and the released colour for each shade (--theme released). The beta build sets
