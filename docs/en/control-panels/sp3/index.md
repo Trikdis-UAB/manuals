@@ -1294,9 +1294,27 @@ Linking electronic keys using the CZ-Dallas reader.
 
 ### Modules <span id="55-modules-window"></span>
 
-**“Keypads” tab**
+**Keypads**
 
-<img alt="TrikdisConfig Modules window, Keypads tab. The keypad table has Serial, Keypad type, Areas and Remove columns. The Keypad parameters panel shows Quick ARM checked, Incorrect codes until lockout set to 3 and Lockout timer set to 1 min." src="./image65.webp" style="width:7.086614173228346in;height:3.716535433070866in" />
+=== "Protegus app"
+
+    Open **Modules → Keypads**. The **Keypad settings** group is at the top; the **Keypads** list below shows each keypad the panel found, with its type and serial. Tap a keypad to choose the areas it controls, or **Delete** to remove it.
+
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Modules, Keypads, top: device card; Keypad settings with Keypad type Paradox/Protegus, Additional Wiegand on 1IO/2IO off, Duress code type 0 instead of first digit, Quick ARM on, Incorrect codes until lockout 3 attempts, Lockout timer 1 min, Panic, Medical and Fire alarm type Silent, Low voltage reader (1IO/2IO) off and greyed out, Use fingerprint, Do not change charset and Custom entry beep off." src="./protegus-app/sp3-keypads-1-phone.webp" /><span class="trik-mob-pair__caption">Keypad settings</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, Keypads, bottom: Keypads list with Keypad FLEXi LCD Button 52001A3C and seven empty slots 00000000." src="./protegus-app/sp3-keypads-2-phone.webp" /><span class="trik-mob-pair__caption">Keypads list</span></span>
+    </span>
+
+    ![Protegus app, Keypad FLEXi LCD Button with a Delete button: Serial 52001A3C, Area 1 and Area 2 on, Areas 3 to 8 off, and an Ok button.](./protegus-app/sp3-keypad-phone.webp){ .trik-mob-img }
+
+
+    In the app, the keypad types are **Paradox/Protegus**, **Wiegand reader** and **Crow CR Icon/LCD (ST)**. **6-digit user code** needs firmware 1.24 or later; **Low voltage reader (1IO/2IO)**, **Use fingerprint** and **Do not change charset** need 1.15, and **Custom entry beep** 1.17. **Low voltage reader (1IO/2IO)** can be changed only when **Additional Wiegand on 1IO/2IO** is on.
+
+=== "TrikdisConfig"
+
+    **“Keypads” tab**
+
+    <img alt="TrikdisConfig Modules window, Keypads tab. The keypad table has Serial, Keypad type, Areas and Remove columns. The Keypad parameters panel shows Quick ARM checked, Incorrect codes until lockout set to 3 and Lockout timer set to 1 min." src="./image65.webp" style="width:7.086614173228346in;height:3.716535433070866in" />
 
 - **Serial** – the keypad’s serial number automatically detected by the control panel. To delete a keypad, enter zeros or click on the **Remove** button.
 
@@ -1304,7 +1322,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Areas** - you can specify which areas the keypad will be able to control (only valid for the following keypads: FLEXi SK LCD, FLEXi SK LED, SK LCD Button, SK LED Button).
 
-- **Remove** – pressing the button will remove the keypad from the list.
+- <span class="trik-term"><span class="trik-term-app"><strong>Delete</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Remove</strong><span class="trik-term-note">)</span></span></span> – pressing the button will remove the keypad from the list.
 
 **Settings group “Keypad parameters”**
 
@@ -1312,7 +1330,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Additional Wiegand on 1IO/2IO** – tick the box if an additional RFID card reader will be connected. An additional reader can be connected to the terminals IO1 and IO2, which cannot be used as inputs or outputs in this case.
 
-- **6 digits user code** - check this box, and the user code entered from the keypad will be 6 digits long. If the current code was 4 digits long, the first two digits of the current code will be added to the user code (1234 becomes 123412). All 4-digit user codes will be changed according to the described method.
+- <span class="trik-term"><span class="trik-term-app"><strong>6-digit user code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>6 digits user code</strong><span class="trik-term-note">)</span></span></span> - check this box, and the user code entered from the keypad will be 6 digits long. If the current code was 4 digits long, the first two digits of the current code will be added to the user code (1234 becomes 123412). All 4-digit user codes will be changed according to the described method.
 
 - **Duress code type** – choose a duress code type. If you are forced to arm or disarm the alarm system and enter the duress code, the system will arm or disarm the system and will immediately send a silent warning to the CMS (central monitoring station).
 
@@ -1336,9 +1354,24 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Custom entry beep** - check the box and the entry delay beep on the keypad will be intermittent.
 
-**“RS485 modules” tab**
+**RS485 modules**
 
-<img alt="TrikdisConfig Modules window, RS485 modules tab. The Module dropdown is open, showing choices including iO expander, E485 communicator and RF-LORA transceiver." src="./image66.webp" style="width:7.086614173228346in;height:3.641732283464567in" />
+=== "Protegus app"
+
+    Open **Modules → RS485 modules**, then tap a module, or **<Add module>** for a free slot. With firmware 1.23 or later, tap **Update** to show each module’s signal strength and supply voltage.
+
+    ![Protegus app, Modules, RS485 modules: Update button; RF-LORA 0A13F7 with 92 % signal and 12.1 V; iO-8 expander 0B2C51 with 78 % and 12 V; six free slots marked Add module.](./protegus-app/sp3-rs485-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, Module 2: Module iO-8 expander, Firmware version 1.10, Serial number 0B2C51, Expander name Garage, and an Ok button.](./protegus-app/sp3-rs485-module-phone.webp){ .trik-mob-img }
+
+
+    Which modules can be chosen depends on the panel’s revision and firmware; the E485, SF485, RF-S8/S9 and PSTN communicators can each be added only once. **Assigned area** is shown for the TM17 reader only.
+
+=== "TrikdisConfig"
+
+    **“RS485 modules” tab**
+
+    <img alt="TrikdisConfig Modules window, RS485 modules tab. The Module dropdown is open, showing choices including iO expander, E485 communicator and RF-LORA transceiver." src="./image66.webp" style="width:7.086614173228346in;height:3.641732283464567in" />
 
 **Settings group “RS485 modules”**
 
@@ -1346,17 +1379,25 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Module** – choose the module being used (modules iO, iO-WL, TM17, iO-8, RF-SH, E485 T16, SF485, iO-MO, iO-LORA, iO8-LORA, PB-LORA, REL-LORA, RF-LORA, RF-HW, RF-S8) from the module list.
 
-- **Serial No.** – mandatory 6-digit number that is given on stickers on the module’s casing and packaging.
+- <span class="trik-term"><span class="trik-term-app"><strong>Serial number</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Serial No.</strong><span class="trik-term-note">)</span></span></span> – mandatory 6-digit number that is given on stickers on the module’s casing and packaging.
 
-- **Area** – assign the module to an area (the TM17 will display the status of the area it is assigned to, and also the states of the zones assigned to the same area).
+- <span class="trik-term"><span class="trik-term-app"><strong>Assigned area</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Area</strong><span class="trik-term-note">)</span></span></span> – assign the module to an area (the TM17 will display the status of the area it is assigned to, and also the states of the zones assigned to the same area).
 
-- **Name** – you can give the module a name.
+- <span class="trik-term"><span class="trik-term-app"><strong>Expander name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Name</strong><span class="trik-term-note">)</span></span></span> – you can give the module a name.
 
 - **Firmware version** – when the „FLEXi“ SP3 finds the connected module, the version of its firmware will be shown.
 
-**“E485 settings” tab**
+**E485 settings**
 
-<img alt="TrikdisConfig Modules window, E485 settings tab. Under Communicator network settings, DHCP mode is checked; Static IP, Subnet mask and Default gateway each show 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
+=== "Protegus app"
+
+    In the app, the E485 network settings are on the E485 communicator’s own screen: open **Modules → RS485 modules** and tap the E485.
+
+=== "TrikdisConfig"
+
+    **“E485 settings” tab**
+
+    <img alt="TrikdisConfig Modules window, E485 settings tab. Under Communicator network settings, DHCP mode is checked; Static IP, Subnet mask and Default gateway each show 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
 - **DHCP mode** – mode for registering on the LAN network (manual or automatic). Tick the box and the „FLEXi“ SP3_3E control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
 
