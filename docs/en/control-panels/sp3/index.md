@@ -836,7 +836,7 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 **Settings group “General”**
 
-- If reports will be sent to CMS, enter the <span class="trik-term"><span class="trik-term-app"><strong>Account No.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID</strong><span class="trik-term-note">)</span></span></span> (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**) given by the CMS.
+- If reports will be sent to CMS, enter the <span class="trik-term"><span class="trik-term-app"><strong>Account No.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID</strong><span class="trik-term-note">)</span></span></span> (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE or FFFF.**) given by the CMS.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>System name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object name</strong><span class="trik-term-note">)</span></span></span> – will be included in reports sent via SMS messages (up to 20 symbols in TrikdisConfig, 19 in the app; letters and numbers can be used).
 
@@ -875,7 +875,7 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 **Settings group “Time settings”**
 
-You can set the time by clicking the <span class="trik-term"><span class="trik-term-app"><strong>Set time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Set PC time</strong><span class="trik-term-note">)</span></span></span> button. If **Disabled** is chosen in the <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time synchronization</strong><span class="trik-term-note">)</span></span></span> field, the computer’s time will be set for the control panel. If a modem or a server is chosen in the <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time synchronization</strong><span class="trik-term-note">)</span></span></span> field, the control panel will synchronize its time according to that modem or server.
+You can set the time with the <span class="trik-term"><span class="trik-term-app"><strong>Set time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Set PC time</strong><span class="trik-term-note">)</span></span></span> button. If **Disabled** is chosen in <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time synchronization</strong><span class="trik-term-note">)</span></span></span>, the panel keeps the time set with that button: the computer’s time in TrikdisConfig, the phone’s in the app. If a modem or a server is chosen in <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time synchronization</strong><span class="trik-term-note">)</span></span></span>, the control panel will synchronize its time according to that modem or server.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Time zone</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time zone (Hours)</strong><span class="trik-term-note">)</span></span></span> – specify your country’s time zone. For example, if the control panel will be installed in Lithuania, enter **+2**.
 
@@ -906,11 +906,11 @@ You can set the time by clicking the <span class="trik-term"><span class="trik-t
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Areas enabled</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partitions enabled</strong><span class="trik-term-note">)</span></span></span> – enter the number of independent parts that the alarm system will be divided into.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Area name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partition name</strong><span class="trik-term-note">)</span></span></span> – enter the partition name.
+- <span class="trik-term"><span class="trik-term-app"><strong>Area name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partition name</strong><span class="trik-term-note">)</span></span></span> – enter the area’s name.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Entry delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Entry</strong><span class="trik-term-note">)</span></span></span> – time for entering through a *Delay* zone, walking to a keypad and disarming the alarm system. Time can be anywhere between 0 and 999 seconds.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Exit delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Exit</strong><span class="trik-term-note">)</span></span></span> – time for leaving the premises through a *Delay* zone after entering the alarm system arm code using a keypad. Time can be anywhere between 0 and 999 seconds. If the alarm system is armed remotely, e.g. via Protegus2 mobile app, the system will not count **Exit time** and will arm immediately.
+- <span class="trik-term"><span class="trik-term-app"><strong>Exit delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Exit</strong><span class="trik-term-note">)</span></span></span> – time for leaving the premises through a *Delay* zone after entering the alarm system arm code using a keypad. Time can be anywhere between 0 and 999 seconds. If the alarm system is armed remotely, e.g. via Protegus2 mobile app, the system will not count the <span class="trik-term"><span class="trik-term-app"><strong>Exit delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Exit</strong><span class="trik-term-note">)</span></span></span> and will arm immediately.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Bell time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Bell</strong><span class="trik-term-note">)</span></span></span> – duration of siren operation once the alarm is triggered. Time can be anywhere between 0 and 999 seconds.
 
@@ -918,11 +918,11 @@ You can set the time by clicking the <span class="trik-term"><span class="trik-t
 
 - **Re-ARM** – turn it on if you want the system to automatically re-arm the alarm system after the system was disarmed remotely, but the *Delay* zone was not violated during the set entry time.
 
-- **Force-ARM** – tick this box to allow to switch the system to protection (ARM) mode even if *Stay* zones are violated, as long as the *Entry* zone is not violated.
+- **Force-ARM** – allows the system to be switched to protection (ARM) mode even if *Stay* zones are violated, as long as the *Entry* zone is not violated.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Keyswitch mode</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Keyswitch</strong><span class="trik-term-note">)</span></span></span> – choose in what way – *Pulse* or *Level* – a Keyswitch zone must be triggered for the system to enable or disable premise protection*.*
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Tamper action</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Tamper</strong><span class="trik-term-note">)</span></span></span> – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when protected“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will will switch on even when the alarm system is disarmed.
+- <span class="trik-term"><span class="trik-term-app"><strong>Tamper action</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Tamper</strong><span class="trik-term-note">)</span></span></span> – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when armed“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will switch on even when the alarm system is disarmed.
 
 **Schedulers**
 
@@ -942,15 +942,15 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
 - **Enable** – enable the schedule for when the system will automatically arm and disarm.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Area</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partition</strong><span class="trik-term-note">)</span></span></span> – specify the partition affected by the specific schedule.
+- <span class="trik-term"><span class="trik-term-app"><strong>Area</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partition</strong><span class="trik-term-note">)</span></span></span> – the area the schedule applies to.
 
 - **Time** – set the time when the specific action must be done.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Enabled only when not armed</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Not Armed</strong><span class="trik-term-note">)</span></span></span> - check the box and the schedule action will be performed only if the control panel is not armed in AWAY mode. Firmware 1.15 or later.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enabled only when not armed</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Not Armed</strong><span class="trik-term-note">)</span></span></span> – the schedule action is performed only if the control panel is not armed in AWAY mode. Firmware 1.15 or later.
 
 - **Action** – set the protection mode (Disarm/Arm/Sleep/Stay) that the system will switch to automatically at the specified time.
 
-- **Monday, ... Sunday** – tick the days of the week that the set protection mode and time will be valid on.
+- **Monday, ... Sunday** – the days of the week on which the set protection mode and time are valid.
 
 - **Holiday** – set how the schedule behaves during holidays (Disabled/Ignore on holidays/Additional when holidays/Only holidays). Disabled – there are no holidays. Ignore on holidays – do not carry out the schedule during holidays. Additional when holidays – perform an additional action during holidays. Only holidays – carry out the schedule during holidays.
 
@@ -992,7 +992,7 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
     <img alt="TrikdisConfig System Options window on the System troubles tab. A table lists faults from AC Fault through Antimasking Fault, each with an unchecked Restrict ARM box." src="./image57.webp" style="width:7.086614173228346in;height:2.9881889763779528in" />
 
-If at least one control panel internal fault field is checked, then the control panel will not be able to be Armed if this fault is present.
+If arming is restricted for a fault, the control panel cannot be armed while that fault is present.
 
 **Access**
 
@@ -1112,21 +1112,21 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 
 - **Return to primary after** – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, in minutes.
 
-- **IP Ping period** – period for sending PING signals for checking connectivity on the GPRS channel, in seconds. To enable these signals, tick the box (in the app, turn on **IP Ping enabled**).
+- **IP Ping period** – period for sending PING signals for checking connectivity on the GPRS channel, in seconds. To send these signals, turn them on.
 
-- **SMS Ping period** – period for sending PING signals for checking connectivity on the SMS channel, in minutes. To enable these signals, tick the box. *Only in TrikdisConfig.*
+- **SMS Ping period** – period for sending PING signals for checking connectivity on the SMS channel, in minutes. To send these signals, turn them on. *Only in TrikdisConfig.*
 
 - **Backup reporting after** – enter how many failed attempts to send messages using the *primary* channel should take place before switching to the *backup* channel.
 
 - **DNS1, DNS2** – DNS server addresses.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Account No. in SIA DC-09</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID in SIA DC-09</strong><span class="trik-term-note">)</span></span></span> –specify the object number.
+- <span class="trik-term"><span class="trik-term-app"><strong>Account No. in SIA DC-09</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID in SIA DC-09</strong><span class="trik-term-note">)</span></span></span> – the account number used in SIA DC-09 messages.
 
 - **SIA DC-09 receiver No.** – specify the receiver number.
 
 - **SIA DC-09 line No.** – specify the line number.
 
-- **Local time in SIA** - check the box so that the messages sent to the CMS (central monitoring station) will indicate the time set in the module.
+- **Local time in SIA** – when it is on, the messages sent to the CMS (central monitoring station) will indicate the time set in the module.
 
 !!! warning "Important"
     Regardless of IP settings, make sure the DNS addresses match those
@@ -1141,12 +1141,12 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - **Backup type 2** – select a connection type (SIM, WiFi, LAN(E485)) with the CMS receiver and Protegus2.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Radio T16 (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Radio T16 (SF485)</strong><span class="trik-term-note">)</span></span></span> – tick this box, when the T16 transmitter will be used for transmitting information. The T16 transmitter operates as a backup connectivity channel if at least one of the other connection methods (SIM, WiFi, LAN(E485)) is used. If there are no other connection methods, it is the main one. The T16 can only be used to send reports to the CMS.
+- <span class="trik-term"><span class="trik-term-app"><strong>Radio T16 (RS485)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Radio T16 (SF485)</strong><span class="trik-term-note">)</span></span></span> – turn it on when the T16 transmitter is used for transmitting information. The T16 transmitter operates as a backup connectivity channel if at least one of the other connection methods (SIM, WiFi, LAN(E485)) is used. If there are no other connection methods, it is the main one. The T16 can only be used to send reports to the CMS.
 - <span class="trik-term"><span class="trik-term-app"><strong>Return to main (both channels)</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Return to main (both channel)</strong><span class="trik-term-note">)</span></span></span> – time period after which the „FLEXi“ SP3 will attempt to regain connection using the *primary* channel, if it was running a backup channel, min.
 
 **Settings group “Communicator network settings”**
 
-- **DHCP mode** – mode for registering on the WiFi network (manual or automatic). Tick the box and the „FLEXi“ SP3 control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
+- **DHCP mode** – mode for registering on the WiFi network (manual or automatic). When it is on, the „FLEXi“ SP3 control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
 
 - **Static IP** – static IP address for manual registration mode.
 
@@ -1160,11 +1160,11 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 **Settings group “SIM parameters”** *Only in TrikdisConfig.*
 
-- **Disable indication of the absence of a SIM card** – when the box is ticked, the „FLEXi“ SP3 control panel will not display an indication that there is no SIM card inserted. Tick it when the control panel works without a SIM card.
+- **Disable indication of the absence of a SIM card** – when it is on, the „FLEXi“ SP3 control panel will not display an indication that there is no SIM card inserted. Turn it on when the control panel works without a SIM card.
 
-- **Use dial and SMS when the working over internet module** – ticking this box will enable controlling the panel using phone calls and SMS messages. If the box is not ticked and there is a WiFi network available, then SMS and phone calls are not used. If the box is not ticked and there is no WiFi network, the „FLEXi“ SP3 can still be controlled using phone calls and SMS messages. The „FLEXi“ SP3 will send SMS messages to the user.
+- **Use dial and SMS when the working over internet module** – turning it on enables controlling the panel using phone calls and SMS messages. If it is off and there is a WiFi network available, then SMS and phone calls are not used. If it is off and there is no WiFi network, the „FLEXi“ SP3 can still be controlled using phone calls and SMS messages. The „FLEXi“ SP3 will send SMS messages to the user.
 
-- **Disable the use of SIM card mobile data** – ticking the box will disable the usage of the SIM card’s mobile data. Data will only be sent using WiFi. If a WiFi network is temporarily unavailable, the „FLEXi“ SP3 will store data in memory. When the WiFi network is restored, the „FLEXi“ SP3 will send data using WiFi.
+- **Disable the use of SIM card mobile data** – turning it on disables the usage of the SIM card’s mobile data. Data will only be sent using WiFi. If a WiFi network is temporarily unavailable, the „FLEXi“ SP3 will store data in memory. When the WiFi network is restored, the „FLEXi“ SP3 will send data using WiFi.
 
 <a id="Users_window"></a>
 
@@ -1203,15 +1203,15 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Can control areas</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Areas</strong><span class="trik-term-note">)</span></span></span> – the areas that the specific user can control.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Can ARM system</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>A</strong><span class="trik-term-note">)</span></span></span> – tick the box if you want to allow the user to ARM the alarm.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can ARM system</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>A</strong><span class="trik-term-note">)</span></span></span> – allows the user to ARM the alarm.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Can DISARM system</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>D</strong><span class="trik-term-note">)</span></span></span> – tick the box if you want to allow the user to DISARM the alarm.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can DISARM system</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>D</strong><span class="trik-term-note">)</span></span></span> – allows the user to DISARM the alarm.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Can remotely control PGM</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, the user can call the „FLEXi“ SP3 and turn on or off desired outputs OUT using DTMF tones.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can remotely control PGM</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM</strong><span class="trik-term-note">)</span></span></span> – when it is on, the user can call the „FLEXi“ SP3 and turn on or off desired outputs OUT using DTMF tones.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>User get response messages from module</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>ACK</strong><span class="trik-term-note">)</span></span></span> – if the box Is ticked, the „FLEXi“ SP3 will send the user SMS messages with **SMS answer text** about the completion of received commands.
+- <span class="trik-term"><span class="trik-term-app"><strong>User get response messages from module</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>ACK</strong><span class="trik-term-note">)</span></span></span> – when it is on, the „FLEXi“ SP3 will send the user SMS messages with **SMS answer text** about the completion of received commands.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Readdress SMS messages from unknown sender</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>FWD</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, SMS messages received from non-users of the system (e.g. SIM card account balance, random promotional messages, etc.) will be forwarded to the user.
+- <span class="trik-term"><span class="trik-term-app"><strong>Readdress SMS messages from unknown sender</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>FWD</strong><span class="trik-term-note">)</span></span></span> – when it is on, SMS messages received from non-users of the system (e.g. SIM card account balance, random promotional messages, etc.) will be forwarded to the user.
 
 #### Linking RFID key fobs (cards) 
 
@@ -1270,7 +1270,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Enable Protegus2 cloud service</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Enable cloud service</strong><span class="trik-term-note">)</span></span></span> – enable Protegus cloud service, the „FLEXi“ SP3 will be able to exchange data with Protegus2 app and it will be possible to configure the control panel remotely using TrikdisConfig.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Enable parallel reporting</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Parallel reporting</strong><span class="trik-term-note">)</span></span></span> – check the box and messages will be sent simultaneously via the primary channel (to CMS) and to Protegus2.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enable parallel reporting</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Parallel reporting</strong><span class="trik-term-note">)</span></span></span> – when it is on, messages are sent simultaneously via the primary channel (to CMS) and to Protegus2.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Protegus2 cloud access code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Cloud access code</strong><span class="trik-term-note">)</span></span></span> – 6-digit code for connecting with Protegus2 (default - 123456).
 
@@ -1288,9 +1288,11 @@ Linking electronic keys using the CZ-Dallas reader.
 
     <img alt="TrikdisConfig Users & Reporting window on the SMS answer texts tab. The table pairs answer types with editable SMS text, including Command done, Wrong password, Wrong data, Wrong command, Zone alarm, Zone restore, Output ON and Output OFF." src="./image64.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
 
+    Change the texts in the **SMS text** column.
+
 **Settings group “SMS answer texts”**
 
-- The text for answers to commands sent using SMS messages can be customized (in TrikdisConfig, in the column **SMS text**). The app has the first four answers: **Command done**, **Wrong password**, **Wrong data** and **Wrong command**; **Zone alarm**, **Zone restore**, **Output ON** and **Output OFF** are set only in TrikdisConfig.
+- The texts of the answers to commands sent by SMS can be changed. The app has the first four answers: **Command done**, **Wrong password**, **Wrong data** and **Wrong command**; **Zone alarm**, **Zone restore**, **Output ON** and **Output OFF** are set only in TrikdisConfig.
 
 ### Modules <span id="55-modules-window"></span>
 
@@ -1316,7 +1318,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
     <img alt="TrikdisConfig Modules window, Keypads tab. The keypad table has Serial, Keypad type, Areas and Remove columns. The Keypad parameters panel shows Quick ARM checked, Incorrect codes until lockout set to 3 and Lockout timer set to 1 min." src="./image65.webp" style="width:7.086614173228346in;height:3.716535433070866in" />
 
-- **Serial** – the keypad’s serial number automatically detected by the control panel. To delete a keypad, enter zeros or click on the **Remove** button.
+- **Serial** – the keypad’s serial number automatically detected by the control panel. To delete a keypad, use <span class="trik-term"><span class="trik-term-app"><strong>Delete</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Remove</strong><span class="trik-term-note">)</span></span></span>; in TrikdisConfig you can also enter zeros.
 
 - **Keypad type** – keypad type, automatically detected by the control panel.
 
@@ -1328,9 +1330,9 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Keypad type** – specify the keypad type (Crow CR16, Paradox LED, Wiegand reader) connected to the control panel (GRN, YEL terminals).
 
-- **Additional Wiegand on 1IO/2IO** – tick the box if an additional RFID card reader will be connected. An additional reader can be connected to the terminals IO1 and IO2, which cannot be used as inputs or outputs in this case.
+- **Additional Wiegand on 1IO/2IO** – turn it on if an additional RFID card reader is connected. An additional reader can be connected to the terminals IO1 and IO2, which cannot be used as inputs or outputs in this case.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>6-digit user code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>6 digits user code</strong><span class="trik-term-note">)</span></span></span> - check this box, and the user code entered from the keypad will be 6 digits long. If the current code was 4 digits long, the first two digits of the current code will be added to the user code (1234 becomes 123412). All 4-digit user codes will be changed according to the described method.
+- <span class="trik-term"><span class="trik-term-app"><strong>6-digit user code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>6 digits user code</strong><span class="trik-term-note">)</span></span></span> – when it is on, the user code entered from the keypad is 6 digits long. If the current code was 4 digits long, the first two digits of the current code will be added to the user code (1234 becomes 123412). All 4-digit user codes will be changed according to the described method.
 
 - **Duress code type** – choose a duress code type. If you are forced to arm or disarm the alarm system and enter the duress code, the system will arm or disarm the system and will immediately send a silent warning to the CMS (central monitoring station).
 
@@ -1346,13 +1348,13 @@ Linking electronic keys using the CZ-Dallas reader.
 
 - **Fire alarm type** - specify what the alarm will sound (**Audible** / **Silent** / **Disabled**) if the **Fire alarm** function keys on the keypad are pressed. When the **Audible** alarm is set, alarm messages are sent to the Protegus2 and the CMS, and the control panel will sound an audible alarm on the keypad and turn on the siren. When the **Silent** alarm is set, alarm messages are sent to the Protegu2s and the CMS, and the control panel will turn off the audible alarms. If set to **Disabled** alarm messages are not sent to Protegus2 and CMS.
 
-- **Low voltage reader (1IO/2IO)** – check the box to change the communication protocol between the control panel and the reader if the connected RFID reader is not working.
+- **Low voltage reader (1IO/2IO)** – turn it on to change the communication protocol between the control panel and the reader if the connected RFID reader is not working.
 
-- **Use fingerprint** – check the box if a fingerprint reader with Wiegand 26/34 protocol will be connected.
+- **Use fingerprint** – turn it on if a fingerprint reader with Wiegand 26/34 protocol will be connected.
 
-- **Do not change charset** - check the box if you do not want to change the text encoding of zone and partition names for the SK-LCD TouchPad keypad.
+- **Do not change charset** – turn it on if you do not want to change the text encoding of zone and area names for the SK-LCD TouchPad keypad.
 
-- **Custom entry beep** - check the box and the entry delay beep on the keypad will be intermittent.
+- **Custom entry beep** – when it is on, the entry delay beep on the keypad is intermittent.
 
 **RS485 modules**
 
@@ -1399,7 +1401,7 @@ Linking electronic keys using the CZ-Dallas reader.
 
     <img alt="TrikdisConfig Modules window, E485 settings tab. Under Communicator network settings, DHCP mode is checked; Static IP, Subnet mask and Default gateway each show 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
-- **DHCP mode** – mode for registering on the LAN network (manual or automatic). Tick the box and the „FLEXi“ SP3_3E control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
+- **DHCP mode** – mode for registering on the LAN network (manual or automatic). When it is on, the „FLEXi“ SP3_3E control panel will automatically read the network settings (subnet mask, gateway) and will automatically be assigned an IP address (automatic registration mode).
 
 - **Static IP** – static IP address for manual registration mode.
 
@@ -1712,15 +1714,15 @@ When the alarm system is armed in STAY mode, “Interior Stay” zones are not p
   - **Silent 24h** – for connecting panic buttons. If this zone is violated, an event report will immediately be sent regardless of the state of the security system, but “Siren” and “Flash” output signals will not be formed.
 - **Type** – choose the type of circuit connected to the zone input IN from a list: NC – normally closed; NO – normally open; EOL – with an end of line resistor; EOL_T – with an end of line resistor and tamper monitoring; ATZ – two zone normally closed circuit with end of line resistors, without tamper monitoring function (to use this type, choose the second ATZ zone in the input list); ATZ_T – two zone normally closed circuit with end of line resistors, with tamper monitoring function (to use this type, choose the second ATZ zone in the input list); 3EOL - with an end of line resistor and tamper monitoring (this setting is for when motion detection with anti masking function is used).
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Enable chime</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Chime</strong><span class="trik-term-note">)</span></span></span> - checking the box will enable the zone chime feature. When the zone is activated, the keypad will beep.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enable chime</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Chime</strong><span class="trik-term-note">)</span></span></span> – turning it on enables the zone chime feature. When the zone is activated, the keypad will beep.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Can be bypassed</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Bypass</strong><span class="trik-term-note">)</span></span></span> – tick this box if you want to allow this zone to be bypassed and ignored when it is triggered.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can be bypassed</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Bypass</strong><span class="trik-term-note">)</span></span></span> – allows this zone to be bypassed and ignored when it is triggered.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Force ARM</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Force</strong><span class="trik-term-note">)</span></span></span> – tick this box if you want to allow arming the security system with the zone open. When the alarm is armed, open zones set to “Force” mode will be temporarily disconnected. After zone restore, they will be turned on and monitored again. A violation of this zone will trigger an alarm.
+- <span class="trik-term"><span class="trik-term-app"><strong>Force ARM</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Force</strong><span class="trik-term-note">)</span></span></span> – allows arming the security system with the zone open. When the alarm is armed, open zones set to “Force” mode will be temporarily disconnected. After zone restore, they will be turned on and monitored again. A violation of this zone will trigger an alarm.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, zone event reports will be sent to the central monitoring station (CMS).
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS</strong><span class="trik-term-note">)</span></span></span> – when it is on, zone event reports are sent to the central monitoring station (CMS).
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Report to Protegus2 cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Prot.</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, zone event reports will be sent to Protegus cloud.
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to Protegus2 cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Prot.</strong><span class="trik-term-note">)</span></span></span> – when it is on, zone event reports are sent to Protegus cloud.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Reaction time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Delay</strong><span class="trik-term-note">)</span></span></span> – input IN zone reaction time, in milliseconds.
 - <span class="trik-term"><span class="trik-term-app"><strong>Zone event CID code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CID code</strong><span class="trik-term-note">)</span></span></span> – event contact ID codes. This code will be filled in automatically after selecting a definition for the zone.
@@ -1782,9 +1784,9 @@ This tab will only be shown if there is at least one user phone number in the *[
 - **Buzzer** – for repeating the sound signals from a keypad.
 - <span class="trik-term"><span class="trik-term-app"><strong>Pulse time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Pulse time, s</strong><span class="trik-term-note">)</span></span></span> – you can set the desired OUT turn on duration from 0 to 9999 seconds.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS</strong><span class="trik-term-note">)</span></span></span> – if this box is ticked, PGM output turn on/off reports will be sent to the central monitoring station (CMS).
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS</strong><span class="trik-term-note">)</span></span></span> – when it is on, PGM output turn on/off reports are sent to the central monitoring station (CMS).
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Report to Protegus2 cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Prot.</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, PGM output turn on/off reports will be sent to Protegus cloud.
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to Protegus2 cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Prot.</strong><span class="trik-term-note">)</span></span></span> – when it is on, PGM output turn on/off reports are sent to Protegus cloud.
 
 **Set action**
 
@@ -1806,25 +1808,25 @@ This tab will only be shown if there is at least one user phone number in the *[
 - **ID** – output’s number on the list.
 - **Enable** – enables the PGM operation algorithm.
 
-- **PGM No.** – select the desired PGM output OUT that will be controlled after the event described in columns **Factor**, **Factor No.**, **Start when**, **Set value** occurs.
+- <span class="trik-term"><span class="trik-term-app"><strong>Then</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM No.</strong><span class="trik-term-note">)</span></span></span> – the output OUT that is controlled when the condition occurs.
 
 - **Action**:
-- **PGM OFF** – state of output OUT – “Off”.
+- <span class="trik-term"><span class="trik-term-app"><strong>OFF</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM OFF</strong><span class="trik-term-note">)</span></span></span> – state of output OUT – “Off”.
 
-- **PGM ON** – state of output OUT – “On”.
+- <span class="trik-term"><span class="trik-term-app"><strong>ON</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM ON</strong><span class="trik-term-note">)</span></span></span> – state of output OUT – “On”.
 
 - **Pulse OFF** – initial state of output OUT – “On”. After the command the OUT state will become “Off” for the duration of the **Pulse time**, and later it will automatically return to the initial “On” state**.**
 
 - **Pulse ON** – initial state of output OUT – “Off”. After the command the OUT state will become “On” for the duration of the **Pulse time**, and later it will automatically return to the initial “Off” state**.**
-- **Pulse time, s** – you can set the pulse time anywhere from 0 to 9999 seconds.
+- <span class="trik-term"><span class="trik-term-app"><strong>Pulse time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Pulse time, s</strong><span class="trik-term-note">)</span></span></span> – you can set the pulse time anywhere from 0 to 9999 seconds.
 
-- **Factor/Factor No.** – choose what event (Zone, Sensor, Jamming, Sensor lost, iButton, Arm, Disarm, SMS received, Zone(follow), Stay, Sleep, AC lost, Low battery, Zone tamper) will turn on the output OUT.
+- <span class="trik-term"><span class="trik-term-app"><strong>If</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Factor/Factor No.</strong><span class="trik-term-note">)</span></span></span> – choose what event (Zone, Sensor, Jamming, Sensor lost, iButton, Arm, Disarm, SMS received, Zone(follow), Stay, Sleep, AC lost, Low battery, Zone tamper) will turn on the output OUT.
 
-  - Schedules can be assign to an output OUT. The schedule shows when the output should be turned on. Up to 10 different schedules can be prepared in the **Scheduler tab**.
+  - Schedules can be assign to an output OUT. The schedule shows when the output should be turned on. Up to 10 different schedules can be prepared in <span class="trik-term"><span class="trik-term-app"><strong>Schedulers</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Scheduler tab</strong><span class="trik-term-note">)</span></span></span>.
 
-- **Start when** – you can set an additional condition when to turn on the output OUT depending on the **Factor** event.
+- **Start when** – an additional condition for turning on the output OUT, depending on the event; in the app it is chosen with the condition (for example alarm or restore).
 
-- **Set value** – depending on the condition chosen in the **Factor** column (SMS received, Temperature) a value (text of received SMS message, voltage or temperature) can be specified. If this value is identified, the action (chosen in the **Action** column) will be performed. The text of the SMS message can be separated by using % symbols. % symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
+- <span class="trik-term"><span class="trik-term-app"><strong>Value</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Set value</strong><span class="trik-term-note">)</span></span></span> – depending on the condition (SMS received, Temperature) a value (text of received SMS message, voltage or temperature) can be specified. If this value is identified, the action will be performed. The text of the SMS message can be separated by using % symbols. % symbols are used for separating the keyword that will change the state of a PGM output from the entire received SMS message.
 
 **%.....%** - part of the received SMS message text must match with the text entered between % symbols (e.g. **%hoUSe%**. The text in an SMS message must include the text “**hoUSe**”. Example of an SMS message: **VacationhoUSe25864**).
 
@@ -1858,9 +1860,9 @@ The SMS message text is case-sensitive.
 
 - **Reader** – the readers that can be connected to the security panel are indicated.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Enabled</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>En</strong><span class="trik-term-note">)</span></span></span> – check the box to enable the reader to control the PGM output.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enabled</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>En</strong><span class="trik-term-note">)</span></span></span> – lets the reader control the PGM output.
 
-- **Code -** by checking the field, you will be able to perform an action (activate PGM output or control the control panel) with the user code.
+- **Code** – when it is on, you can perform an action (activate PGM output or control the control panel) with the user code.
 
 - **PGM –** specify the PGM output that the reader will control. PGM output must be set to **Remote control** mode.
 
@@ -1915,7 +1917,7 @@ The SMS message text is case-sensitive.
 
 - **Action** – set the thermostat’s operation mode: heating or cooling.
 
-- **Active** – if the box is ticked, the thermostat will work with the selected temperature sensor according to the set temperature.
+- **Active** – when it is on, the thermostat will work with the selected temperature sensor according to the set temperature.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Assigned sensor</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Sensor No</strong><span class="trik-term-note">)</span></span></span> – assign a temperature sensor to the thermostat.
 
@@ -1958,13 +1960,13 @@ The SMS message text is case-sensitive.
 
 - <span class="trik-term"><span class="trik-term-app"><strong>Name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Sensor name</strong><span class="trik-term-note">)</span></span></span> – give the temperature sensor a name.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Max. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Max</strong><span class="trik-term-note">)</span></span></span> – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when max reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>High</strong><span class="trik-term-note">)</span></span></span> box must be ticked.
+- <span class="trik-term"><span class="trik-term-app"><strong>Max. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Max</strong><span class="trik-term-note">)</span></span></span> – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when max reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>High</strong><span class="trik-term-note">)</span></span></span> must be on.
 
-- <span class="trik-term"><span class="trik-term-app"><strong>Min. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Min</strong><span class="trik-term-note">)</span></span></span> – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when min reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Low</strong><span class="trik-term-note">)</span></span></span> box must be ticked.
+- <span class="trik-term"><span class="trik-term-app"><strong>Min. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Min</strong><span class="trik-term-note">)</span></span></span> – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when min reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Low</strong><span class="trik-term-note">)</span></span></span> must be on.
 
 - **Delay** - an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
 
-- **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in the **Module type** column).
+- **Sensor type** – choose the type of the connected temperature sensor (Dallas 1Wire – up to 8 temperature sensors of this type can be connected. If Dallas sensors are chosen, they will be linked automatically; Humidity & Temperature – one AM2301 temperature and humidity sensor can be connected. If the Humidity & Temperature sensor will be used, it must be manually assigned in **Module type**).
 
 ### System events <span id="510-system-events-window"></span>
 
