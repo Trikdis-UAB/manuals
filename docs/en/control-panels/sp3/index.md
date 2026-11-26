@@ -1170,33 +1170,48 @@ For setting parameters on how the control panel will communicate with the CMS ch
 
 ### Users & Reporting <span id="54-users-reporting-window"></span>
 
-**“Users” tab**
+**Users**
 
-<img alt="TrikdisConfig Users & Reporting window on the Users tab. The Users & Reporting to User table has fields for Name, Tel number, Email, Code, Tag code and Areas, followed by reporting option checkboxes." src="./image61.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+=== "Protegus app"
+
+    Open **Users & Reporting → Users**, then tap a user. Users 1 to 8 are marked **A** in the list: they are the ones that receive reports by SMS and calls, so only they have **Readdress SMS messages from unknown sender**.
+
+    ![Protegus app, Users & Reporting, Users list: 1A John Smith, 2A Emma Jones, 3A Cleaner, 4A to 8A empty on a grey background, then users 9 to 13 empty.](./protegus-app/sp3-users-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, User John Smith with a Delete button: Name John Smith, Phone number +447700900123, Email john.smith@example.com, Keypad code masked, Tag code 000000000000, Can control areas 1,2, and Can ARM system, Can DISARM system, Can remotely control PGM, User get response messages from module and Readdress SMS messages from unknown sender all on.](./protegus-app/sp3-user-phone.webp){ .trik-mob-img }
+
+
+    **Name** takes up to 18 characters and **Tag code** up to 12 hexadecimal characters. **Keypad code** has 4 digits; with firmware 1.24 or later and **6-digit user code** turned on in **Modules → Keypads**, it has 6. If the email is already used by another user, the app says so. **Delete** clears the user’s name, phone number, email, codes, areas and permissions.
+
+=== "TrikdisConfig"
+
+    **“Users” tab**
+
+    <img alt="TrikdisConfig Users & Reporting window on the Users tab. The Users & Reporting to User table has fields for Name, Tel number, Email, Code, Tag code and Areas, followed by reporting option checkboxes." src="./image61.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 **Settings group “Users & Reporting to User”**
 
 - **Name** – name of the user. These names will be used in event SMS messages.
 
-- **Tel number** – the user’s telephone number that will be used to control the alarm system remotely and will receive SMS messages. The numbers must start with the international country code. The first 8 telephone numbers will receive reports using messages and phone calls.
+- <span class="trik-term"><span class="trik-term-app"><strong>Phone number</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Tel number</strong><span class="trik-term-note">)</span></span></span> – the user’s telephone number that will be used to control the alarm system remotely and will receive SMS messages. The numbers must start with the international country code. The first 8 telephone numbers will receive reports using messages and phone calls.
 
 - **Email** – enter the user’s email, so that the user would be invited to Protegus2 to control the system.
 
-- **Code** – the alarm system arm and disarm code assigned to the user.
+- <span class="trik-term"><span class="trik-term-app"><strong>Keypad code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Code</strong><span class="trik-term-note">)</span></span></span> – the alarm system arm and disarm code assigned to the user.
 
 - **Tag code** – enter the identification number of an RFID card, RFID key fob, or iButton electronic key.
 
-- **Areas** – the areas that the specific user can control.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can control areas</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Areas</strong><span class="trik-term-note">)</span></span></span> – the areas that the specific user can control.
 
-- **A** – tick the box if you want to allow the user to ARM the alarm.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can ARM system</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>A</strong><span class="trik-term-note">)</span></span></span> – tick the box if you want to allow the user to ARM the alarm.
 
-- **D** – tick the box if you want to allow the user to DISARM the alarm.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can DISARM system</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>D</strong><span class="trik-term-note">)</span></span></span> – tick the box if you want to allow the user to DISARM the alarm.
 
-- **PGM** – if the box is ticked, the user can call the „FLEXi“ SP3 and turn on or off desired outputs OUT using DTMF tones.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can remotely control PGM</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>PGM</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, the user can call the „FLEXi“ SP3 and turn on or off desired outputs OUT using DTMF tones.
 
-- **ACK** – if the box Is ticked, the „FLEXi“ SP3 will send the user SMS messages with **SMS answer text** about the completion of received commands.
+- <span class="trik-term"><span class="trik-term-app"><strong>User get response messages from module</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>ACK</strong><span class="trik-term-note">)</span></span></span> – if the box Is ticked, the „FLEXi“ SP3 will send the user SMS messages with **SMS answer text** about the completion of received commands.
 
-- **FWD** – if the box is ticked, SMS messages received from non-users of the system (e.g. SIM card account balance, random promotional messages, etc.) will be forwarded to the user.
+- <span class="trik-term"><span class="trik-term-app"><strong>Readdress SMS messages from unknown sender</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>FWD</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, SMS messages received from non-users of the system (e.g. SIM card account balance, random promotional messages, etc.) will be forwarded to the user.
 
 #### Linking RFID key fobs (cards) 
 
@@ -1236,25 +1251,46 @@ Linking electronic keys using the CZ-Dallas reader.
     The purpose of the Master key is to link other electronic keys. If you
     use the Master key for ARM/DISARM commands, their execution will have a
     delay.
-**“Protegus” tab**
 
-<img alt="TrikdisConfig Users & Reporting window on the Protegus tab. In Cloud application, Enable cloud service and Parallel reporting are checked, and Cloud Access Code is 123456." src="./image63.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+**Protegus2**
+
+=== "Protegus app"
+
+    Open **Users & Reporting → Protegus2**.
+
+    ![Protegus app, Users & Reporting, Protegus2: Enable Protegus2 cloud service on, Enable parallel reporting on, Protegus2 cloud access code masked.](./protegus-app/sp3-users-cloud-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    **“Protegus” tab**
+
+    <img alt="TrikdisConfig Users & Reporting window on the Protegus tab. In Cloud application, Enable cloud service and Parallel reporting are checked, and Cloud Access Code is 123456." src="./image63.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
 **Settings group “Cloud application”**
 
-- **Enable cloud service** – enable Protegus cloud service, the „FLEXi“ SP3 will be able to exchange data with Protegus2 app and it will be possible to configure the control panel remotely using TrikdisConfig.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enable Protegus2 cloud service</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Enable cloud service</strong><span class="trik-term-note">)</span></span></span> – enable Protegus cloud service, the „FLEXi“ SP3 will be able to exchange data with Protegus2 app and it will be possible to configure the control panel remotely using TrikdisConfig.
 
-- **Parallel reporting** – check the box and messages will be sent simultaneously via the primary channel (to CMS) and to Protegus2.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enable parallel reporting</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Parallel reporting</strong><span class="trik-term-note">)</span></span></span> – check the box and messages will be sent simultaneously via the primary channel (to CMS) and to Protegus2.
 
-- **Cloud access code** – 6-digit code for connecting with Protegus2 (default - 123456).
+- <span class="trik-term"><span class="trik-term-app"><strong>Protegus2 cloud access code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Cloud access code</strong><span class="trik-term-note">)</span></span></span> – 6-digit code for connecting with Protegus2 (default - 123456).
 
-**“SMS answer texts” tab**
+**SMS answer texts**
 
-<img alt="TrikdisConfig Users & Reporting window on the SMS answer texts tab. The table pairs answer types with editable SMS text, including Command done, Wrong password, Wrong data, Wrong command, Zone alarm, Zone restore, Output ON and Output OFF." src="./image64.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
+=== "Protegus app"
+
+    Open **Users & Reporting → SMS answer texts**, then tap an answer to change its text.
+
+    ![Protegus app, Users & Reporting, SMS answer texts: Command done, Wrong password, Wrong command and Wrong data, each with the same text.](./protegus-app/sp3-users-sms-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    **“SMS answer texts” tab**
+
+    <img alt="TrikdisConfig Users & Reporting window on the SMS answer texts tab. The table pairs answer types with editable SMS text, including Command done, Wrong password, Wrong data, Wrong command, Zone alarm, Zone restore, Output ON and Output OFF." src="./image64.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
 
 **Settings group “SMS answer texts”**
 
-- The text for answers to commands sent using SMS messages can be customized in the column **SMS text**.
+- The text for answers to commands sent using SMS messages can be customized (in TrikdisConfig, in the column **SMS text**). The app has the first four answers: **Command done**, **Wrong password**, **Wrong data** and **Wrong command**; **Zone alarm**, **Zone restore**, **Output ON** and **Output OFF** are set only in TrikdisConfig.
 
 ### Modules <span id="55-modules-window"></span>
 
