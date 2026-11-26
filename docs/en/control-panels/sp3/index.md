@@ -1933,7 +1933,22 @@ The SMS message text is case-sensitive.
 
 ### Sensors <span id="59-sensors-window"></span>
 
-<img alt="TrikdisConfig Sensors window. The sensor table includes Module type, Serial No., Sensor name, Max, Min, High, Low and Delay. The open Sensor type menu offers Dallas 1-Wire and Humidity & Temperature (AM23xx series)." src="./image90.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
+**Sensors**
+
+=== "Protegus app"
+
+    Open **Sensors**. **Sensor type** is at the top; tap a sensor in the list to set it.
+
+    ![Protegus app, Sensors: Sensor type Dallas 1-Wire; 1 Living room, Sensor on 1W input; sensors 2 to 8 Disabled.](./protegus-app/sp3-sensors-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, Sensor: Name Living room, Module type Sensor on 1W input, Serial No. 28FF6A1B3C160452, Max. temp. 30, Send event when max reached off, Min. temp. 5, Send event when min reached off, Delay 0 min.](./protegus-app/sp3-sensor-phone.webp){ .trik-mob-img }
+
+
+    In the app, the sensor types are **Dallas 1-Wire** and **Humidity and temperature (AM23xx series)**. **Delay** needs firmware 1.15 or later.
+
+=== "TrikdisConfig"
+
+    <img alt="TrikdisConfig Sensors window. The sensor table includes Module type, Serial No., Sensor name, Max, Min, High, Low and Delay. The open Sensor type menu offers Dallas 1-Wire and Humidity & Temperature (AM23xx series)." src="./image90.webp" style="width:7.086614173228346in;height:2.8622047244094486in" />
 
 - **ID** – temperature sensor’s number on the list.
 
@@ -1941,11 +1956,11 @@ The SMS message text is case-sensitive.
 
 - **Serial No.** - serial number of the temperature sensor that is connected to the сontrol panel.
 
-- **Sensor name** – give the temperature sensor a name.
+- <span class="trik-term"><span class="trik-term-app"><strong>Name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Sensor name</strong><span class="trik-term-note">)</span></span></span> – give the temperature sensor a name.
 
-- **Max** – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the **High** box must be ticked.
+- <span class="trik-term"><span class="trik-term-app"><strong>Max. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Max</strong><span class="trik-term-note">)</span></span></span> – when the temperature is higher than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when max reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>High</strong><span class="trik-term-note">)</span></span></span> box must be ticked.
 
-- **Min** – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the **Low** box must be ticked.
+- <span class="trik-term"><span class="trik-term-app"><strong>Min. temp.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Min</strong><span class="trik-term-note">)</span></span></span> – when the temperature is lower than this setting, an event report will be generated. For an event message to be generated, the <span class="trik-term"><span class="trik-term-app"><strong>Send event when min reached</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Low</strong><span class="trik-term-note">)</span></span></span> box must be ticked.
 
 - **Delay** - an event will be sent if the measured value (Max or Min) by the sensor is exceeded within the set time. Delay time is entered in minutes.
 
@@ -1953,9 +1968,19 @@ The SMS message text is case-sensitive.
 
 ### System events <span id="510-system-events-window"></span>
 
-**“Events” tab**
+**Events**
 
-<img alt="TrikdisConfig System events window, Events tab. The table lists Event name, Enable, CMS, Prot., CID Code, SMS event text and SMS restore text. Visible events include Low Battery, Periodic test, Arm/Disarm, RS485 fault, High temperature and Low temperature." src="./image91.webp" style="width:7.086614173228346in;height:2.468503937007874in" />
+=== "Protegus app"
+
+    Open **System events**. The switch on an event’s row turns it on; tap the arrow to open **Report to CMS**, **Report to cloud** and **CID code**.
+
+    ![Protegus app, System events, first events: Low battery CID code 302, Periodic test 602, Arm/Disarm 401, RS485 fault 333, High temperature 158, Low temperature 159, Temperature sensor lost 380, GSM jamming 344, AC fault 301, Partial ARM 456, each turned on.](./protegus-app/sp3-events-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    **“Events” tab**
+
+    <img alt="TrikdisConfig System events window, Events tab. The table lists Event name, Enable, CMS, Prot., CID Code, SMS event text and SMS restore text. Visible events include Low Battery, Periodic test, Arm/Disarm, RS485 fault, High temperature and Low temperature." src="./image91.webp" style="width:7.086614173228346in;height:2.468503937007874in" />
 
 - **ID** – event’s number on the list.
 
@@ -1963,15 +1988,15 @@ The SMS message text is case-sensitive.
 
 - **Enable** – enable event recognition and report generation.
 
-- **CMS / Prot.** – reports on selected events will be sent to CMS and/or to Protegus cloud.
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS / Report to cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS / Prot.</strong><span class="trik-term-note">)</span></span></span> – reports on selected events will be sent to CMS and/or to Protegus cloud.
 
-- **CID Code** – Contact ID code of the event.
+- <span class="trik-term"><span class="trik-term-app"><strong>CID code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CID Code</strong><span class="trik-term-note">)</span></span></span> – Contact ID code of the event.
 
-- **SMS event text** – event SMS message text.
+- **SMS event text** – event SMS message text. *Only in TrikdisConfig.*
 
-- **SMS restore text** – restore event SMS message text.
+- **SMS restore text** – restore event SMS message text. *Only in TrikdisConfig.*
 
-**“SMS & Call reporting” tab**
+**“SMS & Call reporting” tab** *Only in TrikdisConfig.*
 
 <img alt="TrikdisConfig System events window, SMS & Call reporting tab. Event and Restore rows, including Battery low and Battery restore, have SMS and Call checkboxes for User 1; the visible boxes are clear." src="./image92.webp" style="width:7.086614173228346in;height:2.4606299212598426in" />
 
@@ -1985,11 +2010,21 @@ This tab will only be shown if there is at least one user phone number in the �
 
 ### Events log <span id="511-events-log-window"></span>
 
-<img alt="TrikdisConfig Events Log window. Read Log and Clear Log buttons sit above a table with Event No., Time, CID and Event definition columns. Visible entries include WiFi trouble, AC fault, SIM trouble and input alarms." src="./image93.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
+**Events log**
 
-- **Read Log** button – command for reading the events log from the device’s memory.
+=== "Protegus app"
 
-- **Clear Log** – command for clearing the events log entries from the device’s memory.
+    Open **Events log** and tap **Read log**. The newest event is at the top, with its code and time.
+
+    ![Protegus app, Events log: Read log and Clear log buttons; events 8 to 1, newest first: System 1 disarmed. User No.1 at 2026-10-07 07:40:55, Periodic test, Input restore. IN3, Alarm in input IN3, System 1 armed. User No.1, AC restore, AC fault, and System 1 disarmed. User No.2 at 2026-10-06 07:45:12.](./protegus-app/sp3-eventlog-phone.webp){ .trik-mob-img }
+
+=== "TrikdisConfig"
+
+    <img alt="TrikdisConfig Events Log window. Read Log and Clear Log buttons sit above a table with Event No., Time, CID and Event definition columns. Visible entries include WiFi trouble, AC fault, SIM trouble and input alarms." src="./image93.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
+
+- <span class="trik-term"><span class="trik-term-app"><strong>Read log</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Read Log</strong><span class="trik-term-note">)</span></span></span> button – command for reading the events log from the device’s memory.
+
+- <span class="trik-term"><span class="trik-term-app"><strong>Clear log</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Clear Log</strong><span class="trik-term-note">)</span></span></span> – command for clearing the events log entries from the device’s memory.
 
 - In the table, you can find the **Event No.**, **Time**, **CID** code, **Event definition**. The events log can show up to 1000 events stored in the „FLEXi“ SP3’s memory.
 
