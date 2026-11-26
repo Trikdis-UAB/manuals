@@ -764,13 +764,17 @@ An audio signal accompanies the beginning and end of the audio file recording. A
 
 ## Setting parameters <span id="5-setting-parameters-using-trikdisconfig-software"></span>
 
-Most settings described below can be changed in the Protegus app or in TrikdisConfig. What each setting does is described once; each section gives the steps for both tools, with the app’s names where they differ. Settings and actions available in only one tool are marked; only TrikdisConfig can restore default settings, update the firmware, test the panel, set SMS and call reporting to users for zones, PGM outputs and events, edit the events’ SMS texts, and set the SMS ping.
+Most settings described below can be changed in the Protegus app or in TrikdisConfig. What each setting does is described once; where a section has a Protegus app | TrikdisConfig switch, it gives the steps for both tools, with the app’s names where they differ. Settings and actions available in only one tool are marked; only TrikdisConfig can restore default settings, update the firmware, set SMS and call reporting to users for zones, PGM outputs and events, edit the events’ SMS texts, and set the SMS ping.
 
 === "Protegus app"
 
-    **Before you configure in the app.** The control panel must be online and added to a Protegus2 account (see “Linking the „FLEXi“ SP3 to a user’s Protegus2 account” above), and its firmware must be 1.12 or later: with older firmware the app says the version is not supported and shows no **Read** button. A panel that is not yet connected (SIM PIN, APN or WiFi not set) is set up first over USB in TrikdisConfig, or, for a WiFi model, from the phone app’s WiFi setup that the app offers when it cannot find the panel online [to confirm: which SP3 variants the app’s WiFi setup supports].
+    **Before you configure in the app.** The control panel must be online and added to a Protegus2 account (see [Linking the „FLEXi“ SP3 to a user’s Protegus2 account](#41-linking-the-flexi-sp3-to-a-users-protegus2-account)), and its firmware must be 1.12 or later: with older firmware the app says the version is not supported and shows no **Read** button. A panel that is not yet online is set up first over USB in TrikdisConfig. When a panel is added in the phone app and the app cannot find it online, it offers to set up the panel’s WiFi from the phone only for revisions starting with 1, 2, 3E or 52; for the other models, use USB.
 
-    Open the system in the Protegus app and go to **Settings → Advanced settings**. Tap **Read** to load the panel’s settings, change what you need, then tap **Write** to save them to the panel. The top of each screen shows the connected panel: **Unique ID** (IMEI), the version (**SP3_1E74**: revision 1E74), **Serial**, **Boot** and **Firmware**.
+    1. Open the system in the Protegus app and go to **Settings → Advanced settings**. The first time, the app warns that wrong settings can stop the system working; confirm to go on.
+    2. Tap **Read** to load the panel’s settings. If the panel does not use the default administrator code, the app asks for the access code.
+    3. Change the settings, then go back to **Advanced settings** and tap **Write** to save them to the panel.
+
+    The top of each screen shows the connected panel: **Unique ID**, the version (**SP3_1E74**: revision 1E74), **Serial**, **Boot** and **Firmware**.
 
     ![Protegus app, Advanced settings for the FLEXi SP3: device card with Unique ID, SP3_1E74, serial 000123, boot 1.02 and firmware 1.23; Read and Write buttons; menu items System options, Reporting to CMS, Users & Reporting, Modules, Wireless, Zones, PGM, Sensors, System events and Events log.](./protegus-app/sp3-menu-phone.webp){ .trik-mob-img }
 
@@ -785,6 +789,8 @@ Most settings described below can be changed in the Protegus app or in TrikdisCo
     3.  Launch the configuration software TrikdisConfig. The program will automatically recognize the connected device and will automatically open the „FLEXi“ SP3 configuration window.
 
     4.  Click **Read [F4]** to see current „FLEXi“ SP3 parameters. If a pop-up window appears, enter the *administrator* or *installer* code.
+
+    5.  Change the settings, then click **Write [F5]** to save them to the „FLEXi“ SP3.
 
 ### Description of TrikdisConfig status bar 
 
@@ -814,19 +820,25 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
     Open **System options → System general**.
 
-    ![Protegus app, System options, System general for the FLEXi SP3. General: Account No. 0001, System name SP3 security77, Test period 1 day(s) 0 h, Start test at 13:30, Clear events after reset on, Text language Cyrillic alphabet, Suspend event reporting 10 same events per 10 s, Restore event reporting after 1 min, EOL type 2k2+2k2+4k7, Communication path test 1 day(s), LED out for 2Wire fire sensor off, AC failure delay 300 s. SIM: SIM card PIN 1234, APN internet. Time settings: Read time and Set time buttons, Time zone +2 h 0 min, Update time through GSM modem, Daylight saving time on.](./protegus-app/sp3-systemoptions-general-phone.webp){ .trik-mob-img }
+    <span class="trik-mob-pair">
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, System options, System general, top: device card; General group with Account No. 0001, System name SP3 security77, Test period 1 day(s) 0 h, Start test at 13:30, Clear events after reset on, Text language Cyrillic alphabet, Suspend event reporting 10 same events per 10 s, Restore event reporting after 1 min, EOL type 2k2+2k2+4k7, Communication path test 1 day(s), LED out for 2Wire fire sensor off, AC failure delay 300 s." src="./protegus-app/sp3-systemoptions-general-1-phone.webp" /><span class="trik-mob-pair__caption">General</span></span>
+    <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, System general, bottom: SIM group with Preferred carrier empty, SIM card PIN 1234, APN internet, Login, Password and Locked ICCID empty; Time settings group with Read time and Set time buttons, Module time N/A, Time zone +2 h 0 min, Update time through GSM modem, Daylight saving time on." src="./protegus-app/sp3-systemoptions-general-2-phone.webp" /><span class="trik-mob-pair__caption">SIM, Time settings</span></span>
+    </span>
 
     | In TrikdisConfig | In the Protegus app |
     |---|---|
     | **Object ID** | **Account No.** |
     | **Object name** | **System name** |
+    | **Suspend event reporting when** … **same events per** … **s** | **Suspend event reporting** |
+    | **Restore event reporting after** | **Restore event reporting** |
     | **Preferred operator** | **Preferred carrier** |
     | **Set PC time** | **Set time** |
-    | **Time zone (Hours)** | **Time zone** |
+    | **Time zone (hours)** | **Time zone** |
     | **Time set** | **Update time through** |
-    | Module's time | **Module time** |
+    | **Power failure delay** | **AC failure delay**, in the General group |
+    | **Module's time** | **Module time** |
 
-    The **SIM** group appears on models with a mobile modem. **Areas in test SMS** and **Call** are not in the app.
+    **System name** takes up to 19 characters in the app. **Set time** sends the phone’s current time to the panel at once. The **SIM** group appears on revisions starting with 1, 2, 52, 4 or 6, but not 10 or 20; **Preferred carrier** needs firmware 1.21 or later. **Areas in test SMS** and **Call** are not in the app.
 
 === "TrikdisConfig"
 
@@ -838,15 +850,15 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 - If reports will be sent to CMS, enter the **Object ID** (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**) given by the CMS.
 
-- **Object name** – will be included in reports sent via SMS messages (up to 20 symbols, letters and numbers can be used).
+- **Object name** – will be included in reports sent via SMS messages (up to 20 symbols in TrikdisConfig, 19 in the app; letters and numbers can be used).
 
-- **Test period** – if the box is ticked, periodic test reports will be sent every set period, unless **Start test at** is ticked and a time is set.
+- **Test period** – periodic test reports are sent every set period, unless **Start test at** is set.
 
-- **Start test at** – tick the box and specify a time when test reports should be sent.
+- **Start test at** – the time of day when test reports are sent.
 
 - **Areas in test SMS** – the current protection modes of the specified areas will be included into the periodic test report. *Only in TrikdisConfig.*
 
-- **Clear Events after reset** – if the box is ticked, all unsent event reports in buffer memory will be deleted if the control panel is reset.
+- **Clear Events after reset** – if it is on, all unsent event reports in buffer memory will be deleted if the control panel is reset.
 
 - **Text language** – specific symbols of the selected language will be used in SMS messages.
 
@@ -860,7 +872,7 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 - **Communication path test** – specify the time interval after which the control panel will check the Backup communication channels by sending messages to the CMS. After sending the messages on the Backup communication channels, the control panel will return to the Primary communication channel.
 
-- **LED out as 2Wire fire** - check the box when you connect the two-wire fire detector to the LED output.
+- **LED out for 2Wire fire sensor** - turn it on when the two-wire fire detector is connected to the LED output.
 
 **Settings group “SIM”**
 
@@ -881,9 +893,9 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
 - **Time set** – specify a server to synchronize the ***„FLEXi“ SP3**’s* internal clock with. Synchronization occurs after the control panel is powered on.
 
-- **Daylight saving time** – if you check the box, the control panel's internal clock will be automatically switched to summer or winter time.
+- **Daylight saving time** – if it is on, the control panel's internal clock will be automatically switched to summer or winter time.
 
-- **AC failure delay** - in the event of a power failure in the main power supply, a power failure notification will be sent after the specified time delay. When the supply voltage is restored, a notification of the supply voltage recovery will be sent after the specified time delay.
+- **Power failure delay** - in the event of a power failure in the main power supply, a power failure notification will be sent after the specified time delay. When the supply voltage is restored, a notification of the supply voltage recovery will be sent after the specified time delay.
 
 **Areas**
 
@@ -893,15 +905,16 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
     ![Protegus app, System options, Areas: Areas enabled 8, and the list Area 1 to Area 8.](./protegus-app/sp3-systemoptions-areas-phone.webp){ .trik-mob-img }
 
-    ![Protegus app, Area 1: Area name Area 1, Entry delay 10, Exit delay 45, Bell time 300, Squawk off, Re-ARM off, Force-ARM off, Keyswitch mode Level, Tamper action Always audible.](./protegus-app/sp3-systemoptions-area-phone.webp){ .trik-mob-img }
+    ![Protegus app, Area screen: Area name Area 1, Entry delay 10, Exit delay 45, Bell time 300, Squawk off, Re-ARM off, Force-ARM off, Keyswitch mode Level, Tamper action Always audible.](./protegus-app/sp3-systemoptions-area-phone.webp){ .trik-mob-img }
 
     | In TrikdisConfig | In the Protegus app |
     |---|---|
     | **Partitions enabled** | **Areas enabled** |
     | **Partition name** | **Area name** |
     | **Entry**, **Exit**, **Bell** | **Entry delay**, **Exit delay**, **Bell time** |
-    | **Keyswitch** | **Keyswitch mode** |
+    | **Keyswich** (as TrikdisConfig spells it) | **Keyswitch mode** |
     | **Tamper** | **Tamper action** |
+    | Tamper: **Audible when protected** | **Audible when armed** |
 
     On revisions starting with 4 or 6, with firmware 1.15 or later, the app also shows **Arm after** [to confirm: what it does].
 
@@ -923,7 +936,7 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
 - **Squawk** - the siren will make a short sound once when the alarm is armed and twice when it is disarmed.
 
-- **Re-ARM** – tick this box if you want the system to automatically re-arm the alarm system after the system was disarmed remotely, but the *Delay* zone was not violated during the set entry time.
+- **Re-ARM** – turn it on if you want the system to automatically re-arm the alarm system after the system was disarmed remotely, but the *Delay* zone was not violated during the set entry time.
 
 - **Force-ARM** – tick this box to allow to switch the system to protection (ARM) mode even if *Stay* zones are violated, as long as the *Entry* zone is not violated.
 
@@ -935,9 +948,9 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
 === "Protegus app"
 
-    Open **System options → Schedulers**, then tap a scheduler to open its settings.
+    Open **System options → Schedulers**. Tap a scheduler’s time to change it, and its arrow to open the area, action, holiday settings and day buttons.
 
-    ![Protegus app, System options, Schedulers: the first schedule at 22:00, on, Mon to Fri, Arm; the second at 07:00, on, Mon to Fri, Disarm; the others at 00:00, off, Disarm.](./protegus-app/sp3-systemoptions-schedulers-phone.webp){ .trik-mob-img }
+    ![Protegus app, System options, Schedulers, first rows of the list: 22:00, on, Mon to Fri, Arm; 07:00, on, Mon to Fri, Disarm; then rows at 00:00, off, Disarm.](./protegus-app/sp3-systemoptions-schedulers-phone.webp){ .trik-mob-img }
 
     | In TrikdisConfig | In the Protegus app |
     |---|---|
@@ -974,9 +987,9 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
 === "Protegus app"
 
-    Open **System options → Holidays**.
+    Open **System options → Holidays**. Tap a date to change it, and the arrow to open the row and choose **Group** 1 to 4.
 
-    ![Protegus app, System options, Holidays: the first holiday 26-12-24 to 26-12-26, on, Group 1; the others 00-01-01 to 00-01-01, on, no group.](./protegus-app/sp3-systemoptions-holidays-phone.webp){ .trik-mob-img }
+    ![Protegus app, System options, Holidays, first rows of the list: 26-12-24 to 26-12-26, on, Group: 1; then rows 00-01-01 to 00-01-01, on, Group: none.](./protegus-app/sp3-systemoptions-holidays-phone.webp){ .trik-mob-img }
 
     | In TrikdisConfig | In the Protegus app |
     |---|---|
@@ -989,7 +1002,7 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
     <img alt="TrikdisConfig System Options window on the Holidays tab. The visible holiday rows are enabled, show matching start and stop dates of 01.01.2000, and have unchecked boxes for Groups 1–4." src="./image56.webp" style="width:7.086614173228346in;height:1.9291338582677164in" />
 
-- **Enable** – Tick this box to enable the holiday.
+- **Enable** – turns the holiday on.
 
 - **Start date** – set the start date of the holiday.
 
@@ -1019,15 +1032,15 @@ If at least one control panel internal fault field is checked, then the control 
 
     Open **System options → Access**.
 
-    ![Protegus app, System options, Access: Administrator code, SMS code and Installer code (hidden); Installer permissions: Can change Account No. on; Area settings and the menus Users & Reporting, Modules, Zones, PGM, Reporting to CMS and System events all Editable.](./protegus-app/sp3-systemoptions-access-phone.webp){ .trik-mob-img }
+    ![Protegus app, System options, Access: Administrator code, SMS code and Installer code, codes masked; Installer permissions: Can change Account No. on; Area settings and the menus Users & Reporting, Modules, Zones, PGM, Reporting to CMS and System events all Editable.](./protegus-app/sp3-systemoptions-access-phone.webp){ .trik-mob-img }
 
     | In TrikdisConfig | In the Protegus app |
     |---|---|
     | **SMS password** | **SMS code** |
     | Installer permission **Object ID** | **Can change Account No.** |
-    | Installer permission **SIM card** | not in the app |
+    | **Area Settings**, **Menu ‘…’**: **Read only** | **Area settings**, **Menu ‘…’**: **Visible** |
 
-    The app shows **Administrator code** only to the administrator. Each permission is **Editable**, **Visible** (read only) or **Hidden**.
+    **Can change Account No.** is a switch; **Area settings** and each menu are **Editable**, **Visible** (read only) or **Hidden**. The app shows **Administrator code** and **SMS code** only to the administrator. The installer’s **SIM card** permission is set only in TrikdisConfig.
 
 === "TrikdisConfig"
 
@@ -1045,8 +1058,9 @@ If at least one control panel internal fault field is checked, then the control 
 
 !!! note
     If the default *administrator code* is set (123456), after pressing
-    **Read [F4]** the program will immediately show the current
+    **Read [F4]** TrikdisConfig will immediately show the current
     operational parameters of the device without asking for the code.
+
 **Settings group “Installer permissions”**
 
 - Specifies what the installer may change: **Object ID**, the **SIM card** settings (*only in TrikdisConfig*), and each area or menu, which can be editable, read only or hidden.
@@ -1521,7 +1535,7 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
     Open **Zones**, then tap a zone. The list shows each zone with its input, areas, definition and type; a zone with no input shows **Disabled**.
 
-    ![Protegus app, Zones settings list for the FLEXi SP3: Zone 1 SP3 1 I/O, Area 1, Instant, EOL_T; Zone 2 SP3 2 I/O, Area 1, Interior, EOL; Zones 3 to 10 SP3 3 to 10 I/O, Area 1, Instant, EOL; Zone 11 and the following Disabled.](./protegus-app/sp3-zones-phone.webp){ .trik-mob-img }
+    ![Protegus app, Zones settings for the FLEXi SP3, first rows of the list: Zone 1 SP3 1 I/O, Area 1, Instant, EOL_T; Zone 2 SP3 2 I/O, Area 1, Interior, EOL; Zones 3 to 7 SP3 3 to 7 I/O, Area 1, Instant, EOL; Zones 8 to 10 Disabled; Zone 11 Wireless Corner Pir ID1, Instant; Zone 12 Wireless Magnet ID2, Delay; Zone 13 Wireless Smoke ID3, Fire, all NC in Area 1.](./protegus-app/sp3-zones-phone.webp){ .trik-mob-img }
 
     ![Protegus app, Zone settings for Zone 1: Input SP3 1 I/O, Assigned areas Area 1, Definition Instant, Type EOL_T, Enable chime off, Can be bypassed on, Force ARM off, Report to CMS on, Report to Protegus2 cloud on, Reaction time 400 ms, Zone event CID code 130.](./protegus-app/sp3-zone-phone.webp){ .trik-mob-img }
 
