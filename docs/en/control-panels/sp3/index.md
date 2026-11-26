@@ -825,20 +825,8 @@ When the **Read [F4]** button is clicked, the program will read and display the 
     <span class="trik-mob-pair__item"><img class="trik-mob-img" alt="Protegus app, System general, bottom: SIM group with Preferred carrier empty, SIM card PIN 1234, APN internet, Login, Password and Locked ICCID empty; Time settings group with Read time and Set time buttons, Module time N/A, Time zone +2 h 0 min, Update time through GSM modem, Daylight saving time on." src="./protegus-app/sp3-systemoptions-general-2-phone.webp" /><span class="trik-mob-pair__caption">SIM, Time settings</span></span>
     </span>
 
-    | In TrikdisConfig | In the Protegus app |
-    |---|---|
-    | **Object ID** | **Account No.** |
-    | **Object name** | **System name** |
-    | **Suspend event reporting when** … **same events per** … **s** | **Suspend event reporting** |
-    | **Restore event reporting after** | **Restore event reporting** |
-    | **Preferred operator** | **Preferred carrier** |
-    | **Set PC time** | **Set time** |
-    | **Time zone (hours)** | **Time zone** |
-    | **Time set** | **Update time through** |
-    | **Power failure delay** | **AC failure delay**, in the General group |
-    | **Module's time** | **Module time** |
 
-    **System name** takes up to 19 characters in the app. **Set time** sends the phone’s current time to the panel at once. The **SIM** group appears on revisions starting with 1, 2, 52, 4 or 6, but not 10 or 20; **Preferred carrier** needs firmware 1.21 or later. **Areas in test SMS** and **Call** are not in the app.
+    **System name** takes up to 19 characters in the app, and **AC failure delay** is in the General group. Tap **Set time** to send the phone’s current time to the panel at once. The **SIM** group appears on revisions starting with 1, 2, 52, 4 or 6, but not 10 or 20; **Preferred carrier** needs firmware 1.21 or later. **Areas in test SMS** and **Call** are not in the app.
 
 === "TrikdisConfig"
 
@@ -848,9 +836,9 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 **Settings group “General”**
 
-- If reports will be sent to CMS, enter the **Object ID** (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**) given by the CMS.
+- If reports will be sent to CMS, enter the <span class="trik-term"><span class="trik-term-app"><strong>Account No.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID</strong><span class="trik-term-note">)</span></span></span> (4 symbol hexadecimal number, 0-9, A-F. **Do not use FFFE, FFFF Object ID.**) given by the CMS.
 
-- **Object name** – will be included in reports sent via SMS messages (up to 20 symbols in TrikdisConfig, 19 in the app; letters and numbers can be used).
+- <span class="trik-term"><span class="trik-term-app"><strong>System name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object name</strong><span class="trik-term-note">)</span></span></span> – will be included in reports sent via SMS messages (up to 20 symbols in TrikdisConfig, 19 in the app; letters and numbers can be used).
 
 - **Test period** – periodic test reports are sent every set period, unless **Start test at** is set.
 
@@ -862,9 +850,9 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 - **Text language** – specific symbols of the selected language will be used in SMS messages.
 
-- It is possible to **Suspend event reporting when ...** a number of **same events per ... s** happen**.**
+- <span class="trik-term"><span class="trik-term-app"><strong>Suspend event reporting</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Suspend event reporting when ...</strong><span class="trik-term-note">)</span></span></span> – reporting of an event stops when the same event happens the set number of times within the set number of seconds.
 
-- **Restore event reporting after** – set the time after which suspending of event reporting will be cancelled. The time can be anywhere from 0 to 999 minutes.
+- <span class="trik-term"><span class="trik-term-app"><strong>Restore event reporting</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Restore event reporting after</strong><span class="trik-term-note">)</span></span></span> – set the time after which suspending of event reporting will be cancelled. The time can be anywhere from 0 to 999 minutes.
 
 - **Call** – when an event occurs, the „FLEXi“ SP3 will call user(-s) as many times as is set. If the call is declined or answered, the „FLEXi“ SP3 will stop calling. Duration of a call is 20 seconds. *Only in TrikdisConfig.*
 
@@ -883,19 +871,19 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 
 - **Locked ICCID** - enter the ICCID number of the SIM card if you want the control panel to work only with this SIM card.
 
-- **Preferred operator** – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNC codes. Firmware 1.21 or later.
+- <span class="trik-term"><span class="trik-term-app"><strong>Preferred carrier</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Preferred operator</strong><span class="trik-term-note">)</span></span></span> – after entering the mobile network operator code, the communicator will connect only to the network of the selected operator. The mobile operator code consists of MCC and MNC codes. Firmware 1.21 or later.
 
 **Settings group “Time settings”**
 
-You can set the time by clicking the **Set PC time** button. If **Disabled** is chosen in the **Time synchronization** field, the computer’s time will be set for the control panel. If a modem or a server is chosen in the **Time synchronization** field, the control panel will synchronize its time according to that modem or server.
+You can set the time by clicking the <span class="trik-term"><span class="trik-term-app"><strong>Set time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Set PC time</strong><span class="trik-term-note">)</span></span></span> button. If **Disabled** is chosen in the <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time synchronization</strong><span class="trik-term-note">)</span></span></span> field, the computer’s time will be set for the control panel. If a modem or a server is chosen in the <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time synchronization</strong><span class="trik-term-note">)</span></span></span> field, the control panel will synchronize its time according to that modem or server.
 
-- **Time zone (Hours)** – specify your country’s time zone. For example, if the control panel will be installed in Lithuania, enter **+2**.
+- <span class="trik-term"><span class="trik-term-app"><strong>Time zone</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time zone (Hours)</strong><span class="trik-term-note">)</span></span></span> – specify your country’s time zone. For example, if the control panel will be installed in Lithuania, enter **+2**.
 
-- **Time set** – specify a server to synchronize the ***„FLEXi“ SP3**’s* internal clock with. Synchronization occurs after the control panel is powered on.
+- <span class="trik-term"><span class="trik-term-app"><strong>Update time through</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Time set</strong><span class="trik-term-note">)</span></span></span> – specify a server to synchronize the ***„FLEXi“ SP3**’s* internal clock with. Synchronization occurs after the control panel is powered on.
 
 - **Daylight saving time** – if it is on, the control panel's internal clock will be automatically switched to summer or winter time.
 
-- **Power failure delay** - in the event of a power failure in the main power supply, a power failure notification will be sent after the specified time delay. When the supply voltage is restored, a notification of the supply voltage recovery will be sent after the specified time delay.
+- <span class="trik-term"><span class="trik-term-app"><strong>AC failure delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Power failure delay</strong><span class="trik-term-note">)</span></span></span> - in the event of a power failure in the main power supply, a power failure notification will be sent after the specified time delay. When the supply voltage is restored, a notification of the supply voltage recovery will be sent after the specified time delay.
 
 **Areas**
 
@@ -907,14 +895,6 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
     ![Protegus app, Area screen: Area name Area 1, Entry delay 10, Exit delay 45, Bell time 300, Squawk off, Re-ARM off, Force-ARM off, Keyswitch mode Level, Tamper action Always audible.](./protegus-app/sp3-systemoptions-area-phone.webp){ .trik-mob-img }
 
-    | In TrikdisConfig | In the Protegus app |
-    |---|---|
-    | **Partitions enabled** | **Areas enabled** |
-    | **Partition name** | **Area name** |
-    | **Entry**, **Exit**, **Bell** | **Entry delay**, **Exit delay**, **Bell time** |
-    | **Keyswich** (as TrikdisConfig spells it) | **Keyswitch mode** |
-    | **Tamper** | **Tamper action** |
-    | Tamper: **Audible when protected** | **Audible when armed** |
 
     On revisions starting with 4 or 6, with firmware 1.15 or later, the app also shows **Arm after** [to confirm: what it does].
 
@@ -924,15 +904,15 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
     <img alt="TrikdisConfig System Options window on the Partitions tab, with Partitions enabled set to 8. The table lists Areas 1–8 with Entry, Exit, Bell, Squawk, Re-ARM, Force-ARM, Keyswitch and Tamper settings." src="./image54.webp" style="width:7.086614173228346in;height:2.8070866141732282in" />
 
-- **Partitions enabled** – enter the number of independent parts that the alarm system will be divided into.
+- <span class="trik-term"><span class="trik-term-app"><strong>Areas enabled</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partitions enabled</strong><span class="trik-term-note">)</span></span></span> – enter the number of independent parts that the alarm system will be divided into.
 
-- **Partition name** – enter the partition name.
+- <span class="trik-term"><span class="trik-term-app"><strong>Area name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partition name</strong><span class="trik-term-note">)</span></span></span> – enter the partition name.
 
-- **Entry** – time for entering through a *Delay* zone, walking to a keypad and disarming the alarm system. Time can be anywhere between 0 and 999 seconds.
+- <span class="trik-term"><span class="trik-term-app"><strong>Entry delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Entry</strong><span class="trik-term-note">)</span></span></span> – time for entering through a *Delay* zone, walking to a keypad and disarming the alarm system. Time can be anywhere between 0 and 999 seconds.
 
-- **Exit** – time for leaving the premises through a *Delay* zone after entering the alarm system arm code using a keypad. Time can be anywhere between 0 and 999 seconds. If the alarm system is armed remotely, e.g. via Protegus2 mobile app, the system will not count **Exit time** and will arm immediately.
+- <span class="trik-term"><span class="trik-term-app"><strong>Exit delay</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Exit</strong><span class="trik-term-note">)</span></span></span> – time for leaving the premises through a *Delay* zone after entering the alarm system arm code using a keypad. Time can be anywhere between 0 and 999 seconds. If the alarm system is armed remotely, e.g. via Protegus2 mobile app, the system will not count **Exit time** and will arm immediately.
 
-- **Bell** – duration of siren operation once the alarm is triggered. Time can be anywhere between 0 and 999 seconds.
+- <span class="trik-term"><span class="trik-term-app"><strong>Bell time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Bell</strong><span class="trik-term-note">)</span></span></span> – duration of siren operation once the alarm is triggered. Time can be anywhere between 0 and 999 seconds.
 
 - **Squawk** - the siren will make a short sound once when the alarm is armed and twice when it is disarmed.
 
@@ -940,9 +920,9 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
 
 - **Force-ARM** – tick this box to allow to switch the system to protection (ARM) mode even if *Stay* zones are violated, as long as the *Entry* zone is not violated.
 
-- **Keyswitch** – choose in what way – *Pulse* or *Level* – a Keyswitch zone must be triggered for the system to enable or disable premise protection*.*
+- <span class="trik-term"><span class="trik-term-app"><strong>Keyswitch mode</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Keyswitch</strong><span class="trik-term-note">)</span></span></span> – choose in what way – *Pulse* or *Level* – a Keyswitch zone must be triggered for the system to enable or disable premise protection*.*
 
-- **Tamper** – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when protected“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will will switch on even when the alarm system is disarmed.
+- <span class="trik-term"><span class="trik-term-app"><strong>Tamper action</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Tamper</strong><span class="trik-term-note">)</span></span></span> – choose the reaction type (Silent, Audible when armed, Always Audible) when the system detects a sensor tamper event. “Silent” – recipients will receive event reports, but the siren will not switch on; „Audible when protected“ - recipients will receive event reports, but the siren will switch on only if the tamper event happens when the system is armed; „Always audible“ - recipients will receive event reports and the siren will will switch on even when the alarm system is disarmed.
 
 **Schedulers**
 
@@ -951,13 +931,6 @@ You can set the time by clicking the **Set PC time** button. If **Disabled** is 
     Open **System options → Schedulers**. Tap a scheduler’s time to change it, and its arrow to open the area, action, holiday settings and day buttons.
 
     ![Protegus app, System options, Schedulers, first rows of the list: 22:00, on, Mon to Fri, Arm; 07:00, on, Mon to Fri, Disarm; then rows at 00:00, off, Disarm.](./protegus-app/sp3-systemoptions-schedulers-phone.webp){ .trik-mob-img }
-
-    | In TrikdisConfig | In the Protegus app |
-    |---|---|
-    | **Enable** | the switch on each scheduler |
-    | **Partition** | **Area** |
-    | **Not Armed** | **Enabled only when not armed** |
-    | **Holiday**: Only holidays | **Holiday**: Only on holidays |
 
 === "TrikdisConfig"
 
@@ -969,11 +942,11 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
 - **Enable** – enable the schedule for when the system will automatically arm and disarm.
 
-- **Partition** – specify the partition affected by the specific schedule.
+- <span class="trik-term"><span class="trik-term-app"><strong>Area</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Partition</strong><span class="trik-term-note">)</span></span></span> – specify the partition affected by the specific schedule.
 
 - **Time** – set the time when the specific action must be done.
 
-- **Not Armed** - check the box and the schedule action will be performed only if the control panel is not armed in AWAY mode. Firmware 1.15 or later.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enabled only when not armed</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Not Armed</strong><span class="trik-term-note">)</span></span></span> - check the box and the schedule action will be performed only if the control panel is not armed in AWAY mode. Firmware 1.15 or later.
 
 - **Action** – set the protection mode (Disarm/Arm/Sleep/Stay) that the system will switch to automatically at the specified time.
 
@@ -991,11 +964,6 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
     ![Protegus app, System options, Holidays, first rows of the list: 26-12-24 to 26-12-26, on, Group: 1; then rows 00-01-01 to 00-01-01, on, Group: none.](./protegus-app/sp3-systemoptions-holidays-phone.webp){ .trik-mob-img }
 
-    | In TrikdisConfig | In the Protegus app |
-    |---|---|
-    | **Enable** | the switch on each holiday |
-    | **Group 1** to **Group 4** | **Group** |
-
 === "TrikdisConfig"
 
     **“Holidays” tab**
@@ -1008,7 +976,7 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 
 - **Stop date** – set the end date of the holiday. If the holiday is only one day long, this date should match the **Start date**.
 
-- **Group 1, Group 2, Group 3, Group 4** – combine holidays into groups.
+- <span class="trik-term"><span class="trik-term-app"><strong>Group</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Group 1, Group 2, Group 3, Group 4</strong><span class="trik-term-note">)</span></span></span> – combine holidays into groups.
 
 **System troubles**
 
@@ -1034,11 +1002,6 @@ If at least one control panel internal fault field is checked, then the control 
 
     ![Protegus app, System options, Access: Administrator code, SMS code and Installer code, codes masked; Installer permissions: Can change Account No. on; Area settings and the menus Users & Reporting, Modules, Zones, PGM, Reporting to CMS and System events all Editable.](./protegus-app/sp3-systemoptions-access-phone.webp){ .trik-mob-img }
 
-    | In TrikdisConfig | In the Protegus app |
-    |---|---|
-    | **SMS password** | **SMS code** |
-    | Installer permission **Object ID** | **Can change Account No.** |
-    | **Area Settings**, **Menu ‘…’**: **Read only** | **Area settings**, **Menu ‘…’**: **Visible** |
 
     **Can change Account No.** is a switch; **Area settings** and each menu are **Editable**, **Visible** (read only) or **Hidden**. The app shows **Administrator code** and **SMS code** only to the administrator. The installer’s **SIM card** permission is set only in TrikdisConfig.
 
@@ -1052,7 +1015,7 @@ If at least one control panel internal fault field is checked, then the control 
 
 - **Administrator Code** – *(default code - 123456)* gives full access to configuration (the code must be 6 symbols long; it can consist of latin letters and/or numbers).
 
-- **SMS password** – *(default password - 123456)* is used for controlling the system safely using SMS messages. For safety purposes, change it into a 6-symbol password only You know.
+- <span class="trik-term"><span class="trik-term-app"><strong>SMS code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>SMS password</strong><span class="trik-term-note">)</span></span></span> – *(default password - 123456)* is used for controlling the system safely using SMS messages. For safety purposes, change it into a 6-symbol password only You know.
 
 - **Installer Code** – (*default code - 654321*) gives installers access to configuring the system. For safety purposes, change it into a 6-symbol code only You know.
 
@@ -1063,7 +1026,7 @@ If at least one control panel internal fault field is checked, then the control 
 
 **Settings group “Installer permissions”**
 
-- Specifies what the installer may change: **Object ID**, the **SIM card** settings (*only in TrikdisConfig*), and each area or menu, which can be editable, read only or hidden.
+- Specifies what the installer may change: <span class="trik-term"><span class="trik-term-app"><strong>Can change Account No.</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Object ID</strong><span class="trik-term-note">)</span></span></span>, the **SIM card** settings (*only in TrikdisConfig*), and each area or menu, which can be editable, read only or hidden.
 
 ### Reporting to CMS <span id="53-reporting-to-cms-window"></span>
 
@@ -1539,17 +1502,6 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
     ![Protegus app, Zone settings for Zone 1: Input SP3 1 I/O, Assigned areas Area 1, Definition Instant, Type EOL_T, Enable chime off, Can be bypassed on, Force ARM off, Report to CMS on, Report to Protegus2 cloud on, Reaction time 400 ms, Zone event CID code 130.](./protegus-app/sp3-zone-phone.webp){ .trik-mob-img }
 
-    | In TrikdisConfig | In the Protegus app |
-    |---|---|
-    | **Name** | **Zone name** |
-    | **Area** | **Assigned areas** |
-    | **Chime** | **Enable chime** |
-    | **Bypass** | **Can be bypassed** |
-    | **Force** | **Force ARM** |
-    | **CMS** | **Report to CMS** |
-    | **Prot.** | **Report to Protegus2 cloud** |
-    | **Delay** | **Reaction time** |
-    | **CID code** | **Zone event CID code** |
 
     In the app, expander module inputs offer only the NO and NC types. **Sound** is not in the app.
 
@@ -1561,11 +1513,11 @@ All wireless sensors can be linked simultaneously. Insert batteries into the wir
 
 - **Zone No** – the zone’s number on the list.
 
-- **Name** - enter the name of the zone.
+- <span class="trik-term"><span class="trik-term-app"><strong>Zone name</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Name</strong><span class="trik-term-note">)</span></span></span> - enter the name of the zone.
 
 - **Input** – you can select which „FLEXi“ SP3 or expander module input IN to assign to the zone.
 
-- **Area** – assign the zone to an area.
+- <span class="trik-term"><span class="trik-term-app"><strong>Assigned areas</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Area</strong><span class="trik-term-note">)</span></span></span> – assign the zone to an area.
 
 - **Definition** – every zone can be assigned one of these zone functions:
 
@@ -1604,18 +1556,18 @@ When the alarm system is armed in STAY mode, “Interior Stay” zones are not p
   - **Silent 24h** – for connecting panic buttons. If this zone is violated, an event report will immediately be sent regardless of the state of the security system, but “Siren” and “Flash” output signals will not be formed.
 - **Type** – choose the type of circuit connected to the zone input IN from a list: NC – normally closed; NO – normally open; EOL – with an end of line resistor; EOL_T – with an end of line resistor and tamper monitoring; ATZ – two zone normally closed circuit with end of line resistors, without tamper monitoring function (to use this type, choose the second ATZ zone in the input list); ATZ_T – two zone normally closed circuit with end of line resistors, with tamper monitoring function (to use this type, choose the second ATZ zone in the input list); 3EOL - with an end of line resistor and tamper monitoring (this setting is for when motion detection with anti masking function is used).
 
-- **Chime** - checking the box will enable the zone chime feature. When the zone is activated, the keypad will beep.
+- <span class="trik-term"><span class="trik-term-app"><strong>Enable chime</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Chime</strong><span class="trik-term-note">)</span></span></span> - checking the box will enable the zone chime feature. When the zone is activated, the keypad will beep.
 
-- **Bypass** – tick this box if you want to allow this zone to be bypassed and ignored when it is triggered.
+- <span class="trik-term"><span class="trik-term-app"><strong>Can be bypassed</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Bypass</strong><span class="trik-term-note">)</span></span></span> – tick this box if you want to allow this zone to be bypassed and ignored when it is triggered.
 
-- **Force** – tick this box if you want to allow arming the security system with the zone open. When the alarm is armed, open zones set to “Force” mode will be temporarily disconnected. After zone restore, they will be turned on and monitored again. A violation of this zone will trigger an alarm.
+- <span class="trik-term"><span class="trik-term-app"><strong>Force ARM</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Force</strong><span class="trik-term-note">)</span></span></span> – tick this box if you want to allow arming the security system with the zone open. When the alarm is armed, open zones set to “Force” mode will be temporarily disconnected. After zone restore, they will be turned on and monitored again. A violation of this zone will trigger an alarm.
 
-- **CMS** – if the box is ticked, zone event reports will be sent to the central monitoring station (CMS).
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to CMS</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CMS</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, zone event reports will be sent to the central monitoring station (CMS).
 
-- **Prot.** – if the box is ticked, zone event reports will be sent to Protegus cloud.
+- <span class="trik-term"><span class="trik-term-app"><strong>Report to Protegus2 cloud</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Prot.</strong><span class="trik-term-note">)</span></span></span> – if the box is ticked, zone event reports will be sent to Protegus cloud.
 
-- **Delay** – input IN zone reaction time, in milliseconds.
-- **CID code** – event contact ID codes. This code will be filled in automatically after selecting a definition for the zone.
+- <span class="trik-term"><span class="trik-term-app"><strong>Reaction time</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>Delay</strong><span class="trik-term-note">)</span></span></span> – input IN zone reaction time, in milliseconds.
+- <span class="trik-term"><span class="trik-term-app"><strong>Zone event CID code</strong></span><span class="trik-term-tc"><span class="trik-term-note"> (TrikdisConfig: </span><strong>CID code</strong><span class="trik-term-note">)</span></span></span> – event contact ID codes. This code will be filled in automatically after selecting a definition for the zone.
 
 - **Sound** – specify the number of the voice recording that will be played back to the user when the „FLEXi“ SP3 control panel calls during an alarm (this function is valid for SP3_12xx control panel with firmware version up to 1.13 inclusive).
 

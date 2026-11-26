@@ -157,4 +157,12 @@
     max-height: 200mm;
     object-fit: contain;
   }
+
+  /* Setting names that differ between the tools (.trik-term, tool-switcher.css): print both,
+     "Account No. (TrikdisConfig: Object ID)", whatever was chosen on screen. */
+  .md-typeset .trik-term-app,
+  .md-typeset .trik-term-tc,
+  .md-typeset .trik-term-note {
+    display: inline !important;
+  }
 }

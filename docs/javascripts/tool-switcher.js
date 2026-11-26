@@ -246,6 +246,8 @@
       bars.forEach(function (bar) {
         setBarState(bar, tool);
       });
+      // Setting names that differ between the tools (.trik-term) follow the choice (tool-switcher.css).
+      article.dataset.trikTool = tool;
     }
 
     sets.forEach(function (set) {
