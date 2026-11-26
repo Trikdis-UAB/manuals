@@ -50,7 +50,7 @@ The panel has 10 on-board input/output terminals, a keypad bus and an RS485 bus.
 | Account (object) number | Up to 6 characters, hexadecimal |
 | Internal clock | Yes, with time synchronization (SIM, LAN, NTP server) |
 | Event buffer | 256 events |
-| Event log | Up to 5000 events; the oldest are deleted automatically |
+| Event log | Up to 5000 events; the oldest are deleted automatically. Read and clear it in **Diagnostics → Log**. |
 | Users | Up to 1000 |
 | On-board I/O terminals | 10 (IO1–IO10, marked IN1–IN10 on the board) |
 | Areas | 16 |
@@ -114,7 +114,7 @@ Other parts of the board:
 - **ANT GSM** and **ANT WIFI:** connectors for the cellular and WiFi antennas.
 - **SIM:** the nano-SIM card holder.
 - **LAN:** the Ethernet port.
-- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows **Connection: Via USB**. **[how to open the USB configuration in the app: to confirm]**
+- **USB:** USB-C connector for configuring the panel and updating its firmware over a cable with the Protegus app (**USB Device Configuration**), in a desktop browser such as Chrome or Edge or in the Android app. The **Dashboard** then shows **Connection: Via USB**. It also works without internet, in Chrome or Edge on a computer (see **Opening the configurator**). **[how to open the USB configuration when online: to confirm]**
 - **SIM, ETH, WIFI, DAT, PWR:** LEDs (see [LED indication](#led-indication)).
 - **F1 button** next to the relay: turns on the WiFi setup mode, for setting the WiFi network name (SSID). **[how the setup mode is used, and how to restore the factory settings: to confirm]**
 
@@ -325,6 +325,8 @@ Connect the backup battery, then switch on the main power supply.
 4.  Change the settings, then tap **Write** to save them to the panel.
 5.  To close the panel in a desktop browser, click **Disconnect from module** at the top of the menu. If there are unsaved changes, the app asks **Leave configuration?**: **Write and leave**, or leave without saving.
 
+**Without internet.** In Chrome or Edge on a computer where the Protegus web app has been opened online before, the app opens **Offline Mode – Local Access Only**. Click **Programming mode** (**Connect USB to module**), then **USB Device Configuration**, and choose the panel. Only configuration over USB works offline: configuration over the cloud, firmware updates and **Help** don't. This doesn't work on phones or in the Android app. **[to confirm: how long the offline copy stays usable]**
+
 Every page of the configurator is described in [Settings in the Protegus app](#settings-in-the-protegus-app).
 
 ### If the panel does not connect
@@ -425,7 +427,7 @@ Do this first, before you add zones and users.
 
 ### Adding wireless devices
 
-1.  Connect the wireless receiver (RF-S8 for HEYI devices, RF-SH for Crow devices) to AUX and the RS485 bus.
+1.  Connect the wireless receiver (RF-S8 for HEYI devices, RF-SH or RF-C8/C9 for Crow devices) to AUX and the RS485 bus.
 2.  In **Devices & Interfaces → Expanders**, choose **Expanders → Scan for new expanders**. The receiver must appear in the list.
 3.  In **Devices & Interfaces → Wireless**, tap the gear button and set **Sensor lost after**: how long a silent device is reported as lost.
 4.  Disarm all areas and clear any faults. Tap **Scan for new devices**.
@@ -512,7 +514,7 @@ The panel has no access control functions yet: Wiegand readers don't work in fir
 
 1.  Connect an NTC 10K sensor between a free I/O terminal and a **C** terminal.
 2.  In **Terminals**, open **Assign function** on that terminal and choose **Assign temperature input** (under **More functions** when the zone and output functions are offered too).
-3.  In the sensor popup, enter the **Name**, the sensor's **B Constant** (usually 3950) and **NTC R0** (10000 for a 10K sensor).
+3.  In the sensor popup, enter the **Name**, the sensor's **B Constant** (usually 3950) and **NTC R0** (10000 for a 10K sensor). If needed, choose **Temperature units** and set a **Value offset**.
 4.  For an alarm on temperature, set the **Value** under **Min** and **Max** and turn on **Notify when below** and **Notify when above**.
 
     ![Protegus app, SP5 Sensor popup: Type Temperature (Voltage and Resistance are the other choices), Name Living room temperature, Terminal Temperature (zone) - IN 9, Assign thermostat Living room heating. Min: Value 5 °C, Notify when below on. Max: Value 30 °C, Notify when above on. Delay 60 min, B Constant 3950, NTC R0 10000. Reset sensor, Cancel and Save at the bottom.](./protegus-app/sp5-popup-sensor-ntc.webp){ .trik-popup-img }
@@ -613,7 +615,7 @@ The Dashboard shows the panel's identity, owner and connection state at a glance
 | Phone number | The first owner's phone number. |
 | E-mail address | The first owner's e-mail address. |
 
-**Address**, **Owner**, **Phone number** and **E-mail address** appear only when the system has been added to Protegus. Otherwise the card shows **This system is not added to Protegus2.**
+**Address**, **Owner**, **Phone number** and **E-mail address** appear only when the system has been added to Protegus. Otherwise the card shows **This system is not added to Protegus2.** Without internet it shows **No internet connection. System information is unavailable.**
 
 #### Connectivity
 
@@ -998,7 +1000,7 @@ Menu **Areas and zones → Zones**. A zone is one detector input with its area, 
 | Edit | Opens the zone popup. | link |
 
 !!! note
-    Changing **Definition** in the list does not change the zone's **Delay** or **CID code**. Change the definition in the zone popup if you want those updated too.
+    Choosing another **Definition**, in the list or in the zone popup, sets **Delay** and **CID code** to that definition's values (see **Zone definitions**). Choosing the definition the zone already has changes nothing.
 
 #### Zone popup
 
@@ -1260,7 +1262,7 @@ Use it only when the scan does not find a module. A module added here connects o
 
 | Setting | What it does | Values |
 |---|---|---|
-| Device type | The module type. Required. RF-Lora, RF-SH, RF-S8, T16 communicator and T16v2 communicator can be added only once per system. | iO-LO expander, iO8 expander, T16 communicator, RF-Lora, RF-SH, iO8-Lora expander, PB-Lora, T16v2 communicator, RF-S8 |
+| Device type | The module type. Required. RF-Lora, RF-C8/C9, RF-S8, T16 communicator and T16v2 communicator can be added only once per system. An RF-SH is found only by the scan. | iO-LO expander, iO8 expander, T16 communicator, RF-Lora, RF-C8/C9, iO8-Lora expander, PB-Lora, T16v2 communicator, RF-S8 |
 | Serial number | Printed on the device label. Required. | 6 hex characters, as on the label, e.g. A3F012 |
 | Name | The module's name. If left empty, the slot keeps its current name. | up to 23 characters |
 
@@ -1278,16 +1280,17 @@ Modules marked "—" under **Add manually** are recognised when the panel report
 | iO8-Lora expander | yes | — | as iO8 expander |
 | RF-Lora | yes | yes | none; used for the iO-LORA and iO8-LORA expanders |
 | RF-Lora_PIN | — | — | none; used for the iO-LORA and iO8-LORA expanders |
-| RF-SH | yes | yes | none; enables **Wireless** |
+| RF-SH | — | — | none; enables **Wireless** |
 | RF-SH_PIN | — | — | none; enables **Wireless** |
 | RF-S8 | yes | yes | none; enables **Wireless** |
+| RF-C8/C9 | yes | yes | none; enables **Wireless** **[to confirm: which wireless devices it receives]** |
 | T16 communicator | yes | yes | none |
 | T16v2 communicator | yes | yes | none |
 | PB-Lora | yes | — | none |
 
 ### Wireless
 
-Menu **Devices & Interfaces → Wireless** (page heading **Wireless devices**). Lists the wireless devices learned by the panel, up to 42. The page works only with a wireless receiver on the RS485 bus (RF-Lora, RF-SH, RF-S8, RF-SH_PIN or RF-Lora_PIN); without one it shows **There is no wireless sensor receiver in the system**.
+Menu **Devices & Interfaces → Wireless** (page heading **Wireless devices**). Lists the wireless devices learned by the panel, up to 42. The page works only with a wireless receiver on the RS485 bus (RF-Lora, RF-SH, RF-S8, RF-C8/C9, RF-SH_PIN or RF-Lora_PIN); without one it shows **There is no wireless sensor receiver in the system**.
 
 ![Protegus app, SP5 Wireless devices page in a desktop browser: a Refresh status link, a gear button, a Scan for new devices button and four online HEYI devices, each with a zone. 1 Smart Door/Window sensor, Terrace door, area Home, 86 %, 3.1 V. 2 Smart PIR detector, Living room PIR, area Home, 72 %, 3.05 V. 3 Smart Outdoor siren, Outdoor siren tamper, areas Home and Garage, 64 %, 3.2 V. 4 Smart Water leakage sensor, Boiler room leak, area Home, 78 %, 2.9 V. Each row shows a serial number, a device picture and an Edit link.](./protegus-app/sp5-wireless-desktop-content.webp)
 
@@ -1340,7 +1343,7 @@ Opens from **Edit**, or from a device in the scan result. The header shows the d
 |---|---|---|
 | Name | The name of the device's zone. Required. | up to 23 characters |
 | Assign area | The zone's areas. **+ Add new area** opens **Add areas**. | enabled areas |
-| Definition | The zone definition (see **Zones**). | 12 definitions |
+| Definition | The zone definition (see **Zones**). Choosing another definition sets **Delay** and **CID code** to its values, as on **Zones**. | 12 definitions |
 | Delay | The zone's response time, as on **Zones**. | 0–9999 milliseconds |
 | Zone Behavior | The same settings as **Zone Behavior** on **Zones**. **Type** and **Intelli zone** are set on the Zones page only. | as on Zones |
 
@@ -1374,7 +1377,7 @@ Key actions: **None**; **Disarm**, **Arm**, **Stay** and **Sleep** for each enab
 
 #### Receivers and device families
 
-SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH). It doesn't support Maximum Security wireless devices; the RF-LORA receiver is used only for the iO-LORA and iO8-LORA expanders.
+SP5 supports HEYI devices (RF-S8) and Crow devices (RF-SH, and RF-C8/C9 **[to confirm]**). It doesn't support Maximum Security wireless devices; the RF-LORA receiver is used only for the iO-LORA and iO8-LORA expanders.
 
 | Receiver | Device family | Devices |
 |---|---|---|
@@ -1396,7 +1399,7 @@ Menu **Devices & Interfaces → Sensors**. Lists up to 20 sensors measuring temp
 | Status | The sensor's state. **Alarm**: the reading is outside the limits. | Ok, Lost, Alarm, Unknown, N/A |
 | Name | The sensor's name. Edit it in the cell. | up to 23 characters |
 | Type | The sensor's source. | Temperature (zone), Voltage (IN), Resistance (IN), RS485 *expander name*, Wireless *zone name*, Keypad *keypad name* |
-| Live Reading | The current value. | °C, V, Ω or %; -- if none |
+| Live Reading | The current value. | °C, K or °F (the sensor's **Temperature units**), V, Ω or %; -- if none |
 | Assigned to | The terminal or device measured. | terminal name, or N/A |
 | Edit | Opens the sensor popup. | link |
 
@@ -1410,11 +1413,13 @@ Menu **Devices & Interfaces → Sensors**. Lists up to 20 sensors measuring temp
 | Name | The sensor's name. Required. | up to 23 characters |
 | Terminal | The source to measure. A source used by another sensor is not listed. With **Limited access**, it can be changed only when **Terminals** is **Read/Write**. | Disabled, or a free source (see **Sensor sources**) |
 | Assign thermostat | Makes this sensor the trigger of a thermostat. | Disabled, or a thermostat |
-| Value | Under **Min**. The lower limit. | °C, V or Ω (follows **Type**), one decimal |
+| Temperature units | The unit of the reading and of **Min** and **Max**. Shown for **Temperature** only. **[to confirm: whether the panel converts the values or only the unit shown changes]** | Celsius / Kelvin / Fahrenheit; default Celsius |
+| Value offset | A correction to the measured value **[to confirm: added to the reading before the limits are checked]**. | −12.5 to 12.5, one decimal, in the sensor's unit; default 0 |
+| Value | Under **Min**. The lower limit. | °C, K or °F (**Temperature units**), V or Ω (follows **Type**); −3276.8 to 3276.7, one decimal |
 | Notify when below | Alarm when the value falls below **Min**. | on / off |
-| Value | Under **Max**. The upper limit. | °C, V or Ω (follows **Type**), one decimal |
+| Value | Under **Max**. The upper limit. | °C, K or °F (**Temperature units**), V or Ω (follows **Type**); −3276.8 to 3276.7, one decimal |
 | Notify when above | Alarm when the value rises above **Max**. | on / off |
-| Delay | How long the value must stay below **Min** or above **Max** before the alarm. It applies to both limits; seconds are not possible. | 1 min or more |
+| MIN MAX alarm delay | How long the value must stay below **Min** or above **Max** before the alarm. It applies to both limits; seconds are not possible. | 1 min or more |
 | B Constant | The NTC thermistor's B constant, usually 3950 or 4000. Shown for **Temperature (zone)** only. | whole number |
 | NTC R0 | The NTC thermistor's nominal resistance, e.g. 10000 or 4700. Shown for **Temperature (zone)** only. | Ω, in steps of 100 |
 
@@ -1458,7 +1463,7 @@ Menu **Devices & Interfaces → Thermostats**. A thermostat switches an output w
 | (switch in the popup header) | Turns the thermostat on or off. | on / off |
 | Name | The thermostat's name. Required. | up to 23 characters |
 | When | Under **IF**: the sensor that triggers the thermostat. | Not set, or a sensor |
-| is below / is above | The threshold temperature. **is below** for Heating, **is above** for Cooling. | °C, one decimal |
+| is below / is above | The threshold temperature. **is below** for Heating, **is above** for Cooling. | in the sensor's **Temperature units**, one decimal |
 | Mode: | Under **THEN**. **Heating**: switches the output on when the temperature falls below the threshold. **Cooling**: when it rises above it. | Heating / Cooling |
 | Output: | The output to switch. Only outputs with the **Remote control** or **Thermostat** definition are listed. Saving changes a **Remote control** output to **Thermostat** (Level), which removes it from users, groups, keypad utility keys and keyfob keys. When no thermostat uses it any more, it returns to **Remote control**. | Not set, or an output |
 
@@ -1871,7 +1876,7 @@ A condition reads as a sentence: **When** the source, **Match** and the elements
 |---|---|---|
 | Type | What the action controls. | Output / Area |
 | Output / Area | The output or area. A scene can switch only outputs with the **Remote control** definition, not sirens or other outputs, and only those are listed. Only enabled areas are listed. If an action still names another output or a disabled area, for example in settings read from the panel, the box is left empty: choose one, or the app won't save the scene. | an output or area |
-| Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away**. **Arm** works as a normal arming: if the area has Stay zones and no door is opened during the delay, it arms in Stay or Sleep. **Force arm Away** arms the area in Away whatever the other conditions. | see left |
+| Action | For an output: **Turn ON**, **Turn OFF**, **Pulse**, **Toggle**. For an area: **Disarm**, **Arm**, **Arm Sleep**, **Arm Stay**, **Force arm Away**. **Arm** works as a normal arming: if the area has Stay zones and no door is opened during the delay, it arms in Stay or Sleep. **Force arm Away** arms the area in Away whatever the other conditions. The panel doesn't run **Disarm**, or another area action that lowers protection, when the scene is started by a **Zone** condition or by **No movement more than** / **No movement less than**; the popup shows a note when **Disarm** is chosen **[to confirm: which other actions count]**. | see left |
 | Pulse time, s | For **Pulse**. | 1–65535 s; default 5 |
 | When ends | What to do when the scene ends, which is when its conditions are no longer met. A scene started by a momentary condition ends at once, so use **Pulse** or an area action with it. For an output: **Do nothing** or **Invert / repeat pulse**: after **Turn ON**, **Turn OFF** or **Toggle** the output goes to the opposite state; after **Pulse** the pulse is repeated. For an area: **Do nothing** or one of the area actions. | see left |
 
@@ -1924,6 +1929,35 @@ Opens from **Edit** and **+ Add**. The title is **Holiday**. A new holiday start
 | Annual | Repeats every year; the year is not used. **Start date** and **End date** are then set as **Month** and **Day**. | on / off |
 | Start date | The first day. Required. | a date from 2000 to 2255, or Month and Day |
 | End date | The last day. Leave it empty for a one-day holiday. It can't be earlier than **Start date**, except for an annual holiday: its range may cross New Year, for example 24 Dec – 2 Jan. | as Start date |
+
+### Log
+
+Menu **Diagnostics → Log** **[the beta calls it Event Log; to confirm the released name]**. Reads the panel's event log (up to 5000 events) and shows it newest first. The app reads only when you press **Read**, and only the number of newest events you choose. You can also clear the log here.
+
+#### Log page
+
+| Setting | What it does | Values |
+|---|---|---|
+| Alarm, Trouble, Arm / Disarm, Access, Communication, Total events | Cards at the top: how many of the read events happened today, per category and in total. | number |
+| Search | Filters the read events by event, category, method, extra text and object names. | text |
+| Events to read | How many of the newest events **Read** fetches. | 100, 500 or 1000; over USB also 2000 and 5000; default 100 |
+| Read | Reads the events from the panel and shows the progress in %. Asks for the **Configuration access code**, unless the configurator is connected with the factory code **[to confirm: whether the Limited access code is accepted]**. You can open other pages while it reads. | button |
+| Clear log | Asks for the administrator code, then deletes all events in the panel. | button |
+| (category buttons) | Show only the chosen categories. Click again to remove one; with none chosen, all are shown. | Alarm, Alarm restore, Wireless, System, Trouble, Trouble restore, Arm / Disarm, Access, Automation, PGM, Communication, Door |
+| Export | Saves the events shown as a CSV file (separated by semicolons). Not in the Android and iPhone apps. | button |
+| (date button) | Shows only events from **Start date** to **End date**, or the last **Day**, **Week** or **Month**. **Filter** applies the dates; **Clear** removes them. | dates |
+
+#### Event list
+
+| Column | Shows | Values |
+|---|---|---|
+| Time | The time and date by the panel's clock. Events are grouped under date headings; today and yesterday are marked **Today** and **Yesterday**. | hh:mm:ss, yyyy-mm-dd |
+| Category | The event's category. | as the category buttons |
+| Event | The event, with any extra text from the panel under it. An event the app doesn't know is shown as **Event 0x…**. | text |
+| Location / User | The objects of the event: areas, zones, outputs, users, keypads, wireless devices, sensors, schedules, scenes, holidays, expanders, thermostats, for example **Zone 3: Kitchen smoke**. An object with its default name shows only that, for example **Zone 3**. | — |
+| (click a row) | Opens the details: **No.**, **Internal ID**, each object, **Method** (how the event was caused: keypad, RFID card, SMS, call, Protegus2, USB, automatic and others), **CID** (the Contact ID code) and **Additional info**. | — |
+
+Click a column header to sort by it, again to reverse the order, and a third time to return to newest first. While the log is being read or cleared, **Write**, **Read** in the menu and the firmware update are not available.
 
 ## Appendix: system events and Contact ID codes
 
