@@ -1409,154 +1409,200 @@ Linking electronic keys using the CZ-Dallas reader.
 
 ### Wireless <span id="56-wireless-window"></span>
 
-<img alt="TrikdisConfig Wireless sensors window. The Sensors table shows Device type as Disabled in the visible rows, with columns for Serial No., Area, User, Key 3, Key 4 and Configure." src="./image68.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
+**Wireless sensors**
+
+=== "Protegus app"
+
+    Open **Wireless**. The list shows each wireless device with its battery voltage and signal strength; tap a device to see its settings. With firmware 1.23 or later, tap **Update** to read the current battery and signal levels.
+
+    ![Protegus app, Wireless, Sensors: a note “Settings have been changed press Write to save them.”, Learn and Update buttons, then 1 Corner Pir 403117 3.05 V 86 %, 2 Magnet 403542 3.10 V 72 %, 3 Smoke 404018 3.00 V 64 %, 4 Remote control 405233 2.95 V 78 %, and slots 5 to 11 Disabled.](./protegus-app/sp3-wireless-phone.webp){ .trik-mob-img }
+
+    ![Protegus app, Corner Pir device: Device Corner Pir, Serial number 403117, RSSI 86 %, Battery 3.05 V, Enable LED on, Sleep time 10 s, PIR1 sensitivity 10, PIR1 pulses count 3, and an Ok button.](./protegus-app/sp3-wireless-device-phone.webp){ .trik-mob-img }
+
+
+    After **Update**, the app says the settings have changed and asks you to press **Write** [to confirm: whether anything needs writing after Update]. Which settings a device has depends on its type. On revisions ending in 4 with firmware 1.19 or later, the app also shows **Supervision time (min)** [to confirm: what it does on the SP3].
+
+=== "TrikdisConfig"
+
+    <img alt="TrikdisConfig Wireless sensors window. The Sensors table shows Device type as Disabled in the visible rows, with columns for Serial No., Area, User, Key 3, Key 4 and Configure." src="./image68.webp" style="width:7.086614173228346in;height:1.9251968503937007in" />
 
 “FLEXI” SP3, with a connected RF-LORA module, can use wireless sensors, sirens, and key fobs from the company “Maximum”.
 
-#### Registration of the RF-LORA receiver of wireless sensors to the FLEXi SP3 control panel 
+#### Registration of the RF-LORA receiver of wireless sensors to the FLEXi SP3 control panel
 
 The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**4**\_0121.fw (firmware version 1.21 or higher), which will ensure the operation of “Maximum” wireless sensors. The RF-LORA wireless transceiver must be connected to the control panel.
 
-1.  Switch on the power supply to the “FLEXi” SP3 control panel.
+=== "Protegus app"
 
-2.  Wait 1 minute.
+    1.  Switch on the power supply to the „FLEXi“ SP3 and wait 1 minute.
+    2.  In the Protegus app, open **Settings → Advanced settings** and tap **Read**.
+    3.  Open **Modules → RS485 modules**. If **RF-LORA** is in the list with a firmware version, it is already linked; skip the remaining steps.
+    4.  Tap **<Add module>**, choose **RF-LORA** under **Module**, enter the RF-LORA’s **Serial number** (on the device and the packaging sticker) and tap **Ok**.
+    5.  Go back to **Advanced settings** and tap **Write**.
+    6.  Wait 1 minute for the „FLEXi“ SP3 and the RF-LORA to link together, then tap **Read**. The RF-LORA now shows its **Firmware version** in **Modules → RS485 modules**.
 
-3.  Launch ***TrikdisConfig**.*
+=== "TrikdisConfig"
 
-4.  Connect the “FLEXi” SP3 to a computer using a USB Mini-B cable.
+    1.  Switch on the power supply to the “FLEXi” SP3 control panel.
 
-5.  The list of modules should show "**RF-LORA transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-LORA transceiver, you can skip steps 6-13.
+    2.  Wait 1 minute.
 
-<img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+    3.  Launch ***TrikdisConfig**.*
 
-6. If the list does not indicate "**RF-LORA transceiver**", then you must select "**RF-LORA transceiver**" from the list.
+    4.  Connect the “FLEXi” SP3 to a computer using a USB Mini-B cable.
 
-2.  In the “**Serial No.**” field, enter the serial number of the RF-LORA module. This serial number can be found on the device and the packaging sticker.
+    5.  The list of modules should show "**RF-LORA transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-LORA transceiver, you can skip steps 6-13.
 
-<img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted RF-LORA transceiver row has a populated Serial No. field and an empty Firmware version field." src="./image70.webp" style="width:7.086614173228346in;height:1.5826771653543308in" />
+    <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
-3. Click **Write [F5]**.
+    6. If the list does not indicate "**RF-LORA transceiver**", then you must select "**RF-LORA transceiver**" from the list.
 
-2.  Disconnect the USB Mini-B cable.
+    2.  In the “**Serial No.**” field, enter the serial number of the RF-LORA module. This serial number can be found on the device and the packaging sticker.
 
-3.  Wait 1 minute for the “FLEXi” SP3 and RF-LORA to link together.
+    <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted RF-LORA transceiver row has a populated Serial No. field and an empty Firmware version field." src="./image70.webp" style="width:7.086614173228346in;height:1.5826771653543308in" />
 
-4.  Connect a USB Mini-B cable to the “FLEXi” SP3.
+    3. Click **Write [F5]**.
 
-5.  Click **Read [F4]**.
+    2.  Disconnect the USB Mini-B cable.
 
-6.  The firmware version of the RF-LORA will appear in the “**Modules**” window.
+    3.  Wait 1 minute for the “FLEXi” SP3 and RF-LORA to link together.
 
-<img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+    4.  Connect a USB Mini-B cable to the “FLEXi” SP3.
 
-14. The RF-LORA module is now linked to the “FLEXi” SP3.
+    5.  Click **Read [F4]**.
 
-15. Disconnect the USB Mini-B cable.
+    6.  The firmware version of the RF-LORA will appear in the “**Modules**” window.
 
-16. Click “**Disconnect**”.
+    <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
-<img alt="TrikdisConfig Modules window, RS485 modules tab. The RF-LORA transceiver row shows a firmware version, and the Disconnect button is highlighted." src="./image71.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
+    14. The RF-LORA module is now linked to the “FLEXi” SP3.
 
-17. Wait 1 minute.
+    15. Disconnect the USB Mini-B cable.
 
-#### Remote linking of wireless sensors 
+    16. Click “**Disconnect**”.
 
-Using TrikdisConfig, remotely connect to the “FLEXi” SP3 control panel.
+    <img alt="TrikdisConfig Modules window, RS485 modules tab. The RF-LORA transceiver row shows a firmware version, and the Disconnect button is highlighted." src="./image71.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
-!!! warning "Important"
-    Remote configuration will only work when "FLEXi" SP3:
+    17. Wait 1 minute.
 
-    1.  An activated SIM card must be inserted and the PIN code must be
-        entered or disabled, or the control panel must be connected to a
-        WiFi network.
+#### Remote linking of wireless sensors
 
-    2.  If a SIM card is used, mobile internet is activated on it.
+=== "Protegus app"
 
-    3.  Protegus cloud service must be enabled.
+    The app always connects remotely, so the panel must be online.
 
-    4.  The power must be switched on ("**PWR**" LED must be green
-        blinking).
+    1.  Insert batteries into the wireless sensors. Keep the RF-LORA at least 1 m from the sensors.
+    2.  Open **Wireless** and tap **Learn**. The app shows **Learning mode**, and the “**DATA/TROUBLE**” LED on the RF-LORA flashes green/red. If the app says the operation was aborted, check that all areas are disarmed and the system has no faults, then try again.
+    3.  Press the “**TAMPER**” button on the sensor.
 
-    5.  Must be connected to network ("**NET**" LED must be green solid and
-        yellow blinking).
-In the “**Remote access**” section enter the control panel “**IMEI/Unique ID**” number. This number can be found on the device and the packaging sticker.
+        <img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
-<img alt="TrikdisConfig Remote access section. The Unique ID field and Configure button are highlighted for connecting to a control panel." src="./image72.webp" style="width:7.086614173228346in;height:2.141732283464567in" />
+    4.  When the app finds the sensor (“New device was found”), choose its zone in **Select zone** and its definition in **Select zone definition**.
+    5.  To add the next sensor, press its “**TAMPER**” button and choose its zone and definition the same way.
+    6.  Tap **Stop learning**, go back to **Advanced settings** and tap **Write**.
+    7.  Check in **Zones** that the sensors are assigned to the right zones and areas.
 
-Click “**Configure**”.
+    To delete a wireless device, open it in **Wireless**, set **Device** to **Disabled** and tap **Write**.
 
-In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code.
+=== "TrikdisConfig"
 
-Go to the “**Wireless sensors**” window.
+    Using TrikdisConfig, remotely connect to the “FLEXi” SP3 control panel.
 
-<img alt="TrikdisConfig Wireless sensors window. The Sensors table shows disabled devices, with Learn sensors and Update buttons above it." src="./image73.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
+    !!! warning "Important"
+        Remote configuration will only work when "FLEXi" SP3:
 
-Click the “**Learn sensors**” button.
+        1.  An activated SIM card must be inserted and the PIN code must be
+            entered or disabled, or the control panel must be connected to a
+            WiFi network.
 
-<img alt="TrikdisConfig Wireless sensors window. The Learn sensors button above the Sensors table is highlighted." src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
+        2.  If a SIM card is used, mobile internet is activated on it.
 
-All wireless sensors can be linked simultaneously. Insert batteries into the wireless sensors (PIR, magnetic contact, flood detector, smoke detector, siren).
+        3.  Protegus cloud service must be enabled.
 
-When enrolling sensors, the *RF-LORA* module must be at least 1 m from the sensors.
+        4.  The power must be switched on ("**PWR**" LED must be green
+            blinking).
 
-1.  The “**DATA/TROUBLE**” LED on the RF-LORA module will flash green/red.
+        5.  Must be connected to network ("**NET**" LED must be green solid and
+            yellow blinking).
+    In the “**Remote access**” section enter the control panel “**IMEI/Unique ID**” number. This number can be found on the device and the packaging sticker.
 
-2.  RF-LORA module - switches to learning mode. TrikdisConfig will open the sensor binding window.
+    <img alt="TrikdisConfig Remote access section. The Unique ID field and Configure button are highlighted for connecting to a control panel." src="./image72.webp" style="width:7.086614173228346in;height:2.141732283464567in" />
 
-<img alt="TrikdisConfig Learning mode window. It instructs the user to insert batteries into the new sensor and wait for initialization; a Stop learning button is below." src="./image75.webp" style="width:3.7401574803149606in;height:2.322834645669291in" />
+    Click “**Configure**”.
 
-3. Press the "**TAMPER**" button on the sensor.
+    In the newly opened window click **Read [F4]**. If required, enter the administrator or installer code.
 
-<img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
+    Go to the “**Wireless sensors**” window.
 
-4. On the RF-LORA module, the “**DATA/TROUBLE**” LED will flash green for a short time (this indicates that the sensor is enrolled). After a few seconds, the “**DATA/TROUBLE**” indicator will start flashing green/red again.
+    <img alt="TrikdisConfig Wireless sensors window. The Sensors table shows disabled devices, with Learn sensors and Update buttons above it." src="./image73.webp" style="width:7.086614173228346in;height:1.7480314960629921in" />
 
-2.  TrikdisConfig will open a new window in which you need to assign a “**Zone Number**” and “**Zone Definition**” to the wireless sensor.
+    Click the “**Learn sensors**” button.
 
-3.  Click “**Save**”.
+    <img alt="TrikdisConfig Wireless sensors window. The Learn sensors button above the Sensors table is highlighted." src="./image74.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
-<img alt="TrikdisConfig New device was found window for a Corner PIR sensor. The highlighted settings are Zone number 1 and Zone definition Instant, followed by the highlighted Save button." src="./image77.webp" style="width:3.0708661417322833in;height:1.9724409448818898in" />
+    All wireless sensors can be linked simultaneously. Insert batteries into the wireless sensors (PIR, magnetic contact, flood detector, smoke detector, siren).
 
-4. Wireless sensor is included in the list of sensors.
+    When enrolling sensors, the *RF-LORA* module must be at least 1 m from the sensors.
 
-2.  If you need to add the next sensor, you need to press the “**TAMPER**” button on the sensor. And make the settings described above.
+    1.  The “**DATA/TROUBLE**” LED on the RF-LORA module will flash green/red.
 
-3.  Click “**Stop learning**” to complete the registration of wireless sensors.
+    2.  RF-LORA module - switches to learning mode. TrikdisConfig will open the sensor binding window.
 
-<img alt="Learning mode window instructs the user to insert the batteries into the new sensor and wait for initialization. A highlighted message reports: New device was found: ID 1 Corner PIR. The Stop learning button is highlighted." src="./image78.webp" style="width:3.7401574803149606in;height:2.645669291338583in" />
+    <img alt="TrikdisConfig Learning mode window. It instructs the user to insert batteries into the new sensor and wait for initialization; a Stop learning button is below." src="./image75.webp" style="width:3.7401574803149606in;height:2.322834645669291in" />
 
-10. Click “**Yes**” for the sensors to be written to the “FLEXi” SP3 control panel or "**No**" if you want to adjust the parameters additionally.
+    3. Press the "**TAMPER**" button on the sensor.
 
-<img alt="Save configuration dialog asks whether to save new parameters to the module. The Yes button is highlighted; No is also available." src="./image79.webp" style="width:2.7559055118110236in;height:1.1614173228346456in" />
+    <img alt="Drawing of the back of an open wireless sensor. A red arrow labelled Tamper points to the spring-loaded tamper switch near the upper left." src="./image76.webp" style="width:1.7733366141732283in;height:2.37667104111986in" />
 
-Wait a few minutes. Click **Read [F4].**
+    4. On the RF-LORA module, the “**DATA/TROUBLE**” LED will flash green for a short time (this indicates that the sensor is enrolled). After a few seconds, the “**DATA/TROUBLE**” indicator will start flashing green/red again.
 
-TrikdisConfig will display a list of registered wireless sensors in the “**Wireless sensors**” window. The “**Serial No.**” field will list the serial number.
+    2.  TrikdisConfig will open a new window in which you need to assign a “**Zone Number**” and “**Zone Definition**” to the wireless sensor.
 
-<img alt="TrikdisConfig Wireless sensors window, Sensors tab. A registered Corner PIR row is highlighted, including its Serial No. field; the serial number is omitted." src="./image80.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+    3.  Click “**Save**”.
 
-Check that the sensors are correctly assigned to the “**Zones”** and “**Areas**” of the control panel (“**Zones**” window).
+    <img alt="TrikdisConfig New device was found window for a Corner PIR sensor. The highlighted settings are Zone number 1 and Zone definition Instant, followed by the highlighted Save button." src="./image77.webp" style="width:3.0708661417322833in;height:1.9724409448818898in" />
 
-<img alt="TrikdisConfig Zones window, Zones settings tab. The highlighted Zone 1 row has an Input beginning Wireless Corner, Area 1, Definition Instant and Type EOL_T." src="./image81.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+    4. Wireless sensor is included in the list of sensors.
 
-If you set zone **“Type”** EOL-T, then the sensor tamper monitoring mode will be enabled.
+    2.  If you need to add the next sensor, you need to press the “**TAMPER**” button on the sensor. And make the settings described above.
 
-After making changes, press **Write [F5]**..
+    3.  Click “**Stop learning**” to complete the registration of wireless sensors.
 
-!!! note
-    To delete wireless sensors from the "FLEXi" SP3's memory:
-    
-    1.  Launch ***TrikdisConfig**.*
-    
-    2.  Connect the „FLEXi" SP3 to a computer using a USB Mini-B cable
-        or connect to the „FLEXi" SP3 remotely. Click the
-        **Read [F4]** button.
-    
-    3.  In the TrikdisConfig window "**Wireless sensors**", in the
-        column "**Device type**", select "**Disabled**" instead of the
-        wireless sensor that you wish to delete and click **Write [F5]**.
-        The wireless sensor is now removed from the "FLEXi"
-        SP3's memory.
+    <img alt="Learning mode window instructs the user to insert the batteries into the new sensor and wait for initialization. A highlighted message reports: New device was found: ID 1 Corner PIR. The Stop learning button is highlighted." src="./image78.webp" style="width:3.7401574803149606in;height:2.645669291338583in" />
+
+    10. Click “**Yes**” for the sensors to be written to the “FLEXi” SP3 control panel or "**No**" if you want to adjust the parameters additionally.
+
+    <img alt="Save configuration dialog asks whether to save new parameters to the module. The Yes button is highlighted; No is also available." src="./image79.webp" style="width:2.7559055118110236in;height:1.1614173228346456in" />
+
+    Wait a few minutes. Click **Read [F4].**
+
+    TrikdisConfig will display a list of registered wireless sensors in the “**Wireless sensors**” window. The “**Serial No.**” field will list the serial number.
+
+    <img alt="TrikdisConfig Wireless sensors window, Sensors tab. A registered Corner PIR row is highlighted, including its Serial No. field; the serial number is omitted." src="./image80.webp" style="width:7.086614173228346in;height:1.5590551181102361in" />
+
+    Check that the sensors are correctly assigned to the “**Zones”** and “**Areas**” of the control panel (“**Zones**” window).
+
+    <img alt="TrikdisConfig Zones window, Zones settings tab. The highlighted Zone 1 row has an Input beginning Wireless Corner, Area 1, Definition Instant and Type EOL_T." src="./image81.webp" style="width:7.086614173228346in;height:1.736220472440945in" />
+
+    If you set zone **“Type”** EOL-T, then the sensor tamper monitoring mode will be enabled.
+
+    After making changes, press **Write [F5]**..
+
+    !!! note
+        To delete wireless sensors from the "FLEXi" SP3's memory:
+
+        1.  Launch ***TrikdisConfig**.*
+
+        2.  Connect the „FLEXi" SP3 to a computer using a USB Mini-B cable
+            or connect to the „FLEXi" SP3 remotely. Click the
+            **Read [F4]** button.
+
+        3.  In the TrikdisConfig window "**Wireless sensors**", in the
+            column "**Device type**", select "**Disabled**" instead of the
+            wireless sensor that you wish to delete and click **Write [F5]**.
+            The wireless sensor is now removed from the "FLEXi"
+            SP3's memory.
+
 #### Linking wireless sensors without remote access 
 
 All wireless sensors can be linked simultaneously. Insert batteries into the wireless sensors (PIR, magnetic contact, flood detector, smoke detector, siren). **When enrolling sensors, the *RF-LORA* module must be at least 1 m from the sensors.**
