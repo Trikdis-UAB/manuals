@@ -191,7 +191,7 @@ Don't see your question? Contact [support@trikdis.lt](mailto:support@trikdis.lt)
 6.  SMA screw-on type connector for WiFi antenna.
 7.  Nano-SIM card holder.
 8.  SMA screw-on type connector for Cellular antenna.
-9.  USB Mini-B connector for configuring the control panel’s settings.
+9.  USB Mini-B connector (USB Type-C on SP3_8xx boards) for configuring the control panel’s settings.
 
 | **Terminal** | **Description** |
 |----|----|
@@ -295,7 +295,7 @@ If there are problems with powering the system from the main power supply, an *A
 | Terminal block with 3,15 A fuse                                 | 1 pc.    |
 
 !!! note
-    USB wire (Mini-B type) for programming the control panel sold
+    USB wire (Mini-B type; Type-C for SP3_8xx boards) for programming the control panel sold
     separately.
 ## Installation of the system
 
@@ -581,7 +581,7 @@ The *„FLEXI“ SP3* can be used to measure DC voltage. Voltage from 0 V to 30
 
 <img alt="Wiring diagram: SP3 to equipment whose voltage is measured. SP3 IN1 connects to equipment +U, and SP3 C connects to equipment -U." src="./image45.webp" style="width:3.516674321959755in;height:0.8000010936132983in" />
 
-Connect the „FLEXI“ SP3 to a computer with a USB Type-C cable. Run TrikdisConfig. The software will automatically recognize the connected „FLEXI“ SP3 and will open a window for configuration. In the “**Sensor**” window, specify the “**In1 Voltage**” and also specify the amount of voltage above which a message will be generated.
+Connect the „FLEXI“ SP3 to a computer with a USB Mini-B cable (SP3_8xx boards: USB Type-C). Run TrikdisConfig. The software will automatically recognize the connected „FLEXI“ SP3 and will open a window for configuration. In the “**Sensor**” window, specify the “**In1 Voltage**” and also specify the amount of voltage above which a message will be generated.
 
 - **Max** – when the voltage is higher than this setting, an event message will be generated. For an event message to be generated, the “**High**” box must be ticked.
 
@@ -768,7 +768,7 @@ Most settings described below can be changed in the Protegus app or in TrikdisCo
 
 === "Protegus app"
 
-    **Before you configure in the app.** The control panel must be online and added to a Protegus2 account (see [Linking the „FLEXi“ SP3 to a user’s Protegus2 account](#41-linking-the-flexi-sp3-to-a-users-protegus2-account)), and its firmware must be 1.12 or later: with older firmware the app says the version is not supported and shows no **Read** button. A panel that is not yet online is set up first over USB in TrikdisConfig. When a panel is added in the phone app and the app cannot find it online, it offers to set up the panel’s WiFi from the phone only for revisions starting with 1, 2, 3E or 52; for the other models, use USB.
+    **Before you configure in the app.** The control panel must be online and added to a Protegus2 account (see [Linking the „FLEXi“ SP3 to a user’s Protegus2 account](#41-linking-the-flexi-sp3-to-a-users-protegus2-account)), and its firmware must be 1.12 or later: with older firmware the app says the version is not supported and shows no **Read** button. A panel that is not yet online is set up first over USB in TrikdisConfig. When a panel is added in the phone app and the app cannot find it online, it offers to set up the panel’s WiFi from the phone only for revisions starting with 1, 2, 3E or 52.
 
     1. Open the system in the Protegus app and go to **Settings → Advanced settings**. The first time, the app warns that wrong settings can stop the system working; confirm to go on.
     2. Tap **Read** to load the panel’s settings. If the panel does not use the default administrator code, the app asks for the access code.
@@ -782,7 +782,7 @@ Most settings described below can be changed in the Protegus app or in TrikdisCo
 
     1.  Download the configuration software TrikdisConfig from [www.trikdis.com/](http://www.trikdis.com/lt) (enter “TrikdisConfig” in the search field) and install it.
 
-    2.  Connect the „FLEXi“ SP3 to a computer using a USB Mini-B cable.
+    2.  Connect the „FLEXi“ SP3 to a computer using a USB Mini-B cable (SP3_8xx boards: USB Type-C).
 
         **Note:** If you connect the „FLEXi“ SP3 to a computer using a USB cable while it is powered on and operating, the „FLEXi“ SP3 will stop performing its control panel functions and will switch to programming mode.
 
@@ -1483,9 +1483,9 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
     3. Launch ***TrikdisConfig**.*
 
-    4. Connect the “FLEXi” SP3 to a computer using a USB Mini-B cable.
+    4. Connect the “FLEXi” SP3 to a computer using a USB Mini-B cable (SP3_8xx boards: USB Type-C).
 
-    5. The list of modules should show "**RF-LORA transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-LORA transceiver, it is already linked: go on from “Disconnect the USB Mini-B cable”.
+    5. The list of modules should show "**RF-LORA transceiver**", as well as the serial number and firmware version. If you see the firmware version of the RF-LORA transceiver, it is already linked: go on from “The RF-LORA module is now linked”.
 
         <img alt="TrikdisConfig Modules window, RS485 modules tab. The highlighted row shows RF-LORA transceiver under Module, a populated Serial No. field and RF-Lora 433 02.39 under Firmware version." src="./image69.webp" style="width:7.086614173228346in;height:1.562992125984252in" />
 
@@ -1497,11 +1497,11 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
     8. Click **Write [F5]**.
 
-    9. Disconnect the USB Mini-B cable.
+    9. Disconnect the USB cable.
 
     10. Wait 1 minute for the “FLEXi” SP3 and RF-LORA to link together.
 
-    11. Connect a USB Mini-B cable to the “FLEXi” SP3.
+    11. Connect a USB Mini-B cable (SP3_8xx boards: USB Type-C) to the “FLEXi” SP3.
 
     12. Click **Read [F4]**.
 
@@ -1511,7 +1511,7 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
     14. The RF-LORA module is now linked to the “FLEXi” SP3.
 
-    15. Disconnect the USB Mini-B cable.
+    15. Disconnect the USB cable.
 
     16. Click “**Disconnect**”.
 
@@ -1627,7 +1627,7 @@ The „FLEXi“ SP3 control panel is equipped with firmware revision 4 SP3_xxx**
 
         1.  Launch ***TrikdisConfig**.*
 
-        2.  Connect the „FLEXi" SP3 to a computer using a USB Mini-B cable
+        2.  Connect the „FLEXi" SP3 to a computer using a USB Mini-B cable (SP3_8xx boards: USB Type-C)
             or connect to the „FLEXi" SP3 remotely. Click the
             **Read [F4]** button.
 
@@ -1676,7 +1676,7 @@ Then check the result:
 
 === "TrikdisConfig"
 
-    1. Connect a USB Mini-B cable to the “FLEXi” SP3.
+    1. Connect a USB Mini-B cable (SP3_8xx boards: USB Type-C) to the “FLEXi” SP3.
 
     2. Launch TrikdisConfig. Press the **Read [F4]** button.
 
@@ -2152,7 +2152,7 @@ Perform these steps:
 
 1.  Launch ***TrikdisConfig**.*
 
-2.  Connect the „FLEXi“ SP3 to a computer using a USB Mini-B cable or connect to the „FLEXi“ SP3 remotely. If a newer version of firmware is available, the program will automatically offer to install it.
+2.  Connect the „FLEXi“ SP3 to a computer using a USB Mini-B cable (SP3_8xx boards: USB Type-C) or connect to the „FLEXi“ SP3 remotely. If a newer version of firmware is available, the program will automatically offer to install it.
 
 3.  Open the TrikdisConfig window **Firmware**.
 
