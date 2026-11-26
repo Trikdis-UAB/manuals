@@ -831,6 +831,7 @@ When the **Read [F4]** button is clicked, the program will read and display the 
 === "TrikdisConfig"
 
     **“System general” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System Options window on the System general tab. The General, SIM and Time settings groups show fields including Object ID, APN set to internet, EOL Type set to 2k2+2k2+4k7, time zone set to +2 and Power failure delay set to 300 seconds." src="./image53.webp" style="width:7.086614173228346in;height:4.062992125984252in" />
 
@@ -901,6 +902,7 @@ You can set the time with the <span class="trik-term"><span class="trik-term-app
 === "TrikdisConfig"
 
     **“Partitions” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System Options window on the Partitions tab, with Partitions enabled set to 8. The table lists Areas 1–8 with Entry, Exit, Bell, Squawk, Re-ARM, Force-ARM, Keyswitch and Tamper settings." src="./image54.webp" style="width:7.086614173228346in;height:2.8070866141732282in" />
 
@@ -935,6 +937,7 @@ You can set the time with the <span class="trik-term"><span class="trik-term-app
 === "TrikdisConfig"
 
     **“Scheduler” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System Options window on the Scheduler tab. The schedule table has columns for Enable, Partition, Time, Not Armed, Action, days of the week, Holiday and Holiday group; visible rows show partition 1, 00:00, Disarm, Holiday Disabled and group Any." src="./image55.webp" style="width:7.086614173228346in;height:1.921259842519685in" />
 
@@ -967,6 +970,7 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 === "TrikdisConfig"
 
     **“Holidays” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System Options window on the Holidays tab. The visible holiday rows are enabled, show matching start and stop dates of 01.01.2000, and have unchecked boxes for Groups 1–4." src="./image56.webp" style="width:7.086614173228346in;height:1.9291338582677164in" />
 
@@ -989,6 +993,7 @@ In this table, you can arrange scenarios for automatically arming and disarming 
 === "TrikdisConfig"
 
     **“System troubles” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System Options window on the System troubles tab. A table lists faults from AC Fault through Antimasking Fault, each with an unchecked Restrict ARM box." src="./image57.webp" style="width:7.086614173228346in;height:2.9881889763779528in" />
 
@@ -1008,6 +1013,7 @@ If arming is restricted for a fault, the control panel cannot be armed while tha
 === "TrikdisConfig"
 
     **“Access” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System Options window on the Access tab. Access codes include Administrator Code 123456, SMS password and Installer Code fields; Installer permissions show Object ID and SIM card checked, with Area Settings and the visible menus set to Editable." src="./image58.webp" style="width:7.086614173228346in;height:3.1102362204724407in" />
 
@@ -1047,6 +1053,7 @@ If arming is restricted for a fault, the control panel cannot be armed while tha
 === "TrikdisConfig"
 
     **“Reporting” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Reporting to CMS window on the Reporting tab. Primary and backup channels have Communication type set to Disabled; parallel and parallel backup channels show TCP/IP. These four panels have Domain or IP, Port, Protocol, Phone number and Encryption Key fields. Separate Backup channel 2 and Parallel backup channel 2 panels show only Phone number fields." src="./image59.webp" style="width:7.086614173228346in;height:3.87007874015748in" />
 
@@ -1111,6 +1118,7 @@ SMS notifications will be sent to the Central Monitoring Station SMS receiver: 1
 === "TrikdisConfig"
 
     **“Settings” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Reporting to CMS window on the Settings tab. Return to Primary after is 5 minutes, IP Ping period is enabled at 60 seconds, DHCP mode is checked, and both CMS and Protegus use WiFi as Main type and SIM as Backup type." src="./image60.webp" style="width:7.086614173228346in;height:3.8818897637795278in" />
 
@@ -1192,6 +1200,7 @@ For setting parameters on how the control panel will communicate with the CMS ch
 === "TrikdisConfig"
 
     **“Users” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Users & Reporting window on the Users tab. The Users & Reporting to User table has fields for Name, Tel number, Email, Code, Tag code and Areas, followed by reporting option checkboxes." src="./image61.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
@@ -1276,6 +1285,7 @@ Linking electronic keys using the CZ-Dallas reader.
 === "TrikdisConfig"
 
     **“Protegus” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Users & Reporting window on the Protegus tab. In Cloud application, Enable cloud service and Parallel reporting are checked, and Cloud Access Code is 123456." src="./image63.webp" style="width:7.086614173228346in;height:1.7401574803149606in" />
 
@@ -1298,6 +1308,7 @@ Linking electronic keys using the CZ-Dallas reader.
 === "TrikdisConfig"
 
     **“SMS answer texts” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Users & Reporting window on the SMS answer texts tab. The table pairs answer types with editable SMS text, including Command done, Wrong password, Wrong data, Wrong command, Zone alarm, Zone restore, Output ON and Output OFF." src="./image64.webp" style="width:7.086614173228346in;height:2.645669291338583in" />
 
@@ -1328,6 +1339,7 @@ Linking electronic keys using the CZ-Dallas reader.
 === "TrikdisConfig"
 
     **“Keypads” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Modules window, Keypads tab. The keypad table has Serial, Keypad type, Areas and Remove columns. The Keypad parameters panel shows Quick ARM checked, Incorrect codes until lockout set to 3 and Lockout timer set to 1 min." src="./image65.webp" style="width:7.086614173228346in;height:3.716535433070866in" />
 
@@ -1387,6 +1399,7 @@ Linking electronic keys using the CZ-Dallas reader.
 === "TrikdisConfig"
 
     **“RS485 modules” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Modules window, RS485 modules tab. The Module dropdown is open, showing choices including iO expander, E485 communicator and RF-LORA transceiver." src="./image66.webp" style="width:7.086614173228346in;height:3.641732283464567in" />
 
@@ -1415,6 +1428,7 @@ Linking electronic keys using the CZ-Dallas reader.
 === "TrikdisConfig"
 
     **“E485 settings” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Modules window, E485 settings tab. Under Communicator network settings, DHCP mode is checked; Static IP, Subnet mask and Default gateway each show 0.0.0.0." src="./image67.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
@@ -1697,6 +1711,7 @@ Then check the result:
 === "TrikdisConfig"
 
     **“Zones settings” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig Zones window, Zones settings tab. The table lists each zone’s Name, Input, Area, Definition, Type, reporting options, Delay and CID Code; Zone 1 uses SP3 1 I/O, Area 1, Instant and EOL_T." src="./image82.webp" style="width:7.086614173228346in;height:1.9330708661417322in" />
 
@@ -1788,6 +1803,7 @@ This tab will only be shown if there is at least one user phone number in the *[
 === "TrikdisConfig"
 
     **“Outputs tab”**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig PGM window, Outputs tab. PGM 1 uses BELL with output definition Siren; PGM 2 uses LED with System State; PGM 3 uses SP3 10 I/O with Fire Sensor Reset. Each visible row has Pulse Time 20 s." src="./image84.webp" style="width:7.086614173228346in;height:2.094488188976378in" />
 
@@ -1833,6 +1849,7 @@ This tab will only be shown if there is at least one user phone number in the *[
 === "TrikdisConfig"
 
     **“Set Action” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig PGM window, Set Action tab. The table has Enable, PGM No., Action, Pulse Time, Factor, Factor No., Start when and Set value columns. Visible rows are disabled and show PGM No. N/A, Action PGM OFF and Factor Arm." src="./image85.webp" style="width:7.086614173228346in;height:2.106299212598425in" />
 
@@ -1884,6 +1901,7 @@ The SMS message text is case-sensitive.
 === "TrikdisConfig"
 
     **“Control” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig PGM window, Control tab. Entry/Exit control lists iButton, Wiegand 1 (G/Y) and Wiegand 2 (IO) readers. Paradox keypad control shows Utility key 1 (1+2) set to Area statuses; the other visible utility keys are set to None and Pulse." src="./image86.webp" style="width:7.086614173228346in;height:2.5118110236220472in" />
 
@@ -1916,6 +1934,7 @@ The SMS message text is case-sensitive.
 === "TrikdisConfig"
 
     **“Scheduler” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig PGM window, Scheduler tab. Each schedule has Enable, Start time and Stop time fields with separate Monday through Sunday checkboxes. The visible times are 00:00 and the checkboxes are clear." src="./image87.webp" style="width:7.086614173228346in;height:2.1141732283464565in" />
 
@@ -1942,6 +1961,7 @@ The SMS message text is case-sensitive.
 === "TrikdisConfig"
 
     **“Thermostat” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig PGM window, Thermostat tab. The table shows ID, PGM No., Action, Active, Sensor No. and Temperature. Visible thermostats have PGM No. N/A, Action Heat, no active sensors and Temperature 0." src="./image88.webp" style="width:7.086614173228346in;height:3.4173228346456694in" />
 
@@ -2015,6 +2035,7 @@ The SMS message text is case-sensitive.
 === "TrikdisConfig"
 
     **“Events” tab**
+    {: .trik-tab-title }
 
     <img alt="TrikdisConfig System events window, Events tab. The table lists Event name, Enable, CMS, Prot., CID Code, SMS event text and SMS restore text. Visible events include Low Battery, Periodic test, Arm/Disarm, RS485 fault, High temperature and Low temperature." src="./image91.webp" style="width:7.086614173228346in;height:2.468503937007874in" />
 

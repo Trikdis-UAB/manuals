@@ -37,6 +37,25 @@
     break-after: avoid;
   }
 
+  /* A tab that starts with its window's title ("“Settings” tab", marked .trik-tab-title in the Markdown) and a
+     screenshot: keep the label, the title and the screenshot together. Chrome ignores break-after on the
+     ::before label, and on the SP3 page it left 6 labels and titles at page bottoms with the screenshot on
+     the next page (2026-11-26). Only marked titles, so other pages (GET) paginate exactly as before. */
+  .md-typeset .tabbed-set.tabbed-alternate > .tabbed-content > .tabbed-block[data-label] > p.trik-tab-title:first-child {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  .md-typeset .tabbed-set.tabbed-alternate > .tabbed-content > .tabbed-block[data-label] > p.trik-tab-title:first-child + * {
+    break-before: avoid-page;
+    page-break-before: avoid;
+  }
+
+  .md-typeset .tabbed-set.tabbed-alternate > .tabbed-content > .tabbed-block[data-label]:has(> p.trik-tab-title:first-child):has(> :nth-child(2):last-child) {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
   /* Fallback when the script didn't run: flex column with each label moved above its
      block by Material's print `order` rules. */
   .md-typeset .tabbed-set.tabbed-alternate:not(:has(> .tabbed-content > .tabbed-block[data-label])) {
