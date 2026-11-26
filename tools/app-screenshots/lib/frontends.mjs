@@ -34,10 +34,17 @@ export const FRONTENDS = {
     // theme (the camera zones' yellow, a warning's brown) are left alone. Verified: pages whose text is
     // the same in both front-ends came out pixel-identical to the released app (desktop below the top
     // bar, and phone), so this is the default; customers get these colours when the features ship.
+    // From November 2026 the beta sets its theme at run time from AppSettings (primaryColor #6058c8,
+    // secondaryColor #F96432) as --color-primary/--color-secondary, with hover and pressed shades
+    // #4a41c0 / #352e8c and their rgb() border forms; paired with the released build's same rules
+    // (beta main-GZAB7WMM vs released main-QCAFJIM5, 2026-11-26). Matched literally, ignoring case.
     defaultTheme: 'released',
     releasedColours: [
       ['#f96432', '#ef476f'], ['#f84e14', '#ed2b59'], ['#bf3406', '#bf113a'], ['#d29d8c', '#ce9ba7'], ['#fb9c7c', '#f58da6'],
       ['#baa9a4', '#b7b2b3'], ['#6067cd', '#0070a7'], ['#4951c6', '#005b88'], ['#303697', '#002c41'], ['#aeafb2', '#3780a4'],
+      ['#6058c8', '#0070a7'], ['#4a41c0', '#005b88'], ['#352e8c', '#002c41'],
+      ['rgb(74.0837837838,64.9810810811,192.4189189189)', 'rgb(0,91.4778443114,136.4)'],
+      ['rgb(52.7837837838,46.0810810811,139.9189189189)', 'rgb(0,43.5928143713,65)'],
     ],
   },
 };

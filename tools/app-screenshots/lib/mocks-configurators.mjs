@@ -5,6 +5,27 @@ import { SAMPLE, sampleFirmware, wizardDeviceInfo, wizardDeviceStatus, wizardCre
 export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch, scenario = {} }) {
   if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
   if (configurator === 'g16') addSystemWizard(on, { model, state, offline: Boolean(scenario.deviceOffline) });
+  if (configurator === 'sp3') sp3(on);
+}
+
+// FLEXi SP3: the calls its configurator makes only when a button is pressed. Nothing is sent.
+function sp3(on) {
+  // Events log → Read log. Each record is the panel's hex form: area, -, CID (LE), zone/user (LE), event code, -,
+  // packed time (LE); checked against the app's decoder. Oldest first; the app lists the newest on top.
+  on('POST', '/config/eventlog/read', () => ({ success: true, data: [
+    '01000104020021004C7B8C2A', // 2026-10-06 07:45:12 System 1 disarmed, user 2
+    '000001030000160028E38C2A', // 14:12:40 AC fault
+    '000001030000150003E58C2A', // 14:20:03 AC restore
+    '0100010401002000DE638D2A', // 22:15:30 System 1 armed, user 1
+    '010030010300010008338E2A', // 2026-10-07 03:12:08 Alarm in input IN3
+    '010030010300020029338E2A', // 03:12:41 Input restore IN3
+    '0000020600001B0000608E2A', // 06:00:00 Periodic test
+    '0100010401002100377A8E2A', // 07:40:55 System 1 disarmed, user 1
+  ] }));
+  on('POST', '/config/eventlog/clear', () => ({ success: true }));
+  // Modules → RS485 modules → Update, and Wireless → Update: signal and battery of each module and device.
+  on('GET', '/config/update-rs485-sensors', () => ({ success: true, data: { rssi: [92, 78, 0, 0, 0, 0, 0, 0], voltage: [12.1, 12.0, 0, 0, 0, 0, 0, 0] } }));
+  on('POST', '/config/update-sensors', () => ({ success: true, data: 'V:3.05,L:86|V:3.10,L:72|V:3.00,L:64|V:2.95,L:78' }));
 }
 
 // The add-new-system wizard for a g16-family communicator: online, not directly controlled, so the

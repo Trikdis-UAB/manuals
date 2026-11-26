@@ -1,17 +1,300 @@
 {
   "configurator": "sp3",
-  "models": ["SP3"],
-  "_fields": "As in g16.json: id is the file-name part; menu is the label keys clicked from the configurator root (System options opens its submenu in place); route is where the app lands, relative to configure/sp3; config is a patch merged into fixtures/config/sp3.json for this screen only. Sample values follow the manual's TrikdisConfig screenshots, so the two tabs agree.",
+  "models": [
+    "SP3"
+  ],
+  "_fields": "As in g16.json: id is the file-name part; menu is the label keys clicked from the configurator root (System options opens its submenu in place); route is where the app lands, relative to configure/sp3; config is a patch merged into fixtures/config/sp3.json for this screen only. Sample values follow the manual's TrikdisConfig screenshots, so the two tabs agree. A menu entry can be {\"key\", \"last\": true} when an earlier menu item shows the same text (Wireless's subtitle is also \"Sensors\").",
   "screens": [
-    { "id": "menu", "menu": [], "route": "" },
-    { "id": "systemoptions-general", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.systemGeneral"], "route": "systemOptions/systemGeneral" },
-    { "id": "systemoptions-areas", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.partitions"], "route": "systemOptions/partitions" },
-    { "id": "systemoptions-area", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.partitions"], "click": ["Area 1"], "route": "systemOptions/partitions/0" },
-    { "id": "systemoptions-schedulers", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.scheduler"], "route": "systemOptions/scheduler", "maxHeight": 760 },
-    { "id": "systemoptions-holidays", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.holidays"], "route": "systemOptions/holidays", "maxHeight": 760 },
-    { "id": "systemoptions-troubles", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.systemTroubles"], "route": "systemOptions/systemTroubles" },
-    { "id": "systemoptions-access", "menu": ["config_sp3.navigation.systemOptions", "config_sp3.navigation.systemOptionsTree.access"], "route": "systemOptions/access" },
-    { "id": "zones", "menu": ["config_sp3.navigation.zones"], "route": "zones", "maxHeight": 900 },
-    { "id": "zone", "menu": ["config_sp3.navigation.zones"], "click": ["Zone 1"], "route": "zones/0" }
+    {
+      "id": "menu",
+      "menu": [],
+      "route": ""
+    },
+    {
+      "id": "systemoptions-general",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.systemGeneral"
+      ],
+      "route": "systemOptions/systemGeneral"
+    },
+    {
+      "id": "systemoptions-areas",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.partitions"
+      ],
+      "route": "systemOptions/partitions"
+    },
+    {
+      "id": "systemoptions-area",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.partitions"
+      ],
+      "click": [
+        "Area 1"
+      ],
+      "route": "systemOptions/partitions/0"
+    },
+    {
+      "id": "systemoptions-schedulers",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.scheduler"
+      ],
+      "route": "systemOptions/scheduler",
+      "maxHeight": 760
+    },
+    {
+      "id": "systemoptions-holidays",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.holidays"
+      ],
+      "route": "systemOptions/holidays",
+      "maxHeight": 760
+    },
+    {
+      "id": "systemoptions-troubles",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.systemTroubles"
+      ],
+      "route": "systemOptions/systemTroubles"
+    },
+    {
+      "id": "systemoptions-access",
+      "menu": [
+        "config_sp3.navigation.systemOptions",
+        "config_sp3.navigation.systemOptionsTree.access"
+      ],
+      "route": "systemOptions/access"
+    },
+    {
+      "id": "zones",
+      "menu": [
+        "config_sp3.navigation.zones"
+      ],
+      "route": "zones",
+      "maxHeight": 900
+    },
+    {
+      "id": "zone",
+      "menu": [
+        "config_sp3.navigation.zones"
+      ],
+      "click": [
+        "Zone 1"
+      ],
+      "route": "zones/0"
+    },
+    {
+      "id": "reporting",
+      "menu": [
+        "config_sp3.navigation.reportingCms",
+        "config_sp3.navigation.reportingCmsTree.reporting"
+      ],
+      "route": "reportingCms/reporting"
+    },
+    {
+      "id": "reporting-settings",
+      "menu": [
+        "config_sp3.navigation.reportingCms",
+        "config_sp3.navigation.reportingCmsTree.settings"
+      ],
+      "route": "reportingCms/settings"
+    },
+    {
+      "id": "users",
+      "menu": [
+        "config_sp3.navigation.usersRep",
+        "config_sp3.navigation.usersRepTree.users"
+      ],
+      "route": "usersRep/users",
+      "maxHeight": 900
+    },
+    {
+      "id": "user",
+      "menu": [
+        "config_sp3.navigation.usersRep",
+        "config_sp3.navigation.usersRepTree.users"
+      ],
+      "route": "usersRep/users/0",
+      "click": [
+        "John Smith"
+      ]
+    },
+    {
+      "id": "users-cloud",
+      "menu": [
+        "config_sp3.navigation.usersRep",
+        "config_sp3.navigation.usersRepTree.cloud"
+      ],
+      "route": "usersRep/cloud"
+    },
+    {
+      "id": "users-sms",
+      "menu": [
+        "config_sp3.navigation.usersRep",
+        "config_sp3.navigation.usersRepTree.sms"
+      ],
+      "route": "usersRep/sms"
+    },
+    {
+      "id": "keypads",
+      "menu": [
+        "config_sp3.navigation.modules",
+        "config_sp3.navigation.modulesTree.keypads"
+      ],
+      "route": "modules/keypads"
+    },
+    {
+      "id": "keypad",
+      "menu": [
+        "config_sp3.navigation.modules",
+        "config_sp3.navigation.modulesTree.keypads"
+      ],
+      "route": "modules/keypads/0",
+      "click": [
+        "Keypad FLEXi LCD Button"
+      ]
+    },
+    {
+      "id": "rs485",
+      "menu": [
+        "config_sp3.navigation.modules",
+        "config_sp3.navigation.modulesTree.rs485"
+      ],
+      "route": "modules/rs485"
+    },
+    {
+      "id": "rs485-module",
+      "menu": [
+        "config_sp3.navigation.modules",
+        "config_sp3.navigation.modulesTree.rs485"
+      ],
+      "route": "modules/rs485/1",
+      "click": [
+        "iO-8 expander"
+      ]
+    },
+    {
+      "id": "wireless",
+      "menu": [
+        "config_sp3.navigation.wireless"
+      ],
+      "route": "wireless",
+      "click": [
+        "Update"
+      ],
+      "maxHeight": 900
+    },
+    {
+      "id": "wireless-device",
+      "menu": [
+        "config_sp3.navigation.wireless"
+      ],
+      "route": "wireless/0",
+      "click": [
+        "Update",
+        "Corner Pir"
+      ]
+    },
+    {
+      "id": "outputs",
+      "menu": [
+        "config_sp3.navigation.outputs",
+        "config_sp3.navigation.outputsTree.outSettings"
+      ],
+      "route": "outputs/outSettings",
+      "maxHeight": 1000
+    },
+    {
+      "id": "output",
+      "menu": [
+        "config_sp3.navigation.outputs",
+        "config_sp3.navigation.outputsTree.outSettings"
+      ],
+      "route": "outputs/outSettings/3",
+      "click": [
+        "Garden lights"
+      ]
+    },
+    {
+      "id": "actions",
+      "menu": [
+        "config_sp3.navigation.outputs",
+        "config_sp3.navigation.outputsTree.actions"
+      ],
+      "route": "outputs/actions",
+      "maxHeight": 900
+    },
+    {
+      "id": "control",
+      "menu": [
+        "config_sp3.navigation.outputs",
+        "config_sp3.navigation.outputsTree.control"
+      ],
+      "route": "outputs/control"
+    },
+    {
+      "id": "output-schedulers",
+      "menu": [
+        "config_sp3.navigation.outputs",
+        "config_sp3.navigation.outputsTree.scheduler"
+      ],
+      "route": "outputs/scheduler",
+      "maxHeight": 900
+    },
+    {
+      "id": "thermostats",
+      "menu": [
+        "config_sp3.navigation.outputs",
+        "config_sp3.navigation.outputsTree.thermostats"
+      ],
+      "route": "outputs/thermostats"
+    },
+    {
+      "id": "sensors",
+      "menu": [
+        {
+          "key": "config_sp3.navigation.sensors",
+          "last": true
+        }
+      ],
+      "route": "sensors"
+    },
+    {
+      "id": "sensor",
+      "menu": [
+        {
+          "key": "config_sp3.navigation.sensors",
+          "last": true
+        }
+      ],
+      "route": "sensors/0",
+      "click": [
+        "Living room"
+      ]
+    },
+    {
+      "id": "events",
+      "menu": [
+        "config_sp3.navigation.events"
+      ],
+      "route": "events",
+      "maxHeight": 1000
+    },
+    {
+      "id": "eventlog",
+      "menu": [
+        "config_sp3.navigation.eventLog"
+      ],
+      "route": "eventLog",
+      "click": [
+        "Read log"
+      ]
+    }
   ]
 }

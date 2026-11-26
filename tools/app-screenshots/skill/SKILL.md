@@ -195,7 +195,12 @@ public, so keep real names, systems and customer data out of fixtures and commit
 
 Look at every image yourself (`magick montage` contact sheets make this quick): labels translated, no
 raw keys, statuses plausible, nothing cut off. The run must end with 0 problems, and the guard
-self-test must pass after any change to the guard. Values you could not confirm stay flagged in the
+self-test must pass after any change to the guard. Since 2026-11-26 every image is also checked for a
+label key shown instead of its text (`WARN … label key(s) shown instead of text`, and `rawLabelKeys` in
+the manifest): the beta often has new labels the label server lacks, and two SP5 pop-ups came out with
+raw keys from a run that said "0 problems". An image with raw keys does not go into a manual; tell the
+owner which keys are missing. Also compare a recapture with the last set (pixel diff per file, and look
+at every changed one): the beta changes screens between builds. Values you could not confirm stay flagged in the
 manifest (`firmwareConfirmed`, `revisionConfirmed`, `unverified`), and you name them in the hand-off.
 
 ## When the tool cannot produce the real screen

@@ -229,6 +229,11 @@ single users of the panel user list. `keepFocus` leaves the last field focused, 
 
 ## Known limits
 
+- **Beta labels the label server does not have yet.** The beta front-end takes its labels from the EU
+  server, and new screens can use keys that are not there yet; the app then prints the key itself
+  ("configurators.settings.sections.scenes.disarmNote"). Each image is checked for this: the run warns
+  (`label key(s) shown instead of text`) and the manifest records `rawLabelKeys`. Such an image is not
+  for a manual until the labels are published.
 - **SP3 sample not checked against a real panel.** `sp3.build.mjs` follows the app's SP3 configurator
   code (which lists it reads and how long they must be) and the manual's TrikdisConfig screenshots. Not
   confirmed: how many schedules and holidays a panel holds (16 each in the sample) and the users list

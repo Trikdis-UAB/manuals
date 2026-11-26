@@ -117,7 +117,8 @@ async function recolour(route, pairs, stats) {
   let body;
   try { body = await response.text(); } catch { return route.abort().catch(() => {}); }
   for (const [from, to] of pairs) {
-    body = body.replace(new RegExp(from, 'gi'), () => { stats.recoloured.set(from, (stats.recoloured.get(from) ?? 0) + 1); return to; });
+    const literal = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // rgb(…) values carry brackets and dots
+    body = body.replace(new RegExp(literal, 'gi'), () => { stats.recoloured.set(from, (stats.recoloured.get(from) ?? 0) + 1); return to; });
   }
   return route.fulfill({ response, body }).catch(() => {});
 }
