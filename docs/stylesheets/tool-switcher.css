@@ -179,3 +179,12 @@ body[data-md-color-scheme="slate"] .trik-tool-bar__option[aria-checked="true"] {
 body[data-md-color-scheme="slate"] .trik-tool-bar__option:focus-visible {
   outline-color: #fff;
 }
+
+/* Setting names that differ between the tools: .trik-term holds the app's name and, in .trik-term-tc,
+   " (TrikdisConfig: …)". Before the switcher runs, and in print (print.css), both show; once it runs,
+   only the name for the chosen tool shows (tool-switcher.js sets data-trik-tool on the article). */
+.trik-tool-switcher-ready [data-trik-tool="Protegus app"] .trik-term-tc,
+.trik-tool-switcher-ready [data-trik-tool="TrikdisConfig"] .trik-term-app,
+.trik-tool-switcher-ready [data-trik-tool="TrikdisConfig"] .trik-term-note {
+  display: none;
+}
