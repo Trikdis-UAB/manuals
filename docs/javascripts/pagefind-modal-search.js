@@ -2,7 +2,7 @@
   var SEARCH_DEBOUNCE_MS = 180;
   var MAX_RESULTS = 20;
   var DEFAULT_LANG = "en";
-  var KNOWN_LANGS = new Set(["en", "lt", "es", "ru"]);
+  var KNOWN_LANGS = new Set(["en", "lt", "es", "ru", "sv"]);
   var EXPANSION_VARIANT_LIMIT = 8;
   var TOKEN_EXPANSION_PAGE_THRESHOLD = 3;
   var LANGUAGE_SCOPE_MAX_SUBRESULTS_PER_PAGE = 4;

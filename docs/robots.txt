@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# Swedish is in review until a native speaker has checked it; remove at launch.
+Disallow: /sv/
 
 Sitemap: https://docs.trikdis.com/sitemap.xml

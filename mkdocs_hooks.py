@@ -36,12 +36,14 @@ PDF_DOWNLOAD_LABELS = {
     "lt": "Atsisiųsti PDF",
     "es": "Descargar PDF",
     "ru": "Скачать PDF",
+    "sv": "Ladda ner PDF",
 }
 PDF_DOWNLOAD_ORIGINAL_LABELS = {
     "en": "Download original PDF",
     "lt": "Atsisiųsti originalų PDF",
     "es": "Descargar PDF original",
     "ru": "Скачать оригинальный PDF",
+    "sv": "Ladda ner original-PDF",
 }
 INVALID_FILENAME_CHARS_RE = re.compile(r'[\\/:*?"<>|]+')
 NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")

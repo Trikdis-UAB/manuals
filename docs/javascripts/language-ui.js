@@ -3,12 +3,13 @@
     en: "English",
     lt: "Lietuvių",
     es: "Español",
-    ru: "Кириллица"
+    ru: "Кириллица",
+    sv: "Svenska"
   };
   var MOBILE_BREAKPOINT = 960;
   var HOME_LABELS = new Set(["Home", "Pagrindinis", "Inicio", "Главная"]);
-  var RECEIVER_LABELS = new Set(["Receivers", "Imtuvai", "Receptores", "Приемники"]);
-  var COLLAPSIBLE_LABELS = new Set(["Keypads", "Klaviatūros", "Teclados", "Клавиатуры"]);
+  var RECEIVER_LABELS = new Set(["Receivers", "Imtuvai", "Receptores", "Приемники", "Mottagare"]);
+  var COLLAPSIBLE_LABELS = new Set(["Keypads", "Klaviatūros", "Teclados", "Клавиатуры", "Knappsatser"]);
 
   function findLanguageIndex(segments) {
     for (var i = 0; i < segments.length; i += 1) {
