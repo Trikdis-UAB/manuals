@@ -22,7 +22,8 @@ export const FRONTENDS = {
     id: 'beta',
     origin: 'https://beta2.protegus.app',
     staticHosts: ['beta2.protegus.app', 'web.protegus.app'],
-    labelsApi: 'https://api.beta2.protegus.app/v3/api',
+    // api.beta2.protegus.app no longer resolves (2026-11-27); the beta's API answers on its own host.
+    labelsApi: 'https://beta2.protegus.app/v3/api',
     labelsDir: 'translations-beta',
     fixtureSuffix: '-beta', // e.g. sp5-beta.json, when the beta server's config/read is shaped differently
     // The beta's skin, and the released colour for each shade (--theme released). The beta build sets

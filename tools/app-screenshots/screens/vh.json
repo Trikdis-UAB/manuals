@@ -1,0 +1,165 @@
+{
+  "configurator": "vh",
+  "flow": "configuration",
+  "base": "configuration",
+  "models": [
+    "VH"
+  ],
+  "_fields": "As in sp5.json. VideoHub's configurator (Advanced settings) is the newer one; it has no Dashboard, so desktop opens on the first page after the read. Pop-up steps click English texts. cropLast: cut out the last match of crop, for a pop-up opened over another one.",
+  "screens": [
+    {
+      "id": "advanced-intro",
+      "kind": "intro",
+      "waitFor": "systems.titles.useAtOwnRisk"
+    },
+    {
+      "id": "menu",
+      "menu": [],
+      "route": "",
+      "layouts": [
+        "phone"
+      ],
+      "note": "Phone only: the configurator menu after Read. On desktop the same menu is the left sidebar."
+    },
+    {
+      "id": "systemoptions",
+      "menu": [
+        "configurators.navigation.systemOptions"
+      ],
+      "route": "systemOptions"
+    },
+    {
+      "id": "communication-connection",
+      "menu": [
+        "configurators.navigation.communication",
+        "configurators.navigation.communicationChildren.connection"
+      ],
+      "route": "communication/connection"
+    },
+    {
+      "id": "communication-cmsreporting",
+      "menu": [
+        "configurators.navigation.communication",
+        "configurators.navigation.communicationChildren.cmsReporting"
+      ],
+      "route": "communication/cmsReporting"
+    },
+    {
+      "id": "areas",
+      "menu": [
+        "configurators.navigation.areasAndZones",
+        "configurators.navigation.areasAndZonesChildren.areas"
+      ],
+      "route": "areasAndZones/partitions"
+    },
+    {
+      "id": "cameras",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.cameras"
+      ],
+      "route": "devicesAndInterfaces/cameras"
+    },
+    {
+      "id": "popup-camera-edit",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.cameras"
+      ],
+      "route": "devicesAndInterfaces/cameras",
+      "layouts": [
+        "desktop"
+      ],
+      "steps": [
+        {
+          "row": "Backyard",
+          "text": "Edit"
+        },
+        {
+          "text": "Detection options",
+          "within": "section.overlay"
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true
+    },
+    {
+      "id": "popup-camera-streams",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.cameras"
+      ],
+      "route": "devicesAndInterfaces/cameras",
+      "layouts": [
+        "desktop"
+      ],
+      "steps": [
+        {
+          "row": "Backyard",
+          "text": "Edit"
+        },
+        {
+          "css": "app-common-input",
+          "nth": 5,
+          "within": "section.overlay",
+          "wait": 1000
+        }
+      ],
+      "crop": "app-camera-stream-path-popup div.pp_container_default",
+      "isolate": true,
+      "note": "The Camera streams pop-up opens over the camera pop-up when the Live stream path is clicked."
+    },
+    {
+      "id": "popup-camera-masks-zones",
+      "menu": [
+        "configurators.navigation.devicesAndInterfaces",
+        "configurators.navigation.devicesAndInterfacesChildren.cameras"
+      ],
+      "route": "devicesAndInterfaces/cameras",
+      "layouts": [
+        "desktop"
+      ],
+      "steps": [
+        {
+          "row": "Backyard",
+          "text": "Edit"
+        },
+        {
+          "text": "Detection options",
+          "within": "section.overlay"
+        },
+        {
+          "css": "app-name-value.motion-mask",
+          "nth": 0,
+          "within": "section.overlay",
+          "wait": 2500
+        }
+      ],
+      "crop": "section.overlay > div.content",
+      "isolate": true,
+      "cropLast": true
+    }
+  ],
+  "liveOnly": [
+    {
+      "id": "read-progress",
+      "what": "'Reading configuration\u2026 n%' while a configuration is read",
+      "why": "driven by the realtime channel during a live read"
+    },
+    {
+      "id": "write-progress",
+      "what": "'Writing\u2026 n%' while a configuration is written",
+      "why": "driven by the realtime channel during a live write"
+    }
+  ],
+  "notShown": [
+    {
+      "id": "sensors",
+      "why": "Menu item shown only when the device reports sensors; the sample reports none, as the two real VideoHubs on the beta server do."
+    },
+    {
+      "id": "high-res-retention",
+      "why": "High resolution recording retention appears with firmware 1.05 and the beta front-end; the released app and firmware 1.04 do not have it."
+    }
+  ]
+}

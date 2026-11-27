@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readJson } from './guard.mjs';
 import { FRONTENDS, configFixture } from './frontends.mjs';
-import { SAMPLE, MODELS, NEW_SYSTEM_ID, sampleMe, sampleSystem, sampleAreaSystem, sampleConfigInfo, sampleListRow } from './sample.mjs';
+import { SAMPLE, MODELS, NEW_SYSTEM_ID, sampleMe, sampleSystem, sampleAreaSystem, sampleConfigInfo, sampleListRow, vhSystem } from './sample.mjs';
 import { configuratorMocks } from './mocks-configurators.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -23,7 +23,8 @@ export function fakeToken() {
 // scenario (walks that use the app as a user does): sampleSystem 'areas' picks the system with areas and
 // zones; system patches it (deepMerge below); zoneStatus sets zones' live state by number
 // ({ "4": { "alarm": true } }); openZones are the zones the panel names when it refuses to arm;
-// deviceOffline makes the add-system wizard find the device offline.
+// deviceOffline makes the add-system wizard find the device offline; me patches the signed-in user;
+// company ({id, name}) is the monitoring company the VideoHub's detections belong to.
 export function createMocks({ lang, model, configPatch = null, timezoneId = null, frontend = FRONTENDS.released, scenario = {} }) {
   const routes = [];
   const on = (method, endpoint, fn) => routes.push({ method, endpoint, fn });
@@ -31,7 +32,12 @@ export function createMocks({ lang, model, configPatch = null, timezoneId = null
   const state = {}; // what this session's add-system wizard created
   const token = fakeToken();
   const fixture = configFixture(path.join(FIX, 'config'), MODELS[model].fixture, frontend).file;
-  const system = () => deepMerge(scenario.sampleSystem === 'areas' ? sampleAreaSystem(model) : sampleSystem(model), structuredClone(scenario.system ?? {}));
+  const baseSystem = () => {
+    if (scenario.sampleSystem === 'areas') return sampleAreaSystem(model);
+    if (MODELS[model].hwType === 'VH') return vhSystem(model, readJson(FIX, 'config', fixture));
+    return sampleSystem(model);
+  };
+  const system = () => deepMerge(baseSystem(), structuredClone(scenario.system ?? {}));
 
   // Public, auth-free reference data (saved copies; see README).
   on('*', '/translations', ({ query, body }) => {
@@ -56,7 +62,7 @@ export function createMocks({ lang, model, configPatch = null, timezoneId = null
     const me = sampleMe({ regions, modelName: model, withSystem: sid === SAMPLE.systemId, system: system() });
     me.token = token;
     me.language = lang;
-    return me;
+    return scenario.me ? deepMerge(me, structuredClone(scenario.me)) : me;
   });
 
   on('*', '/get-pgm-icon-paths', () => readJson(FIX, 'public', 'pgm-icons.json'));

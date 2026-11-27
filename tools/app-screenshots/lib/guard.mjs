@@ -12,11 +12,20 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { FRONTENDS } from './frontends.mjs';
 
 export const APP_ORIGIN = FRONTENDS.released.origin;
 export const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 const BLOCKED_PATH_PREFIXES = ['/ingest/']; // PostHog analytics + session recording
+
+// Camera pictures in the sample data (snapshots, previews, clips) point at this made-up host, and the
+// guard answers it from fixtures/media/ (real demo-camera frames, plates blurred; dev/vh-media.sh made
+// them). Nothing is fetched: a file that is not there is answered with a plain grey placeholder picture.
+export const MEDIA_HOST = 'media.example.com';
+const MEDIA_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'fixtures', 'media');
+const MEDIA_TYPES = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.gif': 'image/gif', '.mp4': 'video/mp4' };
+const PLACEHOLDER = '<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540"><rect width="960" height="540" fill="#8a9099"/><text x="480" y="280" font-family="sans-serif" font-size="40" fill="#e8eaed" text-anchor="middle">Sample camera picture</text></svg>';
 
 // Third-party resources the app needs, answered locally instead of fetched:
 //  - Google Sign-In: the app's route resolver waits for it to load before it opens a system.
@@ -70,6 +79,12 @@ export async function installGuard(context, { mocks, log, frontend = FRONTENDS.r
       return route.fulfill(json(handler({ method, endpoint, query: url.searchParams, body: parseBody(req) }), cors));
     }
 
+    if (url.host === MEDIA_HOST) {
+      if (method !== 'GET') { bump(stats.refused, `${method} ${url.origin}${url.pathname}`); return route.abort('blockedbyclient'); }
+      bump(stats.mocked, `GET media ${path.basename(url.pathname)}`);
+      return route.fulfill(media(url.pathname));
+    }
+
     const stub = LOCAL_STUBS[url.origin + url.pathname];
     if (method === 'GET' && stub !== undefined) {
       return route.fulfill({ status: 200, contentType: stub.contentType, headers: { 'access-control-allow-origin': '*' }, body: stub.body });
@@ -87,6 +102,13 @@ export async function installGuard(context, { mocks, log, frontend = FRONTENDS.r
   });
 
   return stats;
+}
+
+function media(pathname) {
+  const file = path.join(MEDIA_DIR, path.basename(pathname));
+  const headers = { 'access-control-allow-origin': '*' };
+  if (fs.existsSync(file)) return { status: 200, contentType: MEDIA_TYPES[path.extname(file).toLowerCase()] ?? 'application/octet-stream', headers, body: fs.readFileSync(file) };
+  return { status: 200, contentType: 'image/svg+xml', headers, body: PLACEHOLDER };
 }
 
 function parseBody(req) {
