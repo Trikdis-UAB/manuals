@@ -475,7 +475,7 @@ To start the communicator, turn on the security control panel’s power supply. 
 - “NETWORK” LED illuminates green and blinks yellow when the communicator is registered to the network.
 
 !!! note
-    Sufficient strength of 4G signal is level three (three “NETWORK” indicator flashes in yellow color). / If you count less yellow “NETWORK” LED flashes, the network signal strength is insufficient. We recommend to select a different place to install the communicator, or to use a more sensitive cellular antenna. / If you see a different LED indication, it indicates a certain malfunction. Diagnose it by following the LED indication table in chapter 1.6 “LED indication of operation”. / If the GT indication does not illuminate at all, check the power supply and connections.
+    Sufficient strength of 4G signal is level three (three “NETWORK” indicator flashes in yellow color). / If you count less yellow “NETWORK” LED flashes, the network signal strength is insufficient. We recommend to select a different place to install the communicator, or to use a more sensitive cellular antenna. / If you see a different LED indication, it indicates a certain malfunction. Diagnose it by following the LED indication table in chapter 1.7 “LED indication of operation”. / If the GT indication does not illuminate at all, check the power supply and connections.
 
 ## Programming the control panel
 
