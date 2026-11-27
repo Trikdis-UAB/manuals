@@ -119,6 +119,9 @@ Edge).
    configuration**. Tap it.
 2. Put VideoHub into Bluetooth configuration mode: **press the ON/OFF button 3 times.** The PWR/ACT
    indicator flashes red while green stays on.
+
+    ![Protegus app 'Bluetooth Configuration' page: 'Scanning nearby VideoHub', the instruction to press the ON/OFF button 3 times until the PWR/ACT indicator flashes red while green is on, a drawing of the ON/OFF button and PWR/ACT indicator, and the buttons Cancel and Connect.](./protegus-app/vh-add-system-ble-phone.webp){ .trik-mob-img }
+
 3. Tap **Connect** and select the VideoHub. Its Bluetooth name is `VideoHub-` followed by part of
    its Unique ID.
 4. In **Network Configuration**, enable **WiFi**, enter the **WiFi network name** and **WiFi
@@ -172,6 +175,8 @@ To unpair, open the alarm system's **Cameras** list and tap **×** next to the V
 
 Open the VideoHub system and go to **Settings** → **Cameras**.
 
+![Protegus app 'Cameras' page of a VideoHub: cameras Backyard and Street, a warning on Street and the banner 'No motion masks configured for one or more cameras'; the plus button with '2 of 16'.](./protegus-app/vh-camera-list-phone.webp){ .trik-mob-img }
+
 ### Finding cameras on the network
 
 1. Tap **+** → **Detect local cameras**. VideoHub scans its network (**Camera detection in
@@ -208,6 +213,8 @@ If the camera is not found, add it manually.
 Tap the stream path field to open **Camera streams**. Choose the camera's make and, for an NVR,
 the channel (1–16). Both paths are filled in:
 
+![Protegus app 'Camera streams' pop-up: Dahua selected among Hikvision, Dahua, Uniview, Reolink, Axis and Other/Generic RTSP; Stream channel 1; the warning 'H.265 video format is not supported. Please make sure you set the camera to use H.264 format.'; Live stream path /cam/realmonitor?channel=1&subtype=0 and Detection stream path /cam/realmonitor?channel=1&subtype=1.](./protegus-app/vh-popup-camera-streams-desktop.webp)
+
 | Make | Live stream path | Detection stream path |
 |---|---|---|
 | Hikvision | `/Streaming/Channels/101` (channel 1) | `/Streaming/Channels/102` |
@@ -231,6 +238,8 @@ things that do not move.
 
 ### Detection options
 
+![Protegus app camera settings for camera Backyard: address 192.168.1.101, port 554, user admin, Live stream path and Live view resolution 1920x1080; Detection options expanded with FPS 5 FPS, Resolution Auto, Detection mode 'Follow video area state', Detect people and Detect cars ticked, Improve contrast off, Merge simultaneous detections into one on, Motion sensitivity Medium, Min object size Small, Detection stream path, Motion masks 1 and Alarm area 'Zones: 1'.](./protegus-app/vh-popup-camera-edit-desktop.webp)
+
 | Setting | What it does | Values |
 |---|---|---|
 | **Detection mode** | When the camera raises alarms. | **Off**: never. **On**: always (24 hours). **Follow video area state**: only while VideoHub's area is armed. |
@@ -251,6 +260,8 @@ outdoors.
 
 Open **Motion masks** (or **Alarm area**) in the camera's settings. VideoHub takes a fresh picture
 from the camera (**Requesting for snapshot…**) and you draw on it.
+
+![Protegus app 'Motion masks and alarm area' pop-up on a real frame of the Backyard camera: a red motion mask over an object in the right foreground, and a yellow detection zone over the yard where a person and a parked car are; the Alarm area card says 'Alarms only inside zones below', Detection zone 1, Loitering: 10, with car and person icons.](./protegus-app/vh-popup-camera-masks-zones-desktop.webp)
 
 - **Motion mask**: a part of the picture that is ignored. Use it for anything that moves or looks
   like a person or car but is not one: a road outside the site, trees, a flag, the camera's
@@ -311,10 +322,13 @@ directly; how to send a test event.
 
 ### In the Protegus app
 
+<span class="trik-mob-pair"><span class="trik-mob-pair__item">![Protegus app home screen of a VideoHub system: area Video, Ready to arm, Disarmed, buttons Sleep, Arm, Disarm and Stay, and camera buttons Backyard and Street showing their last detections.](./protegus-app/vh-home-phone.webp){ .trik-mob-img }</span><span class="trik-mob-pair__item">![Protegus app video alarm from camera Backyard, Cropped tab: a person marked 'PERSON | 75%', system name and time of event, and the tabs Cropped, Snapshot, Preview and Video.](./protegus-app/vh-event-details-phone.webp){ .trik-mob-img }</span></span>
+
 - **Home screen**: each camera shows its last alarm picture (or a live picture, if set in the camera's
   **Home screen button snapshot**). Tap it to open **live view**.
 - **Events**: video alarms appear in the system's event list with a picture. Opening one shows the
-  tabs **Details** (cropped picture), **Snapshot** (full picture), **Preview** and **Video**. The
+  tabs **Cropped** (**Details** for company staff), **Snapshot** (full picture), **Preview** and
+  **Video**. The
   video loads when the tab is opened.
 - **Push notifications** carry the picture, so the user sees what happened before opening the app.
 
@@ -323,12 +337,17 @@ blocks such connections (strict corporate firewalls) it may not open.
 
 ### In the Protegus company account (operators)
 
+![Protegus company account, Video page: 'Video events' with search and 'Show reviewed events', three unreviewed alarms from Sample system, cameras Backyard and Street, each with a cropped picture of the detected car or person and its time.](./protegus-app/vh-operator-video-events-desktop.webp)
+
 The **Video** menu opens **Video events**, which lists every video alarm from the company's systems, newest first. Each
 card shows the cropped picture, the system, the camera and the time; hovering over it plays the
 preview.
 
 - New alarms are marked **Unreviewed**. Open the alarm and press **Mark as reviewed**; tick **Review
   all events for same camera** to clear a burst from one camera at once.
+
+    ![Protegus company account, a video alarm from camera Backyard, Details tab: system name, camera name and time of event, the cropped picture with 'PERSON | 75%', a Notes box, the checkbox 'Review all events for same camera' and the button 'Mark as reviewed'.](./protegus-app/vh-operator-event-details-desktop.webp)
+
 - **Show reviewed events** shows or hides the ones already handled.
 - Search by system name, account number, Unique ID, address, user, installer or tag.
 - Operators can add notes to an alarm; an icon on the card shows that it has notes.
@@ -398,6 +417,8 @@ settings** (load it into another VideoHub; the file is checked for changes befor
 
 ### System options
 
+![Protegus app VideoHub configurator, System Options page: Object card with Object Name 'Sample system', Account ID 1234 and Module ID; Access & Permissions card with Cloud access code, Full access and Limited access.](./protegus-app/vh-systemoptions-desktop-content.webp)
+
 #### Object
 
 | Setting | What it does | Values |
@@ -416,6 +437,8 @@ settings** (load it into another VideoHub; the file is checked for changes befor
 
 ### Communication: Networks
 
+![Protegus app VideoHub configurator, Networks page: WiFi card with Enabled off, and Ethernet 1 card with DHCP on.](./protegus-app/vh-communication-connection-desktop-content.webp)
+
 One card per network: **Ethernet 1**, **Ethernet 2** (if the model has it) and **WiFi**.
 
 | Setting | What it does | Values |
@@ -425,6 +448,8 @@ One card per network: **Ethernet 1**, **Ethernet 2** (if the model has it) and *
 | **DHCP** | Gets the address from the network. Turn off to set **IP address**, **Subnet mask**, **Gateway address** and **DNS**. | on / off |
 
 ### Communication: CMS Reporting
+
+![Protegus app VideoHub configurator, CMS Reporting page: Primary channel on, Domain or IP 203.0.113.10, Port 55000, Protocol SIA DC-09_2012, Encryption key, Enable encryption on, Switch to backup after 3 attempts, Network (IP) Ping on with period 180 seconds, Periodic test off, Backup channel; Parallel channel off; Receiver card with Number 1 and Line 1.](./protegus-app/vh-communication-cmsreporting-desktop-content.webp)
 
 Two cards, **Primary channel** and **Parallel channel**, each with an optional **Backup channel**.
 
@@ -442,11 +467,15 @@ Two cards, **Primary channel** and **Parallel channel**, each with an optional *
 
 ### Areas and zones: Areas (Partitions)
 
+![Protegus app VideoHub configurator, Areas (Partitions) page: area 01 'Video', status Disarmed, with Refresh status and '+ Add areas'.](./protegus-app/vh-areas-desktop-content.webp)
+
 The list of VideoHub's areas, with their status. **Add areas** enables more, and **Area name**
 renames one. Arming links are set in the app's area settings: see
 [Pairing VideoHub with an alarm system](#41-pairing-videohub-with-an-alarm-system).
 
 ### Devices & Interfaces: Cameras
+
+![Protegus app VideoHub configurator, Cameras page: Video zone base 900 and a table of two cameras, 1 Backyard at 192.168.1.101 and 2 Street at 192.168.1.102, port 554, both Enabled, each with Edit; '+ Add' button.](./protegus-app/vh-cameras-desktop-content.webp)
 
 | Setting | What it does | Values |
 |---|---|---|
