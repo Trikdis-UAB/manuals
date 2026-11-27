@@ -2,7 +2,7 @@
 // requests the guard must stop, and fail loudly if any of them gets through. Runs once per front-end.
 //   node guard-selftest.mjs
 import { chromium } from 'playwright';
-import { installGuard, FONT_HOSTS } from './lib/guard.mjs';
+import { installGuard, FONT_HOSTS, MEDIA_HOST } from './lib/guard.mjs';
 import { FRONTENDS } from './lib/frontends.mjs';
 
 const mocks = { resolve: (m, e) => (e === '/me' ? () => ({ success: true, mocked: true }) : undefined) };
@@ -17,6 +17,7 @@ const appHeaders = { Authorization: 'Bearer sample', 'X-Home-Region': 'eu', 'My-
 const mockedOk = (r) => r.ok && r.body.includes('"mocked":true');
 const local = (r) => r.ok && r.body.includes('screenshot mode');
 const refused = (r) => !r.ok;
+const mediaLocal = (r) => r.ok && r.status === 200; // served from fixtures/media/ or the placeholder; the host does not exist
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 let failed = 0;
@@ -46,6 +47,8 @@ for (const fe of Object.values(FRONTENDS)) {
     ['non-GET to the app host refused', `${O}/anything`, { method: 'POST', body: 'x' }, refused],
     ['analytics GET refused', `${O}/ingest/e/?x=1`, {}, refused],
     ['other host refused', 'https://example.com/', {}, refused],
+    ['camera picture answered locally', `https://${MEDIA_HOST}/videohub/backyard-live.jpg`, {}, mediaLocal],
+    ['non-GET to the camera picture host refused', `https://${MEDIA_HOST}/videohub/x.jpg`, { method: 'POST', body: 'x' }, refused],
   ];
   for (const [what, url, init, expect] of checks) {
     const r = await tryFetch(url, init);
