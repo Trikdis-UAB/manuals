@@ -18,6 +18,16 @@ The DSC samples are burglar-alarm panels. They say nothing about fire panels, ga
 
 ---
 
+## Teletec's own web pages (checked 2026-11-27)
+
+Teletec's page about our products, [Trikdis larmsändare](https://solutions.teletec.se/trikdis-larmsandare), confirms the main choices:
+
+- **larmsändare** about 15 times ("universell larmsändare"); *kommunikator* once or twice. Product heading "TRIKDIS Communicator GET".
+- **larmcentral(er)** for the monitoring station; **larmmottagare** for receivers (their category name).
+- For the panel the marketing text says **larmpaneler**, and *DSC PowerSeries-centraler*. Their technical manuals say *centralapparat*. We keep **centralapparat** in manuals (installer text), and ask Erik (open question 16).
+- Dual path: **failover** ("automatisk failover mellan LAN och 4G"), *dubbel uppkoppling*, *PSTN-backup*. Other words: *SIM-kort*, *M2M-abonnemang*, *fjärrstyrning*, *fjärrkonfiguration*, *pushnotiser*, *installatör*, *larmöverföring*, *uppkoppling*.
+- Nothing about GATOR on teletec.se, so the gate terms still have no Swedish evidence.
+
 ## Read this first: the dangerous pairs
 
 ### 1. centralapparat (the panel) is not larmcentral (the monitoring station)

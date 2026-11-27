@@ -155,7 +155,7 @@ For Erik at Teletec: each can be answered in a line. Ordered by how many pages t
 
 | # | Question | Options | My recommendation, and why |
 |---|---|---|---|
-| 1 | What do you call our IP/GSM unit that attaches to someone else's panel (English "communicator")? | **larmsändare** / kommunikator / sändare / IP-larmsändare | **larmsändare**; your own Neo guide says *IP-larmsändare* about 50 times and no sample says *kommunikator*. Confirm it also reads right for devices that are not only transmitters (GT, GET also have SMS and app control). |
+| 1 | ~~What do you call our IP/GSM unit ("communicator")?~~ | | **Settled 2026-11-27: larmsändare.** Teletec's own web page is titled *Trikdis larmsändare* and uses the word about 15 times. |
 | 2 | Spelling of the fire panel: *brandlarmcentral* or *brandlarmscentral*? And is there a risk of confusing *larmcentral* (station) with *brandlarmcentral* (panel) in a sentence about fire reporting? | brandlarmcentral / brandlarmscentral / brandcentral | **brandlarmcentral**; standard EN 54 term, but none of your samples covers fire panels, so unverified. |
 | 3 | Primary and spare communication path: *backupkanal* or *reservkanal*? | backupkanal / reservkanal / sekundär kanal | **backupkanal**, because your Neo guide writes *backup Mobil*, and our software label says *Backup channel*. *Reserv-* stays for battery (*reservdrift*). |
 | 4 | Entry and exit delay: which pair do installers expect? | inpasseringstid / utpasseringstid (Neo, PC1616/1864) / ingångsfördröjning / utgångsfördröjning (Power864) | **inpasseringstid / utpasseringstid**, the newer text. |
@@ -172,3 +172,4 @@ For Erik at Teletec: each can be answered in a line. Ordered by how many pages t
 | 15 | *Användarkod* (Neo) or *handhavarkod* (older DSC guides) for user code? | användarkod / handhavarkod | **användarkod**, the newer guide. |
 
 For the translators: where an answer comes back different from my recommendation, change the glossary row first, then the pages, and record the date in the glossary header.
+| 16 | Control panel: your web page says *larmpaneler*, your installation guides *centralapparat*. Which should an installer manual use? | centralapparat / larmpanel / larmcentral (no) | **centralapparat**, the word in your own technical manuals. |
