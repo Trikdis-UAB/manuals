@@ -21,6 +21,8 @@
 
 **Links to a section** (use the numbered id from the built page; nothing rewrites a link for you, Cyrillic slugs collapse to `3212-tipring`): see `NOTES/agent-lessons/section-anchor-links.md`.
 
+**Swedish manuals (`docs/sv`)** (Sonnet translates page by page, Opus checks; glossary and style from Teletec's Swedish manuals; hidden from the language menu and robots until Erik at Teletec has reviewed): see `projects/swedish/README.md`, then `TRANSLATION-BRIEF.md`.
+
 **Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`, and the `protegus-app-screenshots` skill (`tools/app-screenshots/skill/SKILL.md`).
 
 ## Credentials & API access

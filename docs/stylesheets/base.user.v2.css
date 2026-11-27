@@ -1579,3 +1579,9 @@ body[data-md-color-scheme="slate"] .md-typeset .tabbed-set.tabbed-alternate > in
     display: none !important;
   }
 }
+
+/* Swedish is in review: reachable by URL, not offered in the language menu yet.
+   Remove this rule (and the Disallow in robots.txt) when Swedish launches. */
+.md-select__item:has(> a[hreflang="sv"]) {
+  display: none;
+}

@@ -496,7 +496,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     to select a different place to install the communicator, or to use a
     more sensitive cellular antenna. / If you see a different LED
     indication, it indicates a certain malfunction. Diagnose it by following
-    the LED indication table in chapter 1.6 "LED indication of
+    the LED indication table in chapter 1.7 "LED indication of
     operation". / If the GT+ indication does not illuminate at all,
     check the power supply and connections.
 ## Programming the control panel 

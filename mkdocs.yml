@@ -60,6 +60,9 @@ extra:
   - name: Кириллица
     link: /ru/
     lang: ru
+  - name: Svenska
+    link: /sv/
+    lang: sv
   social:
   - icon: material/help-circle
     name: Support
@@ -436,12 +439,34 @@ plugins:
           - RFH11: receivers/radio/rfh11/index.md
           - RR-IP12: receivers/radio/rr-ip12/index.md
         - Телефонная линия RTH2: receivers/landline/rth2/index.md
+    - locale: sv
+      name: Svenska
+      build: true
+      nav:
+      - Home: index.md
+      - Larmsändare:
+        - Snabbinstallation (GT, GT+, GET):
+          - Universell TIP/RING-anslutning: alarm-communicators/cellular/quick-setup/generic-dial-capture/index.md
+          - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
+          - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
+          - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
+        - Mobilnät:
+          - GT: alarm-communicators/cellular/gt/index.md
+          - GT+: alarm-communicators/cellular/gt-plus/index.md
+          - GET: alarm-communicators/cellular/get/index.md
+      - Styrenheter för portar:
+        - GATOR: gate-controllers/gator/index.md
+        - GATOR WiFi: gate-controllers/gator-wifi/index.md
+        - GATOR LTE / GATOR WiFi med iO4R: gate-controllers/gator-io4r/index.md
+      - Utbyggnadsmoduler:
+        - iO-8: expanders/io-8/index.md
 - search:
     lang:
     - en
     - lt
     - es
     - ru
+    - sv
     separator: '[\s\-]+'
 - add-number:
     order: 2
