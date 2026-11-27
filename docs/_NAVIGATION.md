@@ -37,6 +37,8 @@ Editor entry points (start here when editing):
     - [Adding S8/S9 wireless sensors](en/control-panels/sp3/add-s8-sensors.md)
     - [Paradox wireless devices (RTX3)](en/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](en/control-panels/cg17/index.md)
+- Video Verification
+  - [VideoHub](en/video-verification/videohub/index.md)
 - Gate Controllers
   - [GATOR](en/gate-controllers/gator/index.md)
   - [GATOR WiFi](en/gate-controllers/gator-wifi/index.md)
