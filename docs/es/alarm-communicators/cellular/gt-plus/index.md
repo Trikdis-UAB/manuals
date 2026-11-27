@@ -367,6 +367,8 @@ Siguiendo uno de estos diagramas provistos a continuación, conecte el comunicad
 !!! note "Nota"
     Solo con el bus de teclado, el comunicador recibe del panel los estados generales de las zonas y no puede distinguir el tipo de zona (incendio, robo, fuga de agua, etc.). Todas las alarmas se envían como alarma general, Contact ID E130, y algunas CRA gestionan estos eventos de forma distinta a la del tipo de zona que realmente se activó. Para enviar los eventos con los códigos Contact ID propios del panel (por ejemplo, E110 para una alarma de incendio), conecte también los terminales TIP/RING; consulte la sección 3.2.1.2.
 
+    Un detector de humo de 2 hilos conectado al terminal PGM2 del panel (opción 04 de PGM2) se envía como Contact ID E140, alarma general, no como alarma de incendio E111. Para enviarlo como incendio, conecte también los terminales TIP/RING.
+
 ##### Bus de teclado y TIP/RING
 
 <img class="wiring-diagram" alt="Diagrama de conexión: panel DSC con GT+. Bus de datos: RED a +DC (+12V), BLK a -DC, YEL a CLK y GRN a DATA. Terminales del comunicador telefónico: TIP del panel a TIP de GT+ y RING del panel a RING de GT+." src="./wiring-dsc-tip-ring.webp" width="650" height="513" />
