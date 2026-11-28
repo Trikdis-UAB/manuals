@@ -23,6 +23,10 @@
 
 **Swedish manuals (`docs/sv`)** (Sonnet translates page by page, Opus checks; glossary and style from Teletec's Swedish manuals; hidden from the language menu and robots until Erik at Teletec has reviewed): see `projects/swedish/README.md`, then `TRANSLATION-BRIEF.md`.
 
+**This repo is public, notes included** (no usage numbers, bug lists or security notes in `projects/` or `NOTES/`; review links are PR previews, not PDFs or hidden pages on main): see `NOTES/agent-lessons/public-repo-notes.md`.
+
+**Protegus app manual and FAQ** (each app fact, its source and who still has to confirm it; the questions for Igoris and Vytautas): see `projects/Protegus/team-questions.md`.
+
 **Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`, and the `protegus-app-screenshots` skill (`tools/app-screenshots/skill/SKILL.md`).
 
 ## Credentials & API access
