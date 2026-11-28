@@ -1,5 +1,9 @@
 # VideoHub AI video verification hub
 
+<div style="text-align: center;">
+  <img src="./videohub-product.webp" alt="VideoHub: a silver aluminium box with an Ethernet port and four USB ports on its front." width="400">
+</div>
+
 **VideoHub** connects a site's existing IP cameras to the Protegus cloud and to a monitoring station.
 It watches the camera streams on the device itself, recognises **people** and **cars**, and sends an
 alarm only when one of them appears where it should not. Each alarm carries a picture and a short
@@ -24,7 +28,8 @@ clip, so the operator can decide from the event itself, without opening the site
 
 Video is analysed on the device. Only alarms with their pictures and clips leave the site; the
 camera streams do not. Live view, when someone opens it in the app, is a direct connection
-between the app and VideoHub.
+between the app and VideoHub. Pictures and clips are stored on the Protegus servers of the site's
+region.
 
 ### Models
 
@@ -139,6 +144,8 @@ Edge).
 | The connected device's Unique ID doesn't match the one entered | You are connected to another VideoHub. Check the Unique ID. |
 
 ## Adding VideoHub to Protegus
+
+Video: [VideoHub – Add To Protegus 2](https://youtu.be/wnKhMq9gwRY) (TRIKDIS, YouTube).
 
 1. Open the Protegus app, or [web.protegus.app](https://web.protegus.app) on a computer, and sign in
    with the company account.
@@ -263,11 +270,11 @@ from the camera (**Requesting for snapshot…**) and you draw on it.
 
 ![Protegus app 'Motion masks and alarm area' pop-up on a real frame of the Backyard camera: a red motion mask over an object in the right foreground, and a yellow detection zone over the yard where a person and a parked car are; the Alarm area card says 'Alarms only inside zones below', Detection zone 1, Loitering: 10, with car and person icons.](./protegus-app/vh-popup-camera-masks-zones-desktop.webp)
 
-- **Motion mask**: a part of the picture that is ignored. Use it for anything that moves or looks
+- **Motion mask** (exclusion zone): a part of the picture that is ignored. Use it for anything that moves or looks
   like a person or car but is not one: a road outside the site, trees, a flag, the camera's
   on-screen clock, a parking space where a car always stands. **Add mask**, then click the corners
   of the area on the picture.
-- **Detection zone** (shown together as **Alarm area**): when at least one zone exists, only objects
+- **Detection zone** (mandatory zone; shown together as **Alarm area**): when at least one zone exists, only objects
   **inside** a zone raise an alarm (**Alarms only inside zones below**). With no zone, the whole
   picture is used.
 - For each zone you can choose **which objects** trigger it (people, cars, or both; none selected
@@ -306,6 +313,9 @@ setup template can fill them in when VideoHub is added.
 
 Use **Backup channel** for a second receiver address, and **Parallel channel** to report to a
 second monitoring station at the same time.
+
+Alarms can also reach the monitoring station through Protegus 2, without an IPcom receiver.
+**[to confirm]** How this is set up for VideoHub.
 
 ### Event codes and zone numbers
 
