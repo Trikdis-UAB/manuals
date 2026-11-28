@@ -542,7 +542,7 @@ To turn on the communicator, you must first provide a power source for the fire 
     "NETWORK" diode, the Cellular signal level is insufficient. We recommend
     choosing a different place for installing the communicator or using a
     more sensitive Cellular antenna. / If the indication is different, search for
-    the explanation in chapter 1.4 "LED indication of operation". / If the
+    the explanation in chapter 1.5 "LED indication of operation". / If the
     G17F's indicator lights are completely inactive, check the power
     supply and connections.
 ## Remote control 

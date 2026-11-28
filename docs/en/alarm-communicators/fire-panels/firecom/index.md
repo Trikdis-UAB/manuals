@@ -8,7 +8,7 @@
 
 ## Description
 
-Communicator ***FIREMCOM*** meets the requirements of standard EN 54-21:2006; EN 54-4:1997/AC:1999/A1:2002/A2:2006.
+Communicator ***FIRECOM*** meets the requirements of standard EN 54-21:2006; EN 54-4:1997/AC:1999/A1:2002/A2:2006.
 
 The product complies with the performance requirements of EN54-21 standard Annex A for type 1 transmission system type.
 
@@ -668,7 +668,7 @@ To turn on the communicator, first you need to turn on its power supply. The com
 - The “**SIM**” diode must be green solid and periodically blink in yellow no less than 3 times – the green color indicates that the SIM card is successfully registered on the mobile network, while the number of yellow flashes indicate the mobile signal strength. The “**ETH**” indicator lights up green when the communicator is connected to the LAN network.
 
 !!! note
-    Sufficient 4G mobile network strength is 3 (three yellow flashes of the “**SIM**” indicator). / If you see fewer yellow flashes of the “**SIM**” diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the communicator, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.4 “LED indication of operation” to find out the reason. / If all of the FIRECOM indicator lights are off, check the power supply and connections.
+    Sufficient 4G mobile network strength is 3 (three yellow flashes of the “**SIM**” indicator). / If you see fewer yellow flashes of the “**SIM**” diode, the strength of the mobile network is insufficient. We recommend choosing a different place for installing the communicator, changing the location of the antenna or using a more sensitive mobile antenna. / If the light indication is different, see chapter 1.5 “LED indication of operation” to find out the reason. / If all of the FIRECOM indicator lights are off, check the power supply and connections.
 
 ## Quick configuration using *TrikdisConfig* software
 
@@ -1016,7 +1016,7 @@ Messages sent to the Central Monitoring Station are encoded and password protect
 
 - **Port** – enter the receiver’s network port number.
 
-- **Protocol** – select in which coding the events should be sent: **TRK** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers. By selecting the SIA DC protocol, you can select the SIA-DCS messaging format.), **TL150** (to SUR-GUARD receivers).
+- **Protocol** – select in which coding the events should be sent: **TRK** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers. By selecting the SIA DC protocol, you can select the SIA-DCS messaging format.), **TL150** (to SUR-GARD receivers).
 
 - **Encryption Key** – 6-digit message encryption key. The communicator’s encryption key must match the receiver’s encryption key.
 

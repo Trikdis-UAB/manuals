@@ -366,7 +366,7 @@ With relay contacts you can control (turn on/off) various electronic appliances.
 
 ### Schematics for connecting iO series expansion modules
 
-If more inputs or outputs need to be connected to the communicator, or if you want to connect a temperature sensor, connect the TRIKDIS iO series wired or wireless output expander. Configuration of expander modules connected to the E16 is described in chapter 6.6 ““RS485 modules” window”.
+If more inputs or outputs need to be connected to the communicator, or if you want to connect a temperature sensor, connect the TRIKDIS iO series wired or wireless output expander. Configuration of expander modules connected to the E16 is described in chapter 6.7 ““RS485 modules” window”.
 
 <img alt="Wiring diagram: control panel to E16, iO, iO-8 and iO-MOD. Power (+12 V): +AUX to each +DC; -AUX to each -DC. RS485: E16 A RS485 to each A (RS485); B RS485 to each B (RS485). Wireless: iO-MOD to iO-WL, up to 300 m. Separate 12-28 V DC, 0,5 A supply to iO-WL +DC and -DC. DS18B20 or DS18S20 sensor: Vdd+ to +5 V, DQ to 1-Wire, COM to COM." src="./image20.webp" style="width:7.0875in;height:3.4944444444444445in" />
 
@@ -381,7 +381,7 @@ To start the communicator, turn on the security control panel’s power supply. 
 !!! note
     If you see a different LED indication, it indicates a certain
     malfunction. Diagnose it by following the LED indication table in
-    chapter 1.5 "LED indication of operation". / If the E16 indication
+    chapter 1.6 "LED indication of operation". / If the E16 indication
     does not illuminate at all, check the power supply and connections.
 ## Programming the control panel 
 
@@ -570,7 +570,7 @@ After connecting the E16 and clicking **Read [F4], *TrikdisConfig*** will provid
 | Status        | Operating condition                                |
 | Device        | Device type (E16 should be shown)            |
 | SN            | Device serial number                               |
-| BL            | Browser version                                    |
+| BL            | Bootloader version                                 |
 | FW            | Device firmware version                            |
 | HW            | Device hardware version                            |
 | Status        | Connection to program type (via USB or remote)     |

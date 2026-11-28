@@ -343,7 +343,7 @@ Du kan göra inställningarna i Protegus-appen eller i TrikdisConfig. Varje avsn
         - **Communication type**: **IP**.
         - **Domain or IP** och **Port** för mottagaren.
         - **TCP or UDP**.
-        - **Protocol**: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GUARD-mottagare).
+        - **Protocol**: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GARD-mottagare).
         - Den krypteringsnyckel som är inställd i mottagaren: **TRK encryption key** för TRK-protokoll; för DC-09 aktiverar du **Enable encryption key** och anger **DC-09 encryption key**.
 
     4.  (Rekommenderas) Ställ in **Backup channel** på samma sätt.
@@ -382,7 +382,7 @@ Du kan göra inställningarna i Protegus-appen eller i TrikdisConfig. Varje avsn
 
     4. **Communication type** - välj anslutningsmetoden **IP**.
 
-    2.  **Protocol** - välj protokolltyp för händelsemeddelandena: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GUARD-mottagare).
+    2.  **Protocol** - välj protokolltyp för händelsemeddelandena: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GARD-mottagare).
 
     3.  **Encryption key** - ange den krypteringsnyckel som är inställd i mottagaren.
 
@@ -1013,7 +1013,7 @@ Larmsändaren är ansluten till centralapparaten via en seriell buss.
 
 Händelser kan skickas över flera kommunikationskanaler. Primärkanalen och den parallella kommunikationskanalen kan arbeta samtidigt, så att larmsändaren kan skicka händelser till två mottagare samtidigt. Backupkanaler kan tilldelas både primärkanalen och den parallella kanalen och används när anslutningen via primärkanalen eller den parallella kanalen bryts.
 
-Kommunikationen är kodad och lösenordsskyddad. Med TRK-protokollen krävs en TRIKDIS-mottagare för att ta emot händelseinformationen och skicka den vidare till larmcentralens program (DC-09 och TL150 är avsedda för universella mottagare respektive SUR-GUARD-mottagare, se **Protocol** nedan):
+Kommunikationen är kodad och lösenordsskyddad. Med TRK-protokollen krävs en TRIKDIS-mottagare för att ta emot händelseinformationen och skicka den vidare till larmcentralens program (DC-09 och TL150 är avsedda för universella mottagare respektive SUR-GARD-mottagare, se **Protocol** nedan):
 
 - **För anslutning över IP** - programvarumottagaren IPcom för Windows/Linux, maskinvarumottagaren IP/SMS RL14 eller flerkanalsmottagaren RM14.
 
@@ -1040,7 +1040,7 @@ Kommunikationen är kodad och lösenordsskyddad. Med TRK-protokollen krävs en T
 
 - **Communication type** - välj metod för kommunikation med larmcentralens mottagare (**IP).**
 
-- **Protocol** - välj med vilken kodning händelserna ska skickas: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GUARD-mottagare).
+- **Protocol** - välj med vilken kodning händelserna ska skickas: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GARD-mottagare).
 
 - **Encryption key** (**TRK encryption key**; för DC-09-protokoll **Enable encryption key** och **DC-09 encryption key**, med **HEX** för en nyckel i hexadecimalt format) - meddelandets krypteringsnyckel. Nyckeln som skrivs till larmsändaren måste stämma överens med mottagarens nyckel. I Protegus-appen rymmer TRK encryption key upp till 6 tecken och DC-09 encryption key upp till 16 (32 i HEX).
 

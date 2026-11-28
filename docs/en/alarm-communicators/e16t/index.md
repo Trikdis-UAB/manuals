@@ -444,7 +444,7 @@ After connecting the E16T and clicking **Read [F4], *TrikdisConfig*** will provi
 | Status    | Operating condition                                |
 | Device    | Device type (E16T should be shown)           |
 | SN        | Device serial number                               |
-| BL        | Browser version                                    |
+| BL        | Bootloader version                                    |
 | FW        | Device firmware version                            |
 | HW        | Device hardware version                            |
 | Status    | Connection to program type (via USB or remote)     |
@@ -604,7 +604,7 @@ The event Contact ID codes that will be sent to the CMS and to the Protegus, whe
 
 ### Reset factory settings 
 
-To restore the communicator’s factory defaults, you need to click the **Restore** button in the TrikgisConfig window.
+To restore the communicator’s factory defaults, you need to click the **Restore** button in the TrikdisConfig window.
 
 <img alt="TrikdisConfig Default settings section. The Restore button is outlined in red above the Unique ID field." src="./image33.webp" style="width:6.937007874015748in;height:1.062992125984252in" />
 

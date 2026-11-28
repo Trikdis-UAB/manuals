@@ -450,16 +450,85 @@ plugins:
           - Paradox SP(+)/MG(+): alarm-communicators/cellular/quick-setup/paradox/index.md
           - DSC PowerSeries Neo: alarm-communicators/cellular/quick-setup/dsc neo hs/GT+ NEO HS2016 2026 01 07.md
           - DSC PowerSeries: alarm-communicators/cellular/quick-setup/dsc pc/GT+ DSC PC585 2026 01 06.md
+          - Honeywell Vista: alarm-communicators/cellular/quick-setup/honeywell vista/GT+ Honeywell vista 48 ENG 2026 01 07.md
+          - Interlogix NX-4v2 / NX-6v2: alarm-communicators/cellular/quick-setup/interlogix nx-4v2 nx-6v2/GT+ Interlogix NX-4V2 NX-6V2 ENG 2026 01 07.md
+          - Interlogix NX-8v2: alarm-communicators/cellular/quick-setup/interlogix nx-8v2/GT+ Interlogix NX-8V2 2026 01 07.md
+          - Texecom: alarm-communicators/cellular/quick-setup/texecom/GT+ Texecom ENG 2026 03 24.md
+          - Innerrange Inception: alarm-communicators/cellular/quick-setup/innerrange inception/GT+ Innerrange Inception ENG 2026 03 24.md
+          - Innerrange Integriti: alarm-communicators/cellular/quick-setup/innerrange integriti/GT+ Innerrange Integriti ENG 2026 03 24.md
         - Mobilnät:
           - GT: alarm-communicators/cellular/gt/index.md
           - GT+: alarm-communicators/cellular/gt-plus/index.md
           - GET: alarm-communicators/cellular/get/index.md
+          - G16: alarm-communicators/cellular/g16/index.md
+          - G16T: alarm-communicators/cellular/g16t/index.md
+        - För brandlarmcentraler:
+          - FireCom: alarm-communicators/fire-panels/firecom/index.md
+          - G17F: alarm-communicators/fire-panels/g17f/index.md
+        - Ethernet:
+          - Snabbinstallation E16:
+            - DSC PowerSeries: alarm-communicators/ethernet/quick-setup/e16/dsc-pc585/index.md
+            - Paradox SP(+)/MG(+): alarm-communicators/ethernet/quick-setup/e16/paradox/index.md
+            - Honeywell Vista: alarm-communicators/ethernet/quick-setup/e16/honeywell-vista/index.md
+            - Interlogix NX-4v2 / NX-6v2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-4v2-nx-6v2/index.md
+            - Interlogix NX-8v2: alarm-communicators/ethernet/quick-setup/e16/interlogix-nx-8v2/index.md
+            - Texecom: alarm-communicators/ethernet/quick-setup/e16/texecom/index.md
+            - Innerrange Inception: alarm-communicators/ethernet/quick-setup/e16/innerrange-inception/index.md
+            - Innerrange Integriti: alarm-communicators/ethernet/quick-setup/e16/innerrange-integriti/index.md
+          - E16: alarm-communicators/e16/index.md
+          - Snabbinstallation E16T: alarm-communicators/ethernet/quick-setup/e16t/index.md
+          - E16T: alarm-communicators/e16t/index.md
+        - Radio:
+          - T16: alarm-communicators/t16/index.md
+      - Centralapparater:
+        - FLEXi SP3:
+          - Manual för FLEXi SP3: control-panels/sp3/index.md
+          - Använda knappsatser från Protegus och Paradox: control-panels/sp3/paradox-user-guide/index.md
+          - Lägga till trådlösa detektorer S8/S9: control-panels/sp3/add-s8-sensors.md
+          - Trådlösa enheter från Paradox (RTX3): control-panels/sp3/paradox-rtx3/index.md
+        - CG17: control-panels/cg17/index.md
       - Styrenheter för portar:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md
         - GATOR LTE / GATOR WiFi med iO4R: gate-controllers/gator-io4r/index.md
+      - Knappsatser:
+        - Knappsats SK-LCD Button: keypads/sk-lcd-button/index.md
+        - Knappsats SK-LED Button: keypads/sk-led-button/index.md
+        - Knappsats SK-LCD TouchPad: keypads/sk-lcd-touchpad/index.md
+        - Knappsats SK-LED TouchPad: keypads/sk-led-touchpad/index.md
+        - Knappsats FLEXi SK LCD: keypads/flexi-sk-lcd/index.md
+        - Knappsats FLEXi SK LED: keypads/flexi-sk-led/index.md
       - Utbyggnadsmoduler:
         - iO-8: expanders/io-8/index.md
+        - iO-LORA: expanders/io-lora/index.md
+        - iO8-LoRa: expanders/io8-lora/index.md
+        - PB-LoRa: expanders/pb-lora/index.md
+        - Radiotransceivrar:
+          - RF-LoRa: expanders/rf-lora/index.md
+          - RF-S8: expanders/rf-s8/index.md
+      - Mottagare:
+        - IPcom:
+          - Översikt: receivers/ipcom/index.md
+          - Hårdvarumottagare RL25: receivers/ipcom/rl25.md
+          - Åtkomst och inloggning: receivers/ipcom/ui/access-and-login.md
+          - Användargränssnitt:
+            - Status: receivers/ipcom/ui/screens/status.md
+            - Loggar: receivers/ipcom/ui/screens/logs.md
+            - Allmänt: receivers/ipcom/ui/screens/general.md
+            - Interna händelser: receivers/ipcom/ui/screens/internal-events.md
+            - Mottagare: receivers/ipcom/ui/screens/receivers.md
+            - Utgångar: receivers/ipcom/ui/screens/outputs.md
+            - Användare: receivers/ipcom/ui/screens/users.md
+            - Inkommande händelser: receivers/ipcom/ui/screens/incoming-events.md
+            - Objekt: receivers/ipcom/ui/screens/objects.md
+          - Ordlista: receivers/ipcom/ui/glossary.md
+          - Nätverk och brandvägg: receivers/ipcom/ui/networking-firewall.md
+        - Äldre IP-mottagare RL14: receivers/ip-network/rl14/index.md
+        - Radio:
+          - RFH11: receivers/radio/rfh11/index.md
+          - R11: receivers/radio/r11/index.md
+          - RR-IP12: receivers/radio/rr-ip12/index.md
+        - Telelinje RTH2: receivers/landline/rth2/index.md
 - search:
     lang:
     - en

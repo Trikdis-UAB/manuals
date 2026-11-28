@@ -279,7 +279,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 3.  **Communication type** - select the **IP** connection method (We do not recommend SMS as the primary channel).
 
-4.  **Protocol** - select the protocol type for event messages: **TRK** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+4.  **Protocol** - select the protocol type for event messages: **TRK** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GARD receivers).
 
 5.  **TRK encryption key** - enter the encryption key that is set in the receiver.
 
@@ -457,7 +457,7 @@ The *W485* module sends messages to the CMS (Central Monitoring Station) and to 
 
 ### Schematic for connecting the E485 „Ethernet“ module (only for 3G/4G communicators)
 
-The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *G16*, CSP and *Protegus2* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *G16* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *G16* starts sending messages via *E485*. / Configuration of the *E485* WiFi module to work with the *G16* is described in chapter 6.7. „„RS485 modules” window”. / Insert SIM card into the communicator *G16* for *E485* to work.
+The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *G16*, CMS and *Protegus2* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *G16* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *G16* starts sending messages via *E485*. / Configuration of the *E485* Ethernet module to work with the *G16* is described in chapter 6.7. „„RS485 modules” window”. / Insert SIM card into the communicator *G16* for *E485* to work.
 
 <img alt="Wiring diagram: power supply and G16 to the E485 Ethernet module. Power supply (12 VDC, 0.5A): +12V to G16 +DC, 0V to G16 -DC; the same lines continue, via junction dots, to E485 +DC and -DC. RS485 connection (up to 100m): G16 A 485 to E485 A 485, G16 B 485 to E485 B 485." src="./image27.webp" style="width:2.9766732283464568in;height:2.07667104111986in" />
 
@@ -478,7 +478,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     communicator, or to use a more sensitive cellular antenna. / If you see
     a different LED indication, it indicates a certain malfunction. Diagnose
     it by following the LED indication table in chapter
-    [1.6](#17-led-indication-of-operation) "[LED indication of
+    [1.7](#17-led-indication-of-operation) "[LED indication of
     operation](#17-led-indication-of-operation)". / If the G16 indication
     does not illuminate at all, check the power supply and connections.
 ## Programming the control panel 
@@ -701,7 +701,7 @@ After connecting the G16 and clicking **Read [F4], *TrikdisConfig*** will provid
 | Status         | Operating condition                                |
 | Device         | Device type (G16 should be shown)            |
 | SN             | Device serial number                               |
-| BL             | Browser version                                    |
+| BL             | Bootloader version                                 |
 | FW             | Device firmware version                            |
 | HW             | Device hardware version                            |
 | State          | Connection to program type (via USB or remote)     |
@@ -759,7 +759,7 @@ SMS communication is particularly useful as a backup channel, because it works e
 
 - **Communication type** - select which method for connecting to the monitoring station receiver will be used: **IP** or **SMS**.
 
-- **Protocol** - select in which coding the events should be sent: **TRK** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers) , **TL150** (to SUR-GUARD receivers).
+- **Protocol** - select in which coding the events should be sent: **TRK** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers) , **TL150** (to SUR-GARD receivers).
 
 - **TRK encryption key** - 6-digit message encryption key. The key written to the communicator must match the receiver’s key.
 
@@ -889,7 +889,7 @@ You can send SMS commands to the communicator that will control the basic functi
 
 The communicator has 3 universal (input / output) terminals. The table can set the terminal operating mode (Off, IN, OUT). The input must specify the type of circuit to be connected NC, NO, NO / EOL, NC / EOL, NO / DEOL, NC / DEOL.
 
-Additional sensors can be connected to the communicator inputs. When the sensor is triggered, the communicator will send an event message. The input is assigned a Contact ID code, which will be sent to CSP and Protegus2.
+Additional sensors can be connected to the communicator inputs. When the sensor is triggered, the communicator will send an event message. The input is assigned a Contact ID code, which will be sent to CMS and Protegus2.
 
 - **Enable** – checked event fields where messages will be sent to CMS and Protegus2.
 

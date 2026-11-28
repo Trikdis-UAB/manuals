@@ -55,7 +55,19 @@ def front_matter_keys(text: str) -> list[str]:
             if re.match(r"^[A-Za-z_][\w-]*\s*:", line)]
 
 
+SITE_PREFIXES = ("https://docs.trikdis.com/", "http://docs.trikdis.com/")
+
+
+def own_site(target: str) -> str:
+    """A full URL to our own docs site is an internal link: return it as a site-absolute path."""
+    for pre in SITE_PREFIXES:
+        if target.startswith(pre):
+            return "/" + target[len(pre):]
+    return target
+
+
 def internal_anchor(target: str) -> bool:
+    target = own_site(target)
     return "#" in target and not target.startswith(("http://", "https://", "mailto:"))
 
 
@@ -117,7 +129,7 @@ def compare(en_path: Path, sv_path: Path) -> tuple[list[str], list[str]]:
     def canon(target: str, page: Path, lang: str) -> str:
         """Map a link to a language-neutral page key, so that an EN relative .md link and the
         SV '/en/...' link that stands in for a not-yet-translated page compare equal."""
-        path = target.split("#")[0]
+        path = own_site(target).split("#")[0]
         if path.startswith(("http://", "https://", "mailto:")) or not path:
             return target
         if path.startswith("/"):

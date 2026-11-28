@@ -536,3 +536,33 @@ Terms settled while translating. Translators add candidates in their report; the
 | mains / low voltage | **nätspänning** / **lågspänning** | — | |
 | unplanned call-out | **oplanerad utryckning** | — | iO4R page. |
 
+| Stay / Sleep / Away (arming modes) | **hemmaläge / nattläge / bortaläge** (hemmatillkoppling, bortatillkoppling) | — | SP3 page, 2026-11-28. Key labels STAY/SLEEP stay as printed. |
+| duress code | **tvångskod** | — | SP3; PC1616 table has *Tvångs-*. |
+| administrator code | **administratörskod** | — | SP3, keypads. |
+| key fob (remote) | **fjärrkontroll** | — | SP3. |
+| security grade (EN 50131) / environmental class | **säkerhetsgrad** / **miljöklass** | — | SP3. ⚠ open question 10. |
+| fire detector / smoke detector | **branddetektor** / **rökdetektor** | — | FireCom. |
+| two-wire / four-wire detector | **2-tråds / 4-tråds** detektor | tvåtråds | FireCom, Neo pattern. |
+| sounders / signalers | **larmdon** | — | FireCom. |
+| fault warning (EN 54-21) | **felvarning** | — | FireCom; glossary §10. |
+| alarm transmission and fault warning routing equipment | **larmöverförings- och felvarningsutrustning** | — | FireCom (EN 54 title). |
+| notified certification body | **anmält certifieringsorgan** | — | FireCom. ⚠ native check. |
+| RF transmitter (T16) | **radiosändare** | — | T16. |
+| output power / attenuation / line of sight | **sändningseffekt / dämpning / fri sikt** | — | T16. |
+| radio repeater | **radiorepeater** (pl. repeatrar) | — | T16, receivers. |
+| sleep mode / stand-by (power) | **strömsparläge / viloläge** | — | T16 (kept apart). |
+| transceiver | **radiotransceiver** | sändtagare | LoRa pages, Neo. |
+| enrol / unenrol (wireless device) | **lära in / radera inlärningen**; learning mode **inlärningsläge** | parkoppla | LoRa pages, Neo. |
+| DIP switch | **DIP-switch** | — | LoRa pages. |
+| parallel channel | **parallellkanal** | — | E16 quick setups. |
+| transmission module | **överföringsmodul** | — | Radio receivers. |
+| deaf time / time filter | **spärrtid** (labels stay English) | — | R11. |
+| allowlist (prose) | **tillåtelselista** (label **IP Whitelist** stays) | vitlista | IPcom. |
+| tenant (monitoring context) | **kund** | hyresgäst | IPcom, supervisor 2026-11-28. |
+| jump host / hardening | **hoppserver / härdning** | — | IPcom. |
+| handset lifted (LINE LED) | **luren är lyft** | — | RTH2, E16T. |
+| loop (fire panel) / loop number | **slinga** / **slingnummer** | — | G17F. ⚠ native check. |
+| contact (iButton) key / key reader | **elektronisk nyckel (iButton)** / **nyckelläsare** | — | CG17, T16 (*kontaktnyckel*). |
+| fuel level sensor | **bränslenivågivare** | — | CG17. |
+| siren flash | **blixtljus** | — | CG17. |
+| emergency call buttons (keypad) | **nödlarmsknappar** | — | SP3 user guide. |
