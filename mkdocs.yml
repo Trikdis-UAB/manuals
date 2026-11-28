@@ -147,6 +147,8 @@ plugins:
           - Adding S8/S9 wireless sensors: control-panels/sp3/add-s8-sensors.md
           - Paradox wireless devices (RTX3): control-panels/sp3/paradox-rtx3/index.md
         - CG17: control-panels/cg17/index.md
+      - Video Verification:
+        - VideoHub: video-verification/videohub/index.md
       - Gate Controllers:
         - GATOR: gate-controllers/gator/index.md
         - GATOR WiFi: gate-controllers/gator-wifi/index.md

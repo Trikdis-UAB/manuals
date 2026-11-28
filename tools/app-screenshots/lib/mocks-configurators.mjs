@@ -1,12 +1,37 @@
 // Sample answers for the calls a configurator makes besides config/read. Invented data only.
 
-import { SAMPLE, sampleFirmware, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem } from './sample.mjs';
+import { SAMPLE, sampleFirmware, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem, media, vhVisualEvents } from './sample.mjs';
 
 export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch, scenario = {} }) {
   if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
   if (configurator === 'g16') addSystemWizard(on, { model, state, offline: Boolean(scenario.deviceOffline) });
+  if (configurator === 'vh') vh(on, { readJson, FIX, fixture, scenario });
   if (configurator === 'sp3') sp3(on);
 }
+
+// VideoHub: area status, camera snapshots (served by the guard from fixtures/media/), detections.
+function vh(on, { readJson, FIX, fixture: file, scenario }) {
+  on('POST', '/get-system-status-new', () => ({ success: true, data: readJson(FIX, 'config', file)._systemStatus }));
+  // A stored frame answers at once (requesting_fresh false), so the app does not wait for the realtime
+  // channel, which the guard refuses.
+  const live = (cameraId) => (Number(cameraId) % 2 === 1 ? 'backyard-live.jpg' : 'street-car-full.jpg');
+  on('GET', '/camera/snapshot-for-configuration', ({ query }) => ({ success: true, snapshot: media(live(query.get('camera_id'))), requesting_fresh: false }));
+  on('GET', '/camera/snapshot', ({ query }) => ({ success: true, snapshot: media(live(Number(query.get('camera_id')) - 900600)), requesting_fresh: false }));
+  const company = scenario.company ? { companyId: scenario.company.id, companyName: scenario.company.name } : {};
+  on('GET', '/visual-events', ({ query }) => ({ success: true, items: Number(query.get('offset_records') || 0) === 0 ? vhVisualEvents(company) : [] }));
+  on('GET', '/event-visual-data', ({ query }) => {
+    const e = vhVisualEvents(company).find((x) => String(x.id) === query.get('event_id')) ?? vhVisualEvents(company)[1];
+    return { success: true, data: e, ...e };
+  });
+  // An operator's notes on an event: none yet.
+  on('GET', '/event-notes', ({ query }) => ({ success: true, notes: [], event_id: Number(query.get('event_id') || 0), related_event_id: query.get('related_event_id') }));
+  on('GET', '/request-visual-data', () => ({ success: true, already_present: true }));
+  on('GET', '/firmware', () => ({ success: true, data: [{ fw_version: '1.04', fw_date: '2026-11-10' }] }));
+  // Adding a VideoHub that has no network yet: the server knows its type (0x5D) but cannot reach it, so the
+  // app goes straight to Bluetooth setup.
+  if (scenario.deviceOffline) on('GET', '/online', () => ({ success: true, online: false, hwId: 0x5d, errorType: '', srv: 1, own_region: true, local_version: 1 }));
+}
+
 
 // FLEXi SP3: the calls its configurator makes only when a button is pressed. Nothing is sent.
 function sp3(on) {

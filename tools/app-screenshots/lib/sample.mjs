@@ -31,6 +31,13 @@ export const MODELS = {
   // SP5 firmware 1.00: every SP5 on the beta server reports it (7 test systems, read 2026-10-12).
   // Revision 1E7LWB.0 and bootloader 1.00 from a real test panel's config/info (2026-10-19), which
   // reports its version as "SP5_1E7LWB.0_1.00": the firmware part is dotted, not x100.
+  // VideoHub: every VideoHub on the beta server reports fw_version 1.04 (two systems, read 2026-11-27),
+  // and 1.04 is the version installers are told to use. How it names itself in config/info is not known:
+  // the app takes the firmware from the last "_" part (x100 or dotted) and shows the rest as the name, so
+  // "VideoHub_0104" shows "VideoHub" and 1.04 without inventing a revision. Capability list and
+  // direct control as the real systems report them (supported_commands contains 29: camera detection).
+  'VH':    { configurator: 'vh', fixture: 'vh.json', hwId: '5D', deviceId: 0x5d, hwType: 'VH', name: 'VideoHub', firmware: '1.04', revision: null, bt: '0104', firmwareConfirmed: true, comType: 2,
+             systemFwVersion: '1.04', supportedCommands: '.1.2.9.18.1F.24.29.2B.2C.2D.2E.2F.30.' },
   'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: '1E7LWB.0', bt: '1.00', fwFormat: 'dotted', firmwareConfirmed: true, revisionConfirmed: true },
   // FLEXi SP3: the panel in the manual's TrikdisConfig screenshots reports SP3_1E74, firmware 1.23,
   // bootloader 1.02 (revision ends in 4: RF-LORA and RF-S8 receivers, up to 64 zones). Whether 1.23 is
@@ -107,7 +114,7 @@ export function sampleSystem(modelName) {
     id: SAMPLE.systemId,
     name: 'Sample system',
     hwType: m.hwType,
-    supported_commands: '',
+    supported_commands: m.supportedCommands ?? '',
     supported_wireless: '',
     address: 'Sample street 1',
     amIMaster: false,
@@ -164,7 +171,7 @@ export function sampleSystem(modelName) {
     stabilityScoreTier: 'unavailable',
     showStabilityScore: false,
     canUpgradeFirmware: false,
-    fw_version: deviceVersion(m),
+    fw_version: m.systemFwVersion ?? deviceVersion(m),
     sos_type: 0,
     troubles: [],
     devices: [],
@@ -356,4 +363,52 @@ export function wizardCreatedSystem(modelName, body) {
   };
   delete sys.assistedById;
   return sys;
+}
+
+// --- VideoHub ---------------------------------------------------------------------------------
+
+// Camera pictures: served by the guard from fixtures/media/ (MEDIA_HOST in lib/guard.mjs).
+export const media = (file) => `https://media.example.com/videohub/${file}`;
+
+// The VideoHub's cameras as the platform stores them (GET /system -> cameras, TCamera in models/camera.ts),
+// matching the device's own list in fixtures/config/vh.json. related_id is the camera's number in the
+// hub; a camera with one is shown live over WebRTC.
+export function vhCameras(cfg) {
+  return cfg.camera.cameras.map((c, i) => ({
+    id: 900601 + i, name: c.name, protocol: 'rtsp', host: c.address, port: String(c.port), user: c.username, pass: c.password,
+    path: c.stream_path, fullUrl: `rtsp://${c.username}:${c.password}@${c.address}:${c.port}${c.stream_path}`,
+    system_id: SAMPLE.systemId, assigned_pgms: [], assignedPgms: [], assigned_zones: [], assignedZones: [], related_id: c.id,
+    fps: c.fps, resolution: c.resolution, live_resolution: c.live_resolution, lpr_enabled: c.lpr_enabled, button_style: 1, button_snapshot: 0,
+    detection_mode: c.detection_mode, detection_objects: c.detection_objects, improve_contrast: c.improve_contrast,
+    motion_sensitivity: c.motion_sensitivity, min_object_size: c.min_object_size, motion_masks: c.motion_masks,
+    merge_detections: c.merge_detections, detection_zones: c.detection_zones, detection_path: c.detection_path,
+    last_snapshot: media(c.name === 'Backyard' ? 'backyard-person-crop.jpg' : 'street-car-crop.jpg'),
+  }));
+}
+
+// A VideoHub system: one area, the cameras, direct control (as the real ones report).
+export function vhSystem(modelName, cfg) {
+  const s = sampleSystem(modelName);
+  return {
+    ...s, direct: 1, cameras: vhCameras(cfg),
+    areas: [{ id: 900201, system_id: s.id, name: 'Video', queue_no: 1, status: 7, status_time: null, alarm_in_memory: false, last_person_name: '',
+      alarm_time: null, alarm_type: 0, monas_id: null, autoarm_with_area_id: null, disarm_when_autoarmed: false, showKeypad: false, canBypass: false, zones: [] }],
+  };
+}
+
+// Detections, newest first, in the shape of GET /visual-events (VisualEventItem, src/api/v3/event.ts).
+// Times are fixed hours of the capture day. hires_status 2 = the video is available.
+export function vhVisualEvents({ companyId = 0, companyName = null } = {}) {
+  const at = (hh, mm) => todayAt(hh, mm, 'Europe/Vilnius');
+  const ev = (id, camera, cameraId, time, crop, full, preview, video, reviewed = null) => ({
+    id, system_id: SAMPLE.systemId, camera_name: camera, camera_id: cameraId, event_time: time, related_event_id: `${time}.000000-sample${id}`,
+    cropped_snapshot: media(crop), full_snapshot: media(full), preview_lowres: preview ? media(preview) : null, preview_hires: video ? media(video) : null,
+    hires_status: video ? 2 : 0, system_name: 'Sample system', company_id: companyId, company_name: companyName,
+    reviewed_by: reviewed ? 'Sample Operator' : null, reviewed_at: reviewed, has_event_notes: false,
+  });
+  return [
+    ev(900703, 'Backyard', 900601, at(7, 59), 'backyard-car-crop.jpg', 'backyard-car-full.jpg', 'backyard-car-preview.gif', 'backyard-car.mp4'),
+    ev(900702, 'Backyard', 900601, at(7, 58), 'backyard-person-crop.jpg', 'backyard-person-full.jpg', 'backyard-person-preview.gif', 'backyard-person.mp4'),
+    ev(900701, 'Street', 900602, at(7, 51), 'street-car-crop.jpg', 'street-car-full.jpg', 'street-car-preview.gif', 'street-car.mp4'),
+  ];
 }

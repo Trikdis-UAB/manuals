@@ -1,0 +1,183 @@
+{
+  "flow": "walk",
+  "configurator": "vh-user",
+  "models": [
+    "VH"
+  ],
+  "layouts": [
+    "phone",
+    "desktop"
+  ],
+  "filePrefix": "vh",
+  "sampleNote": "Sample VideoHub with two cameras, Backyard and Street (fixtures/config/vh.json), on a system that belongs to a monitoring company (Sample Security), so snapshots and live view are not blurred. Camera pictures are real frames from TRIKDIS's own demo cameras, licence plates blurred (fixtures/media/). Detections at 07:51, 07:58 and 07:59 of the capture day.",
+  "_fields": "Walk steps as in new-system.json. system patches the sample system, me patches the signed-in user, company is the monitoring company the detections belong to. A walk's layouts limits it to those layouts.",
+  "system": {
+    "company_id": 900010,
+    "companyName": "Sample Security"
+  },
+  "company": {
+    "id": 900010,
+    "name": "Sample Security"
+  },
+  "me": {
+    "limits": {
+      "default_camera_count": false,
+      "camera_count": 16
+    }
+  },
+  "walks": [
+    {
+      "id": "home",
+      "steps": [
+        {
+          "click": {
+            "text": "Sample system"
+          },
+          "waitUrl": "/900101"
+        },
+        {
+          "shot": "home"
+        }
+      ]
+    },
+    {
+      "id": "cameras",
+      "steps": [
+        {
+          "click": {
+            "text": "Sample system"
+          },
+          "waitUrl": "/900101"
+        },
+        {
+          "eval": "history.pushState(null, '', location.pathname + '/settings/camera-list'); dispatchEvent(new PopStateEvent('popstate', { state: null }))",
+          "waitUrl": "/settings/camera-list"
+        },
+        {
+          "shot": "camera-list",
+          "title": "systems.menu.myCameras"
+        },
+        {
+          "click": {
+            "text": "Backyard"
+          },
+          "waitUrl": "/edit-camera/900101"
+        },
+        {
+          "shot": "camera-edit",
+          "title": "systems.labels.editCamera"
+        }
+      ]
+    },
+    {
+      "id": "video-events",
+      "steps": [
+        {
+          "eval": "history.pushState(null, '', innerWidth >= 1150 ? '/d/company/video' : '/a/video'); dispatchEvent(new PopStateEvent('popstate', { state: null }))",
+          "waitUrl": "/video"
+        },
+        {
+          "shot": "video-events",
+          "title": "systems.titles.videoEvents"
+        },
+        {
+          "click": {
+            "css": ".event-item:nth-child(2) img.event-snapshot"
+          }
+        },
+        {
+          "shot": "event-details",
+          "fullScreen": true
+        },
+        {
+          "click": {
+            "text": "Snapshot"
+          }
+        },
+        {
+          "shot": "event-snapshot",
+          "fullScreen": true
+        },
+        {
+          "click": {
+            "text": "Preview"
+          }
+        },
+        {
+          "shot": "event-preview",
+          "fullScreen": true
+        }
+      ]
+    },
+    {
+      "id": "ble",
+      "deviceOffline": true,
+      "steps": [
+        {
+          "click": {
+            "css": "app-plus-button .pb-button"
+          },
+          "waitUrl": "/new-system/add-system"
+        },
+        {
+          "fill": {
+            "css": "input",
+            "value": "{imei}"
+          }
+        },
+        {
+          "click": {
+            "label": "auth.buttons.next"
+          },
+          "waitUrl": "/new-system/scan-ble-devices"
+        },
+        {
+          "shot": "add-system-ble",
+          "title": null,
+          "note": "The server knows the device is a VideoHub but cannot reach it, so the app starts Bluetooth setup."
+        }
+      ],
+      "layouts": [
+        "phone"
+      ]
+    },
+    {
+      "id": "operator-video",
+      "note": "A monitoring company's operator (role Company): the event view has Details and Mark as reviewed.",
+      "me": {
+        "name": "Sample Operator",
+        "email": "operator@example.com",
+        "company_id": 900010,
+        "limits": {
+          "default_camera_count": false,
+          "camera_count": 16
+        },
+        "permissions": {
+          "role": 2,
+          "company_id": 900010,
+          "name": "Company",
+          "companyName": "Sample Security"
+        }
+      },
+      "steps": [
+        {
+          "eval": "history.pushState(null, '', innerWidth >= 1150 ? '/d/company/video' : '/a/video'); dispatchEvent(new PopStateEvent('popstate', { state: null }))",
+          "waitUrl": "/video"
+        },
+        {
+          "shot": "operator-video-events",
+          "title": "systems.titles.videoEvents"
+        },
+        {
+          "click": {
+            "css": ".event-item:nth-child(2) img.event-snapshot"
+          }
+        },
+        {
+          "shot": "operator-event-details",
+          "fullScreen": true
+        }
+      ]
+    }
+  ]
+}

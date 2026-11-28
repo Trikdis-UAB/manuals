@@ -30,6 +30,8 @@ node guard-selftest.mjs                                   # must say "all guard 
 node capture.mjs --model GET --lang en --layout phone,desktop
 node capture.mjs --model SP5 --lang en --layout phone --screen zones,users-list
 node capture.mjs --model GET --flow protegus --lang en --layout phone   # user screens: protegus-*-phone.png
+node capture.mjs --model VH --lang en --layout phone,desktop            # VideoHub configurator
+node capture.mjs --model VH --flow vh-user --lang en --layout phone,desktop   # VideoHub cameras, video events
 ```
 
 A user-screen walk sets its sample state in `screens/protegus.json` (system patch, zone status, zones
@@ -190,6 +192,18 @@ public, so keep real names, systems and customer data out of fixtures and commit
 - **After changing a shared sample** (`lib/sample.mjs`, the mocks), re-capture a few released images
   into a scratch folder and pixel-compare them with `out/`, so a fix for one front-end or model does not
   silently change published pictures of another.
+
+- **A pop-up opened over another pop-up** may not live inside the component that opened it. The
+  configurator's pop-ups are portaled: both are `section.overlay` at the layout level, so crop the top
+  one with `cropLast`. Pop-ups opened through the popup service (VideoHub's Camera streams) sit in their
+  own component (`app-camera-stream-path-popup div.pp_container_default`). Find the container with an
+  XPath on a text it shows; `getByText` exact on a leaf can miss text that sits beside an input.
+- **Camera pictures are blurred for installers without a company.** The app blurs snapshots and refuses
+  live view unless the user is a general user or the system belongs to a company (`company_id > 0`), so
+  VideoHub user screens need a sample company (`screens/vh-user.json`). Camera pictures come from
+  `fixtures/media/` through the made-up host `media.example.com`; never point a sample at a real media URL.
+- **The beta API host moved** (2026-11-27): `api.beta2.protegus.app` no longer resolves; the beta's API
+  answers at `beta2.protegus.app/v3/api` (and the EU one at `web.protegus.app/v3/api`).
 
 ## Check before handing over
 

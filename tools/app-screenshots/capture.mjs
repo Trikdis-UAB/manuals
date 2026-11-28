@@ -90,7 +90,7 @@ for (const lang of langs) {
           if (screen.steps) appPath.push(...await runSteps(page, t, screen.steps));
           const base = `${modelSlug}-${id}`;
           // A pop-up or a single card is cut out of the page (screen.crop: its CSS selector).
-          const shots = [{ variant: layout, file: `${base}-${layout}.png`, ...(screen.crop ? { crop: screen.crop, isolate: screen.isolate, keepFocus: screen.keepFocus } : {}) }];
+          const shots = [{ variant: layout, file: `${base}-${layout}.png`, ...(screen.crop ? { crop: screen.crop, cropLast: screen.cropLast, isolate: screen.isolate, keepFocus: screen.keepFocus } : {}) }];
           // g16 opens in the right-hand column of the desktop layout, so that column is also cut out.
           if (layout === 'desktop' && def.flow !== 'configuration') shots.push({ variant: 'desktop-panel', file: `${base}-desktop-panel.png`, selector: 'app-company-mobile-host' });
           // The newer configurator fills the window under the app's top bar (logo, region, account);
@@ -180,9 +180,10 @@ async function runWalks(lang, t) {
     if (def.layouts && !def.layouts.includes(layout)) { console.log(`skip ${layout}: ${args.flow} is captured in ${def.layouts.join(', ')} only`); continue; }
     for (const walk of def.walks) {
       if (wanted && !wanted.some((id) => id === walk.id || walk.steps.some((st) => st.shot === id))) continue;
+      if (walk.layouts && !walk.layouts.includes(layout)) continue; // a walk that exists in some layouts only
       const label = `${lang} ${layout} ${model} ${walk.id}`;
       // The sample state this walk needs (lib/mocks.mjs, createMocks): the flow's system plus the walk's changes.
-      const scenario = { sampleSystem: def.sampleSystem, system: walk.system, zoneStatus: walk.zoneStatus, openZones: walk.openZones, deviceOffline: walk.deviceOffline };
+      const scenario = { sampleSystem: def.sampleSystem, system: walk.system ?? def.system, zoneStatus: walk.zoneStatus, openZones: walk.openZones, deviceOffline: walk.deviceOffline, me: walk.me ?? def.me, company: walk.company ?? def.company };
       const app = await openOrFail(label, { lang, model, layout, timezoneId: def.timezones?.[lang], frontend: fe, scenario });
       if (!app) continue;
       const { page, browser, guard, errors, mocks } = app;
@@ -251,7 +252,8 @@ async function runSteps(page, t, steps) {
 // runs past the window, so the whole element is drawn. isolate: only the element is painted, on a
 // transparent background, so a pop-up's rounded corners do not carry the dimmed page behind it.
 async function shootElement(page, s, layout, opts) {
-  const el = page.locator(s.crop).first();
+  // cropLast: the last match, for a pop-up opened over another one (both are section.overlay).
+  const el = s.cropLast ? page.locator(s.crop).last() : page.locator(s.crop).first();
   await el.waitFor({ timeout: 10000 });
   const need = await el.evaluate((e) => {
     let extra = 0;
@@ -268,8 +270,10 @@ async function shootElement(page, s, layout, opts) {
   // No focus ring on the last field typed into (keepFocus: an open dropdown would close).
   if (!s.keepFocus) await page.evaluate(() => document.activeElement?.blur());
   if (s.isolate) {
+    // Only the chosen element is painted, even when the selector also matches a pop-up underneath it.
+    await el.evaluate((e) => e.setAttribute('data-shot', ''));
     await page.addStyleTag({ content: `html, body { background: transparent !important; } body * { visibility: hidden !important; }
-      ${s.crop}, ${s.crop} * { visibility: visible !important; }` });
+      [data-shot], [data-shot] * { visibility: visible !important; }` });
   }
   await el.screenshot({ ...opts, omitBackground: Boolean(s.isolate) });
 }

@@ -17,7 +17,7 @@ const fe = frontend(appAt >= 0 ? argv.splice(appAt, 2)[1] : 'released');
 const langs = argv.length ? argv : ['en'];
 // 'sp5' has no pack of its own: the endpoint returns the shared configurator labels, which the
 // newer configurator pages use alongside the main app pack.
-const CONFIG_PACKS = ['g16', 'sp5', 'sp3'];
+const CONFIG_PACKS = ['g16', 'sp5', 'sp3', 'vh'];
 
 async function save(file, res) {
   const body = await res.json();
