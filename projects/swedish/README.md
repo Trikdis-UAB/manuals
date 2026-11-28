@@ -13,6 +13,22 @@ Started 2026-11-27 for Teletec (Sweden). Status per page: `progress.md`.
 - **Native review:** Erik Haversten at Teletec settles the "Open questions" in the style
   guide and proofreads the pilot pages before the language goes public.
 
+## What worked (2026-11-27/28, all 69 pages in two days)
+
+- **Families, model page first.** Translate one page of a family (GET, G16, E16, SP3, FireCom,
+  GATOR, the DSC quick setup), check it, then have the siblings reuse its Swedish for identical
+  English. GT+ took ~75 % from GET; CG17 ~45 % from SP3. Siblings read the same and cost less.
+- **Up to ~8 Sonnet translators in parallel** in one worktree, each owning its own files; the
+  supervisor alone edits shared files (glossary, mkdocs.yml, brief) and commits.
+- **Translation finds English errors.** Translators compare text with screenshots and section
+  numbers; they fix the Swedish to match the screen and report. Real errors were fixed in English
+  in the same PR; the rest are in `source-issues.md`.
+- **After each batch:** `build_sv_nav.py --write`, build, `switch_en_links.py <site> --write`,
+  rebuild, `check_anchors.py`, `check_structure.py --all`, banned-term grep (kommunikator, zon,
+  larma på, kontonummer).
+- **When Erik answers:** change the glossary row first, then replace across `docs/sv` with a script,
+  then rerun the checks.
+
 ## Where the terminology comes from
 
 Five Swedish installation and programming manuals Erik sent on 2026-11-12 (DSC
