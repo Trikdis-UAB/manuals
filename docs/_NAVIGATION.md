@@ -31,14 +31,14 @@ Editor entry points (start here when editing):
     - [E16T](en/alarm-communicators/e16t/index.md)
   - Radio
     - [T16](en/alarm-communicators/t16/index.md)
+- Video Verification
+  - [VideoHub](en/video-verification/videohub/index.md)
 - Control Panels
   - [FLEXi SP3](en/control-panels/sp3/index.md)
     - [Using Protegus and Paradox keypads](en/control-panels/sp3/paradox-user-guide/index.md)
     - [Adding S8/S9 wireless sensors](en/control-panels/sp3/add-s8-sensors.md)
     - [Paradox wireless devices (RTX3)](en/control-panels/sp3/paradox-rtx3/index.md)
   - [CG17](en/control-panels/cg17/index.md)
-- Video Verification
-  - [VideoHub](en/video-verification/videohub/index.md)
 - Gate Controllers
   - [GATOR](en/gate-controllers/gator/index.md)
   - [GATOR WiFi](en/gate-controllers/gator-wifi/index.md)
