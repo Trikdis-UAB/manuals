@@ -11,8 +11,7 @@ clip, so the operator can decide from the event itself, without opening the site
 
 > [!IMPORTANT]
 > VideoHub is in its pilot ("early bird") phase. This page describes firmware **1.04** and the
-> current Protegus app. Items marked **[to confirm]** are still being checked with the TRIKDIS
-> team and will be updated. Questions: [support@trikdis.lt](mailto:support@trikdis.lt).
+> current Protegus app, and will be updated as the pilot goes on. Questions: [support@trikdis.lt](mailto:support@trikdis.lt).
 
 ## About VideoHub
 
@@ -40,9 +39,6 @@ region.
 
 In the box: VideoHub, power supply, LAN cable.
 
-**[to confirm]** Specifications: power supply voltage and consumption, dimensions, operating
-temperature range, Wi-Fi standard, number of LAN ports.
-
 ### What is in an alarm
 
 | Item | What it is | Where it is kept |
@@ -63,8 +59,8 @@ The monitoring station receives a link to a 304 × 304 cropped picture in the DC
 ### Network
 
 - VideoHub needs internet access over its LAN cable or Wi-Fi. A static IP address, port forwarding
-  or router changes are not needed on most networks. **[to confirm]** Which networks need changes
-  (for example, outgoing ports blocked by a corporate firewall).
+  or router changes are not needed on most networks. If VideoHub does not come online on a
+  network with a strict firewall, contact support.
 - VideoHub and the cameras must be on the same local network.
 - **Connect VideoHub and the cameras by cable.** Over Wi-Fi VideoHub can receive about 8 camera
   streams at most.
@@ -82,8 +78,6 @@ The monitoring station receives a link to a 304 × 304 cropped picture in the DC
   camera before adding it, if it has other characters.
 - Cloud-only cameras that have no RTSP stream cannot be used.
 
-**[to confirm]** Camera makes and models tested with VideoHub.
-
 ### Placement
 
 Install VideoHub somewhere ventilated, not in a closed cabinet next to other heat sources. In a
@@ -99,8 +93,7 @@ need 1.03, and the retention setting 1.05. How to update: [Updating the firmware
 
 A monitoring station adds VideoHub to its **Protegus company account**, so its operators see the
 events in the company's **Video events** page and pictures are not blurred. A VideoHub that is not
-linked to a company shows blurred pictures to company staff. **[to confirm]** How a company gives
-its operators access, and what the end user sees.
+linked to a company shows blurred pictures to company staff.
 
 ## Connecting VideoHub
 
@@ -260,9 +253,6 @@ things that do not move.
 | **Merge simultaneous detections into one** | Several objects detected at the same moment give one alarm instead of several. | on / off |
 | **Live view resolution** | Resolution of live view. | Auto, 960x540, 1280x720, 1920x1080 |
 
-**[to confirm]** Recommended starting values for sensitivity and object size, indoors and
-outdoors.
-
 ### Masks and the alarm area
 
 Open **Motion masks** (or **Alarm area**) in the camera's settings. VideoHub takes a fresh picture
@@ -314,19 +304,12 @@ setup template can fill them in when VideoHub is added.
 Use **Backup channel** for a second receiver address, and **Parallel channel** to report to a
 second monitoring station at the same time.
 
-Alarms can also reach the monitoring station through Protegus 2, without an IPcom receiver.
-**[to confirm]** How this is set up for VideoHub.
+### Zone numbers
 
-### Event codes and zone numbers
-
-VideoHub reports each camera as a zone. The zone number is the **Video zone base** (Advanced
-settings → **Cameras**, default 900) plus the camera's ID: with the default, camera 1 is zone 901.
+Each camera reports to the monitoring station with its own zone number: the **Video zone base**
+(Advanced settings → **Cameras**, default 900) plus the camera's ID: with the default, camera 1 is zone 901.
 Choose a base that does not overlap the zone numbers of an alarm panel reporting on the same
 account.
-
-**[to confirm]** Event codes sent for a person, a car, and a camera trouble; the exact format of
-the picture and clip links in the DC-09 extra data; which monitoring software opens them
-directly; how to send a test event.
 
 ## Viewing alarms
 
@@ -361,8 +344,6 @@ preview.
 - **Show reviewed events** shows or hides the ones already handled.
 - Search by system name, account number, Unique ID, address, user, installer or tag.
 - Operators can add notes to an alarm; an icon on the card shows that it has notes.
-
-**[to confirm]** Desktop notification sound for operators.
 
 ## Updating the firmware
 
@@ -406,11 +387,9 @@ Before leaving the site:
 | Alarms in the app but not at the monitoring station | CMS Reporting off or wrong | Check the channel, account, receiver number and encryption key. |
 | **There was an error downloading the video.** | The clip is no longer on VideoHub, or VideoHub is offline | Clips are kept for the retention period only; the pictures remain. |
 
-**[to confirm]** Other common problems from installations.
-
 ## Known limits
 
-- **No alarm yet when a camera stops sending video** (cable cut, camera off). **[to confirm]**
+- **No alarm yet when a camera stops sending video** (cable cut, camera off).
 - People and cars only; no fire or smoke detection.
 - Tested with 8 cameras at 1080p. The 16-camera configuration is being tested.
 - Live view needs a network that allows direct connections.
@@ -435,13 +414,13 @@ settings** (load it into another VideoHub; the file is checked for changes befor
 |---|---|---|
 | **Object Name** | The site name stored on VideoHub. | up to 31 characters |
 | **Account ID** | Account number reported to the monitoring station. | hexadecimal, up to 8 characters |
-| **Module ID** | VideoHub's identifier. **[to confirm]** what it is used for. | hexadecimal, up to 10 characters |
+| **Module ID** | VideoHub's identifier. | hexadecimal, up to 10 characters |
 
 #### Access & Permissions
 
 | Setting | What it does | Values |
 |---|---|---|
-| **Cloud access code** | **[to confirm]** | up to 6 characters |
+| **Cloud access code** | Access code for configuration through the Protegus cloud. | up to 6 characters |
 | **Full access** | Configuration code with full access. | up to 8 characters; default `12345678` |
 | **Limited access** | Configuration code with limited access. | up to 8 characters |
 
