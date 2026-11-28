@@ -54,6 +54,15 @@
       "route": "communication/cmsReporting"
     },
     {
+      "id": "communication-cloudreporting",
+      "menu": [
+        "configurators.navigation.communication",
+        "configurators.navigation.communicationChildren.cloudReporting"
+      ],
+      "route": "communication/cloudReporting",
+      "onlyApps": ["beta"]
+    },
+    {
       "id": "areas",
       "menu": [
         "configurators.navigation.areasAndZones",

@@ -53,11 +53,13 @@ just those with `--screen` (the manifest merges).
 
 **Beta front-end:** `--app beta` photographs beta2.protegus.app instead (SP5 follows the beta, Andrius
 2026-10-19). Images and their own manifest go to `out/beta/`, every record says `frontend: "beta"`,
-and the sample configuration is `fixtures/config/<name>-beta.json` when the beta server's answer is
-shaped differently. A model without one falls back to the released shape, and the run prints a NOTE
-saying so. Labels: `node fetch-public.mjs en --app beta` takes the EU server's pack and adds only the
-keys the beta server has that the EU server lacks. Never use the beta server's own wording: it is the
-North America region and says "Via Protegus2 North America cloud" in about 25 labels. Desktop pages of
+and the sample configuration is `fixtures/config/<name>-beta.json` when the beta reads the device's
+configuration in a different shape. A model without one falls back to the released shape, and the run
+prints a NOTE saying so. Labels: `node fetch-public.mjs en --app beta`. Since November 2026 the beta
+front-end talks to the EU server and its labels are the EU server's; the old beta server
+(`api.beta2.protegus.app`, North America) is gone. Its wording named its region ("Protegus 2B
+reporting" where the EU server says "Protegus2 reporting"), so a label taken from an image made before
+then may be wrong: check it against the current pack. Desktop pages of
 the newer configurator also get `…-desktop-content.png`, cut below the app's top bar, which on the beta
 shows the β logo and the region name. Colours: by default the beta is shown in the released app's
 colours (`--theme released`; `--theme own` for its indigo/orange skin), because customers get the
@@ -138,6 +140,16 @@ public, so keep real names, systems and customer data out of fixtures and commit
   page were missing from the pictures, and the run said 0 problems. Never wait with `networkidle` after
   the first load. A page still loading after 20 s now fails its screen. When pictures from two runs
   differ, look for missing icons before blaming the app.
+- **On a slow connection the beta's own files can fail to arrive.** With the released colours, the guard
+  fetches every beta script, style and icon itself to swap the colours. On a 3-5 s-per-request link
+  (2026-11-11) some failed: the app sat on "Loading…" or lost icons, and the run said only `ERR_FAILED`.
+  The guard now tries each file three times with a 60 s limit and reports a final failure as `could not
+  fetch <path>: <reason>`. If that line appears, rerun the screen; time a `curl` to the host before
+  suspecting the app.
+- **New beta calls appear without notice.** A beta build can start asking for something new (the SP5
+  dashboard's `/firmware` and the SIM card's `/mobile-networks`, 2026-11). The run reports it as
+  `unmocked`; give it a sample answer in `lib/mocks-configurators.mjs` that shows the plain, neutral
+  state (here: firmware up to date, one sample operator).
 - **A menu item can depend on the sample having its data.** SP5's Automation appears only when the
   configuration has an `automation` block (the configurator's `navigation.service.ts`); adding it put a
   new item in every desktop sidebar, so the whole beta set was recaptured (2026-10-26). Before adding
@@ -197,7 +209,12 @@ public, so keep real names, systems and customer data out of fixtures and commit
 
 Look at every image yourself (`magick montage` contact sheets make this quick): labels translated, no
 raw keys, statuses plausible, nothing cut off. The run must end with 0 problems, and the guard
-self-test must pass after any change to the guard. Values you could not confirm stay flagged in the
+self-test must pass after any change to the guard. Since 2026-11-26 every image is also checked for a
+label key shown instead of its text (`WARN … label key(s) shown instead of text`, and `rawLabelKeys` in
+the manifest): the beta often has new labels the label server lacks, and two SP5 pop-ups came out with
+raw keys from a run that said "0 problems". An image with raw keys does not go into a manual; tell the
+owner which keys are missing. Also compare a recapture with the last set (pixel diff per file, and look
+at every changed one): the beta changes screens between builds. Values you could not confirm stay flagged in the
 manifest (`firmwareConfirmed`, `revisionConfirmed`, `unverified`), and you name them in the hand-off.
 
 ## When the tool cannot produce the real screen

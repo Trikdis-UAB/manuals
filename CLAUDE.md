@@ -17,7 +17,11 @@
 
 **Checking PDFs before a print-affecting change ships** (staging builds no PDFs; local export with system Chrome; labels print in capitals; where the check helpers live): see `NOTES/agent-lessons/pdf-print-check.md`.
 
+**Previewing a branch without an approval** (a new `.claude/launch.json` entry makes `preview_start` ask Andrius even though the tool is allowed; use a strict build and the PR's Netlify preview instead): see `NOTES/agent-lessons/preview-without-approval.md`.
+
 **Links to a section** (use the numbered id from the built page; nothing rewrites a link for you, Cyrillic slugs collapse to `3212-tipring`): see `NOTES/agent-lessons/section-anchor-links.md`.
+
+**Swedish manuals (`docs/sv`)** (Sonnet translates page by page, Opus checks; glossary and style from Teletec's Swedish manuals; hidden from the language menu and robots until Erik at Teletec has reviewed): see `projects/swedish/README.md`, then `TRANSLATION-BRIEF.md`.
 
 **Protegus app screenshots** (configurator screens from the released web app with sample data, no device or account; the network guard; adding a screen): see `tools/app-screenshots/README.md`, and the `protegus-app-screenshots` skill (`tools/app-screenshots/skill/SKILL.md`).
 

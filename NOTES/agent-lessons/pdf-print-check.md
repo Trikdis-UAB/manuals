@@ -32,6 +32,19 @@ merging anything that touches `docs/stylesheets/print.css`, `Scripts/pdf-export.
 Baselines from the 19 Oct 2026 production deploy (#29): GET EN 65 pages / 77 images, GET LT 57 / 60, SP3 "Adding
 S8/S9 sensors" EN 28 / 38. Local export with system Chrome can differ by a page; the image count must not.
 
+## A tab label left at the bottom of a page
+
+A tab's label (PROTEGUS APP / TRIKDISCONFIG, printed from `::before`) and its window title can end a page while the
+screenshot moves to the next. Chrome ignores `break-after` on `::before`. Broad `break-after: avoid` rules on a
+tab's first child re-paginated GET even where GET had no such page. What worked (SP3, 2026-11-26): mark the
+title paragraph in the Markdown (`{: .trik-tab-title }`) and scope the print rules to that class. SP3 went from 6
+stranded labels to 0 at the same page count; GET's PDF text stayed byte-identical.
+
+To find them, a page counts only when its last text line is a label or title **and no image is drawn below that
+line on the same page**. A screenshot has no text, so "last text line" alone also flags pages where the screenshot
+is right there. A script that does this (image positions as in `pdf_image_check.py`) is
+`tools/app-screenshots/out/_work/orphan_labels.py` in the `app-screenshots` worktree (git-ignored).
+
 ## Where the helpers are
 
 The image-cut checker (`pdf_image_check.py`), the PDF text/PNG tool (`pdfpages.swift`), the Chrome export copy

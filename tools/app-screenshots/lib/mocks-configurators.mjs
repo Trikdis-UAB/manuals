@@ -1,11 +1,12 @@
 // Sample answers for the calls a configurator makes besides config/read. Invented data only.
 
-import { SAMPLE, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem, media, vhVisualEvents } from './sample.mjs';
+import { SAMPLE, sampleFirmware, wizardDeviceInfo, wizardDeviceStatus, wizardCreatedSystem, media, vhVisualEvents } from './sample.mjs';
 
 export function configuratorMocks(configurator, { on, readJson, FIX, model, state, fixture, configPatch, scenario = {} }) {
   if (configurator === 'sp5') sp5(on, { readJson, FIX, model, fixture, configPatch });
   if (configurator === 'g16') addSystemWizard(on, { model, state, offline: Boolean(scenario.deviceOffline) });
   if (configurator === 'vh') vh(on, { readJson, FIX, fixture, scenario });
+  if (configurator === 'sp3') sp3(on);
 }
 
 // VideoHub: area status, camera snapshots (served by the guard from fixtures/media/), detections.
@@ -29,6 +30,27 @@ function vh(on, { readJson, FIX, fixture: file, scenario }) {
   // Adding a VideoHub that has no network yet: the server knows its type (0x5D) but cannot reach it, so the
   // app goes straight to Bluetooth setup.
   if (scenario.deviceOffline) on('GET', '/online', () => ({ success: true, online: false, hwId: 0x5d, errorType: '', srv: 1, own_region: true, local_version: 1 }));
+}
+
+
+// FLEXi SP3: the calls its configurator makes only when a button is pressed. Nothing is sent.
+function sp3(on) {
+  // Events log → Read log. Each record is the panel's hex form: area, -, CID (LE), zone/user (LE), event code, -,
+  // packed time (LE); checked against the app's decoder. Oldest first; the app lists the newest on top.
+  on('POST', '/config/eventlog/read', () => ({ success: true, data: [
+    '01000104020021004C7B8C2A', // 2026-10-06 07:45:12 System 1 disarmed, user 2
+    '000001030000160028E38C2A', // 14:12:40 AC fault
+    '000001030000150003E58C2A', // 14:20:03 AC restore
+    '0100010401002000DE638D2A', // 22:15:30 System 1 armed, user 1
+    '010030010300010008338E2A', // 2026-10-07 03:12:08 Alarm in input IN3
+    '010030010300020029338E2A', // 03:12:41 Input restore IN3
+    '0000020600001B0000608E2A', // 06:00:00 Periodic test
+    '0100010401002100377A8E2A', // 07:40:55 System 1 disarmed, user 1
+  ] }));
+  on('POST', '/config/eventlog/clear', () => ({ success: true }));
+  // Modules → RS485 modules → Update, and Wireless → Update: signal and battery of each module and device.
+  on('GET', '/config/update-rs485-sensors', () => ({ success: true, data: { rssi: [92, 78, 0, 0, 0, 0, 0, 0], voltage: [12.1, 12.0, 12.0, 0, 0, 0, 0, 0] } }));
+  on('POST', '/config/update-sensors', () => ({ success: true, data: 'V:3.05,L:86|V:3.10,L:72|V:3.00,L:64|V:2.95,L:78' }));
 }
 
 // The add-new-system wizard for a g16-family communicator: online, not directly controlled, so the
@@ -63,8 +85,14 @@ function addSystemWizard(on, { model, state, offline }) {
 // Fixed sample moment, so captures are repeatable.
 export const SAMPLE_TIME = '2026-10-07 12:00:00';
 
-function sp5(on, { readJson, FIX, fixture: file, configPatch }) {
+function sp5(on, { readJson, FIX, model, fixture: file, configPatch }) {
   const fixture = () => readJson(FIX, 'config', file);
+
+  // Firmware the server offers for the device (beta, from 2026-11): only the version the sample runs,
+  // so the app says it is up to date and never offers an update.
+  on('GET', '/firmware', () => ({ success: true, data: [{ fw_version: sampleFirmware(model).firmware, fw_date: Date.UTC(2026, 8, 1) / 1000 }] }));
+  // The SIM card's operator list (beta, from 2026-11; the released app reads it from mcc-mnc.com, see the guard).
+  on('GET', '/mobile-networks', () => ({ success: true, data: [{ mcc: '246', mnc: '01', network: 'Sample Mobile' }] }));
 
   // The dashboard's System information card and the "recent devices" list.
   on('GET', '/system-lite', () => ({

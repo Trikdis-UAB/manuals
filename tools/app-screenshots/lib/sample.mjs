@@ -39,6 +39,10 @@ export const MODELS = {
   'VH':    { configurator: 'vh', fixture: 'vh.json', hwId: '5D', deviceId: 0x5d, hwType: 'VH', name: 'VideoHub', firmware: '1.04', revision: null, bt: '0104', firmwareConfirmed: true, comType: 2,
              systemFwVersion: '1.04', supportedCommands: '.1.2.9.18.1F.24.29.2B.2C.2D.2E.2F.30.' },
   'SP5':   { configurator: 'sp5', fixture: 'sp5.json', hwId: '5A', deviceId: 0x5a, hwType: 'SP5', name: 'SP5', firmware: '1.00', revision: '1E7LWB.0', bt: '1.00', fwFormat: 'dotted', firmwareConfirmed: true, revisionConfirmed: true },
+  // FLEXi SP3: the panel in the manual's TrikdisConfig screenshots reports SP3_1E74, firmware 1.23,
+  // bootloader 1.02 (revision ends in 4: RF-LORA and RF-S8 receivers, up to 64 zones). Whether 1.23 is
+  // the current release is not confirmed.
+  'SP3':   { configurator: 'sp3', fixture: 'sp3.json', hwId: '3B', deviceId: 0x3b, hwType: 'SP3', name: 'SP3', firmware: '1.23', revision: '1E74', bt: '1.02', fwFormat: 'dotted', comType: 1, revisionConfirmed: true },
 };
 
 // How the device connects, which the dashboard draws next to "Online": 1 = cellular (signal bars),

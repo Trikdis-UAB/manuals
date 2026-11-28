@@ -364,6 +364,8 @@ Following one of the schematics provided below, connect communicator to the cont
 !!! note
     With the keypad bus only, the communicator receives general zone states from the panel and cannot tell the zone type (fire, burglary, water leak, etc.). All alarms are reported as a general alarm, Contact ID E130, and some monitoring stations handle these events differently from the zone type that was actually triggered. To report events with the panel's own Contact ID codes (for example E110 for a fire alarm), connect the TIP/RING terminals as well, see 3.2.1.2.
 
+    A 2-wire smoke detector on the panel's PGM2 terminal (PGM2 option 04) is reported as Contact ID E140, general alarm, not as fire alarm E111. To report it as fire, connect the TIP/RING terminals as well.
+
 ##### Keypad bus and TIP/RING
 
 <img class="wiring-diagram" alt="Wiring diagram: DSC panel to GT+. Keypad bus: RED to +DC (+12V), BLK to -DC, YEL to CLK, GRN to DATA. Telephone line communicator terminals: panel TIP to GT+ TIP, panel RING to GT+ RING." src="./wiring-dsc-tip-ring.webp" width="650" height="513" />
@@ -494,7 +496,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     to select a different place to install the communicator, or to use a
     more sensitive cellular antenna. / If you see a different LED
     indication, it indicates a certain malfunction. Diagnose it by following
-    the LED indication table in chapter 1.6 "LED indication of
+    the LED indication table in chapter 1.7 "LED indication of
     operation". / If the GT+ indication does not illuminate at all,
     check the power supply and connections.
 ## Programming the control panel 
