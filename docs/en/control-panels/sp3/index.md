@@ -249,7 +249,7 @@ Don't see your question? Contact [support@trikdis.lt](mailto:support@trikdis.lt)
 
 ### Main power supply
 
-The control panel and the entire alarm system can be powered either from an alternating or a direct current source. In both cases, a backup power supply – a 12 V battery – must be connected to the system to ensure the supply of power is uninterrupted. To meet the demands of the EN50131 standard, the backup battery must be able to work for 12 hours for security Grade II or 60 hours for security Grade III after losing power from the main power supply. Take into account the total current consumption of the additional connected modules, the current consumption of individual modules is listed in chapter 1.2 “List of compatible modules”.
+The control panel and the entire alarm system can be powered either from an alternating or a direct current source. In both cases, a backup power supply – a 12 V battery – must be connected to the system to ensure the supply of power is uninterrupted. To meet the demands of the EN50131 standard, the backup battery must be able to work for 12 hours for security Grade II or 60 hours for security Grade III after losing power from the main power supply. Take into account the total current consumption of the additional connected modules, the current consumption of individual modules is listed in chapter 1.3 “List of compatible modules”.
 
 ### Backup power supply
 
@@ -632,7 +632,7 @@ To turn on the control panel, first you need to turn on its power supply. The co
     strength of the mobile network is insufficient. We recommend choosing a
     different place for installing the control panel, changing the location
     of the antenna or using a more sensitive mobile antenna. / If the light
-    indication is different, see chapter 1.4 "LED indication of operation"
+    indication is different, see chapter 1.5 "LED indication of operation"
     to find out the reason. / If all of the „FLEXi" SP3 indicator
     lights are off, check the power supply and connections.
 ## Remote control 

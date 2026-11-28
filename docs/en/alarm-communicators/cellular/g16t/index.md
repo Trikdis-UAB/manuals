@@ -405,13 +405,13 @@ If more inputs or outputs need to be connected to the communicator, or if you wa
 
 ### Schematic for connecting the *W485* WiFi module 
 
-The *W485* module sends messages to the CMS (Central Monitoring Station) and to Protegus using a WiFi internet router. When WiFi connectivity is available, the *G16T* sends event messages via the *W485* module. When WiFi connectivity is disrupted, the *G16T* sends messages via GPRS. When WiFi connectivity is re-established, the *G16T* returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the *G16T* is described in chapter 6.6. „„RS485 modules” window”. / Insert SIM card into the communicator *G16T* for *W485* to work.
+The *W485* module sends messages to the CMS (Central Monitoring Station) and to Protegus using a WiFi internet router. When WiFi connectivity is available, the *G16T* sends event messages via the *W485* module. When WiFi connectivity is disrupted, the *G16T* sends messages via GPRS. When WiFi connectivity is re-established, the *G16T* returns to sending messages via *W485*. / Configuration of the *W485* WiFi module to work with the *G16T* is described in chapter 6.6. „„RS485 modules” window”. / Insert SIM card into the communicator *G16T* for *E485* to work.
 
 <img alt="Wiring diagram: external power supply (12V DC, 0.5A) to G16T +DC and -DC, shared via junction dots down to W485 +DC and -DC. RS485 connection (up to 100m): G16T A 485 to W485 A 485, G16T B 485 to W485 B 485." src="./image20.webp" style="width:2.9325054680664917in;height:2.1975043744531932in" />
 
 ### Schematic for connecting the E485 „Ethernet“ module 
 
-The *E485* module sends messages to the CMS (Central Monitoring Station) and to Protegus using a wired internet connection. Using the *E485* with *G16T*, CSP and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *G16T* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *G16T* starts sending messages via *E485*. / Configuration of the *E485* WiFi module to work with the *G16T* is described in chapter 6.6. „„RS485 modules” window”. / Insert SIM card into the communicator *G16T* for *E485* to work.
+The *E485* module sends messages to the CMS (Central Monitoring Station) and to Protegus using a wired internet connection. Using the *E485* with *G16T*, CMS and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *G16T* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *G16T* starts sending messages via *E485*. / Configuration of the *E485* Ethernet module to work with the *G16T* is described in chapter 6.6. „„RS485 modules” window”. / Insert SIM card into the communicator *G16T* for *E485* to work.
 
 <img alt="Wiring diagram: external power supply (12V DC, 0.5A) to G16T +DC and -DC, shared via junction dots down to E485 +DC and -DC. RS485 connection (up to 100m): G16T A 485 to E485 A 485, G16T B 485 to E485 B 485." src="./image21.webp" style="width:2.9600054680664916in;height:2.2300043744531934in" />
 
@@ -431,7 +431,7 @@ To start the communicator, turn on the security control panel’s power supply. 
     is insufficient. We recommend to select a different place to install the
     communicator, or to use a more sensitive cellular antenna. / If you see
     a different LED indication, it indicates a certain malfunction. Diagnose
-    it following the LED indication table in chapter **1.5 „LED indication
+    it following the LED indication table in chapter **1.6 „LED indication
     of operation".** / If the G16T indication does not illuminate at
     all, check the power supply and connections.
 ## Programming the control panel 
@@ -609,7 +609,7 @@ After connecting the G16T and clicking **Read [F4], *TrikdisConfig*** will provi
 | Status         | Operating condition                                |
 | Device         | Device type (G16T should be shown)           |
 | SN             | Device serial number                               |
-| BL             | Browser version                                    |
+| BL             | Bootloader version                                 |
 | FW             | Device firmware version                            |
 | HW             | Device hardware version                            |
 | Status         | Connection to program type (via USB or remote)     |

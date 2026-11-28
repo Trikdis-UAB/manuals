@@ -319,7 +319,7 @@ After finishing configuration, click **Write [F5]** and disconnect the USB cable
     insert the SIM card into a mobile phone and disable PIN code requests.
 8. If you want to be able configure the CG17 remotely, insert a SIM card with disabled PIN code requests. Send an SMS message: **CONNECT 123456 PROTEGUS=ON,APN=INTERNET**
 
-2.  Remote configuration is described in chapter 5.5 “Setting parameters remotely”.
+2.  Remote configuration is described in chapter 5.4 “Setting parameters remotely”.
 
 3.  Close the top lid.
 
@@ -572,7 +572,7 @@ The *W485* module sends messages to the CMS (Central Monitoring Station) and to 
 
 ### Schematic for connecting the E485 „Ethernet“ module
 
-The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *CG17* (firmware from Ver.1.13), CSP and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *CG17* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *CG17* starts sending messages via *E485*. / Configuration of the *E485* WiFi module to work with the *CG17* is described in chapter 4.5. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the *CG17* security panel. / One *E485* module can be connected to the *CG17*.
+The *E485* sends messages to the CMS (Central Monitoring Station) and to *Protegus2* using a wired internet connection. Using the *E485* with *CG17* (firmware from Ver.1.13), CSP and *Protegus* messages are sent over wired Internet and mobile Internet is not used. If a wired internet connectivity is disrupted, the *CG17* sends messages via the mobile Internet. When the wired Internet connectivity is re-established, *CG17* starts sending messages via *E485*. / Configuration of the *E485* Ethernet module to work with the *CG17* is described in chapter 4.5. „„Modules” window”. / You do not need a SIM card, when using the *E485* with the *CG17* security panel. / One *E485* module can be connected to the *CG17*.
 
 <img alt="Wiring diagram showing a power supply connected to the CG17 panel's AC power terminals, and the CG17's A/B RS485 and +12V/COM terminals wired to the matching A 485/B 485 and +DC/-DC terminals on an E485 module up to 100 meters away." src="./image41.webp" style="width:3.09000656167979in;height:2.4225043744531933in" />
 
@@ -995,7 +995,7 @@ The user will be informed about sudden fuel level changes with an SMS message. T
 
 <img alt="Screenshot of TrikdisConfig software System events window with a red box highlighting three fuel-related event rows (Fuel loss alarm, Low fuel level, High fuel level) and their SMS event/restore text and CID codes." src="./image58.webp" style="width:7.086614173228346in;height:3.074803149606299in" />
 
-Description of the operation of the fuel level sensor. The fuel level sensor **Strela RS485** is connected to the CG17 (see 3.10 „Schematics for connecting of the fuel level sensor Strela RS485”). The measuring parameters are set for the CG17. The fuel level sensor starts measurements:
+Description of the operation of the fuel level sensor. The fuel level sensor **Strela RS485** is connected to the CG17 (see 3.12 „Schematics for connecting of the fuel level sensor Strela RS485”). The measuring parameters are set for the CG17. The fuel level sensor starts measurements:
 
 1.  When the box "**Enable fuel loss detection**" is ticked. When the power is turned on for the CG17, the fuel level sensor starts to monitor fuel consumption. Measurements stop when the power for the CG17 is turned off.
 

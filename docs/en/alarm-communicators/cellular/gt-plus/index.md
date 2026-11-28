@@ -290,7 +290,7 @@ After finishing configuration, click the button **Write [F5]** and disconnect th
 
 3. **Communication type** - select the **IP** connection method.
 
-2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers) , **TL150** (to SUR-GUARD receivers).
+2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers) , **TL150** (to SUR-GARD receivers).
 
 3.  **Encryption key** - enter the encryption key that is set in the receiver.
 
@@ -816,7 +816,7 @@ After connecting the GT+ and clicking **Read [F4], *TrikdisConfig*** will provid
 | Status | Operating condition |
 | Device | Device type (GT+ should be shown) |
 | SN | Device serial number |
-| BL | Browser version |
+| BL | Bootloader version |
 | FW | Device firmware version |
 | HW | Device hardware version |
 | State | Connection to program type (via USB or remote) |
@@ -896,7 +896,7 @@ Communication is encoded and password protected. A TRIKDIS receiver is required 
 
 - **Communication type** - select which method for connecting to the monitoring station receiver will be used: **IP**.
 
-- **Protocol** - select in which coding the events should be sent: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers) , **TL150** (to SUR-GUARD receivers).
+- **Protocol** - select in which coding the events should be sent: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers) , **TL150** (to SUR-GARD receivers).
 
 - **Encryption key** - message encryption key. The key written to the communicator must match the receiver’s key.
 

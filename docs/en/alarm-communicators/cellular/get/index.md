@@ -344,7 +344,7 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
         - **Communication type**: **IP**.
         - **Domain or IP** and **Port** of the receiver.
         - **TCP or UDP**.
-        - **Protocol**: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+        - **Protocol**: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GARD receivers).
         - The encryption key that is set in the receiver: **TRK encryption key** for TRK protocols; for DC-09, turn on **Enable encryption key** and enter the **DC-09 encryption key**.
 
     4.  (Recommended) Set up the **Backup channel** the same way.
@@ -383,7 +383,7 @@ You can make these settings in the Protegus app or in TrikdisConfig; each sectio
 
     4. **Communication type** - select the **IP** connection method.
 
-    2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+    2.  **Protocol** - select the protocol type for event messages: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GARD receivers).
 
     3.  **Encryption key** - enter the encryption key that is set in the receiver.
 
@@ -1014,7 +1014,7 @@ The communicator is connected to the control panel via a Serial Bus.
 
 Events can be sent over several channels of communication. The primary and parallel communication channels can operate simultaneously, this way the communicator can send events to two receivers at the same time. Backup channels can be assigned for both primary and parallel channels, which will be used when the connection via the primary or parallel channel is interrupted.
 
-Communication is encoded and password protected. With the TRK protocols, a TRIKDIS receiver is required for receiving and sending event information to the monitoring programs (DC-09 and TL150 are for universal and SUR-GUARD receivers, see **Protocol** below):
+Communication is encoded and password protected. With the TRK protocols, a TRIKDIS receiver is required for receiving and sending event information to the monitoring programs (DC-09 and TL150 are for universal and SUR-GARD receivers, see **Protocol** below):
 
 - **For connection over IP** - software receiver IPcom Windows/Linux, hardware IP/SMS receiver RL14 or multichannel receiver RM14.
 
@@ -1041,7 +1041,7 @@ Communication is encoded and password protected. With the TRK protocols, a TRIKD
 
 - **Communication type** - select the method of communication with the monitoring station receiver (**IP).**
 
-- **Protocol** - select in which coding the events should be sent: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GUARD receivers).
+- **Protocol** - select in which coding the events should be sent: **TRK8** (to TRIKDIS receivers), **DC-09_2007** or **DC-09_2012** (to universal receivers), **TL150** (to SUR-GARD receivers).
 
 - **Encryption key** (**TRK encryption key**; for DC-09 protocols, **Enable encryption key** and **DC-09 encryption key**, with **HEX** for a key in hexadecimal) - message encryption key. The key written to the communicator must match the receiver’s key. In the Protegus app, the TRK encryption key takes up to 6 characters and the DC-09 encryption key up to 16 (32 in HEX).
 
