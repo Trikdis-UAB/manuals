@@ -61,6 +61,10 @@ separately (then the Swedish follows). Fixed items are struck through with the d
   pages. GT+ quick setup: table CLK/DATA → 7/8, drawing CLK → 7, DATA → 6. E16 quick setup: table
   CLK → 6, DATA → 7, drawing CLK → 7, DATA → 6. Both drawings agree with each other. Swedish follows
   the English tables for now; fix English and Swedish together once confirmed.
+  Evidence (2026-11-28): Honeywell's own wiring is 4 = ground, 5 = +12 V AUX, 6 = Data In (green),
+  7 = Data Out (yellow), and all five main manuals (GET, GT, GT+, G16, E16) draw 7 → CLK, 6 → DATA,
+  so the quick-setup tables look wrong (GT+ even names terminal 8). Asked Vytautas and Igoris by
+  email 2026-11-28 ("Honeywell Vista: CLK ir DATA gnybtai greito paruošimo puslapiuose").
 - **Texecom, Inner Range Inception and Integriti quick setups (GT+):** the wiring diagrams label the
   communicator "E16"; Inception's diagram has Lithuanian wire labels (Juodas, Žalias, Baltas laidas);
   steps 4–6 have no screenshots and other steps borrow the DSC PC images (system name "GT+ DSC").
