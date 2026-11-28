@@ -287,7 +287,7 @@ När konfigureringen är klar klickar du på knappen **Write [F5]** och kopplar 
 
 3.  **Communication type** - välj anslutningsmetoden **IP**.
 
-4.  **Protocol** - välj protokolltyp för händelsemeddelandena: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GUARD-mottagare).
+4.  **Protocol** - välj protokolltyp för händelsemeddelandena: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GARD-mottagare).
 
 5.  **Encryption key** - ange den krypteringsnyckel som är inställd i mottagaren.
 
@@ -784,7 +784,7 @@ När du har anslutit GT och klickat på **Read \[F4\], *TrikdisConfig*** visar p
 | Status | Driftstillstånd |
 | Device | Enhetstyp (GT ska visas) |
 | SN | Enhetens serienummer |
-| BL             | Webbläsarversion                                   |
+| BL             | Bootloader-version                                 |
 | FW | Enhetens firmwareversion |
 | HW | Enhetens maskinvaruversion |
 | State | Typ av anslutning till programmet (via USB eller på distans) |
@@ -864,7 +864,7 @@ Kommunikationen är kodad och lösenordsskyddad. En TRIKDIS-mottagare krävs fö
 
 - **Communication type** - välj vilken metod som ska användas för att ansluta till larmcentralens mottagare: **IP**.
 
-- **Protocol** - välj med vilken kodning händelserna ska skickas: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GUARD-mottagare).
+- **Protocol** - välj med vilken kodning händelserna ska skickas: **TRK8** (till TRIKDIS-mottagare), **DC-09_2007** eller **DC-09_2012** (till universella mottagare), **TL150** (till SUR-GARD-mottagare).
 
 - **Encryption key** - meddelandekrypteringsnyckel. Nyckeln som skrivs till larmsändaren måste stämma överens med mottagarens nyckel.
 

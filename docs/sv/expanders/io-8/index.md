@@ -10,7 +10,7 @@ iO-8 har 8 kontakter som kan ställas in som ingång eller utgång.
 
 På [sidan om iO-8 på *trikdis.com*](http://www.trikdis.com/) finns enhetens specifikationer och en aktuell lista över kompatibla TRIKDIS-enheter.
 
-Kompatibel med [SP3](/en/control-panels/sp3/), [CG17](/en/control-panels/cg17/), [GT+](../../alarm-communicators/cellular/gt-plus/index.md), [GT](../../alarm-communicators/cellular/gt/index.md), [G16](/en/alarm-communicators/cellular/g16/), [G16T](/en/alarm-communicators/cellular/g16t/), [G17F](/en/alarm-communicators/fire-panels/g17f/), [E16](/en/alarm-communicators/e16/), [E16T](/en/alarm-communicators/e16t/), [GATOR Cellular](../../gate-controllers/gator/index.md) och [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
+Kompatibel med [SP3](../../control-panels/sp3/index.md), [CG17](../../control-panels/cg17/index.md), [GT+](../../alarm-communicators/cellular/gt-plus/index.md), [GT](../../alarm-communicators/cellular/gt/index.md), [G16](../../alarm-communicators/cellular/g16/index.md), [G16T](../../alarm-communicators/cellular/g16t/index.md), [G17F](../../alarm-communicators/fire-panels/g17f/index.md), [E16](../../alarm-communicators/e16/index.md), [E16T](../../alarm-communicators/e16t/index.md), [GATOR Cellular](../../gate-controllers/gator/index.md) och [GATOR WiFi](../../gate-controllers/gator-wifi/index.md).
 
 **Gör så här för att ställa in iO-8:**
 
